@@ -921,3 +921,55 @@ lands, treat it as a **cross-check** of per-team detail rather than new material
 append. Two stopped analysts (`field-base-rates`, `award-economics`) left verified API data in the
 scratchpad under `baserates/` and `awards/` — both were about to write their deliverable and are worth
 restarting from their cached data in a later session.
+
+### The cross-check corrected the published answer twice. Both corrections are live.
+
+The `others7` analyst landed after `judging-top10` was first published, and it overturned two things the tab
+had already said. Both were fixed rather than defended.
+
+**Correction 1 — the Registry comparison mixed two different quantities.** The first draft compared GEMS's
+*documentation payload* against HongKong-JSS's *description field*. Those differ by more than an order of
+magnitude on the same part: HKSSC's best part has a **265-character description and 50,189 characters of
+documentation**. Re-measured consistently (documentation payload over design/experiment/characterisation/
+discussion, six headline parts per team, 58 parts total), the medians are:
+
+HKSSC 23,116 · HFI 17,493 · GCGS 14,763 · **GEMS-Taiwan 8,644** · HangzhouFourteenAP 7,786 ·
+HongKong-HS 4,944 · HongKong-JSS 2,606 · GHCIS 1,969 · Eton 1,903 · **Lambert-GA 670**
+
+The conclusion survives and gets stronger: **the Grand Prize winner has the shortest Registry documentation
+of all ten and the runner-up is eighth, while the three longest all belong to parts-prize winners who reached
+no podium.** Long documentation buys a parts prize, not a placing. Never compare `description` with
+documentation payload again.
+
+**Correction 2 — the "one legible claim" thesis does not survive the full cohort.** `judging-three-teams`
+argues the finalists each resolve into one sentence while GEMS publishes five key results, and that is true
+of those three. But **HangzhouFourteenAP has the clearest single headline among the non-finalists** — a
+four-enzyme cocktail cutting biofilm biomass 57.1% against PBS, ANOVA F(5,12) = 29.8, p < 0.001, n = 3, with
+every single-enzyme omission significantly worse — and it took a village award and nothing else. GCGS states
+an LOD of 53.1 nM with R² = 0.894. HKSSC reports a 2.09× advantage over a commercial esterase defended
+through two-way ANOVA, Brown-Forsythe and Welch with Holm correction. One clear claim is not sufficient.
+
+**What those three clear claims have in common is the finding that did survive.** Each is a claim about a
+*surrogate*: an artificial calculus model, a synthetic signalling molecule, a model ester. **Seven of seven
+non-podium teams substitute something convenient for the thing the project is actually about and stop
+there** — synthetic trigger RNA for river water, a synthetic oligo for urine, a tolerance shift for paraben
+removal, *B. subtilis* for *S. mutans*, a reporter for a therapy, a sensor never joined to its effector, one
+protease at two concentrations. **Exactly one team in the ten ran its assay on a real sample** — HongKong-JSS
+on a soil extract — and that team is the 1st Runner-up. Ten teams and two podium places cannot carry a
+causal claim, and the tab says so; it is reported as the one line the podium sits on the right side of.
+
+**The published answer is now two routes, and GEMS took neither.** Lambert-GA reached the slate on
+**novelty** (a de novo binder reported as a first, measured by a commercial service, on a project whose other
+arm has no data and whose results page carries no statistics). HongKong-JSS reached it on **depth** (five
+independent matched runs over 51 treatments, leave-one-run-out re-analyses, a three-metal selectivity panel,
+a real extract). GEMS's novel element showed no light dependence in its own ELISA with every biological
+result coming from the constitutive bypass, and its real depth — the plant work at p < 0.0001 with 40
+seedlings per condition — sits on a protectant the reactor did not make, since the preparation sprayed on
+the plants was never assayed.
+
+Two further things from the cross-check are now on the tab: **Best Model recognition maps exactly onto the
+finalist slate** (Lambert winner, HongKong-JSS nominee, nobody else; flagged as an award predicting an award
+and therefore close to circular, with GCGS and HongKong-HS having no model page at all), and **six of seven
+non-podium teams publish nothing usable on attributions** (HangzhouFourteenAP's is the unedited template;
+GCGS, GHCIS and HongKong-HS have none; HKSSC's points off-wiki; HFI's is an empty iframe) while both
+finalists disclosed heavily and neither was punished.
