@@ -417,3 +417,17 @@ Pattern worth naming across waves 4 and 5: **three of seven analyses returned nu
 (collaboration does not predict placing; measurement discipline does not predict placing; the medical-versus-
 agricultural hypothesis failed). All three are on the page with the null stated in the lede. That is the
 house style now — see also the honest-failure effect that shrank from 54/41 to 33/27 when the dataset closed.
+
+**hardware-afterlife, the detail worth acting on.** The separating habit is **export, not hosting** — the
+opposite of the software finding. There is no `2026/hardware` group on gitlab.igem.org at all (the API 404s
+it while `2026/software` returns a group), so iGEM mandates a software deposit and nothing for hardware, and
+every hardware release is improvised. The failures are not lazy teams; they are teams whose good CAD never
+left the design tool. Cornell, the undergraduate Best Hardware winner, publishes a 40-line priced BOM
+totalling $1,213.35 and still says it *plans to* provide CAD files and circuit diagrams — no STL, STEP,
+schematic or firmware anywhere. Two cited links fail when signed out: Toronto's Drive folder shows a visitor
+nothing, and HongKong-JSS's named firmware repository is a 404 from an account with no public repos.
+Lambert-GA is the only instrument in the cohort ever used by outsiders — UAB and Georgia Tech's Styczynski
+Lab — and it is also the only release with Gerbers, drill files, a JLCPCB CPL and an LCSC-keyed BOM.
+Roadmap Phase 3 now carries this as its own item.
+Also worth remembering as a method caution: a stale deployed JS chunk on one team's site still contained the
+team's own unexecuted editorial placeholders, so bundle-derived evidence must be re-confirmed in the browser.
