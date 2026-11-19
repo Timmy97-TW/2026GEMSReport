@@ -785,3 +785,57 @@ HongKong-JSS's — "We have not tested either explanation directly" is exactly t
 HongKong-JSS wiki trustworthy. The difference is not honesty. It is that GEMS's honesty is spent on
 explaining *why a result is unclear*, while HongKong-JSS's is spent on *bounding a result that is clear*.
 One reads as work in progress; the other reads as a finished claim with known limits.
+
+### Lambert-GA killed the best theory, and that is what made the answer findable
+
+The tempting conclusion after reading HongKong-JSS was that the separator is self-adversarial honesty —
+HongKong-JSS bounds its claims out loud, so perhaps GEMS's habit of explaining why results are unclear read
+as weakness. **Lambert-GA disproves that completely.** Lambert argues against Lambert *on Lambert's own
+award pages*:
+- the parts page contradicts the results page about the in-house pull-down and concludes the result "does
+  not establish binding by the registered candidate";
+- the **Best Model** page states its gram-scale Sobol analysis "did not pass its numerical checks";
+- the **Best Hardware** page prints a protein table and then declares its own concentration columns
+  "unverified", and discloses that the device's published default Wi-Fi password lets anyone on the hotspot
+  control it;
+- a downloadable CSV stamps every siRNA row "biological efficacy not established by this file."
+
+Candour did not cost Lambert the Grand Prize. So candour is not what cost GEMS the finalist slate, and any
+advice along the lines of "claim more confidently" would be exactly wrong.
+
+**Three more theories died on Lambert's evidence too.**
+- *Statistics*: Lambert's results page has **no p-values and no named test**. Its one number, 603.6 nM with
+  a 95% CI, was produced end to end by **Adaptyv Bio** — they received the sequences, expressed the protein,
+  ran the BLI and interpreted it. Campaign disposition: 35 designs → 1 binder, 18 negative, 16 unusable.
+- *Completeness*: Lambert's **RNAi arm has no knockdown data at all** — six siRNAs, twelve transfection
+  conditions, all inconclusive; nothing tested against intact DWV, bee cells or a bee. Its own colony model
+  says RNAi supplies most of SWARM's predicted benefit and the minibinder adds "a small further
+  improvement". The arm carrying the impact has no data.
+- *Registry documentation*: Lambert's 38 accessions top out at **6,313 characters**, with descriptions as
+  short as 19 and almost no characterisation sections. **GEMS beats both finalists on question 8's Registry
+  half** (34 parts, median 7,369 chars, 269,653 total, 14 in the winner band) and still finished below them.
+
+### The answer, as published
+
+**In both finalists the part that does not work sits at the periphery. In ReLEAF it is the thing the project
+is named for.** Lambert leads with the half that produced a measured binder; the mite half produced nothing.
+HongKong-JSS leads with detection that works; the in-field extraction does not. A judge names the
+achievement in one clause and the gap falls in the next.
+
+ReLEAF is named for a *stress-responsive optogenetic* bioreactor. Both halves of that name are the
+undemonstrated parts, by GEMS's own documentation: "The reactor therefore cannot be scheduled from the
+forecast", and ELISA at 2.6–3.2 µg/mL under **both** colours at every time point, AmilCP never colouring,
+red LEDs at 640 nm against the ~672 nm CcaSR needs, and **every biological result produced by a constitutive
+bypass rather than the light-gated device**. What works — secretion, membrane transit, plant rescue at
+p < 0.0001 with 40 seedlings per condition — is real and is not what the project is called.
+
+Question 4 gained the sharpest secondary distinction: **all three teams document failures, so documenting
+one is not the discriminator — a fix following it is.** Lambert went 15 designs to zero binders, changed the
+epitope, added tools, and got 1 of 20. HongKong-JSS found its aptamers were DNA not RNA, abandoned the route
+and published the sequences as a warning. GEMS names two candidate explanations for its central negative
+result — LPA well-to-well light crosstalk, and the 640/672 nm mismatch — and states: "We have not tested
+either explanation directly." Both are about a week of work.
+
+Published as `judging-three-teams` (judging tab, order 20): 8 cards one per question, a 4-column
+three-team table across all eight, and an 8-line checklist. Verified live: tab renders, both tables, 24
+cards, all chips Chinese, no console errors.
