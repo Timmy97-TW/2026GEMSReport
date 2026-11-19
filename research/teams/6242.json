@@ -47,7 +47,11 @@
       "SDS-PAGE with supernatant/pellet fractionation",
       "physiologically-matched validation in artificial lung fluid",
       "stakeholder-driven switch from fixed-concentration to dose-response characterisation"
-    ]
+    ],
+    "frameworks_zh": "GCGS 沒有專門的模型或軟體頁面（兩個網址都是 404），相較其他四支 Top 10 高中隊伍，這是明顯的弱點。唯一的建模主張是對 Fur-RhlR 雙重反應 AND 閘的迴路層級模擬，它預測原生 rhl 啟動子的轉錄活性過低，會使完整迴路無法運作——這與 2016 年 Tokyo_Tech 隊伍發現原生 Prhl 活性偏弱的結果一致——因此也成為在設計循環 2b 升級為工程化 Prhl(LR)（BBa_K1529310）的依據。該模擬的結構、參數、方程式與所用軟體都未記載在 wiki 上，因此它讀起來是一個為設計辯護的步驟，而不是可重現的模型。wiki 上任何地方都沒有蛋白質結構預測、分子嵌合、分子動力學、通量分析或機器學習；alginate lyase 與 Lysis E 模組取自文獻，而非以計算設計。量化分析反而集中在分析層級的擬合：雙重反應迴路在低鐵條件下對 C4-HSL 的反應以對數濃度做線性回歸擬合（Y = 2.582X + 39.04，R2 = 0.894），得到 53.1 nM 的偵測極限，並與臨床痰液中實測的生理相關 C4-HSL 濃度相互對照；此外還有對相近訊號分子的交叉反應測試，以及在人工肺液中 48 小時的生長曲線驗證，顯示工程菌株在雙訊號刺激下仍保持存活、相對生長有中度下降，與 Lysis E 驅動的條件式自溶一致。",
+    "dataviz_zh": "圖表形式常規，但使用得當，而且一貫地與其實體來源配對呈現。工程與改良頁面以四種條件的長條面板呈現 AND 邏輯特性鑑定，並對每個構築畫出整個 C4-HSL 劑量梯度的生長曲線、含 8 小時終點比較與顯著性標註，另有一張專門的分析效能圖，把劑量反應回歸、偵測極限與交叉反應結果擺在一起。每一個建構步驟都附上洋菜膠電泳、轉型平盤、菌落 PCR 與 Sanger 定序軌跡，而不是只憑文字宣稱。迴路設計以「既有部件 BBa_K2315014」對照「改良後的部件」並列繪出，讓每一輪的具體改動看得見而非只被描述。人類實踐與教育把問卷資料做成高解析度圖表（公眾問卷有 398 份有效回覆）。首頁使用以 Sense／Respond／Restore 編排的捲動動畫敘事，讓讀者在接觸任何生物學之前就看懂 AND 閘，另有一張雙重反應系統示意圖承載機制。沒有任何互動式或計算式視覺化，沒有儀表板，也沒有瀏覽器內的工具。",
+    "datascience_zh": "真正的智識貢獻是一段關於取捨的乾淨 design-build-test-learn 論證——即使沒有計算，這也是一種資料推理。循環 2a 把四種 SsrA 降解標籤（LAA、LVA、ASV、AAV，涵蓋一段已知降解動力學範圍）融合到野生型 Prhl 上 RhlR 的 C 端，以同源重組把包含未加標籤對照在內的五個構築組裝到 pTrc99k 上，並在經定序確認的 DH5-alpha 中，依序對空白、僅溶劑、10 微莫耳、100 微莫耳與 1 mM C4-HSL 做 8 小時時間序列劑量反應實驗。結果的解讀謹慎而非選擇性：生長曲線顯示只有 LAA 的最終密度出現小幅但顯著的下降（p < 0.05），與其最快的蛋白質更替帶來額外蛋白水解負擔一致，而 LVA、ASV 與 AAV 沒有顯著的生長代價——因此這些標籤並非普遍具毒性。螢光結果顯示所有標籤都如預期降低了基礎背景值，但 LAA、LVA 與 AAV 徹底失去誘導能力，使空白對照與 1 mM C4-HSL 之間不再有統計上顯著的差異，只有中等速率的 ASV 標籤保留了微弱但可分辨的誘導。團隊得出了正確的一般性結論：當一個啟動子的最大轉錄輸出偏弱時，SsrA 驅動的降解速率可能超過合成速率，因此調整蛋白質更替無法彌補轉錄能力不足——光從降解端下手，無法同時最佳化背景抑制與誘導輸出。循環 2b 換上 Prhl(LR) 並重新鑑定整組構築來檢驗這個推論，確認 RhlR-SsrA-ASV-Prhl(LR) 是同時達成低滲漏與穩健誘導的組合，隨後整合進最終的 AND 閘。人類實踐也促成了方法上的改變：因為專家指出不同病患呼吸道的缺鐵程度並不一致，特性鑑定從單一固定的低鐵濃度改為劑量反應設計；又因為公眾問卷標出對非目標處活化的擔憂，低度的未誘導滲漏從「有就更好」升格為明確的篩選標準。",
+    "software_zh": "未釋出任何軟體，也沒有軟體頁面。貢獻屬於生物與文件層面：最佳化後的複合部件 pCon-RhlR-SsrA-ASV-Prhl(LR)-GFP（BBa_26QSD9SO）已提交至 Registry，作為未來隊伍可重用的 C4-HSL 生物感測器，是對既有部件 BBa_K2315014（最初由 Shanghai_tech_2017 鑑定）的改良；另有一個部件集合頁面，記載 Fur 與 RhlR 感測模組、Lysis E 效應釋放模組與 alginate lyase 貨物。Alginate lyase 的表現已在理論值約 42.2 kDa 處確認，並做了上清液與菌體沉澱的分離。wiki 上沒有任何程式碼或硬體的程式庫連結。"
   },
   "good": {
     "publicEngagement": "Audience-segmented education from primary school through university students to industry professionals, governed by a self-designed GCGS reflective cycle (Gather information, Construct and conduct, Synthesize and sustain) applied after every activity, with the content depth and communication strategy varied per group. The distinguishing feature is a written ethics policy for rare disease communication, derived directly from expert advice rather than invented: person-first language, participants review any content referencing their stories before publication, no overly emotional narratives, no framing that implies patients are a burden, anonymity respected, and no fabricated data. A WeChat official account was launched in Chinese to serve the Chinese-speaking general public after the survey showed over 60% of respondents had never heard of cystic fibrosis and nearly half were unaware of the biofilm mechanism; it publishes rare-disease knowledge aimed at patients' psychological needs and gives patients a platform to connect and support each other, which is unusually thoughtful for a high-school outreach channel. Objectives are differentiated by tier — sparking curiosity in young students through hands-on activities, helping non-biology-major students grasp synthetic biology principles, reducing stigma through responsible communication with the public, and giving professionals and industry stakeholders technical and translational insight. Education strategy was explicitly treated as an output of the human practices work rather than a parallel track.",
@@ -65,28 +69,35 @@
       "An anonymised biopharmaceutical R&D and industry strategy expert",
       "Shanghai_tech_2017 iGEM team (origin of improved part BBa_K2315014)",
       "Tokyo_Tech 2016 iGEM team (native Prhl activity finding)"
-    ]
+    ],
+    "publicEngagement_zh": "教育依受眾分層，從小學生、大學生到產業專業人士，並由一套自行設計的 GCGS 反思循環（Gather information 蒐集資訊、Construct and conduct 建構與執行、Synthesize and sustain 綜合與延續）在每場活動後施行，內容深度與溝通策略也依群體調整。最突出之處是一份針對罕見疾病溝通的書面倫理準則，而且直接源自專家建議而非自行想像：以人為先的語言、任何提及當事人故事的內容都須由其本人在發布前審閱、不使用過度煽情的敘事、不以「病患是負擔」的框架陳述、尊重匿名，以及不捏造資料。問卷顯示超過 60% 的回覆者從未聽過囊狀纖維化、近半數不知道生物膜機制後，團隊開設了中文微信公眾號服務華語大眾；它發布針對病患心理需求的罕見疾病知識，並為病患提供彼此連結與互相支持的平台，對一個高中生的外推管道而言格外用心。目標依層級分化——以動手活動引發年幼學生的好奇、幫助非生物科系學生掌握合成生物學原理、以負責任的溝通減少對公眾的污名化，並為專業人士與產業利害關係人提供技術與轉譯層面的洞見。教育策略被明確視為人類實踐工作的產出，而不是一條平行的支線。",
+    "ihp_zh": "七場結構化專家訪談，加上一份 398 份回覆的雙語公眾問卷，圍繞一個自行設計的反思模型組織起來，並延伸到法規、製造與財務，而不是停在學界。記錄最清楚的一次改變是團隊接受了一項對自己不利的範圍縮減：陳光全醫師（同濟大學醫學院，具囊狀纖維化臨床與研究經驗）坦率指出，VOC 診斷模組雖然可行但並不創新，因為既有研究已確認囊狀纖維化病患會呼出特徵性 VOC，不需要工程菌。團隊因此淡化 VOC 模組，把它重新定位為未來的延伸，並完全聚焦於生物膜降解與抗生素輔助療法。安然博士（上海交通大學）指出四項生物安全風險並把水平基因轉移排在首位；團隊於是在既有的「任務完成即自溶」系統之上，加上一道溫度敏感的自殺開關作為第二層圍堵，同時明確拒絕 pH 敏感開關、理由是技術上困難——這是一次有記錄、有理由的拒絕，而王新博士（河南工業大學）也獨立呼應了同樣看法：他指出體內外的 pH 差異不足，並力促採用多層圍堵、包括以營養缺陷型來防範肺部過度群落化、洩漏至消化道與水平基因轉移。王博士另外提出，長期抗生素治療本身就已擾亂囊狀纖維化肺部的微生物相，工程益生菌可能進一步干擾；團隊把這點採納為一個明確命名的安全終點：在未來研究中監測工程菌株對呼吸道微生物組成的影響。安博士另外促成了一次定位修正，強調產品必須清楚呈現其輔助角色，因為標的是生物膜，而不是單獨治療感染——這套措辭現在貫穿整個 wiki。徐寶山醫師（中山大學附屬口腔醫院，罕見遺傳疾病）把溝通的優先順序定為：首先消除污名、其次建立包容、第三才是傳遞疾病知識，並建議使用以人為先的語言、避免煽情敘事、讓病患審閱內容——這些後來成為教育倫理準則。有兩項實驗設計的改變來自利害關係人意見：以低鐵梯度做劑量反應鑑定而非單一固定濃度，以反映不同病患呼吸道缺鐵程度的異質性；以及把低度未誘導滲漏提升為關鍵篩選標準，因為公眾問卷顯示非目標處活化是最主要的顧慮。商業與法規方面的接觸包括姚清女士（廣州漢光藥業共同創辦人暨董事長，一家創立 25 年的中國 OTC 製藥前 50 強企業）、一位匿名的生物製藥研發與產業策略專家、匯豐銀行的投資與商業銀行專業人士、魏濤教授（廣東韶禾生物科技／華南農業大學，計算生物學）與包慧慧博士（中國國家食品安全風險評估中心）。",
+    "realWorld_zh": "一份扎根於中國給付現實、而非全球 TAM 算術的罕見疾病市場分析。囊狀纖維化列入中國《第一批罕見病目錄》（2018），曾被認為在亞洲族群中極為罕見，發生率約為每 32,000 名新生兒 1 例，相對白人族群為 1/3,300，且嚴重低診——過去十年中國報告的病例數達到之前三十年總數的 2.5 倍，目前推估患者可能超過 20,000 人。超過 78% 的成年囊狀纖維化病患會發展為慢性綠膿桿菌感染。未被滿足的需求描述得很精確：沒有任何已核准療法直接針對並降解生物膜基質、吸入型抗生素無法穿透它、呼吸道清潔能改善症狀但無法清除病原，而 CFTR 調節劑（elexacaftor/tezacaftor/ivacaftor）只對特定基因型有效、價格昂貴，且無法逆轉已形成的肺部結構性損傷。取得途徑依專家建議設計：罕見疾病藥物不需要廣泛鋪貨，區域性的囊狀纖維化診療中心與專家網絡才是有效率的通路，而這些中心的胸腔科醫師就是處方決策者。付費方分析以問卷為基礎——超過 90% 的回覆者偏好公共或集體支付，其中 51.26% 支持罕見疾病基金搭配慈善、40.45% 支持納入國家醫保，而僅約 8% 支持自費——再加上專家指出商業保險對罕見疾病的承保意願有限，使團隊優先鎖定國家醫療保障局與地方罕見疾病基金。他們也指出，中國極少有吸入式活體生物製劑取得臨床使用核准，因此法規與臨床路徑確實不明確；並點出長期的平台延伸方向：其他慢性綠膿桿菌肺部感染，例如 COPD 與支氣管擴張症。產品形式是噴霧乾燥、以基質保護的 EcN 配方，設計目標是抵達深層肺組織。"
   },
   "images": [
     {
       "url": "https://static.igem.wiki/teams/6242/wiki/improve/figure-1.avif",
       "caption": "The modification strategy for the RhlR response system across both improvement cycles: SsrA degradation tags on RhlR, then replacement of wild-type Prhl with the engineered Prhl(LR).",
-      "credit": "Team GCGS, iGEM 2026 wiki"
+      "credit": "Team GCGS, iGEM 2026 wiki",
+      "caption_zh": "RhlR 反應系統在兩輪改良中的修改策略：先在 RhlR 上加 SsrA 降解標籤，再把野生型 Prhl 換成工程化的 Prhl(LR)。"
     },
     {
       "url": "https://static.igem.wiki/teams/6242/wiki/improve/ssra-tag-circuit-replacement.avif",
       "caption": "Genetic circuit designs compared: the existing Registry part BBa_K2315014 against the improved RhlR-SsrA tag construct built in cycle 2b.",
-      "credit": "Team GCGS, iGEM 2026 wiki"
+      "credit": "Team GCGS, iGEM 2026 wiki",
+      "caption_zh": "基因迴路設計對照：既有的 Registry 部件 BBa_K2315014 對比循環 2b 建構的改良版 RhlR-SsrA 標籤構築。"
     },
     {
       "url": "https://static.igem.wiki/teams/6242/wiki/engineering/analytical-performance.avif",
       "caption": "Analytical performance of the Fur-RhlR dual-response circuit: C4-HSL dose-response under low iron fitted as Y = 2.582X + 39.04 (R2 = 0.894), giving a limit of detection of 53.1 nM, with cross-reactivity results.",
-      "credit": "Team GCGS, iGEM 2026 wiki"
+      "credit": "Team GCGS, iGEM 2026 wiki",
+      "caption_zh": "Fur-RhlR 雙重反應迴路的分析效能：低鐵條件下的 C4-HSL 劑量反應擬合為 Y = 2.582X + 39.04（R2 = 0.894），得到 53.1 nM 的偵測極限，並附交叉反應結果。"
     },
     {
       "url": "https://static.igem.wiki/teams/6242/wiki/ihp/survey-figure-8-high-resolution.avif",
       "caption": "Public survey results on synthetic biology awareness and attitudes (398 valid responses): 30% had heard only the term and 27% had never heard of synthetic biology or genetically engineered bacteria, while 50% viewed it as a valuable technology requiring strict ethical review and safety oversight.",
-      "credit": "Team GCGS, iGEM 2026 wiki"
+      "credit": "Team GCGS, iGEM 2026 wiki",
+      "caption_zh": "公眾對合成生物學認知與態度的問卷結果（398 份有效回覆）：30% 只聽過這個名詞、27% 從未聽過合成生物學或基因工程菌，而 50% 認為它是一項有價值的技術，但需要嚴格的倫理審查與安全監管。"
     }
   ],
   "gemsTakeaway": "Copy the engineering logic, and read the gap as a warning. Their transferable asset is a two-cycle DBTL that isolates a real trade-off — SsrA tags cut leakage but, on a weak promoter, degradation outruns synthesis and kill induction too, so you must raise transcriptional capacity rather than keep tuning turnover — plus the discipline of running a growth-curve control so a signal loss cannot be mistaken for toxicity. The warning is that GCGS reached High School Top 10 with essentially no model or software page, and it is the one clear hole in an otherwise strong wiki: a modest, fully documented ODE model of their own AND gate, with parameters and code, would have cost little and closed it.",
@@ -102,5 +113,9 @@
     "https://2026.igem.wiki/gcgs/entrepreneurship/",
     "https://2026.igem.wiki/gcgs/contribution/",
     "https://2026.igem.wiki/gcgs/notebook/"
-  ]
+  ],
+  "projectTitle_zh": "PathoLogic",
+  "tagline_zh": "一株具雙重反應的工程化 E. coli Nissle 1917 益生菌，以可吸入式活體生物製劑形式遞送，用來降解囊狀纖維化肺部中綠膿桿菌（Pseudomonas aeruginosa）的生物膜。",
+  "summary_zh": "PathoLogic 把 E. coli Nissle 1917 工程化為一個活體感測器，只有在同時偵測到囊狀纖維化呼吸道的兩個訊號時才啟動——低鐵（透過 Fur）與來自綠膿桿菌的高濃度 C4-HSL 群體感應分子（透過 RhlR）——兩者接成一個 AND 閘。雙重活化時，Lysis E 使細胞裂解，釋出 alginate lyase，降解以 alginate 為基礎的胞外高分子基質，而該基質正是綠膿桿菌抵禦抗生素與免疫系統的屏障。產品概念是一種噴霧乾燥、以基質保護的可吸入式活體生物製劑，定位為吸入型抗生素的輔助療法，而非取代。它以一段真正具教學價值的兩輪工程故事獲得 Best New Improved Part：在 RhlR 上加 SsrA 降解標籤雖消除了滲漏，卻也連誘導一起消滅，唯有把弱的野生型 Prhl 換成工程化的 Prhl(LR)，才救回一個可用的感測器。乾實驗室是五支高中組 Top 10 隊伍中最薄弱的；其強項在於濕實驗室的特性鑑定紀律，以及一份格外完整的法規與利害關係人分析。",
+  "gemsTakeaway_zh": "學走他們的工程邏輯，同時把那個缺口讀作警訊。他們可被沿用的資產是一段兩輪 DBTL，乾淨地隔離出一個真實的取捨——SsrA 標籤能降低滲漏，但在弱啟動子上，降解速率會跑在合成之前，把誘導一起消滅，因此你必須提升轉錄能力，而不是繼續調整更替速率——再加上做生長曲線對照的紀律，使訊號消失不會被誤認為毒性。警訊則是：GCGS 幾乎沒有模型或軟體頁面就進了高中組 Top 10，而這正是這個整體出色的 wiki 上唯一明顯的破洞：一個規模不大、但完整記載參數與程式碼的自家 AND 閘 ODE 模型，成本很低，就能把洞補上。"
 }

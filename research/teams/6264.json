@@ -6,17 +6,24 @@
   "village": "Space / Foundational Advance (Best Village Project nominee; the village is not named on the wiki, but the project is framed as DNA data storage for long-duration spaceflight)",
   "wiki": "https://2026.igem.wiki/nbjf/",
   "projectTitle": "AI-assisted de novo design of a thermostable TdT for enzymatic DNA synthesis",
+  "projectTitle_zh": "以 AI 輔助 de novo 設計耐熱 TdT，用於酵素式 DNA 合成",
   "tagline": "Redesigning nature's DNA typewriter so information can be written into DNA",
+  "tagline_zh": "重新設計自然界的 DNA 打字機，讓資訊得以寫入 DNA",
   "summary": "NBJF tackled the write step of DNA data storage. Enzymatic DNA synthesis using terminal deoxynucleotidyl transferase (TdT) avoids the toxic chemistry of phosphoramidite synthesis, but wild-type TdT has a melting temperature of roughly 40 C and a catalytic pocket that does not accommodate bulky modified nucleotides. Over seven Design-Build-Test-Learn cycles the team built an AI-assisted de novo protein design pipeline (RFdiffusion backbone generation, ProteinMPNN/LigandMPNN inverse folding, ESMFold and AlphaFold refolding checks, TemStaPro and SaProt thermostability scoring), screened a large candidate library down to a shortlist, expressed 85 designs, and obtained a de novo TdT that retains DNA extension activity at elevated temperature and accepts oxyamino-modified nucleotides. A final cycle used 100 ns molecular dynamics at 300/350/400 K to explain why.",
+  "summary_zh": "NBJF 處理的是 DNA 資料儲存中的「寫入」這一步。以末端去氧核苷酸轉移酶（TdT）進行酵素式 DNA 合成，可避開亞磷醯胺合成的有毒化學，但野生型 TdT 的熔解溫度只有約 40 °C，催化口袋也容納不下體積龐大的修飾核苷酸。經過七個設計—建構—測試—學習（DBTL）循環，該隊建立了一條 AI 輔助的 de novo 蛋白質設計流程（以 RFdiffusion 生成骨架、以 ProteinMPNN/LigandMPNN 做反向折疊、以 ESMFold 與 AlphaFold 重新折疊檢查、以 TemStaPro 與 SaProt 評分熱穩定性），把龐大的候選函式庫篩到一份短名單，表現 85 個設計，並得到一個在較高溫度下仍保有 DNA 延伸活性、且可接受氧胺基修飾核苷酸的 de novo TdT。最後一個循環以 300/350/400 K 下各 100 ns 的分子動力學模擬解釋其原因。",
   "awards": [
     "Best New Basic Part nominee",
     "Best Village Project nominee"
   ],
   "dry": {
     "frameworks": "Structure-based generative protein design plus all-atom molecular dynamics, not kinetic modelling. The design loop is: functionally constrained RFdiffusion backbone generation (motif scaffolding, keeping the DNA-binding region and active site as constraints) -> ProteinMPNN/LigandMPNN inverse folding (LigandMPNN used for sequence design in the DNA-containing structural environment) -> ESMFold for structural recovery -> AlphaFold refinement -> TemStaPro (sequence-based) and SaProt (structure-based) thermostability scoring. Cycle 7 is a full biophysics workflow: AlphaFold 3 protein-DNA-dATP-2Mg2+-Na+ complex model, ORCA quantum-chemical geometry optimisation of dATP, RESP charges via Multiwfn, AmberTools parameterisation, ff19SB protein / OL21 DNA / OPC water / GAFF ligand force fields, energy minimisation, NVT heating, NPT density equilibration with gradual restraint release, then 100 ns production runs per system at 300 K, 350 K and 400 K.",
+    "frameworks_zh": "以結構為基礎的生成式蛋白質設計，加上全原子分子動力學，而非動力學建模。設計迴圈是：帶功能約束的 RFdiffusion 骨架生成（模體支架化，把 DNA 結合區與活性位點保留為約束條件）-> ProteinMPNN/LigandMPNN 反向折疊（在含 DNA 的結構環境中以 LigandMPNN 做序列設計）-> 以 ESMFold 檢查結構回復 -> AlphaFold 精修 -> 以 TemStaPro（序列為基礎）與 SaProt（結構為基礎）評分熱穩定性。第 7 循環則是一整套生物物理流程：以 AlphaFold 3 建出蛋白質-DNA-dATP-2Mg2+-Na+ 的複合體模型，以 ORCA 做 dATP 的量子化學幾何最佳化，透過 Multiwfn 計算 RESP 電荷，以 AmberTools 參數化，採用 ff19SB 蛋白質／OL21 DNA／OPC 水／GAFF 配體力場，先能量最小化、NVT 升溫、NPT 密度平衡並逐步釋放約束，再對每個系統在 300 K、350 K 與 400 K 下各執行 100 ns 的正式模擬。",
     "dataviz": "Quantitative screening plots rather than decoration: RMSD-versus-pLDDT scatter of the whole candidate library showing the trade-off and the small fraction satisfying both criteria, representative predicted-structure overlays showing the failure mode (compact Rossmann-like folds instead of the open catalytic conformation), and MD analysis panels for RMSD, RMSF, DSSP secondary-structure occupancy, hydrogen-bond counts, radius of gyration, SASA, free-energy landscapes and Markov state model populations. The engineering page also carries a reading-guide layout that routes a non-specialist through four entry points.",
+    "dataviz_zh": "是定量的篩選圖而非裝飾：整個候選函式庫的 RMSD 對 pLDDT 散佈圖，顯示兩者的取捨，以及同時滿足兩項標準的小比例；代表性的預測結構疊圖，呈現失效模式（折成緊緻的類 Rossmann 折疊，而不是開放的催化構形）；以及 MD 分析面板，涵蓋 RMSD、RMSF、DSSP 二級結構佔比、氫鍵數、迴轉半徑、SASA、自由能地景與馬可夫狀態模型的族群分布。工程頁面還附有一份閱讀導引版面，為非專業讀者安排四個入口。",
     "datascience": "Library-scale screening with explicit multi-metric criteria instead of a single score: two independent design batches of 100 backbones each, 1,000 inverse-folded sequences per backbone, scored on both RMSD to the design target and pLDDT, yielding 94 candidates meeting both thresholds. Later cycles add cross-model agreement (ESMFold recovery plus two orthogonal thermostability predictors) and a spatial-placeholder strategy to enlarge the catalytic pocket. Experimental side: 85 de novo sequences expressed under one unified B0034/expression framework, 25 giving detectable SDS-PAGE expression - reported as an application dataset rather than a success claim.",
+    "datascience_zh": "以函式庫規模篩選，並採明確的多重指標標準而非單一分數：兩批獨立設計各 100 個骨架，每個骨架 1,000 條反向折疊序列，同時以對設計目標的 RMSD 與 pLDDT 評分，產出 94 個同時通過兩項門檻的候選。後續循環再加上跨模型一致性（ESMFold 的結構回復加上兩個互相獨立的熱穩定性預測器）與一項擴大催化口袋的空間佔位策略。實驗端：85 條 de novo 序列在同一套 B0034／表現架構下表現，其中 25 條在 SDS-PAGE 上可偵測到表現——這是以應用資料集的形式呈現，而不是宣稱成功。",
     "software": "No standalone released application, but the team wrote automated scripts chaining backbone generation, sequence design, structural validation, candidate screening and MD analysis, and publish this as a reproducible, scalable de novo protein design workflow explicitly intended to lower the barrier for future iGEM teams. The Software special-award page was not among the project's own pages.",
+    "software_zh": "沒有獨立釋出的應用程式，但該隊撰寫了自動化腳本，把骨架生成、序列設計、結構驗證、候選篩選與 MD 分析串接起來，並把它作為一條可重現、可擴展的 de novo 蛋白質設計工作流程公開，明確目的是降低未來 iGEM 隊伍的門檻。軟體特別獎頁面並不在該專案自己的頁面之中。",
     "stack": [
       "RFdiffusion (motif scaffolding)",
       "ProteinMPNN and LigandMPNN",
@@ -44,8 +51,11 @@
   },
   "good": {
     "publicEngagement": "A seven-stage education programme that is unusually serious about access rather than reach: synthetic biology classes in schools; accessibility work including sign-language science communication and multilingual courses; creative formats (picture books, board games, art activities); community-specific sessions; digital microlearning; an explicit 'Inclusion and Equal Opportunities in STEM' stage; and international/cross-school scientific exchange. The team also co-built an educational website referenced by ZQT-Nanjing.",
+    "publicEngagement_zh": "一個七階段的教育計畫，對「可及性」而非「觸及人數」認真到不尋常：在學校開設合成生物學課程；無障礙工作包括手語科學傳播與多語課程；創意形式（繪本、桌遊、藝術活動）；針對特定社群的場次；數位微學習；一個明確的「STEM 中的包容與機會平等」階段；以及國際與跨校的科學交流。該隊也共同建置了一個教育網站，並被 ZQT-Nanjing 引用。",
     "ihp": "An ASK -> LISTEN -> REFLECT -> INTEGRATE -> EVALUATE framework applied across four milestones, with the team stating up front that they did not want Human Practices to be a photo album. The decisive conversation was with Li Yang, an information-storage professional at Huawei, who pointed out that storage density alone decides nothing and that write/read/reliability/maintenance costs govern adoption - after which the team explicitly abandoned 'build a DNA storage device' and narrowed to the enzymatic-writing bottleneck. Han Minghao (synthetic biology / DNA engineering) then identified TdT thermostability, substrate compatibility and reaction controllability as the specific handles. Later stages cover intellectual property (two lawyers, Zhang and Wu, on who owns an AI-designed protein and on open science versus commercialisation), sustainability (Mr Liao on agricultural production, leading to a stated sustainability position on whether enzymatic synthesis is genuinely greener), and a Responsible AI section. Eight stakeholder categories were mapped.",
+    "ihp_zh": "一套 ASK -> LISTEN -> REFLECT -> INTEGRATE -> EVALUATE 的架構，套用於四個里程碑，而該隊開頭就說明他們不想讓 Human Practices 變成一本相簿。關鍵的一場對話來自華為的資訊儲存專業人士李揚，他指出單靠儲存密度決定不了任何事，真正左右採用與否的是寫入、讀取、可靠性與維護成本——此後該隊明確放棄「做一台 DNA 儲存裝置」，收斂到酵素式寫入這個瓶頸。接著韓明昊（合成生物學／DNA 工程）指出 TdT 的熱穩定性、底物相容性與反應可控性是具體的著力點。後續階段涵蓋智慧財產權（兩位律師張、吳討論 AI 設計出的蛋白質歸誰所有，以及開放科學與商業化之間的張力）、永續性（廖先生談農業生產，並促成一段關於酵素式合成是否真的更環保的明確立場），以及一個負責任 AI 的章節。共盤點八類利害關係人。",
     "realWorld": "The project is positioned as a tool-enzyme improvement inside a named industrial bottleneck rather than a finished product, which is the right call and was itself a Human Practices outcome. Deliverables for reuse: six new coding parts (BBa_263ET0E5 De novo TdT as the primary characterised part, plus five sequence-diverse variants BBa_26DIWVPI, BBa_266N6QG1, BBa_26BMB5EM, BBa_26NOOCP1, BBa_26YHUEKK), new application data added to the existing RBS BBa_B0034 documenting its behaviour across a library of 85 artificially designed coding sequences, and the automated de novo design workflow itself. The IP strand is unusually mature for a high-school team: they asked practising lawyers who owns an AI-generated sequence before assuming they could license it.",
+    "realWorld_zh": "該專案定位為在一個被指名的產業瓶頸之中改良工具酵素，而不是一個成品，這個判斷是對的，而且本身就是 Human Practices 的成果。可重複使用的交付成果：六個新的編碼元件（BBa_263ET0E5 De novo TdT 為主要經特性化的元件，另有五個序列多樣的變體 BBa_26DIWVPI、BBa_266N6QG1、BBa_26BMB5EM、BBa_26NOOCP1、BBa_26YHUEKK）；為既有的 RBS BBa_B0034 新增應用資料，記錄它在 85 條人工設計編碼序列函式庫中的行為；以及那套自動化的 de novo 設計工作流程本身。智慧財產權這條線對一支高中隊伍而言成熟得不尋常：他們在假設自己可以授權之前，先去問了執業律師 AI 生成的序列歸誰所有。",
     "partners": [
       "Li Yang, Huawei (information storage)",
       "Han Minghao (synthetic biology and DNA engineering)",
@@ -60,25 +70,30 @@
     {
       "url": "https://static.igem.wiki/teams/6264/wiki/engineering/img1.avif",
       "caption": "The seven Design-Build-Test-Learn cycles, from the first unconstrained de novo design through structural reanalysis of wild-type TdT, pocket enlargement, expression screening and the closing molecular-dynamics cycle.",
+      "caption_zh": "七個設計—建構—測試—學習循環，從最初無約束的 de novo 設計，經過野生型 TdT 的結構再分析、口袋擴大、表現篩選，到收尾的分子動力學循環。",
       "credit": "Team NBJF, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6264/wiki/description/img4.avif",
       "caption": "'Meet our DNA typewriter': terminal deoxynucleotidyl transferase, the template-independent polymerase the project redesigns for controlled, letter-by-letter DNA writing.",
+      "caption_zh": "「來見見我們的 DNA 打字機」：末端去氧核苷酸轉移酶，這個不依賴模板的聚合酶正是本專案為了可控、逐字寫入 DNA 而重新設計的對象。",
       "credit": "Team NBJF, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6264/wiki/contribution/img2.avif",
       "caption": "The reproducible de novo protein design workflow the team released for future iGEM teams, chaining RFdiffusion, ProteinMPNN, LigandMPNN, ESMFold, TemStaPro and SaProt with automation scripts.",
+      "caption_zh": "該隊為未來 iGEM 隊伍釋出的可重現 de novo 蛋白質設計工作流程，以自動化腳本串接 RFdiffusion、ProteinMPNN、LigandMPNN、ESMFold、TemStaPro 與 SaProt。",
       "credit": "Team NBJF, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6264/wiki/education/img16.avif",
       "caption": "Education Stage VI, inclusion and equal opportunities in STEM, part of a seven-stage programme that also included sign-language science communication and multilingual courses.",
+      "caption_zh": "教育計畫第六階段，STEM 中的包容與機會平等，屬於一個同時包含手語科學傳播與多語課程的七階段計畫。",
       "credit": "Team NBJF, iGEM 2026 wiki"
     }
   ],
   "gemsTakeaway": "This is the ceiling, not the benchmark: the generative-design half (RFdiffusion, ProteinMPNN, ESMFold, AlphaFold, TemStaPro) is genuinely reachable by a strong high-school team in one season because the tools are free, documented and runnable on Colab-class GPUs, but Cycle 7 - ORCA quantum chemistry, RESP charge fitting, four-force-field Amber parameterisation and 100 ns MD at three temperatures with Markov state analysis - is not something students assemble unaided. The limiting factors there are mentorship and compute in that order; a Taiwanese programme could reproduce NBJF's screening pipeline with a laptop and a cloud GPU, but would need a university collaborator to attempt the MD.",
+  "gemsTakeaway_zh": "這是天花板，不是基準線：生成設計那一半（RFdiffusion、ProteinMPNN、ESMFold、AlphaFold、TemStaPro）一支強的高中隊伍確實有可能在一季內做到，因為這些工具免費、文件完整，且能在 Colab 等級的 GPU 上執行；但第 7 循環——ORCA 量子化學、RESP 電荷擬合、四套力場的 Amber 參數化，以及三個溫度下各 100 ns 的 MD 加上馬可夫狀態分析——不是學生能獨力組起來的。那一段的限制因素依序是指導與運算資源；台灣的計畫用一台筆電加上雲端 GPU 就能重現 NBJF 的篩選流程，但要嘗試 MD 則需要大學端的合作者。",
   "sources": [
     "https://2026.igem.wiki/nbjf/",
     "https://2026.igem.wiki/nbjf/description",

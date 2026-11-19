@@ -488,7 +488,7 @@
     if (FULL.state === "loading") return;
     FULL.state = "loading";
     var s = document.createElement("script");
-    s.src = "data/teams-full.js";
+    s.src = "data/teams-full.js" + (window.BUILD ? "?v=" + window.BUILD : "");
     s.onload = function () {
       var f = window.TEAMS_FULL || {};
       TEAMS = TEAMS.map(function (t) { return f[t.id] ? f[t.id] : t; });

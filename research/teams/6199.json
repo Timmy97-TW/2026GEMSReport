@@ -6,21 +6,46 @@
   "village": "",
   "wiki": "https://2026.igem.wiki/suis-sfls/",
   "projectTitle": "TyroFix",
+  "projectTitle_zh": "TyroFix",
   "tagline": "Recyclable magnetic-bead tyrosinase that cheaply DOPA-modifies recombinant mussel adhesive protein, sold as a B2B raw material",
+  "tagline_zh": "可回收再用的磁珠固定化酪胺酸酶，以低成本對重組貽貝黏附蛋白進行 DOPA 修飾，並以 B2B 原料的形式販售",
   "summary": "SUIS-SFLS expressed three microbial tyrosinases, immobilised them on magnetic beads so the enzyme can be magnetically recovered and reused, and used the recycled catalyst to hydroxylate Mfp3-linker-Mfp6 fusion mussel foot proteins into DOPA-bearing wet adhesives for skin and wound repair. The commercial thesis is unusually self-aware: after expert interviews they abandoned the idea of selling a finished dressing and repositioned as an upstream B2B raw-material supplier, splitting the same protein stock into TyroFix Mini (cosmetic grade) and TyroFix ProMax (Class II medical grade) and running both regulatory tracks in parallel from day one so that test data never has to be repeated. They are the only high-school team here with a genuine financial model, including capex, cost per litre, pricing, gross margin and breakeven year for each line, published as downloadable PDFs. They were nominated for Best Entrepreneurship in the High School section.",
-  "awards": ["Best Entrepreneurship nominee, High School"],
+  "summary_zh": "SUIS-SFLS 表現了三種微生物來源的酪胺酸酶，把它們固定化在磁珠上使酶能以磁性回收並重複使用，再以回收的催化劑把 Mfp3-linker-Mfp6 融合的貽貝足蛋白羥化成帶 DOPA 的濕態黏合劑，用於皮膚與傷口修復。商業論述的自我認識異常清楚：在專家訪談之後，團隊放棄了販售成品敷料的想法，改定位為上游的 B2B 原料供應商，把同一批蛋白質原料拆成 TyroFix Mini（化妝品級）與 TyroFix ProMax（第二類醫療器材級），並從第一天就讓兩條法規途徑平行推進，使檢測資料永遠不必重做。他們是本批中唯一具備真正財務模型的高中團隊，模型包含各產品線的資本支出、每公升成本、定價、毛利率與損益兩平年度，並以可下載的 PDF 公開。團隊入圍高中組的 Best Entrepreneurship。",
+  "awards": [
+    "Best Entrepreneurship nominee, High School"
+  ],
   "dry": {
     "frameworks": "Golden-circle style Why/How/What mission, PESTLE run separately for each product line, SWOT per line, 4P marketing model, Business Model Canvas, a stakeholder power-interest map, TAM-SAM-SOM per line with stated assumptions, a five-phase 36-month milestone plan, and a two-line financial model with breakeven analysis.",
+    "frameworks_zh": "黃金圈式的 Why/How/What 使命陳述、針對兩條產品線分別執行的 PESTLE、各產品線的 SWOT、4P 行銷模型、商業模式圖、一張利害關係人權力-利益圖、各產品線皆附明確假設的 TAM-SAM-SOM、一份五階段 36 個月的里程碑計畫，以及一套含損益兩平分析的雙產品線財務模型。",
     "dataviz": "Thirteen entrepreneurship figures including two separate PESTLE diagrams, competitive positioning, purity and performance indicator panels, a technology roadmap, a business model canvas, a milestone chart and two financial-planning charts. Two downloadable PDFs (financial-planning-mini.pdf, financial-planning-promax.pdf) carry the underlying budgets. Survey results are reported with response percentages and mean Likert scores.",
+    "dataviz_zh": "十三張創業相關圖表，包括兩張分開繪製的 PESTLE 圖、競爭定位圖、純度與效能指標面板、一張技術路線圖、一張商業模式圖、一張里程碑圖，以及兩張財務規劃圖。兩份可下載的 PDF（financial-planning-mini.pdf、financial-planning-promax.pdf）載有底層預算。問卷結果以回應百分比與李克特量表平均分數呈現。",
     "datascience": "A 290-response consumer survey quantified to a usable level: over 90 percent reporting skin issues, acne and marks at 62.76 percent, dryness at 48.62 percent, sensitivity at 45.17 percent, satisfaction with existing repair products at 3.34 out of 5, weak efficacy as the main complaint at 72.61 percent, safety at 82.07 percent and repair efficacy at 75.86 percent as the top purchase factors, willingness to try at 3.57 out of 5, and over 60 percent accepting CNY 100-150 with CNY 110-120 as the sweet spot. Cost modelling is benchmarked against recombinant human insulin industrial fermentation.",
+    "datascience_zh": "一份 290 份回應的消費者問卷被量化到可用的程度：超過 90% 表示有皮膚問題，痘痘與痘印佔 62.76%、乾燥佔 48.62%、敏感佔 45.17%；對現有修復類產品的滿意度為 5 分中的 3.34 分，最主要的抱怨是效果不明顯（72.61%）；購買決策的首要因素為安全性（82.07%）與修復效果（75.86%）；願意嘗試的程度為 5 分中的 3.57 分；超過 60% 可接受 100 至 150 CNY 的價位，而 110 至 120 CNY 是最佳價格帶。成本估算以重組人類胰島素的工業發酵作為對標基準。",
     "software": "",
-    "stack": ["magnetic-bead immobilised tyrosinase", "E. coli expression", "Mfp3-linker-Mfp6 fusion constructs", "chromatography and TFF ultrafiltration", "HPLC purity assay", "NIH/3T3 cytotoxicity assay"],
-    "techniques": ["enzyme immobilisation and magnetic recovery", "controlled DOPA hydroxylation", "three DBTL cycles on fermentation and purification", "wet adhesion measurement in kPa", "endotoxin quantification", "lyophilisation and reconstitution feasibility"]
+    "stack": [
+      "magnetic-bead immobilised tyrosinase",
+      "E. coli expression",
+      "Mfp3-linker-Mfp6 fusion constructs",
+      "chromatography and TFF ultrafiltration",
+      "HPLC purity assay",
+      "NIH/3T3 cytotoxicity assay"
+    ],
+    "techniques": [
+      "enzyme immobilisation and magnetic recovery",
+      "controlled DOPA hydroxylation",
+      "three DBTL cycles on fermentation and purification",
+      "wet adhesion measurement in kPa",
+      "endotoxin quantification",
+      "lyophilisation and reconstitution feasibility"
+    ]
   },
   "good": {
     "publicEngagement": "A 290-response online questionnaire that went beyond sentiment into purchase behaviour, capturing preferred formats, trusted information sources (dermatologists, real user reviews, official brand channels), trial triggers (free samples at 30.69 percent, professional recommendation at 30 percent) and an explicit price band. They also read the result honestly, noting that trust comes from experimental and clinical data (76.21 percent) and transparent mechanism (63.79 percent), and then used those channels to plan promotion rather than inventing a campaign.",
+    "publicEngagement_zh": "一份 290 份回應的線上問卷，內容不只停在態度層面，而是進入購買行為，蒐集了偏好的產品形式、受信任的資訊來源（皮膚科醫師、真實使用者評價、品牌官方管道）、試用誘因（免費試用品 30.69%、專業推薦 30%），以及一個明確的價格帶。團隊也誠實解讀結果，指出信任來自實驗與臨床資料（76.21%）以及機制透明（63.79%），然後就用這些管道來規劃推廣，而不是另外發明一套行銷活動。",
     "ihp": "Five named expert interviews, each with the background stated, the question asked, the feedback, the team's reflection and the concrete project adjustment. Dr. Dongfeng Wang (Deputy Chief Physician, Wuhan Petrochemical Hospital) converted vague 'good adhesion' into care-process requirements and gave quantitative design targets: film formation in about 5 seconds, breathability with water resistance, partial degradation in 3-5 days, and validation moving from superficial to deeper wounds. Mr. Yanxuan Song (medical device engineer and founder of a Guangzhou tech-beauty chain) widened their notion of cost to include purification, storage, transport and handling losses, and suggested lyophilised powder with a reconstitution solution to cut cold-chain burden. Mr. Jiujiang Zhang of CIRS Group, a Class II and III device regulatory specialist, established the rule that shared raw-material origin does not permit shared submission pathways. Mr. Xiaofei Ji, an ISO 13485 internal auditor and NPDP holder who has taken more than ten Class III products to approval, delivered the decisive advice: a student team should start at raw-material supply, treat reproducibility and batch records as early concerns, and settle IP before approaching any manufacturer. That advice visibly rewrote the deliverable, from a finished dressing to a characterised protein plus quality documentation.",
+    "ihp_zh": "五場具名的專家訪談，每一場都記錄了對方背景、所問的問題、回饋內容、團隊的反思，以及具體的專案調整。Dr. Dongfeng Wang（Wuhan Petrochemical Hospital 副主任醫師）把模糊的「黏得好」轉換成照護流程上的要求，並給出量化的設計目標：約 5 秒成膜、兼具透氣與防水、3 至 5 天部分降解，以及驗證順序由淺層傷口推進到較深的傷口。Mr. Yanxuan Song（醫療器材工程師，廣州一家科技美容連鎖的創辦人）把團隊對成本的理解擴大到純化、儲存、運輸與操作損耗，並建議改用凍乾粉末搭配復溶液以降低冷鏈負擔。CIRS Group 的 Mr. Jiujiang Zhang，第二類與第三類器材法規專家，確立了一條原則：原料來源相同並不代表可以共用申報途徑。Mr. Xiaofei Ji，ISO 13485 內部稽核員與 NPDP 持證者，曾把十件以上第三類產品送到取證，他給出的建議最具決定性：學生團隊應該從原料供應切入，把再現性與批次紀錄當成早期就要處理的課題，並在接觸任何製造商之前先把智財談定。這項建議明顯重寫了交付項目，從成品敷料改為一份完成特性鑑定的蛋白質加上品質文件。",
     "realWorld": "The most financially literate high-school entrepreneurship case in this set, and the honesty is what makes it credible. Each line has a built-up cost model rather than a percentage: Mini needs about CNY 6.8 million of equipment (seed shakers, a 200 L fermenter, high-pressure homogeniser, chromatography system, industrial centrifuge, TFF ultrafiltration) depreciated straight-line over six years, about CNY 2.3 million of R&D, and about CNY 71 per litre to produce against a $12-18 per litre price, giving roughly 34 percent gross margin and cumulative profitability in year 3 to 4. ProMax adds an aseptic filling line, sterile filtration and a lyophiliser for about CNY 11.65 million, carries about CNY 8.15 million of R&D split CNY 5.1 million expensed and CNY 3.05 million capitalised, costs about CNY 163.5 per litre against a $22-32 price, and yields only about 15.9 percent gross margin with breakeven in year 5 to 6. Volume ramps are stated (Mini 1,000 then 5,000 then 15,000 then 30,000 litres; ProMax 200 then 1,000 then 3,000 then 8,000), and the whole budget is downloadable as two PDFs. The regulatory path is the most detailed of any team in this group and is clearly researched rather than guessed: ordinary non-special-use cosmetic filing with NMPA plus a CMA-certified safety assessment for a new cosmetic ingredient and a three-year post-market monitoring period, versus provincial Class II contact-wound-dressing registration requiring ISO 13485, 100,000-class cleanrooms, GB/T 16886 biocompatibility and a clinical evaluation route, with the deliberate choice of the equivalent-product comparison pathway to avoid human trials. They identify the specific trap that cosmetic test reports cannot be reused for device registration and design around it by running both safety programmes in parallel, and cite Giant Biogene and Fu Erjia as real companies that use the shared-campus, separated-workshop model they intend to copy. Market sizing is more careful than usual, with Frost and Sullivan figures for both markets, stated percentage assumptions for SAM, and a SOM expressed as a penetration range tied to winning 10-15 recurring B2B accounts or 2-3 licensed device partners. Now the blunt part. There is no registered entity, no funding, no incubator place, no signed letter of intent and no patent filed, only a stated plan to file three categories of patents before any external collaboration. More seriously, the competitive-efficacy section blurs sources: head-to-head performance claims against Komfymed's recombinant collagen dressing, and a 65-patient trial where MAP hydrogel healed wounds in 5.7 days versus 7.3 for rhEGF, read as literature values for mussel adhesive protein generally rather than data the team generated, yet are written as 'our advantage'. A reader should treat those numbers as borrowed benchmarks. Their own SWOT is candid about this, listing an absent intended use, no confirmed device classification, no design controls, no risk-management file, no biocompatibility package and no clinical evidence strategy. Continuation is a licensing-and-supply intent built on a correct strategic insight (cash from the fast cosmetic line funds the slow medical line), but the entity that would execute it does not yet exist.",
+    "realWorld_zh": "這是本批中財務素養最高的高中創業案，而讓它可信的正是那份誠實。每條產品線都有自下而上建起的成本模型，而不是一個百分比：Mini 需約 680 萬 CNY 的設備（種子搖瓶培養、一座 200 L 發酵槽、高壓均質機、層析系統、工業離心機、TFF 超過濾），以六年直線法攤提折舊，研發約 230 萬 CNY，生產成本約每公升 71 CNY，對應每公升 12 至 18 美元的售價，毛利率約 34%，在第 3 至 4 年累積轉為獲利。ProMax 另加無菌充填線、除菌過濾與凍乾機約 1,165 萬 CNY，研發約 815 萬 CNY，其中 510 萬 CNY 費用化、305 萬 CNY 資本化，成本約每公升 163.5 CNY，對應 22 至 32 美元的售價，毛利率僅約 15.9%，損益兩平落在第 5 至 6 年。產量爬升也明確列出（Mini 為 1,000、5,000、15,000 然後 30,000 公升；ProMax 為 200、1,000、3,000 然後 8,000），整份預算並以兩份 PDF 提供下載。法規路徑是這組團隊中最詳細的一份，而且明顯是查過而不是猜的：一邊是向 NMPA 進行普通（非特殊用途）化妝品備案，加上化妝品新原料所需的 CMA 認證安全評估與三年上市後監測期；另一邊是省級第二類接觸傷口敷料註冊，需要 ISO 13485、十萬級無塵室、GB/T 16886 生物相容性與一條臨床評價路徑，而團隊刻意選擇同類產品比對路徑以避開人體試驗。他們指認出一個具體的陷阱，即化妝品的檢測報告無法沿用於器材註冊，並以同步推進兩套安全性計畫的方式來設計繞過它；他們也引用 Giant Biogene 與 Fu Erjia 作為實際採用共用廠區、分隔車間模式的公司，而那正是他們打算效法的做法。市場規模估算也比一般團隊謹慎，兩個市場都引用 Frost and Sullivan 的數字，SAM 有明確的百分比假設，SOM 則表示為一個滲透率區間，並綁定在拿下 10 至 15 個經常性 B2B 客戶或 2 至 3 個取得許可的器材合作夥伴之上。現在談直白的部分。公司實體不存在、沒有資金、沒有育成中心席位、沒有簽署的意向書，也還沒有提出任何專利，只有一項「在任何對外合作之前先提出三類專利」的計畫。更嚴重的是，競爭效能那一節把來源混在一起：與 Komfymed 的重組膠原蛋白敷料做正面對比的效能宣稱，以及一項 65 位病患的試驗中 MAP 水凝膠在 5.7 天癒合傷口、而 rhEGF 為 7.3 天的數據，讀起來像是貽貝黏附蛋白這類材料的一般文獻值，而不是團隊自己做出來的資料，卻被寫成「我們的優勢」。讀者應把那些數字當成借來的標竿值看待。他們自己的 SWOT 對此相當坦白，列出尚無確定的預期用途、尚未確認的器材分類、沒有設計管制、沒有風險管理檔案、沒有生物相容性資料包，也沒有臨床證據策略。後續規劃是一份授權與供貨的意向，建立在一個正確的策略洞察之上（由快速變現的化妝品線提供現金，支撐較慢的醫療線），但要執行它的那個實體目前還不存在。",
     "partners": [
       "Dr. Dongfeng Wang, Deputy Chief Physician, Wuhan Petrochemical Hospital (clinical wound care)",
       "Mr. Yanxuan Song, medical device engineer and founder of Guangzhou Baiyoubai Tech-Beauty Chain (clinic operations and procurement)",
@@ -34,25 +59,30 @@
     {
       "url": "https://static.igem.wiki/teams/6199/wiki/entrepreneurship/figure-11.avif",
       "caption": "Financial planning for TyroFix Mini: capex, R&D spend, CNY 71 per litre production cost and the volume ramp to 30,000 litres by year five",
+      "caption_zh": "TyroFix Mini 的財務規劃：資本支出、研發支出、每公升 71 CNY 的生產成本，以及到第五年爬升至 30,000 公升的產量",
       "credit": "Team SUIS-SFLS, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6199/wiki/entrepreneurship/figure-12.avif",
       "caption": "Financial planning for TyroFix ProMax, the Class II medical line, showing the lower 15.9 percent gross margin and later breakeven",
+      "caption_zh": "TyroFix ProMax（第二類醫療器材線）的財務規劃，顯示較低的 15.9% 毛利率與較晚的損益兩平",
       "credit": "Team SUIS-SFLS, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6199/wiki/entrepreneurship/figure-9.avif",
       "caption": "Business model canvas for the two-line B2B raw-material supply model",
+      "caption_zh": "雙產品線 B2B 原料供應模式的商業模式圖",
       "credit": "Team SUIS-SFLS, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6199/wiki/entrepreneurship/figure-10.avif",
       "caption": "Thirty-six-month milestone plan across five phases, from DBTL cycles to first B2B supply agreements",
+      "caption_zh": "橫跨五個階段的 36 個月里程碑計畫，從 DBTL 循環到第一批 B2B 供貨協議",
       "credit": "Team SUIS-SFLS, iGEM 2026 wiki"
     }
   ],
   "gemsTakeaway": "Adopt their repositioning discipline: ask industry experts where a student-scale team actually belongs in the value chain, and be willing to drop the finished product for an upstream raw material plus characterisation and quality documentation, which is a deliverable a small lab can genuinely own. Then publish the budget as a downloadable model with capex, cost per unit, price, gross margin and breakeven year, so the plan can be criticised on its arithmetic rather than its adjectives.",
+  "gemsTakeaway_zh": "採用他們重新定位的紀律：去問業界專家，一支學生規模的團隊究竟該站在價值鏈的哪一段，並願意放掉成品、改做上游原料加上特性鑑定與品質文件，因為那才是一個小實驗室真正扛得起來的交付項目。接著把預算做成可下載的模型公開，含資本支出、單位成本、價格、毛利率與損益兩平年度，讓整個計畫可以被人用算術來批評，而不是用形容詞。",
   "sources": [
     "https://2026.igem.wiki/suis-sfls/",
     "https://2026.igem.wiki/suis-sfls/entrepreneurship/",

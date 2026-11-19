@@ -6,8 +6,11 @@
   "village": "Foundational Advance",
   "wiki": "https://2026.igem.wiki/eth-zurich/",
   "projectTitle": "preCISe",
+  "projectTitle_zh": "preCISe",
   "tagline": "A modular tool for precise intracellular delivery using contractile injection systems",
+  "tagline_zh": "一套以收縮式注射系統實現精準胞內遞送的模組化工具",
   "summary": "About 79% of the human proteome is intracellular and largely undruggable, and no approved protein therapeutic delivers an exchangeable protein cargo into the cytosol. preCISe engineers Photorhabdus virulence cassettes (PVCs), bacterial extracellular contractile injection systems that act as molecular syringes, into a retargetable delivery platform: a SpyTag/SpyCatcher-attached binder arm swaps the target without re-engineering the cage, demonstrated against CD20 on engineered mammalian cells with a piggyBac Cre-loxP reporter line (preCISion) that turns on GFP only when Cre reaches the cytosol. To raise specificity they added dual targeting, splitting the cargo across two PVCs against two receptors. It won Best Software and Best Foundational Advance because the platform ships as reusable infrastructure: 29 tested protocols, a part collection for evaluating intracellular delivery, and two open-source tools, deCISion and OpenSplitProtein.",
+  "summary_zh": "人類蛋白質體約有 79% 位於細胞內、且大多無法成藥，而目前沒有任何已核准的蛋白質藥物能把可替換的蛋白質酬載送進細胞質。preCISe 把 Photorhabdus virulence cassette（PVC）——一種細菌的胞外收縮式注射系統、功能上就像分子注射器——改造成一個可更換標的的遞送平台：一個以 SpyTag/SpyCatcher 接上的結合子臂可以替換標的，而不必重新改造整個外殼；他們以工程化哺乳類細胞上的 CD20 示範，並建立了一株以 piggyBac Cre-loxP 為基礎的報告細胞株（preCISion），只有在 Cre 真的抵達細胞質時才會打開 GFP。為提升專一性，他們加入了雙標的設計，把酬載拆分到兩個針對不同受體的 PVC 上。此專題拿下最佳軟體與最佳基礎進展獎，因為這個平台是以可重複使用的基礎設施形式交付：29 份經測試的實驗規程、一組用於評估胞內遞送的元件集合，以及兩套開源工具 deCISion 與 OpenSplitProtein。",
   "awards": [
     "Overgrad Top 10",
     "Best Software winner (Overgrad)",
@@ -17,41 +20,98 @@
   ],
   "dry": {
     "frameworks": "Both tools are deliberately model-free, which is the team's central dry-lab argument. OpenSplitProtein ranks every peptide bond in a .pdb or .cif structure on two separate questions rather than one blended score: split tolerance (packing density weighted by inverse squared distance, distance from the buried core, solvent exposure summed over the flanking pair) and fragment reassembly (cross-cut contacts within 8 A, size-normalised interface, interface-to-cohesion ratio). No network was trained and no coefficient was fitted into the ranking; the only constants are the direction of each measurement, two size exponents from the domain-parsing literature and the 8 A contact cutoff. Crucially they defined a structure-free baseline (the length of the shorter fragment, plus relative position i/n) and showed that cross-cut contacts flip sign once it is held fixed, from +0.174 to -0.108, meaning the naive positive correlation was an artefact of chain geometry. Validation used Tsuboyama et al. (2023) cDNA display proteolysis insertion-stability labels at 13,622 backbone positions across 293 domains in 129 sequence families for split tolerance, and 223 split-intein sites from the Int-In dataset (126 with graded efficiency) for reassembly, with feature selection frozen before the test sites were seen and no sequence family shared at 40% identity nor fold at TM-score 0.3. deCISion is a database-integration pipeline rather than a predictor, chaining the Cell Surface Protein Atlas, Human Protein Atlas, SAbDab, Cellosaurus, UniProt, RCSB PDB, NCBI, the iGEM Registry and the Kazusa codon table.",
+    "frameworks_zh": "兩套工具都刻意不依賴模型，這是團隊乾實驗的核心論點。OpenSplitProtein 會為一個 .pdb 或 .cif 結構中的每一個胜肽鍵評分，但分成兩個獨立的問題、而不是混成單一分數：切點容忍度（以距離平方倒數加權的堆積密度、與埋藏核心的距離、兩側殘基對的溶劑暴露總和）與片段重組能力（8 Å 內的跨切點接觸數、依大小標準化的介面、介面與內聚的比值）。排序中沒有訓練任何網路、也沒有擬合任何係數；唯一的常數是每項量測的方向、兩個取自區域切分文獻的大小指數，以及 8 Å 的接觸截斷值。關鍵在於他們定義了一條不依賴結構的基準線（較短片段的長度，加上相對位置 i/n），並顯示一旦固定這條基準線，跨切點接觸數的相關性就會翻轉符號，從 +0.174 變成 -0.108，意即原本那個看似正向的相關其實是鏈幾何造成的假象。驗證方面，切點容忍度使用 Tsuboyama 等人（2023）的 cDNA display 蛋白酶解插入穩定性標註，涵蓋 129 個序列家族、293 個結構域中的 13,622 個骨幹位點；重組能力則使用 Int-In 資料集中的 223 個分裂內含肽位點（其中 126 個有分級效率數據）；特徵選擇在看到測試位點之前即已凍結，兩組之間在 40% 相同度下不共用序列家族、在 TM-score 0.3 下不共用折疊。deCISion 則是一條資料庫整合流程、而不是預測器，串接 Cell Surface Protein Atlas、Human Protein Atlas、SAbDab、Cellosaurus、UniProt、RCSB PDB、NCBI、iGEM Registry 與 Kazusa 密碼子使用表。",
     "dataviz": "The benchmark is reported as a percentile table against three comparators of different kinds, and the team says so explicitly: SplitSeek-Pro (a true competitor), the 2019 iGEM Protein-split Model, and ThermoMPNN-I (not split software at all, but the only released model predicting the insertion label directly, included as the hardest baseline). On 21 published split sites across superfolder GFP, Cre recombinase, horseradish peroxidase, firefly luciferase, Cas9 and NanoLuc, OpenSplitProtein puts the working site at a median 21st percentile with 13 of 21 in the top quarter, against a random expectation of 50; a 22nd site (Cas9 713/714) is excluded and the reason given. Both tools run in the browser (OpenSplitProtein needs only the HTML file opened; structures never leave the user's machine) with a 3D viewer showing the cut and both halves, and the wiki itself is a searchable static site with term callouts, a 'cut anatomy' diagram and an interactive outreach map rendered with d3-geo and topojson over OpenStreetMap and Natural Earth data. Published figures carry explicit tables for how to read a correlation column.",
+    "dataviz_zh": "基準測試以百分位表格對照三個性質各異的比較對象呈現，團隊也明確說明理由：SplitSeek-Pro（真正的競爭對手）、2019 年 iGEM 的 Protein-split Model，以及 ThermoMPNN-I（它根本不是切點軟體，但是唯一已釋出、能直接預測該插入穩定性標註的模型，作為最嚴苛的基準納入）。在 superfolder GFP、Cre recombinase、辣根過氧化酶、螢火蟲螢光素酶、Cas9 與 NanoLuc 上共 21 個已發表的切點中，OpenSplitProtein 把可用切點排在中位數第 21 百分位，21 個中有 13 個落在前四分之一，而隨機期望值為 50；另有第 22 個位點（Cas9 713/714）被排除，理由也有說明。兩套工具都能在瀏覽器中執行（OpenSplitProtein 只需開啟 HTML 檔，結構資料從不離開使用者電腦），並附 3D 檢視器顯示切點與兩個半邊；wiki 本身是一個可搜尋的靜態網站，有術語提示框、一張「切點解剖」示意圖，以及一張以 d3-geo 與 topojson 疊在 OpenStreetMap 與 Natural Earth 資料上繪製的互動科普地圖。發表的圖表都附上明確的表格，說明相關性那一欄該怎麼讀。",
     "datascience": "The project's data-science contribution is the separation of proxy label from real task. Insertion stability measures the cost of perturbing an intact chain, never the cost of releasing two fragments, and the wiki states that difference rather than eliding it; the split-intein set is then used as the only label that directly tests reassembly. Scores are converted to within-structure ranks (0-1, displayed 0-100) so results are comparable across proteins of different size, and selection and testing datasets are separated with structural alignment checks. deCISion turns a public mass-spectrometry atlas into an actionable ranking: it reports each surface receptor's measurement strength on the chosen cell type and how many of the 47 CSPA cell types it was detected on as a specificity proxy, counter-checks normal tissue, cell-type, blood and tumour expression from the Human Protein Atlas, and lists only nanobodies and scFvs from solved structures with measured Kd where one exists (and states that only 1,019 of 14,860 SAbDab binders, 6.9%, have one). Limitations are enumerated rather than hidden: 47 cell types only, selectivity across cultured lines is not tissue specificity, and 'not detected' is not absence because Cell Surface Capture only sees N-glycosylated protein.",
+    "datascience_zh": "此專題在資料科學上的貢獻，是把替代標註與真正的任務區分開來。插入穩定性量的是擾動一條完整鏈的代價，從來不是釋放兩個片段的代價，wiki 把這個差別明說出來、而不是含混帶過；分裂內含肽資料集隨後被當成唯一能直接檢驗重組能力的標註使用。分數會換算成同一結構內的排名（0-1，顯示為 0-100），使不同大小的蛋白質之間可以比較，而選擇集與測試集之間也以結構比對檢查加以隔離。deCISion 把一個公開的質譜圖譜轉成可行動的排序：它回報每個表面受體在所選細胞型別上的量測強度，以及它在 47 種 CSPA 細胞型別中被檢出過幾種（作為專一性的替代指標），再以 Human Protein Atlas 交叉檢核正常組織、細胞型別、血液與腫瘤的表現量，並只列出有解出結構的奈米抗體與 scFv、在有數據時附上實測 Kd（並說明 SAbDab 的 14,860 個結合子中只有 1,019 個、即 6.9% 有 Kd 數據）。限制是列舉出來、而不是藏起來：只有 47 種細胞型別、培養細胞株之間的選擇性不等於組織專一性，而「未檢出」不等於不存在，因為 Cell Surface Capture 只看得到帶 N-糖基化的蛋白質。",
     "software": "Two released tools. OpenSplitProtein (gitlab.igem.org/2026/software/eth-zurich/opensplitprotein) ranks split sites from a structure file, installation-free in the browser. deCISion (gitlab.igem.org/2026/software/eth-zurich/decision) turns a cell type into a PVC construct in five steps: pick one of 47 CSPA human cell types by name, disease or tissue; choose a receptor; choose a nanobody or scFv binder (whole antibodies are rejected as too large for a PVC); accept the published XTEN linker or paste your own (pointing users to iGEM Calgary 2023's LINKED database); assemble binder-linker-SpyCatcher and export protein and DNA sequences as FASTA plus GenBank and SBOL3, with the three plasmids to order (cage, cargo, binder arm) listed. It ships MIT-licensed with a web interface, a JSON API and a CLI, 28 automated tests on every push through GitLab CI, a Docker build, a 2.5-minute demo video, and documentation of the architecture, the data build, what did not work and what the software cannot tell you. The team also published 29 tested eCIS protocols and a piggyBac/SpyTag part collection.",
-    "stack": ["GitLab CI", "Python 3.11", "bun", "Docker", "MIT licence", "JSON API + CLI + web UI", "FASTA / GenBank / SBOL3 export", "Cell Surface Protein Atlas (CSPA)", "Human Protein Atlas", "SAbDab", "Cellosaurus", "UniProt / RCSB PDB / NCBI", "Kazusa codon usage database", "iGEM Registry (BBa_K1159201 SpyTag)", "d3-geo / topojson", "BioRender"],
-    "techniques": ["geometric structure scoring (packing density, SASA, cross-cut contacts)", "within-structure rank normalisation", "confounder adjustment against a structure-free baseline", "benchmark against published split sites and a stability-prediction baseline", "family- and fold-level data leakage control (40% identity, TM-score 0.3)", "surfaceomics-driven target selection and counter-selection", "SpyTag/SpyCatcher modular retargeting", "split-protein and split-intein design", "piggyBac transposon reporter line construction", "SWOT stakeholder analysis"]
+    "software_zh": "釋出了兩套工具。OpenSplitProtein（gitlab.igem.org/2026/software/eth-zurich/opensplitprotein）從一個結構檔為切點排序，在瀏覽器中免安裝執行。deCISion（gitlab.igem.org/2026/software/eth-zurich/decision）以五個步驟把一個細胞型別轉成一個 PVC 構築：依名稱、疾病或組織從 47 種 CSPA 人類細胞型別中挑一種；選一個受體；選一個奈米抗體或 scFv 結合子（完整抗體會被拒絕，因為對 PVC 來說太大）；接受已發表的 XTEN 連接子或貼上自己的（並指引使用者參考 iGEM Calgary 2023 的 LINKED 資料庫）；最後組裝成結合子-連接子-SpyCatcher，把蛋白質與 DNA 序列匯出成 FASTA，另附 GenBank 與 SBOL3，並列出要訂購的三個質體（外殼、酬載、結合子臂）。它以 MIT 授權釋出，提供網頁介面、JSON API 與 CLI，透過 GitLab CI 在每次推送時執行 28 項自動化測試，另有 Docker 建置、一支 2.5 分鐘的示範影片，以及架構、資料建置、哪些做法行不通，與這套軟體無法告訴你什麼等文件。團隊也發表了 29 份經測試的 eCIS 實驗規程，以及一組 piggyBac/SpyTag 元件集合。",
+    "stack": [
+      "GitLab CI",
+      "Python 3.11",
+      "bun",
+      "Docker",
+      "MIT licence",
+      "JSON API + CLI + web UI",
+      "FASTA / GenBank / SBOL3 export",
+      "Cell Surface Protein Atlas (CSPA)",
+      "Human Protein Atlas",
+      "SAbDab",
+      "Cellosaurus",
+      "UniProt / RCSB PDB / NCBI",
+      "Kazusa codon usage database",
+      "iGEM Registry (BBa_K1159201 SpyTag)",
+      "d3-geo / topojson",
+      "BioRender"
+    ],
+    "techniques": [
+      "geometric structure scoring (packing density, SASA, cross-cut contacts)",
+      "within-structure rank normalisation",
+      "confounder adjustment against a structure-free baseline",
+      "benchmark against published split sites and a stability-prediction baseline",
+      "family- and fold-level data leakage control (40% identity, TM-score 0.3)",
+      "surfaceomics-driven target selection and counter-selection",
+      "SpyTag/SpyCatcher modular retargeting",
+      "split-protein and split-intein design",
+      "piggyBac transposon reporter line construction",
+      "SWOT stakeholder analysis"
+    ]
   },
   "good": {
     "publicEngagement": "Education was structured on three pillars (outreach, media, events) with a defined target audience per group and a before-and-after survey used as the measurement instrument, not just feedback. They visited four Swiss high schools (Kantonsschule Uster, Seetal, the cantonal high school for adults, Hohe Promenade) reaching over 130 students in formats from 45 to 90 minutes, and ran a hands-on week at the Wyss Zurich mint & pepper BioSTARS summer camp with 20 students from across Switzerland who performed their own PCR and gel electrophoresis, co-hosted with iGEM Zurich; over 150 students in total. They published two scientific-journal articles including one in BIOspektrum, ran a YouTube channel, co-hosted the Swiss iGEM Meetup for five teams, and presented at the Student Biolab welcome event, with about 16,900 social views. All templates and teaching material are published for reuse.",
+    "publicEngagement_zh": "教育工作建立在三根支柱上（科普、媒體、活動），每個群體都有明確界定的對象，並以前後問卷作為量測工具、而不只是收集感想。他們走訪了四所瑞士高中（Kantonsschule Uster、Seetal、成人州立高中、Hohe Promenade），以 45 到 90 分鐘不等的形式觸及超過 130 位學生；並與 iGEM Zurich 合辦，在 Wyss Zurich 的 mint & pepper BioSTARS 夏令營帶了一週的動手做課程，20 位來自瑞士各地的學生親手跑了 PCR 與膠體電泳；合計超過 150 位學生。他們發表了兩篇科學期刊文章（其中一篇在 BIOspektrum）、經營一個 YouTube 頻道、與人合辦了有五隊參加的瑞士 iGEM 聚會，並在 Student Biolab 的迎新活動上發表，社群媒體觀看數約 16,900 次。所有模板與教學材料都已公開供再利用。",
     "ihp": "24 interviews across six stakeholder groups, each analysed with a SWOT grid, and the changes are concrete. The project began as an eCIS biopesticide against Drosophila suzukii in Swiss crops; conversations with Drosophila experts and BFH European Meet-Up judges (Dr. Nicole Gensch, Amelia Wei) established that this was not viable and the team pivoted to human intracellular delivery while keeping eCIS. Scientific experts in the Pilhofer and Food Microbiology labs drove the choice of CD20 as the proof-of-concept target and the design of the reporter systems. The dual-targeting split-cargo concept was invented in direct response to expert questions about off-target risk, and OpenSplitProtein exists only because that concept needed a cut site: the wiki states the idea came from those conversations, recorded under Human Practices. Dr. Max Brackmann (NBC arms control laboratory, Spiez) assessed the work case-by-case against CDC and Robert Koch Institute checklists and concluded neither the PVC work nor deCISion required additional biosafety layers; the idea of building deCISion on the CSPA came from Prof. Bernd Wollscheid, after the team found the existing SISYPHUS interface unusable for their actual question. Investors and companies (Athebio, Procavea, Nanosyrinx) pushed specificity, off-target data, IP and scalability, and advised focusing a platform on one lead application.",
+    "ihp_zh": "24 場訪談橫跨六個利害關係人群體，每一場都以 SWOT 表格分析，而改動都很具體。這個專題最初是要做一款針對瑞士作物上 Drosophila suzukii 的 eCIS 生物農藥；與果蠅專家及 BFH 歐洲聚會評審（Dr. Nicole Gensch、Amelia Wei）的交流確立了這條路不可行，團隊於是轉向人類胞內遞送，但保留了 eCIS。Pilhofer 與食品微生物學實驗室的科學專家促成了以 CD20 作為概念驗證標的的選擇，以及報告系統的設計。雙標的拆分酬載的構想，是直接回應專家對脫靶風險的質問而生，而 OpenSplitProtein 之所以存在，純粹是因為那個構想需要一個切點：wiki 明確說明這個想法來自那些對話，並記錄在人類實踐之下。Dr. Max Brackmann（Spiez 的 NBC 軍備管制實驗室）逐案以美國 CDC 與 Robert Koch 研究所的檢核表評估這些工作，結論是 PVC 工作與 deCISion 都不需要額外的生物安全層級；而把 deCISion 建在 CSPA 之上的想法來自 Prof. Bernd Wollscheid，當時團隊發現既有的 SISYPHUS 介面無法用來回答他們真正的問題。投資人與公司（Athebio、Procavea、Nanosyrinx）則推動他們重視專一性、脫靶數據、智慧財產與可規模化，並建議把一個平台聚焦在單一個先導應用上。",
     "realWorld": "The team is explicit that this is a foundational advance handed to others rather than a product: the stated purpose is to let future iGEM teams and researchers engineer eCIS more easily, backed by 29 protocols with recommended controls for teams with no prior wet-lab experience, a part collection, and two MIT-licensed tools. Their own validation honesty is part of the case: they state that the best validation of deCISion would be wet-lab targeting of new cell types from its outputs, that they had neither the time nor the scale, and that confidence therefore rests on the validated public databases underneath. The outlook names the sequence required before any clinical path: uniform and consistent PVC expression, verification of predicted binders, validation of split cargo, an industrially scalable PVC production workflow, then in-vivo mouse work on immune response, degradation, accumulation and efficacy. Clinicians (University Hospital Zurich, Hirslanden) were approached partly to establish contacts should the project continue past the competition.",
-    "partners": ["Pilhofer Lab, ETH Zurich (Adam Pinsler, David Schaumann, Dr. Charles Ericson)", "Prof. Bernd Wollscheid, ETH Zurich (CSPA)", "Dr. Enea Maffei, Food Microbiology, ETH Zurich", "Prof. Martin Loessner, ETH Zurich", "Prof. Nadia Mazouz, ETH Zurich (ethics)", "Dr. Max Brackmann, NBC arms control laboratory Spiez", "Dr. James Lapworth, Nanosyrinx", "Dr. Tom Edwardson, Procavea Biotech", "Dr. Richard Woods and Dr. Johannes Urban, Athebio", "Lukas Frischknecht, University Hospital Zurich", "Jan Duscha, Hirslanden medical group", "Wyss Zurich mint & pepper BioSTARS summer camp", "iGEM Zurich (UZH)", "BFH European Meet-Up", "Student Biolab Zurich", "ScopeM, ETH Zurich"]
+    "realWorld_zh": "團隊明確表示這是一項交給他人使用的基礎進展、而不是一項產品：其聲明的目的是讓未來的 iGEM 隊伍與研究者更容易改造 eCIS，支撐這點的是 29 份附建議對照組的實驗規程（供完全沒有濕實驗經驗的隊伍使用）、一組元件集合，以及兩套 MIT 授權的工具。他們對自身驗證的誠實也是論證的一部分：他們直說 deCISion 最好的驗證方式，是依其輸出在濕實驗中針對新的細胞型別做標的實驗，但他們既沒有時間也沒有規模，因此信心只能建立在底層那些已驗證的公開資料庫之上。展望中點名了任何臨床路徑之前必須完成的順序：PVC 表現的一致與穩定、對預測結合子的驗證、對拆分酬載的驗證、一條可工業規模化的 PVC 生產流程，然後才是小鼠體內的免疫反應、降解、累積與療效研究。他們接觸臨床醫師（蘇黎世大學醫院、Hirslanden），部分目的是為專題在競賽結束後若要延續先建立人脈。",
+    "partners": [
+      "Pilhofer Lab, ETH Zurich (Adam Pinsler, David Schaumann, Dr. Charles Ericson)",
+      "Prof. Bernd Wollscheid, ETH Zurich (CSPA)",
+      "Dr. Enea Maffei, Food Microbiology, ETH Zurich",
+      "Prof. Martin Loessner, ETH Zurich",
+      "Prof. Nadia Mazouz, ETH Zurich (ethics)",
+      "Dr. Max Brackmann, NBC arms control laboratory Spiez",
+      "Dr. James Lapworth, Nanosyrinx",
+      "Dr. Tom Edwardson, Procavea Biotech",
+      "Dr. Richard Woods and Dr. Johannes Urban, Athebio",
+      "Lukas Frischknecht, University Hospital Zurich",
+      "Jan Duscha, Hirslanden medical group",
+      "Wyss Zurich mint & pepper BioSTARS summer camp",
+      "iGEM Zurich (UZH)",
+      "BFH European Meet-Up",
+      "Student Biolab Zurich",
+      "ScopeM, ETH Zurich"
+    ]
   },
   "images": [
     {
       "url": "https://static.igem.wiki/teams/6289/wiki/images/software/opensplitprotein/web1-03-ranked-v3.webp",
       "caption": "OpenSplitProtein's browser interface showing every cut site in an uploaded structure ranked separately for split tolerance and fragment reassembly, instead of a single blended score.",
+      "caption_zh": "OpenSplitProtein 的瀏覽器介面，把上傳結構中的每一個切點分別就切點容忍度與片段重組能力排序，而非給出單一混合分數。",
       "credit": "Team ETH-Zurich, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6289/wiki/images/software/decision/howto4-2-receptor.webp",
       "caption": "deCISion's receptor step: surface receptors measured on the chosen CSPA cell type, with measurement strength, how many of the 47 cell types each was detected on as a specificity proxy, and the number of PVC-compatible binders available.",
+      "caption_zh": "deCISion 的受體步驟：列出在所選 CSPA 細胞型別上測得的表面受體，附上量測強度、各受體在 47 種細胞型別中被檢出過幾種（作為專一性的替代指標），以及可用的 PVC 相容結合子數量。",
       "credit": "Team ETH-Zurich, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6289/wiki/images/results/retargeting-v3.webp",
       "caption": "Retargeting result: PVCs carrying an anti-CD20 binder arm attached through SpyTag/SpyCatcher act specifically on CD20-expressing preCISion cells.",
+      "caption_zh": "更換標的的結果：帶有經 SpyTag/SpyCatcher 接上的抗 CD20 結合子臂的 PVC，專一地作用於表現 CD20 的 preCISion 細胞。",
       "credit": "Team ETH-Zurich, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6289/wiki/images/education/summer-camp-gel.webp",
       "caption": "Students running their own gel electrophoresis at the Wyss Zurich mint & pepper BioSTARS summer camp, where 20 high-school students from across Switzerland worked through a realistic research scenario.",
+      "caption_zh": "學生在 Wyss Zurich 的 mint & pepper BioSTARS 夏令營親手跑膠體電泳；20 位來自瑞士各地的高中生在營中走過一個貼近真實的研究情境。",
       "credit": "Team ETH-Zurich, iGEM 2026 wiki"
     }
   ],
   "gemsTakeaway": "The transferable move is cheap-but-honest computation: ETH beat heavier published tools by scoring six geometric quantities, refusing to fit a model, and then spending their effort on validation design instead (a structure-free confounder baseline, frozen feature selection, no shared sequence family or fold between selection and test sets). A school research centre can reproduce that whole method on a laptop, and should copy the companion habit of publishing a 'what the software cannot tell you' section alongside the results.",
+  "gemsTakeaway_zh": "可移植的做法是「便宜但誠實」的運算：ETH 只用六個幾何量來評分、拒絕擬合任何模型，就勝過了已發表的更重量級工具，然後把力氣花在驗證設計上（一條不依賴結構的干擾因子基準線、在看到測試資料前就凍結特徵選擇、選擇集與測試集之間不共用序列家族也不共用折疊）。一所學校的研究中心用一台筆電就能重現這整套方法，也該借鏡他們的配套習慣：在結果旁邊附上一節「這套軟體無法告訴你什麼」。",
   "sources": [
     "https://2026.igem.wiki/eth-zurich/",
     "https://2026.igem.wiki/eth-zurich/description/",

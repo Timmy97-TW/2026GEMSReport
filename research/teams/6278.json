@@ -20,40 +20,95 @@
     "dataviz": "RADAR-Scout is the visualization: a deployed web app (https://radar-scout.vercel.app/, with a companion dashboard at https://radar-scout-dashboard.vercel.app/) where the keloid view ranks 600 filtered genes across five cohorts on the left and plots every candidate sensor for the selected gene on the right, so a target and a sensor are chosen in the same screen, with filters for region type, codon variant, duplex length and isoform, and shortlist/CSV export. Changing the selected tissue reruns the isoform analysis live. The wiki itself is a hand-built site with per-page accent colours and mascot illustrations, and the modelling page is written so a reader can follow each decision: predictor correlations are shown three ways (full Spearman matrix at n = 24, per-replicate rho, then all predictors ranked) and the team states plainly that non-significant predictors are 'unresolved at n = 24 rather than confirmed null'. Parameter tables flag which values are fitted, which are placeholders, and which disagreements remain unresolved.",
     "datascience": "The core result is a replacement for a field convention. The informal RADAR design guideline was to pick the candidate with the lowest GC content. Stanford built a 5x5 experimental library of 25 sensors, measured them by flow cytometry in HEK293 across two replicates (r = 0.94), gated the top 5% mCherry-positive cells and took geometric-mean GFP / geometric-mean mCherry as the output metric, then correlated 19 computational predictors against it. Sensor partition-function folding free energy reached Spearman rho = 0.62-0.63, against -0.29 for GC content and -0.31 for longest homopolymer - so folding energy, not composition, became the ranking filter inside RADAR-Scout. They were honest about what failed: linear, Ridge and Elastic Net regression on the same features reached only Q2 = 0.20, which is explicitly what pushed them from statistical fitting to mechanistic ODEs. Cross-organ analysis of the top 300 genes per organ found 857 of 1,136 distinct genes appeared in only one organ and pairwise Jaccard similarity of 0.050-0.145, so they rejected the idea of a universal fibrosis biomarker set. Isoform filtering uses GTEx Oxford Nanopore long-read data (~150,000 transcripts, 92 samples, 15 tissues) to check the trigger sequence is actually present in the isoforms that cell type expresses.",
     "software": "RADAR-Scout, live at https://radar-scout.vercel.app/ with a dashboard at https://radar-scout-dashboard.vercel.app/. It solves a real engineering problem: the Gao lab's published RADAR candidate table has roughly 7 million rows and could not be held in memory, so build_database.py ingests human_RADAR_sensor_candidates.csv.gz into a SQLite database in 100,000-row chunks with an index on the gene column, and the app queries it read-only with 50 candidates per API page. The computer vision pipeline for personalized microneedle patches uses a U-Net++ with a ResNet34 encoder (from segmentation_models.pytorch) to segment keloid wound photographs, then drives the Autodesk Fusion 360 API to emit a CAD/STL file for 3D printing. Separately, SynBase (https://synbase.web.app/home.html) is a released, free, account-based online learning platform. Parts: 26 modular RADAR parts including 15 functional sensors across five transcripts, novel composite synthetic triggers that each test an entire sensor panel for one gene, a dual-input AND gate, and T7 in vitro transcribed capped polyadenylated mRNA versions.",
-    "stack": ["ViennaRNA 2.7.2 (RNAfold, RNApfold, RNAcofold)", "CELLxGENE / CELLxGENE Census", "GEO (GSE163973, GSE181316)", "Human Dermal Fibroblast Atlas", "GTEx long-read (Oxford Nanopore) RNA-seq", "Ensembl / GENCODE annotations", "Python", "SQLite", "Vercel", "U-Net++ with ResNet34 encoder (segmentation_models.pytorch)", "Autodesk Fusion 360 API", "Benchling", "Firebase (SynBase)"],
-    "techniques": ["Deterministic mass-action ODE modelling", "Stochastic (occupancy-resolved) simulation", "Simulated annealing parameter fitting", "Quasi-steady-state approximation for competitive ADAR binding", "Nine-state hybridization/editing state machine", "Differential expression with pathological/healthy/bystander contrast", "Isoform-level expression filtering", "RNA minimum free energy and partition-function analysis", "Spearman and Pearson predictor screening", "Linear/Ridge/Elastic Net regression (reported as insufficient)", "Jaccard similarity for cross-organ overlap", "Flow cytometry gating (95th percentile mCherry)", "Finite element analysis (Fick, Stokes-Einstein, Darcy)", "Semantic image segmentation", "Parametric CAD generation"]
+    "stack": [
+      "ViennaRNA 2.7.2 (RNAfold, RNApfold, RNAcofold)",
+      "CELLxGENE / CELLxGENE Census",
+      "GEO (GSE163973, GSE181316)",
+      "Human Dermal Fibroblast Atlas",
+      "GTEx long-read (Oxford Nanopore) RNA-seq",
+      "Ensembl / GENCODE annotations",
+      "Python",
+      "SQLite",
+      "Vercel",
+      "U-Net++ with ResNet34 encoder (segmentation_models.pytorch)",
+      "Autodesk Fusion 360 API",
+      "Benchling",
+      "Firebase (SynBase)"
+    ],
+    "techniques": [
+      "Deterministic mass-action ODE modelling",
+      "Stochastic (occupancy-resolved) simulation",
+      "Simulated annealing parameter fitting",
+      "Quasi-steady-state approximation for competitive ADAR binding",
+      "Nine-state hybridization/editing state machine",
+      "Differential expression with pathological/healthy/bystander contrast",
+      "Isoform-level expression filtering",
+      "RNA minimum free energy and partition-function analysis",
+      "Spearman and Pearson predictor screening",
+      "Linear/Ridge/Elastic Net regression (reported as insufficient)",
+      "Jaccard similarity for cross-organ overlap",
+      "Flow cytometry gating (95th percentile mCherry)",
+      "Finite element analysis (Fick, Stokes-Einstein, Darcy)",
+      "Semantic image segmentation",
+      "Parametric CAD generation"
+    ],
+    "frameworks_zh": "四個堆疊的層次。(1) 大規模單細胞轉錄體學：一條處理管線整合了心臟、皮膚、腎臟、肝臟與肺部纖維化的 26 個 scRNA-seq 世代資料——來自 CELLxGENE、CELLxGENE Census 與 GEO 的 960,518 個細胞與 1,728 筆捐贈者—族群觀測——並以等權重的捐贈者層級統計平均，避免細胞數多的捐贈者主導結果。他們沒有採用一般的差異表現分析，而是把每個候選在三個族群（病理、健康、旁觀者）上評分，問的是某個轉錄本是否在目標細胞中豐富、同時在鄰近細胞中缺席——這才是細胞內感測器真正需要的條件。(2) RNA 結構預測：以 ViennaRNA 2.7.2 計算 19 個預測因子（RNAfold 算 MFE 與集合、RNApfold 算每個核苷酸的未配對機率、RNAcofold 算感測器—觸發序列雙股），涵蓋序列組成、二級結構、可及性與雜合。(3) 機制動力學：五個互相連接的確定性質量作用 ODE 模型，外加一個隨機版本，涵蓋質體進入細胞核、單觸發質體、單觸發 RNA、AND 閘質體與 AND 閘 RNA 遞送，建立在 Ligon 等人的 lipoplex 遞送串級之上，並把佔據狀態細分為九個凹陷狀態與十個內體狀態；82 個參數連同出處一併列表，其中四個以 Python 的模擬退火對照 Cohen 等人的 qPCR 核內複本數資料擬合（p_entry = 0.107、K_sat = 232、k_TX = 0.273）。一套九狀態的雜合／編輯方案則追蹤 AND 閘兩個位點的聯合狀態。(4) 裝置物理：以有限元素分析，運用 Fick 定律、Stokes-Einstein 關係式與 Darcy 定律，模擬 LNP 在蟹足腫細胞外基質中的擴散，另有一個以痛覺受器數量估算疼痛的模型。",
+    "dataviz_zh": "RADAR-Scout 本身就是視覺化成果：一個已部署的網頁應用（https://radar-scout.vercel.app/ ，另有搭配的儀表板 https://radar-scout-dashboard.vercel.app/ ），在蟹足腫檢視中，左側把 600 個經篩選的基因在五個世代資料上排序，右側則繪出所選基因的每一個候選感測器，因此標的與感測器在同一個畫面中選定；並可依區域類型、密碼子變異、雙股長度與異構物篩選，支援候選名單與 CSV 匯出。切換所選組織會即時重跑異構物分析。wiki 本身是手工打造的網站，各頁有自己的輔色與吉祥物插畫，而建模頁面的寫法讓讀者能跟上每一個決定：預測因子的相關性以三種方式呈現（n = 24 的完整 Spearman 矩陣、各重複的 rho，以及所有預測因子的排序），團隊也直言未達顯著的預測因子是「在 n = 24 下尚未釐清，而非已確認為無效」。參數表標示哪些值是擬合而來、哪些是暫代值，以及哪些矛盾仍未解決。",
+    "datascience_zh": "核心成果是取代了一個領域慣例。RADAR 設計的非正式準則原本是挑 GC 含量最低的候選。Stanford 建了一個 5x5 的 25 個感測器實驗庫，在 HEK293 中以流式細胞儀量測、做兩次重複（r = 0.94），篩選 mCherry 陽性最高 5% 的細胞，並以 GFP 幾何平均值／mCherry 幾何平均值作為輸出指標，再把 19 個計算預測因子與之做相關分析。感測器的分配函數摺疊自由能達到 Spearman rho = 0.62-0.63，而 GC 含量只有 -0.29、最長同聚物為 -0.31——因此 RADAR-Scout 內部的排序濾器用的是摺疊能量，而不是序列組成。他們對失敗的部分也很誠實：用同一組特徵做線性、Ridge 與 Elastic Net 回歸只達到 Q2 = 0.20，而這正是把他們從統計擬合推向機制式 ODE 的原因。各器官前 300 個基因的跨器官分析發現，1,136 個不同基因中有 857 個只出現在單一器官，兩兩 Jaccard 相似度僅 0.050-0.145，因此他們否定了「存在一組通用纖維化生物標記」的想法。異構物篩選使用 GTEx 的 Oxford Nanopore 長讀資料（約 150,000 個轉錄本、92 個樣本、15 種組織），確認觸發序列真的存在於該細胞類型所表現的異構物中。",
+    "software_zh": "RADAR-Scout 已上線於 https://radar-scout.vercel.app/ ，儀表板在 https://radar-scout-dashboard.vercel.app/ 。它解決了一個真實的工程問題：Gao 實驗室已發表的 RADAR 候選表格約有 700 萬列，無法全部放進記憶體，因此 build_database.py 以每 100,000 列為一塊，把 human_RADAR_sensor_candidates.csv.gz 匯入 SQLite 資料庫並在 gene 欄位建索引，應用程式則以唯讀方式查詢、每個 API 分頁回傳 50 個候選。個人化微針貼片的電腦視覺管線使用 U-Net++ 搭配 ResNet34 編碼器（來自 segmentation_models.pytorch）分割蟹足腫傷口照片，再驅動 Autodesk Fusion 360 API 輸出可 3D 列印的 CAD/STL 檔。另外，SynBase（https://synbase.web.app/home.html ）是一個已釋出、免費、需註冊帳號的線上學習平台。部件方面：26 個模組化 RADAR 部件，包括橫跨五個轉錄本的 15 個功能性感測器、能一次測試某基因整組感測器的新型複合合成觸發序列、一個雙輸入 AND 閘，以及以 T7 體外轉錄、加帽並加多腺苷酸尾的 mRNA 版本。"
   },
   "good": {
     "publicEngagement": "Two deliberately linked programmes. SiBRP (Stanford iGEM Bioengineering Research Program) is a free, fully online three-week bioengineering bootcamp for high school students and incoming freshmen, with nine synchronous two-hour sessions plus three supplemental ones, progressing from molecular biology fundamentals through biodesign, genetic circuit design, plasmid design and experimental workflow to entrepreneurship and ethics. Students work in small groups to produce a full research proposal with literature review and experimental design, submitted as a draft, returned with TA feedback, then revised against a published rubric. It drew nearly 5,000 applications from all 50 US states and over 100 countries (up from 321 in its first year), with two-thirds of applicants female and over 60% from low-income and first-generation backgrounds; 230 participated. Nine guest speakers included iGEM co-founder Drew Endy. Because mentored capacity could not meet demand, the team converted the whole curriculum into SynBase (https://synbase.web.app/home.html) - 'Khan Academy, but for synthetic biology' - nine self-paced modules with accounts that save progress, knowledge checks, interactive activities and discussion boards, no application and no deadline, free worldwide. As of 17 October 2026 it had 750+ registered learners and 650+ free-response discussion contributions, with dry lab modules in development, and the team explicitly invites other iGEM teams to use or adapt it for onboarding their own members.",
     "ihp": "The team was trained in Stanford's Biodesign process by Dr Ross Venook, who told them that biodesign means shadowing clinicians rather than searching online, and they built the whole project around that. Ideation ran as a weekly discipline: every member interviewed one person a week - over twenty conversations with professors, researchers and people in their lives - and a team member's experience with ReSurge, an NGO training reconstructive surgeons abroad, surfaced the statistic that 30% of global disease burden is surgical and reframed abnormal scarring as an access problem. Professor Fan Yang told them burns and keloids are separate research areas and doing both would muddle the work, so they picked one. At the Stanford BIOME Shark Tank they pitched to eight judges (faculty, investors, biotech entrepreneurs) who returned written scorecards; the published response table shows each criticism and what they did, including a judge's suggestion to build an AI-CAD platform for microneedles, which became the U-Net++ segmentation-to-Fusion-360 pipeline. When they looked for keloid patient advocacy groups there were almost none, and the one foundation that replied told them to talk to clinicians instead - the team says plainly that physicians cannot stand in for patients' lived experience and documents this as a second-best route. They then contacted 28 Stanford dermatologists and plastic surgeons and interviewed seven, with a standard instrument of Likert-scale ranking statements plus specialty-specific open questions. Three concerns recurred - recurrence within two years, pain and inconvenience of repeated injections, and difficulty getting drug into dense scar tissue - and each changed the design: Dr Teng's point that late-stage keloids are far harder to treat moved the target from prevention to established keloids; Dr Li's recommendation of collagen-scaffold fibroblast and hydrogel mechanotransduction assays changed the validation plan; physicians' complaint about repeated injections, plus Dr Li's endorsement of a patch, drove the wound-shaped microneedle array, held at 900 um because needles over 1000 um are documented to cause bleeding and pain. Dr Miranda consulted her own network on whether viral-derived parts are inflammatory, and the team decided against combining saRADAR with RNA export machinery as a result. With no animal model for keloids (they occur only in humans), they met Genoskin about their ex vivo human skin models and identified that as the next safety step.",
     "realWorld": "The team was explicit at the Shark Tank that a target product profile was secondary to characterising a modular sensor platform other teams and scientists can reuse, and the contribution page is written as a handoff: swap the sensor region for a new transcript, add a second input as an AND gate, deliver as DNA or RNA, attach your own payload. The clinical path is staged and named - validate the Gao lab sensors and their own in HEK293, validate the AND gate, move to keloid and normal human fibroblast lines, add payload, then terminal assay in Genoskin's ex vivo human skin model for immunotoxicity, phenotypic and transcriptomic readouts - and Genoskin representatives engaged and advised on how to run it. The Cas12a2 payload work and the in vitro transcribed mRNA format are both framed as moving toward the form a real therapy would take rather than a reporter demo. SynBase is maintained beyond the competition as a continuing programme rather than a competition artefact.",
-    "partners": ["ReSurge International", "Genoskin", "Stanford Biodesign", "Stanford Hospital Department of Dermatology", "Stanford Department of Plastic and Reconstructive Surgery", "Stanford BIOME (Biological Interdisciplinary Open Maker Environment)", "Bay Area Bioengineering Symposium", "Stanford Arc Institute", "Gao Lab (RADAR technology)", "Covert Lab", "CELLxGENE / Chan Zuckerberg Initiative", "GTEx Consortium"]
+    "partners": [
+      "ReSurge International",
+      "Genoskin",
+      "Stanford Biodesign",
+      "Stanford Hospital Department of Dermatology",
+      "Stanford Department of Plastic and Reconstructive Surgery",
+      "Stanford BIOME (Biological Interdisciplinary Open Maker Environment)",
+      "Bay Area Bioengineering Symposium",
+      "Stanford Arc Institute",
+      "Gao Lab (RADAR technology)",
+      "Covert Lab",
+      "CELLxGENE / Chan Zuckerberg Initiative",
+      "GTEx Consortium"
+    ],
+    "publicEngagement_zh": "兩個刻意相連的計畫。SiBRP（Stanford iGEM Bioengineering Research Program）是為高中生與即將入學大一新生開設的免費、全線上三週生物工程密集課程，含九堂兩小時同步課程加三堂補充課，從分子生物學基礎一路推進到 biodesign、基因迴路設計、質體設計與實驗流程，再到創業與倫理。學生分小組完成一份完整的研究提案，含文獻回顧與實驗設計，先交草稿、由助教回饋，再依公開的評分量表修改。它吸引了來自美國全部 50 州與 100 多個國家、將近 5,000 份申請（第一年僅 321 份），其中三分之二為女性、超過 60% 來自低收入與家中第一代大學生背景；最終 230 人參與。九位客座講者包括 iGEM 共同創辦人 Drew Endy。由於有導師帶領的容量跟不上需求，團隊把整套課程轉化為 SynBase（https://synbase.web.app/home.html ）——「合成生物學版的可汗學院」——九個可自訂進度的模組，帳號會保存學習進度，含知識檢核、互動活動與討論區，無須申請、沒有截止日期，全球免費。至 2026 年 10 月 17 日已有 750 位以上註冊學習者與 650 則以上的開放式討論貢獻，乾實驗室模組仍在開發中；團隊也明確邀請其他 iGEM 隊伍使用或改編它來訓練自己的新成員。",
+    "ihp_zh": "團隊接受 Dr Ross Venook 的 Stanford Biodesign 流程訓練，他告訴他們 biodesign 的意思是跟著臨床醫師實地觀察，而不是上網搜尋，而整個專案就是圍繞這點建起來的。發想階段被當成每週的紀律執行：每位成員每週訪談一個人——與教授、研究者及自己生活圈中的人累積二十多場對話——而一位成員在 ReSurge（一個在海外培訓重建外科醫師的 NGO）的經驗，帶出「全球疾病負擔有 30% 屬於外科」這個數據，把異常疤痕重新定義為一個醫療取得的問題。楊帆教授告訴他們燒傷與蟹足腫是分開的研究領域，兩者都做只會把工作弄混，於是他們選了一個。在 Stanford BIOME Shark Tank，他們向八位評審（教授、投資人、生技創業者）提案，並收到書面評分表；公開的回應表列出每一項批評以及他們的作為，其中一位評審建議為微針打造 AI-CAD 平台，後來就成了 U-Net++ 分割接 Fusion 360 的管線。當他們去找蟹足腫的病友倡議團體時幾乎找不到，而唯一回覆的基金會建議他們去找臨床醫師談——團隊直言醫師無法代表病患的親身經驗，並把這記錄為一條次佳路徑。接著他們聯絡了 28 位 Stanford 的皮膚科與整形外科醫師，訪談了七位，使用的標準工具是李克特量表排序陳述加上各專科特有的開放式問題。有三項顧慮反覆出現——兩年內復發、反覆注射的疼痛與不便，以及藥物難以進入緻密的疤痕組織——每一項都改變了設計：Dr Teng 指出晚期蟹足腫治療困難得多，使標的從預防轉向已形成的蟹足腫；Dr Li 建議的膠原支架纖維母細胞與水膠力學轉導分析改變了驗證計畫；醫師們抱怨反覆注射，加上 Dr Li 支持貼片形式，促成了依傷口形狀製作的微針陣列，針長定在 900 um，因為文獻記載超過 1000 um 的針會造成流血與疼痛。Dr Miranda 向自己的人際網絡詢問病毒來源的部件是否會引起發炎，團隊因此決定不把 saRADAR 與 RNA 輸出機制結合。由於蟹足腫沒有動物模型（只發生在人類身上），他們與 Genoskin 討論其離體人類皮膚模型，並把它定為下一個安全性驗證步驟。",
+    "realWorld_zh": "團隊在 Shark Tank 上就明確表示，目標產品輪廓的重要性次於「鑑定出一個其他隊伍與科學家能重複使用的模組化感測器平台」，而貢獻頁面是以交棒的方式寫成的：把感測區換成新的轉錄本、加上第二個輸入做成 AND 閘、以 DNA 或 RNA 遞送、接上你自己的酬載。臨床路徑分階段並逐一指名——先在 HEK293 中驗證 Gao 實驗室的感測器與自己的感測器、驗證 AND 閘、移到蟹足腫與正常人類纖維母細胞株、加上酬載，最後在 Genoskin 的離體人類皮膚模型中做終點分析，涵蓋免疫毒性、表現型與轉錄體讀值——而 Genoskin 的代表確實參與並就如何執行提供建議。Cas12a2 酬載工作與體外轉錄 mRNA 形式，都被定位為朝真實療法該有的型態推進，而不是報告子的示範。SynBase 在競賽之後仍持續維運，被當作一個延續的計畫而非競賽產物。"
   },
   "images": [
     {
       "url": "https://static.igem.wiki/teams/6278/wiki/m2-fig4-trigger-selection.webp",
       "caption": "Trigger selection in RADAR-Scout: 600 filtered genes ranked across five keloid cohorts on the left (POSTN first at DSS 1.288), with every candidate sensor for the selected gene plotted on the right, so target and sensor are chosen in one view.",
-      "credit": "Team Stanford University, iGEM 2026 wiki"
+      "credit": "Team Stanford University, iGEM 2026 wiki",
+      "caption_zh": "RADAR-Scout 中的觸發標的選擇：左側把 600 個經篩選的基因在五個蟹足腫世代資料上排序（POSTN 以 DSS 1.288 居首），右側繪出所選基因的每一個候選感測器，讓標的與感測器在同一個檢視中選定。"
     },
     {
       "url": "https://static.igem.wiki/teams/6278/wiki/m2-fig10-rho-ranked.webp",
       "caption": "All 19 computational predictors ranked by Spearman rho against sensor output: the two folding-energy terms lead at 0.62-0.63 while GC content, the field's informal selection rule, reaches only -0.29.",
-      "credit": "Team Stanford University, iGEM 2026 wiki"
+      "credit": "Team Stanford University, iGEM 2026 wiki",
+      "caption_zh": "全部 19 個計算預測因子依與感測器輸出的 Spearman rho 排序：兩個摺疊能量項以 0.62-0.63 領先，而該領域的非正式選擇準則 GC 含量只有 -0.29。"
     },
     {
       "url": "https://static.igem.wiki/teams/6278/wiki/m3-cv1-patch.webp",
       "caption": "A microneedle array patch generated from a photograph of a keloid scar: U-Net++ with a ResNet34 encoder segments the wound, and the Autodesk Fusion 360 API turns the mask into a 3D-printable CAD file.",
-      "credit": "Team Stanford University, iGEM 2026 wiki"
+      "credit": "Team Stanford University, iGEM 2026 wiki",
+      "caption_zh": "由一張蟹足腫疤痕照片生成的微針陣列貼片：U-Net++ 搭配 ResNet34 編碼器分割傷口，Autodesk Fusion 360 API 再把遮罩轉成可 3D 列印的 CAD 檔。"
     },
     {
       "url": "https://static.igem.wiki/teams/6278/wiki/m2-fig20-nine-state.webp",
       "caption": "The nine-state hybridization and editing scheme for the AND-gate RADAR sensor; only the doubly-edited state is translated into GFP, and the enumerated transitions are how the system was verified to be complete.",
-      "credit": "Team Stanford University, iGEM 2026 wiki"
+      "credit": "Team Stanford University, iGEM 2026 wiki",
+      "caption_zh": "AND 閘 RADAR 感測器的九狀態雜合與編輯方案；只有雙重編輯狀態會被轉譯成 GFP，而把所有轉換逐一列舉出來，正是驗證該系統完整性的方法。"
     },
     {
       "url": "https://static.igem.wiki/teams/6278/wiki/sibrp-call.webp",
       "caption": "The final session of SiBRP 2026, the team's free three-week online bioengineering bootcamp, with students joining from 24 US states and 40 countries.",
-      "credit": "Team Stanford University, iGEM 2026 wiki"
+      "credit": "Team Stanford University, iGEM 2026 wiki",
+      "caption_zh": "SiBRP 2026 的最後一堂課——團隊免費的三週線上生物工程密集課程，學生來自美國 24 州與 40 個國家。"
     }
   ],
   "gemsTakeaway": "Stanford's SiBRP-to-SynBase pivot is the directly copyable move: they ran a small mentored cohort, discovered demand they could not staff (5,000 applications for 230 places), and then converted the exact same curriculum into a free self-paced online course with progress tracking and discussion boards - so the teaching asset outlives the cohort. A high-school-plus centre in Taiwan can do the same with its own course material, and should also adopt their dry-lab habit of testing the field's received wisdom (lowest GC content) against its own measured data and replacing it with a better predictor.",
@@ -71,5 +126,9 @@
     "https://radar-scout.vercel.app/",
     "https://radar-scout-dashboard.vercel.app/",
     "https://synbase.web.app/home.html"
-  ]
+  ],
+  "projectTitle_zh": "KelePatch",
+  "tagline_zh": "一種以邏輯閘控制、具細胞狀態專一性的蟹足腫 RNA 療法，透過依傷口形狀製作的微針貼片遞送。",
+  "summary_zh": "KelePatch 建立了一個基於 ADAR 的 RADAR RNA 感測器，只在蟹足腫的肌纖維母細胞內開啟，因此治療酬載只在病變細胞中製造，而不在健康皮膚中。團隊針對五個纖維化轉錄本（ADAM12、POSTN、ASPN、COL11A1、SPP1）設計了一套 26 個部件的模組化感測器集合，在 HEK293 細胞中驗證，再把表現最好的兩個組成雙輸入 AND 閘以提升選擇性，並在健康皮膚纖維母細胞與源自蟹足腫的纖維母細胞中測試；他們也把一個感測器與 Cas12a2 配對，證明輸出不限於螢光報告子。濕實驗室之外，他們做了 RADAR-Scout——一個已發布的網頁平台，輸入細胞類型與基因，就回傳一份考慮 RNA 結構、經排序的 RADAR 感測器候選清單，外加一套關於其行為的機制模擬。本專案獲得總冠軍，因為每一層都彼此相連：960,518 個單細胞的轉錄體資料挑出觸發標的、ViennaRNA 的摺疊能量為感測器排序、ODE 模型解釋了他們在實驗台上看到的延遲，而一套 U-Net++ 電腦視覺管線則把一張疤痕照片變成可 3D 列印的貼片。",
+  "gemsTakeaway_zh": "Stanford 從 SiBRP 轉向 SynBase 的這一步最可直接照抄：他們先辦了一個有導師帶領的小型班，發現需求遠超過自己能配置的人力（5,000 份申請搶 230 個名額），接著把完全相同的課程轉成免費、可自訂進度的線上課程，附進度追蹤與討論區——於是教學資產的壽命超過了那一屆學員。台灣的高中以上研究單位可以用自己的課程教材做同一件事，同時也該採用他們在乾實驗室的習慣：拿領域裡的既有共識（挑 GC 含量最低）去對照自己實測的資料檢驗，再用更好的預測因子取代它。"
 }

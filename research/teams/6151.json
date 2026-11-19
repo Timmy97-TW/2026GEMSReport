@@ -6,8 +6,11 @@
   "village": "Space",
   "wiki": "https://2026.igem.wiki/uni-padua-it/",
   "projectTitle": "C.O.S.M.I.C. (Cyanobacterial Oxygen Supply for Martian Inhabitant Complexes)",
+  "projectTitle_zh": "C.O.S.M.I.C.（火星居住複合體的藍綠菌供氧系統）",
   "tagline": "A Nostoc-based life-support chassis for Mars, plus ReTIsigner, an open codon optimiser for the 35,799 hosts other tools ignore.",
+  "tagline_zh": "以 Nostoc 為基礎的火星生命維持底盤，外加 ReTIsigner：一個開放的密碼子最佳化工具，支援其他工具忽略的 35,799 種宿主。",
   "summary": "Uni-Padua-IT engineered the filamentous cyanobacterium Nostoc sp. PCC 7120 as a Martian life-support organism: it fixes CO2 into breathable oxygen, degrades the perchlorates that poison Martian water (via native NarB and a heterocyst-compartmentalised pcrABD plus chlorite dismutase), and carries pprA from Deinococcus radiodurans for radiation-damage repair, behind a copper-dependent MazF kill switch. Because no free codon optimiser listed their chassis, they forked TIsigner into ReTIsigner, a frequency-weighted codon optimiser that reads any of the 35,799 Kazusa codon usage tables, enforces GC bounds, actively excises RFC restriction sites and reports CAI, GC and translation-initiation opening energy. ReTIsigner was validated in silico over 100 sequences and four hosts, then in vivo: a ReTIsigner-optimised eYFP gave a 2.16-fold common-effect increase in specific fluorescence across DH5-alpha and BL21 (p = 0.002, permutation test stratified by strain). They also built an open-source acoustic (piezo + Arduino) bubble sensor so oxygen production can be followed without opening a sealed culture.",
+  "summary_zh": "Uni-Padua-IT 把絲狀藍綠菌 Nostoc sp. PCC 7120 改造成火星上的生命維持生物：它把 CO2 固定成可供呼吸的氧氣、分解污染火星水源的過氯酸鹽（透過原生的 NarB，加上區隔在異形細胞中的 pcrABD 與亞氯酸鹽歧化酶），並帶有來自 Deinococcus radiodurans 的 pprA 以修復輻射損傷，整套系統受一個銅依賴型 MazF kill switch 控制。由於沒有任何免費的密碼子最佳化工具收錄他們的底盤，團隊把 TIsigner 分支成 ReTIsigner：一個以頻率加權的密碼子最佳化工具，可讀取 35,799 份 Kazusa 密碼子使用表中的任何一份、強制 GC 含量上下界、主動剔除 RFC 限制酶切位，並回報 CAI、GC 與轉譯起始的開啟能量。ReTIsigner 先在電腦上以 100 條序列、四種宿主驗證，再做活體驗證：經 ReTIsigner 最佳化的 eYFP 在 DH5-alpha 與 BL21 中，比生螢光的共同效應提高 2.16 倍（p = 0.002，依菌株分層的排列檢定）。他們也做了一個開放原始碼的聲學氣泡感測器（壓電元件加 Arduino），讓人不必打開密閉培養就能追蹤產氧情況。",
   "awards": [
     "Best Software Tool winner, Undergraduate",
     "Best Wiki winner, Undergraduate",
@@ -15,26 +18,91 @@
   ],
   "dry": {
     "frameworks": "SvelteKit single-page frontend built from scratch, talking to a Flask backend over a single documented HTTP endpoint (POST /optimise); a worker pool behind Flask shells out to the compiled scientific binaries. The whole stack is shipped as a two-stage Docker image (Node.js 22 build stage; Miniconda runtime pinning Python 3.6.9, ViennaRNA 2.5.1 and Infernal 1.1.5) exposing port 5050.",
+    "frameworks_zh": "前端是從零寫起的 SvelteKit 單頁應用，透過單一且有文件的 HTTP 端點（POST /optimise）與 Flask 後端通訊；Flask 後面的工作者池再呼叫編譯好的科學運算執行檔。整套系統以兩階段的 Docker 映像發布（Node.js 22 建置階段；Miniconda 執行階段釘住 Python 3.6.9、ViennaRNA 2.5.1 與 Infernal 1.1.5），對外開放 5050 連接埠。",
     "dataviz": "Results view compares input against each optimised sequence in a results card showing CAI, GC content and opening energy, so sequences no longer have to be analysed one at a time in external tools. A built-in guided tour walks a first-time user through every field of the run configuration. Exports in three reproducible formats (CSV, PDF, FASTA), each recording the full run configuration plus the computed analyses. Validation figures (specific-fluorescence bar charts and ratio plots with 95% CIs) are published as SVG on the wiki, and the system is explained with two architecture diagrams: the POST /optimise request path and one iteration of the annealing loop.",
+    "dataviz_zh": "結果頁把輸入序列與每一條最佳化後的序列並排比較，結果卡片上列出 CAI、GC 含量與開啟能量，使用者不必再把序列一條一條丟到外部工具分析。內建的導覽會帶第一次使用的人走過執行設定的每一個欄位。匯出支援三種可重現的格式（CSV、PDF、FASTA），每一種都記錄完整的執行設定與計算出的分析結果。驗證圖表（比生螢光長條圖與附 95% 信賴區間的比值圖）以 SVG 發布在 wiki 上，系統則以兩張架構圖說明：POST /optimise 的請求路徑，以及退火迴圈的單次迭代。",
     "datascience": "In silico benchmark over 100 coding sequences optimised for four hosts spanning roughly 31-75% GC, recording GC, CAI, opening energy and failure rate with and without a codon usage table: supplying a table cut the failure rate from 52% to 2% while leaving opening energy essentially unchanged (mean difference +/-0.06 kcal/mol). Wet-lab validation used independent cultures as the unit of replication, three cultures per sample each in technical triplicate, fluorescence compared at matched optical density rather than fixed time, two detection channels, and a permutation test stratified by strain; the team explicitly states the confidence interval (about 1.6-2.8x) and what the data does not license them to claim.",
+    "datascience_zh": "電腦模擬基準測試涵蓋 100 條編碼序列，針對四種 GC 含量約 31-75% 的宿主最佳化，記錄有無提供密碼子使用表時的 GC、CAI、開啟能量與失敗率：提供表格可讓失敗率從 52% 降到 2%，而開啟能量基本上不變（平均差異 ±0.06 kcal/mol）。濕實驗驗證以獨立培養作為重複的單位，每個樣本三個培養、各做技術三重複，螢光在相同光密度下比較而不是固定時間點比較，使用兩個偵測通道，並做依菌株分層的排列檢定；團隊也明確寫出信賴區間（約 1.6-2.8 倍），以及這份資料不足以讓他們主張什麼。",
     "software": "ReTIsigner is a free, Apache 2.0-licensed codon optimiser for non-model hosts, and it is the clearest example this year of forking an existing scientific tool rather than rebuilding one. The team started from TIsigner (Bhandari, Lim & Gardner), contacted its authors for feedback on their proposal, and then added four things TIsigner lacked: frequency-weighted synonymous codon sampling driven by any Kazusa codon usage table (35,799 organisms) instead of one-amino-acid-one-codon, an optional GC bound enforced as a feasibility filter, active position-targeted removal of restriction sites with a re-check for newly introduced sites, and in-app CAI/GC analysis per output sequence. The restriction-site work is the headline engineering result: optimising perchlorate reductase subunit A for Nostoc under RFC 10 and RFC 1000 constraints was still running after 15 hours under the original random-substitution behaviour, and completed in seconds afterwards, yielding registry part BBa_268WDVEB. Architecturally the optimiser sits behind POST /optimise so it is usable headlessly without the Svelte interface, and the Docker image removes the platform problem that ViennaRNA and Infernal binaries create on Windows ('docker build -t retisigner . && docker run -p 5050:5050 retisigner'). It ships a user guide, a development guide documenting the system and its API calls, a video tutorial (https://video.igem.org/w/rN6WnodTKYxiNitzfSUVZ3) that optimises BBa_E0040 GFP for Clostridium acetobutylicum ATCC 824, and a public repository at https://gitlab.igem.org/2026/software/uni-padua-it/retisigner-svelte (team repo: https://gitlab.igem.org/2026/uni-padua-it). It is self-hosted via Docker rather than offered as a hosted public web service, which is the one gap: there is no URL a stranger can click. They also positioned ReTIsigner honestly against the field, reproducing Table 1 of Demissie et al. (2025) and adding their own row with a tilde rather than a tick in the CAI column, and comparing feature-by-feature against the two previous iGEM codon optimisers (HebrewU 2018, MIT 2023). They published an open call for collaboration on 9 August 2026 offering to optimise any team's sequence for their chassis and received no replies, and they say so on the wiki.",
-    "stack": ["SvelteKit", "Svelte", "Node.js 22", "Python 3.6.9", "Flask", "Docker (multi-stage)", "Miniconda/Conda", "ViennaRNA 2.5.1 (RNAplfold)", "Infernal 1.1.5", "REST/HTTP API", "Apache 2.0", "iGEM GitLab", "Arduino (hardware)"],
-    "techniques": ["Simulated annealing search", "frequency-weighted synonymous codon sampling", "mRNA translation-initiation opening-energy minimisation", "Codon Adaptation Index (CAIcal/Sharp-Li definition)", "GC-bound feasibility filtering", "active restriction-site excision", "Kazusa codon-usage-table parsing", "permutation testing stratified by strain", "in silico benchmarking across GC-spanning hosts", "acoustic (piezoelectric) frequency-sweep sensing"]
+    "software_zh": "ReTIsigner 是一個免費、以 Apache 2.0 授權、針對非模式宿主的密碼子最佳化工具，也是今年最清楚的一個案例：把既有的科學工具分支延伸，而不是從頭重做一個。團隊從 TIsigner（Bhandari、Lim 與 Gardner）出發，先聯絡原作者取得對他們提案的意見，再補上 TIsigner 缺少的四件事：以任何一份 Kazusa 密碼子使用表（35,799 種生物）驅動、按頻率加權的同義密碼子抽樣，取代一個胺基酸只配一個密碼子的做法；可選的 GC 含量上下界，作為可行性過濾條件；針對位置主動剔除限制酶切位，並重新檢查是否因此產生新的切位；以及在應用程式內針對每條輸出序列做 CAI 與 GC 分析。限制酶切位這一塊是最亮眼的工程成果：在 RFC 10 與 RFC 1000 的限制下為 Nostoc 最佳化過氯酸鹽還原酶 A 次單元，在原本隨機取代的行為下跑了 15 小時還沒結束，改良後幾秒內就完成，並產出 Registry 零件 BBa_268WDVEB。架構上，最佳化引擎放在 POST /optimise 之後，因此不需要 Svelte 介面也能以無介面方式呼叫；Docker 映像則解決 ViennaRNA 與 Infernal 執行檔在 Windows 上造成的平台問題（docker build -t retisigner . && docker run -p 5050:5050 retisigner）。它附有使用手冊、記錄系統與 API 呼叫的開發指南、一支示範把 BBa_E0040 GFP 針對 Clostridium acetobutylicum ATCC 824 最佳化的教學影片（https://video.igem.org/w/rN6WnodTKYxiNitzfSUVZ3），以及公開的程式庫 https://gitlab.igem.org/2026/software/uni-padua-it/retisigner-svelte（團隊程式庫：https://gitlab.igem.org/2026/uni-padua-it）。它只能透過 Docker 自行架設，並沒有提供已託管的公開網路服務，這是唯一的缺口：沒有一個陌生人可以直接點進去的網址。他們也誠實地把 ReTIsigner 放在同領域中定位：重製 Demissie et al.（2025）的表 1，並在自己那一列的 CAI 欄位放上波浪號而不是打勾，同時與過去兩個 iGEM 的密碼子最佳化工具（HebrewU 2018、MIT 2023）逐項比較功能。他們在 2026 年 8 月 9 日公開徵求合作，願意替任何隊伍把序列針對其底盤做最佳化，結果沒有收到任何回覆，而他們也把這件事寫在 wiki 上。",
+    "stack": [
+      "SvelteKit",
+      "Svelte",
+      "Node.js 22",
+      "Python 3.6.9",
+      "Flask",
+      "Docker (multi-stage)",
+      "Miniconda/Conda",
+      "ViennaRNA 2.5.1 (RNAplfold)",
+      "Infernal 1.1.5",
+      "REST/HTTP API",
+      "Apache 2.0",
+      "iGEM GitLab",
+      "Arduino (hardware)"
+    ],
+    "techniques": [
+      "Simulated annealing search",
+      "frequency-weighted synonymous codon sampling",
+      "mRNA translation-initiation opening-energy minimisation",
+      "Codon Adaptation Index (CAIcal/Sharp-Li definition)",
+      "GC-bound feasibility filtering",
+      "active restriction-site excision",
+      "Kazusa codon-usage-table parsing",
+      "permutation testing stratified by strain",
+      "in silico benchmarking across GC-spanning hosts",
+      "acoustic (piezoelectric) frequency-sweep sensing"
+    ]
   },
   "good": {
     "publicEngagement": "A public survey on space research and biotechnology directly reshaped the team's communication: 76.5% of respondents rated using living organisms for oxygen and water highly while only 28.2% rated colonisation highly, so the team separated the usefulness of the technology from support for settling Mars; 42.2% knew little or nothing about GMOs, so explanations of what they modify and why were rewritten more accessibly; and 94.8% called a genetic safety system fundamental or very important, so the kill switch and confined bioreactor were given more space. Education activities grew out of the same consultations.",
+    "publicEngagement_zh": "一份關於太空研究與生物技術的公眾問卷，直接改變了團隊的溝通方式：76.5% 的受訪者高度肯定利用活體生物生產氧氣與水，但只有 28.2% 高度支持殖民，因此團隊把技術本身的有用性與支持移居火星這兩件事分開陳述；42.2% 對基因改造生物所知甚少或完全不知，因此關於他們改了什麼、為什麼要改的說明都重寫得更平易；94.8% 認為基因層面的安全機制是根本或非常重要的，因此 kill switch 與密閉式生物反應器也獲得更多篇幅。教育活動也是從同一批諮詢長出來的。",
     "ihp": "Human practices is written as a sequence of questions with an explicit 'what we changed' and, unusually, a 'what we couldn't fix' for each. Consultations with photosynthesis and cyanobacteria professors (Nicoletta La Rocca, Daniela Billi) cut the cold-tolerance module. iGEM Darmstadt 2025, who had built the same perchlorate constructs in B. subtilis, warned them off pcrABCD's oxygen sensitivity, which led to testing native NarB first and then compartmentalising pcrABD in heterocysts. A presentation to NASA's Open Science Data Repository Analysis Working Group moved the radiation module from survival-at-high-dose to genome integrity over generations, and pushed them toward a terrestrial use case (perchlorate in groundwater near propellant plants) when the Moon turned out to have no perchlorate. ESA flight-operations engineers (Davide Vertuani, Paolo Ferri) made them reason about the journey, not just arrival. Philosopher Telmo Pievani and space-habitat designer Serena Crotti changed how the bioreactor is framed within a crew's daily life. Most relevant to a dry-lab centre: they took their hardware manual and code to an instrumentation professor and an electronics PhD student (Simone Del Favero, Samuele Faccin) before publishing, and as a result weakened their own claim (the sensor detects gas bubbles, it does not measure oxygen), redrew the circuit with no crossing wires, documented timing resolution, and added a table separating proven from untested.",
+    "ihp_zh": "人類實踐以一連串問題的形式書寫，每個問題都明確寫出「我們改了什麼」，而且少見地還有一欄「我們沒能解決什麼」。與光合作用及藍綠菌領域教授（Nicoletta La Rocca、Daniela Billi）的諮詢砍掉了耐冷模組。2025 年的 iGEM Darmstadt 隊伍曾在 B. subtilis 中做過同樣的過氯酸鹽構築，提醒他們 pcrABCD 對氧氣敏感，使他們先測試原生的 NarB，再把 pcrABD 區隔到異形細胞中。向 NASA 的 Open Science Data Repository Analysis Working Group 報告後，輻射模組的目標從在高劑量下存活改成跨世代維持基因組完整性；而當他們發現月球上並沒有過氯酸鹽時，這條線也把他們推向一個地面上的應用場景（推進劑工廠附近地下水中的過氯酸鹽）。ESA 的飛行操作工程師（Davide Vertuani、Paolo Ferri）讓他們必須思考航程本身，而不只是抵達之後。哲學家 Telmo Pievani 與太空棲地設計師 Serena Crotti 則改變了生物反應器在組員日常生活中的定位方式。對乾實驗室型的研究單位最有參考價值的是：他們在發表之前，先把硬體手冊與程式碼拿給一位儀器專業的教授與一位電子學博士生（Simone Del Favero、Samuele Faccin）看，結果主動下修自己的主張（這個感測器偵測的是氣泡，並不量測氧氣）、把電路圖重畫成沒有交叉線、記錄時間解析度，並加上一張表把已驗證與未驗證的部分分開。",
     "realWorld": "The team identified a terrestrial application independent of any Mars mission: perchlorate contaminates groundwater near propellant and pyrotechnics manufacturing and is regulated, and biological removal is already an active research area. They were unable to secure an ionising radiation source (INFN Legnaro's Van de Graaff accelerator unavailable; IOV Padova's linear accelerator caps at roughly 6 Gy/min against a 6 kGy LD50), and report that the pprA radiation claim is therefore untested rather than glossing over it.",
-    "partners": ["iGEM Darmstadt 2025", "NASA Open Science Data Repository Analysis Working Group", "European Space Agency (flight operations)", "University of Padua (Biology, Chemistry, Information Engineering)", "University of Rome Tor Vergata", "TISIGNER authors (Bhandari, Lim, Gardner)"]
+    "realWorld_zh": "團隊找出一個與火星任務無關、在地球上就成立的應用：過氯酸鹽會污染推進劑與煙火製造廠附近的地下水，而且受法規管制，生物性移除也已經是活躍的研究領域。他們沒能取得游離輻射源（INFN Legnaro 的 Van de Graaff 加速器無法使用；IOV Padova 的線性加速器上限約 6 Gy/min，而 LD50 為 6 kGy），並直接說明 pprA 的抗輻射主張因此尚未驗證，而不是把它含糊帶過。",
+    "partners": [
+      "iGEM Darmstadt 2025",
+      "NASA Open Science Data Repository Analysis Working Group",
+      "European Space Agency (flight operations)",
+      "University of Padua (Biology, Chemistry, Information Engineering)",
+      "University of Rome Tor Vergata",
+      "TISIGNER authors (Bhandari, Lim, Gardner)"
+    ]
   },
   "images": [
-    {"url": "https://static.igem.wiki/teams/6151/wiki/software/new-frontend.avif", "caption": "The ReTIsigner interface the team built from scratch in SvelteKit, replacing the original TIsigner form.", "credit": "Team Uni-Padua-IT, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6151/wiki/software/guided-tour.avif", "caption": "The in-app guided tour that walks a first-time user through configuring a whole optimisation run.", "credit": "Team Uni-Padua-IT, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6151/wiki/software/results-opt.avif", "caption": "The results card: input sequence against an optimised output, with CAI and GC content computed in-app.", "credit": "Team Uni-Padua-IT, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6151/wiki/software/request-schema.avif", "caption": "System architecture: the SvelteKit frontend posts a run to Flask, which hands it to a worker pool that shells out to RNAplfold and Infernal.", "credit": "Team Uni-Padua-IT, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6151/wiki/software/optimisation-schema.avif", "caption": "One iteration of the simulated annealing search, with the team's two additions: restriction-site removal before scoring and a GC-bound feasibility check.", "credit": "Team Uni-Padua-IT, iGEM 2026 wiki"}
+    {
+      "url": "https://static.igem.wiki/teams/6151/wiki/software/new-frontend.avif",
+      "caption": "The ReTIsigner interface the team built from scratch in SvelteKit, replacing the original TIsigner form.",
+      "caption_zh": "團隊以 SvelteKit 從零打造的 ReTIsigner 介面，取代了原本 TIsigner 的表單。",
+      "credit": "Team Uni-Padua-IT, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6151/wiki/software/guided-tour.avif",
+      "caption": "The in-app guided tour that walks a first-time user through configuring a whole optimisation run.",
+      "caption_zh": "應用內建的導覽，帶第一次使用的人走完一次完整最佳化執行的設定。",
+      "credit": "Team Uni-Padua-IT, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6151/wiki/software/results-opt.avif",
+      "caption": "The results card: input sequence against an optimised output, with CAI and GC content computed in-app.",
+      "caption_zh": "結果卡片：輸入序列與最佳化後的輸出並排，CAI 與 GC 含量都在應用內計算。",
+      "credit": "Team Uni-Padua-IT, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6151/wiki/software/request-schema.avif",
+      "caption": "System architecture: the SvelteKit frontend posts a run to Flask, which hands it to a worker pool that shells out to RNAplfold and Infernal.",
+      "caption_zh": "系統架構：SvelteKit 前端把一次執行 POST 給 Flask，Flask 再交給工作者池，由其呼叫 RNAplfold 與 Infernal。",
+      "credit": "Team Uni-Padua-IT, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6151/wiki/software/optimisation-schema.avif",
+      "caption": "One iteration of the simulated annealing search, with the team's two additions: restriction-site removal before scoring and a GC-bound feasibility check.",
+      "caption_zh": "模擬退火搜尋的單次迭代，含團隊新增的兩項：在評分前先剔除限制酶切位，以及 GC 含量上下界的可行性檢查。",
+      "credit": "Team Uni-Padua-IT, iGEM 2026 wiki"
+    }
   ],
   "gemsTakeaway": "Fork and extend an existing, cited scientific tool instead of building a new one, and validate the extension at the bench: ReTIsigner's credibility comes from a 2.16-fold wet-lab expression result, a 52%-to-2% failure-rate benchmark, and a published 'what we are entitled to claim' section that names its own limits. A research centre should also copy their packaging discipline, one Docker command plus a documented HTTP endpoint so the engine is reusable headlessly, and their habit of sending documentation to an outside instrumentation expert before publishing it.",
+  "gemsTakeaway_zh": "分支並延伸一個既有、被引用過的科學工具，而不是另造一個新的，並且在實驗台上驗證你加上去的部分：ReTIsigner 的可信度來自 2.16 倍的濕實驗表現結果、失敗率從 52% 降到 2% 的基準測試，以及一段公開寫明「我們有資格主張什麼」、同時指出自身限制的段落。研究單位也值得學他們的封裝紀律：一道 Docker 指令加上一個有文件的 HTTP 端點，讓引擎可以在無介面的情況下被重複使用；還有他們在發表之前先把文件送給外部儀器專家審閱的習慣。",
   "sources": [
     "https://2026.igem.wiki/uni-padua-it/",
     "https://2026.igem.wiki/uni-padua-it/software",

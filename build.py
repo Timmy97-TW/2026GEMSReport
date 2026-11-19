@@ -17,6 +17,7 @@ import json
 import os
 import re
 import sys
+import time
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 RES = os.path.join(ROOT, "research")
@@ -34,10 +35,28 @@ def load(path, default=None):
         return default
 
 
-def write_js(name, var, obj):
+def stamp_index(stamp):
+    """Version the script URLs so readers do not get a stale app or stale data.
+
+    GitHub Pages caches assets for several minutes, so without this a returning
+    reader can run yesterday's app.js against today's data. The stamp also goes
+    into window.BUILD, which app.js appends when it lazy-loads teams-full.js.
+    """
+    path = os.path.join(ROOT, "index.html")
+    with open(path, encoding="utf-8") as f:
+        html = f.read()
+    new = re.sub(r'(<script src="(?:data/)?[A-Za-z0-9_.-]+\.js)(?:\?v=[^"]*)?(">)',
+                 r"\1?v=" + stamp + r"\2", html)
+    if new != html:
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(new)
+    return len(re.findall(r"\?v=" + re.escape(stamp), new))
+
+
+def write_js(name, var, obj, append=False):
     os.makedirs(OUT, exist_ok=True)
     path = os.path.join(OUT, name)
-    with open(path, "w", encoding="utf-8") as f:
+    with open(path, "a" if append else "w", encoding="utf-8") as f:
         f.write("window.%s = " % var)
         json.dump(obj, f, ensure_ascii=False, separators=(",", ":"))
         f.write(";\n")
@@ -337,13 +356,18 @@ def main():
         index.append(row)
     full = {t["id"]: t for t in teams}
 
-    print("building:")
-    write_js("results.js", "RESULTS", results)
+    stamp = time.strftime("%Y%m%d%H%M")
+    print("building (v%s):" % stamp)
+    os.makedirs(OUT, exist_ok=True)
+    with open(os.path.join(OUT, "results.js"), "w", encoding="utf-8") as f:
+        f.write('window.BUILD = "%s";\n' % stamp)
+    write_js("results.js", "RESULTS", results, append=True)
     write_js("teams.js", "TEAMS", index)
     write_js("teams-full.js", "TEAMS_FULL", full)
     write_js("trends.js", "TRENDS", trends)
     write_js("report.js", "REPORT", report)
     write_text_mirror(results, teams, trends, report)
+    print("  index.html     %d script tags versioned" % stamp_index(stamp))
 
     zh = sum(1 for t in teams if t.get("summary_zh"))
     print("\n%d team files · %d translated to Chinese · %d academic trends · %d industry trends · %d insight blocks"
