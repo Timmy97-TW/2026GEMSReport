@@ -1,0 +1,114 @@
+{
+  "team": "NUS-Singapore",
+  "id": "6395",
+  "section": "Undergrad",
+  "country": "Singapore",
+  "village": "Biomanufacturing",
+  "wiki": "https://2026.igem.wiki/nus-singapore/",
+  "projectTitle": "ORCHID",
+  "tagline": "Multiplexed fluorescent stress biosensors in yeast plus a machine-learning layer that turns intracellular stress into the next experiment to run.",
+  "summary": "Industrial bioreactors hold hundreds of thousands of litres and a single bad batch is expensive, yet conventional monitoring tracks only physical and chemical parameters such as pH and dissolved oxygen — nothing about what is happening inside the cell. Omics and LC-MS can see inside, but they are offline, destructive and slow enough that results arrive after the batch has finished, so they cannot act on anything. ORCHID puts biosensors for endoplasmic reticulum, oxidative and ATP stress into Saccharomyces cerevisiae as fluorescent reporters readable straight from a plate reader, solves the resulting spectral overlap with a linear unmixing model, and feeds the separated stress signals into SABLe, a neural-network framework that predicts growth, product and stress from process conditions and then proposes which culture to run next. It won nominations across parts, presentation, wiki and integrated human practices because the loop actually closed: SABLe's exploration rule proposed 27 C, the team grew that plate, and the measured product signal reached 491 mApple RFU/OD600 against 204 and 179 at the 24 and 30 C conditions it was trained on.",
+  "awards": [
+    "Undergrad Top 10",
+    "Nominee, Best Part Collection",
+    "Nominee, Best Presentation",
+    "Nominee, Best Wiki",
+    "Nominee, Best Integrated Human Practices",
+    "Nominee, Best Biomanufacturing Project"
+  ],
+  "dry": {
+    "frameworks": "Three layers, built in sequence. First, a linear unmixing model adapted from multispectral fluorescence imaging to plate-reader wells: each sample's readings are modelled as a mixture matrix with one column per reporter and one row per channel, with diagonal entries carrying a reporter's own signal and off-diagonal entries the crosstalk, inverted to recover each reporter's share. It was validated on mixtures of single-reporter strains including untransformed BY4741 for autofluorescence and water-only wells for background, six replicates per condition. Second, a mechanistic baseline: Hill dose-response curves fitted at each temperature for DTT against the stress reporter and galactose against the product reporter, plus simple ODE time-course equations. The ODEs tracked growth well (R-squared about 0.91-0.93) but fitted stress (0.33-0.47) and product (0.41-0.42) poorly, and the team uses that failure as the explicit justification for moving to machine learning rather than assuming ML was needed. Third, SABLe: a multilayer perceptron trained on 700 culture-time records from 40 unique condition combinations (two temperatures at 24 and 30 C, five DTT concentrations 0-1 mM, four galactose concentrations 0-0.2%, three independent plate cultures each, measured at 0, 3, 5, 7, 9 and 24-26 hours), predicting OD600, mApple/OD600 and mCitrine/OD600 without ever receiving their measured values as inputs. On top of the trained network they run gradient ascent (network frozen, 64 starting conditions, 500 steps each, 32,000 evaluations without growing a culture), a ten-member bootstrap ensemble for disagreement-based uncertainty, and UMAP projection of the 64-dimensional latent response to 20,000 queried conditions to inspect what the network learned.",
+    "dataviz": "The wiki is a Three.js scrollytelling experience that walks a reader from the $2-4 trillion bioeconomy projection down to a single yeast cell, with hoverable bioreactors explaining Titer, Rate and Yield before the project is even introduced — the argument is built visually before any data appears. The dry lab page is laid out as a numbered slide sequence (raw extremes, normalisation, normalised trajectories, stress dose fit, product dose fit, time model fit, fivefold split, held-out scores, held-out trajectories, gradient search, ensemble uncertainty, exploration score, optimisation versus exploration, latent UMAP, measured DTT response, UMAP robustness), so the reasoning chain is the navigation. Two choices stand out. The exploit-versus-explore panel shows side by side that maximising predicted signal just returns to a corner already measured, while the exploration rule spreads eight proposed tests across under-sampled combinations — making the value of the method visible rather than argued. And the UMAP is drawn sixteen different ways with the caption telling the reader to compare colour gradients rather than outlines, with an explicit note that the map axes have no biological units, which is an honest treatment of a technique usually presented as if its shape meant something.",
+    "datascience": "The statistical discipline here is well above the usual standard. Cross-validation groups all biological replicates and time points from a single cultivation condition into one split, because splitting correlated measurements across train and test would inflate performance — so the reported scores (R-squared 0.955 for OD600, 0.891 for mApple/OD600, 0.842 for mCitrine/OD600) measure generalisation to genuinely unseen condition combinations. Channel selection asked how few reads are needed and found one well-chosen channel per reporter matches a full spectral scan (three channels as good as six for three reporters, four as good as eight for four), turning an hour-long scan into minutes so a bioreactor can be sampled routinely. A simulation study set the design rule for adding reporters: for each separation angle from 2 to 90 degrees they generated 3,000 random two-reporter mixtures with 5% noise and found median error stays within 5 percentage points once reporters are at least 28 degrees apart — which is why mCitrine and eGFP at 20 degrees are ruled out. Errors are diagnosed rather than reported: the consistent 3-point overestimate of mTurquoise2 and underestimate of mApple in three-reporter mixtures is attributed to sample preparation rather than the algorithm because noise alone would scatter in both directions, and the larger four-reporter errors are traced to the whole plate being 6-17 times dimmer, leaving mApple and mTurquoise2 only about 160 and 690 RFU above water. Then the model generated a biological hypothesis: UMAP showed conditions with more DTT clustering where both stress and product are predicted high (79% of high-predicted-product conditions were also high DTT, 81% high predicted stress, against 25% expected by chance), the team went back to the measured cultures and confirmed it (Spearman rho, p < 0.001), checked that mCitrine bleed into the mApple channel could explain at most 8% of the rise, and named the next mechanistic question. They also caught their own education-survey analogue of this problem in the model: the 27 C validation plate was read at 24 hours while earlier plates were read at about 25, and they say so.",
+    "software": "SABLe and the linear unmixing algorithm are released on the iGEM GitLab at https://gitlab.igem.org/2026/software/nus-singapore/model, framed explicitly as a reusable framework rather than a one-project script — future teams can use the unmixing to quantify several fluorescent proteins at once and track multiple cellular processes from a single strain design. The part collection is the other deliverable: 17 modular basic parts (stress-sensing elements including altered and native Yap1 response elements, UPRE1 and UPRE2 Hac1 binding sites, biosensor tuning elements, promoters of differing strengths, terminators, and fluorescent reporters including a genetically encoded green ATP sensor) plus 12 composite parts for the ER, oxidative and ATP stress biosensors, designed for plug-and-play assembly. They also characterised leakiness-reduction design principles as a reusable pattern: Sko1 repression upstream of the TATA box, a cP_CYC1 core promoter to lower basal expression, an ODC degradation tag for continuous turnover of background protein, and an RPP2Bt terminator. Two education artefacts are software: a browser game in which players build genetic circuits in virtual yeast populations, with every number and equation documented by source category (published, game-balance tuned by scripted playtesting, or stated rule) and an honest statement that no value was fitted to a real culture so the game shows the shape of the biology rather than predictions; and SynVision, an app whose camera scanner links everyday objects to synthetic biology concepts and then runs DBTL-guided questioning.",
+    "stack": [
+      "Python with a multilayer perceptron (ReLU)",
+      "Deep ensembles for predictive uncertainty",
+      "UMAP dimensionality reduction",
+      "Gradient ascent over a frozen network",
+      "Linear unmixing / matrix inversion on plate-reader channels",
+      "Hill dose-response curve fitting",
+      "ODE time-course models",
+      "Spearman correlation with Holm correction",
+      "Saliency-map style latent inspection",
+      "Three.js scrollytelling wiki",
+      "Microsoft Forms with anonymous participant linking codes",
+      "GitLab (iGEM instance)"
+    ],
+    "techniques": [
+      "Multiplexed fluorescent biosensing with spectral deconvolution",
+      "Reference-spectra calibration including autofluorescence and background wells",
+      "Condition-grouped cross-validation to prevent leakage from correlated replicates",
+      "Channel-subset selection to minimise readout time",
+      "Simulation-based design thresholds (28-degree separation rule)",
+      "Bootstrap ensemble disagreement as an uncertainty proxy",
+      "Exploit-versus-explore acquisition scoring (normalised disagreement plus distance to nearest tested condition)",
+      "Latent-space projection to generate testable biological hypotheses",
+      "Robustness checks across 16 hyperparameter settings",
+      "Model-proposed condition validated at the bench",
+      "Systematic error diagnosis distinguishing preparation artefacts from algorithm error"
+    ]
+  },
+  "good": {
+    "publicEngagement": "NUS treated their educational game as a research object, which is rare at any level. It was designed against Self-Determination Theory with autonomy, competence and relatedness mapped to specific mechanics (free choice of parts, a shared leaderboard, facilitated peer discussion), and every simulation value published with its provenance. Evaluation used paired pre- and post-surveys via Microsoft Forms where participants generated the same anonymous linking code on both forms from details only they would know, so before-and-after answers could be matched without collecting names or emails. They deployed across six settings — Project STEMpact Workshop 3 with secondary school students, NCEB Engineering Biology Week FUTURES Day with polytechnic students, two undergraduate modules (SP2718C and BN4501), NUS Telegram channels and a Raffles Girls' School email blast — getting 58 pre-surveys and 27 post-surveys between 5 September and 18 October 2026, of which 24 paired. The analysis is where it becomes exemplary: four Intrinsic Motivation Inventory subscales were shortened and reworded, then checked for internal consistency with Cronbach's alpha in their own data, which exposed that Perceived Choice at alpha 0.23 was not a single construct (its two items measured having choices and feeling obliged to play) so they reported them separately instead of averaging. Three items were negatively worded and reverse-scored to catch acquiescent responders. Attrition bias was tested — only 41% of pre-survey takers paired — and no item differed (all p > .18). Self-ratings on all three understanding statements rose 1.3-1.8 points (d = 0.76-0.95) and intent to pursue synthetic biology from 4.0 to 4.9 (d = 0.64), all surviving Holm correction. But they also scored free-text definitions as an independent check: promoters rose from 64% to 91% correct, sensors from 23% to 45%, genes stayed at 55%, and the overall written score moved only 1.4 to 1.9 out of 3 (p = .06). Crucially, self-ratings matched written answers before playing (rho = .65) and did not afterwards (rho = -.04) — participants felt they understood more than they could explain — so the team explicitly treats the self-reported gains as an upper bound. Their own headline finding is that participants valued the game more than they enjoyed it: the highest-rated statement in the survey was that the game is useful for understanding synthetic biology (5.5) and the lowest was about enjoying it while playing (4.3).",
+    "ihp": "The project's scope was set and then substantially narrowed by stakeholders. An application scientist at TJX Bioengineering established that a single failed batch causes substantial financial loss and shifted the team's attention from the product to the production process and the changing conditions cells experience; Anomaly Bio, a precision fermentation startup, established that conventional monitoring tracks physical and chemical parameters while the cell's inner workings are overlooked because they are hard to measure and hard to interpret. The largest single change came from Dr Bruce Li, Alan Yang and Prof Yong-Su Jin raising scale-up challenges, deployment barriers and startup resource constraints: in response the team moved ORCHID's primary intended application from continuous industrial monitoring to early-stage R&D, naming strain-engineering and process-development teams at startups as the primary users and dropping production-scale deployment as an immediate objective. Several design elements are individually attributable — Dr Jee Loon Foo's guidance set the initial oxidative and ER stress targets, Sheena Chan's feedback added the ATP depletion sensor, and Dr Bruce Li's concerns about whether the biosensors themselves perturb the cell led them to build parental-versus-biosensor-strain comparisons into the experimental design. Sook Wei explained how genome-scale metabolic models represent competition between growth and product formation but warned that conventional metabolic models may not match real cellular behaviour because of unaccounted byproducts, competing pathways and biological constraints, stressing that experimental data is what closes that gap and pointing toward combining genome-scale modelling with machine learning — advice visible in the final architecture, where a mechanistic ODE baseline is fitted first, shown to fail on stress and product, and only then replaced by a learned model. Later feedback also asked them to extend the model to weigh productivity, yield and cost together rather than optimising a single predicted output, which is recorded as future work rather than claimed as done.",
+    "realWorld": "The deployment story is deliberately modest after the industry reality check. ORCHID is positioned as an early-stage R&D platform for strain engineering and process development teams at startups, not as production-scale instrumentation, because the team accepted that industrial implementation carries technical and financial constraints they cannot yet meet. The workflow they specify is concrete: build or adopt modular biosensors for the analytes of interest in whatever chassis is being engineered, culture under varied process conditions, train the model on how conditions map to stress responses, use it to interpolate and recommend conditions, then run the organism under those conditions — with the intracellular data also making unintended effects on the host easier to spot. The framing they use for the value proposition is a grey box rather than a black box: in-line pH and dissolved oxygen sensors show how organism and environment affect each other, but when production is inefficient researchers still cannot tell which pathway is the constraint, and high-dimensional intracellular stress data gives a window into that. Because the biosensors are modular, they argue the collection builds toward a shared library: metabolic engineering teams can track the burden a heterologous pathway places on the cell, and environmental synthetic biology teams can assess strain robustness in harsh conditions. Troubleshooting is published as a first-class deliverable, with issues and fixes in segmented boxes down the results page specifically so later teams hit them less hard.",
+    "partners": [
+      "TJX Bioengineering (application scientist, cell culture bioprocess)",
+      "Anomaly Bio (precision fermentation startup)",
+      "Dr Bruce Li",
+      "Alan Yang",
+      "Prof Yong-Su Jin",
+      "Dr Jee Loon Foo",
+      "Sheena Chan",
+      "Prof Matthew Chang",
+      "Prof Dong-Yup Lee",
+      "Prof Tom Ellis",
+      "Sook Wei (genome-scale metabolic modelling)",
+      "Lucas Gelain",
+      "Goh Lay Koon",
+      "Chionh Yok Hian",
+      "Project STEMpact",
+      "NCEB Engineering Biology Week (FUTURES Day)",
+      "Raffles Girls' School"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6395/wiki/pages/model/ml-stuff/sable-slide-12-exploration-score.avif",
+      "caption": "SABLe's acquisition rule made visible: model disagreement across the ten bootstrap networks and distance from already-tested conditions highlight different gaps, and their combined exploration score first selected 27 C, 1 mM DTT and 0.15% galactose as the next culture to grow.",
+      "credit": "Team NUS-Singapore, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6395/wiki/pages/model/ml-stuff/figure-18-27c-product-comparison.avif",
+      "caption": "The closed loop: measured mApple per OD600 at 0.2% galactose across DTT doses for 24, 27 and 30 C. The model-proposed 27 C plate reached 491 RFU/OD600 at 0.5 mM DTT, against 204 and 179 for the matched 24 and 30 C cultures the model was trained on.",
+      "credit": "Team NUS-Singapore, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6395/wiki/pages/model/ml-stuff/sable-slide-14-latent-umap.avif",
+      "caption": "UMAP projection of the network's 64-dimensional internal response to 20,000 untested process conditions, the same points coloured by DTT dose, predicted stress and predicted product — the view that generated the testable hypothesis that higher DTT accompanies both more stress and more product.",
+      "credit": "Team NUS-Singapore, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6395/wiki/pages/outreach-and-education/game/game-fig2-written-definitions.avif",
+      "caption": "Share of 22 paired participants giving a correct written definition before and after playing the circuit-building game — the independent check that showed smaller gains than self-ratings and led the team to treat the self-reported improvement as an upper bound.",
+      "credit": "Team NUS-Singapore, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Two things are directly copyable and neither needs a bioreactor. First, NUS's active-learning loop: fit a simple mechanistic model, show where it fails, train a small neural net on your own plate data, then use ensemble disagreement plus distance from tested conditions to pick the next experiment — and actually run it, so the write-up ends with a measured confirmation rather than a prediction. Second, and more unusual, evaluate your outreach the way you evaluate an assay: paired pre/post surveys with anonymous linking codes, reverse-scored items to catch acquiescence, Cronbach's alpha on any scale you shorten, attrition checks, and a free-text knowledge score as an independent check on self-reports. NUS found their participants felt they had learned more than they could explain, and said so — that kind of honesty about one's own teaching is both rare and cheap to adopt.",
+  "sources": [
+    "https://2026.igem.wiki/nus-singapore/",
+    "https://2026.igem.wiki/nus-singapore/description",
+    "https://2026.igem.wiki/nus-singapore/model",
+    "https://2026.igem.wiki/nus-singapore/engineering",
+    "https://2026.igem.wiki/nus-singapore/experiments",
+    "https://2026.igem.wiki/nus-singapore/results",
+    "https://2026.igem.wiki/nus-singapore/parts",
+    "https://2026.igem.wiki/nus-singapore/human-practices",
+    "https://2026.igem.wiki/nus-singapore/education",
+    "https://2026.igem.wiki/nus-singapore/implementation",
+    "https://2026.igem.wiki/nus-singapore/contribution",
+    "https://2026.igem.wiki/nus-singapore/safety-and-security",
+    "https://gitlab.igem.org/2026/software/nus-singapore/model"
+  ]
+}

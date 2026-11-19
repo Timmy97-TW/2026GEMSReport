@@ -96,3 +96,46 @@ IHP + Sustainable Development cohort · Entrepreneurship + Parts + Safety cohort
    island do, and where are the collaboration opportunities.
 6. **Software afterlife.** Of the award-winning iGEM software tools, how many are actually deployed and
    reachable today? A blunt answer shapes Phase 3.
+
+## Findings log
+
+### 2026-11-19 — the convergence (this is the report's thesis)
+The academic trend agent (Nature portfolio + bioRxiv + PubMed) and the industry trend agent (SynBioBeta +
+funding/policy news) were run in parallel, from different sources, with no knowledge of each other.
+**They landed on the same white space.**
+
+- Academic: light has matured into a real-time actuator for closed-loop fermentation control (~60% titre gain
+  reported in a 1 L photobioreactor) — and optogenetics in *Bacillus subtilis* is **twelve papers in all of
+  PubMed**, verified directly by the agent.
+- Industry: optogenetics is becoming the control and cleaning layer of bioprocessing precisely because light
+  lets you retrofit an existing steel fermenter instead of buying a new one — the cheapest route past the
+  CapEx wall that is the binding constraint on biomanufacturing right now.
+- GEMS already stands in that gap: ReLEAF was a CcaS/CcaR optogenetic circuit in *B. subtilis* driving a
+  bioreactor, and it won Best Measurement and Best Hardware for exactly the instrumentation this needs.
+
+Second strategic finding, industry side: Taiwan's state-linked biotech push (TBMC, Hsinchu GMP, ops from
+Q2 2026) is a **CDMO/manufacturing** play with no visible synthetic-biology **design** layer, while Singapore
+(DayOne biological data centre) and Israel (NIS 70M for biological-AI infrastructure) are funding exactly that
+layer. GEMS cannot out-build a CDMO; it can occupy the design position nobody in Taiwan holds.
+
+Both are now written into `report.json` — a "convergence" section on the roadmap tab, and Phase 3 opens with
+the Bacillus optogenetics line.
+
+### Other things worth carrying forward
+- Structure prediction is commodity now: open Boltz-2 / Chai-1 / OpenFold3 / ColabFold match or beat the gated
+  flagship. The scarce skill is reading pLDDT and PAE critically, not getting a fold.
+- ML-guided DBTL is the hardest evidence for the dry-lab thesis: 5× isoprenol titre in six cycles, 800,000
+  designs cut to ~400.
+- US NSTM-6 (Nov 2026) ties federal funding to certified DNA suppliers screening 50+ nucleotide orders, with
+  8-year record retention. Reaches anyone selling to US-funded labs. GEMS needs a one-page policy; it is in
+  Phase 1 now.
+- 2026 pay reality: protein-design roles ~$150K–$215K vs ~$80K–$105K entry-level computational biology.
+  Python/PyTorch/foundation models are the named skills. The hybrid "owns the DBTL loop" profile is the target.
+- Ginkgo revenue roughly halved to $20.2M in Q2 2026 while Twist grew 22% to $459.4M with positive adjusted
+  EBITDA. The platform-company model is dead; picks-and-shovels compounds. Relevant to how GEMS defines its niche.
+
+### Agent waves — status
+- Wave 1 (Top 10 ×6, trends ×2): trends **complete**, team batches landing.
+- Wave 2 (special prizes ×6): landing.
+- Wave 3: remaining collegiate nominees, remaining HS nominees, trend-file Chinese translation — launched.
+- Team files on disk at last check: 35.
