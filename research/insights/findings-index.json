@@ -156,6 +156,32 @@
     "0 measurement rings"
    ],
    "link": "teams"
+  },
+  {
+   "kicker": "Biosafety",
+   "kicker_zh": "生物安全",
+   "title": "Nobody measured an escape rate",
+   "title_zh": "沒有人量過逸出率",
+   "body": "19 of 106 decorated teams describe a genetic containment device. **Zero** report a measured escape frequency, and only two name a DNA-synthesis screening regime. The sharpest result in the category is a negative one: the Safety winner found that a published Addgene kill switch failed first, weeks before its own circuits.",
+   "body_zh": "106 支得獎隊伍中有 19 支描述了基因層級的圍堵裝置。**沒有一支**報告量測到的逸出頻率，只有兩支指名了 DNA 合成訂單的篩查機制。這個類別最銳利的結果是一個負面結果：安全獎得主發現，一個已發表的 Addgene 自殺開關比他們自己的電路更早失效，而且早了好幾週。",
+   "chips": [
+    "0 of 106",
+    "2 name a screening regime"
+   ],
+   "link": "good"
+  },
+  {
+   "kicker": "Parts",
+   "kicker_zh": "元件",
+   "title": "Winning parts are won on documentation, not on novelty",
+   "title_zh": "得獎元件靠的是文件，不是新穎性",
+   "body": "Winners' headline parts carry **10,388 to 83,030 characters** of registry documentation across three to six typed documents; sampled nominee parts carry 440 to 2,500, usually Design only. The high-school basic-part winner is a 247 bp native promoter copied from GenBank. Both improved-part awards had **zero nominees** — the cheapest category in iGEM to enter.",
+   "body_zh": "得獎隊伍的代表元件在註冊庫上帶著 **10,388 到 83,030 個字元**的文件，分布在三到六份分類文件中；抽樣的入圍元件則是 440 到 2,500 字，通常只有 Design 一項。高中組基礎元件得主是一段從 GenBank 複製來的 247 bp 原生啟動子。兩個改良元件獎項都是**零入圍**——那是 iGEM 裡最便宜的參賽門檻。",
+   "chips": [
+    "83,030 vs 440 characters",
+    "improved part: 0 nominees"
+   ],
+   "link": "teams"
   }
  ],
  "method": "Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see.",

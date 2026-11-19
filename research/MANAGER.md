@@ -311,3 +311,26 @@ and it ignores "wiki", which is a loanword this report uses on purpose. There is
 three historical failures and it catches all three while passing clean text.
 It paid for itself within the hour — it caught a Cyrillic "протокол" that the manager had just typed into
 roadmap Phase 4, before it was committed.
+
+### How to verify a registry part (learned in wave 4, worth keeping)
+`parts.igem.org` now redirects to `registry.igem.org`, which is a React SPA — so **any** `/parts/<string>`
+path returns HTTP 200 and a status code proves nothing. The SPA's own pages call a public read API:
+
+```
+https://api.registry.igem.org/v1/parts/slugs/<slug>
+```
+where `<slug>` is the accession lowercased with underscores turned into hyphens
+(`BBa_26SZRX0Y` -> `bba-26szrx0y`). It returns the part JSON and genuinely 404s for an accession that does
+not exist. The `uuid` in that response is the key for the follow-ons: `/v1/parts/<uuid>/documentation`,
+`/metrics`, `/composition`, `/used-by`, `/collections`, `/compatibilities`, `/sequence-features`, and for
+collections `/v1/parts/collections/<uuid>/items` and `/v1/collections/<uuid>/documentation`. The
+documentation endpoint returns full markdown, which is far richer than the rendered page.
+
+Two cautions: send a browser User-Agent, or an AWS WAF challenge blocks plain curl; and the API rate-limits
+hard, so a burst returns **429**, which is easy to misread as a missing part. Verify a 404 by re-requesting
+it alongside accessions you know resolve.
+
+Used immediately: `research/teams/6053.json` (HKSSC) transcribed its own award-winning part as
+`BBa_26SZRXOY` with a letter O. The real accession is `BBa_26SZRX0Y` with a zero — PrbA coding sequence,
+CDS, 1,602 bp — confirmed by the slug endpoint in both directions and by the registry's own listing of the
+team's "PrbA's family" collection. Corrected.
