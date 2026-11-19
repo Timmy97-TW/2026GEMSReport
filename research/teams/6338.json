@@ -8,28 +8,100 @@
   "projectTitle": "Project 茶(Sa)kure-it-all",
   "tagline": "Yeast cocultures that produce four plant specialized metabolites from sakura and tea - sakuranetin, quercetin, EGCG and L-theanine - without the plant",
   "summary": "ASIJ-Tokyo engineered Saccharomyces cerevisiae to make four plant specialized metabolites tied to Japanese culture: sakuranetin, quercetin, EGCG and L-theanine. Rather than one overloaded strain, they split pathways across cocultured strains at optimised ratios (7:3 for sakuranetin and quercetin, 5:3:2 for the three-strain EGCG system), with every enzyme cassette behind a GAL promoter and a constitutive pTEF1 fluorescent reporter so strain ratios can be verified before induction. Their education portfolio is unusually broad for a high-school team and explicitly gap-driven: each activity was created to fill a named gap they had identified. They contributed 34 new parts, a no-HPLC semi-quantitative screening workflow and a low-cost DIY bioreactor with full build instructions, all aimed at other resource-limited high-school teams.",
-  "awards": ["Best Education nominee (High School)", "Best Part Collection nominee (High School)"],
+  "awards": [
+    "Best Education nominee (High School)",
+    "Best Part Collection nominee (High School)"
+  ],
   "dry": {
     "frameworks": "Stakeholder analysis structured into three domains (agricultural supply, health and consumer needs, production and commercial viability); Duke iGEM's Risk and Research Ethics Assessment tool used as an external bioethics compliance check.",
     "dataviz": "Stakeholder map figure grouping identified issues and stakeholders into the three domains; coculture architecture diagrams.",
     "datascience": "A semi-quantitative screening workflow designed specifically for teams without HPLC access, published as a contribution. In-silico modelling of a proposed active-transport system was explored with guidance from a Johns Hopkins biomedical engineering student, then explicitly abandoned because without HPLC the team could not measure intra- versus extracellular compound concentrations to validate it - a documented negative result.",
     "software": "Village 茶(Sa)kura: a free Animal Crossing-style educational game built in Unity and coded in C# over two years with the Japanese technology entertainment company ABAL Inc. Players receive villager requests (for example 'bring me anti-inflammatory sakura cream'), scavenge ingredients in the Sakura Forest, read recipes at crafting stations, synthesise items in in-game labs and return them, with up to 10 encoded pathways; published free on itch.io with a game manual. Also a memory card game, a 'What is?' YouTube explainer series, and The Catalyst: Science & Curiosity, a student science news/publication website.",
-    "stack": ["Unity Engine", "C#", "itch.io distribution", "YouTube", "web publishing platform (The Catalyst)", "HPLC (via International Christian University)"],
-    "techniques": ["yeast coculture at optimised strain ratios", "dual-plasmid selection (pRS316/URA3 + pRS315/LEU2 on SC -Ura -Leu dropout)", "GAL-inducible enzyme cassettes", "pTEF1 constitutive fluorescent reporter for ratio verification", "modular pathway splitting across strains", "DIY low-cost bioreactor build", "CRISPR-Cas9 teaching lab", "agarose gel electrophoresis", "strawberry and banana DNA extraction"]
+    "stack": [
+      "Unity Engine",
+      "C#",
+      "itch.io distribution",
+      "YouTube",
+      "web publishing platform (The Catalyst)",
+      "HPLC (via International Christian University)"
+    ],
+    "techniques": [
+      "yeast coculture at optimised strain ratios",
+      "dual-plasmid selection (pRS316/URA3 + pRS315/LEU2 on SC -Ura -Leu dropout)",
+      "GAL-inducible enzyme cassettes",
+      "pTEF1 constitutive fluorescent reporter for ratio verification",
+      "modular pathway splitting across strains",
+      "DIY low-cost bioreactor build",
+      "CRISPR-Cas9 teaching lab",
+      "agarose gel electrophoresis",
+      "strawberry and banana DNA extraction"
+    ],
+    "frameworks_zh": "利害關係人分析分為三個領域（農業供應、健康與消費者需求、生產與商業可行性）；並使用 Duke iGEM 的風險與研究倫理評估工具作為外部的生物倫理合規檢核。",
+    "dataviz_zh": "一張利害關係人地圖，把指認出的問題與利害關係人歸入三個領域；另有共培養架構示意圖。",
+    "datascience_zh": "一套專為沒有 HPLC 的隊伍設計的半定量篩選流程，已作為貢獻發布。他們也在一位約翰霍普金斯大學生醫工程學生的指導下探索了一個主動運輸系統提案的電腦模擬，隨後明確放棄，因為沒有 HPLC 就無法量測細胞內與細胞外的化合物濃度來驗證它——這是一項有記錄的負面結果。",
+    "software_zh": "Village 茶(Sa)kura：一款免費的《動物森友會》風格教育遊戲，以 Unity 建置、用 C# 撰寫，與日本科技娛樂公司 ABAL Inc. 合作開發兩年。玩家接受村民的請求（例如「幫我帶抗發炎的櫻花乳霜來」），在櫻花森林採集材料、在製作站閱讀配方、在遊戲內的實驗室合成物品再交回去，最多可編入 10 條代謝路徑；在 itch.io 上免費發布並附遊戲手冊。另有一款記憶卡牌遊戲、一個「What is?」YouTube 解說系列，以及 The Catalyst: Science & Curiosity——一個學生科學新聞與投稿網站。"
   },
   "good": {
     "publicEngagement": "ASIJ-Tokyo opened its education work with a diagnostic question - who is not yet part of the synthetic biology conversation - and then built one artefact per identified gap, which makes the portfolio unusually legible. Gap: low public awareness of sakura's health properties, addressed by an Earth Day booth (22 April 2025 and 2026) where elementary, middle and high school students painted flower pots and took home sakura seeds while being briefed on anti-inflammatory and antioxidant properties, reaching 70+ participants each year, plus a Sakura & Matcha Goodies recipe book whose recipes each carry a 'the science behind' blurb. Gap: almost no synthetic biology video content pitched at high school level, addressed by a 'What is?' YouTube series running since 2023 covering bioethics, cellular transport, yeast in synthetic biology, metabolic engineering, genetic switches, cocultures, biosensors and cellular fluorescence, deliberately sequenced so concepts build on each other. Gap: little attention to memory degradation in Japan's ageing population, addressed by a memory card game run at a senior home on 13 October 2026, using six cards depicting cluttered domestic interiors with recall questions (colour of the couch, number of pencils) across repeated rounds individually and in groups of 2-3; the team was scrupulous about its limits, stating plainly that this was a small pilot and not a clinical study, and left the game with the facility and its nurses as a low-pressure cognitive exercise. Gap: no easy way for teachers outside iGEM or biology to run these activities, addressed by a free downloadable workbook of seven tested lesson plans covering DNA, natural pigment, cell modelling, chromatography, biomaterials and polymer creation, refined so that the labs connect into a holistic overview, plus The Catalyst: Science & Curiosity, a newspaper-style website that also acts as a publication platform where any secondary school student can publish science writing from 300-word pieces to 20-page experimental reports. The flagship format is Village 茶(Sa)kura, an Animal Crossing-style Unity/C# game co-developed over two years with ABAL Inc., a Japanese technology entertainment company, iterated against industry-expert feedback and published free on itch.io with a manual. Direct teaching reached a wide spread of ages: a four-year-running CRISPR-Cas9 and gel electrophoresis lab for 8th graders built into their sickle cell anaemia unit (13-14 May 2025 and 12-13 May 2026, including why researchers target the BCL11A enhancer rather than the mutation itself); DNA extraction workshops for over 30 students at Tokyo Bay International School and Montessori School Tokyo in Azabu (31 March and 22 July 2026); the same experiment with bananas for 80+ children aged 5-10 daily at the school's Summer Day Camp, deliberately reaching local and non-international-school children; a 60+ child booth with leaf-rubbing and plant-engineering discussion at Aoyama Gakuin's Global Day (21 October 2025), tied to the UN SDGs and to English-language learning; a Winterfest campus-wide CSI escape-room-style DNA mystery (4 December 2025) with three stations - DNA matching to eliminate suspects, leaf-morphology comparison to locate the crime scene, and gel electrophoresis to identify the culprit; a Community Health Fair obstacle-course race (11 April 2025) where participants acted as skin cells carrying sakuranetin past crawl-space 'constricted blood vessels' and hurdle 'blockages' on a two-minute timer; and Back to School Night in 2025 and 2026, the 2026 edition adding a hands-on flower pipetting activity and recipe-book matcha cookies for 100+ parents, students and teachers. Evidence of iteration is explicit and honest: PCR was cut from the 8th grade lab because crucial steps ran out of time, lesson plans were reworked so activities connect, pipetting was added to Back to School Night, and the team states openly that it did not systematically record feedback this year and therefore added a feedback page to the workbook so teachers who use it can report back. Collaboration was a deliberate education strategy in its own right: activities were created or joined with eight teams across eight countries (Duke, Maastricht, Manipal, Concordia, Ruhr University Bochum, St Stephen's College Hong Kong, Patras, KCIS Xiugang) plus the iGEM Community Blackboard - contributing a scent to Manipal's Scents of the World, an abstract to Maastricht's peer-reviewed MSP Vector journal, a Pokemon-style card to RUBochum's Trading Card Project, a Japanese translation of HKSSC's food-waste comic, and both of their games to Patras's downloadable game gallery.",
     "ihp": "Four stakeholder engagements reshaped the project, each with a recorded design consequence. Tea producer Masahiro Okutomi of Sayama-cha Okutomien (10 April 2026) explained that overseas matcha orders have risen sharply while new tea plants take at least five years to mature and processing equipment three years to arrive, and that L-theanine is what gives matcha much of its quality - so extracting it from leaves for supplements would leave farmers with a degraded product. This directly strengthened the decision to produce L-theanine in yeast rather than extract it, and reframed the team's positioning from replacement to 'an extra source that works beside farms'. He also noted Japanese companies market catechins like EGCG while consumers do not know what L-theanine does, which changed the team's communication plan to explain each compound separately starting with L-theanine. Yukari Kawahito of Sakura Science Beauty (May 2026) introduced transdermal patches as a delivery format the team had not considered and opened a second business route of selling compounds to companies with existing formulation capability. Vikki Adams (Johns Hopkins) advised on an in-silico active-transport model that was ultimately dropped for lack of HPLC validation. A visit to the six-generation family-run Maruichi Mizuno Tea Farm in Shizuoka (16 June 2026) showed how the farm covers plants with sheets, harvests three times a year, processes its own hojicha and sencha and is now seeking matcha manufacturers to benefit from the boom - confirming producers already market L-theanine and EGCG benefits while demand for fermentation-derived ingredients remains untested. The visit was filmed as a vlog.",
     "realWorld": "The project's framing is a supply constraint, not a novelty: sakura-flavoured products appear across Japanese supermarkets every spring and vanish by May because the raw material does, sakuranetin being bound to one of the shortest harvest windows in agriculture, while tea faces the opposite problem of a demand boom farms cannot meet. Contributions were deliberately designed for resource-limited high-school teams: a reusable coculture architecture where a future team can keep Strain N unchanged and only build its own downstream strain, 34 new Registry parts, a semi-quantitative screening workflow usable without HPLC, and a low-cost DIY bioreactor with full build instructions. The team hosted six students from St Mary's International School to build a biosensor, gained HPLC access through a bioanalytical chemistry professor at International Christian University, and will give an opening keynote alongside university professors at ASIJ's first semi-annual science fair on 14 November 2026 to roughly 100 students and teachers.",
-    "partners": ["ABAL Inc. (Japanese technology entertainment company, two-year Unity game co-development)", "Tokyo Bay International School", "Montessori School Tokyo, Azabu", "Aoyama Gakuin (Global Day)", "International Christian University (bioanalytical chemistry professor, HPLC access)", "St Mary's International School", "Recolle Team Hayate (STEM Racing student team)", "Sayama-cha Okutomien (tea producer Masahiro Okutomi)", "Sakura Science Beauty (Yukari Kawahito)", "Maruichi Mizuno Tea Farm, Shizuoka", "Johns Hopkins University (Vikki Adams)", "itch.io (game distribution)", "Japan iGEM meet-up at Hiroo Gakuen (UTokyo, TUS, Waseda, Keio, Oakridge, HG)", "iGEM teams: Duke, Maastricht, Manipal, Concordia, RUBochum, HKSSC, Patras, KCIS Xiugang"]
+    "partners": [
+      "ABAL Inc. (Japanese technology entertainment company, two-year Unity game co-development)",
+      "Tokyo Bay International School",
+      "Montessori School Tokyo, Azabu",
+      "Aoyama Gakuin (Global Day)",
+      "International Christian University (bioanalytical chemistry professor, HPLC access)",
+      "St Mary's International School",
+      "Recolle Team Hayate (STEM Racing student team)",
+      "Sayama-cha Okutomien (tea producer Masahiro Okutomi)",
+      "Sakura Science Beauty (Yukari Kawahito)",
+      "Maruichi Mizuno Tea Farm, Shizuoka",
+      "Johns Hopkins University (Vikki Adams)",
+      "itch.io (game distribution)",
+      "Japan iGEM meet-up at Hiroo Gakuen (UTokyo, TUS, Waseda, Keio, Oakridge, HG)",
+      "iGEM teams: Duke, Maastricht, Manipal, Concordia, RUBochum, HKSSC, Patras, KCIS Xiugang"
+    ],
+    "publicEngagement_zh": "ASIJ-Tokyo 的教育工作是從一個診斷性問題開始的——誰還沒被納入合成生物學的對話——然後針對每一個指認出的缺口各做一件作品，使整個組合格外容易讀懂。缺口：公眾對櫻花保健特性的認識不足，以地球日攤位回應（2025 與 2026 年 4 月 22 日），小學、國中與高中學生在攤位彩繪花盆、帶櫻花種子回家，同時聽取抗發炎與抗氧化特性的說明，每年觸及 70 人以上；另有一本《Sakura & Matcha Goodies》食譜，每道食譜都附一段「背後的科學」。缺口：幾乎沒有以高中程度為對象的合成生物學影片內容，以自 2023 年持續製作的「What is?」YouTube 系列回應，主題涵蓋生物倫理、細胞運輸、酵母在合成生物學中的角色、代謝工程、基因開關、共培養、生物感測器與細胞螢光，並刻意排序讓概念層層累積。缺口：對日本高齡人口記憶退化的關注不足，以 2026 年 10 月 13 日在一間老人之家進行的記憶卡牌遊戲回應，使用六張描繪雜亂居家室內的卡片，搭配回想問題（沙發的顏色、鉛筆的數量），分個人與 2-3 人小組進行多輪；團隊對自身限制相當嚴謹，直言這只是一次小規模試辦、不是臨床研究，並把遊戲留給該機構與護理人員作為低壓力的認知練習。缺口：iGEM 或生物領域之外的老師沒有簡便方式執行這些活動，以一本可免費下載的手冊回應，內含七個經測試的教案，涵蓋 DNA、天然色素、細胞建模、色層分析、生物材料與高分子製作，並經修改讓各實驗能串連成一個整體概觀；另有 The Catalyst: Science & Curiosity，一個報紙風格的網站，同時作為投稿平台，任何中學生都能發表從 300 字短文到 20 頁實驗報告的科學寫作。旗艦作品是 Village 茶(Sa)kura，一款《動物森友會》風格的 Unity/C# 遊戲，與日本科技娛樂公司 ABAL Inc. 共同開發兩年，依產業專家回饋反覆修改，並在 itch.io 上附手冊免費發布。直接教學觸及的年齡層分布很廣：為八年級生開設、已連續四年的 CRISPR-Cas9 與膠體電泳實驗課，嵌入他們的鎌形血球貧血單元（2025 年 5 月 13-14 日與 2026 年 5 月 12-13 日，內容包括為何研究者針對 BCL11A 增強子而非突變本身）；在 Tokyo Bay International School 與麻布的 Montessori School Tokyo 為 30 多位學生舉辦 DNA 萃取工作坊（2026 年 3 月 31 日與 7 月 22 日）；在校內夏日營隊每天為 80 位以上 5 至 10 歲孩童用香蕉做同一個實驗，刻意觸及本地與非國際學校的孩子；在青山學院的 Global Day（2025 年 10 月 21 日）設攤，為 60 多位孩童進行葉片拓印與植物工程討論，並連結聯合國 SDG 與英語學習；Winterfest 的全校 CSI 式密室逃脫 DNA 謎案（2025 年 12 月 4 日），設三個關卡——以 DNA 比對排除嫌犯、以葉形比較鎖定犯罪現場、以膠體電泳指認兇手；社區健康博覽會的障礙賽（2025 年 4 月 11 日），參與者扮演攜帶 sakuranetin 的皮膚細胞，在兩分鐘計時內穿過代表「狹窄血管」的爬行空間與代表「阻塞」的跨欄；以及 2025 與 2026 年的返校之夜，2026 年版新增動手的花朵微量吸管活動與食譜書中的抹茶餅乾，服務 100 位以上家長、學生與教師。迭代的證據明確而誠實：因為關鍵步驟時間不夠，八年級實驗課砍掉了 PCR；教案被重寫以讓各活動相互串連；返校之夜加入了微量吸管操作；團隊也公開承認今年沒有系統性地記錄回饋，因此在手冊中加入一個回饋頁面，讓使用它的教師能回報意見。合作本身就是一項刻意的教育策略：他們與八個國家的八支隊伍共同創建或參與活動（Duke、Maastricht、Manipal、Concordia、Ruhr University Bochum、香港 St Stephen's College、Patras、康橋秀岡 KCIS），再加上 iGEM Community Blackboard——他們為 Manipal 的 Scents of the World 貢獻一種香氣、為 Maastricht 的同儕審查期刊 MSP Vector 投稿一篇摘要、為 RUBochum 的交換卡牌計畫做了一張寶可夢風格卡片、把 HKSSC 的食物浪費漫畫翻成日文，並把自己的兩款遊戲都放進 Patras 的可下載遊戲展示區。",
+    "ihp_zh": "四次利害關係人互動重塑了這個專案，每一次都留下具體的設計後果。狹山茶奧富園的茶農奧富雅浩（2026 年 4 月 10 日）說明海外抹茶訂單急遽增加，但新茶樹至少需要五年才成熟、加工設備也要等三年才到貨，而 L-theanine 正是抹茶品質的主要來源之一——因此若為了做保健食品而從茶葉中萃取它，留給農民的只會是品質下降的產品。這直接強化了「在酵母中生產 L-theanine 而非萃取」的決定，也把團隊的定位從取代改寫為「在農場旁邊運作的額外來源」。他還指出日本企業行銷的是 EGCG 之類的兒茶素，而消費者並不知道 L-theanine 有什麼作用，這使團隊改變傳播計畫，改為逐一說明每種化合物、並從 L-theanine 開始。Sakura Science Beauty 的川人由加里（2026 年 5 月）引入了團隊原本沒想到的遞送形式——經皮貼片，並開啟了第二條商業路線：把化合物賣給已有配方能力的公司。約翰霍普金斯大學的 Vikki Adams 就一個電腦模擬的主動運輸模型提供建議，該模型最終因缺乏 HPLC 驗證而被放棄。造訪靜岡縣經營六代的丸一水野茶園（2026 年 6 月 16 日）則讓他們看到農場如何以覆蓋布遮蔽茶樹、一年採收三次、自行加工焙茶與煎茶，而現在正尋找抹茶製造商以搭上這波熱潮——證實生產者已在行銷 L-theanine 與 EGCG 的益處，而市場對發酵來源原料的需求仍未經檢驗。這次造訪被拍成 vlog。",
+    "realWorld_zh": "專案的立論是供給限制，而不是新奇感：櫻花口味的產品每年春天出現在日本各大超市，到五月就消失，因為原料本身就消失了——sakuranetin 綁定在農業中最短的採收窗口之一；而茶則面對相反的問題：需求暴增而農場跟不上。貢獻刻意為資源有限的高中隊伍設計：一個可重複使用的共培養架構，讓未來的隊伍能保持 N 菌株不變、只建自己的下游菌株；34 個新的 Registry 部件；一套不需 HPLC 也能使用的半定量篩選流程；以及一台附完整製作說明的低成本自製生物反應器。團隊接待了六位來自 St Mary's International School 的學生一起製作生物感測器，並透過國際基督教大學一位生物分析化學教授取得 HPLC 使用機會；他們也將在 2026 年 11 月 14 日 ASIJ 首屆半年度科學展上，與大學教授並列發表開場主題演講，對象約 100 位學生與教師。"
   },
   "images": [
-    {"url": "https://static.igem.wiki/teams/6338/wiki/education/crafting-screenshot.avif", "caption": "A crafting station in Village 茶(Sa)kura, the free Unity/C# synthetic biology game built with ABAL Inc. and published on itch.io", "credit": "Team ASIJ-Tokyo, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6338/wiki/education/seniorhouse.avif", "caption": "Running the six-card memory game with residents at a senior home, 13 October 2026", "credit": "Team ASIJ-Tokyo, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6338/wiki/education/winterfest-igem.avif", "caption": "The campus-wide CSI-themed DNA mystery stations at Winterfest, 4 December 2025", "credit": "Team ASIJ-Tokyo, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6338/wiki/education/igem-backtoschool-2-1.avif", "caption": "Back to School Night 2026: hands-on flower pipetting activity for 100+ parents, students and teachers", "credit": "Team ASIJ-Tokyo, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6338/wiki/education/booth2.avif", "caption": "The Earth Day booth, where 70+ students painted sakura flower pots and took home seeds", "credit": "Team ASIJ-Tokyo, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6338/wiki/education/youtube-ss.avif", "caption": "The 'What is?' YouTube explainer series, built to fill the gap in synthetic biology video pitched at high school level", "credit": "Team ASIJ-Tokyo, iGEM 2026 wiki"}
+    {
+      "url": "https://static.igem.wiki/teams/6338/wiki/education/crafting-screenshot.avif",
+      "caption": "A crafting station in Village 茶(Sa)kura, the free Unity/C# synthetic biology game built with ABAL Inc. and published on itch.io",
+      "credit": "Team ASIJ-Tokyo, iGEM 2026 wiki",
+      "caption_zh": "Village 茶(Sa)kura 中的製作站——這款免費的 Unity/C# 合成生物學遊戲與 ABAL Inc. 共同開發，並在 itch.io 上發布"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6338/wiki/education/seniorhouse.avif",
+      "caption": "Running the six-card memory game with residents at a senior home, 13 October 2026",
+      "credit": "Team ASIJ-Tokyo, iGEM 2026 wiki",
+      "caption_zh": "2026 年 10 月 13 日，與老人之家的住民一起進行六張卡片的記憶遊戲"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6338/wiki/education/winterfest-igem.avif",
+      "caption": "The campus-wide CSI-themed DNA mystery stations at Winterfest, 4 December 2025",
+      "credit": "Team ASIJ-Tokyo, iGEM 2026 wiki",
+      "caption_zh": "2025 年 12 月 4 日 Winterfest 的全校 CSI 主題 DNA 謎案關卡"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6338/wiki/education/igem-backtoschool-2-1.avif",
+      "caption": "Back to School Night 2026: hands-on flower pipetting activity for 100+ parents, students and teachers",
+      "credit": "Team ASIJ-Tokyo, iGEM 2026 wiki",
+      "caption_zh": "2026 年返校之夜：為 100 位以上家長、學生與教師舉辦的動手花朵微量吸管活動"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6338/wiki/education/booth2.avif",
+      "caption": "The Earth Day booth, where 70+ students painted sakura flower pots and took home seeds",
+      "credit": "Team ASIJ-Tokyo, iGEM 2026 wiki",
+      "caption_zh": "地球日攤位，70 位以上學生在此彩繪櫻花花盆並帶種子回家"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6338/wiki/education/youtube-ss.avif",
+      "caption": "The 'What is?' YouTube explainer series, built to fill the gap in synthetic biology video pitched at high school level",
+      "credit": "Team ASIJ-Tokyo, iGEM 2026 wiki",
+      "caption_zh": "「What is?」YouTube 解說系列，專為填補以高中程度為對象的合成生物學影片缺口而製作"
+    }
   ],
   "gemsTakeaway": "Start from a written list of named gaps (which audience, which missing resource) and build exactly one artefact per gap, then package the reusable ones - a seven-lesson tested workbook with a built-in feedback page, a free game, a sequenced video series - so teachers outside synthetic biology can run them without you.",
   "sources": [
@@ -39,5 +111,9 @@
     "https://2026.igem.wiki/asij-tokyo/description",
     "https://2026.igem.wiki/asij-tokyo/contribution",
     "https://2026.igem.wiki/asij-tokyo/entrepreneurship"
-  ]
+  ],
+  "projectTitle_zh": "Project 茶(Sa)kure-it-all",
+  "tagline_zh": "以酵母共培養生產四種來自櫻花與茶的植物特化代謝物——sakuranetin、quercetin、EGCG 與 L-theanine——而不需要植物本身",
+  "summary_zh": "ASIJ-Tokyo 改造 Saccharomyces cerevisiae 來製造四種與日本文化相連的植物特化代謝物：sakuranetin、quercetin、EGCG 與 L-theanine。他們沒有把全部路徑硬塞進單一菌株，而是把路徑拆分到以最佳比例共培養的多個菌株（sakuranetin 與 quercetin 為 7:3，三菌株的 EGCG 系統為 5:3:2），每個酵素卡匣都置於 GAL 啟動子之下，並加上組成型 pTEF1 螢光報告子，使菌株比例能在誘導前先行確認。他們的教育作品組合對高中隊伍而言格外廣泛，而且明確由缺口驅動：每一項活動都是為填補他們指認出的某個特定缺口而設計。團隊貢獻了 34 個新部件、一套無須 HPLC 的半定量篩選流程，以及一台附完整製作說明的低成本自製生物反應器，全都瞄準其他資源有限的高中隊伍。",
+  "gemsTakeaway_zh": "從一份寫下來的缺口清單出發（哪個受眾、缺哪項資源），針對每個缺口只做一件作品，然後把可重複使用的那些包裝好——一本含內建回饋頁的七課測試過教案手冊、一款免費遊戲、一個循序編排的影片系列——讓合成生物學圈外的教師不必靠你也能自己執行。"
 }

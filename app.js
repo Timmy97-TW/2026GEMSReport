@@ -109,6 +109,9 @@
       stat(withDry, L("Dry lab profiles", "乾實驗室剖析")) +
       "</div></div></section>";
 
+    // the findings index sits above the results, as the executive layer
+    h += reportSections("overview", { before: 20 });
+
     // grand prize
     h += '<section class="sec"><div class="wrap">' +
       sechead("Headline results", "The 2026 podium", "2026 年頒獎台",
@@ -146,8 +149,8 @@
     });
     h += "</div></div></section>";
 
-    // report framing sections
-    h += reportSections("overview");
+    // the written framing follows the results
+    h += reportSections("overview", { from: 20 });
 
     return h;
   }
@@ -155,9 +158,16 @@
     return '<div class="stat"><div class="n tnum">' + esc(n) + '</div><div class="l">' + esc(l) + "</div></div>";
   }
 
-  /* render hand-written REPORT blocks tagged for a given tab */
-  function reportSections(tab) {
-    var blocks = (REPORT.sections || []).filter(function (b) { return b.tab === tab; });
+  /* Render REPORT blocks tagged for a tab. `range` narrows by the block's
+     `order` (default 50), so a summary block can sit above hand-built markup
+     and the rest below it. */
+  function reportSections(tab, range) {
+    var lo = range && range.from != null ? range.from : -Infinity;
+    var hi = range && range.before != null ? range.before : Infinity;
+    var blocks = (REPORT.sections || []).filter(function (b) {
+      var o = b.order == null ? 50 : b.order;
+      return b.tab === tab && o >= lo && o < hi;
+    });
     return blocks.map(function (b) {
       var h = '<section class="sec"><div class="wrap">' +
         sechead(b.kicker || "", T(b, "title"), T(b, "title"), T(b, "lede"), T(b, "lede"));

@@ -3,13 +3,18 @@
   "tab": "teams",
   "kicker": "Original analysis",
   "title": "What the Best Wiki winners did differently",
+  "title_zh": "最佳 Wiki 得獎隊伍做了哪些不一樣的事",
   "lede": "The four 2026 Best Wiki winners did not win on visual polish or page weight; they won by building an executive layer that tells a judge where the evidence is, and then by being unusually specific and unusually honest underneath it.",
+  "lede_zh": "2026 年四組最佳 Wiki 得獎隊伍並不是靠視覺精緻度或頁面重量取勝；他們靠的是建立一層明確的摘要層，直接告訴評審證據在哪裡，然後在這層底下做到異常具體、異常誠實。",
   "body": "Three of the four winners ship pages whose text exists in the HTML before any JavaScript runs: **Heidelberg** writes static HTML by hand, **Uni-Padua-IT** prerenders SvelteKit, **Lambert-GA** builds with Astro. TU Delft is the exception, a Vite single-page app behind a 3.4 MB bundle, and it compensates deliberately with an `llms.txt` at the wiki root and a plain-Markdown mirror of every page at `/tu-delft/<page>.md`. Against that, the control group — Princeton, Cornell, LYON, UAlberta, UCNZ, Athens, GU Frankfurt and Eton-College-UK, all winners of serious 2026 science prizes — serves near-empty shells of 486 bytes to 15 kB, as little as seven characters of text without JS.\n\nThe real differentiator is an explicit executive layer. Uni-Padua-IT and Lambert-GA both ship a `/judging` page that walks medal criterion by criterion, summarises each in two or three sentences and deep-links the evidence — Padua pointing straight at its own negative results, Lambert stating in the summary that fifteen minibinder designs produced no confirmed hits before a second campaign of twenty produced one binder at roughly 604 nM. TU Delft reaches the same place with an illustrated module map on Results where hovering highlights a module and clicking jumps to it, over the same five modules that organise the project; Heidelberg puts three summary cards above the fold and gives every nav link a one-line subtitle, so \"Results\" reads \"Where data tells the story\".\n\nUnderneath, the winners are simply more specific. **Heidelberg**'s captions carry panel letters, 547 ng and 433 ng transfection masses, 18,000 × g, and an effect size quoted with its range — 5.6×, 4.3 to 6.4× depending on the haze setting — while Padua photographs the plate that grew nothing, numbers it as a figure, and explains why an earlier transformation failed. **TU Delft** built a content system rather than a set of pages: 1,604 reference tags over 735 unique DOIs, 724 glossary calls against 102 definitions, 307 auto-numbered figures, and one unvarying Background → Results → Discussion → Future Perspective spine. Its decision matrix tags every cell as Factual, Inferred, Estimated or Speculative, with a legend saying the tag records the strength of the evidence behind the cell rather than the judgement — epistemic honesty rendered as a UI component, and I saw nothing like it elsewhere.\n\nWhat did not decide it is as instructive. Page weight spans two orders of magnitude inside the winners' circle, from Lambert-GA's 78 kB homepage to TU Delft's 3.4 MB. None of Heidelberg, Uni-Padua, Lambert-GA, Stanford, UCAS-China or Toronto declares a `prefers-color-scheme` rule, and meaningful alt text ran at 27 to 48 per cent across the winners while HongKong-JSS, ProFuture-China and WageningenUR hit 90, 86 and 81 per cent and won nothing for it. The winners do all honour `prefers-reduced-motion` — thirteen blocks in Heidelberg's stylesheet, eleven in TU Delft's bundle — and Heidelberg goes further, sniffing for a software WebGL renderer and dropping to a lite mode automatically, with `?lite=0` and `?perf=1` for anyone who wants to look: the motion budget goes to figure interactions and graceful degradation, not to hero spectacle.",
+  "body_zh": "四組得獎隊伍中有三組，頁面文字在任何 JavaScript 執行之前就已經存在於 HTML 裡：**Heidelberg** 手寫靜態 HTML，**Uni-Padua-IT** 以 SvelteKit 預先渲染，**Lambert-GA** 用 Astro 建置。TU Delft 是例外，它是一個 3.4 MB bundle 的 Vite 單頁應用，而它刻意用 wiki 根目錄的 `llms.txt`，以及每一頁在 `/tu-delft/<page>.md` 的純 Markdown 鏡像來補償。相對地，對照組——Princeton、Cornell、LYON、UAlberta、UCNZ、Athens、GU Frankfurt 和 Eton-College-UK，全都是 2026 年重量級科學獎項的得主——送出的是 486 位元組到 15 kB 的近乎空殼，在沒有 JS 的情況下最少只有七個字元的文字。\n\n真正的分水嶺是一層明確的摘要層。Uni-Padua-IT 和 Lambert-GA 都提供 `/judging` 頁面，逐條走過每一項獎牌標準，每一項用兩三句話摘要，並深層連結到證據——Padua 直接指向自己的負面結果，Lambert 在摘要裡寫明十五個 minibinder 設計沒有產生任何確認的命中，第二輪二十個設計才做出一個親和力約 604 nM 的 binder。TU Delft 以另一種方式到達同一處：Results 頁上一張插圖式的模組地圖，滑鼠移過會凸顯某個模組，點擊則跳到該模組，涵蓋的正是組織整個專案的那五個模組；Heidelberg 把三張摘要卡放在首屏之上，並給每個導覽連結一行副標，於是「Results」讀起來是「Where data tells the story」。\n\n再往下看，得獎隊伍就只是更具體。**Heidelberg** 的圖說帶有分圖編號、547 ng 與 433 ng 的轉染量、18,000 × g，以及附上範圍的效應量——5.6 倍，依 haze 設定落在 4.3 到 6.4 倍之間——而 Padua 把什麼都沒長出來的培養盤拍下來、編上圖號，並解釋早先一次轉形為何失敗。**TU Delft** 建的是一套內容系統，而不是一疊頁面：1,604 個引用標記對應 735 個不重複的 DOI、724 次詞彙表呼叫對應 102 條定義、307 張自動編號的圖，以及一條從不變動的 Background → Results → Discussion → Future Perspective 骨幹。它的決策矩陣為每一格標上 Factual、Inferred、Estimated 或 Speculative，圖例並說明這個標記記錄的是該格背後證據的強度，而不是判斷本身——把知識論上的誠實做成一個介面元件，這種作法我在別處沒有看到。\n\n沒有決定勝負的因素同樣值得一看。得獎圈內的頁面重量橫跨兩個數量級，從 Lambert-GA 78 kB 的首頁到 TU Delft 的 3.4 MB。Heidelberg、Uni-Padua、Lambert-GA、Stanford、UCAS-China 和 Toronto 都沒有宣告任何 `prefers-color-scheme` 規則；有意義的替代文字在得獎隊伍之間只有 27% 到 48%，而 HongKong-JSS、ProFuture-China 和 WageningenUR 分別達到 90%、86% 和 81%，卻沒有因此得到任何獎。得獎隊伍確實全都尊重 `prefers-reduced-motion`——Heidelberg 的樣式表裡有十三段，TU Delft 的 bundle 裡有十一段——而 Heidelberg 走得更遠，它會偵測軟體 WebGL 轉譯器並自動降為輕量模式，還留了 `?lite=0` 和 `?perf=1` 給想細看的人：動態效果的預算花在圖表互動和優雅降級上，而不是首頁的視覺奇觀。",
   "cards": [
     {
       "kicker": "Information architecture",
       "title": "Build a judging page and make it the front door",
+      "title_zh": "做一個 judging 頁面，並讓它成為正門",
       "body": "Uni-Padua-IT and Lambert-GA each ship a `/judging` route that indexes every medal criterion and every award they apply for. Each entry is two or three sentences of plain summary followed by a deep link into the page that holds the evidence. Padua links directly to its own failed Design-Build-Test-Learn cycles under Silver; Lambert quotes the binding affinity and the two failed design campaigns in the Gold section. It costs one page and it converts a pile of required sections into a reading order.",
+      "body_zh": "Uni-Padua-IT 和 Lambert-GA 各自提供一個 `/judging` 路徑，索引每一條獎牌標準和每一個申請的獎項。每一則是兩三句樸素的摘要，後面接一個深層連結，直通存放證據的頁面。Padua 在銀牌項下直接連到自己失敗的 Design-Build-Test-Learn 循環；Lambert 在金牌段落引用結合親和力和兩次失敗的設計輪次。代價是一頁，換來的是把一堆規定章節轉成一條閱讀動線。",
       "chips": [
         "Uni-Padua-IT",
         "Lambert-GA",
@@ -21,7 +26,9 @@
     {
       "kicker": "Data presentation",
       "title": "Label the provenance of every number you did not measure",
+      "title_zh": "為每一個不是你量出來的數字標註來源",
       "body": "TU Delft's entrepreneurship page scores four candidate applications against eleven weighted parameters. Every single cell carries a bracketed tag — [F]actual, [I]nferred, [E]stimated or [S]peculative — and the legend states that the tag records how strong the evidence behind the cell is, not the score, because every score is a judgement applied to sourced facts. The weights sum to 100 per cent and the weighted total is given to two decimals. It is the single most copyable device I found in 2026.",
+      "body_zh": "TU Delft 的創業頁面用十一個加權參數為四個候選應用評分。每一格都帶一個方括號標記——[F]actual、[I]nferred、[E]stimated 或 [S]peculative——圖例說明這個標記記錄的是該格背後證據有多強，而不是分數本身，因為每個分數都是對有來源的事實所做的判斷。權重加總為 100%，加權總分給到小數第二位。這是我在 2026 年找到最值得照抄的一項設計。",
       "chips": [
         "TU Delft",
         "F / I / E / S",
@@ -33,7 +40,9 @@
     {
       "kicker": "Human practices",
       "title": "Date every pivot and name who caused it",
+      "title_zh": "為每一次轉向標上日期，並指名是誰造成的",
       "body": "Lambert-GA applies one named framework, H.I.V.E. — Hear, Inquire, Validate, Evolve — identically to every stakeholder, then closes with a Project Pivots timeline. Five entries, each with a date, the named expert whose feedback caused it, and a literal before-and-after: nanobody changed to minibinder, P-domain in general changed to specific hotspots. The caption says every change shown came directly from stakeholder feedback rather than internal decisions. It makes integration auditable instead of asserted.",
+      "body_zh": "Lambert-GA 對每一位利害關係人都套用同一個具名框架 H.I.V.E.——Hear、Inquire、Validate、Evolve——最後以一條 Project Pivots 時間軸收尾。五則記錄，每一則都有日期、意見造成這次轉向的具名專家，以及字面上的前後對照：nanobody 改成 minibinder，整個 P-domain 改成特定的熱點。圖說寫明所列的每一項改變都直接來自利害關係人的意見，而不是團隊內部的決定。這讓整合變成可查核的，而不是宣稱的。",
       "chips": [
         "Lambert-GA",
         "H.I.V.E.",
@@ -45,7 +54,9 @@
     {
       "kicker": "Technical build",
       "title": "Mirror the wiki as plain Markdown",
+      "title_zh": "把 wiki 鏡像成純 Markdown",
       "body": "TU Delft's wiki is a Vite single-page app and the heaviest I measured, yet it publishes an `llms.txt` at the wiki root listing twelve pages, each mirrored as plain Markdown at `/tu-delft/<page>.md`. That gives a JS-free fallback, a machine-readable corpus, and a diffable source of truth for the content, all from one build step. If you insist on a client-rendered framework, this is the tax you should pay for it.",
+      "body_zh": "TU Delft 的 wiki 是 Vite 單頁應用，也是我量過最重的一個，但它在 wiki 根目錄發布 `llms.txt`，列出十二個頁面，每一頁都在 `/tu-delft/<page>.md` 鏡像成純 Markdown。這一個建置步驟同時換來不需要 JS 的替代方案、一份機器可讀的語料，以及一份可以做 diff 的內容真實來源。如果你堅持要用客戶端渲染的框架，這就是你該付的稅。",
       "chips": [
         "TU Delft",
         "llms.txt",
@@ -57,7 +68,9 @@
     {
       "kicker": "Figures",
       "title": "Write captions that stand alone, and number the negative control",
+      "title_zh": "寫能獨立成立的圖說，並為陰性對照編上圖號",
       "body": "Heidelberg's captions carry panel letters, exact reagent masses, exact centrifugation and pressure conditions, and effect sizes quoted with a range across settings — a reader can take the figure out of the page and still understand it. Uni-Padua-IT goes one better on controls: the plate that grew nothing gets its own numbered figure with the full condition in the caption, sitting beside the plate that grew two colonies. Showing the control is cheap and it is the fastest way to look like you know what you are doing.",
+      "body_zh": "Heidelberg 的圖說帶有分圖編號、確切的試劑用量、確切的離心與壓力條件，以及跨設定給出範圍的效應量——讀者把圖從頁面裡拿出來也看得懂。Uni-Padua-IT 在對照組上更進一步：什麼都沒長出來的培養盤有自己的圖號，圖說裡寫出完整條件，就放在長出兩個菌落的培養盤旁邊。把對照組放出來很便宜，而且這是讓人看起來知道自己在做什麼的最快方法。",
       "chips": [
         "Heidelberg",
         "Uni-Padua-IT",
@@ -69,7 +82,9 @@
     {
       "kicker": "Build discipline",
       "title": "Keep content out of components",
+      "title_zh": "別把內容寫進元件裡",
       "body": "Stanford University — Grand Prize winner and a Best Wiki nominee, though not a winner — stores each page as a single hand-written JavaScript object with a documented block grammar of p, sh, gal, list, table, steps, math and quotes, plus a per-page accent colour and icon. TU Delft does the equivalent in MDX with a fixed component vocabulary. Either way the layout is written once and the copy is written by people who are not touching layout, which is why neither wiki drifts between pages.",
+      "body_zh": "Stanford University——總冠軍得主，也是最佳 Wiki 入圍者，但沒有得獎——把每一頁存成一個手寫的 JavaScript 物件，配上一套文件化的區塊語法：p、sh、gal、list、table、steps、math 和 quotes，再加上每頁自己的強調色與圖示。TU Delft 則用 MDX 搭配固定的元件詞彙做到同一件事。不論哪一種，版面只寫一次，文字由不碰版面的人來寫，這就是這兩個 wiki 不會在頁與頁之間走樣的原因。",
       "chips": [
         "Stanford University",
         "TU Delft",
@@ -81,7 +96,9 @@
     {
       "kicker": "Craft",
       "title": "Degrade on purpose, not by accident",
+      "title_zh": "刻意降級，而不是意外降級",
       "body": "Heidelberg's wiki detects a software WebGL renderer on load and automatically switches to a lite mode, with `?lite=0` and `?lite=1` to force it either way and `?perf=1` to load a performance reporter. Its stylesheet carries thirteen `prefers-reduced-motion` blocks; TU Delft's bundle carries eleven. The winners treat a judge on a tired laptop as a real user. Nobody built a dark mode, and nobody needed one.",
+      "body_zh": "Heidelberg 的 wiki 在載入時偵測軟體 WebGL 轉譯器，並自動切換到輕量模式，另有 `?lite=0` 和 `?lite=1` 可以強制切換，`?perf=1` 則載入效能回報器。它的樣式表裡有十三段 `prefers-reduced-motion`；TU Delft 的 bundle 裡有十一段。得獎隊伍把用著一台老舊筆電的評審當成真實使用者。沒有人做深色模式，也沒有人需要。",
       "chips": [
         "Heidelberg",
         "?lite=1",
@@ -97,6 +114,12 @@
       "Section",
       "Framework / build",
       "The one thing it does best"
+    ],
+    "head_zh": [
+      "Wiki",
+      "組別",
+      "框架／建置",
+      "它做得最好的一件事"
     ],
     "rows": [
       [
@@ -135,6 +158,44 @@
         "Static HTML, 18 pages including a /medal index",
         "An odometer-style opening statistic that lands the problem in one screen"
       ]
+    ],
+    "rows_zh": [
+      [
+        "Heidelberg",
+        "大學組——得獎",
+        "手寫靜態 HTML，Bootstrap 加一層 77 kB 的 token 層；HTML、CSS 與 JS 合計約 1 MB",
+        "期刊級的圖說，以及針對弱 GPU 的自動輕量模式"
+      ],
+      [
+        "Uni-Padua-IT",
+        "大學組——得獎",
+        "SvelteKit，預先渲染；17 個程式碼分割檔案共 266 kB",
+        "/judging 頁面把每一條獎牌標準直接連到證據，失敗的部分也包含在內"
+      ],
+      [
+        "TU Delft",
+        "研究生組——得獎",
+        "Vite 單頁應用，單一 3.4 MB bundle，16 條扁平路由；MDX 內容搭配固定的元件詞彙",
+        "逐格標註證據來源，並把每一頁鏡像成 Markdown 放在 llms.txt 後面"
+      ],
+      [
+        "Lambert-GA",
+        "高中組——得獎",
+        "Astro，完全靜態；首頁的 HTML、CSS 與 JS 合計 78 kB",
+        "一條標了日期的轉向時間軸，把每次專案變更歸因到具名的利害關係人"
+      ],
+      [
+        "Stanford University",
+        "大學組——入圍",
+        "客戶端渲染的樣板應用；15 個手寫內容檔，搭配文件化的區塊語法",
+        "內容與版面完全分離，所以頁與頁之間不會走樣"
+      ],
+      [
+        "UCAS-China",
+        "大學組——入圍",
+        "靜態 HTML，18 個頁面，含一個 /medal 索引",
+        "里程表式的開場統計數字，一個畫面就把問題講清楚"
+      ]
     ]
   },
   "checklist": [
@@ -151,6 +212,20 @@
     "Date every human-practices pivot, name the person whose feedback caused it, and show before and after.",
     "Honour prefers-reduced-motion and spend the motion budget on figure interactions, not on the hero."
   ],
+  "checklist_zh": [
+    "送出已經包含你文字的 HTML——預先渲染，或像 TU Delft 那樣把每一頁鏡像成 Markdown 並配上 llms.txt。",
+    "做一個 /judging 頁面，用兩三句話回答每一條獎牌標準，並深層連結到證據。",
+    "在第一個畫面就寫出主導問題，並在每一層摘要用一模一樣的字重複它。",
+    "在每一個長頁面的細節之前，放上三張卡片或五個模組的摘要，排在任何子章節之前。",
+    "為每一個結果子章節固定同一條骨幹——Background、Results、Discussion、Future Perspective——而且絕不變動。",
+    "寫能獨立成立的圖說：分圖編號、確切條件、單位、n，以及附上範圍的效應量。",
+    "把陰性對照拍下來，並給它自己的圖號。",
+    "用數字說出你的失敗，而且要說在摘要層裡，不要埋起來。",
+    "為每一個不是你自己量出來的數字標註來源——事實、推論、估計或推測。",
+    "把內容放在每頁一個資料檔裡，搭配文件化的區塊語法；版面只寫一次。",
+    "為每一次人類實踐的轉向標上日期、指名是誰的意見造成的，並呈現前後對照。",
+    "尊重 prefers-reduced-motion，把動態效果的預算花在圖表互動上，而不是首頁主視覺。"
+  ],
   "antipatterns": [
     "Dark mode and theme toggles. Not one of Heidelberg, Uni-Padua-IT, Lambert-GA, Stanford, UCAS-China or Toronto declares a prefers-color-scheme rule, and all of them placed well.",
     "A late alt-text compliance sweep. The four winners ran 27 to 48 per cent meaningful alt text while HongKong-JSS (90 per cent), ProFuture-China (86) and WageningenUR (81) all beat them and none was a Best Wiki winner — it is a floor, not a differentiator, so do it early and cheaply.",
@@ -159,6 +234,15 @@
     "Per-page mascots, bespoke icon sets and per-page accent colours. Stanford invested in all three and placed as a nominee; none of the four winners has a mascot system.",
     "Treating the mandatory section list as the information architecture. A deep-linked judging index does the same job in one page and reads as an argument rather than a form."
   ],
+  "antipatterns_zh": [
+    "深色模式與主題切換。Heidelberg、Uni-Padua-IT、Lambert-GA、Stanford、UCAS-China 和 Toronto 沒有一個宣告 prefers-color-scheme 規則，而他們的名次全都不錯。",
+    "最後才做一輪替代文字合規清查。四組得獎隊伍有意義的替代文字只有 27% 到 48%，而 HongKong-JSS（90%）、ProFuture-China（86%）和 WageningenUR（81%）都勝過他們，卻沒有一個是最佳 Wiki 得主——這是底線，不是差異點，所以早做、便宜做就好。",
+    "首頁放巨大的媒體圖庫。Toronto 光首頁就拉了 214 張圖和 252 個 .avif 參照，ETH-Zurich 送出單一 1.9 MB 的 HTML 頁面；兩者都沒有拿到最佳 Wiki。",
+    "客戶端渲染的單頁應用，而且沒有任何文字替代方案。這是對照組的預設做法——Princeton、Cornell、LYON、UAlberta、UCNZ、Athens、GU Frankfurt 和 Eton-College-UK 全都送出近乎空殼的頁面，儘管他們都拿下了重要的科學獎項。",
+    "每頁一隻吉祥物、客製圖示組和每頁不同的強調色。Stanford 三者都投資了，結果只是入圍；四組得獎隊伍沒有一個有吉祥物系統。",
+    "把規定的章節清單當成資訊架構。一個深層連結的 judging 索引用一頁就做到同一件事，而且讀起來像論證，不像表格。"
+  ],
   "method": "I rendered and read the four winners in full — Heidelberg, Uni-Padua-IT, TU Delft and Lambert-GA — by fetching their page HTML directly where it is server-rendered, by reading TU Delft's Markdown mirrors, and by loading the client-rendered pages in a browser; counts of references, figures, components, image formats, alt attributes and prefers-reduced-motion rules were taken from the shipped source. I sampled around thirty nominees and controls more shallowly, measuring framework, rendered text length, asset weight and alt-text coverage for all of them, and reading Stanford's and UCAS-China's content in detail as the closest nominees. I could not render several Vite single-page nominees deeply — Oxford, UCSC, NUS-Singapore, KAUST-KSA, Muenster-University, IISER-Kolkata and UOttawa among them — because a shared browser pane kept being navigated away mid-session, so they are excluded from the table and their design is not characterised here; I also did not measure real-world load time, mobile layout or screen-reader behaviour beyond the markup.",
+  "method_zh": "我完整渲染並讀過四組得獎隊伍——Heidelberg、Uni-Padua-IT、TU Delft 和 Lambert-GA：伺服器端渲染的部分直接抓取頁面 HTML，TU Delft 的部分讀它的 Markdown 鏡像，客戶端渲染的頁面則在瀏覽器中載入；引用、圖、元件、影像格式、alt 屬性和 prefers-reduced-motion 規則的數量，都取自實際送出的原始碼。我以較淺的方式抽樣約三十組入圍隊伍與對照隊伍，為全部這些隊伍量測框架、渲染後文字長度、資產重量和替代文字覆蓋率，並把 Stanford 與 UCAS-China 的內容當成最接近的入圍者細讀。有幾組 Vite 單頁應用的入圍隊伍我無法深入渲染——包括 Oxford、UCSC、NUS-Singapore、KAUST-KSA、Muenster-University、IISER-Kolkata 和 UOttawa——因為共用的瀏覽器面板在過程中一直被導向其他頁面，所以它們不列入表格，本文也不描述它們的設計；此外，除了標記語言本身之外，我沒有量測真實的載入時間、行動版版面或螢幕閱讀器行為。",
   "kicker_zh": "原創分析"
 }
