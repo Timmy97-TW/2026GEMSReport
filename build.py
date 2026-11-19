@@ -326,6 +326,8 @@ the and but with without using used use for from into onto that this these those
 which while when where what who whom whose there their they them then than
 have has had having been being was were are and also just only more most much many
 data result results finding findings analysis analyse analyze method methods
+report reports reported reporting state states stated states section sections
+page pages claim claims claimed says said note notes noted record records
 operating operate running run build built make made show shows shown
 because however therefore although though since about against between among
 should would could must can may might will shall

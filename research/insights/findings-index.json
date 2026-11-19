@@ -354,17 +354,17 @@
   {
    "kicker": "Judging",
    "kicker_zh": "評審",
-   "title": "Three special awards did not make a finalist",
-   "title_zh": "三個特別獎換不到一席決賽",
-   "body": "iGEM records a designation this report had not used before: **Finalist**. In the 2026 High School section, 147 teams entered, 10 made the Top 10, and **2 were named Finalists**. GEMS-Taiwan was not one of them, while holding three of the 17 section-level awards won across the entire section — the same count of special wins as the Grand Prize winner. The team that came second won no special award at all. A medal is a checklist, a special award is one dimension, and the finalist slate is the whole project judged on nine questions. The Judging tab works through eight of them with evidence.",
-   "body_zh": "iGEM 記錄了一個本報告先前沒有用過的身分：**Finalist（決賽入選）**。2026 年高中組有 147 支隊伍參賽、10 支進入 Top 10，而**只有 2 支被列為 Finalist**。GEMS-Taiwan 不在其中，但它握有整個組別總共 17 項組別層級獎項中的三項——特別獎得獎數與總冠軍相同。而拿到亞軍的那支隊伍，一個特別獎也沒有。獎牌是一張檢核表，特別獎是單一面向，決賽名單則是整個專案被九道問題評出來的結果。「評審標準」頁用證據逐一處理其中八道。",
+   "title": "The finalists' gaps are at the edges. GEMS's gap is at the centre.",
+   "title_zh": "決賽隊伍的缺口在邊緣。GEMS 的缺口在正中央。",
+   "body": "In the 2026 High School section 147 teams entered, 10 reached the Top 10 and **2 were named Finalists**. GEMS-Taiwan was not one, while holding three of the 17 section-level awards won across the whole section. Four explanations died on the evidence: not statistics (the Grand Prize winner's results page has no p-values and no named test), not completeness (its RNAi arm has no knockdown data at all), not Registry documentation (**GEMS beats both finalists**), and not candour — Lambert argues against itself on its own award pages and won anyway. What separates them is where the hole sits. Both finalists lead with the part that worked. **ReLEAF is named for the two halves its own pages report as undemonstrated.**",
+   "body_zh": "2026 年高中組有 147 支隊伍參賽、10 支進入 Top 10，而**只有 2 支被列為 Finalist**。GEMS-Taiwan 不在其中，但它握有整個組別總共 17 項組別層級獎項中的三項。四個解釋都死在證據上：不是統計（總冠軍的結果頁沒有 p 值、也沒有檢定名稱）、不是完成度（它的 RNAi 那一支完全沒有剔除效率資料）、不是 Registry 文件（**GEMS 贏過兩支決賽隊伍**），也不是坦白——Lambert 在自己的得獎頁面上反駁自己，照樣得獎。真正的差別在於那個洞長在哪裡。兩支決賽隊伍都以成功的那一塊開場。**而 ReLEAF 命名所依據的那兩半，正是它自己的頁面記載為尚未證實的那兩半。**",
    "chips": [
     "2 finalists of 10",
-    "147 teams entered"
+    "the gap is at the centre"
    ],
    "chips_zh": [
     "10 支中 2 席決賽",
-    "147 支隊伍參賽"
+    "缺口在正中央"
    ],
    "link": "judging"
   }
