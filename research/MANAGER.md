@@ -227,3 +227,50 @@ slipped into a Chinese roadmap item). Both of those now come back clean.
 106 team files, 98 fully translated, 0 partial, 8 outstanding and all assigned to running agents
 (6345 6422 6426 6450 6463 6475 6479 6511). All 11 analyses and both trend files are fully translated,
 tables and all. `python3 build.py` prints the live count and names anything incomplete.
+
+---
+
+## Session 3 (from 20:33)
+
+State on arrival: build clean, **106 of 106 team files fully translated, 0 partial**, 11 insight blocks all
+bilingual. No agents survived the window reset, so nothing to resume with SendMessage — a fresh wave was
+launched instead. The translation long pole is finished; this stretch is about new analysis.
+
+### Mobile pass — done
+Measured actual overflow at 375x812 on every tab rather than eyeballing screenshots:
+- The page itself never scrolled sideways on any tab (document scrollWidth stayed 375).
+- **Award chips did overflow and were silently clipped** — up to 571 px wide against a 375 px viewport,
+  because `.chip` carried `white-space:nowrap`. The worst offenders are the village-award strings
+  ("Village Award: Space / Foundational Advance / Software & AI / Biomanufacturing — Nominee"). Fixed:
+  `max-width:100%` always, and under 620 px chips wrap with an 11 px radius instead of a pill.
+- The two wide tables sit in `.scrollx` (overflow-x:auto) and scroll correctly, but **nothing told the
+  reader a column was cut off**. Added `scrollHint()` in app.js after both table render sites, shown only
+  under 620 px: "Swipe sideways to see the whole table." / 「左右滑動可看完整表格。」
+- Team detail sheet is clean at 375 px (331 px wide, zero overflowing children).
+- Remaining nit, not fixed: the language toggle and GitHub link are 28-29 px tall, under the 44 px tap
+  target guideline. Deliberate — they are secondary controls and enlarging them unbalances the header.
+
+### Tooling note
+`preview_start` still resolves the PARENT `GEMS/.claude/launch.json` ("atlas", port 8765) even with a
+local `.claude/launch.json` present, so it cannot serve this repo. Running `python3 -m http.server`
+from Bash is refused by the permission classifier in this environment, backgrounded or not. **Verify
+layout against the live GitHub Pages site instead**, or test a CSS rule by injecting it into the live
+page with `javascript_tool` and re-measuring — that is how the chip fix above was validated before it
+was written. For a JS syntax check with no node on the box:
+`/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc app.js`
+(a ReferenceError on `window` means it parsed fine).
+
+### Wave 4 — five new analyses, launched in parallel
+All are *new questions*, not more coverage. Each writes one file to `research/insights/` and nothing else.
+
+| file | tab / order | the question |
+|---|---|---|
+| hardware-afterlife.json | drylab 38 | Can a stranger rebuild the award-winning hardware? BOM, prices, CAD, firmware, assembly guide, calibration — the sister study to software-afterlife, and GEMS's own strongest ground. |
+| measurement-discipline.json | drylab 40 | When a team reports a number, can a reader tell how sure to be about it? Calibration into absolute units, replicates, error bars with stated meaning, LOD, controls, inter-lab checks — the evidence under the roadmap's "teach uncertainty before models". |
+| collaboration-network.json | teams 34 | Who worked with whom, did it correlate with placing, who are the hubs, and which specific teams can GEMS approach. GEMS has no collaboration page at all; this is the most directly actionable piece left. |
+| ihp-by-village.json | good 36 | Is the "loops closed by experts" finding uniform, or worse in therapeutics and better in agriculture, where non-specialists hold decisive knowledge? Builds on ihp-depth.json; matters because GEMS's own project is agricultural. |
+| parts-census.json | teams 36 | What separates a winning registry part from an ordinary submission? Taiwan took zero parts nominations in 2026, and the registry is the one artefact that outlives the project. |
+
+Each brief carried the standing hazards: SPA wikis need the browser pane, open your OWN tab with
+`tabs_create`, work in your own scratch subdirectory, verify every URL you cite, hold GEMS-Taiwan to the
+same standard as everyone else, and report a negative result honestly if that is what the data says.

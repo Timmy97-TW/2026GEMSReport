@@ -189,7 +189,7 @@
           "</tr></thead><tbody>" +
           (LANG === "zh" && b.table.rows_zh ? b.table.rows_zh : b.table.rows).map(function (r) {
             return "<tr>" + r.map(function (c, i) { return "<td>" + (i === 0 ? "<b>" + rich(c) + "</b>" : rich(c)) + "</td>"; }).join("") + "</tr>";
-          }).join("") + "</tbody></table></div>";
+          }).join("") + "</tbody></table></div>" + scrollHint();
       }
       if (b.checklist && b.checklist.length) {
         h += '<h3 class="sub">' + esc(L("Checklist", "檢查清單")) + "</h3>" +
@@ -262,7 +262,12 @@
     var i = cut.lastIndexOf(". ");
     return (i > n * 0.5 ? cut.slice(0, i + 1) : cut.trimEnd() + "…");
   }
-  function isWin(a) { return /winner|grand prize|top 10/i.test(a); }
+  // a wide table scrolls sideways on a phone; say so, because a cut-off column is invisible
+function scrollHint() {
+  return '<p class="scrollhint">' + esc(L("Swipe sideways to see the whole table.", "左右滑動可看完整表格。")) + "</p>";
+}
+
+function isWin(a) { return /winner|grand prize|top 10/i.test(a); }
   /* Award strings are generated in English and translated alongside; filter on
      the English so the test stays one regex, then display in the active language. */
   function awardList(t, winOnly) {
@@ -453,7 +458,7 @@
         d.companiesToWatch.map(function (c) {
           return "<tr><td><b>" + (c.url ? '<a href="' + esc(c.url) + '" target="_blank" rel="noopener">' + esc(c.name) + "</a>" : esc(c.name)) +
             "</b></td><td>" + rich(T(c, "what")) + "</td><td>" + rich(T(c, "why")) + "</td></tr>";
-        }).join("") + "</tbody></table></div>";
+        }).join("") + "</tbody></table></div>" + scrollHint();
     }
     if (d.careerPaths && d.careerPaths.length) {
       h += '<h3 class="sub">' + esc(L("Dry-lab career paths, 2026", "2026 乾實驗室職涯路徑")) + "</h3>" +
