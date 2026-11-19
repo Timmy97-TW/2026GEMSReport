@@ -38,34 +38,45 @@
       "Assay conditions matched to intended use conditions",
       "Explicit methodological boundaries section per assay",
       "Dry-lab ranking tested against wet-lab outcome"
-    ]
+    ],
+    "frameworks_zh": "四個量測模組（M1 至 M4），每一個都寫成導言、實驗設置與驗證、結果與討論、方法學邊界，以及應用。方法學邊界那一節不是事後補的裝飾：它寫明每個結論成立的波長、濃度範圍、溫度與 pH，並點名若要再往前走需要哪些技術。四輪濕實驗的 Design-Build-Test-Learn 循環疊在一個兩輪的計算篩選迴圈上，而濕實驗結果與乾實驗排序不一致，就是改動管線的觸發條件。",
+    "dataviz_zh": "七組獨立對照的 UV 背景掃描，從 240 到 320 nm 每 5 nm 一步，每一組都以箭頭標出吸收最大值；delta-OD 柱狀圖附平均值 +/- 標準差、逐項顯著性標註與 n 值；主要結合蛋白有兩條配對的標準曲線，一條用於蛋白定量、一條用於結合反應；色素吸附的時序照片與定量數據並列；茄紅素穩定性曲線比較曝光組與避光組在 270 分鐘內的變化，旁邊附上樣品照片；以及一條油酸校正曲線。",
+    "datascience_zh": "量測波長是推導出來的，而不是直接假設的。涵蓋緩衝液、純溶劑、雙相溶劑背景、色素吸收與蛋白本身吸收的七組對照，從 240 掃到 320 nm、每 5 nm 一步，結果顯示結合蛋白的 280 nm 峰在石油醚雙相系統中往短波方向位移約 5 nm，因此把 275 nm 定為定量波長；並明訂一條規則：若色素、溶劑比例或雙相條件改變，未重新掃描前不得逕自採用 275 nm。反應的蛋白專一性則以蛋白陰性對照（蛋清）檢驗——它同樣在 280 nm 附近有吸收，但加入辣椒紅素後並不會產生可比的 delta-OD；獨立樣本 t 檢定把真正的反應（Binder-1 與 Binder-3 上升，p < 0.01；Binder-2 下降，p < 0.001）與無反應（Binder-4 與蛋清，未達顯著）區分開來。主要候選分子建了兩條標準曲線而不是一條：一條是 275 nm 下 0 至 1.5 mg/mL 的結合蛋白濃度曲線（y = 0.388x + 0.03，R2 = 0.990），用來扣除蛋白背景；另一條是 delta-OD 對濃度的曲線（y = 0.108x - 0.006，R2 = 0.993），在避光反應 30 分鐘後，對照相同結合蛋白濃度的空白量測。限制也寫明了：擬合只在 0 至 1.5 mg/mL 區間內成立，不得外推；而且這個方法得不到解離常數——那需要跨數個數量級的配體滴定，並以 SPR、ITC、MST 或螢光淬熄把游離態與結合態分開。最有啟發性的模組是 M3：把這套 UV 策略移到茄紅素上時結果不穩定，團隊於是停下來量測量測系統本身——石油醚中的茄紅素標準曲線（y = 0.1109x - 0.00223，R2 = 0.994），加上在 0、30、60、120、180、240 與 270 分鐘讀取的曝光組與避光組時間序列，顯示 OD474.5 的訊號會漂移，照光下的表觀半衰期約 2.5 小時；這意味著觀察到的 OD 變化無法歸因於結合蛋白的作用。團隊據此終止茄紅素這條路線，並把結論寫得很精準：是目前的茄紅素分析系統穩定性不足、不適合用於評估結合蛋白，而不是茄紅素完全不能用；他們也註明自己沒有鑑定降解產物，也沒有把光降解與熱降解分開。脂解酶活性以 710 nm 的銅皂比色法對油酸標準曲線（y = 0.0123x + 0.0452，R2 = 0.999）定量：在蛋白濃度同為 1 mg/mL 的條件下，游離脂解酶為 4.19 U/mL，Lipase-Binder 融合蛋白為 3.68 U/mL（保留 87.8%）。團隊很謹慎地指出，每個催化中心表觀保留 143% 這個數字，是基於由胺基酸組成推算、未經驗證的 1.63 倍分子量比所做的理論莫耳修正，而不是對活性提升的獨立量測。單位也有定義（1 U 等於在 37 C、pH 7.0 下每分鐘釋出 1 umol 脂肪酸），而分析條件也對照預定用途逐一說明理由：以橄欖油代表食用油污中的長鏈三酸甘油酯、37 C 代表溫水洗滌、pH 7.0 代表中性洗滌；同時聲明在 20 C 或 pH 9 至 10 下的表現尚未確立。",
+    "software_zh": "計算管線以 RFdiffusion3 產生骨架、LigandMPNN 設計序列、RoseTTAFold3 以 pTM 與 ipTM 評估結構並以 RMSD 作為可設計性篩選；第二輪則加入 AutoDock Vina 對接作為結合能力預篩，因為濕實驗顯示四個結構指標幾乎相同的候選，在吸附行為上差異很大。他們在 Binder-1 的骨架上重新設計 200 條序列並做對接篩選，得到預測結合能最強的 Binder-5（-10.9 kcal/mol），在濕實驗中比其母體改善約 40%，但仍未超越第一輪的最佳候選；團隊把這個結果報告成對接能救回弱候選，而不是當成對接方法本身的驗證。"
   },
   "good": {
     "publicEngagement": "The team runs an education programme and publishes a cookbook alongside the project, with collaborations and a sustainable-development-goals page documenting wider activity.",
     "ihp": "The project began from a questionnaire with 719 valid responses plus interviews with hotpot enthusiasts, used to test whether the team's own experience of oil stains reflected a broader need before committing to the problem.",
     "realWorld": "An entrepreneurship page accompanies the project. The team is careful to describe the patch as a concept whose integration remains to be experimentally validated, and frames the measurement conditions, 37 C and pH 7.0 with olive oil as substrate, as deliberately matching the product's intended use so that the reported activity reflects performance in context rather than serving only as a proof of principle.",
-    "partners": []
+    "partners": [],
+    "publicEngagement_zh": "團隊經營一套教育計畫，並隨專案出版一本食譜，另有合作與永續發展目標頁面記錄更廣泛的活動。",
+    "ihp_zh": "專案起點是一份有 719 份有效回覆的問卷，加上對火鍋愛好者的訪談，用來在投入這個問題之前，檢驗團隊自己對油污的經驗是否反映了更普遍的需求。",
+    "realWorld_zh": "專案另附一個創業頁面。團隊謹慎地把貼片描述為一個概念，其整合仍待實驗驗證；並說明量測條件（37 C、pH 7.0，以橄欖油為基質）是刻意對應產品的預定用途，使所報告的活性反映的是在使用情境下的表現，而不只是作為原理驗證。"
   },
   "images": [
     {
       "url": "https://static.igem.wiki/teams/6463/wiki/wetlab-oct15/figure-17a5a3588f362703.avif",
       "caption": "Standard curves for the lead binder at 275 nm: a protein quantification curve in petroleum ether (R2 = 0.990) used to account for protein background, and the delta-OD against concentration curve for Binder-2 in the capsanthin system (R2 = 0.993), both declared valid only over 0 to 1.5 mg/mL.",
-      "credit": "Team Yucai-SZ, iGEM 2026 wiki"
+      "credit": "Team Yucai-SZ, iGEM 2026 wiki",
+      "caption_zh": "主要結合蛋白在 275 nm 的標準曲線：石油醚中的蛋白定量曲線（R2 = 0.990），用於扣除蛋白背景；以及辣椒紅素系統中 Binder-2 的 delta-OD 對濃度曲線（R2 = 0.993）；兩者都聲明僅在 0 至 1.5 mg/mL 區間內有效。"
     },
     {
       "url": "https://static.igem.wiki/teams/6463/wiki/wetlab-oct15/original-image22.avif",
       "caption": "Oleic acid calibration curve (y = 0.0123x + 0.0452, R2 = 0.999) used to convert the 710 nm copper-soap absorbance change into lipase activity in U/mL, with one unit defined as 1 umol fatty acid released per minute at 37 C and pH 7.0.",
-      "credit": "Team Yucai-SZ, iGEM 2026 wiki"
+      "credit": "Team Yucai-SZ, iGEM 2026 wiki",
+      "caption_zh": "油酸校正曲線（y = 0.0123x + 0.0452，R2 = 0.999），用於把 710 nm 銅皂吸光值的變化換算成以 U/mL 表示的脂解酶活性；一個單位定義為在 37 C、pH 7.0 下每分鐘釋出 1 umol 脂肪酸。"
     },
     {
       "url": "https://static.igem.wiki/teams/6463/wiki/wetlab-oct15/figure-15556142df20e307.avif",
       "caption": "Assay stability testing with lycopene: the standard curve in petroleum ether (R2 = 0.994), photographs of light-exposed and light-protected samples, and the time-dependent OD curves showing an apparent half-life of about 2.5 hours under illumination, which led the team to terminate the lycopene route.",
-      "credit": "Team Yucai-SZ, iGEM 2026 wiki"
+      "credit": "Team Yucai-SZ, iGEM 2026 wiki",
+      "caption_zh": "以茄紅素進行的分析穩定性測試：石油醚中的標準曲線（R2 = 0.994）、曝光與避光樣品的照片，以及隨時間變化的 OD 曲線——照光下表觀半衰期約 2.5 小時，這使團隊決定終止茄紅素路線。"
     },
     {
       "url": "https://static.igem.wiki/teams/6463/wiki/wetlab-oct15/engineering-oct18-image6.avif",
       "caption": "Change in absorbance at 275 nm for each candidate binder and for the egg white negative protein control after incubation with capsanthin, shown as mean +/- SD (n = 3) with independent-samples t-tests, which separates a protein-specific spectral response from a response any protein would give.",
-      "credit": "Team Yucai-SZ, iGEM 2026 wiki"
+      "credit": "Team Yucai-SZ, iGEM 2026 wiki",
+      "caption_zh": "各候選結合蛋白以及蛋清陰性對照與辣椒紅素共同培養後，在 275 nm 的吸光值變化，以平均值 +/- 標準差（n = 3）呈現並做獨立樣本 t 檢定，用以把蛋白專一的光譜反應與任何蛋白都會給出的反應分開。"
     }
   ],
   "gemsTakeaway": "Before attributing a signal change to your molecule, measure whether the analyte itself is stable under the measurement conditions: light-exposed versus light-protected time series and an apparent half-life define the window in which a reading means anything, and are cheap enough to run before every new target.",
@@ -75,5 +86,9 @@
     "https://2026.igem.wiki/yucai-sz/description",
     "https://2026.igem.wiki/yucai-sz/results",
     "https://2026.igem.wiki/yucai-sz/engineering"
-  ]
+  ],
+  "projectTitle_zh": "SpotAway：一款乾式可活化的緊急除污貼片",
+  "tagline_zh": "從頭設計的色素結合蛋白與一個脂解酶融合蛋白，而且每一項分析都附上明確的方法學邊界。",
+  "summary_zh": "Yucai-SZ 設計了 SpotAway，一個可攜乾式貼片的概念，用來就地處理剛沾上的油污。功能層由兩部分配對：一個帶有從頭設計辣椒紅素結合蛋白的纖維素結合模組融合蛋白，負責捕捉辣油中的疏水性色素；以及一個帶三油酸甘油酯結合域的脂解酶融合蛋白，會錨定在油滴附近並水解三酸甘油酯；兩者都包在以海藻糖與甘露醇保護的乾凝膠中，滴一兩滴水即可再水合。乾實驗則在標準的 Foundry de novo 設計管線上多加一層——在結構篩選之外再疊上以對接為基礎的結合能力預測試——因為濕實驗結果顯示單憑結構指標無法為候選排序。這份量測工作真正與眾不同之處在於：每一項分析都附上一節，明確定義它不能證明什麼。",
+  "gemsTakeaway_zh": "在把訊號變化歸因於自己的分子之前，先量測待測物本身在量測條件下是否穩定：曝光組與避光組的時間序列，加上一個表觀半衰期，就能界定讀值有意義的時間窗，而且便宜到每換一個新目標都值得先跑一次。"
 }
