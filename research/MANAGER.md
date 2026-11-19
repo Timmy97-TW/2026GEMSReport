@@ -1168,3 +1168,85 @@ positives gets ignored, which is worse than a narrower one.
 **Lesson for anyone writing Chinese into these files: do not hand-write `\uXXXX` escapes.** Three of the four
 character errors this session came from them (门 for 門, 张 for 張, 制 for 製). Write the characters literally
 in a UTF-8 heredoc with `PYTHONUTF8=1` and let the audit check the result.
+
+### Wave 7, third result: the three-season comparison broke my hypothesis
+
+I briefed the analyst with a hypothesis and told it to break the hypothesis if the wikis did not support it.
+They did not, and this is now the strongest finding on the tab.
+
+**What I predicted:** that the whole-project communication layer slipped between the 2024 Grand Prize and 2026
+— because 2024's wins were Best Wiki and parts awards while 2026's were three single-dimension awards, and
+because Best Wiki nominees take a Top 10 60% of the time against 22% for Measurement.
+
+**What the three wikis show:** the 2024 Grand Prize and Best Wiki year is **the weakest presented of the
+three.** `https://2024.igem.wiki/gems-taiwan/` is a **577-byte JavaScript shell** whose whole site — routes,
+prose, captions — sits in one **1,690,501-byte** bundle; `/results` **404s because there is no results page at
+all**; the entire site carries **one p-value** (0.0003) and no named test; and its summary is a **nine-item
+achievement list**, the longest module inventory of the three seasons (nine, then thirteen, then five). The
+2026 site is server-rendered, carries five p-values and 67 uniquely numbered figures, and publishes a
+`/development` page that grades five stages against criteria written down before the runs. So the "one
+nominated result versus a module inventory" distinction fails outright on GEMS's own history: the Grand Prize
+year has the longest inventory.
+
+All figures above verified by me first-hand from the bundle, not taken on the analyst's word: the 577-byte
+shell, the 1,690,501-byte bundle, the 404 on `/results`, and **488** unique `static.igem.wiki` asset URLs
+(379 png, 54 pdf, 29 jpg, 12 gif, 6 jpeg, 6 webp, 1 csv).
+
+**What actually separated 2024, verified verbatim from the bundle:**
+- *"We conducted a WHO larvicidal assay (World Health Organization, 2005) by exposing 10 stage 2 larvae in
+  each cup to different concentrations of toxins. All assays were conducted in triplicates."* LC50 reported
+  for all three toxins — Cyt2ba **5.29E+06 CFU/mL**, Xpp81Aa1 1.98×10⁷, BmK IT1 **179 mg/mL** — with the
+  incomplete arm disclosed: *"Each concentration was tested in triplicates except for BmK IT1 due to a lack
+  of available larvae."*
+- *"In total, we examined 98 dead larvae that were mounted onto the slides for microscopic examination."*
+- The rival explanation was **experimentally excluded**: a *Gambicin / Rel1 / Rel2 / Defensin* qPCR panel
+  against a BL21(DE3) arm, because *"We want to rule out the effect of E. coli in the death of mosquito
+  larvae."*
+- Two confounds eliminated by the team in the attractant assay — position bias, then colour: *"we covered
+  each solution with black paper … so that the selection of oviposition sites is based on odorant factors
+  only"* — after which the preference held at p = 0.0003.
+- A randomised 10-household field trial reported **against itself**: *"only 6.7% of the users rated 5 out of
+  5"*, *"trial 4 caught 33 mosquitoes, but most of them were Culex spp."*, *"only trial 12 caught 5 Aedes"*,
+  and the limit stated plainly: *"There was no synthetic biology component involved throughout our field
+  trial (we did not have them test our biolarvacides)."*
+
+**This converges with what the tab already published from the other direction, and that convergence is the
+result.** Cross-sectionally, across the 2026 High School Top 10, seven of seven non-podium teams stop at a
+surrogate and exactly one team in ten ran its assay on a real sample — HongKong-JSS on a soil extract — and
+that team took 1st Runner-up. Longitudinally, inside GEMS's own three seasons, the podium year is the
+real-target year. Two independent directions, one line. Nothing else in the report is supported both ways.
+
+**And one thing is genuinely worse in 2026: the headline outruns the body.** Verified first-hand on three
+live pages. The home page sells, as a feature of the machine, *"On-demand — Green light switches production
+on when the environmental sensors and forecasts decide to."* The results page says *"The ELISA showed no
+change over time"* and that the amount *"did not rise with light"*, and that *"Despite repeated experiments,
+the medium remained colorless"*. The model page says *"The reactor therefore cannot be scheduled from the
+forecast."* One sentence on the front page is contradicted by two other pages of the team's own. 2024 left
+its chain unjoined too but hedged in the same breath — *"**partially** proved the chromosome-free system"*,
+*"Integration … **will be** a powerful vector control tool"*. Hedging inside the same sentence as the claim
+is the habit to copy, and it is free.
+
+**A constant, not a change:** zero named statistical tests in any of the three seasons — no t-test, ANOVA,
+Tukey, Dunnett, Welch, Mann-Whitney, Wilcoxon or Kruskal, in any year. p-values went 1, then 0, then 5. So
+statistical reporting improved while the podium was lost, which reproduces the `measurement-discipline` null
+a third time.
+
+Published as `gems-three-seasons` (judging, order 7): 8 cards, a 7-column three-row table, an 8-line
+checklist whose second item is **"Do not spend 2027 rebuilding the wiki"**. The overview gained a card for it
+and the refuted reading was corrected in the 2024 index card rather than left standing. Roadmap: phase 3's
+real-sample gate now carries the longitudinal evidence, and phase 1 gained "make the landing page say only
+what the results page still supports".
+
+**One correction to my own checking, recorded because it nearly caused a false retraction in the other
+direction.** I searched the bundle for `98 larvae`, got nothing, and told the user I could not verify the
+figure. The string is `98 dead larvae`, and my regex pass printed only the first three of 29 matches, all of
+which happened to be library noise. The analyst was right and my spot-check was badly built. Print all
+matches, or filter by context, before doubting a sourced number.
+
+### A semantic character error no audit can catch
+
+Two of my Chinese edits contained 宣傀影片 where the award name is 宣傳影片 — 傀 instead of 傳, from the same
+mistyped-escape habit. The character audit cannot see this: 傀 is a perfectly valid Traditional character, it
+is just the wrong word. Script-level audits catch Simplified and Cyrillic; they cannot catch a real character
+in the wrong place. The only defence is writing Chinese literally rather than as escapes, and re-reading the
+rendered text.

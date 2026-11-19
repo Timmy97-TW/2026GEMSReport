@@ -35,6 +35,19 @@ Finalist that year; it and Lambert-GA are the only two High School teams in the 
 each with one Grand Prize in that span. So this is not an account of a bar the team has never reached, but of
 one it cleared in 2024 and has not cleared since. The short version of everything else:
 
+- **The podium years are the years the central claim was measured on the real thing — and this is the one
+  finding supported from two directions.** Across the 2026 High School Top 10, seven of seven non-podium teams
+  stop at a surrogate and exactly one team in ten ran its assay on a real sample; that team took 1st Runner-up.
+  Inside GEMS's own three seasons the Grand Prize year is the real-target year: 2024 fed three toxins to live
+  *Aedes albopictus* larvae, reported LC50 for all three, examined 98 dead larvae, and ran a qPCR immune-gene
+  panel against an empty-vector arm expressly to rule out *E. coli* as the cause of death. In 2026 the plant
+  rescue is strong at p < 0.0001 with 40 seedlings a condition, but the preparation sprayed on the plants was
+  never assayed.
+- **The tempting story about 2024 is wrong, and the wikis say so.** 2024 won Best Wiki and the Grand Prize, so
+  the obvious reading is that presentation slipped. Read against all three seasons it breaks: the 2024 site is a
+  577-byte script shell with no results page at all, one p-value, and the longest module inventory of the three.
+  The 2026 site beats it on every presentation measure. What changed is the evidence, not the writing — and no
+  season names a single statistical test, while p-values went 1, then 0, then 5.
 - **Choosing a village is not a lever, and at high-school level there are four doors, not thirteen.** Of 147
   accepted High School teams, 47 were decorated (32.0%). The per-village spread, 2 of 17 in Agriculture up to
   12 of 23 in Biomanufacturing, is not distinguishable from 147 teams decorated independently at 32%
