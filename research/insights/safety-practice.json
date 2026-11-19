@@ -1,246 +1,281 @@
 {
-  "id": "safety-practice",
-  "tab": "good",
-  "order": 38,
-  "kicker": "Original analysis",
-  "kicker_zh": "原創分析",
-  "title": "Nobody measured an escape rate",
-  "title_zh": "沒有人量過逃逸率",
-  "lede": "Zero of 106 decorated teams report a measured escape frequency. Nineteen built a containment device; three knew the metric well enough to say they had not measured it. The teams worth copying are the ones that turned a safety claim into a number, tested the safeguard until it broke, or gave up a design because the safety answer came back wrong.",
-  "lede_zh": "106 支獲獎隊伍中，有 0 支回報了實際量測的逃逸頻率。19 支做了生物圍堵裝置，3 支清楚到足以寫下「我們沒有量」。值得抄的，是那些把安全主張變成數字、把保險機制一路測到壞掉，或因為安全答案不對而放棄設計的隊伍。",
-  "body": "**The base rate first, because it sets the bar low.** Across the 106 decorated teams researched for this report, 19 describe a genetic containment device — a kill switch, an auxotrophy, a toxin–antitoxin pair. Four discuss dual use or misuse at all. Two name how their synthesised DNA was screened. And **zero report a measured escape frequency**, the one number that converts a containment claim into evidence. Two teams in the environmental cohort — **UCL** (6381) and **WageningenUR** (6222) — have no safety page in their site navigation at all, while proposing water treatment and drinking-water deployment respectively. The Safety and Security Award itself tells the same story: no nominees at all in the Overgrad and High School sections, only a winner. Almost nobody enters this category, and the ones who do are not competing against a crowd.\n\n**What a real safety page does that a recitation does not.** The recitation is: BSL-1, non-pathogenic chassis, a risk-group table, autoclave at 121 °C, gloves and closed-toe shoes. Everything on that list is true and none of it is about the project. The minority do one of five harder things. They convert the containment claim into a threshold and compare it against the receiving environment in the same units — **BASIS-China** (6123) measured its bile-acid suicide switch at a threshold of roughly **0.1–0.2 mM taurocholate**, then looked up feline duodenal bile salts at 15–42 mM, sewage total bile acids at 184–356 µg/L (which they convert to 4.7×10⁻⁴–9.1×10⁻⁴ mM) and 13.3 pmol/g deoxycholic acid in soil, and showed the gap. They test the safeguard until it fails — **William-and-Mary** (6243), the Undergrad winner, took a published triple-toxin kill switch off Addgene and ran it longitudinally; it was *the first of their circuits to lose function*, failing weeks before the others, and the entire project became an argument that kill switches need the failure analysis that bridges and aircraft already get. They measure non-target harm rather than asserting it — **Peking** (6366) screened its dsRNA in 21-nt sliding windows against RefSeq, found the longest uninterrupted match in any non-target homolog was **13 nt** (10–11 nt for the pharaoh ant), then actually expressed the ant's homologous fragments in S2 cells and measured relative expression of **1.22 and 1.30** after dsRNA treatment: no knockdown. They choose inactivation against the actual agent — **Bielefeld-CeBiTec** (6221) found that autoclaving and NaOH are of limited effect on α-synuclein fibrils, so they used 10% SDS *and* autoclaved, worked without preformed fibrils after asking the genetic engineering authority, and ran the lab on electronic access tokens with one-way transport and lab coats that never leave the culture room. And they publish an evidence ledger: a \"what our results establish\" column beside a \"what remains before real-world use\" column, which BASIS-China, Peking and IISER-Kolkata all do and most teams do not.\n\n**The escape-rate question has a clean answer, and it is zero.** The strongest teams know exactly what is missing. **IISER-Kolkata** (6450) writes it out: *\"the figure that matters for biocontainment is the escape frequency, i.e., the proportion of cells surviving induction... Values below 1 in 10⁸ cells are the benchmark used in the synthetic biology biocontainment literature. This has not been measured.\"* **UCSC** (6215) projects a **10⁻¹²** combined escape risk by multiplying a cited 10⁻⁶ per-plasmid transfer probability by itself, against a cited 10⁻⁸ standard — arithmetic, not measurement — and then says the honest thing about its own uracil auxotroph: the mutation is H99P, a single base substitution, *\"among the most readily reversible,\"* and *\"any containment claim based on this strain needs a measured reversion frequency, obtained by plating a large population on medium lacking uracil and counting the colonies that grow.\"* **Madrid-UCM** (6124) notes that the strongest engineered systems report undetectable escape near two parts in 10¹². What teams measured instead were kill assays: **NU Boston** (6300) invalidated its own OD₆₀₀ kill-switch readout after discovering CcdB induces filamentation, which changes light scattering, and moved to flow cytometry live/dead and CFU counts, showing a drop at 0.2% arabinose across the 10⁻⁵–10⁻⁷ dilutions. That is good practice, and it is still not an escape rate.\n\n**Three teams gave something up, and that is the strongest evidence in the category.** **Stockholm** (6292), the Overgrad winner, is verified: its own wiki records the largest change in the project as *\"Open municipal deployment was dropped for a contained bioreactor on a defined, concentrated stream, with physical containment in place of a kill switch.\"* The trigger was a named advisory board member, Gunaratna Kuttuva Rajarao, telling them wastewater plants are not closed systems, plants will not accept GMOs, and a kill switch alone would probably not be enough. The venture went with it: no company, no pricing, no customer, and the chassis they now point at for production is not even yeast. **Oxford** (6391) is the second case and states the cost out loud: they chose heat-inactivated yeast over a living *Snodgrassella alvi* gut symbiont for containment and regulatory reasons, *\"and in doing so gave up the persistence that made S. alvi attractive, which means NECTAR needs repeat dosing and therefore more beekeeper labour. Some of the beekeepers we spoke to preferred the option we dropped.\"* **Bielefeld-CeBiTec** is the third and the only one that dropped work on dual-use grounds: *\"We dropped work on blood-brain-barrier-crossing LNPs because of its dual-use potential.\"* Smaller versions exist — ICJFLS (6098) binned a high-leakage kill-switch design after another team shared leakage data, BGI-College (6345) swapped chassis from *C. butyricum* to *C. beijerinckii* at an early safety review, GCGS (6242) documented a rejected pH-sensitive switch with a reason.\n\n**DNA ordering is where this report's roadmap item actually has a worked example — exactly one.** **CalPolySLO** (6405) writes the paragraph GEMS needs to copy: *\"We order synthetic DNA from IDT and Twist Bioscience, both members of the International Gene Synthesis Consortium, which screens orders for sequences of concern. We use nothing from Risk Group 3 or 4.\"* They then publish a four-step provenance chain from order to purified protein, and they got there because Dr Hank Greely told them to publish their safety thinking *before* starting work and Dr Keith Robison raised dual-use scenarios, which produced a benefits-versus-misuse framework. **TAU-Israel** (6196) is the other, and goes further by building screening into software: their design tool runs **commec**, the IBBIS Common Mechanism, on every generated sequence before release, holds the output when screening is incomplete or unresolved, and states plainly that a clean result *\"does not establish that a sequence is harmless\"* and that the frontend panel is not fully connected and live deployment is unverified. That last sentence is what makes it credible. **BASIS-China** names Sangon Biotech as its synthesis house and emailed safety@igem.org before collecting animal-derived material rather than assuming an unavailable form meant the work was impossible.\n\n**On environmental release, the bar is visibly different and most teams do not clear it.** **Peking** designed physical screening into the hardware: two offset slit layers forming a tortuous passage sized against springtails at 0.5–10 mm, an attract-first-load-later deployment sequence so engineered yeast is only loaded after termite activity is confirmed on a load cell, and a removable inner cartridge so the material is retrievable — while declaring that its FAR1–Tet-Off proliferation brake *\"remains at the design stage\"* and that the two environment-responsive promoters *\"do not yet constitute a combined dual-signal control system.\"* **Athens** (6478) traced the real regulatory fork: marketing authorisation under EU Regulation 2019/6 versus the biopesticide regime, EFSA alongside national authorities, and the fact that European foulbrood is WOAH-listed and compulsorily reportable in Greece, so any alternative to destruction must clear that first. **Madrid-UCM** had containment made a precondition by an industrial partner — Repsol said living GMOs would not be acceptable without evidence that release had been prevented — and answered with encapsulated cells plus a culture-and-qPCR monitoring campaign with a divert-and-inactivate protocol. **GHCIS** (6166) sidestepped the problem by going cell-free, so there is no replicating organism to contain. Against these, **Toronto** (6187) — whose human practices work is genuinely strong — has a safety page that is a laboratory incident risk register, and **NU Boston** has a live contradiction worth naming: its alginate beads are *designed to degrade in soil and release the bacteria*, while the kill switch is described as the thing that justifies release.\n\n**GEMS-Taiwan, held to the same bar.** ReLEAF (6072) has exactly one measured containment result, and it is real: lumen-side medium sampled after 24 hours in the bioreactor grew colonies, shell-side medium grew none across a 0.2 µm hollow-fiber membrane retaining cells of 0.25–1.0 µm, backed by transmembrane-pressure and droplet leak detection. That is more than most teams have. It is also the whole case, and the gaps are large for a system that sits on a farm. There is no genetic containment layer at all — no kill switch, no auxotrophy, no second barrier if the membrane fails, which is the single failure mode the whole design depends on. The test is one timepoint, presence/absence, with no CFU count, no plated volume, no detection limit, no replicates and no stressed or fouled-membrane condition; the wiki nonetheless says the membrane *\"ensures containment.\"* Antibiotic resistance markers (erythromycin) are used with no stated plan to remove them before field use. The DURC section identifies no misuse pathway, only a commitment not to misuse. There is no DNA-order screening statement and no supplier named anywhere — precisely the NSTM-6 gap the roadmap flags. And although the team correctly notes that cell-free agricultural biologics may fall between the biopesticide and synthetic-biology classifications, no Taiwanese authority is named as having been asked. CalPolySLO's one paragraph and BASIS-China's one email are each a week's work; both are missing.",
-  "body_zh": "**先講基準率，因為標準低得驚人。** 在本報告研究的 106 支獲獎隊伍中，19 支描述了遺傳圍堵裝置——kill switch、營養缺陷、toxin–antitoxin 配對。4 支談到兩用或誤用。2 支說明了自己合成的 DNA 是如何被篩查的。而**回報實際量測逃逸頻率的隊伍是 0 支**——那正是把圍堵主張變成證據的唯一數字。環境釋放這一群裡，**UCL**（6381）與 **WageningenUR**（6222）的網站導覽中根本沒有安全頁面，而他們分別提出水處理與飲用水部署。Safety and Security 獎本身說著同樣的事：Overgrad 與高中組完全沒有被提名者，只有一位得主。幾乎沒有人投入這個類別，而投入的人並不是在跟人群競爭。\n\n**真正的安全頁面做了什麼，是背誦沒做的。** 背誦長這樣：BSL-1、非致病性底盤、風險組別表格、121 °C 滅菌、手套與包鞋。清單上每一項都是真的，但沒有一項跟這個專案有關。少數隊伍做了以下五件更難的事之一。他們把圍堵主張換算成閾值，並用同樣的單位跟接收環境對比——**BASIS-China**（6123）量到膽酸自殺開關的閾值約為 **0.1–0.2 mM taurocholate**，再查出貓十二指腸膽鹽為 15–42 mM、污水總膽酸為 184–356 µg/L（他們換算為 4.7×10⁻⁴–9.1×10⁻⁴ mM）、土壤中 deoxycholic acid 為 13.3 pmol/g，把差距攤開來。他們把保險機制一路測到壞——大學組得主 **William-and-Mary**（6243）從 Addgene 取得一個已發表的三毒素 kill switch 做長期追蹤，結果它是*所有受測迴路中最先失去功能的一個*，比其他迴路早了數週失效；整個專案因此變成一個論證：kill switch 需要橋樑與飛機早就有的失效分析。他們量測非目標傷害而不是斷言它——**Peking**（6366）以 21-nt 滑動視窗把 dsRNA 比對 RefSeq，發現任何非目標同源基因中最長的連續完全比對只有 **13 nt**（法老蟻為 10–11 nt），接著真的把螞蟻的同源片段在 S2 細胞中表現，量到 dsRNA 處理後相對表現量為 **1.22 與 1.30**：沒有被抑制。他們針對實際的生物劑選擇去活化方式——**Bielefeld-CeBiTec**（6221）查到高壓滅菌與 NaOH 對 α-synuclein 纖維的效果有限，於是改用 10% SDS 並*同時*高壓滅菌，在詢問基因工程主管機關後不使用預形成纖維，並以電子門禁、單向傳遞與永不離開細胞培養室的實驗衣來管理實驗室。最後，他們公布證據帳本：一欄「我們的結果能證明什麼」，旁邊一欄「真實應用前還缺什麼」——BASIS-China、Peking 與 IISER-Kolkata 都這麼做，大多數隊伍沒有。\n\n**逃逸率這題有乾淨的答案，答案是零。** 最強的幾支隊伍很清楚缺了什麼。**IISER-Kolkata**（6450）白紙黑字寫著：「對生物圍堵真正重要的數字是逃逸頻率，也就是誘導後存活細胞的比例……合成生物學圍堵文獻採用的基準是低於 10⁸ 分之 1。這個數字我們沒有量。」**UCSC**（6215）把引用的單一質體轉移機率 10⁻⁶ 自乘，推算出 **10⁻¹²** 的合併逃逸風險，對照引用的 10⁻⁸ 標準——這是算術，不是量測——然後對自己的尿嘧啶營養缺陷株說了誠實的話：該突變為 H99P，單一鹼基置換，「屬於最容易回復的那一類」，而且「任何以此菌株為基礎的圍堵主張，都需要一個實測的回復頻率，做法是把大量菌體塗在缺乏尿嘧啶的培養基上，數長出來的菌落」。**Madrid-UCM**（6124）指出最強的工程系統在接近 10¹² 分之二的偵測極限下回報「偵測不到逃逸」。隊伍們實際量到的是殺滅試驗：**NU Boston**（6300）發現 CcdB 會誘發絲狀化、改變光散射後，自行否決了用 OD₆₀₀ 讀 kill switch 的做法，改用流式細胞儀 live/dead 染色與 CFU 計數，顯示 0.2% arabinose 下在 10⁻⁵–10⁻⁷ 稀釋度皆明顯下降。這是好做法，但它仍然不是逃逸率。\n\n**三支隊伍放棄了某樣東西，而這是這個類別裡最強的證據。** Overgrad 得主 **Stockholm**（6292）已證實：其 wiki 把專案最大的改變記錄為「放棄開放式市政污水部署，改為處理特定高濃度廢流的封閉式生物反應器，以物理圍堵取代 kill switch」。觸發點是具名的顧問委員 Gunaratna Kuttuva Rajarao 告訴他們：污水處理廠不是封閉系統、廠方不會接受 GMO、單靠一個 kill switch 大概不夠。創業案也跟著沒了：沒有公司、沒有定價、沒有客戶，而他們現在指向的量產底盤甚至不是酵母。**Oxford**（6391）是第二個案例，而且把代價講出來：他們基於圍堵與法規理由，選擇熱去活化酵母而非活的 *Snodgrassella alvi* 腸道共生菌，「也因此放棄了讓 S. alvi 有吸引力的持久定殖，這表示 NECTAR 需要重複投藥，也就是更多養蜂人的工時。我們談過的一些養蜂人反而偏好我們放棄的那個選項。」**Bielefeld-CeBiTec** 是第三個，也是唯一因兩用疑慮而中止工作的：「我們因為兩用潛力而中止了可穿越血腦屏障的 LNP 工作。」規模較小的版本也有——ICJFLS（6098）在另一支隊伍分享洩漏資料後丟掉了高洩漏的 kill switch 設計，BGI-College（6345）在早期安全審查時把底盤從 *C. butyricum* 換成 *C. beijerinckii*，GCGS（6242）記錄了一個被否決的 pH 感應開關並附上理由。\n\n**DNA 訂購，正是本報告路線圖那一項唯一有實作範例的地方——而且只有一個。** **CalPolySLO**（6405）寫下了 GEMS 該照抄的那一段：「我們向 IDT 與 Twist Bioscience 訂購合成 DNA，兩者都是 International Gene Synthesis Consortium 成員，會對訂單進行疑慮序列篩查。我們不使用任何風險組別 3 或 4 的材料。」他們接著公布了從下單到純化蛋白的四步履歷鏈；而之所以如此，是因為 Dr Hank Greely 要他們在開工*之前*就公布安全論述，Dr Keith Robison 提出兩用情境，因而產生了一份利益對誤用的評估架構。**TAU-Israel**（6196）是另一支，而且更進一步把篩查做進軟體：他們的設計工具在釋出前對每一條生成序列執行 IBBIS 的 **commec**（Common Mechanism），在篩查未完成或留有未解疑慮時扣住輸出，並明說乾淨的結果「並不能證明一條序列無害」，以及前端面板尚未完全接上、線上部署未經驗證。最後那句話，才是讓它可信的地方。**BASIS-China** 具名 Sangon Biotech 為其合成供應商，並在採集動物來源材料前主動寫信給 safety@igem.org，而不是假設拿不到表單就等於不能做。\n\n**在環境釋放上，門檻明顯不同，而多數隊伍沒跨過。** **Peking** 把物理篩選做進硬體：外殼與內匣兩層錯開的窄縫形成迂迴通道，尺寸對照跳蟲的 0.5–10 mm；採取「先誘集、後投料」的部署順序，等秤重感測器確認白蟻活動後才裝入工程酵母；內匣可抽出，材料可回收——同時聲明其 FAR1–Tet-Off 增殖煞車「仍停留在設計階段」，兩個環境響應啟動子「尚未構成雙訊號聯合控制系統」。**Athens**（6478）追出了真正的法規岔路：依 EU Regulation 2019/6 走上市許可、或走生物農藥制度，EFSA 與各國主管機關並行，而且歐洲幼蟲病是 WOAH 列管、在希臘屬強制通報，任何取代撲殺的替代方案都得先過這一關。**Madrid-UCM** 被產業夥伴把圍堵設為前提——Repsol 直說，若無法證明已防止環境釋放，活體 GMO 不可能被接受——他們的回答是包埋細胞，加上培養與 qPCR 監測，並訂出分流與去活化流程。**GHCIS**（6166）則直接繞過問題，改走無細胞路線，根本沒有會增殖的生物要圍堵。相對地，人類實踐做得確實扎實的 **Toronto**（6187），安全頁面卻是一份實驗室事故風險清單；而 **NU Boston** 有一個該被點名的矛盾：它的海藻酸鈣珠*本來就設計成在土壤中崩解並釋出細菌*，而 kill switch 卻被描述成讓釋放成立的那個理由。\n\n**用同一把尺量 GEMS-Taiwan。** ReLEAF（6072）只有一項實際量測的圍堵結果，而它是真的：生物反應器運轉 24 小時後，管腔側取樣長出菌落，殼側取樣沒有長，中間隔著能截留 0.25–1.0 µm 細胞的 0.2 µm 中空纖維膜，另有跨膜壓力與液滴洩漏偵測佐證。這比多數隊伍擁有的還多。但這也就是全部了，而對一個要裝在農場上的系統來說，缺口很大。完全沒有遺傳圍堵層——沒有 kill switch、沒有營養缺陷，膜一旦失效也沒有第二道屏障，而整個設計恰恰押在這一個失效模式上。該測試只有單一時間點、只分有無，沒有 CFU 計數、沒有塗盤體積、沒有偵測極限、沒有重複，也沒有加壓或結垢膜的條件；wiki 卻寫著這層膜「確保圍堵」。使用了抗生素抗性標記（erythromycin），而且沒有說明田間使用前要如何移除。DURC 章節沒有指出任何誤用路徑，只有一句不會誤用的承諾。整個網站沒有任何 DNA 訂單篩查聲明，也沒有具名任何供應商——這正是路線圖點出的 NSTM-6 缺口。而且儘管團隊正確指出無細胞農業生物製劑可能卡在生物農藥與合成生物學衍生物的分類之間，卻沒有具名任何已諮詢的台灣主管機關。CalPolySLO 的那一段、BASIS-China 的那一封信，各只要一週的工作量；兩樣都沒有。",
-  "cards": [
-    {
-      "kicker": "The one number",
-      "kicker_zh": "那個數字",
-      "title": "BASIS-China measured a threshold, then looked up the real environment",
-      "title_zh": "BASIS-China 量出閾值，再去查真實環境",
-      "body": "The suicide switch keeps cells alive above roughly **0.1–0.2 mM taurocholate** and suppresses growth below it, measured across four Anderson promoters with empty vector alongside. They then converted published concentrations into the same units: feline duodenum 15–42 mM, sewage total bile acids 184–356 µg/L (4.7×10⁻⁴–9.1×10⁻⁴ mM), soil deoxycholic acid 13.3 pmol/g. Two to three orders of magnitude of margin, stated as a comparison rather than a claim — and they add that their microcapsules are designed to release cells in the intestine and must not be counted as physical containment.",
-      "body_zh": "該自殺開關在約 **0.1–0.2 mM taurocholate** 以上維持細胞存活、以下則抑制生長，以四個 Anderson 啟動子並列量測，並設空載體對照。接著他們把文獻濃度換算成同樣單位：貓十二指腸 15–42 mM、污水總膽酸 184–356 µg/L（4.7×10⁻⁴–9.1×10⁻⁴ mM）、土壤 deoxycholic acid 13.3 pmol/g。兩到三個數量級的餘裕，而且是以對比方式陳述而非斷言——他們還補上一句：微膠囊本來就設計成在腸道釋出細菌，不能算作物理圍堵。",
-      "chips": [
-        "0.1–0.2 mM threshold",
-        "sewage 9.1×10⁻⁴ mM",
-        "HS winner"
-      ],
-      "link": "https://2026.igem.wiki/basis-china/safety-and-security",
-      "linkText": "BASIS-China safety and security"
-    },
-    {
-      "kicker": "Tested to failure",
-      "kicker_zh": "測到失效",
-      "title": "William-and-Mary's kill switch broke first",
-      "title_zh": "William-and-Mary 的 kill switch 最先壞掉",
-      "body": "They took a published triple-toxin kill switch from Addgene and followed it longitudinally alongside other circuits. It was the first to lose its intended function, failing weeks before the rest. CFU counts were used instead of OD₆₀₀ or fluorescence, on the reasoning that a kill switch's output is loss of viability, not loss of signal. Their conclusion is the uncomfortable one: a system designed as the last line of defence had never been subjected to the failure analysis that mature engineering disciplines apply as routine.",
-      "body_zh": "他們從 Addgene 取得一個已發表的三毒素 kill switch，與其他迴路並行做長期追蹤。它是最先失去預期功能的一個，比其餘迴路早數週失效。他們以 CFU 計數取代 OD₆₀₀ 或螢光，理由是 kill switch 的輸出是活性喪失，不是訊號喪失。結論並不好聽：一個被設計成最後防線的系統，從來沒有接受過成熟工程學科視為例行的失效分析。",
-      "chips": [
-        "CFU not OD600",
-        "failed first",
-        "UG winner"
-      ],
-      "link": "https://2026.igem.wiki/william-and-mary/safety-and-security",
-      "linkText": "William-and-Mary safety"
-    },
-    {
-      "kicker": "Gave it up",
-      "kicker_zh": "放棄了",
-      "title": "Stockholm dismantled its own deployment plan, and Oxford named the cost",
-      "title_zh": "Stockholm 拆掉自己的部署計畫，Oxford 寫出代價",
-      "body": "Stockholm's wiki records the project's largest change as open municipal deployment dropped for a contained bioreactor, physical containment replacing the kill switch, after a named advisory board member said plants are not closed systems and will not accept GMOs. The venture went with it. Oxford did the same thing one level down: heat-inactivated yeast instead of a living *Snodgrassella alvi* symbiont, for containment and regulatory reasons — *\"and in doing so gave up the persistence that made S. alvi attractive... Some of the beekeepers we spoke to preferred the option we dropped.\"*",
-      "body_zh": "Stockholm 的 wiki 把專案最大的改變記為：放棄開放式市政部署、改為封閉式生物反應器，以物理圍堵取代 kill switch；起因是具名顧問委員指出處理廠不是封閉系統、也不會接受 GMO。創業案一併作廢。Oxford 在低一層做了同樣的事：基於圍堵與法規理由，以熱去活化酵母取代活的 *Snodgrassella alvi* 共生菌——「也因此放棄了讓 S. alvi 有吸引力的持久定殖……我們談過的一些養蜂人反而偏好我們放棄的那個選項。」",
-      "chips": [
-        "open release dropped",
-        "cost stated",
-        "OG winner"
-      ],
-      "link": "https://2026.igem.wiki/stockholm/safety-and-security",
-      "linkText": "Stockholm safety and security"
-    },
-    {
-      "kicker": "DNA ordering",
-      "kicker_zh": "DNA 訂購",
-      "title": "CalPolySLO wrote the paragraph the roadmap is asking for",
-      "title_zh": "CalPolySLO 寫出了路線圖要的那一段",
-      "body": "*\"We order synthetic DNA from IDT and Twist Bioscience, both members of the International Gene Synthesis Consortium, which screens orders for sequences of concern. We use nothing from Risk Group 3 or 4.\"* Then a four-step provenance chain from order to purified protein. It exists because an ethicist told them to publish their safety thinking before starting work and a biosecurity scholar raised dual-use scenarios. Two of 106 teams name a screening regime at all; this is the cleaner of the two to copy.",
-      "body_zh": "「我們向 IDT 與 Twist Bioscience 訂購合成 DNA，兩者都是 International Gene Synthesis Consortium 成員，會對訂單進行疑慮序列篩查。我們不使用任何風險組別 3 或 4 的材料。」接著是從下單到純化蛋白的四步履歷鏈。它之所以存在，是因為一位倫理學者要他們在開工前先公布安全論述，一位生物保安學者提出了兩用情境。106 支隊伍中只有 2 支說明過篩查機制；這一支是比較好照抄的那個。",
-      "chips": [
-        "IDT + Twist",
-        "IGSC",
-        "no RG3/RG4"
-      ],
-      "link": "https://2026.igem.wiki/calpolyslo/safety-and-security",
-      "linkText": "CalPolySLO safety and security"
-    },
-    {
-      "kicker": "Screening as code",
-      "kicker_zh": "把篩查寫成程式",
-      "title": "TAU-Israel put the Common Mechanism in the release path",
-      "title_zh": "TAU-Israel 把 Common Mechanism 放進釋出路徑",
-      "body": "Their design tool runs **commec**, the IBBIS Common Mechanism, over every generated sequence and holds the output when screening is incomplete or leaves an unresolved concern. What makes it credible is the disclaimer: a result without a finding *\"does not establish that a sequence is harmless, suitable for an experiment, or approved for synthesis,\"* the frontend panel is not fully connected, and live deployment has not been verified. They dated the audit and named the source revision.",
-      "body_zh": "他們的設計工具對每一條生成序列執行 IBBIS 的 **commec**（Common Mechanism），並在篩查未完成或留有未解疑慮時扣住輸出。讓它可信的是那段免責聲明：沒有發現的結果「並不能證明一條序列無害、適合用於實驗，或已獲准合成」；前端面板尚未完全接上，線上部署亦未經驗證。他們為這次稽核註明日期並具名原始碼版本。",
-      "chips": [
-        "commec / IBBIS",
-        "hold on unresolved",
-        "audit dated"
-      ],
-      "link": "https://2026.igem.wiki/tau-israel/safety-and-security",
-      "linkText": "TAU-Israel safety and security"
-    },
-    {
-      "kicker": "Non-target harm",
-      "kicker_zh": "非目標傷害",
-      "title": "Peking measured what its bait does to the wrong insect",
-      "title_zh": "Peking 量了自家餌劑對「錯的昆蟲」做了什麼",
-      "body": "21-nt sliding windows against RefSeq with one-mismatch tolerance; longest uninterrupted perfect match in any non-target homolog was **13 nt**, 10–11 nt for the pharaoh ant. Then they expressed the ant's homologous fragments in S2 cells, treated with the termite dsRNA for 48 h, and measured relative expression of **1.22** and **1.30** — no knockdown. Hardware does the rest: offset slits sized against springtails at 0.5–10 mm, bait loaded only after termite activity registers on a load cell. The proliferation brake is declared unbuilt.",
-      "body_zh": "以 21-nt 滑動視窗比對 RefSeq，容許一個錯配；任何非目標同源基因中最長的連續完全比對為 **13 nt**，法老蟻為 10–11 nt。接著他們把螞蟻同源片段在 S2 細胞中表現，以白蟻 dsRNA 處理 48 小時，量得相對表現量 **1.22** 與 **1.30**——沒有被抑制。其餘交給硬體：錯開的窄縫以跳蟲 0.5–10 mm 為尺寸依據，餌劑要等秤重感測器登錄到白蟻活動後才裝入。增殖煞車則明言尚未建造。",
-      "chips": [
-        "≤13 nt off-target",
-        "1.22 / 1.30",
-        "brake not built"
-      ],
-      "link": "https://2026.igem.wiki/peking/safety-and-security",
-      "linkText": "Peking safety and security"
-    },
-    {
-      "kicker": "The honest gap",
-      "kicker_zh": "誠實的缺口",
-      "title": "Three teams named the metric and said they had not measured it",
-      "title_zh": "三支隊伍指名了指標，然後說自己沒量",
-      "body": "IISER-Kolkata: *\"the figure that matters for biocontainment is the escape frequency... Values below 1 in 10⁸ cells are the benchmark... This has not been measured.\"* UCSC on its uracil auxotroph: H99P is a single base substitution, among the most readily reversible, and *\"any containment claim based on this strain needs a measured reversion frequency.\"* Madrid-UCM notes the strongest systems report undetectable escape near two parts in 10¹². Naming the number you are missing is worth more than a table of risk groups.",
-      "body_zh": "IISER-Kolkata：「對生物圍堵真正重要的數字是逃逸頻率……合成生物學文獻的基準是低於 10⁸ 分之 1……這個數字我們沒有量。」UCSC 談自家尿嘧啶營養缺陷株：H99P 是單一鹼基置換，屬於最容易回復的那一類，而且「任何以此菌株為基礎的圍堵主張，都需要一個實測的回復頻率」。Madrid-UCM 指出最強的系統在接近 10¹² 分之二的偵測極限下回報偵測不到逃逸。指名自己缺的那個數字，價值高過一張風險組別表。",
-      "chips": [
-        "10⁻⁸ benchmark",
-        "0 of 106 measured",
-        "named anyway"
-      ],
-      "link": "https://2026.igem.wiki/ucsc/",
-      "linkText": "UCSC wiki"
-    }
-  ],
-  "table": {
-    "head": [
-      "Team",
-      "Safeguard",
-      "What was actually measured",
-      "What they said it does not prove"
-    ],
-    "head_zh": [
-      "隊伍",
-      "保險機制",
-      "實際量到什麼",
-      "他們說這不能證明什麼"
-    ],
-    "rows": [
-      [
-        "BASIS-China 6123",
-        "Bile-acid CcdB suicide switch",
-        "Growth threshold ~0.1–0.2 mM TCA across four promoters; spot dilutions 10⁻¹–10⁻⁴ at 0, 0.1, 1, 10, 15, 30 mM",
-        "Residual faecal bile acids, lab vs environmental conditions, circuit drift, horizontal transfer; microcapsules are not physical containment"
-      ],
-      [
-        "William-and-Mary 6243",
-        "Published triple-toxin kill switch (Addgene)",
-        "Longitudinal CFU viability; the kill switch failed first, weeks before other circuits",
-        "One construct; does not establish that all kill switches are unreliable"
-      ],
-      [
-        "Peking 6366",
-        "RNAi specificity + yeast proliferation brake",
-        "Non-target longest perfect match 13 nt (ant 10–11 nt); ant homolog expression 1.22 / 1.30 after 48 h dsRNA; Tetrahymena 1.58% vs 87.80% trypan-positive",
-        "FAR1–Tet-Off is design stage only; promoters are not yet a dual-signal system; episomal plasmids, long-term stability untested"
-      ],
-      [
-        "UCSC 6215",
-        "pyrE/pyrF uracil auxotrophy + ccdA/ccdB",
-        "80 candidate colonies screened, 17 to colony PCR, clone 56 confirmed auxotroph; escape risk 10⁻¹² projected, not measured",
-        "Genotype and phenotype each established, causal link not; H99P reversible by one base change"
-      ],
-      [
-        "NU Boston 6300",
-        "Salicylate ccdA/ccdB kill switch",
-        "CFU drop at 0.2% arabinose across 10⁻⁵–10⁻⁷ dilutions; flow cytometry live/dead after OD₆₀₀ was invalidated by CcdB filamentation",
-        "No escape frequency; beads are designed to degrade and release cells into soil"
-      ],
-      [
-        "GEMS-Taiwan 6072",
-        "0.2 µm hollow-fiber membrane + leak detection",
-        "Shell-side sample after 24 h: no colonies; lumen-side: colonies",
-        "Single timepoint, presence/absence only — no CFU, no detection limit, no replicates, no stressed-membrane condition; no genetic second layer"
-      ],
-      [
-        "Stockholm 6292",
-        "Physical containment in a closed reactor",
-        "Nothing measured — STPA hazard analysis plus a three-expert advisory board",
-        "Deployment declared conditional on safety and regulatory assessment; degradation products uncharacterised"
-      ]
-    ],
-    "rows_zh": [
-      [
-        "BASIS-China 6123",
-        "膽酸觸發的 CcdB 自殺開關",
-        "四個啟動子下生長閾值約 0.1–0.2 mM TCA；於 0、0.1、1、10、15、30 mM 做 10⁻¹–10⁻⁴ 點滴稀釋",
-        "糞便殘留膽酸、實驗室與環境條件差異、迴路漂移、水平轉移；微膠囊不算物理圍堵"
-      ],
-      [
-        "William-and-Mary 6243",
-        "已發表的三毒素 kill switch（Addgene）",
-        "長期 CFU 存活追蹤；kill switch 最先失效，比其他迴路早數週",
-        "僅一個構築體；不能證明所有 kill switch 都不可靠"
-      ],
-      [
-        "Peking 6366",
-        "RNAi 專一性 ＋ 酵母增殖煞車",
-        "非目標最長連續完全比對 13 nt（螞蟻 10–11 nt）；dsRNA 處理 48 小時後螞蟻同源基因表現 1.22 / 1.30；Tetrahymena 台盼藍陽性 1.58% 對 87.80%",
-        "FAR1–Tet-Off 僅止於設計階段；兩個啟動子尚未構成雙訊號系統；游離型質體，長期穩定性未測"
-      ],
-      [
-        "UCSC 6215",
-        "pyrE/pyrF 尿嘧啶營養缺陷 ＋ ccdA/ccdB",
-        "篩 80 個候選菌落，17 個做菌落 PCR，clone 56 確認為營養缺陷株；逃逸風險 10⁻¹² 為推算而非量測",
-        "基因型與表型各自成立，但因果關係未建立；H99P 只要一個鹼基變化即可回復"
-      ],
-      [
-        "NU Boston 6300",
-        "水楊酸觸發的 ccdA/ccdB kill switch",
-        "0.2% arabinose 下於 10⁻⁵–10⁻⁷ 稀釋度 CFU 下降；CcdB 誘發絲狀化使 OD₆₀₀ 失效後改用流式細胞儀 live/dead",
-        "沒有逃逸頻率；膠珠本來就設計成崩解並把細菌釋入土壤"
-      ],
-      [
-        "GEMS-Taiwan 6072",
-        "0.2 µm 中空纖維膜 ＋ 洩漏偵測",
-        "24 小時後殼側取樣：無菌落；管腔側：有菌落",
-        "單一時間點、僅分有無——沒有 CFU、沒有偵測極限、沒有重複、沒有加壓膜條件；也沒有遺傳第二層"
-      ],
-      [
-        "Stockholm 6292",
-        "封閉反應器中的物理圍堵",
-        "沒有量測——以 STPA 危害分析加上三位專家組成的顧問委員會替代",
-        "部署明訂以安全與法規評估為前提；降解產物尚未鑑定"
-      ]
-    ]
+ "id": "safety-practice",
+ "tab": "good",
+ "order": 38,
+ "kicker": "Original analysis",
+ "kicker_zh": "原創分析",
+ "title": "Nobody measured an escape rate",
+ "title_zh": "沒有人量過逃逸率",
+ "lede": "Zero of 106 decorated teams report a measured escape frequency. Nineteen built a containment device; three knew the metric well enough to say they had not measured it. The teams worth copying are the ones that turned a safety claim into a number, tested the safeguard until it broke, or gave up a design because the safety answer came back wrong.",
+ "lede_zh": "106 支獲獎隊伍中，有 0 支回報了實際量測的逃逸頻率。19 支做了生物圍堵裝置，3 支清楚到足以寫下「我們沒有量」。值得抄的，是那些把安全主張變成數字、把保險機制一路測到壞掉，或因為安全答案不對而放棄設計的隊伍。",
+ "body": "**The base rate first, because it sets the bar low.** Across the 106 decorated teams researched for this report, 19 describe a genetic containment device — a kill switch, an auxotrophy, a toxin–antitoxin pair. Four discuss dual use or misuse at all. Two name how their synthesised DNA was screened. And **zero report a measured escape frequency**, the one number that converts a containment claim into evidence. Two teams in the environmental cohort — **UCL** (6381) and **WageningenUR** (6222) — have no safety page in their site navigation at all, while proposing water treatment and drinking-water deployment respectively. The Safety and Security Award itself tells the same story: no nominees at all in the Overgrad and High School sections, only a winner. Almost nobody enters this category, and the ones who do are not competing against a crowd.\n\n**What a real safety page does that a recitation does not.** The recitation is: BSL-1, non-pathogenic chassis, a risk-group table, autoclave at 121 °C, gloves and closed-toe shoes. Everything on that list is true and none of it is about the project. The minority do one of five harder things. They convert the containment claim into a threshold and compare it against the receiving environment in the same units — **BASIS-China** (6123) measured its bile-acid suicide switch at a threshold of roughly **0.1–0.2 mM taurocholate**, then looked up feline duodenal bile salts at 15–42 mM, sewage total bile acids at 184–356 µg/L (which they convert to 4.7×10⁻⁴–9.1×10⁻⁴ mM) and 13.3 pmol/g deoxycholic acid in soil, and showed the gap. They test the safeguard until it fails — **William-and-Mary** (6243), the Undergrad winner, took a published triple-toxin kill switch off Addgene and ran it longitudinally; it was *the first of their circuits to lose function*, failing weeks before the others, and the entire project became an argument that kill switches need the failure analysis that bridges and aircraft already get. They measure non-target harm rather than asserting it — **Peking** (6366) screened its dsRNA in 21-nt sliding windows against RefSeq, found the longest uninterrupted match in any non-target homolog was **13 nt** (10–11 nt for the pharaoh ant), then actually expressed the ant's homologous fragments in S2 cells and measured relative expression of **1.22 and 1.30** after dsRNA treatment: no knockdown. They choose inactivation against the actual agent — **Bielefeld-CeBiTec** (6221) found that autoclaving and NaOH are of limited effect on α-synuclein fibrils, so they used 10% SDS *and* autoclaved, worked without preformed fibrils after asking the genetic engineering authority, and ran the lab on electronic access tokens with one-way transport and lab coats that never leave the culture room. And they publish an evidence ledger: a \"what our results establish\" column beside a \"what remains before real-world use\" column, which BASIS-China, Peking and IISER-Kolkata all do and most teams do not.\n\n**The escape-rate question has a clean answer, and it is zero.** The strongest teams know exactly what is missing. **IISER-Kolkata** (6450) writes it out: *\"the figure that matters for biocontainment is the escape frequency, i.e., the proportion of cells surviving induction... Values below 1 in 10⁸ cells are the benchmark used in the synthetic biology biocontainment literature. This has not been measured.\"* **UCSC** (6215) projects a **10⁻¹²** combined escape risk by multiplying a cited 10⁻⁶ per-plasmid transfer probability by itself, against a cited 10⁻⁸ standard — arithmetic, not measurement — and then says the honest thing about its own uracil auxotroph: the mutation is H99P, a single base substitution, *\"among the most readily reversible,\"* and *\"any containment claim based on this strain needs a measured reversion frequency, obtained by plating a large population on medium lacking uracil and counting the colonies that grow.\"* **Madrid-UCM** (6124) notes that the strongest engineered systems report undetectable escape near two parts in 10¹². What teams measured instead were kill assays: **NU Boston** (6300) invalidated its own OD₆₀₀ kill-switch readout after discovering CcdB induces filamentation, which changes light scattering, and moved to flow cytometry live/dead and CFU counts, showing a drop at 0.2% arabinose across the 10⁻⁵–10⁻⁷ dilutions. That is good practice, and it is still not an escape rate.\n\n**Three teams gave something up, and that is the strongest evidence in the category.** **Stockholm** (6292), the Overgrad winner, is verified: its own wiki records the largest change in the project as *\"Open municipal deployment was dropped for a contained bioreactor on a defined, concentrated stream, with physical containment in place of a kill switch.\"* The trigger was a named advisory board member, Gunaratna Kuttuva Rajarao, telling them wastewater plants are not closed systems, plants will not accept GMOs, and a kill switch alone would probably not be enough. The venture went with it: no company, no pricing, no customer, and the chassis they now point at for production is not even yeast. **Oxford** (6391) is the second case and states the cost out loud: they chose heat-inactivated yeast over a living *Snodgrassella alvi* gut symbiont for containment and regulatory reasons, *\"and in doing so gave up the persistence that made S. alvi attractive, which means NECTAR needs repeat dosing and therefore more beekeeper labour. Some of the beekeepers we spoke to preferred the option we dropped.\"* **Bielefeld-CeBiTec** is the third and the only one that dropped work on dual-use grounds: *\"We dropped work on blood-brain-barrier-crossing LNPs because of its dual-use potential.\"* Smaller versions exist — ICJFLS (6098) binned a high-leakage kill-switch design after another team shared leakage data, BGI-College (6345) swapped chassis from *C. butyricum* to *C. beijerinckii* at an early safety review, GCGS (6242) documented a rejected pH-sensitive switch with a reason.\n\n**DNA ordering is where this report's roadmap item actually has a worked example — exactly one.** **CalPolySLO** (6405) writes the paragraph GEMS needs to copy: *\"We order synthetic DNA from IDT and Twist Bioscience, both members of the International Gene Synthesis Consortium, which screens orders for sequences of concern. We use nothing from Risk Group 3 or 4.\"* They then publish a four-step provenance chain from order to purified protein, and they got there because Dr Hank Greely told them to publish their safety thinking *before* starting work and Dr Keith Robison raised dual-use scenarios, which produced a benefits-versus-misuse framework. **TAU-Israel** (6196) is the other, and goes further by building screening into software: their design tool runs **commec**, the IBBIS Common Mechanism, on every generated sequence before release, holds the output when screening is incomplete or unresolved, and states plainly that a clean result *\"does not establish that a sequence is harmless\"* and that the frontend panel is not fully connected and live deployment is unverified. That last sentence is what makes it credible. **BASIS-China** names Sangon Biotech as its synthesis house and emailed safety@igem.org before collecting animal-derived material rather than assuming an unavailable form meant the work was impossible.\n\n**On environmental release, the bar is visibly different and most teams do not clear it.** **Peking** designed physical screening into the hardware: two offset slit layers forming a tortuous passage sized against springtails at 0.5–10 mm, an attract-first-load-later deployment sequence so engineered yeast is only loaded after termite activity is confirmed on a load cell, and a removable inner cartridge so the material is retrievable — while declaring that its FAR1–Tet-Off proliferation brake *\"remains at the design stage\"* and that the two environment-responsive promoters *\"do not yet constitute a combined dual-signal control system.\"* **Athens** (6478) traced the real regulatory fork: marketing authorisation under EU Regulation 2019/6 versus the biopesticide regime, EFSA alongside national authorities, and the fact that European foulbrood is WOAH-listed and compulsorily reportable in Greece, so any alternative to destruction must clear that first. **Madrid-UCM** had containment made a precondition by an industrial partner — Repsol said living GMOs would not be acceptable without evidence that release had been prevented — and answered with encapsulated cells plus a culture-and-qPCR monitoring campaign with a divert-and-inactivate protocol. **GHCIS** (6166) sidestepped the problem by going cell-free, so there is no replicating organism to contain. Against these, **Toronto** (6187) — whose human practices work is genuinely strong — has a safety page that is a laboratory incident risk register, and **NU Boston** has a live contradiction worth naming: its alginate beads are *designed to degrade in soil and release the bacteria*, while the kill switch is described as the thing that justifies release.\n\n**GEMS-Taiwan, held to the same bar.** ReLEAF (6072) has exactly one measured containment result, and it is real: lumen-side medium sampled after 24 hours in the bioreactor grew colonies, shell-side medium grew none across a 0.2 µm hollow-fiber membrane retaining cells of 0.25–1.0 µm, backed by transmembrane-pressure and droplet leak detection. That is more than most teams have. It is also the whole case, and the gaps are large for a system that sits on a farm. There is no genetic containment layer at all — no kill switch, no auxotrophy, no second barrier if the membrane fails, which is the single failure mode the whole design depends on. The test is one timepoint, presence/absence, with no CFU count, no plated volume, no detection limit, no replicates and no stressed or fouled-membrane condition; the wiki nonetheless says the membrane *\"ensures containment.\"* Antibiotic resistance markers (erythromycin) are used with no stated plan to remove them before field use. The DURC section identifies no misuse pathway, only a commitment not to misuse. There is no DNA-order screening statement and no supplier named anywhere — precisely the NSTM-6 gap the roadmap flags. And although the team correctly notes that cell-free agricultural biologics may fall between the biopesticide and synthetic-biology classifications, no Taiwanese authority is named as having been asked. CalPolySLO's one paragraph and BASIS-China's one email are each a week's work; both are missing.",
+ "body_zh": "**先講基準率，因為標準低得驚人。** 在本報告研究的 106 支獲獎隊伍中，19 支描述了遺傳圍堵裝置——kill switch、營養缺陷、toxin–antitoxin 配對。4 支談到兩用或誤用。2 支說明了自己合成的 DNA 是如何被篩查的。而**回報實際量測逃逸頻率的隊伍是 0 支**——那正是把圍堵主張變成證據的唯一數字。環境釋放這一群裡，**UCL**（6381）與 **WageningenUR**（6222）的網站導覽中根本沒有安全頁面，而他們分別提出水處理與飲用水部署。Safety and Security 獎本身說著同樣的事：Overgrad 與高中組完全沒有被提名者，只有一位得主。幾乎沒有人投入這個類別，而投入的人並不是在跟人群競爭。\n\n**真正的安全頁面做了什麼，是背誦沒做的。** 背誦長這樣：BSL-1、非致病性底盤、風險組別表格、121 °C 滅菌、手套與包鞋。清單上每一項都是真的，但沒有一項跟這個專案有關。少數隊伍做了以下五件更難的事之一。他們把圍堵主張換算成閾值，並用同樣的單位跟接收環境對比——**BASIS-China**（6123）量到膽酸自殺開關的閾值約為 **0.1–0.2 mM taurocholate**，再查出貓十二指腸膽鹽為 15–42 mM、污水總膽酸為 184–356 µg/L（他們換算為 4.7×10⁻⁴–9.1×10⁻⁴ mM）、土壤中 deoxycholic acid 為 13.3 pmol/g，把差距攤開來。他們把保險機制一路測到壞——大學組得主 **William-and-Mary**（6243）從 Addgene 取得一個已發表的三毒素 kill switch 做長期追蹤，結果它是*所有受測迴路中最先失去功能的一個*，比其他迴路早了數週失效；整個專案因此變成一個論證：kill switch 需要橋樑與飛機早就有的失效分析。他們量測非目標傷害而不是斷言它——**Peking**（6366）以 21-nt 滑動視窗把 dsRNA 比對 RefSeq，發現任何非目標同源基因中最長的連續完全比對只有 **13 nt**（法老蟻為 10–11 nt），接著真的把螞蟻的同源片段在 S2 細胞中表現，量到 dsRNA 處理後相對表現量為 **1.22 與 1.30**：沒有被抑制。他們針對實際的生物劑選擇去活化方式——**Bielefeld-CeBiTec**（6221）查到高壓滅菌與 NaOH 對 α-synuclein 纖維的效果有限，於是改用 10% SDS 並*同時*高壓滅菌，在詢問基因工程主管機關後不使用預形成纖維，並以電子門禁、單向傳遞與永不離開細胞培養室的實驗衣來管理實驗室。最後，他們公布證據帳本：一欄「我們的結果能證明什麼」，旁邊一欄「真實應用前還缺什麼」——BASIS-China、Peking 與 IISER-Kolkata 都這麼做，大多數隊伍沒有。\n\n**逃逸率這題有乾淨的答案，答案是零。** 最強的幾支隊伍很清楚缺了什麼。**IISER-Kolkata**（6450）白紙黑字寫著：「對生物圍堵真正重要的數字是逃逸頻率，也就是誘導後存活細胞的比例……合成生物學圍堵文獻採用的基準是低於 10⁸ 分之 1。這個數字我們沒有量。」**UCSC**（6215）把引用的單一質體轉移機率 10⁻⁶ 自乘，推算出 **10⁻¹²** 的合併逃逸風險，對照引用的 10⁻⁸ 標準——這是算術，不是量測——然後對自己的尿嘧啶營養缺陷株說了誠實的話：該突變為 H99P，單一鹼基置換，「屬於最容易回復的那一類」，而且「任何以此菌株為基礎的圍堵主張，都需要一個實測的回復頻率，做法是把大量菌體塗在缺乏尿嘧啶的培養基上，數長出來的菌落」。**Madrid-UCM**（6124）指出最強的工程系統在接近 10¹² 分之二的偵測極限下回報「偵測不到逃逸」。隊伍們實際量到的是殺滅試驗：**NU Boston**（6300）發現 CcdB 會誘發絲狀化、改變光散射後，自行否決了用 OD₆₀₀ 讀 kill switch 的做法，改用流式細胞儀 live/dead 染色與 CFU 計數，顯示 0.2% arabinose 下在 10⁻⁵–10⁻⁷ 稀釋度皆明顯下降。這是好做法，但它仍然不是逃逸率。\n\n**三支隊伍放棄了某樣東西，而這是這個類別裡最強的證據。** Overgrad 得主 **Stockholm**（6292）已證實：其 wiki 把專案最大的改變記錄為「放棄開放式市政污水部署，改為處理特定高濃度廢流的封閉式生物反應器，以物理圍堵取代 kill switch」。觸發點是具名的顧問委員 Gunaratna Kuttuva Rajarao 告訴他們：污水處理廠不是封閉系統、廠方不會接受 GMO、單靠一個 kill switch 大概不夠。創業案也跟著沒了：沒有公司、沒有定價、沒有客戶，而他們現在指向的量產底盤甚至不是酵母。**Oxford**（6391）是第二個案例，而且把代價講出來：他們基於圍堵與法規理由，選擇熱去活化酵母而非活的 *Snodgrassella alvi* 腸道共生菌，「也因此放棄了讓 S. alvi 有吸引力的持久定殖，這表示 NECTAR 需要重複投藥，也就是更多養蜂人的工時。我們談過的一些養蜂人反而偏好我們放棄的那個選項。」**Bielefeld-CeBiTec** 是第三個，也是唯一因兩用疑慮而中止工作的：「我們因為兩用潛力而中止了可穿越血腦屏障的 LNP 工作。」規模較小的版本也有——ICJFLS（6098）在另一支隊伍分享洩漏資料後丟掉了高洩漏的 kill switch 設計，BGI-College（6345）在早期安全審查時把底盤從 *C. butyricum* 換成 *C. beijerinckii*，GCGS（6242）記錄了一個被否決的 pH 感應開關並附上理由。\n\n**DNA 訂購，正是本報告路線圖那一項唯一有實作範例的地方——而且只有一個。** **CalPolySLO**（6405）寫下了 GEMS 該照抄的那一段：「我們向 IDT 與 Twist Bioscience 訂購合成 DNA，兩者都是 International Gene Synthesis Consortium 成員，會對訂單進行疑慮序列篩查。我們不使用任何風險組別 3 或 4 的材料。」他們接著公布了從下單到純化蛋白的四步履歷鏈；而之所以如此，是因為 Dr Hank Greely 要他們在開工*之前*就公布安全論述，Dr Keith Robison 提出兩用情境，因而產生了一份利益對誤用的評估架構。**TAU-Israel**（6196）是另一支，而且更進一步把篩查做進軟體：他們的設計工具在釋出前對每一條生成序列執行 IBBIS 的 **commec**（Common Mechanism），在篩查未完成或留有未解疑慮時扣住輸出，並明說乾淨的結果「並不能證明一條序列無害」，以及前端面板尚未完全接上、線上部署未經驗證。最後那句話，才是讓它可信的地方。**BASIS-China** 具名 Sangon Biotech 為其合成供應商，並在採集動物來源材料前主動寫信給 safety@igem.org，而不是假設拿不到表單就等於不能做。\n\n**在環境釋放上，門檻明顯不同，而多數隊伍沒跨過。** **Peking** 把物理篩選做進硬體：外殼與內匣兩層錯開的窄縫形成迂迴通道，尺寸對照跳蟲的 0.5–10 mm；採取「先誘集、後投料」的部署順序，等秤重感測器確認白蟻活動後才裝入工程酵母；內匣可抽出，材料可回收——同時聲明其 FAR1–Tet-Off 增殖煞車「仍停留在設計階段」，兩個環境響應啟動子「尚未構成雙訊號聯合控制系統」。**Athens**（6478）追出了真正的法規岔路：依 EU Regulation 2019/6 走上市許可、或走生物農藥制度，EFSA 與各國主管機關並行，而且歐洲幼蟲病是 WOAH 列管、在希臘屬強制通報，任何取代撲殺的替代方案都得先過這一關。**Madrid-UCM** 被產業夥伴把圍堵設為前提——Repsol 直說，若無法證明已防止環境釋放，活體 GMO 不可能被接受——他們的回答是包埋細胞，加上培養與 qPCR 監測，並訂出分流與去活化流程。**GHCIS**（6166）則直接繞過問題，改走無細胞路線，根本沒有會增殖的生物要圍堵。相對地，人類實踐做得確實扎實的 **Toronto**（6187），安全頁面卻是一份實驗室事故風險清單；而 **NU Boston** 有一個該被點名的矛盾：它的海藻酸鈣珠*本來就設計成在土壤中崩解並釋出細菌*，而 kill switch 卻被描述成讓釋放成立的那個理由。\n\n**用同一把尺量 GEMS-Taiwan。** ReLEAF（6072）只有一項實際量測的圍堵結果，而它是真的：生物反應器運轉 24 小時後，管腔側取樣長出菌落，殼側取樣沒有長，中間隔著能截留 0.25–1.0 µm 細胞的 0.2 µm 中空纖維膜，另有跨膜壓力與液滴洩漏偵測佐證。這比多數隊伍擁有的還多。但這也就是全部了，而對一個要裝在農場上的系統來說，缺口很大。完全沒有遺傳圍堵層——沒有 kill switch、沒有營養缺陷，膜一旦失效也沒有第二道屏障，而整個設計恰恰押在這一個失效模式上。該測試只有單一時間點、只分有無，沒有 CFU 計數、沒有塗盤體積、沒有偵測極限、沒有重複，也沒有加壓或結垢膜的條件；wiki 卻寫著這層膜「確保圍堵」。使用了抗生素抗性標記（erythromycin），而且沒有說明田間使用前要如何移除。DURC 章節沒有指出任何誤用路徑，只有一句不會誤用的承諾。整個網站沒有任何 DNA 訂單篩查聲明，也沒有具名任何供應商——這正是路線圖點出的 NSTM-6 缺口。而且儘管團隊正確指出無細胞農業生物製劑可能卡在生物農藥與合成生物學衍生物的分類之間，卻沒有具名任何已諮詢的台灣主管機關。CalPolySLO 的那一段、BASIS-China 的那一封信，各只要一週的工作量；兩樣都沒有。",
+ "cards": [
+  {
+   "kicker": "The one number",
+   "kicker_zh": "那個數字",
+   "title": "BASIS-China measured a threshold, then looked up the real environment",
+   "title_zh": "BASIS-China 量出閾值，再去查真實環境",
+   "body": "The suicide switch keeps cells alive above roughly **0.1–0.2 mM taurocholate** and suppresses growth below it, measured across four Anderson promoters with empty vector alongside. They then converted published concentrations into the same units: feline duodenum 15–42 mM, sewage total bile acids 184–356 µg/L (4.7×10⁻⁴–9.1×10⁻⁴ mM), soil deoxycholic acid 13.3 pmol/g. Two to three orders of magnitude of margin, stated as a comparison rather than a claim — and they add that their microcapsules are designed to release cells in the intestine and must not be counted as physical containment.",
+   "body_zh": "該自殺開關在約 **0.1–0.2 mM taurocholate** 以上維持細胞存活、以下則抑制生長，以四個 Anderson 啟動子並列量測，並設空載體對照。接著他們把文獻濃度換算成同樣單位：貓十二指腸 15–42 mM、污水總膽酸 184–356 µg/L（4.7×10⁻⁴–9.1×10⁻⁴ mM）、土壤 deoxycholic acid 13.3 pmol/g。兩到三個數量級的餘裕，而且是以對比方式陳述而非斷言——他們還補上一句：微膠囊本來就設計成在腸道釋出細菌，不能算作物理圍堵。",
+   "chips": [
+    "0.1–0.2 mM threshold",
+    "sewage 9.1×10⁻⁴ mM",
+    "HS winner"
+   ],
+   "chips_zh": [
+    "閾值 0.1–0.2 mM",
+    "污水 9.1×10⁻⁴ mM",
+    "高中組得主"
+   ],
+   "link": "https://2026.igem.wiki/basis-china/safety-and-security",
+   "linkText": "BASIS-China safety and security"
   },
-  "checklist": [
-    "**Suppliers.** Order synthetic DNA and oligos only from International Gene Synthesis Consortium members, and name them on the safety page the way CalPolySLO does — supplier, consortium membership, and the fact that they screen orders for sequences of concern.",
-    "**Screen what you order.** Run commec (the IBBIS Common Mechanism) over every ordered construct of 50 nucleotides or more before the order goes out. A hold is not a pass: an incomplete or unresolved screen blocks the order until a human resolves it.",
-    "**Record, and keep it eight years.** One register row per order: date, supplier, construct name, full sequence, length, requester, screening tool and version, result, approver. Eight-year retention, matching what NSTM-6 asks of certified suppliers, because a GEMS order inside a US-funded collaboration inherits the requirement.",
-    "**One named signer.** A single GEMS biosafety officer approves every synthesis order and every new chassis before work starts. Two signatures for anything above Risk Group 1, anything on a select-agent list, and any sequence the screen flags.",
-    "**Say what you will not do.** No release of viable engineered cells outside a sealed device; no Risk Group 3 or 4 material; no work with uncharacterised environmental isolates; no construct whose purpose is increased transmissibility, virulence or host range; no antibiotic resistance marker in anything intended to leave the lab.",
-    "**Measure the containment number, don't project it.** For any strain that could leave a device, report an escape or reversion frequency per cell per generation: plate a large population under the restrictive condition, count survivors, state how many cells were plated and the detection limit. The literature benchmark is below 1 in 10⁸.",
-    "**Compare against the real receiving environment.** Any threshold — bile acid, salicylate, temperature, nutrient — gets converted into the units of the soil, water or field where the organism would land, with a cited source. A containment claim is only as good as that comparison.",
-    "**Publish the evidence ledger.** Two columns on every safety page: what these results establish, and what remains before real-world use. Name horizontal transfer, circuit drift over passages, and extracellular DNA explicitly, because genetic containment addresses none of them.",
-    "**Ask someone outside, in writing, early.** Email the institutional biosafety committee, the relevant Taiwanese authority for field deployment of an engineered agricultural input, and safety@igem.org — and publish the question, the answer, and what changed. An unavailable form is not the same as an impossible experiment."
+  {
+   "kicker": "Tested to failure",
+   "kicker_zh": "測到失效",
+   "title": "William-and-Mary's kill switch broke first",
+   "title_zh": "William-and-Mary 的 kill switch 最先壞掉",
+   "body": "They took a published triple-toxin kill switch from Addgene and followed it longitudinally alongside other circuits. It was the first to lose its intended function, failing weeks before the rest. CFU counts were used instead of OD₆₀₀ or fluorescence, on the reasoning that a kill switch's output is loss of viability, not loss of signal. Their conclusion is the uncomfortable one: a system designed as the last line of defence had never been subjected to the failure analysis that mature engineering disciplines apply as routine.",
+   "body_zh": "他們從 Addgene 取得一個已發表的三毒素 kill switch，與其他迴路並行做長期追蹤。它是最先失去預期功能的一個，比其餘迴路早數週失效。他們以 CFU 計數取代 OD₆₀₀ 或螢光，理由是 kill switch 的輸出是活性喪失，不是訊號喪失。結論並不好聽：一個被設計成最後防線的系統，從來沒有接受過成熟工程學科視為例行的失效分析。",
+   "chips": [
+    "CFU not OD600",
+    "failed first",
+    "UG winner"
+   ],
+   "chips_zh": [
+    "用 CFU，不用 OD600",
+    "自己先壞",
+    "大學組得主"
+   ],
+   "link": "https://2026.igem.wiki/william-and-mary/safety-and-security",
+   "linkText": "William-and-Mary safety"
+  },
+  {
+   "kicker": "Gave it up",
+   "kicker_zh": "放棄了",
+   "title": "Stockholm dismantled its own deployment plan, and Oxford named the cost",
+   "title_zh": "Stockholm 拆掉自己的部署計畫，Oxford 寫出代價",
+   "body": "Stockholm's wiki records the project's largest change as open municipal deployment dropped for a contained bioreactor, physical containment replacing the kill switch, after a named advisory board member said plants are not closed systems and will not accept GMOs. The venture went with it. Oxford did the same thing one level down: heat-inactivated yeast instead of a living *Snodgrassella alvi* symbiont, for containment and regulatory reasons — *\"and in doing so gave up the persistence that made S. alvi attractive... Some of the beekeepers we spoke to preferred the option we dropped.\"*",
+   "body_zh": "Stockholm 的 wiki 把專案最大的改變記為：放棄開放式市政部署、改為封閉式生物反應器，以物理圍堵取代 kill switch；起因是具名顧問委員指出處理廠不是封閉系統、也不會接受 GMO。創業案一併作廢。Oxford 在低一層做了同樣的事：基於圍堵與法規理由，以熱去活化酵母取代活的 *Snodgrassella alvi* 共生菌——「也因此放棄了讓 S. alvi 有吸引力的持久定殖……我們談過的一些養蜂人反而偏好我們放棄的那個選項。」",
+   "chips": [
+    "open release dropped",
+    "cost stated",
+    "OG winner"
+   ],
+   "chips_zh": [
+    "放棄開放釋出",
+    "代價寫明",
+    "研究生組得主"
+   ],
+   "link": "https://2026.igem.wiki/stockholm/safety-and-security",
+   "linkText": "Stockholm safety and security"
+  },
+  {
+   "kicker": "DNA ordering",
+   "kicker_zh": "DNA 訂購",
+   "title": "CalPolySLO wrote the paragraph the roadmap is asking for",
+   "title_zh": "CalPolySLO 寫出了路線圖要的那一段",
+   "body": "*\"We order synthetic DNA from IDT and Twist Bioscience, both members of the International Gene Synthesis Consortium, which screens orders for sequences of concern. We use nothing from Risk Group 3 or 4.\"* Then a four-step provenance chain from order to purified protein. It exists because an ethicist told them to publish their safety thinking before starting work and a biosecurity scholar raised dual-use scenarios. Two of 106 teams name a screening regime at all; this is the cleaner of the two to copy.",
+   "body_zh": "「我們向 IDT 與 Twist Bioscience 訂購合成 DNA，兩者都是 International Gene Synthesis Consortium 成員，會對訂單進行疑慮序列篩查。我們不使用任何風險組別 3 或 4 的材料。」接著是從下單到純化蛋白的四步履歷鏈。它之所以存在，是因為一位倫理學者要他們在開工前先公布安全論述，一位生物保安學者提出了兩用情境。106 支隊伍中只有 2 支說明過篩查機制；這一支是比較好照抄的那個。",
+   "chips": [
+    "IDT + Twist",
+    "IGSC",
+    "no RG3/RG4"
+   ],
+   "chips_zh": [
+    "IDT + Twist",
+    "IGSC",
+    "不碰 RG3/RG4"
+   ],
+   "link": "https://2026.igem.wiki/calpolyslo/safety-and-security",
+   "linkText": "CalPolySLO safety and security"
+  },
+  {
+   "kicker": "Screening as code",
+   "kicker_zh": "把篩查寫成程式",
+   "title": "TAU-Israel put the Common Mechanism in the release path",
+   "title_zh": "TAU-Israel 把 Common Mechanism 放進釋出路徑",
+   "body": "Their design tool runs **commec**, the IBBIS Common Mechanism, over every generated sequence and holds the output when screening is incomplete or leaves an unresolved concern. What makes it credible is the disclaimer: a result without a finding *\"does not establish that a sequence is harmless, suitable for an experiment, or approved for synthesis,\"* the frontend panel is not fully connected, and live deployment has not been verified. They dated the audit and named the source revision.",
+   "body_zh": "他們的設計工具對每一條生成序列執行 IBBIS 的 **commec**（Common Mechanism），並在篩查未完成或留有未解疑慮時扣住輸出。讓它可信的是那段免責聲明：沒有發現的結果「並不能證明一條序列無害、適合用於實驗，或已獲准合成」；前端面板尚未完全接上，線上部署亦未經驗證。他們為這次稽核註明日期並具名原始碼版本。",
+   "chips": [
+    "commec / IBBIS",
+    "hold on unresolved",
+    "audit dated"
+   ],
+   "chips_zh": [
+    "commec / IBBIS",
+    "有疑慮就扣住",
+    "稽核標上日期"
+   ],
+   "link": "https://2026.igem.wiki/tau-israel/safety-and-security",
+   "linkText": "TAU-Israel safety and security"
+  },
+  {
+   "kicker": "Non-target harm",
+   "kicker_zh": "非目標傷害",
+   "title": "Peking measured what its bait does to the wrong insect",
+   "title_zh": "Peking 量了自家餌劑對「錯的昆蟲」做了什麼",
+   "body": "21-nt sliding windows against RefSeq with one-mismatch tolerance; longest uninterrupted perfect match in any non-target homolog was **13 nt**, 10–11 nt for the pharaoh ant. Then they expressed the ant's homologous fragments in S2 cells, treated with the termite dsRNA for 48 h, and measured relative expression of **1.22** and **1.30** — no knockdown. Hardware does the rest: offset slits sized against springtails at 0.5–10 mm, bait loaded only after termite activity registers on a load cell. The proliferation brake is declared unbuilt.",
+   "body_zh": "以 21-nt 滑動視窗比對 RefSeq，容許一個錯配；任何非目標同源基因中最長的連續完全比對為 **13 nt**，法老蟻為 10–11 nt。接著他們把螞蟻同源片段在 S2 細胞中表現，以白蟻 dsRNA 處理 48 小時，量得相對表現量 **1.22** 與 **1.30**——沒有被抑制。其餘交給硬體：錯開的窄縫以跳蟲 0.5–10 mm 為尺寸依據，餌劑要等秤重感測器登錄到白蟻活動後才裝入。增殖煞車則明言尚未建造。",
+   "chips": [
+    "≤13 nt off-target",
+    "1.22 / 1.30",
+    "brake not built"
+   ],
+   "chips_zh": [
+    "脫靶 ≤13 nt",
+    "1.22 / 1.30",
+    "煞車沒做"
+   ],
+   "link": "https://2026.igem.wiki/peking/safety-and-security",
+   "linkText": "Peking safety and security"
+  },
+  {
+   "kicker": "The honest gap",
+   "kicker_zh": "誠實的缺口",
+   "title": "Three teams named the metric and said they had not measured it",
+   "title_zh": "三支隊伍指名了指標，然後說自己沒量",
+   "body": "IISER-Kolkata: *\"the figure that matters for biocontainment is the escape frequency... Values below 1 in 10⁸ cells are the benchmark... This has not been measured.\"* UCSC on its uracil auxotroph: H99P is a single base substitution, among the most readily reversible, and *\"any containment claim based on this strain needs a measured reversion frequency.\"* Madrid-UCM notes the strongest systems report undetectable escape near two parts in 10¹². Naming the number you are missing is worth more than a table of risk groups.",
+   "body_zh": "IISER-Kolkata：「對生物圍堵真正重要的數字是逃逸頻率……合成生物學文獻的基準是低於 10⁸ 分之 1……這個數字我們沒有量。」UCSC 談自家尿嘧啶營養缺陷株：H99P 是單一鹼基置換，屬於最容易回復的那一類，而且「任何以此菌株為基礎的圍堵主張，都需要一個實測的回復頻率」。Madrid-UCM 指出最強的系統在接近 10¹² 分之二的偵測極限下回報偵測不到逃逸。指名自己缺的那個數字，價值高過一張風險組別表。",
+   "chips": [
+    "10⁻⁸ benchmark",
+    "0 of 106 measured",
+    "named anyway"
+   ],
+   "chips_zh": [
+    "10⁻⁸ 基準",
+    "0/106 量過",
+    "還是寫出來了"
+   ],
+   "link": "https://2026.igem.wiki/ucsc/",
+   "linkText": "UCSC wiki"
+  }
+ ],
+ "table": {
+  "head": [
+   "Team",
+   "Safeguard",
+   "What was actually measured",
+   "What they said it does not prove"
   ],
-  "checklist_zh": [
-    "**供應商。** 合成 DNA 與寡核苷酸只向 International Gene Synthesis Consortium 成員訂購，並像 CalPolySLO 那樣寫在安全頁面上——供應商名稱、聯盟會員身分，以及他們會對訂單進行疑慮序列篩查這件事。",
-    "**篩查你訂的東西。** 在下單前，對每一個 50 個核苷酸以上的構築體執行 commec（IBBIS 的 Common Mechanism）。扣住不等於放行：篩查未完成或疑慮未解，訂單就停在那裡，直到有人處理。",
-    "**留存紀錄，保存八年。** 每筆訂單一列：日期、供應商、構築體名稱、完整序列、長度、申請人、篩查工具與版本、結果、核可人。保存八年，對齊 NSTM-6 對認證供應商的要求——因為 GEMS 若在美國經費支持的合作案中下單，就會一併繼承這項義務。",
-    "**一位具名簽核人。** 由單一位 GEMS 生物安全負責人核可每一筆合成訂單與每一個新底盤，才能開工。凡是高於風險組別 1、列於管制生物劑清單，或被篩查標記的序列，需兩人會簽。",
-    "**明寫你不做什麼。** 不在密閉裝置之外釋放有活性的工程細胞；不使用風險組別 3 或 4 的材料；不操作未鑑定的環境分離株；不製作以提高傳播力、毒力或宿主範圍為目的之構築體；凡預定離開實驗室者，不帶抗生素抗性標記。",
-    "**圍堵數字要量，不要推算。** 任何可能離開裝置的菌株，都要回報每細胞每世代的逃逸或回復頻率：在限制條件下塗布大量菌體、計數存活者，並寫出塗了多少細胞與偵測極限。文獻基準是低於 10⁸ 分之 1。",
-    "**跟真實接收環境對比。** 任何閾值——膽酸、水楊酸、溫度、養分——都要換算成該生物實際落腳的土壤、水體或田區的單位，並附引用來源。圍堵主張的可信度，不會高於背後那個對比。",
-    "**公布證據帳本。** 每一頁安全頁面都放兩欄：這些結果能證明什麼，以及真實應用前還缺什麼。明確點名水平轉移、多代傳代後的迴路漂移，以及胞外 DNA，因為遺傳圍堵一項都處理不了。",
-    "**及早以書面問外部的人。** 寫信給機構生物安全委員會、工程農業投入品田間部署的台灣主管機關，以及 safety@igem.org——並把問題、答覆與因此改了什麼一起公布。拿不到表單，不等於實驗做不成。"
+  "head_zh": [
+   "隊伍",
+   "保險機制",
+   "實際量到什麼",
+   "他們說這不能證明什麼"
   ],
-  "method": "Two passes. First, a keyword sweep of research/teams/*.json — the researched prose on all 106 decorated teams — for kill switch, auxotroph, biocontainment, containment, escape, BSL, dual-use, screening, risk assessment, Nagoya and release. Counts from that pass are: 19 of 106 describe a genetic containment device, 28 use the words biosafety or biosecurity, 28 name an institutional biosafety body or officer, 4 discuss dual use, 2 name a DNA-synthesis screening regime, and 0 report a measured escape frequency. Those counts are a floor, not a census: the files are researcher summaries, so a practice a team carried out but did not write up prominently — or wrote up only on a page the researcher did not quote — is invisible here. Second, direct verification on the teams' own 2026 wikis for 21 teams: the six Safety and Security Award winners and nominees (William-and-Mary 6243, Bielefeld-CeBiTec 6221, Peking 6366, UCSC 6215, Stockholm 6292, BASIS-China 6123) plus the environmental-release cohort (LYON, Madrid-UCM, RUM-UPRM, UCL, UOttawa, WageningenUR, DTU-Denmark, Toronto, Athens, Oxford, Muenster-University, Lambert-GA, GHCIS, Squirrel-Beijing, GEMS-Taiwan). Most 2026 wikis are client-rendered React applications that return an empty shell to curl; where that happened the page text was recovered from the site's own JavaScript bundle, and the static wikis were read directly. Every number quoted here was read off the team's own page. Bielefeld-CeBiTec 6221, UCSC 6215 and RUM-UPRM 6282 are not in the 106-team on-disk corpus and were read only from their wikis. UCL 6381 and WageningenUR 6222 have no safety page in their site navigation, which is a statement about their navigation, not proof they did no safety work — both completed iGEM's safety forms, which are not public. What none of this can see: the safety form every team files with iGEM, institutional biosafety committee records, and anything a team did at the bench and never wrote down.",
-  "method_zh": "分兩輪。第一輪是對 research/teams/*.json 做關鍵字掃描——那是全部 106 支獲獎隊伍的研究文字——搜尋 kill switch、auxotroph、biocontainment、containment、escape、BSL、dual-use、screening、risk assessment、Nagoya 與 release。該輪的計數為：106 支中有 19 支描述遺傳圍堵裝置，28 支使用生物安全或生物保安字樣，28 支具名機構生物安全單位或負責人，4 支談及兩用，2 支說明 DNA 合成篩查機制，0 支回報實際量測的逃逸頻率。這些數字是下限而非普查：檔案是研究者摘要，因此某隊做了卻沒有顯著寫出、或只寫在研究者未引用頁面上的做法，在這裡是看不見的。第二輪是直接到隊伍自己的 2026 wiki 查證 21 支隊伍：Safety and Security 獎的六支得主與提名隊伍（William-and-Mary 6243、Bielefeld-CeBiTec 6221、Peking 6366、UCSC 6215、Stockholm 6292、BASIS-China 6123），加上環境釋放這一群（LYON、Madrid-UCM、RUM-UPRM、UCL、UOttawa、WageningenUR、DTU-Denmark、Toronto、Athens、Oxford、Muenster-University、Lambert-GA、GHCIS、Squirrel-Beijing、GEMS-Taiwan）。大多數 2026 wiki 是前端渲染的 React 應用，curl 只會拿到空殼；遇到這種情況時，頁面文字是從網站自身的 JavaScript 打包檔還原，靜態網站則直接讀取。本文引用的每一個數字都是從隊伍自己的頁面讀來的。Bielefeld-CeBiTec 6221、UCSC 6215 與 RUM-UPRM 6282 不在這 106 支的本機語料中，僅從其 wiki 讀取。UCL 6381 與 WageningenUR 6222 的網站導覽中沒有安全頁面——這是關於他們導覽的陳述，不是他們沒做安全工作的證明；兩隊都完成了 iGEM 的安全表單，而那些表單並不公開。本文完全看不到的部分：每支隊伍向 iGEM 繳交的安全表單、機構生物安全委員會的紀錄，以及任何在實驗檯上做了卻從未寫下的事。"
+  "rows": [
+   [
+    "BASIS-China 6123",
+    "Bile-acid CcdB suicide switch",
+    "Growth threshold ~0.1–0.2 mM TCA across four promoters; spot dilutions 10⁻¹–10⁻⁴ at 0, 0.1, 1, 10, 15, 30 mM",
+    "Residual faecal bile acids, lab vs environmental conditions, circuit drift, horizontal transfer; microcapsules are not physical containment"
+   ],
+   [
+    "William-and-Mary 6243",
+    "Published triple-toxin kill switch (Addgene)",
+    "Longitudinal CFU viability; the kill switch failed first, weeks before other circuits",
+    "One construct; does not establish that all kill switches are unreliable"
+   ],
+   [
+    "Peking 6366",
+    "RNAi specificity + yeast proliferation brake",
+    "Non-target longest perfect match 13 nt (ant 10–11 nt); ant homolog expression 1.22 / 1.30 after 48 h dsRNA; Tetrahymena 1.58% vs 87.80% trypan-positive",
+    "FAR1–Tet-Off is design stage only; promoters are not yet a dual-signal system; episomal plasmids, long-term stability untested"
+   ],
+   [
+    "UCSC 6215",
+    "pyrE/pyrF uracil auxotrophy + ccdA/ccdB",
+    "80 candidate colonies screened, 17 to colony PCR, clone 56 confirmed auxotroph; escape risk 10⁻¹² projected, not measured",
+    "Genotype and phenotype each established, causal link not; H99P reversible by one base change"
+   ],
+   [
+    "NU Boston 6300",
+    "Salicylate ccdA/ccdB kill switch",
+    "CFU drop at 0.2% arabinose across 10⁻⁵–10⁻⁷ dilutions; flow cytometry live/dead after OD₆₀₀ was invalidated by CcdB filamentation",
+    "No escape frequency; beads are designed to degrade and release cells into soil"
+   ],
+   [
+    "GEMS-Taiwan 6072",
+    "0.2 µm hollow-fiber membrane + leak detection",
+    "Shell-side sample after 24 h: no colonies; lumen-side: colonies",
+    "Single timepoint, presence/absence only — no CFU, no detection limit, no replicates, no stressed-membrane condition; no genetic second layer"
+   ],
+   [
+    "Stockholm 6292",
+    "Physical containment in a closed reactor",
+    "Nothing measured — STPA hazard analysis plus a three-expert advisory board",
+    "Deployment declared conditional on safety and regulatory assessment; degradation products uncharacterised"
+   ]
+  ],
+  "rows_zh": [
+   [
+    "BASIS-China 6123",
+    "膽酸觸發的 CcdB 自殺開關",
+    "四個啟動子下生長閾值約 0.1–0.2 mM TCA；於 0、0.1、1、10、15、30 mM 做 10⁻¹–10⁻⁴ 點滴稀釋",
+    "糞便殘留膽酸、實驗室與環境條件差異、迴路漂移、水平轉移；微膠囊不算物理圍堵"
+   ],
+   [
+    "William-and-Mary 6243",
+    "已發表的三毒素 kill switch（Addgene）",
+    "長期 CFU 存活追蹤；kill switch 最先失效，比其他迴路早數週",
+    "僅一個構築體；不能證明所有 kill switch 都不可靠"
+   ],
+   [
+    "Peking 6366",
+    "RNAi 專一性 ＋ 酵母增殖煞車",
+    "非目標最長連續完全比對 13 nt（螞蟻 10–11 nt）；dsRNA 處理 48 小時後螞蟻同源基因表現 1.22 / 1.30；Tetrahymena 台盼藍陽性 1.58% 對 87.80%",
+    "FAR1–Tet-Off 僅止於設計階段；兩個啟動子尚未構成雙訊號系統；游離型質體，長期穩定性未測"
+   ],
+   [
+    "UCSC 6215",
+    "pyrE/pyrF 尿嘧啶營養缺陷 ＋ ccdA/ccdB",
+    "篩 80 個候選菌落，17 個做菌落 PCR，clone 56 確認為營養缺陷株；逃逸風險 10⁻¹² 為推算而非量測",
+    "基因型與表型各自成立，但因果關係未建立；H99P 只要一個鹼基變化即可回復"
+   ],
+   [
+    "NU Boston 6300",
+    "水楊酸觸發的 ccdA/ccdB kill switch",
+    "0.2% arabinose 下於 10⁻⁵–10⁻⁷ 稀釋度 CFU 下降；CcdB 誘發絲狀化使 OD₆₀₀ 失效後改用流式細胞儀 live/dead",
+    "沒有逃逸頻率；膠珠本來就設計成崩解並把細菌釋入土壤"
+   ],
+   [
+    "GEMS-Taiwan 6072",
+    "0.2 µm 中空纖維膜 ＋ 洩漏偵測",
+    "24 小時後殼側取樣：無菌落；管腔側：有菌落",
+    "單一時間點、僅分有無——沒有 CFU、沒有偵測極限、沒有重複、沒有加壓膜條件；也沒有遺傳第二層"
+   ],
+   [
+    "Stockholm 6292",
+    "封閉反應器中的物理圍堵",
+    "沒有量測——以 STPA 危害分析加上三位專家組成的顧問委員會替代",
+    "部署明訂以安全與法規評估為前提；降解產物尚未鑑定"
+   ]
+  ]
+ },
+ "checklist": [
+  "**Suppliers.** Order synthetic DNA and oligos only from International Gene Synthesis Consortium members, and name them on the safety page the way CalPolySLO does — supplier, consortium membership, and the fact that they screen orders for sequences of concern.",
+  "**Screen what you order.** Run commec (the IBBIS Common Mechanism) over every ordered construct of 50 nucleotides or more before the order goes out. A hold is not a pass: an incomplete or unresolved screen blocks the order until a human resolves it.",
+  "**Record, and keep it eight years.** One register row per order: date, supplier, construct name, full sequence, length, requester, screening tool and version, result, approver. Eight-year retention, matching what NSTM-6 asks of certified suppliers, because a GEMS order inside a US-funded collaboration inherits the requirement.",
+  "**One named signer.** A single GEMS biosafety officer approves every synthesis order and every new chassis before work starts. Two signatures for anything above Risk Group 1, anything on a select-agent list, and any sequence the screen flags.",
+  "**Say what you will not do.** No release of viable engineered cells outside a sealed device; no Risk Group 3 or 4 material; no work with uncharacterised environmental isolates; no construct whose purpose is increased transmissibility, virulence or host range; no antibiotic resistance marker in anything intended to leave the lab.",
+  "**Measure the containment number, don't project it.** For any strain that could leave a device, report an escape or reversion frequency per cell per generation: plate a large population under the restrictive condition, count survivors, state how many cells were plated and the detection limit. The literature benchmark is below 1 in 10⁸.",
+  "**Compare against the real receiving environment.** Any threshold — bile acid, salicylate, temperature, nutrient — gets converted into the units of the soil, water or field where the organism would land, with a cited source. A containment claim is only as good as that comparison.",
+  "**Publish the evidence ledger.** Two columns on every safety page: what these results establish, and what remains before real-world use. Name horizontal transfer, circuit drift over passages, and extracellular DNA explicitly, because genetic containment addresses none of them.",
+  "**Ask someone outside, in writing, early.** Email the institutional biosafety committee, the relevant Taiwanese authority for field deployment of an engineered agricultural input, and safety@igem.org — and publish the question, the answer, and what changed. An unavailable form is not the same as an impossible experiment."
+ ],
+ "checklist_zh": [
+  "**供應商。** 合成 DNA 與寡核苷酸只向 International Gene Synthesis Consortium 成員訂購，並像 CalPolySLO 那樣寫在安全頁面上——供應商名稱、聯盟會員身分，以及他們會對訂單進行疑慮序列篩查這件事。",
+  "**篩查你訂的東西。** 在下單前，對每一個 50 個核苷酸以上的構築體執行 commec（IBBIS 的 Common Mechanism）。扣住不等於放行：篩查未完成或疑慮未解，訂單就停在那裡，直到有人處理。",
+  "**留存紀錄，保存八年。** 每筆訂單一列：日期、供應商、構築體名稱、完整序列、長度、申請人、篩查工具與版本、結果、核可人。保存八年，對齊 NSTM-6 對認證供應商的要求——因為 GEMS 若在美國經費支持的合作案中下單，就會一併繼承這項義務。",
+  "**一位具名簽核人。** 由單一位 GEMS 生物安全負責人核可每一筆合成訂單與每一個新底盤，才能開工。凡是高於風險組別 1、列於管制生物劑清單，或被篩查標記的序列，需兩人會簽。",
+  "**明寫你不做什麼。** 不在密閉裝置之外釋放有活性的工程細胞；不使用風險組別 3 或 4 的材料；不操作未鑑定的環境分離株；不製作以提高傳播力、毒力或宿主範圍為目的之構築體；凡預定離開實驗室者，不帶抗生素抗性標記。",
+  "**圍堵數字要量，不要推算。** 任何可能離開裝置的菌株，都要回報每細胞每世代的逃逸或回復頻率：在限制條件下塗布大量菌體、計數存活者，並寫出塗了多少細胞與偵測極限。文獻基準是低於 10⁸ 分之 1。",
+  "**跟真實接收環境對比。** 任何閾值——膽酸、水楊酸、溫度、養分——都要換算成該生物實際落腳的土壤、水體或田區的單位，並附引用來源。圍堵主張的可信度，不會高於背後那個對比。",
+  "**公布證據帳本。** 每一頁安全頁面都放兩欄：這些結果能證明什麼，以及真實應用前還缺什麼。明確點名水平轉移、多代傳代後的迴路漂移，以及胞外 DNA，因為遺傳圍堵一項都處理不了。",
+  "**及早以書面問外部的人。** 寫信給機構生物安全委員會、工程農業投入品田間部署的台灣主管機關，以及 safety@igem.org——並把問題、答覆與因此改了什麼一起公布。拿不到表單，不等於實驗做不成。"
+ ],
+ "method": "Two passes. First, a keyword sweep of research/teams/*.json — the researched prose on all 106 decorated teams — for kill switch, auxotroph, biocontainment, containment, escape, BSL, dual-use, screening, risk assessment, Nagoya and release. Counts from that pass are: 19 of 106 describe a genetic containment device, 28 use the words biosafety or biosecurity, 28 name an institutional biosafety body or officer, 4 discuss dual use, 2 name a DNA-synthesis screening regime, and 0 report a measured escape frequency. Those counts are a floor, not a census: the files are researcher summaries, so a practice a team carried out but did not write up prominently — or wrote up only on a page the researcher did not quote — is invisible here. Second, direct verification on the teams' own 2026 wikis for 21 teams: the six Safety and Security Award winners and nominees (William-and-Mary 6243, Bielefeld-CeBiTec 6221, Peking 6366, UCSC 6215, Stockholm 6292, BASIS-China 6123) plus the environmental-release cohort (LYON, Madrid-UCM, RUM-UPRM, UCL, UOttawa, WageningenUR, DTU-Denmark, Toronto, Athens, Oxford, Muenster-University, Lambert-GA, GHCIS, Squirrel-Beijing, GEMS-Taiwan). Most 2026 wikis are client-rendered React applications that return an empty shell to curl; where that happened the page text was recovered from the site's own JavaScript bundle, and the static wikis were read directly. Every number quoted here was read off the team's own page. Bielefeld-CeBiTec 6221, UCSC 6215 and RUM-UPRM 6282 are not in the 106-team on-disk corpus and were read only from their wikis. UCL 6381 and WageningenUR 6222 have no safety page in their site navigation, which is a statement about their navigation, not proof they did no safety work — both completed iGEM's safety forms, which are not public. What none of this can see: the safety form every team files with iGEM, institutional biosafety committee records, and anything a team did at the bench and never wrote down.",
+ "method_zh": "分兩輪。第一輪是對 research/teams/*.json 做關鍵字掃描——那是全部 106 支獲獎隊伍的研究文字——搜尋 kill switch、auxotroph、biocontainment、containment、escape、BSL、dual-use、screening、risk assessment、Nagoya 與 release。該輪的計數為：106 支中有 19 支描述遺傳圍堵裝置，28 支使用生物安全或生物保安字樣，28 支具名機構生物安全單位或負責人，4 支談及兩用，2 支說明 DNA 合成篩查機制，0 支回報實際量測的逃逸頻率。這些數字是下限而非普查：檔案是研究者摘要，因此某隊做了卻沒有顯著寫出、或只寫在研究者未引用頁面上的做法，在這裡是看不見的。第二輪是直接到隊伍自己的 2026 wiki 查證 21 支隊伍：Safety and Security 獎的六支得主與提名隊伍（William-and-Mary 6243、Bielefeld-CeBiTec 6221、Peking 6366、UCSC 6215、Stockholm 6292、BASIS-China 6123），加上環境釋放這一群（LYON、Madrid-UCM、RUM-UPRM、UCL、UOttawa、WageningenUR、DTU-Denmark、Toronto、Athens、Oxford、Muenster-University、Lambert-GA、GHCIS、Squirrel-Beijing、GEMS-Taiwan）。大多數 2026 wiki 是前端渲染的 React 應用，curl 只會拿到空殼；遇到這種情況時，頁面文字是從網站自身的 JavaScript 打包檔還原，靜態網站則直接讀取。本文引用的每一個數字都是從隊伍自己的頁面讀來的。Bielefeld-CeBiTec 6221、UCSC 6215 與 RUM-UPRM 6282 不在這 106 支的本機語料中，僅從其 wiki 讀取。UCL 6381 與 WageningenUR 6222 的網站導覽中沒有安全頁面——這是關於他們導覽的陳述，不是他們沒做安全工作的證明；兩隊都完成了 iGEM 的安全表單，而那些表單並不公開。本文完全看不到的部分：每支隊伍向 iGEM 繳交的安全表單、機構生物安全委員會的紀錄，以及任何在實驗檯上做了卻從未寫下的事。"
 }

@@ -21,6 +21,12 @@
     "Score 4",
     "Utility and lab engineers"
    ],
+   "chips_zh": [
+    "WageningenUR",
+    "研究生組",
+    "評分 4",
+    "水務與實驗室工程師"
+   ],
    "kicker_zh": "實例"
   },
   {
@@ -34,6 +40,12 @@
     "High School",
     "Score 4",
     "Best IHP winner"
+   ],
+   "chips_zh": [
+    "GEMS-Taiwan",
+    "高中組",
+    "評分 4",
+    "Best IHP 得主"
    ],
    "kicker_zh": "實例"
   },
@@ -49,6 +61,12 @@
     "Score 4",
     "Best IHP nominee"
    ],
+   "chips_zh": [
+    "Oxford",
+    "大學組",
+    "評分 4",
+    "Best IHP 入圍"
+   ],
    "kicker_zh": "實例"
   },
   {
@@ -62,6 +80,12 @@
     "High School",
     "Score 4",
     "Non-expert changed hardware"
+   ],
+   "chips_zh": [
+    "HongKong-JSS",
+    "高中組",
+    "評分 4",
+    "非專家改了硬體"
    ],
    "kicker_zh": "實例"
   },
@@ -77,6 +101,12 @@
     "Score 4",
     "Not nominated"
    ],
+   "chips_zh": [
+    "Madrid-UCM",
+    "大學組",
+    "評分 4",
+    "沒有入圍"
+   ],
    "kicker_zh": "沒有被獎勵的做法"
   },
   {
@@ -91,6 +121,13 @@
     "GHCIS",
     "UCAS-China",
     "Vocabulary, not vector"
+   ],
+   "chips_zh": [
+    "HFI",
+    "Peking",
+    "GHCIS",
+    "UCAS-China",
+    "改用詞，不改方向"
    ],
    "kicker_zh": "大多無效的形式"
   }

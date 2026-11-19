@@ -1,228 +1,253 @@
 {
-  "id": "highschool-ceiling",
-  "tab": "drylab",
-  "kicker": "Original analysis",
-  "title": "The high-school ceiling, measured honestly",
-  "title_zh": "誠實地量一次高中組的天花板",
-  "lede": "What a high-school dry lab can actually reach in one season — and the finding that the gap is not about tools.",
-  "lede_zh": "一個高中乾實驗室在一季之內真正能做到什麼——以及那個發現：差距不在工具。",
-  "body": "Read the ten High School Top 10 dry labs side by side and the first surprise is how ordinary the software is. **Eton-College-UK** built its protease substrate predictor out of L2-regularised logistic regression and a BLOSUM62-smoothed position-specific scoring matrix — techniques older than the students using them. **HFI** used NetLogo, which is free and was designed for schools. **GHCIS** used a local install of NUPACK. **HangzhouFourteenAP** used PyMOL and FoldX. **HKSSC** used AlphaFold, UCSF Chimera and HotSpot Wizard. **HongKong-HS** reused another team's tool outright — miRADAR, released by Wageningen's 2024 team — rather than rebuilding it. Almost none of this costs money, and none of it requires a cluster.\n\nOnly **Lambert-GA**, the Grand Prize winner, works at the frontier of the toolchain: BindCraft, Boltz-2, Protenix, Mosaic. And even there the thing that earned Best Model was not the tools. It was that they **benchmarked the confidence metrics themselves** — ipSAE, ipTM and a 38-metric ensemble, against 5,721 labelled experimental designs — found the ensemble barely beat chance at ROC-AUC 0.541, noticed that their own eventual hit did not have the best score, and published all of that rather than quietly reporting the hit.\n\nThat is the pattern, and it holds across the whole tier. **The differentiator at high-school level is evaluation discipline, not tool sophistication.**\n\nThe evidence is specific. Eton clustered near-duplicate sequences by Hamming distance and split whole clusters across folds, then ran a label-shuffle control and a composition-only ablation — three cheap steps that separate a real classifier from a leaky one. **HongKong-JSS** split runs into calibration and validation *before* fitting anything, subtracted a matched control from the same run and timepoint, and reported RMSE on held-out runs with the failures left in. HKSSC could not measure molar enzyme concentration, so rather than report an invalid *k*cat/*K*m they defined and justified a mass-normalised metric valid only below *K*m, then ran a two-way ANOVA, found unequal variances, and moved to a median-based test. GHCIS specified its colour-classification algorithm down to the equation and the threshold, including an explicit **\"unresolved, and must not be read as Negative\"** state, and shipped it with one-command Docker deployment. HangzhouFourteenAP reported the prediction that lost: FoldX ranked Y166Q first, the bench preferred Q172P, and the wiki revises its own ranking while using BCA normalisation to rule out protein load as the explanation.\n\n**GEMS-Taiwan** belongs on that list and is worth reading closely, because the wiki is unusually candid about its own weaknesses. The strengths are real: a genuinely pre-registered growth-rate forecast, registered on 1 October and scored on run 6, which landed inside its stated interval; an autoencoder that flagged a failing photometer 26.7 hours before it died; and a crop-stress index fitted to 25 years of county rice yields rather than to expert judgement. The weaknesses are stated by the team itself: secreted activity at n=1 and below the limit of quantitation; two induction runs that disagree on the *sign* of the change; a Hill curve assumed to hold at 20 L when every induction ran at a single light intensity; a 2.44× rice canopy correction that is modelled, not measured; an efficacy coefficient of 0.58 explicitly withdrawn; and a payback period of 68 years on the team's own loss figure against a partner's 4.9 years, with the disagreement named rather than resolved. Naming the disagreement instead of picking the flattering number is the practice worth keeping.\n\n**And the control case.** **GCGS** reached the High School Top 10 with no model page and no software page at all — both routes return 404. Its one modelling claim is an undocumented circuit-level simulation with no parameters, equations or tooling named. A team can still place in the top ten of its section with essentially no dry lab. What GCGS could not do is win a modelling, measurement or software prize, and that is the precise shape of the opportunity.",
-  "body_zh": "把高中組 Top 10 的十個乾實驗室並排來讀，第一個意外是：他們用的軟體有多麼普通。**Eton-College-UK** 的蛋白酶受質預測器，是用 L2 正規化的 logistic regression 加上以 BLOSUM62 平滑的位置特異性計分矩陣（PSSM）做出來的——這些技術比使用它們的學生還老。**HFI** 用的是 NetLogo，免費，而且本來就是為學校設計的。**GHCIS** 用本機安裝的 NUPACK。**HangzhouFourteenAP** 用 PyMOL 與 FoldX。**HKSSC** 用 AlphaFold、UCSF Chimera 與 HotSpot Wizard。**HongKong-HS** 則直接沿用別隊的工具——Wageningen 2024 年釋出的 miRADAR——而不是重做一個。這些幾乎都不花錢，也都不需要叢集運算。\n\n只有總冠軍 **Lambert-GA** 站在工具鏈的前沿：BindCraft、Boltz-2、Protenix、Mosaic。但即使在那裡，替他們贏得最佳模型的也不是工具，而是他們**對信心指標本身做了基準測試**——拿 ipSAE、ipTM 與一組 38 項指標的集成，去對照 5,721 個有實驗標註的設計——發現該集成的 ROC-AUC 只有 0.541，幾乎只比亂猜好一點，還注意到自己最後成功的那個設計分數並不是最高的，然後把這一切全部公開，而不是安靜地只報成功的那一個。\n\n這就是整個型態，而且在整個層級中都成立。**高中層級的差異來自評估的紀律，而不是工具的精密度。**\n\n證據很具體。Eton 以 Hamming 距離把近似重複的序列分群，再把整群一起分到同一個 fold，接著跑標籤洗牌對照與僅用胺基酸組成的消融測試——三個便宜的步驟，就把一個真正的分類器和一個資料外洩的分類器分開了。**HongKong-JSS** 在擬合任何東西*之前*就把實驗批次分成校正組與驗證組，扣除同一批次、同一時間點的對照，並在保留批次上報告 RMSE，而且把失敗的資料留在裡面。HKSSC 無法量到酵素的莫耳濃度，於是沒有去報一個無效的 *k*cat/*K*m，而是定義並論證了一個只在低於 *K*m 時有效的質量標準化指標，接著做雙因子 ANOVA，發現變異數不齊，再改用以中位數為基礎的檢定。GHCIS 把顏色判讀演算法寫到方程式與閾值的層級，包含一個明確的**「無法判定，且不得視為陰性」**狀態，並以一行指令的 Docker 部署出貨。HangzhouFourteenAP 報告了那個輸掉的預測：FoldX 把 Y166Q 排第一，實驗卻偏好 Q172P，而 wiki 修正了自己的排序，同時用 BCA 標準化排除「蛋白質上樣量不同」這個解釋。\n\n**GEMS-Taiwan** 也屬於這份名單，而且值得仔細讀，因為這個 wiki 對自身弱點的坦白程度相當罕見。強項是真的：一個貨真價實的預先登記成長率預測，10 月 1 日登記、在第 6 批次評分，結果落在所宣告的區間內；一個在光度計故障前 26.7 小時就示警的自編碼器；以及一個以 25 年各縣市稻作產量擬合、而非靠專家判斷加權的作物逆境指數。弱點則由團隊自己寫出來：分泌活性 n=1 且低於定量極限；兩次誘導實驗對變化的*正負號*彼此矛盾；Hill 曲線被假定在 20 公升仍然成立，但所有誘導都只在單一光強度下進行；2.44 倍的水稻冠層修正是模擬出來而非量出來的；一個 0.58 的效能係數被明確撤回；以及以團隊自己的損失數字計算出 68 年的回收期，對比合作夥伴算出的 4.9 年，而這個歧異被指名寫出，而不是被解決掉。把歧異寫出來、而不是挑一個好看的數字，正是值得保留的做法。\n\n**還有對照組。** **GCGS** 在完全沒有 model 頁也沒有 software 頁的情況下進入高中組 Top 10——兩個路徑都回傳 404。它唯一的建模主張，是一個沒有記載參數、方程式或工具名稱的電路層級模擬。一支隊伍確實可以幾乎沒有乾實驗室，仍然進入該組前十名。但 GCGS 做不到的是拿下建模、測量或軟體獎項——而那正是機會的確切形狀。",
-  "cards": [
-    {
-      "kicker": "The ceiling",
-      "title": "Lambert-GA, and what the frontier costs",
-      "title_zh": "Lambert-GA，以及站上前沿的代價",
-      "body": "Four linked models: protein-design metric benchmarking on 5,721 labelled designs, a Sobol-analysed oral pharmacokinetic model, a 13-ODE SimBiology RNAi network, and an individual-based six-year, 800-run colony epidemiology. They produced the first reported DWV VP3 minibinder for under $400 of compute, released the open-source PRINCE site ranker (45.8% top-3 hit rate against 23.8% random on a no-homolog subset), and an $80 dryer externally validated at two universities. This is the ceiling, and it is reachable.",
-      "body_zh": "四個彼此連動的模型：在 5,721 個有標註的設計上做蛋白質設計指標的基準測試、一個經 Sobol 分析的口服藥物動力學模型、一個 13 條 ODE 的 SimBiology RNAi 網路，以及一個為期六年、跑 800 次的個體導向族群流行病學模擬。他們以不到 400 美元的運算成本做出第一個被報導的 DWV VP3 minibinder，釋出開源的 PRINCE 位點排序工具（在無同源子集上，前三名命中率 45.8%，對照隨機的 23.8%），以及一台 80 美元、經兩所大學外部驗證的乾燥裝置。這就是天花板，而且搆得到。",
-      "chips": [
-        "Boltz-2 · BindCraft · Protenix",
-        "under $400 of compute"
-      ],
-      "kicker_zh": "天花板"
-    },
-    {
-      "kicker": "The floor",
-      "title": "GCGS: Top 10 with no dry lab at all",
-      "title_zh": "GCGS：完全沒有乾實驗室也能進 Top 10",
-      "body": "Both /model and /software return 404. The single modelling claim is an undocumented circuit-level simulation with no parameters, equations or tooling named. GCGS still reached the High School Top 10 on the strength of a clean two-cycle DBTL and its Best New Improved Part. Read it as the honest floor: the dry lab is not what gets you into the top ten — it is what gets you a prize.",
-      "body_zh": "/model 與 /software 都回傳 404。唯一的建模主張是一個沒有記載參數、方程式或工具名稱的電路層級模擬。GCGS 仍然憑著乾淨的兩輪 DBTL 與最佳改良基因元件獎進入高中組 Top 10。請把它讀成誠實的底線：乾實驗室不是讓你擠進前十名的東西——它是讓你拿到獎項的東西。",
-      "chips": [
-        "no model page",
-        "still Top 10"
-      ],
-      "kicker_zh": "地板"
-    },
-    {
-      "kicker": "The pattern",
-      "title": "Three cheap controls that separate real from leaky",
-      "title_zh": "三個便宜的對照，分開真實與外洩",
-      "body": "From Eton-College-UK, and transferable to any student machine-learning project: cluster near-duplicate sequences by Hamming distance and split whole clusters across folds, so the model cannot memorise a near-copy; run a label-shuffle control, which must collapse to chance; run an ablation that strips the information you claim to be using. None of these needs a GPU. Together they turn a high-school classifier into something a reviewer can believe.",
-      "body_zh": "來自 Eton-College-UK，可移植到任何學生的機器學習專案：以 Hamming 距離把近似重複的序列分群，並把整群分到同一個 fold，讓模型無法記住近似副本；跑標籤洗牌對照，其表現必須塌回隨機水準；跑一個消融測試，剝除你宣稱正在使用的那項資訊。這些都不需要 GPU。合起來，它們能把一個高中生的分類器變成審閱者願意相信的東西。",
-      "chips": [
-        "cluster-aware CV",
-        "label shuffle",
-        "ablation"
-      ],
-      "kicker_zh": "共同型態"
-    },
-    {
-      "kicker": "The pattern",
-      "title": "Split before you fit",
-      "title_zh": "先切分，再擬合",
-      "body": "HongKong-JSS divided its runs into calibration and validation before fitting anything, subtracted a matched control from the same run and timepoint, inverted the fit to predict unknowns, and reported RMSE on the held-out runs with the failures left in — then published a list of the statistics they had not yet done. That last habit is rarer and more valuable than the first.",
-      "body_zh": "HongKong-JSS 在擬合任何東西之前就把實驗批次分成校正組與驗證組，扣除同一批次、同一時間點的對照，反解擬合式來預測未知樣本，並在保留批次上報告 RMSE、把失敗的資料留在裡面——接著公布了一份他們還沒做的統計分析清單。最後這個習慣比第一個更罕見，也更有價值。",
-      "chips": [
-        "held-out RMSE",
-        "published what is not yet done"
-      ],
-      "kicker_zh": "共同型態"
-    },
-    {
-      "kicker": "The pattern",
-      "title": "Publish the prediction that lost",
-      "title_zh": "公開那個輸掉的預測",
-      "body": "HangzhouFourteenAP's FoldX pipeline ranked Y166Q first; the bench preferred Q172P. Rather than bury it, the wiki revises its own ranking, demotes the failed candidate to a mechanistic probe, and uses BCA normalisation to rule out protein load as the confound. Lambert-GA did the same at a larger scale by showing its own hit was not the top-scoring design. A dry lab earns more credibility from one well-controlled loss than from three unexamined wins.",
-      "body_zh": "HangzhouFourteenAP 的 FoldX 流程把 Y166Q 排第一，實驗卻偏好 Q172P。他們沒有把它埋掉，而是在 wiki 上修正自己的排序，把失敗的候選降級為機制探針，並以 BCA 標準化排除「蛋白質上樣量」這個干擾因子。Lambert-GA 在更大的尺度上做了同樣的事：證明自己成功的那個設計並不是分數最高的。一個乾實驗室從一次控制良好的失敗中得到的可信度，大於三次未經檢驗的成功。",
-      "chips": [
-        "FoldX said Y166Q",
-        "the bench said Q172P"
-      ],
-      "kicker_zh": "共同型態"
-    },
-    {
-      "kicker": "For GEMS",
-      "title": "The gap is one term of teaching, not a budget line",
-      "title_zh": "差距是一個學期的教學，不是一筆預算",
-      "body": "Every practice above — cluster-aware splits, label-shuffle controls, calibration/validation separation, provenance tagging, publishing the loss — costs nothing but attention and can be taught in a term. The tools the 2026 high-school field actually used are free: NetLogo, NUPACK, PyMOL, FoldX, scikit-learn, ImageJ, Chimera, the AlphaFold server. GEMS does not need to buy its way to the ceiling. It needs to make evaluation discipline the house style.",
-      "body_zh": "上述每一項做法——分群感知的資料切分、標籤洗牌對照、校正與驗證分離、來源標註、公開失敗——都不花錢，只花注意力，而且一個學期就能教完。2026 年高中組實際用到的工具都是免費的：NetLogo、NUPACK、PyMOL、FoldX、scikit-learn、ImageJ、Chimera、AlphaFold server。GEMS 不需要靠花錢爬上天花板，它需要的是把評估紀律變成自己的風格。",
-      "chips": [
-        "all free tools",
-        "one term"
-      ],
-      "kicker_zh": "給 GEMS"
-    }
-  ],
-  "table": {
-    "head": [
-      "Team",
-      "Headline dry-lab work",
-      "Main tools",
-      "The discipline that stands out"
-    ],
-    "head_zh": [
-      "團隊",
-      "乾實驗室重點工作",
-      "主要工具",
-      "最突出的紀律"
-    ],
-    "rows": [
-      [
-        "Lambert-GA",
-        "Four linked models: de novo minibinder design, oral PK, 13-ODE RNAi network, colony epidemiology",
-        "BindCraft, Boltz-2, Protenix, Mosaic",
-        "Benchmarked the confidence metrics themselves and published that its own hit was not top-scoring"
-      ],
-      [
-        "Eton-College-UK",
-        "Seven-protease substrate predictor on 10,472 cleavage windows",
-        "scikit-learn, PSSM, BLOSUM62, VHSE",
-        "Hamming-cluster-aware cross-validation, label-shuffle and ablation controls"
-      ],
-      [
-        "GEMS-Taiwan",
-        "Crop-stress index fitted to 25 years of county rice yields; optogenetic circuit; anomaly detection",
-        "Python, autoencoder, Kalman filter, ERA5, QGIS, AlphaFold",
-        "A pre-registered forecast scored after the fact, and a published disagreement between its own runs"
-      ],
-      [
-        "GHCIS",
-        "Toehold design pipeline, plus ARGUS, a deployable colour-classification platform",
-        "NUPACK 4.1.0.1, Node.js, Docker, SQLite",
-        "Algorithm specified to the threshold, with an explicit 'unresolved' state"
-      ],
-      [
-        "HongKong-JSS",
-        "Calibration and inverse prediction for an in-field mercury assay",
-        "ImageJ, log-linear calibration, Onshape, ESP32",
-        "Calibration/validation split before fitting; RMSE on held-out runs with failures left in"
-      ],
-      [
-        "HKSSC",
-        "Structure-guided mutagenesis and enzyme kinetics for a paraben-degrading esterase",
-        "AlphaFold, UCSF Chimera, HotSpot Wizard, CB-Dock2",
-        "Invented a justified mass-normalised metric rather than report an invalid kcat/Km"
-      ],
-      [
-        "HFI",
-        "Agent-based contact model and a 13-variable ODE system, both as wet-lab gatekeepers",
-        "NetLogo 3D, Runge-Kutta, interactive HTML front-ends",
-        "Screened seven RBS parts computationally before a single plasmid was built"
-      ],
-      [
-        "HangzhouFourteenAP",
-        "Mutation prioritisation pipeline for CoGH66",
-        "PyMOL, FoldX, MAFFT, AlphaFold Server",
-        "Reported the computational prediction the bench overturned, with the confound controlled"
-      ],
-      [
-        "HongKong-HS",
-        "Toehold switch thermodynamics for a urinary miRNA screening kit",
-        "NUPACK, miRADAR (Wageningen iGEM 2024)",
-        "Reused another team's released tool instead of rebuilding it"
-      ],
-      [
-        "GCGS",
-        "No model or software page exists",
-        "—",
-        "The control case: Top 10 without a dry lab, but no modelling prize"
-      ]
-    ],
-    "rows_zh": [
-      [
-        "Lambert-GA",
-        "四個連動模型：de novo minibinder 設計、口服藥物動力學、13 條 ODE 的 RNAi 網路、族群流行病學",
-        "BindCraft, Boltz-2, Protenix, Mosaic",
-        "對信心指標本身做基準測試，並公開自己成功的設計其實不是分數最高的"
-      ],
-      [
-        "Eton-College-UK",
-        "在 10,472 個切割視窗上建立七種蛋白酶的受質預測器",
-        "scikit-learn, PSSM, BLOSUM62, VHSE",
-        "以 Hamming 距離分群的交叉驗證，加上標籤洗牌與消融對照"
-      ],
-      [
-        "GEMS-Taiwan",
-        "以 25 年各縣市稻作產量擬合的作物逆境指數；光遺傳電路；異常偵測",
-        "Python, autoencoder, Kalman filter, ERA5, QGIS, AlphaFold",
-        "一個事後評分的預先登記預測，以及公開自己兩次實驗之間的矛盾"
-      ],
-      [
-        "GHCIS",
-        "Toehold 設計流程，外加可部署的顏色判讀平台 ARGUS",
-        "NUPACK 4.1.0.1, Node.js, Docker, SQLite",
-        "演算法明確寫到閾值，並設有明確的「無法判定」狀態"
-      ],
-      [
-        "HongKong-JSS",
-        "現場汞檢測的校正與反解預測",
-        "ImageJ, 對數線性校正, Onshape, ESP32",
-        "擬合前先切分校正組與驗證組；在保留批次上報告 RMSE 並保留失敗資料"
-      ],
-      [
-        "HKSSC",
-        "對羥苯甲酸酯分解酯酶的結構導向突變與酵素動力學",
-        "AlphaFold, UCSF Chimera, HotSpot Wizard, CB-Dock2",
-        "沒有報告無效的 kcat/Km，而是提出並論證一個質量標準化指標"
-      ],
-      [
-        "HFI",
-        "代理人基礎接觸模型與 13 變數 ODE 系統，兩者都作為濕實驗的守門員",
-        "NetLogo 3D, Runge-Kutta, 互動式 HTML 前端",
-        "在建出任何一個質體之前，先以運算篩選七個 RBS 元件"
-      ],
-      [
-        "HangzhouFourteenAP",
-        "CoGH66 的突變優先排序流程",
-        "PyMOL, FoldX, MAFFT, AlphaFold Server",
-        "公開那個被實驗推翻的運算預測，並控制了干擾因子"
-      ],
-      [
-        "HongKong-HS",
-        "尿液 miRNA 篩檢套組的 toehold switch 熱力學",
-        "NUPACK, miRADAR（Wageningen iGEM 2024）",
-        "沿用別隊已釋出的工具，而不是重做一個"
-      ],
-      [
-        "GCGS",
-        "沒有 model 頁，也沒有 software 頁",
-        "—",
-        "對照組：沒有乾實驗室也能進 Top 10，但拿不到建模類獎項"
-      ]
-    ]
+ "id": "highschool-ceiling",
+ "tab": "drylab",
+ "kicker": "Original analysis",
+ "title": "The high-school ceiling, measured honestly",
+ "title_zh": "誠實地量一次高中組的天花板",
+ "lede": "What a high-school dry lab can actually reach in one season — and the finding that the gap is not about tools.",
+ "lede_zh": "一個高中乾實驗室在一季之內真正能做到什麼——以及那個發現：差距不在工具。",
+ "body": "Read the ten High School Top 10 dry labs side by side and the first surprise is how ordinary the software is. **Eton-College-UK** built its protease substrate predictor out of L2-regularised logistic regression and a BLOSUM62-smoothed position-specific scoring matrix — techniques older than the students using them. **HFI** used NetLogo, which is free and was designed for schools. **GHCIS** used a local install of NUPACK. **HangzhouFourteenAP** used PyMOL and FoldX. **HKSSC** used AlphaFold, UCSF Chimera and HotSpot Wizard. **HongKong-HS** reused another team's tool outright — miRADAR, released by Wageningen's 2024 team — rather than rebuilding it. Almost none of this costs money, and none of it requires a cluster.\n\nOnly **Lambert-GA**, the Grand Prize winner, works at the frontier of the toolchain: BindCraft, Boltz-2, Protenix, Mosaic. And even there the thing that earned Best Model was not the tools. It was that they **benchmarked the confidence metrics themselves** — ipSAE, ipTM and a 38-metric ensemble, against 5,721 labelled experimental designs — found the ensemble barely beat chance at ROC-AUC 0.541, noticed that their own eventual hit did not have the best score, and published all of that rather than quietly reporting the hit.\n\nThat is the pattern, and it holds across the whole tier. **The differentiator at high-school level is evaluation discipline, not tool sophistication.**\n\nThe evidence is specific. Eton clustered near-duplicate sequences by Hamming distance and split whole clusters across folds, then ran a label-shuffle control and a composition-only ablation — three cheap steps that separate a real classifier from a leaky one. **HongKong-JSS** split runs into calibration and validation *before* fitting anything, subtracted a matched control from the same run and timepoint, and reported RMSE on held-out runs with the failures left in. HKSSC could not measure molar enzyme concentration, so rather than report an invalid *k*cat/*K*m they defined and justified a mass-normalised metric valid only below *K*m, then ran a two-way ANOVA, found unequal variances, and moved to a median-based test. GHCIS specified its colour-classification algorithm down to the equation and the threshold, including an explicit **\"unresolved, and must not be read as Negative\"** state, and shipped it with one-command Docker deployment. HangzhouFourteenAP reported the prediction that lost: FoldX ranked Y166Q first, the bench preferred Q172P, and the wiki revises its own ranking while using BCA normalisation to rule out protein load as the explanation.\n\n**GEMS-Taiwan** belongs on that list and is worth reading closely, because the wiki is unusually candid about its own weaknesses. The strengths are real: a genuinely pre-registered growth-rate forecast, registered on 1 October and scored on run 6, which landed inside its stated interval; an autoencoder that flagged a failing photometer 26.7 hours before it died; and a crop-stress index fitted to 25 years of county rice yields rather than to expert judgement. The weaknesses are stated by the team itself: secreted activity at n=1 and below the limit of quantitation; two induction runs that disagree on the *sign* of the change; a Hill curve assumed to hold at 20 L when every induction ran at a single light intensity; a 2.44× rice canopy correction that is modelled, not measured; an efficacy coefficient of 0.58 explicitly withdrawn; and a payback period of 68 years on the team's own loss figure against a partner's 4.9 years, with the disagreement named rather than resolved. Naming the disagreement instead of picking the flattering number is the practice worth keeping.\n\n**And the control case.** **GCGS** reached the High School Top 10 with no model page and no software page at all — both routes return 404. Its one modelling claim is an undocumented circuit-level simulation with no parameters, equations or tooling named. A team can still place in the top ten of its section with essentially no dry lab. What GCGS could not do is win a modelling, measurement or software prize, and that is the precise shape of the opportunity.",
+ "body_zh": "把高中組 Top 10 的十個乾實驗室並排來讀，第一個意外是：他們用的軟體有多麼普通。**Eton-College-UK** 的蛋白酶受質預測器，是用 L2 正規化的 logistic regression 加上以 BLOSUM62 平滑的位置特異性計分矩陣（PSSM）做出來的——這些技術比使用它們的學生還老。**HFI** 用的是 NetLogo，免費，而且本來就是為學校設計的。**GHCIS** 用本機安裝的 NUPACK。**HangzhouFourteenAP** 用 PyMOL 與 FoldX。**HKSSC** 用 AlphaFold、UCSF Chimera 與 HotSpot Wizard。**HongKong-HS** 則直接沿用別隊的工具——Wageningen 2024 年釋出的 miRADAR——而不是重做一個。這些幾乎都不花錢，也都不需要叢集運算。\n\n只有總冠軍 **Lambert-GA** 站在工具鏈的前沿：BindCraft、Boltz-2、Protenix、Mosaic。但即使在那裡，替他們贏得最佳模型的也不是工具，而是他們**對信心指標本身做了基準測試**——拿 ipSAE、ipTM 與一組 38 項指標的集成，去對照 5,721 個有實驗標註的設計——發現該集成的 ROC-AUC 只有 0.541，幾乎只比亂猜好一點，還注意到自己最後成功的那個設計分數並不是最高的，然後把這一切全部公開，而不是安靜地只報成功的那一個。\n\n這就是整個型態，而且在整個層級中都成立。**高中層級的差異來自評估的紀律，而不是工具的精密度。**\n\n證據很具體。Eton 以 Hamming 距離把近似重複的序列分群，再把整群一起分到同一個 fold，接著跑標籤洗牌對照與僅用胺基酸組成的消融測試——三個便宜的步驟，就把一個真正的分類器和一個資料外洩的分類器分開了。**HongKong-JSS** 在擬合任何東西*之前*就把實驗批次分成校正組與驗證組，扣除同一批次、同一時間點的對照，並在保留批次上報告 RMSE，而且把失敗的資料留在裡面。HKSSC 無法量到酵素的莫耳濃度，於是沒有去報一個無效的 *k*cat/*K*m，而是定義並論證了一個只在低於 *K*m 時有效的質量標準化指標，接著做雙因子 ANOVA，發現變異數不齊，再改用以中位數為基礎的檢定。GHCIS 把顏色判讀演算法寫到方程式與閾值的層級，包含一個明確的**「無法判定，且不得視為陰性」**狀態，並以一行指令的 Docker 部署出貨。HangzhouFourteenAP 報告了那個輸掉的預測：FoldX 把 Y166Q 排第一，實驗卻偏好 Q172P，而 wiki 修正了自己的排序，同時用 BCA 標準化排除「蛋白質上樣量不同」這個解釋。\n\n**GEMS-Taiwan** 也屬於這份名單，而且值得仔細讀，因為這個 wiki 對自身弱點的坦白程度相當罕見。強項是真的：一個貨真價實的預先登記成長率預測，10 月 1 日登記、在第 6 批次評分，結果落在所宣告的區間內；一個在光度計故障前 26.7 小時就示警的自編碼器；以及一個以 25 年各縣市稻作產量擬合、而非靠專家判斷加權的作物逆境指數。弱點則由團隊自己寫出來：分泌活性 n=1 且低於定量極限；兩次誘導實驗對變化的*正負號*彼此矛盾；Hill 曲線被假定在 20 公升仍然成立，但所有誘導都只在單一光強度下進行；2.44 倍的水稻冠層修正是模擬出來而非量出來的；一個 0.58 的效能係數被明確撤回；以及以團隊自己的損失數字計算出 68 年的回收期，對比合作夥伴算出的 4.9 年，而這個歧異被指名寫出，而不是被解決掉。把歧異寫出來、而不是挑一個好看的數字，正是值得保留的做法。\n\n**還有對照組。** **GCGS** 在完全沒有 model 頁也沒有 software 頁的情況下進入高中組 Top 10——兩個路徑都回傳 404。它唯一的建模主張，是一個沒有記載參數、方程式或工具名稱的電路層級模擬。一支隊伍確實可以幾乎沒有乾實驗室，仍然進入該組前十名。但 GCGS 做不到的是拿下建模、測量或軟體獎項——而那正是機會的確切形狀。",
+ "cards": [
+  {
+   "kicker": "The ceiling",
+   "title": "Lambert-GA, and what the frontier costs",
+   "title_zh": "Lambert-GA，以及站上前沿的代價",
+   "body": "Four linked models: protein-design metric benchmarking on 5,721 labelled designs, a Sobol-analysed oral pharmacokinetic model, a 13-ODE SimBiology RNAi network, and an individual-based six-year, 800-run colony epidemiology. They produced the first reported DWV VP3 minibinder for under $400 of compute, released the open-source PRINCE site ranker (45.8% top-3 hit rate against 23.8% random on a no-homolog subset), and an $80 dryer externally validated at two universities. This is the ceiling, and it is reachable.",
+   "body_zh": "四個彼此連動的模型：在 5,721 個有標註的設計上做蛋白質設計指標的基準測試、一個經 Sobol 分析的口服藥物動力學模型、一個 13 條 ODE 的 SimBiology RNAi 網路，以及一個為期六年、跑 800 次的個體導向族群流行病學模擬。他們以不到 400 美元的運算成本做出第一個被報導的 DWV VP3 minibinder，釋出開源的 PRINCE 位點排序工具（在無同源子集上，前三名命中率 45.8%，對照隨機的 23.8%），以及一台 80 美元、經兩所大學外部驗證的乾燥裝置。這就是天花板，而且搆得到。",
+   "chips": [
+    "Boltz-2 · BindCraft · Protenix",
+    "under $400 of compute"
+   ],
+   "chips_zh": [
+    "Boltz-2 · BindCraft · Protenix",
+    "運算不到 400 美元"
+   ],
+   "kicker_zh": "天花板"
   },
-  "method": "Drawn from the ten High School Top 10 team files in this report, each researched from the team's own 2026 wiki. Tool lists are what each team names; a team may have used more than it wrote down. The judgement about what 'stands out' is ours, and a reader who disagrees should open the team file and the wiki behind it — both are linked. GEMS-Taiwan is the report author's own team and has been assessed on the same terms as the rest.",
-  "method_zh": "資料來自本報告中高中組 Top 10 的十份團隊檔案，每一份都取自該隊自己的 2026 wiki。工具清單是各隊自己寫出來的；團隊實際用到的可能多於其所記載。關於「什麼最突出」的判斷出自我們，不同意的讀者可以直接打開團隊檔案與其背後的 wiki——兩者都有連結。GEMS-Taiwan 是本報告作者自己的團隊，評判標準與其他隊伍相同。",
-  "kicker_zh": "原創分析",
-  "order": 32
+  {
+   "kicker": "The floor",
+   "title": "GCGS: Top 10 with no dry lab at all",
+   "title_zh": "GCGS：完全沒有乾實驗室也能進 Top 10",
+   "body": "Both /model and /software return 404. The single modelling claim is an undocumented circuit-level simulation with no parameters, equations or tooling named. GCGS still reached the High School Top 10 on the strength of a clean two-cycle DBTL and its Best New Improved Part. Read it as the honest floor: the dry lab is not what gets you into the top ten — it is what gets you a prize.",
+   "body_zh": "/model 與 /software 都回傳 404。唯一的建模主張是一個沒有記載參數、方程式或工具名稱的電路層級模擬。GCGS 仍然憑著乾淨的兩輪 DBTL 與最佳改良基因元件獎進入高中組 Top 10。請把它讀成誠實的底線：乾實驗室不是讓你擠進前十名的東西——它是讓你拿到獎項的東西。",
+   "chips": [
+    "no model page",
+    "still Top 10"
+   ],
+   "chips_zh": [
+    "沒有模型頁",
+    "照樣進 Top 10"
+   ],
+   "kicker_zh": "地板"
+  },
+  {
+   "kicker": "The pattern",
+   "title": "Three cheap controls that separate real from leaky",
+   "title_zh": "三個便宜的對照，分開真實與外洩",
+   "body": "From Eton-College-UK, and transferable to any student machine-learning project: cluster near-duplicate sequences by Hamming distance and split whole clusters across folds, so the model cannot memorise a near-copy; run a label-shuffle control, which must collapse to chance; run an ablation that strips the information you claim to be using. None of these needs a GPU. Together they turn a high-school classifier into something a reviewer can believe.",
+   "body_zh": "來自 Eton-College-UK，可移植到任何學生的機器學習專案：以 Hamming 距離把近似重複的序列分群，並把整群分到同一個 fold，讓模型無法記住近似副本；跑標籤洗牌對照，其表現必須塌回隨機水準；跑一個消融測試，剝除你宣稱正在使用的那項資訊。這些都不需要 GPU。合起來，它們能把一個高中生的分類器變成審閱者願意相信的東西。",
+   "chips": [
+    "cluster-aware CV",
+    "label shuffle",
+    "ablation"
+   ],
+   "chips_zh": [
+    "分群式交叉驗證",
+    "標籤洗牌",
+    "消融測試"
+   ],
+   "kicker_zh": "共同型態"
+  },
+  {
+   "kicker": "The pattern",
+   "title": "Split before you fit",
+   "title_zh": "先切分，再擬合",
+   "body": "HongKong-JSS divided its runs into calibration and validation before fitting anything, subtracted a matched control from the same run and timepoint, inverted the fit to predict unknowns, and reported RMSE on the held-out runs with the failures left in — then published a list of the statistics they had not yet done. That last habit is rarer and more valuable than the first.",
+   "body_zh": "HongKong-JSS 在擬合任何東西之前就把實驗批次分成校正組與驗證組，扣除同一批次、同一時間點的對照，反解擬合式來預測未知樣本，並在保留批次上報告 RMSE、把失敗的資料留在裡面——接著公布了一份他們還沒做的統計分析清單。最後這個習慣比第一個更罕見，也更有價值。",
+   "chips": [
+    "held-out RMSE",
+    "published what is not yet done"
+   ],
+   "chips_zh": [
+    "留存集 RMSE",
+    "公布還沒做的部分"
+   ],
+   "kicker_zh": "共同型態"
+  },
+  {
+   "kicker": "The pattern",
+   "title": "Publish the prediction that lost",
+   "title_zh": "公開那個輸掉的預測",
+   "body": "HangzhouFourteenAP's FoldX pipeline ranked Y166Q first; the bench preferred Q172P. Rather than bury it, the wiki revises its own ranking, demotes the failed candidate to a mechanistic probe, and uses BCA normalisation to rule out protein load as the confound. Lambert-GA did the same at a larger scale by showing its own hit was not the top-scoring design. A dry lab earns more credibility from one well-controlled loss than from three unexamined wins.",
+   "body_zh": "HangzhouFourteenAP 的 FoldX 流程把 Y166Q 排第一，實驗卻偏好 Q172P。他們沒有把它埋掉，而是在 wiki 上修正自己的排序，把失敗的候選降級為機制探針，並以 BCA 標準化排除「蛋白質上樣量」這個干擾因子。Lambert-GA 在更大的尺度上做了同樣的事：證明自己成功的那個設計並不是分數最高的。一個乾實驗室從一次控制良好的失敗中得到的可信度，大於三次未經檢驗的成功。",
+   "chips": [
+    "FoldX said Y166Q",
+    "the bench said Q172P"
+   ],
+   "chips_zh": [
+    "FoldX 說是 Y166Q",
+    "實驗台說是 Q172P"
+   ],
+   "kicker_zh": "共同型態"
+  },
+  {
+   "kicker": "For GEMS",
+   "title": "The gap is one term of teaching, not a budget line",
+   "title_zh": "差距是一個學期的教學，不是一筆預算",
+   "body": "Every practice above — cluster-aware splits, label-shuffle controls, calibration/validation separation, provenance tagging, publishing the loss — costs nothing but attention and can be taught in a term. The tools the 2026 high-school field actually used are free: NetLogo, NUPACK, PyMOL, FoldX, scikit-learn, ImageJ, Chimera, the AlphaFold server. GEMS does not need to buy its way to the ceiling. It needs to make evaluation discipline the house style.",
+   "body_zh": "上述每一項做法——分群感知的資料切分、標籤洗牌對照、校正與驗證分離、來源標註、公開失敗——都不花錢，只花注意力，而且一個學期就能教完。2026 年高中組實際用到的工具都是免費的：NetLogo、NUPACK、PyMOL、FoldX、scikit-learn、ImageJ、Chimera、AlphaFold server。GEMS 不需要靠花錢爬上天花板，它需要的是把評估紀律變成自己的風格。",
+   "chips": [
+    "all free tools",
+    "one term"
+   ],
+   "chips_zh": [
+    "全是免費工具",
+    "一個學期"
+   ],
+   "kicker_zh": "給 GEMS"
+  }
+ ],
+ "table": {
+  "head": [
+   "Team",
+   "Headline dry-lab work",
+   "Main tools",
+   "The discipline that stands out"
+  ],
+  "head_zh": [
+   "團隊",
+   "乾實驗室重點工作",
+   "主要工具",
+   "最突出的紀律"
+  ],
+  "rows": [
+   [
+    "Lambert-GA",
+    "Four linked models: de novo minibinder design, oral PK, 13-ODE RNAi network, colony epidemiology",
+    "BindCraft, Boltz-2, Protenix, Mosaic",
+    "Benchmarked the confidence metrics themselves and published that its own hit was not top-scoring"
+   ],
+   [
+    "Eton-College-UK",
+    "Seven-protease substrate predictor on 10,472 cleavage windows",
+    "scikit-learn, PSSM, BLOSUM62, VHSE",
+    "Hamming-cluster-aware cross-validation, label-shuffle and ablation controls"
+   ],
+   [
+    "GEMS-Taiwan",
+    "Crop-stress index fitted to 25 years of county rice yields; optogenetic circuit; anomaly detection",
+    "Python, autoencoder, Kalman filter, ERA5, QGIS, AlphaFold",
+    "A pre-registered forecast scored after the fact, and a published disagreement between its own runs"
+   ],
+   [
+    "GHCIS",
+    "Toehold design pipeline, plus ARGUS, a deployable colour-classification platform",
+    "NUPACK 4.1.0.1, Node.js, Docker, SQLite",
+    "Algorithm specified to the threshold, with an explicit 'unresolved' state"
+   ],
+   [
+    "HongKong-JSS",
+    "Calibration and inverse prediction for an in-field mercury assay",
+    "ImageJ, log-linear calibration, Onshape, ESP32",
+    "Calibration/validation split before fitting; RMSE on held-out runs with failures left in"
+   ],
+   [
+    "HKSSC",
+    "Structure-guided mutagenesis and enzyme kinetics for a paraben-degrading esterase",
+    "AlphaFold, UCSF Chimera, HotSpot Wizard, CB-Dock2",
+    "Invented a justified mass-normalised metric rather than report an invalid kcat/Km"
+   ],
+   [
+    "HFI",
+    "Agent-based contact model and a 13-variable ODE system, both as wet-lab gatekeepers",
+    "NetLogo 3D, Runge-Kutta, interactive HTML front-ends",
+    "Screened seven RBS parts computationally before a single plasmid was built"
+   ],
+   [
+    "HangzhouFourteenAP",
+    "Mutation prioritisation pipeline for CoGH66",
+    "PyMOL, FoldX, MAFFT, AlphaFold Server",
+    "Reported the computational prediction the bench overturned, with the confound controlled"
+   ],
+   [
+    "HongKong-HS",
+    "Toehold switch thermodynamics for a urinary miRNA screening kit",
+    "NUPACK, miRADAR (Wageningen iGEM 2024)",
+    "Reused another team's released tool instead of rebuilding it"
+   ],
+   [
+    "GCGS",
+    "No model or software page exists",
+    "—",
+    "The control case: Top 10 without a dry lab, but no modelling prize"
+   ]
+  ],
+  "rows_zh": [
+   [
+    "Lambert-GA",
+    "四個連動模型：de novo minibinder 設計、口服藥物動力學、13 條 ODE 的 RNAi 網路、族群流行病學",
+    "BindCraft, Boltz-2, Protenix, Mosaic",
+    "對信心指標本身做基準測試，並公開自己成功的設計其實不是分數最高的"
+   ],
+   [
+    "Eton-College-UK",
+    "在 10,472 個切割視窗上建立七種蛋白酶的受質預測器",
+    "scikit-learn, PSSM, BLOSUM62, VHSE",
+    "以 Hamming 距離分群的交叉驗證，加上標籤洗牌與消融對照"
+   ],
+   [
+    "GEMS-Taiwan",
+    "以 25 年各縣市稻作產量擬合的作物逆境指數；光遺傳電路；異常偵測",
+    "Python, autoencoder, Kalman filter, ERA5, QGIS, AlphaFold",
+    "一個事後評分的預先登記預測，以及公開自己兩次實驗之間的矛盾"
+   ],
+   [
+    "GHCIS",
+    "Toehold 設計流程，外加可部署的顏色判讀平台 ARGUS",
+    "NUPACK 4.1.0.1, Node.js, Docker, SQLite",
+    "演算法明確寫到閾值，並設有明確的「無法判定」狀態"
+   ],
+   [
+    "HongKong-JSS",
+    "現場汞檢測的校正與反解預測",
+    "ImageJ, 對數線性校正, Onshape, ESP32",
+    "擬合前先切分校正組與驗證組；在保留批次上報告 RMSE 並保留失敗資料"
+   ],
+   [
+    "HKSSC",
+    "對羥苯甲酸酯分解酯酶的結構導向突變與酵素動力學",
+    "AlphaFold, UCSF Chimera, HotSpot Wizard, CB-Dock2",
+    "沒有報告無效的 kcat/Km，而是提出並論證一個質量標準化指標"
+   ],
+   [
+    "HFI",
+    "代理人基礎接觸模型與 13 變數 ODE 系統，兩者都作為濕實驗的守門員",
+    "NetLogo 3D, Runge-Kutta, 互動式 HTML 前端",
+    "在建出任何一個質體之前，先以運算篩選七個 RBS 元件"
+   ],
+   [
+    "HangzhouFourteenAP",
+    "CoGH66 的突變優先排序流程",
+    "PyMOL, FoldX, MAFFT, AlphaFold Server",
+    "公開那個被實驗推翻的運算預測，並控制了干擾因子"
+   ],
+   [
+    "HongKong-HS",
+    "尿液 miRNA 篩檢套組的 toehold switch 熱力學",
+    "NUPACK, miRADAR（Wageningen iGEM 2024）",
+    "沿用別隊已釋出的工具，而不是重做一個"
+   ],
+   [
+    "GCGS",
+    "沒有 model 頁，也沒有 software 頁",
+    "—",
+    "對照組：沒有乾實驗室也能進 Top 10，但拿不到建模類獎項"
+   ]
+  ]
+ },
+ "method": "Drawn from the ten High School Top 10 team files in this report, each researched from the team's own 2026 wiki. Tool lists are what each team names; a team may have used more than it wrote down. The judgement about what 'stands out' is ours, and a reader who disagrees should open the team file and the wiki behind it — both are linked. GEMS-Taiwan is the report author's own team and has been assessed on the same terms as the rest.",
+ "method_zh": "資料來自本報告中高中組 Top 10 的十份團隊檔案，每一份都取自該隊自己的 2026 wiki。工具清單是各隊自己寫出來的；團隊實際用到的可能多於其所記載。關於「什麼最突出」的判斷出自我們，不同意的讀者可以直接打開團隊檔案與其背後的 wiki——兩者都有連結。GEMS-Taiwan 是本報告作者自己的團隊，評判標準與其他隊伍相同。",
+ "kicker_zh": "原創分析",
+ "order": 32
 }

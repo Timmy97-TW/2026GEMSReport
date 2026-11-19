@@ -21,6 +21,10 @@
    "chips": [
     "listening visit first",
     "no method in hand"
+   ],
+   "chips_zh": [
+    "先去聽一次",
+    "手上不帶方法"
    ]
   },
   {
@@ -33,6 +37,10 @@
    "chips": [
     "probably not biology",
     "that is the point"
+   ],
+   "chips_zh": [
+    "大概不是生物學",
+    "這正是重點"
    ]
   },
   {
@@ -45,6 +53,10 @@
    "chips": [
     "0 of 106 did this",
     "nobody asked yet"
+   ],
+   "chips_zh": [
+    "0/106 做過",
+    "還沒有人開口要"
    ]
   },
   {
@@ -57,6 +69,10 @@
    "chips": [
     "real operator",
     "scales by documentation"
+   ],
+   "chips_zh": [
+    "真實的操作者",
+    "靠文件擴散"
    ]
   },
   {
@@ -69,6 +85,10 @@
    "chips": [
     "Taiwan: zero in 2026",
     "weak on criterion one"
+   ],
+   "chips_zh": [
+    "台灣 2026：零",
+    "第一條件偏弱"
    ]
   }
  ],

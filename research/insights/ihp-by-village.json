@@ -1,120 +1,353 @@
 {
-  "id": "ihp-by-village",
-  "tab": "good",
-  "order": 36,
-  "kicker": "Original analysis",
-  "kicker_zh": "原創分析",
-  "title": "The experts-only pattern is not about medicine. It is about who operates the thing.",
-  "title_zh": "「只有專家」的現象與醫學無關，而與「誰在操作那個東西」有關",
-  "lede": "The obvious hypothesis — that therapeutics teams talk to clinicians because they have to, while agriculture and bioremediation teams get real knowledge from farmers and residents — does not survive the counting. Medical villages closed 6 of 21 loops with a non-expert; land, water and food villages closed 8 of 24. The gap that is real is a different one, and it is wide.",
-  "lede_zh": "最直覺的假說——治療類隊伍只能找臨床醫師，而農業與生物復育類隊伍則能從農民和居民身上得到真知識——在實際清點後站不住腳。醫學類村落在 21 個閉合迴路中有 6 個由非專家閉上；土地、水與食物類村落則是 24 個中有 8 個。真正存在的差距是另一條線，而且相當大。",
-  "body": "Across the 106 decorated teams on file, 71 closed a stakeholder-to-design loop and 16 of those 71 closed at least one with a non-expert — a farmer, beekeeper, patient, resident, frontline worker, vendor, artisan or volunteer rather than a professor, clinician, regulator, company scientist or official. Sorted by village, the medical/agricultural split the hypothesis predicted is almost flat. **Therapeutics** is 5 of 12, a higher rate than **Bioremediation** at 1 of 8. **Conservation** is 2 of 8 and **Food & Nutrition** 2 of 4. Only **Agriculture**, at 3 of 4, behaves as predicted, and four closed loops cannot carry an inference on their own. Reported honestly: the hypothesis as stated is wrong, and the earlier *ihp-depth* finding that nearly every loop is expert-closed holds inside every large village without exception.\n\nWhat the table does show is a split the hypothesis did not anticipate, and it is not close. The **platform villages** — Foundational Advance, Biomanufacturing, Space, Software & AI, Fashion & Cosmetics — closed 26 loops and 2 of them involved a non-expert. Foundational Advance is 0 of 8, Space 0 of 3, Software & AI 0 of 1, Biomanufacturing 1 of 11. The **applied villages**, medical and agricultural together, closed 45 loops with 14 non-expert among them. Where a project has no identifiable person downstream of it this year, nobody outside the lab closes a loop, and no amount of survey work substitutes: Heidelberg, Marburg, Princeton, ETH-Zurich, Vilnius, William-and-Mary and XJTLU-China are all score-4 teams whose every consequential input came from somebody with a doctorate.\n\nThe structural reason, where the files support one, is not the village but **who physically operates the thing being changed**. Compare the two villages the hypothesis treated as equivalent. An Agriculture or Conservation deployment ends in a hive, a plot or a market stall that a beekeeper, a grower or a vendor runs with their own hands, so the operator *is* the non-expert and the loop closes through them. A Bioremediation deployment ends inside a wastewater plant, a refinery or a biodiesel works, where the operator is a process engineer with a degree — ABOA's loop closed through the Turku plant's process engineer, UOttawa's through a sulfur-recovery engineer of thirty-three years, Madrid-UCM's through Bio-Oils Huelva and Repsol, Wageningen's through Vitens and Aqualab Zuid. The residents the hypothesis imagined are present in those files and they do change something, but they change communication: Madrid-UCM's Inmaculada Alonso, who had watched a reservoir eutrophy for decades, moved the team toward perceptible restoration outcomes and clearer explanation; UZurich's residents below the slopes made ecological cost something to investigate. Twelve of the 71 teams that closed a loop have a documented non-expert input of exactly that kind — real, named, and stopping short of the build. That is the same vocabulary-not-vector result the earlier analysis found, now located precisely: it happens wherever the public lives *near* the deployment instead of *running* it.\n\nThe best non-expert loops are worth naming because they are all the same shape. **Athens** states that two conditions were fixed before any construct was designed — the protein must reach the brood, and it must survive the larval gut — and says plainly that neither would have come from a literature search; beekeeper Peter Kasztelewicz's gentler practice (requeening, partial clean-out) is why delivery moved from spray to feed, and the team published what that cost. **HongKong-JSS** replaced a 14-channel colour sensor with a wavelength-resolved spectrometer because Koo's Farm and wet-market vendors wanted a number, then replaced syringe delivery with pump dosing after users complained about the force needed, measuring the result as a fall from 7.41 to 1.95 per cent coefficient of variation. **Hongwen School** got the handling cost of wet spent grain (70-80 RMB per tonne, driven by leachate, odour and liner) from Master He, a municipal landfill worker of six years, and turned localised processing from a preference into a hard constraint; separately Mr Shen of a Chongming ecological farm said 'I never look at the price per ton — I look at the cost per kilogram of gain', and the feed route became a standardised premix judged on feed conversion ratio. **LYON** removed every living cell from its filter because the public objected, and ruled households out as customers entirely. **QingdaoAcademy** put ultrafiltration desalting and endotoxin limits into its plan because a beauty-salon manager said she would hesitate to trust Qingdao Ulva. **TAU-Israel** is the medical exception that proves the rule: Shir Parchef's eighteen-year wait for an endometriosis diagnosis and Netta Ben Moshe's being told that incapacitating pain was ordinary cramps set the goal as eliminating pathology without systemic hormonal ablation — patients setting a constraint on the mechanism, not on the wording.\n\nTwo cautions against over-reading. First, the non-expert loops cluster not only by operator role but by **what kind of change they produce**: of the 16, ten changed something physical — a sensor, a delivery route, a formulation, a containment architecture — and six changed only deployment scope, target user or a selection criterion. Oxford is in the second group: about twenty chemical-free hobbyists of the Oxfordshire Natural Beekeeping Group argued against the entire premise, and Oxford's response was to narrow the target user to commercial operations and write that they had changed 'not the molecular mechanism of NECTAR, but the problem we believed NECTAR should — and should not — try to solve'. That is honest and it is real, but it is not the same act as changing a part. Second, legibility may be doing some of the work the villages appear to do: a judge can verify that a professor said something, and several teams that did consult non-experts recorded the result as an honest null. **IISER-Kolkata** asked Mr Mohadep Dutta, who has fished the Ganga since he was seven, about a shift in fish sex ratio, and published that he could not see one — evidence the effect needs instrumentation, rather than a loop. **Stanford University**, Grand Prize winner in Therapeutics, looked for keloid patient groups, found almost none, was told by the one that replied to talk to clinicians instead, and states outright that physicians cannot stand in for lived experience. Those two entries are better practice than most of the surveys in the cohort and they close nothing.\n\nFor an agriculture-adjacent team the operational reading is narrow and uncomfortable. The teams worth copying are not the Best IHP winners as a class — **TU Delft**, **UCAS-China** and **GEMS-Taiwan** all won and all had their architecture set by credentialled experts. **GEMS-Taiwan** should be held to its own standard here: sensing moving out of the cell, the hollow-fibre perfusion reactor, the abandonment of proline delivery, the narrowing to heat and salinity, the WB800 strain and the shift from continuous to periodic operation were closed by Prof. Chen Wen-Liang, Dr. Paul Verslues, Dr. Elizabeth Sattely, Prof. Huang Chieh-Chen and CH Biotech. The only non-expert input that reached the design was the natural-farming forum of 5 September, whose argument that a crop protected from every stress never builds tolerance became the specification for the release threshold, and a farmer's question about organic certification, which bounded the market rather than the machine. **Muenster-University**, nominated for Best Agriculture, reached farmers through the WLV agricultural association and changed its education strategy. That is the default outcome for an agriculture team that talks to farmers, and avoiding it takes a deliberate act: put the device in the hand of the person who will hold it, and ask for a number.",
-  "body_zh": "在檔案中的 106 支受獎隊伍裡，有 71 支閉合了一條從利害關係人到設計的迴路，而這 71 支中有 16 支至少有一條迴路是由非專家閉上的——農民、養蜂人、病人、居民、第一線工人、攤商、工匠或志工，而不是教授、臨床醫師、主管機關人員、企業科學家或官員。依村落分類之後，假說預測的「醫學 vs 農業」分界幾乎是平的。**Therapeutics** 是 12 中有 5，比例反而高於 **Bioremediation** 的 8 中有 1。**Conservation** 是 8 中有 2，**Food & Nutrition** 是 4 中有 2。只有 **Agriculture** 的 4 中有 3 符合預測，而四條閉合迴路本身撐不起任何推論。誠實地說：這個假說如其所述是錯的，而先前 *ihp-depth* 所說「幾乎每一條迴路都由專家閉上」的結論，在每一個樣本量夠大的村落裡都毫無例外地成立。\n\n這張表真正顯示的，是假說沒有預期到的另一條分界，而且差距不小。**平台型村落**——Foundational Advance、Biomanufacturing、Space、Software & AI、Fashion & Cosmetics——共閉合 26 條迴路，其中只有 2 條牽涉非專家。Foundational Advance 是 8 中有 0，Space 3 中有 0，Software & AI 1 中有 0，Biomanufacturing 11 中有 1。**應用型村落**（醫學與農業合計）閉合了 45 條迴路，其中 14 條有非專家參與。當一個專案在今年還沒有可指認的下游使用者時，實驗室外就沒有人會閉上迴路，而再多的問卷也替代不了：Heidelberg、Marburg、Princeton、ETH-Zurich、Vilnius、William-and-Mary 與 XJTLU-China 全是 4 分隊伍，而他們每一項有後果的輸入都來自擁有博士學位的人。\n\n在檔案支持得了結論的範圍內，結構性原因不是村落，而是**誰用手在操作那個被改動的東西**。拿假說視為同類的兩個村落來比。Agriculture 或 Conservation 的部署最後落在一個蜂箱、一塊田或一個市場攤位上，由養蜂人、農友或攤商親手操作，因此操作者本身*就是*那位非專家，迴路也就經由他們閉合。Bioremediation 的部署則落在污水處理廠、煉油廠或生質柴油廠內部，操作者是有學位的製程工程師——ABOA 的迴路經由 Turku 廠的製程工程師閉合，UOttawa 經由一位有 33 年資歷的硫回收工程師，Madrid-UCM 經由 Bio-Oils Huelva 與 Repsol，Wageningen 經由 Vitens 與 Aqualab Zuid。假說想像的那些居民確實出現在這些檔案裡，也確實改變了某些東西，但他們改變的是溝通：Madrid-UCM 的 Inmaculada Alonso 看著一座水庫優養化數十年，她讓隊伍轉向「看得見的復原成果」與更清楚的說明；UZurich 坡下的居民讓生態代價從預設變成待查事項。在 71 支閉合迴路的隊伍中，有 12 支記錄了正是這一類的非專家輸入——真實、具名，而且止步於設計之前。這就是先前分析所說的「改變用詞、不改變方向」，如今可以被精確定位：它發生在公眾住在部署地*附近*、而不是*操作*它的時候。\n\n最好的那幾條非專家迴路值得點名，因為它們形狀相同。**Athens** 寫明有兩項條件在任何構築設計之前就已固定——蛋白質必須抵達幼蟲巢房，而且必須在幼蟲腸道中存活——並直言這兩點都不會從文獻檢索中得出；養蜂人 Peter Kasztelewicz 較溫和的作法（換王、局部清巢）正是投遞方式從噴灑改為飼餵的原因，而隊伍也公開寫出了這個選擇的代價。**HongKong-JSS** 把 14 通道的顏色感測器換成波長解析的光譜儀，因為 Koo's Farm 與傳統市場攤商要的是一個數字；接著在使用者抱怨推針太費力之後，把針筒加樣改為泵驅動定量加樣，並以變異係數從 7.41% 降到 1.95% 來量測成果。**Hongwen School** 從有六年資歷的市政掩埋場工人 Master He 那裡得到濕啤酒糟的處理成本（每公噸 70-80 人民幣，由滲出水、異味與底層襯墊驅動），並把在地化處理從商業偏好升格為硬性限制；另外，崇明一家生態農場的 Mr Shen 說「我從來不看每噸的價格，我看的是每公斤增重的成本」，於是飼料路線變成一包可直接倒進既有攪拌機的標準化預混料，並以飼料換肉率作為評判標準。**LYON** 因為公眾反對，把濾材裡所有活細胞全部移除，並徹底排除家戶作為客戶。**QingdaoAcademy** 把超濾脫鹽與內毒素上限寫進計畫，因為一位美容沙龍經理說她不敢信任青島的石蓴原料。**TAU-Israel** 則是醫學類中那個反證：Shir Parchef 為子宮內膜異位症的診斷等了 18 年，Netta Ben Moshe 被告知劇烈疼痛只是普通經痛——這些讓隊伍把目標設定為「消除病灶而非掩蓋症狀，且不進行全身性荷爾蒙抑制」。這是病人替機制設下限制，而不是替用詞設下限制。\n\n有兩點要提防過度解讀。第一，這些非專家迴路不只依操作者角色分群，也依**它們造成什麼樣的改變**分群：16 條之中，有 10 條改了某個實體的東西——一顆感測器、一條投遞路徑、一種劑型、一套圍堵架構——另外 6 條只改了部署範圍、目標使用者或選擇判準。Oxford 屬於第二群：Oxfordshire Natural Beekeeping Group 約二十位不用藥的業餘養蜂人，反對的是整個前提；Oxford 的回應是把目標使用者收窄到商業蜂場，並寫下他們改變的「不是 NECTAR 的分子機制，而是我們認為 NECTAR 應該、以及不應該去解決的問題」。這很誠實、也很真實，但它和改掉一個元件並不是同一件事。第二，「可被辨識」這件事，可能正在做一部分看起來像是村落在做的工：評審可以查證一位教授說過什麼，而好幾支確實諮詢過非專家的隊伍，把結果記成了一個誠實的空值。**IISER-Kolkata** 問過七歲起就在恆河捕魚的 Mr Mohadep Dutta 有沒有看到魚類性別比例的變化，並公開記下他看不出來這件事——那是「此效應需要儀器才看得見」的證據，而不是一條迴路。**Stanford University** 身為 Therapeutics 的大獎得主，去找蟹足腫病友團體，幾乎找不到，唯一回覆的基金會叫他們去找臨床醫師，而隊伍直白寫下醫師無法代替親身經驗。這兩筆記錄比全體隊伍中大多數的問卷都更接近好的做法，而它們什麼迴路也沒閉上。\n\n對一支與農業相關的隊伍而言，可操作的結論既狹窄又不舒服。值得複製的不是「最佳整合式人類實踐得獎者」這個類別——**TU Delft**、**UCAS-China** 與 **GEMS-Taiwan** 都得了獎，而三者的架構都由有專業資歷的專家定下。**GEMS-Taiwan** 在這裡應當用同一把尺來量：感測移出細胞之外、中空纖維灌流生物反應器、放棄脯胺酸投遞、把植物測試收窄到高溫與鹽分、WB800 菌株，以及反應器從連續改為週期操作，分別是由 Chen Wen-Liang 教授、Dr. Paul Verslues、Dr. Elizabeth Sattely、Huang Chieh-Chen 教授與 CH Biotech 閉上的。唯一真正進到設計裡的非專家輸入，是 9 月 5 日的自然農法公開論壇——「一株被保護到完全沒有逆境的作物永遠不會建立耐受性」成了釋放閾值的規格依據——以及一位農民關於有機驗證的提問，而那限定的是市場，不是機器。**Muenster-University** 入圍最佳農業專案，透過 WLV 農業協會接觸到農民，然後改了教育策略。對一支去找農民談話的農業隊伍來說，那就是預設結果；要避開它需要一個刻意的動作：把裝置放進那個將要握著它的人手裡，然後向他要一個數字。",
-  "cards": [
-    {
-      "kicker": "The result",
-      "kicker_zh": "結果",
-      "title": "A negative result, stated plainly",
-      "title_zh": "一個直說的否定結果",
-      "body": "The hypothesis was that the experts-only pattern is worst where the stakes are most medical and best where non-specialists hold decisive practical knowledge. It does not hold. Medical villages (Therapeutics, Diagnostics, Oncology, Infectious Diseases) closed 21 loops with 6 non-expert among them, 29 per cent. Land, water and food villages (Agriculture, Bioremediation, Conservation, Food & Nutrition) closed 24 loops with 8 non-expert, 33 per cent. Four percentage points is not a pattern. Bioremediation, the village singled out for residents near contaminated sites, is the weakest applied village at 1 of 8.",
-      "body_zh": "原本的假說是：「只有專家」的現象在醫學風險最高處最嚴重，在非專家握有決定性實務知識之處最輕。這不成立。醫學類村落（Therapeutics、Diagnostics、Oncology、Infectious Diseases）閉合 21 條迴路，其中 6 條由非專家閉上，佔 29%。土地、水與食物類村落（Agriculture、Bioremediation、Conservation、Food & Nutrition）閉合 24 條，其中 8 條，佔 33%。四個百分點不構成一種型態。而被特別點名「污染場址附近居民」的 Bioremediation，反而是應用型村落中最弱的一個：8 中有 1。",
-      "chips": ["106 teams", "71 closed a loop", "16 with a non-expert", "Hypothesis fails"]
-    },
-    {
-      "kicker": "The split that is real",
-      "kicker_zh": "真正存在的分界",
-      "title": "Platform villages have nobody downstream",
-      "title_zh": "平台型村落的下游沒有人",
-      "body": "Foundational Advance 0 of 8, Space 0 of 3, Software & AI 0 of 1, Biomanufacturing 1 of 11, Fashion & Cosmetics 1 of 3. The five platform villages between them closed 26 loops and 2 involved a non-expert, against 14 of 45 across the applied villages. This is not a failure of effort - Heidelberg, Marburg, Princeton and ETH-Zurich ran some of the most traceable chains in the cohort. It is that a tool with no named user this year has no lay stakeholder to be wrong in front of. For a team whose project is a platform, the honest move is Uni-Padua-IT's: take the hardware manual to an instrumentation professor and weaken your own claim.",
-      "body_zh": "Foundational Advance 8 中 0、Space 3 中 0、Software & AI 1 中 0、Biomanufacturing 11 中 1、Fashion & Cosmetics 3 中 1。五個平台型村落合計閉合 26 條迴路，只有 2 條牽涉非專家；應用型村落則是 45 條中有 14 條。這不是努力不足——Heidelberg、Marburg、Princeton 與 ETH-Zurich 跑出了全體中最可追溯的幾條鏈。原因是：一個今年還沒有具名使用者的工具，也就沒有一位外行的利害關係人可以在他面前出錯。對專案本身就是平台的隊伍而言，誠實的做法是 Uni-Padua-IT 的做法：把硬體手冊拿去給儀器專業的教授看，然後把自己的主張講弱一點。",
-      "chips": ["Platform: 2 of 26", "Applied: 14 of 45", "Not an effort gap"]
-    },
-    {
-      "kicker": "Worked example",
-      "kicker_zh": "實例",
-      "title": "Two conditions, fixed before any construct was designed",
-      "title_zh": "兩項條件，在任何構築設計之前就已固定",
-      "body": "Athens writes that the requirements for ApiconIASIS came from beekeeping, not from the team: the protein must reach the brood, and it must survive the larval gut. Neither, they say, would have been prioritised from a literature search, and both now define what counts as success. Beekeeper Peter Kasztelewicz, whose own hive footage is on the wiki, worked by requeening and partial clean-out, and that practice is why delivery moved from spray to feed - the adjuvant surfactants harm bees, and separately the person holding the sprayer inhales it, so protective equipment went into the protocols and not into the product. They then chose a purified non-replicating enzyme over a live phage knowing it is weaker and more expensive.",
-      "body_zh": "Athens 寫道，ApiconIASIS 的需求來自養蜂實務，而不是來自隊伍本身：蛋白質必須抵達幼蟲巢房，而且必須在幼蟲腸道中存活。他們說這兩點都不會在文獻檢索中被列為優先，而現在它們定義了什麼叫做成功。養蜂人 Peter Kasztelewicz 的蜂箱影像就放在 wiki 上，他採用換王與局部清巢的作法，而正是這套實務讓投遞方式從噴灑改成飼餵——佐劑中的界面活性劑會傷害蜜蜂，而另一個獨立的風險是拿噴霧器的人會吸入它，所以防護裝備被寫進操作流程、而不是寫進產品。他們接著明知較弱也較貴，仍選擇純化的非複製型酵素而非活噬菌體。",
-      "chips": ["Athens", "Conservation", "Beekeeper set success", "Spray to feed"]
-    },
-    {
-      "kicker": "Worked example",
-      "kicker_zh": "實例",
-      "title": "The man who knew what a tonne actually costs",
-      "title_zh": "知道一公噸真正成本的那個人",
-      "body": "Hongwen School's register of changes is specific, attributed and sometimes negative. Master He, a municipal landfill worker of six years, gave them 60-90 tonnes a month at nearly 80 per cent moisture and handling costs of 70-80 RMB per tonne driven by leachate, odour, liner and labour, persisting not from indifference but from absent local off-takers. The team deleted both of its extreme narratives, fixed 70-80 RMB per tonne as a local baseline, and upgraded localised processing from a business preference to a hard environmental constraint, because a route relying on high-energy drying or long-haul transport would eat its own gains. Separately Mr Shen of a Chongming ecological farm reframed the unit of account - cost per kilogram of gain, not price per tonne - and the feed route became a standardised premix pourable into an existing mixer, judged on feed conversion ratio, diarrhoea rate and mortality.",
-      "body_zh": "Hongwen School 的改變清單具體、具名，有時還是負面的。市政掩埋場工人 Master He 有六年資歷，他給出的數字是每月 60-90 公噸、含水率將近 80%，處理成本每公噸 70-80 人民幣，由滲出水、異味、底層襯墊與人力構成；而這個問題持續存在不是因為大家不在乎，而是因為在地沒有接手者。隊伍刪掉了自己兩套極端敘事，把每公噸 70-80 人民幣定為在地基準，並把在地化處理從商業偏好升格為硬性環境限制——因為依賴高耗能乾燥或長程運輸的路線會把自己的效益吃光。另外，崇明一家生態農場的 Mr Shen 重新定義了計價單位：不是每公噸的價格，而是每公斤增重的成本；於是飼料路線變成可直接倒進既有攪拌機的標準化預混料，並以飼料換肉率、腹瀉率與死亡率來評判。",
-      "chips": ["Hongwen School", "Food & Nutrition", "Landfill worker", "Farm owner"]
-    },
-    {
-      "kicker": "Held to the same standard",
-      "kicker_zh": "用同一把尺來量",
-      "title": "GEMS-Taiwan's architecture was closed by professors",
-      "title_zh": "GEMS-Taiwan 的架構是由教授閉上的",
-      "body": "GEMS-Taiwan won Best Integrated Human Practices in the high-school section on an agricultural project, and on this measure it sits with the majority rather than the exceptions. Sensing moving out of the cell and the hollow-fibre perfusion reactor came from Prof. Chen Wen-Liang on 10 April; abandoning proline delivery from Dr. Paul Verslues; narrowing to heat and salinity from Dr. Elizabeth Sattely; the WB800 strain and periodic rather than continuous operation from Prof. Huang Chieh-Chen; the costing and regulatory work from CH Biotech. The one non-expert input that reached the design is the natural-farming forum of 5 September, where the argument that a crop protected from every stress never builds tolerance became the specification for the release threshold, and a farmer's question about organic certification that bounded the market rather than the machine. The Ghanaian farmers who supplied the origin question have no documented design consequence.",
-      "body_zh": "GEMS-Taiwan 以一個農業專案拿下高中組 Best Integrated Human Practices，而在這個指標上，它站在多數那一邊，不是例外那一邊。感測移出細胞之外與中空纖維灌流生物反應器來自 4 月 10 日的 Chen Wen-Liang 教授；放棄脯胺酸投遞來自 Dr. Paul Verslues；把範圍收窄到高溫與鹽分來自 Dr. Elizabeth Sattely；WB800 菌株與反應器改為週期操作來自 Huang Chieh-Chen 教授；成本與法規工作來自 CH Biotech。唯一進到設計裡的非專家輸入，是 9 月 5 日的自然農法論壇——「一株被保護到完全沒有逆境的作物永遠不會建立耐受性」成了釋放閾值的規格依據——以及一位農民關於有機驗證的提問，而那限定的是市場、不是機器。至於提供了最初問題的迦納農民，檔案中沒有記錄任何設計後果。",
-      "chips": ["GEMS-Taiwan", "Agriculture", "Best IHP winner", "1 non-expert loop"]
-    }
-  ],
-  "table": {
-    "head": ["Village", "Decorated teams", "Closed a loop", "Closed it with a non-expert"],
-    "head_zh": ["村落", "受獎隊伍數", "閉合了迴路", "由非專家閉上"],
-    "rows": [
-      ["Therapeutics", "16", "12 of 16", "5 of 12"],
-      ["Biomanufacturing", "13", "11 of 13", "1 of 11"],
-      ["Bioremediation", "13", "8 of 13", "1 of 8"],
-      ["Foundational Advance", "13", "8 of 13", "0 of 8"],
-      ["Diagnostics", "11", "7 of 11", "1 of 7"],
-      ["Conservation", "9", "8 of 9", "2 of 8"],
-      ["Food & Nutrition", "8", "4 of 8", "2 of 4 - cell too small"],
-      ["Fashion & Cosmetics", "7", "3 of 7", "1 of 3 - cell too small"],
-      ["Agriculture", "5", "4 of 5", "3 of 4 - cell too small"],
-      ["Space", "4", "3 of 4", "0 of 3 - cell too small"],
-      ["Software & AI", "3", "1 of 3", "0 of 1 - cell too small"],
-      ["Infectious Diseases", "2", "1 of 2", "0 of 1 - cell too small"],
-      ["Oncology", "2", "1 of 2", "0 of 1 - cell too small"],
-      ["Medical villages combined", "31", "21 of 31", "6 of 21"],
-      ["Land, water and food combined", "35", "24 of 35", "8 of 24"],
-      ["Platform villages combined", "40", "26 of 40", "2 of 26"],
-      ["All villages", "106", "71 of 106", "16 of 71"]
-    ],
-    "rows_zh": [
-      ["治療 Therapeutics", "16", "16 中有 12", "12 中有 5"],
-      ["生物製造 Biomanufacturing", "13", "13 中有 11", "11 中有 1"],
-      ["生物復育 Bioremediation", "13", "13 中有 8", "8 中有 1"],
-      ["基礎推進 Foundational Advance", "13", "13 中有 8", "8 中有 0"],
-      ["診斷 Diagnostics", "11", "11 中有 7", "7 中有 1"],
-      ["保育 Conservation", "9", "9 中有 8", "8 中有 2"],
-      ["食品與營養 Food & Nutrition", "8", "8 中有 4", "4 中有 2－樣本過小"],
-      ["時尚與美妝 Fashion & Cosmetics", "7", "7 中有 3", "3 中有 1－樣本過小"],
-      ["農業 Agriculture", "5", "5 中有 4", "4 中有 3－樣本過小"],
-      ["太空 Space", "4", "4 中有 3", "3 中有 0－樣本過小"],
-      ["軟體與 AI Software & AI", "3", "3 中有 1", "1 中有 0－樣本過小"],
-      ["傳染病 Infectious Diseases", "2", "2 中有 1", "1 中有 0－樣本過小"],
-      ["腫瘤 Oncology", "2", "2 中有 1", "1 中有 0－樣本過小"],
-      ["醫學類村落合計", "31", "31 中有 21", "21 中有 6"],
-      ["土地、水與食物類合計", "35", "35 中有 24", "24 中有 8"],
-      ["平台型村落合計", "40", "40 中有 26", "26 中有 2"],
-      ["全部村落", "106", "106 中有 71", "71 中有 16"]
-    ]
+ "id": "ihp-by-village",
+ "tab": "good",
+ "order": 36,
+ "kicker": "Original analysis",
+ "kicker_zh": "原創分析",
+ "title": "The experts-only pattern is not about medicine. It is about who operates the thing.",
+ "title_zh": "「只有專家」的現象與醫學無關，而與「誰在操作那個東西」有關",
+ "lede": "The obvious hypothesis — that therapeutics teams talk to clinicians because they have to, while agriculture and bioremediation teams get real knowledge from farmers and residents — does not survive the counting. Medical villages closed 6 of 21 loops with a non-expert; land, water and food villages closed 8 of 24. The gap that is real is a different one, and it is wide.",
+ "lede_zh": "最直覺的假說——治療類隊伍只能找臨床醫師，而農業與生物復育類隊伍則能從農民和居民身上得到真知識——在實際清點後站不住腳。醫學類村落在 21 個閉合迴路中有 6 個由非專家閉上；土地、水與食物類村落則是 24 個中有 8 個。真正存在的差距是另一條線，而且相當大。",
+ "body": "Across the 106 decorated teams on file, 71 closed a stakeholder-to-design loop and 16 of those 71 closed at least one with a non-expert — a farmer, beekeeper, patient, resident, frontline worker, vendor, artisan or volunteer rather than a professor, clinician, regulator, company scientist or official. Sorted by village, the medical/agricultural split the hypothesis predicted is almost flat. **Therapeutics** is 5 of 12, a higher rate than **Bioremediation** at 1 of 8. **Conservation** is 2 of 8 and **Food & Nutrition** 2 of 4. Only **Agriculture**, at 3 of 4, behaves as predicted, and four closed loops cannot carry an inference on their own. Reported honestly: the hypothesis as stated is wrong, and the earlier *ihp-depth* finding that nearly every loop is expert-closed holds inside every large village without exception.\n\nWhat the table does show is a split the hypothesis did not anticipate, and it is not close. The **platform villages** — Foundational Advance, Biomanufacturing, Space, Software & AI, Fashion & Cosmetics — closed 26 loops and 2 of them involved a non-expert. Foundational Advance is 0 of 8, Space 0 of 3, Software & AI 0 of 1, Biomanufacturing 1 of 11. The **applied villages**, medical and agricultural together, closed 45 loops with 14 non-expert among them. Where a project has no identifiable person downstream of it this year, nobody outside the lab closes a loop, and no amount of survey work substitutes: Heidelberg, Marburg, Princeton, ETH-Zurich, Vilnius, William-and-Mary and XJTLU-China are all score-4 teams whose every consequential input came from somebody with a doctorate.\n\nThe structural reason, where the files support one, is not the village but **who physically operates the thing being changed**. Compare the two villages the hypothesis treated as equivalent. An Agriculture or Conservation deployment ends in a hive, a plot or a market stall that a beekeeper, a grower or a vendor runs with their own hands, so the operator *is* the non-expert and the loop closes through them. A Bioremediation deployment ends inside a wastewater plant, a refinery or a biodiesel works, where the operator is a process engineer with a degree — ABOA's loop closed through the Turku plant's process engineer, UOttawa's through a sulfur-recovery engineer of thirty-three years, Madrid-UCM's through Bio-Oils Huelva and Repsol, Wageningen's through Vitens and Aqualab Zuid. The residents the hypothesis imagined are present in those files and they do change something, but they change communication: Madrid-UCM's Inmaculada Alonso, who had watched a reservoir eutrophy for decades, moved the team toward perceptible restoration outcomes and clearer explanation; UZurich's residents below the slopes made ecological cost something to investigate. Twelve of the 71 teams that closed a loop have a documented non-expert input of exactly that kind — real, named, and stopping short of the build. That is the same vocabulary-not-vector result the earlier analysis found, now located precisely: it happens wherever the public lives *near* the deployment instead of *running* it.\n\nThe best non-expert loops are worth naming because they are all the same shape. **Athens** states that two conditions were fixed before any construct was designed — the protein must reach the brood, and it must survive the larval gut — and says plainly that neither would have come from a literature search; beekeeper Peter Kasztelewicz's gentler practice (requeening, partial clean-out) is why delivery moved from spray to feed, and the team published what that cost. **HongKong-JSS** replaced a 14-channel colour sensor with a wavelength-resolved spectrometer because Koo's Farm and wet-market vendors wanted a number, then replaced syringe delivery with pump dosing after users complained about the force needed, measuring the result as a fall from 7.41 to 1.95 per cent coefficient of variation. **Hongwen School** got the handling cost of wet spent grain (70-80 RMB per tonne, driven by leachate, odour and liner) from Master He, a municipal landfill worker of six years, and turned localised processing from a preference into a hard constraint; separately Mr Shen of a Chongming ecological farm said 'I never look at the price per ton — I look at the cost per kilogram of gain', and the feed route became a standardised premix judged on feed conversion ratio. **LYON** removed every living cell from its filter because the public objected, and ruled households out as customers entirely. **QingdaoAcademy** put ultrafiltration desalting and endotoxin limits into its plan because a beauty-salon manager said she would hesitate to trust Qingdao Ulva. **TAU-Israel** is the medical exception that proves the rule: Shir Parchef's eighteen-year wait for an endometriosis diagnosis and Netta Ben Moshe's being told that incapacitating pain was ordinary cramps set the goal as eliminating pathology without systemic hormonal ablation — patients setting a constraint on the mechanism, not on the wording.\n\nTwo cautions against over-reading. First, the non-expert loops cluster not only by operator role but by **what kind of change they produce**: of the 16, ten changed something physical — a sensor, a delivery route, a formulation, a containment architecture — and six changed only deployment scope, target user or a selection criterion. Oxford is in the second group: about twenty chemical-free hobbyists of the Oxfordshire Natural Beekeeping Group argued against the entire premise, and Oxford's response was to narrow the target user to commercial operations and write that they had changed 'not the molecular mechanism of NECTAR, but the problem we believed NECTAR should — and should not — try to solve'. That is honest and it is real, but it is not the same act as changing a part. Second, legibility may be doing some of the work the villages appear to do: a judge can verify that a professor said something, and several teams that did consult non-experts recorded the result as an honest null. **IISER-Kolkata** asked Mr Mohadep Dutta, who has fished the Ganga since he was seven, about a shift in fish sex ratio, and published that he could not see one — evidence the effect needs instrumentation, rather than a loop. **Stanford University**, Grand Prize winner in Therapeutics, looked for keloid patient groups, found almost none, was told by the one that replied to talk to clinicians instead, and states outright that physicians cannot stand in for lived experience. Those two entries are better practice than most of the surveys in the cohort and they close nothing.\n\nFor an agriculture-adjacent team the operational reading is narrow and uncomfortable. The teams worth copying are not the Best IHP winners as a class — **TU Delft**, **UCAS-China** and **GEMS-Taiwan** all won and all had their architecture set by credentialled experts. **GEMS-Taiwan** should be held to its own standard here: sensing moving out of the cell, the hollow-fibre perfusion reactor, the abandonment of proline delivery, the narrowing to heat and salinity, the WB800 strain and the shift from continuous to periodic operation were closed by Prof. Chen Wen-Liang, Dr. Paul Verslues, Dr. Elizabeth Sattely, Prof. Huang Chieh-Chen and CH Biotech. The only non-expert input that reached the design was the natural-farming forum of 5 September, whose argument that a crop protected from every stress never builds tolerance became the specification for the release threshold, and a farmer's question about organic certification, which bounded the market rather than the machine. **Muenster-University**, nominated for Best Agriculture, reached farmers through the WLV agricultural association and changed its education strategy. That is the default outcome for an agriculture team that talks to farmers, and avoiding it takes a deliberate act: put the device in the hand of the person who will hold it, and ask for a number.",
+ "body_zh": "在檔案中的 106 支受獎隊伍裡，有 71 支閉合了一條從利害關係人到設計的迴路，而這 71 支中有 16 支至少有一條迴路是由非專家閉上的——農民、養蜂人、病人、居民、第一線工人、攤商、工匠或志工，而不是教授、臨床醫師、主管機關人員、企業科學家或官員。依村落分類之後，假說預測的「醫學 vs 農業」分界幾乎是平的。**Therapeutics** 是 12 中有 5，比例反而高於 **Bioremediation** 的 8 中有 1。**Conservation** 是 8 中有 2，**Food & Nutrition** 是 4 中有 2。只有 **Agriculture** 的 4 中有 3 符合預測，而四條閉合迴路本身撐不起任何推論。誠實地說：這個假說如其所述是錯的，而先前 *ihp-depth* 所說「幾乎每一條迴路都由專家閉上」的結論，在每一個樣本量夠大的村落裡都毫無例外地成立。\n\n這張表真正顯示的，是假說沒有預期到的另一條分界，而且差距不小。**平台型村落**——Foundational Advance、Biomanufacturing、Space、Software & AI、Fashion & Cosmetics——共閉合 26 條迴路，其中只有 2 條牽涉非專家。Foundational Advance 是 8 中有 0，Space 3 中有 0，Software & AI 1 中有 0，Biomanufacturing 11 中有 1。**應用型村落**（醫學與農業合計）閉合了 45 條迴路，其中 14 條有非專家參與。當一個專案在今年還沒有可指認的下游使用者時，實驗室外就沒有人會閉上迴路，而再多的問卷也替代不了：Heidelberg、Marburg、Princeton、ETH-Zurich、Vilnius、William-and-Mary 與 XJTLU-China 全是 4 分隊伍，而他們每一項有後果的輸入都來自擁有博士學位的人。\n\n在檔案支持得了結論的範圍內，結構性原因不是村落，而是**誰用手在操作那個被改動的東西**。拿假說視為同類的兩個村落來比。Agriculture 或 Conservation 的部署最後落在一個蜂箱、一塊田或一個市場攤位上，由養蜂人、農友或攤商親手操作，因此操作者本身*就是*那位非專家，迴路也就經由他們閉合。Bioremediation 的部署則落在污水處理廠、煉油廠或生質柴油廠內部，操作者是有學位的製程工程師——ABOA 的迴路經由 Turku 廠的製程工程師閉合，UOttawa 經由一位有 33 年資歷的硫回收工程師，Madrid-UCM 經由 Bio-Oils Huelva 與 Repsol，Wageningen 經由 Vitens 與 Aqualab Zuid。假說想像的那些居民確實出現在這些檔案裡，也確實改變了某些東西，但他們改變的是溝通：Madrid-UCM 的 Inmaculada Alonso 看著一座水庫優養化數十年，她讓隊伍轉向「看得見的復原成果」與更清楚的說明；UZurich 坡下的居民讓生態代價從預設變成待查事項。在 71 支閉合迴路的隊伍中，有 12 支記錄了正是這一類的非專家輸入——真實、具名，而且止步於設計之前。這就是先前分析所說的「改變用詞、不改變方向」，如今可以被精確定位：它發生在公眾住在部署地*附近*、而不是*操作*它的時候。\n\n最好的那幾條非專家迴路值得點名，因為它們形狀相同。**Athens** 寫明有兩項條件在任何構築設計之前就已固定——蛋白質必須抵達幼蟲巢房，而且必須在幼蟲腸道中存活——並直言這兩點都不會從文獻檢索中得出；養蜂人 Peter Kasztelewicz 較溫和的作法（換王、局部清巢）正是投遞方式從噴灑改為飼餵的原因，而隊伍也公開寫出了這個選擇的代價。**HongKong-JSS** 把 14 通道的顏色感測器換成波長解析的光譜儀，因為 Koo's Farm 與傳統市場攤商要的是一個數字；接著在使用者抱怨推針太費力之後，把針筒加樣改為泵驅動定量加樣，並以變異係數從 7.41% 降到 1.95% 來量測成果。**Hongwen School** 從有六年資歷的市政掩埋場工人 Master He 那裡得到濕啤酒糟的處理成本（每公噸 70-80 人民幣，由滲出水、異味與底層襯墊驅動），並把在地化處理從商業偏好升格為硬性限制；另外，崇明一家生態農場的 Mr Shen 說「我從來不看每噸的價格，我看的是每公斤增重的成本」，於是飼料路線變成一包可直接倒進既有攪拌機的標準化預混料，並以飼料換肉率作為評判標準。**LYON** 因為公眾反對，把濾材裡所有活細胞全部移除，並徹底排除家戶作為客戶。**QingdaoAcademy** 把超濾脫鹽與內毒素上限寫進計畫，因為一位美容沙龍經理說她不敢信任青島的石蓴原料。**TAU-Israel** 則是醫學類中那個反證：Shir Parchef 為子宮內膜異位症的診斷等了 18 年，Netta Ben Moshe 被告知劇烈疼痛只是普通經痛——這些讓隊伍把目標設定為「消除病灶而非掩蓋症狀，且不進行全身性荷爾蒙抑制」。這是病人替機制設下限制，而不是替用詞設下限制。\n\n有兩點要提防過度解讀。第一，這些非專家迴路不只依操作者角色分群，也依**它們造成什麼樣的改變**分群：16 條之中，有 10 條改了某個實體的東西——一顆感測器、一條投遞路徑、一種劑型、一套圍堵架構——另外 6 條只改了部署範圍、目標使用者或選擇判準。Oxford 屬於第二群：Oxfordshire Natural Beekeeping Group 約二十位不用藥的業餘養蜂人，反對的是整個前提；Oxford 的回應是把目標使用者收窄到商業蜂場，並寫下他們改變的「不是 NECTAR 的分子機制，而是我們認為 NECTAR 應該、以及不應該去解決的問題」。這很誠實、也很真實，但它和改掉一個元件並不是同一件事。第二，「可被辨識」這件事，可能正在做一部分看起來像是村落在做的工：評審可以查證一位教授說過什麼，而好幾支確實諮詢過非專家的隊伍，把結果記成了一個誠實的空值。**IISER-Kolkata** 問過七歲起就在恆河捕魚的 Mr Mohadep Dutta 有沒有看到魚類性別比例的變化，並公開記下他看不出來這件事——那是「此效應需要儀器才看得見」的證據，而不是一條迴路。**Stanford University** 身為 Therapeutics 的大獎得主，去找蟹足腫病友團體，幾乎找不到，唯一回覆的基金會叫他們去找臨床醫師，而隊伍直白寫下醫師無法代替親身經驗。這兩筆記錄比全體隊伍中大多數的問卷都更接近好的做法，而它們什麼迴路也沒閉上。\n\n對一支與農業相關的隊伍而言，可操作的結論既狹窄又不舒服。值得複製的不是「最佳整合式人類實踐得獎者」這個類別——**TU Delft**、**UCAS-China** 與 **GEMS-Taiwan** 都得了獎，而三者的架構都由有專業資歷的專家定下。**GEMS-Taiwan** 在這裡應當用同一把尺來量：感測移出細胞之外、中空纖維灌流生物反應器、放棄脯胺酸投遞、把植物測試收窄到高溫與鹽分、WB800 菌株，以及反應器從連續改為週期操作，分別是由 Chen Wen-Liang 教授、Dr. Paul Verslues、Dr. Elizabeth Sattely、Huang Chieh-Chen 教授與 CH Biotech 閉上的。唯一真正進到設計裡的非專家輸入，是 9 月 5 日的自然農法公開論壇——「一株被保護到完全沒有逆境的作物永遠不會建立耐受性」成了釋放閾值的規格依據——以及一位農民關於有機驗證的提問，而那限定的是市場，不是機器。**Muenster-University** 入圍最佳農業專案，透過 WLV 農業協會接觸到農民，然後改了教育策略。對一支去找農民談話的農業隊伍來說，那就是預設結果；要避開它需要一個刻意的動作：把裝置放進那個將要握著它的人手裡，然後向他要一個數字。",
+ "cards": [
+  {
+   "kicker": "The result",
+   "kicker_zh": "結果",
+   "title": "A negative result, stated plainly",
+   "title_zh": "一個直說的否定結果",
+   "body": "The hypothesis was that the experts-only pattern is worst where the stakes are most medical and best where non-specialists hold decisive practical knowledge. It does not hold. Medical villages (Therapeutics, Diagnostics, Oncology, Infectious Diseases) closed 21 loops with 6 non-expert among them, 29 per cent. Land, water and food villages (Agriculture, Bioremediation, Conservation, Food & Nutrition) closed 24 loops with 8 non-expert, 33 per cent. Four percentage points is not a pattern. Bioremediation, the village singled out for residents near contaminated sites, is the weakest applied village at 1 of 8.",
+   "body_zh": "原本的假說是：「只有專家」的現象在醫學風險最高處最嚴重，在非專家握有決定性實務知識之處最輕。這不成立。醫學類村落（Therapeutics、Diagnostics、Oncology、Infectious Diseases）閉合 21 條迴路，其中 6 條由非專家閉上，佔 29%。土地、水與食物類村落（Agriculture、Bioremediation、Conservation、Food & Nutrition）閉合 24 條，其中 8 條，佔 33%。四個百分點不構成一種型態。而被特別點名「污染場址附近居民」的 Bioremediation，反而是應用型村落中最弱的一個：8 中有 1。",
+   "chips": [
+    "106 teams",
+    "71 closed a loop",
+    "16 with a non-expert",
+    "Hypothesis fails"
+   ],
+   "chips_zh": [
+    "106 支隊伍",
+    "71 支閉合迴圈",
+    "16 支有非專家",
+    "假設不成立"
+   ]
   },
-  "checklist": [
-    "Ask who will physically hold the device or run the process on the day it is used. If that person has a degree in your field, your non-expert loop will not happen by accident.",
-    "Make the non-expert ask for a number. HongKong-JSS's sensor swap and Hongwen School's 70-80 RMB per tonne both started as a quantity somebody named out loud.",
-    "Fix one or two success conditions from practice before the construct is designed, as Athens did, and write down that they did not come from the literature.",
-    "Recruit the people who disagree with the premise. Oxford's twenty chemical-free hobbyists narrowed the target user; GEMS-Taiwan's natural-farming forum set the release threshold.",
-    "Record non-expert input that changed nothing, and say so. IISER-Kolkata published a fisher who could not see the effect; Stanford published that it could not find patients. Both are better than a survey that only changed a word.",
-    "Check the type of change before claiming a loop: a part number, a concentration, a format, a delivery route or who may buy it counts. A changed word, a new leaflet or a reframed slogan does not."
+  {
+   "kicker": "The split that is real",
+   "kicker_zh": "真正存在的分界",
+   "title": "Platform villages have nobody downstream",
+   "title_zh": "平台型村落的下游沒有人",
+   "body": "Foundational Advance 0 of 8, Space 0 of 3, Software & AI 0 of 1, Biomanufacturing 1 of 11, Fashion & Cosmetics 1 of 3. The five platform villages between them closed 26 loops and 2 involved a non-expert, against 14 of 45 across the applied villages. This is not a failure of effort - Heidelberg, Marburg, Princeton and ETH-Zurich ran some of the most traceable chains in the cohort. It is that a tool with no named user this year has no lay stakeholder to be wrong in front of. For a team whose project is a platform, the honest move is Uni-Padua-IT's: take the hardware manual to an instrumentation professor and weaken your own claim.",
+   "body_zh": "Foundational Advance 8 中 0、Space 3 中 0、Software & AI 1 中 0、Biomanufacturing 11 中 1、Fashion & Cosmetics 3 中 1。五個平台型村落合計閉合 26 條迴路，只有 2 條牽涉非專家；應用型村落則是 45 條中有 14 條。這不是努力不足——Heidelberg、Marburg、Princeton 與 ETH-Zurich 跑出了全體中最可追溯的幾條鏈。原因是：一個今年還沒有具名使用者的工具，也就沒有一位外行的利害關係人可以在他面前出錯。對專案本身就是平台的隊伍而言，誠實的做法是 Uni-Padua-IT 的做法：把硬體手冊拿去給儀器專業的教授看，然後把自己的主張講弱一點。",
+   "chips": [
+    "Platform: 2 of 26",
+    "Applied: 14 of 45",
+    "Not an effort gap"
+   ],
+   "chips_zh": [
+    "平台型：2/26",
+    "應用型：14/45",
+    "不是努力的差距"
+   ]
+  },
+  {
+   "kicker": "Worked example",
+   "kicker_zh": "實例",
+   "title": "Two conditions, fixed before any construct was designed",
+   "title_zh": "兩項條件，在任何構築設計之前就已固定",
+   "body": "Athens writes that the requirements for ApiconIASIS came from beekeeping, not from the team: the protein must reach the brood, and it must survive the larval gut. Neither, they say, would have been prioritised from a literature search, and both now define what counts as success. Beekeeper Peter Kasztelewicz, whose own hive footage is on the wiki, worked by requeening and partial clean-out, and that practice is why delivery moved from spray to feed - the adjuvant surfactants harm bees, and separately the person holding the sprayer inhales it, so protective equipment went into the protocols and not into the product. They then chose a purified non-replicating enzyme over a live phage knowing it is weaker and more expensive.",
+   "body_zh": "Athens 寫道，ApiconIASIS 的需求來自養蜂實務，而不是來自隊伍本身：蛋白質必須抵達幼蟲巢房，而且必須在幼蟲腸道中存活。他們說這兩點都不會在文獻檢索中被列為優先，而現在它們定義了什麼叫做成功。養蜂人 Peter Kasztelewicz 的蜂箱影像就放在 wiki 上，他採用換王與局部清巢的作法，而正是這套實務讓投遞方式從噴灑改成飼餵——佐劑中的界面活性劑會傷害蜜蜂，而另一個獨立的風險是拿噴霧器的人會吸入它，所以防護裝備被寫進操作流程、而不是寫進產品。他們接著明知較弱也較貴，仍選擇純化的非複製型酵素而非活噬菌體。",
+   "chips": [
+    "Athens",
+    "Conservation",
+    "Beekeeper set success",
+    "Spray to feed"
+   ],
+   "chips_zh": [
+    "Athens",
+    "保育",
+    "養蜂人定義成功",
+    "從噴灑改成餵食"
+   ]
+  },
+  {
+   "kicker": "Worked example",
+   "kicker_zh": "實例",
+   "title": "The man who knew what a tonne actually costs",
+   "title_zh": "知道一公噸真正成本的那個人",
+   "body": "Hongwen School's register of changes is specific, attributed and sometimes negative. Master He, a municipal landfill worker of six years, gave them 60-90 tonnes a month at nearly 80 per cent moisture and handling costs of 70-80 RMB per tonne driven by leachate, odour, liner and labour, persisting not from indifference but from absent local off-takers. The team deleted both of its extreme narratives, fixed 70-80 RMB per tonne as a local baseline, and upgraded localised processing from a business preference to a hard environmental constraint, because a route relying on high-energy drying or long-haul transport would eat its own gains. Separately Mr Shen of a Chongming ecological farm reframed the unit of account - cost per kilogram of gain, not price per tonne - and the feed route became a standardised premix pourable into an existing mixer, judged on feed conversion ratio, diarrhoea rate and mortality.",
+   "body_zh": "Hongwen School 的改變清單具體、具名，有時還是負面的。市政掩埋場工人 Master He 有六年資歷，他給出的數字是每月 60-90 公噸、含水率將近 80%，處理成本每公噸 70-80 人民幣，由滲出水、異味、底層襯墊與人力構成；而這個問題持續存在不是因為大家不在乎，而是因為在地沒有接手者。隊伍刪掉了自己兩套極端敘事，把每公噸 70-80 人民幣定為在地基準，並把在地化處理從商業偏好升格為硬性環境限制——因為依賴高耗能乾燥或長程運輸的路線會把自己的效益吃光。另外，崇明一家生態農場的 Mr Shen 重新定義了計價單位：不是每公噸的價格，而是每公斤增重的成本；於是飼料路線變成可直接倒進既有攪拌機的標準化預混料，並以飼料換肉率、腹瀉率與死亡率來評判。",
+   "chips": [
+    "Hongwen School",
+    "Food & Nutrition",
+    "Landfill worker",
+    "Farm owner"
+   ],
+   "chips_zh": [
+    "Hongwen School",
+    "食品與營養",
+    "掩埋場工人",
+    "農場主人"
+   ]
+  },
+  {
+   "kicker": "Held to the same standard",
+   "kicker_zh": "用同一把尺來量",
+   "title": "GEMS-Taiwan's architecture was closed by professors",
+   "title_zh": "GEMS-Taiwan 的架構是由教授閉上的",
+   "body": "GEMS-Taiwan won Best Integrated Human Practices in the high-school section on an agricultural project, and on this measure it sits with the majority rather than the exceptions. Sensing moving out of the cell and the hollow-fibre perfusion reactor came from Prof. Chen Wen-Liang on 10 April; abandoning proline delivery from Dr. Paul Verslues; narrowing to heat and salinity from Dr. Elizabeth Sattely; the WB800 strain and periodic rather than continuous operation from Prof. Huang Chieh-Chen; the costing and regulatory work from CH Biotech. The one non-expert input that reached the design is the natural-farming forum of 5 September, where the argument that a crop protected from every stress never builds tolerance became the specification for the release threshold, and a farmer's question about organic certification that bounded the market rather than the machine. The Ghanaian farmers who supplied the origin question have no documented design consequence.",
+   "body_zh": "GEMS-Taiwan 以一個農業專案拿下高中組 Best Integrated Human Practices，而在這個指標上，它站在多數那一邊，不是例外那一邊。感測移出細胞之外與中空纖維灌流生物反應器來自 4 月 10 日的 Chen Wen-Liang 教授；放棄脯胺酸投遞來自 Dr. Paul Verslues；把範圍收窄到高溫與鹽分來自 Dr. Elizabeth Sattely；WB800 菌株與反應器改為週期操作來自 Huang Chieh-Chen 教授；成本與法規工作來自 CH Biotech。唯一進到設計裡的非專家輸入，是 9 月 5 日的自然農法論壇——「一株被保護到完全沒有逆境的作物永遠不會建立耐受性」成了釋放閾值的規格依據——以及一位農民關於有機驗證的提問，而那限定的是市場、不是機器。至於提供了最初問題的迦納農民，檔案中沒有記錄任何設計後果。",
+   "chips": [
+    "GEMS-Taiwan",
+    "Agriculture",
+    "Best IHP winner",
+    "1 non-expert loop"
+   ],
+   "chips_zh": [
+    "GEMS-Taiwan",
+    "農業",
+    "Best IHP 得主",
+    "1 個非專家迴圈"
+   ]
+  }
+ ],
+ "table": {
+  "head": [
+   "Village",
+   "Decorated teams",
+   "Closed a loop",
+   "Closed it with a non-expert"
   ],
-  "checklist_zh": [
-    "問清楚：產品真正被使用的那一天，是誰用手拿著裝置、或是誰在操作那套製程。如果那個人在你的領域裡有學位，你的非專家迴路就不會自己發生。",
-    "讓非專家開口要一個數字。HongKong-JSS 換感測器、Hongwen School 的每公噸 70-80 人民幣，都是從某個人說出口的量值開始的。",
-    "在構築設計之前，就從實務裡定下一到兩項成功條件，像 Athens 那樣，並寫明這些條件不是從文獻來的。",
-    "去找那些不同意前提的人。Oxford 那二十位不用藥的業餘養蜂人收窄了目標使用者；GEMS-Taiwan 的自然農法論壇定下了釋放閾值。",
-    "把沒有造成任何改變的非專家輸入也記下來，並直說。IISER-Kolkata 公開記下一位看不出效應的漁民；Stanford 公開寫下他們找不到病友。兩者都比一份只改了一個用詞的問卷更好。",
-    "宣稱閉合迴路之前，先檢查改變的類型：元件型號、濃度、劑型、投遞路徑，或誰可以購買，這些算數。改掉一個用詞、做一張新傳單、換一句標語，不算。"
+  "head_zh": [
+   "村落",
+   "受獎隊伍數",
+   "閉合了迴路",
+   "由非專家閉上"
   ],
-  "method": "Population: all 106 team files on disk, every one of them a Top 10 or special-prize winner or nominee, so this is the most decorated tenth of iGEM 2026 and not a sample of the competition. Loop scores: the 93 teams scored in the earlier ihp-depth analysis keep that analysis's score unchanged, and 'closed a loop' means its score of 4 - a named stakeholder, a specific thing said, and a change to the build, deployment, readout, safety design or business model. Thirteen files landed after that scoring ran (BASIS-China, BGI-College, Bist-China, Michigan, NCKU-Tainan, NU Boston, Squirrel-Beijing, TU Darmstadt, Tsinghua-T, UBC-Vancouver, UiOslo-Norway, WHU-China, XJTLU-Software); I scored those thirteen myself on the same rubric and seven reached 4, so 71 of 106 against the earlier 64 of 93. Non-expert rule, written before classifying: a person counts as a NON-EXPERT when their standing in the exchange rests on lived experience or hands-on practice rather than on a credential, a research post, a regulatory office or a technical role in a company - farmers, growers, fishers, beekeepers, residents, patients and their families, carers, frontline manual workers, market vendors, shop and salon staff, artisans, consumers, students, volunteers, indigenous community members. EXPERT covers professors and researchers, physicians, dentists, nurses and medical technologists, regulators and officials, company scientists, engineers, technical directors, QA and regulatory-affairs staff, investors and corporate managers, lawyers, ethicists and social scientists, peer iGEM teams and alumni. The hard case the brief names - a farmer with a degree - I resolved toward NON-EXPERT when the person speaks about running their own operation, and toward EXPERT when they are employed to advise other people's operations. Mr Lu of Worldshaper-Shanghai, described as a grower and extension author, is counted non-expert on that rule and is the clearest instance of it; Yusong Shi of GYHS, a doctoral student who is also a stony-coral hobbyist, is counted expert on the same rule, and GYHS's Conservation cell would move if that call reversed. A team counts in the last column if at least one documented loop was closed by a non-expert; ten of the sixteen changed something physical (sensor, delivery route, formulation, containment architecture) and six changed deployment scope, target user or a selection criterion. Twelve further teams have a documented non-expert input that changed only claims, language, education material or success framing, and those are counted as expert-closed, which is the same line the earlier analysis drew. Counting only physical changes gives nine or ten rather than the earlier analysis's 'six or seven in 93'; the difference is thirteen extra files plus formulation and delivery-route changes I counted and it did not, and this is the one place the two analyses differ. Villages: 50 of the 106 files carry no village string, and the high-school section does not have fine-grained villages at all - it competes in four merged clusters, so GEMS-Taiwan's agricultural project sat in the Space / Foundational Advance / Software & AI / Biomanufacturing cluster. I therefore assigned every team to one of the thirteen collegiate villages by where the technology is deployed and who it affects, using the official label from results2026.json where one exists. Several assignments are genuinely arguable - Cornell's smart bandage sits in Fashion & Cosmetics because that is the village it won, QingdaoAcademy and MIT-MAHE could be read as Food rather than Biomanufacturing, Mingdao and TU Darmstadt as Bioremediation rather than Biomanufacturing - and a different reading would move single teams between rows without changing the platform-versus-applied result. What this cannot see: whether a change was made because of the advice or attributed to it afterwards; the wiki behind the file summary, except for Athens and HUST-China, whose pages I read directly to check two borderline calls; whether a loop recorded as expert-closed had an unrecorded non-expert behind it; and whether judges preferred credentialled stakeholders, which is a plausible alternative explanation for the platform-village result that these files cannot settle. Nine of the thirteen village cells have fewer than eight closed loops and are flagged in the table; Agriculture at 3 of 4 is the single most quotable cell and the least load-bearing.",
-  "method_zh": "母體：磁碟上全部 106 份隊伍檔案，每一支都是 Top 10 或特別獎的得主或入圍者，因此這是 iGEM 2026 中受獎最多的十分之一，而不是整個競賽的抽樣。迴路評分：先前 ihp-depth 分析已評分的 93 支隊伍沿用該分析的分數不變，而「閉合了迴路」即該分析的 4 分——具名的利害關係人、一句具體說了什麼，以及建構、部署、讀出、安全設計或商業模式上的一項改變。有 13 份檔案是在那次評分之後才到的（BASIS-China、BGI-College、Bist-China、Michigan、NCKU-Tainan、NU Boston、Squirrel-Beijing、TU Darmstadt、Tsinghua-T、UBC-Vancouver、UiOslo-Norway、WHU-China、XJTLU-Software）；這 13 支由我以同一套評分標準自行評分，其中 7 支達到 4 分，因此是 106 中的 71，對應先前的 93 中的 64。非專家判準，在開始分類之前就先寫下：當一個人在這場對話中的立足點來自親身經驗或動手實務，而不是來自資歷、研究職位、主管機關職務或公司裡的技術角色時，即計為**非專家**——農民、種植者、漁民、養蜂人、居民、病人與家屬、照顧者、第一線體力工作者、市場攤商、店員與沙龍人員、工匠、消費者、學生、志工、原住民社群成員。**專家**則涵蓋教授與研究人員、醫師、牙醫、護理師與醫檢師、主管機關人員與官員、企業科學家、工程師、技術總監、品保與法規事務人員、投資人與企業經理人、律師、倫理學者與社會科學家，以及同儕 iGEM 隊伍與校友。委託說明特別點名的難題——有學位的農民——我的處理方式是：當這個人談的是經營自己的場域時計為非專家，當他受雇去指導別人的場域時計為專家。Worldshaper-Shanghai 的 Mr Lu 被描述為「種植者兼推廣作者」，依此規則計為非專家，也是這條規則最清楚的一個案例；GYHS 的 Yusong Shi 是博士生同時也是硬珊瑚玩家，依同一規則計為專家，而若這個判斷反過來，GYHS 所在的 Conservation 欄位數字就會變動。只要有至少一條記載在案的迴路由非專家閉上，該隊伍就計入最後一欄；16 支之中有 10 支改了實體的東西（感測器、投遞路徑、劑型、圍堵架構），另外 6 支改的是部署範圍、目標使用者或選擇判準。另有 12 支隊伍有記載在案的非專家輸入，但只改了主張、用詞、教育素材或成功的框架，這些仍計為由專家閉合，和先前分析劃的是同一條線。若只計實體改變，得到的是 9 到 10 支，而非先前分析所說的「93 中的六或七支」；差異來自多出的 13 份檔案，加上我把劑型與投遞路徑的改變也計入而該分析沒有——這是兩份分析唯一相異之處。村落：106 份檔案中有 50 份沒有村落欄位字串，而高中組根本沒有細分村落，它們是在四個合併的集群中競賽，所以 GEMS-Taiwan 的農業專案被放在 Space / Foundational Advance / Software & AI / Biomanufacturing 這個集群裡。因此我依「技術部署在哪裡、影響到誰」，把每一支隊伍指派到十三個大專組村落之一，有官方標籤者（來自 results2026.json）即採用官方標籤。有幾個指派確實可以爭論——Cornell 的智慧敷料放在 Fashion & Cosmetics，是因為那是它得獎的村落；QingdaoAcademy 與 MIT-MAHE 也可讀成 Food 而非 Biomanufacturing；Mingdao 與 TU Darmstadt 可讀成 Bioremediation 而非 Biomanufacturing——不同讀法會讓個別隊伍在列與列之間移動，但不會改變「平台型 vs 應用型」這個結果。這份分析看不到的：一項改變究竟是因為那個建議而做，還是事後才歸因於它；檔案摘要背後的 wiki，除了 Athens 與 HUST-China 這兩個邊界案例的頁面我直接讀過以外；一條被記為由專家閉合的迴路背後，是否有未被記錄的非專家；以及評審是否偏好有資歷的利害關係人——這是平台型村落結果的一個合理替代解釋，而這些檔案無法裁決。十三個村落欄位中有九個的閉合迴路少於八條，已在表中標示；Agriculture 的 4 中有 3 是最好引用、也最撐不住重量的一格。"
+  "rows": [
+   [
+    "Therapeutics",
+    "16",
+    "12 of 16",
+    "5 of 12"
+   ],
+   [
+    "Biomanufacturing",
+    "13",
+    "11 of 13",
+    "1 of 11"
+   ],
+   [
+    "Bioremediation",
+    "13",
+    "8 of 13",
+    "1 of 8"
+   ],
+   [
+    "Foundational Advance",
+    "13",
+    "8 of 13",
+    "0 of 8"
+   ],
+   [
+    "Diagnostics",
+    "11",
+    "7 of 11",
+    "1 of 7"
+   ],
+   [
+    "Conservation",
+    "9",
+    "8 of 9",
+    "2 of 8"
+   ],
+   [
+    "Food & Nutrition",
+    "8",
+    "4 of 8",
+    "2 of 4 - cell too small"
+   ],
+   [
+    "Fashion & Cosmetics",
+    "7",
+    "3 of 7",
+    "1 of 3 - cell too small"
+   ],
+   [
+    "Agriculture",
+    "5",
+    "4 of 5",
+    "3 of 4 - cell too small"
+   ],
+   [
+    "Space",
+    "4",
+    "3 of 4",
+    "0 of 3 - cell too small"
+   ],
+   [
+    "Software & AI",
+    "3",
+    "1 of 3",
+    "0 of 1 - cell too small"
+   ],
+   [
+    "Infectious Diseases",
+    "2",
+    "1 of 2",
+    "0 of 1 - cell too small"
+   ],
+   [
+    "Oncology",
+    "2",
+    "1 of 2",
+    "0 of 1 - cell too small"
+   ],
+   [
+    "Medical villages combined",
+    "31",
+    "21 of 31",
+    "6 of 21"
+   ],
+   [
+    "Land, water and food combined",
+    "35",
+    "24 of 35",
+    "8 of 24"
+   ],
+   [
+    "Platform villages combined",
+    "40",
+    "26 of 40",
+    "2 of 26"
+   ],
+   [
+    "All villages",
+    "106",
+    "71 of 106",
+    "16 of 71"
+   ]
+  ],
+  "rows_zh": [
+   [
+    "治療 Therapeutics",
+    "16",
+    "16 中有 12",
+    "12 中有 5"
+   ],
+   [
+    "生物製造 Biomanufacturing",
+    "13",
+    "13 中有 11",
+    "11 中有 1"
+   ],
+   [
+    "生物復育 Bioremediation",
+    "13",
+    "13 中有 8",
+    "8 中有 1"
+   ],
+   [
+    "基礎推進 Foundational Advance",
+    "13",
+    "13 中有 8",
+    "8 中有 0"
+   ],
+   [
+    "診斷 Diagnostics",
+    "11",
+    "11 中有 7",
+    "7 中有 1"
+   ],
+   [
+    "保育 Conservation",
+    "9",
+    "9 中有 8",
+    "8 中有 2"
+   ],
+   [
+    "食品與營養 Food & Nutrition",
+    "8",
+    "8 中有 4",
+    "4 中有 2－樣本過小"
+   ],
+   [
+    "時尚與美妝 Fashion & Cosmetics",
+    "7",
+    "7 中有 3",
+    "3 中有 1－樣本過小"
+   ],
+   [
+    "農業 Agriculture",
+    "5",
+    "5 中有 4",
+    "4 中有 3－樣本過小"
+   ],
+   [
+    "太空 Space",
+    "4",
+    "4 中有 3",
+    "3 中有 0－樣本過小"
+   ],
+   [
+    "軟體與 AI Software & AI",
+    "3",
+    "3 中有 1",
+    "1 中有 0－樣本過小"
+   ],
+   [
+    "傳染病 Infectious Diseases",
+    "2",
+    "2 中有 1",
+    "1 中有 0－樣本過小"
+   ],
+   [
+    "腫瘤 Oncology",
+    "2",
+    "2 中有 1",
+    "1 中有 0－樣本過小"
+   ],
+   [
+    "醫學類村落合計",
+    "31",
+    "31 中有 21",
+    "21 中有 6"
+   ],
+   [
+    "土地、水與食物類合計",
+    "35",
+    "35 中有 24",
+    "24 中有 8"
+   ],
+   [
+    "平台型村落合計",
+    "40",
+    "40 中有 26",
+    "26 中有 2"
+   ],
+   [
+    "全部村落",
+    "106",
+    "106 中有 71",
+    "71 中有 16"
+   ]
+  ]
+ },
+ "checklist": [
+  "Ask who will physically hold the device or run the process on the day it is used. If that person has a degree in your field, your non-expert loop will not happen by accident.",
+  "Make the non-expert ask for a number. HongKong-JSS's sensor swap and Hongwen School's 70-80 RMB per tonne both started as a quantity somebody named out loud.",
+  "Fix one or two success conditions from practice before the construct is designed, as Athens did, and write down that they did not come from the literature.",
+  "Recruit the people who disagree with the premise. Oxford's twenty chemical-free hobbyists narrowed the target user; GEMS-Taiwan's natural-farming forum set the release threshold.",
+  "Record non-expert input that changed nothing, and say so. IISER-Kolkata published a fisher who could not see the effect; Stanford published that it could not find patients. Both are better than a survey that only changed a word.",
+  "Check the type of change before claiming a loop: a part number, a concentration, a format, a delivery route or who may buy it counts. A changed word, a new leaflet or a reframed slogan does not."
+ ],
+ "checklist_zh": [
+  "問清楚：產品真正被使用的那一天，是誰用手拿著裝置、或是誰在操作那套製程。如果那個人在你的領域裡有學位，你的非專家迴路就不會自己發生。",
+  "讓非專家開口要一個數字。HongKong-JSS 換感測器、Hongwen School 的每公噸 70-80 人民幣，都是從某個人說出口的量值開始的。",
+  "在構築設計之前，就從實務裡定下一到兩項成功條件，像 Athens 那樣，並寫明這些條件不是從文獻來的。",
+  "去找那些不同意前提的人。Oxford 那二十位不用藥的業餘養蜂人收窄了目標使用者；GEMS-Taiwan 的自然農法論壇定下了釋放閾值。",
+  "把沒有造成任何改變的非專家輸入也記下來，並直說。IISER-Kolkata 公開記下一位看不出效應的漁民；Stanford 公開寫下他們找不到病友。兩者都比一份只改了一個用詞的問卷更好。",
+  "宣稱閉合迴路之前，先檢查改變的類型：元件型號、濃度、劑型、投遞路徑，或誰可以購買，這些算數。改掉一個用詞、做一張新傳單、換一句標語，不算。"
+ ],
+ "method": "Population: all 106 team files on disk, every one of them a Top 10 or special-prize winner or nominee, so this is the most decorated tenth of iGEM 2026 and not a sample of the competition. Loop scores: the 93 teams scored in the earlier ihp-depth analysis keep that analysis's score unchanged, and 'closed a loop' means its score of 4 - a named stakeholder, a specific thing said, and a change to the build, deployment, readout, safety design or business model. Thirteen files landed after that scoring ran (BASIS-China, BGI-College, Bist-China, Michigan, NCKU-Tainan, NU Boston, Squirrel-Beijing, TU Darmstadt, Tsinghua-T, UBC-Vancouver, UiOslo-Norway, WHU-China, XJTLU-Software); I scored those thirteen myself on the same rubric and seven reached 4, so 71 of 106 against the earlier 64 of 93. Non-expert rule, written before classifying: a person counts as a NON-EXPERT when their standing in the exchange rests on lived experience or hands-on practice rather than on a credential, a research post, a regulatory office or a technical role in a company - farmers, growers, fishers, beekeepers, residents, patients and their families, carers, frontline manual workers, market vendors, shop and salon staff, artisans, consumers, students, volunteers, indigenous community members. EXPERT covers professors and researchers, physicians, dentists, nurses and medical technologists, regulators and officials, company scientists, engineers, technical directors, QA and regulatory-affairs staff, investors and corporate managers, lawyers, ethicists and social scientists, peer iGEM teams and alumni. The hard case the brief names - a farmer with a degree - I resolved toward NON-EXPERT when the person speaks about running their own operation, and toward EXPERT when they are employed to advise other people's operations. Mr Lu of Worldshaper-Shanghai, described as a grower and extension author, is counted non-expert on that rule and is the clearest instance of it; Yusong Shi of GYHS, a doctoral student who is also a stony-coral hobbyist, is counted expert on the same rule, and GYHS's Conservation cell would move if that call reversed. A team counts in the last column if at least one documented loop was closed by a non-expert; ten of the sixteen changed something physical (sensor, delivery route, formulation, containment architecture) and six changed deployment scope, target user or a selection criterion. Twelve further teams have a documented non-expert input that changed only claims, language, education material or success framing, and those are counted as expert-closed, which is the same line the earlier analysis drew. Counting only physical changes gives nine or ten rather than the earlier analysis's 'six or seven in 93'; the difference is thirteen extra files plus formulation and delivery-route changes I counted and it did not, and this is the one place the two analyses differ. Villages: 50 of the 106 files carry no village string, and the high-school section does not have fine-grained villages at all - it competes in four merged clusters, so GEMS-Taiwan's agricultural project sat in the Space / Foundational Advance / Software & AI / Biomanufacturing cluster. I therefore assigned every team to one of the thirteen collegiate villages by where the technology is deployed and who it affects, using the official label from results2026.json where one exists. Several assignments are genuinely arguable - Cornell's smart bandage sits in Fashion & Cosmetics because that is the village it won, QingdaoAcademy and MIT-MAHE could be read as Food rather than Biomanufacturing, Mingdao and TU Darmstadt as Bioremediation rather than Biomanufacturing - and a different reading would move single teams between rows without changing the platform-versus-applied result. What this cannot see: whether a change was made because of the advice or attributed to it afterwards; the wiki behind the file summary, except for Athens and HUST-China, whose pages I read directly to check two borderline calls; whether a loop recorded as expert-closed had an unrecorded non-expert behind it; and whether judges preferred credentialled stakeholders, which is a plausible alternative explanation for the platform-village result that these files cannot settle. Nine of the thirteen village cells have fewer than eight closed loops and are flagged in the table; Agriculture at 3 of 4 is the single most quotable cell and the least load-bearing.",
+ "method_zh": "母體：磁碟上全部 106 份隊伍檔案，每一支都是 Top 10 或特別獎的得主或入圍者，因此這是 iGEM 2026 中受獎最多的十分之一，而不是整個競賽的抽樣。迴路評分：先前 ihp-depth 分析已評分的 93 支隊伍沿用該分析的分數不變，而「閉合了迴路」即該分析的 4 分——具名的利害關係人、一句具體說了什麼，以及建構、部署、讀出、安全設計或商業模式上的一項改變。有 13 份檔案是在那次評分之後才到的（BASIS-China、BGI-College、Bist-China、Michigan、NCKU-Tainan、NU Boston、Squirrel-Beijing、TU Darmstadt、Tsinghua-T、UBC-Vancouver、UiOslo-Norway、WHU-China、XJTLU-Software）；這 13 支由我以同一套評分標準自行評分，其中 7 支達到 4 分，因此是 106 中的 71，對應先前的 93 中的 64。非專家判準，在開始分類之前就先寫下：當一個人在這場對話中的立足點來自親身經驗或動手實務，而不是來自資歷、研究職位、主管機關職務或公司裡的技術角色時，即計為**非專家**——農民、種植者、漁民、養蜂人、居民、病人與家屬、照顧者、第一線體力工作者、市場攤商、店員與沙龍人員、工匠、消費者、學生、志工、原住民社群成員。**專家**則涵蓋教授與研究人員、醫師、牙醫、護理師與醫檢師、主管機關人員與官員、企業科學家、工程師、技術總監、品保與法規事務人員、投資人與企業經理人、律師、倫理學者與社會科學家，以及同儕 iGEM 隊伍與校友。委託說明特別點名的難題——有學位的農民——我的處理方式是：當這個人談的是經營自己的場域時計為非專家，當他受雇去指導別人的場域時計為專家。Worldshaper-Shanghai 的 Mr Lu 被描述為「種植者兼推廣作者」，依此規則計為非專家，也是這條規則最清楚的一個案例；GYHS 的 Yusong Shi 是博士生同時也是硬珊瑚玩家，依同一規則計為專家，而若這個判斷反過來，GYHS 所在的 Conservation 欄位數字就會變動。只要有至少一條記載在案的迴路由非專家閉上，該隊伍就計入最後一欄；16 支之中有 10 支改了實體的東西（感測器、投遞路徑、劑型、圍堵架構），另外 6 支改的是部署範圍、目標使用者或選擇判準。另有 12 支隊伍有記載在案的非專家輸入，但只改了主張、用詞、教育素材或成功的框架，這些仍計為由專家閉合，和先前分析劃的是同一條線。若只計實體改變，得到的是 9 到 10 支，而非先前分析所說的「93 中的六或七支」；差異來自多出的 13 份檔案，加上我把劑型與投遞路徑的改變也計入而該分析沒有——這是兩份分析唯一相異之處。村落：106 份檔案中有 50 份沒有村落欄位字串，而高中組根本沒有細分村落，它們是在四個合併的集群中競賽，所以 GEMS-Taiwan 的農業專案被放在 Space / Foundational Advance / Software & AI / Biomanufacturing 這個集群裡。因此我依「技術部署在哪裡、影響到誰」，把每一支隊伍指派到十三個大專組村落之一，有官方標籤者（來自 results2026.json）即採用官方標籤。有幾個指派確實可以爭論——Cornell 的智慧敷料放在 Fashion & Cosmetics，是因為那是它得獎的村落；QingdaoAcademy 與 MIT-MAHE 也可讀成 Food 而非 Biomanufacturing；Mingdao 與 TU Darmstadt 可讀成 Bioremediation 而非 Biomanufacturing——不同讀法會讓個別隊伍在列與列之間移動，但不會改變「平台型 vs 應用型」這個結果。這份分析看不到的：一項改變究竟是因為那個建議而做，還是事後才歸因於它；檔案摘要背後的 wiki，除了 Athens 與 HUST-China 這兩個邊界案例的頁面我直接讀過以外；一條被記為由專家閉合的迴路背後，是否有未被記錄的非專家；以及評審是否偏好有資歷的利害關係人——這是平台型村落結果的一個合理替代解釋，而這些檔案無法裁決。十三個村落欄位中有九個的閉合迴路少於八條，已在表中標示；Agriculture 的 4 中有 3 是最好引用、也最撐不住重量的一格。"
 }

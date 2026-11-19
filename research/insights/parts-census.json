@@ -23,6 +23,11 @@
     "83,030 characters",
     "12 figures"
    ],
+   "chips_zh": [
+    "BBa_26BFFCJG",
+    "83,030 字元",
+    "12 張圖"
+   ],
    "link": "https://registry.igem.org/parts/bba-26bffcjg",
    "linkText": "Squirrel-Beijing's pNP sensor circuit"
   },
@@ -34,6 +39,11 @@
    "body": "HKSSC won high-school Best New Basic Part with prbA's native promoter and RBS (BBa_262HI0IB), copied from GenBank AY077721.1. The argument was that nobody had registered it. BPROM gave LDF 5.30 with a TATAAT −10 box at position 163 and a TTGAAA −35 box at 142; the fragment went into the promoterless distribution vector BBa_J435300 by HindIII/KpnI; gels, 974 bp and 2,680 bp band sizes and triplicate NanoDrop A260/A280 are all on the page; the GFP read-out sits on the linked composite BBa_26MSEOFB. Total cost: one gBlock, one free web tool, one reporter.",
    "body_zh": "HKSSC 以 prbA 的天然啟動子與 RBS（BBa_262HI0IB）拿下高中組 Best New Basic Part，序列直接取自 GenBank AY077721.1。他們的論點是：從來沒有人登錄過它。BPROM 給出 LDF 5.30，−10 box TATAAT 在第 163 位、−35 box TTGAAA 在第 142 位；片段以 HindIII/KpnI 接進無啟動子的配送載體 BBa_J435300；電泳圖、974 bp 與 2,680 bp 的條帶大小、三重複的 NanoDrop A260/A280 全都在頁面上；GFP 讀值放在連結過去的複合元件 BBa_26MSEOFB。總成本：一段 gBlock、一個免費網頁工具、一個報導基因。",
    "chips": [
+    "BBa_262HI0IB",
+    "247 bp",
+    "BPROM LDF 5.30"
+   ],
+   "chips_zh": [
     "BBa_262HI0IB",
     "247 bp",
     "BPROM LDF 5.30"
@@ -53,6 +63,11 @@
     "n = 3",
     "ε = 18,100 M⁻¹cm⁻¹"
    ],
+   "chips_zh": [
+    "BBa_269NN9UX",
+    "n = 3",
+    "ε = 18,100 M⁻¹cm⁻¹"
+   ],
    "link": "https://registry.igem.org/parts/bba-269nn9ux",
    "linkText": "GeoEsterase characterisation"
   },
@@ -66,6 +81,11 @@
    "chips": [
     "BBa_26QSD9SO",
     "parent BBa_K2315014",
+    "RFU/OD₆₀₀"
+   ],
+   "chips_zh": [
+    "BBa_26QSD9SO",
+    "母件 BBa_K2315014",
     "RFU/OD₆₀₀"
    ],
    "link": "https://registry.igem.org/parts/bba-26qsd9so",
@@ -83,6 +103,11 @@
     "GU Frankfurt 25 items",
     "GHCIS 9 items"
    ],
+   "chips_zh": [
+    "Heidelberg 18 件",
+    "GU Frankfurt 25 件",
+    "GHCIS 9 件"
+   ],
    "link": "https://registry.igem.org/collections/5bceaa90-cc31-4958-a74f-cc3139ec02c2",
    "linkText": "Heidelberg's VOYAGE collection"
   },
@@ -97,6 +122,10 @@
     "8 of 12 blank",
     "Princeton: no characterisation doc"
    ],
+   "chips_zh": [
+    "8/12 空白",
+    "Princeton：沒有表徵文件"
+   ],
    "link": "https://registry.igem.org/collections/eda71dd5-c755-4b01-87cd-819d4222a108",
    "linkText": "GHCIS's documented collection"
   },
@@ -108,6 +137,11 @@
    "body": "The registry now shows a Used in count on every part page, which is the closest thing to a reuse metric iGEM has. On the 2026 winners it only ever points at the same team's own composites. Nothing in this cohort was picked up by a stranger inside the competition year. But the winners themselves are heavy consumers of old parts: GCGS built on a 2017 part and a 2014 promoter, HKSSC used a distribution-kit vector, and nine of the fourteen items in Kyoto's leucine-zipper collection are prior-year BBa_K parts re-measured. The registry pays out on a two-to-ten year lag. That is a reason to start, not a reason to wait.",
    "body_zh": "registry 現在在每個元件頁面上顯示 Used in 計數，這是 iGEM 目前最接近「重複使用」的指標。在 2026 年的得獎元件上，它指向的永遠是同一隊自己的複合元件。這批隊伍裡沒有任何元件在競賽當年被陌生人採用。但得獎者自己大量消費舊元件：GCGS 建立在一個 2017 年的元件與一個 2014 年的啟動子上，HKSSC 使用了配送套件的載體，Kyoto 的 leucine zipper 集合中十四項裡有九項是往年的 BBa_K 元件並重新量測。registry 的回報有兩到十年的遞延。這是該開始的理由，不是該等待的理由。",
    "chips": [
+    "BBa_K2315014 (2017)",
+    "BBa_K1529310 (2014)",
+    "BBa_J435300"
+   ],
+   "chips_zh": [
     "BBa_K2315014 (2017)",
     "BBa_K1529310 (2014)",
     "BBa_J435300"

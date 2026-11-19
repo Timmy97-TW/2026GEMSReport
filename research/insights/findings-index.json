@@ -18,6 +18,9 @@
    "chips": [
     "53% vs 23%"
    ],
+   "chips_zh": [
+    "53% 對 23%"
+   ],
    "link": "drylab"
   },
   {
@@ -30,6 +33,9 @@
    "chips": [
     "all free tools"
    ],
+   "chips_zh": [
+    "全是免費工具"
+   ],
    "link": "drylab"
   },
   {
@@ -41,6 +47,9 @@
    "body_zh": "每一個仍在線的工具，在 wiki 凍結當日就已經上線；每一個只有原始碼的工具，wiki 上唯一的位址都是 localhost。這不是寫程式或預算的決定，而是提前好幾個月做的架站決定。兩支高中隊伍交付得比多數大學還好。所有檢查過的 repository，star 與 fork 都是零。",
    "chips": [
     "hosted on freeze day"
+   ],
+   "chips_zh": [
+    "凍結日當天已架站"
    ],
    "link": "drylab"
   },
@@ -55,6 +64,10 @@
     "provenance visible",
     "\"not assessed\" as a state"
    ],
+   "chips_zh": [
+    "來源看得見",
+    "「未評估」也是一種狀態"
+   ],
    "link": "drylab"
   },
   {
@@ -66,6 +79,9 @@
    "body_zh": "21 個得獎軟體工具中有 8 個還能跑，所有檢查過的程式庫星數與分支數皆為零，106 支隊伍沒有一支做過跨實驗室量測環，71 個閉合的迴路中只有九到十個是與非專業人士閉合的。這些都是截止日造成的。GEMS 的回應是一個**沒有截止日的社團式長期計畫**，讓幾個題目跨年走下去——它的定義、條件與目前的題目清單都在這一頁。",
    "chips": [
     "a programme, not a category"
+   ],
+   "chips_zh": [
+    "是計畫，不是獎項類別"
    ],
    "link": "good"
   },
@@ -80,6 +96,10 @@
     "71 of 106",
     "9–10 exceptions"
    ],
+   "chips_zh": [
+    "71/106",
+    "9 至 10 個例外"
+   ],
    "link": "good"
   },
   {
@@ -93,6 +113,10 @@
     "survey-designed",
     "measured"
    ],
+   "chips_zh": [
+    "從問卷設計",
+    "量過成效"
+   ],
    "link": "good"
   },
   {
@@ -104,6 +128,9 @@
    "body_zh": "Worldshaper-Shanghai 報告自家酵素得出負的 NPV。DTU-Denmark 的 LCA 發現水泥共處理在幾乎每項指標上都勝過他們的路線，接著把每一項落敗轉成工程目標。Stockholm 在安全委員會否決開放水域釋放後拆掉了自己的創業計畫——然後拿下安全與保安獎。",
    "chips": [
     "negative NPV, published"
+   ],
+   "chips_zh": [
+    "NPV 為負，照樣公開"
    ],
    "link": "good"
   },
@@ -118,6 +145,10 @@
     "text before JS",
     "/judging page"
    ],
+   "chips_zh": [
+    "先給文字，再跑 JS",
+    "/judging 頁"
+   ],
    "link": "teams"
   },
   {
@@ -130,6 +161,9 @@
    "chips": [
     "13 teams · 6 wins"
    ],
+   "chips_zh": [
+    "13 隊 · 6 項大獎"
+   ],
    "link": "teams"
   },
   {
@@ -141,6 +175,9 @@
    "body_zh": "治療類團隊與生物復育類團隊，和非專業人士閉合迴路的頻率其實差不多。真正分開這個領域的，是有沒有實驗室以外的人實際操作這個東西：在平台類賽道——Foundational Advance、Space、Software & AI、Biomanufacturing——**26 支得獎隊伍中只有 2 支**曾閉合設計迴路，應用類賽道則是 **45 支中有 14 支**。",
    "chips": [
     "2 of 26 vs 14 of 45"
+   ],
+   "chips_zh": [
+    "2/26 對 14/45"
    ],
    "link": "good"
   },
@@ -155,6 +192,10 @@
     "69 of 106",
     "0 measurement rings"
    ],
+   "chips_zh": [
+    "69/106",
+    "0 個量測環"
+   ],
    "link": "teams"
   },
   {
@@ -167,6 +208,10 @@
    "chips": [
     "0 of 106",
     "2 name a screening regime"
+   ],
+   "chips_zh": [
+    "0/106",
+    "2 支寫出篩查機制"
    ],
    "link": "good"
   },
@@ -181,6 +226,10 @@
     "83,030 vs 440 characters",
     "improved part: 0 nominees"
    ],
+   "chips_zh": [
+    "83,030 對 440 字元",
+    "改良元件：0 入圍"
+   ],
    "link": "teams"
   },
   {
@@ -193,6 +242,10 @@
    "chips": [
     "15% compute an LOD",
     "5% measure twice"
+   ],
+   "chips_zh": [
+    "15% 算了 LOD",
+    "5% 量過兩次"
    ],
    "link": "drylab"
   },
@@ -207,6 +260,10 @@
     "6 of 20 rebuildable",
     "1 ever reused"
    ],
+   "chips_zh": [
+    "6/20 可重建",
+    "只有 1 台被再用"
+   ],
    "link": "drylab"
   },
   {
@@ -219,6 +276,10 @@
    "chips": [
     "106 of 106",
     "only 4 state a boundary"
+   ],
+   "chips_zh": [
+    "106/106",
+    "只有 4 支寫出界線"
    ],
    "link": "drylab"
   }
