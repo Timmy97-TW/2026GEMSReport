@@ -146,3 +146,52 @@ the Bacillus optogenetics line.
 - Wave 2 (special prizes ×6): landing.
 - Wave 3: remaining collegiate nominees, remaining HS nominees, trend-file Chinese translation — launched.
 - Team files on disk at last check: 35.
+
+---
+
+## Session 2 (from 15:41, after the window reset)
+
+All agents died at the 5-hour limit and were **resumed with SendMessage rather than restarted** — their work
+was saved and they continued from their own transcripts. Restarting would have thrown away tens of thousands
+of tokens of fetching. Keep doing this.
+
+### Insight blocks complete (7)
+`research/insights/*.json` merge into the report's sections via build.py.
+
+| id | tab | the finding |
+|---|---|---|
+| technique-census | drylab | Teams that fit AND validate reach Top 10 at 71% vs 40%. AlphaFold still dominates iGEM (19 of 54) though the field moved to open models. COPASI is dead (1 mention); Python won. High-school teams do MORE techno-economic analysis than undergraduates. |
+| highschool-ceiling | drylab | The HS differentiator is evaluation discipline, not tools. Lambert-GA won Best Model by benchmarking the confidence metrics themselves (38-metric ensemble, ROC-AUC 0.541, its own hit not top-scoring). GCGS is the control: Top 10 with no model page at all. |
+| software-afterlife | drylab | 8 of 21 award-winning tools are live. The separating habit is a hosting decision made months early — every live tool was up on freeze day, every source-only tool lists localhost. Zero stars/forks anywhere. |
+| ihp-depth | good | 64 of 93 closed a real stakeholder-to-design loop — but almost every loop was closed by a credentialled technical expert. The publics and patients the criterion is about changed the vocabulary, not the vector (6-7 exceptions in 93). |
+| good-patterns | good | Four separating habits: design education from survey data and measure it; train the team first (GU Frankfurt / NaWik); put disagreeing stakeholders in contact (Oxford's Buzz In); argue against yourself in public. |
+| wiki-craft | teams | Winners ship text in the HTML before JS runs, and build an explicit /judging executive layer that deep-links evidence. Antipatterns that do NOT correlate with winning: dark mode, late alt-text sweeps, huge galleries, mascot systems. What winners DO share is prefers-reduced-motion. |
+| taiwan-cohort | teams | Taiwan fielded 13 competing teams and won 6 awards — more than any East Asian territory except China — but every technical award came from the high-school tier, and the island is invisible in parts, software and collegiate modelling. |
+
+### Corrections to earlier assumptions
+- **Most 2026 wikis are client-rendered SPAs.** curl returns an empty shell. Only a minority (Heidelberg,
+  GEMS-Taiwan, ETH-Zurich) are server-rendered. Use the browser pane, and open your OWN tab with
+  `tabs_create` — the pane is shared and agents collide on the default tab, which cost the wiki-craft
+  analyst several nominees.
+- Nearly all wiki images are `.avif`. The original jpg/png grep found nothing on most teams.
+- **Do not trust a hand-written team list.** My Taiwan brief named 6 teams; the analyst found 13 competing,
+  via `api.igem.org/v1/teams?year=2026` and `/teams/<id>/awards`. That API is the right source, and it was
+  available all along.
+
+### Two devices worth lifting into GEMS practice
+- TU Delft labels **every cell** of its entrepreneurship decision matrix with evidence provenance
+  (Factual / Inferred / Estimated / Speculative), with a legend saying the tag records the evidence, not the
+  judgement. The most copyable single device found anywhere in 2026.
+- Lambert-GA closes Human Practices with a dated **Project Pivots** timeline: each pivot names the expert
+  whose feedback caused it and shows before to after ("Nanobody to Minibinder").
+
+### Next directions
+1. **Apply wiki-craft's checklist to this site.** We are currently its antipattern #4 — a client-rendered app
+   serving an empty shell. Mirror TU Delft: emit a static text version plus an `llms.txt` from build.py.
+2. Finish the Chinese translation sweep (team files and both trend files).
+3. Re-verify every image URL after the final build; drop the dead ones.
+4. Mobile pass.
+5. Possible further analysis: cross-reference the IHP expert-vs-public finding against village — is the
+   "experts only" pattern worse in therapeutics than in agriculture?
+6. GEMS has **no collaboration page at all**, and appears on no other Taiwanese team's. NYCU-Taiwan's
+   27 July Meet-Up drew 53 people from five teams. That is a standing opportunity, not an observation.

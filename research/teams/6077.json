@@ -6,8 +6,11 @@
   "village": "Bioremediation",
   "wiki": "https://2026.igem.wiki/uottawa/",
   "projectTitle": "Nulfur",
+  "projectTitle_zh": "Nulfur",
   "tagline": "Break bonds, not the fuel: engineered biodesulfurization as a polishing step for refractory sulfur in diesel.",
+  "tagline_zh": "斷鍵，而不是斷燃料：以工程化生物脫硫作為柴油中難脫除硫化物的精製步驟。",
   "summary": "Nulfur rebuilds the four-enzyme 4S biodesulfurization pathway (DszA, DszB, DszC plus a flavin reductase) from Rhodococcus erythropolis inside Pseudomonas putida KT2440, targeting dibenzothiophene (DBT) — the refractory sulfur compound that conventional hydrodesulfurization struggles to remove without running at 300-400 C and 3-6 MPa. Rather than replacing hydrodesulfurization, the team reframed the project after industry consultation as a modular side-stream polishing step on diesel. The project won on the strength of its alternative chassis work: because P. putida is a non-model organism, the team built the missing toolkit from scratch (a Golden Gate-compatible broad-host-range vector, a measured four-promoter set, and a working heat-shock transformation protocol) and published it as a handbook for other teams. That platform contribution, paired with an unusually deep dry lab (COBRApy genome-scale modelling, a FoldX/ThermoMPNN protein engineering pipeline, and an agentic AI research platform called Cofactor), won Best Alternative Platform and Best Wiki and Best Bioremediation Project nominations.",
+  "summary_zh": "Nulfur 把源自 Rhodococcus erythropolis 的四酶 4S 生物脫硫途徑（DszA、DszB、DszC 加上一個黃素還原酶）重建於 Pseudomonas putida KT2440 之中，標的是二苯并噻吩（DBT），也就是傳統加氫脫硫必須在 300-400 C、3-6 MPa 條件下才勉強能處理的難脫除硫化物。團隊在與業界諮詢後，並未把專案定位為取代加氫脫硫，而是重新定義為柴油上的模組化側流精製步驟。本專案的獲獎實力來自替代底盤的工作：由於 P. putida 屬於非模式生物，團隊從零建立起原本缺乏的工具組（一個相容於 Golden Gate 的廣宿主範圍載體、一組經過量測的四啟動子系列，以及一套可用的熱休克轉型流程），並把它整理成供其他團隊使用的手冊。這項平台貢獻，搭配一個深度罕見的乾實驗（COBRApy 基因組尺度代謝模型、FoldX/ThermoMPNN 蛋白質工程流程，以及名為 Cofactor 的代理式 AI 研究平台），為團隊贏得 Best Alternative Platform，並入圍 Best Wiki 與 Best Bioremediation Project。",
   "awards": [
     "Undergrad Top 10",
     "Best Alternative Platform winner (Undergrad)",
@@ -16,46 +19,116 @@
   ],
   "dry": {
     "frameworks": "Three distinct computational layers. (1) Genome-scale metabolic modelling: the published P. putida KT2440 model iJN1463 was extended in COBRApy with the heterologous 4S pathway reactions (DszA/B/C/D), and flux balance analysis solved through GLPK over a 1000-point sweep of the DBT exchange flux bound showed metabolism never bottlenecks uptake, while forcing DszB flux revealed an NADH-limited ceiling of 9.80 mmol gDCW-1 h-1 that formate co-feeding raises 25.5% to 12.30. (2) A first-principles mass-transfer model of the biphasic reactor combining Hinze-Kolmogorov droplet-breakup scaling, film theory at the stagnant-sphere limit (Sh = 2), micellar solubilization above the CMC and Michaelis-Menten uptake, solved by bisection for the steady-state free DBT concentration; it predicts rhamnolipid raises effective DBT availability 2.8- to 34-fold. (3) A protein engineering pipeline that screened over 1,100 candidate substitutions in DszB and DszC using ConSurf conservation grades, MD-derived backbone RMSF, and an ensemble of FoldX (empirical force field) plus ThermoMPNN (deep learning on ProteinMPNN embeddings) for ddG, then validated catalytic integrity with explicit-solvent GROMACS MD (amber99sb-ildn, TIP3P) and AutoDock Vina ligand docking before shortlisting five mutants per enzyme.",
+    "frameworks_zh": "三個不同的計算層次。(1) 基因組尺度代謝模型：團隊在 COBRApy 中把已發表的 P. putida KT2440 模型 iJN1463 擴充，加入異源 4S 途徑的反應（DszA/B/C/D），並以 GLPK 求解通量平衡分析，對 DBT 交換通量上限做 1000 點掃描，結果顯示代謝從未成為攝取的瓶頸；而強制給定 DszB 通量後，則揭露出一個受 NADH 限制的上限 9.80 mmol gDCW-1 h-1，共餵入甲酸可將此上限提高 25.5% 至 12.30。(2) 雙相反應器的第一原理質傳模型，結合 Hinze-Kolmogorov 液滴破裂尺度律、停滯球極限下的薄膜理論（Sh = 2）、CMC 以上的微胞增溶，以及 Michaelis-Menten 型攝取，並以二分法求解穩態的游離 DBT 濃度；模型預測鼠李糖脂可讓有效的 DBT 可得量提高 2.8 至 34 倍。(3) 一條蛋白質工程流程，以 ConSurf 保守性等級、由分子動力學模擬得到的主鏈 RMSF，以及 FoldX（經驗力場）加上 ThermoMPNN（在 ProteinMPNN 嵌入向量上做深度學習）的集成來估算 ddG，篩選 DszB 與 DszC 中超過 1,100 個候選取代；接著以顯式溶劑的 GROMACS 分子動力學模擬（amber99sb-ildn、TIP3P）與 AutoDock Vina 配體對接驗證催化功能是否完好，最後為每個酶挑出五個突變體入選名單。",
     "dataviz": "The wiki is a server-rendered-feel React site with a genuinely engineered visual layer: a WebGL/Three.js distillation-tower scene and animated pathway loop on the landing page, every equation rendered as its own labelled SVG so the derivation reads as a chain, and predictor-agreement scatter plots (Figure 9) that shade the quadrant where FoldX and ThermoMPNN both call a substitution stabilising and enlarge it to label the five mutations actually sent to the bench. The Human Practices page is built as a clickable stacked column where each band is one of seven kinds of conversation across 21 entries, so a judge can jump straight to the stakeholder group they care about. Every figure carries a long descriptive alt attribute that states the figure's actual numbers, not just its subject.",
+    "dataviz_zh": "這個 wiki 是一個讀起來像伺服器渲染的 React 網站，視覺層確實經過工程設計：首頁有以 WebGL/Three.js 製作的蒸餾塔場景與動畫化的途徑迴圈；每一條方程式都各自渲染成帶標註的 SVG，使整段推導讀起來像一條連貫的鏈；預測器一致性散布圖（圖 9）則把 FoldX 與 ThermoMPNN 同時判定該取代具穩定化效果的象限加上底色，並將該象限放大，標示出實際送進實驗台的五個突變。人類實踐頁面做成可點選的堆疊柱狀圖，每一段代表 21 筆紀錄中七類對話之一，讓評審可以直接跳到自己關心的利害關係人族群。每張圖都附有長篇描述性的 alt 屬性，寫出該圖實際的數值，而不只是它的主題。",
     "datascience": "The headline data-science contribution is turning the protein engineering loop into a measured, auditable artefact. The team built a six-arm evaluation suite for Cofactor with four ablation regimes (bare, bare_prompt, tools, full) that add exactly one harness layer each, then scored outcomes: 37 deterministic probes in Arms A and B all pass, Arm C recorded zero workflow violations across 27 scorable runs under the phase machine versus two in the bare condition, and Arm D found the ungrounded condition hallucinated amino-acid positions while both grounded conditions did not. Arm E asked the agent to reconstruct the initial experimental designs of six published papers (three postdating the model's knowledge cutoff) and audited tool transcripts for contamination. On the wet-lab side, the promoter library was quantified as log-normalized mScarlet-i fluorescence per OD600 corrected for media background and P. putida autofluorescence, which revealed only three distinct expression tiers rather than the four reported in the literature.",
+    "datascience_zh": "最突出的資料科學貢獻，是把蛋白質工程的迭代迴圈變成一個可量測、可稽核的產出。團隊為 Cofactor 建立了六組評估套件，含四種消融（ablation）設定（bare、bare_prompt、tools、full），每一種剛好多加一層外框機制，然後對結果評分：A、B 兩組中 37 項確定性探測全數通過；C 組在階段狀態機之下，27 次可評分執行中記錄到零次流程違規，而在 bare 條件下為兩次；D 組則發現未加接地的條件會虛構出胺基酸位置，而兩種有接地的條件都沒有。E 組要求代理重建六篇已發表論文的初始實驗設計（其中三篇發表於模型知識截止日之後），並稽核工具的操作紀錄以檢查是否受到汙染。濕實驗方面，啟動子庫以每 OD600 的 mScarlet-i 螢光取對數歸一化後定量，並扣除培養基背景與 P. putida 自體螢光，結果顯示只有三個明顯的表現量層級，而非文獻報告中的四個。",
     "software": "Cofactor, an agentic protein engineering platform released under MIT licence at https://gitlab.igem.org/2026/software/uottawa/cofactor. It wraps a general-purpose LLM in an explicit phase state machine whose preconditions are checked against a 16-table SQLite store (.cofactor/research.sqlite3, WAL journaling, foreign keys) rather than against the model's claims, so runs resume across sessions and the research record stays readable without the tool. A deterministic tool layer covers sequence operations, RFC10 compliance checking, codon optimisation, restriction analysis, solubility scanning, and retrieval from UniProt, NCBI, RCSB PDB, AlphaFold, PubMed and Europe PMC; an ExecutionManager submits jobs to local, SSH or Slurm backends. Three frontends ship: a FastAPI web UI, a Textual TUI and a CLI, all bring-your-own-key and model-agnostic against any OpenAI-compatible endpoint. The team also released the P. putida handbook with protocols and the sanitized Golden Gate-ready pBBR1MCS-2 vector to the iGEM Registry.",
-    "stack": ["COBRApy", "GLPK", "iJN1463 genome-scale model", "FoldX", "ThermoMPNN", "ProteinMPNN embeddings", "ConSurf", "GROMACS", "amber99sb-ildn / TIP3P", "AutoDock Vina", "Python 3.11", "SQLite (WAL)", "FastAPI", "Textual TUI", "Slurm / SSH job submission", "React", "Three.js / WebGL", "Open Babel"],
-    "techniques": ["Flux balance analysis", "Genome-scale metabolic model extension", "Hinze-Kolmogorov droplet-breakup scaling", "Film-theory interfacial mass transfer", "Micellar solubilization modelling", "Michaelis-Menten uptake kinetics", "Bisection root-finding", "Sensitivity analysis over droplet size", "ddG ensemble prediction", "Molecular dynamics (RMSF, native-contact persistence)", "Ligand docking", "LLM agent harness with phase-gated state machine", "Ablation-based evaluation (4 regimes, 6 arms)", "Rubric scoring by two independent judges", "Techno-economic analysis", "Life cycle assessment", "HAZOP / P&ID process safety analysis"]
+    "software_zh": "Cofactor 是一個代理式蛋白質工程平台，以 MIT 授權釋出於 https://gitlab.igem.org/2026/software/uottawa/cofactor。它把一個通用 LLM 包在一個明確的階段狀態機之中，各階段的前置條件是對照一個 16 張表的 SQLite 資料庫（.cofactor/research.sqlite3，WAL 日誌、外鍵）來檢查，而不是採信模型自己的說法，因此執行可以跨工作階段續跑，研究紀錄也不必依賴這個工具就能讀懂。確定性的工具層涵蓋序列操作、RFC10 相容性檢查、密碼子最佳化、限制酶切位分析、溶解度掃描，以及從 UniProt、NCBI、RCSB PDB、AlphaFold、PubMed 與 Europe PMC 擷取資料；ExecutionManager 則負責把運算工作送往本機、SSH 或 Slurm 後端。平台提供三種前端：FastAPI 網頁介面、Textual TUI 與 CLI，全部採自備金鑰、不限模型，可對接任何 OpenAI 相容端點。團隊同時釋出了 P. putida 手冊（含實驗流程）以及經過整理、可直接用於 Golden Gate 的 pBBR1MCS-2 載體至 iGEM Registry。",
+    "stack": [
+      "COBRApy",
+      "GLPK",
+      "iJN1463 genome-scale model",
+      "FoldX",
+      "ThermoMPNN",
+      "ProteinMPNN embeddings",
+      "ConSurf",
+      "GROMACS",
+      "amber99sb-ildn / TIP3P",
+      "AutoDock Vina",
+      "Python 3.11",
+      "SQLite (WAL)",
+      "FastAPI",
+      "Textual TUI",
+      "Slurm / SSH job submission",
+      "React",
+      "Three.js / WebGL",
+      "Open Babel"
+    ],
+    "techniques": [
+      "Flux balance analysis",
+      "Genome-scale metabolic model extension",
+      "Hinze-Kolmogorov droplet-breakup scaling",
+      "Film-theory interfacial mass transfer",
+      "Micellar solubilization modelling",
+      "Michaelis-Menten uptake kinetics",
+      "Bisection root-finding",
+      "Sensitivity analysis over droplet size",
+      "ddG ensemble prediction",
+      "Molecular dynamics (RMSF, native-contact persistence)",
+      "Ligand docking",
+      "LLM agent harness with phase-gated state machine",
+      "Ablation-based evaluation (4 regimes, 6 arms)",
+      "Rubric scoring by two independent judges",
+      "Techno-economic analysis",
+      "Life cycle assessment",
+      "HAZOP / P&ID process safety analysis"
+    ]
   },
   "good": {
     "publicEngagement": "Education is organised around four stated principles - Access, Adapt, Engage, Extend - and each initiative is written up against one of them. The team ran bilingual (English/French) sessions for 370+ children aged 4-13 in the Ottawa-Carleton District School Board's International and Indigenous Languages Program summer school, reached 70 more through the Ottawa Catholic School Board, and visited AcadeCap International School for ages 4-7. Original hands-on activities include Lava Lamps (oil properties), The Art of Consortia (a collaborative mural standing in for microbial division of labour), Mix and Match Genes, The Power of Bacterial DNA, and a Heavy vs Light Oil worksheet. For durability they published a free interactive children's magazine, Bio-Builder, distributed through local Ottawa public libraries explicitly to reach low-income families who cannot buy such resources, plus a demo list, infographics, a science and research podcast, and a full downloadable resource library of presentations and worksheets so the activities run without the team present. They also hosted the Great Canadian iGEM Incubator poster competition (with QGEM) and the Great Canadian Meetup pitch competition, both with published scoring rubrics.",
+    "publicEngagement_zh": "教育工作圍繞四項明定原則展開，即觸及（Access）、調適（Adapt）、參與（Engage）、延伸（Extend），每項活動都對應其中一項撰寫成果。團隊在 Ottawa-Carleton District School Board 的 International and Indigenous Languages Program 暑期學校，為 370 位以上 4 至 13 歲兒童舉辦英法雙語課程，又透過 Ottawa Catholic School Board 再觸及 70 人，並造訪 AcadeCap International School 面向 4 至 7 歲學童。原創的動手活動包括 Lava Lamps（油的性質）、The Art of Consortia（以共同創作壁畫類比微生物的分工）、Mix and Match Genes、The Power of Bacterial DNA，以及一份 Heavy vs Light Oil 學習單。為了讓成果能持續，團隊出版了免費的互動式兒童雜誌 Bio-Builder，並明確選擇透過渥太華當地公共圖書館發行，以觸及買不起這類資源的低收入家庭；此外還有示範清單、資訊圖表、一檔科學與研究播客，以及一座可完整下載的資源庫，收錄簡報與學習單，讓這些活動在團隊不在場時也能照樣進行。團隊另主辦了 Great Canadian iGEM Incubator 海報競賽（與 QGEM 合辦）以及 Great Canadian Meetup 提案競賽，兩者都公開了評分量表。",
     "ihp": "21 conversations across seven categories, each logged in the same three-part structure: why we went, what we heard, what we changed. The changes are concrete. Dr. Jinwen Chen (Natural Resources Canada, CanmetENERGY-Devon) and Dr. Stephen Larter (Calgary, petroleum geochemist) both told the team to abandon heavy diluted bitumen for diesel because of viscosity, mass-transfer and emulsion-separation barriers, and because diesel carries a hard <10 ppm sulfur limit and concentrated refractory DBTs - the team moved its entire target stream to diesel polishing. Dr. Rasha Maal-Bared warned that viscous crude mixes in localised laminar flow, which put static mixing elements and bioreactor sizing into the continuous-flow design. Patrick Lumley (Safe Sulphur Systems, 33 years in sulfur recovery) said the aqueous sulfite byproduct needs pH control to prevent SO2 release and that Claus-plant load reduction is economically worthless - so a pH control loop went into the P&ID and the business case was rebuilt around hydrogen savings and reduced hydrotreating severity instead of sulfur throughput. Larter's warning about microbially influenced corrosion added corrosion and material-compatibility criteria to the reactor design. Faculty of Engineering Design Day feedback forced the pivot from a full HDS-replacement narrative to the complementary polishing model. Dr. Corrie DaCosta, a protein chemist, was consulted specifically about what Cofactor's output report must contain to be usable by the person doing the engineering, and the report format changed as a result.",
+    "ihp_zh": "七個類別、共 21 場對話，每一場都以相同的三段式結構記錄：我們為何去談、我們聽到了什麼、我們改了什麼。這些改動都很具體。Dr. Jinwen Chen（Natural Resources Canada, CanmetENERGY-Devon）與 Dr. Stephen Larter（Calgary，石油地球化學家）都建議團隊放棄重質稀釋瀝青、改做柴油，理由是黏度、質傳與乳化分離上的障礙，以及柴油有硬性的 <10 ppm 含硫上限且難脫除的 DBT 濃度較高，於是團隊把整個目標物流改為柴油精製。Dr. Rasha Maal-Bared 提醒，黏稠原油會以局部層流的方式混合，這一點把靜態混合元件與生物反應器尺寸納入了連續流設計。Patrick Lumley（Safe Sulphur Systems，於硫回收領域有 33 年經驗）指出，水相的亞硫酸鹽副產物需要 pH 控制以避免釋出 SO2，而減輕 Claus 製程負載在經濟上毫無價值，於是 P&ID 中加入了一個 pH 控制迴圈，商業論述也從硫處理量改為重建在節省氫氣與降低加氫處理嚴苛度之上。Larter 對微生物影響腐蝕的提醒，為反應器設計增加了腐蝕與材料相容性的準則。工學院 Design Day 的回饋，則促使團隊從「完全取代 HDS」的敘事轉向互補式的精製模式。團隊還特地向蛋白質化學家 Dr. Corrie DaCosta 請教 Cofactor 的輸出報告必須包含什麼內容，才能讓真正動手做工程的人用得上，報告格式也因此修改。",
     "realWorld": "A fully worked commercialization case. Market sizing: TAM ~$3.1B (global HDS catalyst market), SAM ~$66M (Canada's 2.2% share, 16 refineries, ~2M bbl/day), SOM ~$1.4M from a single-refinery side-stream demo at a $0.40/bbl royalty on a 10,000 bbl/day stream. Revenue model is per-barrel licensing royalties, validated in conversation with an operations and project engineer. A techno-economic analysis compares BDS against HDS CAPEX of $16-42M USD for a 20,000-25,000 bbl/day refinery and projects 50-60% CAPEX reduction from eliminating high-pressure hydrogen hardware; a life cycle assessment with a declared system boundary and BDS/HDS inventories backs the environmental claim rather than asserting it. A staged timeline runs from proof of concept (2026) through publication and NSERC Alliance / Mitacs Accelerate / CRIN non-dilutive funding (2027), pilot demonstration on real feedstock plus formal pre-engagement with Environment and Climate Change Canada under New Substances Notification regulations for contained LMO deployment (2028-29), to licensing (2030+) and expansion into biodenitrogenation. The team deliberately targets smaller, older refineries facing Euro V limits with constrained hydrogen capacity rather than major oil sands operators, on Lumley's advice, and flags biogas producers as a faster early-revenue path. Risk analysis, SWOT, Business Model Canvas and a competitive positioning matrix are all published, and the team is explicit that Nulfur is harm reduction during the energy transition - \"a bridge, not a destination\".",
-    "partners": ["Natural Resources Canada (CanmetENERGY-Devon)", "Environment and Climate Change Canada, Low Carbon Fuels Division", "Safe Sulphur Systems Ltd.", "CDM Smith", "Spanish National Research Council (CSIC), Systems Biology Program", "Bedford Institute of Oceanography, Fisheries and Oceans Canada", "Institute for Oil Sands Innovation / University of Alberta", "University of Calgary", "Queen's University", "Arabian Gulf University", "Hawk & Squirrel Innovation Inc.", "Ottawa-Carleton District School Board (IILP Summer Program)", "Ottawa Catholic School Board", "AcadeCap International School", "Ottawa Public Libraries", "uOttawa eHub RevUp Circuit", "MindFuel Tech Futures Challenge", "QGEM (Great Canadian iGEM Incubator)", "Clean Resource Innovation Network (CRIN)"]
+    "realWorld_zh": "一份完整做到底的商業化論證。市場規模：TAM 約 31 億美元（全球 HDS 觸媒市場）、SAM 約 6,600 萬美元（加拿大佔 2.2%，16 座煉油廠，約 200 萬桶/日）、SOM 約 140 萬美元，來自單一煉油廠側流示範，以 10,000 桶/日的物流按每桶 $0.40 收取授權金計算。營收模式為按桶計價的授權金，並在與一位營運與專案工程師的對話中得到驗證。技術經濟分析把 BDS 與 HDS 相比，後者在 20,000 至 25,000 桶/日規模的煉油廠需 1,600 萬至 4,200 萬美元的資本支出，並推估取消高壓氫氣設備可減少 50-60% 資本支出；一份具明確系統邊界並附 BDS/HDS 清單的生命週期評估，支撐了環境效益的說法，而不是只是斷言。分階段時程由概念驗證（2026）、發表論文與申請 NSERC Alliance / Mitacs Accelerate / CRIN 等非稀釋性資金（2027）、以真實進料進行先導示範並依《新物質通報》法規就封閉式 LMO 部署正式向 Environment and Climate Change Canada 進行事前溝通（2028-29），到技術授權（2030 年以後）與擴展至生物脫氮。團隊依 Lumley 的建議，刻意以面臨 Euro V 限值且氫氣產能受限的中小型、老舊煉油廠為目標，而不是大型油砂業者，並指出沼氣生產者是更快取得初期營收的途徑。風險分析、SWOT、商業模式圖（Business Model Canvas）與競爭定位矩陣全部公開，團隊也明白表示 Nulfur 是能源轉型期間的傷害減緩，「一座橋，而非終點」。",
+    "partners": [
+      "Natural Resources Canada (CanmetENERGY-Devon)",
+      "Environment and Climate Change Canada, Low Carbon Fuels Division",
+      "Safe Sulphur Systems Ltd.",
+      "CDM Smith",
+      "Spanish National Research Council (CSIC), Systems Biology Program",
+      "Bedford Institute of Oceanography, Fisheries and Oceans Canada",
+      "Institute for Oil Sands Innovation / University of Alberta",
+      "University of Calgary",
+      "Queen's University",
+      "Arabian Gulf University",
+      "Hawk & Squirrel Innovation Inc.",
+      "Ottawa-Carleton District School Board (IILP Summer Program)",
+      "Ottawa Catholic School Board",
+      "AcadeCap International School",
+      "Ottawa Public Libraries",
+      "uOttawa eHub RevUp Circuit",
+      "MindFuel Tech Futures Challenge",
+      "QGEM (Great Canadian iGEM Incubator)",
+      "Clean Resource Innovation Network (CRIN)"
+    ]
   },
   "images": [
     {
       "url": "https://static.igem.wiki/teams/6077/wiki/dry-lab/protein-engineering/fig-3.svg",
       "caption": "Predictor-agreement scatter for 437 scored DszB mutations: the shaded quadrant is where FoldX and ThermoMPNN both call a substitution stabilising, enlarged to label the five variants advanced to the wet lab.",
+      "caption_zh": "437 個評分過的 DszB 突變的預測器一致性散布圖：加底色的象限是 FoldX 與 ThermoMPNN 同時判定該取代具穩定化效果的區域，放大後標示出推進到濕實驗的五個變異體。",
       "credit": "Team UOttawa, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6077/wiki/dry-lab/cofactor/figures/fig-4b.avif",
       "caption": "The Cofactor GUI - a local FastAPI web interface over the agentic protein engineering platform, showing chat, hypothesis and evidence views, job tracking and artifact browsing.",
+      "caption_zh": "Cofactor 的圖形介面，一個架在代理式蛋白質工程平台之上的本機 FastAPI 網頁介面，可見對話、假說與證據檢視、工作追蹤與產出檔案瀏覽。",
       "credit": "Team UOttawa, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6077/wiki/dry-lab/consortia/fig-3.avif",
       "caption": "Rate gain in DBT uptake from interfacial-area enhancement and micellar solubilization in isolation and combined; the shaded region is the synergy in excess of the product of the two isolated effects.",
+      "caption_zh": "界面面積增加與微胞增溶分別單獨作用與兩者併用時，DBT 攝取速率的增益；加底色的區域是超出兩個單獨效果相乘的協同作用部分。",
       "credit": "Team UOttawa, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6077/wiki/education/adapt/art-consortia/pxl-20260716-173536329-mp.avif",
       "caption": "The Art of Consortia activity in the Ottawa-Carleton District School Board summer language programme, where children build a shared mural to learn how a microbial consortium divides labour.",
+      "caption_zh": "在 Ottawa-Carleton District School Board 暑期語言課程中進行的 The Art of Consortia 活動，孩童共同創作一幅壁畫，藉此認識微生物群落如何分工。",
       "credit": "Team UOttawa, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6077/wiki/process/igem-p-id-final.avif",
       "caption": "Process and instrumentation diagram for the full-scale biodesulfurization plant, including the pH control loop added after Patrick Lumley warned that uncontrolled sulfite pH would release SO2.",
+      "caption_zh": "全規模生物脫硫廠的製程與儀控圖（P&ID），其中包含在 Patrick Lumley 提醒未受控制的亞硫酸鹽 pH 會釋出 SO2 之後才加入的 pH 控制迴圈。",
       "credit": "Team UOttawa, iGEM 2026 wiki"
     }
   ],
   "gemsTakeaway": "Copy uOttawa's human-practices template literally: a single page where every one of 21 stakeholder conversations is logged in the same three fields - why we went, what we heard, what we changed - with the change written as a specific design edit (a pH loop in the P&ID, a switch of feedstock, static mixers). It costs nothing to adopt, makes a student team's reasoning auditable, and is the clearest way a school research centre can show that outside input actually moved the project rather than decorating it.",
+  "gemsTakeaway_zh": "照字面抄下 uOttawa 的人類實踐範本：用單一頁面，把 21 場利害關係人對話全部以相同的三個欄位記錄下來，也就是我們為何去談、我們聽到了什麼、我們改了什麼，而「改了什麼」要寫成具體的設計變更（P&ID 中的一個 pH 控制迴圈、換掉進料、加裝靜態混合器）。採用它不花任何成本，卻能讓學生團隊的推理過程可被稽核，也是一個校內研究中心最清楚的方式，用以證明外部意見確實推動了專案，而不只是拿來裝飾。",
   "sources": [
     "https://2026.igem.wiki/uottawa/",
     "https://2026.igem.wiki/uottawa/description",

@@ -19,35 +19,90 @@
     "dataviz": "Eighteen numbered model figures that read as a single argument. Aligned multi-track profiles put six normalised structural feature tracks (F1-F6) above the availability-aware composite score so a reader can see which feature drove a peak; priority profiles are paired with an evidence-coverage track underneath so a high score with thin evidence cannot be misread as a finding. Figure 8 is a tunnel-length sensitivity heatmap (rows = assumed exit-tunnel length 30-40 codons, columns = codon position, fixed 0-100 teal scale, light-grey cells for genuinely unavailable data rather than zero) so the reader can watch high-priority bands migrate as an assumption changes. Figure 11 is a codon-level audit matrix (18 homolog rows x codons 110-121, green = slow in that species' tRNA context, white = comparable, grey = non-comparable). Figure 14 is a log2(candidate/WT) dwell heatmap restricted to edited positions only, with the x-axis explicitly flagged as non-continuous and the legend explaining that +1 means 2x. Figure 16 is a three-panel dot plot of WT-normalised flux, ribosome load and exposure on matched candidate rows, deliberately NOT collapsed into one score. KMC traces carry +/- SEM bands and separate unblocked residence from blocked waiting. Captions state the direction of preference and whether a quantity is measured or a relative model proxy.",
     "datascience": "Two supervised models were trained from public measurement data and one from their own: an mRNA degradation proxy (D2) on 5,486 curated E. coli half-life records with gene/protein/CDS-grouped splits, a 29-bp promoter-strength ensemble on 112,955 measured core promoters held out by -35/-10 motif pairs (a genuinely out-of-distribution split, r = 0.677), and a codon-occupancy regression on 107,627 codon-level Ribo-seq observations across 125 genes with a documented 14-nt P-site offset, first/last 10 codons excluded, and gene-held-out evaluation (22,025 test observations). The team audits its own provenance in public: several dataset source fields are annotated 'unconfirmed', 'remains to be confirmed' or 'not an attributed published dataset size' rather than quietly cited. Model 4's proL promoter screen predicted 0.727 (native) vs 0.386/0.366/0.358 (P1-P3); the built strain BL21-AlaPro was then measured by Four-Leaf Clover RT-qPCR, showing rpoD-normalised mature tRNA falling from 63.98 to 23.42 (alaXW) and 6.828 to 2.254 (proL), and those measured numbers were returned to M3-A as a new effective-supply table for a full A-E rerun. The headline wet-lab readout: TolB-G-CSF model-designed sequence in the engineered host reached a mean soluble/insoluble ratio of 0.140 vs 0.075 for the commercial sequence in WT host (DnaK-normalised, n = 3 biological replicates, ~1.87-fold). Crucially the team also reports the negative result honestly — for PfCHT1 and leptin, insoluble bands weakened but no clear soluble enrichment appeared, and the results figure is literally titled 'Solubility Gains Remain Unclear'.",
     "software": "catmaOS 4.02.06 ships as a downloadable Windows x64 source release with Setup.cmd/Start.cmd, a pinned requirements-lock.txt, a private .venv, a local browser workspace on 127.0.0.1:8767 (sequences never leave the user's machine), a 28-page PDF user manual, and four precomputed read-only interactive demos embedded in the wiki with JSON/CSV export. Every run emits a reproducibility bundle: request.json (typed input, label, source, parameters), result.json on a versioned schema 1.0.0 with input hash, module status and reproducibility record, curves.csv, metrics.csv, exact_candidates.csv, native/evidence-result.json and run.log, all zipped per run_id. The design rule stated on the page — 'missing values stay missing' and 'a completed run confirms the requested task finished; it does not imply every model was executed' — is the discipline most teams lack.",
-    "stack": ["Python 3.14", "NumPy", "SciPy", "pandas", "Biopython", "scikit-learn", "Matplotlib", "DSSP", "MAFFT L-INS-i", "PAL2NAL", "ViennaRNA / RNAplfold", "AGGRESCAN", "GtRNAdb / tRNAscan-SE", "NSGA-II", "custom RFMEO solver", "custom Gillespie KMC"],
-    "techniques": ["co-translational folding free-energy model", "structural bioinformatics / DSSP feature fusion", "exit-tunnel coordinate mapping with sensitivity scan", "comparative genomics codon alignment", "tRNA adaptation index-style supply model", "Henikoff sequence weighting", "ODE/steady-state ribosome flow model (RFMEO)", "stochastic Gillespie kinetic Monte Carlo TASEP with extended objects", "finite-state Markov folding-pathway propagation", "steady-state mRNA mass balance", "multi-objective constrained Pareto optimisation", "NSGA-II genetic algorithm", "machine-learning regression (promoter strength, mRNA decay, codon occupancy)", "out-of-distribution held-out validation", "ablation studies", "backend cross-validation", "parameter-scenario robustness analysis", "model-to-measurement feedback loop"]
+    "stack": [
+      "Python 3.14",
+      "NumPy",
+      "SciPy",
+      "pandas",
+      "Biopython",
+      "scikit-learn",
+      "Matplotlib",
+      "DSSP",
+      "MAFFT L-INS-i",
+      "PAL2NAL",
+      "ViennaRNA / RNAplfold",
+      "AGGRESCAN",
+      "GtRNAdb / tRNAscan-SE",
+      "NSGA-II",
+      "custom RFMEO solver",
+      "custom Gillespie KMC"
+    ],
+    "techniques": [
+      "co-translational folding free-energy model",
+      "structural bioinformatics / DSSP feature fusion",
+      "exit-tunnel coordinate mapping with sensitivity scan",
+      "comparative genomics codon alignment",
+      "tRNA adaptation index-style supply model",
+      "Henikoff sequence weighting",
+      "ODE/steady-state ribosome flow model (RFMEO)",
+      "stochastic Gillespie kinetic Monte Carlo TASEP with extended objects",
+      "finite-state Markov folding-pathway propagation",
+      "steady-state mRNA mass balance",
+      "multi-objective constrained Pareto optimisation",
+      "NSGA-II genetic algorithm",
+      "machine-learning regression (promoter strength, mRNA decay, codon occupancy)",
+      "out-of-distribution held-out validation",
+      "ablation studies",
+      "backend cross-validation",
+      "parameter-scenario robustness analysis",
+      "model-to-measurement feedback loop"
+    ],
+    "frameworks_zh": "catmaOS 是一條四模型、五層的多尺度管線，並且異常明確地說明每一層「是什麼」與「不是什麼」。M1 是結構生物資訊評分模型：它由 PDB 座標（G-CSF，PDB 1RHG 鏈 B，UniProt P09919，RefSeq NM_000759.4）建立殘基層級的證據表，以 DSSP 取得二級結構與相對溶劑可及性，隨鏈長增長求解一個自我一致的原生接觸佔據模型（Jacobs-Shakhnovich），以 1 kBT 自由能下降為閾值、4 Angstrom 接觸截斷來偵測摺疊事件，再加入 Kyte-Doolittle 疏水暴露、半胱胺酸鄰域分數、DSSP 轉換與 beta 起始軌跡，以及 AGGRESCAN 式的聚集傾向，然後以考量資料可得性的權重融合成 0-100 的優先度分數，並依 35 個密碼子的核醣體出口通道偏移往下游位移（並掃描 30-40 個密碼子做敏感度分析）。M2 是比較基因組學模型：以 MAFFT L-INS-i 做蛋白質比對、用 PAL2NAL 投影回密碼子，取用 GtRNAdb/tRNAscan-SE 各物種高可信度 tRNA 基因套數，搭配一張凍結的密碼子—反密碼子搖擺懲罰表，將 tRNA 適應度式的有效供給 W_s(c) 轉換為物種內的相對「阻力」，以阻力前 25% 標記慢密碼子，施加嚴格的同一胺基酸過濾，並以 Henikoff 位置式序列加權產生一個加權慢密碼子保守度分數，另附明確的有效覆蓋度軌跡。M3 是動力學核心：M3-A 把密碼子的內在停留時間分解為解碼（有效同源/搖擺供給的倒數，加上近同源競爭項，K_dec = 0.80、gamma_near = 0.50）、胜肽基轉移（脯胺酸/EF-P 停滯情境）、基礎轉位，以及以 ViennaRNA RNAplfold 局部未配對機率表示的 RNA 阻力，並以四組消融設定 A0-A3 歸因機制；M3-B 把該速率向量輸入兩套獨立的核醣體流量後端——一個是確定性的含延伸物件核醣體流量模型（RFMEO）穩態解，一個是隨機 Gillespie 動力學蒙地卡羅的延伸物件 TASEP（5 次重複、SEM 帶、捨棄暖機段）——並以 Pearson、Spearman、一致性係數與前 k 名熱點重疊度交叉驗證，另加一張 alpha-beta 邊界敏感度網格；M3-C 繪出流量安全的停留時間包絡、出口通道可得性閘門、相對接觸次序的摺疊需求、一個在 0.5/1/2 尺度網格上執行的有限狀態生產性路徑傳遞子 p_{L+1} = p_L exp(s Q_L dt_L)（只有當正負號在各尺度間維持一致時才稱該方向「穩健」），以及一個時間加權的未滿足原生接觸暴露代理量 E_U = sum_L U(L) tau(L)；M3-D 以 scikit-learn 的 mRNA 衰減預測器（訓練於 5,486 筆整理過的 E. coli 半衰期記錄，Chen 2015、Selinger 2003，按基因分群切分為 3,883/765/838）閉合一階穩態 mRNA 平衡 M_ss = k_tx / (k_deg,eff + mu)；M3-E 在讀框、GC 含量、motif、限制酶切位與同聚物等限制下產生同義候選，並以四個凍結目標的受限 Pareto 支配進行選擇（最大化末端通量 J、最小化核醣體負載 R、最大化生產性路徑 C4、最小化暴露 C5），小搜尋空間用精確列舉、大空間用 NSGA-II，並以對照精確 Pareto 前緣的精確率/召回率評分。M4 把設計延伸到宿主：它將目標密碼子對映到 BL21 的 tRNA 基因、基因簇與啟動子，使用加權的 K-12 到 BL21 轉移分數（S_map = 0.45 S_signature + 0.20 S_ordered + 0.15 S_count + 0.15 I_80 + 0.05 I_200），提出降低套數或在 29 bp 啟動子核心做 1-3 個置換，對應 15/30/50% 的弱化層級，並以三模型 ML 整合（訓練於已發表 MBRS L4 資料庫的 112,955 個實測核心啟動子，Zhou 2025，依 -35/-10 motif 配對留出，67,978/7,680/37,297）排序，在 log2(1+強度) 上達到 r = 0.677、MAE = 0.506。",
+    "dataviz_zh": "十八張編號的模型圖，讀起來像一條完整的論證。對齊的多軌剖面圖把六條正規化的結構特徵軌（F1-F6）放在考量可得性的綜合分數之上，讓讀者看出是哪個特徵推高了某個峰；優先度剖面圖下方必定配一條證據覆蓋度軌，使「高分但證據薄弱」不會被誤讀成發現。圖 8 是通道長度敏感度熱圖（列為假設的出口通道長度 30-40 個密碼子，行為密碼子位置，固定 0-100 的藍綠色標尺，真正無資料的格子以淺灰表示而非以零填補），讓讀者看見高優先度帶隨著假設改變而遷移。圖 11 是密碼子層級的稽核矩陣（18 列同源蛋白 x 密碼子 110-121，綠色代表在該物種的 tRNA 情境下為慢密碼子，白色代表可比較，灰色代表不可比較）。圖 14 是只限於被編輯位置的 log2(候選/WT) 停留時間熱圖，x 軸明確標示為非連續，圖例也說明 +1 意即 2 倍。圖 16 是以 WT 正規化的通量、核醣體負載與暴露三面板點圖，候選列彼此對齊，刻意不壓縮成單一分數。KMC 軌跡附有 +/- SEM 帶，並把未受阻的停留與受阻的等待分開呈現。圖說都標明偏好的方向，以及該量是實測值還是相對的模型代理量。",
+    "datascience_zh": "兩個監督式模型由公開量測資料訓練，另一個由團隊自己的資料訓練：mRNA 降解代理模型（D2）以 5,486 筆整理過的 E. coli 半衰期記錄訓練，並按基因/蛋白質/CDS 分群切分；29 bp 啟動子強度整合模型以 112,955 個實測核心啟動子訓練，依 -35/-10 motif 配對留出（這是真正的分布外切分，r = 0.677）；密碼子佔據回歸則用了橫跨 125 個基因的 107,627 筆密碼子層級 Ribo-seq 觀測值，記錄了 14 nt 的 P 位偏移、排除頭尾各 10 個密碼子，並採基因留出評估（22,025 筆測試觀測）。團隊公開稽核自己的資料來源：有幾個資料集的來源欄位被標註為「未確認」、「尚待確認」或「非來自有明確出處的已發表資料集規模」，而不是悄悄引用。模型 4 的 proL 啟動子篩選預測值為 0.727（原生）對 0.386/0.366/0.358（P1-P3）；建成的 BL21-AlaPro 菌株隨後以 Four-Leaf Clover RT-qPCR 量測，顯示以 rpoD 正規化的成熟 tRNA 由 63.98 降至 23.42（alaXW）、由 6.828 降至 2.254（proL），而這些實測值被送回 M3-A 作為新的有效供給表，完整重跑 A-E。濕實驗室的主要讀值：在工程宿主中，模型設計序列 TolB-G-CSF 的可溶/不可溶比平均達 0.140，相較於野生型宿主中商用序列的 0.075（以 DnaK 正規化，n = 3 生物重複，約 1.87 倍）。關鍵的是，團隊也誠實報告負面結果——PfCHT1 與 leptin 的不可溶條帶變弱，但沒有出現明顯的可溶性富集，結果圖的標題就直接寫著「Solubility Gains Remain Unclear」（可溶性提升仍不明確）。",
+    "software_zh": "catmaOS 4.02.06 以可下載的 Windows x64 原始碼版本發布，附 Setup.cmd/Start.cmd、鎖定版本的 requirements-lock.txt、私有 .venv、在 127.0.0.1:8767 上執行的本機瀏覽器工作區（序列絕不離開使用者的機器）、一份 28 頁 PDF 使用手冊，以及四個預先計算、嵌入 wiki 的唯讀互動示範，可匯出 JSON/CSV。每次執行都會產出一份可重現性包：request.json（具型別的輸入、標籤、來源、參數）、採版本化綱要 1.0.0 的 result.json（含輸入雜湊、模組狀態與可重現性記錄）、curves.csv、metrics.csv、exact_candidates.csv、native/evidence-result.json 與 run.log，全部依 run_id 打包成 zip。頁面上明文寫出的設計規則——「缺失值就保持缺失」以及「一次完成的執行只確認所請求的任務已結束，不代表每個模型都真的跑過」——正是多數隊伍缺少的紀律。"
   },
   "good": {
     "publicEngagement": "Best Education winner (Undergraduate). The team built an explicit education framework rather than a list of events: a four-tier 'Lifelong Learning Pathway' (interest inspiration, knowledge building, interdisciplinary co-creation, professional impact) that replaces age-banding with depth of engagement, crossed with a four-stage activity structure (Reach, Construct, Dialogue, Extension) and Gardner's theory of multiple intelligences as the design lens for choosing an activity format. They reached over 2,000 people through 21 activities — workshops, exhibitions and the Learning Mall Premium online platform — and produced 18 reusable education toolkits, with the Extension stage deliberately designed so each activity leaves behind a game, handbook or toolkit rather than ending at the event.",
     "ihp": "A CARE framework distilled from stakeholder conversations: Create Accessibility, Accountable Storytelling, Real-world Alignment, Ethical Design. It originated in a question from Dr Lanlan Han about who actually benefits and how strong the evidence is. The interview timeline is structured as Problem / Design / Scope, and the team documents how it narrowed its own claim: starting from 'boost heterologous protein expression in E. coli', literature and interviews with Dr Antony Kam and industry expert Dr Xijun Piao (CATUG Biotechnology, Suzhou) pushed them to redefine success as soluble usable protein rather than total expression, and to state explicitly that dogmaOS is 'not positioned as a universal protein-production platform'. Mid-stage consultations with Dr Yongtao Zhu, Dr Chun Chan, Prof Sheng Yang (Shanghai Institutes for Biological Sciences, CAS), Prof Zhiliang Lu, Dr Avinash Pandreka (Oxford Suzhou Centre for Advanced Research), Dr Kozo Hamada and Prof Zhongmei Liu (Jiangnan University) convinced them that translation speed alone could not explain folding outcomes, which is what created Model 3 and Model 4.",
     "realWorld": "Target selection was driven by real demand: G-CSF, leptin, PfCHT1 and FGF2 were chosen with researchers and protein-production companies as proteins that are hard to express in E. coli and have clear research or clinical uses spanning public health, rare disease and basic research. The team maps the project to SDGs 3, 9, 12 and 17. Accessibility is the commercial thesis — rather than selling a service, catmaOS is released as free local software so academic labs and iGEM teams with only basic E. coli facilities can do upstream optimisation instead of paying for repeated trial-and-error. Safety is built in: non-pathogenic strains, BSL-1 practice, autoclaved waste, and FLP-FRT removal of the kanamycin cassette after lambda-Red genome editing.",
-    "partners": ["Xi'an Jiaotong-Liverpool University", "CATUG Biotechnology (Suzhou) Co., Ltd.", "Shanghai Institutes for Biological Sciences, Chinese Academy of Sciences", "Oxford Suzhou Centre for Advanced Research", "Jiangnan University", "GenScript", "SnapGene"]
+    "partners": [
+      "Xi'an Jiaotong-Liverpool University",
+      "CATUG Biotechnology (Suzhou) Co., Ltd.",
+      "Shanghai Institutes for Biological Sciences, Chinese Academy of Sciences",
+      "Oxford Suzhou Centre for Advanced Research",
+      "Jiangnan University",
+      "GenScript",
+      "SnapGene"
+    ],
+    "publicEngagement_zh": "Best Education 得主（大學部）。團隊建立的是明確的教育框架，而不是一串活動清單：一條四層的「終身學習路徑」（興趣啟發、知識建構、跨領域共創、專業影響），以參與深度取代年齡分層，再與四階段活動結構（觸及、建構、對話、延伸）交叉，並以 Gardner 的多元智能理論作為選擇活動形式的設計視角。他們透過 21 場活動——工作坊、展覽與 Learning Mall Premium 線上平台——觸及超過 2,000 人，並產出 18 套可重複使用的教育工具包；「延伸」階段是刻意設計的，讓每場活動都留下一個遊戲、手冊或工具包，而不是在活動結束時就終止。",
+    "ihp_zh": "他們從利害關係人對話中萃取出一套 CARE 框架：Create Accessibility（創造可及性）、Accountable Storytelling（負責任的敘事）、Real-world Alignment（與真實世界對齊）、Ethical Design（倫理設計）。它源自 Dr Lanlan Han 的一個問題：究竟誰會受益，以及證據有多強。訪談時間軸依「問題／設計／範圍」編排，團隊也記錄了自己如何收斂主張：起點是「提升 E. coli 中的異源蛋白表現」，但文獻以及與 Dr Antony Kam 和產業專家 Dr Xijun Piao（蘇州 CATUG Biotechnology）的訪談，促使他們把成功重新定義為「可用的可溶性蛋白」而非總表現量，並明確聲明 dogmaOS「並不被定位為通用的蛋白質生產平台」。中期與 Dr Yongtao Zhu、Dr Chun Chan、Prof Sheng Yang（中國科學院上海生命科學研究院）、Prof Zhiliang Lu、Dr Avinash Pandreka（牛津蘇州先進研究中心）、Dr Kozo Hamada 與 Prof Zhongmei Liu（江南大學）的諮詢，說服他們單憑轉譯速度無法解釋摺疊結果——這正是模型 3 與模型 4 誕生的原因。",
+    "realWorld_zh": "標的的選擇由真實需求驅動：G-CSF、leptin、PfCHT1 與 FGF2 是與研究人員及蛋白質生產公司共同選定的，它們都在 E. coli 中難以表現，且在公共衛生、罕見疾病與基礎研究上有明確的研究或臨床用途。團隊把專案對應到 SDG 3、9、12 與 17。可及性就是其商業論點——catmaOS 不以服務販售，而是以免費的本機軟體釋出，讓只有基本 E. coli 設備的學術實驗室與 iGEM 隊伍能自行做上游最佳化，而不必付錢去反覆試誤。生物安全內建在設計中：使用非病原菌株、遵循 BSL-1 操作、廢棄物高壓滅菌，並在 lambda-Red 基因組編輯後以 FLP-FRT 移除卡那黴素抗性卡匣。"
   },
   "images": [
     {
       "url": "https://static.igem.wiki/teams/6096/wiki/assets/drylab/model/figure-08.svg",
       "caption": "Figure 8: exit-tunnel sensitivity heatmap. Rows are assumed ribosome exit-tunnel lengths of 30-40 codons, columns are G-CSF codon positions, and the fixed 0-100 teal scale shows structural priority. Light-grey cells mark genuinely unavailable structural data rather than a score of zero, so the reader can watch high-priority bands migrate as a modelling assumption changes.",
-      "credit": "Team XJTLU-China, iGEM 2026 wiki"
+      "credit": "Team XJTLU-China, iGEM 2026 wiki",
+      "caption_zh": "圖 8：出口通道敏感度熱圖。列為假設的核醣體出口通道長度 30-40 個密碼子，行為 G-CSF 的密碼子位置，固定的 0-100 藍綠色標尺表示結構優先度。淺灰色格子標示真正缺乏結構資料之處，而不是以零分充數，讓讀者看見高優先度帶隨著建模假設改變而遷移。"
     },
     {
       "url": "https://static.igem.wiki/teams/6096/wiki/assets/drylab/model/figure-11.svg",
       "caption": "Figure 11: codon-level audit matrix for reference positions 110-121. Each row is a retained homolog; green marks codons called slow in that species' own tRNA context, white marks other comparable synonymous codons, grey retains non-comparable cells. Positions 115 and 121 were slow in all 18 homologs while 118 was slow in none.",
-      "credit": "Team XJTLU-China, iGEM 2026 wiki"
+      "credit": "Team XJTLU-China, iGEM 2026 wiki",
+      "caption_zh": "圖 11：參考位置 110-121 的密碼子層級稽核矩陣。每一列是一個保留下來的同源蛋白；綠色標示在該物種自身 tRNA 情境下被判為慢的密碼子，白色標示其他可比較的同義密碼子，灰色則保留不可比較的格子。位置 115 與 121 在全部 18 個同源蛋白中都是慢的，而 118 在任何一個中都不是。"
     },
     {
       "url": "https://static.igem.wiki/teams/6096/wiki/assets/merge-20261020/catmaos-figure-12.svg",
       "caption": "Figure 12: the full 'how long to pause' panel, linking synonymous candidate generation to intrinsic dwell (M3-A), kinetic Monte Carlo ribosome traffic with SEM bands (M3-B), folding trajectories and contact exposure (M3-C), the mRNA decay proxy (M3-D) and the constrained objective screen (M3-E) in which four of six candidates pass the flux and ribosome-burden gates.",
-      "credit": "Team XJTLU-China, iGEM 2026 wiki"
+      "credit": "Team XJTLU-China, iGEM 2026 wiki",
+      "caption_zh": "圖 12：完整的「該停多久」面板，把同義候選的產生串連到內在停留時間（M3-A）、附 SEM 帶的動力學蒙地卡羅核醣體流量（M3-B）、摺疊軌跡與接觸暴露（M3-C）、mRNA 衰減代理模型（M3-D），以及受限目標篩選（M3-E），其中六個候選有四個通過通量與核醣體負擔的閘門。"
     },
     {
       "url": "https://static.igem.wiki/teams/6096/wiki/assets/drylab/model/figure-16.svg",
       "caption": "Figure 16: throughput, ribosome load and exposure trade-offs for wild type plus six synonymous candidates, shown as three WT-normalised panels on matched rows and deliberately not collapsed into a single score. W1-F had flux 0.781 and load 1.079, failing the flux >= 0.95 constraint; W1-S passed on all four objectives and went to the bench.",
-      "credit": "Team XJTLU-China, iGEM 2026 wiki"
+      "credit": "Team XJTLU-China, iGEM 2026 wiki",
+      "caption_zh": "圖 16：野生型加六個同義候選的產出量、核醣體負載與暴露之間的取捨，以三個以 WT 正規化的面板呈現、候選列彼此對齊，並刻意不壓縮成單一分數。W1-F 的通量為 0.781、負載為 1.079，未通過通量 >= 0.95 的限制；W1-S 四個目標全部通過，進入濕實驗室。"
     }
   ],
   "gemsTakeaway": "Pair every model score with an explicit evidence-coverage track and run a sensitivity scan over your least-defensible assumption (here, exit-tunnel length), so a figure shows not just the answer but how much of it is real data; and keep competing objectives as separate aligned panels rather than summing them into one invented score. Both are achievable with matplotlib by a motivated 16-year-old and immediately make a model honest.",
@@ -61,5 +116,9 @@
     "https://2026.igem.wiki/xjtlu-china/engineering/",
     "https://2026.igem.wiki/xjtlu-china/human-practices/",
     "https://2026.igem.wiki/xjtlu-china/education/"
-  ]
+  ],
+  "projectTitle_zh": "dogmaOS — 以程式化的轉譯節奏提升可溶性蛋白質表現",
+  "tagline_zh": "設計核醣體該在哪裡、停多久，再重新改造宿主的 tRNA 庫讓這個停頓成為可能。",
+  "summary_zh": "XJTLU-China 要問的是：在 E. coli 中難以表現的重組蛋白，其可溶產量能否透過刻意規劃轉譯*在哪裡*變慢來提升，而不是靠把表現量最大化。他們的乾實驗室系統 catmaOS（Codon-Aware Translation Modeling and Analysis Operating System）串接四個模型：結構上的共轉譯摺疊優先度（M1）、演化上保守的慢密碼子證據（M2）、含受限 Pareto 選擇的五層轉譯動力學與核醣體流量引擎（M3-A 至 M3-E），以及宿主 tRNA 庫的干預設計（M4）。這套框架從六個候選中挑出單一個同義密碼子設計（W1-S），以及一個工程化的 BL21-AlaPro 載體株，兩者都進了濕實驗室；接著以 Four-Leaf Clover RT-qPCR 量測實際的 tRNA 剔除程度，再把這個數字回饋進 M3-A 作為更新後的宿主情境。本專案獲得 Best Model（大學部）與 Best Education（大學部）。",
+  "gemsTakeaway_zh": "為每一個模型分數都配上一條明確的證據覆蓋度軌，並對你最站不住腳的那個假設（此處是出口通道長度）做敏感度掃描，讓一張圖不只呈現答案，也呈現其中有多少是真實資料；同時把互相競爭的目標維持為各自對齊的面板，而不是加總成一個自創的分數。這兩件事用 matplotlib、一個有心的 16 歲學生就做得到，而且立刻能讓模型變得誠實。"
 }

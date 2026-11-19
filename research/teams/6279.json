@@ -1,0 +1,95 @@
+{
+  "team": "UBC-Vancouver",
+  "id": "6279",
+  "section": "Undergrad",
+  "country": "Canada",
+  "village": "Diagnostics",
+  "wiki": "https://2026.igem.wiki/ubc-vancouver/",
+  "projectTitle": "FAST: a point-of-care antibiotic susceptibility test",
+  "tagline": "Three devices, a 200-promoter screen and a measurement page that opens by admitting the readout is the whole diagnostic.",
+  "summary": "UBC-Vancouver built FAST, a point-of-care antibiotic susceptibility test in which a patient sample and a candidate antibiotic are combined on a microfluidic chip, and whatever antibiotic survives that step reaches stress-responsive E. coli biosensors downstream: a susceptible sample leaves the antibiotic active, the stress promoter fires and sfGFP is expressed, while a resistant sample degrades the antibiotic and the signal stays near baseline. Because the fluorescence is the diagnosis rather than a supporting observation, the team treated measurement as the project's foundation, establishing baselines, finding the usable concentration window, measuring the response and anchoring everything to controls. Three devices remove the infrastructure a point-of-care test cannot assume: a PDMS microfluidic chip at one to five dollars, a $204.48 fluorescence detector, and a $106.68 bioreactor to produce the biosensor cultures.",
+  "awards": [
+    "Best Diagnostics Project winner",
+    "Best Hardware nominee (Undergraduate)"
+  ],
+  "dry": {
+    "frameworks": "The measurement page is written in the order the work had to be done, establishing a baseline, determining the usable range, measuring the response, then controls and calibration, then scaling, with a limitations section at the end. Human Practices is counted as integrated only where the project would have been different without it, so every conversation is paired with what it changed. Each bioreactor iteration was assessed against a fixed question set covering ease of use, comparability to benchtop standards, modularity and monitoring, with outcomes recorded as what worked and what did not.",
+    "dataviz": "Growth curves with simultaneous OD600 and fluorescence for biosensor strains against wild-type EPI300; dose-response panels expressed as fold change against an untreated control on the same plate; a library-wide scatter in which most of the 200-plus promoter constructs cluster near a growth ratio and induction ratio of one and genuine hits appear as outliers from roughly 3-fold to 12-fold; LTSpice simulation node tables comparing expected against simulated voltages for two supply-rail configurations; sensor-reading-against-time traces under constant illumination for the optical density sensor; CAD models published as .glb files for every chip design iteration alongside engineering drawings.",
+    "datascience": "The baseline work is the part most teams skip. Before measuring any response the team generated growth curves for the CpxP and RecA biosensor strains alongside wild-type EPI300 with no antibiotic present, recording OD600 and fluorescence at 485/510 nm at every timepoint, and found two things that change how all later numbers must be read: the biosensor strains reach maximum cell densities about 35% lower than wild type, indicating metabolic burden from the reporter plasmids and meaning fluorescence cannot be compared across strains without normalising to cell density; and the CpxP strain shows roughly 18 to 20-fold higher basal sfGFP than wild type or RecA after 25 hours at 37 C, which ceases at 22 C. They state the consequence directly, that a team adopting CpxP without knowing this would mistake baseline for signal. OD600 calibration curves were produced from these runs so fluorescence can be normalised rather than reported raw. The first dose-response attempt, 13 two-fold concentrations sampled at 10-minute intervals over 40 to 60 minutes, produced no dose dependence, and the team read that as a failure of the measurement window rather than of the biosensors, publishing it because a team seeing a flat one-hour curve should not conclude their reporter does not work. Correcting it required knowing where the strains stay alive, so MIC titrations for gentamicin, tobramycin and amoxicillin with ranges seeded from published values gave provisional MIC ranges of 4 to 8 ug/mL, defining the subinhibitory window inside which every later measurement was placed. The repeated eight-hour dose response then found CpxP peaking between four and eight hours, reaching 2-fold at four hours and 3-fold at eight at 8 ug/mL amoxicillin, and RecA responding to amoxicillin but not to either aminoglycoside, a negative the team reports explicitly so that others do not reuse the SOS response as an aminoglycoside readout. Controls are anchored rather than assumed: wild-type EPI300 as the chassis negative control, untreated cultures on the same plate as the denominator for every fold change, and blank media wells subtracted from all fluorescence. The plasmid retention assay is itself a control on the measurement conditions, run because chloramphenicol confounds the stress response they are measuring; plasmids were lost within one hour without selection, so selection was retained and the confound documented rather than quietly accepted. Scaling to more than 200 promoter-GFP constructs with UBC's Biofactorial automation facility used apparent MICs cross-checked against EUCAST, subinhibitory concentrations at roughly 0.25 to 0.5 times apparent MIC, 30 384-well plates with OD600 and GFP sampled every 30 minutes over eight hours, plus a no-antibiotic control plate and a media-only blank, with each promoter's response calculated as GFP normalised to OD600 and then to its own control so that constructs with different growth characteristics remain comparable. The detector carries its own calibration routine: a baseline is taken by subtracting an LED-off reading from an LED-on reading, signal and reference voltage are read together and subtracted during collection so supply-rail drift is removed rather than recorded as signal, and gain is set from low upward until the brightest expected sample lands near the top of the 0.883 V usable range. The resolution is derived and published so others can repeat the calculation for their own configuration: the Arduino's 1.1 V internal reference gives an ADC step of 1.074 mV per count, and with a 10 MOhm transimpedance resistor at a gain of 101 the smallest detectable current is about 1 pA. Limitations are stated as limitations, that the MIC values are provisional because they came from endpoint OD600 in a two-fold series rather than standardised broth microdilution against a reference strain, so they locate a working range rather than establish a clinical breakpoint.",
+    "software": "PRISM (Promoter Response Index and Selection Map), a relational SQLite evidence database that integrates RNA-seq differential expression results, regulatory interactions, promoter and transcription-unit annotations and sequence information to rank antibiotic-responsive promoters for screening, published on GitLab with a separate figures repository. The team is explicit that their contribution is the integration, interpretation and review workflow rather than the expression model or the source measurements, and that PRISM makes those relationships inspectable and produces a reproducible selection proposal; identifier mappings retain the source row, reference release and mapping basis so that one symbol mapping to multiple loci is represented rather than silently collapsed. Supporting modelling covers a degradation model, a promoter library analysis and a patient-sample design of experiments. A protocol database covers LB medium preparation, growth curves, the plasmid retention assay, MIC titration, the biosensor dose-response assay, cloning, the antibiotic degradation assay, PDMS casting, bioreactor culture and assembly, flow testing, and calibration SOPs for the SEN0169 pH probe and TSL2591 optical density sensor, each written to be followed by someone who was not present.",
+    "stack": [
+      "Arduino with 1.1 V internal reference ADC",
+      "AD8606 op-amp transimpedance front end",
+      "488 nm LED, 500 nm long-pass filter, photodiode on a shared vertical axis",
+      "KiCad and Altium Designer, JLCPCB manufacture",
+      "LTSpice",
+      "SolidWorks flow simulation",
+      "PDMS cast from FDM-printed PLA molds",
+      "TSL2591 optical density sensor and SEN0169 pH probe",
+      "SQLite (PRISM)",
+      "RNA-seq differential expression",
+      "384-well automated screening (Biofactorial)"
+    ],
+    "techniques": [
+      "Baseline characterisation before response measurement",
+      "OD600 calibration curves and per-construct normalisation",
+      "MIC titration to define a subinhibitory measurement window",
+      "Fold change against an untreated control on the same plate",
+      "Blank media subtraction",
+      "Plasmid retention assay as a control on assay conditions",
+      "Publishing negative and absent responses",
+      "LED-off baseline subtraction and reference-voltage subtraction",
+      "Published ADC step and minimum detectable current",
+      "Gain set from low upward to avoid saturation",
+      "Validation against a flask control in triplicate across three experiments",
+      "Hydraulic resistance modelling checked against flow simulation"
+    ]
+  },
+  "good": {
+    "publicEngagement": "A wet-lab training video series of one to five minute clips covering pipetting, heat-shock transformation, LB media and plates, colony picking, autoclaving and waste disposal, and aseptic technique, made so a multidisciplinary team could learn asynchronously and review later. Beyond the team, the Human Practices group designed synthetic biology resources and workshops for primary and secondary students, for marginalised adults, and ran the Youreka Vancouver Symposium pairing high school students with research, plus a Geering Up microfluidics activity rebuilt after its first version leaked.",
+    "ihp": "Nine clinicians, researchers and patient partners were chosen for what each could say that the literature could not: researchers on what a test must detect, infectious disease physicians and a bedside nurse on what happens to patients once resistance is found, patient partners on living with it, and a patient engagement specialist on how a student team without ethics approval can involve patients at all. On the hardware side, Amin Abdolkhani talked the team out of abandoning PLA molds for resin printing, which would have been more expensive, more wasteful and dependent on another lab's printer, advising one more attempt against revised requirements; it worked. Bram Banik, a PCB designer at D-Wave, explained that adapting published circuits is standard practice rather than deriving from first principles, then ran a KiCad tutorial. Dr Celestine Hong hosted an industrial bioreactor tour that showed how sterility is maintained through screws and O-rings, positive internal pressure, sterile filtration and clamp-and-syringe sampling, recommended feedback control loops, suggested simplifying to a microcontroller, sensor and single control element on the available budget, and warned that the common optical-density-to-cell-count conversion is poorly supported below an OD of 1, recommending a dry cell weight calibration curve instead.",
+    "realWorld": "The need is costed: conventional susceptibility testing needs a microbiology laboratory and days of turnaround, fluorescence readers suitable for this output run from about $630 to over $42,000, and none of the commercial readers accept a custom chip format, so a rapid test that still needs a plate reader and a central lab is not a point-of-care test. The team scoped the hardware around removing those dependencies rather than around building the most capable instrument. Market work sizes FAST against the global clinical diagnostics industry using a TAM-PAM-SAM-SOM framework and sets out competitors and the regulatory rules that would govern the product, alongside needs-finding, business development, strategic planning and long-term growth pages. Reproduction materials are complete: each device page carries a bill of materials with current prices, the chip page provides CAD models for every iteration as .glb files plus engineering drawings for the final straight, gradient-generating and snaking designs, and the detector page provides both PCB designs, a 3D model and a user manual.",
+    "partners": [
+      "Biofactorial, UBC High-Throughput Biology and Automation Facility",
+      "Amin Abdolkhani (UBC SBME, CMED lab)",
+      "Bram Banik (UBC Engineering Physics / D-Wave)",
+      "Dr Celestine Hong (UBC Chemical and Biological Engineering)",
+      "Geering Up",
+      "Youreka Vancouver"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6279/wiki/assets/87edc504fab45511ac34a0233e32a223.avif",
+      "caption": "The overall setup of the fluorescence detection system. Aligning a 488 nm LED, the sample, a 500 nm long-pass filter and a photodiode on a single vertical axis removed one of the two optical filters conventional detectors need, cutting optical material cost by at least half.",
+      "credit": "Team UBC-Vancouver, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6279/wiki/assets/1049987edaae516c9d470c1dcf17c072.avif",
+      "caption": "The 30 mm by 90 mm main detection PCB, with the LED, the microfluidic chip well and the photodiode vertically aligned along the board. The complete device costs $204.48 to build.",
+      "credit": "Team UBC-Vancouver, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6279/wiki/assets/797aed1798be54a683e510a5b995770a.avif",
+      "caption": "The physical PDMS microfluidic chip beside its SolidWorks model. Cast from FDM-printed PLA molds over seven design cycles, it costs roughly one to five dollars per chip and needs neither a cleanroom nor a resin printer.",
+      "credit": "Team UBC-Vancouver, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6279/wiki/assets/cb607262e5ed54178078cdf0291acf72.avif",
+      "caption": "TSL2591 light sensor readings against time under constant illumination, part of the bioreactor's optical density calibration. The bioreactor costs $106.68, monitors temperature, pH and optical density, and was validated against flask culture in triplicate across three experiments.",
+      "credit": "Team UBC-Vancouver, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Characterise the uninduced baseline before you measure any response: discovering that one reporter strain carries 18 to 20-fold higher basal expression and 35% lower maximum density than wild type is the difference between a calibrated signal and mistaking a constitutive background for a result, and it is cheap to find and free to publish.",
+  "sources": [
+    "https://2026.igem.wiki/ubc-vancouver/project/best-measurement",
+    "https://2026.igem.wiki/ubc-vancouver/project/best-hardware",
+    "https://2026.igem.wiki/ubc-vancouver/hardware/fluorescence-detector",
+    "https://2026.igem.wiki/ubc-vancouver/hardware/bioreactor",
+    "https://2026.igem.wiki/ubc-vancouver/hardware/microfluidic-chip",
+    "https://2026.igem.wiki/ubc-vancouver/modelling/prism",
+    "https://2026.igem.wiki/ubc-vancouver/project/human-practices",
+    "https://2026.igem.wiki/ubc-vancouver/administration/market-research-",
+    "https://2026.igem.wiki/ubc-vancouver/human-practices/education"
+  ]
+}
