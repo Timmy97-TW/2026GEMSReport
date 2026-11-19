@@ -21,7 +21,7 @@ English and Traditional Chinese throughout; the switch is top right and is remem
 
 ## What the analysis found
 
-Ten original cross-team analyses sit on the site. The short version:
+Twenty-four original cross-team analyses sit on the site. The short version:
 
 - **Closing the model–data loop is the single best predictor of a Top 10.** Teams that both fit a model to
   their own measured data *and* validate it against something held back reached a Top 10 at 53%, against 23%
@@ -51,6 +51,22 @@ Ten original cross-team analyses sit on the site. The short version:
 - **Taiwan won six awards across thirteen competing teams**, more than any East Asian territory except China —
   but every technical award came from the high-school tier, with zero nominations in any parts award and zero
   in Best Software.
+- **One team in 106 shone light on *B. subtilis*, and it is GEMS.** Both trend reviews independently named
+  optogenetic control in *B. subtilis* as the white space this report's roadmap aims at. Tested against the
+  competition: 5 of 106 decorated teams used light as a control input in any organism, 5 worked with
+  *B. subtilis*, and the two sets intersect in one team. Excluding GEMS, the intersection is 0 of 105.
+- **The institution comes back every year; the problem almost never does.** Of the 81 decorated teams that
+  had entered iGEM before, 5 carried a project line forward, and none of the six returning Grand Prize
+  teams did. Only 3 of 106 credit their own predecessor with anything.
+- **Education artefacts outlive software and hardware by a wide margin** — 284 of 285 education files still
+  download, against 8 of 21 software tools still running and 6 of 20 devices rebuildable. A PDF needs no
+  server. The failure is licensing: 1 licence statement in 136 PDFs.
+- **Team size buys nothing.** Headcount against award count across 84 decorated teams correlates at 0.06
+  (p = 0.61). The smallest Top 10 team was Princeton, with nine undergraduates and four named scientists
+  behind them.
+- **Nobody ran an inter-lab measurement ring, nobody measured an escape rate, and measurement discipline
+  wins nothing** — 27% against 29% across all 106 files. Three of the last eight analyses returned nulls or
+  reversals, and each says so in its opening line.
 
 Both trend reviews — academic (Nature portfolio, bioRxiv, PubMed) and industry (SynBioBeta, funding and policy
 news) — were run independently and landed on the same white space: optogenetic control in *Bacillus subtilis*,
@@ -71,7 +87,7 @@ research/
   results2026.json  official 2026 results, captured from competition.igem.org
   teams/<id>.json   one file per team, keyed by iGEM team id
   trends/*.json     academic and industry trend analysis
-  insights/*.json   the ten cross-team analyses; each merges in as a report section
+  insights/*.json   the cross-team analyses; each merges in as a report section
   report.json       the written synthesis and the four-phase roadmap
   MANAGER.md        running log: what is done, what broke, what is queued next
 ```
@@ -100,8 +116,13 @@ extracting string literals from their JavaScript bundles. Where a team's own wik
 
 Counts in the analyses come from pattern-matching the team files, not from reading the wikis a second time, so
 a technique a team used but did not write up is invisible. The sample is decorated teams only — every file is
-a Top 10 or special-prize winner or nominee — so no baseline here describes the competition at large. Each
-analysis states its own method and what it cannot see.
+a Top 10 or special-prize winner or nominee — so in general no baseline here describes the competition at
+large. Each analysis states its own method and what it cannot see.
+
+The exceptions are marked where they occur. iGEM's own API (`api.igem.org/v1`) serves the full accepted
+roster and the award results for every season, so a few figures — the return rates in the continuity
+analysis, and the organiser-type base rate in the team-resources analysis — are measured across all 423
+accepted 2026 teams rather than the decorated 106. Where a section does that, it says so in its method note.
 
 GEMS-Taiwan is the report author's own team and is assessed on the same terms as everyone else, weaknesses
 included.
