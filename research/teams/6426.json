@@ -1,0 +1,90 @@
+{
+  "team": "CAU-China",
+  "id": "6426",
+  "section": "Undergrad",
+  "country": "China",
+  "village": "Food & Nutrition",
+  "wiki": "https://2026.igem.wiki/cau-china/",
+  "projectTitle": "Fungal Sentinel, with the OptiX phone spectrometer",
+  "tagline": "A $12 to $30 phone-based spectrometer and the two-client software stack that turns one RAW photograph into a concentration with an uncertainty attached.",
+  "summary": "CAU-China built Fungal Sentinel, engineered yeast that senses mould volatiles such as 1-octen-3-ol through a GPCR and reports them as fluorescence, and then built the instrument to read it where the mould actually is. OptiX is a pocket spectrometer that uses the phone's own camera as the detector: a threaded interchangeable excitation source, a sample chamber with light-trap fins, a collection module, a frosted-glass slit, a transmission grating, and two USB-C reference lamps that calibrate wavelength and spectral response per device. The software is two programs implementing one written specification, a Python reference implementation and an Android deployment client, held together by a parity test suite that enforces numerical agreement between them. The result is quantitative fluorescence with a limit of detection of 0.81 nM purified EGFP on an early build with no emission filter.",
+  "awards": [
+    "Best Food & Nutrition Project winner",
+    "Best Hardware nominee (Undergraduate)",
+    "Best Sustainable Development nominee"
+  ],
+  "dry": {
+    "frameworks": "Five explicit hardware DBTL cycles, each stated as a bottleneck that the previous cycle exposed: separate wavelengths, reject excitation, calibrate wavelengths, block ambient light, collect fluorescence. The software is organised as one shared specification implemented twice, with a parity suite that holds the Python and Android implementations to identical expectations on the algorithms they share, so that a field result and a desk result are the same number rather than two approximations of it. Every validation result is accompanied by its limitations.",
+    "dataviz": "An interactive light-path simulation in which the reader drags a spectrum to trace a chosen wavelength through the instrument; an exploded CAD view with numbered, selectable components; row-wise intensity profiles of the three Bayer channels inside the automatically detected spectral band with dynamic peak windows shaded and fitted centroids marked, plotted against a converted wavelength axis; held-out-point calibration residual plots; per-channel absolute response curves inside a dual mask with the response-proportional fusion weights shown as a partition of unity and the channel crossover wavelengths labelled; standard curves with insets marking the limit of detection as a dashed line and the limit of quantification as dotted.",
+    "datascience": "This is an unusually complete instrument-to-number pipeline. Raw pixel values are first made physical: exposure time is read from TIFF/EXIF tag 33434 and the sensor black level from DNG tag 50714, and the frame is normalised to (raw minus black level) over exposure time, so what leaves the first stage is proportional to a photon flux rate rather than to brightness. Wavelength calibration is two-point by design and validated on a held-out channel: blue and red LED peaks fit a linear pixel-to-wavelength model, the green peak at a nominal 522.5 nm is deliberately excluded from the fit and used only to turn a pixel residual into a wavelength error (reported as +15.3 px, i.e. +5.57 nm), with quality grades of PASS at 2.5 nm or better, WARNING to 10 nm and FAILED beyond, and a FAILED calibration blocking downstream steps unless explicitly overridden. Peaks are located inside valley-bounded windows and refined by a log-parabola vertex fit accepted only if the curvature is negative and the vertex falls inside the window, with a half-height edge midpoint as fallback, windows containing multiple local maxima tagged suspect, and the legacy intensity-weighted centroid still reported as a diagnostic so a reviewer can see how much the estimator choice mattered. Spectral response is measured per channel against a NICHIA white LED whose spectral power distribution the manufacturer publishes, inside a dual mask restricting the estimate to wavelengths both inside the usable 430 to 660 nm band and lit strongly enough, and the team deliberately does not smooth the response curves (smoothing fabricates detail the sensor never measured, exactly where the response is least trustworthy) and does not normalise them to each other (that would destroy the relative magnitudes that say which channel to trust where). Order of operations is enforced rather than suggested: blank subtraction is additive and clipped at zero before averaging so a noisy blank cannot produce a negative spectrum, then response division is applied only where the response exceeds 20% of its maximum and reported as zero elsewhere, because dividing before subtracting would multiply the background up as well. Spikes are removed by a local median-absolute-deviation test with a 2% amplitude floor so the filter does not fire on flat regions. Quantification uses spectral unmixing rather than band integration: the sample spectrum is fitted pointwise over an emission window as a linear combination of the measured reference emission shape (taken as the highest standard minus its own blank, on this instrument, not an idealised literature spectrum), the measured blank carrying scatter and Raman structure, and a constant offset, solved by ordinary least squares, with the metric being the fitted coefficient times the area under the reference emission. Because scatter and offset are fitted out before integration, the background no longer sets the detection floor, and with scattered excitation about 100 times stronger than EGFP emission at the lowest levels the unmixing gives a limit of detection ten times lower than blank subtraction alone (0.81 nM versus 7.8 nM). Three safeguards are built around it: automatic and auditable reference selection with a diagnostic naming every candidate's in-window area, a window that starts just beyond the measured scatter peak rather than a fixed symmetric band, and a t-test on the calibration slope (t below 3 is reported as not significant with the LoD and LoQ flagged unreliable rather than printed). Detection limits follow the IUPAC convention from the residual standard deviation of the fitted curve, LoD = 3.3 s_yx / slope and LoQ = 10 s_yx / slope, with weighted regression supported for the heteroscedastic, approximately Poisson character of fluorescence data, and the reported LoD taken from the lowest exposure block whose slope is significant with that provenance printed beside it. Saved calibration curves are re-fitted on import and rejected if the stored slope or intercept do not reproduce, so a hand-edited preset cannot silently change a result. Validation covers accuracy and dynamic range (0.81 nM LoD, linear 6.6 to 1684 nM, recovery 80 to 120%), EGFP in living yeast, mCherry in E. coli, OD600 against a bench spectrophotometer (R2 0.994, slope 1.02), absorbance spectra matched against a Nanodrop, and stability over 27 minutes at 0.30% coefficient of variation with all 14 stability criteria passed. Limitations are published alongside: the lowest standard was still detected so the LoD is extrapolated, and long 16-second exposures read lower than short ones for reasons not yet resolved.",
+    "software": "FSSA (Fungal Sentinel Spectral Analyzer), a Python desktop reference implementation requiring Python 3.10 or later with numpy, scipy, matplotlib and tifffile, with pytest for the test suite and no network access at any stage; MycoSpec, the Kotlin Android client built on Camera2 RAW that reimplements the validated pipeline natively so a RAW-capable phone performs the whole analysis on device; and a CSV Data Cleaner that prepares lamp spectral power distributions from plot-digitised datasheet points, clipping negatives, dropping duplicate wavelengths and resampling onto a 1 nm grid using shape-preserving PCHIP interpolation specifically because a natural cubic spline would overshoot and invent emission structure that is not in the datasheet. Both programs are released under the Apache License 2.0, on GitHub (github.com/LittleSky-CN/Fungal-Sentinel-Spectral-Analyzer and github.com/LittleSky-CN/Mycospec) and mirrored on iGEM GitLab (gitlab.igem.org/2026/software/cau-china/). The instrument itself is modelled and rendered from a Fusion 360 assembly, and the team cites the open-source smartphone spectrophotometer literature it builds on.",
+    "stack": [
+      "Phone CMOS sensor with RAW (DNG) capture",
+      "600 to 1200 line/mm transmission grating",
+      "NICHIA NFSW757DT reference white LED with published SPD",
+      "USB-C powered positioning and calibration lamp PCBs",
+      "Fusion 360",
+      "3D printing",
+      "Python (numpy, scipy, matplotlib, tifffile, pytest)",
+      "Kotlin / Android Camera2 RAW",
+      "PCHIP (Fritsch-Carlson) interpolation",
+      "Apache License 2.0"
+    ],
+    "techniques": [
+      "Exposure and black-level normalisation to photon flux rate",
+      "Two-point wavelength calibration validated on a held-out channel",
+      "Log-parabola vertex peak fitting with fallback and suspect flagging",
+      "Per-device, per-channel absolute spectral response calibration",
+      "Dual masking to avoid estimating response from noise",
+      "Enforced subtract-then-divide order with a guarded division",
+      "MAD-based local spike removal with an amplitude floor",
+      "Spectral unmixing against a measured reference emission shape",
+      "IUPAC LoD and LoQ from residual standard deviation",
+      "Weighted regression for heteroscedastic fluorescence data",
+      "Slope significance testing before reporting a detection limit",
+      "Exposure-block LoD selection with printed provenance",
+      "Calibration preset re-validation on load",
+      "Cross-implementation parity testing"
+    ]
+  },
+  "good": {
+    "publicEngagement": "An age-inclusive education programme spanning a science summer camp, one-day lectures, science-themed orienteering and community talks, reaching preschool and primary children through to university students and older adults, with biosensor concepts tied to everyday mould-prevention practice and courseware tailored per age group. Every activity and its stakeholder feedback was documented and used to revise the next session.",
+    "ihp": "Integrated Human Practices is organised through an F-Ring model with four stakeholder groups (Fungal, Feasibility, Field, Future) and a Focus-Finding-Feedback conversation structure, with each conversation routed back into the DBTL cycle. The project's origin is a reported need rather than an assumed one: students in Science and Technology Backyards in Malawi and Zambia described smallholder farmers in remote and resource-limited communities relying on visual inspection because laboratory testing is too costly, large, maintenance-heavy and technically demanding, and missing early-stage or hidden fungal contamination.",
+    "realWorld": "The entrepreneurship work treats the device as a product and tests that hypothesis against real users, opening with questions the lab cannot answer: who would own the device, a farmer, a cooperative, a warehouse or an extension station; who keeps it working after the pilot ends and who replaces a broken light source three hundred kilometres from the nearest city; how much a household living on stored grain would pay; and what happens if a farmer receives a warning they cannot act on. The technical case is framed around coverage as much as cost, since fungal contamination in stored maize is unevenly distributed by location, depth and batch, so a method that can only analyse a few transported samples cannot represent the warehouse. The hardware is explicitly dual-purpose, usable as a general pocket spectrophotometer, fluorometer or spectrometer by other teams simply by changing the light source.",
+    "partners": [
+      "Science and Technology Backyards (Malawi and Zambia)",
+      "China Agricultural University"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6426/wiki/optix-wiki-package/images/design/hero-cad-render.avif",
+      "caption": "OptiX, the phone-based spectrometer, rendered from the team's Fusion 360 assembly. Materials cost $12 to $30 per unit excluding the optional filter, because the most expensive component, the detector, is the camera the user already owns.",
+      "credit": "Team CAU-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6426/wiki/optix-wiki-package/images/design/exploded-view-cad.avif",
+      "caption": "Exploded view of the instrument: interchangeable excitation source, light shields, sample chamber with light-trap fins, collection module, frosted-glass slit, diffraction grating and phone-holder assembly. Excitation enters the cuvette from the side and fluorescence is collected at 90 degrees.",
+      "credit": "Team CAU-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6426/wiki/optix-wiki-package/images/design/software-wavelength-calibration.avif",
+      "caption": "Two-point wavelength calibration validated on a held-out channel. Only the blue and red LED peaks enter the linear pixel-to-wavelength fit; the green peak is predicted from its nominal 522.5 nm and its residual becomes the accuracy the per-device calibration preset must hold.",
+      "credit": "Team CAU-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6426/wiki/optix-wiki-package/images/validation/accuracy-standard-curve.avif",
+      "caption": "EGFP standard curve with the lowest exposure block inset, marking the limit of detection as a dashed line and the limit of quantification as dotted. Both follow the IUPAC convention from the residual standard deviation of the fit, giving 0.81 nM on an early build with no emission filter.",
+      "credit": "Team CAU-China, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Write the analysis as a specification first, then implement it twice and hold the two implementations to a parity test suite; and inside that specification, validate the calibration on a point you deliberately held out of the fit, fit the background out of the signal rather than subtracting a band, and refuse to print a detection limit when the calibration slope is not statistically significant.",
+  "sources": [
+    "https://2026.igem.wiki/cau-china/hardware",
+    "https://2026.igem.wiki/cau-china/software",
+    "https://2026.igem.wiki/cau-china/description",
+    "https://2026.igem.wiki/cau-china/integrated-human-practices",
+    "https://2026.igem.wiki/cau-china/entrepreneurship",
+    "https://2026.igem.wiki/cau-china/education"
+  ]
+}

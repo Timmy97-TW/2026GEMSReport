@@ -1,0 +1,85 @@
+{
+  "team": "Labi-Taiwan",
+  "id": "6511",
+  "section": "High School",
+  "country": "Taiwan",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/labi-taiwan/",
+  "projectTitle": "BlueCatcher: a cell-free electrochemical biosensor for MDD-associated circulating microRNAs",
+  "tagline": "A multistep biosensor validated stage by stage, from three-way-junction target recognition to a calibrated square-wave voltammetry readout.",
+  "summary": "Labi-Taiwan built BlueCatcher, a portable cell-free electrochemical biosensor for circulating microRNAs associated with major depressive disorder, intended as objective biological evidence alongside clinical assessment rather than as a diagnosis. The signal chain is deliberately long: a three-way junction recognises the target miRNA and releases a trigger strand, the trigger activates a toehold switch that expresses a nuclease, the nuclease cleaves a methylene-blue-labelled DNA reporter, and the released reporter is captured on a gold-modified screen-printed carbon electrode and quantified by square-wave voltammetry. Because a final signal alone cannot show that every step behaved, the team built a stepwise measurement framework in which each stage is independently validated before integration, with the degree of calibration deliberately matched to each measurement's role. The project also carries a machine-learning design suite and a strong education programme grounded in its own 432-respondent survey; it won the iGEMers Prize in the High School section.",
+  "awards": [
+    "iGEMers Prize winner (High School)",
+    "Best Measurement nominee (High School)"
+  ],
+  "dry": {
+    "frameworks": "A stepwise measurement framework that follows the sensor from target recognition to electrochemical readout, with a published table listing for each method its purpose and its reusable output. Each measurement is classified by the question it can answer: structural validation, relative comparison under matched conditions, or absolute quantification. Three modular measurement workflows are released separately from the project so that another team can adopt one without adopting BlueCatcher. The software follows a Design-Predict-Test loop in which predictions are returned to the wet lab and the results are used to judge where the model performed well.",
+    "dataviz": "A heatmap of background-adjusted fluorescence response across all 25 three-way-junction probe combinations, measured every five minutes for 30 minutes; time-course FRET curves with mean +/- SD (n = 3); dose-response and specificity bar panels with individual data points overlaid and significance annotated; overlaid baseline-corrected SWV voltammograms across the reporter concentration series with an inset log-linear calibration; batch-to-batch SWV bar charts with individual measurements shown; an interactive experimental-design flow diagram mapping every assay onto the stage of the sensor it validates.",
+    "datascience": "The calibration philosophy is stated explicitly and is the most transferable thing here: different measurements are calibrated to different degrees according to what they are for. FRET measurements, used only for comparison under matched conditions, are reported as a background-adjusted response (delta F equals fluorescence with target minus fluorescence without target) and are explicitly said to be in arbitrary units, intended for within-experiment comparison and not for absolute cross-instrument quantification. Toehold-switch fluorescence is interpreted against a three-way control framework of sensor-only, trigger-only and sensor-plus-trigger, with fold change calculated as (sensor+trigger minus trigger-only) over (sensor-only minus trigger-only) so that background and OFF-state leakage are separated from activation; this is what revealed a 43.4-fold response in BL21(DE3) against 3.6-fold in pLysS and justified the strain choice. Native PAGE is used only as qualitative structural validation, and the team states that the paired plus- and minus-target lanes are different experimental conditions and not independent replicates, with quantitative reproducibility deferred to the replicated FRET measurements. Only the final electrochemical step is developed as an absolute quantitative endpoint: SWV on functionalised Au@SPCEs across 0 to 500 nM methylene-blue reporter gives a nonlinear full-range response but an approximately linear relationship against log concentration, Ip = 2.313 log10(C) - 2.028 with R2 = 0.9457, and the limit of detection is derived properly from the blanks as I_LOD = I_blank + 3 sigma_blank then inverted through the calibration to give 7.53 nM, with the 0 nM condition serving both as the blank for the threshold and as the negative control. Reproducibility is measured at the level that actually varies, the electrode: three independently fabricated batches of Au@SPCE were measured against the same 200 nM reporter, showed no statistically significant difference, and gave a combined coefficient of variation of 10.66%. Upstream quality control is explicit and non-binary: UV absorbance (A230, A260, A280) is used as a checkpoint rather than a pass/fail gate, with the full table of ratios published including a sample flagged for an anomalous A230 of 1.097 and a 260/230 of 0.048, and samples carried forward to Sanger sequencing as the higher-resolution arbiter in a declared chain of plasmid extraction, purity check, restriction digest, sequence confirmation, then functional measurement. Electrode fabrication itself is characterised stepwise by cyclic voltammetry, chronoamperometry and electrochemical impedance spectroscopy across bare SPCE, Au@SPCE, probe-modified, MCH-blocked and reporter-hybridised states, with EIS used as interface characterisation rather than as the quantitative readout. Statistics are named: two-way ANOVA with Tukey multiple-comparisons for the cell-free screening, with significance levels reported alongside n = 3 and individual points. The team also states what has not been done, that the toehold-switch-to-AciI construct is not yet built so the system is not integrated, and refuses to claim that BlueCatcher is faster, more sensitive or more accessible than qRT-PCR until it is, marking every projected time in its comparison table with an asterisk.",
+    "software": "The BlueCatcher Software Suite, with independent design modules for three-way-junction probes (trained Random Forest) and toehold switches (trained XGBoost), available through a browser interface and as a local install. A user supplies a target or trigger sequence, the suite generates candidate designs, computes sequence, structural, thermodynamic and interaction features using NUPACK and custom scripts, applies the trained model, and returns ranked candidates with prediction confidence plus the complete sequence components needed to order and test them, exportable as CSV. Documented limits of applicability are published: 18 to 25 nucleotide targets for the TWJ module and up to 30 nucleotide triggers for the toehold module, stated as the sequence spaces represented in training rather than as biological limits, together with a discussion of dataset coverage, how prediction confidence should be interpreted, and the NUPACK dependency that constrains distribution. Supporting material includes complete Sanger sequencing datasets as PDFs and three standalone protocol documents (nucleic-acid characterisation, toehold-switch cloning and expression, electrochemical signal generation).",
+    "stack": [
+      "Square-wave voltammetry on gold-modified screen-printed carbon electrodes",
+      "Cyclic voltammetry, chronoamperometry, open circuit potential, EIS",
+      "FRET fluorescence (FAM/BHQ1)",
+      "Native and SDS-PAGE with in-gel fluorescence",
+      "Cell-free expression systems",
+      "Sanger sequencing",
+      "NUPACK",
+      "Random Forest and XGBoost",
+      "ESP32-WROOM-32 portable reader with WiFi/Bluetooth",
+      "Polyimide flexible heater"
+    ],
+    "techniques": [
+      "Calibration depth matched to measurement purpose",
+      "Background-adjusted response (delta F) for relative screening",
+      "Sensor-only / trigger-only / sensor+trigger control framework",
+      "Log-linear SWV calibration with R2",
+      "Blank-derived LOD (mean + 3 sigma, inverted through the curve)",
+      "Batch-to-batch reproducibility with coefficient of variation",
+      "Standardised baseline correction",
+      "Two-way ANOVA with Tukey post-hoc",
+      "Orthogonal protein-level validation of a fluorescence readout",
+      "Quality-control chain with a higher-resolution arbiter",
+      "Machine-learning pre-screening with declared domain limits"
+    ]
+  },
+  "good": {
+    "publicEngagement": "Education began with research rather than assumption. An anonymous online survey, preceded by an informed-consent statement and screened for careless or too-fast responses (12 excluded, 432 retained), used translated versions of three validated instruments: the six-item Depression Literacy and eight-item Misconceptions subscales of the DepSter scale and the nine-item perceived-stigma subscale of the Depression Stigma Scale, with internal consistency reported for this sample (alpha 0.66, 0.84 and 0.72). Literacy was high (mean 25.1 of 30) and misconceptions were broadly rejected (15.7 of 40), while perceived public stigma sat in the moderate-to-high range (29.3 of 45), with the highest-scoring items describing expected social exclusion. The team's conclusion, that the gap in Taiwan is stigma rather than knowledge, redirected the education programme; a saturated path model was estimated to test how education and personal contact relate to literacy, misconceptions and the perceived limits of counselling-only assessment. The programme that followed used different approaches for different audiences: a flipped classroom, a summer laboratory camp whose toehold-switch protocol is published as a reusable four-day workflow, family information sessions, a podcast, TGEM community-building among Taiwanese teams, and social media.",
+    "ihp": "Stakeholder work spans healthcare professionals, researchers, regulatory specialists, potential users and investment professionals, and fed an entrepreneurship roadmap covering regulatory planning and market analysis. The project's framing, that BlueCatcher complements rather than replaces clinical evaluation, comes from this engagement, as does the explicit statement that the device detects signals and does not diagnose.",
+    "realWorld": "The clinical gap is stated concretely: MDD assessment depends on interviews, symptom reporting and professional judgement, and patients face irregular follow-up because of stigma or access, no quantitative way to assess recovery or relapse, and trial-and-error treatment selection. The long-term aim is a portable format operating closer to the point of care in settings without centralised laboratory infrastructure, avoiding the reverse transcription and PCR amplification that qRT-PCR requires. The hardware is specified down to the reader's internals: an insertable electron reader module carrying the electrode pad and a cellulose overflow pad, a battery, a polyimide flexible heater, a lever that mechanically breaks a separation membrane in a two-chamber microtube to release the second reagent, and an ESP32 module that processes the signal and transmits results by WiFi and Bluetooth to a companion application that reports Low, Moderate or High biomarker variation with timestamped metadata rather than a binary diagnosis.",
+    "partners": [
+      "TGEM (Taiwanese iGEM community)",
+      "Previous Taipei-KCISLK teams (V1 2023, V2 2024, V3 2025)"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6511/wiki/wet-lab/measurement/v2/figure-23.avif",
+      "caption": "Square-wave voltammetry quantification of the methylene-blue reporter on functionalised Au@SPCEs across 0 to 500 nM. The inset shows the approximately linear relationship between peak current and log concentration (R2 = 0.9457), from which a blank-derived limit of detection of 7.53 nM is calculated.",
+      "credit": "Team Labi-Taiwan, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6511/wiki/wet-lab/measurement/v2/figure-24.avif",
+      "caption": "Batch-to-batch reproducibility of the SWV readout: three independently fabricated batches of functionalised Au@SPCE measured against the same 200 nM reporter, showing no significant difference and an overall coefficient of variation of 10.66%.",
+      "credit": "Team Labi-Taiwan, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6511/wiki/measurement/flow/full.avif",
+      "caption": "The experimental design of the project, mapping every assay onto the stage of the sensing pathway it validates, from three-way-junction target recognition through toehold-switch signal generation to electrode fabrication and the electrochemical readout.",
+      "credit": "Team Labi-Taiwan, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6511/wiki/dry-lab/hardware/figure-3.avif",
+      "caption": "Exploded view of the portable electrochemical reader's internal components: the insertable electron reader module with the electrode pad and cellulose overflow pad, a battery, a polyimide flexible heater, a lever that breaks the microtube's separation membrane, and an ESP32-WROOM-32 module on the main PCB.",
+      "credit": "Team Labi-Taiwan, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Match the amount of calibration to the job each measurement does: screening comparisons can stay in background-subtracted arbitrary units if you say so, but the one measurement you report as a concentration needs a real calibration curve, a blank-derived limit of detection, standardised baseline correction and a between-batch coefficient of variation. Treating every signal as equally quantitative is where overclaiming starts.",
+  "sources": [
+    "https://2026.igem.wiki/labi-taiwan/measurement",
+    "https://2026.igem.wiki/labi-taiwan/software",
+    "https://2026.igem.wiki/labi-taiwan/hardware",
+    "https://2026.igem.wiki/labi-taiwan/description",
+    "https://2026.igem.wiki/labi-taiwan/education"
+  ]
+}

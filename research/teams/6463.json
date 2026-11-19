@@ -1,0 +1,79 @@
+{
+  "team": "Yucai-SZ",
+  "id": "6463",
+  "section": "High School",
+  "country": "China",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/yucai-sz/",
+  "projectTitle": "SpotAway: a dry-activatable emergency stain patch",
+  "tagline": "De novo designed pigment binders and a lipase fusion, measured with explicit methodological boundaries on every assay.",
+  "summary": "Yucai-SZ designed SpotAway, a concept for a portable dry patch that treats fresh oil stains where they happen. The functional layer pairs a cellulose-binding-module fusion carrying a de novo designed capsanthin binder, for capturing the hydrophobic pigment in chili oil, with a triolein-binding-domain lipase fusion that anchors near oil droplets and hydrolyses triglycerides, all held in a trehalose-mannitol-protected xerogel that is rehydrated with one or two drops of water. The dry lab extended the standard Foundry de novo design pipeline by layering a docking-based binding-ability pre-test onto structural screening, after wet-lab results showed that structural metrics alone could not rank candidates. What distinguishes the measurement work is that every assay is published with a section defining what it cannot show.",
+  "awards": [
+    "Best Measurement nominee (High School)"
+  ],
+  "dry": {
+    "frameworks": "Four measurement modules (M1 to M4), each written as introduction, experimental setup and validation, results and discussion, methodological boundaries, and applications. The boundaries section is not an afterthought: it states the wavelength, concentration range, temperature and pH over which each conclusion holds and names the techniques that would be required to go further. Four wet-lab Design-Build-Test-Learn cycles are layered onto a two-round computational screening loop in which wet-lab disagreement with the dry-lab ranking is the trigger for changing the pipeline.",
+    "dataviz": "UV background scans from 240 to 320 nm in 5 nm steps for seven separate control groups, with the absorbance maximum arrowed on each; delta-OD bar charts with mean +/- SD, individual significance annotations and n stated; two paired standard curves for the lead binder, one for protein quantification and one for the binding response; time-course photographs of pigment adsorption alongside the quantitative data; lycopene stability curves comparing light-exposed and light-protected groups over 270 minutes with the sample photographs beside them; an oleic acid calibration curve.",
+    "datascience": "The measurement wavelength is derived rather than assumed. Seven control groups covering buffer, pure solvent, the biphasic solvent background, pigment absorption and intrinsic protein absorption were scanned from 240 to 320 nm in 5 nm increments, which showed the binder's 280 nm peak shifting about 5 nm shorter in the petroleum-ether biphasic system, fixing 275 nm as the quantification wavelength, with the explicit rule that 275 nm must not be adopted without rescanning if the pigment, solvent ratio or biphasic conditions change. Protein specificity of the response is then tested with a negative protein control, egg white, which also absorbs near 280 nm but does not reproduce a comparable delta-OD on adding capsanthin, and independent-samples t-tests distinguish genuine responses (Binder-1 and Binder-3 increased, p < 0.01; Binder-2 decreased, p < 0.001) from non-responses (Binder-4 and egg white, not significant). Two standard curves are built for the lead candidate rather than one, a binder concentration curve at 275 nm over 0 to 1.5 mg/mL (y = 0.388x + 0.03, R2 = 0.990) to account for protein background and a delta-OD against concentration curve (y = 0.108x - 0.006, R2 = 0.993) measured against a blank at matched binder concentration after a 30-minute light-protected reaction, with the stated limit that the fits are valid only over 0 to 1.5 mg/mL and must not be extrapolated, and that the method cannot yield a dissociation constant, which would require ligand titration across orders of magnitude and separation of free from bound states by SPR, ITC, MST or fluorescence quenching. The most instructive module is M3, where transferring the UV strategy to lycopene produced unstable results and the team stopped to measure the measurement system itself: a lycopene standard curve in petroleum ether (y = 0.1109x - 0.00223, R2 = 0.994) plus light-exposed and light-protected time series read at 0, 30, 60, 120, 180, 240 and 270 minutes showed the OD474.5 signal drifting with an apparent half-life of about 2.5 hours under illumination, which meant an observed OD change could not be attributed to binder activity. The team terminated the lycopene route on that basis and states the conclusion precisely, that the current lycopene assay system lacks sufficient stability for binder assessment, not that lycopene cannot be used at all, and notes that they did not identify the degradation products or separate photodegradation from thermal degradation. Lipase activity is quantified by copper-soap colorimetry at 710 nm against an oleic acid standard curve (y = 0.0123x + 0.0452, R2 = 0.999), with free lipase at 4.19 U/mL and the Lipase-Binder fusion at 3.68 U/mL at matched 1 mg/mL protein (87.8% retention), and the team is careful that the 143% apparent retention per catalytic centre is a theoretical molar correction based on an unverified 1.63x molecular-weight ratio calculated from amino acid composition, not an independent measurement of enhancement. The unit is defined (1 U equals 1 umol fatty acid released per minute at 37 C and pH 7.0) and the assay conditions are justified against the intended use, olive oil as a stand-in for the long-chain triglycerides in cooking-oil stains, 37 C as warm-water washing and pH 7.0 as neutral washing, while stating that performance at 20 C or pH 9 to 10 is not established.",
+    "software": "The computational pipeline is built on RFdiffusion3 for backbone generation, LigandMPNN for sequence design, RoseTTAFold3 for pTM and ipTM structure evaluation with RMSD as a designability filter, and AutoDock Vina docking added in round two as a binding-ability pre-screen after the wet lab showed that four candidates with near-identical structural metrics behaved very differently in adsorption. Redesigning 200 sequences on the Binder-1 backbone and docking-screening them produced Binder-5 with the strongest predicted binding energy (-10.9 kcal/mol), which improved about 40% over its parent in the wet lab without overtaking the round-one best candidate, a result the team reports as showing docking can rescue weak candidates rather than as a validation of docking.",
+    "stack": [
+      "UV-Vis spectrophotometry (240 to 320 nm scans, 275 nm and 474.5 nm quantification)",
+      "Copper-soap colorimetry at 710 nm",
+      "RFdiffusion3",
+      "LigandMPNN",
+      "RoseTTAFold3",
+      "AutoDock Vina",
+      "PubChem ligand preparation",
+      "Independent-samples t-tests"
+    ],
+    "techniques": [
+      "Wavelength selection by multi-control background scanning",
+      "Negative protein control to establish specificity",
+      "Paired standard curves (protein background and response)",
+      "Declared linear range with no extrapolation",
+      "Analyte stability testing before attributing signal change",
+      "Light-exposed versus light-protected controls with a time series",
+      "Apparent half-life as a measurement-window criterion",
+      "Enzyme activity in defined units against a calibration curve",
+      "Assay conditions matched to intended use conditions",
+      "Explicit methodological boundaries section per assay",
+      "Dry-lab ranking tested against wet-lab outcome"
+    ]
+  },
+  "good": {
+    "publicEngagement": "The team runs an education programme and publishes a cookbook alongside the project, with collaborations and a sustainable-development-goals page documenting wider activity.",
+    "ihp": "The project began from a questionnaire with 719 valid responses plus interviews with hotpot enthusiasts, used to test whether the team's own experience of oil stains reflected a broader need before committing to the problem.",
+    "realWorld": "An entrepreneurship page accompanies the project. The team is careful to describe the patch as a concept whose integration remains to be experimentally validated, and frames the measurement conditions, 37 C and pH 7.0 with olive oil as substrate, as deliberately matching the product's intended use so that the reported activity reflects performance in context rather than serving only as a proof of principle.",
+    "partners": []
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6463/wiki/wetlab-oct15/figure-17a5a3588f362703.avif",
+      "caption": "Standard curves for the lead binder at 275 nm: a protein quantification curve in petroleum ether (R2 = 0.990) used to account for protein background, and the delta-OD against concentration curve for Binder-2 in the capsanthin system (R2 = 0.993), both declared valid only over 0 to 1.5 mg/mL.",
+      "credit": "Team Yucai-SZ, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6463/wiki/wetlab-oct15/original-image22.avif",
+      "caption": "Oleic acid calibration curve (y = 0.0123x + 0.0452, R2 = 0.999) used to convert the 710 nm copper-soap absorbance change into lipase activity in U/mL, with one unit defined as 1 umol fatty acid released per minute at 37 C and pH 7.0.",
+      "credit": "Team Yucai-SZ, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6463/wiki/wetlab-oct15/figure-15556142df20e307.avif",
+      "caption": "Assay stability testing with lycopene: the standard curve in petroleum ether (R2 = 0.994), photographs of light-exposed and light-protected samples, and the time-dependent OD curves showing an apparent half-life of about 2.5 hours under illumination, which led the team to terminate the lycopene route.",
+      "credit": "Team Yucai-SZ, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6463/wiki/wetlab-oct15/engineering-oct18-image6.avif",
+      "caption": "Change in absorbance at 275 nm for each candidate binder and for the egg white negative protein control after incubation with capsanthin, shown as mean +/- SD (n = 3) with independent-samples t-tests, which separates a protein-specific spectral response from a response any protein would give.",
+      "credit": "Team Yucai-SZ, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Before attributing a signal change to your molecule, measure whether the analyte itself is stable under the measurement conditions: light-exposed versus light-protected time series and an apparent half-life define the window in which a reading means anything, and are cheap enough to run before every new target.",
+  "sources": [
+    "https://2026.igem.wiki/yucai-sz/measurement",
+    "https://2026.igem.wiki/yucai-sz/model",
+    "https://2026.igem.wiki/yucai-sz/description",
+    "https://2026.igem.wiki/yucai-sz/results",
+    "https://2026.igem.wiki/yucai-sz/engineering"
+  ]
+}

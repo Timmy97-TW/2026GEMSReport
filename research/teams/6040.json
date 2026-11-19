@@ -8,14 +8,35 @@
   "projectTitle": "LanTurn",
   "tagline": "Lanmodulin displayed on yeast, harvested by light-triggered flocculation, deployed on-site as a tolling service for mine tailings",
   "summary": "McGill engineered Saccharomyces cerevisiae EBY100 to display lanmodulin variants on its surface via the Aga1-Aga2 system for selective rare-earth binding, and to flocculate on command through a blue-light VP16-EL222 / C120 optogenetic circuit driving a truncated 678FLO1 flocculin, so that REE-loaded cells can be separated by gravity settling instead of centrifugation. Light-induced flocculation reached 66-75 percent against 24-25 percent in dark controls, and LanM surface display was confirmed by flow cytometry and confocal microscopy. The commercial case is a full industrial techno-economic analysis rather than a canvas: gate-to-gate CAPEX and OPEX, a unit cost of $11.83-20.58 USD per kg REO, a full-scale NPV case study on the Ashram tailings in Nunavik, Quebec, and seven separate sensitivity analyses. They were nominated for Best Entrepreneurship (Undergrad) and Best Biomanufacturing.",
-  "awards": ["Best Entrepreneurship nominee, Undergrad", "Best Biomanufacturing nominee"],
+  "awards": [
+    "Best Entrepreneurship nominee, Undergrad",
+    "Best Biomanufacturing nominee"
+  ],
   "dry": {
     "frameworks": "Technology Readiness Levels (NASA nine-level scale, chosen specifically because Canadian cleantech and mining funding programmes gate on TRL) as the backbone of a four-phase staged development plan, each phase carrying goals, named partners, a funding figure and source, and a risk-and-mitigation table. Plus techno-economic analysis in three parts (gate-to-gate, full-scale case study, sensitivity), competitor tiering into direct, substitute and future, a four-option exit plan, a skill-gap analysis mapped against the advisory board, an IP and freedom-to-operate review, and a one-year incorporation plan with a one-pager.",
     "dataviz": "A tabbed entrepreneurship page with a Sankey flowchart of critical-materials flows, a rare-earth demand-and-project-gap chart, a TEA workflow flowsheet, CAPEX/OPEX tables for both gate-to-gate and full-scale cases, a financial-analysis panel, and seven sensitivity charts (adsorption capacity, desorption efficiency, product purity discount, feedstock grade, yeast dosing concentration, PLS pH, discount rate), plus a tolling-model process diagram and an advisory-board gallery.",
     "datascience": "Genuinely industrial-grade analysis. Mass balances built in Excel at a PLS flowthrough of 1,200,000 cubic metres per year, 1 g/L REE and 80 percent target recovery; unit-cost benchmarking per kg TREO against solvent extraction, column-immobilised lanmodulin and a Caulobacter-based bioadsorbent; NPV of USD 51M over 15 years in the high-uptake case versus USD -0.2M in the low-uptake case, with payback of 2.6-5.9 years. The sensitivity work generates actual engineering targets: breakeven at about 23 mg/g adsorption capacity, rising to about 35 mg/g once a 20-30 percent impurity discount on mixed REO is applied; every 5 percent loss of desorption efficiency costs roughly USD 10M of project value; profitability is governed almost entirely by initial PLS pH rather than the bioadsorbent's operating pH; and the low-uptake case goes negative above a 15 percent discount rate. Separately, the TORCH dry-lab project runs GROMACS molecular dynamics with QM/MM to engineer the LanM binding site, including a real debugging story about periodic boundary conditions inflating RMSD tenfold.",
     "software": "TORCH, a QM/MM and molecular-dynamics pipeline for optimising the lanmodulin binding site, with custom scripts for RMSD, clustering, radial distribution functions and explicit oxygen-distance coordination counting.",
-    "stack": ["GROMACS", "VMD", "Python", "Excel mass-balance and TEA models", "S. cerevisiae EBY100 / pYD1 Aga1-Aga2 display", "VP16-EL222 / C120 optogenetics", "flow cytometry", "confocal microscopy", "ICP-MS", "Xylenol Orange colorimetry"],
-    "techniques": ["yeast surface display with FLAG-tag detection", "blue-light-inducible flocculation and Helm's flocculation assay", "REE adsorption and desorption from flocs", "restriction-enzyme cloning with LiOAc/SDS yeast colony PCR", "sulfuric acid leaching of real tailings samples", "sensitivity and NPV analysis"]
+    "stack": [
+      "GROMACS",
+      "VMD",
+      "Python",
+      "Excel mass-balance and TEA models",
+      "S. cerevisiae EBY100 / pYD1 Aga1-Aga2 display",
+      "VP16-EL222 / C120 optogenetics",
+      "flow cytometry",
+      "confocal microscopy",
+      "ICP-MS",
+      "Xylenol Orange colorimetry"
+    ],
+    "techniques": [
+      "yeast surface display with FLAG-tag detection",
+      "blue-light-inducible flocculation and Helm's flocculation assay",
+      "REE adsorption and desorption from flocs",
+      "restriction-enzyme cloning with LiOAc/SDS yeast colony PCR",
+      "sulfuric acid leaching of real tailings samples",
+      "sensitivity and NPV analysis"
+    ]
   },
   "good": {
     "publicEngagement": "They host their own annual synthetic-biology conference, On the Verge, themed in 2026 as 'On the Verge of Running Out: Building the Bioeconomy', deliberately assembling corporate industry leaders, startup founders, policy experts, researchers and students around resource extraction. They also ran school and summer-camp workshops (microbial painting, acid-base chemistry) and are responding to a teacher's request for more advanced genetic-engineering workshops by exploring chromoproteins for new colours.",

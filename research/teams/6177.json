@@ -1,0 +1,86 @@
+{
+  "team": "SEHS",
+  "id": "6177",
+  "section": "High School",
+  "country": "China",
+  "village": "Therapeutics / health (inferred from project scope; no village stated on the wiki)",
+  "wiki": "https://2026.igem.wiki/sehs/",
+  "projectTitle": "FusionDrive - an anti-TIGIT-IL-2v fusion protein for gastric cancer immunotherapy",
+  "tagline": "Release the immune brake and bias the accelerator, in one molecule",
+  "summary": "Starting from the high gastric-cancer burden in their home province of Shandong, SEHS designed FusionDrive, a fusion protein joining an anti-TIGIT antibody to an engineered IL-2 variant through a G4S linker. The antibody Fab blocks CD155-TIGIT inhibitory signalling to reverse T-cell exhaustion, while the Fc-fused IL-2v carries a low-alpha/high-beta modification that reduces CD25 binding and so biases stimulation away from regulatory T cells. Across five DBTL cycles the team built the antibody, the wild-type IL-2 fusion and the variant fusion in CHO cells and compared them by SDS-PAGE, TIGIT-binding ELISA (EC50 0.6317 nM for the antibody, 1.335 nM after IL-2 fusion) and flow cytometry for CD25 and pSTAT5. Because the iGEM high-school White List left Jurkat as the only available T-cell line, they used PHA induction to create CD25-high and CD25-low populations as a stand-in for the Treg receptor phenotype.",
+  "awards": [
+    "Best Alternative Platform nominee (High School)"
+  ],
+  "dry": {
+    "frameworks": "No computational model of any kind: there is no Model or Software page on the site, and no docking, structure prediction or kinetic simulation anywhere in the project. The design reasoning is literature-driven (lowalpha/highbeta IL-2 variants, G4S linker flexibility) rather than simulated. The hardware page does include a comparative literature review of three published protein-detection instruments used to specify a device.",
+    "dataviz": "Clean, interpretable assay figures: concentration-response ELISA binding curves for all three molecular formats with fitted EC50 values, flow-cytometry panels reporting both positive-cell percentage and mean fluorescence intensity, PHA induction screening results, and pSTAT5 response split across CD25-defined subpopulations. Figure captions state what is being compared.",
+    "datascience": "Dose-response curve fitting to extract EC50 is the real quantitative work, and it is done properly - including diagnosing why the first ELISA saturated (the TIGIT-Fc coating antigen was being detected by the anti-human IgG1-HRP secondary) and re-running with His-tagged TIGIT. Flow-cytometry gating is used to separate populations and compare signalling within each, with both %positive and MFI reported rather than one summary number. No inferential statistics (no ANOVA, no stated replicate counts or error bars in the text), so the analysis is descriptive rather than statistical.",
+    "software": "None.",
+    "stack": [
+      "TIGIT-binding ELISA with EC50 curve fitting",
+      "flow cytometry (CD25, pSTAT5; %positive and MFI)",
+      "SDS-PAGE under reducing and non-reducing conditions",
+      "CHO transient expression and protein purification",
+      "SolidWorks-style CAD for the compact detection device",
+      "Gibson assembly / homologous recombination cloning with Sanger verification"
+    ],
+    "techniques": [
+      "concentration-response curve fitting and EC50 comparison across three molecular formats",
+      "assay-interference troubleshooting and antigen substitution",
+      "phenotype-based model adaptation (PHA-induced CD25-high population as a Treg receptor proxy)",
+      "subpopulation-resolved signalling comparison",
+      "comparative literature review to specify instrument requirements"
+    ]
+  },
+  "good": {
+    "publicEngagement": "Modest and mostly instrumental to the Human Practices work rather than a programme in its own right. There is an online questionnaire with 131 respondents (concerns clustered on efficacy, long-term side effects and cost, plus a stated appetite for disease knowledge), school outreach including a session with 15 final-year high-school students with a post-activity feedback survey, and a dual-use forum organised with two Shandong University academics after the iGEM Safety and Security Committee raised dual-use analysis. The Education page exists but is empty.",
+    "ihp": "Genuinely project-shaping, organised around four questions and a stakeholder table that pairs each input with the team's response and its outcome status. The pivot is documented honestly: the team began assuming alcohol consumption meant liver cancer, and oncologist Dr Meng Min redirected them to gastric cancer, pointing out that because gastric cancer is predominantly East Asian it receives less targeted-drug investment than globally prevalent cancers. Professor Yang Zhe's warning about excessive immune activation reframed the bifunctional design and set 'advanced gastric cancer, combination therapy' as the research context. Antibody engineer Professor Liu Zhifang's point that binding must be re-measured after adding modules is directly why TIGIT binding was tested separately for all three formats. A WuXi AppTec expert (anonymised as Dr Z) pushed them to distinguish a change in response bias from a change in overall activity, and reviewed their questionnaire wording. A patient's family member (Ms Wang) shifted the evaluation goal toward completing treatment rather than efficacy alone. The Safety and Security Committee exchange is what selected CHO cells as the chassis.",
+    "realWorld": "The Alternative Platform page is the real deliverable and the most transferable thing here: a documented mammalian expression and functional-evaluation workflow built entirely inside the 2025-onward iGEM high-school White List, which bans Check-in and Animal Use forms. CHO cells produce the molecules, Jurkat cells measure the response, and the team shows how to translate a tumour-immunology question into something testable with only a whitelisted cell line - including the PHA/CD25 trick that substitutes a receptor phenotype for an unavailable cell type. Contribution also covers the fusion-protein workflow, the modular architecture, documented assay interference, and a compact organoid-chip detection device prototype (sample chamber, constant-temperature heating, illumination, image acquisition, control system) specified as a low-cost alternative to a microplate reader. The business plan covers staged financing and technology licensing.",
+    "partners": [
+      "Dr Meng Min, oncologist",
+      "Professor Yang Zhe (tumour immunology)",
+      "Professor Liu Zhifang, antibody engineering",
+      "WuXi AppTec drug-development expert (anonymised as Dr Z)",
+      "Shandong University academics (dual-use forum)",
+      "iGEM Safety and Security Committee",
+      "President Zhang Zhongjiang (health communication and business planning)",
+      "a patient's family member (anonymised as Ms Wang)"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6177/wiki/description/fig-03.avif",
+      "caption": "From design to initial validation: the five engineering cycles taking FusionDrive from anti-TIGIT antibody to wild-type IL-2 fusion to the low-alpha/high-beta IL-2 variant fusion.",
+      "credit": "Team SEHS, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6177/wiki/alternative-platform/fig-04.avif",
+      "caption": "TIGIT-binding ELISA concentration-response curves for the three molecular formats, the dataset from which the team fitted EC50 values of 0.6317 nM (antibody) and 1.335 nM (IL-2 fusion).",
+      "credit": "Team SEHS, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6177/wiki/alternative-platform/fig-08.avif",
+      "caption": "pSTAT5 responses across CD25-defined Jurkat populations, the readout built to test the low-alpha design using only a whitelisted cell line.",
+      "credit": "Team SEHS, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6177/wiki/alternative-platform/fig-01.avif",
+      "caption": "Overview of the FusionDrive mammalian cell expression and functional evaluation platform, built entirely within the iGEM high-school White List.",
+      "credit": "Team SEHS, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "SEHS is a wet-lab-first project whose dry lab is thin but not decorative: EC50 curve fitting and subpopulation-resolved flow-cytometry analysis are real quantitative work and well within high-school reach, yet an antibody-cytokine fusion project with no structure prediction, no linker modelling and no docking is leaving free analysis on the table. The limiting factor is clearly mentorship rather than tooling or compute - the team had access to CHO culture and a flow cytometer, which is far rarer than a free AlphaFold or HDOCK run, so someone simply never pointed them at the computational side.",
+  "sources": [
+    "https://2026.igem.wiki/sehs/",
+    "https://2026.igem.wiki/sehs/description",
+    "https://2026.igem.wiki/sehs/engineering",
+    "https://2026.igem.wiki/sehs/alternative-platform",
+    "https://2026.igem.wiki/sehs/hardware",
+    "https://2026.igem.wiki/sehs/human-practices",
+    "https://2026.igem.wiki/sehs/contribution",
+    "https://2026.igem.wiki/sehs/education",
+    "https://2026.igem.wiki/sehs/entrepreneurship",
+    "https://2026.igem.wiki/sehs/parts",
+    "https://2026.igem.wiki/sehs/safety"
+  ]
+}

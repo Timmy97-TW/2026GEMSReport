@@ -1,0 +1,115 @@
+{
+  "team": "IISER-Kolkata",
+  "id": "6450",
+  "section": "",
+  "country": "India",
+  "village": "Conservation",
+  "wiki": "https://2026.igem.wiki/iiser-kolkata/",
+  "projectTitle": "FINS",
+  "tagline": "An estrogen-responsive E. coli biosensor coupled to secreted bacterial laccase, immobilised in PVA-alginate beads as a contained tank inside an existing wastewater treatment train",
+  "summary": "FINS detects and degrades estrogenic endocrine disruptors (estrone E1, 17beta-estradiol E2, 17alpha-ethinylestradiol EE2) in wastewater. Module 1 uses EdcR, a TetR-family estrogen-dependent repressor from Caenibius tardaugens, expressed constitutively from BBa_J23105 to hold the Pb promoter shut; estrogen de-represses Pb, a T7 RNA polymerase stage amplifies the partial de-repression, and the output is either mScarlet3 (detection build) or secreted 6xHis-tagged BPul laccase from Bacillus pumilus, which oligomerises estrogens by oxidative coupling in the bulk phase. Module 2 is a holin-endolysin kill switch whose trigger was rebuilt from UV/LexA-SOS to RclR with the rclA promoter after wastewater practitioners pointed out Indian plants disinfect with sodium hypochlorite, not UV, on cost grounds. The project is sited as a discrete tank after secondary treatment and before chlorination, so the plant's own disinfection stage doubles as containment. The dry lab is the standout: 13 coupled ODEs, exact Gillespie and Linear Noise Approximation cross-checks, Fisher information and a Cramer-Rao limit of detection, a lattice-Boltzmann packed-bed solve, and a bespoke C++ elastic network solver released as open software.",
+  "awards": [
+    "Best Presentation (nominee)",
+    "Best Wiki (nominee)",
+    "Best Conservation Project (nominee)"
+  ],
+  "dry": {
+    "frameworks": "A ten-page modelling stack, each page ending in numbers and an explicit uncertainty page that re-derives the uncertainty of the other nine using school-level arithmetic. Deterministic core: 27 mass-action reactions reduced to 13 ODEs under three stated assumptions (well-mixed 1 fL cell so Omega = 0.602192 molecules per nM; mRNA at quasi-steady state since delta_m = 0.231 >> delta_p = 0.0261; one dilution rate for all proteins). Hill repression at the operator fitted directly by least squares in SciPy against digitised fluorescence from Ibero et al. Figure 12, giving K_eff and n = 1.49; the team flags that the repression coefficient was tuned to reproduce the measured leak and is therefore 'an input wearing a prediction's clothes', while every other number is a prediction. A pure elongation calculation from actual construct lengths, with transcription and translation overlapping in E. coli, gives 1.158 min to synthesise and 38.158 min to first photon. Transport: a diffusion-based molecular communication model (built on Adam Noel's framework but for a sustained source rather than a pulse) carrying estrogen from the well through medium, across membrane, to the repressor, justified by measured octanol-water partition coefficients satisfying Overton's rule, with a three-layer cell and conservative-solver mass-balance closure to machine precision. Reactor: a lattice-Boltzmann solve (D3Q19, TRT) of the packed bead bed reproducing porosity to 0.04% and Kozeny-Carman permeability to 0.998x, validated against Zick and Homsy within 2.4%, feeding a geometric depth-removal argument. Structural: AlphaFold 2 (32 models across three runs) on wild-type EdcR, docking of E1 and EE2 to BPul laccase and to the EdcR dimer, plus two independent 100 ns GROMACS MD runs (amber99sb-ildn, TIP3P, GAFF2/AM1-BCC ligand, ~80,300 atoms, 4 fs with hydrogen mass repartitioning).",
+    "dataviz": "Figures carry their own epistemic status. Dose-response panels overlay the digitised source bars, the Hill fit as a dashed line and the integrated ODE steady state as a solid line, with the unrepressed control marked. Gillespie histograms are drawn under LNA curves for each of the three core species across the estrone sweep. The stochastic dose-response plots single Gillespie cells as dots, their mean with 1 SD bars as circles, and the ODE steady state as a line, on both linear and log axes. Fisher information is plotted per cell against estrone for four constitutive promoter strengths. A dedicated dry-vs-wet figure and a knob-ranges figure put model predictions against what the bench actually produced. An interactive browser Normal Mode Explorer renders modes as per-residue displacement arrows coloured blue to red on the structure, overlays CCP4/MRC density as contour mesh or solid isosurface, and reports cross-correlation before and after flexible fitting.",
+    "datascience": "The information-theoretic treatment is the strongest in this cohort. One LNA solve per estrone level gives mean and variance of each species; derivatives are taken by central differences with h = 0.01*theta (closed form 6.2560 vs finite difference 6.2559 for the reporter at 322.5 ng/mL). ODE, LNA and exact Gillespie (1,500 cells per level) agree to within 0.17% and 0.49% on means, with the largest gap (T7 at 409 ng/mL, +1.8%) attributed to gate curvature the LNA omits. From Fisher information they derive a Cramer-Rao bound and a limit of detection of 54.5 ng/mL at N = 10^3 cells, and show analytically that only K_E1, the noise CV/gain of the molecule read, and N enter the LOD formula (matching the full LNA to 0.5%). A systematic knob sweep raising each parameter up to x1000 with the full 9-species LNA shows amplification scales signal and noise together so SNR is unchanged: three orders of amplification move the LOD by 1.9 ng/mL while three orders of k3 move it by 53. They explicitly retire the Fano factor as a figure of merit here ('a low value means a brighter circuit, not a quieter one'), identify a tighter estrone-binding protein as the only real lever, note LOD scales as N^(-1/4), and then conclude against themselves: surface water and effluent hold under 0.01 ng/mL, over three orders of magnitude below their LOD. Elasticity analysis identifies the Hill coefficient as the largest elasticity (-0.613 on the width of the working window, an order of magnitude above the next constant) and the quantity the wet lab most clearly contradicts. The working window where fluorescence actually encodes concentration is bounded at 147 to 988 ng/mL, a 6.70x span, taken as 10% and 90% of the climb from G_off to G_on. Reactor sizing is translated into plant terms: 95 m2 cross-section for one 57 MLD sewage plant, 889 m2 for all of Kolkata's 534 MLD, and a 3400x bead penalty for treating a 17 m3/day factory stream downstream at the city plant instead of at source.",
+    "software": "Quiver, at gitlab.igem.org/2026/software/iiser-kolkata/quiver: a compiled elastic network model solver (enm-solve, ANM and GNM) with a dependency-free browser viewer, the Normal Mode Explorer, and a 27-page PDF handbook. It takes PDB/mmCIF, optionally an AlphaFold predicted aligned error matrix, or a multi-model conformational ensemble or MD trajectory; it outputs mode files and per-residue fluctuation profiles in native formats for VMD, ProDy, PyMOL, ChimeraX, NumPy and MATLAB. The viewer does normal-mode display, cryo-EM density display, normal-mode flexible fitting of a structure into a map, and an AlphaFold-informed dynamics and essential-dynamics workspace. Validation is the remarkable part. (1) A 206-structure crystallographic B-factor benchmark, median Pearson r = 0.633, reported on a single-chain protocol with the 75 multi-chain files flagged as making that a lower bound, and the selection queries, rejected entries with reasons and download commands committed to the repo. (2) Independent cross-check: five structures re-run end to end through ProDy's own parser, Kirchhoff matrix and fluctuations, agreeing to within 0.01 (1UBQ 0.806 vs 0.804, 2LZM 0.578 vs 0.576, 7RSA 0.628 vs 0.628, 1GPB 0.400 vs 0.399, 1HRC 0.192 vs 0.19). (3) MD validation against the two 100 ns trajectories, with the XTC decoder itself verified frame-0 atom-by-atom against the deposited start.pdb before any analysis, because a subtly wrong decoder produces plausible numbers. Amplitude correlation 0.824-0.840 against simulated RMSF over 388 residues, apo and holo agreeing to within 0.016. Cutoff robustness: ANM varies by at most 0.05 between 10 and 18 A and peaks at the 15 A default taken from literature and not fitted, while GNM's 10 A default is shown to be suboptimal here by about 0.06. Directional validation by RMSIP against essential dynamics: 0.715 at k = 10 against a random expectation of 0.092 confirmed over 200 random orthonormal subspace pairs, specific to the input structure (each network matches its own trajectory at 0.715 and the other at 0.51-0.55) and, strikingly, the two MD trajectories agree with each other at only 0.598, so the elastic model predicts each trajectory better than the other trajectory does. Three of 1,164 coordinates carry half the motion. Rigid-body sanity: exactly six zero modes at 20,000 residues with overlap 1.000000 against the analytic basis. 33 tests, a pinned Docker image, Linux/macOS Intel and Apple Silicon/Windows via WSL2, an explicitly stated domain of applicability (compact globular protein-only structures), and a stated requirement that release builds disable fused multiply-add contraction or the sparse-vs-dense Hessian consistency check fails on arm64.",
+    "stack": [
+      "C++ (enm-solve) with LAPACK/BLAS",
+      "SciPy / NumPy",
+      "GROMACS",
+      "mdtraj",
+      "ProDy",
+      "AlphaFold 2",
+      "Docker",
+      "React / three.js wiki",
+      "VMD / PyMOL / ChimeraX output formats",
+      "GitLab"
+    ],
+    "techniques": [
+      "Deterministic ODE circuit modelling with stated reduction assumptions",
+      "Hill-function parameter fitting by least squares on digitised literature data",
+      "Exact Gillespie stochastic simulation",
+      "Linear Noise Approximation",
+      "Fisher information and Cramer-Rao bound",
+      "Analytic limit-of-detection derivation and knob sweeps",
+      "Elasticity / local sensitivity analysis",
+      "Diffusion-based molecular communication modelling",
+      "Lattice-Boltzmann (D3Q19 TRT) porous-media flow",
+      "Kozeny-Carman permeability validation",
+      "Anisotropic and Gaussian network models",
+      "Essential dynamics / PCA of MD trajectories",
+      "RMSIP subspace overlap with randomised null",
+      "Normal-mode flexible fitting into cryo-EM density",
+      "Molecular docking",
+      "Reactor sizing and process-train siting calculations"
+    ]
+  },
+  "good": {
+    "publicEngagement": "Between June and September 2026 the team ran a structured science-education programme reaching about 1,000 students aged 8 to 18 across four schools and their own institute, pitched separately for each age band from class 3 to class 12 and deliberately extended to students who are rarely asked. Teaching was mostly in Bengali, keeping the English terms and building explanations around them, because synthetic biology's vocabulary (plasmid, promoter, transcription, chassis) has no settled Bengali equivalents. Rani Rashmoni School (24 June, class 3-4): living versus non-living through a card game, then cells, DNA and a live DNA extraction. Satish Chandra Memorial School (8 July, class 11-12): genetic engineering, CRISPR and synthetic biology as a discipline; the team found this audience knew more of the content than expected and less of the practice than assumed, so the useful addition was not information but the fact that a person sits down and designs recombinant DNA. Bharat Sevashram Sangha (8 July, class 10), a residential school for Scheduled Tribe students: the prepared class 10 session had to be rebuilt from the base vocabulary mid-session, and the team names the lesson plainly, that prior exposure and not age sets the starting point, and that they had not noticed the age assumption because it had held everywhere else. Institute Open Day (10 July) ran FINS itself as the exhibit, including the parts that did not work, delivered forty to fifty times in short bursts to mixed class 9-12 groups; it was covered by DD Bangla, the state public broadcaster, carrying the project to a general Bengali-speaking audience. A week-long institute summer camp for about 70 students from North-Eastern India, organised with Kendriya Vidyalaya, included lab tours, the modelling side of the project and an original synthetic-biology crime-scene investigation. A long-term partnership with Ek Pehal runs Saturday on-campus sessions and Sunday neighbourhood visits for children from settlements around IISER Kolkata, for which the team wrote 41 free teaching files in English, Hindi and Bengali for classes 8-12 plus 36 literacy/numeracy/science files for younger children. A free webinar on Master's and PhD study abroad drew 151 registrants with Dr Deepak Kumar Malik (President, DAAD IndiAlumni) and the Emerging Scholars Council. Education props were built from cardboard, paper and reused items, which the team notes as an unplanned consequence worth keeping: materials that cost nothing to make are materials a school with no science budget can remake exactly.",
+    "ihp": "Around thirty engagements written to an explicit template that starts with 'Need: the assumption we were carrying and the gap we hoped to fill'. The project originates outside the lab, on the deck of the Fishery Survey of India vessel M.F.V. Matsya Darshini off Visakhapatnam, where the team lead logged a haul of twenty-six fish before the team existed; months later they returned to the same coast to test the observation. The page's integrity is its best feature: three engagements are documented as having declined to give the finding the team went in for. Mr Mohadep Dutta, who has fished the Ganga since he was seven, could not comment on a shift in sex ratio because it is not visible to him, and the team records that as evidence the effect is invisible without instrumentation rather than resolving the disagreement in their favour. The closed loops are structural. Wastewater practitioner S.K. Ghosh (Director, Effluents and Water Treatments Engineer) established that Indian plants disinfect with sodium hypochlorite rather than UV on cost grounds, which forced the kill-switch trigger to be rebuilt around RclR, an AraC-family activator responding specifically to hypochlorous acid and one of only three HOCl-sensing regulators known in E. coli K-12, chosen partly because it activates rather than de-represses so the lysis cassette is off by default; the original UV/LexA-SOS switch was retained and published as a part for the global market rather than discarded. A SAV Water WWTP engagement supplied the operating envelope (aerobic, 8-16 hours aeration). An oceanographer corrected their dispersal modelling, which had assumed static water and annual averages, and established that any dispersal work must rest on seasonal INCOIS current and sea surface temperature data for the Bay of Bengal. A fish ecologist supplied three zebrafish endpoints (egg-laying, mating patterns, growth) and a two-layer safety framework that now structures the toxicity plan, plus the caution that wild-caught fish do not reproduce reliably in confinement, which is why the team nowhere extrapolates from model organisms to wild populations. An account of broken enforcement changed who the Human Practices work addresses, so community and regulatory engagement now run as two parallel levers of equal weight rather than outreach built around regulation. A hospital-effluent intervention branch was closed rather than kept as an alternative. Literature was treated as the first stakeholder, and stakeholders handed over documents (Central Pollution Control Board sector-specific effluent discharge standards, the Department of Fisheries Handbook on Fisheries Statistics) that are cited as such. Prior iGEM teams were studied as precedent: JU Krakow 2024 for an environmental biosensor in a regulatory context where the compound was not monitored, and Sao Carlos 2019 for documenting a regulatory framework that did not fit the work rather than forcing the work into it.",
+    "realWorld": "Deployment is specified down to plant siting and footprint: a sealed tank with cells in a PVA-alginate matrix placed after secondary treatment and before chlorination, so the influent is already low in solids and organics and the plant's own chlorination stage serves as containment. The matrix composition window is argued from transport, not convenience, with alginate alone rejected because ionic Ca2+ crosslinks are reversible and destabilised by phosphate and citrate, and the blend bounded below roughly 1.5% alginate (skin forms too slowly to prevent agglomeration during extrusion) and above roughly 12% PVA (network tightens enough to impede transport). Chassis choice is reasoned against Pseudomonas putida KT2440, the standard bioremediation chassis. Sensitivity is framed as the principal engineering constraint from the outset, citing published EdcR EC50 of 3.32 uM for E1 and 1.38 uM for E2 against typical environmental loads, and the team builds the circuit on a low-copy p15A origin in pTU2-A to trade absolute expression for reduced metabolic burden. The target was set by Indian conditions, where estrone dominates the pollutant profile and is reported at ug/L in Indian WWTP influent, and the economic case is made against granular activated carbon, ozonation and advanced oxidation, which work but are largely absent from Indian plants on capital cost, energy demand and retrofit grounds. They cite EU Directive 2024/3019 on quaternary treatment for micropollutants at plants above 150,000 p.e., phased to 2045, as the regulatory precedent, and are explicit that FINS targets a compound no Indian monitoring framework measures. The claim at the end is deliberately narrow, and the modelling's own verdict, that the LOD sits over three orders of magnitude above environmental concentrations, is published rather than buried. Deliverables left behind include a Biosafety and Bioethics Handbook as a standalone educational product covering pre-synthesis part screening, contained-versus-released design decisions and stakeholder integration, and the genetic engineering and CRISPR slide deck released for other teams.",
+    "partners": [
+      "Fishery Survey of India (FSI), Visakhapatnam",
+      "CIFRI Barrackpore (Dr S.K. Nag, Dr Kavita Kumari)",
+      "CIFNET",
+      "SAV Water / municipal WWTP engineers",
+      "Central Pollution Control Board contacts",
+      "Ek Pehal (student-led education initiative)",
+      "Kendriya Vidyalaya",
+      "Rani Rashmoni School",
+      "Satish Chandra Memorial School",
+      "Bharat Sevashram Sangha Residential School for ST students",
+      "DD Bangla (state public broadcaster)",
+      "DAAD IndiAlumni / Emerging Scholars Council",
+      "iGEM VIT Vellore",
+      "iGEM IISER Thiruvananthapuram",
+      "iGEM IISER Berhampur",
+      "iGEM IIT Kharagpur",
+      "IISER Kolkata Institutional Biosafety Committee"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6450/wiki/software/software/quiver-mode-arrows.webp",
+      "caption": "The Normal Mode Explorer, Quiver's browser interface: a structure drawn as a ribbon coloured blue to red by displacement with per-residue mode arrows overlaid.",
+      "credit": "Team IISER-Kolkata, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6450/wiki/software/software/quiver-fit-result.webp",
+      "caption": "Normal-mode flexible fitting of a structure into a cryo-EM density map, reporting cross-correlation before and after fitting, model displacement and largest bond strain.",
+      "credit": "Team IISER-Kolkata, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6450/wiki/model/noise-fisher-information.webp",
+      "caption": "Fisher information of mScarlet3 per cell against estrone for four constitutive promoter strengths; the design curve peaks at 322.5 ng/mL, below the EC50 of 409 ng/mL.",
+      "credit": "Team IISER-Kolkata, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6450/wiki/model/dry-vs-wet.webp",
+      "caption": "Model prediction set against the bench result, one of several figures where the team publishes where the dry lab and wet lab disagree.",
+      "credit": "Team IISER-Kolkata, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Teach students to compute the detection limit their design can actually reach, then publish it even when it damns the project: IISER-Kolkata derived an LOD of 54.5 ng/mL from Fisher information and a Cramer-Rao bound, showed by sweeping every gain parameter x1000 that amplification moves signal and noise together, and then stated plainly that environmental levels sit three orders of magnitude lower. For a centre with school-age students, their second transferable practice costs nothing: build every teaching prop from cardboard, paper and reused items, because a resource that costs nothing to make is one a school with no budget can rebuild exactly as you ran it.",
+  "sources": [
+    "https://2026.igem.wiki/iiser-kolkata/",
+    "https://2026.igem.wiki/iiser-kolkata/description/",
+    "https://2026.igem.wiki/iiser-kolkata/design/",
+    "https://2026.igem.wiki/iiser-kolkata/model/",
+    "https://2026.igem.wiki/iiser-kolkata/software/",
+    "https://2026.igem.wiki/iiser-kolkata/engineering/",
+    "https://2026.igem.wiki/iiser-kolkata/results/",
+    "https://2026.igem.wiki/iiser-kolkata/human-practices/",
+    "https://2026.igem.wiki/iiser-kolkata/public-outreach-and-collaboration/",
+    "https://2026.igem.wiki/iiser-kolkata/education/",
+    "https://2026.igem.wiki/iiser-kolkata/inclusivity/",
+    "https://2026.igem.wiki/iiser-kolkata/safety-and-security/",
+    "https://2026.igem.wiki/iiser-kolkata/parts/",
+    "https://gitlab.igem.org/2026/software/iiser-kolkata/quiver"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "team": "SMS-Shenzhen",
+  "id": "6165",
+  "section": "High School",
+  "country": "China",
+  "village": "Climate Crisis / Conservation / Bioremediation (inferred from project scope; no village stated on the wiki)",
+  "wiki": "https://2026.igem.wiki/sms-shenzhen/",
+  "projectTitle": "kisMET - selective biosorption of residual metals from battery-recycling wastewater",
+  "tagline": "Catching the last one percent of lithium, cobalt, nickel and manganese without more chemistry",
+  "summary": "kisMET targets the tail-end wastewater of spent lithium-ion battery recycling, where metal concentrations fall to parts-per-million and solvent extraction stops being economic. The team engineered Komagataeibacter rhaeticus to decorate its own bacterial cellulose with a secreted fusion protein built from a signal peptide, a carbohydrate-binding module, a HiBiT reporter tag and a swappable ion-binding peptide, assembled by Golden Gate on a pSEVA331 backbone under a rhamnose-inducible promoter. Four SP/CBM scaffolds and an eight-member ion-binding-peptide panel were designed so the binding specificity can be changed without redesigning the platform. Evidence so far covers cultivation, construct and reporter comparisons, single-metal binding experiments and cellulose-degradation assays; the team states clearly that selectivity in mixed wastewater, closed-loop cellulose reuse and complete metal recovery are design objectives, not results.",
+  "awards": [
+    "Best New Composite Part nominee (High School)"
+  ],
+  "dry": {
+    "frameworks": "A prospective carbon-footprint and techno-economic model, built in two levels: Level A is a preliminary estimate of the material-production module using the team's own measured fermentation parameters, and Level B is the full wastewater-treatment system, deferred until adsorption and recycling performance exist. The functional unit is treatment of one tonne of end-of-pipe battery-recycling wastewater, with the system boundary held identical for the kisMET route and the chemical-precipitation baseline (reagent manufacturing and sludge disposal only; pump and agitation energy excluded). Emission factors are taken from peer-reviewed literature using ecoinvent v3.9.1 global-average datasets, cradle-to-gate. There is no mechanistic or kinetic model - no Langmuir or Freundlich isotherm fitting, no adsorption kinetics, no structural modelling of the ion-binding peptides - which is the clearest gap in an adsorption project.",
+    "dataviz": "Engineering and Results figures for HiBiT reporter signals, construct and scaffold comparisons, single-metal (Li/Co/Ni/Mn) experiments and cellulose degradation; a plasmid design schematic showing interchangeable IBP modules alongside the circular map of the optimised pSEVA331 construct; an LCA system-boundary diagram separating the Level A and Level B modules; an SDG interaction map. Education reports platform analytics as a table with the caveat that reach is not a measure of learning.",
+    "datascience": "Scenario and sensitivity reasoning rather than inferential statistics: medium raw-material emissions computed for a 40 mL YPD batch, then scaled under three dry bacterial-cellulose yield scenarios because the team's own dry-weight yield was never measured, then expressed per tonne of wastewater; emission offsets calculated per metal for substitution of virgin salts and separately for cellulose recycling substituting only the glucose carbon source. The honesty is the notable part: outputs are labelled as trend analysis only, bead productivity is taken from published shake-flask ranges for the same strain, local Chinese grid factors are excluded, and the whole thing is described as a qualitative trend comparison and not an ISO-compliant LCA. The team also states which named parameters are the priority model inputs (fermentation yield, adsorption performance, cycle number) following expert advice.",
+    "software": "No software deliverable beyond the wiki itself. There is an explicit generative-AI disclosure stating that AI was used only for readability editing and website implementation, and that no scientific claim, data figure, gel image, microscopy image, measurement plot or reference was model-generated.",
+    "stack": [
+      "spreadsheet-level carbon-footprint and techno-economic model",
+      "ecoinvent v3.9.1 literature emission factors",
+      "HiBiT luminescent reporter quantification",
+      "Golden Gate assembly design with interchangeable modules",
+      "public sequence databases for SP / CBM / IBP module retrieval",
+      "spectrophotometry and metal-concentration readings",
+      "wiki built from a public repository"
+    ],
+    "techniques": [
+      "functional-unit and system-boundary definition for a comparative footprint",
+      "three-scenario yield sensitivity analysis to cover an unmeasured parameter",
+      "per-metal substitution offset accounting",
+      "cost-per-use rather than cost-per-batch framing for a reusable bead (taken directly from an industry interview)",
+      "explicit trade-off register (removal efficiency vs energy, valorisation vs reagent burden, cellulose recycling vs enzyme input, cost vs treatment stability)",
+      "sample fractionation reasoning (residual liquid A vs digestion liquid B) to keep figure interpretation within what controls support"
+    ]
+  },
+  "good": {
+    "publicEngagement": "The most intellectually honest education page in this cohort, and worth reading as a model regardless of its scale. Four channels, chosen because the audience already uses them rather than building a team website: a WeChat official account, a Xiaohongshu account, a printed two-page bilingual handbook, and two offline events (a school-wide iGEM club class for 59 students on 14 September 2026, and a community booth at Xiangmi Park on 2 October 2026 reaching over 70 visitors, run jointly with iGEM team Yucai-SZ). Three stated principles, each derived from something that failed: teach the phenomenon before the technology (their third and best post never mentions kisMET at all, only where the metal in water comes from); keep the channel open in both directions; and republish the same material in two formats. The analytics are reported against the team's own interest: the team introduction outperformed the project introduction roughly two to one, the purely scientific piece reached the fewest readers, and across three posts and 1,206 reads they received zero comments - from which they conclude that an open door is not an invitation, and propose polls and photo requests instead. The handbook uses one visual language and three analogies (a sponge for the cellulose bead, a magnet for the ion-binding peptide, one grain of rice in a swimming pool for ppm) and is released under CC BY 4.0 for other teams to print, translate or re-analogise.",
+    "ihp": "A five-stage programme on a Motivation -> Message -> Move reflection loop, built almost entirely from industry interviews, and it genuinely relocated the project's target user. Lu Binda (SUSTech doctoral student working on Juhefeng's battery-recycling R&D) mapped the value chain and established that front-end and back-end companies have entirely different wastewater. The team then visited Meizhou Zhongrun, a front-end physical recycler, and learned it sells electrode powder downstream and generates little wastewater - so it is not a customer. That finding redirected them to GEM, a downstream hydrometallurgical company, which confirmed that lithium, nickel, cobalt and manganese do remain in the tail stream after solvent extraction and require precipitation or adsorption. Further interviews covered Dynanonic, professional wastewater treatment firms, officials from the Ministry of Ecology and Environment on biosafety and compliance, and Li Zongjin of Lingzhu Tech twice - the second time producing industrial cost ranges for every process step and the modelling rule that cost per use, not cost per batch, decides whether a reusable bead can compete.",
+    "realWorld": "The platform is deliberately modular: swapping the ion-binding peptide retargets it at rare earths from e-waste or other heavy metals without touching the core system. Acting on advice from BIT-China and their industry interviews, the team chose to pursue technology licensing with established battery companies rather than founding a company - a realistic read of their own position. Named limitations are published rather than buried: Komagataeibacter fermentation is oxygen-transfer and shear-sensitive in stirred bioreactors, candidate peptides have only been tested in single-metal solutions, and cellulose breakdown does not by itself demonstrate that engineered cells have been inactivated, so a validated containment and disposal procedure is still required. Their closing self-assessment - that as a high-school team they offer not scale but time, willingness to re-explain, and the honesty to say when an explanation failed - is the right framing.",
+    "partners": [
+      "Juhefeng / Lu Binda, SUSTech (battery recycling R&D)",
+      "Meizhou Zhongrun (front-end physical recycling)",
+      "GEM (downstream hydrometallurgical recycling)",
+      "Dynanonic",
+      "Li Zongjin, Lingzhu Tech (fermentation scale-up, TEA and LCA)",
+      "Ministry of Ecology and Environment officials",
+      "iGEM team BIT-China (commercial pathway advice)",
+      "iGEM team Yucai-SZ (joint Xiangmi Park community booth)"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6165/wiki/description-fig3-ibp-swap.avif",
+      "caption": "Molecular design of the pSEVA331 expression system, showing the interchangeable ion-binding-peptide modules that let the platform be retargeted to a different metal without redesign.",
+      "credit": "Team SMS-Shenzhen, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6165/wiki/education-handbook-page-b-kismet-kombucha.avif",
+      "caption": "Page B of the bilingual printed handbook, telling the kombucha bacterial-cellulose story and introducing the sponge and magnet analogies; released under CC BY 4.0 for reuse.",
+      "credit": "Team SMS-Shenzhen, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6165/wiki/education-wechat-article-stats.avif",
+      "caption": "The WeChat account back end, reported by the team against their own interest: the team introduction outperformed the project introduction, and the purely scientific post reached the fewest readers of all.",
+      "credit": "Team SMS-Shenzhen, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6165/wiki/hp-gem.avif",
+      "caption": "Interview with GEM, the downstream hydrometallurgical recycler whose confirmation that metals remain in the tail stream after solvent extraction validated kisMET's target application point.",
+      "credit": "Team SMS-Shenzhen, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "The dry lab is real but narrow: a spreadsheet-level carbon-footprint and techno-economic model with a defined functional unit, literature emission factors and a three-scenario sensitivity sweep is squarely within one high-school season and is exactly the kind of modelling most teams skip, yet for an adsorption project the absence of any isotherm or kinetics fitting is a conspicuous hole that a single afternoon with their own single-metal data would have filled. The limiting factor is mentorship rather than tooling, compute or time - nobody told them that Langmuir and Freundlich fits are a spreadsheet exercise, while someone clearly did teach them how to scope an LCA.",
+  "sources": [
+    "https://2026.igem.wiki/sms-shenzhen/",
+    "https://2026.igem.wiki/sms-shenzhen/attributions",
+    "https://2026.igem.wiki/sms-shenzhen/team",
+    "https://2026.igem.wiki/sms-shenzhen/safety"
+  ]
+}

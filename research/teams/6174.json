@@ -1,0 +1,102 @@
+{
+ "team": "Hongwen School",
+ "id": "6174",
+ "section": "High School",
+ "country": "China",
+ "village": "",
+ "wiki": "https://2026.igem.wiki/hongwen-school/",
+ "projectTitle": "BrewXOS",
+ "tagline": "Creating additional value within an existing spent-grain economy: brewer's spent grain to candidate arabinoxylan oligosaccharides.",
+ "summary": "Hongwen School (Shanghai and Qingdao) engineered Bacillus subtilis WB600 to secrete xylan-degrading enzymes that convert the arabinoxylan fraction of brewer's spent grain (BSG) into candidate arabinoxylan oligosaccharides (AXOS). Five strains - single Xyn2 and Xyn11A, two dual combinations with the GH62 arabinofuranosidase Abf62A, and a triple construct - were compared; the triple strain reached 257.10 +/- 5.55 U/mL apparent supernatant activity and a parental-adjusted index of 107.91 +/- 6.64 mg xylose equivalents per gram dry BSG after 12 h, 32.8% above the better dual strain. Alongside this they built BrewXOS Fermenter Mini, a small fermentation-monitoring prototype with a main-cap/sub-cap lid, headspace O2/CO2 sensing and a touchscreen interface, and tested it with real users. The Human Practices work is the best part of the project: a GRAIN x TRACE framework forces every stakeholder interaction to end in a named change plus the evidence for it, or be flagged as an open loop.",
+ "awards": [
+  "Best Sustainable Development nominee (High School)",
+  "Best Hardware nominee (High School)",
+  "Best Village Project nominee"
+ ],
+ "dry": {
+  "frameworks": "GRAIN x TRACE, the team's own two-tier Human Practices documentation framework: GRAIN (Ground the problem, Reframe the purpose, Adapt the science, Iterate toward implementation, Nourish the ecosystem) tracks project-wide evolution while TRACE (Trigger, Relevant voices, Advice and tensions, Change, Evidence and evaluation) records each interaction, with a stated closed-loop rule that advice without a change, or a plan without implementation proof, is explicitly flagged rather than presented as integrated. Published as a reusable template. There is no Model or Software page and no in-silico work - the team does not claim any.",
+  "dataviz": "Survey charts for the 219-response questionnaire (awareness of BSG and prebiotics, trust factors); paired strain-comparison plots showing apparent supernatant activity and 12 h reducing-sugar change with means and SD (n = 3); process traces of temperature, pH and headspace O2/CO2 from the 18 h integrated hardware run; CAD and layout diagrams of the Fermenter Mini.",
+  "datascience": "Careful descriptive statistics with stated limits rather than inference: survey percentages reported against each question's own denominator and explicitly not extrapolated nationally (44.29% of respondents were minors, 43.38% middle-school students); DNS reducing-sugar yields parental-adjusted against WB600 controls and labelled as an operational index, not verified AXOS mass; a 22% AX content assumption flagged where it drives a derived 49.05% apparent conversion index; user-task timings and error counts (5 min 40 s to 1 min 50 s; errors 2 to 0) reported with the caveat that the user sample is too small to generalise. No LCA or TEA has been done and the team says so.",
+  "software": "Arduino firmware for BrewXOS Fermenter Mini, structured into separate modules for sensor acquisition, display update, command parsing and serial output, with bidirectional UART at 9600 bps to a serial touchscreen HMI. A debugging episode is documented in detail: the touchscreen required raw hexadecimal command framing with a %%% terminator, and after fixing the formatting the buttons and sliders could drive the pumps, stirrer and UV-C. Alarm thresholds were moved out of firmware constants into touchscreen-configurable, power-loss-persistent settings after a user complained that different strains need different limits.",
+  "stack": [
+   "Bacillus subtilis WB600 (six-protease-deficient secretion host)",
+   "pDG1730 integration vector (amyE locus)",
+   "E. coli DH5a for propagation",
+   "Arduino Mega 2560 with expansion board",
+   "serial touchscreen HMI (UART)",
+   "waterproof DS18B20 temperature probe",
+   "pH probe, headspace O2 and CO2 sensors",
+   "PTC heater and thermoelectric cooler via relays",
+   "peristaltic pumps, UV-C strip",
+   "3D-printed split lid, motor mount, sensor slots and casing",
+   "CAD/STEP assembly export"
+  ],
+  "techniques": [
+   "colony PCR artefact diagnosis by annealing-temperature and template-concentration variation",
+   "restriction digestion and sequencing confirmation",
+   "multi-tier (single, dual, triple) modular gene assembly with per-tier strain stocks and sequencing records",
+   "DNS reducing-sugar assay with D-xylose calibration",
+   "TLC against xylobiose and xylotriose standards",
+   "enzyme activity assay at 55 C, pH 5.0",
+   "task-based external user testing of hardware with timed repeats and error counts"
+  ]
+ },
+ "good": {
+  "publicEngagement": "Outreach was derived from measured knowledge gaps rather than chosen first: 74.88% of 219 survey respondents reported little or no knowledge of prebiotics and senior interviewees repeatedly confused probiotics with prebiotics, so the team ran senior-living-community workshops on four topics - prebiotics versus probiotics, dietary fibre and gut microbiota, and how to spot exaggerated therapeutic claims and incomplete safety disclosure - using plain-language analogies ('food components that certain beneficial gut microbes can use') while still naming the microbes and enzymes involved. Clinicians set the limits: prebiotics were framed as general dietary support and microbiome shifts were not presented as treatment. Evaluation used teach-back rather than a comprehension question: identical three-question show-of-hands polls before and after, plus asking participants to restate the core concepts in their own words, with short verbal feedback instead of long forms for older participants. The team keeps the distinction between acting on a knowledge gap and proving a durable change, saying there is no longitudinal data. They also published six reusable assets (a B. subtilis construction troubleshooting log, a selection-marker and host-compatibility guide, a multi-tier assembly decision framework, the hardware package with BOM/CAD/sensor matrix, the GRAIN x TRACE template and a senior-outreach toolkit), each with an explicit boundary clause.",
+  "ihp": "This is one of the strongest high-school IHP records of the year because the register of changes is specific, attributed and sometimes negative. Mr Zhou at the Brewing Industry Association gave macro figures (35-36 million kL of beer a year, roughly 5.5-6 million t of wet spent grain, summer output 20-30% above winter, over 80% already in the animal feed chain, an economic transport radius of about 50 km) and the team responded by retiring its founding premise - BrewXOS is not competing with dumping but with a mature feed pathway - and rebuilding its economics as full cost accounting per tonne of wet grain, with near-site or in-park third-party processing instead of in-house brewery lines. Manager Wu of a 300,000 t/year brewery (50,000 t wet BSG, collected by buyers at near-zero cost) confirmed it and the team redefined breweries as raw-material partners who already have an acceptable option. Master He, a municipal landfill worker of six years, supplied the counterweight: 60-90 t/month at nearly 80% moisture, handling costs of 70-80 RMB/t driven by leachate, odour, liner and labour, persisting not from indifference but from absent local off-takers - so the team deleted both extreme narratives, fixed 70-80 RMB/t as a local baseline and upgraded localised processing from a business preference to a hard environmental constraint, because a route relying on high-energy drying or long-haul transport would eat its own gains. Dr Chen, a gastroenterologist at Ruijin Hospital, delivered the single strongest design change: she gave a three-tier evidence ladder (mechanistically plausible / observed in healthy populations / demonstrated in clinical patients), pointed out that marketing AXOS as suitable for IBS directly conflicts with low-FODMAP management, and the team formally struck 'designed specifically for IBS', 'relieves IBS symptoms' and 'improves the gut environment' from its positioning, rewrote the wiki to separate in vitro, healthy-human and patient evidence, and added human tolerance testing as a mandatory milestone. Professor Xu (College of Life Sciences, Zhejiang University) produced three laboratory changes: he stopped a primer redesign by identifying two ~90 bp direct repeats capable of PCR template switching, so the team kept its 1,571 bp clones, raised the annealing temperature and watched the spurious ~400 bp band fade; he made them re-annotate pDG1730 by host role, which replaced erythromycin and ampicillin with spectinomycin for B. subtilis selection and turned lawn-like background into isolated verified colonies; and he pushed them from one-step assembly to tiered construction and to add Abf62A as a testable hypothesis, not an assumed improvement, explicitly because excessive debranching could collapse AXOS into low-substitution XOS. Professor Qing Zhao (Shanghai Chenshan Plant Science Research Center, CAS) moved them from endpoint assays to process logging, which is why the hardware project exists at all; a hardware engineer then rejected their monolithic lid and produced the main-cap/sub-cap architecture, a deepened recessed motor seat and sliding probe slots so routine fluid handling no longer disturbs the impeller shaft and wiring. Downstream, Ms Yang (dairy QC) narrowed the goal from 'a BrewXOS yogurt' to ingredient compatibility in plain fermented milk; Ms Han (Swire Coca-Cola Nanjing) listed pH 2.5-4, hot-fill and a 9-12 month shelf life and said plainly that a premium would not be paid for environmental claims, so RTD beverages became a long-term specification-setting target; Pharmacist Tang moved pharmacies from launch channel to late-stage channel; and Mr Shen of a Chongming ecological farm ('I never look at the price per ton - I look at the cost per kilogram of gain') converted the feed route from wet grain or liquid AXOS into a standardised premix pourable into an existing mixer, judged on feed conversion ratio, diarrhoea rate and mortality. The team also publishes what it rejected - diverting all spent grain away from feed, leading with sustainability, launching a consumer product - with reasons.",
+  "realWorld": "Need is grounded in the literature (BSG is about 85% of brewing's solid byproducts, roughly 20 kg wet grain per 100 L of beer at 60-80% moisture, a 2025 review estimating about 37.8 million t/year globally) and then immediately qualified by field evidence that feed conversion already works in most Chinese settings, so the project's claim is additional value in regions with unstable disposal channels and dense brewery clusters, not displacement. SDG claims are narrow and target-level: SDG 12 (12.2, 12.5 and 12.6) and SDG 9 (9.5, moving toward 9.4) are the primary goals with SDGs 3 and 8 held explicitly as aspirations, and the page says what it cannot support - no measured waste diversion at commercial scale, no demonstrated industrial resource-efficiency gain, no quantified learning improvement. Implementation is an evidence-gated five-stage sequence (product identity; process balance; application evaluation; net-impact comparison; partner validation) with plain fermented milk as the immediate compatibility matrix, beverages long-term, pharmacies late-stage and a feed premix as a parallel route. The regulatory position is stated rather than finessed: China's 2024 National Health Commission approval of sugarcane-bagasse arabinoxylan specifies source, process and intake limits and does not extend to spent-grain-derived AXOS, so BrewXOS has no novel-food clearance and the team refuses to blur AX and AXOS in public materials. Costs are handled as a bill of materials (RMB 3,480.29 for the prototype, flagged as material cost rather than total ownership) plus a local illustration from the landfill data (RMB 4,200-7,200/month handling at that site; treating 10% of the flow would give 6-9 t wet BSG and roughly 130-194 kg xylose equivalents/month, marked as arithmetic rather than a forecast). After the Jamboree the roadmap is structural characterisation and batch consistency, a safety panel (microbial counts, mycotoxins, heavy metals, pesticide residues, processing impurities), clarifying the filing pathway, fermented-milk compatibility baselines, hardware calibration and safety validation, LCA and TEA so a fair comparison with the feed route is possible, re-engaging the same stakeholders to check whether the changes answered them, and publishing the open-source assets with their boundaries annotated. The team states that no LCA or TEA exists yet and therefore no net environmental benefit may be claimed.",
+  "partners": [
+   "Brewing Industry Association (Mr Zhou)",
+   "Qiandao Lake Brewery, Zhejiang (Manager Wu; donated the BSG feedstock)",
+   "Local municipal landfill solid-waste operations (Master He)",
+   "Dr Chen, gastroenterologist, Ruijin Hospital",
+   "Professor Xu, College of Life Sciences, Zhejiang University",
+   "Professor Qing Zhao, Shanghai Chenshan Plant Science Research Center, Chinese Academy of Sciences",
+   "Engineer Sun, food industry R&D",
+   "Hardware engineer (lid structural design consultant)",
+   "Dairy enterprise yogurt QC (Ms Yang)",
+   "Swire Coca-Cola Nanjing (Ms Han)",
+   "Pharmacist Tang and a retail pharmacy",
+   "Ecological farm, Chongming, Shanghai (Mr Shen)",
+   "iGEM Shanghai-SDG 2025 (cross-team exchange on bioprocessing hardware and SDG assessment)"
+  ]
+ },
+ "images": [
+  {
+   "url": "https://static.igem.wiki/teams/6174/wiki/public/hp/integration-pathway.webp",
+   "caption": "The GRAIN x TRACE integration pathway: how stakeholder input reshaped problem definition, purpose, scientific design, implementation strategy and knowledge sharing, with TRACE recording each question-to-change-to-evidence loop.",
+   "credit": "Team Hongwen School, iGEM 2026 wiki"
+  },
+  {
+   "url": "https://static.igem.wiki/teams/6174/wiki/public/hp/brewery-visit.webp",
+   "caption": "Brewery visit during the Ground phase, where an existing low-cost feed outlet for spent grain forced the team to abandon its assumption that breweries needed a new disposal technology.",
+   "credit": "Team Hongwen School, iGEM 2026 wiki"
+  },
+  {
+   "url": "https://static.igem.wiki/teams/6174/wiki/public/hp/farm-visit.webp",
+   "caption": "Farm visit and interview in Chongming, Shanghai, where cost per kilogram of weight gain turned the animal-feed route into a standardised premix concept.",
+   "credit": "Team Hongwen School, iGEM 2026 wiki"
+  },
+  {
+   "url": "https://static.igem.wiki/teams/6174/wiki/public/hp/gastroenterologist-consultation.webp",
+   "caption": "Consultation with a gastroenterologist at Ruijin Hospital, whose three-tier evidence framework led the team to remove all IBS-related claims from the project positioning.",
+   "credit": "Team Hongwen School, iGEM 2026 wiki"
+  }
+ ],
+ "gemsTakeaway": "Copy the TRACE closed-loop rule: log every stakeholder interaction as Trigger, Relevant voice, Advice and tensions, Change and Evidence, and mark an interaction as an open loop whenever there is advice without a project change or a plan without proof of implementation. It converts engagement from a photo gallery into an auditable decision ledger, and the companion 'what we did not adopt, and why' table is what makes the adopted changes credible.",
+ "sources": [
+  "https://2026.igem.wiki/hongwen-school/",
+  "https://2026.igem.wiki/hongwen-school/human-practices",
+  "https://2026.igem.wiki/hongwen-school/sustainability",
+  "https://2026.igem.wiki/hongwen-school/description",
+  "https://2026.igem.wiki/hongwen-school/hardware",
+  "https://2026.igem.wiki/hongwen-school/engineering",
+  "https://2026.igem.wiki/hongwen-school/parts",
+  "https://2026.igem.wiki/hongwen-school/contribution",
+  "https://2026.igem.wiki/hongwen-school/safety-and-security",
+  "https://2026.igem.wiki/hongwen-school/assets/index-BCz246wW.js",
+  "https://2026.igem.wiki/hongwen-school/assets/HumanPracticesArticle-C7wSXf0T.js",
+  "https://2026.igem.wiki/hongwen-school/assets/sustainability-Bw_LueMp.js",
+  "https://registry.igem.org/collections/c1986de4-b393-49a8-8341-4f5d4b150efe"
+ ]
+}

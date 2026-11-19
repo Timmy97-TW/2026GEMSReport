@@ -1,0 +1,61 @@
+{
+  "team": "NYCU-Taiwan",
+  "id": "6306",
+  "section": "Undergrad",
+  "country": "Taiwan",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/nycu-taiwan/",
+  "projectTitle": "BITE — Biosensing for Instant Target Pathogen Evaluation",
+  "tagline": "A two-chamber swab that turns Cas12a collateral cleavage into a blue colour you can read with your eyes",
+  "summary": "NYCU-Taiwan built BITE, a hand-operated two-chamber cartridge for foodborne Salmonella detection: chamber one releases magnetic beads carrying DNA capture probes plus lysis buffer, heat lysis frees bacterial DNA, a magnet concentrates the bead-bound target, then chamber two delivers Cas12a with crRNA and a hairpin reporter whose G-rich segment, once cleaved, folds into a potassium-stabilised G-quadruplex that binds hemin to form a DNAzyme and oxidises TMB from colourless to blue. The point of the design is that the final step needs no instrument. They won Best Project Promotion Video in the Undergrad/Overgrad section, and the same communication discipline runs through the wiki, which is built as a scroll-driven narrative rather than a document.",
+  "awards": ["Best Project Promotion Video, Undergrad/Overgrad (winner)"],
+  "dry": {
+    "frameworks": "A narrative structure applied consistently: everyday stakes, then the quantified global burden with its source named, then what existing methods do well, then the specific real-world constraints that make them impractical, then a refusal of the implied trade-off, then the solution and only then the mechanism. Each mechanistic step is introduced by the question it answers (Cas12a can cut DNA, but how do we turn an invisible molecular reaction into something we can see?), so the chemistry arrives as an answer rather than as content.",
+    "dataviz": "Roughly 67 separately numbered illustration layers on the landing page alone, assembled into a scroll-driven walkthrough: an exploded device diagram with each component labelled (two chambers, Y-connector, sampling swab, collection tube), a magnetic-bead sequence split into meet-the-beads, capture and magnetic separation, an RNP assembly and trans-cleavage sequence, and a hairpin-to-G4-to-DNAzyme-to-blue-TMB chain. Numbers are set as display type (866 million ill, 1.52 million deaths) with the WHO foodborne-hazards estimate cited beneath them.",
+    "datascience": "Education impact is measured rather than asserted: paired pre- and post-surveys at the 16 May outreach session moved the share of 102 high-school candidates rating their understanding of synthetic biology at 4 to 5 from 13.3 percent to 80.0 percent. The April workshop, lacking reflection surveys, was instead scored against observational rubrics and task-completion rates (96 percent produced clean four-tier density gradients, 92 percent kept sterile boundaries in the laminar hood, 88 percent of culture tubes stayed contamination-free at 14 days, 85 percent distinguished nicked, supercoiled and linear plasmid bands, 95 percent built a correct genetic circuit first time). Instagram is reported with the diagnostic metric rather than the vanity one: 41,851 views across 6 July to 6 October, views up 209.6 percent on the previous period, and 57.9 percent of views from non-followers.",
+    "software": "BITE & SEEK, a bilingual public food-safety website launched 10 August 2026, with a card-based kitchen-decision quiz that reshuffles each round so replaying tests understanding rather than recall, a Facts page keyed to the 7-60 degrees C temperature danger zone per Taiwan FDA guidance and the WHO Five Keys, a History page tracing five outbreaks that changed food-safety law, and a live visitor map with per-country quiz averages.",
+    "stack": ["LbCas12a", "crRNA", "G-quadruplex/hemin DNAzyme", "TMB colorimetry", "streptavidin-biotin magnetic beads", "HRP/TMB control readout", "fluorescence time-course assays"],
+    "techniques": ["magnetic-bead target enrichment with capture probes", "heat lysis", "Cas12a trans-cleavage of a hairpin reporter", "potassium-dependent G4 folding", "colorimetric readout development and background characterisation"]
+  },
+  "good": {
+    "publicEngagement": "Three channels with distinct jobs rather than three copies of the same message. BITE & SEEK carries the knowledge in replayable interactive form (133 visits from 5 countries by 18 October, which they report honestly as modest). A four-station hands-on workshop on 18 April took 25 students through micropipetting, sundew tissue culture, gel electrophoresis and BioBrick LEGO modelling, with the full station protocols published so another team can run it. A 16 May session reached 102 high-school candidates during departmental interviews, deliberately timed when the audience was already thinking about studying biotechnology. Instagram splits formats by function: posts for team and event information, Reels for lab life and concepts, Stories for real-time interaction, and the best-performing content was the team introduction post (4,169 views) and a lab Reel (3,039 views), which also drove the most new followers. Their own conclusion from that is the useful one: real people in authentic settings outperform polished explanation, and content anchored to daily life travels furthest.",
+    "ihp": "Two company visits on 5 September, both of which changed something concrete. Dr. Lance Chang, founder and executive director of Trade Wind Biotech, proposed a microfluidic format to cut reagent consumption (the G4 readout being their main reagent cost), asked whether Cas12a cleavage could be coupled directly to the G4 reaction without a transfer step and whether reagents could be pre-dried in the device, and gave them the single most important communication instruction in the whole report: do not open with the molecular mechanism of Cas12a collateral cleavage, open with the visible signal and then explain how target recognition produces it. He also insisted that a clear explanation rests on actually understanding the science, which sent them to the literature on why G4 prefers potassium over sodium (ion coordination plus the greater energetic cost of dehydrating sodium). At AccuSens Biomed, Dr. Chen told them to pick one specific potential advantage and define the evidence needed to support it rather than trying to beat PCR on every axis. Acting on that, they read competitors' technical documentation properly and found that Hygiena's BAX System Real-Time Salmonella assay already uses lyophilised single-tube reagents, holds AOAC OMA and AFNOR certification and offers quantification through SalQuant, meaning several features they had believed distinctive were already on the market. They published that finding. Dr. Chen also gave bench-level troubleshooting (1-5 ng purified plasmid, medium-sized colonies, three- or four-zone streaking with a 20 microlitre tip instead of a metal loop, a descending IPTG series, pre-induction growth to OD600 around 0.5 and never above 0.6) and set field-deployment targets they explicitly label as targets, not features: room-temperature lyophilised reagent beads, a reader that runs off an ordinary power bank, and software that works on a local offline network and syncs to cloud when connectivity returns.",
+    "realWorld": "There is no commercialisation claim here, and the restraint is the point. Every page separates demonstrated results from development directions in so many words: the microfluidic format, reagent pre-mixing and storage stability 'remain future development directions' whose feasibility 'has not yet been established'; the current results 'do not establish shorter sample enrichment, room-temperature reagent stability, or field-ready operation'; background colour development is named as a remaining limitation of their own colorimetric readout. They also state the general lesson, which is the one most iGEM teams miss: successful component tests provide a foundation but do not establish the performance of the complete system. The competitive honesty is equally unusual, since discovering that a commercial assay already has your differentiators and then publishing that discovery is the opposite of what a pitch rewards. What is worth copying, though, is the communication craft. Four things make it work. First, the arc puts stakes before mechanism, so the audience knows why they should care before any molecular biology arrives. Second, it states the constraints that disqualify existing methods in plain operational terms (a test may need lab equipment, a result may take time, testing may need trained personnel) rather than claiming existing methods are bad, which keeps the claim defensible. Third, it refuses a false choice out loud ('but why should we have to choose?') and that refusal becomes the product definition, with the five requirements (fast, sensitive and specific, simple, accessible, portable) spelling out the acronym the device is named after. Fourth, each mechanistic step is framed as the answer to a question the previous step raised, and the chain terminates in something sensory, a blue colour, which is also the actual engineering contribution. The invitation to act is a single pun, 'take a BITE before every bite'. Supporting all of this is real production investment: dozens of bespoke illustration layers, three custom web fonts including a hand-lettered one, bilingual content, and a scroll-driven build rather than a page of text and figures. Continuation is framed as community infrastructure rather than a company: a team leaderboard opening the BITE & SEEK quiz to every iGEM team at the Grand Jamboree with prizes for the top ten, progressive challenges, shareable result cards, full English coverage, and in-person workshops linking the website to hands-on demonstrations.",
+    "partners": [
+      "Trade Wind Biotech Co., Ltd. (Dr. Lance Chang, Founder and Executive Director; device format, reagent integration and communication strategy)",
+      "AccuSens Biomed Co., Ltd. (Dr. Chen; competitive positioning, field-deployment requirements, offered materials for reagent pre-mixing tests)",
+      "National Yang Ming Chiao Tung University, Department of Biological Science and Technology",
+      "IDT and CEB (listed sponsors)"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6306/wiki/01-home/279-home-walk-dev-base.webp",
+      "caption": "One layer of the exploded BITE device walkthrough, built from dozens of separately drawn illustration components so the cartridge can be assembled step by step as the reader scrolls",
+      "credit": "Team NYCU-Taiwan, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6306/wiki/01-home/138-home-hero-people-back.webp",
+      "caption": "Opening illustration of the landing-page narrative, which starts at a shared meal rather than at a molecule",
+      "credit": "Team NYCU-Taiwan, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6306/wiki/17-hp-integrated-hp/253-ihp-tradewind-1.webp",
+      "caption": "Visit to Trade Wind Biotech, where Dr. Lance Chang told the team to lead with the visible signal rather than with Cas12a collateral cleavage",
+      "credit": "Team NYCU-Taiwan, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6306/wiki/18-hp-education/30-hp-edu-expo-2.avif",
+      "caption": "Four-station hands-on workshop, with full station protocols published so other teams can reproduce it",
+      "credit": "Team NYCU-Taiwan, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Adopt their narrative order for every public-facing explanation: stakes with a sourced number, what current methods do well, the operational constraints that disqualify them, an explicit refusal of the trade-off, then the solution, then the mechanism told as a chain of answers ending in something a person can see. And take Trade Wind's instruction literally: open with the visible result, not the enzyme, and only explain the molecular step once the audience wants to know how the result happened.",
+  "sources": [
+    "https://2026.igem.wiki/nycu-taiwan/",
+    "https://2026.igem.wiki/nycu-taiwan/education/",
+    "https://2026.igem.wiki/nycu-taiwan/human-practices/",
+    "https://2026.igem.wiki/nycu-taiwan/project",
+    "https://www.youtube.com/@NYCU_Taiwan_2026"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "team": "PSI Korea",
+  "id": "6479",
+  "section": "High School",
+  "country": "South Korea",
+  "village": "Biomanufacturing / materials and measurement (Best Village Project nominee; the village is not named on the wiki)",
+  "wiki": "https://2026.igem.wiki/psi-korea/",
+  "projectTitle": "Bio Color ID - design and validation of a product authentication system using synthetic biology",
+  "tagline": "An authentication tag whose identity is the material itself, read as 60 optical features",
+  "summary": "Bio Color ID is a counterfeit-detection tag made by casting biologically produced indigoid pigments into bacterial PHB, so that the authentication feature is the material's own optical response rather than a printed code that can be copied or transferred. Two pathways were engineered into E. coli - phaCAB for PHB from acetyl-CoA, and a tryptophan-derived halogenated-indigoid route - with the team solving substrate competition between the halogenase and TnaA by deleting chromosomal tnaA by lambda-Red, moving the host to BL21-AI to stop T7 leakage, screening seven TnaA variants for intermediate rather than maximal activity, and screening six halogenases before settling on SttH. Tags are then read by a team-built reader: a camera plus five LEDs over four coloured backgrounds, giving 60 RGB features per tag. The team shows that three independently fabricated tags agree to Pearson r >= 0.9977 (MAE 3.58 DN) while visually indistinguishable tags and watercolour paper imitations separate clearly.",
+  "awards": [
+    "Best Presentation nominee",
+    "Best Wiki nominee",
+    "Best Village Project nominee"
+  ],
+  "dry": {
+    "frameworks": "Measurement science and statistical modelling rather than mechanistic simulation, and done to a standard most undergraduate teams do not reach. The matching model (BioColor Verify) explicitly decomposes variance into capture variance (repeated photographs of one tag) and specimen variance (independently manufactured tags of the same recipe), standardises each of the 60 features by its own standard deviation, pools variance across colour IDs with the assumption stated and flagged, and weights specimen means equally so a heavily photographed tag cannot dominate the reference centre. Matching combines three metrics (standardised distance, maximum single-feature deviation, outlier count) rather than one distance, because a single large deviation gets diluted in a 60-dimensional norm. Thresholds are set by whole-specimen holdout - all captures of one tag are removed, the model is rebuilt, and the excluded tag is scored - with the team noting that holding out single captures would leak. Rejection of unregistered tags is framed as open-set recognition. Design review is anchored to the Eurachem method-validation guide.",
+    "dataviz": "60-feature profile plots with a fixed, documented ordering (background -> LED -> channel) so any mismatching feature is traceable back to one illumination, one background region and one channel; overlaid profiles for independently fabricated tags with min-max shading; side-by-side profiles of tags versus paper imitations in three colours; sensitivity-score charts per lighting/background configuration; cumulative pixel-selection curves across tolerance; absorption spectra for pigment identification. Every figure caption states what the result does not establish.",
+    "datascience": "MAE, RMSE and Pearson r reported together with the explicit warning that high correlation does not imply agreement in absolute value; 51 of 60 features within 10 DN across three tags; variance-ratio feature screening that subtracts repeat-capture variance from between-specimen variance and floors negatives at zero (49 of 60 features positive, 11 zeroed); a specimen-variability sensitivity score of 34.6 across all features, with the team pointing out that a higher score is not automatically good because the signal being measured is manufacturing noise. Algorithm performance is evaluated on synthetic data generated from measured variation (480 records = 4 IDs x 4 specimens x 5 captures x 6 random datasets), and the report states repeatedly that these are synthetic results and do not establish authentication performance on physical tags. Instrument-level caveats are unusually sharp: JPEG gamma and colour correction mean RGB is not proportional to light intensity, RGB565 bit-shift maxima are 248/252/248 so a value of 248 does not prove saturation, and records before 28 September 2026 have illumination labels offset by one acquisition step.",
+    "software": "Three programs sharing one database: an exploratory pixel/region analyser written in Python with Streamlit (region statistics including mean, SD, quartiles, coefficient of variation and saturation fraction, with a warning below 20 selected pixels, and pixel selection by maximum channel difference, RGB Euclidean distance or channel ratio), a data-acquisition tool, and the BioColor Verify matching application. Database connection handling was tested against four mock servers, row-level security policies block direct client access to classification tables, and the admin key is kept in server environment variables. The team states candidly that integration testing against the live server was blocked by network restrictions, that the analyser still needs a local Python process and ships as an archive, and that at the record cutoff the public repository and release commit were not finalised although lockfiles, schema scripts and an example environment config were prepared.",
+    "stack": [
+      "Python",
+      "Streamlit (exploratory pixel/region analyser)",
+      "scikit-learn",
+      "ESP32-S3 with ESP-IDF LEDC for LED control",
+      "GC0308 camera module (RGB565 -> JPEG quality 80)",
+      "CAD and 3D printing for the reader shell and tag jig",
+      "server database with row-level security",
+      "UV-Vis absorption spectroscopy, FTIR, Nile red staining"
+    ],
+    "techniques": [
+      "60-feature optical fingerprinting (5 LEDs x 4 backgrounds x RGB)",
+      "two-level variance decomposition (capture vs specimen)",
+      "whole-specimen holdout validation and threshold setting",
+      "multi-metric matching (standardised distance + max deviation + outlier count)",
+      "open-set recognition framing with explicit Mismatch reasons",
+      "MAE / RMSE / Pearson r reported jointly with interpretation caveats",
+      "variance-ratio feature selection with noise floor",
+      "synthetic-data algorithm testing with perturbation types and fixed random seeds",
+      "gray-card normalisation with its approximation limits stated",
+      "fixed-ROI coordinates stored as image fractions for resolution independence",
+      "independent third-party hardware rebuild as a reproducibility test"
+    ]
+  },
+  "good": {
+    "publicEngagement": "Maker Faire Seoul 2026, where roughly 100 visitors over two days engaged with the exhibit, and the team recorded the questions rather than the headcount: imitation resistance, whether a dedicated reader is really needed, identification performance, LED selection, how it compares with QR codes and holograms, and variation between smartphones. Each question was converted into a named development priority (evaluation with independent samples, light-source characterisation, calibration with reference samples, simplified reading procedure, total cost assessment). The team also learned anti-counterfeiting design from the Bank of Korea Money Museum and discussed consumer verification behaviour with industry at Seoul Beauty Week (DDP) and the KINTEX K-Beauty Expo.",
+    "ihp": "Expert consultation that visibly changed the measurement protocol. Professor Youngkyung Park first assessed whether LED-plus-RGB-camera measurement was feasible at all; the team then measured samples and returned for a second consultation, which produced the requirement to separate material contributions from instrument contributions. Professor Sungsoo Kang covered measurement consistency and operating procedures. Professor Brian T. Cunningham advised by email to use LEDs with known output spectra and pointed them toward work combining reference samples with computational analysis - the team responded by disabling auto-exposure and auto-white-balance, fixing per-illumination exposure and recording imaging conditions. Dr Jina Son challenged the environmental rationale directly, noting that using PHB in a small marker does not by itself justify the material, which pushed the team into scoping application range, production consistency and extraction time. Industry feedback on adoption cost and verification procedure is what defined the B2B model.",
+    "realWorld": "An agreement with cosmetics company IEUM&Co. to supply real products so the team can test attachment position, packaging curvature, damage, removal and transfer, and readout ease, with the team stating that they will judge the collaboration by recording product provision, attachment trials, field readout and actual adoption. Collaboration with K-beauty brand Atelier Glow on product application. Arts collaborator CRETION made the watercolour paper imitations that serve as the negative controls. The most striking real-world validation is on hardware: four mechanical engineering students from Hanyang University rebuilt the reader from the released documentation alone, buying parts from the same vendors and printing the released files with the same slicer settings. The team is careful about what it has not shown: a profile match does not establish tag uniqueness or distribution history, and acceptance of genuine physical tags and rejection of unregistered ones has not yet been measured.",
+    "partners": [
+      "IEUM&Co. (cosmetics company, product supply agreement)",
+      "Atelier Glow (K-beauty brand)",
+      "CRETION (arts collaborator, imitation samples)",
+      "Professor Youngkyung Park (optical measurement)",
+      "Professor Sungsoo Kang (measurement consistency)",
+      "Professor Brian T. Cunningham (advised by email on LED spectra and reference samples)",
+      "Dr Jina Son (PHB and environmental rationale)",
+      "Hanyang University Department of Mechanical Engineering students (independent reader rebuild)",
+      "Bank of Korea Money Museum",
+      "Maker Faire Seoul 2026, Seoul Beauty Week (DDP), KINTEX K-Beauty Expo"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6479/wiki/description/figure-11-reader-assembly.webp",
+      "caption": "Assembly of the Bio Color ID Reader: a fixed camera, a hemispherical shell carrying five LEDs (405, 525, 625, 660 nm plus broadband white) and a tag holder over four coloured background panels.",
+      "credit": "Team PSI Korea, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6479/wiki/description/figure-12-optical-conditions.webp",
+      "caption": "Tags on four coloured backgrounds imaged under five LED illumination conditions - the acquisition scheme that produces 60 RGB features per tag.",
+      "credit": "Team PSI Korea, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6479/wiki/description/figure-16-independent-tags.webp",
+      "caption": "Profiles of the 60 optical features for three tags independently fabricated under identical conditions, which agreed at Pearson r >= 0.9977 with a summary MAE of 3.58 DN.",
+      "credit": "Team PSI Korea, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6479/wiki/description/figure-20-paper-imitation-light-purple.webp",
+      "caption": "Bio Color ID tags compared with watercolour-painted paper imitations across the 60 features: visually similar samples separate clearly under specific illumination-channel combinations.",
+      "credit": "Team PSI Korea, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "This is the single best model in this cohort for what a high-school dry lab should look like, and almost all of it is reachable in one season: the maths is variance decomposition, holdout validation and three summary statistics, the tooling is Python plus Streamlit plus a 20-dollar ESP32 and a camera module, and the compute requirement is zero. The limiting factor is not tooling or compute but intellectual discipline and the mentorship that instils it - the habit of writing what a result does not establish next to every result, of holding out whole specimens rather than single images, and of reporting that integration tests were blocked instead of quietly omitting them.",
+  "sources": [
+    "https://2026.igem.wiki/psi-korea/",
+    "https://2026.igem.wiki/psi-korea/description",
+    "https://2026.igem.wiki/psi-korea/engineering",
+    "https://2026.igem.wiki/psi-korea/measurement",
+    "https://2026.igem.wiki/psi-korea/software",
+    "https://2026.igem.wiki/psi-korea/hardware",
+    "https://2026.igem.wiki/psi-korea/human-practices",
+    "https://2026.igem.wiki/psi-korea/education",
+    "https://2026.igem.wiki/psi-korea/sustainability",
+    "https://2026.igem.wiki/psi-korea/contribution",
+    "https://2026.igem.wiki/psi-korea/project/results",
+    "https://2026.igem.wiki/psi-korea/project/parts",
+    "https://2026.igem.wiki/psi-korea/wet-lab/experiments",
+    "https://2026.igem.wiki/psi-korea/safety-and-security"
+  ]
+}

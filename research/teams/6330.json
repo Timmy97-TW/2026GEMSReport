@@ -1,0 +1,61 @@
+{
+  "team": "HBUT-China",
+  "id": "6330",
+  "section": "Undergrad",
+  "country": "China",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/hbut-china/",
+  "projectTitle": "IGNITE — oHSV2-Neo-IL-2",
+  "tagline": "An AI-redesigned IL-2 that activates CD8 T cells without expanding Tregs, delivered from an oncolytic HSV-2 into microsatellite-stable cold tumours",
+  "summary": "HBUT-China targeted microsatellite-stable colorectal cancer, the roughly 80-85 percent of advanced cases that behave as immunologically cold tumours, by arming an attenuated oncolytic herpes simplex virus type 2 with an engineered interleukin-2. Their Best New Basic Part, Neo-IL-2, is an AI-guided interface redesign that weakens binding to IL-2R-alpha (CD25) while keeping signalling through the IL-2R-beta/gamma-c complex, so it activates CD8 T cells and NK cells without driving the regulatory T-cell expansion and dose-limiting toxicity that have crippled wild-type IL-2. The cassette was recombined into an HG52 backbone already deleted for ICP34.5 (neurovirulence) and ICP47 (TAP inhibition, so MHC class I presentation is restored), replacing a CMV-GFP cassette at the gamma-34.5 locus. They won Best New Basic Part in the Undergrad section and Best Oncology Project.",
+  "awards": ["Best New Basic Part, Undergrad (winner)", "Best Oncology Project (winner)"],
+  "dry": {
+    "frameworks": "Two named, reusable frameworks offered as contributions: SHIELD, a six-module full-chain safety paradigm covering safety-by-design, wet-lab operational governance, hardware infrastructure assurance, emergency response, training and education, and public outreach; and HOPES, a closed-loop human-centred methodology for integrated human practices. Plus a documented chassis-comparison exercise weighing HSV-1 against HSV-2 across oncolytic capacity, payload size and other dimensions before committing.",
+    "dataviz": "Construction schematics showing the HG52 (ICP34.5-/ICP47-) backbone with TRL/IRL/IRS/TRS repeats and the homologous-recombination replacement of CMV-GFP with CMV-Neo-IL-2-BGH-polyA, three-round plaque-purification panels in bright-field, green and merged channels, flow-cytometry Treg percentage comparisons, qPCR and RTCA traces, tumour growth curves and survival plots, and a watercolour shield diagram linking the six SHIELD dimensions.",
+    "datascience": "AI-assisted protein interface design followed by multi-tool computational triage: molecular docking, affinity prediction, stability and manufacturability analysis, with PRODIGY used to forecast receptor-binding profiles at 37 degrees C and confirm reduced CD25 affinity alongside retained CD122/CD132 association. The design hypothesis is then tested rather than assumed, with SPR used for direct receptor-binding verification.",
+    "software": "",
+    "stack": ["AI-assisted protein design", "PRODIGY affinity prediction", "molecular docking", "HSV-2 HG52 (ICP34.5-/ICP47-) backbone", "pHG52d34.5-CMV-GFP shuttle vector", "ICP4 complementing cells", "calcium phosphate co-transfection", "SPR", "RTCA real-time cytotoxicity", "flow cytometry", "ELISA", "qPCR"],
+    "techniques": ["rational receptor-bias engineering of a cytokine", "homologous recombination into a viral genome at a defined locus", "three-round plaque purification", "Treg selective-activation assay", "T-cell activation assay", "high-passage stability testing of a transgene in a recombinant virus", "in vivo tumour volume and survival monitoring in tumour-bearing mice"]
+  },
+  "good": {
+    "publicEngagement": "Tiered outreach designed per audience rather than one talk repeated: young children (storybooks, five published as PDFs), special-needs children and groups with intellectual disabilities, university students, and elderly communities, including a graded calisthenics set with a basic and an advanced version so seniors of different fitness levels can use it. Formats span hands-on experiments, physical teaching aids and salons.",
+    "ihp": "Patient, clinician and expert interview transcripts were analysed alongside a public questionnaire on understanding of cold versus hot tumours and a review of previous iGEM human-practices cases, organised through their HOPES closed-loop framework. Safety input came from named virologists, including Qiu Yang, a researcher at the Wuhan Institute of Virology, Chinese Academy of Sciences, who works on viral vector safety evaluation and animal model assessment, with multiple rounds of interviews on virology and animal experimentation feeding the risk-assessment design.",
+    "realWorld": "There is no venture here and the team does not pretend otherwise, so the instructive material is the part and the safety practice. On reusability, Neo-IL-2 is one of the better-engineered iGEM parts because the characterisation is layered rather than single-assay: SDS-PAGE for expression, qPCR and ELISA for transcript and protein, SPR for direct receptor binding, a Treg selective-activation assay and a T-cell activation assay for the functional claim that actually matters, RTCA for real-time cytotoxicity, and crucially a stability test of Neo-IL-2 expression after high-passage propagation of the recombinant virus, which is the test that tells a downstream user whether the part survives in a working vector. They also state the reuse envelope explicitly and in vector-agnostic terms: the coding sequence is intended for any context needing selective CD8 T-cell and NK activation without Treg expansion, and they name oncolytic viruses, mRNA-LNP and chassis strains as delivery platforms it can move into. Eight new parts were built (six basic, two composite), two existing parts reused, and functional annotations and characterisation descriptions on the Registry entries were deliberately expanded, with a named Part Leader owning the documentation. That combination, a design rationale, a computational prediction, an orthogonal physical measurement of the predicted property, a functional assay of the intended benefit, and a passage-stability result, is what makes a part genuinely inheritable rather than merely registered. On safety, the standout is institutional rather than technical: HBUT initiated and led a five-school joint biosafety manual for anti-tumour synthetic-biology projects with four other university iGEM teams (ZJU-China, BNU-China, JLU-FBH and ZJUT-China), covering oncolytic-virus modification operating standards, GMO leakage hazards and waste-disposal guidance, published as a downloadable PDF and explicitly designed with internally unified but differentiable risk-assessment protocols, since the five teams use different carriers. Their reasoning for doing it is the honest one: an individual iGEM team is limited in research vision, experimental conditions and risk-assessment competence, so cross-team safety communication is how those limits get overcome. Safety is also built into the construct rather than bolted on, with ICP34.5 deleted to cut neurovirulence and improve tumour selectivity and ICP47 deleted to restore antigen presentation, and they state plainly that genetic attenuation cannot eliminate risk entirely because viruses are inherently infectious. Wet-lab practice is documented at BSL-2 with risk assessment, PPE, waste handling and training, photographed down to biosafety-cabinet operation, eyewash stations and fridge labelling. The blunt limitations are theirs: the project is explicitly still in progress, systematic toxicity assessment requires expansion to multiple animal models, and the AI protein-screening system needs further experimental iteration.",
+    "partners": [
+      "Qiu Yang, Wuhan Institute of Virology, Chinese Academy of Sciences (viral vector safety evaluation and animal models)",
+      "ZJU-China, BNU-China, JLU-FBH and ZJUT-China iGEM teams (five-school joint biosafety manual for anti-tumour synthetic biology)",
+      "Clinicians and patients interviewed on MSS colorectal cancer treatment options"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6330/wiki/safety/wiki/safety/review-20261019/d-shield-framework.webp",
+      "caption": "The SHIELD safety framework, consolidating safety-by-design, wet-lab governance, hardware infrastructure, emergency response, training and outreach into one reusable full-chain paradigm",
+      "credit": "Team HBUT-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6330/wiki/description/description-figure-6-hd.avif",
+      "caption": "Construction of oHSV2-Neo-IL-2: homologous recombination replaces the CMV-GFP cassette at the gamma-34.5 locus of the ICP34.5-/ICP47- HG52 backbone with CMV-Neo-IL-2 and a BGH poly(A) signal",
+      "credit": "Team HBUT-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6330/wiki/safety/icp47-antigen-presentation-20261021.avif",
+      "caption": "Rationale for the ICP47 deletion: relieving TAP inhibition restores MHC class I antigen presentation, a safety and efficacy choice made at the design stage",
+      "credit": "Team HBUT-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6330/wiki/safety/wiki/safety/review-20261019/i-bsc-front.webp",
+      "caption": "Documented BSL-2 practice for oncolytic HSV-2 work, photographed as part of the SHIELD infrastructure-assurance module",
+      "credit": "Team HBUT-China, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "For any part GEMS wants other groups to reuse, publish the five-layer evidence stack HBUT used for Neo-IL-2: design rationale, computational prediction of the specific property changed, an orthogonal physical measurement of that property (SPR, not just docking), a functional assay of the intended benefit and of the harm avoided, and a stability result after many passages in the working vector. Separately, copy the five-school joint biosafety manual: co-author a shared risk-assessment document with other groups working on the same hazard class, since one lab's risk-assessment competence is narrower than five labs'.",
+  "sources": [
+    "https://2026.igem.wiki/hbut-china/",
+    "https://2026.igem.wiki/hbut-china/parts",
+    "https://2026.igem.wiki/hbut-china/contribution",
+    "https://2026.igem.wiki/hbut-china/safety",
+    "https://2026.igem.wiki/hbut-china/assets/index-B5AKokKr.js",
+    "https://static.igem.wiki/teams/6330/wiki/education/pdf/education-biosafety-manual-v1.pdf"
+  ]
+}
