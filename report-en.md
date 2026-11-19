@@ -14,7 +14,7 @@ A review of the iGEM 2026 Top 10 teams across all three sections, every special 
 
 # Overview
 
-## 16 findings, and where to read each one
+## 17 findings, and where to read each one
 
 _The 2026 Best Wiki winners all build a layer like this — each claim in two sentences, with a link straight to the evidence. It works, so this report does it too._
 
@@ -65,6 +65,9 @@ Across 39 wikis read directly: 97% show a blank control, 72% calibrate into an a
 
 ### Six of twenty instruments could be rebuilt by a stranger
 Across the 2026 Best Hardware, Best Measurement and Best Alternative Platform cohorts, 20 instruments were built and **6** publish enough — bill of materials, geometry files, firmware, assembly guide — for someone in another country to rebuild them. **Nine publish no geometry file at all.** Exactly one has ever been used by anyone outside the team that built it.
+
+### Everyone disclosed their AI use — the argument is over what counts as AI
+The expected finding was that almost nobody disclosed. The actual finding is **106 of 106**, because iGEM 2026 made AI Tool Use a required block of a Bronze medal deliverable — a requirement produced total compliance overnight. But only **4 of 106** state what AI did *not* do, and of the 40 teams using a foundation model, only 15 file it as AI at all. AlphaFold is filed as biology.
 
 _Method and limits. Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see._
 
@@ -1160,6 +1163,7 @@ Before building anything new, make what already exists survivable by the next co
 - **Standardise the environment.** One `environment.yml` or `requirements.txt` per project, Python 3.12+, pinned versions. A student should be able to clone and run in under ten minutes.
 - **Archive the 2026 ReLEAF dry lab properly** — the OD600 signal processing, the optogenetic circuit model, the hardware firmware — as the first entry in the institutional record.
 - **Write the one-page biosecurity and ordering policy.** The US National Policy for Nucleic Acid Synthesis Screening (November 2026) now ties federal funding to buying synthetic DNA only from certified providers that screen orders of 50+ nucleotides. Mirror it: certified suppliers only, a documented internal review of any sequence design, an explicit scope statement excluding pathogen and toxin sequences, signed by every student before their first order. It costs an afternoon and it is the first thing a serious partner asks about.
+- **Write the AI-use norm now, while it is cheap.** Every one of the 106 decorated teams of 2026 disclosed its AI use, because iGEM made it a Bronze requirement — compliance is not the problem. Quality is: only **4 of 106** stated what AI did *not* do, and of the 40 teams using a foundation model only 15 filed it as AI at all, because AlphaFold gets filed as biology. The GEMS norm should separate the three things that get blurred — a model we trained, a third-party model we ran, an assistant that wrote code or prose — and require, per use, the model version, a named human reviewer, and one sentence on what the tool was not trusted with. Mark any model output unvalidated until it has been tested.
 
 _Done looks like: A new student can reproduce any 2026 figure from the repository alone, without asking anybody._
 

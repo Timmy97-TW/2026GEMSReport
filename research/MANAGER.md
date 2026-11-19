@@ -431,3 +431,26 @@ Lab — and it is also the only release with Gerbers, drill files, a JLCPCB CPL 
 Roadmap Phase 3 now carries this as its own item.
 Also worth remembering as a method caution: a stale deployed JS chunk on one team's site still contained the
 team's own unexecuted editorial placeholders, so bundle-derived evidence must be re-confirmed in the browser.
+
+**ai-disclosure (drylab 42) — the expected finding was wrong, which is the finding.**
+iGEM 2026's Attributions Form carries a first-class **AI Tool Use** block, and the Attributions Form is
+Bronze medal criterion 2 — so disclosure was effectively mandatory. Base rate is **106 of 106**, read off
+the canonical record at `teams.igem.org/wiki/<id>/attributions` (client-side React; plain curl returns an
+empty shell). ChatGPT 80, Claude 68, Gemini 30, Doubao/Kimi 21, DeepSeek 18; tasks led by Writing 80, Wiki
+Coding 78, Visualization 78. A requirement produced total compliance overnight — that is the transferable
+lesson, and it is the argument for GEMS writing its own norm rather than hoping for culture.
+The gap is quality and categories: only **4 of 106** state what AI did *not* do, and of the 40 teams using a
+third-party foundation model only 15 file it under AI at all, because AlphaFold gets filed as biology.
+Five teams reported an AI failure — HangzhouFourteenAP (FoldX's top pick scored below wild type, ranking
+revised), Toronto, UPF-Barcelona (A/B-tested a tool, no gain, declined to use it), Jilin-China,
+Al-Nahrain-IRAQ. Best practice found anywhere: Al-Nahrain-IRAQ's team-written "Responsible AI use" table
+with use, tools, named reviewer, model versions and an honest note on which one was not recorded.
+GEMS-Taiwan is above median but repeats the same paragraph verbatim under all three tools, names no model
+versions or reviewers, leaves AlphaFold out of the AI field, and serves the page as an iframe of the iGEM
+form. Roadmap Phase 1 now carries an AI-use norm item.
+
+### Status at the end of session 3
+All eight wave 4/5 analyses landed and are integrated: findings index at 17 cards, 20 insight blocks, all
+bilingual, character audit clean. Three of the eight returned nulls or reversals and say so in the lede.
+Roadmap phases 1, 2, 3 and 4 have each been amended from the new evidence. The Science for Good tab has been
+rebuilt around the user's correction (see the section above — read it before touching that tab).

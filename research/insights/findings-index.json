@@ -208,6 +208,19 @@
     "1 ever reused"
    ],
    "link": "drylab"
+  },
+  {
+   "kicker": "AI",
+   "kicker_zh": "AI",
+   "title": "Everyone disclosed their AI use — the argument is over what counts as AI",
+   "title_zh": "每一支隊伍都揭露了 AI 使用——爭點在於什麼算 AI",
+   "body": "The expected finding was that almost nobody disclosed. The actual finding is **106 of 106**, because iGEM 2026 made AI Tool Use a required block of a Bronze medal deliverable — a requirement produced total compliance overnight. But only **4 of 106** state what AI did *not* do, and of the 40 teams using a foundation model, only 15 file it as AI at all. AlphaFold is filed as biology.",
+   "body_zh": "原本預期的結果是幾乎沒有人揭露。實際的結果是 **106 支中的 106 支**，因為 iGEM 2026 把「AI 工具使用」列為銅牌必繳項目中的一個必填區塊——一條規定在一夜之間換來百分之百的遵循。但只有 **106 支中的 4 支**寫出 AI *沒有*做什麼；而在使用基礎模型的 40 支隊伍裡，只有 15 支把它填進 AI 欄位。AlphaFold 被歸類成生物學。",
+   "chips": [
+    "106 of 106",
+    "only 4 state a boundary"
+   ],
+   "link": "drylab"
   }
  ],
  "method": "Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see.",
