@@ -1,0 +1,114 @@
+{
+  "id": "findings-index",
+  "tab": "overview",
+  "kicker": "Start here",
+  "kicker_zh": "從這裡開始",
+  "title": "Eight findings, and where to read each one",
+  "title_zh": "八個發現，以及各自該讀哪一頁",
+  "lede": "The 2026 Best Wiki winners all build a layer like this — each claim in two sentences, with a link straight to the evidence. It works, so this report does it too.",
+  "lede_zh": "2026 年所有最佳 Wiki 得主都建了一層像這樣的東西——每個主張兩句話，附上直達證據的連結。它有效，所以這份報告也這麼做。",
+  "cards": [
+    {
+      "kicker": "Modelling",
+      "kicker_zh": "建模",
+      "title": "Closing the model–data loop is the single best predictor of a Top 10",
+      "title_zh": "閉合模型與資料的迴圈，是 Top 10 最強的單一預測因子",
+      "body": "Teams that both fit a model to their own measured data and validate it against something held back reached a Top 10 at **71%**; teams that did not, at **40%**. All four who closed the loop without a Top 10 won a major special prize anyway. It needs no GPU and no licence.",
+      "body_zh": "既以自身量測資料擬合模型、又用保留資料加以驗證的團隊，進入 Top 10 的比例是 **71%**；沒有這麼做的則是 **40%**。閉合了迴圈卻未進 Top 10 的那四支，全都拿下了重要特別獎。這件事不需要 GPU，也不需要授權。",
+      "chips": [
+        "71% vs 40%"
+      ],
+      "link": "drylab"
+    },
+    {
+      "kicker": "High school",
+      "kicker_zh": "高中組",
+      "title": "At high-school level the gap is evaluation discipline, not tools",
+      "title_zh": "在高中層級，差距在評估紀律，不在工具",
+      "body": "Eton-College-UK used logistic regression and a PSSM but ran cluster-aware cross-validation, a label-shuffle control and an ablation. Lambert-GA won Best Model for benchmarking the confidence metrics themselves and publishing that its own hit was not top-scoring. GCGS reached the Top 10 with no model page at all.",
+      "body_zh": "Eton-College-UK 用的是 logistic regression 與 PSSM，但做了分群感知的交叉驗證、標籤洗牌對照與消融測試。Lambert-GA 拿下最佳模型，是因為他們對信心指標本身做了基準測試，並公開自己成功的設計其實分數不是最高的。GCGS 則在完全沒有 model 頁的情況下進入 Top 10。",
+      "chips": [
+        "all free tools"
+      ],
+      "link": "drylab"
+    },
+    {
+      "kicker": "Software",
+      "kicker_zh": "軟體",
+      "title": "8 of 21 award-winning tools are still usable, and the reason is hosting",
+      "title_zh": "21 個得獎工具中有 8 個仍可使用，原因是「有沒有架站」",
+      "body": "Every live tool was hosted on wiki-freeze day; every source-only tool's wiki lists localhost as its only address. Not a coding or budget decision — a hosting decision made months early. Two high-school teams out-shipped most of the universities. Stars and forks across every repo checked: zero.",
+      "body_zh": "每一個仍在線的工具，在 wiki 凍結當日就已經上線；每一個只有原始碼的工具，wiki 上唯一的位址都是 localhost。這不是寫程式或預算的決定，而是提前好幾個月做的架站決定。兩支高中隊伍交付得比多數大學還好。所有檢查過的 repository，star 與 fork 都是零。",
+      "chips": [
+        "hosted on freeze day"
+      ],
+      "link": "drylab"
+    },
+    {
+      "kicker": "Human practices",
+      "kicker_zh": "人類實踐",
+      "title": "The loops that closed were closed by experts, not by publics",
+      "title_zh": "真正閉合的迴圈，是專家閉合的，不是公眾",
+      "body": "Of 93 decorated teams, 64 can point at a stakeholder who visibly changed the design. But almost every one of those stakeholders was a credentialled technical expert. The publics, patients and communities the criterion is rhetorically about changed the vocabulary and not the vector, with six or seven exceptions in 93.",
+      "body_zh": "在 93 支獲獎隊伍中，有 64 支能指出一位明顯改變了設計的利害關係人。但這些利害關係人幾乎全是具備專業資格的技術專家。這個評審標準修辭上所指向的公眾、病人與社群，改變的是詞彙而不是方向——93 支中只有六、七個例外。",
+      "chips": [
+        "64 of 93",
+        "6–7 exceptions"
+      ],
+      "link": "good"
+    },
+    {
+      "kicker": "Engagement",
+      "kicker_zh": "公眾參與",
+      "title": "The best education work was designed from data and measured like an experiment",
+      "title_zh": "最好的教育工作，是從資料設計、像實驗一樣量測的",
+      "body": "UCAS-China made compliance the target after a 461-person questionnaire, not awareness. GU Frankfurt sent nineteen members to a professional science-communication course first. Oxford built a podcast that deliberately pairs stakeholders who disagree. And the sharpest teams publish the lesson that failed.",
+      "body_zh": "UCAS-China 在做完 461 人的問卷後，把目標設為服藥遵從性，而不是認知提升。GU Frankfurt 先送 19 位成員去上專業的科學傳播課程。Oxford 做了一個刻意把意見相左者配對的 podcast。而最犀利的團隊，會把失敗的那堂課也公布出來。",
+      "chips": [
+        "survey-designed",
+        "measured"
+      ],
+      "link": "good"
+    },
+    {
+      "kicker": "Commercial",
+      "kicker_zh": "商業",
+      "title": "The credible commercial sections published a model showing their own product losing",
+      "title_zh": "可信的商業章節，都公開了顯示自家產品輸掉的模型",
+      "body": "Worldshaper-Shanghai reports a negative NPV for its own enzyme. DTU-Denmark's LCA finds cement co-processing beats its route on almost every indicator, then converts each loss into an engineering target. Stockholm dismantled its venture when the safety board killed open-water release — and won the Safety and Security Award.",
+      "body_zh": "Worldshaper-Shanghai 報告自家酵素得出負的 NPV。DTU-Denmark 的 LCA 發現水泥共處理在幾乎每項指標上都勝過他們的路線，接著把每一項落敗轉成工程目標。Stockholm 在安全委員會否決開放水域釋放後拆掉了自己的創業計畫——然後拿下安全與保安獎。",
+      "chips": [
+        "negative NPV, published"
+      ],
+      "link": "good"
+    },
+    {
+      "kicker": "Wiki craft",
+      "kicker_zh": "Wiki 工藝",
+      "title": "Best Wiki winners ship an executive layer, not better graphics",
+      "title_zh": "最佳 Wiki 得主交付的是一個導讀層，不是更漂亮的圖",
+      "body": "Three of the four serve text that is readable before any script runs; the fourth mirrors every page as Markdown. All four build a layer that answers each medal criterion in two or three sentences and deep-links the evidence, failures included. Dark mode, late alt-text sweeps and mascot systems correlate with nothing.",
+      "body_zh": "四位得主中有三位提供的文字在任何程式執行前就可閱讀；第四位則把每一頁都鏡像為 Markdown。四位都建了一層用兩三句話回答每項獎牌標準、並直接深連到證據（含失敗）的導讀層。深色模式、最後才補的替代文字、吉祥物系統，則與得獎毫無相關。",
+      "chips": [
+        "text before JS",
+        "/judging page"
+      ],
+      "link": "teams"
+    },
+    {
+      "kicker": "Taiwan",
+      "kicker_zh": "台灣",
+      "title": "Taiwan won well, but only in the high-school tier",
+      "title_zh": "台灣贏得不錯，但只贏在高中組",
+      "body": "Thirteen competing teams returned six award wins — more than any East Asian territory except China, and more than Hong Kong on fewer teams. But every technical award came from the high-school tier, there were zero nominations in any parts award and zero in Best Software, and Hong Kong tripled Taiwan's Top 10 count.",
+      "body_zh": "13 支參賽隊伍拿下 6 座獎項——多於中國以外的任何東亞地區，而且以更少的隊伍數超越香港。但所有技術類獎項都來自高中組，在任何元件獎與最佳軟體上都掛零，而香港的 Top 10 席次是台灣的三倍。",
+      "chips": [
+        "13 teams · 6 wins"
+      ],
+      "link": "teams"
+    }
+  ],
+  "method": "Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see.",
+  "method_zh": "每一張卡片都是某篇完整分析的摘要，點進連結的頁面即可看到證據、具名的團隊，以及該方法的限制。凡是以數字為基礎的發現，分析中都會說明該數字如何計算，以及它看不到什麼。",
+  "order": 10
+}

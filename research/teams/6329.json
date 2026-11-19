@@ -6,21 +6,40 @@
   "village": "",
   "wiki": "https://2026.igem.wiki/baltimore/",
   "projectTitle": "KeraTINT",
+  "projectTitle_zh": "KeraTINT",
   "tagline": "A chromoprotein-keratin-binding-peptide fusion that colours hair and repairs it in the same step",
+  "tagline_zh": "一個色蛋白與角蛋白結合肽的融合蛋白，在同一個步驟中既染色又修護頭髮",
   "summary": "Baltimore Biocrew, based at the Baltimore Underground Science Space community lab, engineered fusion proteins joining chromoproteins (aeblue, UM) to keratin-binding peptides so that a semi-permanent dye deposits colour while reinforcing the hair shaft. The entrepreneurship work was run through iGEM's Venture Creation Labs curriculum, the same incubator route their 2023 project RhizeUp took, and it produced an OKR table with numeric key results, a scored risk register, a US-specific patent strategy and a competitor map. Market evidence rests on two IRB-approved consumer surveys (56 then 54 responses, translated into Chinese and Filipino) plus named interviews with a cosmetics founder, two L'Oreal North America hair-colour-lab staff, a cosmetology student and the Boeke Lab at NYU Langone. They were nominated for Best Entrepreneurship in the High School section.",
-  "awards": ["Best Entrepreneurship nominee, High School"],
+  "summary_zh": "Baltimore Biocrew 以 Baltimore Underground Science Space 社群實驗室為基地，工程改造出把色蛋白（aeblue、UM）與角蛋白結合肽接起來的融合蛋白，讓半永久染髮劑在沉積顏色的同時強化髮幹。創業工作透過 iGEM 的 Venture Creation Labs 課程進行，和他們 2023 年的專案 RhizeUp 走的是同一條育成路徑，產出一張附具體數值關鍵結果的 OKR 表、一份有評分的風險登錄表、一套針對美國的專利策略，以及一張競爭者地圖。市場證據建立在兩份經 IRB 核准的消費者調查（先 56 份、後 54 份回覆，並翻譯成中文與菲律賓語）之上，另有具名訪談對象：一位化妝品公司創辦人、兩位 L'Oreal 北美染髮實驗室人員、一位美容科學生，以及 NYU Langone 的 Boeke Lab。他們入圍高中組最佳創業獎。",
+  "awards": [
+    "Best Entrepreneurship nominee, High School"
+  ],
   "dry": {
     "frameworks": "iGEM Venture Creation Labs curriculum as the scaffold, Golden Circle, Unique Value Proposition, Lean Business Model Canvas, SWOT, a seven-phase Objectives and Key Results table with business-day estimates and fixed-cost lines, a risk register with a published 1-5 impact x 1-5 likelihood scoring rubric and named owners, direct and indirect and future competitor tiers, and the iGEM judging ballot answered question by question.",
+    "frameworks_zh": "以 iGEM Venture Creation Labs 課程為骨架，搭配黃金圈、獨特價值主張、精實商業模式畫布、SWOT、一張七階段的目標與關鍵結果（OKR）表（附工作日估算與固定成本行）、一份風險登錄表（附公開的 1-5 衝擊 x 1-5 可能性評分準則與具名負責人）、直接／間接／未來競爭者的分層，以及逐題回答的 iGEM 評審評分表。",
     "dataviz": "Interactive click-through SWOT, a nine-slide pitch deck embedded as a carousel, a lean canvas, a long-term impact-assessment graphic, a 2027-2029 timeline, and a horizontally scrollable OKR and risk table. Survey results are reported as percentages and cross-tabulated by language group and age.",
+    "dataviz_zh": "可點擊切換的互動式 SWOT、以輪播形式嵌入的九頁簡報、一張精實畫布、一張長期影響評估圖、一條 2027-2029 時間軸，以及一張可水平捲動的 OKR 與風險表。調查結果以百分比呈現，並依語言群體與年齡交叉分析。",
     "datascience": "Two-round survey analysis with a genuine iteration: a bimodal distribution on grey-coverage priority in Survey 1 (a quarter rating it 1, nearly half rating it 10) was hypothesised to be two age cohorts, and Survey 2 confirmed it by adding age, hair type and prior chemical-treatment questions. Reported figures include 64.3 percent rating less hair damage a 10/10 priority, 89 percent rating it 8 or above, 50 percent using at-home boxed kits and only 25.9 percent relying solely on salons.",
+    "datascience_zh": "兩輪調查分析，並有一次真正的迭代：第 1 份調查中關於白髮覆蓋優先度的雙峰分布（四分之一給 1 分，近半數給 10 分）被假設為兩個年齡族群所致，第 2 份調查加入年齡、髮質與過去化學處理經驗的題目後確認了這一點。報告數字包括：64.3% 把「減少頭髮損傷」列為 10/10 的優先度，89% 給 8 分以上，50% 使用家用盒裝染髮組，只有 25.9% 完全依賴沙龍。",
     "software": "",
-    "stack": ["Google Forms", "chromoprotein-keratin-binding peptide fusion constructs"],
-    "techniques": ["fusion protein design", "colour retention and wash-cycle testing (planned)", "cytotoxicity assay development (started, not completed)", "pH and thermal stability assessment (literature-based)"]
+    "stack": [
+      "Google Forms",
+      "chromoprotein-keratin-binding peptide fusion constructs"
+    ],
+    "techniques": [
+      "fusion protein design",
+      "colour retention and wash-cycle testing (planned)",
+      "cytotoxicity assay development (started, not completed)",
+      "pH and thermal stability assessment (literature-based)"
+    ]
   },
   "good": {
     "publicEngagement": "Surveys were deliberately multilingual, translated into Chinese and Filipino to reach their own communities, and the results split cleanly by language and age in ways that changed the product thesis: younger English-speaking respondents wanted fashion blues, pinks and purples, which happens to be what their chromoproteins produce, while older Chinese and Filipino respondents wanted grey coverage and natural shades. They also found that the phrase 'genetically engineered' on a label worried more respondents than it attracted, with several linking it to harmful chemicals or illness, and responded by planning a consumer FAQ booklet distributed through partner salons instead of a call centre. They presented at the July 2026 Mid-Atlantic Meetup alongside eight other regional teams.",
+    "publicEngagement_zh": "調查刻意採多語進行，翻譯成中文與菲律賓語以觸及他們自己的社群，而結果依語言與年齡分得很乾淨，並改變了產品論述：較年輕的英語受訪者想要時尚的藍色、粉紅與紫色，而那恰好是他們的色蛋白能做出的顏色；較年長的中文與菲律賓語受訪者則想要白髮覆蓋與自然色調。他們也發現標籤上「基因工程」這個詞讓受訪者擔心的多於被吸引的，有幾位把它連結到有害化學物質或疾病，於是改為規劃一本透過合作沙龍發放的消費者 FAQ 小冊，而不是設客服中心。他們在 2026 年 7 月的 Mid-Atlantic Meetup 與其他八支區域隊伍一同發表。",
     "ihp": "A Closed-Loop Framework structured each stakeholder conversation into relevance, insight, integration and future question. IRB approval from the BUGSS Board of Directors was obtained before surveying, which is unusual rigour at high-school level. Specific conversations changed specific decisions: Savannah Shumaker (chemist, co-founder and CEO of Eight Count Cosmetics) pushed branding toward audience values and simplified their science communication, and suggested contacting cosmetology schools, which led to Rachel Lu; Lindsay Menzer and Yun Yong Jang (L'Oreal Hair North America, Head of Hair Color Lab) flagged patenting during early testing, which launched the US patent-strategy investigation; the Boeke Lab at NYU Langone recommended storage conditions for chromoproteins, prompting a preservation study; and a question from another team at the Mid-Atlantic Meetup about pH and temperature sensitivity, which they had deprioritised, is what sent them to the Boeke Lab in the first place.",
+    "ihp_zh": "一套閉環架構把每場利害關係人對話整理成相關性、洞見、整合與未來問題四項。調查之前已取得 BUGSS 董事會的 IRB 核准，這在高中層級是不尋常的嚴謹。具體的對話改變了具體的決定：Savannah Shumaker（化學家，Eight Count Cosmetics 共同創辦人兼執行長）把品牌推向受眾價值，並簡化了他們的科學溝通，還建議聯繫美容學校，這促成了與 Rachel Lu 的接觸；Lindsay Menzer 與 Yun Yong Jang（L'Oreal Hair North America，染髮實驗室主管）提醒要在早期測試階段就處理專利，這啟動了美國專利策略的研究；NYU Langone 的 Boeke Lab 建議了色蛋白的保存條件，促成一項保存研究；而在 Mid-Atlantic Meetup 上另一支隊伍關於 pH 與溫度敏感性的提問（這是他們原本降低優先度的項目），正是把他們帶往 Boeke Lab 的起因。",
     "realWorld": "This is a credible early-stage venture plan with the finance section still hollow. What is genuinely strong is the execution scaffolding. The OKR table is the best artefact: it sets falsifiable targets with costs and durations attached, including catalogue 15 salons statewide, a minimum of 10 qualitative interviews, at least 5 Letters of Intent, 10 investor pitches, 10,000 dollars from stakeholder investment plus research grants, cell viability above 70 percent in cytotoxicity assays, dye longevity of 40 wash cycles, protein stability at 50 degrees C, 1,000 sales per month and two new production labs in other mid-Atlantic states. Named funding targets are real and local (Wexford SciTech Venture Fund, TEDCO grants, Connect Labs at 4MLK as prospective lab space, youth competitions such as Blue Ocean, Paradigm and Slingshot). Crucially, every one of these is still an aspiration: the Letters of Intent are a key result, not a signed document; the grant is applied for, not won; there is no registered entity, though forming an LLC is floated inside the liability risk row. The regulatory path is the most concretely researched part of the whole analysis and is credible: they identify that the FDA Office of Cosmetics and Colors certifies coal-tar and synthetic colour additives but that a chromoprotein appears to fall into neither bucket, name 21 CFR parts 73 and 74 subpart C, name the Color Certifications Inquiry Branch as the body to ask, and note that certified and uncertified colours carry legally distinct names. The IP strategy is equally specific and actually actionable: a provisional patent on the aeblue-keratin fusion first, converted to a non-provisional within twelve months, with USPTO micro-entity status claimed for an 80 percent fee reduction, and they check their own eligibility against the 262,380 dollar gross-income threshold. Market sizing, by contrast, is the weakest link, resting on Grand View Research hair-colour market reports rather than any bottom-up estimate, with no price point, no cost of goods and no unit economics anywhere. Continuation is plausible rather than secured: they state plainly that as a high-school iGEM team they can never test on human hair, so KeraTINT must pursue third-party testing or operate independently of iGEM after the competition, and they sequence cytotoxicity, pH and thermal assays as the first post-Jamboree work. The precedent helps their case, since the same team's 2023 RhizeUp project went through the same incubator.",
+    "realWorld_zh": "這是一份可信的早期創業計畫，只是財務一節仍然空洞。真正強的是執行的骨架。OKR 表是最好的產出：它設下可被否證的目標，並附上成本與時程，包括盤點全州 15 間沙龍、至少 10 場質性訪談、至少 5 封意向書、10 場投資人簡報、來自利害關係人投資加研究補助的 10,000 美元、細胞毒性試驗中細胞存活率高於 70%、染色可維持 40 次洗髮週期、蛋白質在 50 °C 下穩定、每月 1,000 筆銷售，以及在中大西洋其他州設立兩座新生產實驗室。具名的募資標的真實且在地（Wexford SciTech Venture Fund、TEDCO 補助、把 4MLK 的 Connect Labs 列為可能的實驗室空間、Blue Ocean、Paradigm 與 Slingshot 等青年競賽）。關鍵在於：這些目前全都還只是期望——意向書是關鍵結果，不是已簽署的文件；補助是已申請，不是已獲得；也還沒有登記任何法人實體，雖然在責任風險那一列裡提到了成立 LLC 的可能。法規路徑是整份分析中研究得最具體、也最可信的部分：他們指出 FDA 的 Office of Cosmetics and Colors 認證煤焦油與合成色素添加物，但色蛋白看來兩類都不屬於；他們指名 21 CFR 第 73 與第 74 部 subpart C，指名 Color Certifications Inquiry Branch 是該詢問的單位，並注意到已認證與未認證色素在法律上有不同的名稱。智財策略同樣具體且實際可行：先對 aeblue-角蛋白融合蛋白提出臨時專利申請，在十二個月內轉為正式申請，並主張 USPTO 微型實體身分以取得 80% 的費用減免，他們還對照 262,380 美元的總收入門檻檢查自己的資格。相對地，市場規模估算是最弱的一環，只靠 Grand View Research 的染髮市場報告，而不是任何自下而上的推估，整份文件沒有價格點、沒有銷貨成本、也沒有任何單位經濟分析。延續性屬於有可能而非已確保：他們直白地說，作為高中 iGEM 隊伍，他們永遠不能在真人頭髮上測試，因此 KeraTINT 必須尋求第三方測試，或在競賽結束後脫離 iGEM 獨立運作；他們也把細胞毒性、pH 與熱穩定性試驗排為 Jamboree 之後的第一批工作。先例對他們有利，因為同一支隊伍 2023 年的 RhizeUp 專案走過同一條育成路徑。",
     "partners": [
       "iGEM Venture Creation Labs / Venture Foundry (incubator curriculum)",
       "Baltimore Underground Science Space (BUGSS) community lab and its Board of Directors (IRB approval)",
@@ -35,25 +54,30 @@
     {
       "url": "https://static.igem.wiki/teams/6329/wiki/entrepreneurship/lbmc.avif",
       "caption": "KeraTINT lean business model canvas identifying local salons and cosmetic companies as first customers",
+      "caption_zh": "KeraTINT 的精實商業模式畫布，把在地沙龍與化妝品公司列為首批客戶",
       "credit": "Team Baltimore, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6329/wiki/entrepreneurship/timeline.avif",
       "caption": "Commercialisation timeline from 2027 stakeholder re-engagement to a 2029 salon product roll-out",
+      "caption_zh": "商業化時間軸，從 2027 年重新接觸利害關係人到 2029 年沙龍產品上市",
       "credit": "Team Baltimore, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6329/wiki/entrepreneurship/pitch-deck/2.avif",
       "caption": "Slide from the nine-slide KeraTINT pitch deck covering market sizing and distribution channels",
+      "caption_zh": "KeraTINT 九頁簡報中的一頁，涵蓋市場規模與通路",
       "credit": "Team Baltimore, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6329/wiki/entrepreneurship/impact-assessment.avif",
       "caption": "Long-term positive and negative impact assessment for consumers and the wider hair-care market",
+      "caption_zh": "針對消費者與整個護髮市場的長期正面與負面影響評估",
       "credit": "Team Baltimore, iGEM 2026 wiki"
     }
   ],
   "gemsTakeaway": "Steal the OKR table: every commercialisation objective gets a numeric key result, a business-day estimate and a fixed-cost line, including scientific gates such as cell viability above 70 percent and dye longevity of 40 wash cycles, so a business plan becomes a checklist a successor team can inherit. Also copy getting institutional IRB approval before running consumer surveys, which both protects participants and makes the resulting data citable.",
+  "gemsTakeaway_zh": "值得照抄那張 OKR 表：每一項商業化目標都配上一個數值關鍵結果、一個工作日估算與一行固定成本，連科學關卡也一樣——例如細胞存活率高於 70%、染色可維持 40 次洗髮週期——於是商業計畫變成一份後繼隊伍可以接手的檢核表。另外也值得照抄的是在進行消費者調查前先取得機構 IRB 核准，這既保護受試者，也讓所得資料可被引用。",
   "sources": [
     "https://2026.igem.wiki/baltimore/",
     "https://2026.igem.wiki/baltimore/entrepreneurship/",

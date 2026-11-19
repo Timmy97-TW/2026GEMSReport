@@ -10,6 +10,36 @@ A review of the iGEM 2026 Top 10 teams across all three sections, every special 
 - **Top 10 Overgrad** — Athens, ETH-Zurich, GU Frankfurt, KAUST-KSA, Marburg, Muenster-University, Toronto, TU Delft, UZurich, WageningenUR
 - **Top 10 High School** — Eton-College-UK, GCGS, GEMS-Taiwan, GHCIS, HangzhouFourteenAP, HFI, HKSSC, HongKong-HS, HongKong-JSS, Lambert-GA
 
+## Eight findings, and where to read each one
+
+_The 2026 Best Wiki winners all build a layer like this — each claim in two sentences, with a link straight to the evidence. It works, so this report does it too._
+
+### Closing the model–data loop is the single best predictor of a Top 10
+Teams that both fit a model to their own measured data and validate it against something held back reached a Top 10 at **71%**; teams that did not, at **40%**. All four who closed the loop without a Top 10 won a major special prize anyway. It needs no GPU and no licence.
+
+### At high-school level the gap is evaluation discipline, not tools
+Eton-College-UK used logistic regression and a PSSM but ran cluster-aware cross-validation, a label-shuffle control and an ablation. Lambert-GA won Best Model for benchmarking the confidence metrics themselves and publishing that its own hit was not top-scoring. GCGS reached the Top 10 with no model page at all.
+
+### 8 of 21 award-winning tools are still usable, and the reason is hosting
+Every live tool was hosted on wiki-freeze day; every source-only tool's wiki lists localhost as its only address. Not a coding or budget decision — a hosting decision made months early. Two high-school teams out-shipped most of the universities. Stars and forks across every repo checked: zero.
+
+### The loops that closed were closed by experts, not by publics
+Of 93 decorated teams, 64 can point at a stakeholder who visibly changed the design. But almost every one of those stakeholders was a credentialled technical expert. The publics, patients and communities the criterion is rhetorically about changed the vocabulary and not the vector, with six or seven exceptions in 93.
+
+### The best education work was designed from data and measured like an experiment
+UCAS-China made compliance the target after a 461-person questionnaire, not awareness. GU Frankfurt sent nineteen members to a professional science-communication course first. Oxford built a podcast that deliberately pairs stakeholders who disagree. And the sharpest teams publish the lesson that failed.
+
+### The credible commercial sections published a model showing their own product losing
+Worldshaper-Shanghai reports a negative NPV for its own enzyme. DTU-Denmark's LCA finds cement co-processing beats its route on almost every indicator, then converts each loss into an engineering target. Stockholm dismantled its venture when the safety board killed open-water release — and won the Safety and Security Award.
+
+### Best Wiki winners ship an executive layer, not better graphics
+Three of the four serve text that is readable before any script runs; the fourth mirrors every page as Markdown. All four build a layer that answers each medal criterion in two or three sentences and deep-links the evidence, failures included. Dark mode, late alt-text sweeps and mascot systems correlate with nothing.
+
+### Taiwan won well, but only in the high-school tier
+Thirteen competing teams returned six award wins — more than any East Asian territory except China, and more than Hong Kong on fewer teams. But every technical award came from the high-school tier, there were zero nominations in any parts award and zero in Best Software, and Hong Kong tripled Taiwan's Top 10 count.
+
+_Method and limits. Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see._
+
 ## Two questions, thirty teams
 
 _This report asks the same two questions of every team it looks at._

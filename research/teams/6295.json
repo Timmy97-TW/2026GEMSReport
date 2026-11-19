@@ -7,8 +7,7 @@
   "wiki": "https://2026.igem.wiki/princeton/",
   "projectTitle": "SymPleco: Making Precision Sequestration Sym-ple",
   "tagline": "One M13 phage chassis, any cargo — bulk-capacity adsorption with antibody-grade specificity and light-triggered release.",
-  "summary": "SymPleco attacks a trade-off that runs through all remediation chemistry: activated carbon captures a lot but cannot tell similar molecules apart, while monoclonal antibodies bind precisely but need harsh pH or chaotropic salts to release and cannot be recovered or scaled. Princeton's answer is a filamentous M13 bacteriophage used as a programmable adsorbent: sortase A-mediated ligation staples engineered fusion proteins onto the N-terminus of every pVIII copy (making 'furry' phage that bypass classical display size limits), with pIII carrying a Cg-Defensin anchor for PLA filter attachment, a VHH7 nanobody for macrophage clearance, and an AsLOV2 optomonobody that holds cargo in the dark and lets go under 450 nm light. Because swapping the target means swapping only the displayed binder, the team paired it with SymPlify, a de novo binder design pipeline, so a new target does not wait on a new antibody. It won on foundational-advance logic: a genuinely modular chassis demonstrated across three deliberately unrelated applications (melanoma exosome sequestration, Parkinson's alpha-synuclein interception, microcystin/BPA water remediation), backed by an unusually self-critical ODE model and an IRB-approved patient engagement programme."
-,
+  "summary": "SymPleco attacks a trade-off that runs through all remediation chemistry: activated carbon captures a lot but cannot tell similar molecules apart, while monoclonal antibodies bind precisely but need harsh pH or chaotropic salts to release and cannot be recovered or scaled. Princeton's answer is a filamentous M13 bacteriophage used as a programmable adsorbent: sortase A-mediated ligation staples engineered fusion proteins onto the N-terminus of every pVIII copy (making 'furry' phage that bypass classical display size limits), with pIII carrying a Cg-Defensin anchor for PLA filter attachment, a VHH7 nanobody for macrophage clearance, and an AsLOV2 optomonobody that holds cargo in the dark and lets go under 450 nm light. Because swapping the target means swapping only the displayed binder, the team paired it with SymPlify, a de novo binder design pipeline, so a new target does not wait on a new antibody. It won on foundational-advance logic: a genuinely modular chassis demonstrated across three deliberately unrelated applications (melanoma exosome sequestration, Parkinson's alpha-synuclein interception, microcystin/BPA water remediation), backed by an unusually self-critical ODE model and an IRB-approved patient engagement programme.",
   "awards": [
     "Undergrad Top 10",
     "2nd Runner-up Grand Prize (Undergrad)",
@@ -50,7 +49,11 @@
       "Bootstrap confidence intervals over wells and leave-one-well-out robustness",
       "Chi-square test of construct interchangeability",
       "Regression-pinned unit testing of a scientific model"
-    ]
+    ],
+    "frameworks_zh": "兩項性質不同的計算工作。SymPlify 是一條 de novo 蛋白質結合子設計管線，依標的類型分流：蛋白質鏈走 BindCraft（以 AlphaFold2-multimer 做幻構，對經 softmax 的 logits 做梯度下降，再以 SolubleMPNN 設計序列，並刻意用 AF2-monomer 重新預測作為嚴苛濾器，最後以 PyRosetta 計算結合能與表面疏水性等物理指標），而小分子或大環分子鏈則走 RFdiffusion3 全原子擴散加上 LigandMPNN（每個骨架八條序列）與一個獨立的複合物預測模型。PeSTo 提供熱點殘基評分，RDKit 負責結構繪製與藥效團尋找，freesasa 計算疏水區塊比例。另一方面，量測工作背後有一個遞迴式 Phage Jumpstart Assay 的機制性 ODE 模型（jumpstart.py、jumpstart_mechanistic.py、passage.py、phase2.py、recursion.py），追蹤未感染、已感染與游離顆粒三個族群，納入超感染排除（sigma = 0.05）、飽和式感染、環境承載量，以及由真實 pIII 基因劑量導出的混合外殼感染力 a_h（在 m13ko7_copies=20 時 a_h 約 0.729）；1:11 的傳代步驟以 Poisson 抽樣各顆粒族群而非單純除法，因此一個譜系真的可能絕滅。",
+    "dataviz_zh": "SymPlify 的網頁介面是視覺化的重心：一個 RDKit 3D 檢視器依 PeSTo 結合機率為標的著色，列出信賴分數最高的熱點殘基，使用者可用 x 刪掉低分的殘基以收緊區塊，而難度分解（分散程度、疏水表面比例、球狀度）會隨選擇即時重算——當殘基彼此相距超過 30 A 時還會出現警告，因為單一結合子無法同時觸及它們。執行狀態頁顯示管線階段、標的類型、已耗時間、自動重送次數、設計數量與工作 ID，最後的排序畫面讓使用者逐一點開設計、下載含或不含 GS 連接子的 .pdb 檔。模型頁面在資料呈現上也異常透明：它印出完整的指令參考，把每個參數標示為實測、導出或假設，並依其對第二輪盤面比值的敏感度為假設排序。",
+    "datascience_zh": "Jumpstart 分析把單一的菌落比例讀值變成一條軌跡：因為每一次遞迴同時是一次操作與一次量測，在一個被推往單一基因型的族群上反覆進行，就能揭露單一比值看不出的行為。統計處理謹慎——信賴區間以孔位為單位做 bootstrap、報告逐孔留一檢驗，而在 165-272 個菌落中只長出 0-2 個 Amp 菌落的面板被報告為上界而非量測值；一項卡方檢定（5 自由度下為 197）確立 Run B 的六個構築並非可互換，但團隊明確不願依賴其排序，因為最後四個與零無法區分。他們也報告三種基於絕對量級的效價估計法在同一面板上彼此相差高達 20,000 倍，而這正是他們改用比例讀值的原因。最值得一提的是，模型記錄了自己的錯誤史：最初採用的 m13ko7_copies=200 根本是個錯誤數字（那是野生型 M13 滾環複製的複本數，而非 M13KO7 實際由 p15A 驅動的複本數），隨證據改善先修正為 10、再修正為 20，並承認修正後的模型對參數更敏感，而不是更不敏感。",
+    "software_zh": "SymPlify 是一條整合式 de novo 結合子設計管線，附網頁介面、熱點預測、具自動重送的叢集工作提交，以及設計後的篩選與排序；已向更廣泛的合成生物學社群釋出，並在團隊自己的標的上做過濕實驗驗證。團隊程式庫：https://github.com/dianalluu/puigem2026 ，另有針對 Princeton Della 叢集的 AlphaFold 部署於 https://github.com/09aaronl/alphafold_princeton-della 。ODE 模型以 Python 套件形式發布，test_model.py 中有 52 項自動化檢查（完整執行約 80 秒、快速模式約 8 秒），涵蓋質量平衡與中性不變量、混合外殼的基因劑量推導、Poisson 傳代統計，以及釘住的回歸數值。硬體方面：一個 3D 列印的 PLA 螺旋二十四面體（gyroid）生物濾材匣，其兩個 PITCCH 獲獎設計以可下載的 STEP 組件原始檔公開。"
   },
   "good": {
     "publicEngagement": "PITCCH, the Princeton iGEM Team CAD Competition for Hardware, is the standout: entrants were given a real open engineering problem from the project — design a 3D-printable gyroid biofilter, 20 mm diameter by 25 mm height, maximising contact surface area — along with the team's actual print parameters. It ran free, fully asynchronous and online in a junior division (grades 5-12) and an open division (18+), explicitly permitted responsible AI use, and drew 42 registered submissions from the United States, United Kingdom and Mexico, of which 26 passed dimensional and printability screening before being sliced and computationally ranked by total surface area. Announcement emails went to thousands more via high school superintendents, undergraduate engineering directors and makerspaces, each carrying a project description and iGEM links. The team frames it as citizen science and backed that framing with credit: two winning designs appear on the wiki with the designers named on the attribution form, and the registration terms stated plainly that the team reserves the right to draw inspiration from submissions with attribution. They also postered at symposiums and presented at bioethics exchanges, and at the US-China iGEM Human Practices Summit showed their halted immunology work as a case study in how to pivot.",
@@ -73,28 +76,35 @@
       "Multiple myeloma patient advocacy organisations",
       "US-China iGEM Human Practices Summit",
       "IDT, GenScript, ODI (sponsors)"
-    ]
+    ],
+    "publicEngagement_zh": "PITCCH（Princeton iGEM Team CAD Competition for Hardware）是最突出的一項：參賽者拿到的是專案中一個真實且未解的工程問題——設計一個可 3D 列印的 gyroid 生物濾材，直徑 20 mm、高 25 mm，使接觸表面積最大化——還附上團隊實際使用的列印參數。競賽免費、全程非同步線上進行，分為青少年組（5-12 年級）與公開組（18 歲以上），明確允許負責任地使用 AI，共收到來自美國、英國與墨西哥的 42 份註冊投稿，其中 26 份通過尺寸與可列印性審查，再經切層並以總表面積做計算排序。公告電子郵件另外透過高中學區督學、大學部工程學程主任與創客空間寄給數千人，每一封都附上專案說明與 iGEM 連結。團隊把它定位為公民科學，並以實際的署名支持這個定位：兩個獲獎設計出現在 wiki 上、設計者姓名列在貢獻表上，而報名條款也明白寫出團隊保留在署名前提下從投稿中取得靈感的權利。他們也在研討會張貼海報、在生物倫理交流場合報告，並在美中 iGEM 人類實踐高峰會上，把自己中止的免疫學工作當成「如何轉向」的案例研究展示。",
+    "ihp_zh": "這是本批隊伍中記錄最完整的一串設計變更，而其中有好幾項是砍掉能力、而不是增加能力。Dr Bowen Jing 的技術建議催生了 SymPlify，他的立體衝突濾器也被採納；但團隊隨後把 AlphaFold3 整個從管線中移除，因為 Dr Martin Pacesa 主張它經常錯誤預測結合位點。Pacesa 也提供 PeSTo 作為熱點引擎，而在團隊實際跑了相互競爭的設計做比較之後，AF2 monomer 依他那一方的論點被實作進來。Dr Reynold Panettieri 勸退了他們捕捉 IL-6 的想法——那原本是軟體的基準標的——他指出 IL-6 對血球生成與 T 細胞調節具有雙面作用，並把他們導向「比單株抗體更便宜的生產才是真正優勢」的利基，以及「先指名一個適應症、再由此展開」的做法，而最終的應用正是以此方式定位的。Dr Douglas Galasko 對生物標記與毒素的區分，使他們離開阿茲海默症的 amyloid-beta，轉向帕金森氏症與狂犬病相關的工作。兩位多發性骨髓瘤病患在 Princeton IRB 第 #20003 號計畫下接受訪談，各自獨立指出用「病毒」這個詞指稱噬菌體會造成問題——其中一位提到約 80% 的骨髓瘤病患是在社區醫療場域接受治療、並且聽從醫師的說法——這改變了團隊在所有外推場合描述專案的方式。前 FDA 生物製劑副主任 Dr Celia Witten 把他們指向 CBER 的噬菌體療法工作；美國環保署農藥計畫辦公室與 OPPT 的人員則讓他們回去讀法規條文；而海洋微生物學家 Dr Stephen Giovannoni 與噬菌體生態學家 Prof Forest Rohwer 則把對 Cg-Defensin 抗菌性的憂慮，轉成一項具體規劃的親和力比較實驗。保育鑽紋龜的 Dr John Wnek 選定了他們的環境標的：微囊藻毒素與 BPA，因為附近的新澤西廠區把廢水排到半英里外的海中，而且沒有任何處理外源化學物質的程序。",
+    "realWorld_zh": "法規路徑是被實際盤點出來的，而不是口頭宣稱：臨床方向依 FDA CBER 的噬菌體療法規範，環境方向則在與美國環保署農藥計畫辦公室及污染預防與毒性物質辦公室會談後回到法規條文層級，而團隊也謹慎聲明這一切都不應被解讀為環保署的指引。圍堵是為實際部署而設計——噬菌體留在封閉的水處理設施內、結合在可生物降解的 PLA 濾材上，因此可回收且限定於局部；治療用途則以 VHH7 媒介的巨噬細胞清除作為生物安全途徑。商業論點在於重新配置的成本：由於捕捉專一性存在於 pVIII 上的單一個基因部件，更換標的只需更換該部件，而不必更換介質、殼體、附著化學或資本週期——這正是他們對照用於 PFAS 的粒狀活性碳（GAC）所提出的論據，因為 GAC 在現實的使用壽命下滯留效果不佳。工作對應到 SDG 3.4、6.3 與 9。後續延伸很具體：再送 IRB 申請以訪談黑色素瘤病患、帕金森氏症病患與照顧者；執行 Rohwer 建議的親和力實驗；以 qPCR 量測 M13KO7 的複本數以確定模型最敏感的那個參數；以及把噬菌體水膠作為替代錨定方式，這樣就能完全消除對 Cg-Defensin 的顧慮。"
   },
   "images": [
     {
       "url": "https://static.igem.wiki/teams/6295/wiki/figures/symplify-hotspots-protein.avif",
       "caption": "SymPlify's hotspot selection screen: the protein target rendered in 3D and coloured by PeSTo binding probability, with top hotspot residues listed by confidence so low-scoring ones can be removed to leave the focused patch of three to five that BindCraft works best with.",
-      "credit": "Team Princeton, iGEM 2026 wiki"
+      "credit": "Team Princeton, iGEM 2026 wiki",
+      "caption_zh": "SymPlify 的熱點選擇畫面：蛋白質標的以 3D 呈現並依 PeSTo 結合機率著色，結合信賴度最高的熱點殘基列於旁側，使用者可移除低分殘基，留下 BindCraft 表現最好的三到五個殘基構成的聚焦區塊。"
     },
     {
       "url": "https://static.igem.wiki/teams/6295/wiki/figures/symplify-filtered-designs.avif",
       "caption": "SymPlify's ranking and filtering view, where accepted binder designs are sorted by AlphaFold confidence metrics and PyRosetta physical scores and can be downloaded as .pdb files with or without GS linkers.",
-      "credit": "Team Princeton, iGEM 2026 wiki"
+      "credit": "Team Princeton, iGEM 2026 wiki",
+      "caption_zh": "SymPlify 的排序與篩選檢視，通過的結合子設計依 AlphaFold 信賴指標與 PyRosetta 物理分數排序，並可下載為含或不含 GS 連接子的 .pdb 檔。"
     },
     {
       "url": "https://static.igem.wiki/teams/6295/wiki/figures/hardware-pitcch-surface-area.avif",
       "caption": "Ranked printable surface area for the 26 PITCCH entries that passed dimensional and printability screening, plotted against reference geometries — public CAD submissions evaluated computationally and used to pick the biofilter geometry.",
-      "credit": "Team Princeton, iGEM 2026 wiki"
+      "credit": "Team Princeton, iGEM 2026 wiki",
+      "caption_zh": "26 件通過尺寸與可列印性審查的 PITCCH 投稿，其可列印表面積排序並與參考幾何對照——這些公開的 CAD 投稿經計算評估，並用來挑選生物濾材的幾何形狀。"
     },
     {
       "url": "https://static.igem.wiki/teams/6295/wiki/figures/saf-macrophage-uptake-gfp.avif",
       "caption": "Overlaid phase-contrast and green-fluorescence micrograph of cultured macrophages after incubation with GFP-expressing phage, showing uptake by the VHH7 clearance arm. Scale bar 150 micrometres.",
-      "credit": "Team Princeton, iGEM 2026 wiki"
+      "credit": "Team Princeton, iGEM 2026 wiki",
+      "caption_zh": "培養的巨噬細胞與表現 GFP 的噬菌體共培養後，相位差與綠色螢光的疊合顯微影像，顯示 VHH7 清除臂所促成的吞噬。比例尺 150 微米。"
     }
   ],
   "gemsTakeaway": "Copy PITCCH: hand the public a genuine, unsolved sub-problem from your own project with real constraints and real print parameters, judge entries computationally on a single objective metric, then credit the winners by name and actually build their design in. It converts outreach into contributed engineering at almost no cost, and it works for high-school students because spatial creativity, not synthetic biology training, is what the task rewards. Pair it with Princeton's habit of writing down which model parameters are measured, derived or merely assumed — and publishing the history of their own corrected mistakes — which is the cheapest credibility a student dry lab can buy.",
@@ -115,5 +125,9 @@
     "https://2026.igem.wiki/princeton/contribution",
     "https://2026.igem.wiki/princeton/safety-and-security",
     "https://2026.igem.wiki/princeton/judging"
-  ]
+  ],
+  "projectTitle_zh": "SymPleco：讓精準捕捉變簡單（Making Precision Sequestration Sym-ple）",
+  "tagline_zh": "一個 M13 噬菌體載體、任意貨物——兼具大容量吸附、抗體級專一性與光觸發釋放。",
+  "summary_zh": "SymPleco 針對貫穿所有污染整治化學的一個取捨下手：活性碳吸附量大，卻無法分辨結構相近的分子；單株抗體結合精準，但需要劇烈的 pH 或離液鹽才能釋放，而且無法回收、也難以放大。Princeton 的答案是把絲狀 M13 噬菌體當成可程式化的吸附劑：以 sortase A 媒介的接合把工程化融合蛋白釘在每一份 pVIII 的 N 端（做出「毛茸茸」的噬菌體，繞過傳統展示技術的尺寸限制），而 pIII 則帶著用於附著 PLA 濾材的 Cg-Defensin 錨定子、供巨噬細胞清除的 VHH7 奈米抗體，以及一個 AsLOV2 光控單體抗體——在暗處抓住貨物，在 450 nm 光照下放手。由於更換標的只需要更換所展示的結合蛋白，團隊另外搭配了 SymPlify，一條 de novo 結合蛋白設計管線，讓新標的不必等待新抗體。它靠基礎進展的邏輯獲獎：一個真正模組化的載體，在三個刻意互不相關的應用上得到驗證（黑色素瘤外泌體捕捉、帕金森氏症 alpha-synuclein 攔截、微囊藻毒素／BPA 水體整治），背後還有一個異常自我批判的 ODE 模型，以及一個經 IRB 核准的病患參與計畫。",
+  "gemsTakeaway_zh": "學 PITCCH：把你自己專案中一個真實、未解的子問題，連同真實的限制條件與真實的列印參數交給公眾，以單一客觀指標用計算方式評審，然後具名表彰獲獎者，並真的把他們的設計做進去。這幾乎不花成本就把外推轉成了實際貢獻的工程成果，而且對高中生有效，因為這項任務獎勵的是空間創造力，而不是合成生物學訓練。再搭配 Princeton 的習慣：寫清楚哪些模型參數是實測、哪些是導出、哪些只是假設——並且公開自己修正錯誤的歷程——這是學生乾實驗室能買到最便宜的可信度。"
 }

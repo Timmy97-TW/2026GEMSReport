@@ -167,7 +167,10 @@
           b.cards.map(function (c) {
             return '<div class="card lift">' + (c.kicker ? '<div class="k">' + esc(T(c, "kicker")) + "</div>" : "") +
               "<h4>" + esc(T(c, "title")) + "</h4>" + paras(T(c, "body")) +
-              (c.chips ? chips(c.chips, "b") : "") + "</div>";
+              (c.chips ? chips(c.chips, "b") : "") +
+              (c.link ? '<p style="margin-top:12px"><a href="#' + esc(c.link) + '" style="font-size:13.5px;font-weight:620">' +
+                esc(T(c, "linkText") || L("Read the analysis →", "閱讀完整分析 →")) + "</a></p>" : "") +
+              "</div>";
           }).join("") + "</div>";
       }
       if (b.table) {

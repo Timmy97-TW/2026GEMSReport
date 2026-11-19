@@ -340,7 +340,10 @@ def main():
             continue
         blk.setdefault("tab", "overview")
         insights.append(blk)
-    report["sections"] = (report.get("sections") or []) + insights
+    # `order` lets an analysis block sit above the written framing on its tab
+    # (default 50). Python's sort is stable, so equal orders keep file order.
+    report["sections"] = sorted((report.get("sections") or []) + insights,
+                                key=lambda b: b.get("order", 50))
 
     # The full team records are large, and most of that weight is prose nobody
     # reads until they open a tab that needs it. Ship a light index up front and
