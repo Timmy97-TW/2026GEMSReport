@@ -1,0 +1,62 @@
+{
+  "team": "BGI-College",
+  "id": "6345",
+  "section": "High School",
+  "country": "China",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/bgi-college/",
+  "projectTitle": "BioH2",
+  "tagline": "A wild Clostridium isolated from a Guangdong wetland, made genetically tractable, then redesigned into a closed-loop biorefinery once the arithmetic killed hydrogen-only",
+  "summary": "BGI-College took Clostridium beijerinckii S63, a strain newly isolated from sediment at Yundonghai Wetland Park in Foshan, Guangdong (a site of interest because of unusually high natural soil hydrogen in the Sanshui Basin), and turned a non-model anaerobe into a working chassis. They sequenced it to a single circular 5,870,246 bp chromosome, measured 40.20 plus or minus 3.45 percent hydrogen in its gas output, built a metabolic flux model that identified PFOR and HydA overexpression plus thl deletion as targets, and established an electroporation transformation system through three documented DBTL cycles, two of which failed outright. Their economic check then did something unusual: it proved their own original premise impossible, since breaking even on glucose alone would need 6.70 mol H2 per mol glucose against a hard biochemical ceiling of 4.0, which forced a redesign around byproduct valorisation. They won Best Alternative Platform in the High School section and were nominated for Best New Basic Part and Best Presentation.",
+  "awards": ["Best Alternative Platform, High School (winner)", "Best New Basic Part nominee", "Best Presentation nominee"],
+  "dry": {
+    "frameworks": "Explicit DBTL cycles used as the organising structure for platform development, each written as Design, Build and Test, then Learn, with the failed cycles kept in place. A metabolic flux framework integrating pathway stoichiometry, carbon allocation and electron transfer, released with a visual interface so non-modellers can use it. Hydrogen pathways benchmarked in a four-way comparison table (grey, blue, green, bio-green) on carbon footprint, levelised cost, supply-chain risk and commercial status.",
+    "dataviz": "Baseline versus engineered model runs shown side by side so the predicted yield change is legible, the full electroporation workflow drawn as a process diagram with voltages and buffers labelled, a parameter-sweep figure for the optimisation attempts, and, notably, photographs of the empty selective plates from the failed transformations alongside the successful ones. Field photographs of the wetland sampling site locate the strain in a real place.",
+    "datascience": "The modelling is used as a decision tool, not decoration: it put theoretical yield at 2.46 mol H2/mol glucose for wild type rising to 3.60 under an idealised engineered scenario, and the HPLC product profile (acetate and butyrate dominant, little lactate) is what selected thl as the deletion target rather than a generic guess. The economic model is the standout piece of quantitative reasoning: industrial glucose at about 3,000 RMB per tonne against hydrogen at 40 RMB per kg requires 6.70 mol H2 per mol glucose to cover feedstock alone, which exceeds the 4.0 mol theoretical maximum of dark fermentation, so a hydrogen-only business is arithmetically impossible. Genome work includes ANI above 98 percent against C. beijerinckii DSM 791 (GCF_018223745.1), phylogenetic placement, whole-genome alignment and VFDB virulence screening, published as a separate PDF.",
+    "software": "A visual interface over the metabolic flux model, built explicitly to lower the barrier for researchers who do not routinely do computational modelling.",
+    "stack": ["Clostridium beijerinckii S63 (non-model anaerobe)", "Bacillus subtilis 941", "E. coli DH5-alpha", "pNICKclos2.0 CRISPR editing vector", "electroporation in an anaerobic chamber", "whole-genome sequencing and annotation", "ANI and phylogenetic analysis", "VFDB", "HPLC", "gas chromatography"],
+    "techniques": ["electrocompetent cell preparation under strict anaerobiosis", "electroporation at 1.8 kV in a 2 mm cuvette with erythromycin selection", "CRISPR knockout design in Clostridium", "native promoter plus CDS plus terminator part cloning from a wild isolate", "dark fermentation with HPLC organic-acid tracking", "secondary cultivation of B. subtilis on spent fermentation broth"]
+  },
+  "good": {
+    "publicEngagement": "",
+    "ihp": "Human practices was run as a test of the project's core assumption rather than as outreach. They consulted academic researchers and industrial practitioners including engineers at China General Nuclear Power (CGN), and report the difference in how the two groups framed the problem: academics asked whether the pathway was technically feasible and rigorous, industry asked what it would cost and whether it would scale. Industry input on hydrogen's transport and storage barriers, combined with their own break-even arithmetic, is what turned a hydrogen-only project into a closed-loop biorefinery. A second consultation was decisive technically: after two failed DBTL cycles, Dr. Youduo Wu of Dalian University of Technology told them to reconsider anaerobic handling across the whole workflow rather than keep tuning electroporation parameters, which led them to move the electroporator inside the anaerobic chamber and finally obtain transformants.",
+    "realWorld": "Three things here are worth copying, and the honesty running through all of them is the reason the platform is credible. First, the economics. Their break-even calculation is the single most useful piece of commercialisation reasoning in this cohort precisely because it falsifies their own premise: at roughly 3,000 RMB per tonne of industrial glucose and 40 RMB per kg of hydrogen, covering only the sugar feed needs 6.70 mol H2 per mol glucose, while dark fermentation cannot exceed 4.0 mol, so no amount of strain improvement makes a hydrogen-only product profitable. They state that plainly and redesign rather than hedge. The replacement model is coherent: HPLC confirmed the broth still holds organic acids after hydrogen evolution stops, so instead of paying for chemical waste disposal they use the spent broth as a free substrate to grow commercial Bacillus subtilis and sell it as a liquid biofertiliser, a secondary revenue stream that offsets the feedstock cost and sidesteps hydrogen storage and transport entirely. Note what is and is not claimed: they say the biofertiliser revenue 'substantially offsets' feedstock cost when scaled against raw material inputs, but publish no kit price, no biofertiliser price, no yield per litre of broth and no full P&L, so the loop is a validated concept with the unit economics still missing. There is no company, no patent and no investor. Second, the platform. What makes S63 genuinely reusable by other groups is that they published the route in, not just the destination: the full electroporation workflow with buffers, voltage and cuvette gap specified, the parameter sweep they tried (OD600 0.2 to 1.0, 600 to 1800 V, 100 to 400 microlitres, 1 and 2 mm cuvettes at fixed 200 ohms and 25 microfarads), photographs of the blank plates from both failed cycles, and the one change that actually worked. They also record a failure that did not resolve, stating that the Thl-targeting editing plasmid could not be assembled even though all four fragments amplified and sequenced correctly. Fifteen basic parts were cloned from S63 as native promoter plus CDS plus terminator triples across three HydA and two PFOR genes, which is the right format for a non-model host where heterologous regulatory elements may not work. The genome is published as a separate annotated report. And they label the limits precisely: the transformation system is 'an early-stage platform, rather than a fully optimised or universally reliable protocol', the model 'is not a validated predictor of experimentally achieved hydrogen production', and the oxygen hypothesis 'needs further controlled experiments' to confirm its specific contribution. Third, the safety reasoning, which is more sophisticated than most undergraduate work. The chassis was changed from C. butyricum to C. beijerinckii during an early safety review to avoid strain-dependent pathogenicity risk; they explicitly refuse to let a species-level BSL-1 classification (ATCC 35702) transfer to their own isolate, and instead confirm identity by ANI and phylogeny and screen against VFDB, while recording the correct caveat that a database match does not by itself show a functional virulence factor and that several hits were partial or low-coverage. They are candid that as high-school students they depend on instructors for safety decisions and authorised tasks, do not adjust gas-supply settings or gas-line connections themselves, and they report that three students failed the safety assessment on first attempt and had to re-sit before the team reached a 100 percent pass rate. Continuation is framed as community reuse: the model, the parts, the transformation protocol and the troubleshooting record are offered so that future dark-fermentation teams 'reuse our rationales, protocols, and lessons rather than repeat them'.",
+    "partners": [
+      "BGI Research (Dr. Yingshan Li, secondary PI; isolated and sequenced S63, ran the genome and virulence analyses and taught the team to interpret them)",
+      "Dr. Youduo Wu, Dalian University of Technology (diagnosed oxygen exposure as the transformation bottleneck)",
+      "China General Nuclear Power (CGN) engineers (cost and scale-up framing that drove the redesign)",
+      "Yundonghai Wetland Park, Foshan, Guangdong (environmental source of strain S63)"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6345/wiki/assets/alternative-platform/fig3.avif",
+      "caption": "The electroporation transformation workflow established for Clostridium beijerinckii S63, published with buffers, voltage and cuvette gap specified so another group can reproduce it",
+      "credit": "Team BGI-College, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6345/wiki/assets/alternative-platform/fig4.avif",
+      "caption": "Published evidence of failure: blank erythromycin selective plates from the first transformation attempt, kept on the wiki alongside the eventual success",
+      "credit": "Team BGI-College, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6345/wiki/assets/alternative-platform/fig5.avif",
+      "caption": "The electroporation parameter sweep across cell density, voltage, competent-cell volume and cuvette gap that still did not yield transformants, before the anaerobic-chamber redesign",
+      "credit": "Team BGI-College, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6345/wiki/assets/contribution/fig2.avif",
+      "caption": "Model-guided engineering run showing the theoretical hydrogen yield change from PFOR and HydA overexpression with thl deletion, shown against the wild-type baseline",
+      "credit": "Team BGI-College, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Run the break-even arithmetic against the biochemical ceiling before committing a year of lab work: BGI-College showed a hydrogen-only product needs 6.70 mol H2 per mol glucose while dark fermentation caps at 4.0, which killed their premise early and forced a byproduct-valorisation design that actually closes. And when publishing a platform for a non-model chassis, publish the failed cycles too — the parameter sweep that did nothing, the photographs of blank plates, the plasmid that would never assemble — because the route in is what another lab needs, not the destination.",
+  "sources": [
+    "https://2026.igem.wiki/bgi-college/",
+    "https://2026.igem.wiki/bgi-college/description/",
+    "https://2026.igem.wiki/bgi-college/alternative-platform/",
+    "https://2026.igem.wiki/bgi-college/contribution/",
+    "https://2026.igem.wiki/bgi-college/safety-and-security/",
+    "https://static.igem.wiki/teams/6345/wiki/assets/alternative-platform/genome-analysis-of-s63.pdf"
+  ]
+}

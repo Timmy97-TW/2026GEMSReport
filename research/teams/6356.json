@@ -1,0 +1,90 @@
+{
+  "team": "TU Darmstadt",
+  "id": "6356",
+  "section": "Overgrad",
+  "country": "Germany",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/tu-darmstadt/",
+  "projectTitle": "UNRAVEL: Unlocking New Resources And Value from End-of-Life textiles",
+  "tagline": "Enzymes and thermophilic hosts for mixed textile waste, plus a 134 euro anaerobic chamber, a 115 euro oxygen monitor and a 68 euro shaker, all documented including the failures.",
+  "summary": "TU Darmstadt attacked mixed textile waste, of which roughly 92 million tonnes are generated globally each year and less than 1% is recycled back into fibres, by working with two thermophilic organisms: Acetivibrio thermocellus, a strict anaerobe with a cellulosome that degrades cotton at 60 C, and Geobacillus thermocatenulatus, whose carboxylesterase the team characterised and registered as GeoEsterase. Because those organisms need equipment the team did not have, they built it: a movable DIY anaerobic chamber for under 150 euros, a portable ESP32 oxygen monitor when resazurin proved too slow and cumbersome to verify the atmosphere, and two generations of orbital shaker to fit inside an existing 60 C incubator. What makes the work a measurement case study is the discipline of separating what was demonstrated from what was not, in both the enzymology and the hardware.",
+  "awards": [
+    "Best New Basic Part winner (Overgraduate)",
+    "Best Hardware nominee (Overgraduate)",
+    "Best Presentation nominee"
+  ],
+  "dry": {
+    "frameworks": "Every hardware page is structured as motivation and design requirements, design decisions, bill of materials and costs, construction instructions, materials-processing lessons, testing, evaluation, limitations and conclusion, with a recurring distinction between what was built, what was tested and what has not yet been demonstrated quantitatively. The same discipline runs through the results page, where computational predictions are labelled as predictions and never presented as measured enzyme performance. The team frames its contribution to iGEM as the designs, methods and troubleshooting lessons for working with non-model organisms, so that later teams do not start from scratch.",
+    "dataviz": "Interactive parameter plots for kinetic constants with buttons to switch between kcat, KM and kcat/KM across temperature, and between temperatures on the initial-rate plots, with axes held constant so panels can be compared directly; dashed lines for fitted Michaelis-Menten curves and dotted lines explicitly marking measurements for which no fit could be established, so an unfittable dataset is visible rather than absent; absorbance-against-time traces with the blank subtracted and each trace shown relative to its first read; ATR-IR spectra overlaid against simulated reference spectra; collapsible result sections with open-all and close-all controls; an interactive 3D protein model on the landing page.",
+    "datascience": "Enzyme activity is measured against p-nitrophenyl hexanoate as a soluble stand-in for one of the two ester bonds in PET, with the released 4-nitrophenol quantified by absorbance at 396 nm using a stated extinction coefficient of 18,100 M-1 cm-1 under their conditions, so the readout is anchored to a physical constant rather than left in absorbance units. Conditions are fully specified: 0.5 uM enzyme (0.25 uM for the deep-eutectic-solvent comparison) against 0.5, 1, 2 and 4 mM substrate in 5 C steps around 37 C, every value the mean of a triplicate. The initial rate is defined operationally as the highest rate of product formation between two consecutive reads, identified automatically by their evaluation sheet rather than chosen by eye, and Vmax and KM are then fitted by minimising the sum of squared differences in Excel Solver, with kcat following from Vmax and enzyme concentration. Measurements for which no fit could be established are excluded from the table and the figure and said to be excluded, and one suspect value is flagged twice, at 47 C the Thermo MHETase trace shows a single jump in absorbance shortly after the start, so the team warns that the derived initial rate and the fit containing it should be treated with caution. Every plate's evaluation sheet is published as a PDF with the date, the enzymes, the temperature and the notes, including one where well D12 was excluded for air bubbles, so the chain from raw plate to reported constant is auditable. Thermal stability is measured by thermal shift assay with both enzymes on the same plate under identical conditions (2 uM protein, 5x SYPRO Orange, 1x LEW buffer with 10% glycerol, n = 3), and the negative result is reported with its statistics rather than buried: GeoEsterase 74.54 +/- 0.03 C and Thermo GeoEsterase 74.63 +/- 0.13 C by Boltzmann fit with R2 at least 0.998, a difference of +0.09 C with a 95% confidence interval of -0.21 to +0.40 C and a Welch t-test p of 0.34, from which the team concludes not merely that no improvement was seen but that the interval excludes any stabilisation larger than about 0.4 C. Material identity is verified before use rather than assumed, with ATR-IR on a PerkinElmer FT-IR with MIR TGS detector confirming the nylon is Nylon 6 and the polyester is PET against simulated references, and solvent extraction with methanol and acetone followed by repeat spectra used to test for additives and dyes. Particle sizing produced an honest dead end: cryomilling was optimised by ball diameter (25 mm adopted after 5, 7 and 12 mm failed), recovery across 24 runs ran from 79 to 100% with two same-day replicates at 100 and 79%, which the team reads as powder retained in the jar and funnel rather than as a result, saying explicitly it is not a degradation readout; DLS on a Malvern Zetasizer Nano with the serial number and software version recorded showed none of the samples monodisperse with much of the material above the 10 um measuring range, sonication changed nothing, and the team concluded cryomilling cannot produce the monodisperse dispersions repeatable kinetics need and abandoned the approach in favour of weighed fabric pieces. Microscopy covered the coarse end that DLS cannot reach, 3.1 to 40 um for polyester and 3 to 50 um for nylon, with the caveat that only two samples with few particles were imaged so no distribution can be fitted, plus an incidental warning that polyester autofluoresces without any dye because of optical brighteners, UV stabilisers and degradation products. Computational work is held to the same standard: 51 substitutions across five proteins are reported with the explicit statement that a DeepSTABp-predicted +9.27 C melting-temperature change and a +167% TemStaPro score gain answer different questions and must not be treated as equivalent, that 73% versus 97% binding-pocket residue overlap indicates similar identified residues but does not prove correct substrate positioning or catalytic activity, that a substitution 6.55 angstroms from the catalytic serine is active-site-adjacent and not a mutation of a catalytic residue, and that a 28.2 percentage-point increase in near-serine contact fraction across 100 ns trajectories is geometry, not a measured reaction rate, with the roughly 3.3-fold ester-to-amide contact ratio labelled a simulation-derived geometric comparison and not a change in catalytic specificity.",
+    "software": "Hardware is released as build documentation rather than code: a full assembly procedure for the anaerobic chamber with bills of materials and per-item recorded costs, a step-by-step oxygen-monitor build with the complete I2C scanner sketch and both the simple and advanced Arduino display programs printed in full on the wiki, a wiring table mapping every OLED and sensor pin to its ESP32 pin, and an orbital shaker build with its own BOM, tool list and assembly steps. Nine 3D models and a seventeen-image gallery accompany the shaker, with bearing specifications listed. Plate-reader evaluation sheets are published per plate as PDFs, including the current version of the sheet with a worked example of the layout and calculation steps.",
+    "stack": [
+      "ESP32 NodeMCU with DFRobot SEN0465 factory-calibrated electrochemical oxygen sensor",
+      "0.91 inch 128x32 I2C OLED, Arduino IDE 2.3.10, DFRobot_MultiGasSensor and Adafruit GFX/SSD1306 libraries",
+      "12 V DC gear motor with PWM control and MOSFET switching",
+      "PerkinElmer FT-IR with ATR accessory and MIR TGS detector",
+      "Malvern Zetasizer Nano (DLS)",
+      "Light and confocal microscopy",
+      "Thermal shift assay with SYPRO Orange",
+      "AKTA and gravity His-tag affinity chromatography",
+      "Excel Solver (GRG Nonlinear) for Michaelis-Menten fitting",
+      "DeepSTABp, TemStaPro, ProteinMPNN",
+      "100 ns explicit-solvent molecular dynamics with MM-GBSA and MM-PBSA",
+      "3D printing and cryomilling"
+    ],
+    "techniques": [
+      "Absorbance converted with a stated extinction coefficient",
+      "Operationally defined initial rate, selected automatically",
+      "Michaelis-Menten fitting by least squares with published evaluation sheets",
+      "Unfittable datasets shown as dotted lines rather than omitted",
+      "Suspect traces flagged and carried through to the limitations",
+      "Paired same-plate comparison for thermal shift",
+      "Negative result reported with a confidence interval that bounds the effect",
+      "Material identity confirmed by ATR-IR against reference spectra",
+      "Solvent extraction to test for additives before interpreting spectra",
+      "Recovery reported as process loss rather than as a result",
+      "Abandoning a method when its dispersions cannot support repeatable kinetics",
+      "In-tube thermometry and leak testing for DIY equipment",
+      "Separating prediction from measurement throughout"
+    ]
+  },
+  "good": {
+    "publicEngagement": "A sustainability page sets out the environmental case alongside the science, and the project's framing is that recycling is only part of the answer, with buying less and wearing clothes for longer mattering just as much.",
+    "ihp": "Human Practices treats textile waste as a humanitarian problem first: rich countries export their waste and the communities that handle it are never the ones who benefited from producing it. The team quantifies the flow, with EU exports of used textiles more than doubling since 2005 to over 1.4 million tonnes in 2025, Germany exporting approximately 462,500 tonnes in 2022 and second only to the USA, an estimated 30 to 40% of German exports ending in landfills in receiving countries, and Chile receiving about 131,000 tonnes in 2022. They also note that only about 15% of the EU's 6.94 million tonnes of textile waste was collected separately, with 85% going into mixed household waste where it can no longer be recycled, and they sought out textile companies and the local collectors, sorters and thrift stores who keep materials in circulation. Their stated position is that responsible science means asking who the work should be for, not only whether it can work.",
+    "realWorld": "An entrepreneurship page addresses whether biological textile recycling makes economic sense, from cultivation and enzyme production costs to the practical obstacles of bringing the approach out of the laboratory, on the argument that scientific ideas often fail to leave the lab for economic rather than technical reasons. The hardware is the most directly reusable output: the anaerobic chamber is costed at 134.30 euros in materials against roughly 3,000 euros for a cheap professional chamber, a 95% reduction and the cheapest DIY solution the team could find, with the oxygen monitor at 114.60 euros per unit (the sensor being about 83% of that) and the orbital shaker at 68.08 euros. The build guides are written for reproduction, including which parts must be matched to each other, and the team says what it would record differently next time, specifically hole centres, hole diameters, edge distances and fastener lengths, to reduce another team's trial and error.",
+    "partners": [
+      "Prof. Warzecha (TU Darmstadt)",
+      "Futury Startup Summer School",
+      "Textile companies and local collectors, sorters and thrift stores (Human Practices)"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6356/wiki/hardware/ac5.avif",
+      "caption": "The DIY anaerobic chamber: a transparent 55 L plastic storage container fitted with 125 mm glove ports, brass ball valves for gas inlet and outlet, an EPDM-sealed lid clamped with C-clamps along aluminium U-profile, and a two-container transfer lock, for 134.30 euros in materials against roughly 3,000 euros for a cheap commercial chamber.",
+      "credit": "Team TU Darmstadt, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6356/wiki/hardware/oxygen-sensor.avif",
+      "caption": "The portable oxygen monitor inside the chamber, reading 0.5% on its OLED. Built from an ESP32, a factory-calibrated DFRobot SEN0465 electrochemical sensor and a 0.91 inch display in a repurposed plastic box for about 115 euros, it was made because resazurin proved too slow to tell the team whether the chamber had actually reached an anaerobic atmosphere.",
+      "credit": "Team TU Darmstadt, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6356/wiki/hardware/shaker/further-pictures/shaker-in-chamber-2.avif",
+      "caption": "The orbital shaker, built from perforated plate and angle, a 12 V gear motor with PWM control and furniture casters as eccentrics, for 68.08 euros in materials so it fits inside an existing 60 C incubator for thermophilic cultures.",
+      "credit": "Team TU Darmstadt, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6356/wiki/chem-results/petandreference.avif",
+      "caption": "ATR-IR spectrum of the team's polyester sample overlaid on a simulated PET reference, recorded on a PerkinElmer FT-IR with MIR TGS detector. Material identity was confirmed before any degradation experiment, rather than assumed from the label.",
+      "credit": "Team TU Darmstadt, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Report a null result with the interval that bounds it: measuring both enzyme variants on the same plate under identical conditions let the team say not just that the engineered variant was no more stable, but that the data exclude any stabilisation larger than about 0.4 C, which is a usable constraint rather than an absence of evidence.",
+  "sources": [
+    "https://2026.igem.wiki/tu-darmstadt/",
+    "https://2026.igem.wiki/tu-darmstadt/hardware",
+    "https://2026.igem.wiki/tu-darmstadt/results",
+    "https://2026.igem.wiki/tu-darmstadt/human-practices"
+  ]
+}

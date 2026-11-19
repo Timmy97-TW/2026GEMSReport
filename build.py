@@ -173,6 +173,129 @@ def coverage(teams, results):
     return sorted(want - have)
 
 
+def md_escape(s):
+    return re.sub(r"\n{3,}", "\n\n", str(s or "").strip())
+
+
+def write_text_mirror(results, teams, trends, report):
+    """A plain-Markdown mirror of the whole report, plus llms.txt.
+
+    This exists because of one of the report's own findings: three of the four
+    2026 Best Wiki winners ship text that is in the HTML before any JavaScript
+    runs, and the fourth (TU Delft) compensates with exactly this — an llms.txt
+    index and a Markdown mirror of every page. This site is a client-rendered
+    app, so without a mirror its words are invisible to anything that does not
+    execute JavaScript. Practising what the analysis preaches.
+    """
+    def lang(o, k, l):
+        return (o.get(k + "_zh") if l == "zh" else None) or o.get(k) or ""
+
+    for l, name in (("en", "report-en.md"), ("zh", "report-zh.md")):
+        out = []
+        H = (lambda e, z: z if l == "zh" else e)
+        out.append("# " + H("GEMS Research · iGEM 2026 Report", "GEMS Research · iGEM 2026 報告"))
+        out.append("\n" + H(
+            "A review of the iGEM 2026 Top 10 teams across all three sections, every special prize winner "
+            "and nominee, and the academic and industry currents around them. Live site: "
+            "https://timmy97-tw.github.io/2026GEMSReport/",
+            "本報告檢視 iGEM 2026 三個組別的 Top 10 團隊、所有特別獎得主與入圍隊伍，以及其背後的學術與產業趨勢。"
+            "網站：https://timmy97-tw.github.io/2026GEMSReport/"))
+
+        out.append("\n## " + H("Results", "成績"))
+        for sec, g in (results.get("grandPrize") or {}).items():
+            ru = "; ".join("%s %s" % (r["rank"], r["team"]) for r in g.get("runnersUp", []))
+            out.append("- **%s** — %s (%s, %s)%s" % (sec, g["winner"], g["village"], g["country"],
+                                                     (" · " + ru) if ru else ""))
+        for sec, names in (results.get("top10") or {}).items():
+            out.append("- **Top 10 %s** — %s" % (sec, ", ".join(names)))
+
+        for b in report.get("sections") or []:
+            out.append("\n## " + md_escape(lang(b, "title", l)))
+            if b.get("lede"):
+                out.append("\n_" + md_escape(lang(b, "lede", l)) + "_")
+            if b.get("body"):
+                out.append("\n" + md_escape(lang(b, "body", l)))
+            for c in b.get("cards") or []:
+                out.append("\n### " + md_escape(lang(c, "title", l)))
+                out.append(md_escape(lang(c, "body", l)))
+            for key, head in (("checklist", H("Checklist", "檢查清單")),
+                              ("antipatterns", H("Effort that did not pay off", "投入了卻沒有回報的事"))):
+                items = (b.get(key + "_zh") if l == "zh" else None) or b.get(key) or []
+                if items:
+                    out.append("\n**%s**\n" % head)
+                    out += ["- " + md_escape(x) for x in items]
+            if b.get("method"):
+                out.append("\n_" + H("Method and limits.", "方法與限制。") + " " +
+                           md_escape(lang(b, "method", l)) + "_")
+
+        for key, head in (("academic", H("Academic trends", "學術趨勢")),
+                          ("industry", H("Industry trends", "產業趨勢"))):
+            tl = (trends.get(key) or {}).get("trends") or []
+            if not tl:
+                continue
+            out.append("\n## " + head)
+            for t in tl:
+                out.append("\n### " + md_escape(lang(t, "title", l)))
+                out.append(md_escape(lang(t, "oneLine", l)))
+                out.append("\n" + md_escape(lang(t, "body", l)))
+                if t.get("gemsAction"):
+                    out.append("\n**%s** %s" % (H("GEMS action.", "GEMS 行動。"),
+                                                md_escape(lang(t, "gemsAction", l))))
+
+        out.append("\n## " + H("Roadmap", "路線圖"))
+        for i, p in enumerate(report.get("roadmap") or [], 1):
+            out.append("\n### %d. %s (%s)" % (i, md_escape(lang(p, "title", l)), lang(p, "when", l)))
+            if p.get("lede"):
+                out.append(md_escape(lang(p, "lede", l)))
+            items = (p.get("items_zh") if l == "zh" else None) or p.get("items") or []
+            out += ["- " + md_escape(x) for x in items]
+            if p.get("outcome"):
+                out.append("\n_%s %s_" % (H("Done looks like:", "完成的樣子："), md_escape(lang(p, "outcome", l))))
+
+        out.append("\n## " + H("Team files", "團隊檔案"))
+        for t in sorted(teams, key=lambda x: (-(x.get("rank") or 0), x["team"])):
+            out.append("\n### %s — %s" % (t["team"], md_escape(lang(t, "projectTitle", l))))
+            out.append("%s · %s · %s" % (t.get("section", ""), t.get("country", ""), t.get("wiki", "")))
+            out.append(md_escape(lang(t, "summary", l)))
+            for grp, keys in (("dry", ("frameworks", "datascience", "dataviz", "software")),
+                              ("good", ("ihp", "publicEngagement", "realWorld"))):
+                for k in keys:
+                    v = lang(t.get(grp) or {}, k, l)
+                    if v:
+                        out.append("\n**%s.** %s" % (k, md_escape(v)))
+            if t.get("gemsTakeaway"):
+                out.append("\n**%s** %s" % (H("For GEMS:", "給 GEMS："), md_escape(lang(t, "gemsTakeaway", l))))
+
+        path = os.path.join(ROOT, name)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write("\n".join(out) + "\n")
+        print("  %-14s %6.1f KB" % (name, os.path.getsize(path) / 1024))
+
+    with open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8") as f:
+        f.write("""# GEMS Research · iGEM 2026 Report
+
+> A review of the iGEM 2026 Top 10 teams across all three sections (Undergraduate, Overgraduate, High
+> School), every special prize winner and nominee, and the academic and industry trends around them. Two
+> questions run through it: how teams turn biology into computation, and how they turn science into
+> something a community can use. Built for GEMS Research, a synthetic biology research institution in Taiwan.
+
+The site itself is a client-rendered application. These Markdown mirrors carry the full text.
+
+- [Full report, English](report-en.md): every written section, all %d team files, %d trends and the roadmap
+- [Full report, Traditional Chinese](report-zh.md): the same, in 繁體中文
+- [Official 2026 results](https://competition.igem.org/results/2026): the source for every award in this report
+
+## Data
+
+- [results.js](data/results.js): the complete official 2026 results as JSON
+- [teams.js](data/teams.js): a light index of every team file
+- [teams-full.js](data/teams-full.js): the full team records
+- [trends.js](data/trends.js): academic and industry trend analysis
+- [report.js](data/report.js): the written synthesis, the original analyses and the roadmap
+""" % (len(teams), sum(len((trends.get(k) or {}).get("trends") or []) for k in ("academic", "industry"))))
+    print("  %-14s %6.1f KB" % ("llms.txt", os.path.getsize(os.path.join(ROOT, "llms.txt")) / 1024))
+
+
 def main():
     results = load(os.path.join(RES, "results2026.json"))
     if not results:
@@ -220,6 +343,7 @@ def main():
     write_js("teams-full.js", "TEAMS_FULL", full)
     write_js("trends.js", "TRENDS", trends)
     write_js("report.js", "REPORT", report)
+    write_text_mirror(results, teams, trends, report)
 
     zh = sum(1 for t in teams if t.get("summary_zh"))
     print("\n%d team files · %d translated to Chinese · %d academic trends · %d industry trends · %d insight blocks"

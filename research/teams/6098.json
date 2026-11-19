@@ -6,21 +6,45 @@
   "village": "",
   "wiki": "https://2026.igem.wiki/icjfls/",
   "projectTitle": "ORA-GUARD",
+  "projectTitle_zh": "ORA-GUARD",
   "tagline": "An engineered oral probiotic that degrades the sulfur compounds causing halitosis instead of sterilising the mouth",
+  "tagline_zh": "一株工程改造的口腔益生菌，分解造成口臭的硫化合物，而不是把整個口腔消毒",
   "summary": "ICJFLS engineered Streptococcus salivarius K12, a GRAS oral probiotic, to express a Sox enzyme cluster plus an MTO enzyme that catalytically degrade the volatile sulfur compounds (H2S, methanethiol, dimethyl sulfide) responsible for bad breath, positioning it as a Live Biotherapeutic Product rather than a mouthwash. Plasmid expression was abandoned after stability tests showed near-total plasmid loss within five days without selection, so the cassettes were moved into the chromosome by CRISPR-Cas9, and a four-layer biosafety system (D-alanine auxotrophy via alr knockout, a PcspA RNA-thermometer suicide switch, no antibiotic resistance markers) was added in direct response to public fear of live GMO bacteria. The entrepreneurship case is numerically specific, with per-dose cost, retail price, gross margin and a named contract manufacturer. They were nominated for Best Entrepreneurship in the High School section.",
-  "awards": ["Best Entrepreneurship nominee, High School"],
+  "summary_zh": "ICJFLS 把 Streptococcus salivarius K12 這株列為 GRAS 的口腔益生菌加以工程改造，使其表現 Sox 酵素叢集與一個 MTO 酵素，以催化方式分解造成口臭的揮發性硫化物（H2S、甲硫醇、二甲基硫），並把產品定位為活體生物治療產品（LBP），而不是漱口水。質體表現在穩定性測試顯示沒有選擇壓力時五天內質體幾乎全部流失後便被放棄，改以 CRISPR-Cas9 把表現卡匣送進染色體；同時針對民眾對活體 GMO 細菌的恐懼，直接加上四層生物安全系統（以 alr 基因剔除造成的 D-丙胺酸營養缺陷、PcspA RNA 溫度計自殺開關、不使用抗生素抗性標記）。創業面的論證有具體數字：每劑成本、零售價、毛利率，以及指名的委外製造商。他們入圍高中組 Best Entrepreneurship。",
+  "awards": [
+    "Best Entrepreneurship nominee, High School"
+  ],
   "dry": {
     "frameworks": "TAM-SAM-SOM with figures carried through to a revenue target, Business Model Canvas, three-tier business model (B2C subscription, B2B2C through dental clinics, technology licensing), cost structure and pricing with gross margin, a capability gap analysis, a 2026-2035 development roadmap, a risk register, and a comparative regulatory table for LBPs across the US, EU and China. Seven named appendices are listed, including a five-year financial projection model and a patent landscape and IP strategy.",
+    "frameworks_zh": "TAM-SAM-SOM，且數字一路貫通到營收目標；Business Model Canvas；三層式商業模式（B2C 訂閱、透過牙科診所的 B2B2C、技術授權）；成本結構與定價含毛利率；能力缺口分析；2026-2035 開發路線圖；風險清單；以及一份美國、歐盟與中國三地 LBP 法規的比較表。另列出七份具名附錄，包括五年財務預測模型與專利地圖及智財策略。",
     "dataviz": "Twelve entrepreneurship figures plus six data tables: TAM/SAM/SOM breakdown, business model canvas, revenue projection chart, product-format panel, roadmap, capability-gap chart and the three-jurisdiction LBP regulatory comparison. Survey results are charted as public attitudes, concerns and information needs.",
+    "dataviz_zh": "12 張創業相關圖表加上 6 張資料表：TAM/SAM/SOM 拆解、商業模式圖、營收預測圖、產品形式面板、路線圖、能力缺口圖，以及三個法律管轄區的 LBP 法規比較。問卷結果則繪成民眾態度、顧慮與資訊需求三類圖表。",
     "datascience": "A 745-response questionnaire analysed by age, gender and region, with roughly one third of respondents having experienced halitosis, and results segmented into pain points, safety concerns and information needs. In-vitro degradation efficiency in artificial saliva was benchmarked against purified enzymes. Plasmid-stability passaging produced the five-day loss figure that drove the architecture change.",
+    "datascience_zh": "一份 745 份回覆的問卷，依年齡、性別與地區分析，約三分之一的受訪者曾有口臭經驗，結果再切分為痛點、安全顧慮與資訊需求。人工唾液中的體外分解效率以純化酵素為對照基準。質體穩定性的連續傳代實驗則產生了那個五天流失的數字，直接促成架構變更。",
     "software": "",
-    "stack": ["S. salivarius K12 chassis", "CRISPR-Cas9 genomic integration", "Sox enzyme gene cluster", "MTO enzyme", "PcspA RNA thermometer", "artificial saliva in-vitro system"],
-    "techniques": ["chromosomal integration instead of plasmid expression", "D-alanine auxotrophy by alr knockout", "temperature-inducible toxin kill switch", "VSC quantification in artificial saliva", "plasmid retention passaging assay"]
+    "stack": [
+      "S. salivarius K12 chassis",
+      "CRISPR-Cas9 genomic integration",
+      "Sox enzyme gene cluster",
+      "MTO enzyme",
+      "PcspA RNA thermometer",
+      "artificial saliva in-vitro system"
+    ],
+    "techniques": [
+      "chromosomal integration instead of plasmid expression",
+      "D-alanine auxotrophy by alr knockout",
+      "temperature-inducible toxin kill switch",
+      "VSC quantification in artificial saliva",
+      "plasmid retention passaging assay"
+    ]
   },
   "good": {
     "publicEngagement": "A 745-response online questionnaire spanning ages, genders and regions, surfacing the three questions the public actually asks about live engineered bacteria: will it get out of control in the body, will there be side effects, could it be transmitted to others. They then reported a finding most teams would bury, that patients care about what is in it for me and how it works rather than technical sophistication, and rewrote their communication from 'the technology is advanced' to 'it is safe and effective for you'. They also ran public education activities and attended CCIC, the Conference of China iGEMer Community.",
+    "publicEngagement_zh": "一份跨年齡、性別與地區、共 745 份回覆的線上問卷，問出了民眾對活體工程細菌真正會問的三個問題：它會不會在體內失控、會不會有副作用、會不會傳染給別人。接著他們報告了一項多數團隊會藏起來的發現：病人在意的是「這對我有什麼好處」和「它怎麼作用」，而不是技術有多精密；於是他們把溝通訊息從「技術很先進」改寫為「它對你安全又有效」。他們也辦了公眾教育活動，並出席 CCIC（Conference of China iGEMer Community）。",
     "ihp": "An explicit dialogue-reflection-iteration-redialogue loop with six documented stakeholder groups, and in each case the design consequence is named. Public fear turned a single safety mechanism into the four-layer defence system. Practising dentists and an oral microbiology researcher killed the original oral-capsule concept on the grounds that capsules have limited local effect in the mouth, which is what produced the mouthwash, lozenge, chewing gum and toothpaste format set and raised the priority on mucosal adhesion and colonisation. At CCIC, senior teams warned that gene editing in non-model organisms would be a bottleneck, so L. reuteri was adopted as a backup chassis, and they shared kill-switch leakage data that caused the team to drop a high-leakage design for the temperature-inducible one. A bioethics professor and a biosafety policy advisor are the reason plasmid expression was abandoned for CRISPR-Cas9 chromosomal integration and why genome-stability and animal toxicology studies were pre-planned.",
+    "ihp_zh": "一條明確的對話—反思—迭代—再對話迴路，涵蓋六個有紀錄的利害關係人群體，而且每一次都指出設計上的後果。民眾的恐懼把單一安全機制變成四層防護系統。執業牙醫與一位口腔微生物學研究者否決了最初的口服膠囊構想，理由是膠囊在口腔內的局部作用有限，這才產生漱口水、口含錠、口香糖與牙膏這組產品形式，並把黏膜黏附與定殖的優先度往上提。在 CCIC，資深團隊警告在非模式生物中做基因編輯會是瓶頸，因此團隊把 L. reuteri 納為備用底盤菌株；他們也分享了致死開關的洩漏數據，使團隊捨棄一個高洩漏設計，改用溫度誘導型的版本。一位生物倫理學教授與一位生物安全政策顧問，則是他們放棄質體表現、改走 CRISPR-Cas9 染色體嵌入的原因，也是基因體穩定性與動物毒理學研究被預先排入計畫的原因。",
     "realWorld": "This is a genuine business case with real numbers, and it is the unit economics that separate it from the typical canvas exercise. They state a production cost of roughly RMB 0.5 per dose for freeze-dried bacterial powder plus RMB 0.3 for packaging and filling, totalling about RMB 0.8 per dose falling to RMB 0.3-0.5 at volume; retail pricing of RMB 199 for a 30-dose mouthwash bottle and RMB 159 for a 30-tablet box; and a resulting gross margin of 70-80 percent benchmarked against high-end probiotics. The SOM is built bottom-up rather than taken as a share of the TAM: 100,000 halitosis sufferers at an average RMB 200 per month giving roughly RMB 20 million (about USD 2.8 million) in year one or two, through Tmall, JD.com, Douyin and dental-clinic channels. Market research is partly real and partly desk work: the 745-response questionnaire and dentist interviews are theirs, while the USD 13.44 billion global halitosis market and the RMB 77.9 billion China oral-care figure come from Insight Partners, Frost and Sullivan and similar reports. The competitive analysis is specific and fair, naming BLIS Technologies' BLIS K12 and correctly observing that its deodorising mechanism is indirect because it works through salivaricin bacteriocins, whereas ORA-GUARD catalytically destroys the VSC molecules. The regulatory analysis is the strongest part and is genuinely credible: they identify that NMPA's 2020 biological-products registration classification treats LBPs as therapeutic biological products containing microorganisms, note honestly that neither NMPA nor the FDA has yet issued complete LBP-specific technical guidance, and draw the correct strategic conclusion that this is both policy risk and a chance to help set the standard, with early regulator engagement as the stated tactic. Partners are named rather than implied: Shandong Bona Technology Group for probiotic fermentation and freeze-drying, with industrialisation discussions already begun, and Shijia Doctor Dental Hospital as a clinical and channel partner. Be blunt about the gaps, though. There is no registered company, no incubator place, no grant and no investor commitment; investment partners are described only as a category ('biotechnology VCs and oral care industry funds'). The IP position is weaker than it first reads: the strain construction strategy and genetic circuits are said to form technical barriers that are 'planned to be protected through patent applications', so nothing is filed. The revenue projection figure is labelled as internal estimates, and the appendices (five-year financial model, patent landscape) are listed as titles rather than linked documents, so the deepest financial work is asserted rather than shown. Continuation is a licensing-and-partnering intent rather than a funded plan, and an LBP approval route of that length will outlast any student team unless the Bona relationship becomes a formal transfer.",
+    "realWorld_zh": "這是一份有真實數字的商業論證，而把它和典型的商業模式圖作業區分開來的，正是單位經濟。他們寫出冷凍乾燥菌粉每劑生產成本約 RMB 0.5，加上包裝與充填 RMB 0.3，每劑合計約 RMB 0.8，量產後可降到 RMB 0.3-0.5；零售定價為 30 劑漱口水一瓶 RMB 199、30 錠一盒 RMB 159；由此得出的毛利率為 70-80%，並以高階益生菌為對照基準。SOM 是自下而上建起來的，而不是從 TAM 取一個比例：100,000 名口臭患者、每人每月平均 RMB 200，在第一或第二年約為 RMB 2,000 萬（約 USD 280 萬），通路為 Tmall、JD.com、Douyin 與牙科診所。市場研究一部分是實作、一部分是桌面作業：745 份問卷與牙醫訪談是他們自己做的，而全球口臭市場 USD 134.4 億與中國口腔照護 RMB 779 億這兩個數字則來自 Insight Partners、Frost and Sullivan 等報告。競爭分析具體而公允，指名 BLIS Technologies 的 BLIS K12，並正確指出其除臭機制是間接的——它透過 salivaricin 細菌素作用——而 ORA-GUARD 是以催化方式破壞 VSC 分子。法規分析是最強的一段，也確實可信：他們指出 NMPA 2020 年的生物製品註冊分類把 LBP 視為含微生物的治療用生物製品，誠實說明 NMPA 與 FDA 都還沒有發布完整的 LBP 專屬技術指引，並得出正確的策略結論——這既是政策風險，也是參與制定標準的機會，而他們明講的戰術是及早與法規機關往來。合作夥伴是指名的，不是暗示的：Shandong Bona Technology Group 負責益生菌發酵與冷凍乾燥，產業化討論已經開始；Shijia Doctor Dental Hospital 則是臨床與通路夥伴。不過缺口要講白：沒有登記公司、沒有進駐育成中心、沒有補助、也沒有投資人承諾；投資夥伴只以類別描述（「生技創投與口腔照護產業基金」）。智財的位置也比初讀起來弱：菌株建構策略與基因迴路被說成構成技術門檻，而這些是「計畫透過專利申請加以保護」，所以其實什麼都還沒提出申請。營收預測被標為內部估計，附錄（五年財務模型、專利地圖）只列標題而沒有連結文件，所以最深的財務工作是宣稱而非展示。後續發展是授權與合作的意向，而不是有資金的計畫；而一條那麼長的 LBP 審批路徑，會比任何學生團隊都活得久——除非與 Bona 的關係變成正式的技術移轉。",
     "partners": [
       "Shandong Bona Technology Group Co., Ltd. (probiotic fermentation, freeze-drying, technology transfer and industrialisation discussions)",
       "Shijia Doctor Dental Hospital and dental clinics (clinical trials and channel)",
@@ -34,25 +58,30 @@
     {
       "url": "https://static.igem.wiki/teams/6098/wiki/entrepre/fig-3-entrepre.avif",
       "caption": "TAM, SAM and SOM analysis for ORA-GUARD, with the SOM built bottom-up from 100,000 target users at RMB 200 per month",
+      "caption_zh": "ORA-GUARD 的 TAM、SAM 與 SOM 分析，其中 SOM 由 100,000 名目標使用者、每人每月 RMB 200 自下而上建立",
       "credit": "Team ICJFLS, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6098/wiki/entrepre/fig-11-entrepre.avif",
       "caption": "Comparative overview of Live Biotherapeutic Product regulatory pathways in the US, EU and China",
+      "caption_zh": "美國、歐盟與中國的活體生物治療產品法規路徑比較總覽",
       "credit": "Team ICJFLS, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6098/wiki/entrepre/fig-10-entrepre10.avif",
       "caption": "ORA-GUARD development roadmap from 2026 proof of concept to 2035",
+      "caption_zh": "ORA-GUARD 從 2026 年概念驗證到 2035 年的開發路線圖",
       "credit": "Team ICJFLS, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6098/wiki/entrepre/fig-12-entrepre.avif",
       "caption": "Gap analysis between current team capabilities and the capabilities needed to commercialise ORA-GUARD",
+      "caption_zh": "團隊現有能力與將 ORA-GUARD 商業化所需能力之間的缺口分析",
       "credit": "Team ICJFLS, iGEM 2026 wiki"
     }
   ],
   "gemsTakeaway": "Insist on three numbers before any market slide: cost per dose, price per unit and resulting gross margin, built from the actual process (freeze-drying plus fill-and-finish) rather than from a market-report percentage. And copy their SOM discipline, where the obtainable market is users times spend per user per month, not a fraction of a global TAM.",
+  "gemsTakeaway_zh": "在任何市場投影片之前，先要求三個數字：每劑成本、每單位售價，以及由此得出的毛利率，而且要從真實製程（冷凍乾燥加上充填包裝）算出來，不是從市場報告的百分比推出來。另外值得照抄的是他們的 SOM 紀律：可取得市場是使用者人數乘以每人每月花費，而不是全球 TAM 的一個比例。",
   "sources": [
     "https://2026.igem.wiki/icjfls/",
     "https://2026.igem.wiki/icjfls/entrepreneurship/",

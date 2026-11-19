@@ -6,33 +6,108 @@
   "village": "Food & Agriculture / Manufacturing",
   "wiki": "https://2026.igem.wiki/mit-mahe/",
   "projectTitle": "MAHEK",
+  "projectTitle_zh": "MAHEK",
   "tagline": "Sustainable cuminaldehyde from Pseudomonas putida, and NetFlux, a web tool that turns a genome-scale metabolic model into a drawable pathway and a ranked list of knockouts.",
+  "tagline_zh": "用 Pseudomonas putida 永續生產枯茗醛，並開發 NetFlux——一個把基因組尺度代謝模型化成可繪製路徑與剔除策略排序清單的網頁工具。",
   "summary": "MAHEK addresses the fragrance industry's dependence on petrochemical synthesis and wasteful seed extraction by producing cuminaldehyde biologically. The chassis is Pseudomonas putida F1, a solvent-tolerant soil bacterium that already makes cuminaldehyde as an intermediate in p-cymene degradation; CRISPR-Cas9-mediated homologous recombination knocks out cymC, the p-cumic aldehyde dehydrogenase, arresting the pathway exactly at the target compound. The dry lab's deliverable is NetFlux, a React + FastAPI web application that compresses a genome-scale metabolic model into a readable 'production corridor' using a novel extraction algorithm (SCOPE) and then pools OptKnock and OptForce into one co-ranked list of knockout and regulation strategies, each traced to the gene and linked to BiGG. The team also won the Inclusivity Award for work with visually impaired learners that ended in Vision Empower adopting their tactile models for use in schools across India.",
+  "summary_zh": "MAHEK 針對香料產業依賴石化合成、以及種子萃取耗費資源的問題，改以生物方式生產枯茗醛（cuminaldehyde）。宿主是 Pseudomonas putida F1，一株耐溶劑的土壤細菌，它在 p-cymene 降解途徑中本來就會產生枯茗醛作為中間產物；以 CRISPR-Cas9 介導的同源重組剔除 cymC（p-cumic 醛脫氫酶），讓途徑恰好停在目標化合物。乾實驗的交付成果是 NetFlux，一個 React + FastAPI 的網頁應用程式，它以自創的擷取演算法（SCOPE）把基因組尺度代謝模型壓縮成一條可讀的「生產走廊」，再把 OptKnock 與 OptForce 的結果匯整成單一的共同排序清單，列出剔除與調控策略，每一項都追溯到對應基因並連結到 BiGG。該隊也以針對視障學習者的工作獲得包容性獎，成果是 Vision Empower 採用了他們的觸覺模型，用於印度各地的學校。",
   "awards": [
     "Inclusivity Award winner, Undergraduate",
     "Best Software Tool nominee, Undergraduate"
   ],
   "dry": {
     "frameworks": "React + TypeScript single-page frontend split into three modules (parameter panel, pathway map viewer, interventions table) sharing one run state; FastAPI backend with Pydantic request/response schemas, auto-generated OpenAPI 3.1 documentation and a Swagger UI at /docs; a JobManager running strain design on a bounded background worker pool so heavy requests do not time out; SQLite (mfghub.db) as the model/reaction/metabolite/gene/medium catalogue, rebuilt from the GEMs on every server image build; and Docker Compose bringing up database, API and web client together. Core science runs on COBRApy.",
+    "frameworks_zh": "React + TypeScript 的單頁前端分成三個模組（參數面板、路徑圖檢視器、干預策略表格），共用同一份執行狀態；FastAPI 後端採 Pydantic 的請求／回應結構，自動生成 OpenAPI 3.1 文件並在 /docs 提供 Swagger UI；以 JobManager 在有上限的背景工作者池上執行菌株設計，避免繁重的請求逾時；以 SQLite（mfghub.db）作為模型／反應／代謝物／基因／培養基的目錄，每次建置伺服器映像時都由 GEM 重新產生；並以 Docker Compose 一次啟動資料庫、API 與網頁用戶端。核心科學運算跑在 COBRApy 上。",
     "dataviz": "Pathways are drawn as interactive metabolic maps flowing strictly left to right, with line width proportional to mass flow, metabolites as nodes carrying compartment suffixes, reactions as arrows colour-coded by their FVA annotation, and the substrate-to-target corridor explicitly highlighted. Hovering a reaction opens an inspection card with reaction name and ID, knockout-candidate status, flux and FVA range, coupling and bounds, subsystem, gene associations and gene rules, and its producers and consumers. Each click of Generate opens its parameters in a new tab so settings can be compared side by side. Results export as GraphML, JSON and CSV straight from the browser. The interventions table shows a baseline header (wild-type growth rate, yield floor and ceiling) against which every ranked design is judged, and separates committed 'Ranked Designs' from weaker single-reaction 'Hypotheses (leads)', with the wiki telling users not to compare yield numbers across the two tables.",
+    "dataviz_zh": "路徑以互動式代謝圖繪製，嚴格由左至右流動，線寬與質量流成正比，代謝物為節點並帶有區室後綴，反應為箭頭並依其 FVA 註解上色，由基質到目標產物的走廊則被明確標示強調。將游標停在某個反應上會開啟檢視卡，列出反應名稱與 ID、是否為剔除候選、通量與 FVA 範圍、耦合關係與上下界、所屬子系統、基因關聯與基因規則，以及它的生產者與消耗者。每次點選 Generate 都會在新分頁開啟當次參數，方便並排比較設定。結果可直接從瀏覽器匯出為 GraphML、JSON 與 CSV。干預策略表格以一列基準值為標頭（野生型生長速率、產率下限與上限），作為評判每一項排序設計的依據，並把已確信的「Ranked Designs」與較弱的單一反應「Hypotheses (leads)」分開，wiki 上也告訴使用者不要跨這兩張表比較產率數字。",
     "datascience": "Benchmarked without a ground truth by defining what a useful pathway must do and measuring that instead. SCOPE was run on 9 GEMs with up to 5 target products each, 40 organism-product pairs in total: 100% of extracted pathways were fully connected from substrate to target, and the mean corridor was 55.1 reactions against a mean model size of 934, i.e. 7.8% of the network (models up to 1,762 reactions reduced to about 55). Essential reactions were identified independently with FVA and then checked for recall: 20.3 essential reactions per product on average, 17.5 retained, overall recall 0.863, above 0.90 in five of nine organisms, with the weakest cases (iJN1463 at 0.616, iJN1026 at 0.719) reported rather than hidden. Eleven curated GEMs ship with the tool, covering bacteria, a cyanobacterium, an archaeon, yeast and a diatom. The metabolic model behind the wet lab extended iJN1463 with the full p-cymene degradation route (cymA, cymB, cymC, cmtA-cmtE), linking to native metabolism through OP4ENH.",
+    "datascience_zh": "在沒有真實標準的情況下進行基準測試，做法是改為定義一條有用的路徑必須做到什麼，然後量測它。SCOPE 在 9 個 GEM 上執行，每個最多 5 個目標產物，共 40 組物種—產物配對：所有擷取出的路徑都 100% 從基質到目標完整連通，走廊平均 55.1 個反應，相對於平均模型規模 934 個反應，即網路的 7.8%（最多 1,762 個反應的模型被縮減到約 55 個）。必需反應另以 FVA 獨立判定，再檢查召回率：每個產物平均 20.3 個必需反應，保留 17.5 個，整體召回率 0.863，在九個物種中有五個高於 0.90，而表現最差的案例（iJN1463 為 0.616、iJN1026 為 0.719）是公開報告而非隱藏。工具內附十一個經整理的 GEM，涵蓋細菌、一種藍綠菌、一種古菌、酵母與一種矽藻。濕實驗背後的代謝模型則把 iJN1463 擴充為完整的 p-cymene 降解路線（cymA、cymB、cymC、cmtA-cmtE），並透過 OP4ENH 與原生代謝相連。",
     "software": "NetFlux solves two linked problems in metabolic engineering: genome-scale models are too large to read, and strain-design algorithms waste most of their compute on reactions that can never carry flux. Its five-stage pipeline is the substance. Stage 1 solves FBA then pFBA and converts the flux distribution into a Mass Flow Graph (nodes = reactions, edges = metabolite mass flow). Stage 2 applies FASTCC against a fixed consistency threshold to strip blocked reactions, which the team identifies as the single largest source of computational expense. Stage 3 is SCOPE, their GUDIE-derived extractor: log-normalise the heavy-tailed edge weights, compute a flux-coupling score per reaction against the target, seed an interest signal at the target and propagate it with Personalised PageRank, combine coupling and interest into a per-edge score, expand outward over a bounded number of hops admitting reactions above a threshold anchored to the target's immediate neighbourhood, then an optional repair step that closes a broken corridor with a flux-weighted shortest path. Stage 4 annotates the corridor with FVA so each reaction is typed as essential-and-fixed, flexible, or a natural up/downregulation candidate. Stage 5 pools OptForce and OptKnock and co-ranks their proposals into one ordered list, resolving each to a gene linked to BiGG. Two design decisions stand out for reuse: the REST API is versioned, OpenAPI 3.1-specified and language-agnostic with async job polling (submit, get a job_id, poll), and all compute is deliberately RAM-only, with uploaded models referenced by short-lived tokens, a 30-minute SessionCache, and nothing a client submits ever written to disk or database. Users can upload their own GEM as .json or .sbml. It is self-hosted rather than publicly deployed: 'git clone https://gitlab.igem.org/2026/software/mit-mahe/netflux && docker compose up --build', then http://localhost:5173/, with stated system requirements of 2-4 GB RAM, any modern multi-core CPU and no GPU. A video guide and a step-by-step interpretation guide are on the wiki, and the limitation is stated plainly: constraint-based predictions describe what the network allows at steady state, not kinetics or regulation, so every strategy is a wet-lab hypothesis. Repo: https://gitlab.igem.org/2026/software/mit-mahe/netflux (team repo https://gitlab.igem.org/2026/mit-mahe).",
-    "stack": ["React", "TypeScript", "FastAPI", "Pydantic", "Python", "COBRApy", "SQLite", "Docker", "Docker Compose", "OpenAPI 3.1 / Swagger UI", "REST / JSON-over-HTTP", "GraphML", "SBML", "BiGG database", "KaTeX (wiki maths)", "iGEM GitLab"],
-    "techniques": ["Flux Balance Analysis (FBA)", "parsimonious FBA (pFBA)", "Flux Variability Analysis (FVA)", "Mass Flow Graph representation of metabolism", "FASTCC flux-consistency pruning", "flux coupling analysis", "Personalised PageRank network propagation", "GUDIE-style user-defined subgraph extraction", "flux-weighted shortest-path repair", "OptKnock bilevel knockout search", "OptForce intervention search", "co-ranking of competing optimisation outputs", "recall benchmarking against independently derived essential reactions", "CRISPR-Cas9 homologous recombination (wet lab)"]
+    "software_zh": "NetFlux 解決代謝工程中兩個相連的問題：基因組尺度模型太大而無法閱讀，而菌株設計演算法把大部分運算浪費在永遠不可能帶有通量的反應上。它的五階段流程才是實質內容。階段 1 先解 FBA，再解 pFBA，並把通量分布轉換為質量流圖（節點＝反應，邊＝代謝物的質量流）。階段 2 以固定的一致性門檻套用 FASTCC，剔除受阻反應，該隊指出這正是運算成本最大的單一來源。階段 3 是 SCOPE，他們由 GUDIE 衍生出的擷取器：先把重尾分布的邊權重做對數正規化，計算每個反應相對於目標的通量耦合分數，在目標處播下興趣訊號並以個人化 PageRank 傳播，把耦合與興趣合成每條邊的分數，再在有上限的跳數內向外擴展，納入分數高於某門檻（該門檻以目標的鄰近區域為基準）的反應，最後還有一個選用的修補步驟，以通量加權的最短路徑補起斷掉的走廊。階段 4 以 FVA 註解走廊，讓每個反應被歸類為必需且固定、具彈性，或可自然上調／下調的候選。階段 5 匯整 OptForce 與 OptKnock，把兩者的提案共同排序成單一清單，並各自解析到連結 BiGG 的基因。兩項設計決策特別值得借用：REST API 有版本控制、以 OpenAPI 3.1 規格描述、與語言無關，並採非同步工作輪詢（送出、取得 job_id、輪詢）；以及所有運算刻意只在記憶體中進行，上傳的模型以短效期權杖引用，搭配 30 分鐘的 SessionCache，用戶端送出的任何資料都不會寫入磁碟或資料庫。使用者可上傳自己的 GEM，格式為 .json 或 .sbml。它採自行架設而非公開部署：「git clone https://gitlab.igem.org/2026/software/mit-mahe/netflux && docker compose up --build」，然後開啟 http://localhost:5173/，所列系統需求為 2-4 GB RAM、任何現代多核心 CPU，不需 GPU。wiki 上有影片指南與逐步判讀指南，限制也寫得很直白：基於約束的預測描述的是網路在穩態下允許什麼，而不是動力學或調控，因此每一項策略都是待濕實驗驗證的假說。程式庫：https://gitlab.igem.org/2026/software/mit-mahe/netflux（團隊程式庫 https://gitlab.igem.org/2026/mit-mahe）。",
+    "stack": [
+      "React",
+      "TypeScript",
+      "FastAPI",
+      "Pydantic",
+      "Python",
+      "COBRApy",
+      "SQLite",
+      "Docker",
+      "Docker Compose",
+      "OpenAPI 3.1 / Swagger UI",
+      "REST / JSON-over-HTTP",
+      "GraphML",
+      "SBML",
+      "BiGG database",
+      "KaTeX (wiki maths)",
+      "iGEM GitLab"
+    ],
+    "techniques": [
+      "Flux Balance Analysis (FBA)",
+      "parsimonious FBA (pFBA)",
+      "Flux Variability Analysis (FVA)",
+      "Mass Flow Graph representation of metabolism",
+      "FASTCC flux-consistency pruning",
+      "flux coupling analysis",
+      "Personalised PageRank network propagation",
+      "GUDIE-style user-defined subgraph extraction",
+      "flux-weighted shortest-path repair",
+      "OptKnock bilevel knockout search",
+      "OptForce intervention search",
+      "co-ranking of competing optimisation outputs",
+      "recall benchmarking against independently derived essential reactions",
+      "CRISPR-Cas9 homologous recombination (wet lab)"
+    ]
   },
   "good": {
     "publicEngagement": "Sessions were run across India in English, Hindi, Telugu, Kannada and Marathi so language would not be a barrier, and deliberately extended beyond students: the team visited old age homes to learn how residents' associations with traditional scents had changed over their lifetimes, then introduced them to synthetic biology. Workshops included household-materials DNA extraction from bananas at Purple Space Library Manipal (50 students, grades 1-7, split by age group), recombinant DNA via insulin at GenWise Camp, and deeper project discussion with grade 11-12 biology students at Vidya Mandir Chennai. Teachers were walked through each protocol step so they could keep running the demonstration after the team left. 'Beyond Sight', an audio-only podcast, carried five conversations with visually impaired professionals (a radio jockey, a geneticist, the founder of assistive-technology company TorchIT, an ophthalmologist, and one of only three blind women to have submitted before the Supreme Court of India). A Colourblind Awareness Day Instagram series ran on 6 September.",
+    "publicEngagement_zh": "活動在印度各地以英語、印地語、泰盧固語、坎納達語與馬拉提語進行，讓語言不成為障礙，並刻意延伸到學生以外的族群：該隊走訪養老院，了解住民對傳統香氣的連結如何隨一生改變，再向他們介紹合成生物學。工作坊包括在 Purple Space Library Manipal 用家中材料從香蕉萃取 DNA（50 位學生，1 至 7 年級，依年齡分組）、在 GenWise Camp 以胰島素講解重組 DNA，以及在 Vidya Mandir Chennai 與 11、12 年級生物學生進行更深入的專案討論。他們也帶老師走過每一個實驗步驟，讓團隊離開後老師能繼續操作示範。純音訊的 podcast「Beyond Sight」收錄五場與視障專業人士的對談（一位廣播主持人、一位遺傳學家、輔助科技公司 TorchIT 的創辦人、一位眼科醫師，以及印度最高法院僅有三位曾出庭陳述的盲人女性之一）。色盲意識日的 Instagram 系列則於 9 月 6 日發布。",
     "ihp": "Stakeholder analysis walked the whole cumin supply chain, from traders who buy directly from farmers to internationally working perfumers, finding that each group holds a different version of the same problem. Hard numbers anchor the premise: India supplies about 70-80% of world cumin, the 2026 crop was projected at 9.0-9.2 million bags against roughly 11 million in 2025 (a 15-20% decline), hydrodistillation yields about 2.56% essential oil, and cuminaldehyde is a fraction of that. The decisive conversation was with Givaudan, which revealed that fragrance houses procure whole cumin essential oil rather than isolated cuminaldehyde; this redirected the team's target customer from fragrance houses to aroma compound manufacturers, where demand for isolated, sustainably produced cuminaldehyde actually exists. The inclusivity work was itself integrated rather than decorative: conversations with Vision Empower (IIIT Bangalore) identified that Indian educational structures restrict visually impaired students from science, and the team then built tactile models, trialled them with Mrs Nagarathna, a visually impaired educator, revised on her feedback, and tested with a ninth-grade student. Fixes were deliberately minimal and buildable from cheap materials: the existing DNA model distinguished bases only by colour, so each base got a texture instead (adenine smooth tape, thymine jute, guanine bubble wrap, cytosine velvet) wrapped around the existing model so it did not need rebuilding; the mitosis model's components were only drawn on, so they were rebuilt in clay with pipe-cleaner chromosomes. Vision Empower approved both the content and the models and will use them across their associated schools. A separate conversation with an Indian Sign Language expert established that, unlike ASL, ISL has no centralised place to learn it, which the team records as a gap they did not close.",
+    "ihp_zh": "利害關係人分析走遍整條小茴香供應鏈，從直接向農民收購的貿易商到跨國工作的調香師，發現每個群體掌握的是同一個問題的不同版本。具體數字支撐了前提：印度供應全球約 70-80% 的小茴香，2026 年產量預估為 900 萬至 920 萬包，相對於 2025 年的約 1,100 萬包（下降 15-20%），水蒸餾的精油產率約 2.56%，而枯茗醛只佔其中一部分。關鍵的一場對話來自 Givaudan，對方透露香料公司採購的是整支小茴香精油，而非分離純化的枯茗醛；這使該隊把目標客戶從香料公司轉向香氣化合物製造商，因為對分離、永續生產之枯茗醛的需求其實存在於那裡。包容性工作本身是整合進專案的，不是裝飾：與 Vision Empower（IIIT Bangalore）的對談指出印度的教育結構限制了視障學生接觸科學，該隊因此製作觸覺模型，先與視障教育者 Nagarathna 女士試用、依她的回饋修改，再與一位九年級學生測試。修改刻意最小化、並可用便宜材料自行製作：原有的 DNA 模型只用顏色區分鹼基，於是每個鹼基改以不同質感區分（腺嘌呤用平滑膠帶、胸腺嘧啶用麻布、鳥嘌呤用氣泡紙、胞嘧啶用絨布），直接包覆在原模型上，不必重做；而細胞分裂模型的構造原本只是畫上去的，便改用黏土重做，染色體以毛根製作。Vision Empower 核可了內容與模型，並將在其合作學校推廣使用。另一場與印度手語專家的對談則確認，與美國手語不同，印度手語沒有集中的學習管道，該隊把這點記錄為自己沒有解決的缺口。",
     "realWorld": "A consumer survey found the barrier is information rather than opposition, with respondents already aware of land use, extraction and climate pressures and nearly half willing to pay slightly more for lower environmental impact, though more were worried about long-term effects of ingredients made by engineered microorganisms. Producer-side work found that Indian companies import aroma compounds from China, the UAE and France despite domestic cumin dominance, and that price is the deciding factor for buyers because raw material cost passes straight to consumers. The team wrote 'An iGEMer's Guide to Upscaling', a structured upscaling and biomanufacturing guide, after finding no iGEM-oriented resource bridging flask scale to industrial scale, and 'The Aroma Atlas', a catalogue of everyday scents, their active ingredients and current production methods, as a starting point for teams looking for compounds worth making sustainably. Six cym operon genes were submitted to the Registry as basic parts (BBa_26CFFF0H, BBa_26R7VUFV, BBa_26MJ8EI9, BBa_26SS8791, BBa_26AS8UG2, BBa_26AW7YAF).",
-    "partners": ["Vision Empower / IIIT Bangalore", "Givaudan", "Score Foundation / Project Eyeway", "TorchIT", "Navjeevan Blind School, Pune", "Purple Space Library Manipal", "GenWise Camp", "Vidya Mandir Senior Secondary School, Chennai", "Manipal Academy of Higher Education", "Anthropic (sponsor)", "BioRender, GenScript, IDT, NEB, SnapGene (sponsors)"]
+    "realWorld_zh": "一份消費者調查發現，障礙在於資訊而非反對：受訪者本來就知道土地利用、萃取與氣候壓力，近半數願意為較低的環境衝擊多付一點錢，不過更多人擔心工程微生物所製成分的長期影響。生產端的調查則發現，印度企業儘管本國小茴香產量居主導地位，仍從中國、阿聯與法國進口香氣化合物，而價格是買方的決定因素，因為原料成本會直接轉嫁給消費者。該隊發現沒有任何面向 iGEM、能從搖瓶規模接到工業規模的資源，於是寫了結構化的放大與生物製造指南《An iGEMer's Guide to Upscaling》；另外還做了《The Aroma Atlas》，彙整日常香氣、其活性成分與目前的生產方式，作為其他隊伍尋找值得永續生產之化合物的起點。cym 操縱子的六個基因已作為基礎元件提交到 Registry（BBa_26CFFF0H、BBa_26R7VUFV、BBa_26MJ8EI9、BBa_26SS8791、BBa_26AS8UG2、BBa_26AW7YAF）。",
+    "partners": [
+      "Vision Empower / IIIT Bangalore",
+      "Givaudan",
+      "Score Foundation / Project Eyeway",
+      "TorchIT",
+      "Navjeevan Blind School, Pune",
+      "Purple Space Library Manipal",
+      "GenWise Camp",
+      "Vidya Mandir Senior Secondary School, Chennai",
+      "Manipal Academy of Higher Education",
+      "Anthropic (sponsor)",
+      "BioRender, GenScript, IDT, NEB, SnapGene (sponsors)"
+    ]
   },
   "images": [
-    {"url": "https://static.igem.wiki/teams/6145/wiki/dry-lab/software/fig-2-architecture.avif", "caption": "NetFlux architecture: React/TypeScript frontend, FastAPI backend with Pydantic schemas and a bounded JobManager worker pool, over a SQLite model catalogue and precomputed Mass Flow Graphs.", "credit": "Team MIT-MAHE, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6145/wiki/dry-lab/software/fig-1-pipeline.avif", "caption": "The five-stage NetFlux pipeline: Mass Flow Graph construction, FASTCC pruning, SCOPE/GUDIE corridor extraction, FVA annotation, and the pooled OptKnock/OptForce design engine.", "credit": "Team MIT-MAHE, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6145/wiki/dry-lab/software/fig-4-user-guide.avif", "caption": "An extracted production corridor drawn automatically from a genome-scale model, flowing left to right with line width proportional to mass flow and reactions coloured by FVA annotation.", "credit": "Team MIT-MAHE, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6145/wiki/dry-lab/software/fig-6-user-guide.avif", "caption": "The intervention strategy suite: ranked designs with yield floor, retained growth, coupling strength and the specific gene to edit, separated from weaker exploratory leads.", "credit": "Team MIT-MAHE, iGEM 2026 wiki"}
+    {
+      "url": "https://static.igem.wiki/teams/6145/wiki/dry-lab/software/fig-2-architecture.avif",
+      "caption": "NetFlux architecture: React/TypeScript frontend, FastAPI backend with Pydantic schemas and a bounded JobManager worker pool, over a SQLite model catalogue and precomputed Mass Flow Graphs.",
+      "caption_zh": "NetFlux 架構：React/TypeScript 前端、搭配 Pydantic 結構與有上限 JobManager 工作者池的 FastAPI 後端，底層是 SQLite 模型目錄與預先計算的質量流圖。",
+      "credit": "Team MIT-MAHE, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6145/wiki/dry-lab/software/fig-1-pipeline.avif",
+      "caption": "The five-stage NetFlux pipeline: Mass Flow Graph construction, FASTCC pruning, SCOPE/GUDIE corridor extraction, FVA annotation, and the pooled OptKnock/OptForce design engine.",
+      "caption_zh": "NetFlux 的五階段流程：建構質量流圖、FASTCC 修剪、SCOPE/GUDIE 走廊擷取、FVA 註解，以及匯整 OptKnock/OptForce 的設計引擎。",
+      "credit": "Team MIT-MAHE, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6145/wiki/dry-lab/software/fig-4-user-guide.avif",
+      "caption": "An extracted production corridor drawn automatically from a genome-scale model, flowing left to right with line width proportional to mass flow and reactions coloured by FVA annotation.",
+      "caption_zh": "由基因組尺度模型自動繪出的生產走廊，由左至右流動，線寬與質量流成正比，反應則依 FVA 註解上色。",
+      "credit": "Team MIT-MAHE, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6145/wiki/dry-lab/software/fig-6-user-guide.avif",
+      "caption": "The intervention strategy suite: ranked designs with yield floor, retained growth, coupling strength and the specific gene to edit, separated from weaker exploratory leads.",
+      "caption_zh": "干預策略組合：已排序的設計列出產率下限、保留的生長、耦合強度與應編輯的具體基因，並與較弱的探索性線索分開。",
+      "credit": "Team MIT-MAHE, iGEM 2026 wiki"
+    }
   ],
   "gemsTakeaway": "When there is no ground truth to benchmark against, define what a correct output must satisfy and measure that: NetFlux's credibility rests on three published numbers (100% corridor connectivity, 7.8% of the network retained, 0.863 recall of independently FVA-derived essential reactions), with the weakest organisms named. A research centre should also copy the ephemeral-compute design, user-uploaded models held in RAM behind short-lived tokens and never written to disk, which makes a shared analysis service usable with data people will not hand over.",
+  "gemsTakeaway_zh": "當沒有真實標準可供對標時，就定義一個正確輸出必須滿足哪些條件，然後去量測它：NetFlux 的可信度建立在三個公開數字上（走廊連通性 100%、僅保留網路的 7.8%、對獨立以 FVA 推得之必需反應的召回率 0.863），而且把表現最差的物種指名出來。研究中心也值得照抄它的短暫運算設計——使用者上傳的模型只存在記憶體中，以短效期權杖存取，絕不寫入磁碟，這讓一個共用的分析服務也能處理別人不願交出的資料。",
   "sources": [
     "https://2026.igem.wiki/mit-mahe/",
     "https://2026.igem.wiki/mit-mahe/software",

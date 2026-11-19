@@ -1,0 +1,20 @@
+# GEMS Research · iGEM 2026 Report
+
+> A review of the iGEM 2026 Top 10 teams across all three sections (Undergraduate, Overgraduate, High
+> School), every special prize winner and nominee, and the academic and industry trends around them. Two
+> questions run through it: how teams turn biology into computation, and how they turn science into
+> something a community can use. Built for GEMS Research, a synthetic biology research institution in Taiwan.
+
+The site itself is a client-rendered application. These Markdown mirrors carry the full text.
+
+- [Full report, English](report-en.md): every written section, all 103 team files, 24 trends and the roadmap
+- [Full report, Traditional Chinese](report-zh.md): the same, in 繁體中文
+- [Official 2026 results](https://competition.igem.org/results/2026): the source for every award in this report
+
+## Data
+
+- [results.js](data/results.js): the complete official 2026 results as JSON
+- [teams.js](data/teams.js): a light index of every team file
+- [teams-full.js](data/teams-full.js): the full team records
+- [trends.js](data/trends.js): academic and industry trend analysis
+- [report.js](data/report.js): the written synthesis, the original analyses and the roadmap
