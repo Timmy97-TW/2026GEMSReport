@@ -367,6 +367,23 @@
     "缺口在正中央"
    ],
    "link": "judging"
+  },
+  {
+   "kicker": "Rigour",
+   "kicker_zh": "嚴謹度",
+   "title": "In the High School Top 10, the most rigorous team won nothing",
+   "title_zh": "在高中組 Top 10 裡，最嚴謹的那支隊伍什麼都沒拿",
+   "body": "Every results page in the 2026 High School Top 10, scored on what a reader can check. **HongKong-HS reports ANOVA, Dunnett's post-hoc, a t-test, n=3 and standard deviations — and won no award at all.** The Grand Prize winner names no statistical test, reports no p-value and gives no replicate count; its one quantitative claim is a confidence interval produced by a commercial service. Five of the ten publish no p-value anywhere, and one team reached the Top 10 **with no results page**. This is the measurement-discipline null reproduced inside a cohort of ten: rigour makes a claim checkable, and it does not place.",
+   "body_zh": "把 2026 年高中組 Top 10 的每一份結果頁，依「讀者能核對什麼」評分。**HongKong-HS 報告了 ANOVA、Dunnett 事後檢定、t-test、n=3 與標準差——結果一個獎都沒拿。** 總冠軍沒有寫出任何統計檢定名稱、沒有給出任何 p 值、也沒有重複數；它唯一的量化主張是一個由商業服務做出來的信賴區間。十支隊伍中有五支完全沒有 p 值，而有一支**在沒有結果頁的情況下**進了 Top 10。這是「量測嚴謹度」的虛無結果在十支隊伍群體裡的再現：嚴謹讓主張可被核對，但它不決定名次。",
+   "chips": [
+    "most rigorous: 0 awards",
+    "5 of 10 report no p-value"
+   ],
+   "chips_zh": [
+    "最嚴謹：0 個獎",
+    "10 支中 5 支沒有 p 值"
+   ],
+   "link": "judging"
   }
  ],
  "method": "Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see.",

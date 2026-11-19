@@ -14,7 +14,7 @@ A review of the iGEM 2026 Top 10 teams across all three sections, every special 
 
 # Overview
 
-## 22 findings, and where to read each one
+## 23 findings, and where to read each one
 
 _The 2026 Best Wiki winners all build a layer like this — each claim in two sentences, with a link straight to the evidence. It works, so this report does it too._
 
@@ -83,6 +83,9 @@ Across 84 decorated teams, headcount and award count correlate at **0.06** (Spea
 
 ### The finalists' gaps are at the edges. GEMS's gap is at the centre.
 In the 2026 High School section 147 teams entered, 10 reached the Top 10 and **2 were named Finalists**. GEMS-Taiwan was not one, while holding three of the 17 section-level awards won across the whole section. Four explanations died on the evidence: not statistics (the Grand Prize winner's results page has no p-values and no named test), not completeness (its RNAi arm has no knockdown data at all), not Registry documentation (**GEMS beats both finalists**), and not candour — Lambert argues against itself on its own award pages and won anyway. What separates them is where the hole sits. Both finalists lead with the part that worked. **ReLEAF is named for the two halves its own pages report as undemonstrated.**
+
+### In the High School Top 10, the most rigorous team won nothing
+Every results page in the 2026 High School Top 10, scored on what a reader can check. **HongKong-HS reports ANOVA, Dunnett's post-hoc, a t-test, n=3 and standard deviations — and won no award at all.** The Grand Prize winner names no statistical test, reports no p-value and gives no replicate count; its one quantitative claim is a confidence interval produced by a commercial service. Five of the ten publish no p-value anywhere, and one team reached the Top 10 **with no results page**. This is the measurement-discipline null reproduced inside a cohort of ten: rigour makes a claim checkable, and it does not place.
 
 _Method and limits. Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see._
 
