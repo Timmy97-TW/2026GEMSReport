@@ -14,6 +14,7 @@ Writes data/results.js, data/teams.js, data/trends.js, data/report.js.
 Nothing here runs in the browser; the site loads the generated files directly.
 """
 import glob
+import io
 import json
 import os
 import re
@@ -330,6 +331,48 @@ should would could must can may might will shall
 """.split())
 
 
+def parallel_audit(root="research"):
+    """Find translatable parallel arrays that have no _zh twin, or a ragged one.
+
+    The per-key translation audit only looks at keys that exist, so a card's
+    `chips` list with no `chips_zh` beside it was invisible to it for twenty
+    blocks running. Anything rendered as a list of short strings belongs here.
+    """
+    PAIRS = ("chips", "items", "checklist", "antipatterns", "careerPaths", "openQuestions")
+    out = []
+
+    def walk(node, path, where):
+        if isinstance(node, dict):
+            for k in PAIRS:
+                v = node.get(k)
+                if isinstance(v, list) and v and all(isinstance(x, str) for x in v):
+                    z = node.get(k + "_zh")
+                    if not z:
+                        out.append((path, "%s: %d untranslated" % (k, len(v)), where(node)))
+                    elif len(z) != len(v):
+                        out.append((path, "%s_zh: %d vs %d" % (k, len(z), len(v)), where(node)))
+            for kk, vv in node.items():
+                walk(vv, path, where)
+        elif isinstance(node, list):
+            for x in node:
+                walk(x, path, where)
+
+    def label(n):
+        for k in ("title", "id", "kicker"):
+            if isinstance(n.get(k), str):
+                return n[k][:40]
+        return ""
+
+    for path in sorted(glob.glob(os.path.join(root, "**", "*.json"), recursive=True)):
+        try:
+            doc = json.load(io.open(path, encoding="utf-8"))
+        except (ValueError, OSError) as e:
+            print("  parallel-array audit could not read %s: %s" % (path, e))
+            continue
+        walk(doc, path, label)
+    return out
+
+
 def char_audit(root="research"):
     """Flag Simplified characters, Cyrillic, Greek runs and English words
     stranded inside Chinese prose. Returns a list of (path, kind, sample)."""
@@ -618,6 +661,14 @@ def main():
         print("\nstill missing a file (Top 10 or special-prize winner):")
         for m in missing:
             print("  -", m)
+    pa = parallel_audit()
+    if pa:
+        n = sum(int(k.split(":")[1].split()[0]) for _, k, _ in pa if "untranslated" in k)
+        print("\nparallel-array audit \u2014 %d lists unpaired (%d strings):" % (len(pa), n))
+        for path, kind, sample in pa[:20]:
+            print("  %-46s %-26s %s" % (path, kind, sample))
+        if len(pa) > 20:
+            print("  ... and %d more" % (len(pa) - 20))
     ch = char_audit()
     if ch:
         print("\ncharacter audit — %d to look at:" % len(ch))

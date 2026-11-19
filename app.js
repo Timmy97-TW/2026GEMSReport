@@ -64,8 +64,13 @@
   }
 
   /* ---------- small builders ---------- */
-  function chips(arr, cls, max) {
+  // zh is an optional parallel array; fall back per element, so a half-translated
+  // list still shows Chinese for the entries that have it
+  function chips(arr, cls, max, zh) {
     if (!arr || !arr.length) return "";
+    if (LANG === "zh" && zh && zh.length) {
+      arr = arr.map(function (x, i) { return zh[i] || x; });
+    }
     var a = max ? arr.slice(0, max) : arr;
     var extra = max && arr.length > max ? '<span class="chip">+' + (arr.length - max) + "</span>" : "";
     return '<div class="chips">' + a.map(function (x) {
@@ -114,7 +119,7 @@
 
     // grand prize
     h += '<section class="sec"><div class="wrap">' +
-      sechead("Headline results", "The 2026 podium", "2026 年頒獎台",
+      sechead(L("Headline results", "重點結果"), "The 2026 podium", "2026 年頒獎台",
         "Three sections, three Grand Prizes. Read the villages as much as the names — they show where the competition's centre of gravity sat this year.",
         "三個組別、三座大獎。看 village 比看隊名更有意義——它顯示了今年競賽的重心所在。") +
       '<div class="grid g3">';
@@ -170,14 +175,14 @@
     });
     return blocks.map(function (b) {
       var h = '<section class="sec"><div class="wrap">' +
-        sechead(b.kicker || "", T(b, "title"), T(b, "title"), T(b, "lede"), T(b, "lede"));
+        sechead(T(b, "kicker") || "", T(b, "title"), T(b, "title"), T(b, "lede"), T(b, "lede"));
       if (b.body) h += '<div class="panel" style="max-width:none">' + paras(T(b, "body")) + "</div>";
       if (b.cards && b.cards.length) {
         h += '<div class="grid ' + (b.cards.length > 3 ? "g3" : "g2") + '" style="margin-top:16px">' +
           b.cards.map(function (c) {
             return '<div class="card lift">' + (c.kicker ? '<div class="k">' + esc(T(c, "kicker")) + "</div>" : "") +
               "<h4>" + esc(T(c, "title")) + "</h4>" + paras(T(c, "body")) +
-              (c.chips ? chips(c.chips, "b") : "") +
+              (c.chips ? chips(c.chips, "b", 0, c.chips_zh) : "") +
               (c.link ? '<p style="margin-top:12px"><a href="#' + esc(c.link) + '" style="font-size:13.5px;font-weight:620">' +
                 esc(T(c, "linkText") || L("Read the analysis →", "閱讀完整分析 →")) + "</a></p>" : "") +
               "</div>";
