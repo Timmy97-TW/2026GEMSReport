@@ -1073,3 +1073,98 @@ plain curl with a browser User-Agent):
 From `https://2026.igem.wiki/gems-taiwan/model` (HTTP 200, 129 KB), both quotes verbatim:
 - *"The reactor therefore cannot be scheduled from the forecast."*
 - *"Payback 68 years on our loss figure; Geospatial Analysis says 4.9"*
+
+### The finding of session 5: GEMS won the 2024 High School Grand Prize
+
+This surfaced sideways. The award-economics analyst, reading three seasons of cached award results to build its
+category table, reported in passing that 2024 is the season GEMS-Taiwan won the high-school Grand Prize. I
+verified it directly rather than taking it on trust, and it is correct:
+
+| Season | Placing | Wins | Nominations |
+|---|---|---|---|
+| **2024** | **Grand Prize Winner · Finalist · Top 10 · Gold** | Best Wiki, Best New Basic Part, Best Project Promotion Video | Best Model, Best Education, Best Presentation |
+| 2025 | Top 10 · Gold | **none** | Measurement, Model, Education, Wiki, Best Village Project |
+| 2026 | Top 10 · Gold · **not a Finalist** | Measurement, Hardware, Integrated Human Practices | Presentation, Wiki, Best Village Project |
+
+And: **GEMS-Taiwan and Lambert-GA are the only two teams in the High School Top 10 in all three seasons
+2024-2026**, each winning exactly one Grand Prize in that span — GEMS in 2024, Lambert in 2026.
+
+**This was a framing error in the published judging tab, not a missing detail.** The tab was built to answer
+"what do finalists have that GEMS lacks", when GEMS had already been one. The honest question is narrower and
+far more answerable: *GEMS cleared this bar in 2024 and has not since — what changed?* The fact now opens
+`judging-criteria` in the lede, in a new second body paragraph and in the method note, and it has an overview
+index card. Before this session the 2024 Grand Prize appeared **nowhere** in the report — not in the judging
+blocks, not in `multiyear-continuity`, not on the overview.
+
+The shape of the three records is the lead the next session should pull on, and it is already recorded on the
+tab as a hypothesis rather than a finding: **2024's wins were Best Wiki, Best New Basic Part and the promotion
+video; 2026's were Measurement, Hardware and Integrated Human Practices.** Pooled over three seasons, Best Wiki
+nominees also take a Top 10 **60%** of the time and Best Presentation **53%**, against **22%** for Measurement
+and **21%** for Hardware. In 2024 GEMS won the whole-project communication award; in 2026 it won three
+single-dimension awards and was only nominated for the communication ones. An agent is reading all three GEMS
+wikis against that hypothesis for a `gems-three-seasons` block (judging, order 7). It may break — one team,
+one data point a season, and the cohort and project change every year.
+
+### Wave 7 results: the two relaunched analyses
+
+Both were restarted from the cached scratchpad data, both reproduced every figure I had verified
+independently, and both are published on the judging tab.
+
+**`village-baserates` (judging 40) — a null, and it kills the premise I gave the agent.** I briefed it that
+the per-village base rate "is the number GEMS needs to choose a village for 2027". It is not, and the agent
+showed why. Of 147 accepted high-school teams, 47 were decorated (32.0%) and 10 took a Top 10 place. The
+per-village spread, 2 of 17 in Agriculture up to 12 of 23 in Biomanufacturing, is **not distinguishable from
+147 teams decorated independently at 32%** (chi-square 19.64 on 12 df, Monte-Carlo p = 0.088 over 100,000
+draws holding real village sizes). Joined to 2025 by village name, the only property that carries is
+crowding: entrant count r = +0.906 (p < 0.0001), while Top 10 rate r = +0.171 (p = 0.575) and Gold rate
+r = +0.346 (p = 0.244). Broad decoration rate does persist at r = +0.673 (p = 0.005) and survives a size
+control, but it leaves a 13.0 pp out-of-sample error and falls to r = +0.600, p = 0.153 among the seven
+villages with 10 or more high-school teams both years — reported as a weak instrument, not a lever. Also
+measured: high-school teams get **0.63×** an undergraduate team's odds on a village award (20 of 147 against
+60 of 276), and GEMS's own Biomanufacturing was both the most crowded high-school field (23 of 147, the
+largest) and the most decorated (12 of 23, z = +2.08), taking **all five** of its group's Best Village
+Project citations and leaving none for the group's other eight teams.
+
+One thing I corrected after delivery: the four group labels in its table — Environment, Food & Consumer,
+Health, Advanced & Manufacturing — are **this report's own shorthand**, because the API gives those four
+award objects no distinguishing title. The method note now says so, and the first card lists each group's
+villages in full.
+
+**`award-economics` (judging 50) — the reframing of the circularity is the finding.** Pooled over 2024-26 the
+17 special categories nominate between 3 and 26 teams, and the share of each category's nominees who also
+took a Top 10 runs from 60% to 0%: Best Wiki 60% (49/81), Best Presentation 53% (42/79), Best Model 50%
+(20/40), Integrated Human Practices 45% (17/38), down through Measurement 22% and Hardware 21% to Best New
+Basic Part 9%, SDI 10%, and 0% for Alternative Platform, Safety and New Improved Part. The agent refused the
+easy reading and the block says why: Wiki and Presentation are judged on how the whole project is
+*communicated*, which is the same material a Top 10 judgement works on, so the number predicts nothing and
+instead **maps which categories proxy a whole-project verdict and which certify one isolated dimension**.
+That is the same structure the tab already argued from the other direction — GEMS won three categories and
+missed the podium because categories are judged one dimension at a time.
+
+It also corrected my brief on a point of fact. I had written that GEMS "was nominated in the two
+highest-co-occurrence categories and converted neither". The 60%/53% figures are about co-occurrence with a
+**Top 10**, and GEMS placed Top 10 in all three seasons, so the co-occurrence held; what did not convert was
+the category win. Other verified figures from it: high-school citation slots were 74 in 2024, 80 in 2025 and
+82 in 2026, GEMS held 5, 4 and 5 of them and was the **most-cited high-school team of 2026**; five categories
+have offered a constant high-school slate for three seasons (Model, Education, Presentation, Wiki, IHP); and
+GEMS has never been cited in **9 of the 17** categories, though several of those are thin for high-school
+teams generally rather than a GEMS-specific gap (Alternative Platform 0/0/1 high-school nominees, Software
+0/1/1, Safety 0/1/0).
+
+### The character audit held 41 Simplified forms and was letting slips through
+
+Writing the reframing I introduced a Simplified 张 into a method note through a mistyped escape, and the build
+said nothing. `char_audit` does screen Simplified characters, but against a `SIMPLIFIED` map that held only 41
+entries and did not include it. The map now holds **144** active forms. On its first run it immediately caught
+two more of my own slips — a Simplified 门 in 门檻 in both `findings-index` and `judging-criteria`, from the
+same class of mistyped escape — plus a pre-existing 条目 in `good-pipeline`. All three are fixed.
+
+Two characters were tried and **removed** rather than kept: 后 is correct Traditional in 蟻后 and in mainland
+place names such as 台州后安村, and 并 is correct in fused-ring chemical nomenclature such as 二苯并噻吩.
+Both produced false positives on existing team files on the first run. Forms that are themselves valid
+Traditional characters — 台, 制, 里, 干, 只 — are deliberately absent for the same reason. An audit with false
+positives gets ignored, which is worse than a narrower one.
+
+**Lesson for anyone writing Chinese into these files: do not hand-write `\uXXXX` escapes.** Three of the four
+character errors this session came from them (门 for 門, 张 for 張, 制 for 製). Write the characters literally
+in a UTF-8 heredoc with `PYTHONUTF8=1` and let the audit check the result.

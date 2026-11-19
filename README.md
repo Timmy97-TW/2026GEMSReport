@@ -22,11 +22,31 @@ English and Traditional Chinese throughout; the switch is top right and is remem
 ## What the analysis found
 
 Original cross-team analyses sit on the site, one per tab section. The **Judging** tab is the newest and the
-most specific: iGEM records a *Finalist* designation, and in the 2026 High School section 147 teams entered,
-10 reached the Top 10 and only 2 were named Finalists. That tab reads Lambert-GA (Grand Prize),
-HongKong-JSS (1st Runner-up) and GEMS-Taiwan against eight of the nine questions iGEM uses to choose
-finalists, then applies the same lens to the whole High School Top 10. The short version of everything else:
+most specific. iGEM records a *Finalist* designation, and in the 2026 High School section 147 teams entered,
+10 reached the Top 10 and only 2 were named Finalists — and across 2024, 2025 and 2026 alike that designation
+falls on exactly the podium, seven teams a year, so it names the podium rather than a wider round. The tab
+reads Lambert-GA (Grand Prize), HongKong-JSS (1st Runner-up) and GEMS-Taiwan against eight of the nine
+questions iGEM uses to choose finalists, applies the same lens to the whole High School Top 10, and then asks
+where a high-school team can compete at all: per-village base rates across all 423 accepted teams, and the
+nominee economics of all 17 special categories over three seasons.
 
+It opens on a fact that changes the question. **GEMS-Taiwan won the 2024 High School Grand Prize**, and was a
+Finalist that year; it and Lambert-GA are the only two High School teams in the Top 10 in all three seasons,
+each with one Grand Prize in that span. So this is not an account of a bar the team has never reached, but of
+one it cleared in 2024 and has not cleared since. The short version of everything else:
+
+- **Choosing a village is not a lever, and at high-school level there are four doors, not thirteen.** Of 147
+  accepted High School teams, 47 were decorated (32.0%). The per-village spread, 2 of 17 in Agriculture up to
+  12 of 23 in Biomanufacturing, is not distinguishable from 147 teams decorated independently at 32%
+  (chi-square 19.64 on 12 df, Monte-Carlo p = 0.088). Year to year only crowding carries (r = +0.91); what a
+  village pays does not (Top 10 rate r = +0.17). High-school village awards come from four pooled groups —
+  20 citations, 1 in 5.6 to 1 in 9.6 — which is 0.63× an undergraduate team's odds.
+- **Four award categories behave like a whole-project verdict; most certify one dimension.** Pooled over
+  2024–26, the share of a category's nominees who also took a Top 10 runs from Best Wiki at 60% and Best
+  Presentation at 53% down to 0% for Safety, Alternative Platform and New Improved Part. GEMS's three 2026
+  wins sit at 45%, 22% and 21%. The figure is near-circular and the analysis says so — Wiki and Presentation
+  are judged on how the whole project is communicated, which is the material a Top 10 judgement works on — so
+  it maps the categories rather than predicting anything.
 - **Closing the model–data loop is the single best predictor of a Top 10.** Teams that both fit a model to
   their own measured data *and* validate it against something held back reached a Top 10 at 53%, against 23%
   for those that did not. All nine who closed the loop without a Top 10 won or were nominated for a major special prize anyway.
