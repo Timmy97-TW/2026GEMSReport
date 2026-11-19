@@ -556,6 +556,14 @@ def main():
             continue
         blk.setdefault("tab", "overview")
         insights.append(blk)
+    # The findings index names how many findings it lists. Set that from the
+    # cards, so adding an analysis can never leave a stale number on the page.
+    for blk in insights:
+        if blk.get("id") == "findings-index":
+            n = len(blk.get("cards") or [])
+            blk["title"] = "%d findings, and where to read each one" % n
+            blk["title_zh"] = "%d 個發現，以及各自該讀哪一頁" % n
+
     # `order` lets an analysis block sit above the written framing on its tab
     # (default 50). Python's sort is stable, so equal orders keep file order.
     report["sections"] = sorted((report.get("sections") or []) + insights,

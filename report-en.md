@@ -14,7 +14,7 @@ A review of the iGEM 2026 Top 10 teams across all three sections, every special 
 
 # Overview
 
-## Nine findings, and where to read each one
+## 10 findings, and where to read each one
 
 _The 2026 Best Wiki winners all build a layer like this — each claim in two sentences, with a link straight to the evidence. It works, so this report does it too._
 
