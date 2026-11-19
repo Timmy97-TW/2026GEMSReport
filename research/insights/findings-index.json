@@ -350,6 +350,23 @@
     "最小的 Top 10：9 名學生"
    ],
    "link": "teams"
+  },
+  {
+   "kicker": "Judging",
+   "kicker_zh": "評審",
+   "title": "Three special awards did not make a finalist",
+   "title_zh": "三個特別獎換不到一席決賽",
+   "body": "iGEM records a designation this report had not used before: **Finalist**. In the 2026 High School section, 147 teams entered, 10 made the Top 10, and **2 were named Finalists**. GEMS-Taiwan was not one of them, while holding three of the 17 section-level awards won across the entire section — the same count of special wins as the Grand Prize winner. The team that came second won no special award at all. A medal is a checklist, a special award is one dimension, and the finalist slate is the whole project judged on nine questions. The Judging tab works through eight of them with evidence.",
+   "body_zh": "iGEM 記錄了一個本報告先前沒有用過的身分：**Finalist（決賽入選）**。2026 年高中組有 147 支隊伍參賽、10 支進入 Top 10，而**只有 2 支被列為 Finalist**。GEMS-Taiwan 不在其中，但它握有整個組別總共 17 項組別層級獎項中的三項——特別獎得獎數與總冠軍相同。而拿到亞軍的那支隊伍，一個特別獎也沒有。獎牌是一張檢核表，特別獎是單一面向，決賽名單則是整個專案被九道問題評出來的結果。「評審標準」頁用證據逐一處理其中八道。",
+   "chips": [
+    "2 finalists of 10",
+    "147 teams entered"
+   ],
+   "chips_zh": [
+    "10 支中 2 席決賽",
+    "147 支隊伍參賽"
+   ],
+   "link": "judging"
   }
  ],
  "method": "Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see.",

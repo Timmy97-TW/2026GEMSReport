@@ -21,7 +21,11 @@ English and Traditional Chinese throughout; the switch is top right and is remem
 
 ## What the analysis found
 
-Twenty-four original cross-team analyses sit on the site. The short version:
+Original cross-team analyses sit on the site, one per tab section. The **Judging** tab is the newest and the
+most specific: iGEM records a *Finalist* designation, and in the 2026 High School section 147 teams entered,
+10 reached the Top 10 and only 2 were named Finalists. That tab reads Lambert-GA (Grand Prize),
+HongKong-JSS (1st Runner-up) and GEMS-Taiwan against eight of the nine questions iGEM uses to choose
+finalists, then applies the same lens to the whole High School Top 10. The short version of everything else:
 
 - **Closing the model–data loop is the single best predictor of a Top 10.** Teams that both fit a model to
   their own measured data *and* validate it against something held back reached a Top 10 at 53%, against 23%

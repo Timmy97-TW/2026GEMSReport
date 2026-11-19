@@ -14,7 +14,7 @@ A review of the iGEM 2026 Top 10 teams across all three sections, every special 
 
 # Overview
 
-## 21 findings, and where to read each one
+## 22 findings, and where to read each one
 
 _The 2026 Best Wiki winners all build a layer like this — each claim in two sentences, with a link straight to the evidence. It works, so this report does it too._
 
@@ -80,6 +80,9 @@ The suspicion going in was that outreach survives only as photographs of childre
 
 ### Size buys nothing — the smallest Top 10 team had nine students
 Across 84 decorated teams, headcount and award count correlate at **0.06** (Spearman, p = 0.61), and within every section the Top 10 teams are statistically indistinguishable in size. Medians: high school 17.5, undergraduate 17, overgraduate 12.5. **Princeton reached 2nd runner-up Grand Prize with nine undergraduates** — and four named scientists behind them, one chassis reused across three applications, and a binder pipeline that made a new target cost compute instead of hands. The substitution for people is scope, software and supervision.
+
+### Three special awards did not make a finalist
+iGEM records a designation this report had not used before: **Finalist**. In the 2026 High School section, 147 teams entered, 10 made the Top 10, and **2 were named Finalists**. GEMS-Taiwan was not one of them, while holding three of the 17 section-level awards won across the entire section — the same count of special wins as the Grand Prize winner. The team that came second won no special award at all. A medal is a checklist, a special award is one dimension, and the finalist slate is the whole project judged on nine questions. The Judging tab works through eight of them with evidence.
 
 _Method and limits. Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see._
 
