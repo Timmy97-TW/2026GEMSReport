@@ -72,6 +72,46 @@ GEMS Research already stands in that gap. ReLEAF was a CcaS/CcaR optogenetic cir
 
 There is a second, blunter finding underneath this. Taiwan's state-backed biotechnology push is a manufacturing play — contract development and manufacturing, GMP capacity — with no visible synthetic-biology **design** layer, while Singapore and Israel are explicitly funding exactly that layer. A small institution cannot out-build a CDMO. It can occupy the design position that nobody in Taiwan currently holds.
 
+## How the best teams made complex data honest, not just pretty
+
+_The visualisation work that stood out in 2026 was not the most beautiful. It was the work that made it impossible to misread the data._
+
+Almost every 2026 wiki has charts. The ones worth studying share a single instinct: **they build the reader's doubt into the picture**.
+
+The clearest example is **GEMS-Taiwan**'s provenance colour-coding. Its dose ledger is drawn as one top-to-bottom chain, from 1.67 mL on a 10 cm plate down to US$3,800 of capital per hectare, with a rail running down the left that is green while every row still rests on a measurement and **turns amber at the rice canopy correction** — so a reader sees exactly where measurement stops and modelling begins. Every model input is tabulated with a provenance column. **TU Delft** does the same thing in a different register, labelling every cell of its decision matrix Factual, Inferred, Estimated or Speculative, with a legend stating that the tag records the evidence and not the judgement. **BOKU-Vienna** attaches a parameter-provenance table to its interactive widget. **XJTLU-China** runs an evidence-coverage track underneath its priority profiles, so a high score sitting on thin evidence cannot be mistaken for a finding.
+
+The second instinct is **a state that refuses to be misread**. **DKU**'s safety panel resolves to four verdicts rather than three — clear, exceeded, borderline, and *not assessed* — precisely so an unmeasured gate can never be read as a passed one; 198 of its 496 constructs carry no immunogenicity measurement, and the interface says so rather than showing a zero. It goes further: because the MHC class I predictor accepts only 5-15 residue peptides and returns zero outside that window, a stored zero is explicitly not presented as evidence of low immunogenicity. **GHCIS** ships the same idea in its colour classifier, with an explicit "unresolved, and must not be treated as Negative" state. **UMA Malaga** conveys status by shape and text rather than colour alone.
+
+The third is **telling the reader how to read it**. BOKU-Vienna puts an explicit "How to read this graph" panel beside each one. XJTLU-China numbers eighteen model figures so they read as a single argument rather than a gallery, aligning six normalised feature tracks above a composite score so you can see which feature drove a peak.
+
+The fourth is **captions that carry the whole experiment**. **Mingdao**'s figures are plain, and that is the point — each names the instrument (a BioTek Synergy H1 plate reader; a FORA G31 glucose meter, range 20-600 mg/dL), the buffer, the temperature, the replicate count and the error measure, links its own raw CSV by filename, and where error bars are too small to see, *the caption says so* and points at the table of values.
+
+The fifth is **showing the absences**. **DTU-Denmark**'s interactive stakeholder map colour-codes each pin by engagement status so that non-responses stay visible, and the team names the organisations that never replied. **BNDS-China** prints a caveat directly on its influence map stating that appearing on it does not mean an interview took place.
+
+And a note on accessibility, because the wiki analysis found that late alt-text compliance sweeps correlate with nothing. **BAID-China** shows what doing it properly looks like instead: every chart on the wiki redrawn in the eight-colour Okabe-Ito colour-blind-safe palette, chosen for luminance separation so the figures survive greyscale, with a published colour-blindness simulation verifying that elements stay distinguishable under red-green, blue-yellow and total colour-blindness. That is a design decision taken at the start, not a checkbox at the end.
+
+Interactivity, finally, earns its place only when it lets the reader change something. **UPF-Barcelona**'s RK4 solver gives every parameter a live slider that takes effect *during* the running simulation. BOKU-Vienna's trade-off widget moves a vitamin flux against growth rate with the team's own measured points overlaid. DTU-Denmark's process-flow diagram zooms from a five-route overview into the enzymatic routes with every parameter printed on the box - acid molarity, temperature, residence time, enzyme loading, number of reuses. An animation that only plays is decoration; a control that changes the answer is an argument.
+
+### Colour the rail where measurement stops
+GEMS-Taiwan draws its dose ledger as one chain from 1.67 mL on a plate to US$3,800 per hectare, with a rail down the left that is green while each row rests on a measurement and turns amber at the rice canopy correction. Anyone can see where the evidence ends. TU Delft does the same with Factual / Inferred / Estimated / Speculative tags on every cell of its decision matrix.
+
+### Give "not assessed" its own state
+DKU's safety panel resolves to clear, exceeded, borderline and not assessed — four verdicts, so an unmeasured gate can never read as a passed one. 198 of its 496 constructs have no immunogenicity measurement and the interface says so instead of showing a zero. GHCIS ships the same idea as "unresolved, and must not be treated as Negative".
+
+### Put the whole experiment in the caption
+Mingdao's figures are plain and rigorous. Each names the instrument, the buffer, the temperature, the replicate count and the error measure, and links its own raw CSV by filename. Where the error bars are too small to see, the caption says so and points at the table of values. A figure a reader can audit beats a figure a reader can admire.
+
+### Show who did not reply
+DTU-Denmark colour-codes every pin on its stakeholder map by engagement status, so non-responses stay visible, and names the organisations that never answered. BNDS-China prints the caveat on its influence map that appearing there does not mean an interview happened. A map with no gaps is a map that has been tidied.
+
+### BAID-China redrew every chart in a colour-blind-safe palette
+The eight-colour Okabe-Ito palette, chosen for luminance separation so the figures survive greyscale, with a published colour-blindness simulation verifying that elements stay distinguishable under red-green, blue-yellow and total colour-blindness. The wiki analysis found late alt-text sweeps correlate with nothing; this is the alternative — a decision taken at the start.
+
+### Interactivity only counts if the reader can change the answer
+UPF-Barcelona gives every parameter a live slider that takes effect during the running simulation. BOKU-Vienna moves vitamin flux against growth rate with the team's own measured points overlaid and a "How to read this graph" panel beside it. DTU prints every parameter on the box of a zoomable process diagram. An animation that only plays is decoration.
+
+_Method and limits. Drawn from the dataviz field of every team file in this report, each researched from the team's own 2026 wiki. Interactive behaviour is as the analysts described it after opening the pages; we have not re-tested every widget here. The examples are chosen because they illustrate a transferable device, not because they are the only teams doing good work. GEMS-Taiwan is the report author's own team and appears on the same terms as the rest._
+
 ## What separated real engagement from outreach theatre
 
 _Across the 2026 field, the teams whose Science for Good work counted did four things the rest did not._

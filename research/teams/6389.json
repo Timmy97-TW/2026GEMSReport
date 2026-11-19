@@ -17,8 +17,39 @@
     "dataviz": "DataSUS and IBGE epidemiology is visualised as time series of hospitalisations and costs (2020-2026), choropleth maps of Brazil by state and of the seven ABC Paulista municipalities normalised per 10,000 inhabitants using IBGE SIDRA Tabela 6579, stacked contributions of epilepsy to all nervous-system disease hospitalisations and costs, Likert distributions for the 44-respondent survey, a before-and-after SWOT matrix pair, and a two-axis stakeholder interest-versus-influence matrix built from scores each interviewee gave on a 0-10 scale.",
     "datascience": "Two reproducible pipelines, both published on GitLab. The tRF quantification pipeline reanalyses the Hogg et al. (2019) small RNA-seq dataset across two collection sites: fastp preprocessing (minimum Phred 20, 15-50 nt), Bowtie2 alignment to a tRNA reference in --very-sensitive-local mode reporting up to 10 alignments per read because of tRNA similarity, and Samtools handling, quantifying at both isoacceptor and individual-fragment level as a built-in consistency check. The cross-reactivity pipeline runs BLASTn of query sequences against a genome panel and classifies alignments by similarity tier; run with three complete tRNA sequences against 150 E. coli genome assemblies it produced 12,480 unique alignments, predominantly moderate similarity, before anything was tested in the chassis.",
     "software": "A Python acquisition and processing application drives the ESP32 and AS7341 across ten spectral channels, with background correction added after the first run saturated channels F2, F4, F5, F6, F7 and Clear at 65,535, and with raw readings preserved separately from background-corrected values for traceability plus an export function. A mobile prototype built in MIT App Inventor records readings, keeps a diary and raises an alert when a previously registered value recurs; the team states clearly that automatic sensor integration and spectral-marker interpretation were not completed.",
-    "stack": ["NUPACK", "RNAComposer", "HADDOCK3", "GROMACS 2024", "AMBER99SB-ILDN / TIP3P", "fastp", "Bowtie2", "Samtools", "BLASTn", "Python", "Arduino / ESP32", "AS7341 multispectral sensor", "MIT App Inventor", "React", "GSAP", "GitLab"],
-    "techniques": ["toehold switch thermodynamic design", "RNA-RNA molecular docking", "all-atom molecular dynamics (RMSD, Rg, H-bonds, RMSF)", "small RNA-seq tRF quantification at isoacceptor and fragment level", "BLASTn cross-reactivity screening against a 150-genome panel", "3D-printed low-cost spectrophotometry", "cell-free (CFPS and PURExpress) and whole-cell reporter assays", "DataSUS/IBGE epidemiological analysis", "survey-validated SWOT"]
+    "stack": [
+      "NUPACK",
+      "RNAComposer",
+      "HADDOCK3",
+      "GROMACS 2024",
+      "AMBER99SB-ILDN / TIP3P",
+      "fastp",
+      "Bowtie2",
+      "Samtools",
+      "BLASTn",
+      "Python",
+      "Arduino / ESP32",
+      "AS7341 multispectral sensor",
+      "MIT App Inventor",
+      "React",
+      "GSAP",
+      "GitLab"
+    ],
+    "techniques": [
+      "toehold switch thermodynamic design",
+      "RNA-RNA molecular docking",
+      "all-atom molecular dynamics (RMSD, Rg, H-bonds, RMSF)",
+      "small RNA-seq tRF quantification at isoacceptor and fragment level",
+      "BLASTn cross-reactivity screening against a 150-genome panel",
+      "3D-printed low-cost spectrophotometry",
+      "cell-free (CFPS and PURExpress) and whole-cell reporter assays",
+      "DataSUS/IBGE epidemiological analysis",
+      "survey-validated SWOT"
+    ],
+    "frameworks_zh": "設計依循 Green 等人（2014）的 toehold 架構，但把辨識區改寫為各標的 tRF 的互補序列，並以明確的序列模式約束 c 與 d 兩個區域（c 最初定義為 N4VVVVVVVGAGGAGAWWWWN2AUG，後修訂為 N4VVVVVVVAGAGGAGAWWWWN2AUG，多加一個腺嘌呤以拓寬 RBS；d 區則禁止 A4/C4/G4/U4/K6/M6/R6/S6/W6/Y6 連續段與終止密碼子）。候選序列由自製腳本產生，第一輪 30 個、第二輪每個標的 80 個，再於 NUPACK 中依平衡機率、預測摺疊、toehold 單獨與 toehold—標的複合物的自由能，以及股置換機率排序。結構以 RNAComposer 建立、以 HADDOCK3 嵌合，複合物則在 GROMACS 2024 中模擬（最陡下降能量最小化、100 ps NVT、1 ns NPT，AMBER99SB-ILDN 力場，週期性十二面體盒中的顯式 TIP3P 水，0.15 M Na+/Cl-，Particle Mesh Ewald，1.0 nm 截斷），並報告 RMSD、迴轉半徑、氫鍵數與逐核苷酸 RMSF。三個開關已存入 Registry。",
+    "dataviz_zh": "DataSUS 與 IBGE 的流行病學資料以多種形式視覺化：住院數與費用的時間序列（2020-2026）、依州別呈現巴西全境的分級統計地圖，以及以 IBGE SIDRA Tabela 6579 每萬人正規化的 ABC Paulista 七個行政區地圖；另有癲癇在全部神經系統疾病住院數與費用中所佔比例的堆疊圖、44 位回覆者問卷的李克特分布、前後對照的兩張 SWOT 矩陣，以及一張雙軸的利害關係人「興趣對影響力」矩陣，分數由每位受訪者自行以 0-10 評定。",
+    "datascience_zh": "兩條可重現的管線，皆公開於 GitLab。tRF 定量管線重新分析 Hogg 等人（2019）的小 RNA-seq 資料集、涵蓋兩個採樣地點：以 fastp 前處理（最低 Phred 20、15-50 nt），以 Bowtie2 在 --very-sensitive-local 模式下對 tRNA 參考序列比對，並因 tRNA 彼此相似而每條 read 回報最多 10 個比對位置，再以 Samtools 處理，同時在 isoacceptor 與單一片段兩個層級定量作為內建的一致性檢核。交叉反應管線則以 BLASTn 把查詢序列比對一組基因組，並依相似度分級歸類；以三條完整 tRNA 序列對 150 個 E. coli 基因組組裝執行，產生 12,480 個獨特比對結果、以中度相似為主，而這一切都在載體中進行任何測試之前完成。",
+    "software_zh": "一個 Python 擷取與處理應用程式驅動 ESP32 與 AS7341、橫跨十個光譜通道；在第一次執行時 F2、F4、F5、F6、F7 與 Clear 通道在 65,535 處飽和後，加入了背景校正，並把原始讀值與背景校正後的數值分開保存以利追溯，另附匯出功能。一個以 MIT App Inventor 建置的手機原型可記錄讀值、維護日誌，並在先前登錄過的數值再次出現時發出警示；團隊明確說明自動感測器整合與光譜標記解讀並未完成。"
   },
   "good": {
     "publicEngagement": "Engagement was built around stigma rather than around the technology. The team joined the Marco Roxo awareness walk organised by the Brazilian Epilepsy Association (ABE) in Sao Paulo in March 2026, produced an original documentary, 'Epilepsy: What You Don't See', featuring people living with epilepsy and their relatives, and on 29 September 2026 screened it with ABE followed by a roundtable with a pediatric neurologist (Dr. Daniela Bezerra), a person living with epilepsy (Gustavo Theodoro) and the mother of a child with a rare neurological condition associated with epilepsy (Angelica Akemi). Educational work was gamified: escape rooms in public state schools across the ABC region during Brain Awareness Week (10-14 March 2025, with Pense Brain and faculty, for 9th grade to 3rd year of high school, using puzzles, quizzes and 3D skull and brain models), and a synthetic-biology escape room at UFABC for Biotechnologist Day with LiNA Biotecnologia UFABC in which teams assembled complementary DNA sequences and constructed plasmids. Explanatory flyers were written separately for young people and for older adults, on the reasoning that informational needs differ by group, and they teach bystanders how to assist during a seizure safely. An Introduction to Synthetic Biology mini-course, a poster and talks at the II Brazilian Synthetic Biology Congress, Bio's Start and Semana de Biotecnologia round it out. The team also published a funding guide, 'Overcoming Financial Barriers in Brazil: A Guide to Public and Private Funding', documenting how a parliamentary amendment actually works and how to approach companies in a structured way, because Brazilian teams cannot cover iGEM registration or Jamboree travel from conventional research grants.",
@@ -39,28 +70,35 @@
       "Luiz Caires, Vyro Biotechnologies; Fabricio Pamplona, Mind the Graph",
       "Pense Brain and LiNA Biotecnologia UFABC",
       "FAPESP, CNPEM, INCT-EngBio, Inova UFABC, FUNDEP (UFMG), MathWorks, Twist Bioscience, IDT, GenScript, Ansa Biotechnologies"
-    ]
+    ],
+    "publicEngagement_zh": "參與活動是圍繞污名、而非圍繞技術建構起來的。團隊參加了巴西癲癇協會（ABE）2026 年 3 月在聖保羅舉辦的 Marco Roxo 宣導健走，製作了一部原創紀錄片《Epilepsy: What You Don't See》（癲癇：你看不見的事），由癲癇患者與其家屬出鏡，並在 2026 年 9 月 29 日與 ABE 一同放映，接著舉行圓桌論壇，與談者包括一位小兒神經科醫師（Dr. Daniela Bezerra）、一位癲癇患者（Gustavo Theodoro），以及一位孩子患有與癲癇相關罕見神經疾病的母親（Angelica Akemi）。教育工作則遊戲化：在腦科學週（2025 年 3 月 10-14 日）與 Pense Brain 及教師合作，在 ABC 地區各公立州立學校辦密室逃脫，對象是九年級到高三學生，使用謎題、問答與 3D 頭骨與腦部模型；另在 UFABC 的生技人日與 LiNA Biotecnologia UFABC 合辦一場合成生物學密室逃脫，參賽隊伍要組出互補的 DNA 序列並建構質體。說明傳單針對年輕人與高齡者分別撰寫，理由是不同群體的資訊需求不同，內容也教旁人如何在癲癇發作時安全協助。另有一門合成生物學入門短期課程，以及在第二屆巴西合成生物學大會、Bio's Start 與生物技術週的海報與演講。團隊還出版了一份募資指南《Overcoming Financial Barriers in Brazil: A Guide to Public and Private Funding》，記錄國會修正案補助實際上如何運作，以及如何有條理地接洽企業——因為巴西隊伍無法用一般研究補助支付 iGEM 註冊費或 Jamboree 的旅費。",
+    "ihp_zh": "整份 IHP 以一條四步因果鏈組織，而且是真正的整合、不只是諮詢。第一步問這個問題是否真實存在，使用 DataSUS（SIH/SUS）搭配 IBGE 人口分母：巴西的癲癇住院數從 2020 年的 49,204 例上升到 2025 年的 73,222 例（+48.8%），而其對 SUS 的費用則從 R$ 43,692,171 增至 R$ 92,460,210（+111.6%），因此每次住院的成本比住院數增加得更快；癲癇在全國占所有神經系統疾病住院數的 28-30%，在團隊自己的 ABC Paulista 地區則占 40-50%。關鍵的是，團隊會拿自己的地圖反過來檢驗自己：他們指出長年為巴西人類發展指數最高的 Sao Caetano do Sul 同時也是住院數最多的行政區，而這更可能反映的是就醫可及性而非疾病頻率，因此「真實負擔很可能大於 DataSUS 所能捕捉到的」；他們並引用 IEPS 的資料，指出法定亞馬遜地區前往 ICU 床位的平均交通時間為 3.3 小時，其他地區則為 0.3 小時。第二步把團隊內部的 SWOT 拿去問真正會使用這個裝置的人：透過 ABE 接觸、並經巴西研究倫理委員會核准，對 44 位癲癇患者做問卷，把每一條 SWOT 要點轉成一道李克特題目，並在看到結果之前就先宣告確認或推翻的判準。結果有兩項假設被推翻、矩陣被重畫：原先預期對個人健康資料的擔憂從「弱點」移到了「優勢」，而對「能預測發作的技術」的不信任則從「威脅」移到了「機會」。第三步是十一場經倫理核准的利害關係人訪談，橫跨研究、臨床實務、產業與公共政策，每場結束時請對方就興趣與影響力各打 0-10 分，據以建立利害關係人矩陣；團隊自己從中得出的結論是：對 Patchlepsy 能否觸及病患最有影響力的人不是技術開發者，而是臨床醫師、產業與公共政策。第四步才是設計真正移動的地方，而其中最有力的一條鏈是多方匯聚而非單一來源：有五位利害關係人出於五種不同理由，各自獨立地把他們推離「以微量吸管操作的無細胞反應」——Prof. Cintia Marques Coelho（UnB 合成生物學實驗室）說無細胞系統昂貴、需要冷藏、需要吸管操作與對照，會讓裝置變得難以取得；Fabricio Pamplona 從一開始就建議採用試紙形式與可攜性；Karen Uchiyama 特別建議使用濾紙，因為這能讓裝置更安全、也更容易為 ANVISA 留下文件；Amanda Mendes do Carmo（臨床研究藥師、市場准入）要求一個容易維護與攜帶的東西；而 Prof. Danielle Biscaro Pedrolli 堅持檢驗不能取決於使用者的資格。硬體因此圍繞一條插入 LED 與感測器之間溝槽的濾紙試紙重建，並把無細胞反應嵌入紙中列為明確宣告的下一步，依據是 Karlikow 等人（2022）——他們在 Recife 以病患樣本驗證了紙基無細胞 toehold 分析，每次檢驗 5.48 美元、相對 RT-qPCR 的 11 美元，且採冷凍乾燥、無須冷藏的形式。第二條鏈改變了 DNA 本身：Danielle 指出質體中的抗生素抗性基因排除了居家使用、也使廢棄處理複雜化；Karen 則補強說 ANVISA 會要求有文件記載的使用與棄置流程；而由於團隊從一開始就在 toehold 質體上保留了 BioBrick 前綴與後綴，他們能把構築做成不帶抗性標記的線性 DNA（在截稿時尚未測試，團隊也如實說明）。第三條鏈把滲漏變成核心技術問題：Prof. Elibio Rech、Danielle 與 Luiz Caires 各自獨立警告滲漏與生理狀態下的 tRF 濃度問題，因此團隊在自己的構築中以實驗鑑定滲漏，而不是依賴預測。另有兩項利害關係人意見是以誠實的降級、而非新增功能的方式被整合進來：Prof. Alexandre Kihara 讓團隊區分「預測即將發生的發作」與「監測發作易感性」，此後他們把自己的成果描述為 tRF 反應式感測的概念驗證，而非預測；Elibio 則指出他們的 tRF 證據來自單一族群、且存在性別差異，於是他們直言目前還不知道這些生物標記對誰適用。公立系統中 CAPS Nucleo de Atencao Casa Aberta 的精神科醫師 Dr. Cezzar Santos de Souza 讓他們看到：對於無法辨識或表達前驅症狀（aura）的智能障礙病患而言，警示只有在能傳達給其他人時才有用；加上 93.2% 的問卷回覆者表示早期偵測對照顧者有幫助，這成了一項確定的設計變更：警示會發送給一個已登錄的支持網絡。而因為有 40.9% 的人表示這樣的技術本身可能造成焦慮，他們決定警示必須傳達的是「某個時間窗內風險升高」以及「該怎麼做」，絕不把發作說成確定會發生，並由使用者自行選擇是否、以及如何接收警示。",
+    "realWorld_zh": "真實世界的立論在醫療體系經濟面異常具體，在永續性方面則異常單薄。需求扎根於 SUS 的資料，而不是引用全球盛行率，細到引述地方新聞報導「大 ABC 地區每八小時就有一人因癲癇住院」；獲益機制的陳述也很克制：事先知道並不能阻止發作，但可以讓人移動到安全的地方，並避免那筆推高成本的住院。法規路徑是因為一位利害關係人提起才被盤點出來的，而團隊也如實說明：在 Karen Uchiyama 指出文件要求之後，他們確認 Patchlepsy 在巴西會依 ANVISA RDC 830/2023 作為體外診斷產品受規範，而 ANVISA、FDA 與 EMA 透過 IMDRF 協調要求，並由此得出結論：使用與棄置流程必須與裝置一起設計，而不是事後補文件。任何未來涉及人體受試者或臨床樣本的工作都需要 CEP/CONEP 的倫理審查；專案本身使用合成的 tRF 模擬物，未使用任何病患檢體。部署計畫以 SUS 為導向：Amanda do Carmo 建議的路徑是先進入市場、再納入公共供給，價格則以高價抗癲癇藥物的成本作為對照來論證；而團隊自己的成本策略是自行開發無細胞系統，因為商用套組正是讓這類檢驗昂貴的主要原因之一。沒有商業模式、沒有單位經濟、也沒有市場規模估算。wiki 上任何地方也都沒有 SDG 的主張，連一面標誌牆都沒有——對一個背後有這麼多公共衛生資料的診斷專案來說，這是一個白白錯過的空門，而不是含糊其詞。真正被公開、而且會比 Jamboree 活得更久的，是那些可重複使用的東西：三個 Registry 部件、兩條管線、低成本光譜判讀器及其軟體、一份完整記錄的無細胞負面結果連同兩個假說與他們接下來會採取的排錯路線（以線性 PCR 表現模板取代環狀質體）、經問卷驗證的 SWOT 方法，以及那份巴西募資指南。下一步的技術工作是把無細胞反應嵌入紙中、在 Luiz Caires 提出靈敏度問題後提案的中介整合酶控制放大模組，以及依 Danielle 建議以質體依賴性或營養缺陷型篩選系統取代抗性標記。"
   },
   "images": [
     {
       "url": "https://static.igem.wiki/teams/6389/wiki/human-practices/integrated/fluxograma-hp-english.avif",
       "caption": "The four-step integrated human practices workflow: DataSUS epidemiology, SWOT validation with people with epilepsy, stakeholder interviews, and project refinement.",
-      "credit": "Team UFABC-Brazil, iGEM 2026 wiki"
+      "credit": "Team UFABC-Brazil, iGEM 2026 wiki",
+      "caption_zh": "四步整合式人類實踐流程：DataSUS 流行病學、與癲癇患者一起驗證 SWOT、利害關係人訪談，以及專案修正。"
     },
     {
       "url": "https://static.igem.wiki/teams/6389/wiki/human-practices/integrated/new-fig-18-ing.avif",
       "caption": "The four changes already made to Patchlepsy, each traced back to the survey, the SWOT validation or a named stakeholder interview.",
-      "credit": "Team UFABC-Brazil, iGEM 2026 wiki"
+      "credit": "Team UFABC-Brazil, iGEM 2026 wiki",
+      "caption_zh": "Patchlepsy 已完成的四項變更，每一項都可追溯回問卷、SWOT 驗證或某場指名的利害關係人訪談。"
     },
     {
       "url": "https://static.igem.wiki/teams/6389/wiki/human-practices/integrated/the-stakeholder-influence-mattrix-fig17.avif",
       "caption": "Stakeholder interest-versus-influence matrix, scored 0-10 by the interviewees themselves, which showed the team that clinicians, industry and policy hold more implementation power than technology developers.",
-      "credit": "Team UFABC-Brazil, iGEM 2026 wiki"
+      "credit": "Team UFABC-Brazil, iGEM 2026 wiki",
+      "caption_zh": "利害關係人的興趣對影響力矩陣，分數由受訪者自己以 0-10 評定；它讓團隊看到臨床醫師、產業與政策握有比技術開發者更大的落地權力。"
     },
     {
       "url": "https://static.igem.wiki/teams/6389/wiki/human-practices/public-outreach/documentario-toodos.avif",
       "caption": "Premiere of the team's documentary 'Epilepsy: What You Don't See' with the Brazilian Epilepsy Association, followed by a roundtable with a neurologist, a person living with epilepsy and a parent.",
-      "credit": "Team UFABC-Brazil, iGEM 2026 wiki"
+      "credit": "Team UFABC-Brazil, iGEM 2026 wiki",
+      "caption_zh": "團隊紀錄片《Epilepsy: What You Don't See》與巴西癲癇協會合辦的首映，隨後與一位神經科醫師、一位癲癇患者及一位家長舉行圓桌論壇。"
     }
   ],
   "gemsTakeaway": "Copy the survey-validated SWOT: write your internal SWOT first, convert every point into a question your actual users can answer, declare the confirmation or refutation rule before you see the data, then redraw the matrix. UFABC had two assumptions refuted this way, which is exactly the kind of error a team never finds by assessing itself.",
@@ -81,5 +119,9 @@
     "https://2026.igem.wiki/ufabc-brazil/public-outreach",
     "https://2026.igem.wiki/ufabc-brazil/safety-and-security",
     "https://2026.igem.wiki/ufabc-brazil/attributions"
-  ]
+  ],
+  "projectTitle_zh": "Patchlepsy",
+  "tagline_zh": "一款以紙張判讀的 toehold 生物感測器，提供癲癇患者最缺乏的一件東西：預警時間。",
+  "summary_zh": "Patchlepsy 是一個 toehold switch 生物感測器，設計用來偵測三種 tRNA 衍生片段（5'GlyGCC、5'AlaTGC、5'GluCTC）——根據 Hogg 等人（2019）的報告，這些片段在顳葉癲癇患者發作前的血漿濃度會上升。每個開關各釋出一種不同的色素蛋白報告子（mRFP1、AmilCP、fwYellow），再由一台低成本的 ESP32 加 AS7341 多光譜裝置判讀，並記錄在手機應用程式中。就團隊所知，這是第一批以 tRF（而非 microRNA）為標的的 toehold switch。無細胞分析在 CFPS 萃取套組與 PURExpress 中都未曾活化，團隊把這項失敗連同兩個機制假說一併公開；全細胞系統則確實可行，GlyGCC/mRFP1 開關在其觸發物存在時達到最高 23 倍的倍數變化。整個 wiki 以英文與葡萄牙文雙語呈現。",
+  "gemsTakeaway_zh": "學這套經問卷驗證的 SWOT：先寫出你內部的 SWOT，把每一條轉成你真正的使用者能回答的問題，在看到資料之前先宣告確認或推翻的判準，然後重畫矩陣。UFABC 就這樣推翻了兩項假設——而這正是一支隊伍靠自我評估永遠找不出的那種錯誤。"
 }

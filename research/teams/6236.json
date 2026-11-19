@@ -6,17 +6,24 @@
   "village": "Biomanufacturing / sustainable production (inferred from project scope; no village stated on the wiki)",
   "wiki": "https://2026.igem.wiki/zqt-nanjing/",
   "projectTitle": "EcToBloom",
+  "projectTitle_zh": "EcToBloom",
   "tagline": "A greener, low-salt route to ectoine, finished as a compostable bacterial-cellulose repair mask",
+  "tagline_zh": "更環保的低鹽 ectoine（依克多因）製程，最後做成可堆肥的細菌纖維素修護面膜",
   "summary": "EcToBloom rebuilds the ectoine biosynthesis route (ectB-ectA-ectC from halophilic bacteria) in non-halophilic E. coli BL21(DE3) so that ectoine can be made under conventional low-salt fermentation instead of the industrial high-salt 'bacterial milking' process that corrodes equipment and produces untreatable saline wastewater. A second engineered strain carries acsAB and acsCD to make its own bacterial cellulose membrane, which is combined with a silk fibroin layer and loaded with ectoine to give a preservative-free, compostable three-layer repair mask. Titres rose from 0.503 g/L (same-batch wild type) to 4.425 g/L in the first engineered strain, 5.344 g/L on an optimised medium and 6.852 g/L after introducing the feedback-desensitised LysC T352I aspartokinase. The team also explored wheat-straw hydrolysate and other paper wastes as non-food carbon sources.",
+  "summary_zh": "EcToBloom 把 ectoine（依克多因）的生合成路徑（來自嗜鹽細菌的 ectB-ectA-ectC）重建在非嗜鹽的 E. coli BL21(DE3) 中，讓 ectoine 可以在常規的低鹽發酵條件下生產，取代工業上會腐蝕設備、又產生難以處理含鹽廢水的高鹽「細菌擠乳」製程。第二株工程菌帶有 acsAB 與 acsCD，可自行生產細菌纖維素膜，再與絲蛋白層結合並載入 ectoine，做成不含防腐劑、可堆肥的三層修護面膜。效價從同批次野生型的 0.503 g/L 提升到第一株工程菌的 4.425 g/L，在最佳化培養基上達 5.344 g/L，導入解除回饋抑制的 LysC T352I 天門冬胺酸激酶後達 6.852 g/L。團隊也嘗試以小麥稈水解液與其他紙類廢棄物作為非食用碳源。",
   "awards": [
     "Best Project Promotion Video winner (High School)",
     "Best New Composite Part nominee"
   ],
   "dry": {
     "frameworks": "No mathematical or computational model. The Model, Software, Measurement and Hardware pages are left as unedited iGEM template text (award blurb plus 'Inspirations' links), so the project has no kinetic model, no flux analysis and no in-silico design loop. The engineering logic is reasoned verbally from pathway biochemistry (feedback inhibition of LysC, pathway stoichiometry via a single operon) rather than simulated.",
+    "frameworks_zh": "沒有任何數學或計算模型。Model、Software、Measurement 與 Hardware 四個頁面都還是未編輯過的 iGEM 範本文字（獎項說明加上 Inspirations 連結），因此這個專案沒有動力學模型、沒有通量分析，也沒有電腦模擬的設計迴圈。工程邏輯是用文字從路徑生化機制推論出來的（LysC 的回饋抑制、以單一操縱子達成路徑化學計量），而不是模擬出來的。",
     "dataviz": "Figure-led quantitative reporting across Results and Description: a titre roadmap annotating each stage's value, bar charts with individual replicate dots and SD error bars, 0-48 h growth curves (OD600) with error bars, production time courses, four single-factor screening panels (carbon source, initial glucose, nitrogen source, NH4Cl concentration), plasmid maps, annotated gel panels, and a stakeholder impact map on Human Practices. Figures carry long explanatory captions that state what the bars, dots and error bars are.",
+    "dataviz_zh": "在 Results 與 Description 兩頁以圖為主做量化呈現：一張標註各階段數值的效價路線圖、含個別重複資料點與標準差誤差棒的長條圖、附誤差棒的 0-48 小時生長曲線（OD600）、生產隨時間變化的曲線、四組單因子篩選圖（碳源、初始葡萄糖、氮源、NH4Cl 濃度）、質體圖譜、加註說明的電泳膠圖，以及人類實踐頁面的利害關係人影響地圖。圖說都寫得很長，明確交代長條、資料點與誤差棒各代表什麼。",
     "datascience": "Real but basic experimental data analysis: n = 3 biological replicates throughout, mean +/- SD, fold-change comparisons restricted to same-batch controls, HPLC quantification against a standard calibration curve, and single-factor medium optimisation. Notably careful about statistical honesty for a high-school team: they refuse to add titres from different batches into a 'cumulative improvement', flag that the wild-type signal sits near the method's limit of quantification with high between-replicate variance, and list blank matrices, spike-recovery and peak-purity checks as the follow-up needed.",
+    "datascience_zh": "實驗資料分析是真的做了，但相當基礎：全程 n = 3 生物重複、以平均值 ± 標準差呈現、倍數變化的比較僅限同批次對照、HPLC 以標準校正曲線定量，以及單因子培養基最佳化。以高中隊伍而言，他們在統計誠實度上特別謹慎：拒絕把不同批次的效價相加成所謂的累積改善，點明野生型訊號接近方法的定量極限、重複之間變異很大，並列出空白基質、加標回收與峰純度檢查作為後續該補的工作。",
     "software": "No software deliverable. Their 'code' contribution is the published source of a synthetic-biology educational card game, released so other teams can fork, translate and extend it.",
+    "software_zh": "沒有軟體產出。他們在程式方面的貢獻，是公開一款合成生物學教育卡牌遊戲的原始檔，讓其他團隊可以分支、翻譯與延伸。",
     "stack": [
       "HPLC (C18 reverse phase, acetonitrile:water 20:80, 210 nm) with standard calibration curve",
       "OD600 growth curves with dilution-corrected linear range",
@@ -35,8 +42,11 @@
   },
   "good": {
     "publicEngagement": "The strongest dimension of this project. A BLOOM-framework education programme runs across four age bands with different media for each: food-chain lessons, comics and perler-bead biology art for kindergarten and primary pupils; mini STEM research projects and lab visits for middle schoolers; genetic-circuit design, ethics debating ('Can we do it - but should we?'), knowledge competitions and a purpose-built 'Synthetic Biology Laboratory' card game for high schoolers; plus science journaling and a shared educational website built with team NBJF. A separate strand studies gender equity in science ('Do girls really have equal freedom to choose science?'), including a student-and-parent study of post-Gaokao major choice, and a campus sustainability strand ('Waste Detectives', 'Is it really green?'). The wiki landing page is itself a piece of science communication built like a promotional video: a relatable domestic scene (face mask on the sofa), then the hidden cost, then the named molecule, then a hard cost-comparison table ($385/kg ectoine against $0.33-0.89/kg glycerin), then the two engineering modules, then the vision - concrete-consequence-first rather than mechanism-first. The award-winning promotion video itself is not embedded on the wiki, so only this narrative architecture can be verified here.",
+    "publicEngagement_zh": "這是整個專案最強的一面。以 BLOOM 框架設計的教育計畫橫跨四個年齡層，各用不同媒介：幼兒園與小學生是食物鏈課程、漫畫與拼拼豆豆生物藝術；國中生是小型 STEM 研究專題與實驗室參訪；高中生則是基因迴路設計、倫理辯論（我們做得到，但我們應該做嗎？）、知識競賽，以及專門設計的卡牌遊戲 Synthetic Biology Laboratory；另外還有科學寫作，以及與 NBJF 隊伍合建的共用教育網站。另一條支線研究科學領域的性別平等（女孩真的有同樣的自由選擇科學嗎？），包括針對高考後選填科系的學生與家長調查；還有一條校園永續支線（垃圾偵探、它真的環保嗎？）。wiki 首頁本身就是一件科學傳播作品，結構像一支宣傳片：先是一個人人熟悉的居家場景（沙發上的面膜），接著是被隱藏的代價，然後點出那個分子的名字，再放一張硬邦邦的成本比較表（ectoine 每公斤 385 美元，甘油每公斤 0.33-0.89 美元），然後是兩個工程模組，最後是願景；先講具體後果，而不是先講機制。那支得獎的宣傳片本身並沒有嵌在 wiki 上，所以這裡能查證的只有這套敘事架構。",
     "ihp": "A five-stage Aspiration -> Action -> Analysis -> Adaptation loop with documented project changes at each stage. Stage 1: a 397-response questionnaire on skincare habits and dryness (67.51% reported regular skincare routines, over 80% linked dryness to weather or environment), which narrowed the project from general skincare to barrier repair and widened the target user beyond naturally dry skin. Stage 2: interviews with students, parents, adult consumers, beauty retail staff and a facial-mask industry expert. Stage 3: technical feasibility with Nanjing Tech University researchers (Dr Huang Luming, Dr Fu Yangkai) and Tian Xiaodong of the Institute of Microbiology, CAS - this is where carbon/nitrogen optimisation and the upstream metabolic-engineering idea came from. Stage 4: a dermatologist, mask manufacturers and a cosmetic formulator set the boundaries of what the team could claim. Stage 5: farmers on wheat-straw supply, an environmental researcher on saline and fermentation wastewater risk, plus biosafety and commercialisation. Closes with a stakeholder impact map and reflection.",
+    "ihp_zh": "一個五階段的 Aspiration、Action、Analysis、Adaptation 迴圈，每一階段都記錄了專案因此做出的改變。階段一：一份 397 份回覆的保養習慣與乾燥問題問卷（67.51% 表示有固定保養流程，超過 80% 把乾燥歸因於天氣或環境），把專案從一般保養收斂到屏障修護，也把目標使用者從天生乾性膚質往外擴大。階段二：訪談學生、家長、成年消費者、美妝零售人員與一位面膜產業專家。階段三：與南京工業大學的研究人員（Dr Huang Luming、Dr Fu Yangkai）以及中國科學院微生物研究所的 Tian Xiaodong 討論技術可行性，碳源與氮源最佳化、以及上游代謝工程的想法就是從這裡來的。階段四：一位皮膚科醫師、面膜製造商與一位化妝品配方師界定了團隊可以宣稱的範圍。階段五：與農民討論小麥稈供應、與一位環境研究者討論含鹽與發酵廢水的風險，再加上生物安全與商業化。最後以利害關係人影響地圖與反思收尾。",
     "realWorld": "The project is framed end-to-end as a manufacturing-route substitution rather than a molecule demo: low-salt fermentation to cut corrosion and saline wastewater, agricultural residue as feedstock, in-house membrane production so the mask substrate is not a purchased black box, and a compostable end-of-life. Cost framing is explicit (ectoine at $385.46/kg against hyaluronic acid at $43-113/kg; reactor cost estimates of EUR 3,000/m3 for salt-resistant materials). Contributions are deliberately packaged for reuse: three registered parts with full Registry documentation (BBa_K5481012 acsAB-acsCD bacterial cellulose module, BBa_26XUR2FA LysC T352I, and an ectABC-lysC* composite), published game code, and a reusable questionnaire plus report framework for the women-in-STEM study. The Entrepreneurship page is unfilled template.",
+    "realWorld_zh": "整個專案從頭到尾都被定位成一次製程路線的替換，而不是一次分子的示範：以低鹽發酵減少腐蝕與含鹽廢水、以農業殘渣作為原料、自行生產膜材讓面膜基材不是外購的黑盒子，以及可堆肥的生命週期終點。成本的鋪陳也很明確（ectoine 每公斤 385.46 美元，玻尿酸每公斤 43-113 美元；耐鹽材質反應器的成本估計為每立方公尺 3,000 歐元）。貢獻也刻意包裝成可重複使用的形式：三個已登錄且具完整 Registry 文件的零件（BBa_K5481012 的 acsAB-acsCD 細菌纖維素模組、BBa_26XUR2FA 的 LysC T352I，以及一個 ectABC-lysC* 複合零件）、公開的遊戲程式碼，以及女性參與 STEM 研究所用的可重複使用問卷與報告框架。Entrepreneurship 頁面則仍是未填寫的範本。",
     "partners": [
       "Nanjing Tech University (Dr Huang Luming, Dr Fu Yangkai)",
       "Institute of Microbiology, Chinese Academy of Sciences (Tian Xiaodong)",
@@ -52,25 +62,30 @@
     {
       "url": "https://static.igem.wiki/teams/6236/wiki/description/img1-v2008.avif",
       "caption": "The EcToBloom low-salt green manufacturing platform: engineered chassis, renewable feedstock, biosynthesised ectoine and biodegradable mask, ending in the three-layer BC-Silk-Ectoine repair mask.",
+      "caption_zh": "EcToBloom 的低鹽綠色製造平台：工程底盤、可再生原料、生物合成的 ectoine 與可生物分解的面膜，最後收在三層的 BC-Silk-Ectoine 修護面膜。",
       "credit": "Team ZQT-Nanjing, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6236/wiki/results/img1.avif",
       "caption": "Roadmap of experimental results, annotating the titre reached at each stage: wild type 0.503 g/L, engineered strain 4.425 g/L, optimised medium 5.344 g/L, LysC T352I strain 6.852 g/L.",
+      "caption_zh": "實驗結果路線圖，標註各階段達到的效價：野生型 0.503 g/L、工程菌株 4.425 g/L、最佳化培養基 5.344 g/L、LysC T352I 菌株 6.852 g/L。",
       "credit": "Team ZQT-Nanjing, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6236/wiki/human-practices/img17-v1126.avif",
       "caption": "Stakeholder impact map closing the five-stage Human Practices loop, from consumers and retail staff to metabolic engineers, dermatologists, farmers and environmental researchers.",
+      "caption_zh": "收束五階段人類實踐迴圈的利害關係人影響地圖，從消費者與零售人員，到代謝工程研究者、皮膚科醫師、農民與環境研究者。",
       "credit": "Team ZQT-Nanjing, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6236/wiki/education/img17.avif",
       "caption": "'Synthetic Biology Laboratory', the team's purpose-built card game for high-school learners, whose code was published so other teams can modify and translate it.",
+      "caption_zh": "Synthetic Biology Laboratory，團隊為高中學習者專門設計的卡牌遊戲，程式碼已公開，讓其他團隊可以修改與翻譯。",
       "credit": "Team ZQT-Nanjing, iGEM 2026 wiki"
     }
   ],
   "gemsTakeaway": "Everything ZQT-Nanjing actually did on the dry side - replicated HPLC titres with error bars, single-factor medium screening, growth-versus-production curves, a 397-person survey and a genuinely excellent multi-age communication programme - is reachable by a motivated high-school team in one season, and it won the video award without a single line of modelling: their Model, Software, Measurement and Hardware pages are untouched template text. The limiting factor here is not compute or tooling but mentorship and framing: nobody appears to have suggested that even a two-ODE growth-and-product model or a simple cost model of the low-salt route would have cost a week and turned a strong wet-lab story into a complete one.",
+  "gemsTakeaway_zh": "ZQT-Nanjing 在乾實驗室這一側真正做到的事——帶誤差棒的重複 HPLC 效價、單因子培養基篩選、生長與生產對照曲線、397 人問卷，以及一套真的很優秀的跨年齡溝通計畫——都是一支有動力的高中隊伍在一季之內做得到的；而他們拿下影片獎項時，完全沒有寫過一行模型：Model、Software、Measurement 與 Hardware 四頁都還是未改過的範本文字。這裡的限制因素不是運算資源或工具，而是指導與框架：似乎沒有人提醒他們，就算只是一個兩條 ODE 的生長與產物模型，或一個低鹽製程的簡單成本模型，大概也只要一週，就能把一個紮實的濕實驗故事變成一個完整的故事。",
   "sources": [
     "https://2026.igem.wiki/zqt-nanjing/",
     "https://2026.igem.wiki/zqt-nanjing/description",

@@ -1,0 +1,70 @@
+{
+  "id": "dataviz",
+  "tab": "drylab",
+  "kicker": "Original analysis",
+  "kicker_zh": "原創分析",
+  "title": "How the best teams made complex data honest, not just pretty",
+  "title_zh": "最好的團隊如何讓複雜的資料變得誠實，而不只是好看",
+  "lede": "The visualisation work that stood out in 2026 was not the most beautiful. It was the work that made it impossible to misread the data.",
+  "lede_zh": "2026 年最突出的視覺化作品不是最漂亮的，而是讓資料「無法被誤讀」的那些。",
+  "body": "Almost every 2026 wiki has charts. The ones worth studying share a single instinct: **they build the reader's doubt into the picture**.\n\nThe clearest example is **GEMS-Taiwan**'s provenance colour-coding. Its dose ledger is drawn as one top-to-bottom chain, from 1.67 mL on a 10 cm plate down to US$3,800 of capital per hectare, with a rail running down the left that is green while every row still rests on a measurement and **turns amber at the rice canopy correction** — so a reader sees exactly where measurement stops and modelling begins. Every model input is tabulated with a provenance column. **TU Delft** does the same thing in a different register, labelling every cell of its decision matrix Factual, Inferred, Estimated or Speculative, with a legend stating that the tag records the evidence and not the judgement. **BOKU-Vienna** attaches a parameter-provenance table to its interactive widget. **XJTLU-China** runs an evidence-coverage track underneath its priority profiles, so a high score sitting on thin evidence cannot be mistaken for a finding.\n\nThe second instinct is **a state that refuses to be misread**. **DKU**'s safety panel resolves to four verdicts rather than three — clear, exceeded, borderline, and *not assessed* — precisely so an unmeasured gate can never be read as a passed one; 198 of its 496 constructs carry no immunogenicity measurement, and the interface says so rather than showing a zero. It goes further: because the MHC class I predictor accepts only 5-15 residue peptides and returns zero outside that window, a stored zero is explicitly not presented as evidence of low immunogenicity. **GHCIS** ships the same idea in its colour classifier, with an explicit \"unresolved, and must not be treated as Negative\" state. **UMA Malaga** conveys status by shape and text rather than colour alone.\n\nThe third is **telling the reader how to read it**. BOKU-Vienna puts an explicit \"How to read this graph\" panel beside each one. XJTLU-China numbers eighteen model figures so they read as a single argument rather than a gallery, aligning six normalised feature tracks above a composite score so you can see which feature drove a peak.\n\nThe fourth is **captions that carry the whole experiment**. **Mingdao**'s figures are plain, and that is the point — each names the instrument (a BioTek Synergy H1 plate reader; a FORA G31 glucose meter, range 20-600 mg/dL), the buffer, the temperature, the replicate count and the error measure, links its own raw CSV by filename, and where error bars are too small to see, *the caption says so* and points at the table of values.\n\nThe fifth is **showing the absences**. **DTU-Denmark**'s interactive stakeholder map colour-codes each pin by engagement status so that non-responses stay visible, and the team names the organisations that never replied. **BNDS-China** prints a caveat directly on its influence map stating that appearing on it does not mean an interview took place.\n\nAnd a note on accessibility, because the wiki analysis found that late alt-text compliance sweeps correlate with nothing. **BAID-China** shows what doing it properly looks like instead: every chart on the wiki redrawn in the eight-colour Okabe-Ito colour-blind-safe palette, chosen for luminance separation so the figures survive greyscale, with a published colour-blindness simulation verifying that elements stay distinguishable under red-green, blue-yellow and total colour-blindness. That is a design decision taken at the start, not a checkbox at the end.\n\nInteractivity, finally, earns its place only when it lets the reader change something. **UPF-Barcelona**'s RK4 solver gives every parameter a live slider that takes effect *during* the running simulation. BOKU-Vienna's trade-off widget moves a vitamin flux against growth rate with the team's own measured points overlaid. DTU-Denmark's process-flow diagram zooms from a five-route overview into the enzymatic routes with every parameter printed on the box - acid molarity, temperature, residence time, enzyme loading, number of reuses. An animation that only plays is decoration; a control that changes the answer is an argument.",
+  "body_zh": "幾乎每一個 2026 年的 wiki 都有圖表。值得研究的那些共享同一種直覺：**他們把讀者的懷疑畫進圖裡**。\n\n最清楚的例子是 **GEMS-Taiwan** 的來源色標。他們的劑量帳本畫成一條由上而下的單一鏈條，從 10 公分培養皿上的 1.67 毫升，一路到每公頃 3,800 美元的資本支出，左側有一條軌道：只要每一列仍然立基於量測，它就是綠色，而**在水稻冠層修正那一列轉為琥珀色**——讀者因此能一眼看出量測在哪裡結束、模擬從哪裡開始。每一項模型輸入都附有來源欄位。**TU Delft** 用另一種形式做同樣的事：決策矩陣的每一格都標註為 Factual、Inferred、Estimated 或 Speculative，並附圖例說明「這個標籤記錄的是證據，不是判斷」。**BOKU-Vienna** 為互動元件附上參數來源表。**XJTLU-China** 則在優先度曲線下方加一條證據覆蓋軌，讓「高分但證據稀薄」不會被誤讀成發現。\n\n第二種直覺是**一個拒絕被誤讀的狀態**。**DKU** 的安全面板有四種判定而非三種——clear、exceeded、borderline，以及 *not assessed*——正是為了讓「未量測」永遠不會被讀成「通過」；496 個構築中有 198 個沒有免疫原性量測資料，介面就直接這麼說，而不是顯示一個 0。他們還更進一步：由於 MHC class I 預測器只接受 5-15 個胺基酸的胜肽，超出範圍一律回傳 0，因此系統明確聲明「儲存的 0 不代表低免疫原性」。**GHCIS** 在顏色判讀器中實作了同樣的概念，設有明確的「無法判定，且不得視為陰性」狀態。**UMA Malaga** 則以形狀與文字、而非單靠顏色來傳達狀態。\n\n第三種是**告訴讀者該怎麼讀**。BOKU-Vienna 在每張圖旁邊放一個明確的「如何閱讀這張圖」面板。XJTLU-China 把十八張模型圖編號，使它們讀起來像一條完整論證而不是圖庫，並把六條標準化特徵軌對齊疊在綜合分數之上，讓人看得出是哪一項特徵推高了峰值。\n\n第四種是**讓圖說承載整個實驗**。**Mingdao** 的圖很樸素，而這正是重點——每張圖都標明儀器（BioTek Synergy H1 盤式判讀儀；FORA G31 血糖儀，量測範圍 20-600 mg/dL）、緩衝液、溫度、重複次數與誤差量度，並以檔名連結自己的原始 CSV；當誤差棒小到看不見時，*圖說會直接寫出來*，並指向數值表。\n\n第五種是**把「缺席」顯示出來**。**DTU-Denmark** 的互動式利害關係人地圖依接觸狀態為每個圖釘上色，讓未回覆者保持可見，團隊還點名了從未回信的機構。**BNDS-China** 則把警語直接印在影響力地圖上：出現在圖上並不代表訪談真的發生過。\n\n最後談無障礙，因為 wiki 分析發現「最後才補的替代文字」與得獎毫無相關。**BAID-China** 示範了真正做對是什麼樣子：wiki 上每一張圖都以八色 Okabe-Ito 色盲友善色票重繪，選色依據是亮度差異足以在灰階下仍可辨識，並公開了一份色盲模擬圖，驗證元素在紅綠、藍黃與全色盲模擬下仍可區分。那是一開始就做的設計決定，不是最後補打的勾。\n\n最後，互動性只有在「讓讀者能改變某個東西」時才站得住腳。**UPF-Barcelona** 的 RK4 solver 為每個參數配上即時滑桿，而且在模擬*執行中*就會生效。BOKU-Vienna 的權衡元件讓維生素通量對生長速率移動，並疊上團隊自己量到的點。DTU-Denmark 的流程圖可從五條路線的總覽放大到酵素路線，每個方塊上都印著參數——酸莫耳濃度、溫度、停留時間、酵素添加量、重複使用次數。只會播放的動畫是裝飾；能改變答案的控制項才是論證。",
+  "cards": [
+    {
+      "kicker": "The device worth stealing",
+      "kicker_zh": "值得借用的裝置",
+      "title": "Colour the rail where measurement stops",
+      "title_zh": "在量測終止之處替軌道換色",
+      "body": "GEMS-Taiwan draws its dose ledger as one chain from 1.67 mL on a plate to US$3,800 per hectare, with a rail down the left that is green while each row rests on a measurement and turns amber at the rice canopy correction. Anyone can see where the evidence ends. TU Delft does the same with Factual / Inferred / Estimated / Speculative tags on every cell of its decision matrix.",
+      "body_zh": "GEMS-Taiwan 把劑量帳本畫成一條鏈：從培養皿上的 1.67 毫升到每公頃 3,800 美元，左側軌道在每列仍立基於量測時保持綠色，到水稻冠層修正那一列轉為琥珀色。任何人都看得出證據在哪裡結束。TU Delft 用另一種方式做同一件事：在決策矩陣的每一格標上 Factual / Inferred / Estimated / Speculative。",
+      "chips": ["provenance made visible"]
+    },
+    {
+      "kicker": "The device worth stealing",
+      "kicker_zh": "值得借用的裝置",
+      "title": "Give \"not assessed\" its own state",
+      "title_zh": "給「未評估」一個自己的狀態",
+      "body": "DKU's safety panel resolves to clear, exceeded, borderline and not assessed — four verdicts, so an unmeasured gate can never read as a passed one. 198 of its 496 constructs have no immunogenicity measurement and the interface says so instead of showing a zero. GHCIS ships the same idea as \"unresolved, and must not be treated as Negative\".",
+      "body_zh": "DKU 的安全面板有四種判定：clear、exceeded、borderline、not assessed——四種，因此「未量測」永遠不會被讀成「通過」。496 個構築中有 198 個沒有免疫原性量測，介面就直接說明，而不是顯示 0。GHCIS 以「無法判定，且不得視為陰性」實作了同樣的概念。",
+      "chips": ["198 of 496 say so"]
+    },
+    {
+      "kicker": "The device worth stealing",
+      "kicker_zh": "值得借用的裝置",
+      "title": "Put the whole experiment in the caption",
+      "title_zh": "把整個實驗寫進圖說",
+      "body": "Mingdao's figures are plain and rigorous. Each names the instrument, the buffer, the temperature, the replicate count and the error measure, and links its own raw CSV by filename. Where the error bars are too small to see, the caption says so and points at the table of values. A figure a reader can audit beats a figure a reader can admire.",
+      "body_zh": "Mingdao 的圖樸素而嚴謹。每張圖都標明儀器、緩衝液、溫度、重複次數與誤差量度，並以檔名連結自己的原始 CSV。當誤差棒小到看不見，圖說會直接寫明並指向數值表。一張讀者能稽核的圖，勝過一張讀者只能讚嘆的圖。",
+      "chips": ["instrument · buffer · n · error", "raw CSV linked"]
+    },
+    {
+      "kicker": "The device worth stealing",
+      "kicker_zh": "值得借用的裝置",
+      "title": "Show who did not reply",
+      "title_zh": "把沒有回覆的人也畫出來",
+      "body": "DTU-Denmark colour-codes every pin on its stakeholder map by engagement status, so non-responses stay visible, and names the organisations that never answered. BNDS-China prints the caveat on its influence map that appearing there does not mean an interview happened. A map with no gaps is a map that has been tidied.",
+      "body_zh": "DTU-Denmark 依接觸狀態為利害關係人地圖上的每個圖釘上色，讓未回覆者保持可見，並點名從未回信的機構。BNDS-China 則把警語印在影響力地圖上：出現在圖上不代表訪談真的發生過。一張沒有空缺的地圖，是一張被整理過的地圖。",
+      "chips": ["non-responses stay visible"]
+    },
+    {
+      "kicker": "Accessibility, done early",
+      "kicker_zh": "及早處理的無障礙",
+      "title": "BAID-China redrew every chart in a colour-blind-safe palette",
+      "title_zh": "BAID-China 用色盲友善色票重繪了每一張圖",
+      "body": "The eight-colour Okabe-Ito palette, chosen for luminance separation so the figures survive greyscale, with a published colour-blindness simulation verifying that elements stay distinguishable under red-green, blue-yellow and total colour-blindness. The wiki analysis found late alt-text sweeps correlate with nothing; this is the alternative — a decision taken at the start.",
+      "body_zh": "採用八色 Okabe-Ito 色票，選色依據是亮度差異足以讓圖在灰階下仍可辨識，並公開色盲模擬圖驗證元素在紅綠、藍黃與全色盲模擬下仍可區分。wiki 分析發現最後才補的替代文字與得獎毫無相關；這就是替代方案——一個在一開始就做的決定。",
+      "chips": ["Okabe-Ito", "simulation published"]
+    },
+    {
+      "kicker": "For GEMS",
+      "kicker_zh": "給 GEMS",
+      "title": "Interactivity only counts if the reader can change the answer",
+      "title_zh": "互動只有在讀者能改變答案時才算數",
+      "body": "UPF-Barcelona gives every parameter a live slider that takes effect during the running simulation. BOKU-Vienna moves vitamin flux against growth rate with the team's own measured points overlaid and a \"How to read this graph\" panel beside it. DTU prints every parameter on the box of a zoomable process diagram. An animation that only plays is decoration.",
+      "body_zh": "UPF-Barcelona 為每個參數配上即時滑桿，而且在模擬執行中就會生效。BOKU-Vienna 讓維生素通量對生長速率移動，疊上團隊自己量到的點，旁邊還附「如何閱讀這張圖」面板。DTU 在可縮放流程圖的每個方塊上都印出參數。只會播放的動畫是裝飾。",
+      "chips": ["sliders during the run", "How to read this graph"]
+    }
+  ],
+  "method": "Drawn from the dataviz field of every team file in this report, each researched from the team's own 2026 wiki. Interactive behaviour is as the analysts described it after opening the pages; we have not re-tested every widget here. The examples are chosen because they illustrate a transferable device, not because they are the only teams doing good work. GEMS-Taiwan is the report author's own team and appears on the same terms as the rest.",
+  "method_zh": "資料取自本報告每一份團隊檔案的 dataviz 欄位，皆來自各隊自己的 2026 wiki。互動行為依分析員實際開啟頁面後的描述記錄，我們並未在此重新測試每一個元件。所舉案例是因為它們示範了一個可移植的手法而被選出，並非表示只有這些團隊做得好。GEMS-Taiwan 是本報告作者自己的團隊，與其他隊伍適用相同標準。"
+}
