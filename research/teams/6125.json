@@ -1,0 +1,59 @@
+{
+  "team": "Squirrel-Beijing",
+  "id": "6125",
+  "section": "High School",
+  "country": "China",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/squirrel-beijing/",
+  "projectTitle": "PNPeeker",
+  "tagline": "A whole-cell sensor that reports the bioavailable fraction of p-nitrophenol in soil, paired with a five-enzyme pathway that destroys it and a cold-triggered suicide switch",
+  "summary": "Squirrel-Beijing targeted p-nitrophenol, a US EPA priority pollutant found in more than 32 percent of Chinese agricultural soils at 0.8-30.5 micrograms per gram in places, and attacked the measurement problem rather than just the pollutant: HPLC reports total concentration, but ecological risk depends on the bioavailable fraction, which only a living sensor can read. They engineered the PobR transcriptional regulator with its PpobA promoter into an RFP reporter circuit showing concentration-dependent response from 0.001 to 10 mg/L, reconstructed the five-enzyme hydroquinone pathway (pnpA, B, C, E, D) that converts pNP all the way to beta-ketoadipate, and achieved 87-95 percent pNP removal at 10-500 micrograms per litre within 24 hours. They won Best New Composite Part in the High School section and were nominated for Best Village Project.",
+  "awards": ["Best New Composite Part, High School (winner)", "Best Village Project nominee"],
+  "dry": {
+    "frameworks": "Parts presented with explicit medal-tier labelling (Gold Medal Part, Silver Medal Part, Bronze Medal Part) so a reader can see which contribution criterion each satisfies, plus a dedicated 'Applications for Future iGEM Teams' section with four named reuse routes. For collaboration they defined P-E-A-F (Preparation, Exchange, Action, Feedback) as a transferable framework for cross-team work. The entrepreneurship page runs TAM-SAM-SOM, PEST, Porter's Five Forces, SWOT, 4Ps, Business Model Canvas, a milestone timeline, a five-year financial forecast, a five-category risk register and three exit routes.",
+    "dataviz": "Characterisation figures that answer the questions a reuser actually asks: normalised GFP/OD600 promoter activity across five temperatures over 0-10 hours, growth curves of the lysis strain at 16, 25 and 37 degrees C over 12 hours, PCR gels confirming expected fragment sizes (GFP 717 bp, T4 Holin 657 bp, T4 Lysozyme 492 bp), the TAM-SAM-SOM illustration, the P-E-A-F framework diagram and a five-year financial forecast chart. A 28-term project glossary sits beside every page.",
+    "datascience": "Numbers are reported with ranges and conditions attached rather than as single best values: the sensor's response spans 0.001-10 mg/L, degradation is 87-95 percent across an initial-concentration range of 10-500 micrograms per litre at 24 hours, and the cold promoter reaches about 270.2 A.U. at 20 degrees C against 14.1 A.U. at 37 degrees C, a 19.2-fold window, with 15, 25 and 30 degrees C values all given so another team can pick an induction temperature. PobR itself was improved by computational screening (docking plus molecular dynamics) followed by site-directed mutation.",
+    "software": "",
+    "stack": ["E. coli", "PobR / PpobA regulatory pair", "pnpABCDE hydroquinone pathway", "J23100 promoter with B0034 RBS", "pCspA cold-inducible promoter with T4 Holin and T4 Lysozyme", "RFP and GFP reporters", "molecular docking and molecular dynamics", "BioBrick RFC#10 assembly"],
+    "techniques": ["whole-cell biosensing of bioavailable pollutant fraction", "computational regulator engineering then site-directed mutagenesis", "dual-operon splitting of a long pathway to avoid transcription attenuation", "temperature- and time-resolved promoter characterisation", "cold-triggered lysis biocontainment", "standardised quantitative pNP detection validated in complex environmental matrices"]
+  },
+  "good": {
+    "publicEngagement": "The 28-term project glossary deserves counting as public engagement in its own right, since it defines every technical term used across the wiki in plain language and is linked from every page. Its entry for OD600 is the giveaway on quality: it states that OD600 is a proxy for culture turbidity and 'does not by itself establish cell viability or complete cell lysis', which is a caveat on their own headline lysis result rather than a textbook definition.",
+    "ihp": "Expert interviews drove the project's framing toward bioavailability rather than total concentration, and the team captain made a specific management decision about them: recognising that the dry team could interview fluently but could not field highly technical follow-ups, and that the wet-lab team had the knowledge but not the interview role, the captain personally attended every human-practices expert interview to capture professional questions and suggestions on site and minimise information loss across the knowledge gap between subgroups. That is a documented organisational fix to a problem most teams never name.",
+    "realWorld": "Two things to assess here, and the parts work is the stronger. On reusability, this is close to a model contribution. Every part is codon-optimised for E. coli and BioBrick RFC#10 compatible, so adoption needs no re-synthesis. Each part description states its position in the pathway and what it hands to the next step, so the five degradation enzymes read as a sequence rather than five entries. The composite parts are quantified with the conditions stated (the reporter circuit over 0.001-10 mg/L; the pnpABCDE module at 87-95 percent removal from 10-500 micrograms per litre in 24 hours), which is what lets another team tell whether their own result matches. The dual-operon design is explained as a solution to a named general problem, transcription attenuation in long polycistronic mRNAs causing downstream genes to under-express, and offered as a transferable strategy for any long pathway, which is the difference between publishing a part and publishing a technique. Best of all, they chose to satisfy the Bronze contribution criterion properly: rather than registering another new part, they took an existing Registry entry, BBa_K5083099, and generated the characterisation data it was missing, a full temperature gradient (15, 20, 25, 30, 37 degrees C) crossed with culture time, plus growth curves of the lysis strain at 16, 25 and 37 degrees C, concluding with exactly the practical guidance a reuser needs: strong induction at 15-20 degrees C with low basal expression at 30-37, high GFP at 20 degrees C, and clear density collapse to about 0.11 OD at 16 degrees C by 12 hours. They also label their own evidence carefully, saying the lysis data 'preliminarily demonstrate' an association between lower temperature and decreased cell density rather than claiming proven containment. The 'Applications for Future iGEM Teams' section then spells out four concrete reuse routes: swap the reporter to port the sensor to a colorimetric or portable platform; reuse the degradation module or borrow the operon-splitting strategy for a different pathway; use the temperature-resolved data to design a cold suicide switch; or combine sensing and degradation modules via RFC#10 for an integrated monitor-and-remediate strain, which they built themselves as a demonstration. On the commercial side the work is competent but thinner than the parts work, though it does carry real unit economics: pricing anchored at 30-50 percent of the HPLC/GC-MS comprehensive per-test cost of 150-300 RMB, giving 150 RMB per kit (lyophilised strain tube, reaction buffer, operating manual), against a unit cost of 75 RMB falling to 45 RMB at scale, so gross margin runs 50 percent to about 70 percent; a five-year forecast from 500 to 15,000 kits with break-even in year three at roughly 4,000 kits and 600,000 RMB revenue; and a start-up need of about 450,000 RMB over years one and two. The SOM is built bottom-up from Guangdong's roughly 2.5 million hectares of arable land with its three assumptions stated (South China at about 20 percent of the national market, biosensor penetration at 5-8 percent, initial share 3-5 percent), landing at USD 2-4 million. Be blunt, though: there is no registered entity, no patent, no incubator place, no investor conversation and no letter of intent, the funding sources are listed as categories (iGEM grants, school research funding, angel or incubator seed money, supervisor channels) rather than named prospects, and the regulatory discussion is a risk category rather than a mapped approval route. The venture is a well-constructed plan on paper; the parts are a real, usable deliverable.",
+    "partners": [
+      "Partner iGEM teams engaged through the P-E-A-F collaboration framework",
+      "Academic experts consulted in human practices (attended personally by the team captain)",
+      "Supervisor collaboration channels named as a prospective funding route"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6125/wiki/contribution/img1.avif",
+      "caption": "Supplementary characterisation of the existing Registry part BBa_K5083099: PCR confirmation of GFP, T4 Holin and T4 Lysozyme fragments, normalised pCspA activity across temperatures and times, and growth curves of the lysis strain",
+      "credit": "Team Squirrel-Beijing, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6125/wiki/contribution/img2.avif",
+      "caption": "Time-resolved response of the pCspA cold-inducible promoter at five temperatures, the data a future team needs to choose an induction temperature",
+      "credit": "Team Squirrel-Beijing, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6125/wiki/contribution/img4.avif",
+      "caption": "The Preparation-Exchange-Action-Feedback (P-E-A-F) collaboration framework, published as a transferable method for cross-team work",
+      "credit": "Team Squirrel-Beijing, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6125/wiki/entrepreneurship/img1.avif",
+      "caption": "TAM-SAM-SOM market sizing, with the obtainable market built bottom-up from Guangdong arable hectarage and three stated penetration assumptions",
+      "credit": "Team Squirrel-Beijing, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Make one deliverable per project be characterisation data added to somebody else's existing part, chosen because that part lacked the numbers a user would need, and report it as a parameter sweep (temperature crossed with time, with all intermediate values shown) rather than a single demonstration. Then write an explicit 'Applications for Future Teams' section naming who could reuse each module and how, and keep a plain-language glossary whose entries state the limits of your own measurements, as theirs does for OD600.",
+  "sources": [
+    "https://2026.igem.wiki/squirrel-beijing/",
+    "https://2026.igem.wiki/squirrel-beijing/parts/",
+    "https://2026.igem.wiki/squirrel-beijing/contribution/",
+    "https://2026.igem.wiki/squirrel-beijing/entrepreneurship/"
+  ]
+}

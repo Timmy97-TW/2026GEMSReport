@@ -1,0 +1,156 @@
+{
+  "id": "wiki-craft",
+  "tab": "teams",
+  "kicker": "Original analysis",
+  "title": "What the Best Wiki winners did differently",
+  "lede": "The four 2026 Best Wiki winners did not win on visual polish or page weight; they won by building an executive layer that tells a judge where the evidence is, and then by being unusually specific and unusually honest underneath it.",
+  "body": "Three of the four winners ship pages whose text exists in the HTML before any JavaScript runs: **Heidelberg** writes static HTML by hand, **Uni-Padua-IT** prerenders SvelteKit, **Lambert-GA** builds with Astro. TU Delft is the exception, a Vite single-page app behind a 3.4 MB bundle, and it compensates deliberately with an `llms.txt` at the wiki root and a plain-Markdown mirror of every page at `/tu-delft/<page>.md`. Against that, the control group — Princeton, Cornell, LYON, UAlberta, UCNZ, Athens, GU Frankfurt and Eton-College-UK, all winners of serious 2026 science prizes — serves near-empty shells of 486 bytes to 15 kB, as little as seven characters of text without JS.\n\nThe real differentiator is an explicit executive layer. Uni-Padua-IT and Lambert-GA both ship a `/judging` page that walks medal criterion by criterion, summarises each in two or three sentences and deep-links the evidence — Padua pointing straight at its own negative results, Lambert stating in the summary that fifteen minibinder designs produced no confirmed hits before a second campaign of twenty produced one binder at roughly 604 nM. TU Delft reaches the same place with an illustrated module map on Results where hovering highlights a module and clicking jumps to it, over the same five modules that organise the project; Heidelberg puts three summary cards above the fold and gives every nav link a one-line subtitle, so \"Results\" reads \"Where data tells the story\".\n\nUnderneath, the winners are simply more specific. **Heidelberg**'s captions carry panel letters, 547 ng and 433 ng transfection masses, 18,000 × g, and an effect size quoted with its range — 5.6×, 4.3 to 6.4× depending on the haze setting — while Padua photographs the plate that grew nothing, numbers it as a figure, and explains why an earlier transformation failed. **TU Delft** built a content system rather than a set of pages: 1,604 reference tags over 735 unique DOIs, 724 glossary calls against 102 definitions, 307 auto-numbered figures, and one unvarying Background → Results → Discussion → Future Perspective spine. Its decision matrix tags every cell as Factual, Inferred, Estimated or Speculative, with a legend saying the tag records the strength of the evidence behind the cell rather than the judgement — epistemic honesty rendered as a UI component, and I saw nothing like it elsewhere.\n\nWhat did not decide it is as instructive. Page weight spans two orders of magnitude inside the winners' circle, from Lambert-GA's 78 kB homepage to TU Delft's 3.4 MB. None of Heidelberg, Uni-Padua, Lambert-GA, Stanford, UCAS-China or Toronto declares a `prefers-color-scheme` rule, and meaningful alt text ran at 27 to 48 per cent across the winners while HongKong-JSS, ProFuture-China and WageningenUR hit 90, 86 and 81 per cent and won nothing for it. The winners do all honour `prefers-reduced-motion` — thirteen blocks in Heidelberg's stylesheet, eleven in TU Delft's bundle — and Heidelberg goes further, sniffing for a software WebGL renderer and dropping to a lite mode automatically, with `?lite=0` and `?perf=1` for anyone who wants to look: the motion budget goes to figure interactions and graceful degradation, not to hero spectacle.",
+  "cards": [
+    {
+      "kicker": "Information architecture",
+      "title": "Build a judging page and make it the front door",
+      "body": "Uni-Padua-IT and Lambert-GA each ship a `/judging` route that indexes every medal criterion and every award they apply for. Each entry is two or three sentences of plain summary followed by a deep link into the page that holds the evidence. Padua links directly to its own failed Design-Build-Test-Learn cycles under Silver; Lambert quotes the binding affinity and the two failed design campaigns in the Gold section. It costs one page and it converts a pile of required sections into a reading order.",
+      "chips": [
+        "Uni-Padua-IT",
+        "Lambert-GA",
+        "2 clicks to evidence",
+        "One page"
+      ]
+    },
+    {
+      "kicker": "Data presentation",
+      "title": "Label the provenance of every number you did not measure",
+      "body": "TU Delft's entrepreneurship page scores four candidate applications against eleven weighted parameters. Every single cell carries a bracketed tag — [F]actual, [I]nferred, [E]stimated or [S]peculative — and the legend states that the tag records how strong the evidence behind the cell is, not the score, because every score is a judgement applied to sourced facts. The weights sum to 100 per cent and the weighted total is given to two decimals. It is the single most copyable device I found in 2026.",
+      "chips": [
+        "TU Delft",
+        "F / I / E / S",
+        "Weighted matrix",
+        "Shows its working"
+      ]
+    },
+    {
+      "kicker": "Human practices",
+      "title": "Date every pivot and name who caused it",
+      "body": "Lambert-GA applies one named framework, H.I.V.E. — Hear, Inquire, Validate, Evolve — identically to every stakeholder, then closes with a Project Pivots timeline. Five entries, each with a date, the named expert whose feedback caused it, and a literal before-and-after: nanobody changed to minibinder, P-domain in general changed to specific hotspots. The caption says every change shown came directly from stakeholder feedback rather than internal decisions. It makes integration auditable instead of asserted.",
+      "chips": [
+        "Lambert-GA",
+        "H.I.V.E.",
+        "Dated timeline",
+        "Before → after"
+      ]
+    },
+    {
+      "kicker": "Technical build",
+      "title": "Mirror the wiki as plain Markdown",
+      "body": "TU Delft's wiki is a Vite single-page app and the heaviest I measured, yet it publishes an `llms.txt` at the wiki root listing twelve pages, each mirrored as plain Markdown at `/tu-delft/<page>.md`. That gives a JS-free fallback, a machine-readable corpus, and a diffable source of truth for the content, all from one build step. If you insist on a client-rendered framework, this is the tax you should pay for it.",
+      "chips": [
+        "TU Delft",
+        "llms.txt",
+        "/page.md",
+        "JS-free fallback"
+      ]
+    },
+    {
+      "kicker": "Figures",
+      "title": "Write captions that stand alone, and number the negative control",
+      "body": "Heidelberg's captions carry panel letters, exact reagent masses, exact centrifugation and pressure conditions, and effect sizes quoted with a range across settings — a reader can take the figure out of the page and still understand it. Uni-Padua-IT goes one better on controls: the plate that grew nothing gets its own numbered figure with the full condition in the caption, sitting beside the plate that grew two colonies. Showing the control is cheap and it is the fastest way to look like you know what you are doing.",
+      "chips": [
+        "Heidelberg",
+        "Uni-Padua-IT",
+        "Units + n + conditions",
+        "Show the control"
+      ]
+    },
+    {
+      "kicker": "Build discipline",
+      "title": "Keep content out of components",
+      "body": "Stanford University — Grand Prize winner and a Best Wiki nominee, though not a winner — stores each page as a single hand-written JavaScript object with a documented block grammar of p, sh, gal, list, table, steps, math and quotes, plus a per-page accent colour and icon. TU Delft does the equivalent in MDX with a fixed component vocabulary. Either way the layout is written once and the copy is written by people who are not touching layout, which is why neither wiki drifts between pages.",
+      "chips": [
+        "Stanford University",
+        "TU Delft",
+        "One file per page",
+        "Block grammar"
+      ]
+    },
+    {
+      "kicker": "Craft",
+      "title": "Degrade on purpose, not by accident",
+      "body": "Heidelberg's wiki detects a software WebGL renderer on load and automatically switches to a lite mode, with `?lite=0` and `?lite=1` to force it either way and `?perf=1` to load a performance reporter. Its stylesheet carries thirteen `prefers-reduced-motion` blocks; TU Delft's bundle carries eleven. The winners treat a judge on a tired laptop as a real user. Nobody built a dark mode, and nobody needed one.",
+      "chips": [
+        "Heidelberg",
+        "?lite=1",
+        "prefers-reduced-motion",
+        "Hardware sniffing"
+      ]
+    }
+  ],
+  "table": {
+    "head": [
+      "Wiki",
+      "Section",
+      "Framework / build",
+      "The one thing it does best"
+    ],
+    "rows": [
+      [
+        "Heidelberg",
+        "Undergrad — winner",
+        "Hand-written static HTML, Bootstrap plus a 77 kB token layer; ~1 MB of HTML, CSS and JS",
+        "Journal-grade figure captions, and an automatic lite mode for weak GPUs"
+      ],
+      [
+        "Uni-Padua-IT",
+        "Undergrad — winner",
+        "SvelteKit, prerendered; 266 kB across 17 code-split files",
+        "A /judging page that links each medal criterion straight at the evidence, failures included"
+      ],
+      [
+        "TU Delft",
+        "Overgrad — winner",
+        "Vite SPA, one 3.4 MB bundle, 16 flat routes; MDX content with a fixed component vocabulary",
+        "Per-cell evidence-provenance labels, plus every page mirrored as Markdown behind llms.txt"
+      ],
+      [
+        "Lambert-GA",
+        "High School — winner",
+        "Astro, fully static; 78 kB of HTML, CSS and JS on the homepage",
+        "A dated pivot timeline that attributes each project change to a named stakeholder"
+      ],
+      [
+        "Stanford University",
+        "Undergrad — nominee",
+        "Client-rendered template app; 15 hand-written content files with a documented block grammar",
+        "Content fully separated from layout, so nothing drifts between pages"
+      ],
+      [
+        "UCAS-China",
+        "Undergrad — nominee",
+        "Static HTML, 18 pages including a /medal index",
+        "An odometer-style opening statistic that lands the problem in one screen"
+      ]
+    ]
+  },
+  "checklist": [
+    "Ship HTML that already contains your words — prerender, or mirror every page as Markdown with an llms.txt, as TU Delft did.",
+    "Build a /judging page that answers each medal criterion in two or three sentences and deep-links the evidence.",
+    "State the controlling question on the first screen and repeat it in the same words on every summary layer.",
+    "Put a three-card or five-module summary above the detail on every long page, before any subsection.",
+    "Fix one spine for every results subsection — Background, Results, Discussion, Future Perspective — and never vary it.",
+    "Write captions that stand alone: panel letters, exact conditions, units, n, and the effect size with its range.",
+    "Photograph the negative control and give it a figure number of its own.",
+    "Name your failures with numbers, and name them in the executive layer rather than burying them.",
+    "Tag the provenance of every number you did not measure yourself — factual, inferred, estimated or speculative.",
+    "Keep content in one data file per page with a documented block grammar; let layout be written once.",
+    "Date every human-practices pivot, name the person whose feedback caused it, and show before and after.",
+    "Honour prefers-reduced-motion and spend the motion budget on figure interactions, not on the hero."
+  ],
+  "antipatterns": [
+    "Dark mode and theme toggles. Not one of Heidelberg, Uni-Padua-IT, Lambert-GA, Stanford, UCAS-China or Toronto declares a prefers-color-scheme rule, and all of them placed well.",
+    "A late alt-text compliance sweep. The four winners ran 27 to 48 per cent meaningful alt text while HongKong-JSS (90 per cent), ProFuture-China (86) and WageningenUR (81) all beat them and none was a Best Wiki winner — it is a floor, not a differentiator, so do it early and cheaply.",
+    "Huge homepage media galleries. Toronto pulls 214 images and 252 .avif references on the homepage alone and ETH-Zurich serves a single 1.9 MB HTML page; neither won Best Wiki.",
+    "A client-rendered SPA with no text fallback. This is the default in the control group — Princeton, Cornell, LYON, UAlberta, UCNZ, Athens, GU Frankfurt and Eton-College-UK all serve near-empty shells despite winning major science prizes.",
+    "Per-page mascots, bespoke icon sets and per-page accent colours. Stanford invested in all three and placed as a nominee; none of the four winners has a mascot system.",
+    "Treating the mandatory section list as the information architecture. A deep-linked judging index does the same job in one page and reads as an argument rather than a form."
+  ],
+  "method": "I rendered and read the four winners in full — Heidelberg, Uni-Padua-IT, TU Delft and Lambert-GA — by fetching their page HTML directly where it is server-rendered, by reading TU Delft's Markdown mirrors, and by loading the client-rendered pages in a browser; counts of references, figures, components, image formats, alt attributes and prefers-reduced-motion rules were taken from the shipped source. I sampled around thirty nominees and controls more shallowly, measuring framework, rendered text length, asset weight and alt-text coverage for all of them, and reading Stanford's and UCAS-China's content in detail as the closest nominees. I could not render several Vite single-page nominees deeply — Oxford, UCSC, NUS-Singapore, KAUST-KSA, Muenster-University, IISER-Kolkata and UOttawa among them — because a shared browser pane kept being navigated away mid-session, so they are excluded from the table and their design is not characterised here; I also did not measure real-world load time, mobile layout or screen-reader behaviour beyond the markup."
+}

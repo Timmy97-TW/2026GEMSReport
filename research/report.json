@@ -90,15 +90,19 @@
       "items": [
         "**Commit to the Bacillus optogenetics line.** Both trend reviews independently pointed here. Port and properly characterise a CcaS/CcaR or LOV-based light-inducible cassette in *B. subtilis* with full dose-response, dynamic range and growth-stage characterisation. In a twelve-paper literature that is on its own a publishable contribution, and it is the natural continuation of ReLEAF rather than a fresh start.",
         "**Pick one narrow, real problem** that GEMS has genuine data on — the strongest candidate is the optogenetic induction and OD600 measurement work from ReLEAF, where GEMS already has instrumentation, data and a Best Measurement award behind it.",
+        "**Buy the domain and host it before the freeze.** This is the single habit that separated the award-winning iGEM 2026 software that is still usable today from the software that is not. Of 21 award-winning tools checked, 8 are live; every one of those was hosted on freeze day, and every source-only tool's wiki lists localhost as its only address. It is a hosting decision made months early, not a coding or budget one — two high-school teams out-shipped most of the universities on exactly this. Write the documentation around a URL, not an install command.",
         "**Build it as a deployed web tool, not a notebook.** Documented, licensed, with example data, a DOI, and a URL anybody can open. Teams that only publish source code get used by nobody.",
         "**Design for other people's data from day one.** Input format, validation, error messages. This is the single most common failure in iGEM software.",
+        "**Expect nobody to come.** Across every award-winning 2026 repository checked, stars and forks were zero, and the only external-adoption figure found anywhere was Stanford's SynBase reporting 837 learners. Uni-Padua-IT publicly offered to optimise any team's sequence and got no replies, and said so on their wiki. Publishing is necessary and not sufficient: the three outside users below have to be recruited by hand.",
         "**Get three outside users and write down what broke.** Other Taiwanese schools, a university lab, a 2027 iGEM team. Their complaints are the roadmap for version two."
       ],
       "items_zh": [
         "**確立枯草桿菌光遺傳學這條路線。** 兩份趨勢分析各自獨立地指向這裡。在 *B. subtilis* 中移植並完整表徵一組 CcaS/CcaR 或 LOV 型的光誘導卡匣，做出完整的劑量反應、動態範圍與生長期表徵。在一個只有十二篇文獻的領域裡，光是這件事本身就足以發表，而且這是 ReLEAF 的自然延伸，不是重新開始。",
         "**挑一個狹窄而真實的問題**，而且 GEMS 手上有真正的資料——最強的候選是 ReLEAF 的光遺傳誘導與 OD600 量測工作，GEMS 已經有儀器、有資料，背後還有一座最佳量測獎。",
+        "**在 wiki 凍結前就把網域買好、把服務架起來。** 這是唯一一個把「今天還能用」的 iGEM 2026 得獎軟體，和「今天不能用」的區分開來的習慣。在檢查的 21 個得獎工具中，有 8 個仍然在線；這 8 個無一例外在凍結當日就已經上線，而所有只有原始碼的工具，其 wiki 上唯一的位址都是 localhost。這是一個提前好幾個月做的「要不要架站」決定，不是寫程式或預算的決定——有兩支高中隊伍正是靠這一點，交付得比多數大學還好。文件要圍繞一個網址來寫，而不是圍繞一行安裝指令。",
         "**把它做成已部署的網頁工具，而不是 notebook。** 有文件、有授權、有範例資料、有 DOI，以及任何人都能打開的網址。只釋出原始碼的團隊，沒有人會用。",
         "**從第一天就為別人的資料設計。** 輸入格式、驗證、錯誤訊息。這是 iGEM 軟體最常見的單一失敗原因。",
+        "**不要期待有人會自己找上門。** 在檢查過的每一個 2026 得獎 repository 中，star 與 fork 都是零，而唯一能找到的外部採用數字，是 Stanford 的 SynBase 回報的 837 位學習者。Uni-Padua-IT 公開表示願意為任何團隊最佳化序列，結果沒有人回應，而他們把這件事寫在 wiki 上。釋出是必要條件而非充分條件：下面那三位外部使用者，必須一個一個親手去找。",
         "**找到三位外部使用者，並記錄哪裡壞了。** 其他台灣學校、一間大學實驗室、一支 2027 iGEM 團隊。他們的抱怨就是第二版的路線圖。"
       ],
       "outcome": "A tool with a URL, a licence, documentation and users who are not GEMS students.",

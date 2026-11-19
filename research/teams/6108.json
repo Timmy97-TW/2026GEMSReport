@@ -6,8 +6,11 @@
   "village": "Therapeutics",
   "wiki": "https://2026.igem.wiki/gu-frankfurt/",
   "projectTitle": "HIDE",
+  "projectTitle_zh": "HIDE",
   "tagline": "Hiding a transplanted organ from the immune system instead of suppressing the immune system",
+  "tagline_zh": "把移植器官藏起來不讓免疫系統看見，而不是去壓制免疫系統",
   "summary": "Around 183,000 transplants a year are followed by lifelong immunosuppression, which protects the graft by weakening the whole patient. HIDE attacks the cause instead: a synNotch receptor carrying a computationally designed binder recognises the donor organ's mismatched HLA class I alleles, triggers production and export of shRNA in extracellular vesicles, and silences only those 'non-self' HLAs by RNA interference, leaving the rest of the immune system intact. Three research fields are bridged at once (synNotch, RNAi, exosome delivery), with the binder and the shRNA both designed in silico by the dry lab and validated by FACS, qPCR, western blot and nanoparticle tracking analysis. It won Best Part Collection and Best Education because the by-products are as usable as the therapy: HUSH, an open-source RNAi design framework for polymorphic gene families, and TRUST, a framework for communicating about death and grief that iGEM did not previously have.",
+  "summary_zh": "每年約有 183,000 例移植手術，術後隨之而來的是終身免疫抑制——為了保住移植物，卻削弱了整個病人。HIDE 改從病因下手：一個帶有以電腦設計的結合子（binder）的 synNotch 受體辨識捐贈器官上不相配的 HLA class I 等位基因，觸發 shRNA 的生產並以胞外囊泡輸出，再透過 RNA 干擾只沉默那些「非自體」的 HLA，其餘免疫系統維持完整。此專題一次串起三個研究領域（synNotch、RNAi、exosome 遞送），結合子與 shRNA 都由乾實驗以電腦設計，並以 FACS、qPCR、西方墨點法與奈米顆粒追蹤分析驗證。它拿下最佳元件集合與最佳教育獎，因為其副產物和療法本身一樣好用：HUSH，一套針對多型性基因家族的開源 RNAi 設計框架；以及 TRUST，一套談論死亡與哀傷的溝通框架，這是 iGEM 此前所沒有的。",
   "awards": [
     "Overgrad Top 10",
     "Best Part Collection winner (Overgrad)",
@@ -18,41 +21,96 @@
   ],
   "dry": {
     "frameworks": "Two pipelines solving an allele-discrimination problem that has no off-the-shelf method. For the binder, the team deliberately picked the harder target: HLA-A*01 (allele frequency around 15%) rather than the more common HLA-A*02, because A*01 carries fewer polymorphisms relative to other common alleles and therefore makes a specific binder harder to design; an IPD-IMGT multiple sequence alignment of HLA-A*01:01:01:01 against A*02:01:01:01 and A*03:01:01:01 located the usable mismatches, concentrated in and around the peptide-binding groove of the polymorphic alpha1 and alpha2 domains. They then generated roughly 2,000 de novo binders with BindCraft and RFdiffusion3, scored affinity and specificity against target and off-target HLAs with Boltz-2 and AlphaFold, and carried the eight most promising designs into molecular dynamics simulations for stability, across six design batches with combined MD results. For the shRNA, sequence alignment identified nucleotide-level discriminating positions, candidates were designed and evaluated with siDirect, and every candidate was screened against the human genome for off-targets in other human mRNAs. HUSH then added 150 further shRNAs with alignment-aware targeting.",
+    "frameworks_zh": "兩條流程，處理一個沒有現成方法的等位基因辨別問題。在結合子方面，團隊刻意挑了較難的標的：選 HLA-A*01（等位基因頻率約 15%）而非更常見的 HLA-A*02，因為 A*01 相對於其他常見等位基因的多型性較少，要設計出具專一性的結合子因此更難；他們以 IPD-IMGT 把 HLA-A*01:01:01:01 與 A*02:01:01:01、A*03:01:01:01 做多序列比對，找出可用的不相配位點，這些位點集中在多型性的 alpha1 與 alpha2 區域的胜肽結合溝及其周邊。接著以 BindCraft 與 RFdiffusion3 產生約 2,000 個從頭設計的結合子，用 Boltz-2 與 AlphaFold 對標的與非標的 HLA 評估親和力與專一性，再把最有潛力的 8 個設計帶入分子動力學模擬檢驗穩定性，前後共六批設計並彙整模擬結果。在 shRNA 方面，序列比對找出核苷酸層級的辨別位點，候選序列以 siDirect 設計與評估，每個候選都再對人類基因組篩查在其他人類 mRNA 上的脫靶可能。HUSH 之後又追加了 150 條具序列比對意識的標靶 shRNA。",
     "dataviz": "The wiki is built as an explorable system rather than a document. The dry-lab overview is a hover-and-click hitbox diagram where each component (Binder, shRNA, HUSH) reveals its rationale and links through to its own results page. The HLA class I architecture is a draggable 3D structure coloured by domain (alpha1, alpha2, alpha3, beta2m) so the reader can see for themselves that the variation sits in the groove. The MSA is shown in classic dash notation against the A*01 reference so each mismatch is countable. MD runs are published as per-binder, per-allele animations (for example binder FR57 against HLA-A*01, A*02 and A*03 side by side), which makes specificity visible rather than tabulated. The HUSH page embeds a working mockup of the five-stage wizard with sample data that the reader can step through, and the mascot Heidi narrates each step. Human practices is an interactive stakeholder map filterable by affiliation and by part of the construct, so a reader can ask 'who shaped the binder?' and get an answer. Education statistics are presented as before-and-after pairs, not totals.",
+    "dataviz_zh": "這個 wiki 做成一套可探索的系統、而不是一份文件。乾實驗總覽是一張可滑過與點擊的熱區圖，每個組件（Binder、shRNA、HUSH）都會展開其設計理由，並連到各自的結果頁。HLA class I 的結構以可拖曳的 3D 模型呈現、依區域上色（alpha1、alpha2、alpha3、beta2m），讀者自己就看得出變異位在結合溝上。多序列比對以傳統的破折號記法對照 A*01 參考序列呈現，使每個不相配位點都數得出來。分子動力學的結果以每個結合子、每個等位基因為單位的動畫發表（例如把結合子 FR57 對 HLA-A*01、A*02 與 A*03 並排呈現），讓專一性看得見、而非只列成表。HUSH 頁面內嵌一個可運作的五階段精靈模擬界面，附上範例資料供讀者逐步操作，並由吉祥物 Heidi 逐步解說。人類實踐做成一張可依所屬單位、也可依構築的哪個部分篩選的互動利害關係人地圖，讀者可以直接問「是誰影響了結合子的設計？」並得到答案。教育成效以前後對照的成對數據呈現，而不是總量。",
     "datascience": "HUSH exists because the team audited the tool landscape and found it stagnant: commercial RNAi designers are proprietary black boxes whose algorithms and option sets are undocumented, and even non-commercial siDirect is neither open-source nor pipeline-integrable, while recent published advances for discriminating highly similar sequences had been implemented nowhere. HUSH therefore folds multiple sequence alignment into the design step itself: a target sequence plus an optional panel of related sequences (the alleles to spare) switches on allele-aware targeting and an MSA stage, and the tool inspects the input up front (molecule type, length, GC content, panel size) and warns, for example, that a GC-rich target may cause the seed filter to reject every candidate, then offers to relax that filter in the criteria step. Protein input is flagged because it must be resolved to a transcript first. Safety is a scoring stage, not a disclaimer: candidates are aligned with Bowtie against NCBI human RefSeq, and the team proposes extending the standard off-target check to known single-nucleotide polymorphisms that could create unwanted off-targets. Designed siRNAs convert to shRNAs with hairpin-loop guidance and thermodynamic evaluation of structure integrity.",
+    "datascience_zh": "HUSH 之所以存在，是因為團隊盤點了工具生態後發現它停滯不前：商用 RNAi 設計工具是專有的黑盒子，演算法與選項設定都沒有文件，就連非商業的 siDirect 也既非開源、也無法整進流程，而近年已發表的、用於辨別高度相似序列的進展則完全沒有任何實作。因此 HUSH 把多序列比對折進設計步驟本身：輸入一條標的序列，再加上一組可選的相關序列（也就是要保留的等位基因），就會啟動具等位基因意識的標靶設定與一個比對階段；工具會在一開始就檢視輸入（分子類型、長度、GC 含量、序列組大小）並提出警示，例如 GC 含量高的標的可能導致種子區過濾器把所有候選都剔除，接著在條件設定步驟提供放寬該過濾器的選項。蛋白質輸入會被標記，因為必須先解析為對應的轉錄本。安全性是一個評分階段、不是免責聲明：候選序列以 Bowtie 對 NCBI human RefSeq 比對，團隊並提議把標準脫靶檢查擴及已知的單核苷酸多型性，因為這些位點可能造成不想要的脫靶。設計好的 siRNA 會在髮夾環的設計指引與結構完整性的熱力學評估下轉換為 shRNA。",
     "software": "HUSH (Human genome-Universal Silencing Hairpin designer), open-source on GitLab, ships in four interfaces around one core HushSession object: a guided five-step web wizard plus a compact expert mode exposing thermodynamic constants and selection rules, a CLI for one-shot pipeline use, a persistent in-terminal shell with saved input and panels, and an MCP server so an AI agent can drive it. A REST API provides compatibility for external pipelines. The three stated design tenets are research-first (every option documented with the research behind it), accessibility (upload a sequence and be guided, with proposed optimal choices derived from the sequence), and safety. The team also released START (SynBio Travellers, an educational browser game) and TRUST (a sensitive-topics framework), and the wiki repository is gitlab.igem.org/2026/gu-frankfurt.",
-    "stack": ["BindCraft", "RFdiffusion3", "Boltz-2", "AlphaFold", "molecular dynamics simulation", "siDirect", "Bowtie", "NCBI RefSeq", "IPD-IMGT/HLA alignment tool", "GitLab (open source)", "REST API", "MCP server", "CLI + terminal shell + web wizard"],
-    "techniques": ["de novo protein binder generation at ~2000-candidate scale", "affinity and specificity co-scoring against off-target alleles", "MD stability triage of top candidates", "multiple sequence alignment driven allele discrimination", "genome-wide off-target screening", "SNP-aware off-target proposal", "shRNA hairpin thermodynamic evaluation", "synNotch receptor engineering", "extracellular-vesicle RNA delivery", "qPCR, FACS, western blot, nanoparticle tracking analysis readouts"]
+    "software_zh": "HUSH（Human genome-Universal Silencing Hairpin designer）在 GitLab 上開源，圍繞同一個核心的 HushSession 物件提供四種介面：一個有引導的五步網頁精靈，外加一個精簡的專家模式可直接調整熱力學常數與篩選規則；一個供一次性整進流程使用的 CLI；一個可保存輸入與序列組、常駐於終端機的互動介面；以及一個 MCP 伺服器，讓 AI 代理人能驅動它。另有 REST API 供外部流程相容接取。他們明示的三項設計原則是研究優先（每個選項都附上背後研究的文件）、易用性（上傳序列就會被引導，並依序列推導出建議的最佳選項）與安全性。團隊另外釋出了 START（SynBio Travellers，一款教育用瀏覽器遊戲）與 TRUST（敏感議題框架），wiki 的程式庫在 gitlab.igem.org/2026/gu-frankfurt。",
+    "stack": [
+      "BindCraft",
+      "RFdiffusion3",
+      "Boltz-2",
+      "AlphaFold",
+      "molecular dynamics simulation",
+      "siDirect",
+      "Bowtie",
+      "NCBI RefSeq",
+      "IPD-IMGT/HLA alignment tool",
+      "GitLab (open source)",
+      "REST API",
+      "MCP server",
+      "CLI + terminal shell + web wizard"
+    ],
+    "techniques": [
+      "de novo protein binder generation at ~2000-candidate scale",
+      "affinity and specificity co-scoring against off-target alleles",
+      "MD stability triage of top candidates",
+      "multiple sequence alignment driven allele discrimination",
+      "genome-wide off-target screening",
+      "SNP-aware off-target proposal",
+      "shRNA hairpin thermodynamic evaluation",
+      "synNotch receptor engineering",
+      "extracellular-vesicle RNA delivery",
+      "qPCR, FACS, western blot, nanoparticle tracking analysis readouts"
+    ]
   },
   "good": {
     "publicEngagement": "A five-media strategy (game, workshops, social dialogue, print, audio) built on training the team first: 19 members took the 'Basics of Science Communication' workshop from NaWik, the German National Institute for Science Communication, and used its core-message, cloverleaf and arrow tools as the basis of everything after. Outputs were then measured, not just counted: nine school workshops at two schools reached over 140 students, with the share who knew that the family decides when no donation wish is documented rising from 66.1% to 91.9%, and 103 of 147 students saying they would talk to others (counted conservatively at four people each as a take-home estimate). HIDE & SEEK, a printed educational magazine distributed in pharmacies, doctors' practices and gyms, raised average correct answers across four knowledge questions from 88% to 100%. They ran a Night of Science survey booth, presented HIDE on hr3 radio (about one million daily listeners), were featured in BIOspektrum, UniReport and Wissen wird, appeared on iGEM Lund's podcast 'The Sequence', built the START browser game, and distributed hundreds of organ donation cards.",
+    "publicEngagement_zh": "一套五種媒介的策略（遊戲、工作坊、社會對話、印刷、聲音），建立在先訓練自己團隊的基礎上：19 位成員上了德國國家科學傳播研究所 NaWik 的「科學傳播基礎」工作坊，並以其核心訊息、四葉草與箭頭等工具作為之後一切工作的基礎。產出接著被量測、不只是計數：在兩所學校舉辦九場校園工作坊、觸及超過 140 位學生，知道「在沒有書面捐贈意願紀錄時由家屬決定」的比例從 66.1% 升至 91.9%，147 位學生中有 103 位表示會再去告訴別人（保守以每人四位計算，作為擴散效果的估計）。《HIDE & SEEK》是一本在藥局、診所與健身房發放的印刷版教育雜誌，使四道知識題的平均正確率從 88% 提升到 100%。他們在 Night of Science 設了問卷攤位、在 hr3 廣播（每日約一百萬聽眾）介紹 HIDE，獲 BIOspektrum、UniReport 與 Wissen wird 報導，上了 iGEM Lund 的播客《The Sequence》，做出 START 瀏覽器遊戲，並發送了數百張器官捐贈卡。",
     "ihp": "50 stakeholders in 44 interviews across six countries, sorted into five functions (defining the need, designing the therapy, route to the clinic, the donation debate, sensitive communication and education) and mapped against the part of the construct each one shaped. Documented changes: DSO and Eurotransplant quantified the logistics and donor shortage that justify the project; Prof. Urs Christen's account of lifelong immunosuppression side effects pushed the team toward a personalised approach; Dr. Venugopal Gudipati made binder accuracy the governing constraint on the receptor arm, and Dr. Gregory Allen shaped the synNotch design; CAR-T experts set the manufacturing, logistics and cost frame for an autologous therapy. In the donation debate the team interviewed politicians on both sides (Dr. Armin Grau and Helge Lindh), found both agreed the real deficit is education, and wrote a political proposal to make their workshops a mandatory part of school curricula, presented on 22 September 2026 to the cross-party Bundestag group 'Freiwilligkeit in der Organspende', which agreed to consider it. The largest change was procedural: interviewing people with lived transplant experience showed the team that iGEM has biosafety guidance but nothing on sensitive topics, which iGEM's own Human Practices committee confirmed when asked, so they built TRUST (Talking Responsibly and Understanding Sensitive Topics) with Dr. Katharina Karcher of the MASTERY project at Birmingham, transplant psychologist Dr. Angela Buchholz (who showed that unfamiliar language creates fear rather than understanding), supervisor Ariane Mantey-Strauss, ethicist Dr. Timo Sauer, nurse Sanjin Krupic, DSO's PD Dr. Ana Paula Barreiros, and former iGEM Safety and Security chief Alonso Flores, who pushed back that no framework can move responsibility off the teams themselves.",
+    "ihp_zh": "六個國家、44 場訪談、50 位利害關係人，依五項功能分類（界定需求、設計療法、通往臨床的路徑、捐贈議題的公共辯論、敏感溝通與教育），並對應到各自影響了構築的哪個部分。有紀錄的改動包括：DSO 與 Eurotransplant 量化了支撐本專題立論的物流與捐贈者短缺狀況；Prof. Urs Christen 對終身免疫抑制副作用的描述，推動團隊走向個人化的做法；Dr. Venugopal Gudipati 使結合子的準確性成為受體這一端的首要約束條件，Dr. Gregory Allen 則形塑了 synNotch 的設計；CAR-T 專家為一項自體療法設定了製造、物流與成本的框架。在捐贈議題的辯論上，團隊訪談了立場相對的兩位政治人物（Dr. Armin Grau 與 Helge Lindh），發現雙方都同意真正的缺口在教育，於是撰寫了一份政治提案，主張把他們的工作坊納入學校課綱的必修內容，並於 2026 年 9 月 22 日向德國聯邦議院跨黨派小組「Freiwilligkeit in der Organspende」提出，該小組同意納入考慮。最大的改動是程序上的：訪談有移植親身經驗的人之後，團隊發現 iGEM 有生物安全指引、卻完全沒有敏感議題的指引，詢問後 iGEM 自己的人類實踐委員會也確認如此，於是他們建立了 TRUST（Talking Responsibly and Understanding Sensitive Topics），合作者包括伯明罕 MASTERY 計畫的 Dr. Katharina Karcher、移植心理師 Dr. Angela Buchholz（她指出陌生的語彙製造的是恐懼、不是理解）、督導 Ariane Mantey-Strauss、倫理學者 Dr. Timo Sauer、護理師 Sanjin Krupic、DSO 的 PD Dr. Ana Paula Barreiros，以及前 iGEM 安全與保安負責人 Alonso Flores——後者反駁說，任何框架都無法把責任從隊伍自己身上移開。",
     "realWorld": "The commercialisation strategy is an exclusive licensing agreement: HIDE retains the intellectual property while a large pharmaceutical partner takes manufacturing, distribution and payer negotiation, chosen because an autologous cell therapy's facility, consumable and specialist-salary costs cannot be matched by a start-up. Miltenyi Biotec has issued a letter of support. The analysis names the customer chain (pharmaceutical companies, statutory health insurers, transplant centres) rather than patients, because an advanced cell therapy cannot be sold direct, and works through German reimbursement specifically: near-universal statutory coverage funded at 14.6% of income, with price set by negotiation with the manufacturer. The page carries cost of goods per dose, a seven-year forecast, a regulatory roadmap with milestones and risks, a Business Model Canvas, SWOT and skill-gap analyses the team describes as an honest look at their own gaps, a PEST analysis, and a mapping to the UN Sustainable Development Goals. Input came from the iGEM Entrepreneurship Bootcamp, Innovectis and the Charite Berlin Regulatory Support Unit.",
-    "partners": ["Miltenyi Biotec (letter of support)", "NaWik, National Institute for Science Communication", "Deutsche Stiftung Organtransplantation (DSO)", "Eurotransplant", "Cross-party Bundestag group 'Freiwilligkeit in der Organspende'", "Dr. Katharina Karcher, MASTERY, University of Birmingham", "Dr. Angela Buchholz, University Hospital Hamburg-Eppendorf", "Alonso Flores, former iGEM Safety and Security Programme Chief", "Innovectis (Goethe University technology transfer)", "Regulatory Support Unit, Charite Berlin", "Prof. Rainer Blasczyk, Hannover Medical School", "Prof. Klemens Budde, Charite", "MD PhD Gregory Allen", "Prof. Jens Kurreck, TU Berlin", "iGEM Lund ('The Sequence' podcast)", "hr3 (Hessischer Rundfunk)", "BIOspektrum"]
+    "realWorld_zh": "商業化策略是獨家授權協議：HIDE 保留智慧財產權，由一家大型製藥夥伴承接製造、通路與付費方的議價，之所以這樣選，是因為自體細胞療法所需的廠房、耗材與專業人力薪資成本，新創公司無法負擔。Miltenyi Biotec 已出具支持函。分析中指名的客戶鏈是製藥公司、法定健保與移植中心、而不是病人，因為先進細胞療法無法直接銷售給病人；並具體走過德國的給付制度：近乎全民的法定保險以所得的 14.6% 籌資，價格則由與製造商議價決定。該頁面附有每劑的銷貨成本、七年期預測、含里程碑與風險的法規路線圖、商業模式畫布、團隊自稱是誠實檢視自身缺口的 SWOT 與技能落差分析、PEST 分析，以及對聯合國永續發展目標的對應。意見來源包括 iGEM 創業訓練營、Innovectis 與柏林 Charité 的法規支援單位。",
+    "partners": [
+      "Miltenyi Biotec (letter of support)",
+      "NaWik, National Institute for Science Communication",
+      "Deutsche Stiftung Organtransplantation (DSO)",
+      "Eurotransplant",
+      "Cross-party Bundestag group 'Freiwilligkeit in der Organspende'",
+      "Dr. Katharina Karcher, MASTERY, University of Birmingham",
+      "Dr. Angela Buchholz, University Hospital Hamburg-Eppendorf",
+      "Alonso Flores, former iGEM Safety and Security Programme Chief",
+      "Innovectis (Goethe University technology transfer)",
+      "Regulatory Support Unit, Charite Berlin",
+      "Prof. Rainer Blasczyk, Hannover Medical School",
+      "Prof. Klemens Budde, Charite",
+      "MD PhD Gregory Allen",
+      "Prof. Jens Kurreck, TU Berlin",
+      "iGEM Lund ('The Sequence' podcast)",
+      "hr3 (Hessischer Rundfunk)",
+      "BIOspektrum"
+    ]
   },
   "images": [
     {
       "url": "https://static.igem.wiki/teams/6108/wiki/images/drylab/hush/hush-1-input-page.avif",
       "caption": "HUSH step one: the target sequence to silence plus an optional panel of related alleles to spare, with live input inspection reporting molecule type, length, GC content and readiness, and warning when a GC-rich target may defeat the seed filter.",
+      "caption_zh": "HUSH 的第一步：輸入要沉默的標的序列，再加上一組可選的、要保留的相關等位基因序列；系統即時檢視輸入並回報分子類型、長度、GC 含量與是否就緒，並在 GC 含量高的標的可能使種子區過濾器失效時提出警示。",
       "credit": "Team GU Frankfurt, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6108/wiki/images/drylab/hush/hush-architecture.svg",
       "caption": "HUSH architecture: one central HushSession interface serving the web wizard, the CLI, the terminal shell and the MCP server, so the same design logic is reachable by a newcomer, a pipeline or an AI agent.",
+      "caption_zh": "HUSH 的架構：一個中央的 HushSession 介面同時支撐網頁精靈、CLI、終端機互動介面與 MCP 伺服器，使同一套設計邏輯對新手、對流程、對 AI 代理人都可取用。",
       "credit": "Team GU Frankfurt, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6108/wiki/images/wetlab/wetlab-figures-fixed/synnotch/fig-19-fr57-facs.svg",
       "caption": "FACS characterisation of the designed binder FR57 in the synNotch receptor, testing whether a de novo binder discriminates HLA-A*01 from the near-identical A*02 and A*03 alleles.",
+      "caption_zh": "以 FACS 對 synNotch 受體上設計出的結合子 FR57 做特性分析，檢驗一個從頭設計的結合子能否把 HLA-A*01 與幾乎相同的 A*02、A*03 等位基因區分開來。",
       "credit": "Team GU Frankfurt, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6108/wiki/images/education-page/images-cropped/workshop-figure-1.avif",
       "caption": "One of nine school workshops on organ donation and synthetic biology, measured with before-and-after knowledge questions; the proposal to make these workshops curriculum-mandatory reached the German Bundestag.",
+      "caption_zh": "九場器官捐贈與合成生物學校園工作坊中的一場，以前後知識題量測成效；把這些工作坊納入課綱必修的提案已送進德國聯邦議院。",
       "credit": "Team GU Frankfurt, iGEM 2026 wiki"
     }
   ],
   "gemsTakeaway": "Two things are directly copyable. First, HUSH's premise: when the standard tool for your problem is a proprietary web form, the gap itself is a publishable contribution, so build the open version with the alignment step folded in and the safety check scored rather than disclaimed. Second, treat outreach as an experiment with a pre-and-post instrument (66.1% to 91.9% on a single factual question is worth more than 'we reached 500 people'), and build a TRUST-style written protocol before students run any activity touching death, illness or grief.",
+  "gemsTakeaway_zh": "有兩點可以直接借鏡。第一是 HUSH 的立論前提：當你問題領域裡的標準工具是一個專有的網頁表單，這個缺口本身就是可發表的貢獻，所以就把開源版本做出來，把序列比對這一步整合進去，並把安全性檢查做成評分、而不是免責聲明。第二是把科普當成實驗來做，備好前後測工具（在單一事實題上從 66.1% 提升到 91.9%，比「我們觸及 500 人」有價值得多），並在學生執行任何涉及死亡、疾病或哀傷的活動之前，先建立一份 TRUST 那樣的書面規範。",
   "sources": [
     "https://2026.igem.wiki/gu-frankfurt/",
     "https://2026.igem.wiki/gu-frankfurt/drylab",
