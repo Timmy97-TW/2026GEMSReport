@@ -1,0 +1,91 @@
+{
+ "team": "GYHS",
+ "id": "6283",
+ "section": "High School",
+ "country": "China",
+ "village": "",
+ "wiki": "https://2026.igem.wiki/gyhs/",
+ "projectTitle": "ReefBond: A Mussel-Inspired Bioadhesive for Coral Reef Restoration",
+ "tagline": "A mussel-inspired protein material, designed to help coral fragments hold on while they establish a new home.",
+ "summary": "GYHS (Guangdong Guangya High School, Guangzhou) built ReefBond, a recombinant fusion protein that joins a mussel foot protein adhesion module (Mfp3-v12 / Mfp3-v15) to an acidic mineralization module (a CARP3-derived peptide, (Asp)8, (DE)6 or (DDE)4) so that surface adhesion and interfacial mineral deposition act at the same coral-substrate interface. Eight fusion designs were expressed in E. coli BL21(DE3) from pET21a; the team reports qualitative surface-retention staining, in vitro CaCO3 deposition with SEM imaging, and a purpose-built two-version underwater test tank with a motor-guided force gauge, five-level wave generator and a six-channel monitoring interface. The project is unusually honest: nearly every claim is paired with what has not yet been measured, and no live-coral test has been done. Human Practices is the spine of the project rather than a decoration - expert and practitioner advice visibly reorders the experimental programme.",
+ "awards": [
+  "Best Sustainable Development nominee (High School)"
+ ],
+ "dry": {
+  "frameworks": "No computational modelling framework. The Model and Software template pages are essentially unfilled iGEM boilerplate; the dry-lab contribution is the instrumentation and data-recording software for the hardware platform, plus a literature-based mechanistic review (Venn 2011, Mass 2013, Cornwall 2021, Lange 2024, Gavriel 2018, Laipnik 2020) used in place of simulation.",
+  "dataviz": "ReefBond monitor renders live time-series charts for six channels (electrical conductivity, water temperature, total dissolved solids, salinity, pH and a raw light-sensor ADC value), a recent-image gallery and time-lapse playback; records are written about once per second and plots refresh about every two seconds.",
+  "datascience": "Record discipline rather than analysis: readings and the manually selected wave level are written to CSV with timestamps, a channel is left blank after more than 6 s without a reading while a measured zero is kept as zero, and the team insists raw ADC and ppm values are not relabelled as lux/PAR or PSU without calibration. Planned work is to key sensor CSVs, photographs and mechanical test sheets to shared experiment and sample identifiers.",
+  "software": "ReefBond monitor - a browser-based acquisition and recording interface for the underwater test platform (device status, six environmental channels, scheduled photography at 5-86,400 s intervals, time-lapse, CSV export). Published at https://gitlab.igem.org/2026/software/gyhs/reefbondmonitor .",
+  "stack": [
+   "Arduino Uno",
+   "four-in-one digital probe over USB-RS485",
+   "analogue pH module (A1) and light sensor (A0)",
+   "stepper and DC motor drivers",
+   "USB camera",
+   "turbidity meter",
+   "CSV logging",
+   "web/touch monitoring interface",
+   "PETG 3D printing"
+  ],
+  "techniques": [
+   "instrument calibration planning (two-point pH conversion, comparison against reference instruments)",
+   "SEM morphology of recovered deposits",
+   "Coomassie Brilliant Blue surface-retention staining and NBT reactivity staining",
+   "digital force-gauge pull testing with guide-rail loading",
+   "in vitro CaCO3 deposition (10 mM CaCl2, 25 mM MgCl2, 10 mM NaHCO3, 25 C, 7 d)"
+  ]
+ },
+ "good": {
+  "publicEngagement": "A school club exhibition with a Chinese-language 'SAVE CORAL REEF' poster, a knowledge quiz with small prizes and whiteboard questions introduced coral biology, reef ecology, threats and existing restoration methods before explaining ReefBond; students and teachers read the displays and talked with the team. Social media extended this, with post-level viewing records of 1,489 views for the iGEM introduction and 679 for the coral-themed post. The strongest element is a published set of six quiz questions and answers written specifically to kill misconceptions the team had encountered - corals are animals, bleaching is not death, an acidic module is a design hypothesis and not proof of increased coral calcification, engineered bacteria stay in the lab. The team states plainly that it has evidence of participation (photos, view counts) but not of learning, and sets out the paired anonymous pre/post records it will collect next.",
+  "ihp": "The causal chain is explicit and runs through five strands. A field visit to the Guangdong Marine Science Education Base with Professor Xie (Shenzhen Research Institute, Guangdong Ocean University) and the coral husbandry and restoration staff produced the first redirection: Xie explained that the facility's existing modified mortar already wins on cost and underwater handling but needs surface cleaning, and recommended testing underwater setting time, substrate differences, resistance to water movement and temperature stability - so the team replaced 'bond strength' with a seven-part requirement set (working and setting time, substrate compatibility, disturbance resistance, stable positioning, durability, cost, effects on coral and water quality) and adopted a staged validation pathway starting in ornamental reef aquaria rather than the sea. Yusong Shi, a Westlake University doctoral student and stony-coral hobbyist, turned handling into structure: his insistence on minimising handling disturbance produced the V2 fixed base, screw-in detachable holders and recessed model interfaces, and his suggestion of an ointment-style tube became the roughly 0.5 g single-use small-dose packaging concept. The sharpest change came from four experts converging against the team's own favourite module - Xie doubted their equipment could measure coral calcification rates, Shi recommended simpler mineralization work, Professor Baowei Chen (School of Marine Sciences, Sun Yat-sen University) told them not to interpret external deposition as stimulation of coral metabolism, and Professor Wang (South China University of Technology) prioritised adhesion because mineralization tests are more demanding; instead of dropping or defending the module, the team rewrote its research question to 'does a candidate mineralization module change in vitro deposition, and can that change measurably affect attachment performance?', reinterpreted mineralization as material-interface deposition and kept only comparative screening of the four acidic peptide classes. Professor Wang's point that microbes will use the protein and raise local oxygen demand added aeration, dissolved-oxygen and coral-microbiome questions to the assessment plan, while Professor Xu (College of Environmental and Resource Sciences, Zhejiang University) converted 'did mineral form?' into a method - indirect turbidity and TDS monitoring followed by SEM of endpoint samples - which is why TDS recording and a turbidity meter were added to V2. A peer, Student Chen of Guangdong Guangya High School with internship experience at a South China Sea coral facility, asked how long ReefBond would hold and what failure would mean, which pushed the team from a single tensile number to attachment service life, reapplication after failure and pollution burden. Professor Chen's separation of composition, dose, release, bioavailability and the distinction between functional aging and biodegradation became a six-dimension safety endpoint framework (composition and residues; exposure; degradation; water quality and microbes; deposit contact; organism selection), and the team then read Chinese Biosecurity Law Articles 35-38 and environmental-code Articles 95 and 737-738 against their own plan. They state clearly that no regulatory consultation has yet happened and no live coral has been tested - the honesty is itself part of the method.",
+  "realWorld": "Need is framed with cited numbers rather than slogans: reefs are about 0.2% of the seafloor but support at least 25% of marine species, NOAA recorded bleaching-level heat stress over roughly 84.4% of global reef area in 2023-2025, and a review of historical restoration cases found 60-70% survival for common genera but a median restored area of only 100 m2 monitored for 12 months - which is why the team targets the early post-transplant attachment window rather than restoration as a whole. Four SDGs are claimed with named sub-targets and justification: 14.2 (attachment material for ecosystem restoration), 14.a (the open hardware, operating instructions and published software as marine research-capacity and knowledge transfer), 12.4 and 12.5 (composition, release, degradation and a proposed metric of material consumed per acceptable attachment over a defined period, including reapplication after failure), 9.5 and 9.4 (traceable development and testing capacity), and 11.4 (conservation practice and engagement); SDG 13 is explicitly held as indirect rather than counted. Deployment follows an evidence-gated pathway - laboratory production and functional testing, then functional and safety assessment in aquaria or nurseries, then carefully planned marine trials - with Xie's warning that cost could block large-scale restoration kept on the page. The regulatory path is named but unstarted: teachers and the partner institution will compile composition, residue, dose, release and site information for internal review before consulting local environmental, natural resources and fisheries authorities and the site manager about approvals, filings, organism sources, site use and monitoring. Cost is treated as full accounting - preparation and application losses, replacement, tool reuse, equipment cost, training and maintenance - and after the Jamboree the plan is calibration and repeatability testing of the platform, matched-control comparisons of fusion proteins against the adhesive component and commercial materials, staged safety assessment, aquarium user trials of dispensing and positioning, and returning the data to Professor Xie, Shi and Student Chen to ask whether their concerns were actually answered, recording the reasons for each decision including when results show no improvement.",
+  "partners": [
+   "Guangdong Marine Science Education Base (coral husbandry and restoration team)",
+   "Professor Xie, Shenzhen Research Institute of Guangdong Ocean University",
+   "Yusong Shi, School of Medicine, Westlake University (reef aquarium user)",
+   "Professor Baowei Chen, School of Marine Sciences, Sun Yat-sen University",
+   "Professor Wang, South China University of Technology (coral-associated microbiology)",
+   "Professor Xu, College of Environmental and Resource Sciences, Zhejiang University",
+   "Mr Xu, engineering and maker educator (hardware mentor)",
+   "Student Chen, Guangdong Guangya High School / South China Sea Institute of Oceanology intern (restoration workshop)",
+   "Worldshaper Academy (instructors)"
+  ]
+ },
+ "images": [
+  {
+   "url": "https://static.igem.wiki/teams/6283/wiki/public/hp/figure-01-hp-overview.webp",
+   "caption": "Overview of Human Practices inputs, decisions and project responses: the five strands linking stakeholder advice to design, experiment, safety and follow-up.",
+   "credit": "Team GYHS, iGEM 2026 wiki"
+  },
+  {
+   "url": "https://static.igem.wiki/teams/6283/wiki/public/hp/figure-03-facility-visit.webp",
+   "caption": "Field visit and discussion with Professor Xie at the Guangdong Marine Science Education Base, including coral husbandry aquaria and mounting bases.",
+   "credit": "Team GYHS, iGEM 2026 wiki"
+  },
+  {
+   "url": "https://static.igem.wiki/teams/6283/wiki/public/hp/figure-04-attachment-workflow.webp",
+   "caption": "The current coral attachment workflow - nursery growth, attachment with bases, grids, screws or putty, then continued checks - compiled from discussions at the restoration facility.",
+   "credit": "Team GYHS, iGEM 2026 wiki"
+  },
+  {
+   "url": "https://static.igem.wiki/teams/6283/wiki/public/hp/figure-05-validation-pathway.webp",
+   "caption": "The staged pathway for evaluating a coral attachment material, in which progression depends on evidence from the preceding stage.",
+   "credit": "Team GYHS, iGEM 2026 wiki"
+  }
+ ],
+ "gemsTakeaway": "Adopt GYHS's habit of letting stakeholders attack the module you are most attached to and then rewriting the research question instead of the conclusion: four experts doubted their mineralization story, so the team reinterpreted it as interfacial deposition and kept only a controlled comparative screen. Pair it with their discipline of printing, beside every result, the measurement that would be needed to make the claim and has not yet been made.",
+ "sources": [
+  "https://2026.igem.wiki/gyhs/",
+  "https://2026.igem.wiki/gyhs/human-practices",
+  "https://2026.igem.wiki/gyhs/sustainability",
+  "https://2026.igem.wiki/gyhs/description",
+  "https://2026.igem.wiki/gyhs/engineering",
+  "https://2026.igem.wiki/gyhs/hardware",
+  "https://2026.igem.wiki/gyhs/results",
+  "https://2026.igem.wiki/gyhs/safety-and-security",
+  "https://2026.igem.wiki/gyhs/contribution",
+  "https://2026.igem.wiki/gyhs/parts",
+  "https://2026.igem.wiki/gyhs/assets/index-5Lo3wIOn.js",
+  "https://gitlab.igem.org/2026/software/gyhs/reefbondmonitor"
+ ]
+}

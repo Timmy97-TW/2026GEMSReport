@@ -42,6 +42,14 @@
       "chips": ["Techno-economic: 7 HS vs 5 UG", "GROMACS: 6 UG, 0 HS"]
     },
     {
+      "kicker": "A weaker result, reported anyway",
+      "title": "Publishing your failures: real, but a smaller effect than it looks",
+      "title_zh": "公開失敗：效果是真的，但沒有看起來那麼大",
+      "body": "Several analysts noticed the same thing independently — Toronto, WageningenUR and UZurich each put a prominent negative or failed result on the wiki, and two of them won the award in that exact category. We tested it across every file. Teams that openly report failure reach a Top 10 at 54%, against 41% for those that do not. That is a real gap, but it is far smaller than the loop-closure gap, and the measurement is partly circular: it detects how candid *our own summary* of a team was, not reliably how candid the team was. Treat it as a reason to publish the negative result, not as proof it wins prizes.",
+      "body_zh": "好幾位分析員各自獨立注意到同一件事——Toronto、WageningenUR 與 UZurich 都在 wiki 上顯著地放上了一個負面或失敗的結果，而其中兩隊正是在對應的獎項類別中獲獎。我們對所有檔案做了檢驗：公開報告失敗的團隊進入 Top 10 的比例是 54%，沒有這麼做的則是 41%。差距是真的，但遠小於「閉合迴圈」的差距，而且這個量測帶有循環性：它偵測到的是*我們自己的摘要*有多坦白，而未必能可靠反映團隊有多坦白。請把它當作「應該公開負面結果」的理由，而不是「這樣就會得獎」的證明。",
+      "chips": ["54% vs 41%", "measurement is confounded"]
+    },
+    {
       "kicker": "What this means for GEMS",
       "title": "The cheapest capability is the one that correlates with winning",
       "title_zh": "最便宜的能力，正好就是和得獎相關的那一個",

@@ -1,0 +1,89 @@
+{
+  "team": "ZQT-Nanjing",
+  "id": "6236",
+  "section": "High School",
+  "country": "China",
+  "village": "Biomanufacturing / sustainable production (inferred from project scope; no village stated on the wiki)",
+  "wiki": "https://2026.igem.wiki/zqt-nanjing/",
+  "projectTitle": "EcToBloom",
+  "tagline": "A greener, low-salt route to ectoine, finished as a compostable bacterial-cellulose repair mask",
+  "summary": "EcToBloom rebuilds the ectoine biosynthesis route (ectB-ectA-ectC from halophilic bacteria) in non-halophilic E. coli BL21(DE3) so that ectoine can be made under conventional low-salt fermentation instead of the industrial high-salt 'bacterial milking' process that corrodes equipment and produces untreatable saline wastewater. A second engineered strain carries acsAB and acsCD to make its own bacterial cellulose membrane, which is combined with a silk fibroin layer and loaded with ectoine to give a preservative-free, compostable three-layer repair mask. Titres rose from 0.503 g/L (same-batch wild type) to 4.425 g/L in the first engineered strain, 5.344 g/L on an optimised medium and 6.852 g/L after introducing the feedback-desensitised LysC T352I aspartokinase. The team also explored wheat-straw hydrolysate and other paper wastes as non-food carbon sources.",
+  "awards": [
+    "Best Project Promotion Video winner (High School)",
+    "Best New Composite Part nominee"
+  ],
+  "dry": {
+    "frameworks": "No mathematical or computational model. The Model, Software, Measurement and Hardware pages are left as unedited iGEM template text (award blurb plus 'Inspirations' links), so the project has no kinetic model, no flux analysis and no in-silico design loop. The engineering logic is reasoned verbally from pathway biochemistry (feedback inhibition of LysC, pathway stoichiometry via a single operon) rather than simulated.",
+    "dataviz": "Figure-led quantitative reporting across Results and Description: a titre roadmap annotating each stage's value, bar charts with individual replicate dots and SD error bars, 0-48 h growth curves (OD600) with error bars, production time courses, four single-factor screening panels (carbon source, initial glucose, nitrogen source, NH4Cl concentration), plasmid maps, annotated gel panels, and a stakeholder impact map on Human Practices. Figures carry long explanatory captions that state what the bars, dots and error bars are.",
+    "datascience": "Real but basic experimental data analysis: n = 3 biological replicates throughout, mean +/- SD, fold-change comparisons restricted to same-batch controls, HPLC quantification against a standard calibration curve, and single-factor medium optimisation. Notably careful about statistical honesty for a high-school team: they refuse to add titres from different batches into a 'cumulative improvement', flag that the wild-type signal sits near the method's limit of quantification with high between-replicate variance, and list blank matrices, spike-recovery and peak-purity checks as the follow-up needed.",
+    "software": "No software deliverable. Their 'code' contribution is the published source of a synthetic-biology educational card game, released so other teams can fork, translate and extend it.",
+    "stack": [
+      "HPLC (C18 reverse phase, acetonitrile:water 20:80, 210 nm) with standard calibration curve",
+      "OD600 growth curves with dilution-corrected linear range",
+      "agarose gel electrophoresis + colony PCR + Sanger sequencing verification",
+      "alkaline purification and dry-weight quantification of intracellular vs extracellular cellulose",
+      "plasmid map / pathway figure production"
+    ],
+    "techniques": [
+      "same-batch controlled fold-change comparison",
+      "mean +/- SD with n = 3 biological replicates and per-replicate data points plotted",
+      "single-factor screening (carbon source, glucose concentration, nitrogen source, NH4Cl concentration)",
+      "growth-vs-production time-course analysis to assess metabolic burden",
+      "limit-of-quantification reasoning and explicit refusal to pool across batches",
+      "rational point-mutation design (LysC T352I) from literature feedback-inhibition mechanism"
+    ]
+  },
+  "good": {
+    "publicEngagement": "The strongest dimension of this project. A BLOOM-framework education programme runs across four age bands with different media for each: food-chain lessons, comics and perler-bead biology art for kindergarten and primary pupils; mini STEM research projects and lab visits for middle schoolers; genetic-circuit design, ethics debating ('Can we do it - but should we?'), knowledge competitions and a purpose-built 'Synthetic Biology Laboratory' card game for high schoolers; plus science journaling and a shared educational website built with team NBJF. A separate strand studies gender equity in science ('Do girls really have equal freedom to choose science?'), including a student-and-parent study of post-Gaokao major choice, and a campus sustainability strand ('Waste Detectives', 'Is it really green?'). The wiki landing page is itself a piece of science communication built like a promotional video: a relatable domestic scene (face mask on the sofa), then the hidden cost, then the named molecule, then a hard cost-comparison table ($385/kg ectoine against $0.33-0.89/kg glycerin), then the two engineering modules, then the vision - concrete-consequence-first rather than mechanism-first. The award-winning promotion video itself is not embedded on the wiki, so only this narrative architecture can be verified here.",
+    "ihp": "A five-stage Aspiration -> Action -> Analysis -> Adaptation loop with documented project changes at each stage. Stage 1: a 397-response questionnaire on skincare habits and dryness (67.51% reported regular skincare routines, over 80% linked dryness to weather or environment), which narrowed the project from general skincare to barrier repair and widened the target user beyond naturally dry skin. Stage 2: interviews with students, parents, adult consumers, beauty retail staff and a facial-mask industry expert. Stage 3: technical feasibility with Nanjing Tech University researchers (Dr Huang Luming, Dr Fu Yangkai) and Tian Xiaodong of the Institute of Microbiology, CAS - this is where carbon/nitrogen optimisation and the upstream metabolic-engineering idea came from. Stage 4: a dermatologist, mask manufacturers and a cosmetic formulator set the boundaries of what the team could claim. Stage 5: farmers on wheat-straw supply, an environmental researcher on saline and fermentation wastewater risk, plus biosafety and commercialisation. Closes with a stakeholder impact map and reflection.",
+    "realWorld": "The project is framed end-to-end as a manufacturing-route substitution rather than a molecule demo: low-salt fermentation to cut corrosion and saline wastewater, agricultural residue as feedstock, in-house membrane production so the mask substrate is not a purchased black box, and a compostable end-of-life. Cost framing is explicit (ectoine at $385.46/kg against hyaluronic acid at $43-113/kg; reactor cost estimates of EUR 3,000/m3 for salt-resistant materials). Contributions are deliberately packaged for reuse: three registered parts with full Registry documentation (BBa_K5481012 acsAB-acsCD bacterial cellulose module, BBa_26XUR2FA LysC T352I, and an ectABC-lysC* composite), published game code, and a reusable questionnaire plus report framework for the women-in-STEM study. The Entrepreneurship page is unfilled template.",
+    "partners": [
+      "Nanjing Tech University (Dr Huang Luming, Dr Fu Yangkai)",
+      "Institute of Microbiology, Chinese Academy of Sciences (Tian Xiaodong)",
+      "iGEM team NBJF (shared educational website)",
+      "facial mask industry expert 'Director Jin' and mask manufacturers",
+      "dermatologist and cosmetic formulator",
+      "local wheat farmers",
+      "environmental researcher (saline/fermentation wastewater)",
+      "Nanjing Foreign Language School and six other Nanjing-area partner schools"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6236/wiki/description/img1-v2008.avif",
+      "caption": "The EcToBloom low-salt green manufacturing platform: engineered chassis, renewable feedstock, biosynthesised ectoine and biodegradable mask, ending in the three-layer BC-Silk-Ectoine repair mask.",
+      "credit": "Team ZQT-Nanjing, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6236/wiki/results/img1.avif",
+      "caption": "Roadmap of experimental results, annotating the titre reached at each stage: wild type 0.503 g/L, engineered strain 4.425 g/L, optimised medium 5.344 g/L, LysC T352I strain 6.852 g/L.",
+      "credit": "Team ZQT-Nanjing, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6236/wiki/human-practices/img17-v1126.avif",
+      "caption": "Stakeholder impact map closing the five-stage Human Practices loop, from consumers and retail staff to metabolic engineers, dermatologists, farmers and environmental researchers.",
+      "credit": "Team ZQT-Nanjing, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6236/wiki/education/img17.avif",
+      "caption": "'Synthetic Biology Laboratory', the team's purpose-built card game for high-school learners, whose code was published so other teams can modify and translate it.",
+      "credit": "Team ZQT-Nanjing, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Everything ZQT-Nanjing actually did on the dry side - replicated HPLC titres with error bars, single-factor medium screening, growth-versus-production curves, a 397-person survey and a genuinely excellent multi-age communication programme - is reachable by a motivated high-school team in one season, and it won the video award without a single line of modelling: their Model, Software, Measurement and Hardware pages are untouched template text. The limiting factor here is not compute or tooling but mentorship and framing: nobody appears to have suggested that even a two-ODE growth-and-product model or a simple cost model of the low-salt route would have cost a week and turned a strong wet-lab story into a complete one.",
+  "sources": [
+    "https://2026.igem.wiki/zqt-nanjing/",
+    "https://2026.igem.wiki/zqt-nanjing/description",
+    "https://2026.igem.wiki/zqt-nanjing/results",
+    "https://2026.igem.wiki/zqt-nanjing/model",
+    "https://2026.igem.wiki/zqt-nanjing/software",
+    "https://2026.igem.wiki/zqt-nanjing/measurement",
+    "https://2026.igem.wiki/zqt-nanjing/hardware",
+    "https://2026.igem.wiki/zqt-nanjing/human-practices",
+    "https://2026.igem.wiki/zqt-nanjing/education",
+    "https://2026.igem.wiki/zqt-nanjing/contribution",
+    "https://2026.igem.wiki/zqt-nanjing/entrepreneurship",
+    "https://2026.igem.wiki/zqt-nanjing/engineering",
+    "https://2026.igem.wiki/zqt-nanjing/parts"
+  ]
+}

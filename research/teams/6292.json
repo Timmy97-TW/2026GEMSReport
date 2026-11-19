@@ -1,0 +1,67 @@
+{
+  "team": "Stockholm",
+  "id": "6292",
+  "section": "Overgrad",
+  "country": "Sweden",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/stockholm/",
+  "projectTitle": "TIDE",
+  "tagline": "A yeast that senses bisphenol A and degrades it from the same sensing event, rebuilt as a contained reactor after three experts said open release would never fly",
+  "summary": "Stockholm (KTH) built TIDE, a three-plasmid Saccharomyces cerevisiae system: a detection module encoding a synthetic LexA-mER-alpha transcription factor, a degradation module encoding laccase, and a GFP reporter, so that detecting BPA also triggers its breakdown. They assembled by Gibson, verified by sequencing, read GFP by microscopy and 96-well plate, measured laccase by a modified ABTS assay at 420 nm and BPA removal by LC-MS, and built a modular dry-lab pipeline (structure prediction with pLDDT/PAE early screening, then batch docking of a bisphenol analogue panel). They won the Safety and Security Award in the Overgrad section, and the reason is visible in the work: a three-expert advisory board, a formal STPA hazard analysis, a published wastewater-containment guidebook for future teams, and a documented decision to abandon their own central deployment assumption.",
+  "awards": ["Safety and Security Award, Overgrad (winner)"],
+  "dry": {
+    "frameworks": "Systems-Theoretic Process Analysis (STPA), the aerospace hazard-analysis method from Nancy Leveson's MIT group, applied to a biological system: a control structure of regulators, development team, operator, engineered yeast and independent BPA measurement, yielding eight losses, system-level hazards with safety constraints, twenty-six unsafe control actions with controller constraints, and causal scenarios with candidate mitigations. They credit iGEM UCalgary 2024's ErythrO as the precedent for adapting STPA biologically. Alongside it: a structured expert advisory board, KTH's KLARA chemical risk-management documentation, and a self-built laboratory safety form.",
+    "dataviz": "An STPA control-structure diagram distinguishing control actions (solid) from feedback (dashed) with the BPA-clearing path highlighted, plasmid maps, a dry-lab pipeline schematic, sequencing alignment profiles, GFP microscopy panels, LC-MS figures, docking score and contact-map tables, and market-growth forecasts for BPA versus its alternatives with shaded inter-source variation and an explicit note that the data were compiled and visualised with AI assistance and the sources manually verified.",
+    "datascience": "A modular structure-prediction and docking pipeline with an early screening stage that filters candidates on configurable pLDDT and PAE cutoffs before the expensive full run, plus shared-memory and worker-RAM optimisation, and a batch mode that docks every ligand in the bisphenol analogue panel against each receptor candidate automatically. Validation: docking estradiol into 1ERE reproduces the crystal pose to within about 0.6 Angstrom. The code is deliberately split into modelling, docking and redesign modules rather than one end-to-end script, so other teams can reuse parts.",
+    "software": "A reusable sequence-to-binding-score pipeline (structure prediction, docking, redesign) released as separate modules with configurable confidence-score screening.",
+    "stack": ["AlphaFold-style structure prediction with pLDDT/PAE confidence filtering", "molecular docking", "S. cerevisiae three-plasmid system", "Gibson Assembly", "LC-MS", "ABTS laccase assay", "fluorescence microscopy", "KLARA risk-management system"],
+    "techniques": ["LexA-mER-alpha synthetic transcription factor sensing", "laccase-mediated BPA degradation", "multi-plasmid yeast transformation", "LC-MS discrimination of degradation from uptake and adsorption", "auxotrophic selection", "STPA hazard modelling"]
+  },
+  "good": {
+    "publicEngagement": "They ran a Model United Nations conference simulating the UN Environment Assembly on 'Strengthening Global Monitoring and Regulatory Frameworks for Bisphenol A and Other Endocrine Disrupting Chemicals', and published the planning documents as a reusable toolkit so other iGEM teams can run one, explicitly designed to be approachable for beginners. A second online MUN for current and former iGEM members, on equitable access to biotechnological innovation, is being organised. They also built two SDG outreach games for different age groups, contributed a BPA literature review to the MSP Vector journal run by the Maastricht iGEM team and took part in its peer review, and appeared at the KTH Climate Action Centre, ForskarFredag, a school visit, a student magazine and conferences in Copenhagen, Munster and Oslo.",
+    "ihp": "Over twenty named stakeholders including Naturvardsverket (the Swedish EPA) and Stockholm Vatten och Avfall, with a regulatory comparison that is genuinely specific: Sweden's SFS 2012:991 restricting BPA-releasing coatings in food packaging ahead of the EU-wide ban, against the FDA's continuing position that BPA is safe at authorised levels. The decisive engagement, though, is the safety advisory board, where each of three KTH experts is documented with the questions asked, the answer given and the change made. Gunaratna Kuttuva Rajarao told them wastewater plants are not closed systems, that plants will not accept GMOs, that the safety of the organism cannot be guaranteed and that a kill switch alone would probably not be enough. Zeynep Cetecioglu Gurol explained the plant layout and identified the membrane-bioreactor stage as the only place a retained organism could sit, named Bromma as a plant planning to adopt membrane bioreactors, flagged that real operating temperatures of 20-25 degrees C differ from lab conditions, and recommended non-targeted metabolite analysis because transformation products may be more harmful than BPA itself. Gustav Sjoberg said physical containment in a closed reactor is sufficient (no open drains, double barriers, sealed reactors, fail-closed computer-controlled valves, autoclaved waste), that secreting laccase from yeast is hard and a high-secreting filamentous fungus would be the real production host, that holding yield over many generations is the real risk and should be addressed by genome integration near an essential gene, and bluntly that activated carbon followed by incineration is very cheap and hard to compete with.",
+    "realWorld": "This is the rare case where the safety work demolished the business case and the team published the demolition. Rajarao's feedback produced what they themselves call the project's largest change: they abandoned the assumption that TIDE would ever be released into municipal wastewater. The system is now proposed as a contained biological reactor with physical containment as the primary safeguard and genetic measures only as an additional layer; the application moved from large municipal volumes to a defined, more concentrated industrial stream (food packaging and manufacturing effluent, which Rajarao noted has more BPA and fewer competing contaminants); and they rebuilt the economic case around that smaller stream, stating enzyme demand at low concentration as a limitation rather than hiding it. They also stopped treating a drop in BPA as proof of safe effluent, because degradation products and enzyme demand are unanswered. Sjoberg's point that activated carbon plus incineration is cheap and hard to beat is accepted rather than argued away: their case now rests on degradation being more energy-efficient than boiling off water and burning, on picking the right stream, and on a credible operating model, with membrane cost and continuous dosing listed as limitations. The regulatory read is honest too: EU GMO regulation is not expected to open up, the EU wastewater directive currently requires only monitoring of micropollutants and pharmaceutical capture is expected to use activated carbon, and deployment is declared conditional on safety and regulatory assessment with the sequence set by Cetecioglu Gurol (prove laboratory function, then pilot, then full risk assessment, environmental and techno-economic work). Be clear about what this means: there is no business model here in the commercial sense, no company, no investor, no patent, no customer and no pricing, and the proposed implementation organism may not even be yeast, since they now describe S. cerevisiae as a proof-of-concept host and point at a high-secreting filamentous fungus for production. The results are equally unvarnished: sequence verification problems, an incorrect primer and an overly long PCR target muddied verification rounds, the positive control (tamoxifen) never arrived, and they state that sequence verification should precede functional testing and each assay needs a positive control. What they built instead of a venture is reusable safety infrastructure: a downloadable Guidebook to Wastewater Treatment Systems comparing nine systems (activated sludge, UASB, biofilm reactors, membrane bioreactors, nature-based lagoons and combinations) and setting out the containment, horizontal-gene-transfer and regulatory questions each one raises for a GMO project, closing with a checklist for future teams; the full STPA as a PDF; a modular dry-lab pipeline; and the MUN toolkit. Notably, the guidebook exists because they noticed, during an unmoderated caucus at their own MUN, that delegates had little understanding of how wastewater treatment plants work yet enthusiastically wrote remediation into the resolution anyway, and inferred the same gap would exist among iGEM teams. Continuation is framed as a research path rather than a company: transfer the circuit to a production organism, integrate essential genes into the plasmids under native promoters, build a CRISPR knockout strain for dependence, and characterise degradation products before any safety claim.",
+    "partners": [
+      "KTH Royal Institute of Technology, Dept. of Industrial Biotechnology (Johan Rockberg, PI)",
+      "Gunaratna Kuttuva Rajarao, KTH (wastewater treatment and bioremediation; safety advisory board and general safety training)",
+      "Zeynep Cetecioglu Gurol, KTH (wastewater bioremediation, SYMBIOREM Horizon Europe project; safety advisory board)",
+      "Gustav Sjoberg, KTH (metabolic engineering and GMOs in bioreactors; safety advisory board)",
+      "Naturvardsverket (Swedish Environmental Protection Agency)",
+      "Stockholm Vatten och Avfall (and Bromma wastewater treatment plant as a possible future test site)",
+      "KTH Climate Action Centre",
+      "MSP Vector journal, Maastricht University iGEM team (literature review and peer review)",
+      "iGEM UCalgary 2024 (STPA precedent)"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6292/wiki/safety-and-security/figure1-stpa-control-structure.avif",
+      "caption": "STPA control structure for TIDE, mapping regulators, developers, operator, the engineered yeast and independent BPA measurement, with control actions as solid lines and feedback as dashed",
+      "credit": "Team Stockholm, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6292/wiki/safety-and-security/guna-meeting.avif",
+      "caption": "Safety and security advisory board interview with Gunaratna Kuttuva Rajarao, whose feedback ended the plan to release TIDE into municipal wastewater",
+      "credit": "Team Stockholm, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6292/wiki/safety-and-security/zeynep-meeting.avif",
+      "caption": "Advisory board interview with Zeynep Cetecioglu Gurol, who identified the membrane-bioreactor stage as the only containment point in a conventional treatment plant",
+      "credit": "Team Stockholm, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6292/wiki/community-impact/mun.avif",
+      "caption": "The team's Model United Nations simulation of the UN Environment Assembly on regulating bisphenol A and other endocrine disruptors, released with a reusable organiser toolkit",
+      "credit": "Team Stockholm, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Convene a small safety and security advisory board of domain practitioners (not just academics in your own field) early enough that their answers can still change the project, and publish each interview as questions asked, answer given and change made, including the change that kills your headline application. Then run a formal STPA on the deployed system, since modelling controllers, feedback loops and unsafe control actions surfaces failure modes that a biosafety checklist never reaches, and release the analysis as a document other teams can copy.",
+  "sources": [
+    "https://2026.igem.wiki/stockholm/",
+    "https://2026.igem.wiki/stockholm/safety-and-security",
+    "https://2026.igem.wiki/stockholm/contribution",
+    "https://2026.igem.wiki/stockholm/assets/index-D8fvRSn0.js",
+    "https://static.igem.wiki/teams/6292/wiki/safety-and-security/stpa-tide.pdf",
+    "https://static.igem.wiki/teams/6292/wiki/safety-and-security/safety-security-guidebook-igem.pdf"
+  ]
+}

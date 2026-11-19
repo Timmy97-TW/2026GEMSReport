@@ -1,0 +1,104 @@
+{
+  "team": "HKU-HongKong",
+  "id": "6401",
+  "section": "",
+  "country": "Hong Kong",
+  "village": "Therapeutics",
+  "wiki": "https://2026.igem.wiki/hku-hongkong/",
+  "projectTitle": "Omni-Patch",
+  "tagline": "A cell-free single-layer sodium alginate dressing carrying a de novo TLR4/MD-2 antagonist peptide and FGF2 for hard-to-heal wounds",
+  "summary": "Omni-Patch is a cell-free sodium alginate wound dressing loaded with aTi-14, a de novo designed peptide intended to block LPS binding to the MD-2/TLR4 complex, plus FGF2 as a repair-supporting growth factor. The team's first concept used a living chassis secreting a literature peptide (TAP2) under nitric-oxide control via NorR; recombinant TAP2 could not be recovered and the macrophage assay showed no reduction in inflammatory markers, so they pivoted to de novo design and a cell-free carrier. A nitric-oxide diffusion model then showed NO penetration depth was far shorter than the hydrogel thickness needed for exudate handling, which killed the NO-sensing component and reframed the device as open-loop. The wiki is unusually candid: aTi-14 left-shifted FITC-LPS binding at 25 uM in a one-concentration THP-1 M0 screen while five sibling variants did not, but matched qPCR showed no transcript drop, the Griess nitrite run was discarded for bacterial contamination, and no IC50 is claimed.",
+  "awards": [
+    "Best New Composite Part (nominee)",
+    "Best Presentation (nominee)",
+    "Best Therapeutics Project (nominee)"
+  ],
+  "dry": {
+    "frameworks": "Four chained mechanistic modules plus a design-space inversion. Module 1 models payload release from the alginate matrix and transport from gel surface into wound tissue, recalibrated against the measured FGF2-G3 BCA release fraction after the wet lab released less than predicted. Module 2 models competition between aTi-14 and LPS for the MD-2 pocket, using the measured relative reduction in LPS binding at 25 uM as a dissociation-constant proxy to output receptor-occupancy fraction. Module 3 propagates occupancy to downstream NF-kB signalling output (nuclear p65, NO, accumulated nitrite). Module 4 is a Fisher-KPP reaction-diffusion wound-closure model in which the FGF2-G3 arm drives fibroblast proliferation and inflammation suppresses growth through the aTi-14 arm, with a front-speed criterion drawing the heal/no-heal boundary and predicted closure time as the patient-facing output. A separate NO-sensing model (NorR regulator circuit, penetration-depth heatmap, NO-vs-NorR threshold) was built before the planned experiment and its negative result removed the sensing component from the wet-lab design.",
+    "dataviz": "Figure set is systematically numbered per module (m1-m4, ds-, sa-, no-, ps- prefixes) and served through a custom DryLabFigure/FigureLightbox React component with figure number, caption and note. Includes solver-convergence plots, release curves overlaid on BCA data, kymographs of aTi-14 and FGF2 concentration through gel depth and time, MD-2 occupancy curves, endotoxin-load shift plots, p65-vs-occupancy curves, closure-time curves, a front-speed verification plot, a Sobol dose-vs-closure sensitivity figure, an NO penetration-depth heatmap, and a design map from the inverse run.",
+    "datascience": "Global sensitivity analysis (Sobol) across the chained modules, confirming the dominant uncertainties (endotoxin load, receptor affinity, mobile fraction) propagate into the design criteria without amplification, so conclusions are robust to constants that could not be directly validated. Solver-convergence verification for each module before use. After verification the whole chain was run in reverse as a design-space inversion, deriving the loading and thickness criteria the patch must satisfy to reach a target closure time, with a time-above-target/dosing-interval figure and a design map. A bespoke 'mathematical filter' scores candidates on three sub-modules (binding suitability, structural burden, proteolytic stability); applied retrospectively it flagged structural liabilities in the failed TAP2 peptide that the earlier affinity-only score had missed, and cleared aTi-14.",
+    "software": "RFD3-binder-studio: a locally deployable, open-source ten-stage de novo binder design and triage pipeline behind one command line, published at github.com/igemhku/rfd3-binder-studio and gitlab.igem.org/2026/software/hku-hongkong/rfd3-binder-studio. Stage 1 generates binder backbones against the MD-2 target structure and its hotspot residues with RFdiffusion3; stage 2 writes sequences with LigandMPNN/ProteinMPNN across a temperature/noise grid; stage 3 re-folds and validates with RoseTTAFold3 against pLDDT, PAE and backbone RMSD gates; stage 4 co-folds target and binder de novo with Boltz-2 for ipTM, interface pLDDT, PAE and affinity; stage 5 reads interface biophysics with PRODIGY (binding free energy, hydrogen bonds, salt bridges, buried surface area); stage 6 screens immunogenicity with MHCflurry, MHCnuggets and IEDB; stage 7 scans off-targets by MMseqs2 homology search of the target then co-folds candidates against anti-target receptor PDBs with the same Boltz-2 engine for like-for-like comparison; stage 8 applies hard pass/fail gates then a block-weighted composite rank; stage 9 runs in silico directed evolution whose children re-enter at stage 4 so every generation is re-folded, re-scored and re-gated on identical terms, with full lineage in a database; stage 10 writes ranked_candidates.csv and report.md. All parameters live in editable YAML. Ships a --dry-run mode with fabricated metrics that validates the full pipeline on any laptop, a doctor command that reports what the current machine can run, --resume, and an init-example campaign. Stages 1-4 and 7 need CUDA GPU; 5, 6, 8, 9 run on CPU. The team explicitly states the scoring weights are reasoned priors, not measured calibration, so output is a triage order and not an affinity.",
+    "stack": [
+      "RFdiffusion3 (RFD3)",
+      "ProteinMPNN / LigandMPNN",
+      "RoseTTAFold3 (RF3)",
+      "Boltz-2",
+      "PRODIGY",
+      "MHCflurry 2.0",
+      "MHCnuggets",
+      "IEDB",
+      "MMseqs2",
+      "YAML-driven config",
+      "Python CLI",
+      "GitLab / GitHub"
+    ],
+    "techniques": [
+      "De novo binder backbone generation against hotspot residues",
+      "Independent refold validation (pLDDT / PAE / RMSD gating)",
+      "De novo co-folding for ipTM and interface confidence",
+      "Binding free energy estimation",
+      "MHC class I/II immunogenicity screening",
+      "Homology-based off-target panel construction and like-for-like co-folding",
+      "Hard gating then block-weighted composite ranking",
+      "In silico directed evolution with revalidation re-entry",
+      "Reaction-diffusion (Fisher-KPP) front-speed modelling",
+      "Receptor competitive-binding / occupancy modelling",
+      "Release and tissue-transport kinetics with wet-lab recalibration",
+      "Sobol global sensitivity analysis",
+      "Inverse design / design-space inversion",
+      "Solver convergence verification"
+    ]
+  },
+  "good": {
+    "publicEngagement": "A structured SynBio Workshop Series rather than one-off events, each with matched pre/post Likert surveys and reported means. 'Running with DNA' at South Tuen Mun Government Secondary School (28 September 2026) gave 13 Form 4-5 students a full agarose gel electrophoresis and DNA fingerprinting run in their own school lab, co-led by STMGSS alumni on the iGEM team; the pre-survey established the access gap (13/13 reported few opportunities to run gels, 10/13 for micropipettes) and the post-survey returned an aggregated mean of 4.46/5.00 across 16 items with 92.3% reporting better understanding of synthetic biology. A separate lower-secondary workshop (18 S1-S2 respondents) scored 4.67/5.00 on micropipetting and 4.39/5.00 on hands-on learning being more effective than lectures. A case-based DBTL Healthcare Challenge for secondary biology students built around a fictional 62-year-old diabetic patient moved understanding of engineered bacteria from 3.06 to 4.13/5.00 and of the DBTL cycle from 3.44 to 4.19 across 16 matched responses. The HKU-iBRIDGE SynBio Bootcamp (3-4 October 2026, HKU Medical Campus) brought 40+ S3-S5 students from across Hong Kong through two dry-lab sessions. The team leader also appeared as an expert guest on Episode 121 of the Disconnected podcast, distributed on web, Spotify, Apple Podcasts, Amazon Music and YouTube, discussing AlphaFold, generative diffusion models, human-in-the-loop governance and the stigma researchers face. An Omni-Patch Arcade of four browser games with a built-in feedback portal and dual difficulty tiers extends engagement past the physical workshops.",
+    "ihp": "Five stakeholder tiers defined up front with a stated reason for approaching each: lived experience (patients, home caregivers, bedside nurses), clinical and technical specialists, health-system and regulatory actors, public and educational actors, then a final synthesis tier that is explicitly not new conversations but a thematic analysis across all of them, mapping agreement, disagreement and tension. Each interview is written to a fixed four-part template (background and why approached, problems and gaps identified, takeaways and advice, closed-loop action plan). The closed loops are concrete and often restrictive rather than flattering. Prof. Chen (Institute of Antibiotics, Huashan Hospital, Fudan University) established that bacterial colonisation is not infection and that LPS or inflammatory signal alone cannot justify antibiotics, which rewrote both the scientific hypothesis (partial modulation of excessive bacteria-associated inflammation, with host-defence and bacterial-clearance evidence required alongside cytokine readouts) and the education materials (emphasise regular foot observation and prompt professional assessment, never self-diagnosis). A burn-surgery director at Beijing Jishuitan Hospital established that diabetic foot ulcer healing is multifactorial and forced the team to test one peptide and one defined mechanism before proposing combinations, and to drop the M1/M2 framing and NO trigger pending evidence. A plastic surgery consultant pointed out hydrogels absorb exudate poorly relative to foam and negative-pressure wound therapy and that high exudate flow could wash out a topically released peptide, suggesting integration with NPWT or application to sterile surgical dressings instead.",
+    "realWorld": "The project is consistently positioned as a preclinical adjunct to standard care, not a replacement for debridement, offloading, infection treatment, vascular assessment or clinical judgement, and the wiki repeats that boundary on description, measurement and IHP pages. Health-system and regulatory stakeholders (clinicians managing wound-care workflows, MedTech entrepreneurs, trade and regulatory specialists familiar with Hong Kong and Greater Bay Area pathways) shaped the value proposition, target indication and translation route. The epidemiological framing is specific to Hong Kong, built on Census and Statistics Department population projections to 2046 for residents aged 65+, and cites pooled chronic-wound prevalence and diabetic foot ulcer lifetime risk from systematic reviews rather than asserted numbers. Both educational games are open-source single-file HTML that run offline in any browser, work on mobile, are fully bilingual English/Chinese, need no account or install, and carry a public live visit counter so uptake is externally verifiable.",
+    "partners": [
+      "South Tuen Mun Government Secondary School (STMGSS)",
+      "Pui Ching Middle School",
+      "HKU-iBRIDGE",
+      "Asia-Pacific iGEM Conference (APIC)",
+      "Institute of Antibiotics, Huashan Hospital, Fudan University",
+      "Beijing Jishuitan Hospital / Capital Medical University Burn and Wound Repair",
+      "Disconnected podcast"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6401/wiki/modeling/updated/m4-fig2-closure-curves-and-time.avif",
+      "caption": "Module 4 Fisher-KPP wound-closure model: predicted closure curves and closure time, the patient-facing output of the chained model stack.",
+      "credit": "Team HKU-HongKong, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6401/wiki/modeling/updated/no-fig4-penetration-depth-heatmap.avif",
+      "caption": "Nitric-oxide penetration-depth heatmap. Simulated NO depth fell short of the hydrogel thickness needed for exudate handling, so the NO-sensing module was cut from the wet-lab design before the experiment was run.",
+      "credit": "Team HKU-HongKong, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6401/wiki/modeling/updated/ds-fig3-design-map.avif",
+      "caption": "Design map from the inverse run: with all modules verified, the chain was reversed to derive the loading and thickness criteria the patch must satisfy to reach a target closure time.",
+      "credit": "Team HKU-HongKong, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6401/wiki/education/edu-bootcamp-graph-knowledge-pre-post.avif",
+      "caption": "Pre/post knowledge gain across ten technical topics at the HKU-iBRIDGE SynBio Bootcamp, where baseline scores were weakest exactly in computational tools and mathematical modelling (both 1.52/5).",
+      "credit": "Team HKU-HongKong, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Build the dry lab's own workflow into a teachable artefact: HKU turned their real de novo campaign into two free single-file browser games that make students apply the team's actual gates (pLDDT >= 70, ipTM >= 0.80, MMseqs2 off-target screens, MHCflurry immunogenicity) to the team's actual ten candidates, and deliberately let students run the wrong decay model first so the correct rule is discovered as a fix rather than announced as a formula. Pair this with their discipline of publishing the modelling result that killed a design feature (the NO penetration-depth run) as a headline finding, which is the cheapest way for students with no GPU budget to show real engineering judgement.",
+  "sources": [
+    "https://2026.igem.wiki/hku-hongkong/",
+    "https://2026.igem.wiki/hku-hongkong/description/",
+    "https://2026.igem.wiki/hku-hongkong/model/",
+    "https://2026.igem.wiki/hku-hongkong/software/",
+    "https://2026.igem.wiki/hku-hongkong/measurement/",
+    "https://2026.igem.wiki/hku-hongkong/engineering/",
+    "https://2026.igem.wiki/hku-hongkong/results/",
+    "https://2026.igem.wiki/hku-hongkong/human-practices/",
+    "https://2026.igem.wiki/hku-hongkong/education/",
+    "https://2026.igem.wiki/hku-hongkong/contribution/",
+    "https://2026.igem.wiki/hku-hongkong/parts/",
+    "https://2026.igem.wiki/hku-hongkong/safety-and-security/",
+    "https://github.com/igemhku/rfd3-binder-studio"
+  ]
+}
