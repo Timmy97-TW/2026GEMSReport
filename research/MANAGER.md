@@ -478,3 +478,61 @@ find new ground rather than work a backlog.
 Every brief carried the same house rules: null in the lede if the hypothesis fails, exact denominators,
 a method note naming what the counting cannot see, decorated-teams-only stated as a limit, Taiwan-usage
 Traditional Chinese with no Simplified and no Cyrillic, and one file each with no other repo writes.
+
+### A translation hole the per-key audit could never have found
+
+Every card on the site ends in chips — the short pill labels carrying the card's hardest fact. All **417
+of them, across all 20 analyses, rendered in English while the page was in Chinese.** `chips()` in app.js
+had no language branch and no file in `research/` carried a `chips_zh` key, so the per-key translation
+audit — which only inspects keys that *exist* — printed "20 of 20 translated" on every build for the whole
+life of the project. Section kickers had the mirror-image bug: all 20 blocks already carry `kicker_zh` and
+`sechead` was being handed the English one.
+
+Fixed in three places, and the order matters for anyone repeating this:
+1. `chips(arr, cls, max, zh)` now takes an optional parallel Chinese array and falls back **per element**,
+   so a half-translated list still shows Chinese for the entries that have it. Nothing breaks while a
+   translation is in flight.
+2. `build.py` gained `parallel_audit()` over chips, items, checklist, antipatterns, careerPaths and
+   openQuestions, reporting both *missing* and *ragged* (length-mismatched) translations.
+3. Then the 417 chips were translated by two agents working on scratchpad extracts, never on the repo,
+   with the manager applying the result through a script that asserts the English is still byte-identical
+   before writing. One of the two agents died on a content-filter error — but it died *after* writing its
+   output, during its own self-check, so the file was complete and no resume was needed. Check the artefact
+   before resuming a dead agent.
+
+**`parallel_audit()` found nothing on its first run, and that was a bug, not a pass.** `io` was never
+imported, so `json.load(io.open(...))` raised `NameError` on every file straight into a bare
+`except Exception: continue`. An audit that silently passes is worse than no audit. The except now names
+`(ValueError, OSError)` and prints the file it could not read. Do not write a bare except in this file.
+
+Two related fixes fell out of verifying the result on the live site:
+- `VILLAGE_ZH` in build.py was missing **Art & Design** and **Climate Crisis**, so five generated award
+  labels read as Chinese with an English village name inside them.
+- Long village-award chips were being shrunk by flex below their own text width and silently clipped —
+  414px of text in a 258px box on the teams tab. `.chip.win` now wraps at every width, not only on a
+  phone. Verified live: 888 chips rendered across five tabs, 0 overflowing.
+
+### Wave 6 results as they land
+
+**chassis-census (teams 38) — the roadmap's central bet now has a number behind it.**
+Nothing in twenty-one analyses had asked what the decorated teams actually *built in*. E. coli 51 of 106,
+and only 24 of those 51 name a strain. Any yeast 13, mammalian 8, B. subtilis 5, cell-free 9,
+purified-enzyme-only 6, no wet lab at all 1. Other named non-model organisms 14, with almost no repetition —
+*P. putida* ×4 is the only cluster. 18 teams used more than one chassis. **12 dossiers describe real bench
+work without ever naming the host, so 51 is a floor, not a ceiling** — the analyst declined to impute
+E. coli and said so in the method note, which is the right call.
+
+The reason to run it was to test this report's own thesis. Both trend reviews independently named
+optogenetic control in *B. subtilis* as the white space, and the whole Phase 3 roadmap points there on
+their word alone. Against the competition itself: **5 of 106 used light as a control input in any organism,
+5 of 106 worked with *B. subtilis*, and the two sets intersect in exactly one team — GEMS-Taiwan. Excluding
+GEMS, the intersection is 0 of 105.** Marburg is the only near miss: they investigated optogenetic
+induction with PULSE, called it the most attractive long-term inducer on safety grounds, and did not build
+it. Phase 3 item 0 now carries the number instead of resting on two trend reviews.
+
+The companion hypothesis failed and leads with it: a non-model chassis neither helps nor hurts placing
+among decorated teams (33% against 27%, Fisher p = 0.62).
+
+Method note worth preserving: naive regex would have been badly wrong here. "laccase" matches `CcaS`,
+"Jaccard" matches `CcaR`, and `\b168\b` matches "7,168". The unverified light-user count was 22 teams; the
+verified count is 5. Every hit was read in context before it was classified.
