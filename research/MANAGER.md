@@ -1250,3 +1250,50 @@ mistyped-escape habit. The character audit cannot see this: 傀 is a perfectly v
 is just the wrong word. Script-level audits catch Simplified and Cyrillic; they cannot catch a real character
 in the wrong place. The only defence is writing Chinese literally rather than as escapes, and re-reading the
 rendered text.
+
+### A third audit: the renderer was shipping raw markup, on two tabs, for an unknown time
+
+Verifying the new block on the live site I counted **two literal asterisks rendered on the page**. Chasing it
+turned up a renderer limitation and four live strings, two of them nothing to do with this session's work.
+
+`rich()` in app.js is exactly two replacements:
+
+```js
+.replace(/\*\*([^*]+?)\*\*/g, "<strong>$1</strong>")
+.replace(/(^|[^*\w])\*([^*\n]+?)\*(?![*\w])/g, "$1<em>$2</em>")
+```
+
+The bold pattern's content class is `[^*]+?` — **it may not contain an asterisk.** So an italic nested inside
+bold, which is ordinary Markdown, never matches the bold rule at all, and the `**` reaches the reader. Four
+strings were live:
+
+- `research/report.json`, roadmap phase 3 item 0, both languages: `**5 worked with *B. subtilis***`, which
+  rendered as *5 worked with* with a stray `**` before it and `0 of 105**` after. **This predates this
+  session** and was on the roadmap tab the whole time.
+- `research/insights/ai-disclosure.json`, body and body_zh, two passages each: `**… a first-class *AI Tool
+  Use* block**` and the verdict sentence with `*at*` inside the bold span. Drylab was showing **four** raw
+  asterisk runs. I had swept judging, overview and roadmap in earlier sessions and never swept drylab.
+- `research/insights/gems-three-seasons.json` card 3, both languages: the significance markers written out as
+  literal asterisk runs inside code spans, `` `**p < 0.01` ``, `` `***p<0.001` ``. Described in words now.
+
+All six strings fixed. `**` in a code span is still unsafe, because `rich()` runs before any code handling
+and there is no code handling.
+
+**New `md_audit()` in build.py, wired in beside the other two.** It simulates both of the renderer's rules on
+every string under `research/` and reports any **`**`** that survives. Two deliberate design choices, both
+recorded in the docstring:
+
+- It ignores a **lone** surviving asterisk. Those are almost always intended and render correctly — allele
+  names such as `HLA-A*01` on team 6108, globs, footnote markers. Flagging them produced 30 false positives
+  on the first run, so the condition is a surviving `**`, which is always wrong.
+- It spells out `[A-Za-z0-9_]` instead of using Python's `\w`. JavaScript's `\w` is ASCII-only while Python's
+  is Unicode-aware and matches CJK, so a direct translation of the italic regex misreports every Chinese
+  string.
+
+Self-tested against the three strings that were actually broken and five that are not — the two fixed
+versions, a legitimate `***bold italic***`, `HLA-A*01`, and ordinary mixed emphasis. It flags exactly the
+three. Worth knowing: **`***text***` renders correctly** — the bold rule matches the inner pair and the italic
+rule wraps the result — so a triple run is not by itself a fault, which is why the audit simulates the
+renderer rather than pattern-matching asterisk runs.
+
+Three audits now run on every build: parallel-array, character, and markdown. All three are silent.
