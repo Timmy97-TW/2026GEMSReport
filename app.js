@@ -22,9 +22,12 @@
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
     });
   }
-  // turn **bold** into <strong>, keep everything else escaped
+  // **bold** and *italic* -> tags; everything else stays escaped.
+  // Bold runs first so its asterisks are consumed before the italic pass.
   function rich(s) {
-    return esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    return esc(s)
+      .replace(/\*\*([^*]+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/(^|[^*\w])\*([^*\n]+?)\*(?![*\w])/g, "$1<em>$2</em>");
   }
   function paras(s) {
     if (!s) return "";

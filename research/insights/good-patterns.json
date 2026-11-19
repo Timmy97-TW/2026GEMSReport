@@ -15,7 +15,11 @@
       "title_zh": "Oxford 的 Buzz In：把分歧記錄下來",
       "body": "A three-episode podcast that deliberately paired stakeholders who disagree, rather than interviewing them separately and summarising. Episode one put a Varroa-resistance academic opposite a commercial beekeeper on whether to treat at all. Most human-practices pages exist to smooth disagreement away; this one makes it the content, and it is far harder to fake than a list of meetings.",
       "body_zh": "一個三集的 podcast，刻意把意見相左的利害關係人配對，而不是分別訪談後再做摘要。第一集讓研究 Varroa 抗性的學者，與商業養蜂人正面交鋒「到底該不該用藥」。多數人類實踐頁面的存在目的是把分歧抹平；這一個把分歧變成內容，而且它比一份會議清單難假造得多。",
-      "chips": ["3 episodes", "paired opponents"]
+      "chips": [
+        "3 episodes",
+        "paired opponents"
+      ],
+      "kicker_zh": "值得借用的形式"
     },
     {
       "kicker": "The habit worth stealing",
@@ -23,7 +27,11 @@
       "title_zh": "公布學生答錯的那一題",
       "body": "GEMS-Taiwan surveyed 140 students across five schools before and after each lesson and published per-question accuracy — including DNA base pairing, where only 30% answered correctly. Reporting the failure makes the whole dataset credible and hands the next teacher something actionable. A photograph of a full classroom does neither.",
       "body_zh": "GEMS-Taiwan 在五所學校對 140 名學生做課前課後問卷，並公布逐題正確率——包括 DNA 鹼基配對，只有 30% 答對。報告失敗讓整份資料變得可信，也交給下一位老師一個可以採取行動的東西。一張坐滿學生的照片兩者都做不到。",
-      "chips": ["140 students · 5 schools", "30% on base pairing"]
+      "chips": [
+        "140 students · 5 schools",
+        "30% on base pairing"
+      ],
+      "kicker_zh": "值得借用的習慣"
     },
     {
       "kicker": "The habit worth stealing",
@@ -31,7 +39,11 @@
       "title_zh": "先訓練團隊，再去教公眾",
       "body": "Nineteen GU Frankfurt members took the Basics of Science Communication workshop from NaWik, Germany's national science-communication institute, and built everything afterwards on its core-message and cloverleaf tools. Science communication is a craft with a literature; almost every other team treats it as something you can already do because you can talk.",
       "body_zh": "GU Frankfurt 有 19 位成員上了德國國家科學傳播研究所 NaWik 的「科學傳播基礎」工作坊，並以其核心訊息與四葉草工具為基礎建構後續所有內容。科學傳播是一門有文獻的技藝；幾乎其他所有團隊都把它當成「我會說話所以我就會」。",
-      "chips": ["19 members trained", "NaWik"]
+      "chips": [
+        "19 members trained",
+        "NaWik"
+      ],
+      "kicker_zh": "值得借用的習慣"
     },
     {
       "kicker": "The business model worth stealing",
@@ -39,7 +51,11 @@
       "title_zh": "賣證書，不要賣儀器",
       "body": "HongKong-JSS does not sell its mercury assay. Farmers subscribe annually, the team tests on site, passing farms get a 'Heavy Metal-Free' logo for supermarket packaging that commands a premium, and surprise re-tests through the year keep the certificate honest — affordable precisely because the test itself is cheap. The cheapness of the science becomes the business model rather than a weakness.",
       "body_zh": "HongKong-JSS 不賣他們的汞檢測。農民年度訂閱，團隊到場檢測，通過的農場取得可用於超市包裝的「無重金屬」標章並賣出溢價，而全年不定期的突擊複檢維持證書的公信力——之所以負擔得起，正因為檢測本身很便宜。科學的廉價在這裡變成商業模式，而不是弱點。",
-      "chips": ["Certification-as-a-Service", "surprise re-tests"]
+      "chips": [
+        "Certification-as-a-Service",
+        "surprise re-tests"
+      ],
+      "kicker_zh": "值得借用的商業模式"
     },
     {
       "kicker": "The business model worth stealing",
@@ -47,7 +63,10 @@
       "title_zh": "標明每一項證據的強度",
       "body": "UAlberta tabulates demand by customer role and says how strong each item is: two clinician letters of support, one signed letter of intent, 86% of 38 surveyed patients interested, one application at interview stage with Nucleate Canada. A letter of intent and a survey response are not the same kind of evidence, and saying so is what makes the table worth reading.",
       "body_zh": "UAlberta 依客戶角色把需求列表，並說明每一項證據有多強：兩封臨床醫師支持信、一封已簽署的意向書、38 位受訪患者中 86% 有興趣、一件進入面試階段的 Nucleate Canada 申請。一封意向書和一份問卷回覆不是同一種證據，而把這件事講清楚，正是這張表值得讀的原因。",
-      "chips": ["evidence graded by strength"]
+      "chips": [
+        "evidence graded by strength"
+      ],
+      "kicker_zh": "值得借用的商業模式"
     },
     {
       "kicker": "For GEMS",
@@ -55,9 +74,13 @@
       "title_zh": "公開地為自己提出反方論證",
       "body": "UCAS-China opens its commercial section by saying the case must rest on unmet need rather than technological novelty, then lists what the existing drugs do well. GEMS-Taiwan publishes a 68-year payback against a partner's 4.9-year figure and names the disagreement instead of resolving it. This is the practice that most distinguishes the 2026 podium, and it costs nothing but nerve.",
       "body_zh": "UCAS-China 在商業章節的開頭就說：這個案子必須建立在未滿足需求上，而非技術新穎性，接著列出既有藥物的優點。GEMS-Taiwan 公布了 68 年的回收期，對照合作夥伴算出的 4.9 年，並指名這個歧異而不去解決它。這是 2026 年頒獎台上最顯著的共同做法，而它唯一的代價是膽識。",
-      "chips": ["no budget required"]
+      "chips": [
+        "no budget required"
+      ],
+      "kicker_zh": "給 GEMS"
     }
   ],
   "method": "Drawn from the Science for Good fields of the team files in this report, each researched from the team's own 2026 wiki. Audience numbers and survey sizes are the teams' own figures and are not independently verified. The judgement about what 'counted' is ours; the team files and the wikis behind them are linked so a reader can disagree. GEMS-Taiwan is the report author's own team and appears here on the same terms as the rest.",
-  "method_zh": "資料取自本報告團隊檔案中的「科學向善」欄位，每一份都來自該隊自己的 2026 wiki。參與人數與問卷樣本數為各隊自報數字，未經獨立查證。關於「什麼才算數」的判斷出自我們；團隊檔案與其背後的 wiki 都附有連結，讀者可以自行判斷是否同意。GEMS-Taiwan 是本報告作者自己的團隊，在此與其他隊伍適用相同標準。"
+  "method_zh": "資料取自本報告團隊檔案中的「科學向善」欄位，每一份都來自該隊自己的 2026 wiki。參與人數與問卷樣本數為各隊自報數字，未經獨立查證。關於「什麼才算數」的判斷出自我們；團隊檔案與其背後的 wiki 都附有連結，讀者可以自行判斷是否同意。GEMS-Taiwan 是本報告作者自己的團隊，在此與其他隊伍適用相同標準。",
+  "kicker_zh": "原創分析"
 }

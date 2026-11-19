@@ -1,328 +1,344 @@
 {
- "id": "taiwan-cohort",
- "tab": "teams",
- "kicker": "Original analysis",
- "title": "Taiwan at iGEM 2026",
- "lede": "Taiwan fielded thirteen competing teams in 2026 and won six awards, more than any territory in East Asia except China, but every technical award came from the high-school tier and the island is invisible in parts, software and collegiate modelling.",
- "body": "Taiwan registered fifteen entries with iGEM in 2026 and thirteen of them competed — eight high-school, four undergraduate, one overgraduate — returning **eight golds, five silvers and no bronzes**, one Top 10 place, six outright award wins and seven further nominations. The wins were GEMS-Taiwan's Best Measurement, Best Hardware and Best Integrated Human Practices, Labi-Taiwan's peer-voted iGEMers Prize, NYCU-Taiwan's Best Project Promotion Video and NCKU-Tainan's Best Infectious Diseases Project; the nominations added Mingdao for Model, NCKU-Tainan for Hardware, NTHU for Food & Nutrition, Labi-Taiwan for Measurement, and GEMS-Taiwan for Presentation, Wiki and Best Village Project. Against the region that is strong in volume and weak in altitude: China fielded 176 competing teams for 24 wins and five Top 10 places, Hong Kong 16 for three wins, three Top 10 places and the high-school Grand Prize first runner-up in HongKong-JSS, Japan seven for nine nominations and no wins, Korea six for none and Singapore four for none. Taiwan therefore out-won Hong Kong six to three on fewer teams and was the only territory outside China to win more than once, but it took a single Top 10 and placed nothing in any Grand Prize at any tier.\n\nThe strength is **instrumentation**: six of the thirteen teams built and documented a device — GEMS-Taiwan's hollow-fibre perfusion bioreactor and two in-line photometers, NCKU-Tainan's CAPTURE-Screen fluorescence reader at US$54–161 against the US$3,500 open-source plate reader it substitutes, NTHU's four-channel frequency-tagged reader with digital lock-in detection, NTHU Taiwan's open-source moving-bed biofilm reactor, Mingdao's single-frame fermentor and Labi-Taiwan's portable electrochemical reader — with human practices and communication a clear second, carrying three of the six wins. The weakness is just as sharply defined: **not one Taiwanese nomination in any of the four parts awards, and none in Best Software**, where even Hong Kong managed one through HK-Joint-School, despite GEMS-Taiwan, NCKU-Tainan and NYCU-Taiwan all releasing licensed code; Best Model appears once, at high-school level, for Mingdao; and the collegiate tier produced no technical special award at all, NYCU-Taiwan's win being a video and NCKU-Tainan's a village category. The clearest symptom is NTHU Taiwan's CatharSys, whose four models dropped a screening factor on a predicted 6% separation, reversed an enzyme-engineering plan when formaldehyde was projected to five times chassis tolerance, stated a falsifiable prediction before the build and reversed a nozzle geometry on first-principles hydraulics — and which won a gold medal and nothing else.\n\nGEMS-Taiwan's three wins and Top 10 place are the island's best result of the year, and they were earned on provenance rather than biology: an input ledger marking every number measured, cited or modelled, a growth rate pre-registered on 1 October and later scored at 0.286 ± 0.010 h⁻¹, and an autoencoder that named a failing photometer 26.7 hours before the channel died. Measured against the collegiate Top 10 sections the dry lab is thin in four named places — there is no inferential statistics, the central secreted-activity figure standing at **n = 1, 7.25 mU/mL, below quantitation** with two induction runs disagreeing on the sign, where NCKU-Tainan a tier up fits mixed models with plate as a random intercept and holds out a treatment to predict; the entire control architecture rests on a published CcaSR Hill curve assumed valid at 20 L although every induction ran at a single light intensity, so nothing in the project tests its own transfer function; the digital twin is an admitted digital shadow, replaying recorded runs with a person making every decision and green-light induction not integrated; and the economics are negative on the team's own numbers, 68 years to payback at perfect efficacy against a partner's 4.9. The step up needs depth in three places rather than more scope: replication and intervals on the central claim with a pre-registered **effect size** rather than a pre-registered growth rate; an in-house CcaSR dose–response across light intensities and scales in absolute fluorescein-calibrated units, which would simultaneously turn 35 contributed SubtiToolKit parts into a collection with the transfer curves a parts award actually rewards; and a twin that controls a run instead of replaying one, with one external software user whose complaints are written down.\n\nThe collaboration map begins with an uncomfortable fact: **GEMS-Taiwan is not in the island's network**. NYCU-Taiwan hosted the 2026 Taiwan iGEMers Meet-Up at its Bo-Ai campus on 27 July for 53 students and advisors from NYCU-Taiwan, NCKU-Tainan, HIA-Taiwan, VIS and WIST, and NCKU-Tainan's collaboration page adds Mingdao, CCU-Taiwan and NTHU — while neither GEMS-Taiwan nor Labi-Taiwan appears on either list and the GEMS wiki carries no collaboration page at all. The partners therefore follow from complementarity, not goodwill: NTHU Taiwan shares the *Bacillus subtilis* chassis and the open-hardware habit, NCKU-Tainan holds the statistics and the cheap reader, CCU-Taiwan works the rice leafroller on the same crop and the same island, NTHU's AeroSense group has the cohort's deepest computation and admits its decoder was validated on external metal-oxide sensor datasets rather than its own cells, Labi-Taiwan is the only other high-school programme with a real computational stack, and NYCU-Taiwan convenes.\n\nTaiwan's state-backed push is manufacturing-led — the Taiwan Bio-Manufacturing Corporation broke ground on a 15,000 m² GMP facility in Hsinchu Biomedical Science Park in June 2025 with operations from Q2 2026 including Taiwan's first GMP mRNA capability, biomedicine sits inside the 5+2 Innovative Industries Plan, a 33-company delegation went to BIO 2026, and this research found no Taiwan-specific synthetic-biology design programme or funding figure at all. Singapore and Israel are funding precisely that missing layer, with DayOne launching Singapore's first biological data centre prototype in August 2026 and Israel's Innovation Authority committing roughly NIS 70 million in July 2026 to national infrastructure for AI models built on biological data. The 2026 cohort is both the evidence of the gap and the evidence that it can be filled: thirteen teams, six instruments built, zero parts nominations, zero software nominations. GEMS should position itself as Taiwan's dry-lab pipeline rather than as a smaller wet lab, and say so to the Biotechnology and Pharmaceutical Industries Promotion Office and the Ministry of Economic Affairs with Singapore and Israel named as the comparison, to TBMC in Hsinchu as it ramps twenty minutes from NYCU and both NTHU teams, and to the Industrial Technology Research Institute, where NTHU Taiwan already holds a working relationship GEMS would not have to build from scratch.",
- "cards": [
-  {
-   "kicker": "High School · Taipei · id 6072",
-   "title": "GEMS-Taiwan — ReLEAF",
-   "body": "An optogenetic Bacillus subtilis WB800 bioreactor that reads field sensors and weather forecasts, sets a green-light dose through the CcaSR two-component system and secretes plant-protective proteins beside a Taiwanese paddy. Taiwan's only Top 10 place in 2026 and the island's only triple winner: Best Measurement, Best Hardware and Best Integrated Human Practices, plus nominations for Presentation, Wiki and Best Village Project. The award case rests on provenance rather than biology — a pre-registered growth rate scored after the fact, an autoencoder that named a failing photometer 26.7 hours early, an input ledger marking every number measured, cited or modelled, and a wiki that withdraws its own claims. The hole is that the published CcaSR transfer function the whole control architecture depends on was assumed, never measured, and the central activity figure is n = 1 below quantitation.",
-   "chips": [
-    "Gold",
-    "Top 10",
-    "3 wins",
-    "Hardware",
-    "Measurement",
-    "IHP",
-    "B. subtilis"
-   ]
-  },
-  {
-   "kicker": "High School · Taoyuan · id 6511",
-   "title": "Labi-Taiwan — BlueCatcher",
-   "body": "A nucleic-acid biosensor for major depressive disorder, built by Labi Education, the programme formerly entered as Taipei-KCISLK. The dry lab is the most data-heavy of any Taiwanese high-school team: differential expression, miRNA–mRNA networks, GSEA and WGCNA narrowed 2,656 mature miRNAs to sixteen candidates and then to miR-124-3p as the first engineering target, with machine learning used to prioritise three-way-junction probes and toehold switches, and thermodynamic and kinetic modelling behind the readout. It won the iGEMers Prize, the award the other teams vote for, and was nominated for Best Measurement on a portable electrochemical reader. Like GEMS, it is a Taipei-area commercial-organiser programme and appears on no other Taiwanese team's collaboration page.",
-   "chips": [
-    "Gold",
-    "iGEMers Prize",
-    "Measurement nominee",
-    "miRNA",
-    "ML",
-    "electrochemical"
-   ]
-  },
-  {
-   "kicker": "Undergrad · Hsinchu · id 6306",
-   "title": "NYCU-Taiwan — BITE",
-   "body": "A modular food-safety biosensor combining magnetic-bead DNA enrichment, CRISPR-Cas12a recognition and G4–hemin colorimetric readout against synthetic DNA from the Salmonella enterica invA region. The dry lab is organised as SeekProbe_Designer for capture-probe design plus a four-layer model stack from bead capture through Cas12a activation and hairpin-G4 colour to end-to-end prediction, with a Y-shaped multi-chamber device concept. It won Best Project Promotion Video — the island's only collegiate win outside a village category — on a silver medal, which is the gap between communication and technical recognition in one team. NYCU is also the convening institution: it hosted the 2026 Taiwan iGEMers Meet-Up for 53 people from five teams and built the exchange website behind it.",
-   "chips": [
-    "Silver",
-    "Best Promotion Video",
-    "Cas12a",
-    "Meet-Up host",
-    "food safety"
-   ]
-  },
-  {
-   "kicker": "Undergrad · Tainan · id 6379",
-   "title": "NCKU-Tainan — Capture",
-   "body": "Two engineered E. coli systems reading the same Pseudomonas aeruginosa quorum-sensing signal: one reports AHL as fluorescence, one deploys aptamers to sponge it out of circulation, aimed at healthcare-associated infection in Taiwanese intensive care. It won Best Infectious Diseases Project and was nominated for Best Hardware for CAPTURE-Screen, a single-cuvette fluorescence reader at US$54–161 against US$3,500 for the plate reader it substitutes, paired with LasReader for 4PL calibration with approximate 95% intervals. The statistics are the best in the Taiwanese cohort — mixed models with plate as a random intercept, geometric-mean ratio effect sizes, and the Cb-2 treatment held out and then predicted. It is also the island's mentoring spine, having run a session for Mingdao in March with three of its own members as Mingdao alumni.",
-   "chips": [
-    "Gold",
-    "Infectious Diseases win",
-    "Hardware nominee",
-    "US$54 reader",
-    "mixed models"
-   ]
-  },
-  {
-   "kicker": "Overgrad · Hsinchu · id 6460",
-   "title": "NTHU — AeroSense",
-   "body": "A biohybrid olfactory platform: Drosophila odorant receptors with ORCO in HEK293 cells, GCaMP6f fluorescence reporting, a four-channel frequency-tagged optical reader with digital lock-in processing, and a fly-inspired network for decoding odour patterns, aimed at early fungal-risk screening in stored bananas. This is the deepest computational work in the Taiwanese cohort — PCA and projection-neuron coding, measured infrared and quantum-vibration features, an OpenPOM comparison, mutation-robustness and cross-species transfer tests, and molecular-dynamics pocket-entry studies. Nominated for Best Food & Nutrition Project and nothing else. The team states its own limit plainly: the decoder was evaluated on external metal-oxide sensor datasets, not on its own cells.",
-   "chips": [
-    "Gold",
-    "Food & Nutrition nominee",
-    "GCaMP6f",
-    "neural decoder",
-    "lock-in optics"
-   ]
-  },
-  {
-   "kicker": "High School · Taichung · id 6105",
-   "title": "Mingdao — Waste-to-Watt",
-   "body": "Laminated paper food containers from a 7,000-student campus turned into bioethanol by simultaneous saccharification and fermentation, with Zymomonas mobilis acting as a glucose sink so that BglA β-glucosidase never becomes product-inhibited and cellulase never sees accumulating cellobiose. Nominated for Best Model on three stacked models — enzyme-inhibition kinetics characterised under fermentation-compatible conditions rather than the thermophilic optimum, Monod growth for Z. mobilis, and a coupled ODE comparing closed and open systems. The hardware is a single 45 × 45 × 60 cm frame carrying shredding, hydrolysis, fermentation and distillation with the vessel riding to the distillation station on its own hotplate, so the mixture is never transferred. The clearest high-school modelling case in Taiwan after GEMS, and the only Taiwanese Best Model nomination at any tier.",
-   "chips": [
-    "Gold",
-    "Best Model nominee",
-    "SSF",
-    "coupled ODE",
-    "fermentor"
-   ]
-  },
-  {
-   "kicker": "Undergrad · Hsinchu · id 6416 — not on the briefed list",
-   "title": "NTHU Taiwan — CatharSys",
-   "body": "A second, separate National Tsing Hua University team, distinct from the overgraduate NTHU entry: engineered Bacillus subtilis forming biofilms on suspended carriers in a moving-bed reactor to treat TMAH and trimethylamine waste from Hsinchu's semiconductor lithography lines. Four models, and each one changed a decision — dissolved oxygen was dropped from the screen at a predicted 6% separation below flask noise, strengthening the bottleneck enzyme alone was shown to drive formaldehyde to five times chassis tolerance so a matched hxlAB upregulation was carried instead, a biofilm model stated a falsifiable prediction before the build, and first-principles hydraulics reversed a nozzle geometry for the pump already bought. CathaBench, its three-tank open-source benchtop MBBR with ESP32 control and an offline Wi-Fi dashboard, was iterated on feedback from ITRI and industry. Gold medal, zero nominations — on this evidence the most under-recognised dry lab in Taiwan in 2026, and the closest technical match to GEMS.",
-   "chips": [
-    "Gold",
-    "no awards",
-    "B. subtilis",
-    "MBBR",
-    "ITRI",
-    "semiconductor waste"
-   ]
-  },
-  {
-   "kicker": "Undergrad · Chiayi · id 6408 — not on the briefed list",
-   "title": "CCU-Taiwan — NoFold",
-   "body": "National Chung Cheng University against the rice leafroller, Cnaphalocrocis medinalis, which folds a rice leaf and eats it from inside and is described as a predominant foliage feeder across Asian rice ecosystems. The framing is the same economic argument GEMS makes: only about 12% of world rice crosses a border, so an Asian yield loss cannot be covered by imports, and the moths arrive on spring winds from overwintering areas such as Hanoi and Nanning with Taiwan on the route. Gold medal, no awards or nominations. Same crop, same island, same pest-pressure problem as ReLEAF, approached from entomology rather than abiotic stress — the most obvious untapped adjacency in the cohort.",
-   "chips": [
-    "Gold",
-    "no awards",
-    "rice",
-    "crop protection",
-    "Chiayi"
-   ]
-  },
-  {
-   "kicker": "High School · Taichung · id 6062 — not on the briefed list",
-   "title": "WIST — ultrasound-reporting probiotic",
-   "body": "Washington International School, Taichung: an engineered E. coli that answers two chemical clues at once, lactate and nitrate, and reports the AND condition by filling with gas vesicles and becoming visible to ultrasound, as a swallowable early screen for colorectal cancer. The acoustic-reporter approach is the same gas-vesicle technology Heidelberg built its collegiate Top 10 project on this year, which makes it an ambitious choice for a high-school team. It carries both a Model and a Software page and declares every figure on the home page a diagram of method rather than acquired data. Gold medal, no awards; it attended the NYCU Meet-Up and appears on NCKU-Tainan's collaboration list.",
-   "chips": [
-    "Gold",
-    "no awards",
-    "gas vesicles",
-    "ultrasound",
-    "AND gate"
-   ]
-  },
-  {
-   "kicker": "High School · Taipei · id 6200 — not on the briefed list",
-   "title": "AEI Prep-Taiwan — SynPETic",
-   "body": "Engineered E. coli making PETase and MHETase side by side on one scaffold — a 'PETosome' — to depolymerise PET in water at 37 °C with no extruder and no metal catalyst, framed around the roughly 2,500 kg of plastic waste the ISS generates a year and the up-to-US$20,000 cost of lifting a kilogram to orbit. One of only two commercially organised Taiwanese high-school programmes besides GEMS and Labi, and it carries Model, Software and Hardware pages. Silver medal, no awards or nominations. The Space village framing makes it the nearest cohort neighbour to GEMS's own village placement.",
-   "chips": [
-    "Silver",
-    "no awards",
-    "PETase",
-    "Space village",
-    "Taipei"
-   ]
-  },
-  {
-   "kicker": "High School · Taipei · id 6423 — not on the briefed list",
-   "title": "VIS — Cadture",
-   "body": "VIS@betterworld Lab, testing whether engineered metallothioneins can capture cadmium from industrial wastewater, with a modelling page on cadmium removal. The notable feature is epistemic honesty of the kind GEMS also practises: the home page states that current work measures bacterial growth and GFP response and that direct cadmium removal remains to be tested, rather than implying a result it does not have. Silver medal, no awards or nominations. It attended the NYCU Meet-Up and is on NCKU-Tainan's collaboration list, so it is inside the island network that the Taipei commercial programmes are outside.",
-   "chips": [
-    "Silver",
-    "no awards",
-    "metallothionein",
-    "cadmium",
-    "honest scoping"
-   ]
-  },
-  {
-   "kicker": "High School · Zhubei · id 6156 — not on the briefed list",
-   "title": "HIA-Taiwan — Aiy-U-Ready",
-   "body": "Hsinchu International Academy in Zhubei, working on aiyu, Ficus pumila var. awkeotsang, a fig endemic to Taiwan that yields hundreds of tonnes a year and is almost unknown outside it. The project is built around that asymmetry — a locally owned crop nobody else is characterising — which is precisely the 'own a dataset nobody else has' logic the industry trend research identifies as a small institution's only durable asset. Silver medal, no awards or nominations, with a Dry Lab model page. It attended the NYCU Meet-Up and is on NCKU-Tainan's collaboration list.",
-   "chips": [
-    "Silver",
-    "no awards",
-    "aiyu",
-    "endemic crop",
-    "Hsinchu County"
-   ]
-  },
-  {
-   "kicker": "High School · New Taipei · id 6103 — not on the briefed list",
-   "title": "KCIS-Xiugang-Taipei — Herculyeast",
-   "body": "Kang Chiao International School's Xiugang campus, running a yeast project with both Model and Software pages under its Dry Lab, plus Entrepreneurship, Inclusivity and Sustainability sections. Silver medal, no awards or nominations. Its sibling campus at Linkou entered separately as Taipei-TWN and was recorded as not eligible, so the Kang Chiao group fielded two high-school entries in 2026 and converted neither — and Labi-Taiwan, the iGEMers Prize winner, is the same Linkou programme's earlier lineage under a new organiser.",
-   "chips": [
-    "Silver",
-    "no awards",
-    "yeast",
-    "New Taipei",
-    "Kang Chiao"
-   ]
-  },
-  {
-   "kicker": "Did not compete · ids 6142, 6543 — not on the briefed list",
-   "title": "Taipei-TWN and Oros Biotech",
-   "body": "Two Taiwanese registrations that never reached the competition floor and so are missing from every results table. Taipei-TWN (Kang Chiao International School, Linkou campus, high school, Taipei) carries the status 'not eligible' with no medal and no wiki content. Oros Biotech of Taichung entered the venture-foundry track rather than the competition, has no section, no medal and a 404 wiki — meaning Taiwan's only 2026 entry into iGEM's startup pathway left no public record. Both matter for the denominator: fifteen Taiwanese registrations, thirteen competing teams, and an entrepreneurship route the island used once and did not document.",
-   "chips": [
-    "Not eligible",
-    "venture foundry",
-    "no wiki",
-    "Taipei",
-    "Taichung"
-   ]
-  },
-  {
-   "kicker": "Regional comparison",
-   "title": "Taiwan against China, Hong Kong, Japan, Korea and Singapore",
-   "body": "On accepted competing teams: China 176, Hong Kong 16, Taiwan 13, Japan 7, Korea 6, Singapore 4. On outright wins Taiwan placed second in the region with six, behind China's 24 and ahead of Hong Kong's three, with Japan, Korea and Singapore returning none at all — so Taiwan was the only territory outside China to win more than once. On altitude the ranking inverts: China took five Top 10 places and a Grand Prize first runner-up, Hong Kong three Top 10 places and the high-school Grand Prize first runner-up through HongKong-JSS, Singapore one through NUS-Singapore, and Taiwan one through GEMS-Taiwan, with no Taiwanese Grand Prize placing at any tier. In kind the regions differ sharply: China dominates the parts awards and the Registry layer, Hong Kong spreads thirteen nominations across parts, model, software, hardware, education, presentation and wiki, Japan accumulates nominations without converting any, and Taiwan concentrates in hardware, measurement and human practices while taking zero parts and zero software nominations.",
-   "chips": [
-    "TWN 13 teams",
-    "6 wins",
-    "1 Top 10",
-    "0 parts",
-    "0 software",
-    "HKG 3 Top 10"
-   ]
-  }
- ],
- "table": {
-  "head": [
-   "Team",
-   "Tier",
-   "2026 result",
-   "Strength"
+  "id": "taiwan-cohort",
+  "tab": "teams",
+  "kicker": "Original analysis",
+  "title": "Taiwan at iGEM 2026",
+  "lede": "Taiwan fielded thirteen competing teams in 2026 and won six awards, more than any territory in East Asia except China, but every technical award came from the high-school tier and the island is invisible in parts, software and collegiate modelling.",
+  "body": "Taiwan registered fifteen entries with iGEM in 2026 and thirteen of them competed — eight high-school, four undergraduate, one overgraduate — returning **eight golds, five silvers and no bronzes**, one Top 10 place, six outright award wins and seven further nominations. The wins were GEMS-Taiwan's Best Measurement, Best Hardware and Best Integrated Human Practices, Labi-Taiwan's peer-voted iGEMers Prize, NYCU-Taiwan's Best Project Promotion Video and NCKU-Tainan's Best Infectious Diseases Project; the nominations added Mingdao for Model, NCKU-Tainan for Hardware, NTHU for Food & Nutrition, Labi-Taiwan for Measurement, and GEMS-Taiwan for Presentation, Wiki and Best Village Project. Against the region that is strong in volume and weak in altitude: China fielded 176 competing teams for 24 wins and five Top 10 places, Hong Kong 16 for three wins, three Top 10 places and the high-school Grand Prize first runner-up in HongKong-JSS, Japan seven for nine nominations and no wins, Korea six for none and Singapore four for none. Taiwan therefore out-won Hong Kong six to three on fewer teams and was the only territory outside China to win more than once, but it took a single Top 10 and placed nothing in any Grand Prize at any tier.\n\nThe strength is **instrumentation**: six of the thirteen teams built and documented a device — GEMS-Taiwan's hollow-fibre perfusion bioreactor and two in-line photometers, NCKU-Tainan's CAPTURE-Screen fluorescence reader at US$54–161 against the US$3,500 open-source plate reader it substitutes, NTHU's four-channel frequency-tagged reader with digital lock-in detection, NTHU Taiwan's open-source moving-bed biofilm reactor, Mingdao's single-frame fermentor and Labi-Taiwan's portable electrochemical reader — with human practices and communication a clear second, carrying three of the six wins. The weakness is just as sharply defined: **not one Taiwanese nomination in any of the four parts awards, and none in Best Software**, where even Hong Kong managed one through HK-Joint-School, despite GEMS-Taiwan, NCKU-Tainan and NYCU-Taiwan all releasing licensed code; Best Model appears once, at high-school level, for Mingdao; and the collegiate tier produced no technical special award at all, NYCU-Taiwan's win being a video and NCKU-Tainan's a village category. The clearest symptom is NTHU Taiwan's CatharSys, whose four models dropped a screening factor on a predicted 6% separation, reversed an enzyme-engineering plan when formaldehyde was projected to five times chassis tolerance, stated a falsifiable prediction before the build and reversed a nozzle geometry on first-principles hydraulics — and which won a gold medal and nothing else.\n\nGEMS-Taiwan's three wins and Top 10 place are the island's best result of the year, and they were earned on provenance rather than biology: an input ledger marking every number measured, cited or modelled, a growth rate pre-registered on 1 October and later scored at 0.286 ± 0.010 h⁻¹, and an autoencoder that named a failing photometer 26.7 hours before the channel died. Measured against the collegiate Top 10 sections the dry lab is thin in four named places — there is no inferential statistics, the central secreted-activity figure standing at **n = 1, 7.25 mU/mL, below quantitation** with two induction runs disagreeing on the sign, where NCKU-Tainan a tier up fits mixed models with plate as a random intercept and holds out a treatment to predict; the entire control architecture rests on a published CcaSR Hill curve assumed valid at 20 L although every induction ran at a single light intensity, so nothing in the project tests its own transfer function; the digital twin is an admitted digital shadow, replaying recorded runs with a person making every decision and green-light induction not integrated; and the economics are negative on the team's own numbers, 68 years to payback at perfect efficacy against a partner's 4.9. The step up needs depth in three places rather than more scope: replication and intervals on the central claim with a pre-registered **effect size** rather than a pre-registered growth rate; an in-house CcaSR dose–response across light intensities and scales in absolute fluorescein-calibrated units, which would simultaneously turn 35 contributed SubtiToolKit parts into a collection with the transfer curves a parts award actually rewards; and a twin that controls a run instead of replaying one, with one external software user whose complaints are written down.\n\nThe collaboration map begins with an uncomfortable fact: **GEMS-Taiwan is not in the island's network**. NYCU-Taiwan hosted the 2026 Taiwan iGEMers Meet-Up at its Bo-Ai campus on 27 July for 53 students and advisors from NYCU-Taiwan, NCKU-Tainan, HIA-Taiwan, VIS and WIST, and NCKU-Tainan's collaboration page adds Mingdao, CCU-Taiwan and NTHU — while neither GEMS-Taiwan nor Labi-Taiwan appears on either list and the GEMS wiki carries no collaboration page at all. The partners therefore follow from complementarity, not goodwill: NTHU Taiwan shares the *Bacillus subtilis* chassis and the open-hardware habit, NCKU-Tainan holds the statistics and the cheap reader, CCU-Taiwan works the rice leafroller on the same crop and the same island, NTHU's AeroSense group has the cohort's deepest computation and admits its decoder was validated on external metal-oxide sensor datasets rather than its own cells, Labi-Taiwan is the only other high-school programme with a real computational stack, and NYCU-Taiwan convenes.\n\nTaiwan's state-backed push is manufacturing-led — the Taiwan Bio-Manufacturing Corporation broke ground on a 15,000 m² GMP facility in Hsinchu Biomedical Science Park in June 2025 with operations from Q2 2026 including Taiwan's first GMP mRNA capability, biomedicine sits inside the 5+2 Innovative Industries Plan, a 33-company delegation went to BIO 2026, and this research found no Taiwan-specific synthetic-biology design programme or funding figure at all. Singapore and Israel are funding precisely that missing layer, with DayOne launching Singapore's first biological data centre prototype in August 2026 and Israel's Innovation Authority committing roughly NIS 70 million in July 2026 to national infrastructure for AI models built on biological data. The 2026 cohort is both the evidence of the gap and the evidence that it can be filled: thirteen teams, six instruments built, zero parts nominations, zero software nominations. GEMS should position itself as Taiwan's dry-lab pipeline rather than as a smaller wet lab, and say so to the Biotechnology and Pharmaceutical Industries Promotion Office and the Ministry of Economic Affairs with Singapore and Israel named as the comparison, to TBMC in Hsinchu as it ramps twenty minutes from NYCU and both NTHU teams, and to the Industrial Technology Research Institute, where NTHU Taiwan already holds a working relationship GEMS would not have to build from scratch.",
+  "cards": [
+    {
+      "kicker": "High School · Taipei · id 6072",
+      "title": "GEMS-Taiwan — ReLEAF",
+      "body": "An optogenetic Bacillus subtilis WB800 bioreactor that reads field sensors and weather forecasts, sets a green-light dose through the CcaSR two-component system and secretes plant-protective proteins beside a Taiwanese paddy. Taiwan's only Top 10 place in 2026 and the island's only triple winner: Best Measurement, Best Hardware and Best Integrated Human Practices, plus nominations for Presentation, Wiki and Best Village Project. The award case rests on provenance rather than biology — a pre-registered growth rate scored after the fact, an autoencoder that named a failing photometer 26.7 hours early, an input ledger marking every number measured, cited or modelled, and a wiki that withdraws its own claims. The hole is that the published CcaSR transfer function the whole control architecture depends on was assumed, never measured, and the central activity figure is n = 1 below quantitation.",
+      "chips": [
+        "Gold",
+        "Top 10",
+        "3 wins",
+        "Hardware",
+        "Measurement",
+        "IHP",
+        "B. subtilis"
+      ],
+      "kicker_zh": "高中組 · Taipei · id 6072"
+    },
+    {
+      "kicker": "High School · Taoyuan · id 6511",
+      "title": "Labi-Taiwan — BlueCatcher",
+      "body": "A nucleic-acid biosensor for major depressive disorder, built by Labi Education, the programme formerly entered as Taipei-KCISLK. The dry lab is the most data-heavy of any Taiwanese high-school team: differential expression, miRNA–mRNA networks, GSEA and WGCNA narrowed 2,656 mature miRNAs to sixteen candidates and then to miR-124-3p as the first engineering target, with machine learning used to prioritise three-way-junction probes and toehold switches, and thermodynamic and kinetic modelling behind the readout. It won the iGEMers Prize, the award the other teams vote for, and was nominated for Best Measurement on a portable electrochemical reader. Like GEMS, it is a Taipei-area commercial-organiser programme and appears on no other Taiwanese team's collaboration page.",
+      "chips": [
+        "Gold",
+        "iGEMers Prize",
+        "Measurement nominee",
+        "miRNA",
+        "ML",
+        "electrochemical"
+      ],
+      "kicker_zh": "高中組 · Taoyuan · id 6511"
+    },
+    {
+      "kicker": "Undergrad · Hsinchu · id 6306",
+      "title": "NYCU-Taiwan — BITE",
+      "body": "A modular food-safety biosensor combining magnetic-bead DNA enrichment, CRISPR-Cas12a recognition and G4–hemin colorimetric readout against synthetic DNA from the Salmonella enterica invA region. The dry lab is organised as SeekProbe_Designer for capture-probe design plus a four-layer model stack from bead capture through Cas12a activation and hairpin-G4 colour to end-to-end prediction, with a Y-shaped multi-chamber device concept. It won Best Project Promotion Video — the island's only collegiate win outside a village category — on a silver medal, which is the gap between communication and technical recognition in one team. NYCU is also the convening institution: it hosted the 2026 Taiwan iGEMers Meet-Up for 53 people from five teams and built the exchange website behind it.",
+      "chips": [
+        "Silver",
+        "Best Promotion Video",
+        "Cas12a",
+        "Meet-Up host",
+        "food safety"
+      ],
+      "kicker_zh": "大學組 · Hsinchu · id 6306"
+    },
+    {
+      "kicker": "Undergrad · Tainan · id 6379",
+      "title": "NCKU-Tainan — Capture",
+      "body": "Two engineered E. coli systems reading the same Pseudomonas aeruginosa quorum-sensing signal: one reports AHL as fluorescence, one deploys aptamers to sponge it out of circulation, aimed at healthcare-associated infection in Taiwanese intensive care. It won Best Infectious Diseases Project and was nominated for Best Hardware for CAPTURE-Screen, a single-cuvette fluorescence reader at US$54–161 against US$3,500 for the plate reader it substitutes, paired with LasReader for 4PL calibration with approximate 95% intervals. The statistics are the best in the Taiwanese cohort — mixed models with plate as a random intercept, geometric-mean ratio effect sizes, and the Cb-2 treatment held out and then predicted. It is also the island's mentoring spine, having run a session for Mingdao in March with three of its own members as Mingdao alumni.",
+      "chips": [
+        "Gold",
+        "Infectious Diseases win",
+        "Hardware nominee",
+        "US$54 reader",
+        "mixed models"
+      ],
+      "kicker_zh": "大學組 · Tainan · id 6379"
+    },
+    {
+      "kicker": "Overgrad · Hsinchu · id 6460",
+      "title": "NTHU — AeroSense",
+      "body": "A biohybrid olfactory platform: Drosophila odorant receptors with ORCO in HEK293 cells, GCaMP6f fluorescence reporting, a four-channel frequency-tagged optical reader with digital lock-in processing, and a fly-inspired network for decoding odour patterns, aimed at early fungal-risk screening in stored bananas. This is the deepest computational work in the Taiwanese cohort — PCA and projection-neuron coding, measured infrared and quantum-vibration features, an OpenPOM comparison, mutation-robustness and cross-species transfer tests, and molecular-dynamics pocket-entry studies. Nominated for Best Food & Nutrition Project and nothing else. The team states its own limit plainly: the decoder was evaluated on external metal-oxide sensor datasets, not on its own cells.",
+      "chips": [
+        "Gold",
+        "Food & Nutrition nominee",
+        "GCaMP6f",
+        "neural decoder",
+        "lock-in optics"
+      ],
+      "kicker_zh": "研究生組 · Hsinchu · id 6460"
+    },
+    {
+      "kicker": "High School · Taichung · id 6105",
+      "title": "Mingdao — Waste-to-Watt",
+      "body": "Laminated paper food containers from a 7,000-student campus turned into bioethanol by simultaneous saccharification and fermentation, with Zymomonas mobilis acting as a glucose sink so that BglA β-glucosidase never becomes product-inhibited and cellulase never sees accumulating cellobiose. Nominated for Best Model on three stacked models — enzyme-inhibition kinetics characterised under fermentation-compatible conditions rather than the thermophilic optimum, Monod growth for Z. mobilis, and a coupled ODE comparing closed and open systems. The hardware is a single 45 × 45 × 60 cm frame carrying shredding, hydrolysis, fermentation and distillation with the vessel riding to the distillation station on its own hotplate, so the mixture is never transferred. The clearest high-school modelling case in Taiwan after GEMS, and the only Taiwanese Best Model nomination at any tier.",
+      "chips": [
+        "Gold",
+        "Best Model nominee",
+        "SSF",
+        "coupled ODE",
+        "fermentor"
+      ],
+      "kicker_zh": "高中組 · Taichung · id 6105"
+    },
+    {
+      "kicker": "Undergrad · Hsinchu · id 6416 — not on the briefed list",
+      "title": "NTHU Taiwan — CatharSys",
+      "body": "A second, separate National Tsing Hua University team, distinct from the overgraduate NTHU entry: engineered Bacillus subtilis forming biofilms on suspended carriers in a moving-bed reactor to treat TMAH and trimethylamine waste from Hsinchu's semiconductor lithography lines. Four models, and each one changed a decision — dissolved oxygen was dropped from the screen at a predicted 6% separation below flask noise, strengthening the bottleneck enzyme alone was shown to drive formaldehyde to five times chassis tolerance so a matched hxlAB upregulation was carried instead, a biofilm model stated a falsifiable prediction before the build, and first-principles hydraulics reversed a nozzle geometry for the pump already bought. CathaBench, its three-tank open-source benchtop MBBR with ESP32 control and an offline Wi-Fi dashboard, was iterated on feedback from ITRI and industry. Gold medal, zero nominations — on this evidence the most under-recognised dry lab in Taiwan in 2026, and the closest technical match to GEMS.",
+      "chips": [
+        "Gold",
+        "no awards",
+        "B. subtilis",
+        "MBBR",
+        "ITRI",
+        "semiconductor waste"
+      ],
+      "kicker_zh": "大學組 · Hsinchu · id 6416 — 不在原清單中"
+    },
+    {
+      "kicker": "Undergrad · Chiayi · id 6408 — not on the briefed list",
+      "title": "CCU-Taiwan — NoFold",
+      "body": "National Chung Cheng University against the rice leafroller, Cnaphalocrocis medinalis, which folds a rice leaf and eats it from inside and is described as a predominant foliage feeder across Asian rice ecosystems. The framing is the same economic argument GEMS makes: only about 12% of world rice crosses a border, so an Asian yield loss cannot be covered by imports, and the moths arrive on spring winds from overwintering areas such as Hanoi and Nanning with Taiwan on the route. Gold medal, no awards or nominations. Same crop, same island, same pest-pressure problem as ReLEAF, approached from entomology rather than abiotic stress — the most obvious untapped adjacency in the cohort.",
+      "chips": [
+        "Gold",
+        "no awards",
+        "rice",
+        "crop protection",
+        "Chiayi"
+      ],
+      "kicker_zh": "大學組 · Chiayi · id 6408 — 不在原清單中"
+    },
+    {
+      "kicker": "High School · Taichung · id 6062 — not on the briefed list",
+      "title": "WIST — ultrasound-reporting probiotic",
+      "body": "Washington International School, Taichung: an engineered E. coli that answers two chemical clues at once, lactate and nitrate, and reports the AND condition by filling with gas vesicles and becoming visible to ultrasound, as a swallowable early screen for colorectal cancer. The acoustic-reporter approach is the same gas-vesicle technology Heidelberg built its collegiate Top 10 project on this year, which makes it an ambitious choice for a high-school team. It carries both a Model and a Software page and declares every figure on the home page a diagram of method rather than acquired data. Gold medal, no awards; it attended the NYCU Meet-Up and appears on NCKU-Tainan's collaboration list.",
+      "chips": [
+        "Gold",
+        "no awards",
+        "gas vesicles",
+        "ultrasound",
+        "AND gate"
+      ],
+      "kicker_zh": "高中組 · Taichung · id 6062 — 不在原清單中"
+    },
+    {
+      "kicker": "High School · Taipei · id 6200 — not on the briefed list",
+      "title": "AEI Prep-Taiwan — SynPETic",
+      "body": "Engineered E. coli making PETase and MHETase side by side on one scaffold — a 'PETosome' — to depolymerise PET in water at 37 °C with no extruder and no metal catalyst, framed around the roughly 2,500 kg of plastic waste the ISS generates a year and the up-to-US$20,000 cost of lifting a kilogram to orbit. One of only two commercially organised Taiwanese high-school programmes besides GEMS and Labi, and it carries Model, Software and Hardware pages. Silver medal, no awards or nominations. The Space village framing makes it the nearest cohort neighbour to GEMS's own village placement.",
+      "chips": [
+        "Silver",
+        "no awards",
+        "PETase",
+        "Space village",
+        "Taipei"
+      ],
+      "kicker_zh": "高中組 · Taipei · id 6200 — 不在原清單中"
+    },
+    {
+      "kicker": "High School · Taipei · id 6423 — not on the briefed list",
+      "title": "VIS — Cadture",
+      "body": "VIS@betterworld Lab, testing whether engineered metallothioneins can capture cadmium from industrial wastewater, with a modelling page on cadmium removal. The notable feature is epistemic honesty of the kind GEMS also practises: the home page states that current work measures bacterial growth and GFP response and that direct cadmium removal remains to be tested, rather than implying a result it does not have. Silver medal, no awards or nominations. It attended the NYCU Meet-Up and is on NCKU-Tainan's collaboration list, so it is inside the island network that the Taipei commercial programmes are outside.",
+      "chips": [
+        "Silver",
+        "no awards",
+        "metallothionein",
+        "cadmium",
+        "honest scoping"
+      ],
+      "kicker_zh": "高中組 · Taipei · id 6423 — 不在原清單中"
+    },
+    {
+      "kicker": "High School · Zhubei · id 6156 — not on the briefed list",
+      "title": "HIA-Taiwan — Aiy-U-Ready",
+      "body": "Hsinchu International Academy in Zhubei, working on aiyu, Ficus pumila var. awkeotsang, a fig endemic to Taiwan that yields hundreds of tonnes a year and is almost unknown outside it. The project is built around that asymmetry — a locally owned crop nobody else is characterising — which is precisely the 'own a dataset nobody else has' logic the industry trend research identifies as a small institution's only durable asset. Silver medal, no awards or nominations, with a Dry Lab model page. It attended the NYCU Meet-Up and is on NCKU-Tainan's collaboration list.",
+      "chips": [
+        "Silver",
+        "no awards",
+        "aiyu",
+        "endemic crop",
+        "Hsinchu County"
+      ],
+      "kicker_zh": "高中組 · Zhubei · id 6156 — 不在原清單中"
+    },
+    {
+      "kicker": "High School · New Taipei · id 6103 — not on the briefed list",
+      "title": "KCIS-Xiugang-Taipei — Herculyeast",
+      "body": "Kang Chiao International School's Xiugang campus, running a yeast project with both Model and Software pages under its Dry Lab, plus Entrepreneurship, Inclusivity and Sustainability sections. Silver medal, no awards or nominations. Its sibling campus at Linkou entered separately as Taipei-TWN and was recorded as not eligible, so the Kang Chiao group fielded two high-school entries in 2026 and converted neither — and Labi-Taiwan, the iGEMers Prize winner, is the same Linkou programme's earlier lineage under a new organiser.",
+      "chips": [
+        "Silver",
+        "no awards",
+        "yeast",
+        "New Taipei",
+        "Kang Chiao"
+      ],
+      "kicker_zh": "高中組 · New Taipei · id 6103 — 不在原清單中"
+    },
+    {
+      "kicker": "Did not compete · ids 6142, 6543 — not on the briefed list",
+      "title": "Taipei-TWN and Oros Biotech",
+      "body": "Two Taiwanese registrations that never reached the competition floor and so are missing from every results table. Taipei-TWN (Kang Chiao International School, Linkou campus, high school, Taipei) carries the status 'not eligible' with no medal and no wiki content. Oros Biotech of Taichung entered the venture-foundry track rather than the competition, has no section, no medal and a 404 wiki — meaning Taiwan's only 2026 entry into iGEM's startup pathway left no public record. Both matter for the denominator: fifteen Taiwanese registrations, thirteen competing teams, and an entrepreneurship route the island used once and did not document.",
+      "chips": [
+        "Not eligible",
+        "venture foundry",
+        "no wiki",
+        "Taipei",
+        "Taichung"
+      ],
+      "kicker_zh": "未參賽 · ids 6142, 6543 — 不在原清單中"
+    },
+    {
+      "kicker": "Regional comparison",
+      "title": "Taiwan against China, Hong Kong, Japan, Korea and Singapore",
+      "body": "On accepted competing teams: China 176, Hong Kong 16, Taiwan 13, Japan 7, Korea 6, Singapore 4. On outright wins Taiwan placed second in the region with six, behind China's 24 and ahead of Hong Kong's three, with Japan, Korea and Singapore returning none at all — so Taiwan was the only territory outside China to win more than once. On altitude the ranking inverts: China took five Top 10 places and a Grand Prize first runner-up, Hong Kong three Top 10 places and the high-school Grand Prize first runner-up through HongKong-JSS, Singapore one through NUS-Singapore, and Taiwan one through GEMS-Taiwan, with no Taiwanese Grand Prize placing at any tier. In kind the regions differ sharply: China dominates the parts awards and the Registry layer, Hong Kong spreads thirteen nominations across parts, model, software, hardware, education, presentation and wiki, Japan accumulates nominations without converting any, and Taiwan concentrates in hardware, measurement and human practices while taking zero parts and zero software nominations.",
+      "chips": [
+        "TWN 13 teams",
+        "6 wins",
+        "1 Top 10",
+        "0 parts",
+        "0 software",
+        "HKG 3 Top 10"
+      ],
+      "kicker_zh": "區域比較"
+    }
   ],
-  "rows": [
-   [
-    "GEMS-Taiwan (6072)",
-    "High School",
-    "Gold; Top 10; wins in Measurement, Hardware, Integrated HP; nominees Presentation, Wiki, Village Project",
-    "Provenance discipline, pre-registration, four built devices"
-   ],
-   [
-    "Labi-Taiwan (6511)",
-    "High School",
-    "Gold; iGEMers Prize winner; Best Measurement nominee",
-    "Sequencing-to-target evidence integration; portable electrochemical readout"
-   ],
-   [
-    "Mingdao (6105)",
-    "High School",
-    "Gold; Best Model nominee",
-    "Enzyme-kinetic and coupled-ODE modelling; integrated single-frame fermentor"
-   ],
-   [
-    "WIST (6062)",
-    "High School",
-    "Gold; no awards",
-    "Gas-vesicle ultrasound reporting; two-input AND logic"
-   ],
-   [
-    "AEI Prep-Taiwan (6200)",
-    "High School",
-    "Silver; no awards",
-    "Scaffolded dual-enzyme PET depolymerisation; Space village framing"
-   ],
-   [
-    "VIS (6423)",
-    "High School",
-    "Silver; no awards",
-    "Metallothionein cadmium capture; honest scoping of untested claims"
-   ],
-   [
-    "HIA-Taiwan (6156)",
-    "High School",
-    "Silver; no awards",
-    "Taiwan-endemic aiyu crop nobody else is characterising"
-   ],
-   [
-    "KCIS-Xiugang-Taipei (6103)",
-    "High School",
-    "Silver; no awards",
-    "Yeast chassis with both model and software pages"
-   ],
-   [
-    "NYCU-Taiwan (6306)",
-    "Undergrad",
-    "Silver; Best Project Promotion Video winner",
-    "Communication, convening; four-layer Cas12a model stack and probe-design software"
-   ],
-   [
-    "NCKU-Tainan (6379)",
-    "Undergrad",
-    "Gold; Best Infectious Diseases Project winner; Best Hardware nominee",
-    "Inferential statistics with held-out prediction; US$54-161 fluorescence reader"
-   ],
-   [
-    "NTHU Taiwan (6416)",
-    "Undergrad",
-    "Gold; no awards",
-    "Four models that each reversed or changed a build decision; open-source MBBR"
-   ],
-   [
-    "CCU-Taiwan (6408)",
-    "Undergrad",
-    "Gold; no awards",
-    "Rice leafroller entomology and rice-trade economics"
-   ],
-   [
-    "NTHU (6460)",
-    "Overgrad",
-    "Gold; Best Food & Nutrition Project nominee",
-    "Deepest computation in the cohort: receptor prediction, odour decoding, lock-in optics"
-   ],
-   [
-    "Taipei-TWN (6142)",
-    "High School",
-    "Not eligible; no medal",
-    "No public record"
-   ],
-   [
-    "Oros Biotech (6543)",
-    "Venture foundry",
-    "No section, no medal, 404 wiki",
-    "Taiwan's only 2026 entry to iGEM's startup pathway"
-   ]
-  ]
- },
- "partners": [
-  {
-   "name": "NTHU Taiwan (National Tsing Hua University, Hsinchu) — team 6416",
-   "why": "The closest technical match to GEMS on the island and the one GEMS has no relationship with. Same chassis (engineered Bacillus subtilis), same commitment to open-source reactor hardware (CathaBench, a three-tank MBBR on ESP32 with an offline dashboard), and a modelling culture that demonstrably changed the build rather than decorating it — it dropped dissolved oxygen from a screen on a predicted 6% separation, reversed an enzyme-engineering plan when formaldehyde was projected to five times chassis tolerance, and reversed a nozzle geometry after first-principles hydraulics. It also already holds the ITRI and industry relationships GEMS would otherwise have to build from nothing. It won gold and nothing else, so it needs legibility as much as GEMS needs rigour.",
-   "firstProject": "A joint Bacillus subtilis measurement standard. Co-characterise the CcaSR green-light transfer function and a suspension-versus-biofilm growth model across both teams' reactors in absolute fluorescein-calibrated units, then release it as a SubtiToolKit-compatible part collection with full transfer curves and a shared SBOL3 record. This closes GEMS's single largest hole — a control architecture resting on a Hill curve it never measured — and gives NTHU Taiwan the Registry-visible artefact its modelling earned and did not get."
+  "table": {
+    "head": [
+      "Team",
+      "Tier",
+      "2026 result",
+      "Strength"
+    ],
+    "rows": [
+      [
+        "GEMS-Taiwan (6072)",
+        "High School",
+        "Gold; Top 10; wins in Measurement, Hardware, Integrated HP; nominees Presentation, Wiki, Village Project",
+        "Provenance discipline, pre-registration, four built devices"
+      ],
+      [
+        "Labi-Taiwan (6511)",
+        "High School",
+        "Gold; iGEMers Prize winner; Best Measurement nominee",
+        "Sequencing-to-target evidence integration; portable electrochemical readout"
+      ],
+      [
+        "Mingdao (6105)",
+        "High School",
+        "Gold; Best Model nominee",
+        "Enzyme-kinetic and coupled-ODE modelling; integrated single-frame fermentor"
+      ],
+      [
+        "WIST (6062)",
+        "High School",
+        "Gold; no awards",
+        "Gas-vesicle ultrasound reporting; two-input AND logic"
+      ],
+      [
+        "AEI Prep-Taiwan (6200)",
+        "High School",
+        "Silver; no awards",
+        "Scaffolded dual-enzyme PET depolymerisation; Space village framing"
+      ],
+      [
+        "VIS (6423)",
+        "High School",
+        "Silver; no awards",
+        "Metallothionein cadmium capture; honest scoping of untested claims"
+      ],
+      [
+        "HIA-Taiwan (6156)",
+        "High School",
+        "Silver; no awards",
+        "Taiwan-endemic aiyu crop nobody else is characterising"
+      ],
+      [
+        "KCIS-Xiugang-Taipei (6103)",
+        "High School",
+        "Silver; no awards",
+        "Yeast chassis with both model and software pages"
+      ],
+      [
+        "NYCU-Taiwan (6306)",
+        "Undergrad",
+        "Silver; Best Project Promotion Video winner",
+        "Communication, convening; four-layer Cas12a model stack and probe-design software"
+      ],
+      [
+        "NCKU-Tainan (6379)",
+        "Undergrad",
+        "Gold; Best Infectious Diseases Project winner; Best Hardware nominee",
+        "Inferential statistics with held-out prediction; US$54-161 fluorescence reader"
+      ],
+      [
+        "NTHU Taiwan (6416)",
+        "Undergrad",
+        "Gold; no awards",
+        "Four models that each reversed or changed a build decision; open-source MBBR"
+      ],
+      [
+        "CCU-Taiwan (6408)",
+        "Undergrad",
+        "Gold; no awards",
+        "Rice leafroller entomology and rice-trade economics"
+      ],
+      [
+        "NTHU (6460)",
+        "Overgrad",
+        "Gold; Best Food & Nutrition Project nominee",
+        "Deepest computation in the cohort: receptor prediction, odour decoding, lock-in optics"
+      ],
+      [
+        "Taipei-TWN (6142)",
+        "High School",
+        "Not eligible; no medal",
+        "No public record"
+      ],
+      [
+        "Oros Biotech (6543)",
+        "Venture foundry",
+        "No section, no medal, 404 wiki",
+        "Taiwan's only 2026 entry to iGEM's startup pathway"
+      ]
+    ]
   },
-  {
-   "name": "NCKU-Tainan (National Cheng Kung University, Tainan) — team 6379",
-   "why": "The only Taiwanese collegiate team to win a technical-domain award in 2026, and the holder of the exact competence GEMS lacks: mixed models with plate as a random intercept, geometric-mean-ratio effect sizes with 95% intervals, and a held-out treatment used as a genuine prediction test. It is also an instrumentation peer — CAPTURE-Screen reads GFP at US$54-161 against US$3,500 for the open-source plate reader it replaces, and LasReader wraps 4PL calibration with confidence intervals around any reader's output. It is the de facto mentoring spine of Taiwanese iGEM, having run a session for Mingdao with three of its own members as Mingdao alumni, so a GEMS link here also buys entry to the network GEMS skipped.",
-   "firstProject": "A cross-instrument calibration round-robin. Run GEMS's in-line photometer, NCKU's CAPTURE-Screen and a benchtop plate reader against the same fluorescein and silica standards and the same sfGFP culture series, analyse everything through LasReader so the analysis path is identical, and publish a Taiwan measurement note reporting agreement, disagreement and the limits of each instrument's linear range. It is a Best Measurement-grade artefact for both teams and it imports NCKU's statistics into GEMS's practice by doing rather than by telling."
-  },
-  {
-   "name": "CCU-Taiwan (National Chung Cheng University, Chiayi) — team 6408",
-   "why": "Working the same crop, the same island and the same problem from the other side: rice under pest pressure rather than rice under abiotic stress. Its framing already matches GEMS's economic argument — that only about 12% of world rice crosses a border, so an Asian yield loss cannot be imported away — and it brings entomology and migration data (spring leafroller flights north from Hanoi and Nanning with Taiwan on the route) that GEMS's stress index does not contain. Gold medal, no awards, no obvious outlet for the work. Geographically it sits between Tainan and Taichung, inside the rice belt both projects target.",
-   "firstProject": "A shared Taiwan rice-stress dataset with a published benchmark. Extend GEMS's fitted stress index — 25 years of county rice yields against ERA5 daily reanalysis, scored across 32,767 candidate term combinations — with CCU's leafroller pressure and arrival data, release it as a versioned, licensed dataset with a defined forecasting benchmark task and a public leaderboard, and have both teams state a trigger rule against it in advance. One hectare, two trigger rules, one open benchmark that other teams can beat."
-  },
-  {
-   "name": "NTHU (National Tsing Hua University, Hsinchu, overgrad AeroSense group) — team 6460",
-   "why": "The deepest computational work in the Taiwanese cohort and the natural counterpart to GEMS's protein-design pipeline. It runs receptor-response prediction with measured infrared and quantum-vibration features, an OpenPOM comparison, mutation-robustness and cross-species transfer tests, and molecular-dynamics pocket-entry studies — and it says openly that its decoder was evaluated on external metal-oxide sensor datasets rather than on its own cells. GEMS has the opposite problem: a GRAFT design workflow with docking, all-atom MD and a pre-set AlphaFold confidence gate, and almost no measured validation of what it designs. Each team is the other's missing half.",
-   "firstProject": "A design-to-measurement validation loop. GEMS proposes a small, pre-registered panel of receptor or binder variants through GRAFT with the confidence gate and acceptance criteria fixed in writing beforehand; NTHU expresses and measures them on its HEK293/GCaMP6f assay and four-channel lock-in reader; both publish the hit rate including every failure, with the predictions timestamped before the measurements. The deliverable is a hit-rate number on a named pipeline, which is the one thing neither team can currently produce alone."
-  },
-  {
-   "name": "Labi-Taiwan (Labi Education, Taoyuan) — team 6511",
-   "why": "The only other Taiwanese high-school programme with a genuine computational stack, and GEMS's structural twin: both are Taipei-area programmes run by commercial organisers, both are absent from NYCU's and NCKU's collaboration lists, and between them they hold four of Taiwan's six 2026 wins. Their skills barely overlap — Labi runs sequencing-to-target evidence integration (2,656 miRNAs narrowed to miR-124-3p through differential expression, miRNA-mRNA networks, GSEA and WGCNA), ML-prioritised nucleic-acid probe design and electrochemical readout, where GEMS runs sensor metrology, reactor control and provenance auditing. Labi's iGEMers Prize also proves it can carry a room, which is the reputational asset a teaching programme needs.",
-   "firstProject": "A two-module Taiwan high-school dry-lab school, co-taught and open to any Taiwanese team. GEMS teaches provenance ledgers, assumption registers, pre-registration with written pass criteria and instrument cross-calibration; Labi teaches target selection from public sequencing cohorts, probe design and electrochemical quantification. Every participating team leaves with one pre-registered prediction, scored publicly after their next experiment. Teaching is also how GEMS joins the island network it currently sits outside."
-  },
-  {
-   "name": "NYCU-Taiwan (National Yang Ming Chiao Tung University, Hsinchu) — team 6306",
-   "why": "The island's convening institution and its best communicators. It hosted the 2026 Taiwan iGEMers Meet-Up at its Bo-Ai campus on 27 July for 53 students and advisors from five teams, built a dedicated Taiwan iGEMers exchange website as the public record, and won Best Project Promotion Video. It also sits in Hsinchu alongside both NTHU teams, TBMC's new GMP facility and ITRI, which makes it the right physical venue for anything recurring. What its meet-up lacked was technical content: the roundtables covered team cohesion, leadership and Jamboree preparation, not modelling or measurement.",
-   "firstProject": "Co-host the 2027 Taiwan iGEMers Meet-Up with a dry-lab track, and stand up a permanent Taiwan iGEM dry-lab repository behind it. NYCU supplies the venue, the convening and the website; GEMS supplies a half-day curriculum on modelling, calibration and reproducibility plus the repository's founding contents — shared calibration protocols, fluorescein standards, model code, SBOL3 construct records and a template pre-registration form. The test of success is that a 2027 team other than GEMS publishes a calibrated measurement using it."
-  }
- ],
- "method": "The tally is built from research/results2026.json (captured from competition.igem.org/results/2026 on 19 November 2026) cross-checked team by team against iGEM's own public API — api.igem.org/v1/teams?year=2026 for the full 463-team roster with countries, cities, sections and acceptance status, and api.igem.org/v1/teams/<id>/awards for each team's medals, nominations and wins — which is how nine Taiwanese registrations absent from the results table were found, including NTHU Taiwan (6416), CCU-Taiwan (6408), WIST (6062) and AEI Prep-Taiwan (6200). Project detail comes from the teams' own 2026 wikis, read directly where server-rendered and through a browser for the client-rendered single-page sites (Labi-Taiwan, CCU-Taiwan), plus the existing researched file at research/teams/6072.json for GEMS-Taiwan and research/trends/industry.json for the TBMC, DayOne and Israel Innovation Authority figures. Two Taiwanese registrations could not be verified beyond their API records: Taipei-TWN (6142) is marked not eligible and has no wiki content, and Oros Biotech (6543) returns a 404 wiki, so nothing is claimed about either project; KCIS-Xiugang-Taipei's project could only be identified by name and navigation structure because its wiki ships a largely unmodified template, and Mingdao's medal-level claims rest on the API rather than on a wiki statement."
+  "partners": [
+    {
+      "name": "NTHU Taiwan (National Tsing Hua University, Hsinchu) — team 6416",
+      "why": "The closest technical match to GEMS on the island and the one GEMS has no relationship with. Same chassis (engineered Bacillus subtilis), same commitment to open-source reactor hardware (CathaBench, a three-tank MBBR on ESP32 with an offline dashboard), and a modelling culture that demonstrably changed the build rather than decorating it — it dropped dissolved oxygen from a screen on a predicted 6% separation, reversed an enzyme-engineering plan when formaldehyde was projected to five times chassis tolerance, and reversed a nozzle geometry after first-principles hydraulics. It also already holds the ITRI and industry relationships GEMS would otherwise have to build from nothing. It won gold and nothing else, so it needs legibility as much as GEMS needs rigour.",
+      "firstProject": "A joint Bacillus subtilis measurement standard. Co-characterise the CcaSR green-light transfer function and a suspension-versus-biofilm growth model across both teams' reactors in absolute fluorescein-calibrated units, then release it as a SubtiToolKit-compatible part collection with full transfer curves and a shared SBOL3 record. This closes GEMS's single largest hole — a control architecture resting on a Hill curve it never measured — and gives NTHU Taiwan the Registry-visible artefact its modelling earned and did not get."
+    },
+    {
+      "name": "NCKU-Tainan (National Cheng Kung University, Tainan) — team 6379",
+      "why": "The only Taiwanese collegiate team to win a technical-domain award in 2026, and the holder of the exact competence GEMS lacks: mixed models with plate as a random intercept, geometric-mean-ratio effect sizes with 95% intervals, and a held-out treatment used as a genuine prediction test. It is also an instrumentation peer — CAPTURE-Screen reads GFP at US$54-161 against US$3,500 for the open-source plate reader it replaces, and LasReader wraps 4PL calibration with confidence intervals around any reader's output. It is the de facto mentoring spine of Taiwanese iGEM, having run a session for Mingdao with three of its own members as Mingdao alumni, so a GEMS link here also buys entry to the network GEMS skipped.",
+      "firstProject": "A cross-instrument calibration round-robin. Run GEMS's in-line photometer, NCKU's CAPTURE-Screen and a benchtop plate reader against the same fluorescein and silica standards and the same sfGFP culture series, analyse everything through LasReader so the analysis path is identical, and publish a Taiwan measurement note reporting agreement, disagreement and the limits of each instrument's linear range. It is a Best Measurement-grade artefact for both teams and it imports NCKU's statistics into GEMS's practice by doing rather than by telling."
+    },
+    {
+      "name": "CCU-Taiwan (National Chung Cheng University, Chiayi) — team 6408",
+      "why": "Working the same crop, the same island and the same problem from the other side: rice under pest pressure rather than rice under abiotic stress. Its framing already matches GEMS's economic argument — that only about 12% of world rice crosses a border, so an Asian yield loss cannot be imported away — and it brings entomology and migration data (spring leafroller flights north from Hanoi and Nanning with Taiwan on the route) that GEMS's stress index does not contain. Gold medal, no awards, no obvious outlet for the work. Geographically it sits between Tainan and Taichung, inside the rice belt both projects target.",
+      "firstProject": "A shared Taiwan rice-stress dataset with a published benchmark. Extend GEMS's fitted stress index — 25 years of county rice yields against ERA5 daily reanalysis, scored across 32,767 candidate term combinations — with CCU's leafroller pressure and arrival data, release it as a versioned, licensed dataset with a defined forecasting benchmark task and a public leaderboard, and have both teams state a trigger rule against it in advance. One hectare, two trigger rules, one open benchmark that other teams can beat."
+    },
+    {
+      "name": "NTHU (National Tsing Hua University, Hsinchu, overgrad AeroSense group) — team 6460",
+      "why": "The deepest computational work in the Taiwanese cohort and the natural counterpart to GEMS's protein-design pipeline. It runs receptor-response prediction with measured infrared and quantum-vibration features, an OpenPOM comparison, mutation-robustness and cross-species transfer tests, and molecular-dynamics pocket-entry studies — and it says openly that its decoder was evaluated on external metal-oxide sensor datasets rather than on its own cells. GEMS has the opposite problem: a GRAFT design workflow with docking, all-atom MD and a pre-set AlphaFold confidence gate, and almost no measured validation of what it designs. Each team is the other's missing half.",
+      "firstProject": "A design-to-measurement validation loop. GEMS proposes a small, pre-registered panel of receptor or binder variants through GRAFT with the confidence gate and acceptance criteria fixed in writing beforehand; NTHU expresses and measures them on its HEK293/GCaMP6f assay and four-channel lock-in reader; both publish the hit rate including every failure, with the predictions timestamped before the measurements. The deliverable is a hit-rate number on a named pipeline, which is the one thing neither team can currently produce alone."
+    },
+    {
+      "name": "Labi-Taiwan (Labi Education, Taoyuan) — team 6511",
+      "why": "The only other Taiwanese high-school programme with a genuine computational stack, and GEMS's structural twin: both are Taipei-area programmes run by commercial organisers, both are absent from NYCU's and NCKU's collaboration lists, and between them they hold four of Taiwan's six 2026 wins. Their skills barely overlap — Labi runs sequencing-to-target evidence integration (2,656 miRNAs narrowed to miR-124-3p through differential expression, miRNA-mRNA networks, GSEA and WGCNA), ML-prioritised nucleic-acid probe design and electrochemical readout, where GEMS runs sensor metrology, reactor control and provenance auditing. Labi's iGEMers Prize also proves it can carry a room, which is the reputational asset a teaching programme needs.",
+      "firstProject": "A two-module Taiwan high-school dry-lab school, co-taught and open to any Taiwanese team. GEMS teaches provenance ledgers, assumption registers, pre-registration with written pass criteria and instrument cross-calibration; Labi teaches target selection from public sequencing cohorts, probe design and electrochemical quantification. Every participating team leaves with one pre-registered prediction, scored publicly after their next experiment. Teaching is also how GEMS joins the island network it currently sits outside."
+    },
+    {
+      "name": "NYCU-Taiwan (National Yang Ming Chiao Tung University, Hsinchu) — team 6306",
+      "why": "The island's convening institution and its best communicators. It hosted the 2026 Taiwan iGEMers Meet-Up at its Bo-Ai campus on 27 July for 53 students and advisors from five teams, built a dedicated Taiwan iGEMers exchange website as the public record, and won Best Project Promotion Video. It also sits in Hsinchu alongside both NTHU teams, TBMC's new GMP facility and ITRI, which makes it the right physical venue for anything recurring. What its meet-up lacked was technical content: the roundtables covered team cohesion, leadership and Jamboree preparation, not modelling or measurement.",
+      "firstProject": "Co-host the 2027 Taiwan iGEMers Meet-Up with a dry-lab track, and stand up a permanent Taiwan iGEM dry-lab repository behind it. NYCU supplies the venue, the convening and the website; GEMS supplies a half-day curriculum on modelling, calibration and reproducibility plus the repository's founding contents — shared calibration protocols, fluorescein standards, model code, SBOL3 construct records and a template pre-registration form. The test of success is that a 2027 team other than GEMS publishes a calibrated measurement using it."
+    }
+  ],
+  "method": "The tally is built from research/results2026.json (captured from competition.igem.org/results/2026 on 19 November 2026) cross-checked team by team against iGEM's own public API — api.igem.org/v1/teams?year=2026 for the full 463-team roster with countries, cities, sections and acceptance status, and api.igem.org/v1/teams/<id>/awards for each team's medals, nominations and wins — which is how nine Taiwanese registrations absent from the results table were found, including NTHU Taiwan (6416), CCU-Taiwan (6408), WIST (6062) and AEI Prep-Taiwan (6200). Project detail comes from the teams' own 2026 wikis, read directly where server-rendered and through a browser for the client-rendered single-page sites (Labi-Taiwan, CCU-Taiwan), plus the existing researched file at research/teams/6072.json for GEMS-Taiwan and research/trends/industry.json for the TBMC, DayOne and Israel Innovation Authority figures. Two Taiwanese registrations could not be verified beyond their API records: Taipei-TWN (6142) is marked not eligible and has no wiki content, and Oros Biotech (6543) returns a 404 wiki, so nothing is claimed about either project; KCIS-Xiugang-Taipei's project could only be identified by name and navigation structure because its wiki ships a largely unmodified template, and Mingdao's medal-level claims rest on the API rather than on a wiki statement.",
+  "kicker_zh": "原創分析"
 }

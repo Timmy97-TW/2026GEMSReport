@@ -15,7 +15,8 @@
         "Lambert-GA",
         "2 clicks to evidence",
         "One page"
-      ]
+      ],
+      "kicker_zh": "資訊架構"
     },
     {
       "kicker": "Data presentation",
@@ -26,7 +27,8 @@
         "F / I / E / S",
         "Weighted matrix",
         "Shows its working"
-      ]
+      ],
+      "kicker_zh": "資料呈現"
     },
     {
       "kicker": "Human practices",
@@ -37,7 +39,8 @@
         "H.I.V.E.",
         "Dated timeline",
         "Before → after"
-      ]
+      ],
+      "kicker_zh": "人類實踐"
     },
     {
       "kicker": "Technical build",
@@ -48,7 +51,8 @@
         "llms.txt",
         "/page.md",
         "JS-free fallback"
-      ]
+      ],
+      "kicker_zh": "技術實作"
     },
     {
       "kicker": "Figures",
@@ -59,7 +63,8 @@
         "Uni-Padua-IT",
         "Units + n + conditions",
         "Show the control"
-      ]
+      ],
+      "kicker_zh": "圖表"
     },
     {
       "kicker": "Build discipline",
@@ -70,7 +75,8 @@
         "TU Delft",
         "One file per page",
         "Block grammar"
-      ]
+      ],
+      "kicker_zh": "建置紀律"
     },
     {
       "kicker": "Craft",
@@ -81,7 +87,8 @@
         "?lite=1",
         "prefers-reduced-motion",
         "Hardware sniffing"
-      ]
+      ],
+      "kicker_zh": "工藝"
     }
   ],
   "table": {
@@ -152,5 +159,6 @@
     "Per-page mascots, bespoke icon sets and per-page accent colours. Stanford invested in all three and placed as a nominee; none of the four winners has a mascot system.",
     "Treating the mandatory section list as the information architecture. A deep-linked judging index does the same job in one page and reads as an argument rather than a form."
   ],
-  "method": "I rendered and read the four winners in full — Heidelberg, Uni-Padua-IT, TU Delft and Lambert-GA — by fetching their page HTML directly where it is server-rendered, by reading TU Delft's Markdown mirrors, and by loading the client-rendered pages in a browser; counts of references, figures, components, image formats, alt attributes and prefers-reduced-motion rules were taken from the shipped source. I sampled around thirty nominees and controls more shallowly, measuring framework, rendered text length, asset weight and alt-text coverage for all of them, and reading Stanford's and UCAS-China's content in detail as the closest nominees. I could not render several Vite single-page nominees deeply — Oxford, UCSC, NUS-Singapore, KAUST-KSA, Muenster-University, IISER-Kolkata and UOttawa among them — because a shared browser pane kept being navigated away mid-session, so they are excluded from the table and their design is not characterised here; I also did not measure real-world load time, mobile layout or screen-reader behaviour beyond the markup."
+  "method": "I rendered and read the four winners in full — Heidelberg, Uni-Padua-IT, TU Delft and Lambert-GA — by fetching their page HTML directly where it is server-rendered, by reading TU Delft's Markdown mirrors, and by loading the client-rendered pages in a browser; counts of references, figures, components, image formats, alt attributes and prefers-reduced-motion rules were taken from the shipped source. I sampled around thirty nominees and controls more shallowly, measuring framework, rendered text length, asset weight and alt-text coverage for all of them, and reading Stanford's and UCAS-China's content in detail as the closest nominees. I could not render several Vite single-page nominees deeply — Oxford, UCSC, NUS-Singapore, KAUST-KSA, Muenster-University, IISER-Kolkata and UOttawa among them — because a shared browser pane kept being navigated away mid-session, so they are excluded from the table and their design is not characterised here; I also did not measure real-world load time, mobile layout or screen-reader behaviour beyond the markup.",
+  "kicker_zh": "原創分析"
 }

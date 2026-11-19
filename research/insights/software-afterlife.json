@@ -10,65 +10,248 @@
       "kicker": "Best in class",
       "title": "AMPilot — the only tool with a working public API",
       "body": "XJTLU-Software's antimicrobial-peptide workbench at ampilotlab.com opens in guest mode with no account, and its /api/v1 routes are documented in a published OpenAPI 3.1 spec. A live call to /api/v1/corpus/search returned real literature evidence with provenance, licence and retrieval date attached — no key, no sign-up. The spec states the API is deterministic, stateless and calls no language model, which is what makes it safe for someone else to build on. It is the clearest example this year of a team designing for a second user rather than a judge.",
-      "chips": ["alive", "XJTLU-Software", "public API", "guest mode", "OpenAPI 3.1"]
+      "chips": [
+        "alive",
+        "XJTLU-Software",
+        "public API",
+        "guest mode",
+        "OpenAPI 3.1"
+      ],
+      "kicker_zh": "同類最佳"
     },
     {
       "kicker": "Proof it is not a budget problem",
       "title": "Two high-school teams out-shipped most universities",
       "body": "GHCIS's ARGUS runs a real backend at argus.ucuv.dpdns.org — its /api/ready endpoint answers with JSON, not a static shell — alongside a Docker and a native Node deploy path, role-based access and SQLite persistence. HK-Joint-School's PyroForge serves protein thermostability prediction at pyroforge.26650078.xyz with /health reporting ESM models loaded and ready. Both URLs are reachable right now. Neither team had a university budget; they had a cheap domain and a decision to host.",
-      "chips": ["alive", "GHCIS", "HK-Joint-School", "high school", "real backend"]
+      "chips": [
+        "alive",
+        "GHCIS",
+        "HK-Joint-School",
+        "high school",
+        "real backend"
+      ],
+      "kicker_zh": "證明這不是預算問題"
     },
     {
       "kicker": "The cautionary tale",
       "title": "Vilnius deployed, then switched it off",
       "body": "Ladder Detector automates gel-image annotation, a genuinely unglamorous and genuinely useful job, and Vilnius-Lithuania did the right thing by deploying it publicly. The URL on their wiki, ladder-detector.onrender.com, now returns HTTP 503 and the text \"This service has been suspended by its owner.\" The Apache-2.0 source is intact on GitLab and still runs via docker compose, so the work is not lost — but every citation of that wiki link now points at a dead page. A free hosting tier is a deadline, not a deployment.",
-      "chips": ["gone", "Vilnius-Lithuania", "503 suspended", "source survives"]
+      "chips": [
+        "gone",
+        "Vilnius-Lithuania",
+        "503 suspended",
+        "source survives"
+      ],
+      "kicker_zh": "前車之鑑"
     },
     {
       "kicker": "Honest about the gap",
       "title": "Diana and HUSH publish a URL that is not the tool",
       "body": "UMA Malaga's live site opens with a disclaimer: \"Saved results, not the live tool... The pages cannot analyse a variant you type.\" It publishes unedited CLI output with the commit hash, Docker image digest and tool versions recorded — excellent reproducibility practice, but not a service. GU Frankfurt's HUSH page likewise says it \"shows its web app in action\" and then walks through a mockup of screenshots. Both are more honest than most, and both are exactly why a 200 response proves nothing until you read the page.",
-      "chips": ["source-only", "UMA Malaga", "GU Frankfurt", "demo not deployment"]
+      "chips": [
+        "source-only",
+        "UMA Malaga",
+        "GU Frankfurt",
+        "demo not deployment"
+      ],
+      "kicker_zh": "誠實面對落差"
     },
     {
       "kicker": "Good code, no front door",
       "title": "ETH-Zurich's deCISion is the best source-only release",
       "body": "The Best Software winner for Overgrad ships MIT-licensed with a web interface, a JSON API, a CLI, 28 automated tests on every push through GitLab CI, a Docker build, a CITATION.cff and a demo video. It exports FASTA, GenBank and SBOL3 and takes any .pdb or .cif structure, so it would work on someone else's data without modification. The only address on the wiki is localhost:4173. Everything needed to deploy it exists in the repository; nobody deployed it.",
-      "chips": ["source-only", "ETH-Zurich", "MIT", "CI + Docker", "localhost only"]
+      "chips": [
+        "source-only",
+        "ETH-Zurich",
+        "MIT",
+        "CI + Docker",
+        "localhost only"
+      ],
+      "kicker_zh": "程式很好，沒有入口"
     },
     {
       "kicker": "Check the whole release",
       "title": "Toronto's app is live; its dataset DOI is not",
       "body": "PETadex at petadex.net is one of the strongest tools of the year: a sharded DIAMOND search over a 298.7M-sequence corpus, with worked examples loaded and ready to run, nothing to install. But the wiki cites a 23.8 GB Zenodo deposit at doi:10.5281/zenodo.23457986, and that DOI returns 404 — a Zenodo API search for \"petadex\" finds zero records. The interactive half survived and the archival half did not, which is the opposite of what long-term preservation is supposed to deliver.",
-      "chips": ["alive", "Toronto", "petadex.net", "Zenodo DOI 404"]
+      "chips": [
+        "alive",
+        "Toronto",
+        "petadex.net",
+        "Zenodo DOI 404"
+      ],
+      "kicker_zh": "檢查整個釋出"
     }
   ],
   "table": {
-    "head": ["Tool", "Team", "Status", "Live URL / repo", "Reusable on other data?"],
+    "head": [
+      "Tool",
+      "Team",
+      "Status",
+      "Live URL / repo",
+      "Reusable on other data?"
+    ],
     "rows": [
-      ["AMPilot", "XJTLU-Software", "alive", "https://ampilotlab.com", "yes"],
-      ["ARGUS", "GHCIS", "alive", "https://argus.ucuv.dpdns.org/client/", "yes"],
-      ["Atlas COMPASS + EDGE", "NJU-China", "alive", "https://www.starase-atlas.org/", "partly"],
-      ["PETadex sequence search", "Toronto", "alive", "https://petadex.net/search", "yes"],
-      ["PyroForge", "HK-Joint-School", "alive", "https://pyroforge.26650078.xyz/", "yes"],
-      ["PeptiCraft", "DKU", "alive", "https://pepticraft.pages.dev", "partly"],
-      ["RADAR-Scout", "Stanford University", "alive", "https://radar-scout.vercel.app/", "partly"],
-      ["SynBase", "Stanford University", "alive", "https://synbase.web.app/home.html", "n/a (curriculum)"],
-      ["deCISion", "ETH-Zurich", "source-only", "gitlab.igem.org/2026/software/eth-zurich/decision", "yes"],
-      ["OpenSplitProtein", "ETH-Zurich", "source-only", "gitlab.igem.org/2026/software/eth-zurich/opensplitprotein", "yes"],
-      ["ReTIsigner", "Uni-Padua-IT", "source-only", "gitlab.igem.org/2026/software/uni-padua-it/retisigner-svelte", "yes"],
-      ["RK4 solver", "UPF-Barcelona", "source-only", "gitlab.igem.org/2026/software/upf-barcelona/upf-software", "yes"],
-      ["iGEMforge", "UPF-Barcelona", "source-only", "gitlab.igem.org/2026/software/upf-barcelona/upf-software", "partly"],
-      ["NetFlux", "MIT-MAHE", "source-only", "gitlab.igem.org/2026/software/mit-mahe/netflux", "yes"],
-      ["Diana gRNA designer", "UMA Malaga", "source-only", "gitlab.igem.org/2026/software/uma-malaga/diana-grna-designer", "yes"],
-      ["HUSH", "GU Frankfurt", "source-only", "gitlab.igem.org/2026/software/gu-frankfurt/hush", "yes"],
-      ["PRINCE", "Lambert-GA", "source-only", "gitlab.igem.org/2026/software/lambert-ga/prince-webapp", "yes"],
-      ["catmaOS", "XJTLU-China", "source-only", "gitlab.igem.org/2026/software/xjtlu-china/software", "partly"],
-      ["Bioreactor digital twin", "GEMS-Taiwan", "source-only", "gitlab.igem.org/2026/software/gems-taiwan/digital-twin", "no"],
-      ["Ladder Detector", "Vilnius-Lithuania", "gone", "ladder-detector.onrender.com (503 suspended)", "yes, if self-hosted"],
-      ["CERNAL", "TAU-Israel", "gone", "cernal.app + cernal.duckdns.org (both unresolvable)", "partly, if self-hosted"],
-      ["Electrospinner (no software)", "Cornell", "n/a", "CAD, BOM and manuals only", "n/a"],
-      ["Bioreactor stack (no software)", "KAUST-KSA", "n/a", "gitlab.igem.org/2026/kaust-ksa", "n/a"]
+      [
+        "AMPilot",
+        "XJTLU-Software",
+        "alive",
+        "https://ampilotlab.com",
+        "yes"
+      ],
+      [
+        "ARGUS",
+        "GHCIS",
+        "alive",
+        "https://argus.ucuv.dpdns.org/client/",
+        "yes"
+      ],
+      [
+        "Atlas COMPASS + EDGE",
+        "NJU-China",
+        "alive",
+        "https://www.starase-atlas.org/",
+        "partly"
+      ],
+      [
+        "PETadex sequence search",
+        "Toronto",
+        "alive",
+        "https://petadex.net/search",
+        "yes"
+      ],
+      [
+        "PyroForge",
+        "HK-Joint-School",
+        "alive",
+        "https://pyroforge.26650078.xyz/",
+        "yes"
+      ],
+      [
+        "PeptiCraft",
+        "DKU",
+        "alive",
+        "https://pepticraft.pages.dev",
+        "partly"
+      ],
+      [
+        "RADAR-Scout",
+        "Stanford University",
+        "alive",
+        "https://radar-scout.vercel.app/",
+        "partly"
+      ],
+      [
+        "SynBase",
+        "Stanford University",
+        "alive",
+        "https://synbase.web.app/home.html",
+        "n/a (curriculum)"
+      ],
+      [
+        "deCISion",
+        "ETH-Zurich",
+        "source-only",
+        "gitlab.igem.org/2026/software/eth-zurich/decision",
+        "yes"
+      ],
+      [
+        "OpenSplitProtein",
+        "ETH-Zurich",
+        "source-only",
+        "gitlab.igem.org/2026/software/eth-zurich/opensplitprotein",
+        "yes"
+      ],
+      [
+        "ReTIsigner",
+        "Uni-Padua-IT",
+        "source-only",
+        "gitlab.igem.org/2026/software/uni-padua-it/retisigner-svelte",
+        "yes"
+      ],
+      [
+        "RK4 solver",
+        "UPF-Barcelona",
+        "source-only",
+        "gitlab.igem.org/2026/software/upf-barcelona/upf-software",
+        "yes"
+      ],
+      [
+        "iGEMforge",
+        "UPF-Barcelona",
+        "source-only",
+        "gitlab.igem.org/2026/software/upf-barcelona/upf-software",
+        "partly"
+      ],
+      [
+        "NetFlux",
+        "MIT-MAHE",
+        "source-only",
+        "gitlab.igem.org/2026/software/mit-mahe/netflux",
+        "yes"
+      ],
+      [
+        "Diana gRNA designer",
+        "UMA Malaga",
+        "source-only",
+        "gitlab.igem.org/2026/software/uma-malaga/diana-grna-designer",
+        "yes"
+      ],
+      [
+        "HUSH",
+        "GU Frankfurt",
+        "source-only",
+        "gitlab.igem.org/2026/software/gu-frankfurt/hush",
+        "yes"
+      ],
+      [
+        "PRINCE",
+        "Lambert-GA",
+        "source-only",
+        "gitlab.igem.org/2026/software/lambert-ga/prince-webapp",
+        "yes"
+      ],
+      [
+        "catmaOS",
+        "XJTLU-China",
+        "source-only",
+        "gitlab.igem.org/2026/software/xjtlu-china/software",
+        "partly"
+      ],
+      [
+        "Bioreactor digital twin",
+        "GEMS-Taiwan",
+        "source-only",
+        "gitlab.igem.org/2026/software/gems-taiwan/digital-twin",
+        "no"
+      ],
+      [
+        "Ladder Detector",
+        "Vilnius-Lithuania",
+        "gone",
+        "ladder-detector.onrender.com (503 suspended)",
+        "yes, if self-hosted"
+      ],
+      [
+        "CERNAL",
+        "TAU-Israel",
+        "gone",
+        "cernal.app + cernal.duckdns.org (both unresolvable)",
+        "partly, if self-hosted"
+      ],
+      [
+        "Electrospinner (no software)",
+        "Cornell",
+        "n/a",
+        "CAD, BOM and manuals only",
+        "n/a"
+      ],
+      [
+        "Bioreactor stack (no software)",
+        "KAUST-KSA",
+        "n/a",
+        "gitlab.igem.org/2026/kaust-ksa",
+        "n/a"
+      ]
     ]
   },
   "checklist": [
@@ -90,5 +273,6 @@
     "sourceOnly": 11,
     "stub": 0,
     "gone": 2
-  }
+  },
+  "kicker_zh": "原創分析"
 }

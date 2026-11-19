@@ -15,7 +15,11 @@
       "title_zh": "71% 對 40%",
       "body": "Teams that both fit their model to their own data and validated it against something held back reached a Top 10 at 71%. Teams that did not reached it at 40%. Note the sample is already decorated — every team here is a Top 10 or special-prize team — so this is loop-closure separating winners from other winners, not from the general field.",
       "body_zh": "既以自身資料擬合模型、又用保留資料加以驗證的團隊，進入 Top 10 的比例是 71%；沒有這麼做的則是 40%。請注意樣本本身已經過篩選——這裡每一支團隊都是 Top 10 或特別獎隊伍——因此這是「閉合迴圈」把贏家從其他贏家中分出來，而不是從一般參賽者中分出來。",
-      "chips": ["14 of 54 closed the loop", "10 of those 14 made Top 10"]
+      "chips": [
+        "14 of 54 closed the loop",
+        "10 of those 14 made Top 10"
+      ],
+      "kicker_zh": "關鍵數字"
     },
     {
       "kicker": "Still the default",
@@ -23,7 +27,13 @@
       "title_zh": "在 iGEM 裡，AlphaFold 還沒被取代",
       "body": "Roughly a third of teams name AlphaFold, more than twice the rate of Boltz, ESMFold, RFdiffusion or ProteinMPNN. The research literature moved to the open stack over the past year; the competition has not. The teams already working in Boltz and the MPNN family — Lambert-GA, Heidelberg, GU Frankfurt, DTU-Denmark, Princeton — are visibly ahead of the curve rather than merely current.",
       "body_zh": "約三分之一的團隊提到 AlphaFold，是 Boltz、ESMFold、RFdiffusion 或 ProteinMPNN 的兩倍以上。研究文獻在過去一年已轉向開源工具鏈，競賽卻還沒。已經在用 Boltz 與 MPNN 家族的隊伍——Lambert-GA、Heidelberg、GU Frankfurt、DTU-Denmark、Princeton——明顯走在前面，而不只是跟上。",
-      "chips": ["AlphaFold ×19", "Boltz ×7", "ProteinMPNN ×7", "RFdiffusion ×3"]
+      "chips": [
+        "AlphaFold ×19",
+        "Boltz ×7",
+        "ProteinMPNN ×7",
+        "RFdiffusion ×3"
+      ],
+      "kicker_zh": "仍是預設選項"
     },
     {
       "kicker": "A tool generation ended",
@@ -31,7 +41,13 @@
       "title_zh": "Python 吃掉了整個建模工具鏈",
       "body": "COPASI appears once. Tellurium once. MATLAB four times. Python appears in more team files than any other item in the census, usually SciPy integrating a hand-written ODE system, with scikit-learn behind it for anything statistical. For a programme deciding what to teach, this settles the question: teach Python and the numerical stack, and treat SBML-based tools as an interchange format rather than a starting point.",
       "body_zh": "COPASI 出現一次，Tellurium 一次，MATLAB 四次。Python 出現在比普查中任何其他項目都多的團隊檔案裡，通常是用 SciPy 積分手寫的 ODE 系統，統計部分則交給 scikit-learn。對一個正在決定要教什麼的課程而言，這已經定案：教 Python 與數值運算工具鏈，把以 SBML 為基礎的工具當作交換格式，而不是起點。",
-      "chips": ["Python ×31", "scikit-learn ×8", "COPASI ×1", "Tellurium ×1"]
+      "chips": [
+        "Python ×31",
+        "scikit-learn ×8",
+        "COPASI ×1",
+        "Tellurium ×1"
+      ],
+      "kicker_zh": "一個工具世代的終結"
     },
     {
       "kicker": "The inversion",
@@ -39,7 +55,11 @@
       "title_zh": "高中隊伍會算成本，大學部常常不算",
       "body": "Techno-economic analysis appears in more high-school files than undergraduate ones, both in absolute count and as a share of the tier. Full molecular dynamics runs the other way and is exclusively undergraduate. The tiers are differently shaped rather than simply further apart, and a high-school programme that assumes it must catch up on everything is aiming at the wrong gap.",
       "body_zh": "技術經濟分析在高中組檔案中出現的次數，無論絕對數或組內占比都高於大學部；完整的分子動力學則完全相反，只出現在大學部。兩個層級的形狀不同，而不只是距離遠近的差別。一個假定自己必須在所有面向上追趕的高中課程，瞄錯了缺口。",
-      "chips": ["Techno-economic: 7 HS vs 5 UG", "GROMACS: 6 UG, 0 HS"]
+      "chips": [
+        "Techno-economic: 7 HS vs 5 UG",
+        "GROMACS: 6 UG, 0 HS"
+      ],
+      "kicker_zh": "反轉"
     },
     {
       "kicker": "A weaker result, reported anyway",
@@ -47,7 +67,11 @@
       "title_zh": "公開失敗：效果是真的，但沒有看起來那麼大",
       "body": "Several analysts noticed the same thing independently — Toronto, WageningenUR and UZurich each put a prominent negative or failed result on the wiki, and two of them won the award in that exact category. We tested it across every file. Teams that openly report failure reach a Top 10 at 54%, against 41% for those that do not. That is a real gap, but it is far smaller than the loop-closure gap, and the measurement is partly circular: it detects how candid *our own summary* of a team was, not reliably how candid the team was. Treat it as a reason to publish the negative result, not as proof it wins prizes.",
       "body_zh": "好幾位分析員各自獨立注意到同一件事——Toronto、WageningenUR 與 UZurich 都在 wiki 上顯著地放上了一個負面或失敗的結果，而其中兩隊正是在對應的獎項類別中獲獎。我們對所有檔案做了檢驗：公開報告失敗的團隊進入 Top 10 的比例是 54%，沒有這麼做的則是 41%。差距是真的，但遠小於「閉合迴圈」的差距，而且這個量測帶有循環性：它偵測到的是*我們自己的摘要*有多坦白，而未必能可靠反映團隊有多坦白。請把它當作「應該公開負面結果」的理由，而不是「這樣就會得獎」的證明。",
-      "chips": ["54% vs 41%", "measurement is confounded"]
+      "chips": [
+        "54% vs 41%",
+        "measurement is confounded"
+      ],
+      "kicker_zh": "較弱的結果，照樣報告"
     },
     {
       "kicker": "What this means for GEMS",
@@ -55,9 +79,14 @@
       "title_zh": "最便宜的能力，正好就是和得獎相關的那一個",
       "body": "Closing the model-data loop needs no GPU, no licence, no partner lab and no new chassis. It needs a student who can fit a curve, report an uncertainty and hold data back for a test. That is a term's teaching, and on this evidence it moves the result more than any tool choice. It is Phase 2 of the roadmap for exactly this reason.",
       "body_zh": "閉合模型與資料之間的迴圈，不需要 GPU、不需要授權、不需要合作實驗室、也不需要新的底盤。它需要的是一位會擬合曲線、會報告不確定度、並且懂得保留資料做測試的學生。那是一個學期的教學量，而根據這些證據，它對結果的影響大於任何工具選擇。這正是它成為路線圖階段二的原因。",
-      "chips": ["No GPU required", "One term of teaching"]
+      "chips": [
+        "No GPU required",
+        "One term of teaching"
+      ],
+      "kicker_zh": "這對 GEMS 的意義"
     }
   ],
   "method": "Counts come from pattern-matching the `dry` and `good` fields of every team file in this report, not from reading the wikis a second time, so a technique a team used but did not write up is invisible here. The sample is decorated teams only — every file is a Top 10 or special-prize winner or nominee — so the baselines are not the whole competition. The loop-closure test looks for explicit language about fitting, uncertainty and validation; a team that did the work but described it loosely will be undercounted. Read the numbers as a ranking, not a measurement.",
-  "method_zh": "計數方式是對本報告每一份團隊檔案的 `dry` 與 `good` 欄位做樣式比對，而非重新閱讀 wiki，因此團隊做了卻沒寫下來的技術在這裡是看不見的。樣本僅限獲獎隊伍——每一份檔案都是 Top 10 或特別獎得主／入圍者——所以基準值並不代表整個競賽。迴圈閉合的判準是尋找明確描述擬合、不確定度與驗證的文字；做了卻寫得含糊的團隊會被低估。請把這些數字當成排序，而不是量測。"
+  "method_zh": "計數方式是對本報告每一份團隊檔案的 `dry` 與 `good` 欄位做樣式比對，而非重新閱讀 wiki，因此團隊做了卻沒寫下來的技術在這裡是看不見的。樣本僅限獲獎隊伍——每一份檔案都是 Top 10 或特別獎得主／入圍者——所以基準值並不代表整個競賽。迴圈閉合的判準是尋找明確描述擬合、不確定度與驗證的文字；做了卻寫得含糊的團隊會被低估。請把這些數字當成排序，而不是量測。",
+  "kicker_zh": "原創分析"
 }
