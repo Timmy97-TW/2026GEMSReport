@@ -182,6 +182,32 @@
     "improved part: 0 nominees"
    ],
    "link": "teams"
+  },
+  {
+   "kicker": "Measurement",
+   "kicker_zh": "量測",
+   "title": "Measurement discipline does not win anything — do it anyway",
+   "title_zh": "量測紀律贏不到任何東西——但還是要做",
+   "body": "Across 39 wikis read directly: 97% show a blank control, 72% calibrate into an absolute unit, but only **15%** compute a limit of detection for their own assay and **5%** ever measure one sample twice. And it does not predict placing: over all 106 files, teams mentioning calibration reached a Top 10 at 27% against 29%. **No effect.** The Best Measurement winner's nine pages contain the words *error bar* and *standard deviation* zero times.",
+   "body_zh": "直接讀過的 39 個 wiki 中：97% 有空白對照，72% 校正到絕對單位，但只有 **15%** 替自己的分析法算出偵測極限，**5%** 曾經把同一個樣本量過兩次。而且它並不預測名次：在全部 106 份檔案中，提到校正的隊伍進入 Top 10 的比例是 27%，沒提的是 29%。**沒有效果。**最佳量測得主的九個頁面裡，*error bar* 與 *standard deviation* 這兩個詞出現了零次。",
+   "chips": [
+    "15% compute an LOD",
+    "5% measure twice"
+   ],
+   "link": "drylab"
+  },
+  {
+   "kicker": "Hardware",
+   "kicker_zh": "硬體",
+   "title": "Six of twenty instruments could be rebuilt by a stranger",
+   "title_zh": "二十台儀器中，只有六台陌生人重建得出來",
+   "body": "Across the 2026 Best Hardware, Best Measurement and Best Alternative Platform cohorts, 20 instruments were built and **6** publish enough — bill of materials, geometry files, firmware, assembly guide — for someone in another country to rebuild them. **Nine publish no geometry file at all.** Exactly one has ever been used by anyone outside the team that built it.",
+   "body_zh": "在 2026 年最佳硬體、最佳量測與最佳替代平台這三個群體中，共有 20 台儀器被做出來，其中 **6 台**公開的資料足夠——材料清單、幾何檔案、韌體、組裝指南——讓另一個國家的人重建它。**有九台完全沒有公開任何幾何檔案。**而曾經被製作團隊以外的人使用過的，剛好只有一台。",
+   "chips": [
+    "6 of 20 rebuildable",
+    "1 ever reused"
+   ],
+   "link": "drylab"
   }
  ],
  "method": "Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see.",

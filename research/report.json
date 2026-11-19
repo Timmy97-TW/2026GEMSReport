@@ -72,14 +72,16 @@
     "**Track B — structural and sequence modelling.** Structure prediction is now free infrastructure: the open models (Boltz-2, Chai-1, OpenFold3, ColabFold) match or beat the gated flagship, so folding a protein is a commodity step, not a project. Put one shared GPU box or a modest cloud budget behind an internal queue, make \"fold it, then read the confidence metrics\" compulsory in every project, and teach the hard part — knowing when pLDDT and PAE are lying to you. Deliverable: a designed or selected variant with a documented computational rationale, taken to the bench.",
     "**Teach the four controls, and make them compulsory.** This is where the 53%-against-23% finding becomes a syllabus. Split calibration from validation before fitting anything. Cluster near-duplicate sequences and split whole clusters across folds, so a model cannot memorise a near-copy. Run a label-shuffle control that must collapse to chance. Run an ablation that strips the information you claim to be using. Eton-College-UK did all four at high-school level with logistic regression and a scoring matrix; the controls, not the model, are what made it credible.",
     "**Teach uncertainty before teaching models.** Error propagation, replicate design, what a fit actually claims. Most student models fail here, not at the mathematics.",
-    "**Run a weekly dry-lab clinic.** One hour, somebody presents a figure, everyone else attacks it. This is how modelling taste transmits between cohorts."
+    "**Run a weekly dry-lab clinic.** One hour, somebody presents a figure, everyone else attacks it. This is how modelling taste transmits between cohorts.",
+    "**Know why you are doing this.** Reading 39 decorated wikis directly, only 15% computed a limit of detection for their own assay and 5% ever measured one sample twice — and measurement discipline does not predict placing: 27% against 29% across all 106 files. *No effect.* The case for teaching uncertainty first is not that it wins. It is that a number nobody can reproduce is not a result, and an institution that cannot tell the difference will eventually publish one."
    ],
    "items_zh": [
     "**軌道 A —— 動力系統。** 基因電路的 ODE 模型、以自身資料擬合參數、敏感度分析、可辨識性。工具：Python 搭配 SciPy 與 lmfit，SBML 端使用 Tellurium/COPASI。產出：一個以 GEMS 真實時間序列資料擬合的電路模型，每個參數都附信賴區間。",
     "**軌道 B —— 結構與序列建模。** 結構預測現在已是免費的基礎設施：開源模型（Boltz-2、Chai-1、OpenFold3、ColabFold）已可匹敵甚至超越封閉的旗艦模型，因此「把蛋白質折出來」是一個標準步驟，而不是一個專案。配置一台共用 GPU 主機或一筆適度的雲端預算，架一個內部排程佇列，規定每個專案都必須「先折、再讀信心指標」，並教真正困難的部分——判斷 pLDDT 與 PAE 什麼時候在騙你。產出：一個經過設計或篩選的變體，附上完整的運算理由，並實際進到實驗檯。",
     "**教那四項對照，並列為必做。** 這就是「53% 對 23%」這個發現落地成課綱的地方。在擬合任何東西之前先把校正組與驗證組分開。把近似重複的序列分群，並讓整群落在同一個 fold，使模型無法記住近似副本。跑標籤洗牌對照，其表現必須塌回隨機水準。跑一個消融測試，剝除你宣稱正在使用的那項資訊。Eton-College-UK 在高中階段用 logistic regression 與計分矩陣就做完了這四項；讓結果可信的是那些對照，不是模型。",
     "**先教不確定度，再教模型。** 誤差傳遞、重複設計、一次擬合究竟主張了什麼。多數學生模型敗在這裡，而不是數學。",
-    "**每週一次乾實驗室診療會。** 一小時，一個人報一張圖，其他人負責挑戰它。建模的品味就是這樣在屆與屆之間傳下去的。"
+    "**每週一次乾實驗室診療會。** 一小時，一個人報一張圖，其他人負責挑戰它。建模的品味就是這樣在屆與屆之間傳下去的。",
+    "**要清楚自己為什麼做這件事。** 直接讀過 39 個得獎 wiki 後：只有 15% 替自己的分析法算出偵測極限，5% 曾經把同一個樣本量過兩次——而且量測紀律並不預測名次：全部 106 份檔案中是 27% 對 29%。*沒有效果。* 先教不確定度的理由不是它能贏。理由是：一個沒有人能重現的數字不算結果；而一個分不出這個差別的機構，遲早會發表一個這樣的數字。"
    ],
    "outcome": "Two or three students who can independently build, fit and defend a model with its controls — and who can teach the next two or three.",
    "outcome_zh": "有兩三位學生能獨立建立、擬合模型並連同對照一起為它辯護——而且能教會下兩三位。"
