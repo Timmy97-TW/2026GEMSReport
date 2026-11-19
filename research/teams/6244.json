@@ -1,101 +1,116 @@
 {
- "team": "QingdaoAcademy",
- "id": "6244",
- "section": "High School",
- "country": "China",
- "village": "",
- "wiki": "https://2026.igem.wiki/qingdaoacademy/",
- "projectTitle": "UPKeep",
- "tagline": "From green tides to new possibilities: enzymes that turn collected Ulva into sugars for further biological use.",
- "summary": "QingdaoAcademy (Qingdao, Shandong) built UPKeep around the Ulva prolifera green tides that wash onto the Yellow Sea coast each summer. Stage 1 uses a free, configurable cellulosome - four enzyme modules (Cel9A, Cel6B, Cel9B-N, BglC) docked onto a CBM3a-bearing scaffoldin via cohesin-dockerin pairs - to open the cellulose-rich cell wall; Stage 2 applies an INPNC-Uly1040 ulvan lyase fusion to depolymerise ulvan into oligosaccharides proposed as a cosmetic moisturising ingredient. Containment is an iron-responsive Fur/ccdB-TetR/ccdA toxin-antitoxin circuit, modelled as a 13-state ODE system, while interface selection rests on a 25-pair AlphaFold 3 screen with HADDOCK and PRODIGY follow-up. The Human Practices work is unusually well engineered for a first-year high-school team: thirteen numbered design decisions, each with the stakeholder, what was said, what changed and the follow-up evidence.",
- "awards": [
-  "Best Sustainable Development nominee (High School)",
-  "Best New Basic Part nominee (High School)",
-  "Best Village Project nominee"
- ],
- "dry": {
-  "frameworks": "Two linked models. (1) Cellulosome recognition: all 25 cohesin-dockerin pairings screened with AlphaFold Server (AF3), two protein chains plus two calcium ions per request, seed 101, five outputs each - 125 structures - ranked by five-output mean protein-pair ipTM with bidirectional interchain PAE, interface contacts and pose spread examined; seven pairs (the five intended A-a, B-b, C-c, F-f, T-t plus the two highest-scoring mismatches B-c and T-b) taken through HADDOCK refinement and PRODIGY affinity estimation against the native 1OHZ reference. (2) Iron-responsive containment: a 13-state ODE model (sensed intracellular iron, Fur RNA, total and iron-bound Fur, shared ccdB/TetR transcript, TetR, ccdA RNA, free CcdB, free CcdA, inactive complex, a damage proxy, log population and log survival) in hours, used to study response delay after iron withdrawal or restoration, how the iron threshold shifts with the chosen endpoint, and which parameters dominate that threshold.",
-  "dataviz": "Matplotlib-generated SVG figures throughout: an LCA climate comparison separating enzymatic gross emissions, the residue-substitution credit and the net result across three scenarios; log-axis water and energy comparisons; a 25x25 ipTM heat matrix with the intended diagonal outlined and the two mismatch candidates highlighted in orange; predicted Kd on a logarithmic axis with per-model dots and cluster spans; interactive 3D structure viewers with a pLDDT colour mode; a stakeholder influence-versus-impact map and an SDG interaction map, both downloadable as SVG and PNG; survey charts transcribed from original screenshots with each question's own denominator retained.",
-  "datascience": "Reproducibility is treated as a deliverable: submitted sequences, AF3 requests, structures, a configuration-status manifest, per-model metrics for all 125 AF3 structures and all 25 pair summaries are downloadable as JSON, with official page snapshots, plain-text logs and parsed values archived under a result-snapshots directory and task/cluster filenames linking models to local inputs. HADDOCK scores are reconstructed from saved energy terms with the default weighting (Evdw + 0.2 Eelec + Edesolv + 0.1 Eair) and reported as mean +/- population SD over four cluster representatives. Pose uncertainty is quantified rather than hidden (mean/max pairwise dockerin Ca RMSD after cohesin alignment of about 10.99/17.76 A for T-t), and the team notes that B-b and B-c Kd ranges overlap with median dG differing by 0.05 kcal/mol, so cross-binding must be tested experimentally rather than declared resolved. A process LCA on a basis of 1 t fresh Ulva at 90% moisture gives 34 kWh, 8,800 L water and 264 kg CO2e gross, with a residue-substitution credit sweep (0-1 kg soybean meal displaced per kg theoretical remaining dry matter) producing a 34.4-264 kg CO2e/t net range; a literature-based nutrient conversion gives 18-54 kg N and 2.5-9.2 kg P per dry tonne.",
-  "software": "No standalone software tool. Dry-lab outputs are the AF3/HADDOCK/PRODIGY screening archive, the ODE reconstruction (independently re-derived from the report's equations and parameter tables on 20 October 2026, with added parameter stress tests), the LCA and nutrient-accounting workbooks, the downloadable activity-classification CSV, and an AP242 STEP CAD assembly of the Ulva collection ROV exported from Onshape.",
-  "stack": [
-   "AlphaFold Server (AF3)",
-   "HADDOCK",
-   "PRODIGY",
-   "molecular 3D viewer with pLDDT colouring",
-   "ODE integration with sensitivity and parameter stress tests",
-   "Matplotlib v3.11.2",
-   "Onshape (AP242 STEP export)",
-   "Wenjuanxing online survey platform"
+  "team": "QingdaoAcademy",
+  "id": "6244",
+  "section": "High School",
+  "country": "China",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/qingdaoacademy/",
+  "projectTitle": "UPKeep",
+  "projectTitle_zh": "UPKeep",
+  "tagline": "From green tides to new possibilities: enzymes that turn collected Ulva into sugars for further biological use.",
+  "tagline_zh": "從綠潮到新的可能：用酵素把收集來的 Ulva 轉化為可供後續生物利用的醣類。",
+  "summary": "QingdaoAcademy (Qingdao, Shandong) built UPKeep around the Ulva prolifera green tides that wash onto the Yellow Sea coast each summer. Stage 1 uses a free, configurable cellulosome - four enzyme modules (Cel9A, Cel6B, Cel9B-N, BglC) docked onto a CBM3a-bearing scaffoldin via cohesin-dockerin pairs - to open the cellulose-rich cell wall; Stage 2 applies an INPNC-Uly1040 ulvan lyase fusion to depolymerise ulvan into oligosaccharides proposed as a cosmetic moisturising ingredient. Containment is an iron-responsive Fur/ccdB-TetR/ccdA toxin-antitoxin circuit, modelled as a 13-state ODE system, while interface selection rests on a 25-pair AlphaFold 3 screen with HADDOCK and PRODIGY follow-up. The Human Practices work is unusually well engineered for a first-year high-school team: thirteen numbered design decisions, each with the stakeholder, what was said, what changed and the follow-up evidence.",
+  "summary_zh": "QingdaoAcademy（山東青島）以每年夏天湧上黃海沿岸的 Ulva prolifera 綠潮為題，建立了 UPKeep。第一階段使用一個游離、可組態的纖維小體（cellulosome），由四個酵素模組（Cel9A、Cel6B、Cel9B-N、BglC）透過 cohesin-dockerin 配對接到帶有 CBM3a 的支架蛋白上，用來打開富含纖維素的細胞壁；第二階段則以 INPNC-Uly1040 ulvan 裂解酶融合蛋白把 ulvan 解聚成寡醣，並提議作為化妝品的保濕成分。生物圍阻採用鐵離子反應型的 Fur/ccdB-TetR/ccdA 毒素-抗毒素迴路，以 13 個狀態變數的 ODE 系統建模；界面的選擇則建立在 25 組配對的 AlphaFold 3 篩選上，再以 HADDOCK 與 PRODIGY 做後續分析。對一支第一年參賽的高中隊伍來說，人類實踐的工作設計得異常嚴謹：十三項編號的設計決策，每一項都列出利害關係人、對方說了什麼、改了什麼，以及後續證據。",
+  "awards": [
+    "Best Sustainable Development nominee (High School)",
+    "Best New Basic Part nominee (High School)",
+    "Best Village Project nominee"
   ],
-  "techniques": [
-   "interface screening by ipTM, interchain PAE and contact analysis",
-   "docking refinement and binding-affinity estimation",
-   "cross-binding and selectivity risk identification",
-   "13-state ODE dynamics, threshold and sensitivity analysis",
-   "scenario life-cycle assessment with substitution credits",
-   "nitrogen and phosphorus material-flow accounting",
-   "colony-PCR template-preparation comparison (direct colony vs 2/10 suspension vs liquid culture)",
-   "moisture-uptake gravimetry under controlled humidity and hydroxyl-radical scavenging assay"
+  "dry": {
+    "frameworks": "Two linked models. (1) Cellulosome recognition: all 25 cohesin-dockerin pairings screened with AlphaFold Server (AF3), two protein chains plus two calcium ions per request, seed 101, five outputs each - 125 structures - ranked by five-output mean protein-pair ipTM with bidirectional interchain PAE, interface contacts and pose spread examined; seven pairs (the five intended A-a, B-b, C-c, F-f, T-t plus the two highest-scoring mismatches B-c and T-b) taken through HADDOCK refinement and PRODIGY affinity estimation against the native 1OHZ reference. (2) Iron-responsive containment: a 13-state ODE model (sensed intracellular iron, Fur RNA, total and iron-bound Fur, shared ccdB/TetR transcript, TetR, ccdA RNA, free CcdB, free CcdA, inactive complex, a damage proxy, log population and log survival) in hours, used to study response delay after iron withdrawal or restoration, how the iron threshold shifts with the chosen endpoint, and which parameters dominate that threshold.",
+    "frameworks_zh": "兩個相互連結的模型。（1）纖維小體辨識：全部 25 組 cohesin-dockerin 配對都以 AlphaFold Server（AF3）篩選，每次請求輸入兩條蛋白質鏈加兩個鈣離子，seed 為 101，各產生五個輸出，共 125 個結構；以五個輸出的蛋白質配對 ipTM 平均值排序，並檢視雙向的鏈間 PAE、界面接觸與構型分散程度；其中七組配對（五組預期的 A-a、B-b、C-c、F-f、T-t，加上分數最高的兩組錯配 B-c 與 T-b）進一步做 HADDOCK 精修與 PRODIGY 親和力估計，並以天然的 1OHZ 作為參考對照。（2）鐵離子反應型生物圍阻：一個 13 個狀態變數的 ODE 模型（感測到的胞內鐵、Fur RNA、總 Fur 與結合鐵的 Fur、共用的 ccdB/TetR 轉錄本、TetR、ccdA RNA、游離 CcdB、游離 CcdA、失活複合體、一個損傷代理變數、族群對數與存活率對數），時間以小時為單位，用來研究撤除或恢復鐵之後的反應延遲、鐵濃度閾值如何隨所選終點而移動，以及哪些參數主導該閾值。",
+    "dataviz": "Matplotlib-generated SVG figures throughout: an LCA climate comparison separating enzymatic gross emissions, the residue-substitution credit and the net result across three scenarios; log-axis water and energy comparisons; a 25x25 ipTM heat matrix with the intended diagonal outlined and the two mismatch candidates highlighted in orange; predicted Kd on a logarithmic axis with per-model dots and cluster spans; interactive 3D structure viewers with a pLDDT colour mode; a stakeholder influence-versus-impact map and an SDG interaction map, both downloadable as SVG and PNG; survey charts transcribed from original screenshots with each question's own denominator retained.",
+    "dataviz_zh": "全站圖表皆以 Matplotlib 產生 SVG：一張生命週期評估的氣候比較圖，把酵素路線的毛排放、殘渣替代的抵減額以及三種情境下的淨結果分開呈現；水與能源的對數軸比較圖；一張 25x25 的 ipTM 熱圖矩陣，預期的對角線以框線標出，兩個錯配候選以橘色強調；對數軸上的預測 Kd 值，附各模型的點與叢集區間；可互動的 3D 結構檢視器並附 pLDDT 上色模式；一張利害關係人影響力對衝擊的地圖與一張 SDG 交互作用地圖，兩者都可下載為 SVG 與 PNG；以及由原始截圖轉錄而來的問卷圖表，每一題各自的分母都保留下來。",
+    "datascience": "Reproducibility is treated as a deliverable: submitted sequences, AF3 requests, structures, a configuration-status manifest, per-model metrics for all 125 AF3 structures and all 25 pair summaries are downloadable as JSON, with official page snapshots, plain-text logs and parsed values archived under a result-snapshots directory and task/cluster filenames linking models to local inputs. HADDOCK scores are reconstructed from saved energy terms with the default weighting (Evdw + 0.2 Eelec + Edesolv + 0.1 Eair) and reported as mean +/- population SD over four cluster representatives. Pose uncertainty is quantified rather than hidden (mean/max pairwise dockerin Ca RMSD after cohesin alignment of about 10.99/17.76 A for T-t), and the team notes that B-b and B-c Kd ranges overlap with median dG differing by 0.05 kcal/mol, so cross-binding must be tested experimentally rather than declared resolved. A process LCA on a basis of 1 t fresh Ulva at 90% moisture gives 34 kWh, 8,800 L water and 264 kg CO2e gross, with a residue-substitution credit sweep (0-1 kg soybean meal displaced per kg theoretical remaining dry matter) producing a 34.4-264 kg CO2e/t net range; a literature-based nutrient conversion gives 18-54 kg N and 2.5-9.2 kg P per dry tonne.",
+    "datascience_zh": "可重現性被當作一項交付成果：送出的序列、AF3 請求、結構檔、組態狀態清單、全部 125 個 AF3 結構的各模型指標以及全部 25 組配對摘要，都可下載為 JSON；官方頁面的快照、純文字日誌與解析後的數值歸檔在 result-snapshots 目錄下，並以任務／叢集檔名把模型連回本機輸入。HADDOCK 分數由儲存的能量項以預設權重（Evdw + 0.2 Eelec + Edesolv + 0.1 Eair）重建，並以四個叢集代表的平均值 +/- 母體標準差報告。構型的不確定性被量化而非隱藏（T-t 在 cohesin 對齊後，dockerin Ca 原子的兩兩 RMSD 平均／最大值約為 10.99／17.76 A），團隊並指出 B-b 與 B-c 的 Kd 範圍重疊、中位 dG 僅相差 0.05 kcal/mol，因此交叉結合必須用實驗檢驗，而不能宣稱已經解決。以含水率 90% 的 1 公噸新鮮 Ulva 為基準所做的製程生命週期評估，得到 34 kWh、8,800 L 水與 264 kg CO2e 的毛排放；再對殘渣替代抵減做掃描（每公斤理論剩餘乾物質替代 0-1 kg 豆粉），得出 34.4-264 kg CO2e/t 的淨值區間；依文獻換算的養分量則為每公噸乾重 18-54 kg N 與 2.5-9.2 kg P。",
+    "software": "No standalone software tool. Dry-lab outputs are the AF3/HADDOCK/PRODIGY screening archive, the ODE reconstruction (independently re-derived from the report's equations and parameter tables on 20 October 2026, with added parameter stress tests), the LCA and nutrient-accounting workbooks, the downloadable activity-classification CSV, and an AP242 STEP CAD assembly of the Ulva collection ROV exported from Onshape.",
+    "software_zh": "沒有獨立的軟體工具。乾實驗的產出是 AF3/HADDOCK/PRODIGY 的篩選檔案庫、ODE 重建（於 2026 年 10 月 20 日依報告中的方程式與參數表獨立重新推導，並加上參數壓力測試）、生命週期評估與養分核算的試算表、可下載的活性分類 CSV，以及一份由 Onshape 匯出的 Ulva 收集 ROV 的 AP242 STEP CAD 組裝檔。",
+    "stack": [
+      "AlphaFold Server (AF3)",
+      "HADDOCK",
+      "PRODIGY",
+      "molecular 3D viewer with pLDDT colouring",
+      "ODE integration with sensitivity and parameter stress tests",
+      "Matplotlib v3.11.2",
+      "Onshape (AP242 STEP export)",
+      "Wenjuanxing online survey platform"
+    ],
+    "techniques": [
+      "interface screening by ipTM, interchain PAE and contact analysis",
+      "docking refinement and binding-affinity estimation",
+      "cross-binding and selectivity risk identification",
+      "13-state ODE dynamics, threshold and sensitivity analysis",
+      "scenario life-cycle assessment with substitution credits",
+      "nitrogen and phosphorus material-flow accounting",
+      "colony-PCR template-preparation comparison (direct colony vs 2/10 suspension vs liquid culture)",
+      "moisture-uptake gravimetry under controlled humidity and hydroxyl-radical scavenging assay"
+    ]
+  },
+  "good": {
+    "publicEngagement": "Engagement was sequenced on survey evidence rather than instinct: of 259 respondents 228 had at least heard of Ulva (88.03%) but only 34 claimed familiarity, and 142 of 263 knew little or nothing about synthetic biology (53.99%), so the booklet starts with everyday coastal effects and existing post-collection uses before engineered bacteria, surface display or cellulosomes appear at all. A harbour interviewee's remark that online video would reach people better than a poster at the pier redirected the channel strategy to short videos on Bilibili, Xiaohongshu, Douyin and WeChat Channels. A joint activity with OUC-Haide (the 17-C collaboration) was cross-checked before delivery and two content errors - a pH item and an mRNA pairing error - were found and corrected, with simulations, three-level hints and a reset path added. Continued participation runs through the school biology club and repeated lessons rather than one-off events, and the team keeps SDG 4 targets 4.4 and 4.7 separate from its claims about measured learning.",
+    "publicEngagement_zh": "參與活動的順序是依問卷證據而非直覺安排：259 位回覆者中有 228 人至少聽過 Ulva（88.03%），但只有 34 人自稱熟悉；263 人中有 142 人對合成生物學所知甚少或一無所知（53.99%），因此手冊從日常的海岸影響與現有的收集後用途講起，之後才出現工程菌、表面展示或纖維小體。一位港口受訪者說網路影片比碼頭海報更能觸及民眾，這把通路策略轉向 Bilibili、小紅書、抖音與微信視頻號上的短影片。與 OUC-Haide 合辦的活動（17-C 合作）在交付前先經交叉檢核，找出並修正了兩處內容錯誤（一道 pH 題與一處 mRNA 配對錯誤），並加入模擬、三層提示與重設路徑。持續參與是透過學校生物社與反覆授課，而非一次性活動；團隊也把 SDG 4 的 4.4 與 4.7 兩項目標，與自己關於學習成效的主張分開陳述。",
+    "ihp": "Twenty-two HP activities across six activity types are compressed into a register of thirteen numbered decisions (D01-D13), each naming the stakeholder, the quote, the change and the follow-up record - and several of them killed the team's favourite ideas. D02 is the clearest: the team wanted one system in which E. coli produced enzymes and degraded Ulva in a single reaction, but Seawin's Technical Director explained that cells and different enzymes each need their own temperature, pH and nutrient conditions, and Vland's Chief Scientist added that cells themselves generate metabolic acid, so the one-step process was split into separate cell-culture and enzyme-reaction steps and the planned pH-based function switch was abandoned entirely (D03). D04 came from peer pressure plus specialist correction: CCiC judges and teams flagged the expression burden of an extracellular cell-anchored cellulosome, and a Shanxi University doctoral researcher warned against loading too many cohesins onto one scaffoldin because of cleavage risk, so the team moved to a free cellulosome, accepting extraction and purification as explicit tasks, and planned separate expression followed by assembly. D05 is an honest unresolved tension rather than a tidy win: the cellulosome researcher supported adding BglC to hydrolyse accumulating cellobiose while Vland warned that glucose would then inhibit downstream, so the enzyme was retained with the trade-off written into the reaction-condition study. D06 dismantled the CBS-inspired shortcut of feeding hydrolysate straight into culture - Bright Moon pressed on carbon, nitrogen and aeration and Vland demanded composition analysis and experimental validation, so growth and enzyme production became separately measured questions, later yielding the observation that at pH 7 a 40% hydrolysate medium supported growth and target-protein expression with a longer lag phase. D07 is the strongest stakeholder-to-design chain: a beauty-salon manager said she would hesitate to trust Qingdao Ulva as a raw material because of possible pollution, which the team carried into a joint consultation with Professors Ning Wu and Jing Wang at the Institute of Oceanology, CAS, where contamination resolved into two concrete, separately measurable requirements - seaweed's high salt content means inadequate desalting could cause osmotic imbalance on skin, so ultrafiltration desalting and concentration entered the sample-preparation plan, and because E. coli is the production host, endotoxin must be specifically measured and controlled for higher-end or damaged-skin use. Biosafety specialist Prof. Zhihang Chen then converted an end-stage pair of controls (heat treatment plus a kill switch) into process-wide control, separating live cells, nucleic acids and endotoxin, each with its own treatment and assessment target, and prompting work on ClearColi and Rosetta chassis compatibility. D08 had Gather Great Ocean puncture the assumption that a mature brown-seaweed business implies a market for ulvan oligosaccharides - its Ulva powder goes to aquaculture feed, and it told the team to first establish what advantage ulvan oligosaccharides have over other materials - which sent them to the two professors for assay methods they could actually run (moisture uptake by desiccator and balance, in vitro antioxidant assays) and added molecular-weight profiling after the 500 Da skin-penetration literature. D13 reframed feedstock itself: the Yellow Sea Fisheries Research Institute separated ecological abundance, visible shoreline biomass and what a processor can reliably obtain, and added sand removal, dewatering and acquisition cost, so the team retained a reduced-supply scenario instead of assuming continued large blooms. Even packaging was corrected - YUTOECO's engineering manager said the proposal was still too broad, so inner contact packaging is now specified around sealing, barrier and storage needs and only the outer layer explores moulded plant fibre.",
+    "ihp_zh": "六種活動類型下的 22 場人類實踐活動，被壓縮成一份十三項編號決策（D01-D13）的紀錄，每一項都指名利害關係人、引述原話、說明改動與後續記錄，而其中有幾項直接否決了團隊最鍾愛的構想。D02 最為明確：團隊原想做一個讓 E. coli 在單一反應中同時生產酵素並降解 Ulva 的系統，但 Seawin 的技術總監說明細胞與各種酵素各自需要不同的溫度、pH 與營養條件，Vland 的首席科學家則補充細胞自身會產生代謝酸，於是一步式製程被拆成細胞培養與酵素反應兩個獨立步驟，原先計畫的以 pH 為基礎的功能開關也被完全放棄（D03）。D04 來自同儕壓力加上專家糾正：CCiC 的評審與其他團隊指出把纖維小體錨定在細胞表面會造成表現負擔，一位山西大學的博士研究者則警告不要在單一支架蛋白上掛太多 cohesin，因為有被切斷的風險，於是團隊改採游離纖維小體，接受萃取與純化成為明確的工作項目，並規劃先分別表現再組裝。D05 是一項誠實且未解的張力，而不是漂亮的勝利：研究纖維小體的學者支持加入 BglC 來水解累積的纖維二醣，Vland 則警告隨之產生的葡萄糖會抑制下游，於是這個酵素被保留下來，而取捨被寫進反應條件的研究中。D06 推翻了受 CBS 啟發、直接把水解液餵入培養的捷徑：Bright Moon 針對碳源、氮源與通氣追問，Vland 則要求成分分析與實驗驗證，於是生長與酵素生產變成兩個分別量測的問題，後來也得到一項觀察：在 pH 7 下，40% 水解液的培養基能支持生長與目標蛋白表現，但延滯期較長。D07 是從利害關係人連到設計的最強鏈條：一位美容沙龍經理表示，因為可能有污染，她會猶豫是否信任青島的 Ulva 作為原料；團隊把這個疑慮帶進與中國科學院海洋研究所 Professors Ning Wu 與 Jing Wang 的聯合諮詢，污染在那裡被拆解成兩項具體且可分別量測的要求：海藻含鹽量高，脫鹽不足可能在皮膚上造成滲透壓失衡，因此超過濾脫鹽與濃縮被納入樣品製備計畫；而由於生產宿主是 E. coli，內毒素必須被專門量測並控制，尤其是用於高階產品或受損肌膚時。生物安全專家 Prof. Zhihang Chen 接著把原本放在末端的兩道控制（熱處理加上自殺開關）轉為貫穿整個製程的控制，把活細胞、核酸與內毒素分開處理，各自有自己的處理方式與評估目標，也促成了對 ClearColi 與 Rosetta 宿主相容性的研究。在 D08 中，Gather Great Ocean 戳破了「成熟的褐藻事業意味著 ulvan 寡醣也有市場」這個假設：該公司的 Ulva 粉末是供水產飼料使用，並要團隊先確立 ulvan 寡醣相對於其他材料有什麼優勢；這促使他們向那兩位教授請教真正做得到的檢測方法（以乾燥器與天平量吸濕量、體外抗氧化檢測），並在讀過 500 Da 皮膚穿透的文獻後加入分子量分布分析。D13 重新框定了原料本身：黃海水產研究所把生態量、岸邊可見的生物量，以及加工業者實際能穩定取得的量三者區分開來，並加上除砂、脫水與取得成本，於是團隊保留了一個供應量減少的情境，而不是假設大規模藻華會持續發生。連包裝都被糾正：YUTOECO 的工程經理指出提案仍然太籠統，因此現在內層接觸性包裝是依密封、阻隔與儲存需求來訂規格，只有外層才探索模塑植物纖維。",
+    "realWorld": "The real-world case is anchored in the existing Qingdao system rather than in a waste narrative: harbour workers, the Municipal Marine Development Bureau and processors described coordinated pier collection, dewatering and drying, trucking to downstream companies, feed and fertiliser uses and decayed material returned to sea - so the team compares four handling routes on cost, product value and nutrient destination and positions UPKeep as an added high-value step, noting Gather Great Ocean's blunt 'there is no waste material'. SDGs are claimed at target level with the team's own numbers: SDG 12 (12.2, 12.5, 12.6, 12.8) carries the LCA, with the enzymatic scenario at 264 kg CO2e/t gross and about 35 kg CO2e/t net when each kg of remaining dry matter displaces 1 kg of soybean meal at 2.75 kg CO2e/kg, 34 kWh/t against 389 kWh/t for the feed-meal route, and 8,800 L/t water driven chiefly by membrane diafiltration; SDG 14 (14.1, 14.2) carries nitrogen and phosphorus accounting to final destination and marine-ecology consultation; SDG 9 (9.4) the process and enzyme-recovery work; SDG 3 (3.9) storage, odour and coastal handling exposure; SDG 4 (4.4, 4.7) education; and SDG 8 (8.2, 8.8) worker protection and cost responsibility. The SDG dialogue partner was Professor Pierre Failler (Economics, University of Portsmouth), whose advice - 'do the economics first, and don't mix the concepts' and 'doing a single project on its own is very difficult, you need a cluster model' - made the team keep the business plan and the LCA as separate documents. The most concrete real-world act is not a product: after Hongdao interviews about slippery coastal working conditions, on 6 October 2026 the team filed a proposal through Qingdao's 12319 public-service platform requesting anti-slip footwear and gloves for frontline sanitation workers, and received an official reply on 9 October describing purchase and distribution of anti-slip equipment, safety reminders, site inspection and weather-based adjustment of operations; the remotely operated Ulva collection vehicle (a 648 x 462 x 419 mm PVC-framed ROV with a forward nylon-mesh basket, published as an AP242 STEP model) is justified on the same worker-exposure grounds. Entrepreneurship is deliberately modest - the first offer is an oligosaccharide research sample plus production route, assay results and a proposed quality-information sheet to cosmetic ingredient developers, with a cream-base-versus-cream-plus-ingredient demonstrator, revenue only after formulation qualification, and cost priorities named as enzyme production and recovery, purification, drying, batch quality and packaging. Regulatory status is not claimed anywhere; residue destined for fertiliser is explicitly excluded where it contains engineered cells, and no packaging prototype has been made.",
+    "realWorld_zh": "真實世界的論述錨定在青島既有的體系上，而不是一套廢棄物敘事：港口工人、市海洋發展局與加工業者描述了碼頭的協同收集、脫水與乾燥、卡車運往下游公司、飼料與肥料用途，以及腐敗物料被送回海裡的情形；團隊因此就成本、產品價值與養分最終去向比較四條處理路徑，並把 UPKeep 定位為一道增加高價值的步驟，同時引述 Gather Great Ocean 直白的一句「沒有廢料」。SDG 的主張以目標層級提出，並附上團隊自己的數字：SDG 12（12.2、12.5、12.6、12.8）承載生命週期評估，酵素情境的毛排放為 264 kg CO2e/t，若每公斤剩餘乾物質替代 1 公斤以 2.75 kg CO2e/kg 計的豆粉，則淨值約 35 kg CO2e/t，能耗 34 kWh/t（飼料粉路線為 389 kWh/t），用水 8,800 L/t，主要來自薄膜透析過濾；SDG 14（14.1、14.2）承載氮與磷一路追到最終去向的核算以及海洋生態諮詢；SDG 9（9.4）對應製程與酵素回收工作；SDG 3（3.9）對應儲存、異味與海岸作業的暴露；SDG 4（4.4、4.7）對應教育；SDG 8（8.2、8.8）對應工人保護與成本責任。SDG 對話的對象是 Professor Pierre Failler（University of Portsmouth，經濟學），他的建議（「先把經濟算清楚，不要把概念混在一起」以及「單獨做一個專案非常困難，你需要一個群聚模式」）使團隊把商業計畫與生命週期評估維持為兩份獨立文件。最具體的真實世界行動並不是一項產品：在 Hongdao 針對海岸作業濕滑環境的訪談之後，團隊於 2026 年 10 月 6 日透過青島 12319 公共服務平台提交建議，要求為一線環衛工人提供防滑鞋與手套，並於 10 月 9 日收到官方回覆，說明防滑裝備的採購與發放、安全提醒、現場巡檢以及依天候調整作業；那台遙控操作的 Ulva 收集車（648 x 462 x 419 mm 的 PVC 框架 ROV，前方裝有尼龍網籃，以 AP242 STEP 模型公開）也是以同樣的工人暴露理由為依據。創業部分刻意保守：第一個提供物是寡醣研究樣品，加上生產路線、檢測結果與一份提議的品質資訊表，對象是化妝品原料開發者，並附上乳霜基底對乳霜加成分的示範品；營收只在配方通過驗證後才出現；成本重點則明確點名酵素生產與回收、純化、乾燥、批次品質與包裝。法規狀態在任何地方都沒有被宣稱；用於肥料的殘渣在含有工程細胞時被明確排除，而包裝原型尚未製作。",
+    "partners": [
+      "Qingdao Municipal Marine Development Bureau",
+      "Hongdao fishing harbour fishers, boat operators, coastal sanitation workers and residents",
+      "Seawin Biotech (Technical Director, two consultations)",
+      "Vland Biotech (Chief Scientist, two consultations)",
+      "Bright Moon Seaweed Group (company visit and R&D consultation)",
+      "Qingdao Gather Great Ocean Algae Industry Group",
+      "Yellow Sea Fisheries Research Institute, Chinese Academy of Fishery Sciences",
+      "Professors Ning Wu and Jing Wang, Institute of Oceanology, Chinese Academy of Sciences",
+      "Prof. Zhihang Chen (biosafety)",
+      "Cellulosome researcher, Shanxi University",
+      "Professor Pierre Failler, University of Portsmouth (SDG consultation, 20 October 2026)",
+      "YUTOECO / YUTO (packaging engineering)",
+      "iGEM OUC-Haide (17-C collaboration)",
+      "CCiC conference and Unconference participants",
+      "A student and a beauty salon manager (prospective skincare users)"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6244/wiki/engagement/qa-8fac1d1be36d-hp01-8fac1d1be3.avif",
+      "caption": "HP01: interviews at Hongdao fishing harbour with fishers, boat operators, coastal sanitation workers and residents, which corrected the team's assumption that the Ulva utilisation chain was undeveloped.",
+      "caption_zh": "HP01：在 Hongdao 漁港對漁民、船員、海岸環衛工人與居民進行訪談，這修正了團隊原先以為 Ulva 利用鏈尚未發展的假設。",
+      "credit": "Team QingdaoAcademy, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6244/wiki/engagement/qa-38a681455267-hp03-38a6814552.avif",
+      "caption": "HP03: consultation with the Qingdao Municipal Marine Development Bureau on existing collection, transport and post-collection handling, used to locate the project's point of entry.",
+      "caption_zh": "HP03：就既有的收集、運輸與收集後處理向青島市海洋發展局諮詢，用來定位專案的切入點。",
+      "credit": "Team QingdaoAcademy, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6244/wiki/engagement/qa-2a0007cd5e6a-hp12-2a0007cd5e.avif",
+      "caption": "HP12: joint consultation with Professors Ning Wu and Jing Wang at the Institute of Oceanology, CAS, where a user's contamination worry became separate desalting and endotoxin requirements.",
+      "caption_zh": "HP12：與中國科學院海洋研究所 Professors Ning Wu 與 Jing Wang 的聯合諮詢，一位使用者的污染疑慮在此化為脫鹽與內毒素兩項獨立要求。",
+      "credit": "Team QingdaoAcademy, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6244/wiki/engagement/qa-74aa66d13ac0-hp16a-74aa66d13a.avif",
+      "caption": "HP16: visit to Bright Moon Seaweed, whose R&D staff redirected the team's effort onto enzyme selection and ratios and onto membrane separation and sample condition.",
+      "caption_zh": "HP16：參訪 Bright Moon Seaweed，其研發人員把團隊的力氣導向酵素選擇與比例，以及薄膜分離與樣品條件。",
+      "credit": "Team QingdaoAcademy, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Keep a numbered decision register like UPKeep's D01-D13, where each row is initial idea / stakeholders / what we heard / what we changed / why it matters, cross-linked to the interview record and to the experiment that tests the change - including rows where two advisers disagreed and the tension was retained rather than resolved. Their second habit is worth copying too: push a vague public worry ('Ulva might be polluted') to experts until it becomes separately measurable specifications (desalting, endotoxin, DNA residue, live-cell viability).",
+  "gemsTakeaway_zh": "維護一份像 UPKeep 的 D01-D13 那樣的編號決策紀錄，每一列都是「最初想法／利害關係人／我們聽到什麼／我們改了什麼／為什麼重要」，並與訪談記錄以及檢驗該項改動的實驗相互連結，其中也包含兩位顧問意見相左、而這份張力被保留而非被抹平的那些列。他們的第二個習慣同樣值得照做：把一個模糊的公眾疑慮（「Ulva 可能受污染」）一路追問到專家那裡，直到它變成幾項可以分別量測的規格（脫鹽、內毒素、DNA 殘留、活細胞存活率）。",
+  "sources": [
+    "https://2026.igem.wiki/qingdaoacademy/",
+    "https://2026.igem.wiki/qingdaoacademy/human-practices",
+    "https://2026.igem.wiki/qingdaoacademy/sustainability",
+    "https://2026.igem.wiki/qingdaoacademy/entrepreneurship",
+    "https://2026.igem.wiki/qingdaoacademy/education",
+    "https://2026.igem.wiki/qingdaoacademy/description",
+    "https://2026.igem.wiki/qingdaoacademy/model",
+    "https://2026.igem.wiki/qingdaoacademy/results",
+    "https://2026.igem.wiki/qingdaoacademy/hardware",
+    "https://2026.igem.wiki/qingdaoacademy/engineering",
+    "https://2026.igem.wiki/qingdaoacademy/contribution",
+    "https://2026.igem.wiki/qingdaoacademy/team"
   ]
- },
- "good": {
-  "publicEngagement": "Engagement was sequenced on survey evidence rather than instinct: of 259 respondents 228 had at least heard of Ulva (88.03%) but only 34 claimed familiarity, and 142 of 263 knew little or nothing about synthetic biology (53.99%), so the booklet starts with everyday coastal effects and existing post-collection uses before engineered bacteria, surface display or cellulosomes appear at all. A harbour interviewee's remark that online video would reach people better than a poster at the pier redirected the channel strategy to short videos on Bilibili, Xiaohongshu, Douyin and WeChat Channels. A joint activity with OUC-Haide (the 17-C collaboration) was cross-checked before delivery and two content errors - a pH item and an mRNA pairing error - were found and corrected, with simulations, three-level hints and a reset path added. Continued participation runs through the school biology club and repeated lessons rather than one-off events, and the team keeps SDG 4 targets 4.4 and 4.7 separate from its claims about measured learning.",
-  "ihp": "Twenty-two HP activities across six activity types are compressed into a register of thirteen numbered decisions (D01-D13), each naming the stakeholder, the quote, the change and the follow-up record - and several of them killed the team's favourite ideas. D02 is the clearest: the team wanted one system in which E. coli produced enzymes and degraded Ulva in a single reaction, but Seawin's Technical Director explained that cells and different enzymes each need their own temperature, pH and nutrient conditions, and Vland's Chief Scientist added that cells themselves generate metabolic acid, so the one-step process was split into separate cell-culture and enzyme-reaction steps and the planned pH-based function switch was abandoned entirely (D03). D04 came from peer pressure plus specialist correction: CCiC judges and teams flagged the expression burden of an extracellular cell-anchored cellulosome, and a Shanxi University doctoral researcher warned against loading too many cohesins onto one scaffoldin because of cleavage risk, so the team moved to a free cellulosome, accepting extraction and purification as explicit tasks, and planned separate expression followed by assembly. D05 is an honest unresolved tension rather than a tidy win: the cellulosome researcher supported adding BglC to hydrolyse accumulating cellobiose while Vland warned that glucose would then inhibit downstream, so the enzyme was retained with the trade-off written into the reaction-condition study. D06 dismantled the CBS-inspired shortcut of feeding hydrolysate straight into culture - Bright Moon pressed on carbon, nitrogen and aeration and Vland demanded composition analysis and experimental validation, so growth and enzyme production became separately measured questions, later yielding the observation that at pH 7 a 40% hydrolysate medium supported growth and target-protein expression with a longer lag phase. D07 is the strongest stakeholder-to-design chain: a beauty-salon manager said she would hesitate to trust Qingdao Ulva as a raw material because of possible pollution, which the team carried into a joint consultation with Professors Ning Wu and Jing Wang at the Institute of Oceanology, CAS, where contamination resolved into two concrete, separately measurable requirements - seaweed's high salt content means inadequate desalting could cause osmotic imbalance on skin, so ultrafiltration desalting and concentration entered the sample-preparation plan, and because E. coli is the production host, endotoxin must be specifically measured and controlled for higher-end or damaged-skin use. Biosafety specialist Prof. Zhihang Chen then converted an end-stage pair of controls (heat treatment plus a kill switch) into process-wide control, separating live cells, nucleic acids and endotoxin, each with its own treatment and assessment target, and prompting work on ClearColi and Rosetta chassis compatibility. D08 had Gather Great Ocean puncture the assumption that a mature brown-seaweed business implies a market for ulvan oligosaccharides - its Ulva powder goes to aquaculture feed, and it told the team to first establish what advantage ulvan oligosaccharides have over other materials - which sent them to the two professors for assay methods they could actually run (moisture uptake by desiccator and balance, in vitro antioxidant assays) and added molecular-weight profiling after the 500 Da skin-penetration literature. D13 reframed feedstock itself: the Yellow Sea Fisheries Research Institute separated ecological abundance, visible shoreline biomass and what a processor can reliably obtain, and added sand removal, dewatering and acquisition cost, so the team retained a reduced-supply scenario instead of assuming continued large blooms. Even packaging was corrected - YUTOECO's engineering manager said the proposal was still too broad, so inner contact packaging is now specified around sealing, barrier and storage needs and only the outer layer explores moulded plant fibre.",
-  "realWorld": "The real-world case is anchored in the existing Qingdao system rather than in a waste narrative: harbour workers, the Municipal Marine Development Bureau and processors described coordinated pier collection, dewatering and drying, trucking to downstream companies, feed and fertiliser uses and decayed material returned to sea - so the team compares four handling routes on cost, product value and nutrient destination and positions UPKeep as an added high-value step, noting Gather Great Ocean's blunt 'there is no waste material'. SDGs are claimed at target level with the team's own numbers: SDG 12 (12.2, 12.5, 12.6, 12.8) carries the LCA, with the enzymatic scenario at 264 kg CO2e/t gross and about 35 kg CO2e/t net when each kg of remaining dry matter displaces 1 kg of soybean meal at 2.75 kg CO2e/kg, 34 kWh/t against 389 kWh/t for the feed-meal route, and 8,800 L/t water driven chiefly by membrane diafiltration; SDG 14 (14.1, 14.2) carries nitrogen and phosphorus accounting to final destination and marine-ecology consultation; SDG 9 (9.4) the process and enzyme-recovery work; SDG 3 (3.9) storage, odour and coastal handling exposure; SDG 4 (4.4, 4.7) education; and SDG 8 (8.2, 8.8) worker protection and cost responsibility. The SDG dialogue partner was Professor Pierre Failler (Economics, University of Portsmouth), whose advice - 'do the economics first, and don't mix the concepts' and 'doing a single project on its own is very difficult, you need a cluster model' - made the team keep the business plan and the LCA as separate documents. The most concrete real-world act is not a product: after Hongdao interviews about slippery coastal working conditions, on 6 October 2026 the team filed a proposal through Qingdao's 12319 public-service platform requesting anti-slip footwear and gloves for frontline sanitation workers, and received an official reply on 9 October describing purchase and distribution of anti-slip equipment, safety reminders, site inspection and weather-based adjustment of operations; the remotely operated Ulva collection vehicle (a 648 x 462 x 419 mm PVC-framed ROV with a forward nylon-mesh basket, published as an AP242 STEP model) is justified on the same worker-exposure grounds. Entrepreneurship is deliberately modest - the first offer is an oligosaccharide research sample plus production route, assay results and a proposed quality-information sheet to cosmetic ingredient developers, with a cream-base-versus-cream-plus-ingredient demonstrator, revenue only after formulation qualification, and cost priorities named as enzyme production and recovery, purification, drying, batch quality and packaging. Regulatory status is not claimed anywhere; residue destined for fertiliser is explicitly excluded where it contains engineered cells, and no packaging prototype has been made.",
-  "partners": [
-   "Qingdao Municipal Marine Development Bureau",
-   "Hongdao fishing harbour fishers, boat operators, coastal sanitation workers and residents",
-   "Seawin Biotech (Technical Director, two consultations)",
-   "Vland Biotech (Chief Scientist, two consultations)",
-   "Bright Moon Seaweed Group (company visit and R&D consultation)",
-   "Qingdao Gather Great Ocean Algae Industry Group",
-   "Yellow Sea Fisheries Research Institute, Chinese Academy of Fishery Sciences",
-   "Professors Ning Wu and Jing Wang, Institute of Oceanology, Chinese Academy of Sciences",
-   "Prof. Zhihang Chen (biosafety)",
-   "Cellulosome researcher, Shanxi University",
-   "Professor Pierre Failler, University of Portsmouth (SDG consultation, 20 October 2026)",
-   "YUTOECO / YUTO (packaging engineering)",
-   "iGEM OUC-Haide (17-C collaboration)",
-   "CCiC conference and Unconference participants",
-   "A student and a beauty salon manager (prospective skincare users)"
-  ]
- },
- "images": [
-  {
-   "url": "https://static.igem.wiki/teams/6244/wiki/engagement/qa-8fac1d1be36d-hp01-8fac1d1be3.avif",
-   "caption": "HP01: interviews at Hongdao fishing harbour with fishers, boat operators, coastal sanitation workers and residents, which corrected the team's assumption that the Ulva utilisation chain was undeveloped.",
-   "credit": "Team QingdaoAcademy, iGEM 2026 wiki"
-  },
-  {
-   "url": "https://static.igem.wiki/teams/6244/wiki/engagement/qa-38a681455267-hp03-38a6814552.avif",
-   "caption": "HP03: consultation with the Qingdao Municipal Marine Development Bureau on existing collection, transport and post-collection handling, used to locate the project's point of entry.",
-   "credit": "Team QingdaoAcademy, iGEM 2026 wiki"
-  },
-  {
-   "url": "https://static.igem.wiki/teams/6244/wiki/engagement/qa-2a0007cd5e6a-hp12-2a0007cd5e.avif",
-   "caption": "HP12: joint consultation with Professors Ning Wu and Jing Wang at the Institute of Oceanology, CAS, where a user's contamination worry became separate desalting and endotoxin requirements.",
-   "credit": "Team QingdaoAcademy, iGEM 2026 wiki"
-  },
-  {
-   "url": "https://static.igem.wiki/teams/6244/wiki/engagement/qa-74aa66d13ac0-hp16a-74aa66d13a.avif",
-   "caption": "HP16: visit to Bright Moon Seaweed, whose R&D staff redirected the team's effort onto enzyme selection and ratios and onto membrane separation and sample condition.",
-   "credit": "Team QingdaoAcademy, iGEM 2026 wiki"
-  }
- ],
- "gemsTakeaway": "Keep a numbered decision register like UPKeep's D01-D13, where each row is initial idea / stakeholders / what we heard / what we changed / why it matters, cross-linked to the interview record and to the experiment that tests the change - including rows where two advisers disagreed and the tension was retained rather than resolved. Their second habit is worth copying too: push a vague public worry ('Ulva might be polluted') to experts until it becomes separately measurable specifications (desalting, endotoxin, DNA residue, live-cell viability).",
- "sources": [
-  "https://2026.igem.wiki/qingdaoacademy/",
-  "https://2026.igem.wiki/qingdaoacademy/human-practices",
-  "https://2026.igem.wiki/qingdaoacademy/sustainability",
-  "https://2026.igem.wiki/qingdaoacademy/entrepreneurship",
-  "https://2026.igem.wiki/qingdaoacademy/education",
-  "https://2026.igem.wiki/qingdaoacademy/description",
-  "https://2026.igem.wiki/qingdaoacademy/model",
-  "https://2026.igem.wiki/qingdaoacademy/results",
-  "https://2026.igem.wiki/qingdaoacademy/hardware",
-  "https://2026.igem.wiki/qingdaoacademy/engineering",
-  "https://2026.igem.wiki/qingdaoacademy/contribution",
-  "https://2026.igem.wiki/qingdaoacademy/team"
- ]
 }

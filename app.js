@@ -75,7 +75,7 @@
   function img(src, alt) {
     if (!src) return "";
     return '<img loading="lazy" referrerpolicy="no-referrer" src="' + esc(src) + '" alt="' + esc(alt || "") +
-      '" onerror="this.closest(\'.shot,.ph\')&amp;&amp;this.closest(\'.shot,.ph\').classList.add(\'hide\');this.remove()">';
+      '" onerror="var p=this.closest(\'.shot,.ph,.evph\');if(p)p.classList.add(\'hide\');this.remove()">';
   }
   function sechead(k, en, zh, sub_en, sub_zh) {
     return '<div class="sechead"><div class="k">' + esc(L(k, k)) + '</div><h2>' + esc(L(en, zh)) + "</h2>" +
@@ -244,7 +244,9 @@
             "共 " + rows.length + " 支團隊在這方面的紀錄足以作為學習對象。點擊團隊可展開完整檔案。")) +
         '<div class="grid g2">' +
         rows.slice(0, 18).map(function (t) {
-          return '<div class="card lift" data-team="' + esc(t.id) + '" style="cursor:pointer">' +
+          var im = (t.images || [])[0];
+          return '<div class="card lift ev" data-team="' + esc(t.id) + '" style="cursor:pointer">' +
+            (im ? '<figure class="evph">' + img(im.url, t.team + " — " + (im.caption || "")) + "</figure>" : "") +
             '<div class="k">' + esc(t.team) + " · " + esc(secLabel(t.section)) + "</div>" +
             "<h4>" + esc(T(t, "projectTitle") || t.team) + "</h4>" +
             "<p>" + rich(clip(T(t[kind], f[0]), 460)) + "</p>" +

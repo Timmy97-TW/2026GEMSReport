@@ -129,6 +129,18 @@ html:lang(zh-Hant) .card .k{letter-spacing:.06em}
 
 .panel{background:var(--panel);border-radius:var(--r);padding:22px 23px;box-shadow:inset 0 0 0 1px var(--line2)}
 
+/* evidence card: a figure from the team's own wiki, above the text */
+.card.ev{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.card.ev>.k,.card.ev>h4,.card.ev>p,.card.ev>.chips{padding-left:21px;padding-right:21px}
+.card.ev>.k{padding-top:17px}
+.card.ev>p{flex:1}
+.card.ev>.chips{padding-bottom:19px;margin-top:auto}
+.card.ev>.chips:empty{padding-bottom:19px}
+.evph{margin:0;aspect-ratio:16/9;overflow:hidden;background:linear-gradient(135deg,var(--panel),#EEF2F6)}
+.evph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card.ev:hover .evph img{transform:scale(1.03)}
+.evph.hide{display:none}
+
 /* chips */
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .chip{font-size:11.5px;font-weight:600;color:var(--ink2);background:var(--panel);border-radius:999px;padding:4px 10px;
@@ -323,10 +335,10 @@ html:lang(zh-Hant) .tbl th{letter-spacing:.04em}
 
 <dialog class="sheet" id="sheet"><div id="sheetIn"></div></dialog>
 
-<script src="data/results.js?v=202611191608"></script>
-<script src="data/report.js?v=202611191608"></script>
-<script src="data/teams.js?v=202611191608"></script>
-<script src="data/trends.js?v=202611191608"></script>
-<script src="app.js?v=202611191608"></script>
+<script src="data/results.js?v=202611191609"></script>
+<script src="data/report.js?v=202611191609"></script>
+<script src="data/teams.js?v=202611191609"></script>
+<script src="data/trends.js?v=202611191609"></script>
+<script src="app.js?v=202611191609"></script>
 </body>
 </html>

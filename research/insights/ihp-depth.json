@@ -3,13 +3,18 @@
   "tab": "good",
   "kicker": "Original analysis",
   "title": "Who actually let the outside world change the science",
+  "title_zh": "究竟是誰真的讓外界改變了科學",
   "lede": "Across 93 teams, closing the loop has stopped being the distinction and become the norm — and almost every loop that closed was closed by a credentialled expert rather than by anybody the criterion is rhetorically about.",
+  "lede_zh": "在 93 支隊伍中，把回饋迴路閉合已經不再是區別所在，而成了常態——而幾乎每一個閉合的迴路，都是由一位有專業資歷的專家閉上的，不是由這條評審標準在修辭上所指的那些人。",
   "body": "A score of four is a sentence, not a stakeholder list: a name, a specific thing said, and a design that is visibly different afterwards. Wageningen's Triton has three modules rather than one because Peter Fischer of Aqualab Zuid explained that trifluoroacetate can only be measured by LC-MS at a central lab, which forced an on-site biosensor, and because Bert van der Waal and Peyman Salehian showed that even tenfold reverse-osmosis concentration leaves it far too dilute, which forced a capture module. **GEMS-Taiwan** was releasing engineered Bacillus into soil until Prof. Chen Wen-Liang told them it could be neither contained nor made to sense temperature precisely; the hollow-fibre perfusion reactor and the electronic AIoT sensing layer both came out of that one April conversation. UCAS-China dropped NKX2-1 as a cargo and put SLPI in its place because Professor Huaiyong Chen said the first matters in development and barely in adulthood. RDFZ-China built bcsABCD in both BL21(DE3) and C41(DE3) and switched host after Professor Haibo Zhang warned that a working genetic module does not imply an efficient one; WUXI-DSAS excised gtdT on Dr Tengfei Hu's advice and recovered the linear dose-response its first-generation sensor could not give; IISER-Kolkata rebuilt its kill-switch trigger around the hypochlorite-sensing regulator RclR after a wastewater engineer pointed out that Indian plants disinfect with sodium hypochlorite rather than UV; and Oxford gave up a living Snodgrassella symbiont for heat-inactivated yeast because regulators pushed back against the beekeepers who had asked for it, then published what that cost its own users.\n\nThe three Best IHP winners share a method, and it is organisational rather than intellectual: the practice is wired into the engineering, not appended to it. **TU Delft** ran Value Sensitive Design in three declared passes and translated values into requirements, labelling the ones it could not meet as Future Perspectives rather than dropping them quietly; UCAS-China built its RCSF cycle as a deliberate parallel to DBTL and gave the human practices group the standing job of tracking every subteam's bottleneck; GEMS-Taiwan ran four thematic expert pipelines with five continuously engaged experts. What the winners do not have is a monopoly on depth. Oxford, Wageningen and UFABC-Brazil were nominees with chains at least as traceable, and UFABC declared its confirmation and refutation rules before seeing its survey results, then redrew its own SWOT when two assumptions failed. **Madrid-UCM**, which published the only genuine closure criterion in the cohort, got no human practices nomination at all.\n\nThe formats that changed designs are narrow and unglamorous. One of them is a single conversation with whoever operates the thing: Veolia's technical director for LYON, a sulfur-recovery engineer of thirty-three years for UOttawa, an optometrist for UAlberta, wet-market vendors for HongKong-JSS who demanded a number and got a wavelength-resolved spectrometer in place of a 14-channel colour sensor. Another is protocol-level consultation with whoever actually runs the technique, which is where chassis and construct changes come from: DTU to Komagataella phaffii, NFLSHS-CHINA from two plasmids to one, Heidelberg to a Serratia expression cassette. Add regulators contacted while the design is still open, peer teams handing over negative data as Darmstadt 2025 did to Padua on pcrABCD's oxygen sensitivity, and written-scorecard pitch events, which are cheap and work: Stanford's BIOME Shark Tank produced the microneedle segmentation pipeline. Against that, the school workshop, the museum stand, the carnival booth, the panel discussion and SDG mapping produced headcounts and nothing traceable, and the large public survey changed vocabulary with near-perfect reliability and hardware almost never.\n\nThe high-school tier is fully competitive wherever the work is user-facing and iterative. HongKong-JSS's farm-driven hardware revisions, measured as a drop from 7.41 to 1.95 per cent coefficient of variation, are better user-led engineering than most collegiate teams managed; **Hongwen School** struck three marketing claims on a gastroenterologist's evidence ladder and changed its selection antibiotic on a professor's re-annotation; HFI, NFLSHS-CHINA, RDFZ-China and WUXI-DSAS all changed circuits or hosts for a named reason; and QingdaoAcademy compressed twenty-two activities into thirteen numbered decisions that split a one-pot process in two and abandoned a planned pH-based function switch outright. Where the tier is not competitive is institutional reach: nothing in it approaches Oxford's EPA-FDA-USDA-CBD mapping, Wageningen's analysis of the non-viable-GMO approval route, UCL's Water UK discharge gap or DTU's correspondence with the European Environment Agency, and formal ethics infrastructure is rare, with Baltimore's community-lab board the main exception; the tier also almost never publishes failures of access the way DTU names the turbine makers who never replied.\n\nThe uncomfortable finding is who actually caused the changes. Of 64 teams that closed a loop, the loop was closed by a credentialled technical expert in nearly every case; the publics, patients and communities that the criterion is rhetorically about overwhelmingly changed the vocabulary and not the vector. Cornell's burn survivors changed what the team promises, Princeton's myeloma patients changed the word 'virus', HFI's 434 respondents changed 'genetically modified' to 'engineered' — all real, none of it touching a construct. Genuine counter-examples number six or seven in 93: LYON removed every living cell from its filter because the public objected, ICJFLS turned public fear into a four-layer containment design, HongKong-JSS re-specified a sensor because farmers wanted a number, UFABC-Brazil routed its seizure alert to a caregiver because a psychiatrist in the public system pointed out that patients who cannot recognise an aura cannot act on one, a beauty-salon manager's distrust of local seaweed put ultrafiltration desalting and endotoxin limits into QingdaoAcademy's plan, and a landfill worker of six years gave Hongwen School the handling cost that made local processing a hard constraint. Two further discomforts: the branded cycle acronym is now universal and predicts nothing, with Jilin-China's Social Shaping Loop and GreatBay-SCIE's five-stage framework scoring 2 while plain tables score 4; and awards track legibility rather than consequence, since **KIT** won Inclusivity and GreatBay-SCIE was nominated for Best IHP on evidence that scores 2, while Madrid-UCM, Hongwen School, GYHS and WUXI-DSAS closed loops nobody rewarded.",
+  "body_zh": "四分是一個句子，不是一張利害關係人名單：一個名字、一句具體說過的話，以及之後看得出不一樣的設計。Wageningen 的 Triton 有三個模組而不是一個，是因為 Aqualab Zuid 的 Peter Fischer 說明三氟乙酸只能把樣本送到中央實驗室用 LC-MS 量測，這迫使他們加上現場生物感測器；也因為 Bert van der Waal 和 Peyman Salehian 指出，即使經過十倍逆滲透濃縮，濃度還是稀得太多，這迫使他們加上捕捉模組。**GEMS-Taiwan** 原本要把工程化的 Bacillus 釋放到土壤裡，直到 Chen Wen-Liang 教授告訴他們，這既無法圍堵，也無法做到精確感測溫度；中空纖維灌流反應器和電子 AIoT 感測層，都出自四月那一場對話。UCAS-China 放棄 NKX2-1 作為載運基因、換上 SLPI，是因為 Huaiyong Chen 教授指出前者在發育期重要，在成年期幾乎不重要。RDFZ-China 把 bcsABCD 同時建在 BL21(DE3) 和 C41(DE3) 上，並在 Haibo Zhang 教授警告一個能運作的基因模組不代表它有效率之後換了宿主；WUXI-DSAS 依 Tengfei Hu 博士的建議切除 gtdT，救回第一代感測器給不出的線性劑量反應；IISER-Kolkata 在一位污水工程師指出印度的處理廠是用次氯酸鈉而不是紫外線消毒之後，圍繞次氯酸感測調控因子 RclR 重建了自殺開關的觸發機制；而 Oxford 放棄活的 Snodgrassella 共生菌、改用熱滅活酵母，是因為主管機關的意見與要求前者的養蜂人相反，之後他們也公開了這個選擇讓自己的使用者付出什麼代價。\n\n三支最佳整合式人類實踐得主共用一種方法，而且是組織上的而非思想上的：這套實踐被接進工程裡，不是附加在工程旁邊。**TU Delft** 以三個明確宣告的回合執行價值敏感設計，把價值轉譯成需求，並把做不到的那些標為 Future Perspectives，而不是悄悄刪掉；UCAS-China 刻意把自己的 RCSF 循環建成與 DBTL 平行的結構，並讓人類實踐組常態負責追蹤每一個分組的瓶頸；GEMS-Taiwan 跑了四條主題式專家管線，有五位持續參與的專家。得獎者沒有壟斷深度。Oxford、Wageningen 和 UFABC-Brazil 都只是入圍，但因果鏈至少同樣可追溯，而 UFABC 在看到問卷結果之前就先宣告自己的確認與反駁規則，之後在兩項假設失效時重畫了自己的 SWOT。**Madrid-UCM** 是全體隊伍中唯一提出真正閉環判準的隊伍，卻完全沒有拿到人類實踐的入圍。\n\n真正改變了設計的形式很窄，也不華麗。其中一種是和實際操作那個東西的人談一次話：LYON 談的是 Veolia 的技術總監，UOttawa 談的是一位有三十三年經驗的硫回收工程師，UAlberta 談的是一位驗光師，HongKong-JSS 談的是傳統市場的攤商，他們要的是一個數字，結果 14 通道的顏色感測器被換成了波長解析的光譜儀。另一種是和真正執行該技術的人做實驗流程層級的諮詢，這是底盤與構築體改變的來源：DTU 換成 Komagataella phaffii，NFLSHS-CHINA 從兩個質體變成一個，Heidelberg 換成 Serratia 表現卡匣。再加上在設計還沒定案時就接觸的主管機關、把負面資料交出來的同儕隊伍——例如 Darmstadt 2025 把 pcrABCD 對氧氣敏感的結果交給 Padua——以及有書面評分表的提案活動，這種活動便宜而且有效：Stanford 的 BIOME Shark Tank 催生了微針分割流程。相對地，校園工作坊、博物館攤位、園遊會攤位、座談會和 SDG 對照，產出的是參加人數，沒有任何可追溯的東西；而大型公眾問卷幾乎毫無例外地改變了用詞，卻幾乎從不改變硬體。\n\n只要工作是面對使用者而且會反覆迭代，高中組就完全有競爭力。HongKong-JSS 由農場驅動的硬體修改，量測結果是變異係數從 7.41% 降到 1.95%，這比多數大學隊伍做到的使用者導向工程更好；**Hongwen School** 依一位腸胃科醫師的證據階梯刪掉三項行銷聲稱，並依一位教授重新註解的結果更換了篩選用抗生素；HFI、NFLSHS-CHINA、RDFZ-China 和 WUXI-DSAS 都為了一個具名的理由改了迴路或宿主；QingdaoAcademy 則把二十二項活動壓縮成十三個編號的決定，其中把一鍋式製程拆成兩段，並且乾脆放棄原先計畫的 pH 功能切換。這一組不具競爭力的地方是制度性的觸及範圍：組內沒有任何案例接近 Oxford 的 EPA-FDA-USDA-CBD 對照、Wageningen 對非存活基改生物核可途徑的分析、UCL 找出的 Water UK 排放落差，或 DTU 與歐洲環境署的往來；正式的倫理機制也很少見，Baltimore 的社區實驗室審查委員會是主要的例外。這一組也幾乎從不公布接觸失敗的紀錄，像 DTU 那樣點名哪些渦輪機製造商從未回覆。\n\n令人不自在的發現是：究竟是誰造成了那些改變。64 支閉合了迴路的隊伍中，幾乎每一例都是由一位有專業資歷的技術專家閉上的；而這條標準在修辭上所指的公眾、病人和社群，絕大多數只改變了用詞，沒有改變載體。Cornell 的燒傷倖存者改變了隊伍承諾的內容，Princeton 的骨髓瘤病人改掉了「病毒」這個詞，HFI 的 434 位受訪者把「基因改造」改成「工程化」——全都真實，卻沒有一項碰到構築體。真正的反例在 93 支隊伍中有六、七個：LYON 因為公眾反對而把濾材裡所有活細胞都移除，ICJFLS 把公眾的恐懼轉成四層圍堵設計，HongKong-JSS 因為農民要一個數字而重新規格化感測器，UFABC-Brazil 因為公立體系的一位精神科醫師指出無法辨識前兆的病人也無法據以行動，而把癲癇警示改送到照顧者，一位美容院經理對本地海藻的不信任讓超過濾脫鹽與內毒素上限進了 QingdaoAcademy 的計畫，而一位做了六年的垃圾掩埋場工人則給了 Hongwen School 那筆搬運成本，使就地處理成為硬性限制。另有兩點令人不自在：掛上品牌的循環縮寫現在到處都有，而且什麼都預測不了——Jilin-China 的 Social Shaping Loop 和 GreatBay-SCIE 的五階段框架都只得 2 分，而樸素的表格得 4 分；獎項追蹤的是易讀性而不是後果，因為 **KIT** 以只得 2 分的證據拿下包容性獎、GreatBay-SCIE 也以這種等級的證據入圍最佳整合式人類實踐，而 Madrid-UCM、Hongwen School、GYHS 和 WUXI-DSAS 閉合的迴路沒有人獎勵。",
   "cards": [
     {
       "kicker": "Worked example",
       "title": "Two of three modules were somebody else's idea",
+      "title_zh": "三個模組中有兩個是別人的主意",
       "body": "Wageningen set out only to degrade trifluoroacetate. Peter Fischer at Aqualab Zuid, one of six labs legally tasked with assessing Dutch drinking water, explained that the compound can only be measured by LC-MS on samples shipped to a central lab, so the bioreactor could not be operated at all without an on-site readout: that created the biosensor module. Bert van der Waal and Peyman Salehian then showed that tenfold reverse-osmosis concentration takes 2.2 micrograms per litre only to 22, against a milligram-per-litre target, which created the capture module. Frank Schoonenberg of Vitens moved the whole deployment target to reverse-osmosis concentrate, and Tue Kjaergaard Nielsen changed the readout to released fluoride because measuring TFA disappearance mistakes adsorption for degradation.",
+      "body_zh": "Wageningen 原本只打算分解三氟乙酸。Aqualab Zuid 的 Peter Fischer——該實驗室是荷蘭六家法定負責評估飲用水的機構之一——說明這個化合物只能把樣本送到中央實驗室用 LC-MS 量測，所以沒有現場讀出就根本無法操作這座生物反應器：這催生了生物感測模組。接著 Bert van der Waal 和 Peyman Salehian 指出，十倍逆滲透濃縮只能把每公升 2.2 微克提高到 22 微克，而目標是毫克每公升的量級，這催生了捕捉模組。Vitens 的 Frank Schoonenberg 把整個部署目標移到逆滲透濃縮液，而 Tue Kjaergaard Nielsen 把讀出改成釋出的氟離子，因為量測 TFA 的消失會把吸附誤認成分解。",
       "chips": [
         "WageningenUR",
         "Overgrad",
@@ -21,7 +26,9 @@
     {
       "kicker": "Worked example",
       "title": "The conversation that moved sensing out of the cell",
+      "title_zh": "把感測移出細胞之外的那場對話",
       "body": "GEMS-Taiwan's original design put engineered Bacillus subtilis in the soil with a DesK-DesR system reading temperature directly. On 10 April, Prof. Chen Wen-Liang and bioprocess experts said two things were wrong: the bacteria could not be contained, and biological sensing was neither precise nor controllable enough. Sensing moved out of the cell into electronic sensors and an AIoT model, and a hollow-fibre perfusion bioreactor was built to hold the bacteria in while letting the protectants out. A later public forum with natural-farming advocates, who argued that a crop protected from every stress never builds tolerance, became the specification for the release threshold rather than an objection to be managed.",
+      "body_zh": "GEMS-Taiwan 最初的設計是把工程化的 Bacillus subtilis 放進土壤，用 DesK-DesR 系統直接讀取溫度。4 月 10 日，Chen Wen-Liang 教授和生物製程專家指出兩件事是錯的：細菌無法被圍堵，而生物感測既不夠精確也不夠可控。感測從細胞內移到電子感測器和一套 AIoT 模型，同時建了一座中空纖維灌流生物反應器，把細菌留在裡面、讓保護物質出去。後來一場與自然農法倡議者的公開論壇——他們主張一株被保護到完全沒有逆境的作物永遠不會建立耐受性——成了釋放閾值的規格依據，而不是一個要被處理掉的反對意見。",
       "chips": [
         "GEMS-Taiwan",
         "High School",
@@ -33,7 +40,9 @@
     {
       "kicker": "Worked example",
       "title": "When the regulator overrules the user",
+      "title_zh": "當主管機關推翻使用者",
       "body": "Danny Le Feuvre of the Australian Honey Bee Industry Council and Mike Allerton of Amateur Beekeepers Australia both wanted a persistent living Snodgrassella alvi gut symbiont because it minimises beekeeper labour. Oxford did not simply comply: it took the question to Scottish and Australian regulators and the Soil Association, who pushed the other way, and switched to heat-inactivated dried yeast. The team then stated plainly what that cost — the persistence the beekeepers valued, meaning repeat dosing and more labour. A joint meeting with EPA, FDA and USDA staff stopped them treating the inactivated route as a universal regulatory shortcut, forcing jurisdiction-by-jurisdiction mapping instead.",
+      "body_zh": "Australian Honey Bee Industry Council 的 Danny Le Feuvre 和 Amateur Beekeepers Australia 的 Mike Allerton 都想要一株能持續存在的活 Snodgrassella alvi 腸道共生菌，因為這能把養蜂人的工作量降到最低。Oxford 並沒有照辦：他們把這個問題帶到蘇格蘭與澳洲的主管機關以及 Soil Association，這些單位的意見正好相反，於是改用熱滅活的乾酵母。隊伍接著明白寫出這個選擇的代價——失去養蜂人所重視的持續性，意味著要重複投藥、工作量更大。一場與 EPA、FDA 和 USDA 人員的聯合會議，讓他們不再把滅活路線當成普遍適用的法規捷徑，而是改為逐一管轄區進行對照。",
       "chips": [
         "Oxford",
         "Undergrad",
@@ -45,7 +54,9 @@
     {
       "kicker": "Worked example",
       "title": "A farmer asked for a number",
+      "title_zh": "一位農民要一個數字",
       "body": "HongKong-JSS built a mercury biosensor with a visible colour readout. Koo's Farm and local wet-market vendors said they wanted numerical readings, not qualitative colour, which is the direct reason the AS7343 14-channel sensor was replaced by a wavelength-resolved Hamamatsu C12880 with a numerical display. Users then reported excessive syringe force on the V1 filter stack, so manual delivery became pump-driven dosing, improving the coefficient of variation from 7.41 to 1.95 per cent. More Happy Farm said plainly that not every farmer wants to own a device, which pushed them to a service model — and after a 195-person demonstration found high perceived confidence, the team separated device status from safety judgement in the interface because confidence is not accuracy.",
+      "body_zh": "HongKong-JSS 做了一個以可見顏色讀出的汞生物感測器。Koo's Farm 和本地傳統市場的攤商說他們要的是數值讀數，不是定性的顏色，這就是 AS7343 14 通道感測器被換成帶數值顯示的波長解析 Hamamatsu C12880 的直接原因。使用者接著回報 V1 濾材組需要過大的針筒推力，於是手動加樣改成泵驅動的定量加樣，變異係數從 7.41% 改善到 1.95%。More Happy Farm 直接說並不是每個農民都想擁有一台裝置，這把他們推向服務模式——而在一場 195 人的示範中發現使用者自覺的信心偏高之後，隊伍在介面上把裝置狀態與安全判斷分開，因為有信心不等於準確。",
       "chips": [
         "HongKong-JSS",
         "High School",
@@ -57,7 +68,9 @@
     {
       "kicker": "Method that nobody rewarded",
       "title": "The only team that defined what 'closed' means",
+      "title_zh": "唯一定義了「閉合」是什麼意思的隊伍",
       "body": "Madrid-UCM built a five-rung integration ladder with an explicit closure criterion: a loop counts as closed only when the revised design goes back to the person whose input triggered it and their response produces a further change. They then demonstrated it on materials — Carmen Garcia Payo and Loreto Garcia Fernandez proposed core-shell capsules, the team built them but could not see the internal structure, took that problem back to the same researchers, and got magnetite as an optical tracer plus cryosectioning, which became a wall-thickness and leakage pipeline. Aurelio Hidalgo's point that a single-use biocatalyst is neither economical nor recoverable killed both placeholder designs and moved the enzyme panel onto a reusable solid support. They also document a change they chose not to make, on the grounds that not adding a pathway is a design decision too. No Best IHP nomination.",
+      "body_zh": "Madrid-UCM 建了一座五階的整合階梯，並有明確的閉環判準：一個迴路只有在修訂後的設計回到提供意見的那個人面前、而他的回應又帶來進一步的改變時，才算閉合。他們接著在材料上示範了這一點——Carmen Garcia Payo 和 Loreto Garcia Fernandez 提議核殼膠囊，隊伍做出來了卻看不到內部結構，於是把這個問題帶回同一批研究者，得到以磁鐵礦作為光學示蹤劑再加上冷凍切片的作法，這後來變成一條量測壁厚與滲漏的流程。Aurelio Hidalgo 指出單次使用的生物催化劑既不經濟也無法回收，這一句話殺掉了兩個暫用設計，並把酵素組移到可重複使用的固體支撐上。他們也記錄了一項選擇不做的改變，理由是不加進一條代謝途徑同樣是一個設計決定。沒有拿到最佳整合式人類實踐入圍。",
       "chips": [
         "Madrid-UCM",
         "Undergrad",
@@ -69,7 +82,9 @@
     {
       "kicker": "Format that mostly did not work",
       "title": "The survey that changes your vocabulary",
+      "title_zh": "只會改變你用詞的問卷",
       "body": "Large public surveys are the most common instrument in the cohort and the least consequential for design. HFI's 434 responses replaced 'genetically modified' with 'engineered' across all materials and rebuilt the education from basics. Peking's 539 respondents named three priorities the team concedes already outlined the finished project. UCAS-China's 419 public respondents and HongKong-HS's 420 produced awareness statistics and workshop plans. The honest version is GHCIS, which found that its price and speed questions branched into samples too small to use and explicitly refused to convert 'within RMB 30' into a product requirement, carrying it forward as a question for frontline users instead.",
+      "body_zh": "大型公眾問卷是全體隊伍中最常見的工具，對設計的影響也最小。HFI 的 434 份回覆讓所有材料把「基因改造」換成「工程化」，並把教育內容從基礎重建。Peking 的 539 位受訪者點出三項優先事項，而隊伍自己承認這三項早就勾勒出了最終完成的專案。UCAS-China 的 419 位公眾受訪者和 HongKong-HS 的 420 位，產出的是認知度統計和工作坊計畫。誠實的版本是 GHCIS：他們發現價格與速度的題目分支之後樣本太小而無法使用，並明確拒絕把「人民幣 30 元以內」轉成產品需求，而是把它當成一個問題帶給第一線使用者。",
       "chips": [
         "HFI",
         "Peking",
@@ -86,6 +101,12 @@
       "Section",
       "Score",
       "What changed"
+    ],
+    "head_zh": [
+      "隊伍",
+      "組別",
+      "評分",
+      "改變了什麼"
     ],
     "rows": [
       [
@@ -646,9 +667,570 @@
         "1",
         "A 719-response survey tested the premise; no consequence recorded"
       ]
+    ],
+    "rows_zh": [
+      [
+        "ABOA",
+        "研究生組",
+        "4",
+        "放棄純化酵素，改用附著在載體上的全細胞；反應器移到側流"
+      ],
+      [
+        "Al-Nahrain-IRAQ",
+        "大學組",
+        "4",
+        "放棄 AI 模型，改用方程式建模；新增實驗資料輸入頁面"
+      ],
+      [
+        "Athens",
+        "研究生組",
+        "4",
+        "投遞方式從噴灑改為飼料；放棄活噬菌體，改用不複製的酵素"
+      ],
+      [
+        "BGCFullerton",
+        "高中組",
+        "4",
+        "放棄 CIF 胜肽；風化層混合配方計畫與模型驗證方式改變"
+      ],
+      [
+        "CHINAGuangdongShimen",
+        "高中組",
+        "4",
+        "多價抗體改成單一的單價 nanobody"
+      ],
+      [
+        "Cornell",
+        "大學組",
+        "4",
+        "放棄自製高壓電源；為提高專一性加入缺氧 AND 閘"
+      ],
+      [
+        "DTU-Denmark",
+        "研究生組",
+        "4",
+        "酵素步驟重新定位為溶劑分解的互補；底盤換成 K. phaffii；放棄對接篩選"
+      ],
+      [
+        "ETH-Zurich",
+        "研究生組",
+        "4",
+        "放棄果蠅生物農藥方向；發明分割載運的雙標的策略"
+      ],
+      [
+        "Eton-College-UK",
+        "高中組",
+        "4",
+        "更換質體骨架；定案為可重複使用的讀取器加一次性卡匣"
+      ],
+      [
+        "GCGS",
+        "高中組",
+        "4",
+        "縮減 VOC 模組範圍；加入溫度自殺開關，並附理由否決 pH 開關"
+      ],
+      [
+        "GEMS-Taiwan",
+        "高中組",
+        "4",
+        "感測移出細胞之外；加入灌流反應器；放棄脯胺酸投遞"
+      ],
+      [
+        "GYHS",
+        "高中組",
+        "4",
+        "以一組七項需求取代單一黏結強度指標；V2 的操作方式重新設計"
+      ],
+      [
+        "HFI",
+        "高中組",
+        "4",
+        "放棄離胺酸誘導型啟動子，改用組成型表現"
+      ],
+      [
+        "HK-Joint-School",
+        "高中組",
+        "4",
+        "目標從阻燃改為無毒、低煙；加入基準比較"
+      ],
+      [
+        "HKSSC",
+        "高中組",
+        "4",
+        "加入自殺開關與受控使用；以 MIC 與生長速率設計；pH 範圍取自主管機關資料"
+      ],
+      [
+        "HKU-HongKong",
+        "未列組別",
+        "4",
+        "假設收斂為部分調節發炎；放棄 M1/M2 的框架"
+      ],
+      [
+        "HUST-China",
+        "大學組",
+        "4",
+        "完全放棄 reflectin 模組，改走時尚廢棄物纖維素路線"
+      ],
+      [
+        "HangzhouFourteenAP",
+        "高中組",
+        "4",
+        "標的從已礦化的牙結石移到礦化前的生物膜基質"
+      ],
+      [
+        "Heidelberg",
+        "大學組",
+        "4",
+        "表現宿主換成 Serratia 卡匣；工程改造目標轉到 GvpC"
+      ],
+      [
+        "HongKong-HS",
+        "高中組",
+        "4",
+        "toehold switch 改成 HCR；ThT 螢光改成 G4／hemin 顯色"
+      ],
+      [
+        "HongKong-JSS",
+        "高中組",
+        "4",
+        "顏色感測器改成光譜儀；針筒改成泵驅動定量加樣"
+      ],
+      [
+        "Hongwen School",
+        "高中組",
+        "4",
+        "刪除 IBS 相關聲稱；更換篩選標記；就近處理成為硬性限制"
+      ],
+      [
+        "ICJFLS",
+        "高中組",
+        "4",
+        "放棄膠囊，改為漱口水／錠劑／口香糖組合；放棄質體，改為染色體嵌入"
+      ],
+      [
+        "IISER-Kolkata",
+        "未列組別",
+        "4",
+        "因為處理廠不使用紫外線，自殺開關改以次氯酸感測器重建"
+      ],
+      [
+        "KAUST-KSA",
+        "研究生組",
+        "4",
+        "底盤加入 Dsup；依真實任務條件重排酬載優先順序"
+      ],
+      [
+        "LYON",
+        "大學組",
+        "4",
+        "濾材中所有活細胞全部移除；排除家庭用戶作為客戶"
+      ],
+      [
+        "Lambert-GA",
+        "高中組",
+        "4",
+        "放棄 nanobody，改用 minibinder；標的收斂到 VP3 的 P-domain"
+      ],
+      [
+        "MIT-MAHE",
+        "大學組",
+        "4",
+        "目標客戶從香水品牌商移到香料化合物製造商"
+      ],
+      [
+        "Madrid-UCM",
+        "大學組",
+        "4",
+        "放棄分泌與菌群路線，改用固定化酵素；圍堵優先於效能"
+      ],
+      [
+        "Marburg",
+        "研究生組",
+        "4",
+        "重新設計 5'UTR，使 PPR 位點與 RBS 不再連動；放棄 RBS 測試"
+      ],
+      [
+        "McGill",
+        "大學組",
+        "4",
+        "放棄超純化；原料改為新鮮尾礦；改採代工收費的商業模式"
+      ],
+      [
+        "McMaster-Canada",
+        "大學組",
+        "4",
+        "放棄腫瘤與過敏的構想，改為局部作用的腸道相關系統"
+      ],
+      [
+        "Muenster-University",
+        "研究生組",
+        "4",
+        "預測流程以幾何評分層重建；放棄 NLR 路線"
+      ],
+      [
+        "NBJF",
+        "高中組",
+        "4",
+        "放棄 DNA 儲存裝置，轉向酵素寫入的瓶頸"
+      ],
+      [
+        "NFLSHS-CHINA",
+        "高中組",
+        "4",
+        "兩個質體併成一個；放棄水性配方，改為油劑與膠囊"
+      ],
+      [
+        "NJU-China",
+        "大學組",
+        "4",
+        "在每一個檢視畫面中都把已記錄的關聯與模型預測分開"
+      ],
+      [
+        "NUS-Singapore",
+        "大學組",
+        "4",
+        "主要用途從工業監測移到早期研發"
+      ],
+      [
+        "NYCU-Taiwan",
+        "大學組",
+        "4",
+        "讀過競爭對手的文件後撤回原本宣稱的優勢"
+      ],
+      [
+        "Oxford",
+        "大學組",
+        "4",
+        "放棄活體共生菌底盤，改用熱滅活酵母，並公開這個選擇的代價"
+      ],
+      [
+        "PSI Korea",
+        "高中組",
+        "4",
+        "關閉自動曝光並固定影像條件；把儀器與材料分開處理"
+      ],
+      [
+        "Princeton",
+        "大學組",
+        "4",
+        "從流程中移除 AlphaFold3；放棄 IL-6 與 amyloid-beta 標的"
+      ],
+      [
+        "QingdaoAcademy",
+        "高中組",
+        "4",
+        "一鍋式製程拆成兩段；放棄 pH 開關；加入脫鹽與內毒素控制"
+      ],
+      [
+        "RDFZ-China",
+        "高中組",
+        "4",
+        "宿主換成 C41(DE3)；金屬錨件改用現地石材"
+      ],
+      [
+        "SEHS",
+        "高中組",
+        "4",
+        "適應症從肝癌移到胃癌；依每一種形式重新測試結合能力"
+      ],
+      [
+        "SMS-Shenzhen",
+        "高中組",
+        "4",
+        "目標客戶從前端回收業者移到濕法冶金的尾端流程"
+      ],
+      [
+        "SUIS-SFLS",
+        "高中組",
+        "4",
+        "交付成果從成品敷料改寫為完成特性分析的蛋白質加品管紀錄"
+      ],
+      [
+        "Stanford University",
+        "大學組",
+        "4",
+        "放棄燒傷，改做蟹足腫；目標從預防移到已形成的疤痕"
+      ],
+      [
+        "Stockholm",
+        "研究生組",
+        "4",
+        "放棄開放釋放，改為設置在膜生物反應器階段的密閉反應器"
+      ],
+      [
+        "TAU-Israel",
+        "研究生組",
+        "4",
+        "標記依淺層與深層病灶分層；生物感測器降級為初步分流用"
+      ],
+      [
+        "TU Delft",
+        "研究生組",
+        "4",
+        "放棄抗生素，改用 AMP；以預先塗層的植入物取代手術室現調的膏劑"
+      ],
+      [
+        "UAlberta",
+        "大學組",
+        "4",
+        "放棄結合口袋釋放機制；放棄酵母改用 E. coli；GFP 換成 mScarlet"
+      ],
+      [
+        "UCAS-China",
+        "大學組",
+        "4",
+        "放棄 NKX2-1 載運基因改用 SLPI；重新定位為氣喘的維持治療"
+      ],
+      [
+        "UCNZ",
+        "大學組",
+        "4",
+        "放棄分散式廠房，改為單一中央設施；縮小永續性聲稱的範圍"
+      ],
+      [
+        "UFABC-Brazil",
+        "研究生組",
+        "4",
+        "以試紙取代需要移液的無細胞反應；警示改送到支持網絡"
+      ],
+      [
+        "UNILausanne",
+        "研究生組",
+        "4",
+        "在模型自身的建議之外仍保留防禦策略；明確宣告模型範圍就是其限制"
+      ],
+      [
+        "UOttawa",
+        "大學組",
+        "4",
+        "目標物流從瀝青移到柴油；在 P&ID 中加入 pH 控制迴路"
+      ],
+      [
+        "UZurich",
+        "研究生組",
+        "4",
+        "放棄機器學習計畫，改用成熟軟體；模型中加入根系團聚作用"
+      ],
+      [
+        "Uni-Padua-IT",
+        "大學組",
+        "4",
+        "刪去耐寒模組；把高氯酸鹽相關基因區隔到異形細胞中"
+      ],
+      [
+        "Vilnius-Lithuania",
+        "大學組",
+        "4",
+        "膠體軟體從影像分類改為條帶距離比對"
+      ],
+      [
+        "WUXI-DSAS",
+        "高中組",
+        "4",
+        "切除 gtdT 以恢復線性；輸出改為肌酸酐比值"
+      ],
+      [
+        "WageningenUR",
+        "研究生組",
+        "4",
+        "新增生物感測與捕捉模組；讀出改為釋出的氟離子"
+      ],
+      [
+        "William-and-Mary",
+        "大學組",
+        "4",
+        "讀出改為 CFU 存活數；加入海水微宇宙實驗"
+      ],
+      [
+        "Worldshaper-Shanghai",
+        "高中組",
+        "4",
+        "放棄能力建構路線改為技術授權；刪除日照更環保的聲稱"
+      ],
+      [
+        "XJTLU-China",
+        "大學組",
+        "4",
+        "把成功重新定義為可溶性蛋白質，而不是總表現量"
+      ],
+      [
+        "ASIJ-Tokyo",
+        "高中組",
+        "3",
+        "定位從替代品改為額外來源；加入貼片途徑"
+      ],
+      [
+        "Baltimore",
+        "高中組",
+        "3",
+        "加入保存性研究與專利策略；這些改變與實際建置沒有直接關係"
+      ],
+      [
+        "CalPolySLO",
+        "大學組",
+        "3",
+        "加入存活性測試與誤用評估框架；建置本身沒有改變"
+      ],
+      [
+        "DKU",
+        "大學組",
+        "3",
+        "依應用場景設定免疫原性閾值，工具輸出更清楚；意見歸因是集體性的"
+      ],
+      [
+        "GHCIS",
+        "高中組",
+        "3",
+        "依未具名的業界建議，微流體形式改為濾紙"
+      ],
+      [
+        "GU Frankfurt",
+        "研究生組",
+        "3",
+        "以結合物準確度作為主要限制條件；最大的改變是流程上的"
+      ],
+      [
+        "Kyoto",
+        "大學組",
+        "3",
+        "放棄食品主題並重新界定問題；具體改變沒有逐項列出"
+      ],
+      [
+        "Peking",
+        "大學組",
+        "3",
+        "放棄廣效農藥與粗放生物防治路線；因果鏈沒有歸因"
+      ],
+      [
+        "SDU-Denmark",
+        "研究生組",
+        "3",
+        "目標移向穩定的低功率發電；沒有具名來源"
+      ],
+      [
+        "SJTU-BioX-Shanghai",
+        "大學組",
+        "3",
+        "重新定位為清創後使用、具物理圍堵的敷料；來源未具名"
+      ],
+      [
+        "Toronto",
+        "研究生組",
+        "3",
+        "偏好密閉生物反應器與高同源性酵素；利害關係人未具名"
+      ],
+      [
+        "UCL",
+        "大學組",
+        "3",
+        "找出法規落差並建立技術經濟分析模型；裝置本身沒有改變"
+      ],
+      [
+        "UPF-Barcelona",
+        "大學組",
+        "3",
+        "核心主張從整體土壤水分縮小為根部的水合層"
+      ],
+      [
+        "ZJU-China",
+        "大學組",
+        "3",
+        "材料設計中成本的權重提高；意見歸因是彙總的"
+      ],
+      [
+        "ZQT-Nanjing",
+        "高中組",
+        "3",
+        "在一份 397 人的問卷之後，從一般護膚收斂到屏障修復"
+      ],
+      [
+        "BAID-China",
+        "高中組",
+        "2",
+        "依受眾區分溝通深度；修訂無障礙相關產出"
+      ],
+      [
+        "BNDS-China",
+        "高中組",
+        "2",
+        "從同儕隊伍借用工作流程紀律；其餘都是框架層面的"
+      ],
+      [
+        "BOKU-Vienna",
+        "研究生組",
+        "2",
+        "聲稱關鍵設計決定有所改變，但沒有說是哪些"
+      ],
+      [
+        "CAU-China",
+        "大學組",
+        "2",
+        "報告了來自馬拉威與尚比亞的需求；沒有記錄任何設計後果"
+      ],
+      [
+        "GreatBay-SCIE",
+        "高中組",
+        "2",
+        "因汙名化的考量更改標語；設計理念的歸因很鬆散"
+      ],
+      [
+        "HBUT-China",
+        "大學組",
+        "2",
+        "具名病毒學家提供意見納入風險評估；沒有陳述任何設計後果"
+      ],
+      [
+        "Jilin-China",
+        "大學組",
+        "2",
+        "以雙迴路重新界定什麼算成功；沒有呈現後果"
+      ],
+      [
+        "KIT",
+        "研究生組",
+        "2",
+        "把問卷轉成兩項包容性交付成果；科學本身沒有動"
+      ],
+      [
+        "Labi-Taiwan",
+        "高中組",
+        "2",
+        "採用互補而非取代的定位，以及偵測而非診斷的聲明"
+      ],
+      [
+        "Mingdao",
+        "高中組",
+        "2",
+        "五個誠實的問題，包括一個不做這個專案的條件；沒有記錄設計改變"
+      ],
+      [
+        "UMA Malaga",
+        "大學組",
+        "2",
+        "問題重新圍繞診斷路徑而非裝置來界定"
+      ],
+      [
+        "UOregon",
+        "研究生組",
+        "2",
+        "廠區操作人員確認了這個落差；公平性的框架被塑形，設計沒有"
+      ],
+      [
+        "NIS Almaty-Medeu",
+        "高中組",
+        "1",
+        "事先公布了問題；還沒有記錄任何回答或後果"
+      ],
+      [
+        "Yucai-SZ",
+        "高中組",
+        "1",
+        "一份 719 份回覆的問卷檢驗了前提；沒有記錄任何後果"
+      ]
     ]
   },
   "method": "Every team in this report is a Top 10 or special-prize winner or nominee, so this is the most decorated tenth of the competition and not a representative sample. Read '64 of 93 closed the loop' as 'closing the loop is normal among teams that win things', not as a statement about iGEM at large. Every team file with any good.ihp content was scored on the four-point rubric from what the file itself states: a 4 required a named stakeholder, a specific thing said, and a change to the build, the deployment, the readout, the safety design or the business model that the file ties to that input. Teams whose only documented consequence was a change of framing, language, education material or evidence package scored 2 or 3 however elaborately the process was branded, and awards were ignored throughout. The rubric cannot verify that a change was made because of the advice rather than attributed to it afterwards, cannot see the wiki behind the summary, and cannot distinguish a thin causal chain from a thin write-up of a thick one. Files continued to land while the scoring ran; all 93 present at the end were read and scored, so the set is complete as of writing but not closed.",
+  "method_zh": "本報告中的每一支隊伍都是 Top 10 或特別獎的得主或入圍者，所以這是整個競賽中獲獎最多的那十分之一，不是代表性樣本。「93 支中有 64 支閉合了迴路」要讀成「在會得獎的隊伍裡，閉合迴路是常態」，而不是關於 iGEM 整體的陳述。每一份有 good.ihp 內容的隊伍檔案，都依檔案本身的陳述用四分制評分：要拿 4 分，必須有具名的利害關係人、一句具體說過的話，以及檔案明確連回該意見的建置、部署、讀出、安全設計或商業模式上的改變。只記錄到框架、語言、教育材料或證據包有所改變的隊伍，不論流程被包裝得多華麗，都只得 2 或 3 分，而獎項在整個過程中都不納入考量。這套評分標準無法確認某項改變是因為那個建議而做，還是事後才歸因於它；看不到摘要背後的 wiki；也無法區分一條單薄的因果鏈，和一條厚實因果鏈的單薄書面紀錄。評分進行期間仍持續有檔案送進來；最後存在的 93 份全都讀過並評分，所以這個集合在撰寫時是完整的，但沒有封閉。",
   "scored": 93,
   "kicker_zh": "原創分析"
 }
