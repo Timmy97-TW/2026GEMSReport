@@ -393,6 +393,47 @@ def parallel_audit(root="research"):
     return out
 
 
+def md_audit(root="research"):
+    """Flag strings where rich() in app.js would leave a literal asterisk on the page.
+
+    rich() is exactly two replacements and the bold one is \\*\\*([^*]+?)\\*\\* -- its content
+    may NOT contain an asterisk. So an italic nested inside bold ("**a *b* c**") never matches
+    the bold rule at all and the ** ships raw to the reader; a triple run does the same. Four
+    such strings were live on 20 Nov 2026, two of them in the roadmap. This simulates both
+    rules and reports any asterisk that survives. JS \\w is [A-Za-z0-9_] and is NOT Python's
+    Unicode \\w, so the classes are spelled out or every CJK string misreports.
+    """
+    W = "A-Za-z0-9_"
+    bold = re.compile(r"\*\*([^*]+?)\*\*")
+    ital = re.compile(r"(^|[^*" + W + r"])\*([^*\n]+?)\*(?![*" + W + r"])")
+    hits = []
+    for path in sorted(glob.glob(os.path.join(root, "**", "*.json"), recursive=True)):
+        try:
+            doc = json.load(io.open(path, encoding="utf-8"))
+        except (ValueError, OSError) as e:
+            print("  markdown audit could not read %s: %s" % (path, e))
+            continue
+
+        def walk(o, key=""):
+            if isinstance(o, dict):
+                for k, v in o.items():
+                    walk(v, k)
+            elif isinstance(o, list):
+                for v in o:
+                    walk(v, key)
+            elif isinstance(o, str) and "**" in o:
+                out = ital.sub(r"\1<em>\2</em>", bold.sub(r"<strong>\1</strong>", o))
+                # A LONE surviving asterisk is fine and usually intended -- allele names such
+                # as HLA-A*01, a glob, a footnote marker. Only a surviving ** is always wrong,
+                # because the reader sees the markup instead of bold text.
+                if "**" in out:
+                    i = out.index("**")
+                    hits.append((path, key, out[max(0, i - 30):i + 30].replace("\n", " ")))
+
+        walk(doc)
+    return hits
+
+
 def char_audit(root="research"):
     """Flag Simplified characters, Cyrillic, Greek runs and English words
     stranded inside Chinese prose. Returns a list of (path, kind, sample)."""
@@ -689,6 +730,13 @@ def main():
             print("  %-46s %-26s %s" % (path, kind, sample))
         if len(pa) > 20:
             print("  ... and %d more" % (len(pa) - 20))
+    md = md_audit()
+    if md:
+        print("\nmarkdown audit \u2014 %d string(s) would show a raw asterisk:" % len(md))
+        for path, key, sample in md[:12]:
+            print("  %-46s %-14s %s" % (path, key, sample))
+        if len(md) > 12:
+            print("  ... and %d more" % (len(md) - 12))
     ch = char_audit()
     if ch:
         print("\ncharacter audit — %d to look at:" % len(ch))
