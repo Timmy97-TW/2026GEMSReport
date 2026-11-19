@@ -13,10 +13,10 @@
       "kicker_zh": "建模",
       "title": "Closing the model–data loop is the single best predictor of a Top 10",
       "title_zh": "閉合模型與資料的迴圈，是 Top 10 最強的單一預測因子",
-      "body": "Teams that both fit a model to their own measured data and validate it against something held back reached a Top 10 at **71%**; teams that did not, at **40%**. All four who closed the loop without a Top 10 won a major special prize anyway. It needs no GPU and no licence.",
-      "body_zh": "既以自身量測資料擬合模型、又用保留資料加以驗證的團隊，進入 Top 10 的比例是 **71%**；沒有這麼做的則是 **40%**。閉合了迴圈卻未進 Top 10 的那四支，全都拿下了重要特別獎。這件事不需要 GPU，也不需要授權。",
+      "body": "Teams that both fit a model to their own measured data and validate it against something held back reached a Top 10 at **53%**; teams that did not, at **23%** — less than half the rate. All nine who closed the loop without a Top 10 won or were nominated for a major special prize anyway. It needs no GPU and no licence.",
+      "body_zh": "既以自身量測資料擬合模型、又用保留資料加以驗證的團隊，進入 Top 10 的比例是 **53%**；沒有這麼做的則是 **23%**，不到一半。閉合了迴圈卻未進 Top 10 的那九支，全都拿下或入圍了重要特別獎。這件事不需要 GPU，也不需要授權。",
       "chips": [
-        "71% vs 40%"
+        "53% vs 23%"
       ],
       "link": "drylab"
     },

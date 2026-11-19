@@ -17,8 +17,8 @@ English and Traditional Chinese throughout; the switch is top right and is remem
 Ten original cross-team analyses sit on the site. The short version:
 
 - **Closing the model–data loop is the single best predictor of a Top 10.** Teams that both fit a model to
-  their own measured data *and* validate it against something held back reached a Top 10 at 71%, against 40%
-  for those that did not. All four who closed the loop without a Top 10 won a major special prize anyway.
+  their own measured data *and* validate it against something held back reached a Top 10 at 53%, against 23%
+  for those that did not. All nine who closed the loop without a Top 10 won or were nominated for a major special prize anyway.
 - **At high-school level the differentiator is evaluation discipline, not tools.** Eton-College-UK used
   logistic regression and a scoring matrix but ran cluster-aware cross-validation, a label-shuffle control and
   an ablation. Lambert-GA won Best Model for benchmarking the confidence metrics themselves — a 38-metric

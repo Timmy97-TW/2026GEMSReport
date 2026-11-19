@@ -160,7 +160,7 @@ of tokens of fetching. Keep doing this.
 
 | id | tab | the finding |
 |---|---|---|
-| technique-census | drylab | Teams that fit AND validate reach Top 10 at 71% vs 40%. AlphaFold still dominates iGEM (19 of 54) though the field moved to open models. COPASI is dead (1 mention); Python won. High-school teams do MORE techno-economic analysis than undergraduates. |
+| technique-census | drylab | Teams that fit AND validate reach Top 10 at 53% vs 23% (recomputed on all 106 files; an early 54-file snapshot said 71/40). AlphaFold still dominates iGEM (19 of 54) though the field moved to open models. COPASI is dead (1 mention); Python won. High-school teams do MORE techno-economic analysis than undergraduates. |
 | highschool-ceiling | drylab | The HS differentiator is evaluation discipline, not tools. Lambert-GA won Best Model by benchmarking the confidence metrics themselves (38-metric ensemble, ROC-AUC 0.541, its own hit not top-scoring). GCGS is the control: Top 10 with no model page at all. |
 | software-afterlife | drylab | 8 of 21 award-winning tools are live. The separating habit is a hosting decision made months early — every live tool was up on freeze day, every source-only tool lists localhost. Zero stars/forks anywhere. |
 | ihp-depth | good | 64 of 93 closed a real stakeholder-to-design loop — but almost every loop was closed by a credentialled technical expert. The publics and patients the criterion is about changed the vocabulary, not the vector (6-7 exceptions in 93). |
