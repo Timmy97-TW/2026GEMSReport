@@ -635,3 +635,66 @@ entrant list, organiser type could be measured on all 423 accepted teams instead
 community lab; the undergraduate section has none). It confers nothing — **14 of 53 commercial high-school
 teams were decorated (26%) against 26 of 94 others (28%).** GEMS-Taiwan is registered commercial, verified
 directly at `api.igem.org/v1/teams/6072`. All 106 decorated teams matched the roster by name.
+
+## Session 4, part 2 — the Judging tab (user request, 20 Nov ~02:40)
+
+The user asked, directly, for a deep comparison of **HongKong-JSS, Lambert-GA and GEMS-Taiwan** against iGEM's
+finalist-selection questions, an assessment of **where GEMS specifically lost**, and then a full High School
+Top 10 analysis — all of it **on a new site tab**. They then went to bed and asked for it finished by morning.
+Two tangential agents (field-base-rates, award-economics) were stopped to concentrate the budget; both had
+already verified their numbers against the live API and their scratchpads under `baserates/` and `awards/`
+are worth picking up in a later session.
+
+**The nine questions** (the user supplied them; question 9 is excluded throughout because it concerns the live
+judging session and leaves no public record — stated in the method note of every block on the tab):
+1 impressive · 2 did it work · 3 impact · 4 engineering principles · 5 human practices · 6 how much was the
+team's own work · 7 built on synthetic biology and standard components · 8 documented on Wiki and Registry.
+
+**New tab**: `{ id: "judging", en: "Judging", zh: "評審標準" }`, inserted second in the bar, with
+`viewJudging()` and an explicit branch in `render()`. Note for anyone adding a tab later: the dispatch in
+`render()` ends in a bare `else h = viewRoadmap()`, so a new tab without its own branch silently renders the
+roadmap instead of looking broken. Add the branch.
+
+**The fact the tab is built on, verified against results2026.json and the API:**
+
+| Team | Placing | Special wins | Noms |
+|---|---|---|---|
+| Lambert-GA | Grand Prize winner | 3 (Model, Wiki, SDI) | 1 |
+| HongKong-JSS | **1st Runner-up** | **0** | 4 |
+| GEMS-Taiwan | Top 10 | **3** (Measurement, Hardware, IHP) | 3 |
+
+GEMS tied the Grand Prize winner on special-award wins and finished off the podium; the team that came second
+won none. Special awards are judged one dimension at a time; finalists are judged on the whole project. That
+is the frame, and it is why the eight questions are the right lens rather than a rhetorical device.
+
+### Verified directly by the manager before publishing — GEMS's own raw data
+
+`protocol-reproducibility` claimed GEMS's wiki carries `csv: null` with a note reading "ill give data later".
+Publishing that about the report author's own team demanded first-hand verification. It checks out exactly, at
+a live public URL:
+
+`https://2026.igem.wiki/gems-taiwan/static/hardware/photometer/js/growth-data.js` (HTTP 200, 3,002 bytes)
+
+```
+// ─── THE ONE PLACE THE RAW DATA GOES ───
+// The owner, 15 Oct: "ill give data later". Until then each `csv` below is null, and the two charts draw
+// the series TRACED from the team's chart images (GROWTH_TRACED in js/...)
+window.BIO_GROWTH = {
+  growth_c1: { unit: "h", csv: null },     // DBTL 1, 22 °C
+  growth_c2: { unit: "min", csv: null }    // DBTL 2, 37 °C
+}
+```
+
+The rendered pages carry the matching public captions — "redrawn from the team's chart" — and the page source
+on `hardware-bioreactor` documents the method in detail: *"bars read from the image's pixels against its
+gridlines (+-0.02)"*, *"points read from the image's pixels against its gridlines (+-0.005 mM)"*. One comment
+records an unresolved unit conflict shipped as a TODO: *"its axis says mg/mL, but the kit's standard curve and
+samples are in ug/mL, so ug/mL here: CHECK with the team"*.
+
+**How to frame this fairly, which matters more than the sharpness of it.** GEMS's wiki is unusually candid: it
+*tells the reader* the figures are redrawn and states its pixel-reading uncertainties, which is exactly the
+provenance habit the dataviz analysis praised in other teams. But candour about tracing is not the same thing
+as publishing the numbers. A judge on question 8 asks whether a stranger can check the claim, and a chart
+traced from a picture of a chart cannot be checked — the uncertainty is bounded by the tracing, not by the
+experiment. Also worth noting: the GEMS wiki is static HTML, not a Vite SPA, so all of this is plainly
+fetchable with curl, unlike most 2026 wikis.
