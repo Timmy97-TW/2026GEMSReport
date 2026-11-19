@@ -487,7 +487,10 @@ def main():
     print("  index.html     %d script tags versioned" % stamp_index(stamp))
 
     zh_full, zh_part, zh_none = zh_audit(teams)
-    zh_ins = sum(1 for b in insights if b.get("body_zh"))
+    # a block counts as translated when the prose it actually has is translated;
+    # the findings index has no body, only a lede and cards.
+    zh_ins = sum(1 for b in insights
+                 if (b.get("body_zh") if b.get("body") else b.get("lede_zh")))
     print("\n%d team files · %d academic trends · %d industry trends · %d insight blocks (%d translated)"
           % (len(teams), len(trends["academic"].get("trends", [])),
              len(trends["industry"].get("trends", [])), len(insights), zh_ins))
