@@ -334,3 +334,44 @@ Used immediately: `research/teams/6053.json` (HKSSC) transcribed its own award-w
 `BBa_26SZRXOY` with a letter O. The real accession is `BBa_26SZRX0Y` with a zero — PrbA coding sequence,
 CDS, 1,602 bp — confirmed by the slug endpoint in both directions and by the registry's own listing of the
 team's "PrbA's family" collection. Corrected.
+
+---
+
+## IMPORTANT correction from the user — what "Science for Good" means
+
+Read this before touching the `good` tab. The original brief listed Science for Good alongside iGEM's
+judging criteria (public engagement, integrated human practices, real-world application), and the tab was
+built as if those three *were* the subject. **They are not.** The user corrected it directly:
+
+> Science for Good is GEMS stepping outside the competition frame — a club-form programme, open and without
+> a deadline, where students work continuously and from several directions on a few good problems: ones with
+> social meaning, that can land somewhere real, that produce a quantifiable effect, and that can scale.
+
+The worked example the user gave: through ReLEAF, GEMS met a teacher who farms by natural-farming
+principles. Next year the team could go back up the mountain **having set the synthetic-biology requirement
+aside**, listen to what that farm actually needs, and use science to build a solution — or take up the
+seed-exchange platform she raised. *Science for Good means that kind of opportunity and idea*, not a rubric.
+
+What changed on the site as a result:
+- New `insights/good-definition.json` (order 5) — the definition, the four selection criteria written out
+  as cards, what the programme is not (not an iGEM incubator, not outreach), and a checklist for running it.
+  It argues the competition's costs from this report's own evidence: 8 of 21 tools still alive, zero stars
+  and forks anywhere, no inter-lab measurement ring in 106 teams, nine or ten of 71 loops closed by a
+  non-expert. Those are deadline artefacts, and the programme is the container for what a deadline cannot hold.
+- New `insights/good-pipeline.json` (order 20) — the actual pipeline, which is nearly empty and says so.
+  Two live entries from the ReLEAF season's relationships, three proposals derived from this report, with a
+  table scoring every entry against the four criteria and an explicit column for "did anyone outside GEMS
+  ask for this" (No for all three proposals). The governing idea: **relationships generate problems, project
+  searches generate topics** — so 2027 should go back to the places 2026 reached, without a proposal in hand.
+- `app.js` — on the `good` tab the three galleries are now headed "Worked examples", not "Evidence", with a
+  lead-in saying to read them as examples for the programme rather than as a rubric.
+- `report.json` overview section and the README now both state the distinction up front.
+
+**Privacy decision, deliberate and worth preserving:** the partner's name and her farm's specific
+difficulties are *withheld* on the public site. They were shared in conversation, not published by her, and
+consent to put a named person's difficulties on a public page was never sought. The pipeline says so in the
+body and in the method note. If the user wants her named, that is their call to make, not the report's.
+
+Follow-on work this opens up (not started):
+- The pipeline wants real entries. The honest next step is a listening visit, not more analysis.
+- A short "how a problem enters and leaves the pipeline" governance note, once the programme has run once.
