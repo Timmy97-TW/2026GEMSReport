@@ -1,0 +1,347 @@
+{
+ "id": "parts-census",
+ "tab": "teams",
+ "order": 36,
+ "kicker": "Original analysis",
+ "kicker_zh": "原創分析",
+ "title": "What makes a part worth other people's time",
+ "title_zh": "什麼樣的元件值得別人花時間",
+ "lede": "A census of the four 2026 parts awards. Taiwan took six awards from thirteen teams and not one parts nomination — so we read the registry pages themselves. The winning parts are not the clever ones. They are the ones carrying a datasheet.",
+ "lede_zh": "針對 2026 年四項元件獎的普查。台灣十三支隊伍拿下六個獎項，卻沒有任何一項元件類提名——所以我們直接去讀 registry 頁面本身。得獎的元件不是最聰明的那些，而是附了一份規格表（datasheet）的那些。",
+ "body": "Four awards, eleven winners across the three sections, and one thing separates them from the forty-odd nominees: **what is actually on the registry page**. The 2026 registry (now at registry.igem.org, with every part reachable as a server-rendered page and a public read API) gives each part a Design, Experiment, Characterisation, Application and Discussion slot. The winners fill them. We measured the characters of documentation on each part page we could resolve. The winners' headline parts carry between **10,000 and 83,000 characters** across three to six documents. The nominee parts we sampled carry **440 to 2,500 characters**, usually a single Design note — and several carry nothing at all.\n\nThe empty pages are the real finding, because they belong to *nominated* teams. QingdaoAcademy's ulvan lyases (BBa_26QJCNH8, BBa_26ZVH9D0, BBa_265B8WZF) were nominated for Best New Basic Part at high-school level and each page has **zero documentation**: a title, a sequence, nothing else. HKU-HongKong's aTi-14 peptide (BBa_265GWS2B, 45 bp) was a Best New Composite Part nominee with zero documentation. Bist-China registered PdhR (BBa_26OKC42U) and LldR (BBa_26S2KNZ1) with no documentation at all, and put the real material on two near-duplicate variant pages instead. Nomination is cheap. A page is not.\n\n**Novelty loses to documentation, decisively.** The high-school Best New Basic Part winner, HKSSC, won with BBa_262HI0IB — a *247 bp native promoter and RBS lifted straight out of GenBank AY077721.1*. Nothing about the sequence is new. What is new is that nobody had ever registered or characterised it: the team said so, predicted the promoter with BPROM (LDF 5.30, −10 box TATAAT at position 163, −35 box TTGAAA at 142), cloned it into the promoterless distribution-kit vector BBa_J435300, and reported the gels, the band sizes (974 bp insert, 2,680 bp vector) and the NanoDrop triplicates. The GFP read-out lives on the composite BBa_26MSEOFB, linked from the basic part. That is an entire award won on a promoter trap, a free web tool and honest bookkeeping. It is the single most copyable result in the whole census.\n\nThe best datasheet in the cohort is TU Darmstadt's GeoEsterase (BBa_269NN9UX, Best New Basic Part, Overgrad): activity on *p*-nitrophenyl hexanoate read at 396 nm with the extinction coefficient stated (ε = 18,100 M⁻¹cm⁻¹), 0.5 µM enzyme against 0.5/1/2/4 mM substrate, at 22, 32, 37, 42 and 47 °C, **every value the mean of a triplicate**, Michaelis-Menten fitted by least squares, and a table of V_max, K_M, k_cat and k_cat/K_M (894 M⁻¹s⁻¹ at 42 °C in buffer). It also reports that the engineered ThermoGeoEsterase *underperformed* the parent at every temperature and that the thermal shift assay found no improvement — and says the plate reader could not exceed 47 °C. Winners write down what did not work, in units.\n\nDoes the evidence live in the registry or link back to a wiki that will rot? **In the registry.** Across seven winning parts we counted the image hosts: 4 to 21 figures per part, every one served from registry.igem.wiki/documentation — the registry's own asset store, not the team site. Only TU Darmstadt and WHU-China link out to 2026.igem.wiki at all, and then as cross-references for extra detail, not as the place the data lives. The same holds for Best Part Collection: all three winners carry collection-level documentation (GHCIS 25,665 characters, Heidelberg 76,231, GU Frankfurt 111,681), while **eight of the twelve nominated collections have no collection page text whatsoever** — ETH-Zurich, Bonn, UTDallas, Marburg aside, Tsinglan, HFI, ASIJ-Tokyo, YHA-HWFLA and UCS-A simply list parts. A bag of parts with a title is not a collection.\n\nOne hypothesis fails. **Nothing in the 2026 registry shows a winning part being reused by another team.** Every non-zero *Used in* count on a 2026 winner points back at that team's own composites: Neo-IL-2 (BBa_26WNS0EJ) feeds BBa_26V37TWZ and BBa_26VH4F2F, both HBUT-China's; BBa_262HI0IB feeds HKSSC's own BBa_26MSEOFB; Michigan's M1 thermometer feeds its own geneblock. Reuse runs the other way, and it runs *backwards in time*: GCGS improved BBa_K2315014 from Shanghai_tech 2017 and borrowed Prhl(LR) (BBa_K1529310) from Tokyo_Tech 2014; Kyoto's Leucine ZipPart collection folds in five prior-year zippers and re-measures them. A part built in 2026 pays out in 2028. That is the actual timescale of a durable asset, and it is an argument for starting now rather than against it.",
+ "body_zh": "四個獎項、三個組別共十一位得主，而把他們和四十幾支入圍隊伍分開的只有一件事：**registry 頁面上到底有什麼**。2026 年的 registry（現在位於 registry.igem.org，每個元件都有伺服器端渲染的頁面與公開的讀取 API）為每個元件提供 Design、Experiment、Characterisation、Application 與 Discussion 欄位。得獎者把它們填滿。我們量測了每個能解析到的元件頁面上的文件字元數：得獎者的主打元件在三到六份文件中帶有 **10,000 到 83,000 個字元**；我們抽樣的入圍元件則是 **440 到 2,500 個字元**，通常只有一份 Design 筆記——而且有好幾個根本什麼都沒有。\n\n空白頁面才是真正的發現，因為它們屬於**已經入圍**的隊伍。QingdaoAcademy 的 ulvan lyase（BBa_26QJCNH8、BBa_26ZVH9D0、BBa_265B8WZF）入圍高中組 Best New Basic Part，每一頁的文件都是**零**：一個標題、一段序列，沒有別的。HKU-HongKong 的 aTi-14 胜肽（BBa_265GWS2B，45 bp）入圍 Best New Composite Part，文件同樣是零。Bist-China 登錄的 PdhR（BBa_26OKC42U）與 LldR（BBa_26S2KNZ1）完全沒有文件，真正的內容反而放在兩個幾乎一模一樣的變體頁面上。入圍很便宜，一個頁面不是。\n\n**新穎性輸給文件，而且輸得乾淨俐落。** 高中組 Best New Basic Part 得主 HKSSC 靠 BBa_262HI0IB 獲獎——那是一段*直接取自 GenBank AY077721.1 的 247 bp 天然啟動子加 RBS*。序列本身毫無新意。新的是：從來沒有人登錄或鑑定過它。隊伍把這件事講清楚，用 BPROM 預測啟動子（LDF 5.30、−10 box TATAAT 位於第 163 位、−35 box TTGAAA 位於第 142 位），把它接進配送套件中的無啟動子載體 BBa_J435300，並報出電泳圖、條帶大小（插入片段 974 bp、載體 2,680 bp）與 NanoDrop 三重複數據。GFP 讀值放在複合元件 BBa_26MSEOFB 上，並從基礎元件連結過去。整座獎就是靠一次啟動子捕捉、一個免費網頁工具與誠實的記帳拿下的。這是整份普查中最值得照抄的一項結果。\n\n這批隊伍裡最好的規格表是 TU Darmstadt 的 GeoEsterase（BBa_269NN9UX，Overgrad 組 Best New Basic Part）：以 *p*-nitrophenyl hexanoate 為受質、在 396 nm 讀值並明寫莫耳吸光係數（ε = 18,100 M⁻¹cm⁻¹），0.5 µM 酵素對上 0.5／1／2／4 mM 受質，溫度取 22、32、37、42、47 °C，**每一個數值都是三重複的平均**，以最小平方法擬合 Michaelis-Menten，並附上 V_max、K_M、k_cat 與 k_cat/K_M 的表格（緩衝液 42 °C 下為 894 M⁻¹s⁻¹）。他們同時寫明：經工程改造的 ThermoGeoEsterase 在每一個溫度下都*不如*親代，熱位移分析也看不出熱穩定性改善——並說明讀盤儀加熱上限只到 47 °C。得獎者會把失敗寫下來，而且帶單位。\n\n證據是放在 registry 裡，還是連回一個終將腐朽的 wiki？**在 registry 裡。** 我們統計了七個得獎元件的圖片來源：每個元件 4 到 21 張圖，全部由 registry.igem.wiki/documentation 提供，也就是 registry 自己的檔案庫，而不是隊伍網站。只有 TU Darmstadt 與 WHU-China 會連出到 2026.igem.wiki，而且是作為補充細節的交叉參照，不是資料所在之處。Best Part Collection 也一樣：三位得主都有集合層級的文件（GHCIS 25,665 字元、Heidelberg 76,231、GU Frankfurt 111,681），而**十二個入圍集合中有八個完全沒有集合頁面文字**——除了 Marburg 之外，ETH-Zurich、Bonn、UTDallas、Tsinglan、HFI、ASIJ-Tokyo、YHA-HWFLA 與 UCS-A 都只是把元件列出來。一袋元件加上一個標題，並不是一個集合。\n\n有一個假說失敗了。**2026 年的 registry 裡找不到任何得獎元件被別隊重複使用的跡象。** 2026 年得獎元件上所有非零的 *Used in* 計數，指向的都是同一隊自己的複合元件：Neo-IL-2（BBa_26WNS0EJ）供給 BBa_26V37TWZ 與 BBa_26VH4F2F，兩者都屬於 HBUT-China；BBa_262HI0IB 供給 HKSSC 自己的 BBa_26MSEOFB；Michigan 的 M1 溫度計供給自家的 geneblock。重複使用是往另一個方向走的，而且是*往回走*：GCGS 改良了 Shanghai_tech 2017 的 BBa_K2315014，並借用 Tokyo_Tech 2014 的 Prhl(LR)（BBa_K1529310）；Kyoto 的 Leucine ZipPart 集合收編了五個往年的 leucine zipper 並重新量測。2026 年做的元件，要到 2028 年才會回本。這才是「可持久的資產」真正的時間尺度，而這是現在就該開始做的理由，不是不做的理由。",
+ "cards": [
+  {
+   "kicker": "The depth gap",
+   "kicker_zh": "深度落差",
+   "title": "10,000 characters versus 440",
+   "title_zh": "10,000 字元對上 440",
+   "body": "Every winning headline part we resolved carries 10,388–83,030 characters of registry documentation across 3–6 typed documents (Design, Experiment, Characterisation, Application, Discussion). Squirrel-Beijing's high-school composite winner BBa_26BFFCJG tops the list at 83,030 characters and 12 registry-hosted figures. Sampled nominee parts: Vilnius-Lithuania 442–2,495, DTU-Denmark 520–1,188, mostly Design-only. Volume is not sufficient — UCAS-China's BBa_263ZN48F has 146,670 characters across 16 documents and only placed as a nominee — but below about 5,000 characters nothing in this cohort won anything.",
+   "body_zh": "我們解析到的每一個得獎主打元件，都帶有 10,388 至 83,030 字元的 registry 文件，分布在 3 到 6 份分類文件中（Design、Experiment、Characterisation、Application、Discussion）。Squirrel-Beijing 的高中組複合元件得主 BBa_26BFFCJG 以 83,030 字元與 12 張存放於 registry 的圖居冠。抽樣的入圍元件：Vilnius-Lithuania 442–2,495、DTU-Denmark 520–1,188，而且多半只有 Design。份量本身並不充分——UCAS-China 的 BBa_263ZN48F 有 16 份文件、146,670 字元，仍然只是入圍——但在這批隊伍裡，低於約 5,000 字元的沒有任何一個得獎。",
+   "chips": [
+    "BBa_26BFFCJG",
+    "83,030 characters",
+    "12 figures"
+   ],
+   "link": "https://registry.igem.org/parts/bba-26bffcjg",
+   "linkText": "Squirrel-Beijing's pNP sensor circuit"
+  },
+  {
+   "kicker": "The most teachable win",
+   "kicker_zh": "最值得學的一次獲獎",
+   "title": "An unremarkable 247 bp, documented properly",
+   "title_zh": "一段平凡的 247 bp，但文件做到位",
+   "body": "HKSSC won high-school Best New Basic Part with prbA's native promoter and RBS (BBa_262HI0IB), copied from GenBank AY077721.1. The argument was that nobody had registered it. BPROM gave LDF 5.30 with a TATAAT −10 box at position 163 and a TTGAAA −35 box at 142; the fragment went into the promoterless distribution vector BBa_J435300 by HindIII/KpnI; gels, 974 bp and 2,680 bp band sizes and triplicate NanoDrop A260/A280 are all on the page; the GFP read-out sits on the linked composite BBa_26MSEOFB. Total cost: one gBlock, one free web tool, one reporter.",
+   "body_zh": "HKSSC 以 prbA 的天然啟動子與 RBS（BBa_262HI0IB）拿下高中組 Best New Basic Part，序列直接取自 GenBank AY077721.1。他們的論點是：從來沒有人登錄過它。BPROM 給出 LDF 5.30，−10 box TATAAT 在第 163 位、−35 box TTGAAA 在第 142 位；片段以 HindIII/KpnI 接進無啟動子的配送載體 BBa_J435300；電泳圖、974 bp 與 2,680 bp 的條帶大小、三重複的 NanoDrop A260/A280 全都在頁面上；GFP 讀值放在連結過去的複合元件 BBa_26MSEOFB。總成本：一段 gBlock、一個免費網頁工具、一個報導基因。",
+   "chips": [
+    "BBa_262HI0IB",
+    "247 bp",
+    "BPROM LDF 5.30"
+   ],
+   "link": "https://registry.igem.org/parts/bba-262hi0ib",
+   "linkText": "BBa_262HI0IB on the registry"
+  },
+  {
+   "kicker": "What a datasheet looks like",
+   "kicker_zh": "一份規格表長什麼樣",
+   "title": "Units, replicates, conditions — and the failure",
+   "title_zh": "單位、重複、條件——以及失敗",
+   "body": "TU Darmstadt's GeoEsterase (BBa_269NN9UX) is the reference datasheet of 2026: p-nitrophenyl hexanoate at 396 nm with ε = 18,100 M⁻¹cm⁻¹ stated, 0.5 µM enzyme against 0.5/1/2/4 mM substrate at 22–47 °C, every point n = 3, Michaelis-Menten fitted by least squares, k_cat/K_M = 894 M⁻¹s⁻¹ at 42 °C. The Discussion then reports that the ProteinMPNN-redesigned ThermoGeoEsterase was worse than the parent at every temperature, that the thermal shift assay showed no gain, and that the plate reader could not exceed 47 °C so the test stopped there.",
+   "body_zh": "TU Darmstadt 的 GeoEsterase（BBa_269NN9UX）是 2026 年的規格表典範：以 p-nitrophenyl hexanoate 在 396 nm 讀值並明寫 ε = 18,100 M⁻¹cm⁻¹，0.5 µM 酵素對 0.5／1／2／4 mM 受質，溫度 22 至 47 °C，每個數據點 n = 3，以最小平方法擬合 Michaelis-Menten，42 °C 下 k_cat/K_M = 894 M⁻¹s⁻¹。接著 Discussion 直接寫明：以 ProteinMPNN 重新設計的 ThermoGeoEsterase 在每個溫度下都比親代差，熱位移分析看不出改善，而且讀盤儀無法超過 47 °C，所以測試就停在那裡。",
+   "chips": [
+    "BBa_269NN9UX",
+    "n = 3",
+    "ε = 18,100 M⁻¹cm⁻¹"
+   ],
+   "link": "https://registry.igem.org/parts/bba-269nn9ux",
+   "linkText": "GeoEsterase characterisation"
+  },
+  {
+   "kicker": "Best New Improved Part",
+   "kicker_zh": "Best New Improved Part",
+   "title": "Two winners, zero nominees",
+   "title_zh": "兩位得主，零入圍",
+   "body": "Nobody else entered. Both improved-part awards — Michigan at undergrad, GCGS at high school — were given with no nominee list at all. GCGS shows the template: name the parent (BBa_K2315014, Shanghai_tech 2017), name the defect (basal leakage without C4-HSL), make two stated changes (an SsrA-ASV degron on RhlR; swap wild-type Prhl for Tokyo_Tech 2014's Prhl(LR), BBa_K1529310), then benchmark the improved part BBa_26QSD9SO side by side against the parent and four other tag variants across a 0 / 10 µM / 100 µM / 1 mM C4-HSL gradient, normalised as RFU/OD₆₀₀, with growth curves showing no metabolic burden.",
+   "body_zh": "沒有別人報名。兩項 improved part 獎——大學組 Michigan、高中組 GCGS——都是在完全沒有入圍名單的情況下頒出的。GCGS 示範了範本：指名親代（BBa_K2315014，Shanghai_tech 2017）、指出缺陷（沒有 C4-HSL 時的基礎滲漏）、做出兩項明寫的更動（在 RhlR 上加 SsrA-ASV 降解標籤；把野生型 Prhl 換成 Tokyo_Tech 2014 的 Prhl(LR)，BBa_K1529310），再把改良後的 BBa_26QSD9SO 與親代及另外四個標籤變體並排比較，跨 0／10 µM／100 µM／1 mM 的 C4-HSL 梯度，以 RFU/OD₆₀₀ 正規化，並附生長曲線證明沒有代謝負擔。",
+   "chips": [
+    "BBa_26QSD9SO",
+    "parent BBa_K2315014",
+    "RFU/OD₆₀₀"
+   ],
+   "link": "https://registry.igem.org/parts/bba-26qsd9so",
+   "linkText": "GCGS's improved C4-HSL sensor"
+  },
+  {
+   "kicker": "Best Part Collection",
+   "kicker_zh": "Best Part Collection",
+   "title": "A shared grammar, or a bag of parts",
+   "title_zh": "共通文法，還是一袋零件",
+   "body": "Winners name their parts to a rule. Heidelberg's 18-item VOYAGE collection prefixes every entry with its function — GV-core:, Sensing:, Multiplexing:, Organize: — and GU Frankfurt's 25 items split cleanly by role into 4 HLA targets (Biological Region), 9 synNotch receptors (Engineered Region) and 12 shRNAs (NcRNA Gene): bind, trigger, silence. GHCIS's high-school winner is a 3 × 3 matrix: three AMR genes (mcr-1, blaNDM-1, blaKPC-2) × trigger RNA and reporter plasmid. Marburg's nominated CLiPPR, the largest collection at 246 parts, is the only one to state its assembly standard outright (MoClo, BsaI/BsmBI) — and still did not win.",
+   "body_zh": "得獎者為元件命名是有規則的。Heidelberg 的 18 項 VOYAGE 集合，每個條目都以功能為前綴——GV-core:、Sensing:、Multiplexing:、Organize:；GU Frankfurt 的 25 項則依角色乾淨地分成 4 個 HLA 標的（Biological Region）、9 個 synNotch 受體（Engineered Region）與 12 個 shRNA（NcRNA Gene）：結合、觸發、沉默。GHCIS 的高中組得主是一個 3 × 3 矩陣：三個抗藥性基因（mcr-1、blaNDM-1、blaKPC-2）× trigger RNA 與報導質體。入圍的 Marburg CLiPPR 是最大的集合（246 個元件），也是唯一明寫組裝標準的（MoClo、BsaI/BsmBI）——但仍然沒有得獎。",
+   "chips": [
+    "Heidelberg 18 items",
+    "GU Frankfurt 25 items",
+    "GHCIS 9 items"
+   ],
+   "link": "https://registry.igem.org/collections/5bceaa90-cc31-4958-a74f-cc3139ec02c2",
+   "linkText": "Heidelberg's VOYAGE collection"
+  },
+  {
+   "kicker": "The empty-page problem",
+   "kicker_zh": "空白頁面問題",
+   "title": "Eight of twelve nominated collections have no page text",
+   "title_zh": "十二個入圍集合中有八個沒有頁面文字",
+   "body": "All three Best Part Collection winners carry collection-level documentation: GHCIS 25,665 characters in 4 documents, Heidelberg 76,231 in 4, GU Frankfurt 111,681 in 7. Of the twelve nominated collections we checked, only Kyoto (40,761), NUS-Singapore (51,083), Princeton (68,005) and Marburg (58,778) have any — and Princeton's seven documents are all typed Design, with no characterisation document at all. ETH-Zurich, Bonn, UTDallas, Tsinglan, HFI, ASIJ-Tokyo, YHA-HWFLA and UCS-A registered a collection and left the page blank. Several of them, Tsinglan included, documented the individual parts well; nobody wrote the page that explains why the parts belong together.",
+   "body_zh": "三位 Best Part Collection 得主都有集合層級的文件：GHCIS 4 份共 25,665 字元、Heidelberg 4 份共 76,231、GU Frankfurt 7 份共 111,681。我們檢查的十二個入圍集合中，只有 Kyoto（40,761）、NUS-Singapore（51,083）、Princeton（68,005）與 Marburg（58,778）有文件——而 Princeton 的七份文件全部歸類為 Design，完全沒有 characterisation 文件。ETH-Zurich、Bonn、UTDallas、Tsinglan、HFI、ASIJ-Tokyo、YHA-HWFLA 與 UCS-A 則是登錄了集合卻把頁面留白。其中有幾隊（包括 Tsinglan）把個別元件寫得很好；但沒有人寫下那一頁，說明這些元件為什麼該放在一起。",
+   "chips": [
+    "8 of 12 blank",
+    "Princeton: no characterisation doc"
+   ],
+   "link": "https://registry.igem.org/collections/eda71dd5-c755-4b01-87cd-819d4222a108",
+   "linkText": "GHCIS's documented collection"
+  },
+  {
+   "kicker": "Reuse, honestly",
+   "kicker_zh": "誠實談重複使用",
+   "title": "'Used in' is self-citation — so far",
+   "title_zh": "「Used in」目前都是自我引用",
+   "body": "The registry now shows a Used in count on every part page, which is the closest thing to a reuse metric iGEM has. On the 2026 winners it only ever points at the same team's own composites. Nothing in this cohort was picked up by a stranger inside the competition year. But the winners themselves are heavy consumers of old parts: GCGS built on a 2017 part and a 2014 promoter, HKSSC used a distribution-kit vector, and nine of the fourteen items in Kyoto's leucine-zipper collection are prior-year BBa_K parts re-measured. The registry pays out on a two-to-ten year lag. That is a reason to start, not a reason to wait.",
+   "body_zh": "registry 現在在每個元件頁面上顯示 Used in 計數，這是 iGEM 目前最接近「重複使用」的指標。在 2026 年的得獎元件上，它指向的永遠是同一隊自己的複合元件。這批隊伍裡沒有任何元件在競賽當年被陌生人採用。但得獎者自己大量消費舊元件：GCGS 建立在一個 2017 年的元件與一個 2014 年的啟動子上，HKSSC 使用了配送套件的載體，Kyoto 的 leucine zipper 集合中十四項裡有九項是往年的 BBa_K 元件並重新量測。registry 的回報有兩到十年的遞延。這是該開始的理由，不是該等待的理由。",
+   "chips": [
+    "BBa_K2315014 (2017)",
+    "BBa_K1529310 (2014)",
+    "BBa_J435300"
+   ],
+   "link": "https://registry.igem.org/parts/bba-k2315014",
+   "linkText": "The 2017 parent GCGS improved"
+  }
+ ],
+ "table": {
+  "head": [
+   "Team",
+   "Section",
+   "Category",
+   "Part or collection",
+   "Registry documentation",
+   "Figures"
+  ],
+  "head_zh": [
+   "隊伍",
+   "組別",
+   "獎項",
+   "元件或集合",
+   "Registry 文件量",
+   "圖片"
+  ],
+  "rows": [
+   [
+    "HBUT-China",
+    "Undergrad",
+    "Best New Basic Part",
+    "BBa_26WNS0EJ Neo-IL-2 (CDS, 399 bp)",
+    "6 docs, 59,355 chars",
+    "18"
+   ],
+   [
+    "TU Darmstadt",
+    "Overgrad",
+    "Best New Basic Part",
+    "BBa_269NN9UX GeoEsterase (CDS, 879 bp)",
+    "4 docs, 68,204 chars",
+    "21"
+   ],
+   [
+    "HKSSC",
+    "High School",
+    "Best New Basic Part",
+    "BBa_262HI0IB prbA native promoter + RBS (247 bp)",
+    "2 docs, 10,388 chars",
+    "5"
+   ],
+   [
+    "WHU-China",
+    "Undergrad",
+    "Best New Composite Part",
+    "BBa_26TCR52M YhjH-mCherry-PopZ (1,958 bp)",
+    "4 docs, 35,441 chars",
+    "17"
+   ],
+   [
+    "Muenster-University",
+    "Overgrad",
+    "Best New Composite Part",
+    "Blocker_PCS:protease_NLR series (e.g. BBa_26ON4OVD)",
+    "0 docs; 300-char descriptions only",
+    "0"
+   ],
+   [
+    "Squirrel-Beijing",
+    "High School",
+    "Best New Composite Part",
+    "BBa_26BFFCJG PobR pNP-responsive RFP circuit",
+    "5 docs, 83,030 chars",
+    "12"
+   ],
+   [
+    "Michigan",
+    "Undergrad",
+    "Best New Improved Part",
+    "BBa_2623X9FE M1 RNA thermometer (38 bp)",
+    "4 docs, 13,798 chars",
+    "4"
+   ],
+   [
+    "GCGS",
+    "High School",
+    "Best New Improved Part",
+    "BBa_26QSD9SO pCon-RhlR-SsrA-ASV-Prhl(LR)-GFP",
+    "5 docs, 25,840 chars",
+    "11"
+   ],
+   [
+    "Heidelberg",
+    "Undergrad",
+    "Best Part Collection",
+    "VOYAGE gas-vesicle collection, 18 items",
+    "4 docs, 76,231 chars",
+    "11"
+   ],
+   [
+    "GU Frankfurt",
+    "Overgrad",
+    "Best Part Collection",
+    "HIDE collection, 25 items",
+    "7 docs, 111,681 chars",
+    "17"
+   ],
+   [
+    "GHCIS",
+    "High School",
+    "Best Part Collection",
+    "Toehold AMR collection, 9 items",
+    "4 docs, 25,665 chars",
+    "8"
+   ]
+  ],
+  "rows_zh": [
+   [
+    "HBUT-China",
+    "大學組",
+    "Best New Basic Part",
+    "BBa_26WNS0EJ Neo-IL-2（CDS，399 bp）",
+    "6 份文件、59,355 字元",
+    "18"
+   ],
+   [
+    "TU Darmstadt",
+    "研究生組",
+    "Best New Basic Part",
+    "BBa_269NN9UX GeoEsterase（CDS，879 bp）",
+    "4 份文件、68,204 字元",
+    "21"
+   ],
+   [
+    "HKSSC",
+    "高中組",
+    "Best New Basic Part",
+    "BBa_262HI0IB prbA 天然啟動子 + RBS（247 bp）",
+    "2 份文件、10,388 字元",
+    "5"
+   ],
+   [
+    "WHU-China",
+    "大學組",
+    "Best New Composite Part",
+    "BBa_26TCR52M YhjH-mCherry-PopZ（1,958 bp）",
+    "4 份文件、35,441 字元",
+    "17"
+   ],
+   [
+    "Muenster-University",
+    "研究生組",
+    "Best New Composite Part",
+    "Blocker_PCS:protease_NLR 系列（例如 BBa_26ON4OVD）",
+    "0 份文件；僅有約 300 字元的描述",
+    "0"
+   ],
+   [
+    "Squirrel-Beijing",
+    "高中組",
+    "Best New Composite Part",
+    "BBa_26BFFCJG PobR 對 pNP 反應的 RFP 迴路",
+    "5 份文件、83,030 字元",
+    "12"
+   ],
+   [
+    "Michigan",
+    "大學組",
+    "Best New Improved Part",
+    "BBa_2623X9FE M1 RNA 溫度計（38 bp）",
+    "4 份文件、13,798 字元",
+    "4"
+   ],
+   [
+    "GCGS",
+    "高中組",
+    "Best New Improved Part",
+    "BBa_26QSD9SO pCon-RhlR-SsrA-ASV-Prhl(LR)-GFP",
+    "5 份文件、25,840 字元",
+    "11"
+   ],
+   [
+    "Heidelberg",
+    "大學組",
+    "Best Part Collection",
+    "VOYAGE 氣泡囊集合，18 項",
+    "4 份文件、76,231 字元",
+    "11"
+   ],
+   [
+    "GU Frankfurt",
+    "研究生組",
+    "Best Part Collection",
+    "HIDE 集合，25 項",
+    "7 份文件、111,681 字元",
+    "17"
+   ],
+   [
+    "GHCIS",
+    "高中組",
+    "Best Part Collection",
+    "Toehold 抗藥性集合，9 項",
+    "4 份文件、25,665 字元",
+    "8"
+   ]
+  ]
+ },
+ "checklist": [
+  "Target Best New Improved Part first. In 2026 it had two winners and zero nominees across the whole competition — the only parts category where showing up is most of the work. It also needs no novel sequence, which suits a team without a protein-design pipeline.",
+  "Pick a parent part that already exists in the registry, has a stated defect, and runs in E. coli. Write its accession down on day one (GCGS used BBa_K2315014 from Shanghai_tech 2017). If you cannot name the parent and its defect in one sentence, you are not entering this category.",
+  "State the improvement as a list of discrete, named changes to the parent — not 'we optimised it'. GCGS's whole case is two lines: add an SsrA-ASV degron to RhlR, replace wild-type Prhl with Prhl(LR). Each change gets its own sub-part accession on the page.",
+  "Measure the parent and the improved part on the same plate, on the same day, with the same reporter. A side-by-side benchmark against the unmodified parent is the single non-negotiable requirement of this category.",
+  "Produce a dose-response or transfer function, not a yes/no. At least four inducer concentrations plus a blank and a solvent-only control, three biological replicates per point, output normalised to OD₆₀₀ (RFU/OD₆₀₀) or to enzyme concentration.",
+  "Write the conditions a stranger would need to repeat it: strain and chassis, medium, temperature, induction OD, time points, instrument and wavelength, and the extinction coefficient if you convert absorbance to concentration (TU Darmstadt: ε = 18,100 M⁻¹cm⁻¹ at 396 nm).",
+  "Put the figures in the registry, not on the wiki. Upload every plot and gel through the registry documentation editor so it is served from registry.igem.wiki/documentation. A figure that only exists on 2026.igem.wiki dies when the wiki does. Cross-link to the wiki for extra detail only.",
+  "Fill all five document slots — Design, Experiment, Characterisation, Application, Discussion. Eleven of eleven winners used at least three; most nominee parts used one. Empty slots are visible on the page.",
+  "Write the limitations into the Discussion and keep them. Michigan published that M3 produced no detectable protein and that its comparison rests on a single unreplicated blot; TU Darmstadt published that their engineered variant was worse than the parent. Both won. Hiding a null result does not buy an award, and reporting one apparently does not cost you a category.",
+  "Register a collection as well, with a collection-level page of its own. Give every part a name built to a rule (prefix by function: GV-core:, Sensing:, Multiplexing:), state the assembly standard and overhangs explicitly, and write the one document that says why these parts belong together. Eight of twelve nominated 2026 collections skipped that document.",
+  "Check every accession before you publish it. BBa_26SZRX0Y contains a zero, not the letter O; a single wrong character makes the part unfindable, which is the one failure mode that undoes all the work above.",
+  "Budget the writing as a work package, not an afterthought. The median winning part page in 2026 is roughly 25,000–35,000 characters with ten-plus figures: that is one person for two to three weeks, and it has to be scheduled before the wiki freeze, not after."
+ ],
+ "checklist_zh": [
+  "先以 Best New Improved Part 為目標。2026 年全場只有兩位得主、零入圍——這是元件類獎項中「有報名就贏一半」的唯一一個。它也不需要新穎序列，適合沒有蛋白質設計管線的隊伍。",
+  "挑一個已經存在於 registry、有明確缺陷、而且能在 E. coli 裡跑的親代元件。第一天就把它的編號寫下來（GCGS 用的是 Shanghai_tech 2017 的 BBa_K2315014）。如果你沒辦法用一句話說出親代是誰、缺陷是什麼，就代表你還沒真的進入這個類別。",
+  "把改良寫成一張對親代所做的、具名且離散的更動清單——不要寫「我們做了最佳化」。GCGS 的整個論點只有兩行：在 RhlR 上加 SsrA-ASV 降解標籤、把野生型 Prhl 換成 Prhl(LR)。每一項更動都要在頁面上有自己的子元件編號。",
+  "把親代與改良後的元件放在同一塊盤、同一天、用同一個報導基因量。與未改造親代的並排對照，是這個類別唯一不可妥協的要求。",
+  "做出劑量反應或轉移函數，不要做是／否。至少四個誘導物濃度，外加空白組與僅溶劑組，每個點三個生物重複，輸出以 OD₆₀₀ 正規化（RFU/OD₆₀₀）或以酵素濃度正規化。",
+  "把陌生人要重做一次所需要的條件寫出來：菌株與宿主、培養基、溫度、誘導時的 OD、取樣時間點、儀器與波長；若要把吸光值換算成濃度，還要寫出莫耳吸光係數（TU Darmstadt：396 nm 下 ε = 18,100 M⁻¹cm⁻¹）。",
+  "把圖放進 registry，不要只放在 wiki。所有圖表與電泳圖都透過 registry 的文件編輯器上傳，讓它由 registry.igem.wiki/documentation 提供。只存在於 2026.igem.wiki 上的圖，會隨 wiki 一起消失。連回 wiki 只用於補充細節。",
+  "五個文件欄位全部填滿——Design、Experiment、Characterisation、Application、Discussion。十一位得主全都至少用了三個；多數入圍元件只用了一個。空欄位在頁面上是看得見的。",
+  "把限制寫進 Discussion，而且留著不要刪。Michigan 公開寫出 M3 完全測不到蛋白、而且整個比較只建立在一張未重複的西方墨點上；TU Darmstadt 公開寫出他們改造的變體比親代還差。兩者都得獎了。藏起陰性結果買不到獎，而寫出來顯然也不會讓你丟掉一個類別。",
+  "同時登錄一個集合，並為它寫一個集合層級的頁面。每個元件都依規則命名（以功能為前綴：GV-core:、Sensing:、Multiplexing:），明寫組裝標準與黏端（overhang），並寫下那一份說明「這些元件為什麼屬於同一組」的文件。2026 年十二個入圍集合中，有八個跳過了這份文件。",
+  "發布前逐一檢查每個編號。BBa_26SZRX0Y 裡面是數字 0，不是字母 O；一個字元錯掉，元件就搜不到，而這是唯一一種會讓上面所有努力歸零的失敗模式。",
+  "把撰寫當成一個獨立的工作包，而不是事後補。2026 年得獎元件頁面的中位數大約是 25,000 至 35,000 字元、十張以上的圖：那是一個人兩到三週的量，而且必須排在 wiki 凍結之前，不是之後。"
+ ],
+ "method": "Started from the 106 researched team files on disk, which named exact accessions for several cohort teams. Then read the 2026 registry directly. parts.igem.org now redirects to registry.igem.org, a React application backed by a public read API (api.registry.igem.org/v1) that the site itself calls; we drove it through a browser tab and used only the endpoints the registry's own pages request — part by slug, documentation, composition, used-by, collections, collection items. Every accession quoted here was confirmed to return HTTP 200 from /v1/parts/slugs/<slug>; BBa_26SZRXOY, as transcribed in one team file, 404s — the real part is BBa_26SZRX0Y with a zero. We resolved documentation for all eleven winners' headline parts or collections, for all fifteen Best Part Collection cohort collections, and for sampled parts from eleven nominee teams. Documentation size is the character count of the markdown stored in the registry's own documentation records; figure counts are markdown and HTML image references in that same text. Limits: the award lists name teams, not parts, so for teams that registered several parts we inferred the award-winning one from the team file, the part's documentation depth and the project description — Muenster-University's Best New Composite Part winner in particular we could not pin down, and the Blocker_PCS series we found carries no documentation at all, so that row may be the wrong part. We also could not see team files for XMU-China, NNU-Nanjing-China, China-HUBU-Wuhan, RUBochum, NAU-CHINA, LZU-Northwest and VUB-Brussels, so those nominees are not represented in the depth figures. Rate limiting on the registry API (HTTP 429) capped the sampling, so nominee counts are samples of three to five parts per team, not full inventories. No team wiki was used as a source for any number here.",
+ "method_zh": "先從磁碟上 106 份已研究的隊伍檔案出發，其中幾支隊伍直接寫出了確切的元件編號；接著直接讀 2026 年的 registry。parts.igem.org 現在會轉址到 registry.igem.org，那是一個 React 應用，背後有公開的讀取 API（api.registry.igem.org/v1）供網站本身呼叫；我們以瀏覽器分頁操作，而且只使用 registry 自己的頁面會請求的端點——依 slug 取元件、documentation、composition、used-by、collections 與集合項目。本文引用的每一個編號都已確認 /v1/parts/slugs/<slug> 回傳 HTTP 200；某份隊伍檔案裡抄寫的 BBa_26SZRXOY 會 404——真正的元件是 BBa_26SZRX0Y，中間是數字 0。我們解析了全部十一位得主的主打元件或集合、Best Part Collection 這組全部十五個集合，以及十一支入圍隊伍的抽樣元件。文件量是 registry 自身 documentation 記錄中所儲存 markdown 的字元數；圖片數量是同一段文字中的 markdown 與 HTML 圖片引用數。限制：獎項名單列的是隊伍而非元件，因此對於登錄了多個元件的隊伍，我們是從隊伍檔案、元件的文件深度與專案描述推斷出得獎元件——其中 Muenster-University 的 Best New Composite Part 得獎元件我們無法確定，而我們找到的 Blocker_PCS 系列完全沒有文件，所以那一列有可能指錯元件。我們也沒有 XMU-China、NNU-Nanjing-China、China-HUBU-Wuhan、RUBochum、NAU-CHINA、LZU-Northwest 與 VUB-Brussels 的隊伍檔案，因此這些入圍者未納入深度統計。registry API 的速率限制（HTTP 429）限縮了抽樣規模，所以入圍隊伍的數字是每隊三到五個元件的抽樣，而非完整清冊。本文的任何數字都沒有以隊伍 wiki 作為來源。"
+}

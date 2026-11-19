@@ -238,10 +238,17 @@
       var rows = TEAMS.filter(function (t) { return t[kind] && t[kind][f[0]] && String(t[kind][f[0]]).length > 60; })
         .sort(function (a, b) { return (b.rank || 0) - (a.rank || 0) || String(b[kind][f[0]]).length - String(a[kind][f[0]]).length; });
       if (!rows.length) return;
+      // On the Science for Good tab these are iGEM's own judging categories, kept
+      // because that is honestly what the team files contain. The lead-in says
+      // why a GEMS reader is looking at them: as worked examples for the
+      // programme, not as a rubric to score ourselves against.
+      var lead = kind === "good"
+        ? L(rows.length + " teams documented this well enough to borrow from. Read them as worked examples for the programme above, not as a rubric. Click a team for the full file.",
+            "共 " + rows.length + " 支團隊在這方面的紀錄足以直接借用。請把它們當作上面那個長期計畫的實作範例來讀，而不是一張評分表。點擊團隊可展開完整檔案。")
+        : L(rows.length + " teams documented this well enough to learn from. Click a team for the full file.",
+            "共 " + rows.length + " 支團隊在這方面的紀錄足以作為學習對象。點擊團隊可展開完整檔案。");
       h += '<section class="sec"><div class="wrap">' +
-        sechead(L("Evidence", "案例"), f[1], f[2],
-          L(rows.length + " teams documented this well enough to learn from. Click a team for the full file.",
-            "共 " + rows.length + " 支團隊在這方面的紀錄足以作為學習對象。點擊團隊可展開完整檔案。")) +
+        sechead(kind === "good" ? L("Worked examples", "實作範例") : L("Evidence", "案例"), f[1], f[2], lead) +
         '<div class="grid g2">' +
         rows.slice(0, 18).map(function (t) {
           var im = (t.images || [])[0];

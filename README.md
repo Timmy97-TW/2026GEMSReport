@@ -10,6 +10,13 @@ files in all, researched from the teams' own wikis — read against the two ques
 how a project turns biology into computation, and how it turns science into something a community can use.
 Plus the academic and industry currents around them, and a Drylab roadmap for the next eighteen months.
 
+**On "Science for Good".** In this report that is not iGEM's judging category. It is the name of a GEMS
+programme: club-form, no competition deadline, carrying a few well-chosen problems across years rather than
+seasons — problems that matter to someone outside GEMS, that can actually be deployed, whose effect can be
+counted, and that get cheaper as they spread. The iGEM human-practices material is kept as worked examples
+for that programme, not as a rubric. The Science for Good tab states the definition, the selection criteria
+and what is currently in the pipeline.
+
 English and Traditional Chinese throughout; the switch is top right and is remembered per browser.
 
 ## What the analysis found

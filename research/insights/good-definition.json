@@ -1,0 +1,88 @@
+{
+ "id": "good-definition",
+ "tab": "good",
+ "order": 5,
+ "kicker": "What this tab is for",
+ "kicker_zh": "這一頁是做什麼的",
+ "title": "Science for Good is a programme, not a judging category",
+ "title_zh": "Science for Good 是一個長期計畫，不是一個評審項目",
+ "lede": "At GEMS, Science for Good means a club-form programme with no competition deadline: a few well-chosen problems, worked continuously and from several directions, for as long as they take. iGEM's Human Practices criteria are evidence we can learn from. They are not the definition.",
+ "lede_zh": "在 GEMS，Science for Good 指的是一個沒有比賽截止日的社團式長期計畫：挑幾個夠好的題目，從多個方向持續投入，需要多久就做多久。iGEM 的人類實踐評審標準是我們可以學習的材料，但不是它的定義。",
+ "body": "A competition season is nine months long and ends in a rubric. That shape is useful — it forces a team to finish something — but it decides a great deal that nobody intended. It decides that a problem is worth working on if it can be closed by October. It decides that the output is a wiki. And it decides who you talk to, because a judge recognises a professor's authority faster than a farmer's.\n\n**The evidence on this page is the cost of that shape.** Of 21 award-winning software tools from 2026, 8 are still usable today, and across every repository checked there are zero stars and zero forks — nobody came. Not one team in the 106 ran an inter-lab measurement ring, the one form of collaboration that would have produced a number other people could reuse. Of 106 decorated teams, 71 closed a stakeholder-to-design loop, but only nine or ten closed it with someone who was not a credentialled expert. None of this is because the teams were careless. It is because the deadline rewards an artefact and a defensible story, and all three of those things take longer than a season.\n\n**So Science for Good at GEMS is the container for the work the competition cannot hold.** It is open membership rather than a selected team, it carries problems across years rather than seasons, and it is allowed to arrive somewhere with no method in hand. The first visit is listening. The solution does not have to be a construct — it can be an instrument, a dataset, a protocol, a piece of software, or a way of organising something that already exists. Sometimes the honest finding is that synthetic biology is the wrong tool, and a programme that cannot reach that conclusion is not doing research.\n\niGEM still matters, but the direction of supply reverses. *The programme feeds the competition, not the other way round.* A problem that has been lived with for two years makes a far better nine-month project than a problem invented in January to fit a village.",
+ "body_zh": "一個比賽季是九個月，終點是一張評分表。這個形狀有它的用處——它逼團隊把東西做完——但它也替我們決定了很多沒有人打算決定的事。它決定了一個題目值不值得做，取決於能不能在十月前收掉。它決定了產出是一個 wiki。它也決定了你去跟誰談，因為評審認得出教授的權威，比認得出農民的快得多。\n\n**這一頁上的證據，就是這個形狀的代價。** 2026 年得獎的 21 個軟體工具裡，今天還能用的有 8 個；而所有檢查過的程式庫，星數與分支數全部是零——沒有人來。106 支隊伍中沒有任何一支做過跨實驗室量測環，那正是唯一一種能產出別人可以再利用的數字的合作形式。106 支得獎隊伍中有 71 支閉合了「利害關係人到設計」的迴路，但其中只有九到十支，是和沒有專業資格的人閉合的。這些都不是因為隊伍不用心，而是因為截止日獎勵的是一件作品和一套站得住腳的敘事，而上面這三件事，全都需要比一季更久。\n\n**所以 GEMS 的 Science for Good，是用來裝比賽裝不下的那些工作的容器。** 它是開放參與而不是遴選出來的隊伍，它讓題目跨年而不是跨季，而且它允許你到了現場手上還沒有方法。第一次去就是去聽。解方不一定要是一個基因構築——可以是一台儀器、一組資料、一份流程、一個軟體，或是把既有的東西重新組織起來的方式。有時候誠實的結論是：合成生物學是錯的工具；一個無法得出這個結論的計畫，就不算在做研究。\n\niGEM 仍然重要，但供應的方向要反過來。*是長期計畫餵養比賽，不是反過來。* 一個已經相處了兩年的題目，會比一月才為了塞進某個 village 而想出來的題目，成為好得多的九個月專案。",
+ "cards": [
+  {
+   "kicker": "Criterion 1",
+   "kicker_zh": "條件一",
+   "title": "It matters to someone who is not us",
+   "title_zh": "它對我們以外的人有意義",
+   "body": "A problem someone outside GEMS already has, and would still have if we never showed up. The test is whether a specific person can describe it to you in their own words, unprompted, before you offer anything.",
+   "body_zh": "一個 GEMS 以外的人已經有的問題——就算我們從未出現，它還是在那裡。檢驗方式是：在你提出任何東西之前，有沒有一個具體的人能用自己的話、不經提示地把它描述給你聽。",
+   "chips": [
+    "social meaning"
+   ]
+  },
+  {
+   "kicker": "Criterion 2",
+   "kicker_zh": "條件二",
+   "title": "It can actually be put somewhere",
+   "title_zh": "它真的放得進某個地方",
+   "body": "There is a real site, a real operator and a real route to getting it there. The analysis on this page found the loops that closed were closed where a non-specialist physically operates the thing — a stall, a hive, a field. Deployability is not a later phase; it selects the problem.",
+   "body_zh": "有真實的場域、真實的操作者，以及真實的送達路徑。本頁的分析發現，真正閉合的迴路，都發生在由非專業人士實際操作那個東西的地方——一個攤位、一個蜂箱、一塊田。可佈署性不是後面的階段，它是挑題目的條件。",
+   "chips": [
+    "deployable"
+   ]
+  },
+  {
+   "kicker": "Criterion 3",
+   "kicker_zh": "條件三",
+   "title": "The effect can be counted",
+   "title_zh": "效果數得出來",
+   "body": "Before starting, you can name the number that would move and say how you would measure it. If the only available outcome is that people felt positive about science, it belongs in education, which is good work but a different programme.",
+   "body_zh": "在開始之前，你就能說出哪一個數字會變，以及你要怎麼量它。如果唯一拿得出來的成果是「大家對科學感覺很好」，那它屬於教育——那是好事，但是另一個計畫。",
+   "chips": [
+    "quantifiable"
+   ]
+  },
+  {
+   "kicker": "Criterion 4",
+   "kicker_zh": "條件四",
+   "title": "The second one is cheaper than the first",
+   "title_zh": "第二次要比第一次便宜",
+   "body": "Scaling is a property of the design, not an ambition stated at the end. If helping the tenth farm costs what the first one cost, it is a service, not a solution — and the programme should know which it is building.",
+   "body_zh": "可規模化是設計的性質，不是結尾處宣示的志向。如果幫第十個農場的成本和第一個一樣，那它是一項服務，不是一個解方——而計畫本身應該清楚自己在做哪一種。",
+   "chips": [
+    "scalable"
+   ]
+  },
+  {
+   "kicker": "What it is not",
+   "kicker_zh": "它不是什麼",
+   "title": "Not an iGEM incubator, and not outreach",
+   "title_zh": "不是 iGEM 孵化器，也不是科普推廣",
+   "body": "A problem does not enter because it would make a good project, and it does not stay because it photographs well. Outreach and education are separate, valuable, and measured differently. Confusing the two is how a programme ends up with a lot of activity and no result.",
+   "body_zh": "一個題目不會因為「可以做成不錯的專案」而進來，也不會因為「拍起來好看」而留下。科普與教育是另一回事，有其價值，衡量方式也不同。把兩者混在一起，就是一個計畫最後活動很多、卻沒有成果的原因。",
+   "chips": [
+    "not outreach"
+   ]
+  }
+ ],
+ "checklist": [
+  "Write the four criteria down and score every candidate problem against them in public, inside the programme.",
+  "Give each live problem one owner and a dated file that anyone in GEMS can read.",
+  "Make the first visit to any new partner a listening visit with no method proposed.",
+  "Require a named number before work starts: what would move, and how it gets measured.",
+  "Review the pipeline twice a year and close problems deliberately, with a written reason.",
+  "Let iGEM teams draw from the pipeline; do not let the iGEM calendar decide what enters it."
+ ],
+ "checklist_zh": [
+  "把四個條件寫下來，並在計畫內部公開地用它們替每一個候選題目評分。",
+  "每一個進行中的題目都要有一位負責人，和一份 GEMS 任何人都能讀的、標了日期的檔案。",
+  "任何新夥伴的第一次拜訪都是去聽的，不提出方法。",
+  "動工之前必須先講明一個數字：哪一項會變，以及要怎麼量。",
+  "每年檢視兩次題目清單，並且要有意識地結案，附上書面理由。",
+  "讓 iGEM 團隊從這個清單裡取題；但不要讓 iGEM 的行事曆決定什麼可以進來。"
+ ],
+ "method": "This section states GEMS Research's own definition of its Science for Good programme; it is not a finding about iGEM. The figures quoted in support — 8 of 21 software tools still usable, zero stars or forks, no inter-lab measurement ring in 106 teams, 71 of 106 loops closed with nine or ten closed by non-experts — come from the analyses further down this page and on the dry-lab tab, each of which states its own method and limits. They are offered as evidence that a nine-month container has predictable costs, not as proof that a club-form programme avoids them. That part is untested, and GEMS is the test.",
+ "method_zh": "這一節陳述的是 GEMS Research 自己對 Science for Good 計畫的定義，不是關於 iGEM 的研究發現。用來佐證的數字——21 個軟體工具中 8 個仍可使用、星數與分支數為零、106 支隊伍中沒有跨實驗室量測環、106 支中 71 支閉合迴路而其中只有九到十支由非專業人士閉合——都來自本頁下方與乾實驗室頁的分析，各自都載明了方法與限制。它們是用來說明「九個月的容器有可預期的代價」，不是用來證明社團式的長期計畫就能避開這些代價。那一點還沒有被驗證過，而 GEMS 自己就是那個驗證。"
+}

@@ -58,6 +58,18 @@
    "link": "drylab"
   },
   {
+   "kicker": "Science for Good",
+   "kicker_zh": "Science for Good",
+   "title": "The deadline, not the people, is what limits Science for Good",
+   "title_zh": "限制 Science for Good 的是截止日，不是人",
+   "body": "8 of 21 award-winning software tools still run, every repository checked has zero stars and zero forks, no team in 106 ran an inter-lab measurement ring, and only nine or ten of 71 closed loops were closed by a non-expert. These are deadline artefacts. GEMS's answer is a **club-form programme with no deadline**, carrying a few problems across years — its definition, criteria and current pipeline are on this tab.",
+   "body_zh": "21 個得獎軟體工具中有 8 個還能跑，所有檢查過的程式庫星數與分支數皆為零，106 支隊伍沒有一支做過跨實驗室量測環，71 個閉合的迴路中只有九到十個是與非專業人士閉合的。這些都是截止日造成的。GEMS 的回應是一個**沒有截止日的社團式長期計畫**，讓幾個題目跨年走下去——它的定義、條件與目前的題目清單都在這一頁。",
+   "chips": [
+    "a programme, not a category"
+   ],
+   "link": "good"
+  },
+  {
    "kicker": "Human practices",
    "kicker_zh": "人類實踐",
    "title": "The loops that closed were closed by experts, not by publics",
