@@ -13,6 +13,7 @@ Reads:
 Writes data/results.js, data/teams.js, data/trends.js, data/report.js.
 Nothing here runs in the browser; the site loads the generated files directly.
 """
+import glob
 import json
 import os
 import re
@@ -294,6 +295,90 @@ def zh_audit(teams):
     return full, partial, none
 
 
+# ---------------------------------------------------------------- char audit
+# Three failure modes actually seen in this repo's Chinese, all from translation
+# agents working at speed. Each check is written to avoid the false positives
+# that were investigated and cleared once already (see research/MANAGER.md):
+#   - 算法 is fine inside 演算法, which is correct Taiwan usage
+#   - a lone Greek letter is scientific notation, not a slip
+SIMPLIFIED = {
+    "们": "們", "这": "這", "个": "個", "过": "過", "时": "時", "样": "樣",
+    "现": "現", "发": "發", "对": "對", "说": "說", "实": "實", "学": "學",
+    "动": "動", "试": "試", "验": "驗", "语": "語", "读": "讀", "题": "題",
+    "数": "數", "录": "錄", "级": "級", "质": "質", "继": "繼", "续": "續",
+    "测": "測", "构": "構", "标": "標", "应": "應", "该": "該",
+    "开": "開", "关": "關", "专": "專", "业": "業", "务": "務", "产": "產",
+    "资": "資", "台": None,  # 台 is correct in Taiwan usage; never flag it
+    "软": "軟", "硬": None, "网": "網", "计": "計", "认": "認", "识": "識",
+    "总": "總", "结": "結", "论": "論", "据": "據", "库": "庫", "报": "報",
+    "马": "馬", "鸟": "鳥", "车": "車", "东": "東", "问": "問", "间": "間",
+}
+CJK = r"\u4e00-\u9fff\u3400-\u4dbf"
+# Latin inside Chinese is normal in this repo: tool names, model names, gene
+# names, units and iGEM wiki page names all stay in English. Flagging every one
+# buries the real slips, so instead flag only ORDINARY English words, which have
+# no business in Chinese prose. This list is what actually went wrong before
+# ("operating" dropped into a Chinese sentence) plus the obvious neighbours.
+LATIN_BAD = frozenset("""
+the and but with without using used use for from into onto that this these those
+which while when where what who whom whose there their they them then than
+have has had having been being was were are and also just only more most much many
+data result results finding findings analysis analyse analyze method methods
+operating operate running run build built make made show shows shown
+because however therefore although though since about against between among
+should would could must can may might will shall
+""".split())
+
+
+def char_audit(root="research"):
+    """Flag Simplified characters, Cyrillic, Greek runs and English words
+    stranded inside Chinese prose. Returns a list of (path, kind, sample)."""
+    hits = []
+    simp = {k: v for k, v in SIMPLIFIED.items() if v}
+    cyr = re.compile(r"[\u0400-\u04ff]+")
+    greek_run = re.compile(r"[\u0370-\u03ff]{2,}")
+    latin_in_cjk = re.compile(r"(?<=[%s])\s?([A-Za-z][A-Za-z'\-]{2,})\s?(?=[%s])" % (CJK, CJK))
+    for path in sorted(glob.glob(os.path.join(root, "**", "*.json"), recursive=True)):
+        try:
+            raw = open(path, encoding="utf-8").read()
+        except OSError:
+            continue
+        blob = json.loads(raw)
+        texts = []
+
+        def walk(o, key=""):
+            if isinstance(o, dict):
+                for k, v in o.items():
+                    walk(v, k)
+            elif isinstance(o, list):
+                for v in o:
+                    walk(v, key)
+            elif isinstance(o, str) and key.endswith("_zh"):
+                texts.append(o)
+
+        walk(blob)
+        joined = "\n".join(texts)
+        if not joined:
+            continue
+        for bad, good in simp.items():
+            if bad in joined:
+                i = joined.index(bad)
+                hits.append((path, "simplified %s should be %s" % (bad, good),
+                             joined[max(0, i - 12):i + 12].replace("\n", " ")))
+        m = cyr.search(joined)
+        if m:
+            hits.append((path, "cyrillic", m.group(0)))
+        m = greek_run.search(joined)
+        if m:
+            hits.append((path, "greek run", m.group(0)))
+        for m in latin_in_cjk.finditer(joined):
+            w = m.group(1)
+            if w == w.lower() and w in LATIN_BAD:
+                i = m.start()
+                hits.append((path, "english inside chinese: " + w,
+                             joined[max(0, i - 14):i + len(w) + 14].replace("\n", " ")))
+    return hits
+
 def coverage(teams, results):
     """Which decorated teams do we still have no file for?"""
     have = {t["team"] for t in teams}
@@ -525,6 +610,14 @@ def main():
         print("\nstill missing a file (Top 10 or special-prize winner):")
         for m in missing:
             print("  -", m)
+    ch = char_audit()
+    if ch:
+        print("\ncharacter audit — %d to look at:" % len(ch))
+        for path, kind, sample in ch[:25]:
+            print("  %-46s %-34s %s" % (path, kind, sample))
+        if len(ch) > 25:
+            print("  ... and %d more" % (len(ch) - 25))
+
     if problems:
         print("\nwarnings:")
         for p in problems:
