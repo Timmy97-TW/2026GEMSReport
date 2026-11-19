@@ -1,485 +1,527 @@
 {
-  "id": "hardware-afterlife",
-  "tab": "drylab",
-  "order": 38,
-  "kicker": "Original analysis",
-  "kicker_zh": "原創分析",
-  "title": "Can anyone rebuild the hardware?",
-  "title_zh": "這些硬體，別人做得出來嗎？",
-  "lede": "Of 20 instruments built by the 2026 Best Hardware, Best Measurement and Best Alternative Platform cohorts, 6 publish enough for a stranger in another country to rebuild them. Nine publish no geometry file at all. One has ever been used by someone outside the team that built it.",
-  "lede_zh": "2026 年 Best Hardware、Best Measurement 與 Best Alternative Platform 這三組隊伍總共做出 20 台儀器，其中只有 6 台公開的資料足以讓另一個國家的陌生人重建出來。有 9 台完全沒有釋出任何幾何檔案。而真正被原團隊以外的人用過的，只有 1 台。",
-  "body": "**Six of twenty.** That is how many award-winning iGEM 2026 instruments a stranger could actually rebuild: NCKU-Tainan's CAPTURE-Screen fluorescence reader, Lambert-GA's Vapor-X vacuum dryer, UNILausanne's C.L.A.W. LAMP incubator, Hongwen School's BrewXOS Fermenter Mini, TU Darmstadt's anaerobic chamber trio, and GEMS-Taiwan's four ReLEAF devices. Two more — Princeton's gyroid biofilter and CalPolySLO's emulsification washboard — are single printed parts where an STL plus print settings is the whole deliverable, which takes the generous count to eight. Everything else is missing at least one thing a second builder cannot do without.\n\nThe sister analysis of software found that every repository was populated, because iGEM mandates a GitLab deposit, and that the thing separating live tools from dead ones was a hosting decision. Hardware has no such floor. **There is no `2026/hardware` group on gitlab.igem.org at all** — the API returns 404 for it while `2026/software` returns a group called Software. Every hardware release in this cohort is improvised: a sub-project filed under `/software/`, a personal GitHub account, an Onshape link, a Google Drive folder, or loose files on the wiki's asset store. Nothing in the competition ever asks a hardware team to press Export.\n\nAnd pressing Export is exactly the separating habit. The teams you cannot rebuild from are not lazy and their CAD is not missing — it is visibly, beautifully *rendered*. Cornell's Best Hardware winner has an exploded view of the Arachne electrospinner and a bill of materials so good it names Analog Technologies' AHV24V30KVR5MAW at $419.00 across 40 priced line items totalling $1,213.35 — and then says, in the present tense of a page that will not change again, \"we plan to provide a bill of materials, CAD files, circuit diagrams, assembly documentation, and an operation manual.\" Two PDFs went up; no CAD file, no schematic file and no firmware ever did. CAU-China's OptiX phone spectrometer has an interactive exploded CAD view with numbered, clickable components and the most careful calibration chain in the whole cohort — and not one downloadable file, not one priced part, on a $12–30 instrument whose entire pitch is that anyone can have one. NU Boston published CAD drawings with dimensions and tolerances as figures. UBC-Vancouver published `.glb` meshes, a render format. In every one of these cases the model exists; it simply never left the design tool in a format anyone else can open.\n\nThe six that cleared the bar all did one unglamorous thing: they wrote the build as a document with files attached, not a page with pictures attached. NCKU-Tainan's MIT-licensed repo holds 225 files — 75 STEP exports, 59 STLs, the parametric CadQuery Python they were generated from, an ESP32 sketch with its own AS7341 driver, a bill-of-materials CSV and a 12-step assembly order that a second builder checked against the real machine. Its costing is the most honest number in the census: US$160.62 for the printed build, broken down to the print-shop receipt, with the line \"an estimate, not an account\" and the NT$31.68/US$1 rate it was converted at. Lambert-GA shipped Gerbers, a drill file, a JLCPCB pick-and-place CSV and a BOM keyed to LCSC part numbers, so the board can be ordered without a human in the loop. UNILausanne's C.L.A.W. costs under CHF 10, ships five STLs and a 3.8 MB manual, and includes the calibration that matters: a thermometer in the tube bore reads about 10 °C above the display, so the thermostat is set to 52.5 °C, preheated ten minutes, and holds 62.7 ± 1.2 °C over 30 minutes across three runs.\n\nTwo links fail the moment you check them rather than read them. Toronto's bioreactor page points at a Google Drive folder called \"Bioreactor CAD Files\"; opened signed-out it shows the folder name, no files, and a prompt to sign in — so the CAD for a $204 CAD bioreactor is, in practice, unavailable, while the firmware beside it is public and Apache-2.0. HongKong-JSS does the opposite: its Onshape document loads for anyone, 28 parts and a full feature tree, while `github.com/hkjssplkchc2026/mercurysense` — the firmware, the C12880 spectrometer driver and the acquisition instructions, as named on their own wiki — returns 404, and that GitHub account has no public repositories at all. Costs deserve the same scepticism. NU Boston's FLARE leads with \"as low as $300 vs $10,000\", then publishes two bills of materials totalling $499.80 and $344.18, **neither of which contains the Raspberry Pi 5 or the Arduino that run the instrument**. By contrast HongKong-JSS states plainly that its USD 357 build missed the USD 40 its stakeholders asked for, and TU Darmstadt records that the oxygen sensor is 83% of its €114.60 monitor.\n\nOutside use is bleaker than it was for software. Across every hardware repository checked the fork count is zero and the star count is zero, with one exception: Bist-China's seven STLs on GitHub have two stars — and no licence file, so nobody may legally reuse them. The single genuine case of a device leaving its makers is Lambert-GA's, and it is a high-school team: they shipped Vapor-X to the Biochemical Genetics Laboratory at the University of Alabama at Birmingham, where John Moore measured 38 of 43 compounds recovered within 5% of undried controls, and to the Styczynski Lab at Georgia Tech, which checked GFP fluorescence after drying DNA and lysates. Both labs' raw data are downloadable. **One team in twenty asked an outsider to use the thing, and the one that did was the one with Gerbers.**",
-  "body_zh": "**二十台裡有六台。** 這是 2026 年得獎儀器中，陌生人真的做得出來的數量：NCKU-Tainan 的 CAPTURE-Screen 螢光判讀儀、Lambert-GA 的 Vapor-X 真空乾燥機、UNILausanne 的 C.L.A.W. LAMP 恆溫器、Hongwen School 的 BrewXOS Fermenter Mini、TU Darmstadt 的三件厭氧套件，以及 GEMS-Taiwan 的四台 ReLEAF 裝置。另有兩件——Princeton 的 gyroid 生物濾材與 CalPolySLO 的乳化搓板——本身就是單一列印件，一個 STL 加上列印參數就是全部交付物，寬鬆算來可以湊到八台。其餘每一台，都至少缺了第二個製作者非有不可的某樣東西。\n\n軟體那篇姊妹分析發現：每一個儲存庫都有實質內容，因為 iGEM 強制要求把原始碼存進 GitLab；真正決定工具生死的，是一個關於架站的決定。硬體沒有這道底線。**gitlab.igem.org 上根本沒有 `2026/hardware` 這個群組**——API 對它回 404，而 `2026/software` 回的是一個名為 Software 的群組。這批隊伍的硬體釋出全是各自想辦法：掛在 `/software/` 底下的子專案、個人 GitHub 帳號、一條 Onshape 連結、一個 Google Drive 資料夾，或是散落在 wiki 靜態檔案區的零散檔案。整場比賽從來沒有任何一個環節，要求硬體隊伍按下「匯出」。\n\n而「按下匯出」正是那個分水嶺習慣。那些你重建不了的隊伍，並不是偷懶，他們的 CAD 也沒有不見——而是被漂漂亮亮地「算圖」成了圖片。Cornell 這支 Best Hardware 冠軍隊，有一張 Arachne 靜電紡絲機的爆炸圖，還有一份好到會寫出 Analog Technologies AHV24V30KVR5MAW、單價 $419.00 的物料清單，40 個逐項報價的品項合計 $1,213.35——然後，在一個不會再更動的頁面上，用現在式寫著：「我們計畫提供物料清單、CAD 檔案、電路圖、組裝文件與操作手冊。」最後上傳的是兩份 PDF；沒有任何一個 CAD 檔、電路圖檔或韌體。CAU-China 的 OptiX 手機光譜儀有一張可點選、元件逐一編號的互動式爆炸 CAD 視圖，校正鏈也是整批隊伍中做得最細的——卻連一個可下載的檔案、一項標價的零件都沒有，而這台儀器的全部訴求，就是 $12 到 $30、人人都能有一台。NU Boston 把標注尺寸與公差的 CAD 圖當成插圖發表。UBC-Vancouver 發表的是 `.glb`，一種算圖用的格式。上述每一個案例，模型都存在；它只是從來沒有以別人打得開的格式離開過設計軟體。\n\n過關的那六支，都做了同一件不起眼的事：他們把製作過程寫成一份附帶檔案的文件，而不是一個附帶圖片的網頁。NCKU-Tainan 以 MIT 授權的儲存庫裡有 225 個檔案——75 個 STEP 匯出檔、59 個 STL、生成這些檔案的參數化 CadQuery Python、一支自帶 AS7341 驅動程式的 ESP32 韌體、一份物料清單 CSV，以及一份由第二位製作者對照實機核對過的 12 步組裝順序。它的成本估算是這份普查中最誠實的數字：3D 列印版 US$160.62，拆到列印店的收據，並附上「這是估算，不是帳目」這句話，以及換算所用的 NT$31.68 兌 US$1 匯率。Lambert-GA 釋出了 Gerber 檔、鑽孔檔、JLCPCB 貼片座標 CSV，以及一份以 LCSC 料號編寫的物料清單，所以這塊板子可以在沒有人介入的情況下直接下單。UNILausanne 的 C.L.A.W. 成本不到 CHF 10，附五個 STL 與一份 3.8 MB 的手冊，而且寫進了真正關鍵的校正：把溫度計直接插進試管孔，讀到的溫度比面板顯示高約 10 °C，所以恆溫器設在 52.5 °C、預熱十分鐘，三次獨立測試中 30 分鐘內維持在 62.7 ± 1.2 °C。\n\n有兩條連結，只要去點它、而不是去讀它，就當場失效。Toronto 的生物反應器頁面指向一個名為「Bioreactor CAD Files」的 Google Drive 資料夾；未登入開啟時只看得到資料夾名稱、沒有任何檔案，還跳出要你登入的提示——所以這台 204 加幣生物反應器的 CAD，實際上拿不到，而旁邊的韌體卻是公開的 Apache-2.0。HongKong-JSS 則剛好相反：它的 Onshape 文件任何人都開得起來，28 個零件、完整特徵樹俱在，但他們自己 wiki 上寫明收著韌體、C12880 光譜儀驅動程式與擷取說明的 `github.com/hkjssplkchc2026/mercurysense` 回應 404，而且那個 GitHub 帳號底下一個公開儲存庫也沒有。成本同樣值得用一樣的懷疑去看。NU Boston 的 FLARE 以「低至 $300，相對於 $10,000」開場，接著公開了兩份物料清單，合計分別是 $499.80 與 $344.18，**而兩份都沒有放進驅動這台儀器的 Raspberry Pi 5 或 Arduino**。相對地，HongKong-JSS 直白寫出他們 USD 357 的製作成本沒有達到利害關係人要求的 USD 40，TU Darmstadt 也記下氧氣感測器佔了那台 €114.60 監測器的 83%。\n\n至於外部使用，情況比軟體那邊更慘。所有被檢查過的硬體儲存庫，分支數都是零、星星數也都是零，只有一個例外：Bist-China 放在 GitHub 上的七個 STL 有兩顆星——卻沒有授權條款檔案，所以沒有人可以合法地拿去用。唯一一個儀器真正離開製作者手中的案例來自 Lambert-GA，而且是一支高中隊伍：他們把 Vapor-X 寄到 University of Alabama at Birmingham 的 Biochemical Genetics Laboratory，由 John Moore 量得 43 個化合物中有 38 個的回收率落在未乾燥對照組的 5% 以內；也寄到 Georgia Tech 的 Styczynski Lab，由他們檢查 DNA 與細胞裂解液乾燥後的 GFP 螢光。兩間實驗室的原始資料都可以下載。**二十支隊伍中只有一支請外人實際用過自己的東西，而做到這件事的，正是那支連 Gerber 檔都備齊的隊伍。**",
-  "cards": [
-    {
-      "kicker": "Best in class",
-      "kicker_zh": "同類最佳",
-      "title": "Vapor-X — the only device an outsider has used",
-      "title_zh": "Vapor-X——唯一有外人用過的裝置",
-      "body": "Lambert-GA's $80.07 vacuum dryer (a Mason jar, a 12 V pump, a polyimide heater and a Raspberry Pi Pico W on a custom PCB) is the only instrument in this cohort with third-party evidence. The team shipped it to the Biochemical Genetics Laboratory at the University of Alabama at Birmingham, where John Moore recovered 38 of 43 measured compounds within 5% of undried controls, and to the Styczynski Lab at Georgia Tech for GFP fluorescence after drying. The release matches: three STLs, a complete Gerber and drill set, a JLCPCB pick-and-place CSV, a BOM keyed to LCSC part numbers, MicroPython firmware under Apache-2.0, and an 8.5 MB construction manual. It is the only release here that a board house could execute without a human reading the wiki.",
-      "body_zh": "Lambert-GA 這台 $80.07 的真空乾燥機（一只梅森罐、一顆 12 V 真空幫浦、一片聚醯亞胺加熱片，以及一塊自製 PCB 上的 Raspberry Pi Pico W），是這批隊伍中唯一有第三方證據的儀器。團隊把它寄到 University of Alabama at Birmingham 的 Biochemical Genetics Laboratory，由 John Moore 測得 43 個化合物中有 38 個回收率落在未乾燥對照組的 5% 以內；也寄到 Georgia Tech 的 Styczynski Lab，檢查乾燥後的 GFP 螢光。釋出的內容也相稱：三個 STL、一整套 Gerber 與鑽孔檔、一份 JLCPCB 貼片座標 CSV、一份以 LCSC 料號編寫的物料清單、以 Apache-2.0 授權的 MicroPython 韌體，以及一份 8.5 MB 的製作手冊。這是此處唯一一份板廠不必有人去讀 wiki 就能直接施工的釋出。",
-      "chips": [
-        "rebuildable",
-        "Lambert-GA",
-        "high school",
-        "Gerbers + CPL",
-        "tested at 2 outside labs"
-      ],
-      "link": "https://gitlab.igem.org/2026/software/lambert-ga/vapor-x",
-      "linkText": "Vapor-X files on iGEM GitLab"
-    },
-    {
-      "kicker": "The fullest file set",
-      "kicker_zh": "最完整的檔案組",
-      "title": "NCKU-Tainan shipped the source, not just the export",
-      "title_zh": "NCKU-Tainan 釋出的是原始檔，不只是匯出檔",
-      "body": "225 files under MIT: 75 STEP assemblies, 59 STLs covering 66 printed pieces across two builds, and the parametric CadQuery Python the geometry was generated from — so another team can change a dimension rather than reprint yours. Alongside it sit an ESP32 sketch with its own AS7341 driver, a bill-of-materials CSV, a bench schematic with measured values, and working sensor settings (AGAIN 512x, ATIME 255, ASTEP 280). The costing is itemised by basis — print-shop receipts, costing sheet, distributor list prices — totals US$160.62 for the printed build and US$53.70 for the laser-cut one, and is labelled \"an estimate, not an account\". They also publish what failed: the laser-cut build could not tell the AHL sensor strain from cells without sfGFP.",
-      "body_zh": "以 MIT 授權釋出的 225 個檔案：75 個 STEP 組件、涵蓋兩個版本共 66 個列印件的 59 個 STL，以及生成這些幾何的參數化 CadQuery Python——所以別的隊伍可以改尺寸，而不是只能照著你的檔案重印。旁邊還放著一支自帶 AS7341 驅動程式的 ESP32 韌體、一份物料清單 CSV、一張標有實測值的電路圖，以及可用的感測器設定（AGAIN 512x、ATIME 255、ASTEP 280）。成本逐項標明依據——列印店收據、自家成本表、經銷商牌價——3D 列印版合計 US$160.62、雷射切割版 US$53.70，並註明「這是估算，不是帳目」。他們也把失敗寫出來：雷射切割版分不出 AHL 感測菌株與不帶 sfGFP 的細胞。",
-      "chips": [
-        "rebuildable",
-        "NCKU-Tainan",
-        "75 STEP + 59 STL",
-        "parametric source",
-        "MIT"
-      ],
-      "link": "https://gitlab.igem.org/2026/software/ncku-tainan/capture-screen-hardware",
-      "linkText": "capture-screen-hardware"
-    },
-    {
-      "kicker": "The gap between page and file",
-      "kicker_zh": "頁面與檔案之間的落差",
-      "title": "The Best Hardware winner published no CAD at all",
-      "title_zh": "Best Hardware 冠軍隊一個 CAD 檔都沒有釋出",
-      "body": "Cornell's Arachne electrospinner won Best Hardware (Undergraduate) with a genuinely excellent bill of materials — 40 priced line items in three groups, from the $419.00 Analog Technologies AHV24V30KVR5MAW 30 kV supply to $0.08 M5 screws, subtotals $681.76 / $416.87 / $114.72, total $1,213.35 — and a fabrication-and-assembly guide and safety manual that both download. What never appeared is the geometry: no STL, no STEP, no circuit schematic file and no ESP32 firmware anywhere on the hardware, circuitry, encasement or contribution pages. The page still carries the sentence \"we plan to provide a bill of materials, CAD files, circuit diagrams, assembly documentation, and an operation manual.\" Half of that shipped.",
-      "body_zh": "Cornell 的 Arachne 靜電紡絲機拿下大學組 Best Hardware，物料清單做得確實出色——三個群組、40 個標價品項，從 $419.00 的 Analog Technologies AHV24V30KVR5MAW 30 kV 高壓模組，到 $0.08 的 M5 螺絲，小計分別是 $681.76／$416.87／$114.72，總計 $1,213.35——製作組裝指南與安全手冊兩份 PDF 也都下載得到。始終沒有出現的是幾何檔：hardware、circuitry、encasement 與 contribution 四個頁面上，沒有任何 STL、STEP、電路圖檔或 ESP32 韌體。頁面上到現在還寫著：「我們計畫提供物料清單、CAD 檔案、電路圖、組裝文件與操作手冊。」兌現的是其中一半。",
-      "chips": [
-        "not rebuildable",
-        "Cornell",
-        "BOM $1,213.35",
-        "no CAD",
-        "no firmware"
-      ],
-      "link": "https://2026.igem.wiki/cornell/hardware",
-      "linkText": "Cornell hardware page"
-    },
-    {
-      "kicker": "Check the link, not the sentence",
-      "kicker_zh": "要點連結，不要只看句子",
-      "title": "An empty Drive folder and a 404 repository",
-      "title_zh": "一個空的 Drive 資料夾，和一個 404 的儲存庫",
-      "body": "Toronto's hardware page links a Google Drive folder named \"Bioreactor CAD Files\". Opened without a Google account it renders the folder title, lists nothing, and asks you to sign in — so the CAD for its $204 CAD, 96-unit bioreactor array is effectively unavailable, while the firmware next to it is public under Apache-2.0 and the BOM and assembly PDFs both download. HongKong-JSS has the mirror-image failure: its Onshape document is genuinely public (28 parts, full feature tree, view-only) but github.com/hkjssplkchc2026/mercurysense — named on its own wiki as holding the ESP32 firmware, the Hamamatsu C12880 driver and the acquisition instructions — returns 404, and the account has zero public repositories. Only its extraction-unit firmware survived, on a different personal account, with licence \"NOASSERTION\".",
-      "body_zh": "Toronto 的硬體頁面連到一個名為「Bioreactor CAD Files」的 Google Drive 資料夾。在沒有 Google 帳號的情況下開啟，只顯示資料夾標題、列不出任何檔案，並要求你登入——所以那台 204 加幣、可達 96 組的生物反應器陣列的 CAD，實際上拿不到，而旁邊的韌體卻以 Apache-2.0 公開，物料清單與組裝說明兩份 PDF 也都下載得到。HongKong-JSS 則是鏡像般的另一種失敗：它的 Onshape 文件確實公開（28 個零件、完整特徵樹、唯讀），但他們自己 wiki 上寫明收著 ESP32 韌體、Hamamatsu C12880 驅動程式與擷取說明的 github.com/hkjssplkchc2026/mercurysense 回應 404，而那個帳號底下一個公開儲存庫也沒有。活下來的只有萃取單元的韌體，放在另一個個人帳號上，授權條款標示為「NOASSERTION」。",
-      "chips": [
-        "broken",
-        "Toronto",
-        "HongKong-JSS",
-        "Drive sign-in wall",
-        "GitHub 404"
-      ],
-      "link": "https://2026.igem.wiki/toronto/hardware/",
-      "linkText": "Toronto hardware page"
-    },
-    {
-      "kicker": "Costs that do not add up",
-      "kicker_zh": "兜不攏的成本",
-      "title": "The computer is missing from the bill of materials",
-      "title_zh": "物料清單裡少了那台電腦",
-      "body": "NU Boston's FLARE soil chamber leads with \"a build cost of as low as $300 vs. $10,000\" and then publishes two bills of materials: $499.80 for the entire system and $344.18 for the UV module. Neither total includes the Raspberry Pi 5 that runs the imaging, the Arduino that drives the pumps, the printed and laser-cut enclosure, or the tubing — the module BOM lists a \"Raspberry Pi 5 breakout board, $7.50\" but not the Pi. So the headline is below both published totals, and both published totals are below the real one. Compare HongKong-JSS, which states outright that its USD 357 core-component build overshot the USD 40 its stakeholders asked for, and TU Darmstadt, which notes that the sensor alone is 83% of its €114.60 oxygen monitor.",
-      "body_zh": "NU Boston 的 FLARE 土壤模擬艙以「製作成本低至 $300，相對於 $10,000」開場，接著公開了兩份物料清單：整套系統 $499.80、UV 模組 $344.18。兩份總計都沒有包含負責成像的 Raspberry Pi 5、驅動幫浦的 Arduino、列印與雷射切割的機殼，也沒有管路——模組清單裡列了「Raspberry Pi 5 擴展板，$7.50」，卻沒有那台 Pi。於是，標題數字低於兩份公開總計，而兩份公開總計又都低於真實成本。對照之下，HongKong-JSS 直接寫明他們 USD 357 的核心元件成本超出利害關係人要求的 USD 40，TU Darmstadt 也註明光是感測器就佔了那台 €114.60 氧氣監測器的 83%。",
-      "chips": [
-        "cost credibility",
-        "NU Boston",
-        "$300 headline",
-        "$499.80 BOM",
-        "no Pi in the list"
-      ],
-      "link": "https://2026.igem.wiki/nu-boston/hardware",
-      "linkText": "NU Boston hardware page"
-    },
-    {
-      "kicker": "GEMS-Taiwan, on the same terms",
-      "kicker_zh": "以同一把尺衡量 GEMS-Taiwan",
-      "title": "Eighteen STLs, six manuals — and meshes instead of models",
-      "title_zh": "十八個 STL、六本手冊——但給的是網格，不是模型",
-      "body": "GEMS-Taiwan clears the bar, and it is worth being precise about how narrowly. On the credit side: 18 STL files that download (verified, served as model/stl), six assembly guides of 10 to 16 pages for the bioreactor, both photometers and the light plate, a user manual and brochure, a 6.8 MB hardware notebook covering 23 March to 17 October, print settings recorded next to the files (Bambu Lab X1 Carbon, 0.2 mm, 20% gyroid, PLA Matte with TPU 95A cuvette slots), a published SiO2 OD600 calibration, and CC BY 4.0 on everything. Against: the files are STL meshes, not STEP or parametric source, so a second team can print the photometer but not change its light path; the costs are totals (NT$16,450 in parts; about US$360 for the photometer against roughly US$15,000 for the benchtop instrument it replaces) rather than a priced line-item table; and of the four devices only the reactor rig's sketch.ino is in the MIT digital-twin repo — the photometer and LPA firmware were never released as source. Nobody outside the team has built one.",
-      "body_zh": "GEMS-Taiwan 過了標準，但值得把「只是剛好過」說清楚。可記上一筆的是：18 個確認可下載的 STL 檔（已驗證，以 model/stl 提供）、生物反應器、兩台光度計與光板各自 10 到 16 頁的六本組裝指南、一本使用手冊與一本型錄、一本涵蓋 3 月 23 日到 10 月 17 日的 6.8 MB 硬體筆記、與檔案並列的列印參數（Bambu Lab X1 Carbon、0.2 mm、20% gyroid 填充、本體 PLA Matte、比色管槽 TPU 95A）、一份公開的 SiO2 OD600 校正文件，以及全部採用 CC BY 4.0。要扣分的是：釋出的是 STL 網格，不是 STEP 也不是參數化原始檔，所以別的隊伍印得出這台光度計，卻改不動它的光路；成本給的是總數（零件 NT$16,450；光度計約 US$360，對照它所取代的約 US$15,000 桌上型儀器），而不是逐項標價的表格；四台裝置裡也只有反應器控制端的 sketch.ino 放進了 MIT 授權的 digital-twin 儲存庫——光度計與 LPA 的韌體從未以原始碼形式釋出。團隊以外，沒有人做過一台。",
-      "chips": [
-        "rebuildable, narrowly",
-        "GEMS-Taiwan",
-        "18 STL",
-        "CC BY 4.0",
-        "no STEP, no priced BOM"
-      ],
-      "link": "https://2026.igem.wiki/gems-taiwan/contribution/",
-      "linkText": "ReLEAF hardware files"
-    }
-  ],
-  "table": {
-    "head": [
-      "Team",
-      "Device",
-      "Design files you can download",
-      "Cost published",
-      "Firmware + licence",
-      "Rebuildable?"
-    ],
-    "head_zh": [
-      "隊伍",
-      "裝置",
-      "可下載的設計檔",
-      "公開的成本",
-      "韌體與授權",
-      "做得出來嗎？"
-    ],
-    "rows": [
-      [
-        "Lambert-GA",
-        "Vapor-X vacuum dryer",
-        "3 STL + Gerbers + drill + CPL CSV",
-        "$80.07 / $95.52 assembled",
-        "MicroPython, Apache-2.0",
-        "yes — used by 2 outside labs"
-      ],
-      [
-        "NCKU-Tainan",
-        "CAPTURE-Screen reader",
-        "75 STEP, 59 STL, CadQuery source",
-        "US$160.62 / US$53.70",
-        "ESP32 sketch, MIT",
-        "yes"
-      ],
-      [
-        "UNILausanne",
-        "C.L.A.W. LAMP incubator",
-        "5 STL + 3.8 MB manual",
-        "under CHF 10",
-        "none needed (thermostat module)",
-        "yes"
-      ],
-      [
-        "Hongwen School",
-        "BrewXOS Fermenter Mini",
-        "8.56 MB STEP assembly",
-        "about 3,480 RMB",
-        "Arduino, published as a PDF",
-        "yes"
-      ],
-      [
-        "TU Darmstadt",
-        "Anaerobic chamber, O2 monitor, shaker",
-        "none — built from a stock container",
-        "EUR 134.30 / 114.60 / 68.08",
-        "sketches printed in full, CC BY 4.0",
-        "yes"
-      ],
-      [
-        "GEMS-Taiwan",
-        "Bioreactor, 2 photometers, LPA, hydroponics",
-        "18 STL (meshes only)",
-        "NT$16,450; photometer ~US$360",
-        "1 of 4 devices, MIT",
-        "yes, narrowly"
-      ],
-      [
-        "Princeton",
-        "Gyroid biofilter cartridge",
-        "2 STL + print parameters",
-        "n/a (printed part)",
-        "n/a",
-        "yes (single part)"
-      ],
-      [
-        "CalPolySLO",
-        "Emulsification washboard + sled",
-        "2 STL via Google Drive",
-        "about $15",
-        "n/a",
-        "yes (single part)"
-      ],
-      [
-        "KAUST-KSA",
-        "SHIHAB suitcase bioreactor",
-        "CAD drawings as a 5.5 MB PDF",
-        "BOM PDF, no headline figure",
-        "45 KB Arduino sketch (served as .js)",
-        "almost — no geometry file"
-      ],
-      [
-        "HK League",
-        "Converted hydrogel bioprinter",
-        "3 STL zips",
-        "about US$400, not itemised",
-        "BioPrintCAD, Apache-2.0",
-        "almost — no priced BOM"
-      ],
-      [
-        "UBC-Vancouver",
-        "Fluorescence detector, bioreactor, chip",
-        ".glb meshes + drawing PDFs",
-        "CAD 204.48 (detector)",
-        "not published",
-        "almost — no source files"
-      ],
-      [
-        "HongKong-JSS",
-        "MerMAID detection + extraction units",
-        "Onshape public, 28 parts",
-        "USD ~357 (target was USD 40)",
-        "detection repo 404; extraction NOASSERTION",
-        "no — firmware gone"
-      ],
-      [
-        "Toronto",
-        "96-unit parallel bioreactor array",
-        "Drive folder lists nothing signed-out",
-        "$204 CAD per reactor",
-        "7 sketches + dashboard, Apache-2.0",
-        "no — CAD unreachable"
-      ],
-      [
-        "Bist-China",
-        "PyrLac POCT reader",
-        "7 STL on GitHub (2 stars)",
-        "about $77, itemised",
-        "sketches, no licence file",
-        "no — no licence, no guide"
-      ],
-      [
-        "Cornell",
-        "Arachne electrospinner",
-        "none",
-        "$1,213.35, 40 line items",
-        "not published",
-        "no"
-      ],
-      [
-        "NU Boston",
-        "FLARE soil chamber",
-        "none",
-        "$499.80 / $344.18, Pi excluded",
-        "not published",
-        "no"
-      ],
-      [
-        "CAU-China",
-        "OptiX phone spectrometer",
-        "none",
-        "\"$12-30\", not itemised",
-        "FSSA + MycoSpec, Apache-2.0",
-        "no"
-      ],
-      [
-        "SDU-Denmark",
-        "Microbial fuel cell + Arduino logger",
-        "parts-list PDF only",
-        "not costed",
-        "logger code not published",
-        "no"
-      ],
-      [
-        "McMaster-Canada",
-        "OMV bioreactor + microfluidic device",
-        "CFD result CSVs only",
-        "none",
-        "none",
-        "no"
-      ],
-      [
-        "Labi-Taiwan",
-        "ESP32 electrochemical reader",
-        "none",
-        "none",
-        "none",
-        "no"
-      ]
-    ],
-    "rows_zh": [
-      [
-        "Lambert-GA",
-        "Vapor-X 真空乾燥機",
-        "3 個 STL＋Gerber＋鑽孔檔＋貼片 CSV",
-        "$80.07／含組裝 $95.52",
-        "MicroPython，Apache-2.0",
-        "可以——兩間外部實驗室用過"
-      ],
-      [
-        "NCKU-Tainan",
-        "CAPTURE-Screen 判讀儀",
-        "75 個 STEP、59 個 STL、CadQuery 原始檔",
-        "US$160.62／US$53.70",
-        "ESP32 韌體，MIT",
-        "可以"
-      ],
-      [
-        "UNILausanne",
-        "C.L.A.W. LAMP 恆溫器",
-        "5 個 STL＋3.8 MB 手冊",
-        "不到 CHF 10",
-        "不需要（用恆溫模組）",
-        "可以"
-      ],
-      [
-        "Hongwen School",
-        "BrewXOS Fermenter Mini",
-        "8.56 MB 的 STEP 組件",
-        "約 3,480 RMB",
-        "Arduino，以 PDF 形式發表",
-        "可以"
-      ],
-      [
-        "TU Darmstadt",
-        "厭氧操作箱、氧氣監測器、振盪器",
-        "無——以市售容器改裝",
-        "EUR 134.30／114.60／68.08",
-        "程式碼完整印在頁面上，CC BY 4.0",
-        "可以"
-      ],
-      [
-        "GEMS-Taiwan",
-        "生物反應器、兩台光度計、LPA、水耕板",
-        "18 個 STL（僅網格）",
-        "NT$16,450；光度計約 US$360",
-        "四台中只有一台，MIT",
-        "勉強可以"
-      ],
-      [
-        "Princeton",
-        "Gyroid 生物濾材",
-        "2 個 STL＋列印參數",
-        "不適用（單一列印件）",
-        "不適用",
-        "可以（單一零件）"
-      ],
-      [
-        "CalPolySLO",
-        "乳化搓板與橡皮筋滑座",
-        "2 個 STL，放在 Google Drive",
-        "約 $15",
-        "不適用",
-        "可以（單一零件）"
-      ],
-      [
-        "KAUST-KSA",
-        "SHIHAB 手提箱式生物反應器",
-        "CAD 圖，5.5 MB 的 PDF",
-        "有物料清單 PDF，無公開總價",
-        "45 KB Arduino 韌體（以 .js 提供）",
-        "差一點——沒有幾何檔"
-      ],
-      [
-        "HK League",
-        "改裝的水膠生物列印機",
-        "3 個 STL 壓縮檔",
-        "約 US$400，未逐項列出",
-        "BioPrintCAD，Apache-2.0",
-        "差一點——沒有標價物料清單"
-      ],
-      [
-        "UBC-Vancouver",
-        "螢光偵測器、生物反應器、晶片",
-        ".glb 網格＋工程圖 PDF",
-        "CAD 204.48（偵測器）",
-        "未釋出",
-        "差一點——沒有原始檔"
-      ],
-      [
-        "HongKong-JSS",
-        "MerMAID 偵測與萃取單元",
-        "Onshape 公開，28 個零件",
-        "USD 約 357（目標是 USD 40）",
-        "偵測端儲存庫 404；萃取端 NOASSERTION",
-        "不行——韌體不見了"
-      ],
-      [
-        "Toronto",
-        "96 組平行生物反應器陣列",
-        "未登入時 Drive 資料夾列不出檔案",
-        "每台 204 加幣",
-        "7 支韌體＋儀表板，Apache-2.0",
-        "不行——CAD 拿不到"
-      ],
-      [
-        "Bist-China",
-        "PyrLac 定點照護判讀儀",
-        "GitHub 上 7 個 STL（2 顆星）",
-        "約 $77，有逐項列出",
-        "有韌體，但沒有授權條款檔",
-        "不行——無授權、無組裝指南"
-      ],
-      [
-        "Cornell",
-        "Arachne 靜電紡絲機",
-        "無",
-        "$1,213.35，40 個品項",
-        "未釋出",
-        "不行"
-      ],
-      [
-        "NU Boston",
-        "FLARE 土壤模擬艙",
-        "無",
-        "$499.80／$344.18，未含 Pi",
-        "未釋出",
-        "不行"
-      ],
-      [
-        "CAU-China",
-        "OptiX 手機光譜儀",
-        "無",
-        "「$12-30」，未逐項列出",
-        "FSSA 與 MycoSpec，Apache-2.0",
-        "不行"
-      ],
-      [
-        "SDU-Denmark",
-        "微生物燃料電池與 Arduino 記錄器",
-        "只有零件清單 PDF",
-        "未估價",
-        "記錄器程式碼未釋出",
-        "不行"
-      ],
-      [
-        "McMaster-Canada",
-        "OMV 生物反應器與微流體裝置",
-        "只有 CFD 結果 CSV",
-        "無",
-        "無",
-        "不行"
-      ],
-      [
-        "Labi-Taiwan",
-        "ESP32 電化學判讀儀",
-        "無",
-        "無",
-        "無",
-        "不行"
-      ]
-    ]
+ "id": "hardware-afterlife",
+ "tab": "drylab",
+ "order": 38,
+ "kicker": "Original analysis",
+ "kicker_zh": "原創分析",
+ "title": "Can anyone rebuild the hardware?",
+ "title_zh": "這些硬體，別人做得出來嗎？",
+ "lede": "Of 20 instruments built by the 2026 Best Hardware, Best Measurement and Best Alternative Platform cohorts, 6 publish enough for a stranger in another country to rebuild them. Nine publish no geometry file at all. One has ever been used by someone outside the team that built it.",
+ "lede_zh": "2026 年 Best Hardware、Best Measurement 與 Best Alternative Platform 這三組隊伍總共做出 20 台儀器，其中只有 6 台公開的資料足以讓另一個國家的陌生人重建出來。有 9 台完全沒有釋出任何幾何檔案。而真正被原團隊以外的人用過的，只有 1 台。",
+ "body": "**Six of twenty.** That is how many award-winning iGEM 2026 instruments a stranger could actually rebuild: NCKU-Tainan's CAPTURE-Screen fluorescence reader, Lambert-GA's Vapor-X vacuum dryer, UNILausanne's C.L.A.W. LAMP incubator, Hongwen School's BrewXOS Fermenter Mini, TU Darmstadt's anaerobic chamber trio, and GEMS-Taiwan's four ReLEAF devices. Two more — Princeton's gyroid biofilter and CalPolySLO's emulsification washboard — are single printed parts where an STL plus print settings is the whole deliverable, which takes the generous count to eight. Everything else is missing at least one thing a second builder cannot do without.\n\nThe sister analysis of software found that every repository was populated, because iGEM mandates a GitLab deposit, and that the thing separating live tools from dead ones was a hosting decision. Hardware has no such floor. **There is no `2026/hardware` group on gitlab.igem.org at all** — the API returns 404 for it while `2026/software` returns a group called Software. Every hardware release in this cohort is improvised: a sub-project filed under `/software/`, a personal GitHub account, an Onshape link, a Google Drive folder, or loose files on the wiki's asset store. Nothing in the competition ever asks a hardware team to press Export.\n\nAnd pressing Export is exactly the separating habit. The teams you cannot rebuild from are not lazy and their CAD is not missing — it is visibly, beautifully *rendered*. Cornell's Best Hardware winner has an exploded view of the Arachne electrospinner and a bill of materials so good it names Analog Technologies' AHV24V30KVR5MAW at $419.00 across 40 priced line items totalling $1,213.35 — and then says, in the present tense of a page that will not change again, \"we plan to provide a bill of materials, CAD files, circuit diagrams, assembly documentation, and an operation manual.\" Two PDFs went up; no CAD file, no schematic file and no firmware ever did. CAU-China's OptiX phone spectrometer has an interactive exploded CAD view with numbered, clickable components and the most careful calibration chain in the whole cohort — and not one downloadable file, not one priced part, on a $12–30 instrument whose entire pitch is that anyone can have one. NU Boston published CAD drawings with dimensions and tolerances as figures. UBC-Vancouver published `.glb` meshes, a render format. In every one of these cases the model exists; it simply never left the design tool in a format anyone else can open.\n\nThe six that cleared the bar all did one unglamorous thing: they wrote the build as a document with files attached, not a page with pictures attached. NCKU-Tainan's MIT-licensed repo holds 225 files — 75 STEP exports, 59 STLs, the parametric CadQuery Python they were generated from, an ESP32 sketch with its own AS7341 driver, a bill-of-materials CSV and a 12-step assembly order that a second builder checked against the real machine. Its costing is the most honest number in the census: US$160.62 for the printed build, broken down to the print-shop receipt, with the line \"an estimate, not an account\" and the NT$31.68/US$1 rate it was converted at. Lambert-GA shipped Gerbers, a drill file, a JLCPCB pick-and-place CSV and a BOM keyed to LCSC part numbers, so the board can be ordered without a human in the loop. UNILausanne's C.L.A.W. costs under CHF 10, ships five STLs and a 3.8 MB manual, and includes the calibration that matters: a thermometer in the tube bore reads about 10 °C above the display, so the thermostat is set to 52.5 °C, preheated ten minutes, and holds 62.7 ± 1.2 °C over 30 minutes across three runs.\n\nTwo links fail the moment you check them rather than read them. Toronto's bioreactor page points at a Google Drive folder called \"Bioreactor CAD Files\"; opened signed-out it shows the folder name, no files, and a prompt to sign in — so the CAD for a $204 CAD bioreactor is, in practice, unavailable, while the firmware beside it is public and Apache-2.0. HongKong-JSS does the opposite: its Onshape document loads for anyone, 28 parts and a full feature tree, while `github.com/hkjssplkchc2026/mercurysense` — the firmware, the C12880 spectrometer driver and the acquisition instructions, as named on their own wiki — returns 404, and that GitHub account has no public repositories at all. Costs deserve the same scepticism. NU Boston's FLARE leads with \"as low as $300 vs $10,000\", then publishes two bills of materials totalling $499.80 and $344.18, **neither of which contains the Raspberry Pi 5 or the Arduino that run the instrument**. By contrast HongKong-JSS states plainly that its USD 357 build missed the USD 40 its stakeholders asked for, and TU Darmstadt records that the oxygen sensor is 83% of its €114.60 monitor.\n\nOutside use is bleaker than it was for software. Across every hardware repository checked the fork count is zero and the star count is zero, with one exception: Bist-China's seven STLs on GitHub have two stars — and no licence file, so nobody may legally reuse them. The single genuine case of a device leaving its makers is Lambert-GA's, and it is a high-school team: they shipped Vapor-X to the Biochemical Genetics Laboratory at the University of Alabama at Birmingham, where John Moore measured 38 of 43 compounds recovered within 5% of undried controls, and to the Styczynski Lab at Georgia Tech, which checked GFP fluorescence after drying DNA and lysates. Both labs' raw data are downloadable. **One team in twenty asked an outsider to use the thing, and the one that did was the one with Gerbers.**",
+ "body_zh": "**二十台裡有六台。** 這是 2026 年得獎儀器中，陌生人真的做得出來的數量：NCKU-Tainan 的 CAPTURE-Screen 螢光判讀儀、Lambert-GA 的 Vapor-X 真空乾燥機、UNILausanne 的 C.L.A.W. LAMP 恆溫器、Hongwen School 的 BrewXOS Fermenter Mini、TU Darmstadt 的三件厭氧套件，以及 GEMS-Taiwan 的四台 ReLEAF 裝置。另有兩件——Princeton 的 gyroid 生物濾材與 CalPolySLO 的乳化搓板——本身就是單一列印件，一個 STL 加上列印參數就是全部交付物，寬鬆算來可以湊到八台。其餘每一台，都至少缺了第二個製作者非有不可的某樣東西。\n\n軟體那篇姊妹分析發現：每一個儲存庫都有實質內容，因為 iGEM 強制要求把原始碼存進 GitLab；真正決定工具生死的，是一個關於架站的決定。硬體沒有這道底線。**gitlab.igem.org 上根本沒有 `2026/hardware` 這個群組**——API 對它回 404，而 `2026/software` 回的是一個名為 Software 的群組。這批隊伍的硬體釋出全是各自想辦法：掛在 `/software/` 底下的子專案、個人 GitHub 帳號、一條 Onshape 連結、一個 Google Drive 資料夾，或是散落在 wiki 靜態檔案區的零散檔案。整場比賽從來沒有任何一個環節，要求硬體隊伍按下「匯出」。\n\n而「按下匯出」正是那個分水嶺習慣。那些你重建不了的隊伍，並不是偷懶，他們的 CAD 也沒有不見——而是被漂漂亮亮地「算圖」成了圖片。Cornell 這支 Best Hardware 冠軍隊，有一張 Arachne 靜電紡絲機的爆炸圖，還有一份好到會寫出 Analog Technologies AHV24V30KVR5MAW、單價 $419.00 的物料清單，40 個逐項報價的品項合計 $1,213.35——然後，在一個不會再更動的頁面上，用現在式寫著：「我們計畫提供物料清單、CAD 檔案、電路圖、組裝文件與操作手冊。」最後上傳的是兩份 PDF；沒有任何一個 CAD 檔、電路圖檔或韌體。CAU-China 的 OptiX 手機光譜儀有一張可點選、元件逐一編號的互動式爆炸 CAD 視圖，校正鏈也是整批隊伍中做得最細的——卻連一個可下載的檔案、一項標價的零件都沒有，而這台儀器的全部訴求，就是 $12 到 $30、人人都能有一台。NU Boston 把標注尺寸與公差的 CAD 圖當成插圖發表。UBC-Vancouver 發表的是 `.glb`，一種算圖用的格式。上述每一個案例，模型都存在；它只是從來沒有以別人打得開的格式離開過設計軟體。\n\n過關的那六支，都做了同一件不起眼的事：他們把製作過程寫成一份附帶檔案的文件，而不是一個附帶圖片的網頁。NCKU-Tainan 以 MIT 授權的儲存庫裡有 225 個檔案——75 個 STEP 匯出檔、59 個 STL、生成這些檔案的參數化 CadQuery Python、一支自帶 AS7341 驅動程式的 ESP32 韌體、一份物料清單 CSV，以及一份由第二位製作者對照實機核對過的 12 步組裝順序。它的成本估算是這份普查中最誠實的數字：3D 列印版 US$160.62，拆到列印店的收據，並附上「這是估算，不是帳目」這句話，以及換算所用的 NT$31.68 兌 US$1 匯率。Lambert-GA 釋出了 Gerber 檔、鑽孔檔、JLCPCB 貼片座標 CSV，以及一份以 LCSC 料號編寫的物料清單，所以這塊板子可以在沒有人介入的情況下直接下單。UNILausanne 的 C.L.A.W. 成本不到 CHF 10，附五個 STL 與一份 3.8 MB 的手冊，而且寫進了真正關鍵的校正：把溫度計直接插進試管孔，讀到的溫度比面板顯示高約 10 °C，所以恆溫器設在 52.5 °C、預熱十分鐘，三次獨立測試中 30 分鐘內維持在 62.7 ± 1.2 °C。\n\n有兩條連結，只要去點它、而不是去讀它，就當場失效。Toronto 的生物反應器頁面指向一個名為「Bioreactor CAD Files」的 Google Drive 資料夾；未登入開啟時只看得到資料夾名稱、沒有任何檔案，還跳出要你登入的提示——所以這台 204 加幣生物反應器的 CAD，實際上拿不到，而旁邊的韌體卻是公開的 Apache-2.0。HongKong-JSS 則剛好相反：它的 Onshape 文件任何人都開得起來，28 個零件、完整特徵樹俱在，但他們自己 wiki 上寫明收著韌體、C12880 光譜儀驅動程式與擷取說明的 `github.com/hkjssplkchc2026/mercurysense` 回應 404，而且那個 GitHub 帳號底下一個公開儲存庫也沒有。成本同樣值得用一樣的懷疑去看。NU Boston 的 FLARE 以「低至 $300，相對於 $10,000」開場，接著公開了兩份物料清單，合計分別是 $499.80 與 $344.18，**而兩份都沒有放進驅動這台儀器的 Raspberry Pi 5 或 Arduino**。相對地，HongKong-JSS 直白寫出他們 USD 357 的製作成本沒有達到利害關係人要求的 USD 40，TU Darmstadt 也記下氧氣感測器佔了那台 €114.60 監測器的 83%。\n\n至於外部使用，情況比軟體那邊更慘。所有被檢查過的硬體儲存庫，分支數都是零、星星數也都是零，只有一個例外：Bist-China 放在 GitHub 上的七個 STL 有兩顆星——卻沒有授權條款檔案，所以沒有人可以合法地拿去用。唯一一個儀器真正離開製作者手中的案例來自 Lambert-GA，而且是一支高中隊伍：他們把 Vapor-X 寄到 University of Alabama at Birmingham 的 Biochemical Genetics Laboratory，由 John Moore 量得 43 個化合物中有 38 個的回收率落在未乾燥對照組的 5% 以內；也寄到 Georgia Tech 的 Styczynski Lab，由他們檢查 DNA 與細胞裂解液乾燥後的 GFP 螢光。兩間實驗室的原始資料都可以下載。**二十支隊伍中只有一支請外人實際用過自己的東西，而做到這件事的，正是那支連 Gerber 檔都備齊的隊伍。**",
+ "cards": [
+  {
+   "kicker": "Best in class",
+   "kicker_zh": "同類最佳",
+   "title": "Vapor-X — the only device an outsider has used",
+   "title_zh": "Vapor-X——唯一有外人用過的裝置",
+   "body": "Lambert-GA's $80.07 vacuum dryer (a Mason jar, a 12 V pump, a polyimide heater and a Raspberry Pi Pico W on a custom PCB) is the only instrument in this cohort with third-party evidence. The team shipped it to the Biochemical Genetics Laboratory at the University of Alabama at Birmingham, where John Moore recovered 38 of 43 measured compounds within 5% of undried controls, and to the Styczynski Lab at Georgia Tech for GFP fluorescence after drying. The release matches: three STLs, a complete Gerber and drill set, a JLCPCB pick-and-place CSV, a BOM keyed to LCSC part numbers, MicroPython firmware under Apache-2.0, and an 8.5 MB construction manual. It is the only release here that a board house could execute without a human reading the wiki.",
+   "body_zh": "Lambert-GA 這台 $80.07 的真空乾燥機（一只梅森罐、一顆 12 V 真空幫浦、一片聚醯亞胺加熱片，以及一塊自製 PCB 上的 Raspberry Pi Pico W），是這批隊伍中唯一有第三方證據的儀器。團隊把它寄到 University of Alabama at Birmingham 的 Biochemical Genetics Laboratory，由 John Moore 測得 43 個化合物中有 38 個回收率落在未乾燥對照組的 5% 以內；也寄到 Georgia Tech 的 Styczynski Lab，檢查乾燥後的 GFP 螢光。釋出的內容也相稱：三個 STL、一整套 Gerber 與鑽孔檔、一份 JLCPCB 貼片座標 CSV、一份以 LCSC 料號編寫的物料清單、以 Apache-2.0 授權的 MicroPython 韌體，以及一份 8.5 MB 的製作手冊。這是此處唯一一份板廠不必有人去讀 wiki 就能直接施工的釋出。",
+   "chips": [
+    "rebuildable",
+    "Lambert-GA",
+    "high school",
+    "Gerbers + CPL",
+    "tested at 2 outside labs"
+   ],
+   "chips_zh": [
+    "可重建",
+    "Lambert-GA",
+    "高中",
+    "Gerbers + CPL",
+    "2 間外部實驗室測過"
+   ],
+   "link": "https://gitlab.igem.org/2026/software/lambert-ga/vapor-x",
+   "linkText": "Vapor-X files on iGEM GitLab"
   },
-  "checklist": [
-    "Export every part to STEP as well as STL before the wiki freeze. ReLEAF ships 18 STL meshes; a mesh prints but cannot be edited, so nobody can move the photometer's light path. NCKU-Tainan shipped 75 STEP files plus the CadQuery source that generated them.",
-    "Publish one itemised bill of materials per device — supplier, part number, quantity, unit price, extended price, subtotal — not a total. Cornell's 40-row table is the model to copy even though Cornell published no CAD; ReLEAF currently gives NT$16,450 and about US$360 with the parts named only inside the assembly guides.",
-    "Put all four devices' firmware in the GitLab repo under MIT, not just the reactor rig's sketch.ino. If a file extension is blocked, do what KAUST-KSA did: upload the sketch as .js with a header telling the reader to save it as .ino.",
-    "Ship each device as one versioned archive — STEP, STL, BOM CSV, firmware, manual, LICENSE — instead of eighteen loose links on a contribution page. HK League's three zips with a per-file print count are the pattern.",
-    "Put the licence inside the bundle, not only in a sentence at the bottom of the page. Bist-China's seven STLs are the only hardware files in the cohort with any stars, and nobody may legally use them because there is no licence file.",
-    "Never host design files on Google Drive. Toronto's \"Bioreactor CAD Files\" folder shows a signed-out visitor nothing at all, which is indistinguishable from publishing nothing.",
-    "Write a calibration page per device and keep the honest number in it. The SiO2 OD600 calibration and the leaf-sensor +0.47 to +1.71 degC offset over 540 paired readings are exactly right; add the same for the LPA's per-LED output and the Pro-versus-Slim scale difference.",
-    "Cost the whole instrument, including the computer. NU Boston's two BOMs both omit the Raspberry Pi that runs the device; the GEMS cost sheet should state explicitly what the NT$16,450 does and does not cover.",
-    "Send one device to one outside laboratory, ask them to run something real, and publish their raw data. Lambert-GA is a high-school team and did this twice, at UAB and Georgia Tech — it is the only outside-use evidence in the entire cohort.",
-    "Re-check every hardware link a month after the Jamboree. HongKong-JSS's firmware repository was named on the wiki and is now a 404; a single curl would have caught it."
+  {
+   "kicker": "The fullest file set",
+   "kicker_zh": "最完整的檔案組",
+   "title": "NCKU-Tainan shipped the source, not just the export",
+   "title_zh": "NCKU-Tainan 釋出的是原始檔，不只是匯出檔",
+   "body": "225 files under MIT: 75 STEP assemblies, 59 STLs covering 66 printed pieces across two builds, and the parametric CadQuery Python the geometry was generated from — so another team can change a dimension rather than reprint yours. Alongside it sit an ESP32 sketch with its own AS7341 driver, a bill-of-materials CSV, a bench schematic with measured values, and working sensor settings (AGAIN 512x, ATIME 255, ASTEP 280). The costing is itemised by basis — print-shop receipts, costing sheet, distributor list prices — totals US$160.62 for the printed build and US$53.70 for the laser-cut one, and is labelled \"an estimate, not an account\". They also publish what failed: the laser-cut build could not tell the AHL sensor strain from cells without sfGFP.",
+   "body_zh": "以 MIT 授權釋出的 225 個檔案：75 個 STEP 組件、涵蓋兩個版本共 66 個列印件的 59 個 STL，以及生成這些幾何的參數化 CadQuery Python——所以別的隊伍可以改尺寸，而不是只能照著你的檔案重印。旁邊還放著一支自帶 AS7341 驅動程式的 ESP32 韌體、一份物料清單 CSV、一張標有實測值的電路圖，以及可用的感測器設定（AGAIN 512x、ATIME 255、ASTEP 280）。成本逐項標明依據——列印店收據、自家成本表、經銷商牌價——3D 列印版合計 US$160.62、雷射切割版 US$53.70，並註明「這是估算，不是帳目」。他們也把失敗寫出來：雷射切割版分不出 AHL 感測菌株與不帶 sfGFP 的細胞。",
+   "chips": [
+    "rebuildable",
+    "NCKU-Tainan",
+    "75 STEP + 59 STL",
+    "parametric source",
+    "MIT"
+   ],
+   "chips_zh": [
+    "可重建",
+    "NCKU-Tainan",
+    "75 STEP + 59 STL",
+    "參數化原始檔",
+    "MIT"
+   ],
+   "link": "https://gitlab.igem.org/2026/software/ncku-tainan/capture-screen-hardware",
+   "linkText": "capture-screen-hardware"
+  },
+  {
+   "kicker": "The gap between page and file",
+   "kicker_zh": "頁面與檔案之間的落差",
+   "title": "The Best Hardware winner published no CAD at all",
+   "title_zh": "Best Hardware 冠軍隊一個 CAD 檔都沒有釋出",
+   "body": "Cornell's Arachne electrospinner won Best Hardware (Undergraduate) with a genuinely excellent bill of materials — 40 priced line items in three groups, from the $419.00 Analog Technologies AHV24V30KVR5MAW 30 kV supply to $0.08 M5 screws, subtotals $681.76 / $416.87 / $114.72, total $1,213.35 — and a fabrication-and-assembly guide and safety manual that both download. What never appeared is the geometry: no STL, no STEP, no circuit schematic file and no ESP32 firmware anywhere on the hardware, circuitry, encasement or contribution pages. The page still carries the sentence \"we plan to provide a bill of materials, CAD files, circuit diagrams, assembly documentation, and an operation manual.\" Half of that shipped.",
+   "body_zh": "Cornell 的 Arachne 靜電紡絲機拿下大學組 Best Hardware，物料清單做得確實出色——三個群組、40 個標價品項，從 $419.00 的 Analog Technologies AHV24V30KVR5MAW 30 kV 高壓模組，到 $0.08 的 M5 螺絲，小計分別是 $681.76／$416.87／$114.72，總計 $1,213.35——製作組裝指南與安全手冊兩份 PDF 也都下載得到。始終沒有出現的是幾何檔：hardware、circuitry、encasement 與 contribution 四個頁面上，沒有任何 STL、STEP、電路圖檔或 ESP32 韌體。頁面上到現在還寫著：「我們計畫提供物料清單、CAD 檔案、電路圖、組裝文件與操作手冊。」兌現的是其中一半。",
+   "chips": [
+    "not rebuildable",
+    "Cornell",
+    "BOM $1,213.35",
+    "no CAD",
+    "no firmware"
+   ],
+   "chips_zh": [
+    "無法重建",
+    "Cornell",
+    "物料清單 $1,213.35",
+    "沒有 CAD",
+    "沒有韌體"
+   ],
+   "link": "https://2026.igem.wiki/cornell/hardware",
+   "linkText": "Cornell hardware page"
+  },
+  {
+   "kicker": "Check the link, not the sentence",
+   "kicker_zh": "要點連結，不要只看句子",
+   "title": "An empty Drive folder and a 404 repository",
+   "title_zh": "一個空的 Drive 資料夾，和一個 404 的儲存庫",
+   "body": "Toronto's hardware page links a Google Drive folder named \"Bioreactor CAD Files\". Opened without a Google account it renders the folder title, lists nothing, and asks you to sign in — so the CAD for its $204 CAD, 96-unit bioreactor array is effectively unavailable, while the firmware next to it is public under Apache-2.0 and the BOM and assembly PDFs both download. HongKong-JSS has the mirror-image failure: its Onshape document is genuinely public (28 parts, full feature tree, view-only) but github.com/hkjssplkchc2026/mercurysense — named on its own wiki as holding the ESP32 firmware, the Hamamatsu C12880 driver and the acquisition instructions — returns 404, and the account has zero public repositories. Only its extraction-unit firmware survived, on a different personal account, with licence \"NOASSERTION\".",
+   "body_zh": "Toronto 的硬體頁面連到一個名為「Bioreactor CAD Files」的 Google Drive 資料夾。在沒有 Google 帳號的情況下開啟，只顯示資料夾標題、列不出任何檔案，並要求你登入——所以那台 204 加幣、可達 96 組的生物反應器陣列的 CAD，實際上拿不到，而旁邊的韌體卻以 Apache-2.0 公開，物料清單與組裝說明兩份 PDF 也都下載得到。HongKong-JSS 則是鏡像般的另一種失敗：它的 Onshape 文件確實公開（28 個零件、完整特徵樹、唯讀），但他們自己 wiki 上寫明收著 ESP32 韌體、Hamamatsu C12880 驅動程式與擷取說明的 github.com/hkjssplkchc2026/mercurysense 回應 404，而那個帳號底下一個公開儲存庫也沒有。活下來的只有萃取單元的韌體，放在另一個個人帳號上，授權條款標示為「NOASSERTION」。",
+   "chips": [
+    "broken",
+    "Toronto",
+    "HongKong-JSS",
+    "Drive sign-in wall",
+    "GitHub 404"
+   ],
+   "chips_zh": [
+    "壞掉",
+    "Toronto",
+    "HongKong-JSS",
+    "Drive 擋在登入牆後",
+    "GitHub 404"
+   ],
+   "link": "https://2026.igem.wiki/toronto/hardware/",
+   "linkText": "Toronto hardware page"
+  },
+  {
+   "kicker": "Costs that do not add up",
+   "kicker_zh": "兜不攏的成本",
+   "title": "The computer is missing from the bill of materials",
+   "title_zh": "物料清單裡少了那台電腦",
+   "body": "NU Boston's FLARE soil chamber leads with \"a build cost of as low as $300 vs. $10,000\" and then publishes two bills of materials: $499.80 for the entire system and $344.18 for the UV module. Neither total includes the Raspberry Pi 5 that runs the imaging, the Arduino that drives the pumps, the printed and laser-cut enclosure, or the tubing — the module BOM lists a \"Raspberry Pi 5 breakout board, $7.50\" but not the Pi. So the headline is below both published totals, and both published totals are below the real one. Compare HongKong-JSS, which states outright that its USD 357 core-component build overshot the USD 40 its stakeholders asked for, and TU Darmstadt, which notes that the sensor alone is 83% of its €114.60 oxygen monitor.",
+   "body_zh": "NU Boston 的 FLARE 土壤模擬艙以「製作成本低至 $300，相對於 $10,000」開場，接著公開了兩份物料清單：整套系統 $499.80、UV 模組 $344.18。兩份總計都沒有包含負責成像的 Raspberry Pi 5、驅動幫浦的 Arduino、列印與雷射切割的機殼，也沒有管路——模組清單裡列了「Raspberry Pi 5 擴展板，$7.50」，卻沒有那台 Pi。於是，標題數字低於兩份公開總計，而兩份公開總計又都低於真實成本。對照之下，HongKong-JSS 直接寫明他們 USD 357 的核心元件成本超出利害關係人要求的 USD 40，TU Darmstadt 也註明光是感測器就佔了那台 €114.60 氧氣監測器的 83%。",
+   "chips": [
+    "cost credibility",
+    "NU Boston",
+    "$300 headline",
+    "$499.80 BOM",
+    "no Pi in the list"
+   ],
+   "chips_zh": [
+    "成本可信度",
+    "NU Boston",
+    "標題寫 $300",
+    "物料清單 $499.80",
+    "清單裡沒有 Pi"
+   ],
+   "link": "https://2026.igem.wiki/nu-boston/hardware",
+   "linkText": "NU Boston hardware page"
+  },
+  {
+   "kicker": "GEMS-Taiwan, on the same terms",
+   "kicker_zh": "以同一把尺衡量 GEMS-Taiwan",
+   "title": "Eighteen STLs, six manuals — and meshes instead of models",
+   "title_zh": "十八個 STL、六本手冊——但給的是網格，不是模型",
+   "body": "GEMS-Taiwan clears the bar, and it is worth being precise about how narrowly. On the credit side: 18 STL files that download (verified, served as model/stl), six assembly guides of 10 to 16 pages for the bioreactor, both photometers and the light plate, a user manual and brochure, a 6.8 MB hardware notebook covering 23 March to 17 October, print settings recorded next to the files (Bambu Lab X1 Carbon, 0.2 mm, 20% gyroid, PLA Matte with TPU 95A cuvette slots), a published SiO2 OD600 calibration, and CC BY 4.0 on everything. Against: the files are STL meshes, not STEP or parametric source, so a second team can print the photometer but not change its light path; the costs are totals (NT$16,450 in parts; about US$360 for the photometer against roughly US$15,000 for the benchtop instrument it replaces) rather than a priced line-item table; and of the four devices only the reactor rig's sketch.ino is in the MIT digital-twin repo — the photometer and LPA firmware were never released as source. Nobody outside the team has built one.",
+   "body_zh": "GEMS-Taiwan 過了標準，但值得把「只是剛好過」說清楚。可記上一筆的是：18 個確認可下載的 STL 檔（已驗證，以 model/stl 提供）、生物反應器、兩台光度計與光板各自 10 到 16 頁的六本組裝指南、一本使用手冊與一本型錄、一本涵蓋 3 月 23 日到 10 月 17 日的 6.8 MB 硬體筆記、與檔案並列的列印參數（Bambu Lab X1 Carbon、0.2 mm、20% gyroid 填充、本體 PLA Matte、比色管槽 TPU 95A）、一份公開的 SiO2 OD600 校正文件，以及全部採用 CC BY 4.0。要扣分的是：釋出的是 STL 網格，不是 STEP 也不是參數化原始檔，所以別的隊伍印得出這台光度計，卻改不動它的光路；成本給的是總數（零件 NT$16,450；光度計約 US$360，對照它所取代的約 US$15,000 桌上型儀器），而不是逐項標價的表格；四台裝置裡也只有反應器控制端的 sketch.ino 放進了 MIT 授權的 digital-twin 儲存庫——光度計與 LPA 的韌體從未以原始碼形式釋出。團隊以外，沒有人做過一台。",
+   "chips": [
+    "rebuildable, narrowly",
+    "GEMS-Taiwan",
+    "18 STL",
+    "CC BY 4.0",
+    "no STEP, no priced BOM"
+   ],
+   "chips_zh": [
+    "勉強可重建",
+    "GEMS-Taiwan",
+    "18 STL",
+    "CC BY 4.0",
+    "沒有 STEP，物料清單沒標價"
+   ],
+   "link": "https://2026.igem.wiki/gems-taiwan/contribution/",
+   "linkText": "ReLEAF hardware files"
+  }
+ ],
+ "table": {
+  "head": [
+   "Team",
+   "Device",
+   "Design files you can download",
+   "Cost published",
+   "Firmware + licence",
+   "Rebuildable?"
   ],
-  "checklist_zh": [
-    "在 wiki 凍結之前，把每個零件同時匯出成 STEP 與 STL。ReLEAF 給的是 18 個 STL 網格；網格印得出來，卻改不動，所以沒有人能調整光度計的光路。NCKU-Tainan 給的是 75 個 STEP，外加生成它們的 CadQuery 原始檔。",
-    "每台裝置公開一份逐項的物料清單——供應商、料號、數量、單價、小計金額、分組小計——而不是一個總數。Cornell 那張 40 列的表是值得照抄的範本，即使 Cornell 自己連 CAD 都沒放；ReLEAF 目前只給 NT$16,450 和約 US$360，零件名稱則埋在組裝指南裡。",
-    "把四台裝置的韌體都以 MIT 授權放進 GitLab 儲存庫，而不是只有反應器控制端的 sketch.ino。如果副檔名被擋，就照 KAUST-KSA 的做法：把韌體以 .js 上傳，並在開頭寫明請讀者另存為 .ino。",
-    "每台裝置打包成一個有版本的壓縮檔——STEP、STL、物料清單 CSV、韌體、手冊、LICENSE——而不是在 contribution 頁面上散落十八條連結。HK League 那三個附帶逐檔列印數量的壓縮檔就是範例。",
-    "把授權條款放進壓縮檔裡，不要只寫在頁面底部一句話。Bist-China 的七個 STL 是這批隊伍中唯一拿到星星的硬體檔案，但因為沒有授權條款檔，沒有人可以合法使用。",
-    "絕對不要把設計檔放在 Google Drive。Toronto 那個「Bioreactor CAD Files」資料夾對未登入的訪客什麼都不顯示，這和完全沒有公開沒有兩樣。",
-    "每台裝置寫一頁校正說明，而且把誠實的那個數字留在裡面。SiO2 OD600 校正，以及葉面感測器在 540 組配對讀數中 +0.47 到 +1.71 degC 的偏移，做法完全正確；LPA 的逐顆 LED 輸出、以及 Pro 與 Slim 之間的尺度差異，也該比照辦理。",
-    "把整台儀器的成本算進去，包含那台電腦。NU Boston 的兩份物料清單都漏掉了驅動裝置的 Raspberry Pi；GEMS 的成本表也該明講 NT$16,450 涵蓋與不涵蓋什麼。",
-    "把一台裝置寄給一間外部實驗室，請他們跑一件真實的實驗，並公開他們的原始資料。Lambert-GA 是一支高中隊伍，而且做了兩次，分別在 UAB 與 Georgia Tech——這是整批隊伍中唯一的外部使用證據。",
-    "Jamboree 結束一個月後，把每一條硬體連結重新檢查一遍。HongKong-JSS 的韌體儲存庫在 wiki 上寫得清清楚楚，現在卻是 404；一行 curl 就能抓到。"
+  "head_zh": [
+   "隊伍",
+   "裝置",
+   "可下載的設計檔",
+   "公開的成本",
+   "韌體與授權",
+   "做得出來嗎？"
   ],
-  "method": "Twenty instruments were graded: the fourteen Best Hardware winners and nominees across all three sections, plus the six Best Measurement and Best Alternative Platform teams that actually built a device (UNILausanne, Princeton, CalPolySLO, SDU-Denmark, McMaster-Canada, Labi-Taiwan). The remaining Measurement and Alternative Platform teams checked — William-and-Mary, XJTLU-China, WageningenUR, CHINAGuangdongShimen, HangzhouFourteenAP, Yucai-SZ, UOttawa, Marburg, BGI-College — released no instrument and are excluded from the base rate; William-and-Mary's hardware page is still an unfilled iGEM template. Each instrument was scored on seven checkable things: a bill of materials naming parts with prices or part numbers; a total cost and whether it is credible; geometry or electrical source files that actually download; firmware with a licence; an assembly guide a non-author could follow; a calibration or validation protocol; and any evidence of outside use. The pass bar was all of files, priced parts, an assembly guide and a validation protocol, plus firmware where the device needs it. Server-rendered wiki pages were read with curl; client-rendered React wikis were read either from their JavaScript bundles or in a browser — and the browser mattered: a stale deployed chunk on Hongwen School's site still contained the team's own unexecuted editorial placeholders where the CAD link should be, while the live page serves a working 8.56 MB STEP file, so bundle evidence was always confirmed in the browser before being treated as a finding. Every claimed download was fetched and its HTTP status, content type and byte size recorded; Google Drive and Onshape links were opened signed-out. Repositories were queried through the GitLab and GitHub APIs for file tree, licence, stars, forks and last activity. What could not be checked: the contents of bill-of-materials and assembly PDFs, because no PDF text extractor was available in this environment — those files were verified to exist, download and carry the right media type, and their line items were only quoted where the wiki page itself reproduces them. Nor can a link check tell you whether a device reads true, whether an assembly guide is actually followable, or whether anyone has quietly built one; zero stars and zero forks mean no public signal, not certainly no users.",
-  "method_zh": "共評分 20 台儀器：三個組別全部 14 支 Best Hardware 冠軍與入圍隊伍，加上 Best Measurement 與 Best Alternative Platform 中真的做出裝置的 6 支隊伍（UNILausanne、Princeton、CalPolySLO、SDU-Denmark、McMaster-Canada、Labi-Taiwan）。其餘被檢查過的 Measurement 與 Alternative Platform 隊伍——William-and-Mary、XJTLU-China、WageningenUR、CHINAGuangdongShimen、HangzhouFourteenAP、Yucai-SZ、UOttawa、Marburg、BGI-College——沒有釋出儀器，因此不計入比率；其中 William-and-Mary 的 hardware 頁面到現在仍是未填寫的 iGEM 範本。每台儀器就七件可查核的事評分：點名零件並附價格或料號的物料清單；總成本以及這個數字是否可信；真的下載得到的幾何或電路原始檔；附授權條款的韌體；非作者也跟得上的組裝指南；校正或驗證流程；以及任何外部使用的證據。通過門檻是：檔案、標價零件、組裝指南與驗證流程四者齊備，裝置若需要韌體則韌體也要有。伺服器端算繪的 wiki 頁面以 curl 讀取；用戶端算繪的 React wiki 則從其 JavaScript bundle 或直接在瀏覽器中讀取——而瀏覽器這一步很關鍵：Hongwen School 網站上一塊過時的已部署 bundle 裡，CAD 連結的位置仍留著團隊自己未執行的編輯備註，但實際上線的頁面提供的是一個可用的 8.56 MB STEP 檔，因此所有 bundle 證據在被當成結論之前，都先在瀏覽器中確認過。每一個宣稱可下載的檔案都實際抓取過，並記下 HTTP 狀態碼、內容型態與位元組大小；Google Drive 與 Onshape 連結都在未登入狀態下開啟。儲存庫則透過 GitLab 與 GitHub API 查詢檔案樹、授權條款、星星數、分支數與最後活動時間。查不到的部分：物料清單與組裝指南 PDF 的內文，因為這個環境沒有可用的 PDF 文字擷取工具——這些檔案只確認了存在、可下載、媒體型態正確，其中的品項只有在 wiki 頁面本身也列出時才被引用。此外，連結檢查也無法告訴你一台裝置讀數是否準確、一本組裝指南是否真的跟得上，或是否有人默默做過一台；零顆星與零個分支代表的是沒有公開訊號，不等於確定沒有使用者。"
+  "rows": [
+   [
+    "Lambert-GA",
+    "Vapor-X vacuum dryer",
+    "3 STL + Gerbers + drill + CPL CSV",
+    "$80.07 / $95.52 assembled",
+    "MicroPython, Apache-2.0",
+    "yes — used by 2 outside labs"
+   ],
+   [
+    "NCKU-Tainan",
+    "CAPTURE-Screen reader",
+    "75 STEP, 59 STL, CadQuery source",
+    "US$160.62 / US$53.70",
+    "ESP32 sketch, MIT",
+    "yes"
+   ],
+   [
+    "UNILausanne",
+    "C.L.A.W. LAMP incubator",
+    "5 STL + 3.8 MB manual",
+    "under CHF 10",
+    "none needed (thermostat module)",
+    "yes"
+   ],
+   [
+    "Hongwen School",
+    "BrewXOS Fermenter Mini",
+    "8.56 MB STEP assembly",
+    "about 3,480 RMB",
+    "Arduino, published as a PDF",
+    "yes"
+   ],
+   [
+    "TU Darmstadt",
+    "Anaerobic chamber, O2 monitor, shaker",
+    "none — built from a stock container",
+    "EUR 134.30 / 114.60 / 68.08",
+    "sketches printed in full, CC BY 4.0",
+    "yes"
+   ],
+   [
+    "GEMS-Taiwan",
+    "Bioreactor, 2 photometers, LPA, hydroponics",
+    "18 STL (meshes only)",
+    "NT$16,450; photometer ~US$360",
+    "1 of 4 devices, MIT",
+    "yes, narrowly"
+   ],
+   [
+    "Princeton",
+    "Gyroid biofilter cartridge",
+    "2 STL + print parameters",
+    "n/a (printed part)",
+    "n/a",
+    "yes (single part)"
+   ],
+   [
+    "CalPolySLO",
+    "Emulsification washboard + sled",
+    "2 STL via Google Drive",
+    "about $15",
+    "n/a",
+    "yes (single part)"
+   ],
+   [
+    "KAUST-KSA",
+    "SHIHAB suitcase bioreactor",
+    "CAD drawings as a 5.5 MB PDF",
+    "BOM PDF, no headline figure",
+    "45 KB Arduino sketch (served as .js)",
+    "almost — no geometry file"
+   ],
+   [
+    "HK League",
+    "Converted hydrogel bioprinter",
+    "3 STL zips",
+    "about US$400, not itemised",
+    "BioPrintCAD, Apache-2.0",
+    "almost — no priced BOM"
+   ],
+   [
+    "UBC-Vancouver",
+    "Fluorescence detector, bioreactor, chip",
+    ".glb meshes + drawing PDFs",
+    "CAD 204.48 (detector)",
+    "not published",
+    "almost — no source files"
+   ],
+   [
+    "HongKong-JSS",
+    "MerMAID detection + extraction units",
+    "Onshape public, 28 parts",
+    "USD ~357 (target was USD 40)",
+    "detection repo 404; extraction NOASSERTION",
+    "no — firmware gone"
+   ],
+   [
+    "Toronto",
+    "96-unit parallel bioreactor array",
+    "Drive folder lists nothing signed-out",
+    "$204 CAD per reactor",
+    "7 sketches + dashboard, Apache-2.0",
+    "no — CAD unreachable"
+   ],
+   [
+    "Bist-China",
+    "PyrLac POCT reader",
+    "7 STL on GitHub (2 stars)",
+    "about $77, itemised",
+    "sketches, no licence file",
+    "no — no licence, no guide"
+   ],
+   [
+    "Cornell",
+    "Arachne electrospinner",
+    "none",
+    "$1,213.35, 40 line items",
+    "not published",
+    "no"
+   ],
+   [
+    "NU Boston",
+    "FLARE soil chamber",
+    "none",
+    "$499.80 / $344.18, Pi excluded",
+    "not published",
+    "no"
+   ],
+   [
+    "CAU-China",
+    "OptiX phone spectrometer",
+    "none",
+    "\"$12-30\", not itemised",
+    "FSSA + MycoSpec, Apache-2.0",
+    "no"
+   ],
+   [
+    "SDU-Denmark",
+    "Microbial fuel cell + Arduino logger",
+    "parts-list PDF only",
+    "not costed",
+    "logger code not published",
+    "no"
+   ],
+   [
+    "McMaster-Canada",
+    "OMV bioreactor + microfluidic device",
+    "CFD result CSVs only",
+    "none",
+    "none",
+    "no"
+   ],
+   [
+    "Labi-Taiwan",
+    "ESP32 electrochemical reader",
+    "none",
+    "none",
+    "none",
+    "no"
+   ]
+  ],
+  "rows_zh": [
+   [
+    "Lambert-GA",
+    "Vapor-X 真空乾燥機",
+    "3 個 STL＋Gerber＋鑽孔檔＋貼片 CSV",
+    "$80.07／含組裝 $95.52",
+    "MicroPython，Apache-2.0",
+    "可以——兩間外部實驗室用過"
+   ],
+   [
+    "NCKU-Tainan",
+    "CAPTURE-Screen 判讀儀",
+    "75 個 STEP、59 個 STL、CadQuery 原始檔",
+    "US$160.62／US$53.70",
+    "ESP32 韌體，MIT",
+    "可以"
+   ],
+   [
+    "UNILausanne",
+    "C.L.A.W. LAMP 恆溫器",
+    "5 個 STL＋3.8 MB 手冊",
+    "不到 CHF 10",
+    "不需要（用恆溫模組）",
+    "可以"
+   ],
+   [
+    "Hongwen School",
+    "BrewXOS Fermenter Mini",
+    "8.56 MB 的 STEP 組件",
+    "約 3,480 RMB",
+    "Arduino，以 PDF 形式發表",
+    "可以"
+   ],
+   [
+    "TU Darmstadt",
+    "厭氧操作箱、氧氣監測器、振盪器",
+    "無——以市售容器改裝",
+    "EUR 134.30／114.60／68.08",
+    "程式碼完整印在頁面上，CC BY 4.0",
+    "可以"
+   ],
+   [
+    "GEMS-Taiwan",
+    "生物反應器、兩台光度計、LPA、水耕板",
+    "18 個 STL（僅網格）",
+    "NT$16,450；光度計約 US$360",
+    "四台中只有一台，MIT",
+    "勉強可以"
+   ],
+   [
+    "Princeton",
+    "Gyroid 生物濾材",
+    "2 個 STL＋列印參數",
+    "不適用（單一列印件）",
+    "不適用",
+    "可以（單一零件）"
+   ],
+   [
+    "CalPolySLO",
+    "乳化搓板與橡皮筋滑座",
+    "2 個 STL，放在 Google Drive",
+    "約 $15",
+    "不適用",
+    "可以（單一零件）"
+   ],
+   [
+    "KAUST-KSA",
+    "SHIHAB 手提箱式生物反應器",
+    "CAD 圖，5.5 MB 的 PDF",
+    "有物料清單 PDF，無公開總價",
+    "45 KB Arduino 韌體（以 .js 提供）",
+    "差一點——沒有幾何檔"
+   ],
+   [
+    "HK League",
+    "改裝的水膠生物列印機",
+    "3 個 STL 壓縮檔",
+    "約 US$400，未逐項列出",
+    "BioPrintCAD，Apache-2.0",
+    "差一點——沒有標價物料清單"
+   ],
+   [
+    "UBC-Vancouver",
+    "螢光偵測器、生物反應器、晶片",
+    ".glb 網格＋工程圖 PDF",
+    "CAD 204.48（偵測器）",
+    "未釋出",
+    "差一點——沒有原始檔"
+   ],
+   [
+    "HongKong-JSS",
+    "MerMAID 偵測與萃取單元",
+    "Onshape 公開，28 個零件",
+    "USD 約 357（目標是 USD 40）",
+    "偵測端儲存庫 404；萃取端 NOASSERTION",
+    "不行——韌體不見了"
+   ],
+   [
+    "Toronto",
+    "96 組平行生物反應器陣列",
+    "未登入時 Drive 資料夾列不出檔案",
+    "每台 204 加幣",
+    "7 支韌體＋儀表板，Apache-2.0",
+    "不行——CAD 拿不到"
+   ],
+   [
+    "Bist-China",
+    "PyrLac 定點照護判讀儀",
+    "GitHub 上 7 個 STL（2 顆星）",
+    "約 $77，有逐項列出",
+    "有韌體，但沒有授權條款檔",
+    "不行——無授權、無組裝指南"
+   ],
+   [
+    "Cornell",
+    "Arachne 靜電紡絲機",
+    "無",
+    "$1,213.35，40 個品項",
+    "未釋出",
+    "不行"
+   ],
+   [
+    "NU Boston",
+    "FLARE 土壤模擬艙",
+    "無",
+    "$499.80／$344.18，未含 Pi",
+    "未釋出",
+    "不行"
+   ],
+   [
+    "CAU-China",
+    "OptiX 手機光譜儀",
+    "無",
+    "「$12-30」，未逐項列出",
+    "FSSA 與 MycoSpec，Apache-2.0",
+    "不行"
+   ],
+   [
+    "SDU-Denmark",
+    "微生物燃料電池與 Arduino 記錄器",
+    "只有零件清單 PDF",
+    "未估價",
+    "記錄器程式碼未釋出",
+    "不行"
+   ],
+   [
+    "McMaster-Canada",
+    "OMV 生物反應器與微流體裝置",
+    "只有 CFD 結果 CSV",
+    "無",
+    "無",
+    "不行"
+   ],
+   [
+    "Labi-Taiwan",
+    "ESP32 電化學判讀儀",
+    "無",
+    "無",
+    "無",
+    "不行"
+   ]
+  ]
+ },
+ "checklist": [
+  "Export every part to STEP as well as STL before the wiki freeze. ReLEAF ships 18 STL meshes; a mesh prints but cannot be edited, so nobody can move the photometer's light path. NCKU-Tainan shipped 75 STEP files plus the CadQuery source that generated them.",
+  "Publish one itemised bill of materials per device — supplier, part number, quantity, unit price, extended price, subtotal — not a total. Cornell's 40-row table is the model to copy even though Cornell published no CAD; ReLEAF currently gives NT$16,450 and about US$360 with the parts named only inside the assembly guides.",
+  "Put all four devices' firmware in the GitLab repo under MIT, not just the reactor rig's sketch.ino. If a file extension is blocked, do what KAUST-KSA did: upload the sketch as .js with a header telling the reader to save it as .ino.",
+  "Ship each device as one versioned archive — STEP, STL, BOM CSV, firmware, manual, LICENSE — instead of eighteen loose links on a contribution page. HK League's three zips with a per-file print count are the pattern.",
+  "Put the licence inside the bundle, not only in a sentence at the bottom of the page. Bist-China's seven STLs are the only hardware files in the cohort with any stars, and nobody may legally use them because there is no licence file.",
+  "Never host design files on Google Drive. Toronto's \"Bioreactor CAD Files\" folder shows a signed-out visitor nothing at all, which is indistinguishable from publishing nothing.",
+  "Write a calibration page per device and keep the honest number in it. The SiO2 OD600 calibration and the leaf-sensor +0.47 to +1.71 degC offset over 540 paired readings are exactly right; add the same for the LPA's per-LED output and the Pro-versus-Slim scale difference.",
+  "Cost the whole instrument, including the computer. NU Boston's two BOMs both omit the Raspberry Pi that runs the device; the GEMS cost sheet should state explicitly what the NT$16,450 does and does not cover.",
+  "Send one device to one outside laboratory, ask them to run something real, and publish their raw data. Lambert-GA is a high-school team and did this twice, at UAB and Georgia Tech — it is the only outside-use evidence in the entire cohort.",
+  "Re-check every hardware link a month after the Jamboree. HongKong-JSS's firmware repository was named on the wiki and is now a 404; a single curl would have caught it."
+ ],
+ "checklist_zh": [
+  "在 wiki 凍結之前，把每個零件同時匯出成 STEP 與 STL。ReLEAF 給的是 18 個 STL 網格；網格印得出來，卻改不動，所以沒有人能調整光度計的光路。NCKU-Tainan 給的是 75 個 STEP，外加生成它們的 CadQuery 原始檔。",
+  "每台裝置公開一份逐項的物料清單——供應商、料號、數量、單價、小計金額、分組小計——而不是一個總數。Cornell 那張 40 列的表是值得照抄的範本，即使 Cornell 自己連 CAD 都沒放；ReLEAF 目前只給 NT$16,450 和約 US$360，零件名稱則埋在組裝指南裡。",
+  "把四台裝置的韌體都以 MIT 授權放進 GitLab 儲存庫，而不是只有反應器控制端的 sketch.ino。如果副檔名被擋，就照 KAUST-KSA 的做法：把韌體以 .js 上傳，並在開頭寫明請讀者另存為 .ino。",
+  "每台裝置打包成一個有版本的壓縮檔——STEP、STL、物料清單 CSV、韌體、手冊、LICENSE——而不是在 contribution 頁面上散落十八條連結。HK League 那三個附帶逐檔列印數量的壓縮檔就是範例。",
+  "把授權條款放進壓縮檔裡，不要只寫在頁面底部一句話。Bist-China 的七個 STL 是這批隊伍中唯一拿到星星的硬體檔案，但因為沒有授權條款檔，沒有人可以合法使用。",
+  "絕對不要把設計檔放在 Google Drive。Toronto 那個「Bioreactor CAD Files」資料夾對未登入的訪客什麼都不顯示，這和完全沒有公開沒有兩樣。",
+  "每台裝置寫一頁校正說明，而且把誠實的那個數字留在裡面。SiO2 OD600 校正，以及葉面感測器在 540 組配對讀數中 +0.47 到 +1.71 degC 的偏移，做法完全正確；LPA 的逐顆 LED 輸出、以及 Pro 與 Slim 之間的尺度差異，也該比照辦理。",
+  "把整台儀器的成本算進去，包含那台電腦。NU Boston 的兩份物料清單都漏掉了驅動裝置的 Raspberry Pi；GEMS 的成本表也該明講 NT$16,450 涵蓋與不涵蓋什麼。",
+  "把一台裝置寄給一間外部實驗室，請他們跑一件真實的實驗，並公開他們的原始資料。Lambert-GA 是一支高中隊伍，而且做了兩次，分別在 UAB 與 Georgia Tech——這是整批隊伍中唯一的外部使用證據。",
+  "Jamboree 結束一個月後，把每一條硬體連結重新檢查一遍。HongKong-JSS 的韌體儲存庫在 wiki 上寫得清清楚楚，現在卻是 404；一行 curl 就能抓到。"
+ ],
+ "method": "Twenty instruments were graded: the fourteen Best Hardware winners and nominees across all three sections, plus the six Best Measurement and Best Alternative Platform teams that actually built a device (UNILausanne, Princeton, CalPolySLO, SDU-Denmark, McMaster-Canada, Labi-Taiwan). The remaining Measurement and Alternative Platform teams checked — William-and-Mary, XJTLU-China, WageningenUR, CHINAGuangdongShimen, HangzhouFourteenAP, Yucai-SZ, UOttawa, Marburg, BGI-College — released no instrument and are excluded from the base rate; William-and-Mary's hardware page is still an unfilled iGEM template. Each instrument was scored on seven checkable things: a bill of materials naming parts with prices or part numbers; a total cost and whether it is credible; geometry or electrical source files that actually download; firmware with a licence; an assembly guide a non-author could follow; a calibration or validation protocol; and any evidence of outside use. The pass bar was all of files, priced parts, an assembly guide and a validation protocol, plus firmware where the device needs it. Server-rendered wiki pages were read with curl; client-rendered React wikis were read either from their JavaScript bundles or in a browser — and the browser mattered: a stale deployed chunk on Hongwen School's site still contained the team's own unexecuted editorial placeholders where the CAD link should be, while the live page serves a working 8.56 MB STEP file, so bundle evidence was always confirmed in the browser before being treated as a finding. Every claimed download was fetched and its HTTP status, content type and byte size recorded; Google Drive and Onshape links were opened signed-out. Repositories were queried through the GitLab and GitHub APIs for file tree, licence, stars, forks and last activity. What could not be checked: the contents of bill-of-materials and assembly PDFs, because no PDF text extractor was available in this environment — those files were verified to exist, download and carry the right media type, and their line items were only quoted where the wiki page itself reproduces them. Nor can a link check tell you whether a device reads true, whether an assembly guide is actually followable, or whether anyone has quietly built one; zero stars and zero forks mean no public signal, not certainly no users.",
+ "method_zh": "共評分 20 台儀器：三個組別全部 14 支 Best Hardware 冠軍與入圍隊伍，加上 Best Measurement 與 Best Alternative Platform 中真的做出裝置的 6 支隊伍（UNILausanne、Princeton、CalPolySLO、SDU-Denmark、McMaster-Canada、Labi-Taiwan）。其餘被檢查過的 Measurement 與 Alternative Platform 隊伍——William-and-Mary、XJTLU-China、WageningenUR、CHINAGuangdongShimen、HangzhouFourteenAP、Yucai-SZ、UOttawa、Marburg、BGI-College——沒有釋出儀器，因此不計入比率；其中 William-and-Mary 的 hardware 頁面到現在仍是未填寫的 iGEM 範本。每台儀器就七件可查核的事評分：點名零件並附價格或料號的物料清單；總成本以及這個數字是否可信；真的下載得到的幾何或電路原始檔；附授權條款的韌體；非作者也跟得上的組裝指南；校正或驗證流程；以及任何外部使用的證據。通過門檻是：檔案、標價零件、組裝指南與驗證流程四者齊備，裝置若需要韌體則韌體也要有。伺服器端算繪的 wiki 頁面以 curl 讀取；用戶端算繪的 React wiki 則從其 JavaScript bundle 或直接在瀏覽器中讀取——而瀏覽器這一步很關鍵：Hongwen School 網站上一塊過時的已部署 bundle 裡，CAD 連結的位置仍留著團隊自己未執行的編輯備註，但實際上線的頁面提供的是一個可用的 8.56 MB STEP 檔，因此所有 bundle 證據在被當成結論之前，都先在瀏覽器中確認過。每一個宣稱可下載的檔案都實際抓取過，並記下 HTTP 狀態碼、內容型態與位元組大小；Google Drive 與 Onshape 連結都在未登入狀態下開啟。儲存庫則透過 GitLab 與 GitHub API 查詢檔案樹、授權條款、星星數、分支數與最後活動時間。查不到的部分：物料清單與組裝指南 PDF 的內文，因為這個環境沒有可用的 PDF 文字擷取工具——這些檔案只確認了存在、可下載、媒體型態正確，其中的品項只有在 wiki 頁面本身也列出時才被引用。此外，連結檢查也無法告訴你一台裝置讀數是否準確、一本組裝指南是否真的跟得上，或是否有人默默做過一台；零顆星與零個分支代表的是沒有公開訊號，不等於確定沒有使用者。"
 }

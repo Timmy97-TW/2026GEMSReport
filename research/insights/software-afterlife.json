@@ -1,477 +1,516 @@
 {
-  "id": "software-afterlife",
-  "tab": "drylab",
-  "kicker": "Original analysis",
-  "title": "Does award-winning iGEM software survive the Jamboree?",
-  "title_zh": "得獎的 iGEM 軟體撐得過 Jamboree 嗎？",
-  "lede": "Of 21 software tools released by award-winning iGEM 2026 teams, 8 are live and usable by a stranger today, 11 are source-only, and 2 have already gone dark.",
-  "lede_zh": "2026 年 iGEM 得獎隊伍釋出的 21 個軟體工具中，今天有 8 個還在線上、陌生人可以直接使用，11 個只有原始碼，2 個已經消失。",
-  "body": "**Eight of twenty-one.** That is the honest base rate for award-winning iGEM 2026 software that a stranger can open and use today, four weeks after the Jamboree. Eleven more are source-only: the code is public, populated and often genuinely good, but using it means cloning a repository and running Docker. Two are already dead — Vilnius-Lithuania's Ladder Detector now answers \"This service has been suspended by its owner\" at ladder-detector.onrender.com, and TAU-Israel's CERNAL fails to resolve at both cernal.app and cernal.duckdns.org, the two addresses its own wiki advertises.\n\nThe striking thing is that nothing is a stub. Every repository checked was populated with real code, a README and a licence. iGEM's mandatory GitLab deposit has solved the empty-repo problem completely. What it has not solved, and cannot, is hosting: the competition requires you to publish source, and publishing source is where most teams stop.\n\nThe live ones have one habit in common, and it is not budget. **They bought a domain and pointed it at a running backend before the wiki freeze, then wrote the wiki around a URL rather than around an install command.** NJU-China's Atlas sits on starase-atlas.org, XJTLU-Software's AMPilot on ampilotlab.com, Toronto's PETadex on petadex.net, Stanford's RADAR-Scout on Vercel. Two of the eight are high-school teams running real inference in public: GHCIS's ARGUS answers `{\"status\":\"ready\"}` at argus.ucuv.dpdns.org, and HK-Joint-School's PyroForge reports `models_ready: true, esm_ready: true` — an ESM protein model loaded and serving, from a school team.\n\nThe source-only group is not lazy; it is mostly careful. ETH-Zurich's deCISion ships 28 CI-tested checks, a Docker build and an MIT licence. UMA Malaga's Diana has a 10 GB reproducible Docker stack and a BIOLOGICAL_REPORT.md mapping each biological step to code. Uni-Padua-IT's ReTIsigner is a thoughtful fork of a published tool, Apache 2.0, one `docker run` from working. These teams decided, often explicitly and for defensible reasons — cost, patient data, a 4 GB index — that local execution was the right call. The cost is simply that nobody will ever casually try them.\n\nTwo teams published a live URL that is not the tool, and both said so honestly. UMA Malaga's diana-grna-designer-7723f5.igem.wiki opens with \"Saved results, not the live tool... The pages cannot analyse a variant you type.\" GU Frankfurt's HUSH page says \"This page shows its web app in action\" and then presents a clickable mockup of screenshots. Judges reward the appearance of a deployed tool, so the gap between a demo and a deployment is exactly where a link check gets fooled.\n\nOutside use is the bleakest column. Across every GitLab repository examined the star count is zero, the fork count is zero, and the last commit falls in the October freeze window — with one exception, DKU's pepticraft-2, touched on 5 November. Uni-Padua-IT published an open call on 9 August offering to codon-optimise any team's sequence, received no replies, and reported that on their wiki. The only genuine external-adoption signal found anywhere was on Stanford's SynBase, which displays \"837 learners\" — and that is a teaching platform, not a research tool.\n\nOne more caution for anyone citing datasets as deliverables. Toronto's PETadex front end is live and excellent, but the 23.8 GB Zenodo deposit its wiki cites, doi:10.5281/zenodo.23457986, returns 404, and a Zenodo search for \"petadex\" returns zero records. The web app survived; the archival half of the release did not.\n\nFor GEMS the lesson is narrow and cheap. Shipping a tool outsiders use is achievable — eight teams did it, including two high schools — but it is a hosting decision, not a coding decision, and it has to be made months before the wiki freeze. The teams that got there treated the public URL as the deliverable and the repository as the backup. The ones that did not now own excellent code that nobody will run.",
-  "body_zh": "**21 個裡有 8 個。**這就是 2026 年 iGEM 得獎軟體誠實的基礎比率：Jamboree 結束四週後，陌生人今天還打得開、用得動的只有這麼多。另外 11 個只有原始碼：程式公開、內容完整，而且常常真的寫得不錯，但要用它就得把儲存庫 clone 下來再跑 Docker。兩個已經死了——Vilnius-Lithuania 的 Ladder Detector 現在在 ladder-detector.onrender.com 回應「This service has been suspended by its owner」，TAU-Israel 的 CERNAL 在 cernal.app 和 cernal.duckdns.org 都無法解析，而這兩個網址正是它自己的 wiki 上公告的。\n\n值得注意的是，沒有一個是空殼。每一個檢查過的儲存庫都有真正的程式碼、一份 README 和一份授權條款。iGEM 強制要求上傳 GitLab，已經徹底解決了空儲存庫的問題。它沒有解決、也無法解決的是代管：競賽要求你公開原始碼，而公開原始碼就是多數隊伍停下來的地方。\n\n還活著的那些有一個共同習慣，而且不是預算。**他們在 wiki 凍結之前就買好網域、指向一個正在運行的後端，然後把 wiki 寫成繞著一個網址，而不是繞著一行安裝指令。**NJU-China 的 Atlas 放在 starase-atlas.org，XJTLU-Software 的 AMPilot 在 ampilotlab.com，Toronto 的 PETadex 在 petadex.net，Stanford 的 RADAR-Scout 在 Vercel 上。八個裡有兩個是高中隊伍，而且在公開環境跑真正的推論：GHCIS 的 ARGUS 在 argus.ucuv.dpdns.org 回應 `{\"status\":\"ready\"}`，HK-Joint-School 的 PyroForge 回報 `models_ready: true, esm_ready: true`——一個 ESM 蛋白質模型載入並持續提供服務，而這來自一支高中隊伍。\n\n只有原始碼的這一群並不是懶，多半是謹慎。ETH-Zurich 的 deCISion 附上 28 項經 CI 測試的檢查、一套 Docker 建置和 MIT 授權。UMA Malaga 的 Diana 有一套 10 GB 的可重現 Docker 環境，以及一份把每個生物步驟對應到程式碼的 BIOLOGICAL_REPORT.md。Uni-Padua-IT 的 ReTIsigner 是對一個已發表工具用心的分支，採 Apache 2.0，一行 `docker run` 就能動。這些隊伍判斷在本機執行才是對的選擇，而且往往講得很明白、理由也站得住腳——成本、病人資料、一個 4 GB 的索引。代價就只是：永遠不會有人隨手試一下。\n\n有兩支隊伍公布了一個不是工具本身的線上網址，而且兩支都誠實說了。UMA Malaga 的 diana-grna-designer-7723f5.igem.wiki 一開頭就寫「Saved results, not the live tool... The pages cannot analyse a variant you type.」GU Frankfurt 的 HUSH 頁面說「This page shows its web app in action」，接著呈現一份由截圖組成、可以點擊的介面示意稿。評審會獎勵「看起來已經部署」這件事，所以示範與部署之間的落差，正是連結檢查被騙的地方。\n\n外部使用是最慘的一欄。所有檢視過的 GitLab 儲存庫，star 數是零，fork 數是零，最後一次 commit 都落在十月的凍結期內——只有一個例外，DKU 的 pepticraft-2 在 11 月 5 日被動過。Uni-Padua-IT 在 8 月 9 日公開徵求，願意幫任何隊伍做密碼子最佳化，結果沒有收到任何回覆，並且把這件事寫在自己的 wiki 上。在任何地方找到的唯一真實外部採用訊號，是 Stanford 的 SynBase 顯示的「837 learners」——而那是一個教學平台，不是研究工具。\n\n給任何把資料集當成交付成果來引用的人一個提醒。Toronto 的 PETadex 前端還在線上，而且做得很好，但它的 wiki 引用的那份 23.8 GB Zenodo 存放紀錄 doi:10.5281/zenodo.23457986 回傳 404，在 Zenodo 搜尋「petadex」也得到零筆紀錄。網頁應用活了下來；這次釋出中負責封存的那一半沒有。\n\n對 GEMS 來說，這個教訓既狹窄又便宜。做出外人會用的工具是辦得到的——八支隊伍做到了，其中包括兩支高中隊伍——但這是代管的決定，不是寫程式的決定，而且必須在 wiki 凍結前好幾個月就做。做到的隊伍把公開網址當成交付成果，把儲存庫當成備份。沒做到的，現在擁有一堆優秀但沒人會執行的程式碼。",
-  "cards": [
-    {
-      "kicker": "Best in class",
-      "title": "AMPilot — the only tool with a working public API",
-      "title_zh": "AMPilot——唯一有可用公開 API 的工具",
-      "body": "XJTLU-Software's antimicrobial-peptide workbench at ampilotlab.com opens in guest mode with no account, and its /api/v1 routes are documented in a published OpenAPI 3.1 spec. A live call to /api/v1/corpus/search returned real literature evidence with provenance, licence and retrieval date attached — no key, no sign-up. The spec states the API is deterministic, stateless and calls no language model, which is what makes it safe for someone else to build on. It is the clearest example this year of a team designing for a second user rather than a judge.",
-      "body_zh": "XJTLU-Software 的抗菌肽工作台在 ampilotlab.com 以訪客模式開啟，不需要帳號，它的 /api/v1 路徑都寫在一份公開的 OpenAPI 3.1 規格裡。實際呼叫 /api/v1/corpus/search 回傳了真正的文獻證據，並附上來源、授權條款和取用日期——不用金鑰、不用註冊。規格中載明這個 API 是確定性的、無狀態的，而且不呼叫任何語言模型，這正是別人可以安心在上面開發的原因。這是今年最清楚的一個例子：一支隊伍是為第二個使用者而設計，不是為評審而設計。",
-      "chips": [
-        "alive",
-        "XJTLU-Software",
-        "public API",
-        "guest mode",
-        "OpenAPI 3.1"
-      ],
-      "kicker_zh": "同類最佳"
-    },
-    {
-      "kicker": "Proof it is not a budget problem",
-      "title": "Two high-school teams out-shipped most universities",
-      "title_zh": "兩支高中隊伍交付的成果勝過多數大學隊伍",
-      "body": "GHCIS's ARGUS runs a real backend at argus.ucuv.dpdns.org — its /api/ready endpoint answers with JSON, not a static shell — alongside a Docker and a native Node deploy path, role-based access and SQLite persistence. HK-Joint-School's PyroForge serves protein thermostability prediction at pyroforge.26650078.xyz with /health reporting ESM models loaded and ready. Both URLs are reachable right now. Neither team had a university budget; they had a cheap domain and a decision to host.",
-      "body_zh": "GHCIS 的 ARGUS 在 argus.ucuv.dpdns.org 跑著一個真正的後端——它的 /api/ready 端點回應的是 JSON，不是靜態空殼——還附上 Docker 和原生 Node 兩條部署路徑、角色式存取控制和 SQLite 持久化儲存。HK-Joint-School 的 PyroForge 在 pyroforge.26650078.xyz 提供蛋白質熱穩定性預測，/health 回報 ESM 模型已載入並就緒。兩個網址現在都連得上。兩支隊伍都沒有大學的預算；他們有的是一個便宜的網域，和一個要架站的決定。",
-      "chips": [
-        "alive",
-        "GHCIS",
-        "HK-Joint-School",
-        "high school",
-        "real backend"
-      ],
-      "kicker_zh": "證明這不是預算問題"
-    },
-    {
-      "kicker": "The cautionary tale",
-      "title": "Vilnius deployed, then switched it off",
-      "title_zh": "Vilnius 部署了，然後把它關掉",
-      "body": "Ladder Detector automates gel-image annotation, a genuinely unglamorous and genuinely useful job, and Vilnius-Lithuania did the right thing by deploying it publicly. The URL on their wiki, ladder-detector.onrender.com, now returns HTTP 503 and the text \"This service has been suspended by its owner.\" The Apache-2.0 source is intact on GitLab and still runs via docker compose, so the work is not lost — but every citation of that wiki link now points at a dead page. A free hosting tier is a deadline, not a deployment.",
-      "body_zh": "Ladder Detector 把膠體影像的標註自動化，這是一件真的不華麗、也真的有用的工作，而 Vilnius-Lithuania 做了對的事：把它公開部署出去。他們 wiki 上的網址 ladder-detector.onrender.com 現在回傳 HTTP 503 和「This service has been suspended by its owner.」這段文字。Apache-2.0 的原始碼在 GitLab 上完好無缺，用 docker compose 依然跑得起來，所以成果沒有消失——但現在每一次引用那個 wiki 連結，指向的都是一個死掉的頁面。免費代管方案是一個期限，不是一次部署。",
-      "chips": [
-        "gone",
-        "Vilnius-Lithuania",
-        "503 suspended",
-        "source survives"
-      ],
-      "kicker_zh": "前車之鑑"
-    },
-    {
-      "kicker": "Honest about the gap",
-      "title": "Diana and HUSH publish a URL that is not the tool",
-      "title_zh": "Diana 和 HUSH 公布的網址不是工具本身",
-      "body": "UMA Malaga's live site opens with a disclaimer: \"Saved results, not the live tool... The pages cannot analyse a variant you type.\" It publishes unedited CLI output with the commit hash, Docker image digest and tool versions recorded — excellent reproducibility practice, but not a service. GU Frankfurt's HUSH page likewise says it \"shows its web app in action\" and then walks through a mockup of screenshots. Both are more honest than most, and both are exactly why a 200 response proves nothing until you read the page.",
-      "body_zh": "UMA Malaga 的線上網站一開頭就有免責聲明：「Saved results, not the live tool... The pages cannot analyse a variant you type.」它公開未經修剪的 CLI 輸出，並記下 commit 雜湊值、Docker 映像摘要和工具版本——這是極佳的可重現性實務，但不是一個服務。GU Frankfurt 的 HUSH 頁面同樣寫著它「shows its web app in action」，然後帶你走過一份由截圖組成的介面示意稿。兩者都比大多數隊伍誠實，而兩者也正好說明了為什麼在你讀過頁面之前，一個 200 回應什麼都證明不了。",
-      "chips": [
-        "source-only",
-        "UMA Malaga",
-        "GU Frankfurt",
-        "demo not deployment"
-      ],
-      "kicker_zh": "誠實面對落差"
-    },
-    {
-      "kicker": "Good code, no front door",
-      "title": "ETH-Zurich's deCISion is the best source-only release",
-      "title_zh": "ETH-Zurich 的 deCISion 是最好的純原始碼釋出",
-      "body": "The Best Software winner for Overgrad ships MIT-licensed with a web interface, a JSON API, a CLI, 28 automated tests on every push through GitLab CI, a Docker build, a CITATION.cff and a demo video. It exports FASTA, GenBank and SBOL3 and takes any .pdb or .cif structure, so it would work on someone else's data without modification. The only address on the wiki is localhost:4173. Everything needed to deploy it exists in the repository; nobody deployed it.",
-      "body_zh": "這個研究生組的最佳軟體得主以 MIT 授權釋出，附有網頁介面、JSON API、CLI、每次推送都透過 GitLab CI 執行的 28 項自動化測試、一套 Docker 建置、一份 CITATION.cff 和一支示範影片。它可以輸出 FASTA、GenBank 和 SBOL3，也接受任何 .pdb 或 .cif 結構，所以不用改動就能用在別人的資料上。但 wiki 上唯一的位址是 localhost:4173。部署所需要的一切都在儲存庫裡；沒有人去部署它。",
-      "chips": [
-        "source-only",
-        "ETH-Zurich",
-        "MIT",
-        "CI + Docker",
-        "localhost only"
-      ],
-      "kicker_zh": "程式很好，沒有入口"
-    },
-    {
-      "kicker": "Check the whole release",
-      "title": "Toronto's app is live; its dataset DOI is not",
-      "title_zh": "Toronto 的應用還活著，它的資料集 DOI 沒有",
-      "body": "PETadex at petadex.net is one of the strongest tools of the year: a sharded DIAMOND search over a 298.7M-sequence corpus, with worked examples loaded and ready to run, nothing to install. But the wiki cites a 23.8 GB Zenodo deposit at doi:10.5281/zenodo.23457986, and that DOI returns 404 — a Zenodo API search for \"petadex\" finds zero records. The interactive half survived and the archival half did not, which is the opposite of what long-term preservation is supposed to deliver.",
-      "body_zh": "petadex.net 上的 PETadex 是今年最強的工具之一：對一個 2.987 億條序列的語料做分片 DIAMOND 搜尋，範例已經載好可以直接跑，什麼都不用安裝。但 wiki 引用了一份 23.8 GB 的 Zenodo 存放紀錄 doi:10.5281/zenodo.23457986，而那個 DOI 回傳 404——用 Zenodo API 搜尋「petadex」找到零筆紀錄。互動的那一半活了下來，封存的那一半沒有，這和長期保存本該達成的目標正好相反。",
-      "chips": [
-        "alive",
-        "Toronto",
-        "petadex.net",
-        "Zenodo DOI 404"
-      ],
-      "kicker_zh": "檢查整個釋出"
-    }
-  ],
-  "table": {
-    "head": [
-      "Tool",
-      "Team",
-      "Status",
-      "Live URL / repo",
-      "Reusable on other data?"
-    ],
-    "head_zh": [
-      "工具",
-      "隊伍",
-      "狀態",
-      "線上網址／儲存庫",
-      "可用於其他資料？"
-    ],
-    "rows": [
-      [
-        "AMPilot",
-        "XJTLU-Software",
-        "alive",
-        "https://ampilotlab.com",
-        "yes"
-      ],
-      [
-        "ARGUS",
-        "GHCIS",
-        "alive",
-        "https://argus.ucuv.dpdns.org/client/",
-        "yes"
-      ],
-      [
-        "Atlas COMPASS + EDGE",
-        "NJU-China",
-        "alive",
-        "https://www.starase-atlas.org/",
-        "partly"
-      ],
-      [
-        "PETadex sequence search",
-        "Toronto",
-        "alive",
-        "https://petadex.net/search",
-        "yes"
-      ],
-      [
-        "PyroForge",
-        "HK-Joint-School",
-        "alive",
-        "https://pyroforge.26650078.xyz/",
-        "yes"
-      ],
-      [
-        "PeptiCraft",
-        "DKU",
-        "alive",
-        "https://pepticraft.pages.dev",
-        "partly"
-      ],
-      [
-        "RADAR-Scout",
-        "Stanford University",
-        "alive",
-        "https://radar-scout.vercel.app/",
-        "partly"
-      ],
-      [
-        "SynBase",
-        "Stanford University",
-        "alive",
-        "https://synbase.web.app/home.html",
-        "n/a (curriculum)"
-      ],
-      [
-        "deCISion",
-        "ETH-Zurich",
-        "source-only",
-        "gitlab.igem.org/2026/software/eth-zurich/decision",
-        "yes"
-      ],
-      [
-        "OpenSplitProtein",
-        "ETH-Zurich",
-        "source-only",
-        "gitlab.igem.org/2026/software/eth-zurich/opensplitprotein",
-        "yes"
-      ],
-      [
-        "ReTIsigner",
-        "Uni-Padua-IT",
-        "source-only",
-        "gitlab.igem.org/2026/software/uni-padua-it/retisigner-svelte",
-        "yes"
-      ],
-      [
-        "RK4 solver",
-        "UPF-Barcelona",
-        "source-only",
-        "gitlab.igem.org/2026/software/upf-barcelona/upf-software",
-        "yes"
-      ],
-      [
-        "iGEMforge",
-        "UPF-Barcelona",
-        "source-only",
-        "gitlab.igem.org/2026/software/upf-barcelona/upf-software",
-        "partly"
-      ],
-      [
-        "NetFlux",
-        "MIT-MAHE",
-        "source-only",
-        "gitlab.igem.org/2026/software/mit-mahe/netflux",
-        "yes"
-      ],
-      [
-        "Diana gRNA designer",
-        "UMA Malaga",
-        "source-only",
-        "gitlab.igem.org/2026/software/uma-malaga/diana-grna-designer",
-        "yes"
-      ],
-      [
-        "HUSH",
-        "GU Frankfurt",
-        "source-only",
-        "gitlab.igem.org/2026/software/gu-frankfurt/hush",
-        "yes"
-      ],
-      [
-        "PRINCE",
-        "Lambert-GA",
-        "source-only",
-        "gitlab.igem.org/2026/software/lambert-ga/prince-webapp",
-        "yes"
-      ],
-      [
-        "catmaOS",
-        "XJTLU-China",
-        "source-only",
-        "gitlab.igem.org/2026/software/xjtlu-china/software",
-        "partly"
-      ],
-      [
-        "Bioreactor digital twin",
-        "GEMS-Taiwan",
-        "source-only",
-        "gitlab.igem.org/2026/software/gems-taiwan/digital-twin",
-        "no"
-      ],
-      [
-        "Ladder Detector",
-        "Vilnius-Lithuania",
-        "gone",
-        "ladder-detector.onrender.com (503 suspended)",
-        "yes, if self-hosted"
-      ],
-      [
-        "CERNAL",
-        "TAU-Israel",
-        "gone",
-        "cernal.app + cernal.duckdns.org (both unresolvable)",
-        "partly, if self-hosted"
-      ],
-      [
-        "Electrospinner (no software)",
-        "Cornell",
-        "n/a",
-        "CAD, BOM and manuals only",
-        "n/a"
-      ],
-      [
-        "Bioreactor stack (no software)",
-        "KAUST-KSA",
-        "n/a",
-        "gitlab.igem.org/2026/kaust-ksa",
-        "n/a"
-      ]
-    ],
-    "rows_zh": [
-      [
-        "AMPilot",
-        "XJTLU-Software",
-        "存活",
-        "https://ampilotlab.com",
-        "是"
-      ],
-      [
-        "ARGUS",
-        "GHCIS",
-        "存活",
-        "https://argus.ucuv.dpdns.org/client/",
-        "是"
-      ],
-      [
-        "Atlas COMPASS + EDGE",
-        "NJU-China",
-        "存活",
-        "https://www.starase-atlas.org/",
-        "部分"
-      ],
-      [
-        "PETadex 序列搜尋",
-        "Toronto",
-        "存活",
-        "https://petadex.net/search",
-        "是"
-      ],
-      [
-        "PyroForge",
-        "HK-Joint-School",
-        "存活",
-        "https://pyroforge.26650078.xyz/",
-        "是"
-      ],
-      [
-        "PeptiCraft",
-        "DKU",
-        "存活",
-        "https://pepticraft.pages.dev",
-        "部分"
-      ],
-      [
-        "RADAR-Scout",
-        "Stanford University",
-        "存活",
-        "https://radar-scout.vercel.app/",
-        "部分"
-      ],
-      [
-        "SynBase",
-        "Stanford University",
-        "存活",
-        "https://synbase.web.app/home.html",
-        "不適用（教學課程）"
-      ],
-      [
-        "deCISion",
-        "ETH-Zurich",
-        "僅原始碼",
-        "gitlab.igem.org/2026/software/eth-zurich/decision",
-        "是"
-      ],
-      [
-        "OpenSplitProtein",
-        "ETH-Zurich",
-        "僅原始碼",
-        "gitlab.igem.org/2026/software/eth-zurich/opensplitprotein",
-        "是"
-      ],
-      [
-        "ReTIsigner",
-        "Uni-Padua-IT",
-        "僅原始碼",
-        "gitlab.igem.org/2026/software/uni-padua-it/retisigner-svelte",
-        "是"
-      ],
-      [
-        "RK4 求解器",
-        "UPF-Barcelona",
-        "僅原始碼",
-        "gitlab.igem.org/2026/software/upf-barcelona/upf-software",
-        "是"
-      ],
-      [
-        "iGEMforge",
-        "UPF-Barcelona",
-        "僅原始碼",
-        "gitlab.igem.org/2026/software/upf-barcelona/upf-software",
-        "部分"
-      ],
-      [
-        "NetFlux",
-        "MIT-MAHE",
-        "僅原始碼",
-        "gitlab.igem.org/2026/software/mit-mahe/netflux",
-        "是"
-      ],
-      [
-        "Diana gRNA 設計工具",
-        "UMA Malaga",
-        "僅原始碼",
-        "gitlab.igem.org/2026/software/uma-malaga/diana-grna-designer",
-        "是"
-      ],
-      [
-        "HUSH",
-        "GU Frankfurt",
-        "僅原始碼",
-        "gitlab.igem.org/2026/software/gu-frankfurt/hush",
-        "是"
-      ],
-      [
-        "PRINCE",
-        "Lambert-GA",
-        "僅原始碼",
-        "gitlab.igem.org/2026/software/lambert-ga/prince-webapp",
-        "是"
-      ],
-      [
-        "catmaOS",
-        "XJTLU-China",
-        "僅原始碼",
-        "gitlab.igem.org/2026/software/xjtlu-china/software",
-        "部分"
-      ],
-      [
-        "生物反應器數位孿生",
-        "GEMS-Taiwan",
-        "僅原始碼",
-        "gitlab.igem.org/2026/software/gems-taiwan/digital-twin",
-        "否"
-      ],
-      [
-        "Ladder Detector",
-        "Vilnius-Lithuania",
-        "已消失",
-        "ladder-detector.onrender.com（503 已停用）",
-        "是，若自行架設"
-      ],
-      [
-        "CERNAL",
-        "TAU-Israel",
-        "已消失",
-        "cernal.app + cernal.duckdns.org（兩者都無法解析）",
-        "部分，若自行架設"
-      ],
-      [
-        "靜電紡絲機（無軟體）",
-        "Cornell",
-        "不適用",
-        "只有 CAD、BOM 和操作手冊",
-        "不適用"
-      ],
-      [
-        "生物反應器系統（無軟體）",
-        "KAUST-KSA",
-        "不適用",
-        "gitlab.igem.org/2026/kaust-ksa",
-        "不適用"
-      ]
-    ]
+ "id": "software-afterlife",
+ "tab": "drylab",
+ "kicker": "Original analysis",
+ "title": "Does award-winning iGEM software survive the Jamboree?",
+ "title_zh": "得獎的 iGEM 軟體撐得過 Jamboree 嗎？",
+ "lede": "Of 21 software tools released by award-winning iGEM 2026 teams, 8 are live and usable by a stranger today, 11 are source-only, and 2 have already gone dark.",
+ "lede_zh": "2026 年 iGEM 得獎隊伍釋出的 21 個軟體工具中，今天有 8 個還在線上、陌生人可以直接使用，11 個只有原始碼，2 個已經消失。",
+ "body": "**Eight of twenty-one.** That is the honest base rate for award-winning iGEM 2026 software that a stranger can open and use today, four weeks after the Jamboree. Eleven more are source-only: the code is public, populated and often genuinely good, but using it means cloning a repository and running Docker. Two are already dead — Vilnius-Lithuania's Ladder Detector now answers \"This service has been suspended by its owner\" at ladder-detector.onrender.com, and TAU-Israel's CERNAL fails to resolve at both cernal.app and cernal.duckdns.org, the two addresses its own wiki advertises.\n\nThe striking thing is that nothing is a stub. Every repository checked was populated with real code, a README and a licence. iGEM's mandatory GitLab deposit has solved the empty-repo problem completely. What it has not solved, and cannot, is hosting: the competition requires you to publish source, and publishing source is where most teams stop.\n\nThe live ones have one habit in common, and it is not budget. **They bought a domain and pointed it at a running backend before the wiki freeze, then wrote the wiki around a URL rather than around an install command.** NJU-China's Atlas sits on starase-atlas.org, XJTLU-Software's AMPilot on ampilotlab.com, Toronto's PETadex on petadex.net, Stanford's RADAR-Scout on Vercel. Two of the eight are high-school teams running real inference in public: GHCIS's ARGUS answers `{\"status\":\"ready\"}` at argus.ucuv.dpdns.org, and HK-Joint-School's PyroForge reports `models_ready: true, esm_ready: true` — an ESM protein model loaded and serving, from a school team.\n\nThe source-only group is not lazy; it is mostly careful. ETH-Zurich's deCISion ships 28 CI-tested checks, a Docker build and an MIT licence. UMA Malaga's Diana has a 10 GB reproducible Docker stack and a BIOLOGICAL_REPORT.md mapping each biological step to code. Uni-Padua-IT's ReTIsigner is a thoughtful fork of a published tool, Apache 2.0, one `docker run` from working. These teams decided, often explicitly and for defensible reasons — cost, patient data, a 4 GB index — that local execution was the right call. The cost is simply that nobody will ever casually try them.\n\nTwo teams published a live URL that is not the tool, and both said so honestly. UMA Malaga's diana-grna-designer-7723f5.igem.wiki opens with \"Saved results, not the live tool... The pages cannot analyse a variant you type.\" GU Frankfurt's HUSH page says \"This page shows its web app in action\" and then presents a clickable mockup of screenshots. Judges reward the appearance of a deployed tool, so the gap between a demo and a deployment is exactly where a link check gets fooled.\n\nOutside use is the bleakest column. Across every GitLab repository examined the star count is zero, the fork count is zero, and the last commit falls in the October freeze window — with one exception, DKU's pepticraft-2, touched on 5 November. Uni-Padua-IT published an open call on 9 August offering to codon-optimise any team's sequence, received no replies, and reported that on their wiki. The only genuine external-adoption signal found anywhere was on Stanford's SynBase, which displays \"837 learners\" — and that is a teaching platform, not a research tool.\n\nOne more caution for anyone citing datasets as deliverables. Toronto's PETadex front end is live and excellent, but the 23.8 GB Zenodo deposit its wiki cites, doi:10.5281/zenodo.23457986, returns 404, and a Zenodo search for \"petadex\" returns zero records. The web app survived; the archival half of the release did not.\n\nFor GEMS the lesson is narrow and cheap. Shipping a tool outsiders use is achievable — eight teams did it, including two high schools — but it is a hosting decision, not a coding decision, and it has to be made months before the wiki freeze. The teams that got there treated the public URL as the deliverable and the repository as the backup. The ones that did not now own excellent code that nobody will run.",
+ "body_zh": "**21 個裡有 8 個。**這就是 2026 年 iGEM 得獎軟體誠實的基礎比率：Jamboree 結束四週後，陌生人今天還打得開、用得動的只有這麼多。另外 11 個只有原始碼：程式公開、內容完整，而且常常真的寫得不錯，但要用它就得把儲存庫 clone 下來再跑 Docker。兩個已經死了——Vilnius-Lithuania 的 Ladder Detector 現在在 ladder-detector.onrender.com 回應「This service has been suspended by its owner」，TAU-Israel 的 CERNAL 在 cernal.app 和 cernal.duckdns.org 都無法解析，而這兩個網址正是它自己的 wiki 上公告的。\n\n值得注意的是，沒有一個是空殼。每一個檢查過的儲存庫都有真正的程式碼、一份 README 和一份授權條款。iGEM 強制要求上傳 GitLab，已經徹底解決了空儲存庫的問題。它沒有解決、也無法解決的是代管：競賽要求你公開原始碼，而公開原始碼就是多數隊伍停下來的地方。\n\n還活著的那些有一個共同習慣，而且不是預算。**他們在 wiki 凍結之前就買好網域、指向一個正在運行的後端，然後把 wiki 寫成繞著一個網址，而不是繞著一行安裝指令。**NJU-China 的 Atlas 放在 starase-atlas.org，XJTLU-Software 的 AMPilot 在 ampilotlab.com，Toronto 的 PETadex 在 petadex.net，Stanford 的 RADAR-Scout 在 Vercel 上。八個裡有兩個是高中隊伍，而且在公開環境跑真正的推論：GHCIS 的 ARGUS 在 argus.ucuv.dpdns.org 回應 `{\"status\":\"ready\"}`，HK-Joint-School 的 PyroForge 回報 `models_ready: true, esm_ready: true`——一個 ESM 蛋白質模型載入並持續提供服務，而這來自一支高中隊伍。\n\n只有原始碼的這一群並不是懶，多半是謹慎。ETH-Zurich 的 deCISion 附上 28 項經 CI 測試的檢查、一套 Docker 建置和 MIT 授權。UMA Malaga 的 Diana 有一套 10 GB 的可重現 Docker 環境，以及一份把每個生物步驟對應到程式碼的 BIOLOGICAL_REPORT.md。Uni-Padua-IT 的 ReTIsigner 是對一個已發表工具用心的分支，採 Apache 2.0，一行 `docker run` 就能動。這些隊伍判斷在本機執行才是對的選擇，而且往往講得很明白、理由也站得住腳——成本、病人資料、一個 4 GB 的索引。代價就只是：永遠不會有人隨手試一下。\n\n有兩支隊伍公布了一個不是工具本身的線上網址，而且兩支都誠實說了。UMA Malaga 的 diana-grna-designer-7723f5.igem.wiki 一開頭就寫「Saved results, not the live tool... The pages cannot analyse a variant you type.」GU Frankfurt 的 HUSH 頁面說「This page shows its web app in action」，接著呈現一份由截圖組成、可以點擊的介面示意稿。評審會獎勵「看起來已經部署」這件事，所以示範與部署之間的落差，正是連結檢查被騙的地方。\n\n外部使用是最慘的一欄。所有檢視過的 GitLab 儲存庫，star 數是零，fork 數是零，最後一次 commit 都落在十月的凍結期內——只有一個例外，DKU 的 pepticraft-2 在 11 月 5 日被動過。Uni-Padua-IT 在 8 月 9 日公開徵求，願意幫任何隊伍做密碼子最佳化，結果沒有收到任何回覆，並且把這件事寫在自己的 wiki 上。在任何地方找到的唯一真實外部採用訊號，是 Stanford 的 SynBase 顯示的「837 learners」——而那是一個教學平台，不是研究工具。\n\n給任何把資料集當成交付成果來引用的人一個提醒。Toronto 的 PETadex 前端還在線上，而且做得很好，但它的 wiki 引用的那份 23.8 GB Zenodo 存放紀錄 doi:10.5281/zenodo.23457986 回傳 404，在 Zenodo 搜尋「petadex」也得到零筆紀錄。網頁應用活了下來；這次釋出中負責封存的那一半沒有。\n\n對 GEMS 來說，這個教訓既狹窄又便宜。做出外人會用的工具是辦得到的——八支隊伍做到了，其中包括兩支高中隊伍——但這是代管的決定，不是寫程式的決定，而且必須在 wiki 凍結前好幾個月就做。做到的隊伍把公開網址當成交付成果，把儲存庫當成備份。沒做到的，現在擁有一堆優秀但沒人會執行的程式碼。",
+ "cards": [
+  {
+   "kicker": "Best in class",
+   "title": "AMPilot — the only tool with a working public API",
+   "title_zh": "AMPilot——唯一有可用公開 API 的工具",
+   "body": "XJTLU-Software's antimicrobial-peptide workbench at ampilotlab.com opens in guest mode with no account, and its /api/v1 routes are documented in a published OpenAPI 3.1 spec. A live call to /api/v1/corpus/search returned real literature evidence with provenance, licence and retrieval date attached — no key, no sign-up. The spec states the API is deterministic, stateless and calls no language model, which is what makes it safe for someone else to build on. It is the clearest example this year of a team designing for a second user rather than a judge.",
+   "body_zh": "XJTLU-Software 的抗菌肽工作台在 ampilotlab.com 以訪客模式開啟，不需要帳號，它的 /api/v1 路徑都寫在一份公開的 OpenAPI 3.1 規格裡。實際呼叫 /api/v1/corpus/search 回傳了真正的文獻證據，並附上來源、授權條款和取用日期——不用金鑰、不用註冊。規格中載明這個 API 是確定性的、無狀態的，而且不呼叫任何語言模型，這正是別人可以安心在上面開發的原因。這是今年最清楚的一個例子：一支隊伍是為第二個使用者而設計，不是為評審而設計。",
+   "chips": [
+    "alive",
+    "XJTLU-Software",
+    "public API",
+    "guest mode",
+    "OpenAPI 3.1"
+   ],
+   "chips_zh": [
+    "還活著",
+    "XJTLU-Software",
+    "公開 API",
+    "訪客模式",
+    "OpenAPI 3.1"
+   ],
+   "kicker_zh": "同類最佳"
   },
-  "checklist": [
-    "Buy a domain and deploy the tool publicly before the wiki freeze, not after it — every tool that is alive today was hosted on freeze day.",
-    "Put a clickable URL at the top of the software page; if the only address on the page is localhost, assume nobody outside the team will ever run it.",
-    "Let strangers in without an account — guest mode or a no-key API. CERNAL gated behind a lab login is dead; AMPilot's keyless API still answers.",
-    "Pay for hosting that outlives the free tier, and check the URL again a month after the Jamboree. Vilnius's deployment lasted weeks.",
-    "Expose a documented HTTP API with an OpenAPI spec alongside the UI, so the tool can be a step in someone else's pipeline rather than a destination.",
-    "Ship a health endpoint that returns real JSON, so anyone — including a judge or a reviewer — can prove the backend is running and not a static shell.",
-    "Accept standard inputs (FASTA, GenBank, SBML, .pdb/.cif) and export standard outputs (SBOL, GenBank, CSV); hard-wiring the tool to your own chassis caps its audience at your team.",
-    "Never present a mockup or saved output as the running tool — and if you do publish saved results, label them as plainly as UMA Malaga did.",
-    "Verify every archival DOI resolves before you cite it; Toronto's 23.8 GB Zenodo deposit 404s while the web app it supports stays up.",
-    "Recruit one outside user and record what they did. Across all 21 tools the only external-adoption number found anywhere was SynBase's 837 learners; stars and forks were zero everywhere."
-  ],
-  "checklist_zh": [
-    "在 wiki 凍結之前就買下網域、把工具公開部署出去，不要等凍結之後——今天還活著的每一個工具，在凍結當天都已經上線代管。",
-    "把可以點擊的網址放在軟體頁面最上方；如果頁面上唯一的位址是 localhost，就假設團隊之外永遠不會有人執行它。",
-    "讓陌生人不用帳號就能進來——訪客模式，或是不需要金鑰的 API。擋在實驗室登入後面的 CERNAL 已經死了；AMPilot 不用金鑰的 API 現在還會回應。",
-    "付錢買能撐過免費方案的代管，並在 Jamboree 之後一個月再檢查一次網址。Vilnius 的部署只撐了幾週。",
-    "在使用者介面之外，再提供一個有 OpenAPI 規格、文件化的 HTTP API，讓這個工具能成為別人流程中的一步，而不只是一個終點。",
-    "提供一個會回傳真正 JSON 的健康檢查端點，讓任何人——包括評審或審查者——都能證明後端真的在跑，不是靜態空殼。",
-    "接受標準輸入（FASTA、GenBank、SBML、.pdb/.cif），並輸出標準格式（SBOL、GenBank、CSV）；把工具綁死在自己的底盤菌株上，等於把使用者上限設成自己這支隊伍。",
-    "絕不要把介面示意稿或存檔輸出當成正在運行的工具呈現——而如果你真的要公布存檔結果，就像 UMA Malaga 那樣清楚標示。",
-    "在引用任何封存 DOI 之前，先確認它解析得出來；Toronto 那份 23.8 GB 的 Zenodo 存放紀錄回傳 404，而它支撐的網頁應用還活著。",
-    "找一位團隊外的使用者，並記錄他做了什麼。21 個工具中，在任何地方找到的唯一外部採用數字是 SynBase 的 837 位學習者；star 和 fork 數到處都是零。"
-  ],
-  "method": "Starting from the 2026 Best Software winners and nominees, the Best Software & AI winners and nominees, and the Best Model and Best Hardware winners, every tool's wiki software page was read (via curl where server-rendered, via the browser pane for client-rendered SPAs), every GitLab and GitHub repository was queried through the GitLab API for file tree, licence, stars, forks and last-commit date, and every candidate deployment was first checked with curl and then opened in a browser and read, because a 200 from an SPA catch-all route proves nothing — starase-atlas.org returns its index page for any /api path, so apparent API endpoints had to be inspected by content. Where a backend health endpoint existed it was called directly (ARGUS /api/ready, PyroForge /health, AMPilot /api/v1/corpus/search, which returned real data). A link check cannot tell you whether the science is correct, whether the tool gives sensible answers on data it has not seen, whether the maintainers intend to keep paying for hosting, or whether anyone is actually using it — zero stars and zero forks mean no public signal, not necessarily no users. Cornell and KAUST-KSA released no standalone software and are listed but excluded from the base rate; TAU-Israel, HK-Joint-School, DKU and XJTLU-Software had no local research file, so their tools were identified from their wikis directly.",
-  "method_zh": "起點是 2026 年最佳軟體的得主與入圍者、最佳軟體與 AI 的得主與入圍者，以及最佳模型與最佳硬體的得主：每一個工具的 wiki 軟體頁面都讀過（伺服器端渲染的用 curl，客戶端渲染的單頁應用則用瀏覽器面板），每一個 GitLab 和 GitHub 儲存庫都透過 GitLab API 查詢檔案樹、授權條款、star 數、fork 數和最後一次 commit 的日期，而每一個可能的部署都先用 curl 檢查、再在瀏覽器中開啟並實際閱讀，因為單頁應用萬用路由回傳的 200 什麼都證明不了——starase-atlas.org 對任何 /api 路徑都回傳它的首頁，所以看起來像 API 端點的東西必須逐一檢查內容。有後端健康檢查端點的就直接呼叫（ARGUS 的 /api/ready、PyroForge 的 /health、AMPilot 的 /api/v1/corpus/search，後者回傳了真實資料）。連結檢查無法告訴你科學是否正確、工具在沒見過的資料上是否給出合理答案、維護者是否打算繼續付代管費用，或是否真的有人在用它——零 star 和零 fork 代表沒有公開訊號，不一定代表沒有使用者。Cornell 和 KAUST-KSA 沒有釋出獨立軟體，列入表格但不計入基礎比率；TAU-Israel、HK-Joint-School、DKU 和 XJTLU-Software 沒有本地的研究檔案，他們的工具是直接從 wiki 辨識出來的。",
-  "baseRate": {
-    "checked": 21,
-    "alive": 8,
-    "sourceOnly": 11,
-    "stub": 0,
-    "gone": 2
+  {
+   "kicker": "Proof it is not a budget problem",
+   "title": "Two high-school teams out-shipped most universities",
+   "title_zh": "兩支高中隊伍交付的成果勝過多數大學隊伍",
+   "body": "GHCIS's ARGUS runs a real backend at argus.ucuv.dpdns.org — its /api/ready endpoint answers with JSON, not a static shell — alongside a Docker and a native Node deploy path, role-based access and SQLite persistence. HK-Joint-School's PyroForge serves protein thermostability prediction at pyroforge.26650078.xyz with /health reporting ESM models loaded and ready. Both URLs are reachable right now. Neither team had a university budget; they had a cheap domain and a decision to host.",
+   "body_zh": "GHCIS 的 ARGUS 在 argus.ucuv.dpdns.org 跑著一個真正的後端——它的 /api/ready 端點回應的是 JSON，不是靜態空殼——還附上 Docker 和原生 Node 兩條部署路徑、角色式存取控制和 SQLite 持久化儲存。HK-Joint-School 的 PyroForge 在 pyroforge.26650078.xyz 提供蛋白質熱穩定性預測，/health 回報 ESM 模型已載入並就緒。兩個網址現在都連得上。兩支隊伍都沒有大學的預算；他們有的是一個便宜的網域，和一個要架站的決定。",
+   "chips": [
+    "alive",
+    "GHCIS",
+    "HK-Joint-School",
+    "high school",
+    "real backend"
+   ],
+   "chips_zh": [
+    "還活著",
+    "GHCIS",
+    "HK-Joint-School",
+    "高中",
+    "真的有後端"
+   ],
+   "kicker_zh": "證明這不是預算問題"
   },
-  "kicker_zh": "原創分析",
-  "order": 34
+  {
+   "kicker": "The cautionary tale",
+   "title": "Vilnius deployed, then switched it off",
+   "title_zh": "Vilnius 部署了，然後把它關掉",
+   "body": "Ladder Detector automates gel-image annotation, a genuinely unglamorous and genuinely useful job, and Vilnius-Lithuania did the right thing by deploying it publicly. The URL on their wiki, ladder-detector.onrender.com, now returns HTTP 503 and the text \"This service has been suspended by its owner.\" The Apache-2.0 source is intact on GitLab and still runs via docker compose, so the work is not lost — but every citation of that wiki link now points at a dead page. A free hosting tier is a deadline, not a deployment.",
+   "body_zh": "Ladder Detector 把膠體影像的標註自動化，這是一件真的不華麗、也真的有用的工作，而 Vilnius-Lithuania 做了對的事：把它公開部署出去。他們 wiki 上的網址 ladder-detector.onrender.com 現在回傳 HTTP 503 和「This service has been suspended by its owner.」這段文字。Apache-2.0 的原始碼在 GitLab 上完好無缺，用 docker compose 依然跑得起來，所以成果沒有消失——但現在每一次引用那個 wiki 連結，指向的都是一個死掉的頁面。免費代管方案是一個期限，不是一次部署。",
+   "chips": [
+    "gone",
+    "Vilnius-Lithuania",
+    "503 suspended",
+    "source survives"
+   ],
+   "chips_zh": [
+    "沒了",
+    "Vilnius-Lithuania",
+    "503 已停用",
+    "原始碼還在"
+   ],
+   "kicker_zh": "前車之鑑"
+  },
+  {
+   "kicker": "Honest about the gap",
+   "title": "Diana and HUSH publish a URL that is not the tool",
+   "title_zh": "Diana 和 HUSH 公布的網址不是工具本身",
+   "body": "UMA Malaga's live site opens with a disclaimer: \"Saved results, not the live tool... The pages cannot analyse a variant you type.\" It publishes unedited CLI output with the commit hash, Docker image digest and tool versions recorded — excellent reproducibility practice, but not a service. GU Frankfurt's HUSH page likewise says it \"shows its web app in action\" and then walks through a mockup of screenshots. Both are more honest than most, and both are exactly why a 200 response proves nothing until you read the page.",
+   "body_zh": "UMA Malaga 的線上網站一開頭就有免責聲明：「Saved results, not the live tool... The pages cannot analyse a variant you type.」它公開未經修剪的 CLI 輸出，並記下 commit 雜湊值、Docker 映像摘要和工具版本——這是極佳的可重現性實務，但不是一個服務。GU Frankfurt 的 HUSH 頁面同樣寫著它「shows its web app in action」，然後帶你走過一份由截圖組成的介面示意稿。兩者都比大多數隊伍誠實，而兩者也正好說明了為什麼在你讀過頁面之前，一個 200 回應什麼都證明不了。",
+   "chips": [
+    "source-only",
+    "UMA Malaga",
+    "GU Frankfurt",
+    "demo not deployment"
+   ],
+   "chips_zh": [
+    "只有原始碼",
+    "UMA Malaga",
+    "GU Frankfurt",
+    "是展示，不是部署"
+   ],
+   "kicker_zh": "誠實面對落差"
+  },
+  {
+   "kicker": "Good code, no front door",
+   "title": "ETH-Zurich's deCISion is the best source-only release",
+   "title_zh": "ETH-Zurich 的 deCISion 是最好的純原始碼釋出",
+   "body": "The Best Software winner for Overgrad ships MIT-licensed with a web interface, a JSON API, a CLI, 28 automated tests on every push through GitLab CI, a Docker build, a CITATION.cff and a demo video. It exports FASTA, GenBank and SBOL3 and takes any .pdb or .cif structure, so it would work on someone else's data without modification. The only address on the wiki is localhost:4173. Everything needed to deploy it exists in the repository; nobody deployed it.",
+   "body_zh": "這個研究生組的最佳軟體得主以 MIT 授權釋出，附有網頁介面、JSON API、CLI、每次推送都透過 GitLab CI 執行的 28 項自動化測試、一套 Docker 建置、一份 CITATION.cff 和一支示範影片。它可以輸出 FASTA、GenBank 和 SBOL3，也接受任何 .pdb 或 .cif 結構，所以不用改動就能用在別人的資料上。但 wiki 上唯一的位址是 localhost:4173。部署所需要的一切都在儲存庫裡；沒有人去部署它。",
+   "chips": [
+    "source-only",
+    "ETH-Zurich",
+    "MIT",
+    "CI + Docker",
+    "localhost only"
+   ],
+   "chips_zh": [
+    "只有原始碼",
+    "ETH-Zurich",
+    "MIT",
+    "CI + Docker",
+    "只能跑 localhost"
+   ],
+   "kicker_zh": "程式很好，沒有入口"
+  },
+  {
+   "kicker": "Check the whole release",
+   "title": "Toronto's app is live; its dataset DOI is not",
+   "title_zh": "Toronto 的應用還活著，它的資料集 DOI 沒有",
+   "body": "PETadex at petadex.net is one of the strongest tools of the year: a sharded DIAMOND search over a 298.7M-sequence corpus, with worked examples loaded and ready to run, nothing to install. But the wiki cites a 23.8 GB Zenodo deposit at doi:10.5281/zenodo.23457986, and that DOI returns 404 — a Zenodo API search for \"petadex\" finds zero records. The interactive half survived and the archival half did not, which is the opposite of what long-term preservation is supposed to deliver.",
+   "body_zh": "petadex.net 上的 PETadex 是今年最強的工具之一：對一個 2.987 億條序列的語料做分片 DIAMOND 搜尋，範例已經載好可以直接跑，什麼都不用安裝。但 wiki 引用了一份 23.8 GB 的 Zenodo 存放紀錄 doi:10.5281/zenodo.23457986，而那個 DOI 回傳 404——用 Zenodo API 搜尋「petadex」找到零筆紀錄。互動的那一半活了下來，封存的那一半沒有，這和長期保存本該達成的目標正好相反。",
+   "chips": [
+    "alive",
+    "Toronto",
+    "petadex.net",
+    "Zenodo DOI 404"
+   ],
+   "chips_zh": [
+    "還活著",
+    "Toronto",
+    "petadex.net",
+    "Zenodo DOI 404"
+   ],
+   "kicker_zh": "檢查整個釋出"
+  }
+ ],
+ "table": {
+  "head": [
+   "Tool",
+   "Team",
+   "Status",
+   "Live URL / repo",
+   "Reusable on other data?"
+  ],
+  "head_zh": [
+   "工具",
+   "隊伍",
+   "狀態",
+   "線上網址／儲存庫",
+   "可用於其他資料？"
+  ],
+  "rows": [
+   [
+    "AMPilot",
+    "XJTLU-Software",
+    "alive",
+    "https://ampilotlab.com",
+    "yes"
+   ],
+   [
+    "ARGUS",
+    "GHCIS",
+    "alive",
+    "https://argus.ucuv.dpdns.org/client/",
+    "yes"
+   ],
+   [
+    "Atlas COMPASS + EDGE",
+    "NJU-China",
+    "alive",
+    "https://www.starase-atlas.org/",
+    "partly"
+   ],
+   [
+    "PETadex sequence search",
+    "Toronto",
+    "alive",
+    "https://petadex.net/search",
+    "yes"
+   ],
+   [
+    "PyroForge",
+    "HK-Joint-School",
+    "alive",
+    "https://pyroforge.26650078.xyz/",
+    "yes"
+   ],
+   [
+    "PeptiCraft",
+    "DKU",
+    "alive",
+    "https://pepticraft.pages.dev",
+    "partly"
+   ],
+   [
+    "RADAR-Scout",
+    "Stanford University",
+    "alive",
+    "https://radar-scout.vercel.app/",
+    "partly"
+   ],
+   [
+    "SynBase",
+    "Stanford University",
+    "alive",
+    "https://synbase.web.app/home.html",
+    "n/a (curriculum)"
+   ],
+   [
+    "deCISion",
+    "ETH-Zurich",
+    "source-only",
+    "gitlab.igem.org/2026/software/eth-zurich/decision",
+    "yes"
+   ],
+   [
+    "OpenSplitProtein",
+    "ETH-Zurich",
+    "source-only",
+    "gitlab.igem.org/2026/software/eth-zurich/opensplitprotein",
+    "yes"
+   ],
+   [
+    "ReTIsigner",
+    "Uni-Padua-IT",
+    "source-only",
+    "gitlab.igem.org/2026/software/uni-padua-it/retisigner-svelte",
+    "yes"
+   ],
+   [
+    "RK4 solver",
+    "UPF-Barcelona",
+    "source-only",
+    "gitlab.igem.org/2026/software/upf-barcelona/upf-software",
+    "yes"
+   ],
+   [
+    "iGEMforge",
+    "UPF-Barcelona",
+    "source-only",
+    "gitlab.igem.org/2026/software/upf-barcelona/upf-software",
+    "partly"
+   ],
+   [
+    "NetFlux",
+    "MIT-MAHE",
+    "source-only",
+    "gitlab.igem.org/2026/software/mit-mahe/netflux",
+    "yes"
+   ],
+   [
+    "Diana gRNA designer",
+    "UMA Malaga",
+    "source-only",
+    "gitlab.igem.org/2026/software/uma-malaga/diana-grna-designer",
+    "yes"
+   ],
+   [
+    "HUSH",
+    "GU Frankfurt",
+    "source-only",
+    "gitlab.igem.org/2026/software/gu-frankfurt/hush",
+    "yes"
+   ],
+   [
+    "PRINCE",
+    "Lambert-GA",
+    "source-only",
+    "gitlab.igem.org/2026/software/lambert-ga/prince-webapp",
+    "yes"
+   ],
+   [
+    "catmaOS",
+    "XJTLU-China",
+    "source-only",
+    "gitlab.igem.org/2026/software/xjtlu-china/software",
+    "partly"
+   ],
+   [
+    "Bioreactor digital twin",
+    "GEMS-Taiwan",
+    "source-only",
+    "gitlab.igem.org/2026/software/gems-taiwan/digital-twin",
+    "no"
+   ],
+   [
+    "Ladder Detector",
+    "Vilnius-Lithuania",
+    "gone",
+    "ladder-detector.onrender.com (503 suspended)",
+    "yes, if self-hosted"
+   ],
+   [
+    "CERNAL",
+    "TAU-Israel",
+    "gone",
+    "cernal.app + cernal.duckdns.org (both unresolvable)",
+    "partly, if self-hosted"
+   ],
+   [
+    "Electrospinner (no software)",
+    "Cornell",
+    "n/a",
+    "CAD, BOM and manuals only",
+    "n/a"
+   ],
+   [
+    "Bioreactor stack (no software)",
+    "KAUST-KSA",
+    "n/a",
+    "gitlab.igem.org/2026/kaust-ksa",
+    "n/a"
+   ]
+  ],
+  "rows_zh": [
+   [
+    "AMPilot",
+    "XJTLU-Software",
+    "存活",
+    "https://ampilotlab.com",
+    "是"
+   ],
+   [
+    "ARGUS",
+    "GHCIS",
+    "存活",
+    "https://argus.ucuv.dpdns.org/client/",
+    "是"
+   ],
+   [
+    "Atlas COMPASS + EDGE",
+    "NJU-China",
+    "存活",
+    "https://www.starase-atlas.org/",
+    "部分"
+   ],
+   [
+    "PETadex 序列搜尋",
+    "Toronto",
+    "存活",
+    "https://petadex.net/search",
+    "是"
+   ],
+   [
+    "PyroForge",
+    "HK-Joint-School",
+    "存活",
+    "https://pyroforge.26650078.xyz/",
+    "是"
+   ],
+   [
+    "PeptiCraft",
+    "DKU",
+    "存活",
+    "https://pepticraft.pages.dev",
+    "部分"
+   ],
+   [
+    "RADAR-Scout",
+    "Stanford University",
+    "存活",
+    "https://radar-scout.vercel.app/",
+    "部分"
+   ],
+   [
+    "SynBase",
+    "Stanford University",
+    "存活",
+    "https://synbase.web.app/home.html",
+    "不適用（教學課程）"
+   ],
+   [
+    "deCISion",
+    "ETH-Zurich",
+    "僅原始碼",
+    "gitlab.igem.org/2026/software/eth-zurich/decision",
+    "是"
+   ],
+   [
+    "OpenSplitProtein",
+    "ETH-Zurich",
+    "僅原始碼",
+    "gitlab.igem.org/2026/software/eth-zurich/opensplitprotein",
+    "是"
+   ],
+   [
+    "ReTIsigner",
+    "Uni-Padua-IT",
+    "僅原始碼",
+    "gitlab.igem.org/2026/software/uni-padua-it/retisigner-svelte",
+    "是"
+   ],
+   [
+    "RK4 求解器",
+    "UPF-Barcelona",
+    "僅原始碼",
+    "gitlab.igem.org/2026/software/upf-barcelona/upf-software",
+    "是"
+   ],
+   [
+    "iGEMforge",
+    "UPF-Barcelona",
+    "僅原始碼",
+    "gitlab.igem.org/2026/software/upf-barcelona/upf-software",
+    "部分"
+   ],
+   [
+    "NetFlux",
+    "MIT-MAHE",
+    "僅原始碼",
+    "gitlab.igem.org/2026/software/mit-mahe/netflux",
+    "是"
+   ],
+   [
+    "Diana gRNA 設計工具",
+    "UMA Malaga",
+    "僅原始碼",
+    "gitlab.igem.org/2026/software/uma-malaga/diana-grna-designer",
+    "是"
+   ],
+   [
+    "HUSH",
+    "GU Frankfurt",
+    "僅原始碼",
+    "gitlab.igem.org/2026/software/gu-frankfurt/hush",
+    "是"
+   ],
+   [
+    "PRINCE",
+    "Lambert-GA",
+    "僅原始碼",
+    "gitlab.igem.org/2026/software/lambert-ga/prince-webapp",
+    "是"
+   ],
+   [
+    "catmaOS",
+    "XJTLU-China",
+    "僅原始碼",
+    "gitlab.igem.org/2026/software/xjtlu-china/software",
+    "部分"
+   ],
+   [
+    "生物反應器數位孿生",
+    "GEMS-Taiwan",
+    "僅原始碼",
+    "gitlab.igem.org/2026/software/gems-taiwan/digital-twin",
+    "否"
+   ],
+   [
+    "Ladder Detector",
+    "Vilnius-Lithuania",
+    "已消失",
+    "ladder-detector.onrender.com（503 已停用）",
+    "是，若自行架設"
+   ],
+   [
+    "CERNAL",
+    "TAU-Israel",
+    "已消失",
+    "cernal.app + cernal.duckdns.org（兩者都無法解析）",
+    "部分，若自行架設"
+   ],
+   [
+    "靜電紡絲機（無軟體）",
+    "Cornell",
+    "不適用",
+    "只有 CAD、BOM 和操作手冊",
+    "不適用"
+   ],
+   [
+    "生物反應器系統（無軟體）",
+    "KAUST-KSA",
+    "不適用",
+    "gitlab.igem.org/2026/kaust-ksa",
+    "不適用"
+   ]
+  ]
+ },
+ "checklist": [
+  "Buy a domain and deploy the tool publicly before the wiki freeze, not after it — every tool that is alive today was hosted on freeze day.",
+  "Put a clickable URL at the top of the software page; if the only address on the page is localhost, assume nobody outside the team will ever run it.",
+  "Let strangers in without an account — guest mode or a no-key API. CERNAL gated behind a lab login is dead; AMPilot's keyless API still answers.",
+  "Pay for hosting that outlives the free tier, and check the URL again a month after the Jamboree. Vilnius's deployment lasted weeks.",
+  "Expose a documented HTTP API with an OpenAPI spec alongside the UI, so the tool can be a step in someone else's pipeline rather than a destination.",
+  "Ship a health endpoint that returns real JSON, so anyone — including a judge or a reviewer — can prove the backend is running and not a static shell.",
+  "Accept standard inputs (FASTA, GenBank, SBML, .pdb/.cif) and export standard outputs (SBOL, GenBank, CSV); hard-wiring the tool to your own chassis caps its audience at your team.",
+  "Never present a mockup or saved output as the running tool — and if you do publish saved results, label them as plainly as UMA Malaga did.",
+  "Verify every archival DOI resolves before you cite it; Toronto's 23.8 GB Zenodo deposit 404s while the web app it supports stays up.",
+  "Recruit one outside user and record what they did. Across all 21 tools the only external-adoption number found anywhere was SynBase's 837 learners; stars and forks were zero everywhere."
+ ],
+ "checklist_zh": [
+  "在 wiki 凍結之前就買下網域、把工具公開部署出去，不要等凍結之後——今天還活著的每一個工具，在凍結當天都已經上線代管。",
+  "把可以點擊的網址放在軟體頁面最上方；如果頁面上唯一的位址是 localhost，就假設團隊之外永遠不會有人執行它。",
+  "讓陌生人不用帳號就能進來——訪客模式，或是不需要金鑰的 API。擋在實驗室登入後面的 CERNAL 已經死了；AMPilot 不用金鑰的 API 現在還會回應。",
+  "付錢買能撐過免費方案的代管，並在 Jamboree 之後一個月再檢查一次網址。Vilnius 的部署只撐了幾週。",
+  "在使用者介面之外，再提供一個有 OpenAPI 規格、文件化的 HTTP API，讓這個工具能成為別人流程中的一步，而不只是一個終點。",
+  "提供一個會回傳真正 JSON 的健康檢查端點，讓任何人——包括評審或審查者——都能證明後端真的在跑，不是靜態空殼。",
+  "接受標準輸入（FASTA、GenBank、SBML、.pdb/.cif），並輸出標準格式（SBOL、GenBank、CSV）；把工具綁死在自己的底盤菌株上，等於把使用者上限設成自己這支隊伍。",
+  "絕不要把介面示意稿或存檔輸出當成正在運行的工具呈現——而如果你真的要公布存檔結果，就像 UMA Malaga 那樣清楚標示。",
+  "在引用任何封存 DOI 之前，先確認它解析得出來；Toronto 那份 23.8 GB 的 Zenodo 存放紀錄回傳 404，而它支撐的網頁應用還活著。",
+  "找一位團隊外的使用者，並記錄他做了什麼。21 個工具中，在任何地方找到的唯一外部採用數字是 SynBase 的 837 位學習者；star 和 fork 數到處都是零。"
+ ],
+ "method": "Starting from the 2026 Best Software winners and nominees, the Best Software & AI winners and nominees, and the Best Model and Best Hardware winners, every tool's wiki software page was read (via curl where server-rendered, via the browser pane for client-rendered SPAs), every GitLab and GitHub repository was queried through the GitLab API for file tree, licence, stars, forks and last-commit date, and every candidate deployment was first checked with curl and then opened in a browser and read, because a 200 from an SPA catch-all route proves nothing — starase-atlas.org returns its index page for any /api path, so apparent API endpoints had to be inspected by content. Where a backend health endpoint existed it was called directly (ARGUS /api/ready, PyroForge /health, AMPilot /api/v1/corpus/search, which returned real data). A link check cannot tell you whether the science is correct, whether the tool gives sensible answers on data it has not seen, whether the maintainers intend to keep paying for hosting, or whether anyone is actually using it — zero stars and zero forks mean no public signal, not necessarily no users. Cornell and KAUST-KSA released no standalone software and are listed but excluded from the base rate; TAU-Israel, HK-Joint-School, DKU and XJTLU-Software had no local research file, so their tools were identified from their wikis directly.",
+ "method_zh": "起點是 2026 年最佳軟體的得主與入圍者、最佳軟體與 AI 的得主與入圍者，以及最佳模型與最佳硬體的得主：每一個工具的 wiki 軟體頁面都讀過（伺服器端渲染的用 curl，客戶端渲染的單頁應用則用瀏覽器面板），每一個 GitLab 和 GitHub 儲存庫都透過 GitLab API 查詢檔案樹、授權條款、star 數、fork 數和最後一次 commit 的日期，而每一個可能的部署都先用 curl 檢查、再在瀏覽器中開啟並實際閱讀，因為單頁應用萬用路由回傳的 200 什麼都證明不了——starase-atlas.org 對任何 /api 路徑都回傳它的首頁，所以看起來像 API 端點的東西必須逐一檢查內容。有後端健康檢查端點的就直接呼叫（ARGUS 的 /api/ready、PyroForge 的 /health、AMPilot 的 /api/v1/corpus/search，後者回傳了真實資料）。連結檢查無法告訴你科學是否正確、工具在沒見過的資料上是否給出合理答案、維護者是否打算繼續付代管費用，或是否真的有人在用它——零 star 和零 fork 代表沒有公開訊號，不一定代表沒有使用者。Cornell 和 KAUST-KSA 沒有釋出獨立軟體，列入表格但不計入基礎比率；TAU-Israel、HK-Joint-School、DKU 和 XJTLU-Software 沒有本地的研究檔案，他們的工具是直接從 wiki 辨識出來的。",
+ "baseRate": {
+  "checked": 21,
+  "alive": 8,
+  "sourceOnly": 11,
+  "stub": 0,
+  "gone": 2
+ },
+ "kicker_zh": "原創分析",
+ "order": 34
 }

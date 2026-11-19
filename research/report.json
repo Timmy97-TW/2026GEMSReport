@@ -5,6 +5,7 @@
   {
    "tab": "overview",
    "kicker": "How to read this",
+   "kicker_zh": "怎麼讀這份報告",
    "title": "Two questions, thirty teams",
    "title_zh": "兩個問題，三十支團隊",
    "lede": "This report asks the same two questions of every team it looks at.",
@@ -15,6 +16,7 @@
   {
    "tab": "roadmap",
    "kicker": "Premise",
+   "kicker_zh": "前提",
    "title": "Why the dry lab is the roadmap",
    "title_zh": "為什麼乾實驗室就是路線圖",
    "lede": "GEMS Research is becoming an institution, not a team. Institutions are defined by what they can still do after the current students graduate.",
@@ -25,6 +27,7 @@
   {
    "tab": "roadmap",
    "kicker": "The convergence",
+   "kicker_zh": "兩條線的交會",
    "title": "Two independent analyses, one answer",
    "title_zh": "兩份獨立分析，同一個答案",
    "lede": "The academic trend review and the industry trend review were run separately, from different sources, with no knowledge of each other. They landed on the same white space.",

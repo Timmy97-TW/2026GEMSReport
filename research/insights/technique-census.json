@@ -1,93 +1,121 @@
 {
-  "id": "technique-census",
-  "tab": "drylab",
-  "kicker": "Original analysis",
-  "title": "What 2026's best teams actually reached for",
-  "title_zh": "2026 年最強的團隊，實際上用了什麼",
-  "lede": "A census of the computational tools named across all 106 team files in this report — and the one habit that separates the podium from everybody else.",
-  "lede_zh": "對本報告全部 106 份團隊檔案中提及的運算工具所做的普查——以及把頒獎台和其他人分開的那一個習慣。",
-  "body": "Across the 106 team files gathered here, **AlphaFold is still the default**: it is named by 32 teams, more than any other modelling tool and four times as often as Boltz. ProteinMPNN appears in 14 files, Rosetta in 12, ESMFold and RFdiffusion in 8 each. The academic literature has already moved past this — open models now match or beat the gated flagship — but iGEM has not caught up. That lag is an opportunity: a team that works fluently with the current open stack is doing something most of the competition is not.\n\nThe second pattern is that **the dedicated systems-biology tools have quietly lost**. COPASI, once the standard way an iGEM team built a kinetic model, appears in **one** file out of 106. Tellurium appears in one. MATLAB holds on in five. Everything else is Python — named by 44 teams, more than any other single item in the census, usually SciPy integrating an ODE system written by hand, with scikit-learn behind it in 12 files for anything statistical. Teaching COPASI as the entry point to modelling now teaches a tool the field has left behind.\n\nThe third pattern is the surprise. **Techno-economic analysis — costing the thing, modelling unit economics — is done by more high-school teams than undergraduate ones**: 11 against 8, and a far higher share of a smaller tier. High-school teams are being pushed hard on implementation and business thinking, and they are delivering it. Meanwhile GROMACS, full molecular dynamics, appears in 7 undergraduate files, 1 overgraduate file and **never once** in a high-school one. The two tiers are not weaker and stronger versions of each other; they are differently shaped.\n\n**Then the finding that matters.** We checked which teams do both halves of modelling properly: fit the model to their own measured data (parameter estimation, regression, R², RMSE, confidence intervals, error bars) *and* validate it against something held back (held-out data, cross-validation, a separate experimental test). Only **19 of 106** teams do both.\n\nOf those 19, **10 are Top 10 teams — 53%**. Of the 87 that do not close the loop, 20 are Top 10 — **23%**. A team that closes the model–data loop is more than twice as likely to place. And of the nine who closed it without reaching a Top 10, every one still won or was nominated for a major special prize: XJTLU-China and Jilin-China in Best Model, NJU-China took Best Software & AI Project, UBC-Vancouver took Best Diagnostics, CAU-China took Best Food & Nutrition.\n\nThis is the single most actionable number in the report. Not which model you use — whether you close the loop between the model and your own data. It is also, conveniently, the cheapest capability to build: it needs no GPU, no licence and no collaboration. It needs a student who knows what a residual is.",
-  "body_zh": "在本報告蒐集的 106 份團隊檔案中，**AlphaFold 仍然是預設選項**：共 32 支團隊提到它，多於任何其他建模工具，是 Boltz 的四倍。ProteinMPNN 出現在 14 份檔案中，Rosetta 12 份，ESMFold 與 RFdiffusion 各 8 份。學術文獻早已走過這一步——開源模型現已可匹敵甚至超越封閉的旗艦模型——但 iGEM 還沒跟上。這個時間差就是機會：能熟練運用當前開源工具鏈的團隊，正在做大多數競爭者沒做的事。\n\n第二個型態是，**專用的系統生物學工具已悄悄落敗**。COPASI 曾經是 iGEM 團隊建立動力學模型的標準做法，如今在 106 份檔案中只出現**一次**。Tellurium 一次。MATLAB 勉強守住五份。其餘全是 Python——共 44 支團隊提及，多於普查中任何其他單一項目，通常是用 SciPy 積分一組手寫的 ODE 系統，統計部分則由 scikit-learn 在 12 份檔案中接手。現在把 COPASI 當作建模的入門，等於是在教一個領域已經放下的工具。\n\n第三個型態令人意外。**做技術經濟分析——計算成本、建立單位經濟模型——的高中隊伍比大學部隊伍還多**：11 對 8，而且在一個規模更小的組別中占比高出許多。高中組被大力要求落實應用與商業思考，而他們做到了。相對地，完整的分子動力學（GROMACS）出現在 7 份大學部檔案、1 份研究生組檔案，在高中組則**一次也沒有**。這兩個層級不是同一件事的強弱版本，它們的形狀本來就不同。\n\n**接著是真正重要的發現。** 我們檢查了哪些團隊把建模的兩半都做完：以自己量到的資料擬合模型（參數估計、回歸、R²、RMSE、信賴區間、誤差棒），*並且*用保留的資料驗證它（held-out 資料、交叉驗證、獨立的實驗測試）。106 支團隊中只有 **19 支**兩者皆備。\n\n這 19 支裡，**有 10 支是 Top 10 團隊——53%**。而在沒有閉合迴圈的 87 支中，只有 20 支進入 Top 10——**23%**。閉合模型與資料迴圈的團隊，進榜機率是兩倍以上。而閉合了迴圈卻未進 Top 10 的那九支，無一例外都拿下或入圍了重要特別獎：XJTLU-China 與 Jilin-China 在最佳模型，NJU-China 拿下最佳軟體與 AI 專案，UBC-Vancouver 拿下最佳診斷，CAU-China 拿下最佳食品與營養。\n\n這是整份報告中最可執行的一個數字。重點不是你用哪個模型，而是你有沒有把模型與自己的資料之間的迴圈閉合起來。而且它恰好也是最便宜的能力：不需要 GPU、不需要授權、不需要合作對象。它需要的是一位知道什麼叫殘差的學生。",
-  "cards": [
-    {
-      "kicker": "The headline number",
-      "title": "53% versus 23%",
-      "title_zh": "53% 對 23%",
-      "body": "Teams that both fit their model to their own data and validated it against something held back reached a Top 10 at 53%. Teams that did not reached it at 23% — less than half the rate. Note the sample is already decorated: every team here is a Top 10 or special-prize winner or nominee, so this is loop-closure separating winners from other winners, not from the general field.",
-      "body_zh": "既以自身資料擬合模型、又用保留資料加以驗證的團隊，進入 Top 10 的比例是 53%；沒有這麼做的則是 23%，不到一半。請注意樣本本身已經過篩選：這裡每一支團隊都是 Top 10 或特別獎得主／入圍者，因此這是「閉合迴圈」把贏家從其他贏家中分出來，而不是從一般參賽者中分出來。",
-      "chips": [
-        "19 of 106 closed the loop",
-        "10 of those 19 made Top 10"
-      ],
-      "kicker_zh": "關鍵數字"
-    },
-    {
-      "kicker": "Still the default",
-      "title": "AlphaFold has not been displaced inside iGEM",
-      "title_zh": "在 iGEM 裡，AlphaFold 還沒被取代",
-      "body": "32 of 106 teams name AlphaFold, four times the rate of Boltz. The research literature moved to the open stack over the past year; the competition has not. The teams already working in Boltz and the MPNN family — Lambert-GA, Heidelberg, GU Frankfurt, DTU-Denmark, Princeton — are visibly ahead of the curve rather than merely current.",
-      "body_zh": "106 支團隊中有 32 支提到 AlphaFold，是 Boltz 的四倍。研究文獻在過去一年已轉向開源工具鏈，競賽卻還沒。已經在用 Boltz 與 MPNN 家族的隊伍——Lambert-GA、Heidelberg、GU Frankfurt、DTU-Denmark、Princeton——明顯走在前面，而不只是跟上。",
-      "chips": [
-        "AlphaFold ×32",
-        "ProteinMPNN ×14",
-        "Boltz ×8",
-        "RFdiffusion ×8"
-      ],
-      "kicker_zh": "仍是預設選項"
-    },
-    {
-      "kicker": "A tool generation ended",
-      "title": "Python ate the modelling stack",
-      "title_zh": "Python 吃掉了整個建模工具鏈",
-      "body": "COPASI appears once in 106 files. Tellurium once. MATLAB five times. Python appears in 44 team files, more than any other item in the census, usually SciPy integrating a hand-written ODE system, with scikit-learn behind it for anything statistical. For a programme deciding what to teach, this settles the question: teach Python and the numerical stack, and treat SBML-based tools as an interchange format rather than a starting point.",
-      "body_zh": "COPASI 在 106 份檔案中出現一次，Tellurium 一次，MATLAB 五次。Python 出現在 44 份團隊檔案中，多於普查中任何其他項目，通常是用 SciPy 積分手寫的 ODE 系統，統計部分交給 scikit-learn。對一個正在決定要教什麼的課程而言，這已經定案：教 Python 與數值運算工具鏈，把以 SBML 為基礎的工具當作交換格式，而不是起點。",
-      "chips": [
-        "Python ×44",
-        "scikit-learn ×12",
-        "COPASI ×1",
-        "Tellurium ×1"
-      ],
-      "kicker_zh": "一個工具世代的終結"
-    },
-    {
-      "kicker": "The inversion",
-      "title": "High-school teams cost their projects; undergraduates often don't",
-      "title_zh": "高中隊伍會算成本，大學部常常不算",
-      "body": "Techno-economic analysis appears in 11 high-school files against 8 undergraduate ones, and in a far higher share of the smaller tier. Full molecular dynamics runs the other way: 7 undergraduate files, 1 overgraduate, and never once in a high-school file. The tiers are differently shaped rather than simply further apart, and a high-school programme that assumes it must catch up on everything is aiming at the wrong gap.",
-      "body_zh": "技術經濟分析出現在 11 份高中組檔案中，對比大學部的 8 份，而且在規模較小的組別裡占比高出許多。完整的分子動力學則完全相反：7 份大學部、1 份研究生組，高中組一次也沒有。兩個層級的形狀不同，而不只是距離遠近的差別。一個假定自己必須在所有面向上追趕的高中課程，瞄錯了缺口。",
-      "chips": [
-        "Techno-economic: 11 HS vs 8 UG",
-        "GROMACS: 7 UG, 0 HS"
-      ],
-      "kicker_zh": "反轉"
-    },
-    {
-      "kicker": "A weaker result, reported anyway",
-      "title": "Publishing your failures: an effect that shrank when we added data",
-      "title_zh": "公開失敗：加入更多資料後，效果反而縮小了",
-      "body": "Several analysts noticed the same thing independently — Toronto, WageningenUR and UZurich each put a prominent negative result on the wiki, and two won the award in that exact category. On the first 54 files the pattern looked real: 54% against 41%. Re-run across all 106 it collapses to **33% against 27%**, and the measurement was always partly circular — it detects how candid *our own summary* of a team was, not reliably how candid the team was. We are leaving it in because reporting the finding that weakened is the same discipline the rest of this page is about. Publish the negative result because it is honest, not because it wins prizes.",
-      "body_zh": "好幾位分析員各自獨立注意到同一件事——Toronto、WageningenUR 與 UZurich 都在 wiki 上放了顯著的負面結果，其中兩隊正是在對應類別中獲獎。在最初的 54 份檔案上，這個型態看起來是真的：54% 對 41%。但擴及全部 106 份重跑之後，它塌縮為 **33% 對 27%**；而且這個量測本來就帶有循環性——它偵測到的是*我們自己的摘要*有多坦白，而未必能可靠反映團隊有多坦白。我們把它留下來，是因為「報告那個變弱的發現」正是本頁其餘部分所談的同一種紀律。公開負面結果，是因為那樣才誠實，而不是因為那樣會得獎。",
-      "chips": [
-        "first 54 files: 54% vs 41%",
-        "all 106 files: 33% vs 27%"
-      ],
-      "kicker_zh": "較弱的結果，照樣報告"
-    },
-    {
-      "kicker": "What this means for GEMS",
-      "title": "The cheapest capability is the one that correlates with winning",
-      "title_zh": "最便宜的能力，正好就是和得獎相關的那一個",
-      "body": "Closing the model-data loop needs no GPU, no licence, no partner lab and no new chassis. It needs a student who can fit a curve, report an uncertainty and hold data back for a test. That is a term's teaching, and on this evidence it moves the result more than any tool choice. It is Phase 2 of the roadmap for exactly this reason.",
-      "body_zh": "閉合模型與資料之間的迴圈，不需要 GPU、不需要授權、不需要合作實驗室、也不需要新的底盤。它需要的是一位會擬合曲線、會報告不確定度、並且懂得保留資料做測試的學生。那是一個學期的教學量，而根據這些證據，它對結果的影響大於任何工具選擇。這正是它成為路線圖階段二的原因。",
-      "chips": [
-        "No GPU required",
-        "One term of teaching"
-      ],
-      "kicker_zh": "這對 GEMS 的意義"
-    }
-  ],
-  "method": "Counts come from pattern-matching the dry-lab and science-for-good fields of all 106 team files in this report, not from reading the wikis a second time, so a technique a team used but did not write up is invisible here. The sample is decorated teams only — every file is a Top 10 or special-prize winner or nominee — so the baselines are not the whole competition. The loop-closure test looks for explicit language about fitting, uncertainty and validation; a team that did the work but described it loosely will be undercounted. An earlier version of this page reported 71% against 40% from a 54-file snapshot taken while research was still landing; the figures above supersede it. Read the numbers as a ranking, not a measurement.",
-  "method_zh": "計數方式是對本報告全部 106 份團隊檔案的乾實驗室與科學向善欄位做樣式比對，而非重新閱讀 wiki，因此團隊做了卻沒寫下來的技術在這裡是看不見的。樣本僅限獲獎隊伍——每一份檔案都是 Top 10 或特別獎得主／入圍者——所以基準值並不代表整個競賽。迴圈閉合的判準是尋找明確描述擬合、不確定度與驗證的文字；做了卻寫得含糊的團隊會被低估。本頁較早的版本依據研究仍在進行時的 54 份檔案快照，報告了 71% 對 40%；上述數字取代該版本。請把這些數字當成排序，而不是量測。",
-  "kicker_zh": "原創分析",
-  "order": 30
+ "id": "technique-census",
+ "tab": "drylab",
+ "kicker": "Original analysis",
+ "title": "What 2026's best teams actually reached for",
+ "title_zh": "2026 年最強的團隊，實際上用了什麼",
+ "lede": "A census of the computational tools named across all 106 team files in this report — and the one habit that separates the podium from everybody else.",
+ "lede_zh": "對本報告全部 106 份團隊檔案中提及的運算工具所做的普查——以及把頒獎台和其他人分開的那一個習慣。",
+ "body": "Across the 106 team files gathered here, **AlphaFold is still the default**: it is named by 32 teams, more than any other modelling tool and four times as often as Boltz. ProteinMPNN appears in 14 files, Rosetta in 12, ESMFold and RFdiffusion in 8 each. The academic literature has already moved past this — open models now match or beat the gated flagship — but iGEM has not caught up. That lag is an opportunity: a team that works fluently with the current open stack is doing something most of the competition is not.\n\nThe second pattern is that **the dedicated systems-biology tools have quietly lost**. COPASI, once the standard way an iGEM team built a kinetic model, appears in **one** file out of 106. Tellurium appears in one. MATLAB holds on in five. Everything else is Python — named by 44 teams, more than any other single item in the census, usually SciPy integrating an ODE system written by hand, with scikit-learn behind it in 12 files for anything statistical. Teaching COPASI as the entry point to modelling now teaches a tool the field has left behind.\n\nThe third pattern is the surprise. **Techno-economic analysis — costing the thing, modelling unit economics — is done by more high-school teams than undergraduate ones**: 11 against 8, and a far higher share of a smaller tier. High-school teams are being pushed hard on implementation and business thinking, and they are delivering it. Meanwhile GROMACS, full molecular dynamics, appears in 7 undergraduate files, 1 overgraduate file and **never once** in a high-school one. The two tiers are not weaker and stronger versions of each other; they are differently shaped.\n\n**Then the finding that matters.** We checked which teams do both halves of modelling properly: fit the model to their own measured data (parameter estimation, regression, R², RMSE, confidence intervals, error bars) *and* validate it against something held back (held-out data, cross-validation, a separate experimental test). Only **19 of 106** teams do both.\n\nOf those 19, **10 are Top 10 teams — 53%**. Of the 87 that do not close the loop, 20 are Top 10 — **23%**. A team that closes the model–data loop is more than twice as likely to place. And of the nine who closed it without reaching a Top 10, every one still won or was nominated for a major special prize: XJTLU-China and Jilin-China in Best Model, NJU-China took Best Software & AI Project, UBC-Vancouver took Best Diagnostics, CAU-China took Best Food & Nutrition.\n\nThis is the single most actionable number in the report. Not which model you use — whether you close the loop between the model and your own data. It is also, conveniently, the cheapest capability to build: it needs no GPU, no licence and no collaboration. It needs a student who knows what a residual is.",
+ "body_zh": "在本報告蒐集的 106 份團隊檔案中，**AlphaFold 仍然是預設選項**：共 32 支團隊提到它，多於任何其他建模工具，是 Boltz 的四倍。ProteinMPNN 出現在 14 份檔案中，Rosetta 12 份，ESMFold 與 RFdiffusion 各 8 份。學術文獻早已走過這一步——開源模型現已可匹敵甚至超越封閉的旗艦模型——但 iGEM 還沒跟上。這個時間差就是機會：能熟練運用當前開源工具鏈的團隊，正在做大多數競爭者沒做的事。\n\n第二個型態是，**專用的系統生物學工具已悄悄落敗**。COPASI 曾經是 iGEM 團隊建立動力學模型的標準做法，如今在 106 份檔案中只出現**一次**。Tellurium 一次。MATLAB 勉強守住五份。其餘全是 Python——共 44 支團隊提及，多於普查中任何其他單一項目，通常是用 SciPy 積分一組手寫的 ODE 系統，統計部分則由 scikit-learn 在 12 份檔案中接手。現在把 COPASI 當作建模的入門，等於是在教一個領域已經放下的工具。\n\n第三個型態令人意外。**做技術經濟分析——計算成本、建立單位經濟模型——的高中隊伍比大學部隊伍還多**：11 對 8，而且在一個規模更小的組別中占比高出許多。高中組被大力要求落實應用與商業思考，而他們做到了。相對地，完整的分子動力學（GROMACS）出現在 7 份大學部檔案、1 份研究生組檔案，在高中組則**一次也沒有**。這兩個層級不是同一件事的強弱版本，它們的形狀本來就不同。\n\n**接著是真正重要的發現。** 我們檢查了哪些團隊把建模的兩半都做完：以自己量到的資料擬合模型（參數估計、回歸、R²、RMSE、信賴區間、誤差棒），*並且*用保留的資料驗證它（held-out 資料、交叉驗證、獨立的實驗測試）。106 支團隊中只有 **19 支**兩者皆備。\n\n這 19 支裡，**有 10 支是 Top 10 團隊——53%**。而在沒有閉合迴圈的 87 支中，只有 20 支進入 Top 10——**23%**。閉合模型與資料迴圈的團隊，進榜機率是兩倍以上。而閉合了迴圈卻未進 Top 10 的那九支，無一例外都拿下或入圍了重要特別獎：XJTLU-China 與 Jilin-China 在最佳模型，NJU-China 拿下最佳軟體與 AI 專案，UBC-Vancouver 拿下最佳診斷，CAU-China 拿下最佳食品與營養。\n\n這是整份報告中最可執行的一個數字。重點不是你用哪個模型，而是你有沒有把模型與自己的資料之間的迴圈閉合起來。而且它恰好也是最便宜的能力：不需要 GPU、不需要授權、不需要合作對象。它需要的是一位知道什麼叫殘差的學生。",
+ "cards": [
+  {
+   "kicker": "The headline number",
+   "title": "53% versus 23%",
+   "title_zh": "53% 對 23%",
+   "body": "Teams that both fit their model to their own data and validated it against something held back reached a Top 10 at 53%. Teams that did not reached it at 23% — less than half the rate. Note the sample is already decorated: every team here is a Top 10 or special-prize winner or nominee, so this is loop-closure separating winners from other winners, not from the general field.",
+   "body_zh": "既以自身資料擬合模型、又用保留資料加以驗證的團隊，進入 Top 10 的比例是 53%；沒有這麼做的則是 23%，不到一半。請注意樣本本身已經過篩選：這裡每一支團隊都是 Top 10 或特別獎得主／入圍者，因此這是「閉合迴圈」把贏家從其他贏家中分出來，而不是從一般參賽者中分出來。",
+   "chips": [
+    "19 of 106 closed the loop",
+    "10 of those 19 made Top 10"
+   ],
+   "chips_zh": [
+    "106 支中 19 支閉合迴圈",
+    "這 19 支中 10 支進 Top 10"
+   ],
+   "kicker_zh": "關鍵數字"
+  },
+  {
+   "kicker": "Still the default",
+   "title": "AlphaFold has not been displaced inside iGEM",
+   "title_zh": "在 iGEM 裡，AlphaFold 還沒被取代",
+   "body": "32 of 106 teams name AlphaFold, four times the rate of Boltz. The research literature moved to the open stack over the past year; the competition has not. The teams already working in Boltz and the MPNN family — Lambert-GA, Heidelberg, GU Frankfurt, DTU-Denmark, Princeton — are visibly ahead of the curve rather than merely current.",
+   "body_zh": "106 支團隊中有 32 支提到 AlphaFold，是 Boltz 的四倍。研究文獻在過去一年已轉向開源工具鏈，競賽卻還沒。已經在用 Boltz 與 MPNN 家族的隊伍——Lambert-GA、Heidelberg、GU Frankfurt、DTU-Denmark、Princeton——明顯走在前面，而不只是跟上。",
+   "chips": [
+    "AlphaFold ×32",
+    "ProteinMPNN ×14",
+    "Boltz ×8",
+    "RFdiffusion ×8"
+   ],
+   "chips_zh": [
+    "AlphaFold ×32",
+    "ProteinMPNN ×14",
+    "Boltz ×8",
+    "RFdiffusion ×8"
+   ],
+   "kicker_zh": "仍是預設選項"
+  },
+  {
+   "kicker": "A tool generation ended",
+   "title": "Python ate the modelling stack",
+   "title_zh": "Python 吃掉了整個建模工具鏈",
+   "body": "COPASI appears once in 106 files. Tellurium once. MATLAB five times. Python appears in 44 team files, more than any other item in the census, usually SciPy integrating a hand-written ODE system, with scikit-learn behind it for anything statistical. For a programme deciding what to teach, this settles the question: teach Python and the numerical stack, and treat SBML-based tools as an interchange format rather than a starting point.",
+   "body_zh": "COPASI 在 106 份檔案中出現一次，Tellurium 一次，MATLAB 五次。Python 出現在 44 份團隊檔案中，多於普查中任何其他項目，通常是用 SciPy 積分手寫的 ODE 系統，統計部分交給 scikit-learn。對一個正在決定要教什麼的課程而言，這已經定案：教 Python 與數值運算工具鏈，把以 SBML 為基礎的工具當作交換格式，而不是起點。",
+   "chips": [
+    "Python ×44",
+    "scikit-learn ×12",
+    "COPASI ×1",
+    "Tellurium ×1"
+   ],
+   "chips_zh": [
+    "Python ×44",
+    "scikit-learn ×12",
+    "COPASI ×1",
+    "Tellurium ×1"
+   ],
+   "kicker_zh": "一個工具世代的終結"
+  },
+  {
+   "kicker": "The inversion",
+   "title": "High-school teams cost their projects; undergraduates often don't",
+   "title_zh": "高中隊伍會算成本，大學部常常不算",
+   "body": "Techno-economic analysis appears in 11 high-school files against 8 undergraduate ones, and in a far higher share of the smaller tier. Full molecular dynamics runs the other way: 7 undergraduate files, 1 overgraduate, and never once in a high-school file. The tiers are differently shaped rather than simply further apart, and a high-school programme that assumes it must catch up on everything is aiming at the wrong gap.",
+   "body_zh": "技術經濟分析出現在 11 份高中組檔案中，對比大學部的 8 份，而且在規模較小的組別裡占比高出許多。完整的分子動力學則完全相反：7 份大學部、1 份研究生組，高中組一次也沒有。兩個層級的形狀不同，而不只是距離遠近的差別。一個假定自己必須在所有面向上追趕的高中課程，瞄錯了缺口。",
+   "chips": [
+    "Techno-economic: 11 HS vs 8 UG",
+    "GROMACS: 7 UG, 0 HS"
+   ],
+   "chips_zh": [
+    "技術經濟分析：高中 11 對大學部 8",
+    "GROMACS：大學部 7，高中 0"
+   ],
+   "kicker_zh": "反轉"
+  },
+  {
+   "kicker": "A weaker result, reported anyway",
+   "title": "Publishing your failures: an effect that shrank when we added data",
+   "title_zh": "公開失敗：加入更多資料後，效果反而縮小了",
+   "body": "Several analysts noticed the same thing independently — Toronto, WageningenUR and UZurich each put a prominent negative result on the wiki, and two won the award in that exact category. On the first 54 files the pattern looked real: 54% against 41%. Re-run across all 106 it collapses to **33% against 27%**, and the measurement was always partly circular — it detects how candid *our own summary* of a team was, not reliably how candid the team was. We are leaving it in because reporting the finding that weakened is the same discipline the rest of this page is about. Publish the negative result because it is honest, not because it wins prizes.",
+   "body_zh": "好幾位分析員各自獨立注意到同一件事——Toronto、WageningenUR 與 UZurich 都在 wiki 上放了顯著的負面結果，其中兩隊正是在對應類別中獲獎。在最初的 54 份檔案上，這個型態看起來是真的：54% 對 41%。但擴及全部 106 份重跑之後，它塌縮為 **33% 對 27%**；而且這個量測本來就帶有循環性——它偵測到的是*我們自己的摘要*有多坦白，而未必能可靠反映團隊有多坦白。我們把它留下來，是因為「報告那個變弱的發現」正是本頁其餘部分所談的同一種紀律。公開負面結果，是因為那樣才誠實，而不是因為那樣會得獎。",
+   "chips": [
+    "first 54 files: 54% vs 41%",
+    "all 106 files: 33% vs 27%"
+   ],
+   "chips_zh": [
+    "前 54 份：54% 對 41%",
+    "全部 106 份：33% 對 27%"
+   ],
+   "kicker_zh": "較弱的結果，照樣報告"
+  },
+  {
+   "kicker": "What this means for GEMS",
+   "title": "The cheapest capability is the one that correlates with winning",
+   "title_zh": "最便宜的能力，正好就是和得獎相關的那一個",
+   "body": "Closing the model-data loop needs no GPU, no licence, no partner lab and no new chassis. It needs a student who can fit a curve, report an uncertainty and hold data back for a test. That is a term's teaching, and on this evidence it moves the result more than any tool choice. It is Phase 2 of the roadmap for exactly this reason.",
+   "body_zh": "閉合模型與資料之間的迴圈，不需要 GPU、不需要授權、不需要合作實驗室、也不需要新的底盤。它需要的是一位會擬合曲線、會報告不確定度、並且懂得保留資料做測試的學生。那是一個學期的教學量，而根據這些證據，它對結果的影響大於任何工具選擇。這正是它成為路線圖階段二的原因。",
+   "chips": [
+    "No GPU required",
+    "One term of teaching"
+   ],
+   "chips_zh": [
+    "不需要 GPU",
+    "一學期就教得完"
+   ],
+   "kicker_zh": "這對 GEMS 的意義"
+  }
+ ],
+ "method": "Counts come from pattern-matching the dry-lab and science-for-good fields of all 106 team files in this report, not from reading the wikis a second time, so a technique a team used but did not write up is invisible here. The sample is decorated teams only — every file is a Top 10 or special-prize winner or nominee — so the baselines are not the whole competition. The loop-closure test looks for explicit language about fitting, uncertainty and validation; a team that did the work but described it loosely will be undercounted. An earlier version of this page reported 71% against 40% from a 54-file snapshot taken while research was still landing; the figures above supersede it. Read the numbers as a ranking, not a measurement.",
+ "method_zh": "計數方式是對本報告全部 106 份團隊檔案的乾實驗室與科學向善欄位做樣式比對，而非重新閱讀 wiki，因此團隊做了卻沒寫下來的技術在這裡是看不見的。樣本僅限獲獎隊伍——每一份檔案都是 Top 10 或特別獎得主／入圍者——所以基準值並不代表整個競賽。迴圈閉合的判準是尋找明確描述擬合、不確定度與驗證的文字；做了卻寫得含糊的團隊會被低估。本頁較早的版本依據研究仍在進行時的 54 份檔案快照，報告了 71% 對 40%；上述數字取代該版本。請把這些數字當成排序，而不是量測。",
+ "kicker_zh": "原創分析",
+ "order": 30
 }
