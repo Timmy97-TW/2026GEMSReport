@@ -14,7 +14,7 @@ A review of the iGEM 2026 Top 10 teams across all three sections, every special 
 
 # Overview
 
-## 10 findings, and where to read each one
+## 11 findings, and where to read each one
 
 _The 2026 Best Wiki winners all build a layer like this — each claim in two sentences, with a link straight to the evidence. It works, so this report does it too._
 
@@ -47,6 +47,9 @@ Thirteen competing teams returned six award wins — more than any East Asian te
 
 ### The divide is not medical versus agricultural — it is platform versus applied
 Therapeutics teams close loops with non-experts about as often as bioremediation teams do. What actually separates the field is whether anyone outside a lab ever operates the thing: across the platform villages — Foundational Advance, Space, Software & AI, Biomanufacturing — **2 of 26** decorated teams closed a design loop at all, against **14 of 45** in the applied villages.
+
+### Nobody ran an inter-lab measurement ring — in a competition about measurement
+69 of 106 decorated teams record working with another team, but almost all of it is meet-ups. **Not one** ran an inter-lab measurement ring, and collaboration does not predict placing: substantive collaborators reached a Top 10 at 29%, attendance-only teams at 48%. The one team that offered to do real shared work publicly got **zero replies** — and won Best Software and Best Wiki anyway.
 
 _Method and limits. Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see._
 
@@ -842,7 +845,8 @@ _Done looks like: A tool with a URL, a licence, documentation and users who are 
 Institutional standing comes from being useful to people who owe you nothing.
 - **Run a dry-lab school for Taiwanese iGEM and high-school teams.** Modelling, measurement, reproducibility. Teaching forces the material to become transmissible, and it builds the network that later supplies collaborators.
 - **Approach the three Taiwanese teams the analysis identified by name.** NTHU Taiwan (team 6416, Hsinchu) is a separate NTHU entry running engineered *Bacillus subtilis* in a moving-bed reactor — the closest technical match to GEMS on the island, and the natural partner for a joint *B. subtilis* measurement standard. CCU-Taiwan (6408, Chiayi) worked on rice, the same crop as ReLEAF, so a shared Taiwan rice-stress dataset with a published benchmark is a one-season project. Labi-Taiwan (6511) won the peer-voted iGEMers Prize and is the obvious co-teacher for a Taiwan high-school dry-lab school.
-- **Start a collaboration page, because GEMS does not have one.** The Taiwan analysis found GEMS-Taiwan appears on no other Taiwanese team's collaboration page and has none of its own, while NYCU-Taiwan's meet-up on 27 July drew 53 people from five teams. Being findable is a prerequisite for everything else in this phase.
+- **Start a collaboration page, because GEMS does not have one.** Both /collaborations and /partnership return 404, no iGEM team is named anywhere on the GEMS wiki, and GEMS appears on no other Taiwanese team's page — while placing Top 10 with three awards. Two national doors are already open and dated: **TGEM**, in its fourth edition on 22 August 2026 at the Boya Building, NTU, hosted by **Labi-Taiwan** with NTU's Department of Biochemical Science and Technology; and **NYCU-Taiwan's** 27 July meet-up, 53 people from five teams, whose organisers published their own run-sheets and asked for a collaboration interest form. Email Labi-Taiwan in March and NYCU-Taiwan in April. Being findable is a prerequisite for everything else here.
+- **Offer the inter-lab measurement ring nobody ran.** Across all 106 decorated teams of 2026 there was not one — the whole category of collaboration that produces a reusable result went unclaimed, and the single team that publicly offered real shared work got zero replies. GEMS holds the credential for it: Best Measurement and Best Hardware. Ship a calibrated construct and a written protocol to NCKU-Tainan (6379), NTHU (6460), Labi-Taiwan (6511) and Mingdao (6105) — Mingdao has already re-characterised another team's part, so it is the likeliest first yes — and publish the between-lab variance whatever it turns out to be. Note before building the plan on it: collaboration did not predict placing in 2026. Do this because a reproducible number is the asset, not because it wins anything.
 - **Publish.** A methods paper, a preprint, or a well-documented dataset. One citable artefact per year changes how every later conversation starts.
 - **Keep a standing partnership with a university lab and a non-academic stakeholder** — a farm, a clinic, a municipal body. The stakeholder relationship is what makes human practices real rather than performed, and it is the thing competition teams cannot build in nine months.
 - **Maintain the trend watch.** This report should be regenerated at least twice a year; the academic and industry tabs are built to be re-run.

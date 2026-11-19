@@ -274,3 +274,40 @@ All are *new questions*, not more coverage. Each writes one file to `research/in
 Each brief carried the standing hazards: SPA wikis need the browser pane, open your OWN tab with
 `tabs_create`, work in your own scratch subdirectory, verify every URL you cite, hold GEMS-Taiwan to the
 same standard as everyone else, and report a negative result honestly if that is what the data says.
+
+### Wave 4 results as they land
+
+**ihp-by-village — the hypothesis failed, and something better was underneath it.**
+Medical villages closed 6 of 21 loops with a non-expert; land, water and food villages 8 of 24. Therapeutics
+(5 of 12) actually beats Bioremediation (1 of 8). The real split is **platform against applied**: Foundational
+Advance 0/8, Space 0/3, Software & AI 0/1, Biomanufacturing 1/11 — 2 of 26 across the platform villages,
+against 14 of 45 in the applied ones. The structural reason argued from the files is not the subject matter
+but **who physically operates the thing**: agriculture and conservation deployments end in a hive or a stall
+run by a non-specialist, while bioremediation ends inside a wastewater plant whose operator is a degreed
+process engineer. Residents near contaminated sites appear, and change the communication rather than the design.
+The analyst rescored the thirteen files that landed after ihp-depth and recounts **71 of 106** closing a loop
+and **nine or ten** closing it with a non-expert, against ihp-depth's six or seven in 93. That divergence is
+now written into ihp-depth's method note, and the findings index and README quote the recount.
+
+**collaboration-network — a clean null, and a lead the report did not have.**
+69 of 106 document inter-team work, 37 none, and almost all of it is meet-ups. **No inter-lab measurement ring
+exists anywhere in the 106** and there was no live part or sample exchange. Uni-Padua-IT publicly offered on
+9 August to codon-optimise any team's sequence and got **zero replies** — then won Best Software and Best Wiki.
+Correlation with placing is absent and runs slightly backwards: substantive collaborators 14/48 (29%),
+attendance-only 10/21 (48%), none 6/37 (16%), p=0.17. Reported as a null.
+Previously unrecorded here: **TGEM, fourth edition, 22 August 2026, Boya Building NTU, hosted by Labi-Taiwan
+with NTU's Department of Biochemical Science and Technology.** Roadmap Phase 4 has been rewritten around it,
+NYCU-Taiwan's published run-sheets, and the measurement ring nobody ran, with named teams and months to email.
+Caveat the analyst flagged: file-based coding is a documentation proxy — NCKU-Tainan's file shows no
+collaboration signal while its wiki carries five dated exchanges.
+
+### The character audit earned itself immediately
+`char_audit()` in build.py now runs on every build over every `_zh` string in `research/`. It checks three
+things and nothing else, because the earlier naive sweep produced 503 hits that were almost all legitimate:
+Simplified characters (curated list; 准 and 台 removed — both correct Traditional), Cyrillic anywhere, Greek
+runs of two or more (a lone Greek letter is scientific notation), and **lowercase ordinary English words**
+stranded inside CJK. The last check is deliberately case-sensitive so an AND gate and a wiki page name pass,
+and it ignores "wiki", which is a loanword this report uses on purpose. There is a self-test: feed it the
+three historical failures and it catches all three while passing clean text.
+It paid for itself within the hour — it caught a Cyrillic "протокол" that the manager had just typed into
+roadmap Phase 4, before it was committed.

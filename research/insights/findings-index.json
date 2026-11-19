@@ -131,6 +131,19 @@
     "2 of 26 vs 14 of 45"
    ],
    "link": "good"
+  },
+  {
+   "kicker": "Collaboration",
+   "kicker_zh": "合作",
+   "title": "Nobody ran an inter-lab measurement ring — in a competition about measurement",
+   "title_zh": "沒有任何一支隊伍做過跨實驗室量測環——在一個以量測為核心的競賽裡",
+   "body": "69 of 106 decorated teams record working with another team, but almost all of it is meet-ups. **Not one** ran an inter-lab measurement ring, and collaboration does not predict placing: substantive collaborators reached a Top 10 at 29%, attendance-only teams at 48%. The one team that offered to do real shared work publicly got **zero replies** — and won Best Software and Best Wiki anyway.",
+   "body_zh": "106 支得獎隊伍中有 69 支記錄了與其他隊伍的合作，但幾乎全是 meet-up。**沒有任何一支**做過跨實驗室量測環；而且合作並不預測名次：有實質合作的隊伍進入 Top 10 的比例是 29%，只去參加聚會的反而是 48%。唯一公開提議要做真正共同工作的那支隊伍，**一封回覆都沒有收到**——卻仍拿下最佳軟體與最佳 Wiki。",
+   "chips": [
+    "69 of 106",
+    "0 measurement rings"
+   ],
+   "link": "teams"
   }
  ],
  "method": "Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see.",
