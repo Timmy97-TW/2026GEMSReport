@@ -1,0 +1,89 @@
+{
+  "team": "UNILausanne",
+  "id": "6045",
+  "section": "Overgrad",
+  "country": "Switzerland",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/unilausanne/",
+  "projectTitle": "ASTACi: Detect, Disarm, Defend",
+  "tagline": "A field-deployable LAMP assay for the crayfish plague pathogen, a sub-CHF-10 open-source incubator to run it, and an ecological model that decided which treatment strategy to pursue.",
+  "summary": "UNILausanne addressed crayfish plague, caused by the oomycete Aphanomyces astaci, with three complementary strategies: detect the pathogen in water with loop-mediated isothermal amplification, disarm the invasive signal crayfish that carries it using RNAi, and defend native crayfish with a protective protein supplement. The measurement work asks whether the LAMP assay is specific enough to separate A. astaci from the closely related A. frigidophilus, sensitive enough to be useful, and robust enough to survive real lake and river water. The hardware is C.L.A.W., a hand-sized USB-powered incubator built with the original author of the MobileLAMP design, fully open-source at under CHF 10 per unit. A stochastic two-species population model was validated against a documented field case and then used to decide how to split effort between the disarm and defend strategies.",
+  "awards": [
+    "Best Measurement nominee (Overgraduate)"
+  ],
+  "dry": {
+    "frameworks": "Measurement is organised around three stated requirements for a field assay (distinguish the pathogen from close relatives, offer a low detection limit, remain reliable under different environmental conditions), which become the specificity, sensitivity and robustness sections. The model is organised as sensitivity analysis, then validation against a real documented outcome, then use, with assumptions and limitations listed as expandable sections and each parameter annotated with its definition, the value used and the basis for that value, including explicit statements of 'no literature value exists' where none does.",
+    "dataviz": "Annotated agarose gel panels paired with photographs of colorimetric tube results; a qPCR standard curve of Ct against log10 template concentration with a linear regression over the assay's linear range; a temperature-stability plot showing three individual C.L.A.W. runs in grey, the mean +/- SD in orange and a shaded band marking the 60 to 65 C LAMP window, analysed and plotted in R 4.5.1 with ggplot2; an animated monthly-cycle schematic of the ecological model; interactive population-trajectory charts with median lines, shaded likely-outcome ranges, hoverable values, a toggleable data table and clickable legend entries; a heat-map grid of percentage native decline across competition and transmission values with the selected cell outlined.",
+    "datascience": "Specificity was engineered rather than assumed: multiple LAMP primer sets were designed and compared, with the best-performing set placing the F3 primer over a 10 bp deletion present in A. frigidophilus, and the team found that removing the optional loop primers eliminated false positives, a result they turn into a recommendation for other teams. Sensitivity was established by serial dilution with three replicates per level, giving a preliminary limit of detection of 5.5 x 10^-5 ng template per reaction, about 5 x 10^-6 ng/uL in the final reaction, below which amplification became inconsistent; a missing band in one lane is attributed to a probable pipetting error rather than quietly dropped. That figure is then benchmarked against the gold standard by running a qPCR standard curve for A. astaci, Ct against log10 concentration in triplicate, with a lowest detected concentration of about 1 x 10^-7 ng/uL, so the team can say its assay sits within one order of magnitude of the reference method instead of claiming parity. Robustness testing produced the most useful negative result: lake and river water pH was measured (5.8 for distilled, 7.04 to 7.11 for Lake Geneva, 7.26 to 8.16 for river water), samples were spiked with synthetic DNA, and amplification was robust across the range on gel, but the pH-sensitive colorimetric readout failed to change colour at higher starting pH, so the assay is robust and its readout is not. The team converts this into three explicit recommendations: run a no-template control with every new primer set, drop the loop primers if the NTC gives false positives, and check environmental pH or confirm a colorimetric negative by gel before calling a sample clean. Hardware is calibrated rather than trusted: a thermometer placed directly in the tube bore read about 10 C above the display, so the thermostat is set to 52.5 C to reach 62.5 C in the tube, and this calibration step is written into the published manual; heating from 27 to 62.5 C takes about five minutes with an overshoot to around 70 C at eight minutes because the sensor sits under the block, so the protocol specifies a 10-minute preheat, after which the tube bore holds 62.7 +/- 1.2 C over 30 minutes across three independent runs. The ecological model is stochastic with many replicates per condition reported as medians with percentile bands, is subjected to a sensitivity analysis to identify which parameters matter, and is then validated by sweeping competition and transmission against a real documented displacement (Bubb, Thom and Lucas tracked 15 invasive and 20 native crayfish at a river site in 2003 and found zero natives on resurvey in 2005); the team chose moderate competition with beta = 0.9, a 95% match, over the closest 97% fit because the latter would have contradicted their neutral-habitat baseline, and they state that the remaining gap was left open rather than closed by adjusting habitat.",
+    "software": "C.L.A.W. is fully open-source with a published assembly manual containing a parts list with prices and suppliers, step-by-step assembly instructions, wiring diagrams, and guidance on settings and calibration; STL files for the base, cover, lid, tube support and button are provided with an interactive 3D viewer on the wiki. The design builds on the published MobileLAMP device and the team worked with its corresponding author to correct a missing circuit connection. Analysis and plotting were done in R 4.5.1 with ggplot2.",
+    "stack": [
+      "Vazyme fluorescent LAMP/RT-LAMP kit",
+      "NEB WarmStart Colorimetric LAMP 2X master mix",
+      "Agarose gel electrophoresis",
+      "TaqMan qPCR (Vralstad assay)",
+      "R 4.5.1 with ggplot2",
+      "3D printing (STL)",
+      "USB power bank electronics",
+      "Stochastic two-species population simulation"
+    ],
+    "techniques": [
+      "Primer-set comparison for specificity",
+      "Loop-primer removal to suppress false positives",
+      "Serial dilution limit of detection with replicates",
+      "Benchmarking against a gold-standard method",
+      "Environmental matrix (lake and river water) testing",
+      "pH measurement of sample matrices",
+      "No-template controls on every primer set",
+      "Thermometer-in-tube calibration of a heater",
+      "Temperature stability as mean +/- SD across runs",
+      "Parameter sensitivity analysis",
+      "Model validation against a documented field outcome"
+    ]
+  },
+  "good": {
+    "publicEngagement": "An education page and a games section accompany the project, alongside an inclusivity page that includes a dyslexia-friendly display option on the wiki itself.",
+    "ihp": "A conversation with La Maison de la Riviere, a Swiss foundation for aquatic ecosystem research and conservation, changed a decision the model had already made. The simulations showed monotonically that moving effort from protein supplementation toward RNAi always helped the native population, which suggested abandoning the defend strategy. The foundation described native crayfish reintroduced into a lake with no invasive crayfish present that still died because A. astaci was already in the water, a case the model could not represent because it tracks the pathogen only through the invasive population. The team kept developing the defend strategy for that use case and documented explicitly that the model's scope, not the strategy, was the limitation.",
+    "realWorld": "The target users are named and the design follows from them: fishermen and conservationists who must run the test at the water's edge without a laboratory, which is why C.L.A.W. runs from a standard USB power bank, costs under CHF 10, and is published with everything needed to rebuild it. The outlook section lists three concrete improvements with reasons (a heated lid to stop condensation reducing the reaction volume, a larger aluminium block so controls can run alongside samples, and freeze-dried reagents for a self-contained field kit), and the next steps for the assay are stated as replacing synthetic DNA with isolated pathogen DNA and then with environmental samples, possibly with a pre-enrichment step.",
+    "partners": [
+      "Dr Ganga Chinna Rao Devarapu (corresponding author, MobileLAMP)",
+      "La Maison de la Riviere",
+      "Vazyme",
+      "New England Biolabs",
+      "IDT",
+      "Microsynth",
+      "Twist Bioscience",
+      "Promega"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6045/wiki/hardware/frame-023.webp",
+      "caption": "C.L.A.W. (Compact LAMP ASTACi Water-incubator), the team's hand-sized, USB-powered LAMP incubator. It is fully open-source, built from off-the-shelf and 3D-printed parts for under CHF 10 per device.",
+      "credit": "Team UNILausanne, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6045/wiki/figure-hardware/claw-stability-graph.avif",
+      "caption": "Temperature in the C.L.A.W. tube bore over a 30-minute incubation after a 10-minute preheat, read every five minutes with a glass thermometer inserted directly into the bore. Grey lines are the three individual runs, orange is mean +/- SD, and the shaded band marks the 60 to 65 C LAMP window; the bore held 62.7 +/- 1.2 C.",
+      "credit": "Team UNILausanne, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6045/wiki/measurement/fig2.avif",
+      "caption": "Agarose gel of LAMP amplicons across a serial dilution of template DNA, three replicates per level, establishing a preliminary limit of detection of 5.5 x 10^-5 ng per reaction. The team attributes the one missing band to a probable pipetting error rather than removing the lane.",
+      "credit": "Team UNILausanne, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6045/wiki/measurement/fig3.avif",
+      "caption": "qPCR standard curve for A. astaci, Ct against log10 template concentration in triplicate with a linear regression over the assay's linear range. Benchmarking against this gold standard lets the team state that their LAMP assay sits within one order of magnitude rather than claiming equivalence.",
+      "credit": "Team UNILausanne, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Test the readout in the matrix it will actually meet, not only the chemistry: the team's LAMP amplification worked in river water while its pH-based colour change did not, a failure invisible in distilled-water validation and the kind that quietly produces false negatives in the field.",
+  "sources": [
+    "https://2026.igem.wiki/unilausanne/measurement",
+    "https://2026.igem.wiki/unilausanne/hardware",
+    "https://2026.igem.wiki/unilausanne/model",
+    "https://2026.igem.wiki/unilausanne/",
+    "https://2026.igem.wiki/unilausanne/design-detect",
+    "https://2026.igem.wiki/unilausanne/human-practices"
+  ]
+}

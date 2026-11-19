@@ -200,9 +200,24 @@ def main():
         insights.append(blk)
     report["sections"] = (report.get("sections") or []) + insights
 
+    # The full team records are large, and most of that weight is prose nobody
+    # reads until they open a tab that needs it. Ship a light index up front and
+    # lazy-load the rest on the first tab (or sheet) that actually uses it.
+    INDEX_KEYS = ("id", "team", "section", "country", "village", "wiki", "rank", "awards",
+                  "projectTitle", "projectTitle_zh", "tagline", "tagline_zh",
+                  "summary", "summary_zh")
+    index = []
+    for t in teams:
+        row = {k: t[k] for k in INDEX_KEYS if t.get(k)}
+        if t.get("images"):
+            row["images"] = t["images"][:1]
+        index.append(row)
+    full = {t["id"]: t for t in teams}
+
     print("building:")
     write_js("results.js", "RESULTS", results)
-    write_js("teams.js", "TEAMS", teams)
+    write_js("teams.js", "TEAMS", index)
+    write_js("teams-full.js", "TEAMS_FULL", full)
     write_js("trends.js", "TRENDS", trends)
     write_js("report.js", "REPORT", report)
 

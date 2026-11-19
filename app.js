@@ -321,6 +321,10 @@
 
   /* ---------- team detail sheet ---------- */
   function openTeam(id) {
+    if (FULL.state !== "done" && FULL.state !== "error") {
+      loadFull(function () { openTeam(id); });
+      return;
+    }
     var t = TEAMS.filter(function (x) { return String(x.id) === String(id); })[0];
     if (!t) return;
     var h = '<div class="sh-head"><div><div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3)">' +
@@ -469,8 +473,48 @@
     return h;
   }
 
+  /* ---------- lazy-loaded full team records ----------
+     data/teams.js carries a light index so the first paint stays small; the full
+     prose lives in data/teams-full.js and is fetched the first time a tab or a
+     detail sheet actually needs it. */
+  var FULL = { state: "idle", waiting: [] };
+  function needsFull(tab) { return tab === "drylab" || tab === "good" || tab === "teams"; }
+  function loadFull(then) {
+    if (FULL.state === "done") { then && then(); return; }
+    if (then) FULL.waiting.push(then);
+    if (FULL.state === "loading") return;
+    FULL.state = "loading";
+    var s = document.createElement("script");
+    s.src = "data/teams-full.js";
+    s.onload = function () {
+      var f = window.TEAMS_FULL || {};
+      TEAMS = TEAMS.map(function (t) { return f[t.id] ? f[t.id] : t; });
+      window.TEAMS = TEAMS;
+      FULL.state = "done";
+      var q = FULL.waiting; FULL.waiting = [];
+      q.forEach(function (fn) { fn(); });
+    };
+    s.onerror = function () {
+      // the index alone still renders something useful — fail visibly, not silently
+      FULL.state = "error";
+      var q = FULL.waiting; FULL.waiting = [];
+      q.forEach(function (fn) { fn(); });
+    };
+    document.head.appendChild(s);
+  }
+
   /* ---------- router ---------- */
   function render() {
+    if (needsFull(CUR) && FULL.state !== "done") {
+      renderTabs();
+      document.getElementById("main").innerHTML =
+        '<div class="load"><div class="spin"></div>' +
+        esc(FULL.state === "error"
+          ? L("Could not load the team files.", "無法載入團隊檔案。")
+          : L("Loading team files…", "載入團隊檔案…")) + "</div>";
+      applyStatic();
+      if (FULL.state !== "error") { loadFull(render); return; }
+    }
     renderTabs();
     var m = document.getElementById("main"), h;
     if (CUR === "overview") h = viewOverview();

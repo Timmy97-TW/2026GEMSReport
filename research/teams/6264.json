@@ -1,0 +1,93 @@
+{
+  "team": "NBJF",
+  "id": "6264",
+  "section": "High School",
+  "country": "China",
+  "village": "Space / Foundational Advance (Best Village Project nominee; the village is not named on the wiki, but the project is framed as DNA data storage for long-duration spaceflight)",
+  "wiki": "https://2026.igem.wiki/nbjf/",
+  "projectTitle": "AI-assisted de novo design of a thermostable TdT for enzymatic DNA synthesis",
+  "tagline": "Redesigning nature's DNA typewriter so information can be written into DNA",
+  "summary": "NBJF tackled the write step of DNA data storage. Enzymatic DNA synthesis using terminal deoxynucleotidyl transferase (TdT) avoids the toxic chemistry of phosphoramidite synthesis, but wild-type TdT has a melting temperature of roughly 40 C and a catalytic pocket that does not accommodate bulky modified nucleotides. Over seven Design-Build-Test-Learn cycles the team built an AI-assisted de novo protein design pipeline (RFdiffusion backbone generation, ProteinMPNN/LigandMPNN inverse folding, ESMFold and AlphaFold refolding checks, TemStaPro and SaProt thermostability scoring), screened a large candidate library down to a shortlist, expressed 85 designs, and obtained a de novo TdT that retains DNA extension activity at elevated temperature and accepts oxyamino-modified nucleotides. A final cycle used 100 ns molecular dynamics at 300/350/400 K to explain why.",
+  "awards": [
+    "Best New Basic Part nominee",
+    "Best Village Project nominee"
+  ],
+  "dry": {
+    "frameworks": "Structure-based generative protein design plus all-atom molecular dynamics, not kinetic modelling. The design loop is: functionally constrained RFdiffusion backbone generation (motif scaffolding, keeping the DNA-binding region and active site as constraints) -> ProteinMPNN/LigandMPNN inverse folding (LigandMPNN used for sequence design in the DNA-containing structural environment) -> ESMFold for structural recovery -> AlphaFold refinement -> TemStaPro (sequence-based) and SaProt (structure-based) thermostability scoring. Cycle 7 is a full biophysics workflow: AlphaFold 3 protein-DNA-dATP-2Mg2+-Na+ complex model, ORCA quantum-chemical geometry optimisation of dATP, RESP charges via Multiwfn, AmberTools parameterisation, ff19SB protein / OL21 DNA / OPC water / GAFF ligand force fields, energy minimisation, NVT heating, NPT density equilibration with gradual restraint release, then 100 ns production runs per system at 300 K, 350 K and 400 K.",
+    "dataviz": "Quantitative screening plots rather than decoration: RMSD-versus-pLDDT scatter of the whole candidate library showing the trade-off and the small fraction satisfying both criteria, representative predicted-structure overlays showing the failure mode (compact Rossmann-like folds instead of the open catalytic conformation), and MD analysis panels for RMSD, RMSF, DSSP secondary-structure occupancy, hydrogen-bond counts, radius of gyration, SASA, free-energy landscapes and Markov state model populations. The engineering page also carries a reading-guide layout that routes a non-specialist through four entry points.",
+    "datascience": "Library-scale screening with explicit multi-metric criteria instead of a single score: two independent design batches of 100 backbones each, 1,000 inverse-folded sequences per backbone, scored on both RMSD to the design target and pLDDT, yielding 94 candidates meeting both thresholds. Later cycles add cross-model agreement (ESMFold recovery plus two orthogonal thermostability predictors) and a spatial-placeholder strategy to enlarge the catalytic pocket. Experimental side: 85 de novo sequences expressed under one unified B0034/expression framework, 25 giving detectable SDS-PAGE expression - reported as an application dataset rather than a success claim.",
+    "software": "No standalone released application, but the team wrote automated scripts chaining backbone generation, sequence design, structural validation, candidate screening and MD analysis, and publish this as a reproducible, scalable de novo protein design workflow explicitly intended to lower the barrier for future iGEM teams. The Software special-award page was not among the project's own pages.",
+    "stack": [
+      "RFdiffusion (motif scaffolding)",
+      "ProteinMPNN and LigandMPNN",
+      "ESMFold",
+      "AlphaFold and AlphaFold 3",
+      "TemStaPro",
+      "SaProt",
+      "ORCA (QM geometry optimisation)",
+      "Multiwfn (RESP charge fitting)",
+      "AmberTools (ff19SB, OL21, OPC, GAFF)",
+      "molecular dynamics production runs (100 ns per system)",
+      "DSSP, RMSD/RMSF/Rg/SASA analysis, free-energy landscapes, Markov state models",
+      "automation scripts for the screening pipeline"
+    ],
+    "techniques": [
+      "functionally constrained generative backbone design",
+      "inverse folding in a ligand/DNA-aware structural context",
+      "multi-model cross-screening (fold recovery + two thermostability predictors)",
+      "RMSD/pLDDT joint thresholding to filter a large candidate library",
+      "spatial placeholder strategy to enlarge a catalytic pocket",
+      "temperature-series MD (300/350/400 K) to compare designed vs wild-type protein",
+      "Markov state modelling and free-energy landscape analysis of conformational states",
+      "closing the loop: computational mechanism analysis run only after wet-lab activity data existed"
+    ]
+  },
+  "good": {
+    "publicEngagement": "A seven-stage education programme that is unusually serious about access rather than reach: synthetic biology classes in schools; accessibility work including sign-language science communication and multilingual courses; creative formats (picture books, board games, art activities); community-specific sessions; digital microlearning; an explicit 'Inclusion and Equal Opportunities in STEM' stage; and international/cross-school scientific exchange. The team also co-built an educational website referenced by ZQT-Nanjing.",
+    "ihp": "An ASK -> LISTEN -> REFLECT -> INTEGRATE -> EVALUATE framework applied across four milestones, with the team stating up front that they did not want Human Practices to be a photo album. The decisive conversation was with Li Yang, an information-storage professional at Huawei, who pointed out that storage density alone decides nothing and that write/read/reliability/maintenance costs govern adoption - after which the team explicitly abandoned 'build a DNA storage device' and narrowed to the enzymatic-writing bottleneck. Han Minghao (synthetic biology / DNA engineering) then identified TdT thermostability, substrate compatibility and reaction controllability as the specific handles. Later stages cover intellectual property (two lawyers, Zhang and Wu, on who owns an AI-designed protein and on open science versus commercialisation), sustainability (Mr Liao on agricultural production, leading to a stated sustainability position on whether enzymatic synthesis is genuinely greener), and a Responsible AI section. Eight stakeholder categories were mapped.",
+    "realWorld": "The project is positioned as a tool-enzyme improvement inside a named industrial bottleneck rather than a finished product, which is the right call and was itself a Human Practices outcome. Deliverables for reuse: six new coding parts (BBa_263ET0E5 De novo TdT as the primary characterised part, plus five sequence-diverse variants BBa_26DIWVPI, BBa_266N6QG1, BBa_26BMB5EM, BBa_26NOOCP1, BBa_26YHUEKK), new application data added to the existing RBS BBa_B0034 documenting its behaviour across a library of 85 artificially designed coding sequences, and the automated de novo design workflow itself. The IP strand is unusually mature for a high-school team: they asked practising lawyers who owns an AI-generated sequence before assuming they could license it.",
+    "partners": [
+      "Li Yang, Huawei (information storage)",
+      "Han Minghao (synthetic biology and DNA engineering)",
+      "Lawyer Zhang (research achievements and intellectual property)",
+      "Lawyer Wu (open science and technology commercialisation)",
+      "Mr Liao (agricultural production / sustainability)",
+      "iGEM team ZQT-Nanjing (shared educational website)",
+      "partner schools in the cross-school exchange programme"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6264/wiki/engineering/img1.avif",
+      "caption": "The seven Design-Build-Test-Learn cycles, from the first unconstrained de novo design through structural reanalysis of wild-type TdT, pocket enlargement, expression screening and the closing molecular-dynamics cycle.",
+      "credit": "Team NBJF, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6264/wiki/description/img4.avif",
+      "caption": "'Meet our DNA typewriter': terminal deoxynucleotidyl transferase, the template-independent polymerase the project redesigns for controlled, letter-by-letter DNA writing.",
+      "credit": "Team NBJF, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6264/wiki/contribution/img2.avif",
+      "caption": "The reproducible de novo protein design workflow the team released for future iGEM teams, chaining RFdiffusion, ProteinMPNN, LigandMPNN, ESMFold, TemStaPro and SaProt with automation scripts.",
+      "credit": "Team NBJF, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6264/wiki/education/img16.avif",
+      "caption": "Education Stage VI, inclusion and equal opportunities in STEM, part of a seven-stage programme that also included sign-language science communication and multilingual courses.",
+      "credit": "Team NBJF, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "This is the ceiling, not the benchmark: the generative-design half (RFdiffusion, ProteinMPNN, ESMFold, AlphaFold, TemStaPro) is genuinely reachable by a strong high-school team in one season because the tools are free, documented and runnable on Colab-class GPUs, but Cycle 7 - ORCA quantum chemistry, RESP charge fitting, four-force-field Amber parameterisation and 100 ns MD at three temperatures with Markov state analysis - is not something students assemble unaided. The limiting factors there are mentorship and compute in that order; a Taiwanese programme could reproduce NBJF's screening pipeline with a laptop and a cloud GPU, but would need a university collaborator to attempt the MD.",
+  "sources": [
+    "https://2026.igem.wiki/nbjf/",
+    "https://2026.igem.wiki/nbjf/description",
+    "https://2026.igem.wiki/nbjf/engineering",
+    "https://2026.igem.wiki/nbjf/results",
+    "https://2026.igem.wiki/nbjf/contribution",
+    "https://2026.igem.wiki/nbjf/parts",
+    "https://2026.igem.wiki/nbjf/human-practices",
+    "https://2026.igem.wiki/nbjf/education",
+    "https://2026.igem.wiki/nbjf/notebook"
+  ]
+}
