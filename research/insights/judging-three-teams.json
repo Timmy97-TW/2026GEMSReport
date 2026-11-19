@@ -110,14 +110,14 @@
    "kicker_zh": "第 7 題",
    "title": "The synthetic-biology core has to be the validated part",
    "title_zh": "合成生物學的核心，必須是被驗證的那一部分",
-   "body": "Questions 7 and 2 close on GEMS together. ReLEAF's claim to be synthetic biology rests on green-light control of *B. subtilis* through CcaSR — the one module that showed no light dependence, and whose published transfer function was never tested because \"every induction so far has been at one setting\". Worse, of GEMS's 34 deposited parts, the one that embodies the project's novelty — **BBa_26GJIT8W, the PcpcG2-veg green-light promoter — carries a 22-character description and no documentation at all.**\n\nThe parts GEMS evidenced best, secreting a protein and applying it to a plant, are conventional protein work. Lambert's novelty and Lambert's evidence are the same object: the minibinder is the new thing and the measured thing. **GEMS's novelty and GEMS's evidence are in different places, and the novel one is the least documented part in the collection.** The fair hostile summary is the one the analysis arrived at independently: a very good small fermenter with a very good OD meter, and the optogenetics as decoration.",
-   "body_zh": "第 7 題與第 2 題在 GEMS 身上一起收口。ReLEAF 自稱合成生物學，倚靠的是透過 CcaSR 以綠光控制 *B. subtilis*——而那正是唯一沒有顯示光依賴性的模組，其已發表的轉移函數也從未被測試，因為「到目前為止每一次誘導都只用了一個設定」。更糟的是，GEMS 存放的 34 個元件裡，體現這個專案新穎性的那一個——**BBa_26GJIT8W，PcpcG2-veg 綠光啟動子——只有 22 個字元的說明，完全沒有文件。**\n\nGEMS 證據最紮實的部分，也就是分泌一個蛋白並施用到植物上，是常規的蛋白工作。Lambert 的新穎性與證據是同一個物件：minibinder 既是新東西，也是被量測的東西。**GEMS 的新穎性與證據落在不同的地方，而新穎的那一個是整個元件集合裡文件最少的。** 最公允的敵意總結，就是這份分析獨立得到的那一句：一台很好的小型發酵槽配一台很好的 OD 計，而光遺傳學是裝飾。",
+   "body": "Questions 7 and 2 close on GEMS together. ReLEAF's claim to be synthetic biology rests on green-light control of *B. subtilis* through CcaSR — the one module that showed no light dependence, and whose published transfer function was never tested because \"every induction so far has been at one setting\". Worse, and this comes from GEMS's own parts page rather than from any outside reading: the page carries a **Documentation** column that the team states was read from the live Registry API, and **every one of its four regulatory parts shows \"—\"** — PcpcG2-veg (BBa_26GJIT8W, the green-light promoter itself), PtagC+RBS, RBS0 and EEBD-RBS0. The control elements that *are* the synthetic-biology contribution are the parts with no documentation at all.\n\nThe parts GEMS evidenced best, secreting a protein and applying it to a plant, are conventional protein work. Lambert's novelty and Lambert's evidence are the same object: the minibinder is the new thing and the measured thing. **GEMS's novelty and GEMS's evidence are in different places, and the novel one is the least documented part in the collection.** The fair hostile summary is the one the analysis arrived at independently: a very good small fermenter with a very good OD meter, and the optogenetics as decoration.",
+   "body_zh": "第 7 題與第 2 題在 GEMS 身上一起收口。ReLEAF 自稱合成生物學，倚靠的是透過 CcaSR 以綠光控制 *B. subtilis*——而那正是唯一沒有顯示光依賴性的模組，其已發表的轉移函數也從未被測試，因為「到目前為止每一次誘導都只用了一個設定」。更糟的是，這一點來自 GEMS 自己的元件頁，不是外部的解讀：該頁有一個 **Documentation** 欄，團隊自述其內容是從線上 Registry API 讀取的，而**它四個調控元件全部顯示「—」**——PcpcG2-veg（BBa_26GJIT8W，也就是綠光啟動子本身）、PtagC+RBS、RBS0 與 EEBD-RBS0。那些「本身就是合成生物學貢獻」的控制元件，正是完全沒有文件的那幾個。\n\nGEMS 證據最紮實的部分，也就是分泌一個蛋白並施用到植物上，是常規的蛋白工作。Lambert 的新穎性與證據是同一個物件：minibinder 既是新東西，也是被量測的東西。**GEMS 的新穎性與證據落在不同的地方，而新穎的那一個是整個元件集合裡文件最少的。** 最公允的敵意總結，就是這份分析獨立得到的那一句：一台很好的小型發酵槽配一台很好的 OD 計，而光遺傳學是裝飾。",
    "chips": [
-    "novelty part: 22 characters",
+    "4 of 4 regulatory parts undocumented",
     "one induction setting only"
    ],
    "chips_zh": [
-    "新穎元件：22 個字元",
+    "4 個調控元件全部無文件",
     "只用過一個誘導設定"
    ]
   },
@@ -126,16 +126,16 @@
    "kicker_zh": "第 8 題",
    "title": "The Registry documentation is long. Almost none of it is characterisation.",
    "title_zh": "Registry 文件很長，但幾乎沒有一段是表徵資料。",
-   "body": "The obvious theory was that GEMS's Registry pages were thin. They are not — and this is the one place the comparison runs in GEMS's favour. All 34 deposited accessions resolve with sequence, documentation runs 0 to 18,401 characters with a **median of 7,369 and 269,653 characters across the collection**, and 14 parts sit inside the 10,388–83,030 band this report measured for parts-award winners. HongKong-JSS's four parts carry **756, 643, 468 and 385 characters**, and its Best New Composite Part nominee is the 756. Lambert's 38 claimed accessions top out at 6,313 characters, with descriptions as short as 19 and almost no characterisation sections anywhere.\n\nSo volume is not the problem. **Kind is. Only 3 of GEMS's 34 parts carry a Characterisation section at all, 3,313 characters between them**; the rest is Design, Experiment and Application prose. Five parts have no documentation whatsoever. Separately, on the results page: five p-values, SEM and error bars throughout, R² to four decimals — and **no named statistical test anywhere.** Significance is carried by asterisks alone, while HongKong-JSS writes \"paired two-sided t-test p = 0.0080\". And five bioreactor figures are captioned \"redrawn from the team's chart\", with the wiki's own `growth-data.js` recording `csv: null` beside the note \"The owner, 15 Oct: 'ill give data later'\".",
-   "body_zh": "最直覺的理論是 GEMS 的 Registry 頁面太薄。並不是——而這也是整個比較中唯一對 GEMS 有利的地方。34 個存放的編號全部解析成功且附序列，文件長度從 0 到 18,401 字元，**中位數 7,369，整個集合共 269,653 字元**，其中 14 個落在本報告為元件獎得主量到的 10,388–83,030 區間內。HongKong-JSS 的四個元件分別是 **756、643、468 與 385 字元**，而它入圍 Best New Composite Part 的那一個就是 756 的那個。Lambert 聲稱的 38 個編號上限是 6,313 字元，說明短到只有 19 個字元，而且幾乎沒有任何地方有表徵段落。\n\n所以問題不是量，**是種類。GEMS 的 34 個元件裡，只有 3 個帶有表徵（Characterisation）段落，三者合計 3,313 字元**；其餘都是設計、實驗與應用的敘述。另有五個元件完全沒有文件。此外在結果頁上：五個 p 值、全頁 SEM 與誤差棒、R² 寫到小數第四位——卻**沒有任何地方寫出統計檢定的名稱。** 顯著性只靠星號，而 HongKong-JSS 寫的是「paired two-sided t-test p = 0.0080」。還有五張生物反應器的圖，圖說是「redrawn from the team's chart」，而 wiki 自己的 `growth-data.js` 記著 `csv: null`，旁邊寫著「The owner, 15 Oct: 'ill give data later'」。",
+   "body": "The obvious theory was that GEMS's Registry pages were thin. They are not — and this is the one place the comparison runs in GEMS's favour. All 34 deposited accessions resolve with sequence, documentation runs 0 to 18,401 characters with a **median of 7,369 and 269,653 characters across the collection**, and 14 parts sit inside the 10,388–83,030 band this report measured for parts-award winners. HongKong-JSS's four parts carry **756, 643, 468 and 385 characters**, and its Best New Composite Part nominee is the 756. Lambert's 38 claimed accessions top out at 6,313 characters, with descriptions as short as 19 and almost no characterisation sections anywhere.\n\nSo volume is not the problem. **Kind is, and GEMS publishes the proof itself.** Its parts page carries a Documentation column the team says was read from the live Registry API, and across the 35 parts it presents the column reads: **Experiment 18, Design 8, nothing at all 6, and Characterisation 3.** Three parts in thirty-five carry characterisation, about 3,300 characters between them. A judge on question 8 is asking whether a stranger can check the claim, and Design and Experiment prose describes what was intended and what was done — not what was measured. Separately, on the results page: five p-values, SEM and error bars throughout, R² to four decimals — and **no named statistical test anywhere.** Significance is carried by asterisks alone, while HongKong-JSS writes \"paired two-sided t-test p = 0.0080\". And five bioreactor figures are captioned \"redrawn from the team's chart\", with the wiki's own `growth-data.js` recording `csv: null` beside the note \"The owner, 15 Oct: 'ill give data later'\".",
+   "body_zh": "最直覺的理論是 GEMS 的 Registry 頁面太薄。並不是——而這也是整個比較中唯一對 GEMS 有利的地方。34 個存放的編號全部解析成功且附序列，文件長度從 0 到 18,401 字元，**中位數 7,369，整個集合共 269,653 字元**，其中 14 個落在本報告為元件獎得主量到的 10,388–83,030 區間內。HongKong-JSS 的四個元件分別是 **756、643、468 與 385 字元**，而它入圍 Best New Composite Part 的那一個就是 756 的那個。Lambert 聲稱的 38 個編號上限是 6,313 字元，說明短到只有 19 個字元，而且幾乎沒有任何地方有表徵段落。\n\n所以問題不是量，**是種類，而且 GEMS 自己就公開了證據。** 它的元件頁有一個 Documentation 欄，團隊自述其內容讀自線上 Registry API，而在它所呈現的 35 個元件中，這一欄是：**Experiment 18 個、Design 8 個、完全沒有的 6 個、Characterisation 3 個。** 三十五個元件裡只有三個有表徵，三者合計約 3,300 字元。第 8 題問的是陌生人能不能核對這個主張，而 Design 與 Experiment 的敘述講的是「打算做什麼」和「做了什麼」——不是「量到了什麼」。此外在結果頁上：五個 p 值、全頁 SEM 與誤差棒、R² 寫到小數第四位——卻**沒有任何地方寫出統計檢定的名稱。** 顯著性只靠星號，而 HongKong-JSS 寫的是「paired two-sided t-test p = 0.0080」。還有五張生物反應器的圖，圖說是「redrawn from the team's chart」，而 wiki 自己的 `growth-data.js` 記著 `csv: null`，旁邊寫著「The owner, 15 Oct: 'ill give data later'」。",
    "chips": [
     "median 7,369 chars — strong",
-    "3 of 34 characterised",
+    "Characterisation on 3 of 35",
     "0 named tests"
    ],
    "chips_zh": [
     "中位數 7,369 字元——很強",
-    "34 個中 3 個有表徵",
+    "35 個中 3 個有表徵",
     "0 個檢定名稱"
    ]
   }
@@ -194,13 +194,13 @@
     "7 Synbio and standards",
     "Novel protein is the measured thing",
     "MerR sensor is the measured thing",
-    "Novel promoter BBa_26GJIT8W: 22-character description"
+    "4 of 4 regulatory parts carry no documentation"
    ],
    [
     "8 Documentation",
     "Best Wiki winner; max 6,313 chars, 19-char descriptions",
     "Registry 385–756 chars — thinner than GEMS",
-    "Median 7,369 chars, but 3 of 34 characterised; 0 named tests"
+    "Median 7,369 chars, but Characterisation on 3 of 35; 0 named tests"
    ]
   ],
   "rows_zh": [
@@ -244,13 +244,13 @@
     "7 合成生物學與標準",
     "新穎蛋白就是被量測的東西",
     "MerR 感測器就是被量測的東西",
-    "新穎啟動子 BBa_26GJIT8W：22 字元說明"
+    "4 個調控元件全部沒有文件"
    ],
    [
     "8 文件完整度",
     "最佳 Wiki 得主；上限 6,313 字元，說明短至 19 字元",
     "Registry 385–756 字元——比 GEMS 更薄",
-    "中位數 7,369 字元，但 34 個中僅 3 個有表徵；0 個檢定名稱"
+    "中位數 7,369 字元，但 35 個中僅 3 個有表徵；0 個檢定名稱"
    ]
   ]
  },
@@ -259,7 +259,7 @@
   "If the light-gated device does not beat the constitutive control, the project is not an optogenetics project. Settle that in week six, not in October.",
   "Name every statistical test beside its p-value. Asterisks alone cost nothing to fix and cannot be checked by a stranger.",
   "Never ship a control arm at n=1. The LPA growth figure would have cost two more tubes.",
-  "Write a Characterisation section on every Registry part. Only 3 of 34 have one, and the novel promoter has a 22-character description.",
+  "Write a Characterisation section on every Registry part. GEMS's own parts table shows Characterisation on 3 of 35, and all four regulatory parts — the green-light promoter included — showing nothing at all.",
   "Publish the numbers behind every figure as CSV. A chart traced from a picture of a chart is bounded by the tracing, not the experiment.",
   "Reconcile the two payback figures, or retract one. A published 68-years-against-4.9 contradiction answers question 3 for the judge.",
   "Keep the candour. It won three categories. Spend it bounding results that are clear, not only explaining results that are not."
@@ -269,11 +269,11 @@
   "如果光控裝置贏不過組成型對照組，這個專案就不是光遺傳學專案。這件事該在第六週就定案，不是等到十月。",
   "每個 p 值旁邊都寫出檢定名稱。只放星號，修起來不花錢，但陌生人無法核對。",
   "永遠不要讓對照組只有 n=1。那張 LPA 生長圖，差的只是兩支試管。",
-  "每一個 Registry 元件都寫出表徵段落。34 個裡只有 3 個有，而新穎的那個啟動子只有 22 個字元的說明。",
+  "每一個 Registry 元件都寫出表徵段落。GEMS 自己的元件表顯示 35 個中只有 3 個有表徵，而四個調控元件——包含綠光啟動子——全部一片空白。",
   "把每張圖背後的數字以 CSV 公開。用圖片描出來的圖表，其不確定度來自描圖，不是來自實驗。",
   "把兩個回本年數調和，或撤回其中一個。公開的「68 年對 4.9 年」矛盾，會替評審把第 3 題回答掉。",
   "保住那份坦白。它贏下了三個類別。把它用在為清楚的結果劃定邊界，而不只是解釋不清楚的結果。"
  ],
- "method": "Every claim here was fetched first-hand from the three teams' live 2026 wikis and from api.registry.igem.org, and the specific figures were re-verified by the report's manager rather than taken on an analyst's word. GEMS's wiki is static HTML and was read with curl; Lambert's is server-rendered Astro and was read the same way; HongKong-JSS's needed a browser. Statistical-reporting counts come from stripping tags from the full results page and matching whole words, so a test named only inside a figure image would be invisible to the count. Question 9, on how competently a team answered judges' questions live, is excluded: it leaves no public record, and it is entirely possible that part of the gap described here was created in the room rather than on the wiki. GEMS-Taiwan is the report author's own team and is assessed on the same terms as the other two, which is the standing rule of this report. The analysis describes what a judge could learn from the published record; it is not a reconstruction of any judge's actual reasoning, and no judge has been consulted. Registry documentation lengths for GEMS come from /v1/parts/{uuid}/documentation across all 34 deposited accessions; HongKong-JSS's are description lengths from the parts records, so the two are not measured identically and the comparison is directional rather than exact — it is quoted here only because the gap is an order of magnitude and runs in GEMS's favour. Lambert-GA's Registry figures are description and documentation-body lengths for the 21 of 38 accessions whose bodies were retrieved before api.registry.igem.org began returning HTTP 429 across the board for about fifty minutes; the remainder are recorded as not found with that reason rather than estimated, so Lambert's maximum is a floor on the sample and not a census.",
- "method_zh": "此處每一項主張都是第一手從三支隊伍 2026 年的線上 wiki 以及 api.registry.igem.org 取得，具體數字由本報告的管理者重新查核，而不是採信分析員的轉述。GEMS 的 wiki 是靜態 HTML，用 curl 讀取；Lambert 的是 Astro 伺服器端渲染，也以同樣方式讀取；HongKong-JSS 的需要用瀏覽器。統計報告方式的計數，是把整個結果頁去除標籤後以完整字詞比對而得，因此若某個檢定名稱只寫在圖片裡，這個計數看不到它。第 9 題關於團隊現場回答評審問題的能力，在此排除：它沒有留下公開紀錄，而這裡描述的落差，完全有可能有一部分是在現場、而不是在 wiki 上產生的。GEMS-Taiwan 是本報告作者自己的團隊，與另外兩支以相同標準評估，這是本報告一貫的規則。本分析描述的是「一位評審能從公開紀錄中讀到什麼」，不是對任何評審實際推理過程的重建，也沒有徵詢過任何評審。 GEMS 的 Registry 文件長度取自全部 34 個存放編號的 /v1/parts/{uuid}/documentation；HongKong-JSS 的則是元件紀錄中的 description 長度，兩者量測方式並不相同，因此此處的比較是方向性的、不是精確對等——之所以引用，只因為差距達一個數量級，而且方向對 GEMS 有利。 Lambert-GA 的 Registry 數字，是 38 個編號中在 api.registry.igem.org 開始全面回傳 HTTP 429（持續約五十分鐘）之前成功取得內文的那 21 個的說明與文件長度；其餘以「未取得」並註明該原因記錄，而非推估，因此 Lambert 的上限是這個樣本的下界，不是全面普查。"
+ "method": "Every claim here was fetched first-hand from the three teams' live 2026 wikis and from api.registry.igem.org, and the specific figures were re-verified by the report's manager rather than taken on an analyst's word. GEMS's wiki is static HTML and was read with curl; Lambert's is server-rendered Astro and was read the same way; HongKong-JSS's needed a browser. Statistical-reporting counts come from stripping tags from the full results page and matching whole words, so a test named only inside a figure image would be invisible to the count. Question 9, on how competently a team answered judges' questions live, is excluded: it leaves no public record, and it is entirely possible that part of the gap described here was created in the room rather than on the wiki. GEMS-Taiwan is the report author's own team and is assessed on the same terms as the other two, which is the standing rule of this report. The analysis describes what a judge could learn from the published record; it is not a reconstruction of any judge's actual reasoning, and no judge has been consulted. Registry documentation lengths for GEMS come from /v1/parts/{uuid}/documentation across all 34 deposited accessions; HongKong-JSS's are description lengths from the parts records, so the two are not measured identically and the comparison is directional rather than exact — it is quoted here only because the gap is an order of magnitude and runs in GEMS's favour. Lambert-GA's Registry figures are description and documentation-body lengths for the 21 of 38 accessions whose bodies were retrieved before api.registry.igem.org began returning HTTP 429 across the board for about fifty minutes; the remainder are recorded as not found with that reason rather than estimated, so Lambert's maximum is a floor on the sample and not a census. The Documentation-column tally for GEMS was read by the manager directly from the team's own published parts page, which states that the column was populated from the live Registry API on 21 October 2026; the per-part character counts come from the API and could not be re-verified at the time of writing because api.registry.igem.org was returning HTTP 429 to all requests.",
+ "method_zh": "此處每一項主張都是第一手從三支隊伍 2026 年的線上 wiki 以及 api.registry.igem.org 取得，具體數字由本報告的管理者重新查核，而不是採信分析員的轉述。GEMS 的 wiki 是靜態 HTML，用 curl 讀取；Lambert 的是 Astro 伺服器端渲染，也以同樣方式讀取；HongKong-JSS 的需要用瀏覽器。統計報告方式的計數，是把整個結果頁去除標籤後以完整字詞比對而得，因此若某個檢定名稱只寫在圖片裡，這個計數看不到它。第 9 題關於團隊現場回答評審問題的能力，在此排除：它沒有留下公開紀錄，而這裡描述的落差，完全有可能有一部分是在現場、而不是在 wiki 上產生的。GEMS-Taiwan 是本報告作者自己的團隊，與另外兩支以相同標準評估，這是本報告一貫的規則。本分析描述的是「一位評審能從公開紀錄中讀到什麼」，不是對任何評審實際推理過程的重建，也沒有徵詢過任何評審。 GEMS 的 Registry 文件長度取自全部 34 個存放編號的 /v1/parts/{uuid}/documentation；HongKong-JSS 的則是元件紀錄中的 description 長度，兩者量測方式並不相同，因此此處的比較是方向性的、不是精確對等——之所以引用，只因為差距達一個數量級，而且方向對 GEMS 有利。 Lambert-GA 的 Registry 數字，是 38 個編號中在 api.registry.igem.org 開始全面回傳 HTTP 429（持續約五十分鐘）之前成功取得內文的那 21 個的說明與文件長度；其餘以「未取得」並註明該原因記錄，而非推估，因此 Lambert 的上限是這個樣本的下界，不是全面普查。 GEMS 的 Documentation 欄統計，由本報告管理者直接從該團隊自己公開的元件頁讀出；該頁自述這一欄是在 2026 年 10 月 21 日從線上 Registry API 取得。各元件的字元數來自 API，撰稿時無法重新核對，因為 api.registry.igem.org 當時對所有請求回傳 HTTP 429。"
 }
