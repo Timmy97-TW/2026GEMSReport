@@ -1,392 +1,443 @@
 {
- "id": "findings-index",
- "tab": "overview",
- "kicker": "Start here",
- "kicker_zh": "從這裡開始",
- "title": "Nine findings, and where to read each one",
- "title_zh": "九個發現，以及各自該讀哪一頁",
- "lede": "The 2026 Best Wiki winners all build a layer like this — each claim in two sentences, with a link straight to the evidence. It works, so this report does it too.",
- "lede_zh": "2026 年所有最佳 Wiki 得主都建了一層像這樣的東西——每個主張兩句話，附上直達證據的連結。它有效，所以這份報告也這麼做。",
- "cards": [
-  {
-   "kicker": "Modelling",
-   "kicker_zh": "建模",
-   "title": "Closing the model–data loop is the single best predictor of a Top 10",
-   "title_zh": "閉合模型與資料的迴圈，是 Top 10 最強的單一預測因子",
-   "body": "Teams that both fit a model to their own measured data and validate it against something held back reached a Top 10 at **53%**; teams that did not, at **23%** — less than half the rate. All nine who closed the loop without a Top 10 won or were nominated for a major special prize anyway. It needs no GPU and no licence.",
-   "body_zh": "既以自身量測資料擬合模型、又用保留資料加以驗證的團隊，進入 Top 10 的比例是 **53%**；沒有這麼做的則是 **23%**，不到一半。閉合了迴圈卻未進 Top 10 的那九支，全都拿下或入圍了重要特別獎。這件事不需要 GPU，也不需要授權。",
-   "chips": [
-    "53% vs 23%"
-   ],
-   "chips_zh": [
-    "53% 對 23%"
-   ],
-   "link": "drylab"
-  },
-  {
-   "kicker": "High school",
-   "kicker_zh": "高中組",
-   "title": "At high-school level the gap is evaluation discipline, not tools",
-   "title_zh": "在高中層級，差距在評估紀律，不在工具",
-   "body": "Eton-College-UK used logistic regression and a PSSM but ran cluster-aware cross-validation, a label-shuffle control and an ablation. Lambert-GA won Best Model for benchmarking the confidence metrics themselves and publishing that its own hit was not top-scoring. GCGS reached the Top 10 with no model page at all.",
-   "body_zh": "Eton-College-UK 用的是 logistic regression 與 PSSM，但做了分群感知的交叉驗證、標籤洗牌對照與消融測試。Lambert-GA 拿下最佳模型，是因為他們對信心指標本身做了基準測試，並公開自己成功的設計其實分數不是最高的。GCGS 則在完全沒有 model 頁的情況下進入 Top 10。",
-   "chips": [
-    "all free tools"
-   ],
-   "chips_zh": [
-    "全是免費工具"
-   ],
-   "link": "drylab"
-  },
-  {
-   "kicker": "Software",
-   "kicker_zh": "軟體",
-   "title": "8 of 21 award-winning tools are still usable, and the reason is hosting",
-   "title_zh": "21 個得獎工具中有 8 個仍可使用，原因是「有沒有架站」",
-   "body": "Every live tool was hosted on wiki-freeze day; every source-only tool's wiki lists localhost as its only address. Not a coding or budget decision — a hosting decision made months early. Two high-school teams out-shipped most of the universities. Stars and forks across every repo checked: zero.",
-   "body_zh": "每一個仍在線的工具，在 wiki 凍結當日就已經上線；每一個只有原始碼的工具，wiki 上唯一的位址都是 localhost。這不是寫程式或預算的決定，而是提前好幾個月做的架站決定。兩支高中隊伍交付得比多數大學還好。所有檢查過的 repository，star 與 fork 都是零。",
-   "chips": [
-    "hosted on freeze day"
-   ],
-   "chips_zh": [
-    "凍結日當天已架站"
-   ],
-   "link": "drylab"
-  },
-  {
-   "kicker": "Visualisation",
-   "kicker_zh": "視覺化",
-   "title": "The best figures build the reader's doubt into the picture",
-   "title_zh": "最好的圖，把讀者的懷疑畫進圖裡",
-   "body": "GEMS-Taiwan's provenance rail turns amber exactly where measurement stops and modelling begins. DKU gives \"not assessed\" its own verdict so an unmeasured gate cannot read as a passed one. Mingdao's captions carry the instrument, the buffer, the replicate count and a link to the raw CSV. DTU shows which stakeholders never replied.",
-   "body_zh": "GEMS-Taiwan 的來源軌道，正好在量測結束、模擬開始之處轉為琥珀色。DKU 給「未評估」一個自己的判定，讓未量測的關卡不會被讀成通過。Mingdao 的圖說載明儀器、緩衝液、重複次數，並連結原始 CSV。DTU 則把從未回覆的利害關係人也顯示出來。",
-   "chips": [
-    "provenance visible",
-    "\"not assessed\" as a state"
-   ],
-   "chips_zh": [
-    "來源看得見",
-    "「未評估」也是一種狀態"
-   ],
-   "link": "drylab"
-  },
-  {
-   "kicker": "Science for Good",
-   "kicker_zh": "Science for Good",
-   "title": "The deadline, not the people, is what limits Science for Good",
-   "title_zh": "限制 Science for Good 的是截止日，不是人",
-   "body": "8 of 21 award-winning software tools still run, every repository checked has zero stars and zero forks, no team in 106 ran an inter-lab measurement ring, and only nine or ten of 71 closed loops were closed by a non-expert. These are deadline artefacts. GEMS's answer is a **club-form programme with no deadline**, carrying a few problems across years — its definition, criteria and current pipeline are on this tab.",
-   "body_zh": "21 個得獎軟體工具中有 8 個還能跑，所有檢查過的程式庫星數與分支數皆為零，106 支隊伍沒有一支做過跨實驗室量測環，71 個閉合的迴路中只有九到十個是與非專業人士閉合的。這些都是截止日造成的。GEMS 的回應是一個**沒有截止日的社團式長期計畫**，讓幾個題目跨年走下去——它的定義、條件與目前的題目清單都在這一頁。",
-   "chips": [
-    "a programme, not a category"
-   ],
-   "chips_zh": [
-    "是計畫，不是獎項類別"
-   ],
-   "link": "good"
-  },
-  {
-   "kicker": "Human practices",
-   "kicker_zh": "人類實踐",
-   "title": "The loops that closed were closed by experts, not by publics",
-   "title_zh": "真正閉合的迴圈，是專家閉合的，不是公眾",
-   "body": "Of all 106 decorated teams, **71** can point at a stakeholder who visibly changed the design. But almost every one of those stakeholders was a credentialled technical expert. The publics, patients and communities the criterion is rhetorically about changed the vocabulary and not the vector, with **nine or ten exceptions in 106**. (The first pass scored 93 files and found 64 and six-to-seven; the figures here are the recount on the closed set.)",
-   "body_zh": "在全部 106 支獲獎隊伍中，有 **71** 支能指出一位明顯改變了設計的利害關係人。但這些利害關係人幾乎全是具備專業資格的技術專家。這個評審標準修辭上所指向的公眾、病人與社群，改變的是詞彙而不是方向——**106 支中只有九到十個例外**。（第一輪評的是 93 份檔案，得到 64 支與六到七個例外；這裡的數字是集合封閉後的重算。）",
-   "chips": [
-    "71 of 106",
-    "9–10 exceptions"
-   ],
-   "chips_zh": [
-    "71/106",
-    "9 至 10 個例外"
-   ],
-   "link": "good"
-  },
-  {
-   "kicker": "Engagement",
-   "kicker_zh": "公眾參與",
-   "title": "The best education work was designed from data and measured like an experiment",
-   "title_zh": "最好的教育工作，是從資料設計、像實驗一樣量測的",
-   "body": "UCAS-China made compliance the target after a 461-person questionnaire, not awareness. GU Frankfurt sent nineteen members to a professional science-communication course first. Oxford built a podcast that deliberately pairs stakeholders who disagree. And the sharpest teams publish the lesson that failed.",
-   "body_zh": "UCAS-China 在做完 461 人的問卷後，把目標設為服藥遵從性，而不是認知提升。GU Frankfurt 先送 19 位成員去上專業的科學傳播課程。Oxford 做了一個刻意把意見相左者配對的 podcast。而最犀利的團隊，會把失敗的那堂課也公布出來。",
-   "chips": [
-    "survey-designed",
-    "measured"
-   ],
-   "chips_zh": [
-    "從問卷設計",
-    "量過成效"
-   ],
-   "link": "good"
-  },
-  {
-   "kicker": "Commercial",
-   "kicker_zh": "商業",
-   "title": "The credible commercial sections published a model showing their own product losing",
-   "title_zh": "可信的商業章節，都公開了顯示自家產品輸掉的模型",
-   "body": "Worldshaper-Shanghai reports a negative NPV for its own enzyme. DTU-Denmark's LCA finds cement co-processing beats its route on almost every indicator, then converts each loss into an engineering target. Stockholm dismantled its venture when the safety board killed open-water release — and won the Safety and Security Award.",
-   "body_zh": "Worldshaper-Shanghai 報告自家酵素得出負的 NPV。DTU-Denmark 的 LCA 發現水泥共處理在幾乎每項指標上都勝過他們的路線，接著把每一項落敗轉成工程目標。Stockholm 在安全委員會否決開放水域釋放後拆掉了自己的創業計畫——然後拿下安全與保安獎。",
-   "chips": [
-    "negative NPV, published"
-   ],
-   "chips_zh": [
-    "NPV 為負，照樣公開"
-   ],
-   "link": "good"
-  },
-  {
-   "kicker": "Wiki craft",
-   "kicker_zh": "Wiki 工藝",
-   "title": "Best Wiki winners ship an executive layer, not better graphics",
-   "title_zh": "最佳 Wiki 得主交付的是一個導讀層，不是更漂亮的圖",
-   "body": "Three of the four serve text that is readable before any script runs; the fourth mirrors every page as Markdown. All four build a layer that answers each medal criterion in two or three sentences and deep-links the evidence, failures included. Dark mode, late alt-text sweeps and mascot systems correlate with nothing.",
-   "body_zh": "四位得主中有三位提供的文字在任何程式執行前就可閱讀；第四位則把每一頁都鏡像為 Markdown。四位都建了一層用兩三句話回答每項獎牌標準、並直接深連到證據（含失敗）的導讀層。深色模式、最後才補的替代文字、吉祥物系統，則與得獎毫無相關。",
-   "chips": [
-    "text before JS",
-    "/judging page"
-   ],
-   "chips_zh": [
-    "先給文字，再跑 JS",
-    "/judging 頁"
-   ],
-   "link": "teams"
-  },
-  {
-   "kicker": "Taiwan",
-   "kicker_zh": "台灣",
-   "title": "Taiwan won well, but only in the high-school tier",
-   "title_zh": "台灣贏得不錯，但只贏在高中組",
-   "body": "Thirteen competing teams returned six award wins — more than any East Asian territory except China, and more than Hong Kong on fewer teams. But every technical award came from the high-school tier, there were zero nominations in any parts award and zero in Best Software, and Hong Kong tripled Taiwan's Top 10 count.",
-   "body_zh": "13 支參賽隊伍拿下 6 座獎項——多於中國以外的任何東亞地區，而且以更少的隊伍數超越香港。但所有技術類獎項都來自高中組，在任何元件獎與最佳軟體上都掛零，而香港的 Top 10 席次是台灣的三倍。",
-   "chips": [
-    "13 teams · 6 wins"
-   ],
-   "chips_zh": [
-    "13 隊 · 6 項大獎"
-   ],
-   "link": "teams"
-  },
-  {
-   "kicker": "Human practices",
-   "kicker_zh": "人文實踐",
-   "title": "The divide is not medical versus agricultural — it is platform versus applied",
-   "title_zh": "分界不在醫療與農業之間，而在平台與應用之間",
-   "body": "Therapeutics teams close loops with non-experts about as often as bioremediation teams do. What actually separates the field is whether anyone outside a lab ever operates the thing: across the platform villages — Foundational Advance, Space, Software & AI, Biomanufacturing — **2 of 26** decorated teams closed a design loop at all, against **14 of 45** in the applied villages.",
-   "body_zh": "治療類團隊與生物復育類團隊，和非專業人士閉合迴路的頻率其實差不多。真正分開這個領域的，是有沒有實驗室以外的人實際操作這個東西：在平台類賽道——Foundational Advance、Space、Software & AI、Biomanufacturing——**26 支得獎隊伍中只有 2 支**曾閉合設計迴路，應用類賽道則是 **45 支中有 14 支**。",
-   "chips": [
-    "2 of 26 vs 14 of 45"
-   ],
-   "chips_zh": [
-    "2/26 對 14/45"
-   ],
-   "link": "good"
-  },
-  {
-   "kicker": "Collaboration",
-   "kicker_zh": "合作",
-   "title": "Nobody ran an inter-lab measurement ring — in a competition about measurement",
-   "title_zh": "沒有任何一支隊伍做過跨實驗室量測環——在一個以量測為核心的競賽裡",
-   "body": "69 of 106 decorated teams record working with another team, but almost all of it is meet-ups. **Not one** ran an inter-lab measurement ring, and collaboration does not predict placing: substantive collaborators reached a Top 10 at 29%, attendance-only teams at 48%. The one team that offered to do real shared work publicly got **zero replies** — and won Best Software and Best Wiki anyway.",
-   "body_zh": "106 支得獎隊伍中有 69 支記錄了與其他隊伍的合作，但幾乎全是 meet-up。**沒有任何一支**做過跨實驗室量測環；而且合作並不預測名次：有實質合作的隊伍進入 Top 10 的比例是 29%，只去參加聚會的反而是 48%。唯一公開提議要做真正共同工作的那支隊伍，**一封回覆都沒有收到**——卻仍拿下最佳軟體與最佳 Wiki。",
-   "chips": [
-    "69 of 106",
-    "0 measurement rings"
-   ],
-   "chips_zh": [
-    "69/106",
-    "0 個量測環"
-   ],
-   "link": "teams"
-  },
-  {
-   "kicker": "Biosafety",
-   "kicker_zh": "生物安全",
-   "title": "Nobody measured an escape rate",
-   "title_zh": "沒有人量過逸出率",
-   "body": "19 of 106 decorated teams describe a genetic containment device. **Zero** report a measured escape frequency, and only two name a DNA-synthesis screening regime. The sharpest result in the category is a negative one: the Safety winner found that a published Addgene kill switch failed first, weeks before its own circuits.",
-   "body_zh": "106 支得獎隊伍中有 19 支描述了基因層級的圍堵裝置。**沒有一支**報告量測到的逸出頻率，只有兩支指名了 DNA 合成訂單的篩查機制。這個類別最銳利的結果是一個負面結果：安全獎得主發現，一個已發表的 Addgene 自殺開關比他們自己的電路更早失效，而且早了好幾週。",
-   "chips": [
-    "0 of 106",
-    "2 name a screening regime"
-   ],
-   "chips_zh": [
-    "0/106",
-    "2 支寫出篩查機制"
-   ],
-   "link": "good"
-  },
-  {
-   "kicker": "Parts",
-   "kicker_zh": "元件",
-   "title": "Winning parts are won on documentation, not on novelty",
-   "title_zh": "得獎元件靠的是文件，不是新穎性",
-   "body": "Winners' headline parts carry **10,388 to 83,030 characters** of registry documentation across three to six typed documents; sampled nominee parts carry 440 to 2,500, usually Design only. The high-school basic-part winner is a 247 bp native promoter copied from GenBank. Both improved-part awards had **zero nominees** — the cheapest category in iGEM to enter.",
-   "body_zh": "得獎隊伍的代表元件在註冊庫上帶著 **10,388 到 83,030 個字元**的文件，分布在三到六份分類文件中；抽樣的入圍元件則是 440 到 2,500 字，通常只有 Design 一項。高中組基礎元件得主是一段從 GenBank 複製來的 247 bp 原生啟動子。兩個改良元件獎項都是**零入圍**——那是 iGEM 裡最便宜的參賽門檻。",
-   "chips": [
-    "83,030 vs 440 characters",
-    "improved part: 0 nominees"
-   ],
-   "chips_zh": [
-    "83,030 對 440 字元",
-    "改良元件：0 入圍"
-   ],
-   "link": "teams"
-  },
-  {
-   "kicker": "Measurement",
-   "kicker_zh": "量測",
-   "title": "Measurement discipline does not win anything — do it anyway",
-   "title_zh": "量測紀律贏不到任何東西——但還是要做",
-   "body": "Across 39 wikis read directly: 97% show a blank control, 72% calibrate into an absolute unit, but only **15%** compute a limit of detection for their own assay and **5%** ever measure one sample twice. And it does not predict placing: over all 106 files, teams mentioning calibration reached a Top 10 at 27% against 29%. **No effect.** The Best Measurement winner's nine pages contain the words *error bar* and *standard deviation* zero times.",
-   "body_zh": "直接讀過的 39 個 wiki 中：97% 有空白對照，72% 校正到絕對單位，但只有 **15%** 替自己的分析法算出偵測極限，**5%** 曾經把同一個樣本量過兩次。而且它並不預測名次：在全部 106 份檔案中，提到校正的隊伍進入 Top 10 的比例是 27%，沒提的是 29%。**沒有效果。**最佳量測得主的九個頁面裡，*error bar* 與 *standard deviation* 這兩個詞出現了零次。",
-   "chips": [
-    "15% compute an LOD",
-    "5% measure twice"
-   ],
-   "chips_zh": [
-    "15% 算了 LOD",
-    "5% 量過兩次"
-   ],
-   "link": "drylab"
-  },
-  {
-   "kicker": "Hardware",
-   "kicker_zh": "硬體",
-   "title": "Six of twenty instruments could be rebuilt by a stranger",
-   "title_zh": "二十台儀器中，只有六台陌生人重建得出來",
-   "body": "Across the 2026 Best Hardware, Best Measurement and Best Alternative Platform cohorts, 20 instruments were built and **6** publish enough — bill of materials, geometry files, firmware, assembly guide — for someone in another country to rebuild them. **Nine publish no geometry file at all.** Exactly one has ever been used by anyone outside the team that built it.",
-   "body_zh": "在 2026 年最佳硬體、最佳量測與最佳替代平台這三個群體中，共有 20 台儀器被做出來，其中 **6 台**公開的資料足夠——材料清單、幾何檔案、韌體、組裝指南——讓另一個國家的人重建它。**有九台完全沒有公開任何幾何檔案。**而曾經被製作團隊以外的人使用過的，剛好只有一台。",
-   "chips": [
-    "6 of 20 rebuildable",
-    "1 ever reused"
-   ],
-   "chips_zh": [
-    "6/20 可重建",
-    "只有 1 台被再用"
-   ],
-   "link": "drylab"
-  },
-  {
-   "kicker": "AI",
-   "kicker_zh": "AI",
-   "title": "Everyone disclosed their AI use — the argument is over what counts as AI",
-   "title_zh": "每一支隊伍都揭露了 AI 使用——爭點在於什麼算 AI",
-   "body": "The expected finding was that almost nobody disclosed. The actual finding is **106 of 106**, because iGEM 2026 made AI Tool Use a required block of a Bronze medal deliverable — a requirement produced total compliance overnight. But only **4 of 106** state what AI did *not* do, and of the 40 teams using a foundation model, only 15 file it as AI at all. AlphaFold is filed as biology.",
-   "body_zh": "原本預期的結果是幾乎沒有人揭露。實際的結果是 **106 支中的 106 支**，因為 iGEM 2026 把「AI 工具使用」列為銅牌必繳項目中的一個必填區塊——一條規定在一夜之間換來百分之百的遵循。但只有 **106 支中的 4 支**寫出 AI *沒有*做什麼；而在使用基礎模型的 40 支隊伍裡，只有 15 支把它填進 AI 欄位。AlphaFold 被歸類成生物學。",
-   "chips": [
-    "106 of 106",
-    "only 4 state a boundary"
-   ],
-   "chips_zh": [
-    "106/106",
-    "只有 4 支寫出界線"
-   ],
-   "link": "drylab"
-  },
-  {
-   "kicker": "The bet",
-   "kicker_zh": "這一賭",
-   "title": "One team in 106 shines light on B. subtilis, and it is this one",
-   "title_zh": "106 支隊伍裡只有 1 支把光打在 B. subtilis 上，而那支就是我們",
-   "body": "Both trend reviews independently named optogenetic control in *Bacillus subtilis* as the white space this roadmap should aim at — a twelve-paper literature in all of PubMed. The census tested that against the competition itself. **5 of 106** used light as a control input in any organism; **5 of 106** worked with *B. subtilis*; the two sets overlap in exactly **one** team, which is GEMS-Taiwan. Outside GEMS the intersection is **0 of 105**. The gap in the literature is mirrored precisely in iGEM, and nobody in this cohort is competing for it.",
-   "body_zh": "兩份趨勢回顧各自獨立地把「*Bacillus subtilis* 的光控」指為這份路線圖該瞄準的空白——整個 PubMed 只有十二篇文獻。這次普查拿這個說法去對照比賽本身。**106 支中有 5 支**在任何生物裡把光當成控制輸入；**106 支中有 5 支**碰過 *B. subtilis*；兩個集合恰好只重疊在**一支**隊伍上，就是 GEMS-Taiwan。把 GEMS 排除之後，交集是 **105 支中的 0 支**。文獻裡的那個缺口，在 iGEM 裡被原樣複製了一次，而這一屆沒有人在搶。",
-   "chips": [
-    "5 of 106 used light",
-    "intersection: 0 of 105"
-   ],
-   "chips_zh": [
-    "5/106 用了光",
-    "交集：0/105"
-   ],
-   "link": "teams"
-  },
-  {
-   "kicker": "Continuity",
-   "kicker_zh": "延續",
-   "title": "The institution comes back every year; the problem almost never does",
-   "title_zh": "機構每年都回來，題目幾乎從不回來",
-   "body": "Measured across iGEM's full accepted rosters rather than the winners — **284 of 423** 2026 teams had competed before, and returning tracks with results (Gold 59% against 42%). But returning is not continuing. Of the 81 decorated teams that had entered before, **5 carried a project line forward**, and **none of the six returning Grand Prize teams did**. Only **3 of 106** credit their own predecessor with anything. The hypothesis that continuing pays could not be tested — not for want of a baseline, but for want of cases.",
-   "body_zh": "這次是用 iGEM 完整的正式參賽名單、而不是得獎名單來算——2026 年 **423 支中有 284 支**先前就參賽過，而回鍋確實與成績相關（金牌率 59% 對 42%）。但「回來」不等於「延續」。在 81 支先前參賽過的得獎隊伍裡，**只有 5 支把一條題目線帶到今年**，**六支回鍋的總冠軍級隊伍一支也沒有**。106 支之中只有 **3 支**對自己的前一屆表示過任何感謝。「延續有沒有用」這個假說無法檢定——不是因為缺少對照組，而是因為缺少案例。",
-   "chips": [
-    "5 of 78 continued",
-    "3 of 106 credit last year"
-   ],
-   "chips_zh": [
-    "78 支中 5 支延續",
-    "106 支中 3 支感謝前一屆"
-   ],
-   "link": "good"
-  },
-  {
-   "kicker": "Education",
-   "kicker_zh": "教育",
-   "title": "Education artefacts outlive software and hardware, by a wide margin",
-   "title_zh": "教育產出活得比軟體和硬體久，而且差距很大",
-   "body": "The suspicion going in was that outreach survives only as photographs of children holding things. It was wrong. Of **285 education files** linked from 31 decorated wikis, **284 download today** and one returns 403 — not a single 404. Against 8 of 21 software tools still running and 6 of 20 devices rebuildable, the reason is structural: a PDF on static.igem.wiki needs no server to stay alive. The failures are elsewhere — **1 licence statement in 136 PDFs**, and the Best Education winner publishes no downloadable file at all.",
-   "body_zh": "一開始的懷疑是：教育推廣最後只會以「孩子們拿著東西的照片」留下來。這個懷疑錯了。31 份得獎 wiki 連出的 **285 個教育檔案**中，**284 個今天仍下載得到**，一個回 403——一個 404 都沒有。對照軟體 21 個中 8 個還能跑、硬體 20 台中 6 台重建得出來，原因是結構性的：放在 static.igem.wiki 上的一份 PDF，不需要任何伺服器就能活著。真正的失敗在別處——**136 份 PDF 裡只有 1 份寫了授權條款**，而最佳教育獎得主根本沒有提供任何可下載的檔案。",
-   "chips": [
-    "284 of 285 download",
-    "1 licence in 136 PDFs"
-   ],
-   "chips_zh": [
-    "285 個中 284 個下載得到",
-    "136 份 PDF 中 1 份有授權"
-   ],
-   "link": "good"
-  },
-  {
-   "kicker": "Resources",
-   "kicker_zh": "資源",
-   "title": "Size buys nothing — the smallest Top 10 team had nine students",
-   "title_zh": "人多買不到名次——最小的 Top 10 隊伍只有九名學生",
-   "body": "Across 84 decorated teams, headcount and award count correlate at **0.06** (Spearman, p = 0.61), and within every section the Top 10 teams are statistically indistinguishable in size. Medians: high school 17.5, undergraduate 17, overgraduate 12.5. **Princeton reached 2nd runner-up Grand Prize with nine undergraduates** — and four named scientists behind them, one chassis reused across three applications, and a binder pipeline that made a new target cost compute instead of hands. The substitution for people is scope, software and supervision.",
-   "body_zh": "在 84 支得獎隊伍中，人數與獎項數的相關係數是 **0.06**（Spearman，p = 0.61），而且在每一個組別裡，Top 10 隊伍的人數與其他得獎隊伍在統計上沒有差別。中位數：高中組 17.5、大學組 17、研究生組 12.5。**Princeton 以九名大學生拿下總冠軍季軍**——他們背後有四位具名的科學家、一個底盤重複用在三個應用上，以及一條結合子設計流程，讓換一個標的花的是算力而不是人手。能取代人的，是範圍、軟體與指導。",
-   "chips": [
-    "r = 0.06, p = 0.61",
-    "smallest Top 10: 9 students"
-   ],
-   "chips_zh": [
-    "r = 0.06、p = 0.61",
-    "最小的 Top 10：9 名學生"
-   ],
-   "link": "teams"
-  },
-  {
-   "kicker": "Judging",
-   "kicker_zh": "評審",
-   "title": "Two routes to the finalist slate, and GEMS took neither",
-   "title_zh": "通往決賽席位有兩條路，GEMS 兩條都沒走",
-   "body": "In the 2026 High School section 147 teams entered, 10 reached the Top 10 and **2 were named Finalists**. GEMS-Taiwan was not one, while holding three of the 17 section-level awards won across the whole section. Five explanations died on the evidence: not statistics (the Grand Prize winner's results page has no p-values and no named test), not completeness, not Registry documentation (**the Grand Prize winner has the shortest of all ten**), not candour, and not even having one clear claim — the clearest headline among the non-finalists placed nowhere. The finalists arrived by different routes: **novelty**, and **depth on a real sample**. Seven of seven non-podium teams stop at a surrogate; exactly one team in ten tested a real one.",
-   "body_zh": "2026 年高中組有 147 支隊伍參賽、10 支進入 Top 10，而**只有 2 支被列為 Finalist**。GEMS-Taiwan 不在其中，但它握有整個組別總共 17 項組別層級獎項中的三項。五個解釋都死在證據上：不是統計（總冠軍的結果頁沒有 p 值、也沒有檢定名稱）、不是完成度、不是 Registry 文件（**總冠軍的文件是十支裡最短的**）、不是坦白，甚至也不是「有一個清楚的主張」——非決賽隊伍中標題最清楚的那一支，什麼名次都沒有。兩支決賽隊伍是沿著不同的路抵達的：**新穎性**，以及**在真實樣本上的深度**。七支非頒獎台隊伍全部停在替代物上；十支之中只有一支測過真實樣本。",
-   "chips": [
-    "2 finalists of 10",
-    "novelty, or depth on a real sample"
-   ],
-   "chips_zh": [
-    "10 支中 2 席決賽",
-    "新穎性，或真實樣本上的深度"
-   ],
-   "link": "judging"
-  },
-  {
-   "kicker": "Rigour",
-   "kicker_zh": "嚴謹度",
-   "title": "In the High School Top 10, the most rigorous team won nothing",
-   "title_zh": "在高中組 Top 10 裡，最嚴謹的那支隊伍什麼都沒拿",
-   "body": "Every results page in the 2026 High School Top 10, scored on what a reader can check. **HongKong-HS reports ANOVA, Dunnett's post-hoc, a t-test, n=3 and standard deviations — and won no award at all.** The Grand Prize winner names no statistical test, reports no p-value and gives no replicate count; its one quantitative claim is a confidence interval produced by a commercial service. Five of the ten publish no p-value anywhere, and one team reached the Top 10 **with no results page**. This is the measurement-discipline null reproduced inside a cohort of ten: rigour makes a claim checkable, and it does not place.",
-   "body_zh": "把 2026 年高中組 Top 10 的每一份結果頁，依「讀者能核對什麼」評分。**HongKong-HS 報告了 ANOVA、Dunnett 事後檢定、t-test、n=3 與標準差——結果一個獎都沒拿。** 總冠軍沒有寫出任何統計檢定名稱、沒有給出任何 p 值、也沒有重複數；它唯一的量化主張是一個由商業服務做出來的信賴區間。十支隊伍中有五支完全沒有 p 值，而有一支**在沒有結果頁的情況下**進了 Top 10。這是「量測嚴謹度」的虛無結果在十支隊伍群體裡的再現：嚴謹讓主張可被核對，但它不決定名次。",
-   "chips": [
-    "most rigorous: 0 awards",
-    "5 of 10 report no p-value"
-   ],
-   "chips_zh": [
-    "最嚴謹：0 個獎",
-    "10 支中 5 支沒有 p 值"
-   ],
-   "link": "judging"
-  }
- ],
- "method": "Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see.",
- "method_zh": "每一張卡片都是某篇完整分析的摘要，點進連結的頁面即可看到證據、具名的團隊，以及該方法的限制。凡是以數字為基礎的發現，分析中都會說明該數字如何計算，以及它看不到什麼。",
- "order": 10
+  "id": "findings-index",
+  "tab": "overview",
+  "kicker": "Start here",
+  "kicker_zh": "從這裡開始",
+  "title": "Nine findings, and where to read each one",
+  "title_zh": "九個發現，以及各自該讀哪一頁",
+  "lede": "The 2026 Best Wiki winners all build a layer like this — each claim in two sentences, with a link straight to the evidence. It works, so this report does it too.",
+  "lede_zh": "2026 年所有最佳 Wiki 得主都建了一層像這樣的東西——每個主張兩句話，附上直達證據的連結。它有效，所以這份報告也這麼做。",
+  "cards": [
+    {
+      "kicker": "Modelling",
+      "kicker_zh": "建模",
+      "title": "Closing the model–data loop is the single best predictor of a Top 10",
+      "title_zh": "閉合模型與資料的迴圈，是 Top 10 最強的單一預測因子",
+      "body": "Teams that both fit a model to their own measured data and validate it against something held back reached a Top 10 at **53%**; teams that did not, at **23%** — less than half the rate. All nine who closed the loop without a Top 10 won or were nominated for a major special prize anyway. It needs no GPU and no licence.",
+      "body_zh": "既以自身量測資料擬合模型、又用保留資料加以驗證的團隊，進入 Top 10 的比例是 **53%**；沒有這麼做的則是 **23%**，不到一半。閉合了迴圈卻未進 Top 10 的那九支，全都拿下或入圍了重要特別獎。這件事不需要 GPU，也不需要授權。",
+      "chips": [
+        "53% vs 23%"
+      ],
+      "chips_zh": [
+        "53% 對 23%"
+      ],
+      "link": "drylab"
+    },
+    {
+      "kicker": "High school",
+      "kicker_zh": "高中組",
+      "title": "At high-school level the gap is evaluation discipline, not tools",
+      "title_zh": "在高中層級，差距在評估紀律，不在工具",
+      "body": "Eton-College-UK used logistic regression and a PSSM but ran cluster-aware cross-validation, a label-shuffle control and an ablation. Lambert-GA won Best Model for benchmarking the confidence metrics themselves and publishing that its own hit was not top-scoring. GCGS reached the Top 10 with no model page at all.",
+      "body_zh": "Eton-College-UK 用的是 logistic regression 與 PSSM，但做了分群感知的交叉驗證、標籤洗牌對照與消融測試。Lambert-GA 拿下最佳模型，是因為他們對信心指標本身做了基準測試，並公開自己成功的設計其實分數不是最高的。GCGS 則在完全沒有 model 頁的情況下進入 Top 10。",
+      "chips": [
+        "all free tools"
+      ],
+      "chips_zh": [
+        "全是免費工具"
+      ],
+      "link": "drylab"
+    },
+    {
+      "kicker": "Software",
+      "kicker_zh": "軟體",
+      "title": "8 of 21 award-winning tools are still usable, and the reason is hosting",
+      "title_zh": "21 個得獎工具中有 8 個仍可使用，原因是「有沒有架站」",
+      "body": "Every live tool was hosted on wiki-freeze day; every source-only tool's wiki lists localhost as its only address. Not a coding or budget decision — a hosting decision made months early. Two high-school teams out-shipped most of the universities. Stars and forks across every repo checked: zero.",
+      "body_zh": "每一個仍在線的工具，在 wiki 凍結當日就已經上線；每一個只有原始碼的工具，wiki 上唯一的位址都是 localhost。這不是寫程式或預算的決定，而是提前好幾個月做的架站決定。兩支高中隊伍交付得比多數大學還好。所有檢查過的 repository，star 與 fork 都是零。",
+      "chips": [
+        "hosted on freeze day"
+      ],
+      "chips_zh": [
+        "凍結日當天已架站"
+      ],
+      "link": "drylab"
+    },
+    {
+      "kicker": "Visualisation",
+      "kicker_zh": "視覺化",
+      "title": "The best figures build the reader's doubt into the picture",
+      "title_zh": "最好的圖，把讀者的懷疑畫進圖裡",
+      "body": "GEMS-Taiwan's provenance rail turns amber exactly where measurement stops and modelling begins. DKU gives \"not assessed\" its own verdict so an unmeasured gate cannot read as a passed one. Mingdao's captions carry the instrument, the buffer, the replicate count and a link to the raw CSV. DTU shows which stakeholders never replied.",
+      "body_zh": "GEMS-Taiwan 的來源軌道，正好在量測結束、模擬開始之處轉為琥珀色。DKU 給「未評估」一個自己的判定，讓未量測的關卡不會被讀成通過。Mingdao 的圖說載明儀器、緩衝液、重複次數，並連結原始 CSV。DTU 則把從未回覆的利害關係人也顯示出來。",
+      "chips": [
+        "provenance visible",
+        "\"not assessed\" as a state"
+      ],
+      "chips_zh": [
+        "來源看得見",
+        "「未評估」也是一種狀態"
+      ],
+      "link": "drylab"
+    },
+    {
+      "kicker": "Science for Good",
+      "kicker_zh": "Science for Good",
+      "title": "The deadline, not the people, is what limits Science for Good",
+      "title_zh": "限制 Science for Good 的是截止日，不是人",
+      "body": "8 of 21 award-winning software tools still run, every repository checked has zero stars and zero forks, no team in 106 ran an inter-lab measurement ring, and only nine or ten of 71 closed loops were closed by a non-expert. These are deadline artefacts. GEMS's answer is a **club-form programme with no deadline**, carrying a few problems across years — its definition, criteria and current pipeline are on this tab.",
+      "body_zh": "21 個得獎軟體工具中有 8 個還能跑，所有檢查過的程式庫星數與分支數皆為零，106 支隊伍沒有一支做過跨實驗室量測環，71 個閉合的迴路中只有九到十個是與非專業人士閉合的。這些都是截止日造成的。GEMS 的回應是一個**沒有截止日的社團式長期計畫**，讓幾個題目跨年走下去——它的定義、條件與目前的題目清單都在這一頁。",
+      "chips": [
+        "a programme, not a category"
+      ],
+      "chips_zh": [
+        "是計畫，不是獎項類別"
+      ],
+      "link": "good"
+    },
+    {
+      "kicker": "Human practices",
+      "kicker_zh": "人類實踐",
+      "title": "The loops that closed were closed by experts, not by publics",
+      "title_zh": "真正閉合的迴圈，是專家閉合的，不是公眾",
+      "body": "Of all 106 decorated teams, **71** can point at a stakeholder who visibly changed the design. But almost every one of those stakeholders was a credentialled technical expert. The publics, patients and communities the criterion is rhetorically about changed the vocabulary and not the vector, with **nine or ten exceptions in 106**. (The first pass scored 93 files and found 64 and six-to-seven; the figures here are the recount on the closed set.)",
+      "body_zh": "在全部 106 支獲獎隊伍中，有 **71** 支能指出一位明顯改變了設計的利害關係人。但這些利害關係人幾乎全是具備專業資格的技術專家。這個評審標準修辭上所指向的公眾、病人與社群，改變的是詞彙而不是方向——**106 支中只有九到十個例外**。（第一輪評的是 93 份檔案，得到 64 支與六到七個例外；這裡的數字是集合封閉後的重算。）",
+      "chips": [
+        "71 of 106",
+        "9–10 exceptions"
+      ],
+      "chips_zh": [
+        "71/106",
+        "9 至 10 個例外"
+      ],
+      "link": "good"
+    },
+    {
+      "kicker": "Engagement",
+      "kicker_zh": "公眾參與",
+      "title": "The best education work was designed from data and measured like an experiment",
+      "title_zh": "最好的教育工作，是從資料設計、像實驗一樣量測的",
+      "body": "UCAS-China made compliance the target after a 461-person questionnaire, not awareness. GU Frankfurt sent nineteen members to a professional science-communication course first. Oxford built a podcast that deliberately pairs stakeholders who disagree. And the sharpest teams publish the lesson that failed.",
+      "body_zh": "UCAS-China 在做完 461 人的問卷後，把目標設為服藥遵從性，而不是認知提升。GU Frankfurt 先送 19 位成員去上專業的科學傳播課程。Oxford 做了一個刻意把意見相左者配對的 podcast。而最犀利的團隊，會把失敗的那堂課也公布出來。",
+      "chips": [
+        "survey-designed",
+        "measured"
+      ],
+      "chips_zh": [
+        "從問卷設計",
+        "量過成效"
+      ],
+      "link": "good"
+    },
+    {
+      "kicker": "Commercial",
+      "kicker_zh": "商業",
+      "title": "The credible commercial sections published a model showing their own product losing",
+      "title_zh": "可信的商業章節，都公開了顯示自家產品輸掉的模型",
+      "body": "Worldshaper-Shanghai reports a negative NPV for its own enzyme. DTU-Denmark's LCA finds cement co-processing beats its route on almost every indicator, then converts each loss into an engineering target. Stockholm dismantled its venture when the safety board killed open-water release — and won the Safety and Security Award.",
+      "body_zh": "Worldshaper-Shanghai 報告自家酵素得出負的 NPV。DTU-Denmark 的 LCA 發現水泥共處理在幾乎每項指標上都勝過他們的路線，接著把每一項落敗轉成工程目標。Stockholm 在安全委員會否決開放水域釋放後拆掉了自己的創業計畫——然後拿下安全與保安獎。",
+      "chips": [
+        "negative NPV, published"
+      ],
+      "chips_zh": [
+        "NPV 為負，照樣公開"
+      ],
+      "link": "good"
+    },
+    {
+      "kicker": "Wiki craft",
+      "kicker_zh": "Wiki 工藝",
+      "title": "Best Wiki winners ship an executive layer, not better graphics",
+      "title_zh": "最佳 Wiki 得主交付的是一個導讀層，不是更漂亮的圖",
+      "body": "Three of the four serve text that is readable before any script runs; the fourth mirrors every page as Markdown. All four build a layer that answers each medal criterion in two or three sentences and deep-links the evidence, failures included. Dark mode, late alt-text sweeps and mascot systems correlate with nothing.",
+      "body_zh": "四位得主中有三位提供的文字在任何程式執行前就可閱讀；第四位則把每一頁都鏡像為 Markdown。四位都建了一層用兩三句話回答每項獎牌標準、並直接深連到證據（含失敗）的導讀層。深色模式、最後才補的替代文字、吉祥物系統，則與得獎毫無相關。",
+      "chips": [
+        "text before JS",
+        "/judging page"
+      ],
+      "chips_zh": [
+        "先給文字，再跑 JS",
+        "/judging 頁"
+      ],
+      "link": "teams"
+    },
+    {
+      "kicker": "Taiwan",
+      "kicker_zh": "台灣",
+      "title": "Taiwan won well, but only in the high-school tier",
+      "title_zh": "台灣贏得不錯，但只贏在高中組",
+      "body": "Thirteen competing teams returned six award wins — more than any East Asian territory except China, and more than Hong Kong on fewer teams. But every technical award came from the high-school tier, there were zero nominations in any parts award and zero in Best Software, and Hong Kong tripled Taiwan's Top 10 count.",
+      "body_zh": "13 支參賽隊伍拿下 6 座獎項——多於中國以外的任何東亞地區，而且以更少的隊伍數超越香港。但所有技術類獎項都來自高中組，在任何元件獎與最佳軟體上都掛零，而香港的 Top 10 席次是台灣的三倍。",
+      "chips": [
+        "13 teams · 6 wins"
+      ],
+      "chips_zh": [
+        "13 隊 · 6 項大獎"
+      ],
+      "link": "teams"
+    },
+    {
+      "kicker": "Human practices",
+      "kicker_zh": "人文實踐",
+      "title": "The divide is not medical versus agricultural — it is platform versus applied",
+      "title_zh": "分界不在醫療與農業之間，而在平台與應用之間",
+      "body": "Therapeutics teams close loops with non-experts about as often as bioremediation teams do. What actually separates the field is whether anyone outside a lab ever operates the thing: across the platform villages — Foundational Advance, Space, Software & AI, Biomanufacturing — **2 of 26** decorated teams closed a design loop at all, against **14 of 45** in the applied villages.",
+      "body_zh": "治療類團隊與生物復育類團隊，和非專業人士閉合迴路的頻率其實差不多。真正分開這個領域的，是有沒有實驗室以外的人實際操作這個東西：在平台類賽道——Foundational Advance、Space、Software & AI、Biomanufacturing——**26 支得獎隊伍中只有 2 支**曾閉合設計迴路，應用類賽道則是 **45 支中有 14 支**。",
+      "chips": [
+        "2 of 26 vs 14 of 45"
+      ],
+      "chips_zh": [
+        "2/26 對 14/45"
+      ],
+      "link": "good"
+    },
+    {
+      "kicker": "Collaboration",
+      "kicker_zh": "合作",
+      "title": "Nobody ran an inter-lab measurement ring — in a competition about measurement",
+      "title_zh": "沒有任何一支隊伍做過跨實驗室量測環——在一個以量測為核心的競賽裡",
+      "body": "69 of 106 decorated teams record working with another team, but almost all of it is meet-ups. **Not one** ran an inter-lab measurement ring, and collaboration does not predict placing: substantive collaborators reached a Top 10 at 29%, attendance-only teams at 48%. The one team that offered to do real shared work publicly got **zero replies** — and won Best Software and Best Wiki anyway.",
+      "body_zh": "106 支得獎隊伍中有 69 支記錄了與其他隊伍的合作，但幾乎全是 meet-up。**沒有任何一支**做過跨實驗室量測環；而且合作並不預測名次：有實質合作的隊伍進入 Top 10 的比例是 29%，只去參加聚會的反而是 48%。唯一公開提議要做真正共同工作的那支隊伍，**一封回覆都沒有收到**——卻仍拿下最佳軟體與最佳 Wiki。",
+      "chips": [
+        "69 of 106",
+        "0 measurement rings"
+      ],
+      "chips_zh": [
+        "69/106",
+        "0 個量測環"
+      ],
+      "link": "teams"
+    },
+    {
+      "kicker": "Biosafety",
+      "kicker_zh": "生物安全",
+      "title": "Nobody measured an escape rate",
+      "title_zh": "沒有人量過逸出率",
+      "body": "19 of 106 decorated teams describe a genetic containment device. **Zero** report a measured escape frequency, and only two name a DNA-synthesis screening regime. The sharpest result in the category is a negative one: the Safety winner found that a published Addgene kill switch failed first, weeks before its own circuits.",
+      "body_zh": "106 支得獎隊伍中有 19 支描述了基因層級的圍堵裝置。**沒有一支**報告量測到的逸出頻率，只有兩支指名了 DNA 合成訂單的篩查機制。這個類別最銳利的結果是一個負面結果：安全獎得主發現，一個已發表的 Addgene 自殺開關比他們自己的電路更早失效，而且早了好幾週。",
+      "chips": [
+        "0 of 106",
+        "2 name a screening regime"
+      ],
+      "chips_zh": [
+        "0/106",
+        "2 支寫出篩查機制"
+      ],
+      "link": "good"
+    },
+    {
+      "kicker": "Parts",
+      "kicker_zh": "元件",
+      "title": "Winning parts are won on documentation, not on novelty",
+      "title_zh": "得獎元件靠的是文件，不是新穎性",
+      "body": "Winners' headline parts carry **10,388 to 83,030 characters** of registry documentation across three to six typed documents; sampled nominee parts carry 440 to 2,500, usually Design only. The high-school basic-part winner is a 247 bp native promoter copied from GenBank. Both improved-part awards had **zero nominees** — the cheapest category in iGEM to enter.",
+      "body_zh": "得獎隊伍的代表元件在註冊庫上帶著 **10,388 到 83,030 個字元**的文件，分布在三到六份分類文件中；抽樣的入圍元件則是 440 到 2,500 字，通常只有 Design 一項。高中組基礎元件得主是一段從 GenBank 複製來的 247 bp 原生啟動子。兩個改良元件獎項都是**零入圍**——那是 iGEM 裡最便宜的參賽門檻。",
+      "chips": [
+        "83,030 vs 440 characters",
+        "improved part: 0 nominees"
+      ],
+      "chips_zh": [
+        "83,030 對 440 字元",
+        "改良元件：0 入圍"
+      ],
+      "link": "teams"
+    },
+    {
+      "kicker": "Measurement",
+      "kicker_zh": "量測",
+      "title": "Measurement discipline does not win anything — do it anyway",
+      "title_zh": "量測紀律贏不到任何東西——但還是要做",
+      "body": "Across 39 wikis read directly: 97% show a blank control, 72% calibrate into an absolute unit, but only **15%** compute a limit of detection for their own assay and **5%** ever measure one sample twice. And it does not predict placing: over all 106 files, teams mentioning calibration reached a Top 10 at 27% against 29%. **No effect.** The Best Measurement winner's nine pages contain the words *error bar* and *standard deviation* zero times.",
+      "body_zh": "直接讀過的 39 個 wiki 中：97% 有空白對照，72% 校正到絕對單位，但只有 **15%** 替自己的分析法算出偵測極限，**5%** 曾經把同一個樣本量過兩次。而且它並不預測名次：在全部 106 份檔案中，提到校正的隊伍進入 Top 10 的比例是 27%，沒提的是 29%。**沒有效果。**最佳量測得主的九個頁面裡，*error bar* 與 *standard deviation* 這兩個詞出現了零次。",
+      "chips": [
+        "15% compute an LOD",
+        "5% measure twice"
+      ],
+      "chips_zh": [
+        "15% 算了 LOD",
+        "5% 量過兩次"
+      ],
+      "link": "drylab"
+    },
+    {
+      "kicker": "Hardware",
+      "kicker_zh": "硬體",
+      "title": "Six of twenty instruments could be rebuilt by a stranger",
+      "title_zh": "二十台儀器中，只有六台陌生人重建得出來",
+      "body": "Across the 2026 Best Hardware, Best Measurement and Best Alternative Platform cohorts, 20 instruments were built and **6** publish enough — bill of materials, geometry files, firmware, assembly guide — for someone in another country to rebuild them. **Nine publish no geometry file at all.** Exactly one has ever been used by anyone outside the team that built it.",
+      "body_zh": "在 2026 年最佳硬體、最佳量測與最佳替代平台這三個群體中，共有 20 台儀器被做出來，其中 **6 台**公開的資料足夠——材料清單、幾何檔案、韌體、組裝指南——讓另一個國家的人重建它。**有九台完全沒有公開任何幾何檔案。**而曾經被製作團隊以外的人使用過的，剛好只有一台。",
+      "chips": [
+        "6 of 20 rebuildable",
+        "1 ever reused"
+      ],
+      "chips_zh": [
+        "6/20 可重建",
+        "只有 1 台被再用"
+      ],
+      "link": "drylab"
+    },
+    {
+      "kicker": "AI",
+      "kicker_zh": "AI",
+      "title": "Everyone disclosed their AI use — the argument is over what counts as AI",
+      "title_zh": "每一支隊伍都揭露了 AI 使用——爭點在於什麼算 AI",
+      "body": "The expected finding was that almost nobody disclosed. The actual finding is **106 of 106**, because iGEM 2026 made AI Tool Use a required block of a Bronze medal deliverable — a requirement produced total compliance overnight. But only **4 of 106** state what AI did *not* do, and of the 40 teams using a foundation model, only 15 file it as AI at all. AlphaFold is filed as biology.",
+      "body_zh": "原本預期的結果是幾乎沒有人揭露。實際的結果是 **106 支中的 106 支**，因為 iGEM 2026 把「AI 工具使用」列為銅牌必繳項目中的一個必填區塊——一條規定在一夜之間換來百分之百的遵循。但只有 **106 支中的 4 支**寫出 AI *沒有*做什麼；而在使用基礎模型的 40 支隊伍裡，只有 15 支把它填進 AI 欄位。AlphaFold 被歸類成生物學。",
+      "chips": [
+        "106 of 106",
+        "only 4 state a boundary"
+      ],
+      "chips_zh": [
+        "106/106",
+        "只有 4 支寫出界線"
+      ],
+      "link": "drylab"
+    },
+    {
+      "kicker": "The bet",
+      "kicker_zh": "這一賭",
+      "title": "One team in 106 shines light on B. subtilis, and it is this one",
+      "title_zh": "106 支隊伍裡只有 1 支把光打在 B. subtilis 上，而那支就是我們",
+      "body": "Both trend reviews independently named optogenetic control in *Bacillus subtilis* as the white space this roadmap should aim at — a twelve-paper literature in all of PubMed. The census tested that against the competition itself. **5 of 106** used light as a control input in any organism; **5 of 106** worked with *B. subtilis*; the two sets overlap in exactly **one** team, which is GEMS-Taiwan. Outside GEMS the intersection is **0 of 105**. The gap in the literature is mirrored precisely in iGEM, and nobody in this cohort is competing for it.",
+      "body_zh": "兩份趨勢回顧各自獨立地把「*Bacillus subtilis* 的光控」指為這份路線圖該瞄準的空白——整個 PubMed 只有十二篇文獻。這次普查拿這個說法去對照比賽本身。**106 支中有 5 支**在任何生物裡把光當成控制輸入；**106 支中有 5 支**碰過 *B. subtilis*；兩個集合恰好只重疊在**一支**隊伍上，就是 GEMS-Taiwan。把 GEMS 排除之後，交集是 **105 支中的 0 支**。文獻裡的那個缺口，在 iGEM 裡被原樣複製了一次，而這一屆沒有人在搶。",
+      "chips": [
+        "5 of 106 used light",
+        "intersection: 0 of 105"
+      ],
+      "chips_zh": [
+        "5/106 用了光",
+        "交集：0/105"
+      ],
+      "link": "teams"
+    },
+    {
+      "kicker": "Continuity",
+      "kicker_zh": "延續",
+      "title": "The institution comes back every year; the problem almost never does",
+      "title_zh": "機構每年都回來，題目幾乎從不回來",
+      "body": "Measured across iGEM's full accepted rosters rather than the winners — **284 of 423** 2026 teams had competed before, and returning tracks with results (Gold 59% against 42%). But returning is not continuing. Of the 81 decorated teams that had entered before, **5 carried a project line forward**, and **none of the six returning Grand Prize teams did**. Only **3 of 106** credit their own predecessor with anything. The hypothesis that continuing pays could not be tested — not for want of a baseline, but for want of cases.",
+      "body_zh": "這次是用 iGEM 完整的正式參賽名單、而不是得獎名單來算——2026 年 **423 支中有 284 支**先前就參賽過，而回鍋確實與成績相關（金牌率 59% 對 42%）。但「回來」不等於「延續」。在 81 支先前參賽過的得獎隊伍裡，**只有 5 支把一條題目線帶到今年**，**六支回鍋的總冠軍級隊伍一支也沒有**。106 支之中只有 **3 支**對自己的前一屆表示過任何感謝。「延續有沒有用」這個假說無法檢定——不是因為缺少對照組，而是因為缺少案例。",
+      "chips": [
+        "5 of 78 continued",
+        "3 of 106 credit last year"
+      ],
+      "chips_zh": [
+        "78 支中 5 支延續",
+        "106 支中 3 支感謝前一屆"
+      ],
+      "link": "good"
+    },
+    {
+      "kicker": "Education",
+      "kicker_zh": "教育",
+      "title": "Education artefacts outlive software and hardware, by a wide margin",
+      "title_zh": "教育產出活得比軟體和硬體久，而且差距很大",
+      "body": "The suspicion going in was that outreach survives only as photographs of children holding things. It was wrong. Of **285 education files** linked from 31 decorated wikis, **284 download today** and one returns 403 — not a single 404. Against 8 of 21 software tools still running and 6 of 20 devices rebuildable, the reason is structural: a PDF on static.igem.wiki needs no server to stay alive. The failures are elsewhere — **1 licence statement in 136 PDFs**, and the Best Education winner publishes no downloadable file at all.",
+      "body_zh": "一開始的懷疑是：教育推廣最後只會以「孩子們拿著東西的照片」留下來。這個懷疑錯了。31 份得獎 wiki 連出的 **285 個教育檔案**中，**284 個今天仍下載得到**，一個回 403——一個 404 都沒有。對照軟體 21 個中 8 個還能跑、硬體 20 台中 6 台重建得出來，原因是結構性的：放在 static.igem.wiki 上的一份 PDF，不需要任何伺服器就能活著。真正的失敗在別處——**136 份 PDF 裡只有 1 份寫了授權條款**，而最佳教育獎得主根本沒有提供任何可下載的檔案。",
+      "chips": [
+        "284 of 285 download",
+        "1 licence in 136 PDFs"
+      ],
+      "chips_zh": [
+        "285 個中 284 個下載得到",
+        "136 份 PDF 中 1 份有授權"
+      ],
+      "link": "good"
+    },
+    {
+      "kicker": "Resources",
+      "kicker_zh": "資源",
+      "title": "Size buys nothing — the smallest Top 10 team had nine students",
+      "title_zh": "人多買不到名次——最小的 Top 10 隊伍只有九名學生",
+      "body": "Across 84 decorated teams, headcount and award count correlate at **0.06** (Spearman, p = 0.61), and within every section the Top 10 teams are statistically indistinguishable in size. Medians: high school 17.5, undergraduate 17, overgraduate 12.5. **Princeton reached 2nd runner-up Grand Prize with nine undergraduates** — and four named scientists behind them, one chassis reused across three applications, and a binder pipeline that made a new target cost compute instead of hands. The substitution for people is scope, software and supervision.",
+      "body_zh": "在 84 支得獎隊伍中，人數與獎項數的相關係數是 **0.06**（Spearman，p = 0.61），而且在每一個組別裡，Top 10 隊伍的人數與其他得獎隊伍在統計上沒有差別。中位數：高中組 17.5、大學組 17、研究生組 12.5。**Princeton 以九名大學生拿下總冠軍季軍**——他們背後有四位具名的科學家、一個底盤重複用在三個應用上，以及一條結合子設計流程，讓換一個標的花的是算力而不是人手。能取代人的，是範圍、軟體與指導。",
+      "chips": [
+        "r = 0.06, p = 0.61",
+        "smallest Top 10: 9 students"
+      ],
+      "chips_zh": [
+        "r = 0.06、p = 0.61",
+        "最小的 Top 10：9 名學生"
+      ],
+      "link": "teams"
+    },
+    {
+      "kicker": "Judging",
+      "kicker_zh": "評審",
+      "title": "GEMS has already won this, in 2024 — so the question is what changed",
+      "title_zh": "GEMS 已經贏過一次，就在 2024 年——所以問題是什麽改變了",
+      "body": "**GEMS-Taiwan won the 2024 High School Grand Prize** and was a Finalist that year. It placed Top 10 in 2024, 2025 and 2026, and it and Lambert-GA are the **only two High School teams to do that** — each winning exactly one Grand Prize in the span, GEMS in 2024 and Lambert in 2026. So the finalist analysis is not about a bar this team has never reached. Note the shape of the three records: 2024's wins were **Best Wiki**, Best New Basic Part and the promotion video; 2025 brought five nominations and **no win at all**; 2026's wins were Measurement, Hardware and Integrated Human Practices, with Best Wiki and Best Presentation only nominated. The categories that co-occur most with a Top 10 across three seasons are Best Wiki at **60%** and Best Presentation at **53%**; Measurement and Hardware sit at 22% and 21%.",
+      "body_zh": "**GEMS-Taiwan 贏過 2024 年高中組總冠軍**，那一年它也是 Finalist。它在 2024、2025、2026 三季都進了 Top 10，而全高中組**只有它和 Lambert-GA 做到**——這段期間兩支各贏一次總冠軍，GEMS 在 2024 年，Lambert 在 2026 年。所以整份決賽分析談的並不是一道這支隊伍從未跨過的門檻。請留意三年紀錄的形狀：2024 年的得獎是**Best Wiki**、Best New Basic Part 與宣傀影片；2025 年有五項入圍、**一項都沒贏**；2026 年的得獎是量測、硬體與整合式人類實踐，而 Best Wiki 與 Best Presentation 只是入圍。三季下來，與 Top 10 最常同時發生的類別是 Best Wiki（**60%**）與 Best Presentation（**53%**）；量測與硬體則是 22% 與 21%。",
+      "chips": [
+        "2024 Grand Prize winner",
+        "Top 10 three seasons running"
+      ],
+      "chips_zh": [
+        "2024 年總冠軍",
+        "三季連續進 Top 10"
+      ],
+      "link": "judging"
+    },
+    {
+      "kicker": "Judging",
+      "kicker_zh": "評審",
+      "title": "Two routes to the finalist slate, and GEMS took neither",
+      "title_zh": "通往決賽席位有兩條路，GEMS 兩條都沒走",
+      "body": "In the 2026 High School section 147 teams entered, 10 reached the Top 10 and **2 were named Finalists**. GEMS-Taiwan was not one, while holding three of the 17 section-level awards won across the whole section. Five explanations died on the evidence: not statistics (the Grand Prize winner's results page has no p-values and no named test), not completeness, not Registry documentation (**the Grand Prize winner has the shortest of all ten**), not candour, and not even having one clear claim — the clearest headline among the non-finalists placed nowhere. The finalists arrived by different routes: **novelty**, and **depth on a real sample**. Seven of seven non-podium teams stop at a surrogate; exactly one team in ten tested a real one.",
+      "body_zh": "2026 年高中組有 147 支隊伍參賽、10 支進入 Top 10，而**只有 2 支被列為 Finalist**。GEMS-Taiwan 不在其中，但它握有整個組別總共 17 項組別層級獎項中的三項。五個解釋都死在證據上：不是統計（總冠軍的結果頁沒有 p 值、也沒有檢定名稱）、不是完成度、不是 Registry 文件（**總冠軍的文件是十支裡最短的**）、不是坦白，甚至也不是「有一個清楚的主張」——非決賽隊伍中標題最清楚的那一支，什麼名次都沒有。兩支決賽隊伍是沿著不同的路抵達的：**新穎性**，以及**在真實樣本上的深度**。七支非頒獎台隊伍全部停在替代物上；十支之中只有一支測過真實樣本。",
+      "chips": [
+        "2 finalists of 10",
+        "novelty, or depth on a real sample"
+      ],
+      "chips_zh": [
+        "10 支中 2 席決賽",
+        "新穎性，或真實樣本上的深度"
+      ],
+      "link": "judging"
+    },
+    {
+      "kicker": "Rigour",
+      "kicker_zh": "嚴謹度",
+      "title": "In the High School Top 10, the most rigorous team won nothing",
+      "title_zh": "在高中組 Top 10 裡，最嚴謹的那支隊伍什麼都沒拿",
+      "body": "Every results page in the 2026 High School Top 10, scored on what a reader can check. **HongKong-HS reports ANOVA, Dunnett's post-hoc, a t-test, n=3 and standard deviations — and won no award at all.** The Grand Prize winner names no statistical test, reports no p-value and gives no replicate count; its one quantitative claim is a confidence interval produced by a commercial service. Five of the ten publish no p-value anywhere, and one team reached the Top 10 **with no results page**. This is the measurement-discipline null reproduced inside a cohort of ten: rigour makes a claim checkable, and it does not place.",
+      "body_zh": "把 2026 年高中組 Top 10 的每一份結果頁，依「讀者能核對什麼」評分。**HongKong-HS 報告了 ANOVA、Dunnett 事後檢定、t-test、n=3 與標準差——結果一個獎都沒拿。** 總冠軍沒有寫出任何統計檢定名稱、沒有給出任何 p 值、也沒有重複數；它唯一的量化主張是一個由商業服務做出來的信賴區間。十支隊伍中有五支完全沒有 p 值，而有一支**在沒有結果頁的情況下**進了 Top 10。這是「量測嚴謹度」的虛無結果在十支隊伍群體裡的再現：嚴謹讓主張可被核對，但它不決定名次。",
+      "chips": [
+        "most rigorous: 0 awards",
+        "5 of 10 report no p-value"
+      ],
+      "chips_zh": [
+        "最嚴謹：0 個獎",
+        "10 支中 5 支沒有 p 值"
+      ],
+      "link": "judging"
+    },
+    {
+      "kicker": "Judging",
+      "kicker_zh": "評審",
+      "title": "Village choice is not a lever, and the high-school village award has four doors, not thirteen",
+      "title_zh": "選 village 不是一根槓桿，而高中組的 village 獎只有四道門，不是十三道",
+      "body": "Of 147 accepted High School teams across 13 villages, **47 were decorated (32.0%)** and 10 took a Top 10 place. The per-village spread looks dramatic, from 2 of 17 in Agriculture to 12 of 23 in Biomanufacturing, and it **is not distinguishable from 147 teams decorated independently at 32%** (chi-square 19.64 on 12 df, Monte-Carlo p = 0.088). Across years the only property that carries is how crowded a village is (r = +0.91); what it pays does not (Top 10 rate r = +0.17, p = 0.58). And the structure is not per village at all: high-school teams compete for **four award groups**, 20 citations in total, between 1 in 5.6 and 1 in 9.6 — **0.63× an undergraduate team's odds**. GEMS's own Biomanufacturing was the most crowded high-school field in the competition and also the most decorated, 12 of 23.",
+      "body_zh": "13 個 village 裡共 147 支獲接受的高中隊伍，其中**47 支獲得獎項列名（32.0%）**，10 支拿下 Top 10。各 village 之間的差距看起來很大，從 Agriculture 的 17 取 2 到 Biomanufacturing 的 23 取 12，但它**與「147 支隊伍各自以 32% 機率獲得列名」無法區別**（卡方 19.64，自由度 12，蒙地卡羅 p = 0.088）。跨年度唯一延續下來的性質是一個 village 有多擁擠（r = +0.91）；它給出多少回報則沒有延續（Top 10 比率 r = +0.17，p = 0.58）。而且這個結構根本不是按 village 走的：高中隊伍競爭的是**四個獎項群組**、合計 20 個席次，機率介於 1 比 5.6 與 1 比 9.6 之間——**只有大學組隊伍的 0.63 倍**。GEMS 自己所在的 Biomanufacturing 是全場高中隊伍最擁擠的 village，同時也是列名率最高的，23 支裡有 12 支。",
+      "chips": [
+        "spread indistinguishable from chance",
+        "four groups, 20 citations"
+      ],
+      "chips_zh": [
+        "差距與隨機無法區別",
+        "四個群組、20 個席次"
+      ],
+      "link": "judging"
+    },
+    {
+      "kicker": "Judging",
+      "kicker_zh": "評審",
+      "title": "Four categories behave like a whole-project verdict, and the three GEMS won are not among them",
+      "title_zh": "有四個類別的行為像是整體專案的判決，而 GEMS 贏下的那三個不在其中",
+      "body": "Pooled over 2024-26, the 17 special categories nominate between 3 and 26 teams, and the share of each category's nominees who also took a Top 10 place runs from **60% down to 0%**. The top four are Best Wiki **60%**, Best Presentation **53%**, Best Model **50%** and Integrated Human Practices **45%**. GEMS's three 2026 wins sit at 45%, **22%** and **21%**. The figure is near-circular — Wiki and Presentation are judged on how the whole project is *communicated*, which is the same material a Top 10 judgement works on — so it is useless as a prediction and useful as a map of which categories proxy a whole-project verdict and which certify one isolated dimension. GEMS held 5 of the 82 high-school citation slots in 2026, the most of any team in the section, and has never been cited in **9 of the 17** categories.",
+      "body_zh": "把 2024 到 2026 三季合起來看，17 個特別獎類別的入圍人數介於 3 到 26 支之間，而各類別入圍者同時拿下 Top 10 的比例，從**60% 一路到 0%**。最高的四個是 Best Wiki **60%**、Best Presentation **53%**、Best Model **50%** 與整合式人類實踐 **45%**。GEMS 在 2026 年贏下的三個，分別落在 45%、**22%** 與 **21%**。這個數字接近循環論證——Wiki 與 Presentation 評的是整個專案「如何被傳達」，而那正是 Top 10 評審所依據的同一批材料——所以它拿來預測毫無用處，拿來當地圖卻很有用：它標出哪些類別是整體專案判決的替身，哪些只認證單一面向。GEMS 在 2026 年占住 82 個高中組列名席次中的 5 個，是整個組別最多的一支，而在**17 個類別裡有 9 個**從未被列名過。",
+      "chips": [
+        "60% down to 0%",
+        "GEMS's wins at 45, 22 and 21%"
+      ],
+      "chips_zh": [
+        "從 60% 到 0%",
+        "GEMS 的得獎在 45、22、21%"
+      ],
+      "link": "judging"
+    }
+  ],
+  "method": "Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see.",
+  "method_zh": "每一張卡片都是某篇完整分析的摘要，點進連結的頁面即可看到證據、具名的團隊，以及該方法的限制。凡是以數字為基礎的發現，分析中都會說明該數字如何計算，以及它看不到什麼。",
+  "order": 10
 }

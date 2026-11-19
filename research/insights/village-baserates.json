@@ -1,0 +1,437 @@
+{
+  "id": "village-baserates",
+  "tab": "judging",
+  "order": 40,
+  "kicker": "Base rates",
+  "kicker_zh": "基準率",
+  "title": "What a village is worth to a high-school team, and why 2025 cannot tell you",
+  "title_zh": "一個 village 對高中隊伍值多少，以及為什麼 2025 年的資料無法告訴你",
+  "lede": "Across 147 accepted high-school teams in 13 villages, **47 were decorated (32.0%) and 10 took a Top 10 place (6.8%)**. The per-village spread looks large — from 2 of 17 in Agriculture and Food & Nutrition to 12 of 23 in Biomanufacturing — and it does not survive two tests. Within 2026 the whole spread is **not distinguishable from 147 teams decorated independently at 32%** (chi-square 19.64 on 12 df, Monte-Carlo p = 0.088). Across years, the only thing that carries from 2025 to 2026 is **how crowded a village is (r = +0.91)**, not what it pays: Top 10 rate r = +0.17 (p = 0.57), Gold rate r = +0.35 (p = 0.24). And one structural fact undoes the question anyway: a high-school team does not enter a village for award purposes, it enters **one of four award groups**.",
+  "lede_zh": "147 支獲接受的高中隊伍分布在 13 個 village，其中 **47 支得到獎項肯定（32.0%），10 支取得 Top 10 名次（6.8%）**。各 village 之間的差距看起來很大——從 Agriculture 與 Food & Nutrition 的 17 支中 2 支，到 Biomanufacturing 的 23 支中 12 支——但它通不過兩項檢驗。在 2026 年之內，整個差距**與「147 支隊伍各自獨立以 32% 機率獲獎」無法區分**（卡方 19.64，自由度 12，蒙地卡羅 p = 0.088）。跨年度來看，從 2025 年帶到 2026 年的只有**一個 village 有多擁擠（r = +0.91）**，而不是它付出多少：Top 10 比率 r = +0.17（p = 0.57），金牌比率 r = +0.35（p = 0.24）。而且有一個結構事實本身就讓這個問題失效：就獎項而言，高中隊伍進的不是 village，而是**四個獎項群組之一**。",
+  "body": "The cohort a high-school team competes against is not the whole 423. It is the 147 accepted high-school teams, and within a village it is the high-school teams in that village. Measured that way the section base rates are: 47 of 147 decorated (32.0%), 17 of 147 outright winners (11.6%), 10 Top 10 places, 2 finalist slots, 63 Gold, 68 Silver, 4 Bronze, 135 of 147 holding a medal at all.\n\n**The first finding is structural, and it changes the denominator.** The 13 type-`village` award objects in the API carry 60 citations and **not one high-school team** — they are undergraduate and overgraduate only. High-school teams compete instead for four award objects that all share the title `Best Village Project`, one per award group, 1 winner and 4 nominees each: **20 citations in total.** The groups in 2026 were Climate Crisis / Conservation / Bioremediation (28 high-school entrants, 1 in 5.6), Space / Foundational Advance / Software & AI / Biomanufacturing (31, 1 in 6.2), Infectious Diseases / Therapeutics / Diagnostics / Oncology (40, 1 in 8.0) and Agriculture / Food & Nutrition / Fashion & Cosmetics / Art & Design (48, 1 in 9.6). So a high-school team choosing a village is really choosing one of four groups, and **a village's apparent thinness can be irrelevant once it is pooled with three others**: Software & AI had 2 high-school entrants and sat inside a 31-team group. The same arithmetic shows the section is allocated village recognition less generously than the rest of the competition — 20 citations for 147 high-school teams (1 in 7.4) against 60 for 276 undergraduate and overgraduate teams (1 in 4.6), which is **0.63× the odds**.\n\n**The second finding is a null, and it is the decisive one for 2027.** Joining 2025 to 2026 by village name across the 13 villages with high-school entrants in both years, the number of high-school entrants is strongly persistent (r = +0.906, permutation p < 0.0001) — crowded villages stay crowded, thin ones stay thin. What a village pays out does not persist. **Top 10 rate: r = +0.17, p = 0.57. Gold rate: r = +0.35, p = 0.24.** The broad decoration rate does carry a moderate signal (r = +0.673, p = 0.005, and it survives controlling for village size, partial r = +0.66), but it buys a poor predictor: using a village's 2025 rate to guess its 2026 rate still leaves a mean error of **13.0 percentage points**, and restricted to the seven villages with at least 10 high-school entrants in both years the correlation falls to r = +0.600 with p = 0.153. Individual villages swing hard. Diagnostics went from 0 Top 10 places out of 10 entrants to 3 out of 13. Infectious Diseases went from 2 out of 6 to 0 out of 1. Biomanufacturing moved from 5 of 17 decorated to 12 of 23, the largest swing in the set at +22.8 points. **Village choice is not a reliable lever, and the honest instruction for 2027 is to stop treating it as one.**\n\n**The honest limit on all of this is the denominators.** Six of the 13 villages had fewer than 10 high-school entrants and between them held only 22 of the 147 teams; Infectious Diseases had one team, Foundational Advance and Software & AI two each, Space four. Two further village names, Art & Design and Climate Crisis, had zero accepted high-school teams in 2026, so their high-school rate is undefined rather than zero. Rates computed on 1 to 7 teams move by 14 to 100 percentage points when one team's result changes, and nothing on those rows should be read as a tendency.",
+  "body_zh": "一支高中隊伍實際面對的群體不是全部 423 支，而是 147 支獲接受的高中隊伍；在單一 village 之內，則是該 village 裡的高中隊伍。以這個方式量測，整個組別的基準率是：147 支中 47 支得到獎項肯定（32.0%）、17 支成為實質得獎者（11.6%）、10 個 Top 10 名次、2 個決賽席位、63 面金牌、68 面銀牌、4 面銅牌，147 支中有 135 支至少拿到一面獎牌。\n\n**第一個發現是結構性的，而它改變了分母。** API 裡 13 個 type 為 `village` 的獎項物件共有 60 個獎項席次，其中**沒有任何一支高中隊伍**——那些獎只給大學組與研究生組。高中隊伍競爭的是另外四個獎項物件，它們的 `title` 全都是 `Best Village Project`，每個獎項群組一個，各有 1 位得獎者與 4 位入圍者：**總共 20 個獎項席次。** 2026 年的四個群組是 Climate Crisis / Conservation / Bioremediation（28 支高中隊伍，1 比 5.6）、Space / Foundational Advance / Software & AI / Biomanufacturing（31 支，1 比 6.2）、Infectious Diseases / Therapeutics / Diagnostics / Oncology（40 支，1 比 8.0），以及 Agriculture / Food & Nutrition / Fashion & Cosmetics / Art & Design（48 支，1 比 9.6）。所以高中隊伍選 village，實際上是在選四個群組之一，而**一個 village 看起來很稀薄，在它與另外三個併成一組之後可能毫無意義**：Software & AI 只有 2 支高中隊伍，卻坐在一個 31 支隊伍的群組裡。同樣的算術也顯示，高中組在 village 層級的肯定上分配得比競賽其他部分吝嗇——147 支高中隊伍分 20 個獎項席次（1 比 7.4），而 276 支大學與研究生隊伍分 60 個（1 比 4.6），也就是**機率的 0.63 倍**。\n\n**第二個發現是一個虛無結果，而它對 2027 年才是決定性的。** 以 village 名稱把 2025 年接到 2026 年，取兩年都有高中隊伍的那 13 個 village：高中參賽隊數高度延續（r = +0.906，置換檢定 p < 0.0001）——擁擠的 village 持續擁擠，稀薄的持續稀薄。但一個 village 付出什麼並不延續。**Top 10 比率：r = +0.17，p = 0.57。金牌比率：r = +0.35，p = 0.24。** 廣義的獲獎肯定比率確實帶有中等程度的訊號（r = +0.673，p = 0.005，而且在控制 village 規模後依然存在，偏相關 r = +0.66），但它換來的是一個很差的預測器：用某個 village 2025 年的比率去猜它 2026 年的比率，平均誤差仍有 **13.0 個百分點**；而若只取兩年高中隊伍都在 10 支以上的那七個 village，相關係數降到 r = +0.600，p = 0.153。單一 village 的擺盪很劇烈。Diagnostics 從 10 支隊伍 0 個 Top 10，變成 13 支隊伍 3 個。Infectious Diseases 從 6 支中 2 個變成 1 支中 0 個。Biomanufacturing 從 17 支中 5 支獲獎變成 23 支中 12 支，是整組最大的擺盪，+22.8 個百分點。**選 village 不是一個可靠的槓桿，而 2027 年誠實的指示是：別再把它當成槓桿。**\n\n**這一切誠實的限制在於分母。** 13 個 village 中有 6 個的高中隊伍不到 10 支，加起來只占 147 支中的 22 支；Infectious Diseases 只有 1 支，Foundational Advance 與 Software & AI 各 2 支，Space 4 支。另外兩個 village 名稱，Art & Design 與 Climate Crisis，2026 年沒有任何獲接受的高中隊伍，因此它們的高中比率是未定義，而不是零。建立在 1 到 7 支隊伍上的比率，只要其中一支的結果改變，就會移動 14 到 100 個百分點，那幾列上的任何數字都不該被當成傾向來讀。",
+  "cards": [
+    {
+      "kicker": "The denominator",
+      "kicker_zh": "分母",
+      "title": "High-school village awards are given over four groups, not thirteen villages",
+      "title_zh": "高中組的 village 獎是按四個群組頒發，不是按十三個 village",
+      "body": "The 13 `village`-type award objects in the iGEM API hold 60 citations and **zero high-school teams**; they are undergraduate and overgraduate only. High-school teams compete for four separate award objects that all carry the title `Best Village Project` — one per award group, 1 winner and 4 nominees each, **20 citations in total**. Anyone matching on that title as a dictionary key collapses four distinct groups into one and gets the analysis wrong.\n\nSo the choosable unit is the group, not the village: Climate Crisis / Conservation / Bioremediation (28 high-school entrants, 1 in 5.6), Space / Foundational Advance / Software & AI / Biomanufacturing (31, 1 in 6.2), Infectious Diseases / Therapeutics / Diagnostics / Oncology (40, 1 in 8.0), Agriculture / Food & Nutrition / Fashion & Cosmetics / Art & Design (48, 1 in 9.6). The four partition the 147 exactly. **A village's apparent thinness can be irrelevant once it is pooled**: Software & AI had 2 high-school entrants and sat inside a 31-team group, and Foundational Advance had 2 inside the same one. The 2025 season had the same four-group structure with the same 20 citations, so this is the design and not a one-year quirk.",
+      "body_zh": "iGEM API 裡 13 個 type 為 `village` 的獎項物件共有 60 個獎項席次，其中**高中隊伍為零**；那些獎只給大學組與研究生組。高中隊伍競爭的是四個分開的獎項物件，它們的 `title` 全都是 `Best Village Project`——每個獎項群組一個，各 1 位得獎者與 4 位入圍者，**總共 20 個獎項席次**。任何把這個 title 當成字典鍵來比對的人，都會把四個不同的群組壓成一個，然後把分析做錯。\n\n所以可被選擇的單位是群組，不是 village：Climate Crisis / Conservation / Bioremediation（28 支高中隊伍，1 比 5.6）、Space / Foundational Advance / Software & AI / Biomanufacturing（31 支，1 比 6.2）、Infectious Diseases / Therapeutics / Diagnostics / Oncology（40 支，1 比 8.0）、Agriculture / Food & Nutrition / Fashion & Cosmetics / Art & Design（48 支，1 比 9.6）。四個群組恰好把 147 支完整切分。**一個 village 看起來稀薄，在併入群組之後可能毫無意義**：Software & AI 只有 2 支高中隊伍，卻坐在 31 支隊伍的群組裡；Foundational Advance 同樣是 2 支，也在同一組裡。2025 年的賽季是同樣的四群組結構、同樣的 20 個獎項席次，所以這是制度設計，不是單一年度的異常。",
+      "chips": [
+        "20 citations, 4 groups",
+        "60 village citations: 0 high-school",
+        "1 in 5.6 to 1 in 9.6"
+      ],
+      "chips_zh": [
+        "20 個獎項席次、4 個群組",
+        "60 個 village 獎項席次：高中 0",
+        "1 比 5.6 到 1 比 9.6"
+      ]
+    },
+    {
+      "kicker": "The null",
+      "kicker_zh": "虛無結果",
+      "title": "Crowding persists year to year; payout does not",
+      "title_zh": "擁擠程度會延續到下一年；付出不會",
+      "body": "Joined by village name — team ids are reissued every season, so names are the only cross-year key — across the 13 villages with high-school entrants in both 2025 and 2026, the number of high-school entrants is strongly persistent: **r = +0.906, permutation p < 0.0001.** Bioremediation and Therapeutics were crowded in both years; Foundational Advance and Software & AI were nearly empty in both.\n\nWhat a village pays out does not travel. **Top 10 rate: r = +0.17, two-sided permutation p = 0.57. Gold rate: r = +0.35, p = 0.24.** Both are nulls. The broad decoration rate is the one measure with a signal — r = +0.673, p = 0.005, robust to dropping any single village (+0.598 to +0.755) and to controlling for village size (partial r = +0.66) — but it is a weak instrument in practice: predicting a village's 2026 rate from its own 2025 rate still leaves a **mean error of 13.0 percentage points**, and among the seven villages with at least 10 high-school entrants in both years the correlation is r = +0.600 at p = 0.153. **A thin village is not reliably thin again**, and the report records this as a null rather than a lever.",
+      "body_zh": "以 village 名稱接合——隊伍 id 每一季都會重新發放，所以名稱是唯一可用的跨年度鍵——在 2025 與 2026 兩年都有高中隊伍的 13 個 village 中，高中參賽隊數高度延續：**r = +0.906，置換檢定 p < 0.0001。** Bioremediation 與 Therapeutics 兩年都擁擠；Foundational Advance 與 Software & AI 兩年都幾乎是空的。\n\n一個 village 付出什麼則不會傳遞。**Top 10 比率：r = +0.17，雙尾置換檢定 p = 0.57。金牌比率：r = +0.35，p = 0.24。** 兩者都是虛無結果。廣義的獲獎肯定比率是唯一帶有訊號的量——r = +0.673，p = 0.005，對逐一剔除任一 village 穩健（+0.598 到 +0.755），控制 village 規模後也仍然存在（偏相關 r = +0.66）——但實務上它是個很弱的工具：用某 village 自己 2025 年的比率去預測 2026 年，平均誤差仍有 **13.0 個百分點**；而在兩年高中隊伍都至少 10 支的那七個 village 中，相關係數是 r = +0.600，p = 0.153。**稀薄的 village 不會可靠地再次稀薄**，本報告把這件事記為一個虛無結果，而不是一個槓桿。",
+      "chips": [
+        "entrants r = +0.91",
+        "Top 10 rate r = +0.17, p = 0.57",
+        "±13.0 pp prediction error"
+      ],
+      "chips_zh": [
+        "參賽隊數 r = +0.91",
+        "Top 10 比率 r = +0.17、p = 0.57",
+        "預測誤差 ±13.0 個百分點"
+      ]
+    },
+    {
+      "kicker": "Within one year",
+      "kicker_zh": "單一年度之內",
+      "title": "The whole 2026 spread, 12% to 57%, is inside what 147 coin flips would produce",
+      "title_zh": "2026 年整個 12% 到 57% 的差距，都落在 147 次拋硬幣會產生的範圍內",
+      "body": "The per-village high-school decoration rates run from 2 of 17 in Agriculture and in Food & Nutrition (11.8%) up to 12 of 23 in Biomanufacturing (52.2%) and 4 of 7 in Conservation (57.1%). Against the section rate of 47 of 147 (32.0%), that spread gives a **chi-square of 19.64 on 12 degrees of freedom, Monte-Carlo p = 0.088** under a null in which every high-school team is decorated independently at 32% with the real village sizes held fixed.\n\nSo the table below is almost entirely what chance looks like at these sample sizes. **Exactly one village clears two standard deviations: Biomanufacturing at z = +2.08**, 12 decorated against 7.4 expected. Everything else sits between z = −1.79 (Agriculture and Food & Nutrition, 2 against 5.4 expected) and z = +1.43 (Conservation). A single team's result moves a 7-team row by 14 points and a 2-team row by 50. The spread is real as a record of what happened; it is not evidence that the villages differ.",
+      "body_zh": "各 village 的高中獲獎肯定比率，從 Agriculture 與 Food & Nutrition 的 17 支中 2 支（11.8%），到 Biomanufacturing 的 23 支中 12 支（52.2%）與 Conservation 的 7 支中 4 支（57.1%）。相對於整組 147 支中 47 支（32.0%）的比率，這個差距在「每支高中隊伍各自獨立以 32% 機率獲獎、各 village 規模維持真實值」的虛無假設下，給出**卡方 19.64、自由度 12、蒙地卡羅 p = 0.088**。\n\n所以下面這張表幾乎完全就是「在這種樣本數下，機率長成的樣子」。**恰好只有一個 village 超過兩個標準差：Biomanufacturing，z = +2.08**，12 支獲獎對上期望值 7.4 支。其餘全部落在 z = −1.79（Agriculture 與 Food & Nutrition，2 支對上期望 5.4 支）到 z = +1.43（Conservation）之間。單一支隊伍的結果，會讓 7 支隊伍的那一列移動 14 個百分點，讓 2 支隊伍的那一列移動 50 個百分點。這個差距作為「發生了什麼」的紀錄是真的；但它不是「各 village 有差別」的證據。",
+      "chips": [
+        "chi-square 19.64, 12 df, p = 0.088",
+        "only Biomanufacturing clears z = +2"
+      ],
+      "chips_zh": [
+        "卡方 19.64、自由度 12、p = 0.088",
+        "只有 Biomanufacturing 超過 z = +2"
+      ]
+    },
+    {
+      "kicker": "GEMS's own village",
+      "kicker_zh": "GEMS 自己的 village",
+      "title": "Biomanufacturing was the most crowded high-school field and the most decorated one",
+      "title_zh": "Biomanufacturing 是高中組最擁擠的戰場，也是獲獎肯定最多的一個",
+      "body": "Biomanufacturing took **49 teams and 23 high-school teams, the largest high-school field in the competition** — 15.6% of the whole section in one village. Crowding did not cost its teams anything measurable. **12 of 23 were decorated (52.2%), the highest rate of any village with 10 or more high-school entrants**, against 32.0% for the section, and the only village-level figure in 2026 that clears two standard deviations (z = +2.08). It produced 4 of the 17 outright high-school winners, tied with Diagnostics for the most, GEMS-Taiwan among them with Best Measurement, Best Hardware and Best Integrated Human Practices. And **all five of its award group's `Best Village Project` citations went to Biomanufacturing teams** — the winner HangzhouFourteenAP plus four nominees including GEMS-Taiwan — leaving 0 for the 8 high-school teams in Space, Foundational Advance and Software & AI.\n\nTwo figures cut the other way, and they are the ones that matter at the top. **Top 10: 2 of 23, 8.7%**, barely above the 6.8% section rate and well behind Diagnostics at 3 of 13 (23.1%). **Gold: 10 of 23, 43.5%, against 42.9% for the section** — no advantage at all. Biomanufacturing was a good place to pick up a citation in 2026 and an ordinary place to reach the podium. It was also the village with the largest year-on-year swing in the whole set, 5 of 17 decorated in 2025 to 12 of 23 in 2026, which is the clearest single reason not to plan on it repeating.",
+      "body_zh": "Biomanufacturing 收了 **49 支隊伍、其中 23 支高中隊伍，是全競賽最大的高中戰場**——整個高中組有 15.6% 擠在同一個 village 裡。擁擠並沒有讓它的隊伍付出任何可量測的代價。**23 支中有 12 支得到獎項肯定（52.2%），是所有高中隊伍達 10 支以上的 village 中最高的比率**，對比整組的 32.0%，也是 2026 年唯一超過兩個標準差的 village 層級數字（z = +2.08）。它產出了 17 個高中實質得獎者中的 4 個，與 Diagnostics 併列最多，其中包括 GEMS-Taiwan 的最佳量測、最佳硬體與最佳整合性人文實踐。而且**它所屬獎項群組的五個 `Best Village Project` 獎項席次 全部落在 Biomanufacturing 的隊伍上**——得獎者 HangzhouFourteenAP 加上四位入圍者，GEMS-Taiwan 在其中——讓 Space、Foundational Advance 與 Software & AI 的 8 支高中隊伍拿到 0 個。\n\n有兩個數字方向相反，而它們正是在頂端真正重要的那兩個。**Top 10：23 支中 2 支，8.7%**，只比整組的 6.8% 高一點，遠落後於 Diagnostics 的 13 支中 3 支（23.1%）。**金牌：23 支中 10 支，43.5%，對比整組 42.9%**——完全沒有優勢。2026 年的 Biomanufacturing 是個容易撿到一個獎項席次的地方，是個普通的上頒獎台的地方。它同時也是整組中年度擺盪最大的 village，2025 年 17 支中 5 支獲獎、2026 年 23 支中 12 支，這正是「不要指望它重演」最清楚的單一理由。",
+      "chips": [
+        "23 of 147 high-school teams",
+        "decorated 12/23 (52%), section 32%",
+        "Gold 43.5% vs section 42.9%"
+      ],
+      "chips_zh": [
+        "147 支高中隊伍中的 23 支",
+        "獲獎肯定 12/23（52%），整組 32%",
+        "金牌 43.5% 對整組 42.9%"
+      ]
+    },
+    {
+      "kicker": "Thin and thick",
+      "kicker_zh": "稀薄與厚實",
+      "title": "Conservation's 7 high-school teams took 2 of the 10 Top 10 places; Bioremediation's 21 took none",
+      "title_zh": "Conservation 的 7 支高中隊伍拿下 10 個 Top 10 名次中的 2 個；Bioremediation 的 21 支一個都沒拿",
+      "body": "Stated as rates per entrant rather than as ranks, the cheapest Top 10 place in 2026 belonged to **Conservation, 2 of 7 high-school entrants, 1 in 3.5**, and that village also produced the high-school Grand Prize winner, Lambert-GA, and a second Top 10 team, GHCIS. Next is **Diagnostics, 3 of 13, 1 in 4.3**, the only village with three. Then a long gap to Biomanufacturing at 1 in 11.5, Agriculture and Food & Nutrition at 1 in 17, Therapeutics at 1 in 20.\n\nSeven of the 13 villages produced **no high-school Top 10 team at all**, and two of those were large: **Bioremediation, 0 from 21 entrants, and Fashion & Cosmetics, 0 from 14** — 35 high-school teams between them and not one place. On the citation side the order differs again: Conservation led at 2.14 non-medal citations per high-school entrant (15 across 7 teams), Biomanufacturing 1.39, Bioremediation 0.29.\n\n**The limit on reading any of this as a tendency is the denominators.** Six of 13 villages fielded fewer than 10 high-school teams and held 22 of the 147 between them — Infectious Diseases 1, Foundational Advance 2, Software & AI 2, Space 4, Oncology 6, Conservation 7. Conservation's 1 in 3.5 rests on two teams. Art & Design and Climate Crisis had no accepted high-school teams at all, so their rates are undefined, not zero.",
+      "body_zh": "以「每位參賽者的比率」而不是以排名來陳述，2026 年最便宜的 Top 10 名次屬於 **Conservation，7 支高中隊伍中 2 支，1 比 3.5**；而這個 village 同時產出了高中組總冠軍 Lambert-GA，以及第二支 Top 10 隊伍 GHCIS。其次是 **Diagnostics，13 支中 3 支，1 比 4.3**，是唯一有三個名次的 village。接著就是一段很長的落差：Biomanufacturing 1 比 11.5，Agriculture 與 Food & Nutrition 1 比 17，Therapeutics 1 比 20。\n\n13 個 village 中有 7 個**完全沒有產出高中 Top 10 隊伍**，其中兩個規模還不小：**Bioremediation，21 支參賽 0 個；Fashion & Cosmetics，14 支參賽 0 個**——兩者加起來 35 支高中隊伍，一個名次都沒有。在獎項席次那一側，順序又不一樣：Conservation 以每位高中參賽者 2.14 個非獎牌獎項席次領先（7 支隊伍共 15 個），Biomanufacturing 1.39，Bioremediation 0.29。\n\n**把這些讀成任何傾向，限制都在分母。** 13 個 village 中有 6 個的高中隊伍不到 10 支，加起來只占 147 支中的 22 支——Infectious Diseases 1 支、Foundational Advance 2 支、Software & AI 2 支、Space 4 支、Oncology 6 支、Conservation 7 支。Conservation 的 1 比 3.5 建立在兩支隊伍上。Art & Design 與 Climate Crisis 完全沒有獲接受的高中隊伍，因此它們的比率是未定義，不是零。",
+      "chips": [
+        "Conservation 2/7 Top 10",
+        "Bioremediation 0/21",
+        "6 of 13 villages under 10 teams"
+      ],
+      "chips_zh": [
+        "Conservation 7 支中 2 個 Top 10",
+        "Bioremediation 21 支中 0 個",
+        "13 個 village 中 6 個不到 10 支隊伍"
+      ]
+    },
+    {
+      "kicker": "Allocation",
+      "kicker_zh": "分配",
+      "title": "A high-school team gets 0.63× an undergraduate team's odds on a village award",
+      "title_zh": "在 village 獎上，高中隊伍拿到的機率是大學隊伍的 0.63 倍",
+      "body": "The 60 village-award citations go to 276 undergraduate and overgraduate teams across 13 denominators — **1 in 4.6 overall, 21.7%**. The 20 `Best Village Project` citations go to 147 high-school teams across 4 denominators — **1 in 7.4, 13.6%**. That is **0.63× the odds**, and it is the single largest structural difference between the sections found anywhere in this analysis.\n\nThe two systems are uneven in opposite ways. Per undergraduate or overgraduate entrant the 13 village denominators spread **2.9×**, from Software & AI at 1 in 3.0 (3 citations, 9 entrants) to Therapeutics at 1 in 8.8 (5 citations, 44 entrants), median 1 in 4.0 — the slots are allotted by village, not in proportion to how many teams the village drew. The four high-school groups spread only **1.7×**, 1 in 5.6 to 1 in 9.6, because pooling four villages into one group evens out the denominators. **So the high-school allocation is flatter and thinner: less to be gained by choosing well, and less on offer in total.** Within a group the unevenness returns: Biomanufacturing's 23 teams took all 5 of their group's citations, an effective 1 in 4.6, while the other 8 teams in that group took 0.",
+      "body_zh": "60 個 village 獎獎項席次分給 276 支大學與研究生隊伍、跨 13 個分母——**整體 1 比 4.6，21.7%**。20 個 `Best Village Project` 獎項席次分給 147 支高中隊伍、跨 4 個分母——**1 比 7.4，13.6%**。這是**機率的 0.63 倍**，也是本分析在任何地方找到的、組別之間最大的單一結構差異。\n\n這兩套制度不平均的方向相反。以每位大學或研究生參賽者計，13 個 village 分母之間相差 **2.9 倍**，從 Software & AI 的 1 比 3.0（3 個獎項席次、9 支隊伍）到 Therapeutics 的 1 比 8.8（5 個獎項席次、44 支隊伍），中位數 1 比 4.0——席次是按 village 配置，不是按該 village 收到多少隊伍比例分配。四個高中群組之間只相差 **1.7 倍**，1 比 5.6 到 1 比 9.6，因為把四個 village 併成一組會把分母拉平。**所以高中組的分配更平、也更薄：選得好能賺到的更少，總量也更少。** 在群組之內，不平均又回來了：Biomanufacturing 的 23 支隊伍拿走了該群組全部 5 個獎項席次，實質上是 1 比 4.6，而該群組其他 8 支隊伍拿到 0 個。",
+      "chips": [
+        "high-school 1 in 7.4",
+        "undergrad/overgrad 1 in 4.6",
+        "group spread 1.7× vs village 2.9×"
+      ],
+      "chips_zh": [
+        "高中組 1 比 7.4",
+        "大學／研究生組 1 比 4.6",
+        "群組差距 1.7 倍對 village 2.9 倍"
+      ]
+    },
+    {
+      "kicker": "Self-selection",
+      "kicker_zh": "自我選擇",
+      "title": "None of these rates is a probability of winning, because teams choose their own village",
+      "title_zh": "這些比率都不是獲獎機率，因為隊伍自己選 village",
+      "body": "Every figure on this page is a rate observed among teams that chose to enter that village. It is not the chance that a given team would win if it entered. **Teams self-select, and strong teams cluster** — by country, by school network, by the kind of project a well-resourced lab can attempt, and by copying what worked for a neighbouring school last year. 20 of the 23 high-school teams in Biomanufacturing came from China, Hong Kong, Taiwan, Korea or Japan, and the two Taiwanese entries sat beside HangzhouFourteenAP, which won the group. A rate of 52% in that field says something about who entered it, not about what the field does to an entrant.\n\nThe practical consequence is narrow and worth stating flatly: **this analysis cannot support advice of the form \"enter village X to win\"**, and no such advice is given here. What it can support is the opposite move — ruling the question out. The payout measures that matter do not persist from 2025 to 2026, the whole 2026 spread sits inside chance at these sample sizes, and the high-school village-award odds are set by a four-group structure that a village choice barely perturbs. **Village choice should be decided on what the team can actually do, and the base rates should be used to stop that decision absorbing any more planning time.**",
+      "body_zh": "本頁的每一個數字，都是「在選擇進入該 village 的隊伍之間」觀察到的比率。它不是某支隊伍若進入該 village 就會獲獎的機率。**隊伍會自我選擇，而強隊會群聚**——依國家、依學校網絡、依一間資源充足的實驗室能嘗試什麼樣的專案，也依「隔壁學校去年用什麼有效」而模仿。Biomanufacturing 的 23 支高中隊伍中有 20 支來自中國、香港、台灣、韓國或日本，而兩支台灣隊伍與贏下該群組的 HangzhouFourteenAP 坐在一起。那個戰場 52% 的比率，說的是「誰進去了」，不是「那個戰場對一個參賽者會做什麼」。\n\n實務上的後果很窄，而且值得直說：**本分析無法支撐「進入某個 village 以獲獎」這種形式的建議**，本頁也不提供這種建議。它能支撐的是相反的動作——把這個問題排除掉。真正重要的那些付出指標並沒有從 2025 延續到 2026，2026 年整個差距在這種樣本數下都落在機率之內，而高中組的 village 獎機率是由一個四群組結構決定的，選哪個 village 幾乎動不了它。**選 village 應該依團隊實際能做什麼來決定，而這些基準率的用途是讓這個決定不再吸走任何規劃時間。**",
+      "chips": [
+        "rates describe who entered",
+        "no \"enter village X\" advice",
+        "20 of 23 from five countries"
+      ],
+      "chips_zh": [
+        "比率描述的是誰進去了",
+        "不提供「進某個 village」的建議",
+        "23 支中 20 支來自五個國家"
+      ]
+    }
+  ],
+  "table": {
+    "head": [
+      "Village",
+      "HS teams (all)",
+      "HS Top 10",
+      "HS decorated",
+      "HS wins",
+      "HS Gold",
+      "Award group · 1 in N"
+    ],
+    "head_zh": [
+      "Village",
+      "高中隊數（全部）",
+      "高中 Top 10",
+      "高中獲獎肯定",
+      "高中實質得獎",
+      "高中金牌",
+      "獎項群組 · 1 比 N"
+    ],
+    "rows": [
+      [
+        "Biomanufacturing",
+        "23 (49)",
+        "2",
+        "**12/23 (52%)**",
+        "4",
+        "10/23 (43%)",
+        "Advanced & Mfg · 1 in 6.2"
+      ],
+      [
+        "Bioremediation",
+        "21 (50)",
+        "**0**",
+        "5/21 (24%)",
+        "1",
+        "10/21 (48%)",
+        "Environment · 1 in 5.6"
+      ],
+      [
+        "Therapeutics",
+        "20 (64)",
+        "1",
+        "5/20 (25%)",
+        "2",
+        "8/20 (40%)",
+        "Health · 1 in 8.0"
+      ],
+      [
+        "Agriculture",
+        "17 (40)",
+        "1",
+        "**2/17 (12%)**",
+        "1",
+        "5/17 (29%)",
+        "Food & Consumer · 1 in 9.6"
+      ],
+      [
+        "Food & Nutrition",
+        "17 (33)",
+        "1",
+        "**2/17 (12%)**",
+        "1",
+        "6/17 (35%)",
+        "Food & Consumer · 1 in 9.6"
+      ],
+      [
+        "Fashion & Cosmetics",
+        "14 (28)",
+        "**0**",
+        "6/14 (43%)",
+        "2",
+        "6/14 (43%)",
+        "Food & Consumer · 1 in 9.6"
+      ],
+      [
+        "Diagnostics",
+        "13 (35)",
+        "**3**",
+        "6/13 (46%)",
+        "4",
+        "7/13 (54%)",
+        "Health · 1 in 8.0"
+      ],
+      [
+        "Conservation",
+        "7 (21)",
+        "**2**",
+        "4/7 (57%)",
+        "2",
+        "5/7 (71%)",
+        "Environment · 1 in 5.6"
+      ],
+      [
+        "Oncology",
+        "6 (17)",
+        "0",
+        "3/6 (50%)",
+        "0",
+        "3/6 (50%)",
+        "Health · 1 in 8.0"
+      ],
+      [
+        "Space",
+        "4 (17)",
+        "0",
+        "2/4 (50%)",
+        "0",
+        "2/4 (50%)",
+        "Advanced & Mfg · 1 in 6.2"
+      ],
+      [
+        "Foundational Advance",
+        "2 (47)",
+        "0",
+        "0/2 — all sections 20/47 (43%)",
+        "0",
+        "0/2 (0%)",
+        "Advanced & Mfg · 1 in 6.2"
+      ],
+      [
+        "Software & AI",
+        "2 (11)",
+        "0",
+        "0/2 — all sections 4/11 (36%)",
+        "0",
+        "1/2 (50%)",
+        "Advanced & Mfg · 1 in 6.2"
+      ],
+      [
+        "Infectious Diseases",
+        "1 (11)",
+        "0",
+        "0/1 — all sections 4/11 (36%)",
+        "0",
+        "0/1 (0%)",
+        "Health · 1 in 8.0"
+      ],
+      [
+        "**All 13 villages**",
+        "**147 (423)**",
+        "**10**",
+        "**47/147 (32.0%)**",
+        "**17**",
+        "**63/147 (42.9%)**",
+        "**20 citations · 1 in 7.4**"
+      ]
+    ],
+    "rows_zh": [
+      [
+        "Biomanufacturing",
+        "23（49）",
+        "2",
+        "**12/23（52%）**",
+        "4",
+        "10/23（43%）",
+        "先進與製造 · 1 比 6.2"
+      ],
+      [
+        "Bioremediation",
+        "21（50）",
+        "**0**",
+        "5/21（24%）",
+        "1",
+        "10/21（48%）",
+        "環境 · 1 比 5.6"
+      ],
+      [
+        "Therapeutics",
+        "20（64）",
+        "1",
+        "5/20（25%）",
+        "2",
+        "8/20（40%）",
+        "健康 · 1 比 8.0"
+      ],
+      [
+        "Agriculture",
+        "17（40）",
+        "1",
+        "**2/17（12%）**",
+        "1",
+        "5/17（29%）",
+        "食品與消費 · 1 比 9.6"
+      ],
+      [
+        "Food & Nutrition",
+        "17（33）",
+        "1",
+        "**2/17（12%）**",
+        "1",
+        "6/17（35%）",
+        "食品與消費 · 1 比 9.6"
+      ],
+      [
+        "Fashion & Cosmetics",
+        "14（28）",
+        "**0**",
+        "6/14（43%）",
+        "2",
+        "6/14（43%）",
+        "食品與消費 · 1 比 9.6"
+      ],
+      [
+        "Diagnostics",
+        "13（35）",
+        "**3**",
+        "6/13（46%）",
+        "4",
+        "7/13（54%）",
+        "健康 · 1 比 8.0"
+      ],
+      [
+        "Conservation",
+        "7（21）",
+        "**2**",
+        "4/7（57%）",
+        "2",
+        "5/7（71%）",
+        "環境 · 1 比 5.6"
+      ],
+      [
+        "Oncology",
+        "6（17）",
+        "0",
+        "3/6（50%）",
+        "0",
+        "3/6（50%）",
+        "健康 · 1 比 8.0"
+      ],
+      [
+        "Space",
+        "4（17）",
+        "0",
+        "2/4（50%）",
+        "0",
+        "2/4（50%）",
+        "先進與製造 · 1 比 6.2"
+      ],
+      [
+        "Foundational Advance",
+        "2（47）",
+        "0",
+        "0/2 — 全組別 20/47（43%）",
+        "0",
+        "0/2（0%）",
+        "先進與製造 · 1 比 6.2"
+      ],
+      [
+        "Software & AI",
+        "2（11）",
+        "0",
+        "0/2 — 全組別 4/11（36%）",
+        "0",
+        "1/2（50%）",
+        "先進與製造 · 1 比 6.2"
+      ],
+      [
+        "Infectious Diseases",
+        "1（11）",
+        "0",
+        "0/1 — 全組別 4/11（36%）",
+        "0",
+        "0/1（0%）",
+        "健康 · 1 比 8.0"
+      ],
+      [
+        "**13 個 village 合計**",
+        "**147（423）**",
+        "**10**",
+        "**47/147（32.0%）**",
+        "**17**",
+        "**63/147（42.9%）**",
+        "**20 個獎項席次 · 1 比 7.4**"
+      ]
+    ]
+  },
+  "checklist": [
+    "Spend no more than one meeting on which village to enter. The payout measures that matter do not carry from 2025 to 2026 — Top 10 rate r = +0.17, p = 0.57 — and the 2026 spread sits inside chance at p = 0.088.",
+    "If the village question is raised anyway, raise it at group level. There are four groups and 20 `Best Village Project` citations, and Software & AI's 2 high-school entrants sat in the same 31-team group as Biomanufacturing's 23.",
+    "Do not plan on Biomanufacturing repeating 2026. It swung from 5 of 17 decorated to 12 of 23, the largest move in the set, and its Gold rate was 43.5% against a section rate of 42.9%.",
+    "Budget expectations against the section base rates, not the village ones: 32.0% of high-school teams decorated, 11.6% outright winners, 10 Top 10 places for 147 teams.",
+    "Count on a medal and nothing more. 135 of 147 high-school teams hold one and 92.9% of the whole competition does, so a Gold is a floor to clear early rather than a result to report.",
+    "Treat the village award as thin for this section on purpose: 1 in 7.4 for high school against 1 in 4.6 for undergraduate and overgraduate. Aim at the award categories where the high-school section has its own full slate.",
+    "Never quote a rate built on fewer than 10 teams to a sponsor or a judge. Six of the 13 villages are below that, and Conservation's headline 1-in-3.5 Top 10 rate rests on two teams.",
+    "Re-pull both seasons from the iGEM API before reusing any of this in 2027, and join on village name — team ids are reissued each season and will silently produce a wrong answer."
+  ],
+  "checklist_zh": [
+    "「要進哪個 village」最多只花一次會議。真正重要的付出指標並沒有從 2025 帶到 2026——Top 10 比率 r = +0.17、p = 0.57——而 2026 年的差距在 p = 0.088 之下仍落在機率之內。",
+    "如果還是要討論 village，就在群組層級討論。總共四個群組、20 個 `Best Village Project` 獎項席次，而 Software & AI 的 2 支高中隊伍，和 Biomanufacturing 的 23 支坐在同一個 31 支隊伍的群組裡。",
+    "不要指望 Biomanufacturing 重演 2026 年。它從 17 支中 5 支獲獎擺盪到 23 支中 12 支，是整組最大的移動，而它的金牌比率 43.5% 對比整組的 42.9%。",
+    "用整個組別的基準率來編列期待，不要用 village 的：高中隊伍 32.0% 得到獎項肯定、11.6% 是實質得獎者、147 支隊伍分 10 個 Top 10 名次。",
+    "把獎牌當成理所當然，但也僅此而已。147 支高中隊伍中有 135 支拿到獎牌，全競賽是 92.9%，所以金牌是一條該及早跨過的底線，不是一個值得報告的成果。",
+    "把 village 獎對本組別的稀薄視為制度設計：高中組 1 比 7.4，大學與研究生組 1 比 4.6。把力氣放在高中組有完整獨立席次的那些獎項類別上。",
+    "絕不要把建立在不到 10 支隊伍上的比率報給贊助者或評審。13 個 village 中有 6 個低於這個門檻，而 Conservation 招牌的 1 比 3.5 Top 10 比率，是建立在兩支隊伍上。",
+    "2027 年要再用這些資料之前，先從 iGEM API 重新抓取兩個賽季，並以 village 名稱接合——隊伍 id 每季重新發放，會無聲地產生錯誤答案。"
+  ],
+  "method": "Source: the public iGEM API, team rosters and award results for the 2026 and 2025 seasons, cached locally and not re-fetched. Denominators are accepted teams only: 423 in 2026 (147 high-school, 201 undergraduate, 75 overgraduate) and 413 in 2025 (143 high-school), with 8 withdrawn 2025 entries excluded. \"Decorated\" means a team appears as winner or nominee on any non-medal award; medals are counted separately, and 2026 medals were Gold 226, Silver 149, Bronze 18, so 393 of 423 teams (92.9%) hold one and 249 hold a medal and no award. High-school figures are 63 Gold, 68 Silver, 4 Bronze, 135 of 147 with a medal. Per-village rows use the high-school teams in that village as the denominator; the all-sections figure is shown alongside only where it changes the reading. Village awards are handled at two levels because the API records them at two levels: the 13 type-`village` award objects carry 60 citations and no high-school teams, while high-school teams are cited in four separate type-`special` objects that all share the title `Best Village Project`, 5 citations each, 20 in total — matching that title as a single key collapses the four groups and must be avoided. Group membership was taken from the four award rosters and checked to partition the 147 high-school teams exactly (28, 48, 40, 31). The API gives those four award objects no distinguishing title, so the short group labels used in the table — Environment, Food & Consumer, Health, Advanced & Manufacturing — are this report's own shorthand and not iGEM's names; iGEM identifies each group only by its list of villages, which the first card gives in full. Art & Design and Climate Crisis had zero accepted high-school teams in 2026, so their high-school rates are undefined, not zero. The 2025 join is on village name, not uuid and not team id, because team ids are reissued every season. Correlations are Pearson with two-sided permutation p-values over 200,000 shuffles; the within-year heterogeneity test is a chi-square against the 32.0% section rate with a 100,000-draw Monte-Carlo null holding the real village sizes fixed. The decisive caveat: a decoration rate is not a probability of winning for a team that chooses that village. Teams pick their own village and strong teams cluster, by country, by school network and by imitating what worked nearby, so these rates describe who entered a village rather than what entering it does. No recommendation of the form \"enter village X to win\" follows from this analysis and none is made. Six of the 13 villages fielded fewer than 10 high-school teams, holding 22 of 147 between them, and rates on those rows move by 14 to 100 percentage points on a single team's result. GEMS-Taiwan is the report author's own team and appears in these counts on the same terms as every other team.",
+  "method_zh": "資料來源：iGEM 公開 API 的 2026 與 2025 兩個賽季的隊伍名冊與獎項結果，已在本機快取，未重新抓取。分母只採計獲接受的隊伍：2026 年 423 支（高中 147、大學 201、研究生 75），2025 年 413 支（高中 143），2025 年 8 筆已撤回的登記予以排除。「獲獎肯定」指一支隊伍以得獎者或入圍者身分出現在任何非獎牌獎項上；獎牌分開計算，2026 年獎牌為金 226、銀 149、銅 18，因此 423 支中有 393 支（92.9%）持有獎牌，249 支有獎牌而無任何獎項。高中組為金 63、銀 68、銅 4，147 支中 135 支有獎牌。各 village 的列以該 village 的高中隊伍為分母；只有在會改變判讀時，才並列全組別的數字。village 獎分兩個層級處理，因為 API 本身就記在兩個層級：13 個 type 為 `village` 的獎項物件共 60 個獎項席次、不含任何高中隊伍，而高中隊伍被記在四個分開的 type 為 `special` 的物件上，它們的 `title` 全都是 `Best Village Project`，各 5 個獎項席次、合計 20 個——把這個 title 當成單一鍵來比對會把四個群組壓成一個，必須避免。群組成員取自那四份獲獎名單，並已驗證恰好把 147 支高中隊伍完整切分（28、48、40、31）。API 並未給那四個獎項物件任何可供區別的 title，所以表格裡用的四個簡稱——環境、食品與消費、健康、先進與製造——是本報告自己的縮寫，並不是 iGEM 的名稱；iGEM 只用各群組的 village 清單來指稱它們，而第一張卡片已完整列出。Art & Design 與 Climate Crisis 在 2026 年沒有任何獲接受的高中隊伍，因此它們的高中比率是未定義，不是零。2025 年的接合以 village 名稱為鍵，不用 uuid、也不用隊伍 id，因為隊伍 id 每一季都會重新發放。相關係數為 Pearson 係數，p 值為 200,000 次重排的雙尾置換檢定；年度內的異質性檢定為對照 32.0% 整組比率的卡方檢定，搭配 100,000 次抽樣、維持各 village 真實規模的蒙地卡羅虛無分布。最關鍵的保留：對一支選擇進入某 village 的隊伍而言，獲獎肯定比率不是它的獲獎機率。隊伍自己挑選 village，而強隊會群聚——依國家、依學校網絡，也依模仿鄰近學校有效的做法——因此這些比率描述的是「誰進了某個 village」，不是「進去會發生什麼」。本分析不導出、也不提供「進入某個 village 以獲獎」這種形式的建議。13 個 village 中有 6 個的高中隊伍不到 10 支，加起來只占 147 支中的 22 支，而那幾列的比率會因單一支隊伍的結果而移動 14 到 100 個百分點。GEMS-Taiwan 是本報告作者自己的團隊，在這些統計中與其他所有隊伍以相同方式計入。"
+}
