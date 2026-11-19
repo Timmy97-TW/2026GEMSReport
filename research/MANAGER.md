@@ -869,3 +869,55 @@ Facts worth carrying forward:
 Section base rates for context (from the API, all 423 accepted teams): 147 high-school teams entered, 135
 have a medal recorded (63 Gold, 68 Silver, 4 Bronze), **17 won any section-level or village award**, 47
 received at least one nomination, 10 made the Top 10 and **2 were named Finalists**.
+
+### judging-top10 (judging 30) — the rigour inversion, measured across all ten
+
+The three-team comparison could be accused of fitting a story to one outcome, so the same measurements were
+taken across the whole cohort. Results pages for GCGS, GHCIS, HFI, HKSSC, HongKong-HS and Lambert-GA are
+server-rendered and were fetched with curl; Eton's and HangzhouFourteenAP's are client-rendered and were read
+in the browser pane. **This also corrects an assumption worth recording: not all 2026 wikis are SPAs. GEMS's
+is static HTML, Lambert's is server-rendered Astro, and six of the ten High School Top 10 pages fetch fine
+with a browser User-Agent.** Earlier sessions treated the browser pane as mandatory; it is not.
+
+| Team | Placing | Named test | p-values | n= | Dispersion |
+|---|---|---|---|---|---|
+| Lambert-GA | Grand Prize | **none** | **none** | **none** | one 95% CI |
+| HongKong-JSS | 1st Runner-up | paired two-sided t-test | 0.0080, 0.0346 | n=5 | SD, error bars |
+| GEMS-Taiwan | Top 10 | none | five | n=1 and n=3 | SEM, error bars |
+| HKSSC | Top 10 | ANOVA | five, incl. exact | none | none |
+| HongKong-HS | Top 10 | ANOVA, Dunnett, t-test | three | n=3 | SD |
+| HFI | Top 10 | none | four | none | SD |
+| GCGS | Top 10 | none | none | none | none |
+| GHCIS | Top 10 | none | none | none | none |
+| HangzhouFourteenAP | Top 10 | none | none | none | SD |
+| Eton-College-UK | Top 10 | — | — | — | **no results page** |
+
+**The inversion: the two best-reported teams placed lowest.** HongKong-HS has the most complete statistical
+reporting in the section and **won nothing at all**. HKSSC reports ANOVA with p-values to five decimals and
+won one parts award on a Silver medal. The Grand Prize winner names no test, reports no p-value and gives no
+replicate count. Five of ten publish no p-value. This reproduces the `measurement-discipline` null (27%
+against 29% across 106) inside a cohort of ten, and it means **advice to out-rigour the field is advice to
+pull a disconnected lever.** Naming the test is still right — for the reader who wants to check a claim —
+and the checklist says so in those terms rather than as a route to placing.
+
+Two more sorting theories die here: **Eton-College-UK made the Top 10 with no results page at all** (it has
+description, engineering, protocols, notebook, model, hardware and a game), and **HKSSC placed on Silver**
+while the other nine hold Gold. And parts awards: GCGS, GHCIS and HKSSC each won one, all three finished off
+the podium, and the two finalists won none between them.
+
+What survives all ten is the shape of the write-up: the two finalists nominate one result as the answer and
+bound it in the same breath; the eight non-finalists publish module inventories. **Editorial, not
+experimental** — which is also the cheapest thing on this list to change.
+
+### State at the end of the judging work
+
+New tab `judging` (second in the bar), three blocks: `judging-criteria` (order 5), `judging-three-teams`
+(order 20), `judging-top10` (order 30). 28 insight blocks total, all bilingual, both audits silent.
+Verified live in both languages and at 375 px: 3 sections, 36 cards, 3 tables, 33 chips all translated,
+zero chip overflow, no document overflow, scroll hints on all three wide tables, no console errors.
+
+The `others7` analyst was still running when this was written; its brief overlaps `judging-top10`, so if it
+lands, treat it as a **cross-check** of per-team detail rather than new material, and reconcile rather than
+append. Two stopped analysts (`field-base-rates`, `award-economics`) left verified API data in the
+scratchpad under `baserates/` and `awards/` — both were about to write their deliverable and are worth
+restarting from their cached data in a later session.
