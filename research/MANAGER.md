@@ -458,3 +458,23 @@ All eight wave 4/5 analyses landed and are integrated: findings index at 17 card
 bilingual, character audit clean. Three of the eight returned nulls or reversals and say so in the lede.
 Roadmap phases 1, 2, 3 and 4 have each been amended from the new evidence. The Science for Good tab has been
 rebuilt around the user's correction (see the section above — read it before touching that tab).
+
+## Session 4 (from 01:36, 20 Nov 2026)
+
+Arrived clean: 20 insight blocks, all 20 translated, 106/106 team files complete, 0 partial, character
+audit silent. Every research direction queued in the two earlier lists is now done, so this wave had to
+find new ground rather than work a backlog.
+
+### Wave 6 — five analyses, launched in parallel
+
+| id | tab / order | the question |
+|---|---|---|
+| `chassis-census` | teams 38 | What did the 106 actually build in? E. coli vs yeast vs B. subtilis vs cell-free vs non-model. Plus a direct test of this report's own white-space claim: how many of the 106 used light as a control input, how many used B. subtilis, how many did both. |
+| `multiyear-continuity` | good 40 | Does carrying a project across years pay? Tests the Science for Good premise against iGEM's own 2024/2025/2026 results. Briefed hard on survivorship: the sample is winners only, so "this cannot be answered from this sample" is an acceptable and possibly correct finding. |
+| `education-afterlife` | good 42 | Completes the afterlife trilogy after software (8 of 21 alive) and hardware (6 of 20 rebuildable). Could a teacher in Taiwan actually obtain and run an award-winning 2026 education artefact? Every download link to be tested. |
+| `protocol-reproducibility` | drylab 44 | The wet-lab twin of hardware-afterlife. Six checks per team: full protocol, named strain, plasmid maps or sequences, registry deposit with sequence, raw data, dated notebook. GEMS-Taiwan scored on the same six and published in the same table. |
+| `team-resources` | teams 40 | What it costs to win. Size, PIs, institution type, sponsors, university lab access, whether a graduate student did hands-on work. The key question for GEMS: how many high-school teams are hosted in a university lab. Ends on the smallest team that reached a Top 10 and what it did instead of having people. |
+
+Every brief carried the same house rules: null in the lede if the hypothesis fails, exact denominators,
+a method note naming what the counting cannot see, decorated-teams-only stated as a limit, Taiwan-usage
+Traditional Chinese with no Simplified and no Cyrillic, and one file each with no other repo writes.
