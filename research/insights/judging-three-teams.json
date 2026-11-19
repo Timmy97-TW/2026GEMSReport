@@ -4,20 +4,20 @@
  "order": 20,
  "kicker": "Head to head",
  "kicker_zh": "正面對照",
- "title": "Lambert-GA, HongKong-JSS and GEMS-Taiwan against the eight questions",
- "title_zh": "Lambert-GA、HongKong-JSS 與 GEMS-Taiwan 對照八道問題",
- "lede": "Neither statistical rigour nor a finished chain nor Registry depth separated the two finalists from GEMS — on every one of those, at least one finalist is **weaker** than GEMS is. What the finalists have is one claim carrying one number with its limits stated in the same breath. GEMS's wiki is something rarer and, for these eight questions, more costly: **the most complete published account in the 2026 High School field of what a project did not achieve.**",
- "lede_zh": "把兩支決賽隊伍和 GEMS 分開的，既不是統計嚴謹度、也不是鏈條是否做完、更不是 Registry 文件的厚度——這三項裡的每一項，都至少有一支決賽隊伍比 GEMS **更弱**。決賽隊伍擁有的，是一個主張、帶著一個數字，並在同一句話裡交代它的邊界。GEMS 的 wiki 是更罕見的東西，而對這八道問題來說也更昂貴：**它是 2026 年高中組裡，對「一個專案沒有做到什麼」最完整的公開陳述。**",
- "body": "Three theories had to die before the real answer was visible, and each died on the evidence of a team that placed above GEMS.\n\n**It is not statistics.** Lambert-GA won the Grand Prize with a results page carrying **no p-values and no named statistical test at all**. Its one quantitative claim is a binding affinity of 603.6 nM across two replicates, 95% CI 497.1 to 733.3 nM — measured by Adaptyv, a commercial service. Everything else is dot blots quantified in ImageJ. GEMS's plant work is more statistically serious than anything on Lambert's results page.\n\n**It is not completeness.** HongKong-JSS's chain is unfinished in the same place GEMS's is — at the join. Its extraction platform never once fed its biosensor, and it says so: *\"Extraction recovery, treatment effectiveness, and compatibility with the biosensor must be validated before the complete workflow can support reliable environmental mercury measurements.\"*\n\n**It is not Registry documentation.** GEMS deposited 34 parts with a median of 7,369 characters of documentation each, 269,653 in total, with 14 inside the band this report measured for parts-award winners. HongKong-JSS's four parts carry 756, 643, 468 and 385 characters. GEMS is far ahead on this question and still finished below.\n\nSo what is left? **Both finalists resolve into one object.** Lambert's novelty and Lambert's evidence are the same thing — the minibinder is the new thing and the measured thing. HongKong-JSS's number is bounded out loud: its home page says, directly beneath the headline, *\"The detection limit of the complete portable system is not yet established\"*, and its summary *\"1 ppb is the lowest concentration we tested, not a validated detection limit.\"* Neither leaves a judge a soft spot the team has not already named.\n\nGEMS's wiki does something braver and differently shaped. It retracts its own efficacy coefficients, flags its own ELISA control, marks its own key promoter's documentation as absent, prints an input ledger that \"turns amber at the canopy correction\", states that the reactor cannot be scheduled from the forecast that is supposed to drive it, and publishes a payback of 68 years beside its own other estimate of 4.9 without reconciling them. **Three category panels rewarded exactly this, because in Measurement, Hardware and Integrated Human Practices, showing your work *is* the deliverable.** The finalist panel asked eight questions about what was achieved, and read the same pages as the field's most thorough list of open questions.\n\nThat is the loss, stated precisely. Not rigour, not scope, not honesty, not documentation volume. **The project never resolved into one claim; the claim it is named for is the one its own data does not support; and its own economics page refutes its premise in public.** Every one of those is fixable, and none of them requires a bigger team or a better lab.",
- "body_zh": "在真正的答案浮現之前，有三個理論必須先死掉，而每一個都死在某支名次高於 GEMS 的隊伍所提供的證據上。\n\n**不是統計。** Lambert-GA 拿下總冠軍，而它的結果頁上**完全沒有 p 值，也沒有任何統計檢定的名稱**。它唯一的量化主張是一個結合親和力：603.6 nM，兩次重複，95% CI 497.1 到 733.3 nM——由商業服務 Adaptyv 量測。其餘都是用 ImageJ 定量的點墨點。GEMS 的植物工作，在統計上比 Lambert 結果頁上的任何東西都更嚴謹。\n\n**不是完成度。** HongKong-JSS 的鏈條斷在和 GEMS 一樣的地方——接縫處。它的萃取平台從來沒有餵進它的生物感測器一次，而他們寫明了：*「萃取回收率、處理效果，以及與生物感測器的相容性，都必須先被驗證，完整流程才能支撐可靠的環境汞量測。」*\n\n**不是 Registry 文件。** GEMS 存放了 34 個元件，每個文件長度中位數 7,369 字元，合計 269,653 字元，其中 14 個落在本報告為元件獎得主量到的區間內。HongKong-JSS 的四個元件分別是 756、643、468、385 字元。GEMS 在這一題上遙遙領先，名次卻在它之下。\n\n那麼剩下什麼？**兩支決賽隊伍都收斂成一個物件。** Lambert 的新穎性與證據是同一件事——minibinder 既是新東西，也是被量測的東西。HongKong-JSS 的數字則被大聲地劃出邊界：首頁就在標題底下寫著 *「完整可攜系統的偵測極限尚未建立」*，摘要寫著 *「1 ppb 是我們測過的最低濃度，不是一個已驗證的偵測極限。」* 兩者都沒有留給評審任何「團隊自己還沒先講出來」的弱點。\n\nGEMS 的 wiki 做的是更勇敢、但形狀不同的事。它撤回自己的效力係數、標示自己 ELISA 對照組的問題、在元件表上標明自己關鍵啟動子的文件缺失、印出一份「在冠層校正處轉為琥珀色」的輸入帳本、明說反應器無法由那個本該驅動它的預報來排程，並且把 68 年的回本期與自家另一個 4.9 年的估計並列公開、不加調和。**三個類別評審團獎勵的正是這件事，因為在量測、硬體與整合式人類實踐裡，把工作攤開來給人看本身就是交付項目。** 而決賽評審團問的是八道關於「做到了什麼」的問題，於是把同樣這些頁面，讀成了全場最詳盡的一份未解問題清單。\n\n這就是失分之處，講清楚了。不是嚴謹度、不是規模、不是誠實、也不是文件的量。**這個專案從未收斂成一個主張；它命名所依據的那個主張，正是自家資料不支持的那一個；而它自己的經濟分析頁在公開場合推翻了它的前提。** 這三件事每一件都可以修，而且沒有一件需要更大的團隊或更好的實驗室。",
+ "title": "Where the finalist line fell: the finalists' gaps are at the edges, GEMS's gap is at the centre",
+ "title_zh": "決賽那條線落在哪裡：決賽隊伍的缺口在邊緣，GEMS 的缺口在正中央",
+ "lede": "Four theories for the gap died on the evidence, each killed by a team that placed **above** GEMS: it is not statistical rigour, not a finished chain, not Registry documentation, and not self-criticism — Lambert-GA and HongKong-JSS are each weaker than GEMS on at least one of those, and Lambert argues against itself harder than GEMS does. What is left is structural. **In both finalists, the part that does not work is at the periphery of the project. In ReLEAF, it is the thing the project is named for.**",
+ "lede_zh": "關於這道落差的四個理論都死在證據上，而且每一個都被某支名次**高於** GEMS 的隊伍殺掉：不是統計嚴謹度、不是鏈條是否做完、不是 Registry 文件、也不是自我批評——Lambert-GA 與 HongKong-JSS 各自至少有一項比 GEMS 更弱，而 Lambert 自我批評的力道比 GEMS 更強。剩下的是結構性的差別。**在兩支決賽隊伍身上，不成功的那一塊位於專案的邊緣。而在 ReLEAF 身上，不成功的那一塊正是專案命名所依據的東西。**",
+ "body": "Four theories had to die before the answer was visible. Each died on the evidence of a team that finished above GEMS.\n\n**Not statistics.** Lambert-GA won the Grand Prize with a results page carrying no p-values and no named statistical test. Its one quantitative claim is a 603.6 nM binding affinity, 95% CI 497.1–733.3, n=2 — measured by Adaptyv Bio, not by the team. Its own bench work is called \"preliminary evidence\" on one page and disowned on another. GEMS's plant work, at p < 0.0001 with 40 seedlings per condition, is more statistically serious than anything on Lambert's results page.\n\n**Not completeness.** HongKong-JSS's extraction platform never once fed its biosensor. Lambert's RNAi arm — six siRNAs — has **no knockdown data at all**, twelve transfection conditions all inconclusive, and nothing was ever tested against intact virus, bee cells, or a bee. Lambert's own colony model concludes that RNAi supplies most of SWARM's predicted benefit while the minibinder adds \"a small further improvement\". The arm carrying the impact has no data.\n\n**Not Registry documentation, and here GEMS is ahead of both.** GEMS deposited 34 parts, median 7,369 characters of documentation, 269,653 across the collection, 14 inside the band this report measured for parts-award winners. HongKong-JSS's four parts carry 756, 643, 468 and 385 characters. Lambert's top out at 6,313 with descriptions as short as 19 characters and almost no characterisation sections anywhere. On question 8's Registry half, GEMS beat the Grand Prize winner and the runner-up, and still finished below both.\n\n**Not self-criticism — this is the theory worth killing loudest.** Lambert's Best Wiki pages argue against Lambert on Lambert's own award pages: the parts page contradicts the results page about the in-house pull-down and concludes the result \"does not establish binding by the registered candidate\"; the Best Model page states its gram-scale Sobol analysis \"did not pass its numerical checks\"; the Best Hardware page prints a protein table and then declares its own concentration columns \"unverified\". A downloadable CSV stamps every siRNA row \"biological efficacy not established by this file.\" **Candour did not cost Lambert the Grand Prize, and candour is therefore not what cost GEMS the finalist slate.**\n\nWhat is left is where the hole sits. Lambert is named for hitting the virus and the mite; the virus half produced a measured binder and the mite half produced nothing, and the measured half is the half the project leads with. HongKong-JSS is named for in-field mercury detection; the detection works and the in-field part does not. In both cases a judge can name the achievement in one clause and the gap is in the next clause, at the edge.\n\nReLEAF is named for a stress-responsive optogenetic bioreactor. The stress-responsive half is refuted by GEMS's own model — *\"The reactor therefore cannot be scheduled from the forecast\"* — and the optogenetic half did not show light dependence: ELISA read 2.6 to 3.2 µg/mL under both colours at every time point, the AmilCP reporter never coloured, the red LEDs sit at 640 nm where CcaSR needs about 672 nm to switch off, and **every biological result in the project came from a constitutive bypass module rather than the light-gated device.** What works — secreting an enzyme, pushing it through a membrane, rescuing a stressed plant — is real, quantified, and is not what the project is called.\n\nThat is the loss, stated as precisely as the public record allows. GEMS built a very good small fermenter, a very good optical density meter, and a genuinely excellent human-practices programme, and three category panels rewarded exactly those. The eight finalist questions ask what the project achieved, and the project's own pages answer that its central mechanism is undemonstrated and its scheduling premise does not hold. **None of the three fixes needs a bigger team or a better lab.**",
+ "body_zh": "在答案浮現之前，有四個理論必須先死掉。每一個都死在某支名次高於 GEMS 的隊伍所提供的證據上。\n\n**不是統計。** Lambert-GA 拿下總冠軍，而它的結果頁上沒有 p 值，也沒有任何統計檢定名稱。它唯一的量化主張是 603.6 nM 的結合親和力，95% CI 497.1–733.3，n=2——由 Adaptyv Bio 量測，不是團隊自己做的。它自家的實驗工作在一個頁面上被稱為「初步證據」，在另一個頁面上被否認。GEMS 的植物工作，p < 0.0001、每組 40 棵幼苗，在統計上比 Lambert 結果頁上的任何東西都更嚴謹。\n\n**不是完成度。** HongKong-JSS 的萃取平台一次都沒有餵進它的生物感測器。Lambert 的 RNAi 這一支——六條 siRNA——**完全沒有任何剔除效率的資料**，十二種轉染條件全部無法判定，而且從未對完整病毒、蜜蜂細胞或一隻蜜蜂做過測試。Lambert 自己的蜂群模型結論是：RNAi 貢獻了 SWARM 預測效益的大部分，而 minibinder 只增加「小幅的進一步改善」。承載影響力的那一支，沒有資料。\n\n**不是 Registry 文件，而且在這一項 GEMS 領先兩者。** GEMS 存放了 34 個元件，文件長度中位數 7,369 字元，整個集合 269,653 字元，其中 14 個落在本報告為元件獎得主量到的區間內。HongKong-JSS 的四個元件是 756、643、468、385 字元。Lambert 的上限是 6,313 字元，說明短到只有 19 個字元，而且幾乎沒有任何地方有表徵段落。在第 8 題的 Registry 那一半，GEMS 贏過總冠軍、也贏過亞軍，名次卻在兩者之下。\n\n**不是自我批評——這個理論最值得大聲殺掉。** Lambert 那些拿下最佳 Wiki 的頁面，在自己的得獎頁面上反駁自己：元件頁與結果頁對於自家的 pull-down 實驗互相矛盾，並下結論說該結果「並未證實已註冊的候選分子有結合能力」；最佳模型頁寫明它的公克級 Sobol 分析「沒有通過自己的數值檢查」；最佳硬體頁印出一張蛋白濃度表，然後宣告自己那幾欄濃度「未經驗證」。一份可下載的 CSV 在每一列 siRNA 上蓋章寫著「本檔案並未建立生物效力」。**坦白並沒有讓 Lambert 失去總冠軍，因此坦白也不是讓 GEMS 失去決賽席位的原因。**\n\n剩下的是：那個洞長在哪裡。Lambert 的命名是「同時打病毒與打蟎」；病毒那一半做出了一個被量測到的結合分子，蟎那一半什麼也沒做出來，而專案開場用的正是被量測到的那一半。HongKong-JSS 的命名是「現地汞偵測」；偵測成功了，現地那部分沒有。在這兩個例子裡，評審都能用一個子句說出成就，而缺口在下一個子句，位於邊緣。\n\nReLEAF 的命名是「逆境響應式光控生物反應器」。逆境響應這一半，被 GEMS 自己的模型推翻——*「因此反應器無法由預報來排程」*；而光控這一半沒有顯示出光依賴性：ELISA 在每個時間點、兩種顏色下都讀到 2.6 到 3.2 µg/mL，AmilCP 報告子從未顯色，紅光 LED 在 640 nm 而 CcaSR 需要約 672 nm 才能關閉，而且**這個專案裡每一項生物學成果，都來自組成型的旁路模組，不是來自光控裝置。** 真正成功的部分——分泌一個酵素、讓它穿過膜、救援一棵受逆境的植物——是真實的、量化過的，但那不是這個專案的名字。\n\n這就是失分之處，以公開紀錄所能允許的精確度陳述。GEMS 做出了一台很好的小型發酵槽、一台很好的光密度計，以及一個真正出色的人類實踐計畫，而三個類別評審團獎勵的正是這些。那八道決賽問題問的是「這個專案達成了什麼」，而專案自己的頁面回答：它的核心機制尚未被證實，它的排程前提不成立。**這三件要修的事，沒有一件需要更大的團隊或更好的實驗室。**",
  "cards": [
   {
    "kicker": "Question 1",
    "kicker_zh": "第 1 題",
    "title": "Both finalists had one sentence. GEMS had five.",
    "title_zh": "兩支決賽隊伍各有一句話。GEMS 有五句。",
-   "body": "GEMS's `/results` page opens with a **Key results** block, and it is excellent work: protectant secretion, light control, the photometer at R² 0.992 with 434 h unattended, plant rescue with a timing effect, and containment with active enzyme in the cell-free shell for 72 h. Five results, each real. Lambert-GA's whole project resolves into one claim about a minibinder binding Deformed Wing Virus VP3. HongKong-JSS's resolves into one number for mercury in water. **A judge on this question is looking for the sentence they can repeat back without notes, and five results do not average into one — they compete with each other.**",
-   "body_zh": "GEMS 的 `/results` 頁開頭是一個 **Key results** 區塊，而那是很好的工作：保護蛋白分泌、光控、光度計 R² 0.992 與 434 小時無人監測、具時序效應的植物救援，以及在無細胞殼側維持 72 小時活性酵素的生物圍堵。五個成果，每一個都是真的。Lambert-GA 的整個專案收斂成一個主張：一個 minibinder 結合 Deformed Wing Virus 的 VP3。HongKong-JSS 收斂成一個數字：水中的汞。**評審在這一題找的是「不用翻筆記就能複述出來的那一句話」，而五個成果不會平均成一個——它們會互相競爭。**",
+   "body": "GEMS's `/results` page opens with a **Key results** block, and it is excellent work: protectant secretion, light control, the photometer at R² 0.992 with 434 h unattended, plant rescue with a timing effect, and containment with active enzyme in the cell-free shell for 72 h. Five results, each real. Lambert-GA's whole project resolves into one claim about a minibinder binding Deformed Wing Virus VP3. HongKong-JSS's resolves into one number for mercury in water. **A judge on this question is looking for the sentence they can repeat back without notes, and five results do not average into one — they compete with each other.**\n\nWorth noting that Lambert's project is *also* two arms with one working, and HongKong-JSS's is also a three-part system. The difference is not how many pieces a project has. It is whether one of them has been nominated as the answer.",
+   "body_zh": "GEMS 的 `/results` 頁開頭是一個 **Key results** 區塊，而那是很好的工作：保護蛋白分泌、光控、光度計 R² 0.992 與 434 小時無人監測、具時序效應的植物救援，以及在無細胞殼側維持 72 小時活性酵素的生物圍堵。五個成果，每一個都是真的。Lambert-GA 的整個專案收斂成一個主張：一個 minibinder 結合 Deformed Wing Virus 的 VP3。HongKong-JSS 收斂成一個數字：水中的汞。**評審在這一題找的是「不用翻筆記就能複述出來的那一句話」，而五個成果不會平均成一個——它們會互相競爭。**\n\n值得注意的是，Lambert 的專案**同樣**是兩支其中一支成功，HongKong-JSS 的同樣是一個三段式系統。差別不在於一個專案有幾個部件，而在於其中有沒有一個被指定為「答案」。",
    "chips": [
     "5 key results vs 1 claim"
    ],
@@ -46,8 +46,8 @@
    "kicker_zh": "第 3 題",
    "title": "GEMS's own model refutes the project's premise, and publishes the contradiction",
    "title_zh": "GEMS 自己的模型推翻了專案的前提，並把矛盾公開",
-   "body": "This turned out to be the sharpest weakness of the eight, and it is self-reported. The model page's own *Key results* block states: **\"Payback 68 years on our loss figure; Geospatial Analysis says 4.9\"** — a fourteen-fold contradiction between two of GEMS's own pages, left standing. The same page works out that one hectare needs 5.4 days of brewing against a three-day forecast, so \"2.4 days of production precede any forecast that would justify it\", and concludes: **\"The reactor therefore cannot be scheduled from the forecast.\"** Forecast-triggered production is the premise of ReLEAF. The page also records that **\"The preparation sprayed on plants was never assayed.\"**\n\nHongKong-JSS and Lambert both benchmark against an external standard a judge recognises — WHO and EPA mercury limits, honeybee colony loss. GEMS benchmarks against itself and finds it does not add up. That is admirable and it is also, on question 3, the answer a judge takes away.",
-   "body_zh": "這一題最後成了八題中最鋒利的弱點，而且是自己報出來的。模型頁自己的 *Key results* 區塊寫著：**「Payback 68 years on our loss figure; Geospatial Analysis says 4.9」**——GEMS 自己兩個頁面之間十四倍的矛盾，就這樣擺著。同一頁算出一公頃需要 5.4 天的培養，而預報只有三天，因此「有 2.4 天的生產發生在任何能正當化它的預報之前」，並下結論：**「因此反應器無法由預報來排程。」** 而「由預報觸發生產」正是 ReLEAF 的前提。該頁也記下：**「噴到植物上的那份製備從未被檢測活性。」**\n\nHongKong-JSS 與 Lambert 都是對照評審認得的外部標準——WHO 與 EPA 的汞限值、蜂群損失率。GEMS 對照的是自己，而且發現算不過來。這很值得敬重，但在第 3 題上，這也就是評審帶走的那個答案。",
+   "body": "This turned out to be the sharpest weakness of the eight, and it is self-reported. The model page's own *Key results* block states: **\"Payback 68 years on our loss figure; Geospatial Analysis says 4.9\"** — a fourteen-fold contradiction between two of GEMS's own pages, left standing. The same page works out that one hectare needs 5.4 days of brewing against a three-day forecast, so \"2.4 days of production precede any forecast that would justify it\", and concludes: **\"The reactor therefore cannot be scheduled from the forecast.\"** Forecast-triggered production is the premise of ReLEAF. The page also records that **\"The preparation sprayed on plants was never assayed.\"**\n\nHongKong-JSS and Lambert both benchmark against an external standard a judge recognises — WHO and EPA mercury limits, honeybee colony loss. GEMS benchmarks against itself and finds it does not add up. That is admirable and it is also, on question 3, the answer a judge takes away.\n\nIn fairness, Lambert's impact headline is not better evidenced: its 96.7% pollination-retention figure rests on a 93.6% mite-reproduction reduction lifted from an external study, which it states, and the arm supplying most of the modelled benefit has no efficacy data. The difference is that Lambert's economics do not contradict Lambert. GEMS publishes a refutation of its own premise and leaves it standing, which is more honest and, on this question, more expensive.",
+   "body_zh": "這一題最後成了八題中最鋒利的弱點，而且是自己報出來的。模型頁自己的 *Key results* 區塊寫著：**「Payback 68 years on our loss figure; Geospatial Analysis says 4.9」**——GEMS 自己兩個頁面之間十四倍的矛盾，就這樣擺著。同一頁算出一公頃需要 5.4 天的培養，而預報只有三天，因此「有 2.4 天的生產發生在任何能正當化它的預報之前」，並下結論：**「因此反應器無法由預報來排程。」** 而「由預報觸發生產」正是 ReLEAF 的前提。該頁也記下：**「噴到植物上的那份製備從未被檢測活性。」**\n\nHongKong-JSS 與 Lambert 都是對照評審認得的外部標準——WHO 與 EPA 的汞限值、蜂群損失率。GEMS 對照的是自己，而且發現算不過來。這很值得敬重，但在第 3 題上，這也就是評審帶走的那個答案。\n\n公平地說，Lambert 的影響力標題證據並不更好：它 96.7% 的授粉保留率，建立在一項外部研究的 93.6% 蟎繁殖抑制率之上（他們寫明了），而貢獻了大部分模型效益的那一支沒有任何效力資料。差別在於，Lambert 的經濟分析沒有反駁 Lambert。GEMS 公開了一份對自身前提的反駁，並且把它擺在那裡；那更誠實，但在這一題上也更昂貴。",
    "chips": [
     "68 years vs 4.9 years",
     "cannot be scheduled from the forecast"
@@ -60,15 +60,17 @@
   {
    "kicker": "Question 4",
    "kicker_zh": "第 4 題",
-   "title": "HongKong-JSS published its conceptual error. That is the standard.",
-   "title_zh": "HongKong-JSS 把自己的觀念錯誤公開了。那就是標準。",
-   "body": "HongKong-JSS's engineering page runs **nine numbered wet-lab cycles, the majority of which document failures** — including a conceptual error published as a warning to other teams: they designed four constructs around published mercury aptamers believing all aptamers are RNA, discovered D3 and D4 are DNA aptamers whose selected structure cannot form inside an mRNA, abandoned the route, and published the sequences marked do-not-reuse. Admitted missing controls, uninduced subcultures turning red, an amplifier that was deep red before any mercury. **A failure published is the cheapest evidence on the whole rubric and the most convincing.**",
+   "title": "The distinction is not whether a failure is documented. It is whether a fix followed.",
+   "title_zh": "差別不在於有沒有記錄失敗，而在於後面有沒有跟著一個修正。",
+   "body": "All three teams document failures, so presence is not the discriminator. What the finalists add is the next step.\n\nLambert ran **33 numbered DBTL iterations** and its first minibinder campaign submitted 15 designs and got **zero** binders — including one scoring ipSAE 0.927 that still came back negative. They changed the epitope from an unresolved C-terminal region to the QP/A-ridge, added two new design tools and agreement-across-predictions filtering, and campaign 2 returned 1 binder from 20. They then add that \"the improved outcome cannot be attributed to PRINCE or SolubleMPNN independently\". HongKong-JSS ran nine cycles, discovered its mercury aptamers were DNA rather than RNA and could not fold inside an mRNA, **abandoned the route** and published the sequences as a warning.\n\nGEMS documents its failures at least as thoroughly and then stops. On the central optogenetic result the wiki names two candidate explanations — neighbouring-well light crosstalk in the LPA, and red LEDs at 640 nm against the ~672 nm CcaSR needs — and says: \"**We have not tested either explanation directly.**\" Both would have been a week's work. A documented failure with a response reads as engineering; a documented failure with a hypothesis reads as a lab notebook.",
    "body_zh": "HongKong-JSS 的工程頁跑了**九個編號的濕實驗循環，其中大多數記錄的是失敗**——包含一個被公開出來、用以警告其他隊伍的觀念錯誤：他們依據已發表的汞 aptamer 設計了四個構築，以為所有 aptamer 都是 RNA，後來發現 D3 與 D4 是 DNA aptamer，其篩選出的結構無法在 mRNA 內形成，於是放棄這條路線，並把序列標上「請勿重複使用」後公開。他們也承認缺少對照組、未誘導的次培養卻變紅、放大器在接觸任何汞之前就已經深紅。**一個被公開的失敗，是整張評分表上最便宜、也最有說服力的證據。**",
    "chips": [
-    "9 cycles, most of them failures"
+    "Lambert: 15 designs, 0 binders, then a fix",
+    "GEMS: two explanations, neither tested"
    ],
    "chips_zh": [
-    "9 個循環，多數是失敗"
+    "Lambert：15 個設計、0 個結合，然後修正",
+    "GEMS：兩個解釋，都沒測"
    ]
   },
   {
@@ -88,17 +90,19 @@
   {
    "kicker": "Question 6",
    "kicker_zh": "第 6 題",
-   "title": "Both finalists disclosed heavy outside help, in detail",
-   "title_zh": "兩支決賽隊伍都詳細揭露了大量外部協助",
-   "body": "This is the question most likely to be read backwards, and all three teams disclose heavily. HongKong-JSS states it **did no cloning at all** — \"Our team did not perform the cloning\", plasmids from IDT, GenScript and BGI Genomics — that \"Our supervisor prepared all mercury solutions\", and that a Secondary PI did hardware design, software development **and** the wiki. Lambert's headline affinity was measured by **Adaptyv**, a commercial BLI service, and says so. Neither was punished for it.\n\nGEMS discloses on the same scale: 31 students against 8 PIs and instructors and 10 advisors. What it discloses is more exposed, though. An instructor is credited with \"Designed and conducted experiments of the project\", and an advisor with having been \"a core member of the hardware team, designing the bioreactor and photometer from idea generation and planning through CAD modeling\" — that is an adult leading the work that won Best Hardware, in the team's own words. **Disclosure is not the problem; what there is to disclose is.**",
+   "title": "Nobody was punished for outside help, and the Grand Prize winner outsourced its headline number",
+   "title_zh": "沒有人因為外部協助被懲罰，而總冠軍把招牌數字外包了",
+   "body": "This question is the one most likely to be read backwards, and the evidence says it did not separate these three at all.\n\nLambert's headline affinity was produced end to end by **Adaptyv Bio**, which received the sequences, expressed the protein, ran the BLI and interpreted the result; an Adaptyv scientist also diagnosed the failed first campaign and supplied the numeric fix. The DWV coding sequence with its P-domain boundaries came from an external virologist, and a Georgia Tech lab \"helped shape our minibinder design strategy\" and \"guided the development of our predictive mathematical modeling\". All of it is disclosed in detail. HongKong-JSS **did no cloning at all**, had its mercury solutions prepared by its supervisor, and credits a Secondary PI with hardware, software and the wiki.\n\nGEMS discloses on the same scale — 31 students against 8 PIs and instructors and 10 advisors — and what it discloses is more exposed: an instructor credited with \"Designed and conducted experiments of the project\", and an advisor who was \"a core member of the hardware team, designing the bioreactor and photometer from idea generation and planning through CAD modeling\". That is an adult leading the work that won Best Hardware, in the team's own words. **But Lambert outsourced the measurement its Grand Prize rests on and won anyway. This question did not decide it.**",
    "body_zh": "這是最容易被讀反的一題，而三支隊伍都大量揭露。HongKong-JSS 明說它**完全沒有做選殖**——「我們的團隊沒有進行選殖」，質體來自 IDT、GenScript 與 BGI Genomics；也說「所有汞溶液都由我們的指導老師配製」，以及一位 Secondary PI 負責了硬體設計、軟體開發**以及** wiki。Lambert 的招牌親和力數字由商業 BLI 服務 **Adaptyv** 量測，並且寫明了。兩者都沒有因此被懲罰。\n\nGEMS 的揭露規模相當：31 名學生，對 8 位 PI 與指導老師、10 位顧問。但它揭露出來的內容比較暴露。一位指導老師被記為「Designed and conducted experiments of the project」（設計並執行了專案的實驗），一位顧問被記為「a core member of the hardware team, designing the bioreactor and photometer from idea generation and planning through CAD modeling」（硬體團隊的核心成員，從構想、規劃到 CAD 建模設計了生物反應器與光度計）——用團隊自己的話說，那是一位成年人主導了拿下最佳硬體的那部分工作。**問題不在於有沒有揭露，而在於有什麼要揭露。**",
    "chips": [
-    "no cloning, and said so",
-    "an advisor led the hardware"
+    "Adaptyv ran the BLI",
+    "HongKong-JSS did no cloning",
+    "an advisor led GEMS hardware"
    ],
    "chips_zh": [
-    "沒做選殖，而且寫明了",
-    "硬體由一位顧問主導"
+    "BLI 由 Adaptyv 執行",
+    "HongKong-JSS 沒做選殖",
+    "GEMS 硬體由顧問主導"
    ]
   },
   {
@@ -122,8 +126,8 @@
    "kicker_zh": "第 8 題",
    "title": "The Registry documentation is long. Almost none of it is characterisation.",
    "title_zh": "Registry 文件很長，但幾乎沒有一段是表徵資料。",
-   "body": "The obvious theory was that GEMS's Registry pages were thin. They are not — and this is the one place the comparison runs in GEMS's favour. All 34 deposited accessions resolve with sequence, documentation runs 0 to 18,401 characters with a **median of 7,369 and 269,653 characters across the collection**, and 14 parts sit inside the 10,388–83,030 band this report measured for parts-award winners. HongKong-JSS's four parts carry **756, 643, 468 and 385 characters**, and its Best New Composite Part nominee is the 756.\n\nSo volume is not the problem. **Kind is. Only 3 of GEMS's 34 parts carry a Characterisation section at all, 3,313 characters between them**; the rest is Design, Experiment and Application prose. Five parts have no documentation whatsoever. Separately, on the results page: five p-values, SEM and error bars throughout, R² to four decimals — and **no named statistical test anywhere.** Significance is carried by asterisks alone, while HongKong-JSS writes \"paired two-sided t-test p = 0.0080\". And five bioreactor figures are captioned \"redrawn from the team's chart\", with the wiki's own `growth-data.js` recording `csv: null` beside the note \"The owner, 15 Oct: 'ill give data later'\".",
-   "body_zh": "最直覺的理論是 GEMS 的 Registry 頁面太薄。並不是——而這也是整個比較中唯一對 GEMS 有利的地方。34 個存放的編號全部解析成功且附序列，文件長度從 0 到 18,401 字元，**中位數 7,369，整個集合共 269,653 字元**，其中 14 個落在本報告為元件獎得主量到的 10,388–83,030 區間內。HongKong-JSS 的四個元件分別是 **756、643、468 與 385 字元**，而它入圍 Best New Composite Part 的那一個就是 756 的那個。\n\n所以問題不是量，**是種類。GEMS 的 34 個元件裡，只有 3 個帶有表徵（Characterisation）段落，三者合計 3,313 字元**；其餘都是設計、實驗與應用的敘述。另有五個元件完全沒有文件。此外在結果頁上：五個 p 值、全頁 SEM 與誤差棒、R² 寫到小數第四位——卻**沒有任何地方寫出統計檢定的名稱。** 顯著性只靠星號，而 HongKong-JSS 寫的是「paired two-sided t-test p = 0.0080」。還有五張生物反應器的圖，圖說是「redrawn from the team's chart」，而 wiki 自己的 `growth-data.js` 記著 `csv: null`，旁邊寫著「The owner, 15 Oct: 'ill give data later'」。",
+   "body": "The obvious theory was that GEMS's Registry pages were thin. They are not — and this is the one place the comparison runs in GEMS's favour. All 34 deposited accessions resolve with sequence, documentation runs 0 to 18,401 characters with a **median of 7,369 and 269,653 characters across the collection**, and 14 parts sit inside the 10,388–83,030 band this report measured for parts-award winners. HongKong-JSS's four parts carry **756, 643, 468 and 385 characters**, and its Best New Composite Part nominee is the 756. Lambert's 38 claimed accessions top out at 6,313 characters, with descriptions as short as 19 and almost no characterisation sections anywhere.\n\nSo volume is not the problem. **Kind is. Only 3 of GEMS's 34 parts carry a Characterisation section at all, 3,313 characters between them**; the rest is Design, Experiment and Application prose. Five parts have no documentation whatsoever. Separately, on the results page: five p-values, SEM and error bars throughout, R² to four decimals — and **no named statistical test anywhere.** Significance is carried by asterisks alone, while HongKong-JSS writes \"paired two-sided t-test p = 0.0080\". And five bioreactor figures are captioned \"redrawn from the team's chart\", with the wiki's own `growth-data.js` recording `csv: null` beside the note \"The owner, 15 Oct: 'ill give data later'\".",
+   "body_zh": "最直覺的理論是 GEMS 的 Registry 頁面太薄。並不是——而這也是整個比較中唯一對 GEMS 有利的地方。34 個存放的編號全部解析成功且附序列，文件長度從 0 到 18,401 字元，**中位數 7,369，整個集合共 269,653 字元**，其中 14 個落在本報告為元件獎得主量到的 10,388–83,030 區間內。HongKong-JSS 的四個元件分別是 **756、643、468 與 385 字元**，而它入圍 Best New Composite Part 的那一個就是 756 的那個。Lambert 聲稱的 38 個編號上限是 6,313 字元，說明短到只有 19 個字元，而且幾乎沒有任何地方有表徵段落。\n\n所以問題不是量，**是種類。GEMS 的 34 個元件裡，只有 3 個帶有表徵（Characterisation）段落，三者合計 3,313 字元**；其餘都是設計、實驗與應用的敘述。另有五個元件完全沒有文件。此外在結果頁上：五個 p 值、全頁 SEM 與誤差棒、R² 寫到小數第四位——卻**沒有任何地方寫出統計檢定的名稱。** 顯著性只靠星號，而 HongKong-JSS 寫的是「paired two-sided t-test p = 0.0080」。還有五張生物反應器的圖，圖說是「redrawn from the team's chart」，而 wiki 自己的 `growth-data.js` 記著 `csv: null`，旁邊寫著「The owner, 15 Oct: 'ill give data later'」。",
    "chips": [
     "median 7,369 chars — strong",
     "3 of 34 characterised",
@@ -158,7 +162,7 @@
    ],
    [
     "2 Did it work",
-    "603.6 nM, 95% CI 497.1–733.3, n=2",
+    "603.6 nM, 95% CI, n=2 — measured by Adaptyv; RNAi arm has no data",
     "n=5 matched runs, paired t-test p=0.0080; chain incomplete and stated",
     "Plant rescue p<0.0001; light-gated device showed no light dependence"
    ],
@@ -170,9 +174,9 @@
    ],
    [
     "4 Engineering",
-    "DBTL across the binder design",
+    "33 iterations; 15 designs to 0 binders, then a fix",
     "9 cycles, most documenting failure, incl. a published error",
-    "DBTL present; failures explained rather than resolved"
+    "Failures documented; two explanations, neither tested"
    ],
    [
     "5 Human practices",
@@ -182,7 +186,7 @@
    ],
    [
     "6 Own work",
-    "Affinity measured by Adaptyv, disclosed",
+    "Adaptyv produced, ran and interpreted the BLI",
     "No cloning at all, disclosed",
     "31 students, 8 PIs, 10 advisors; an advisor led the hardware"
    ],
@@ -194,7 +198,7 @@
    ],
    [
     "8 Documentation",
-    "Best Wiki winner; server-rendered Astro",
+    "Best Wiki winner; max 6,313 chars, 19-char descriptions",
     "Registry 385–756 chars — thinner than GEMS",
     "Median 7,369 chars, but 3 of 34 characterised; 0 named tests"
    ]
@@ -208,7 +212,7 @@
    ],
    [
     "2 是否成功",
-    "603.6 nM，95% CI 497.1–733.3，n=2",
+    "603.6 nM、95% CI、n=2——由 Adaptyv 量測；RNAi 那一支沒有資料",
     "n=5 配對試驗，paired t-test p=0.0080；鏈條未完成且已說明",
     "植物救援 p<0.0001；光控裝置未顯示光依賴性"
    ],
@@ -220,9 +224,9 @@
    ],
    [
     "4 工程原則",
-    "結合子設計的 DBTL",
+    "33 次迭代；15 個設計得到 0 個結合，然後修正",
     "9 個循環，多數記錄失敗，含一個公開的錯誤",
-    "有 DBTL；失敗是被解釋，而不是被解決"
+    "有記錄失敗；兩個解釋，都沒有測試"
    ],
    [
     "5 人類實踐",
@@ -232,7 +236,7 @@
    ],
    [
     "6 自主完成度",
-    "親和力由 Adaptyv 測定，已揭露",
+    "Adaptyv 製備、執行並解讀了 BLI",
     "完全沒做選殖，已揭露",
     "31 學生、8 PI、10 顧問；硬體由一位顧問主導"
    ],
@@ -244,7 +248,7 @@
    ],
    [
     "8 文件完整度",
-    "最佳 Wiki 得主；Astro 伺服器端渲染",
+    "最佳 Wiki 得主；上限 6,313 字元，說明短至 19 字元",
     "Registry 385–756 字元——比 GEMS 更薄",
     "中位數 7,369 字元，但 34 個中僅 3 個有表徵；0 個檢定名稱"
    ]
@@ -270,6 +274,6 @@
   "把兩個回本年數調和，或撤回其中一個。公開的「68 年對 4.9 年」矛盾，會替評審把第 3 題回答掉。",
   "保住那份坦白。它贏下了三個類別。把它用在為清楚的結果劃定邊界，而不只是解釋不清楚的結果。"
  ],
- "method": "Every claim here was fetched first-hand from the three teams' live 2026 wikis and from api.registry.igem.org, and the specific figures were re-verified by the report's manager rather than taken on an analyst's word. GEMS's wiki is static HTML and was read with curl; Lambert's is server-rendered Astro and was read the same way; HongKong-JSS's needed a browser. Statistical-reporting counts come from stripping tags from the full results page and matching whole words, so a test named only inside a figure image would be invisible to the count. Question 9, on how competently a team answered judges' questions live, is excluded: it leaves no public record, and it is entirely possible that part of the gap described here was created in the room rather than on the wiki. GEMS-Taiwan is the report author's own team and is assessed on the same terms as the other two, which is the standing rule of this report. The analysis describes what a judge could learn from the published record; it is not a reconstruction of any judge's actual reasoning, and no judge has been consulted. Registry documentation lengths for GEMS come from /v1/parts/{uuid}/documentation across all 34 deposited accessions; HongKong-JSS's are description lengths from the parts records, so the two are not measured identically and the comparison is directional rather than exact — it is quoted here only because the gap is an order of magnitude and runs in GEMS's favour.",
- "method_zh": "此處每一項主張都是第一手從三支隊伍 2026 年的線上 wiki 以及 api.registry.igem.org 取得，具體數字由本報告的管理者重新查核，而不是採信分析員的轉述。GEMS 的 wiki 是靜態 HTML，用 curl 讀取；Lambert 的是 Astro 伺服器端渲染，也以同樣方式讀取；HongKong-JSS 的需要用瀏覽器。統計報告方式的計數，是把整個結果頁去除標籤後以完整字詞比對而得，因此若某個檢定名稱只寫在圖片裡，這個計數看不到它。第 9 題關於團隊現場回答評審問題的能力，在此排除：它沒有留下公開紀錄，而這裡描述的落差，完全有可能有一部分是在現場、而不是在 wiki 上產生的。GEMS-Taiwan 是本報告作者自己的團隊，與另外兩支以相同標準評估，這是本報告一貫的規則。本分析描述的是「一位評審能從公開紀錄中讀到什麼」，不是對任何評審實際推理過程的重建，也沒有徵詢過任何評審。 GEMS 的 Registry 文件長度取自全部 34 個存放編號的 /v1/parts/{uuid}/documentation；HongKong-JSS 的則是元件紀錄中的 description 長度，兩者量測方式並不相同，因此此處的比較是方向性的、不是精確對等——之所以引用，只因為差距達一個數量級，而且方向對 GEMS 有利。"
+ "method": "Every claim here was fetched first-hand from the three teams' live 2026 wikis and from api.registry.igem.org, and the specific figures were re-verified by the report's manager rather than taken on an analyst's word. GEMS's wiki is static HTML and was read with curl; Lambert's is server-rendered Astro and was read the same way; HongKong-JSS's needed a browser. Statistical-reporting counts come from stripping tags from the full results page and matching whole words, so a test named only inside a figure image would be invisible to the count. Question 9, on how competently a team answered judges' questions live, is excluded: it leaves no public record, and it is entirely possible that part of the gap described here was created in the room rather than on the wiki. GEMS-Taiwan is the report author's own team and is assessed on the same terms as the other two, which is the standing rule of this report. The analysis describes what a judge could learn from the published record; it is not a reconstruction of any judge's actual reasoning, and no judge has been consulted. Registry documentation lengths for GEMS come from /v1/parts/{uuid}/documentation across all 34 deposited accessions; HongKong-JSS's are description lengths from the parts records, so the two are not measured identically and the comparison is directional rather than exact — it is quoted here only because the gap is an order of magnitude and runs in GEMS's favour. Lambert-GA's Registry figures are description and documentation-body lengths for the 21 of 38 accessions whose bodies were retrieved before api.registry.igem.org began returning HTTP 429 across the board for about fifty minutes; the remainder are recorded as not found with that reason rather than estimated, so Lambert's maximum is a floor on the sample and not a census.",
+ "method_zh": "此處每一項主張都是第一手從三支隊伍 2026 年的線上 wiki 以及 api.registry.igem.org 取得，具體數字由本報告的管理者重新查核，而不是採信分析員的轉述。GEMS 的 wiki 是靜態 HTML，用 curl 讀取；Lambert 的是 Astro 伺服器端渲染，也以同樣方式讀取；HongKong-JSS 的需要用瀏覽器。統計報告方式的計數，是把整個結果頁去除標籤後以完整字詞比對而得，因此若某個檢定名稱只寫在圖片裡，這個計數看不到它。第 9 題關於團隊現場回答評審問題的能力，在此排除：它沒有留下公開紀錄，而這裡描述的落差，完全有可能有一部分是在現場、而不是在 wiki 上產生的。GEMS-Taiwan 是本報告作者自己的團隊，與另外兩支以相同標準評估，這是本報告一貫的規則。本分析描述的是「一位評審能從公開紀錄中讀到什麼」，不是對任何評審實際推理過程的重建，也沒有徵詢過任何評審。 GEMS 的 Registry 文件長度取自全部 34 個存放編號的 /v1/parts/{uuid}/documentation；HongKong-JSS 的則是元件紀錄中的 description 長度，兩者量測方式並不相同，因此此處的比較是方向性的、不是精確對等——之所以引用，只因為差距達一個數量級，而且方向對 GEMS 有利。 Lambert-GA 的 Registry 數字，是 38 個編號中在 api.registry.igem.org 開始全面回傳 HTTP 429（持續約五十分鐘）之前成功取得內文的那 21 個的說明與文件長度；其餘以「未取得」並註明該原因記錄，而非推估，因此 Lambert 的上限是這個樣本的下界，不是全面普查。"
 }
