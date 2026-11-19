@@ -1,0 +1,63 @@
+{
+  "id": "real-world",
+  "tab": "good",
+  "kicker": "Original analysis",
+  "title": "The commercial work that was worth reading argued against itself",
+  "title_zh": "值得一讀的商業分析，都在反駁自己",
+  "lede": "Across the 2026 field, the teams with credible real-world plans are the ones that published a model showing their own product losing.",
+  "lede_zh": "綜觀 2026 年，真實世界計畫最可信的團隊，都公開了一個顯示自家產品輸掉的模型。",
+  "body": "Almost every iGEM team produces a business model canvas. Very few produce a number that could have gone against them. The difference is the whole of what separates a credible 2026 commercial section from a template.\n\n**Worldshaper-Shanghai** published a recomputable net-present-value model and reported the result honestly: their own enzyme gives a **negative NPV**. They did not bury it, soften it, or quietly change the discount rate. **BGI-College** did the same with arithmetic instead of finance — a break-even calculation comparing 6.70 against 4.0 mol H₂ per mol glucose disproved the team's own premise, and forced a redesign around byproduct valorisation. **DTU-Denmark** ran a prospective life-cycle assessment in SimaPro with ReCiPe 2016 H and found its enzymatic route emits 2.1 kg CO₂-eq/kg against 1.4 for solvolysis and 0.9 for pyrolysis, with cement co-processing beating them on almost every indicator — then converted each losing indicator into a named engineering target. **Madrid-UCM** published an ISO 14040/44 openLCA result that currently rules against its own technology.\n\n**Stockholm** went furthest. Its safety advisory board killed the open-water release the project was built around, so the team dismantled the venture, retreated to a contained membrane bioreactor on a smaller industrial stream, and made the deliverable **reusable safety infrastructure** instead: an STPA hazard analysis, a nine-system wastewater containment guidebook, and a measurement-uncertainty toolkit. Giving up the product and shipping the method is a result, and it was recognised with the Safety and Security Award.\n\nSet against that, the template is easy to spot once you know the tell: **the cost side is real and the revenue side is fantasy**. ZJU-China itemises equipment at CNY 7.45 million, media, IPTG and labour, and publishes a downloadable cost sheet — genuinely good work — then assumes **100% capture of its serviceable obtainable market** to reach a USD 427 million NPV. The discipline applied to the inputs evaporates at the outputs.\n\nThe high-school tier is not behind here, and in places it is ahead. **SUIS-SFLS** built the only full financial model in the high-school set: capital expenditure of CNY 6.8 and 11.65 million across two scenarios, CNY 71 and 163.5 per litre, 34% against 15.9% margins, break-even years, and the spreadsheets published as downloadable PDFs, on a dual NMPA and ISO 13485 regulatory track. **ICJFLS** works bottom-up from unit economics — RMB 0.8 per dose against RMB 199 retail — with a 745-response survey and a named CDMO. **NFLSHS-CHINA** has a filed and accepted patent on a CsCCD2 mutant, two physical minimum viable products with formula tables, and labels its partnerships as prospective rather than implying they are signed.\n\nThe second thing the credible teams do is **name the stage of each claim**. Baltimore runs Venture Creation Labs OKRs with numeric gates and IRB-approved trilingual surveys, and says plainly that its letters of intent and grants are targets rather than commitments. McGill has a full techno-economic analysis — $11.83 to $20.58 per kg of rare earth oxide, an Ashram project NPV of +USD 51 million, seven sensitivity analyses — an accelerator place, a venture-capital mentor, two letters of support and secured tailings samples, and states that it is not yet incorporated. Nobody is penalised for an early-stage venture. Teams are penalised, correctly, for presenting an aspiration in the grammar of an achievement.\n\nAnd a reminder that not every project should become a company. **HBUT-China**, **WHU-China**, **Squirrel-Beijing** and **BASIS-China** have no venture at all. Their deliverable is infrastructure other teams can use: 34 parts in four independently reusable modules with measurement parts built in and honest terminator read-through annotations; a five-layer characterisation of Neo-IL-2 including surface plasmon resonance and high-passage stability; a tunable bile-acid kill switch with a measured 0.1–0.2 mM threshold compared against real sewage and soil concentrations, plus a published five-step framework for characterising kill switches. That is a real-world contribution with a longer half-life than most business plans.",
+  "body_zh": "幾乎每一支 iGEM 團隊都會生出一張商業模式畫布，但很少有團隊生出一個「有可能對自己不利」的數字。而這個差別，就是 2026 年可信的商業章節與樣板之間的全部距離。\n\n**Worldshaper-Shanghai** 公開了一個可重新計算的淨現值模型，並誠實報告結果：他們自己的酵素得出**負的 NPV**。他們沒有把它藏起來、淡化，也沒有偷偷調整折現率。**BGI-College** 做了同樣的事，只是用算術而非財務——一個比較 6.70 與 4.0 mol H₂／mol 葡萄糖的損益兩平計算，推翻了團隊自己的前提，迫使他們圍繞副產物加值重新設計。**DTU-Denmark** 以 SimaPro 搭配 ReCiPe 2016 H 做了前瞻性生命週期評估，發現自家的酵素路線排放 2.1 kg CO₂-eq/kg，而溶劑解為 1.4、熱解為 0.9，水泥共處理在幾乎每一項指標上都勝過他們——然後把每一項輸掉的指標轉化為一個具名的工程目標。**Madrid-UCM** 則公開了一份 ISO 14040/44 的 openLCA 結果，而該結果目前判定對他們自己的技術不利。\n\n**Stockholm** 走得最遠。他們的安全諮詢委員會否決了整個專案賴以成立的開放水域釋放，於是團隊拆掉了這個創業構想，退回到處理較小工業廢流的密閉式膜生物反應器，並把產出改成**可重複使用的安全基礎設施**：一份 STPA 危害分析、一本涵蓋九種系統的廢水圍堵指南，以及一套量測不確定度工具包。放棄產品、交付方法，本身就是一種成果，而它拿下了安全與保安獎。\n\n對照之下，樣板一旦知道徵兆就很好認：**成本端是真的，營收端是幻想**。ZJU-China 列出 7,450 萬人民幣的設備、培養基、IPTG 與人力，還公開可下載的成本表——這是扎實的工作——接著假設**100% 拿下其可服務可獲得市場**，得出 4.27 億美元的 NPV。用在投入端的紀律，到了產出端就蒸發了。\n\n高中組在這件事上並不落後，有些地方甚至領先。**SUIS-SFLS** 做出高中組唯一一份完整的財務模型：兩種情境下 680 萬與 1,165 萬人民幣的資本支出、每公升 71 元與 163.5 元、34% 對 15.9% 的毛利率、損益兩平年份，試算表以可下載 PDF 公開，並走 NMPA 與 ISO 13485 雙軌法規路徑。**ICJFLS** 從單位經濟由下而上推算——每劑 0.8 人民幣對零售價 199 元——搭配 745 份問卷與一家具名的 CDMO。**NFLSHS-CHINA** 則有一件已提出並受理的 CsCCD2 突變體專利、兩個附配方表的實體最小可行產品，而且把合作關係標示為「潛在」，不暗示已經簽約。\n\n可信團隊做的第二件事，是**標明每一項主張所處的階段**。Baltimore 以 Venture Creation Labs 的 OKR 搭配量化關卡運作，做了經 IRB 核准的三語問卷，並直說他們的意向書與補助都只是目標，不是承諾。McGill 有完整的技術經濟分析——每公斤稀土氧化物 11.83 至 20.58 美元、Ashram 專案淨現值 +5,100 萬美元、七項敏感度分析——有加速器席位、創投導師、兩封支持信與已取得的尾礦樣本，並載明尚未完成公司設立。沒有人會因為創業處於早期而被扣分；被扣分的——而且理所當然——是用「已完成」的文法去陳述一個「想達成」的願望。\n\n最後提醒：不是每一個專案都該變成公司。**HBUT-China**、**WHU-China**、**Squirrel-Beijing** 與 **BASIS-China** 根本沒有創業規劃。他們的產出是其他團隊可以使用的基礎設施：34 個分屬四個可獨立重用模組的元件，內建量測用元件，並誠實註記終止子讀通問題；Neo-IL-2 的五層次表徵，含表面電漿共振與高代次穩定性；一個可調控的膽酸自殺開關，量測到 0.1–0.2 mM 的閾值並與真實污水及土壤濃度對照，外加一套已發表的自殺開關五步驟表徵框架。這是一種真實世界的貢獻，而且半衰期比多數商業計畫書都長。",
+  "cards": [
+    {
+      "kicker": "The strongest move",
+      "title": "Publish the model that says no",
+      "title_zh": "公開那個說「不」的模型",
+      "body": "Worldshaper-Shanghai's recomputable NPV model finds their own enzyme gives a negative NPV, and says so. DTU-Denmark's prospective LCA finds cement co-processing beats their enzymatic route on almost every indicator, then turns each losing indicator into an engineering target. Madrid-UCM's ISO 14040/44 assessment currently rules against its own technology. A model that could only ever have agreed with you is not evidence.",
+      "body_zh": "Worldshaper-Shanghai 可重算的 NPV 模型得出自家酵素為負 NPV，而他們照實寫出來。DTU-Denmark 的前瞻性 LCA 發現水泥共處理在幾乎每項指標上都勝過他們的酵素路線，於是把每一項輸掉的指標轉成工程目標。Madrid-UCM 的 ISO 14040/44 評估目前判定對自家技術不利。一個只可能同意你的模型，不是證據。",
+      "chips": ["negative NPV, published", "LCA that rules against you"]
+    },
+    {
+      "kicker": "The tell",
+      "title": "Real costs, fantasy revenue",
+      "title_zh": "真實的成本，幻想的營收",
+      "body": "ZJU-China itemises CNY 7.45 million of equipment, media, IPTG and labour and publishes a downloadable cost sheet — then assumes 100% capture of its serviceable obtainable market to reach a USD 427 million NPV. This is the most common failure mode in iGEM commercial sections: rigour on the inputs, where the team has data, and none on the outputs, where it does not.",
+      "body_zh": "ZJU-China 逐項列出 7,450 萬人民幣的設備、培養基、IPTG 與人力，還公開可下載的成本表——接著假設 100% 拿下可服務可獲得市場，得出 4.27 億美元的 NPV。這是 iGEM 商業章節最常見的失敗模式：在團隊有資料的投入端講究嚴謹，在沒有資料的產出端完全放棄。",
+      "chips": ["100% SOM capture"]
+    },
+    {
+      "kicker": "The result that looks like a failure",
+      "title": "Stockholm dismantled its own venture",
+      "title_zh": "Stockholm 拆掉了自己的創業計畫",
+      "body": "A safety advisory board killed the open-water release the project was built on. Rather than argue, the team retreated to a contained membrane bioreactor on a smaller stream and shipped reusable safety infrastructure instead — an STPA hazard analysis, a nine-system wastewater containment guidebook, a measurement-uncertainty toolkit. It won the Safety and Security Award. Giving up the product and publishing the method is a result.",
+      "body_zh": "安全諮詢委員會否決了這個專案賴以成立的開放水域釋放。團隊沒有爭辯，而是退回到處理較小廢流的密閉式膜生物反應器，改為交付可重複使用的安全基礎設施——STPA 危害分析、涵蓋九種系統的廢水圍堵指南、量測不確定度工具包。它拿下了安全與保安獎。放棄產品、公開方法，本身就是成果。",
+      "chips": ["Safety and Security Award"]
+    },
+    {
+      "kicker": "High school, ahead",
+      "title": "SUIS-SFLS built the only full financial model in its tier",
+      "title_zh": "SUIS-SFLS 做出該組唯一一份完整財務模型",
+      "body": "Capital expenditure of CNY 6.8 and 11.65 million across two scenarios, CNY 71 and 163.5 per litre, 34% against 15.9% margins, break-even years, spreadsheets published as downloadable PDFs, on a dual NMPA and ISO 13485 track. ICJFLS works bottom-up from RMB 0.8 per dose against RMB 199 retail with a named CDMO. The census found high-school teams do more techno-economic analysis than undergraduates; this is what that looks like up close.",
+      "body_zh": "兩種情境下 680 萬與 1,165 萬人民幣的資本支出、每公升 71 元與 163.5 元、34% 對 15.9% 的毛利率、損益兩平年份，試算表以可下載 PDF 公開，並走 NMPA 與 ISO 13485 雙軌。ICJFLS 則由下而上從每劑 0.8 人民幣對零售價 199 元推算，並列出具名的 CDMO。技術普查發現高中隊伍做的技術經濟分析比大學部還多；放大來看就是這個樣子。",
+      "chips": ["capex, margins, break-even", "NMPA + ISO 13485"]
+    },
+    {
+      "kicker": "The habit",
+      "title": "Name the stage of every claim",
+      "title_zh": "標明每一項主張所處的階段",
+      "body": "Baltimore says plainly that its letters of intent and grants are targets, not commitments. McGill has a full techno-economic analysis, an accelerator place, a VC mentor, two letters of support and secured tailings samples — and states it is not yet incorporated. NFLSHS-CHINA labels its partnerships prospective. Nobody is penalised for being early. Teams are penalised for writing an aspiration in the grammar of an achievement.",
+      "body_zh": "Baltimore 直說他們的意向書與補助都只是目標，不是承諾。McGill 有完整的技術經濟分析、加速器席位、創投導師、兩封支持信與已取得的尾礦樣本——並載明尚未完成公司設立。NFLSHS-CHINA 把合作關係標示為潛在。沒有人會因為處於早期而被扣分；被扣分的是用「已完成」的文法去寫一個「想達成」的願望。",
+      "chips": ["early is fine", "overclaiming is not"]
+    },
+    {
+      "kicker": "For GEMS",
+      "title": "Not every project should become a company",
+      "title_zh": "不是每個專案都該變成公司",
+      "body": "HBUT-China, WHU-China, Squirrel-Beijing and BASIS-China have no venture at all. They shipped infrastructure instead — 34 parts in four reusable modules with measurement parts built in, a five-layer Neo-IL-2 characterisation, a tunable kill switch with a measured 0.1–0.2 mM threshold checked against real sewage concentrations, and a published five-step framework for characterising kill switches. For an institution building a reputation, that has a longer half-life than a business plan.",
+      "body_zh": "HBUT-China、WHU-China、Squirrel-Beijing 與 BASIS-China 完全沒有創業規劃。他們交付的是基礎設施——34 個分屬四個可重用模組、內建量測元件的零件；Neo-IL-2 的五層次表徵；一個量測到 0.1–0.2 mM 閾值、並與真實污水濃度對照的可調控自殺開關；以及一套已發表的自殺開關五步驟表徵框架。對一個正在建立聲譽的機構而言，這些東西的半衰期比商業計畫書長得多。",
+      "chips": ["parts outlive plans"]
+    }
+  ],
+  "method": "Drawn from the realWorld fields of the team files in this report, each researched from the team's own 2026 wiki. Financial figures are the teams' own and are not independently audited; where a team's assumptions looked unsupported that is noted as our reading, not as a finding of error. Teams that published a model unfavourable to themselves are over-represented here because that is exactly what the analysis is about — it is not a claim that most 2026 teams did so.",
+  "method_zh": "資料取自本報告團隊檔案中的 realWorld 欄位，每一份都來自該隊自己的 2026 wiki。財務數字為各隊自報且未經獨立查核；凡判斷某隊假設缺乏支撐之處，均屬我們的閱讀判斷，而非認定其有誤。公開了對自己不利之模型的團隊在此被過度呈現，因為那正是本篇分析的主題——這並不表示 2026 年多數團隊都這麼做。"
+}
