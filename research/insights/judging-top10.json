@@ -1,0 +1,327 @@
+{
+ "id": "judging-top10",
+ "tab": "judging",
+ "order": 30,
+ "kicker": "The whole cohort",
+ "kicker_zh": "整組十支",
+ "title": "The whole High School Top 10, read against the same eight questions",
+ "title_zh": "整個高中組 Top 10，用同樣八道問題讀一遍",
+ "lede": "Reading all ten rather than three inverts the most tempting lesson. **The most statistically rigorous team in the section won nothing at all, and the Grand Prize winner names no statistical test anywhere.** One team reached the Top 10 with no results page. Three won parts awards and none of the three is a finalist. The only property that tracks the podium across all ten is whether the write-up nominates **one** of its results as the answer.",
+ "lede_zh": "把十支隊伍一起讀，而不是只讀三支，會把最誘人的那個教訓翻過來。**這一組裡統計最嚴謹的隊伍什麼獎都沒拿，而總冠軍在任何地方都沒寫出統計檢定的名稱。** 有一支隊伍在沒有結果頁的情況下進了 Top 10。三支隊伍贏得元件獎，而這三支都沒進決賽。在十支隊伍之間，唯一與頒獎台相關的性質是：這份寫作有沒有把它的**其中一個**成果指定為「答案」。",
+ "body": "The three-team comparison above could be accused of fitting a story to one outcome. So the same measurements were taken across the whole cohort, and the table below is the result: every 2026 High School Top 10 team's results page, scored on what a reader can actually check.\n\nThe pattern it produces is not one anyone would design a programme around. **HongKong-HS reports ANOVA, Dunnett's post-hoc, a t-test, n=3 and standard deviations — and won nothing.** HKSSC reports ANOVA with p-values to five decimal places and won one parts award on a Silver medal. Lambert-GA won the Grand Prize with no test, no p-value and no replicate count. Five of the ten publish no p-value at all. This is the measurement-discipline null from elsewhere in this report, reproduced inside a cohort of ten: rigour makes work checkable, and it does not place.\n\nTwo more structural facts cut the same way. **Eton-College-UK reached the Top 10 with no results page on its wiki at all** — description, engineering, protocols, notebook, model, hardware and a game, but nowhere that gathers what was found. And **HKSSC placed on a Silver medal** while every other team in the ten holds Gold. Neither documentation completeness nor medal level is doing the sorting.\n\nNor are parts awards. GCGS, GHCIS and HKSSC each won one and all three finished outside the podium, while the two finalists won none between them. A parts award is a durable contribution and, as this report argues elsewhere, the cheapest category in the competition to enter — but it is not a route to a placing.\n\nWhat survives contact with all ten is the shape of the write-up. The two finalists each nominate a single result as the project's answer and state its limits in the same breath. The eight non-finalists publish module inventories — four modules and an AND gate, two rounds of switch screening, six subsystem sections, construction then purification then characterisation, five key results. Every one of those is competent work by people who did more than most entrants in the section. **The difference is editorial, not experimental, and it is the cheapest of all the differences to fix.**",
+ "body_zh": "上面那份三隊比較，可能會被質疑是「為一個結果編一個故事」。所以同樣的量測被套用到整個群體上，下面的表格就是結果：2026 年高中組 Top 10 每一支隊伍的結果頁，依「讀者實際上能核對什麼」評分。\n\n它產生的模式，不會是任何人用來規劃一個計畫的那種模式。**HongKong-HS 報告了 ANOVA、Dunnett 事後檢定、t-test、n=3 與標準差——結果什麼都沒拿。** HKSSC 報告 ANOVA，p 值寫到小數第五位，以銀牌拿下一個元件獎。Lambert-GA 拿下總冠軍，沒有檢定、沒有 p 值、沒有重複數。十支隊伍中有五支完全沒有 p 值。這就是本報告別處那個「量測嚴謹度」的虛無結果，在十支隊伍的群體裡再現一次：嚴謹讓工作可被核對，但它不決定名次。\n\n另外兩個結構性事實指向同一邊。**Eton-College-UK 在 wiki 上完全沒有結果頁的情況下進了 Top 10**——有 description、engineering、protocols、notebook、model、hardware 與一個遊戲，但沒有任何地方把「發現了什麼」收攏起來。而 **HKSSC 以銀牌進榜**，而這十支隊伍中其他每一支都是金牌。做排序的，既不是文件完整度，也不是獎牌等級。\n\n元件獎也不是。GCGS、GHCIS 與 HKSSC 各拿一個，三支全都在頒獎台之外；而兩支決賽隊伍加起來一個也沒有。元件獎是一項耐久的貢獻，而且如本報告別處所論，是整個比賽裡最便宜的參賽類別——但它不是通往名次的路。\n\n在十支隊伍的檢驗下存活下來的，是寫作的形狀。兩支決賽隊伍各自把一個成果指定為這個專案的答案，並在同一句話裡交代它的邊界。八支非決賽隊伍發表的是模組清單——四個模組加一個 AND gate、兩輪開關篩選、六個子系統段落、先建構再純化再功能表徵、五個重點成果。這裡每一份都是稱職的工作，出自比這一組大多數參賽者做得更多的人。**差別在編輯，不在實驗，而且在所有差別裡，這是最便宜的那一個。**",
+ "cards": [
+  {
+   "kicker": "The inversion",
+   "kicker_zh": "反轉",
+   "title": "The best statistics in the section belong to the teams that placed lowest",
+   "title_zh": "這一組裡統計做得最好的，是名次最低的隊伍",
+   "body": "**HongKong-HS has the most complete statistical reporting in the High School Top 10** — ANOVA, Dunnett's post-hoc, a t-test, n=3 and standard deviations — and it won **nothing**: no section award, no village award, no finalist slot. **HKSSC is second best** — ANOVA with exact p-values down to p = 0.00408 — and it won one parts award on a Silver medal. Meanwhile the **Grand Prize winner reports no statistical test, no p-value and no replicate count anywhere on its results page.** Its single quantitative claim is a confidence interval produced by a commercial service.\n\nThis is the same null the measurement-discipline analysis found across all 106 decorated teams (27% against 29%, no effect on placing), and here it is again inside a cohort of ten. **Statistical rigour is worth doing because it makes a claim checkable, not because it places.** Any plan for 2027 that leans on out-rigouring the field is leaning on a lever that is not connected to anything.",
+   "body_zh": "**HongKong-HS 擁有高中組 Top 10 裡最完整的統計報告**——ANOVA、Dunnett 事後檢定、t-test、n=3 與標準差——而它**什麼都沒拿**：沒有組別獎、沒有 village 獎、沒有決賽席位。**HKSSC 排第二**——ANOVA，p 值精確到 p = 0.00408——它以銀牌拿下一個元件獎。而**總冠軍在它的結果頁上，沒有任何統計檢定、沒有任何 p 值、也沒有任何重複數。** 它唯一的量化主張，是一個由商業服務做出來的信賴區間。\n\n這與「量測嚴謹度」分析在全部 106 支得獎隊伍上得到的虛無結果一樣（27% 對 29%，對名次沒有影響），而現在它在十支隊伍的群體裡又出現一次。**統計嚴謹值得做，因為它讓一個主張可以被核對，不是因為它能換名次。** 任何把 2027 年計畫建立在「比全場更嚴謹」上的做法，都是在拉一根沒有接上任何東西的槓桿。",
+   "chips": [
+    "most rigorous team won nothing",
+    "Grand Prize winner: 0 tests"
+   ],
+   "chips_zh": [
+    "最嚴謹的隊伍什麼都沒拿",
+    "總冠軍：0 個檢定"
+   ]
+  },
+  {
+   "kicker": "Only three",
+   "kicker_zh": "只有三支",
+   "title": "Three of the ten name a statistical test at all",
+   "title_zh": "十支隊伍裡只有三支寫出統計檢定的名稱",
+   "body": "HongKong-JSS, HKSSC and HongKong-HS name a test. The other seven — including GEMS, including the Grand Prize winner — report significance with asterisks, or report no significance at all. **Five of the ten publish no p-value anywhere.** For a reader trying to judge whether a result holds, most of this cohort cannot be checked, and the judges placed them first and last regardless. The honest reading is that at High School level these eight questions are decided on what was built and claimed, not on how it was analysed.",
+   "body_zh": "HongKong-JSS、HKSSC 與 HongKong-HS 寫出了檢定名稱。其餘七支——包含 GEMS、也包含總冠軍——用星號表示顯著性，或者完全沒有呈現顯著性。**十支隊伍中有五支沒有在任何地方給出 p 值。** 對一位想判斷某個結果站不站得住的讀者來說，這一組大多數隊伍都無法核對；而評審把他們分別排在第一名與最後幾名，與此無關。誠實的解讀是：在高中組，這八道問題是依據「做出了什麼、主張了什麼」來決定的，不是依據「怎麼分析的」。",
+   "chips": [
+    "3 of 10 name a test",
+    "5 of 10 report no p-value"
+   ],
+   "chips_zh": [
+    "10 支中 3 支寫出檢定",
+    "10 支中 5 支沒有 p 值"
+   ]
+  },
+  {
+   "kicker": "No results page",
+   "kicker_zh": "沒有結果頁",
+   "title": "Eton-College-UK reached the Top 10 without a results page",
+   "title_zh": "Eton-College-UK 在沒有結果頁的情況下進了 Top 10",
+   "body": "Eton's wiki has description, contribution, implementation, engineering, protocols, notebook, model, three modelling sub-pages, hardware, human practices, education, a game, team and attributions. **It has no results page.** Its engineering page carries three design-build-test cycles across two biosensors and an electrochemical device, and opens by stating the project \"was engineered in two labs at once\", one of them at King's College London.\n\nThis is the clearest possible demonstration that the Top 10 is not a documentation score. It also echoes a finding already in this report: GCGS reached the Top 10 in 2026 with no model page at all. **A missing page is survivable. A missing claim is not.**",
+   "body_zh": "Eton 的 wiki 有 description、contribution、implementation、engineering、protocols、notebook、model、三個模型子頁、hardware、human practices、education、一個遊戲、team 與 attributions。**它沒有結果頁。** 它的 engineering 頁有三個設計、建造、測試的循環，涵蓋兩個蛋白生物感測器與一個電化學裝置，開頭就寫明這個專案「同時在兩間實驗室裡被工程化」，其中一間在 King's College London。\n\n這是最清楚的證明：Top 10 不是一個文件評分。它也呼應本報告已有的一個發現：GCGS 在 2026 年沒有任何 model 頁，一樣進了 Top 10。**少一個頁面活得下去。少一個主張活不下去。**",
+   "chips": [
+    "no results page, still Top 10"
+   ],
+   "chips_zh": [
+    "沒有結果頁，照樣 Top 10"
+   ]
+  },
+  {
+   "kicker": "The medal",
+   "kicker_zh": "獎牌",
+   "title": "HKSSC made the Top 10 on a Silver medal",
+   "title_zh": "HKSSC 以銀牌進入 Top 10",
+   "body": "Every other team in the ten holds Gold; HKSSC holds **Silver** and still placed, with a Best New Basic Part win on top. Across the whole section 135 of 147 teams have a medal and 63 of those are Gold, so a medal is a checklist that most of the field clears. **The Top 10 and the medal are genuinely independent judgements**, and a team optimising for medal criteria is not thereby optimising for a placing.",
+   "body_zh": "這十支隊伍中其他每一支都是金牌；HKSSC 是**銀牌**，卻照樣進榜，而且還多拿一個 Best New Basic Part。整個組別 147 支隊伍中有 135 支有獎牌，其中 63 支是金牌，所以獎牌是一張大多數隊伍都能通過的檢核表。**Top 10 與獎牌是真正互相獨立的判斷**，一支為了獎牌標準去最佳化的隊伍，並不因此就在為名次最佳化。",
+   "chips": [
+    "Silver, and Top 10"
+   ],
+   "chips_zh": [
+    "銀牌，而且 Top 10"
+   ]
+  },
+  {
+   "kicker": "Parts",
+   "kicker_zh": "元件",
+   "title": "Three teams won parts awards. None of them is a finalist.",
+   "title_zh": "三支隊伍贏得元件獎。沒有一支進決賽。",
+   "body": "GCGS took Best New Improved Part, GHCIS took Best Part Collection, HKSSC took Best New Basic Part — and all three finished outside the podium. The two finalists won no parts award between them; HongKong-JSS was merely nominated, on a composite part whose Registry entry runs to 756 characters.\n\nSo a parts award is not a route to the podium either. It is still worth having — it is a durable artefact that outlives the season, and this report argues elsewhere that it is the cheapest category in the competition to enter. **But it should be pursued as a contribution, not as a placing strategy.**",
+   "body_zh": "GCGS 拿下 Best New Improved Part、GHCIS 拿下 Best Part Collection、HKSSC 拿下 Best New Basic Part——而這三支都在頒獎台之外。兩支決賽隊伍加起來一個元件獎也沒有；HongKong-JSS 只是入圍，而那個 composite 元件的 Registry 條目長度是 756 字元。\n\n所以元件獎也不是通往頒獎台的路。它仍然值得拿——那是一個比賽季活得更久的耐久產物，而本報告在別處也論證過它是整個比賽裡最便宜的參賽類別。**但應該把它當成一項貢獻來追求，不是當成一套名次策略。**",
+   "chips": [
+    "3 parts awards, 0 finalists"
+   ],
+   "chips_zh": [
+    "3 個元件獎，0 席決賽"
+   ]
+  },
+  {
+   "kicker": "What is left",
+   "kicker_zh": "剩下的是什麼",
+   "title": "Across all ten, the thing that tracks the podium is a single finished claim",
+   "title_zh": "把十支隊伍一起看，真正與頒獎台相關的是「一個做完的主張」",
+   "body": "Test the pattern against the whole cohort rather than against GEMS alone. The two finalists each resolve into one sentence a judge can repeat: a designed minibinder binds a named viral protein at a measured affinity; a living sensor reads mercury in water at a stated concentration with its limits named. Among the eight non-finalists, the results pages are organised as **module inventories** — GCGS lists four modules and an assembled AND gate, GHCIS two rounds of switch screening plus a reporter system, HFI six subsystem sections, HangzhouFourteenAP construction then purification then characterisation, GEMS five key results. Each is a competent list of parts that work. **None of them nominates one of those parts as the answer.**\n\nThat is a structural property of how the work was written up, not a measure of how much was done — and it is the one property that lines up with the finalist slate across all ten.",
+   "body_zh": "把這個模式拿去對照整個群體，而不是只對照 GEMS。兩支決賽隊伍各自收斂成評審能複述的一句話：一個被設計出來的 minibinder 以量到的親和力結合一個具名的病毒蛋白；一個活體感測器在指定濃度下讀出水中的汞，並說明了邊界。而在八支非決賽隊伍裡，結果頁的組織方式是**模組清單**——GCGS 列出四個模組加一個組裝好的 AND gate、GHCIS 兩輪開關篩選加一套顯色系統、HFI 六個子系統段落、HangzhouFourteenAP 先建構再純化再功能表徵、GEMS 五個重點成果。每一份都是一張「這些零件都能動」的稱職清單。**但沒有一份把其中某一個零件指定為「答案」。**\n\n這是「工作如何被寫出來」的結構性性質，不是「做了多少」的量度——而在這十支隊伍裡，它是唯一與決賽名單對得上的性質。",
+   "chips": [
+    "2 teams: one sentence",
+    "8 teams: a module inventory"
+   ],
+   "chips_zh": [
+    "2 支隊伍：一句話",
+    "8 支隊伍：一張模組清單"
+   ]
+  }
+ ],
+ "table": {
+  "head": [
+   "Team",
+   "Placing",
+   "Named test",
+   "p-values",
+   "Replicates",
+   "Dispersion",
+   "Results page"
+  ],
+  "head_zh": [
+   "隊伍",
+   "名次",
+   "檢定名稱",
+   "p 值",
+   "重複數",
+   "離散度",
+   "結果頁"
+  ],
+  "rows": [
+   [
+    "Lambert-GA",
+    "Grand Prize",
+    "none",
+    "none",
+    "none",
+    "one 95% CI",
+    "19,936"
+   ],
+   [
+    "HongKong-JSS",
+    "1st Runner-up",
+    "paired two-sided t-test",
+    "0.0080, 0.0346",
+    "n=5",
+    "SD, error bars",
+    "—"
+   ],
+   [
+    "GEMS-Taiwan",
+    "Top 10",
+    "none",
+    "five",
+    "n=1 and n=3",
+    "SEM, error bars",
+    "—"
+   ],
+   [
+    "HKSSC",
+    "Top 10",
+    "ANOVA",
+    "five, incl. exact",
+    "none",
+    "none",
+    "35,221"
+   ],
+   [
+    "HongKong-HS",
+    "Top 10",
+    "ANOVA, Dunnett, t-test",
+    "three",
+    "n=3",
+    "SD",
+    "28,787"
+   ],
+   [
+    "HFI",
+    "Top 10",
+    "none",
+    "four",
+    "none",
+    "SD",
+    "23,784"
+   ],
+   [
+    "GCGS",
+    "Top 10",
+    "none",
+    "none",
+    "none",
+    "none",
+    "18,570"
+   ],
+   [
+    "GHCIS",
+    "Top 10",
+    "none",
+    "none",
+    "none",
+    "none",
+    "17,267"
+   ],
+   [
+    "HangzhouFourteenAP",
+    "Top 10",
+    "none",
+    "none",
+    "none",
+    "SD",
+    "9,976"
+   ],
+   [
+    "Eton-College-UK",
+    "Top 10",
+    "none",
+    "none",
+    "none",
+    "none",
+    "no results page"
+   ]
+  ],
+  "rows_zh": [
+   [
+    "Lambert-GA",
+    "總冠軍",
+    "無",
+    "無",
+    "無",
+    "一個 95% CI",
+    "19,936"
+   ],
+   [
+    "HongKong-JSS",
+    "亞軍",
+    "paired two-sided t-test",
+    "0.0080、0.0346",
+    "n=5",
+    "SD、誤差棒",
+    "—"
+   ],
+   [
+    "GEMS-Taiwan",
+    "Top 10",
+    "無",
+    "五個",
+    "n=1 與 n=3",
+    "SEM、誤差棒",
+    "—"
+   ],
+   [
+    "HKSSC",
+    "Top 10",
+    "ANOVA",
+    "五個，含精確值",
+    "無",
+    "無",
+    "35,221"
+   ],
+   [
+    "HongKong-HS",
+    "Top 10",
+    "ANOVA、Dunnett、t-test",
+    "三個",
+    "n=3",
+    "SD",
+    "28,787"
+   ],
+   [
+    "HFI",
+    "Top 10",
+    "無",
+    "四個",
+    "無",
+    "SD",
+    "23,784"
+   ],
+   [
+    "GCGS",
+    "Top 10",
+    "無",
+    "無",
+    "無",
+    "無",
+    "18,570"
+   ],
+   [
+    "GHCIS",
+    "Top 10",
+    "無",
+    "無",
+    "無",
+    "無",
+    "17,267"
+   ],
+   [
+    "HangzhouFourteenAP",
+    "Top 10",
+    "無",
+    "無",
+    "無",
+    "SD",
+    "9,976"
+   ],
+   [
+    "Eton-College-UK",
+    "Top 10",
+    "無",
+    "無",
+    "無",
+    "無",
+    "沒有結果頁"
+   ]
+  ]
+ },
+ "checklist": [
+  "Do not build the 2027 plan around out-rigouring the field. The most rigorous team in this section won nothing, and the Grand Prize winner named no test.",
+  "Still name every test beside its p-value — for the reader who wants to check the claim, not for the judge.",
+  "Nominate one result as the answer before writing the wiki, and organise the results page around it instead of around subsystems.",
+  "State the limit of the headline claim in the same sentence as the claim, the way HongKong-JSS does.",
+  "Treat a parts award as a contribution that outlives the season, not as a placing strategy.",
+  "Audit the wiki for the question a judge actually asks: can a stranger name what this project achieved after two minutes on the site?"
+ ],
+ "checklist_zh": [
+  "不要把 2027 年的計畫建立在「比全場更嚴謹」上。這一組最嚴謹的隊伍什麼都沒拿，而總冠軍沒寫出任何檢定名稱。",
+  "但還是要在每個 p 值旁邊寫出檢定名稱——為了想核對這個主張的讀者，不是為了評審。",
+  "在寫 wiki 之前就指定一個成果作為「答案」，並把結果頁圍繞它來組織，而不是圍繞子系統。",
+  "像 HongKong-JSS 那樣，把招牌主張的邊界寫在與主張同一個句子裡。",
+  "把元件獎當成一項比賽季活得更久的貢獻，不是一套名次策略。",
+  "用評審真正會問的那個問題來檢查 wiki：一個陌生人在站上待兩分鐘後，能不能說出這個專案達成了什麼？"
+ ],
+ "method": "Results pages for GCGS, GHCIS, HFI, HKSSC, HongKong-HS and Lambert-GA were fetched directly as server-rendered HTML; Eton-College-UK's and HangzhouFourteenAP's wikis are client-rendered and were read in a browser. HongKong-JSS's figures come from a dedicated analyst read of its wiki rather than from the manager's own fetch, which is why its results-page character count is left blank rather than guessed. Counts of named tests, p-values, replicate counts and dispersion measures come from stripping tags from each results page and matching whole words, so a test named only inside a figure image, a PDF or a collapsed panel is invisible to this method — and roughly a third of 2026 wikis do hide content in click-to-open panels, so these are floors rather than totals. Eton-College-UK has no results page, so its row describes an absence rather than a measurement. Character counts are of visible text after tag stripping and are not comparable across different wiki architectures. Question 9, on the live judging session, is excluded throughout this tab because it leaves no public record, and it is entirely possible that part of what separated these teams happened there.",
+ "method_zh": "GCGS、GHCIS、HFI、HKSSC、HongKong-HS 與 Lambert-GA 的結果頁，是以伺服器端渲染的 HTML 直接取得；Eton-College-UK 與 HangzhouFourteenAP 的 wiki 是用戶端渲染，以瀏覽器讀取。HongKong-JSS 的數字來自一位專責分析員對其 wiki 的細讀，而非管理者自己的抓取，因此它的結果頁字元數留空，而不是以推估填入。檢定名稱、p 值、重複數與離散度的計數，是把每個結果頁去除標籤後以完整字詞比對而得，因此若某個檢定名稱只出現在圖片、PDF 或折疊面板裡，這個方法就看不到它——而 2026 年大約有三分之一的 wiki 確實把內容藏在點擊展開的面板中，所以這些數字是下界，不是總數。Eton-College-UK 沒有結果頁，因此它那一列描述的是「缺少」，不是一項量測。字元數是去除標籤後可見文字的長度，不同 wiki 架構之間不可比較。第 9 題關於現場問答，在本頁全程排除，因為它沒有留下公開紀錄；而把這些隊伍分開的因素，完全有可能有一部分就發生在那裡。"
+}

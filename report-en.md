@@ -1312,6 +1312,57 @@ So volume is not the problem. **Kind is, and GEMS publishes the proof itself.** 
 
 _Method and limits. Every claim here was fetched first-hand from the three teams' live 2026 wikis and from api.registry.igem.org, and the specific figures were re-verified by the report's manager rather than taken on an analyst's word. GEMS's wiki is static HTML and was read with curl; Lambert's is server-rendered Astro and was read the same way; HongKong-JSS's needed a browser. Statistical-reporting counts come from stripping tags from the full results page and matching whole words, so a test named only inside a figure image would be invisible to the count. Question 9, on how competently a team answered judges' questions live, is excluded: it leaves no public record, and it is entirely possible that part of the gap described here was created in the room rather than on the wiki. GEMS-Taiwan is the report author's own team and is assessed on the same terms as the other two, which is the standing rule of this report. The analysis describes what a judge could learn from the published record; it is not a reconstruction of any judge's actual reasoning, and no judge has been consulted. Registry documentation lengths for GEMS come from /v1/parts/{uuid}/documentation across all 34 deposited accessions; HongKong-JSS's are description lengths from the parts records, so the two are not measured identically and the comparison is directional rather than exact — it is quoted here only because the gap is an order of magnitude and runs in GEMS's favour. Lambert-GA's Registry figures are description and documentation-body lengths for the 21 of 38 accessions whose bodies were retrieved before api.registry.igem.org began returning HTTP 429 across the board for about fifty minutes; the remainder are recorded as not found with that reason rather than estimated, so Lambert's maximum is a floor on the sample and not a census. The Documentation-column tally for GEMS was read by the manager directly from the team's own published parts page, which states that the column was populated from the live Registry API on 21 October 2026; the per-part character counts come from the API and could not be re-verified at the time of writing because api.registry.igem.org was returning HTTP 429 to all requests._
 
+## The whole High School Top 10, read against the same eight questions
+
+_Reading all ten rather than three inverts the most tempting lesson. **The most statistically rigorous team in the section won nothing at all, and the Grand Prize winner names no statistical test anywhere.** One team reached the Top 10 with no results page. Three won parts awards and none of the three is a finalist. The only property that tracks the podium across all ten is whether the write-up nominates **one** of its results as the answer._
+
+The three-team comparison above could be accused of fitting a story to one outcome. So the same measurements were taken across the whole cohort, and the table below is the result: every 2026 High School Top 10 team's results page, scored on what a reader can actually check.
+
+The pattern it produces is not one anyone would design a programme around. **HongKong-HS reports ANOVA, Dunnett's post-hoc, a t-test, n=3 and standard deviations — and won nothing.** HKSSC reports ANOVA with p-values to five decimal places and won one parts award on a Silver medal. Lambert-GA won the Grand Prize with no test, no p-value and no replicate count. Five of the ten publish no p-value at all. This is the measurement-discipline null from elsewhere in this report, reproduced inside a cohort of ten: rigour makes work checkable, and it does not place.
+
+Two more structural facts cut the same way. **Eton-College-UK reached the Top 10 with no results page on its wiki at all** — description, engineering, protocols, notebook, model, hardware and a game, but nowhere that gathers what was found. And **HKSSC placed on a Silver medal** while every other team in the ten holds Gold. Neither documentation completeness nor medal level is doing the sorting.
+
+Nor are parts awards. GCGS, GHCIS and HKSSC each won one and all three finished outside the podium, while the two finalists won none between them. A parts award is a durable contribution and, as this report argues elsewhere, the cheapest category in the competition to enter — but it is not a route to a placing.
+
+What survives contact with all ten is the shape of the write-up. The two finalists each nominate a single result as the project's answer and state its limits in the same breath. The eight non-finalists publish module inventories — four modules and an AND gate, two rounds of switch screening, six subsystem sections, construction then purification then characterisation, five key results. Every one of those is competent work by people who did more than most entrants in the section. **The difference is editorial, not experimental, and it is the cheapest of all the differences to fix.**
+
+### The best statistics in the section belong to the teams that placed lowest
+**HongKong-HS has the most complete statistical reporting in the High School Top 10** — ANOVA, Dunnett's post-hoc, a t-test, n=3 and standard deviations — and it won **nothing**: no section award, no village award, no finalist slot. **HKSSC is second best** — ANOVA with exact p-values down to p = 0.00408 — and it won one parts award on a Silver medal. Meanwhile the **Grand Prize winner reports no statistical test, no p-value and no replicate count anywhere on its results page.** Its single quantitative claim is a confidence interval produced by a commercial service.
+
+This is the same null the measurement-discipline analysis found across all 106 decorated teams (27% against 29%, no effect on placing), and here it is again inside a cohort of ten. **Statistical rigour is worth doing because it makes a claim checkable, not because it places.** Any plan for 2027 that leans on out-rigouring the field is leaning on a lever that is not connected to anything.
+
+### Three of the ten name a statistical test at all
+HongKong-JSS, HKSSC and HongKong-HS name a test. The other seven — including GEMS, including the Grand Prize winner — report significance with asterisks, or report no significance at all. **Five of the ten publish no p-value anywhere.** For a reader trying to judge whether a result holds, most of this cohort cannot be checked, and the judges placed them first and last regardless. The honest reading is that at High School level these eight questions are decided on what was built and claimed, not on how it was analysed.
+
+### Eton-College-UK reached the Top 10 without a results page
+Eton's wiki has description, contribution, implementation, engineering, protocols, notebook, model, three modelling sub-pages, hardware, human practices, education, a game, team and attributions. **It has no results page.** Its engineering page carries three design-build-test cycles across two biosensors and an electrochemical device, and opens by stating the project "was engineered in two labs at once", one of them at King's College London.
+
+This is the clearest possible demonstration that the Top 10 is not a documentation score. It also echoes a finding already in this report: GCGS reached the Top 10 in 2026 with no model page at all. **A missing page is survivable. A missing claim is not.**
+
+### HKSSC made the Top 10 on a Silver medal
+Every other team in the ten holds Gold; HKSSC holds **Silver** and still placed, with a Best New Basic Part win on top. Across the whole section 135 of 147 teams have a medal and 63 of those are Gold, so a medal is a checklist that most of the field clears. **The Top 10 and the medal are genuinely independent judgements**, and a team optimising for medal criteria is not thereby optimising for a placing.
+
+### Three teams won parts awards. None of them is a finalist.
+GCGS took Best New Improved Part, GHCIS took Best Part Collection, HKSSC took Best New Basic Part — and all three finished outside the podium. The two finalists won no parts award between them; HongKong-JSS was merely nominated, on a composite part whose Registry entry runs to 756 characters.
+
+So a parts award is not a route to the podium either. It is still worth having — it is a durable artefact that outlives the season, and this report argues elsewhere that it is the cheapest category in the competition to enter. **But it should be pursued as a contribution, not as a placing strategy.**
+
+### Across all ten, the thing that tracks the podium is a single finished claim
+Test the pattern against the whole cohort rather than against GEMS alone. The two finalists each resolve into one sentence a judge can repeat: a designed minibinder binds a named viral protein at a measured affinity; a living sensor reads mercury in water at a stated concentration with its limits named. Among the eight non-finalists, the results pages are organised as **module inventories** — GCGS lists four modules and an assembled AND gate, GHCIS two rounds of switch screening plus a reporter system, HFI six subsystem sections, HangzhouFourteenAP construction then purification then characterisation, GEMS five key results. Each is a competent list of parts that work. **None of them nominates one of those parts as the answer.**
+
+That is a structural property of how the work was written up, not a measure of how much was done — and it is the one property that lines up with the finalist slate across all ten.
+
+**Checklist**
+
+- Do not build the 2027 plan around out-rigouring the field. The most rigorous team in this section won nothing, and the Grand Prize winner named no test.
+- Still name every test beside its p-value — for the reader who wants to check the claim, not for the judge.
+- Nominate one result as the answer before writing the wiki, and organise the results page around it instead of around subsystems.
+- State the limit of the headline claim in the same sentence as the claim, the way HongKong-JSS does.
+- Treat a parts award as a contribution that outlives the season, not as a placing strategy.
+- Audit the wiki for the question a judge actually asks: can a stranger name what this project achieved after two minutes on the site?
+
+_Method and limits. Results pages for GCGS, GHCIS, HFI, HKSSC, HongKong-HS and Lambert-GA were fetched directly as server-rendered HTML; Eton-College-UK's and HangzhouFourteenAP's wikis are client-rendered and were read in a browser. HongKong-JSS's figures come from a dedicated analyst read of its wiki rather than from the manager's own fetch, which is why its results-page character count is left blank rather than guessed. Counts of named tests, p-values, replicate counts and dispersion measures come from stripping tags from each results page and matching whole words, so a test named only inside a figure image, a PDF or a collapsed panel is invisible to this method — and roughly a third of 2026 wikis do hide content in click-to-open panels, so these are floors rather than totals. Eton-College-UK has no results page, so its row describes an absence rather than a measurement. Character counts are of visible text after tag stripping and are not comparable across different wiki architectures. Question 9, on the live judging session, is excluded throughout this tab because it leaves no public record, and it is entirely possible that part of what separated these teams happened there._
+
 
 # Academic trends
 
