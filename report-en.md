@@ -10,7 +10,7 @@ A review of the iGEM 2026 Top 10 teams across all three sections, every special 
 - **Top 10 Overgrad** — Athens, ETH-Zurich, GU Frankfurt, KAUST-KSA, Marburg, Muenster-University, Toronto, TU Delft, UZurich, WageningenUR
 - **Top 10 High School** — Eton-College-UK, GCGS, GEMS-Taiwan, GHCIS, HangzhouFourteenAP, HFI, HKSSC, HongKong-HS, HongKong-JSS, Lambert-GA
 
-## Eight findings, and where to read each one
+## Nine findings, and where to read each one
 
 _The 2026 Best Wiki winners all build a layer like this — each claim in two sentences, with a link straight to the evidence. It works, so this report does it too._
 
@@ -22,6 +22,9 @@ Eton-College-UK used logistic regression and a PSSM but ran cluster-aware cross-
 
 ### 8 of 21 award-winning tools are still usable, and the reason is hosting
 Every live tool was hosted on wiki-freeze day; every source-only tool's wiki lists localhost as its only address. Not a coding or budget decision — a hosting decision made months early. Two high-school teams out-shipped most of the universities. Stars and forks across every repo checked: zero.
+
+### The best figures build the reader's doubt into the picture
+GEMS-Taiwan's provenance rail turns amber exactly where measurement stops and modelling begins. DKU gives "not assessed" its own verdict so an unmeasured gate cannot read as a passed one. Mingdao's captions carry the instrument, the buffer, the replicate count and a link to the raw CSV. DTU shows which stakeholders never replied.
 
 ### The loops that closed were closed by experts, not by publics
 Of 93 decorated teams, 64 can point at a stakeholder who visibly changed the design. But almost every one of those stakeholders was a credentialled technical expert. The publics, patients and communities the criterion is rhetorically about changed the vocabulary and not the vector, with six or seven exceptions in 93.

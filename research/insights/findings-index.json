@@ -3,8 +3,8 @@
   "tab": "overview",
   "kicker": "Start here",
   "kicker_zh": "從這裡開始",
-  "title": "Eight findings, and where to read each one",
-  "title_zh": "八個發現，以及各自該讀哪一頁",
+  "title": "Nine findings, and where to read each one",
+  "title_zh": "九個發現，以及各自該讀哪一頁",
   "lede": "The 2026 Best Wiki winners all build a layer like this — each claim in two sentences, with a link straight to the evidence. It works, so this report does it too.",
   "lede_zh": "2026 年所有最佳 Wiki 得主都建了一層像這樣的東西——每個主張兩句話，附上直達證據的連結。它有效，所以這份報告也這麼做。",
   "cards": [
@@ -41,6 +41,19 @@
       "body_zh": "每一個仍在線的工具，在 wiki 凍結當日就已經上線；每一個只有原始碼的工具，wiki 上唯一的位址都是 localhost。這不是寫程式或預算的決定，而是提前好幾個月做的架站決定。兩支高中隊伍交付得比多數大學還好。所有檢查過的 repository，star 與 fork 都是零。",
       "chips": [
         "hosted on freeze day"
+      ],
+      "link": "drylab"
+    },
+    {
+      "kicker": "Visualisation",
+      "kicker_zh": "視覺化",
+      "title": "The best figures build the reader's doubt into the picture",
+      "title_zh": "最好的圖，把讀者的懷疑畫進圖裡",
+      "body": "GEMS-Taiwan's provenance rail turns amber exactly where measurement stops and modelling begins. DKU gives \"not assessed\" its own verdict so an unmeasured gate cannot read as a passed one. Mingdao's captions carry the instrument, the buffer, the replicate count and a link to the raw CSV. DTU shows which stakeholders never replied.",
+      "body_zh": "GEMS-Taiwan 的來源軌道，正好在量測結束、模擬開始之處轉為琥珀色。DKU 給「未評估」一個自己的判定，讓未量測的關卡不會被讀成通過。Mingdao 的圖說載明儀器、緩衝液、重複次數，並連結原始 CSV。DTU 則把從未回覆的利害關係人也顯示出來。",
+      "chips": [
+        "provenance visible",
+        "\"not assessed\" as a state"
       ],
       "link": "drylab"
     },
