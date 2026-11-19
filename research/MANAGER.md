@@ -737,3 +737,51 @@ predictions that failed**.
 spot the team has not already named. That makes the project trustworthy on a whole-project view even with an
 incomplete chain and thin parts. Credibility is category-independent, which is exactly why three category
 wins did not substitute for it.
+
+### GEMS-Taiwan, verified first-hand by the manager from the live wiki
+
+The GEMS wiki is **static HTML, not a Vite SPA**, so all of this is fetchable with plain curl and a browser
+User-Agent. Anyone continuing this analysis should read it that way rather than through the browser pane.
+
+**Criterion 1 — there is a "Key results" block, and it contains five results, not one.** Verbatim from
+`/results`: protectant secretion (ACCD, LEA14 and BoPep4 all secreted by WB800, ACCD about three times the
+other two) · light control (green light switches ACCD on, activity leads the protein by hours) · the
+photometer (R² 0.992 against silica, 434 h unattended) · plant rescue (timing decides the effect: pre- and
+post-treatment rescue, co-treatment does not) · containment and release (active ACCD in the cell-free shell
+for 72 h, no colonies on the shell side). Every one is a genuine result. None is *the* result, and a judge
+on question 1 is looking for the sentence they can repeat back without notes.
+
+**Criterion 2 — the plant biology is strong, and the optogenetic core is the weakest link.** This is the
+finding that matters and it is the opposite way round from what a reader would guess.
+- The plant work is properly quantified: **40 seedlings per condition**, mean ± SEM, **p < 0.0001**, across
+  salinity and heat trials, with fresh weight, chlorophyll and root length, and a real timing result
+  (pre- and post-treatment rescue; co-treatment does not).
+- The optogenetics does not reach that standard **by the team's own account**. The figure supporting "light
+  exposure does not hinder growth" is **red 100% (n=1) against green 100% (n=3)** — an unbalanced control
+  arm with a single replicate. The wiki's own "What it settles" section says the green-versus-red Western
+  difference "was small and not yet quantified", that similar ELISA values across conditions "may be due to
+  too many samples in the LPA at once, so that light from neighboring wells affected each other", that
+  "CcaSR needs red light at about 672 nm to switch off, but our red LEDs emit at 640 nm", and then — to its
+  credit — "**We have not tested either explanation directly.**"
+- So the links that are best evidenced are the conventional ones (secrete a protein, apply it to a plant),
+  and the link that makes ReLEAF *synthetic biology* rather than hardware-plus-plant-science is the one
+  carrying n=1, an unquantified difference and two untested confounds. That lands on questions 2 and 7 at
+  once.
+
+**Criterion 8 — p-values with no named test.** Across the whole results page: 5 p-values, SEM and error bars
+throughout, R² values to four decimals — and **zero occurrences of any named statistical test.** No t-test,
+no ANOVA, no Tukey, no Dunnett, nothing. Significance is carried by asterisks alone. Compare HongKong-JSS,
+which writes "paired two-sided t-test p = 0.0080" and reports held-out RMSE including its failed predictions.
+A p-value whose test is not named cannot be checked by a stranger, which is precisely what question 8 asks.
+
+**Also criterion 8, verified against the live pages** (see the earlier section for the `csv: null` file):
+`growth-data.js` states the traced charts are drawn "with a line under each chart that says so". I checked all
+**36 figcaptions** on `/hardware-photometer`: the two growth-curve captions carry **no** traced or redrawn
+disclosure, while a different figure (the 336 h long run) does. The intent is in the source and did not reach
+the page.
+
+**In fairness, and this belongs in the published analysis.** GEMS's candour is real and comparable to
+HongKong-JSS's — "We have not tested either explanation directly" is exactly the register that made the
+HongKong-JSS wiki trustworthy. The difference is not honesty. It is that GEMS's honesty is spent on
+explaining *why a result is unclear*, while HongKong-JSS's is spent on *bounding a result that is clear*.
+One reads as work in progress; the other reads as a finished claim with known limits.
