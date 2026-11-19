@@ -6,32 +6,98 @@
   "village": "",
   "wiki": "https://2026.igem.wiki/baid-china/",
   "projectTitle": "Neurofilux",
+  "projectTitle_zh": "Neurofilux",
   "tagline": "An AI-designed antibody sandwich assay for blood neurofilament light chain, for cheap non-invasive early screening of neurodegenerative disease",
+  "tagline_zh": "以 AI 設計抗體的血液神經絲輕鏈三明治免疫檢測，用於低成本、非侵入性的神經退化疾病早期篩檢",
   "summary": "BAID-China built Neurofilux, a blood test for neurofilament light chain (NfL), a biomarker of neuronal damage that rises years before Alzheimer's or ALS symptoms appear but is currently detectable only by expensive, invasive or insufficiently sensitive methods. They expressed the NfL rod domain (residues 93-396) as antigen, used the generative model RFantibody to design candidate antibodies, screened them with a multi-objective scoring pipeline, validated eight candidates experimentally and found two pairs outperforming commercial antibodies in sandwich ELISA, then converted the validated antibodies into nanobodies for stability and cost. Their inclusivity work is organised around a self-defined 3A framework - Adaptation, Awareness, Accessibility - and centres on a tactile magnetic genetic-circuit kit for blind children, developed in two phases and donated to a school for the visually impaired.",
-  "awards": ["Inclusivity nominee (High School)"],
+  "summary_zh": "BAID-China 做出 Neurofilux，一項檢測血液中神經絲輕鏈（NfL）的檢驗。NfL 是神經元損傷的生物標記，在阿茲海默症或 ALS 症狀出現前數年就會上升，但目前只能靠昂貴、侵入性或靈敏度不足的方法偵測。他們表現 NfL 的 rod domain（第 93–396 號殘基）作為抗原，用生成式模型 RFantibody 設計候選抗體，以多目標評分流程篩選，實驗驗證八個候選，找出兩組在三明治 ELISA 中表現優於市售抗體的配對，再把已驗證的抗體轉換為奈米抗體以提升穩定性並降低成本。他們的包容性工作圍繞自訂的 3A 架構——Adaptation、Awareness、Accessibility——核心是一套給視障兒童的觸覺磁性基因迴路教具，分兩階段開發，最後捐贈給一所視障學校。",
+  "awards": [
+    "Inclusivity nominee (High School)"
+  ],
   "dry": {
     "frameworks": "Self-defined 3A inclusivity framework (Adaptation: convert visually-presented science into tactile, auditory and interactive forms; Awareness: dispel stereotypes and spread barrier-free science; Accessibility: remove visual, language and technical thresholds), with every activity required to map onto at least one dimension. Grounded in a literature review citing Hayes and Proulx (2023) on barriers for visually impaired science students and CAST (2024) Universal Design for Learning, plus Design Thinking, Empathy Mapping and Universal Design concepts taught by an invited expert. Accessibility work was benchmarked against WCAG.",
+    "frameworks_zh": "自訂的 3A 包容性架構（Adaptation：把以視覺呈現的科學內容轉換為觸覺、聽覺與互動形式；Awareness：破除刻板印象並推廣無障礙科學；Accessibility：移除視覺、語言與技術門檻），並要求每一項活動至少對應其中一個面向。基礎來自一份文獻回顧，引用 Hayes 與 Proulx（2023）關於視障科學學生所面對障礙的研究，以及 CAST（2024）的通用學習設計，另外還有外聘專家講授的設計思考、同理心地圖與通用設計概念。無障礙工作則以 WCAG 作為對標基準。",
     "dataviz": "All wiki charts redrawn in the eight-colour Okabe-Ito colour-blind-safe palette, chosen because each colour keeps enough luminance difference to stay readable in greyscale; the team published a colour-blindness simulation figure verifying that elements remain distinguishable under red-green, blue-yellow and total colour-blindness simulation.",
+    "dataviz_zh": "wiki 上所有圖表都改用八色的 Okabe-Ito 色盲友善配色，選用理由是每個顏色之間都保有足夠的亮度差，轉成灰階後仍可閱讀；該隊並公開一張色盲模擬圖，驗證在紅綠色盲、藍黃色盲與全色盲模擬下各元素仍可區辨。",
     "datascience": "Multi-objective computational scoring to rank AI-generated antibody candidates by predicted sensitivity; comparative legal and building-code research across China, Egypt, Pakistan and the United States compiled into an open-access international accessibility database; pre-activity knowledge survey of junior and senior high school students on neurodegenerative disease awareness.",
+    "datascience_zh": "以多目標計算評分，依預測靈敏度排序 AI 生成的候選抗體；比較中國、埃及、巴基斯坦與美國的法規與建築規範研究，彙整成一個開放取用的國際無障礙資料庫；針對國中與高中學生進行活動前的神經退化疾病認知調查。",
     "software": "RFantibody generative AI model used for de novo antibody design, followed by computational screening and virtual validation of nanobody conversions; a laboratory accessibility audit tool and evaluation form built on universal design principles; a wiki accessibility plugin offering a five-step text magnifier, a language switcher and one-click return-to-top, with semantic HTML restructured so screen readers can parse the navigation hierarchy.",
-    "stack": ["RFantibody (generative antibody design)", "multi-objective computational screening", "sandwich ELISA", "Okabe-Ito colour palette", "semantic HTML / screen-reader-compatible markup", "WCAG", "trilingual wiki (Chinese, English, French)"],
-    "techniques": ["NfL rod domain (93-396 aa) expression as antigen", "antibody pair selection for sandwich ELISA", "nanobody conversion", "CDR loop design on dominant epitopes", "planned digital ELISA at fg/mL sensitivity"]
+    "software_zh": "使用 RFantibody 生成式 AI 模型進行全新抗體設計，接著對奈米抗體轉換版本做計算篩選與虛擬驗證；依通用設計原則建立一套實驗室無障礙稽核工具與評估表；一個 wiki 無障礙外掛，提供五級文字放大、語言切換與一鍵回到頂端，並重寫為語意化 HTML，讓螢幕閱讀器能解析導覽階層。",
+    "stack": [
+      "RFantibody (generative antibody design)",
+      "multi-objective computational screening",
+      "sandwich ELISA",
+      "Okabe-Ito colour palette",
+      "semantic HTML / screen-reader-compatible markup",
+      "WCAG",
+      "trilingual wiki (Chinese, English, French)"
+    ],
+    "techniques": [
+      "NfL rod domain (93-396 aa) expression as antigen",
+      "antibody pair selection for sandwich ELISA",
+      "nanobody conversion",
+      "CDR loop design on dominant epitopes",
+      "planned digital ELISA at fg/mL sensitivity"
+    ]
   },
   "good": {
     "publicEngagement": "BAID-China started from evidence rather than instinct: a literature review on STEM barriers for disabled students (high lab benches, reading instrument data, observing phenomena, the need for written or sign-language support) plus a field visit to Bethel China, a charity for preschool children with visual impairments, where they identified two concrete problems - classes run with several children to one teacher, which blocks understanding, and tactile picture books that deliver touch sensation but almost no actual knowledge content. Both findings set the agenda. First strand: a team member, Audrey, joined the iGEM community project 'Accessibility in Synbio Labs' at the iGEM Annual Community Day in early 2026 and led BAID-China's inclusivity group through Phase 1 (research and database development) and Phase 2 (lab audits) alongside iGEM members from China, Egypt, Pakistan and the United States. With team Concordia-Shanghai they researched China's Accessibility Environment Construction Law, the Law on the Protection of Persons with Disabilities and GB 55019-2021 General Specifications for Accessibility in Architecture and Municipal Engineering, focusing on doorway clearance and wheelchair turning diameter, and the national research sets were compiled into an open-access comparative international database. The audit tool was then reviewed by Chloe Franklin, a scientist who uses a wheelchair, whose feedback changed it substantially: replace the Yes/No/N/A format with a scale that reflects degrees of accessibility because wheelchair users' needs differ widely; add specific measurable criteria with dimensional requirements; and weight audit items by importance, since building entrances, elevators, emergency evacuation routes and restrooms are foundational while equipment height and storage can be adjusted more easily. The team logged her suggestions, took them to weekly meetings, produced a new version, and credits co-creators by name (Sami from Team Toronto 2026, Mohamed, Sophie and Linda). They are honest that pilot testing was not completed within the season and commit to continuing next year. Second strand, and the signature contribution: Chloe Franklin's remark that a beautiful accessible lab on a high floor of a building with no accessible elevator is meaningless pushed the team from physical access to information access. They built a tactile magnetic genetic-circuit kit in which each component is a distinct shape rather than a colour or diagram: two circles of different sizes for input signals (large = normal cell, small = cancer cell), a star for an activator, an X for a repressor, an arrow for a promoter, a rectangle for a gene, a semicircle for a terminator and a pentagon for the output (anticancer drug release). This was embedded in a 45-minute workshop of four activities, run five times for more than 110 participants in total. Activity One sent sighted participants into the team's own laboratory in a wheelchair, where they discovered the doorway was barely wider than the chair, a slope and uneven bricks blocked independent movement, and bench spacing left no turning room. Activity Two brought in David Doyle, Project Head of the Accessibility in Synbio Labs community project, to teach Design Thinking, Empathy Mapping and Universal Design - the point being that environments should be designed around users rather than users adapting to environments. Activity Three recreated a standard Chinese middle-school microscope exercise, but half the participants were denied visual access: one student described cell shapes, features and spatial arrangement in words while the others had to reconstruct the specimen on paper, which reliably failed, demonstrating that people can sit in the same classroom and receive very different amounts of information. Activity Four had blindfolded participants assemble, by touch alone, a circuit that releases a drug when cancer cells are detected but not when normal cells are present. Phase 1 feedback exposed real design flaws - unclear verbal instructions about logical relationships between blocks, and block shapes and sizes that were hard to grasp or distinguish - which taught the team that simply converting a visual circuit diagram into differently shaped magnets is not sufficient. For Phase 2 they contacted a Beijing school for the visually impaired and visited twice. The first visit was deliberately not a lesson: team members read biology picture books to the children, using a caterpillar's growth to introduce change in living things, while observing how the children used language to describe scientific phenomena and how they responded to different question types. Because the seven participating children were aged 3-8 and had no basis for promoters, terminators or expression regulation, the team stripped the terminology out and kept only the Input-Regulation-Output logic, recast as a 'sound machine': children explored block shapes by touch, assembled the machine, and a volunteer clapped three times as the audio output when it worked. The star block was introduced as the machine's 'good assistant' that makes it run and the X block as the 'bad assistant' that stops it, so activation and repression were learned through immediate auditory feedback. The kit was then donated to the school so teachers can keep using and adapting it for different ages. Third strand: wiki accessibility treated as a deliverable with real user testing. All charts were redrawn in the Okabe-Ito palette and verified against red-green, blue-yellow and total colour-blindness simulations; the page code was rebuilt with semantic tags so screen readers can identify headings, paragraphs and buttons; an accessibility plugin in the lower right corner offers five text sizes with line and character spacing adjusted in step so layout does not break when enlarged, aimed explicitly at elderly readers; and the entire project is translated into Chinese, English and French with two switching paths. The team then invited a person with red-green colour blindness, elderly users and non-native English speakers to test it and iterated on their feedback. Fourth strand: public science communication on neurodegenerative disease, prompted by a survey finding that most junior high school students did not know what neurodegenerative diseases are, associated them only with memory decline in the elderly, or said 'this has nothing to do with me', while high school students had the capacity but no systematic channel; an interview with the local health bureau director in the Guangying area established that medical staff, government and charities are all delivering information but public acceptance is low and prevention habits are not forming, partly because the material is monotonous and dependent on visual text.",
+    "publicEngagement_zh": "BAID-China 從證據而非直覺出發：先做了一份關於身障學生 STEM 障礙的文獻回顧（實驗檯過高、讀取儀器數據、觀察現象，以及對文字或手語支援的需求），再實地走訪 Bethel China 這個服務學齡前視障兒童的公益機構，在那裡指認出兩個具體問題——課程是幾個孩子配一位老師，這會阻礙理解；而觸覺繪本給得了觸感，卻幾乎沒有實際的知識內容。這兩項發現定下了後續的工作議程。第一條路線：隊員 Audrey 在 2026 年初的 iGEM Annual Community Day 加入 iGEM 社群專案「Accessibility in Synbio Labs」，並帶領 BAID-China 的包容性小組，與來自中國、埃及、巴基斯坦與美國的 iGEM 成員一起完成第 1 階段（研究與資料庫建置）與第 2 階段（實驗室稽核）。他們與 Concordia-Shanghai 隊共同研究中國的《無障礙環境建設法》、《殘疾人保障法》與 GB 55019-2021《建築與市政工程無障礙通用規範》，聚焦門口淨寬與輪椅迴轉直徑，各國的研究成果最後彙整成一個開放取用的國際比較資料庫。稽核工具隨後由使用輪椅的科學家 Chloe Franklin 審閱，她的意見帶來實質修改：把 Yes/No/N/A 的格式改成能反映無障礙程度的量尺，因為輪椅使用者的需求差異很大；加入附具體尺寸要求的可量測標準；並依重要性為稽核項目加權，因為建築入口、電梯、緊急疏散路線與衛浴是基礎條件，而設備高度與儲物位置相對容易調整。該隊把她的建議逐項記錄，帶進每週會議，產出新版本，並具名致謝共同創作者（Team Toronto 2026 的 Sami，以及 Mohamed、Sophie 與 Linda）。他們坦言試行測試並未在本賽季內完成，並承諾明年繼續。第二條路線，也是該隊的招牌貢獻：Chloe Franklin 說過，一間漂亮的無障礙實驗室若位於沒有無障礙電梯的高樓層，就毫無意義——這句話把團隊從實體通行推向資訊取得。他們做出一套觸覺磁性基因迴路教具，每個元件以不同形狀而非顏色或圖示區分：兩個大小不同的圓形代表輸入訊號（大 = 正常細胞，小 = 癌細胞）、星形是活化子、X 形是抑制子、箭頭是啟動子、長方形是基因、半圓是終止子、五邊形是輸出（釋放抗癌藥物）。這套教具嵌入一場 45 分鐘、四個活動的工作坊，共舉辦五場，累計超過 110 位參與者。活動一讓明眼參與者坐輪椅進入該隊自己的實驗室，他們發現門口只比輪椅寬一點、一道斜坡與不平整的磚面讓人無法自行通行，實驗檯間距也完全沒有迴轉空間。活動二請來「Accessibility in Synbio Labs」社群專案的負責人 David Doyle 講授設計思考、同理心地圖與通用設計——重點在於環境應該圍繞使用者來設計，而不是讓使用者去適應環境。活動三重現中國國中標準的顯微鏡實驗，但有一半參與者被剝奪視覺管道：由一位學生用言語描述細胞形狀、特徵與空間排列，其他人必須在紙上重建該標本，結果一律失敗，示範了人們可以坐在同一間教室，卻接收到差距極大的資訊量。活動四則讓戴眼罩的參與者純靠觸覺組裝一組迴路，使其在偵測到癌細胞時釋放藥物、在正常細胞存在時不釋放。第 1 階段的回饋暴露出真正的設計缺陷——關於積件之間邏輯關係的口頭說明不夠清楚，積件的形狀與大小也不易掌握或區辨——這讓該隊明白，單純把視覺迴路圖換成不同形狀的磁鐵並不足夠。第 2 階段他們聯繫北京一所視障學校，前後拜訪兩次。第一次刻意不上課：隊員為孩子朗讀生物繪本，用毛毛蟲的成長引入生物的變化，同時觀察孩子如何用語言描述科學現象、以及他們對不同問法的反應。因為參與的七位孩子年齡在 3 至 8 歲之間，對啟動子、終止子或表現調控毫無基礎，該隊把術語全部拿掉，只保留「輸入—調控—輸出」的邏輯，改寫成一台「聲音機器」：孩子用觸覺探索積件形狀、組裝機器，成功時由一位志工拍手三下作為聲音輸出。星形積件被介紹為讓機器運轉的「好幫手」，X 形積件則是讓它停下來的「壞幫手」，於是活化與抑制透過即時的聽覺回饋被學會。教具隨後捐給這所學校，讓老師能持續使用並針對不同年齡調整。第三條路線：把 wiki 無障礙當成一項交付成果，並做了真實的使用者測試。所有圖表改用 Okabe-Ito 配色，並以紅綠色盲、藍黃色盲與全色盲模擬驗證；頁面程式碼以語意化標籤重建，讓螢幕閱讀器能辨識標題、段落與按鈕；右下角的無障礙外掛提供五種文字大小，行距與字距同步調整，放大時版面不會破掉，明確是為年長讀者設計；整個專案並翻譯成中文、英文與法文，提供兩種切換途徑。該隊接著邀請一位紅綠色盲者、年長使用者與非英語母語者實測，再依回饋反覆修改。第四條路線：關於神經退化疾病的科普。起因是一份調查發現，多數國中生不知道神經退化疾病是什麼，只把它與老年人的記憶衰退連在一起，或是說「這跟我沒關係」，而高中生雖有能力理解，卻缺乏系統性的管道；另一場對光影地區衛生主管的訪談指出，醫療人員、政府與公益組織都在傳遞資訊，但公眾接受度低、預防習慣也沒有養成，部分原因是素材單調且依賴視覺文字。",
     "ihp": "The project's human practices thread runs through disease awareness and screening access: interviews with the local health bureau director in the Guangying area on why existing neurodegenerative-disease education fails to land, plus in-school surveys establishing an age-stratified knowledge gap, shaped the public communication strategy to differentiate content depth by audience. The inclusivity work is itself integrated practice - the Chloe Franklin and David Doyle consultations each produced documented, traceable changes to an artefact rather than general encouragement.",
+    "ihp_zh": "該專案的 human practices 主線貫穿疾病認知與篩檢可得性：對光影地區衛生主管的訪談探討現有神經退化疾病教育為何無法打中受眾，加上校內調查確立了依年齡分層的知識落差，兩者共同形塑了依受眾區分內容深度的科普策略。包容性工作本身就是整合式實踐——與 Chloe Franklin 和 David Doyle 的諮詢，各自都在某件產出上留下有紀錄、可追溯的修改，而不只是泛泛的鼓勵。",
     "realWorld": "Open outputs: the comparative international laboratory-accessibility legal database, the laboratory accessibility audit tool PDF, the audit evaluation form PDF, the Chinese legal research document, the trilingual accessible wiki itself, and the physical tactile magnetic genetic-circuit kit, which was donated to a Beijing school for the visually impaired for continued teaching use. Commitments are explicit: pilot testing of the audit tool continues into the next season in collaboration with the wider iGEM community.",
-    "partners": ["Bethel China (charity for preschool children with visual impairments; seven children tested the kit)", "a school for the visually impaired in Beijing (kit donated)", "iGEM community project 'Accessibility in Synbio Labs' (David Doyle, Project Head)", "Chloe Franklin, scientist and wheelchair user (audit tool review)", "Concordia-Shanghai iGEM (joint Chinese legal research)", "Team Toronto 2026 (Sami) and Mohamed, co-creators of the audit tool", "iGEM members from Egypt, Pakistan and the United States", "Guangying area local health bureau"]
+    "realWorld_zh": "開放產出：國際實驗室無障礙法規比較資料庫、實驗室無障礙稽核工具 PDF、稽核評估表 PDF、中國法規研究文件、三語無障礙 wiki 本身，以及實體的觸覺磁性基因迴路教具——後者已捐贈給北京一所視障學校，供其持續教學使用。承諾也寫得明確：稽核工具的試行測試將延續到下一賽季，與更廣的 iGEM 社群合作進行。",
+    "partners": [
+      "Bethel China (charity for preschool children with visual impairments; seven children tested the kit)",
+      "a school for the visually impaired in Beijing (kit donated)",
+      "iGEM community project 'Accessibility in Synbio Labs' (David Doyle, Project Head)",
+      "Chloe Franklin, scientist and wheelchair user (audit tool review)",
+      "Concordia-Shanghai iGEM (joint Chinese legal research)",
+      "Team Toronto 2026 (Sami) and Mohamed, co-creators of the audit tool",
+      "iGEM members from Egypt, Pakistan and the United States",
+      "Guangying area local health bureau"
+    ]
   },
   "images": [
-    {"url": "https://static.igem.wiki/teams/6089/wiki/5.avif", "caption": "Workshop Activity One: participants navigate the team's own laboratory in a wheelchair and record the barriers they meet", "credit": "Team BAID-China, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6089/wiki/12.avif", "caption": "Workshop Activity Three: one participant describes a microscope specimen in words while others try to reconstruct it on paper", "credit": "Team BAID-China, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6089/wiki/16.avif", "caption": "Workshop Activity Four: blindfolded participants build a genetic circuit from shape-coded magnetic pieces by touch alone", "credit": "Team BAID-China, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6089/wiki/24.avif", "caption": "Phase 2 at a Beijing school for the visually impaired: seven children aged 3-8 build a 'sound machine' using the tactile kit", "credit": "Team BAID-China, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6089/wiki/in1.avif", "caption": "The Okabe-Ito colour-blind-safe palette adopted for every chart on the wiki, verified with colour-blindness simulation", "credit": "Team BAID-China, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6089/wiki/28.avif", "caption": "Across five workshop sessions the team reached more than 110 participants", "credit": "Team BAID-China, iGEM 2026 wiki"}
+    {
+      "url": "https://static.igem.wiki/teams/6089/wiki/5.avif",
+      "caption": "Workshop Activity One: participants navigate the team's own laboratory in a wheelchair and record the barriers they meet",
+      "caption_zh": "工作坊活動一：參與者坐輪椅通行該隊自己的實驗室，並記錄沿途遇到的障礙",
+      "credit": "Team BAID-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6089/wiki/12.avif",
+      "caption": "Workshop Activity Three: one participant describes a microscope specimen in words while others try to reconstruct it on paper",
+      "caption_zh": "工作坊活動三：一位參與者用言語描述顯微鏡標本，其他人試著在紙上把它重建出來",
+      "credit": "Team BAID-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6089/wiki/16.avif",
+      "caption": "Workshop Activity Four: blindfolded participants build a genetic circuit from shape-coded magnetic pieces by touch alone",
+      "caption_zh": "工作坊活動四：戴眼罩的參與者純靠觸覺，用形狀編碼的磁性積件搭出一組基因迴路",
+      "credit": "Team BAID-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6089/wiki/24.avif",
+      "caption": "Phase 2 at a Beijing school for the visually impaired: seven children aged 3-8 build a 'sound machine' using the tactile kit",
+      "caption_zh": "第 2 階段在北京一所視障學校：七位 3 至 8 歲的孩子用這套觸覺教具組出一台「聲音機器」",
+      "credit": "Team BAID-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6089/wiki/in1.avif",
+      "caption": "The Okabe-Ito colour-blind-safe palette adopted for every chart on the wiki, verified with colour-blindness simulation",
+      "caption_zh": "wiki 上每一張圖表都採用的 Okabe-Ito 色盲友善配色，並以色盲模擬驗證",
+      "credit": "Team BAID-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6089/wiki/28.avif",
+      "caption": "Across five workshop sessions the team reached more than 110 participants",
+      "caption_zh": "五場工作坊累計觸及超過 110 位參與者",
+      "credit": "Team BAID-China, iGEM 2026 wiki"
+    }
   ],
   "gemsTakeaway": "Build the accessible teaching aid, then pilot it twice: first with sighted participants under blindfold so you catch your own design flaws in a controlled setting, then with the actual users after stripping out the terminology they do not yet have - and donate the finished kit to the partner school so it keeps teaching after you leave.",
+  "gemsTakeaway_zh": "先做出無障礙教具，再試教兩次：第一次讓明眼參與者戴上眼罩，在可控情境下抓出自己的設計缺陷，第二次面對真正的使用者，並先把他們還不具備的術語全部拿掉——最後把完成的教具捐給合作學校，讓它在你們離開之後繼續被用來教學。",
   "sources": [
     "https://2026.igem.wiki/baid-china/",
     "https://2026.igem.wiki/baid-china/inclusivity",

@@ -1,0 +1,647 @@
+{
+  "id": "ihp-depth",
+  "tab": "good",
+  "kicker": "Original analysis",
+  "title": "Who actually let the outside world change the science",
+  "lede": "Across 93 teams, closing the loop has stopped being the distinction and become the norm — and almost every loop that closed was closed by a credentialled expert rather than by anybody the criterion is rhetorically about.",
+  "body": "A score of four is a sentence, not a stakeholder list: a name, a specific thing said, and a design that is visibly different afterwards. Wageningen's Triton has three modules rather than one because Peter Fischer of Aqualab Zuid explained that trifluoroacetate can only be measured by LC-MS at a central lab, which forced an on-site biosensor, and because Bert van der Waal and Peyman Salehian showed that even tenfold reverse-osmosis concentration leaves it far too dilute, which forced a capture module. **GEMS-Taiwan** was releasing engineered Bacillus into soil until Prof. Chen Wen-Liang told them it could be neither contained nor made to sense temperature precisely; the hollow-fibre perfusion reactor and the electronic AIoT sensing layer both came out of that one April conversation. UCAS-China dropped NKX2-1 as a cargo and put SLPI in its place because Professor Huaiyong Chen said the first matters in development and barely in adulthood. RDFZ-China built bcsABCD in both BL21(DE3) and C41(DE3) and switched host after Professor Haibo Zhang warned that a working genetic module does not imply an efficient one; WUXI-DSAS excised gtdT on Dr Tengfei Hu's advice and recovered the linear dose-response its first-generation sensor could not give; IISER-Kolkata rebuilt its kill-switch trigger around the hypochlorite-sensing regulator RclR after a wastewater engineer pointed out that Indian plants disinfect with sodium hypochlorite rather than UV; and Oxford gave up a living Snodgrassella symbiont for heat-inactivated yeast because regulators pushed back against the beekeepers who had asked for it, then published what that cost its own users.\n\nThe three Best IHP winners share a method, and it is organisational rather than intellectual: the practice is wired into the engineering, not appended to it. **TU Delft** ran Value Sensitive Design in three declared passes and translated values into requirements, labelling the ones it could not meet as Future Perspectives rather than dropping them quietly; UCAS-China built its RCSF cycle as a deliberate parallel to DBTL and gave the human practices group the standing job of tracking every subteam's bottleneck; GEMS-Taiwan ran four thematic expert pipelines with five continuously engaged experts. What the winners do not have is a monopoly on depth. Oxford, Wageningen and UFABC-Brazil were nominees with chains at least as traceable, and UFABC declared its confirmation and refutation rules before seeing its survey results, then redrew its own SWOT when two assumptions failed. **Madrid-UCM**, which published the only genuine closure criterion in the cohort, got no human practices nomination at all.\n\nThe formats that changed designs are narrow and unglamorous. One of them is a single conversation with whoever operates the thing: Veolia's technical director for LYON, a sulfur-recovery engineer of thirty-three years for UOttawa, an optometrist for UAlberta, wet-market vendors for HongKong-JSS who demanded a number and got a wavelength-resolved spectrometer in place of a 14-channel colour sensor. Another is protocol-level consultation with whoever actually runs the technique, which is where chassis and construct changes come from: DTU to Komagataella phaffii, NFLSHS-CHINA from two plasmids to one, Heidelberg to a Serratia expression cassette. Add regulators contacted while the design is still open, peer teams handing over negative data as Darmstadt 2025 did to Padua on pcrABCD's oxygen sensitivity, and written-scorecard pitch events, which are cheap and work: Stanford's BIOME Shark Tank produced the microneedle segmentation pipeline. Against that, the school workshop, the museum stand, the carnival booth, the panel discussion and SDG mapping produced headcounts and nothing traceable, and the large public survey changed vocabulary with near-perfect reliability and hardware almost never.\n\nThe high-school tier is fully competitive wherever the work is user-facing and iterative. HongKong-JSS's farm-driven hardware revisions, measured as a drop from 7.41 to 1.95 per cent coefficient of variation, are better user-led engineering than most collegiate teams managed; **Hongwen School** struck three marketing claims on a gastroenterologist's evidence ladder and changed its selection antibiotic on a professor's re-annotation; HFI, NFLSHS-CHINA, RDFZ-China and WUXI-DSAS all changed circuits or hosts for a named reason; and QingdaoAcademy compressed twenty-two activities into thirteen numbered decisions that split a one-pot process in two and abandoned a planned pH-based function switch outright. Where the tier is not competitive is institutional reach: nothing in it approaches Oxford's EPA-FDA-USDA-CBD mapping, Wageningen's analysis of the non-viable-GMO approval route, UCL's Water UK discharge gap or DTU's correspondence with the European Environment Agency, and formal ethics infrastructure is rare, with Baltimore's community-lab board the main exception; the tier also almost never publishes failures of access the way DTU names the turbine makers who never replied.\n\nThe uncomfortable finding is who actually caused the changes. Of 64 teams that closed a loop, the loop was closed by a credentialled technical expert in nearly every case; the publics, patients and communities that the criterion is rhetorically about overwhelmingly changed the vocabulary and not the vector. Cornell's burn survivors changed what the team promises, Princeton's myeloma patients changed the word 'virus', HFI's 434 respondents changed 'genetically modified' to 'engineered' — all real, none of it touching a construct. Genuine counter-examples number six or seven in 93: LYON removed every living cell from its filter because the public objected, ICJFLS turned public fear into a four-layer containment design, HongKong-JSS re-specified a sensor because farmers wanted a number, UFABC-Brazil routed its seizure alert to a caregiver because a psychiatrist in the public system pointed out that patients who cannot recognise an aura cannot act on one, a beauty-salon manager's distrust of local seaweed put ultrafiltration desalting and endotoxin limits into QingdaoAcademy's plan, and a landfill worker of six years gave Hongwen School the handling cost that made local processing a hard constraint. Two further discomforts: the branded cycle acronym is now universal and predicts nothing, with Jilin-China's Social Shaping Loop and GreatBay-SCIE's five-stage framework scoring 2 while plain tables score 4; and awards track legibility rather than consequence, since **KIT** won Inclusivity and GreatBay-SCIE was nominated for Best IHP on evidence that scores 2, while Madrid-UCM, Hongwen School, GYHS and WUXI-DSAS closed loops nobody rewarded.",
+  "cards": [
+    {
+      "kicker": "Worked example",
+      "title": "Two of three modules were somebody else's idea",
+      "body": "Wageningen set out only to degrade trifluoroacetate. Peter Fischer at Aqualab Zuid, one of six labs legally tasked with assessing Dutch drinking water, explained that the compound can only be measured by LC-MS on samples shipped to a central lab, so the bioreactor could not be operated at all without an on-site readout: that created the biosensor module. Bert van der Waal and Peyman Salehian then showed that tenfold reverse-osmosis concentration takes 2.2 micrograms per litre only to 22, against a milligram-per-litre target, which created the capture module. Frank Schoonenberg of Vitens moved the whole deployment target to reverse-osmosis concentrate, and Tue Kjaergaard Nielsen changed the readout to released fluoride because measuring TFA disappearance mistakes adsorption for degradation.",
+      "chips": [
+        "WageningenUR",
+        "Overgrad",
+        "Score 4",
+        "Utility and lab engineers"
+      ]
+    },
+    {
+      "kicker": "Worked example",
+      "title": "The conversation that moved sensing out of the cell",
+      "body": "GEMS-Taiwan's original design put engineered Bacillus subtilis in the soil with a DesK-DesR system reading temperature directly. On 10 April, Prof. Chen Wen-Liang and bioprocess experts said two things were wrong: the bacteria could not be contained, and biological sensing was neither precise nor controllable enough. Sensing moved out of the cell into electronic sensors and an AIoT model, and a hollow-fibre perfusion bioreactor was built to hold the bacteria in while letting the protectants out. A later public forum with natural-farming advocates, who argued that a crop protected from every stress never builds tolerance, became the specification for the release threshold rather than an objection to be managed.",
+      "chips": [
+        "GEMS-Taiwan",
+        "High School",
+        "Score 4",
+        "Best IHP winner"
+      ]
+    },
+    {
+      "kicker": "Worked example",
+      "title": "When the regulator overrules the user",
+      "body": "Danny Le Feuvre of the Australian Honey Bee Industry Council and Mike Allerton of Amateur Beekeepers Australia both wanted a persistent living Snodgrassella alvi gut symbiont because it minimises beekeeper labour. Oxford did not simply comply: it took the question to Scottish and Australian regulators and the Soil Association, who pushed the other way, and switched to heat-inactivated dried yeast. The team then stated plainly what that cost — the persistence the beekeepers valued, meaning repeat dosing and more labour. A joint meeting with EPA, FDA and USDA staff stopped them treating the inactivated route as a universal regulatory shortcut, forcing jurisdiction-by-jurisdiction mapping instead.",
+      "chips": [
+        "Oxford",
+        "Undergrad",
+        "Score 4",
+        "Best IHP nominee"
+      ]
+    },
+    {
+      "kicker": "Worked example",
+      "title": "A farmer asked for a number",
+      "body": "HongKong-JSS built a mercury biosensor with a visible colour readout. Koo's Farm and local wet-market vendors said they wanted numerical readings, not qualitative colour, which is the direct reason the AS7343 14-channel sensor was replaced by a wavelength-resolved Hamamatsu C12880 with a numerical display. Users then reported excessive syringe force on the V1 filter stack, so manual delivery became pump-driven dosing, improving the coefficient of variation from 7.41 to 1.95 per cent. More Happy Farm said plainly that not every farmer wants to own a device, which pushed them to a service model — and after a 195-person demonstration found high perceived confidence, the team separated device status from safety judgement in the interface because confidence is not accuracy.",
+      "chips": [
+        "HongKong-JSS",
+        "High School",
+        "Score 4",
+        "Non-expert changed hardware"
+      ]
+    },
+    {
+      "kicker": "Method that nobody rewarded",
+      "title": "The only team that defined what 'closed' means",
+      "body": "Madrid-UCM built a five-rung integration ladder with an explicit closure criterion: a loop counts as closed only when the revised design goes back to the person whose input triggered it and their response produces a further change. They then demonstrated it on materials — Carmen Garcia Payo and Loreto Garcia Fernandez proposed core-shell capsules, the team built them but could not see the internal structure, took that problem back to the same researchers, and got magnetite as an optical tracer plus cryosectioning, which became a wall-thickness and leakage pipeline. Aurelio Hidalgo's point that a single-use biocatalyst is neither economical nor recoverable killed both placeholder designs and moved the enzyme panel onto a reusable solid support. They also document a change they chose not to make, on the grounds that not adding a pathway is a design decision too. No Best IHP nomination.",
+      "chips": [
+        "Madrid-UCM",
+        "Undergrad",
+        "Score 4",
+        "Not nominated"
+      ]
+    },
+    {
+      "kicker": "Format that mostly did not work",
+      "title": "The survey that changes your vocabulary",
+      "body": "Large public surveys are the most common instrument in the cohort and the least consequential for design. HFI's 434 responses replaced 'genetically modified' with 'engineered' across all materials and rebuilt the education from basics. Peking's 539 respondents named three priorities the team concedes already outlined the finished project. UCAS-China's 419 public respondents and HongKong-HS's 420 produced awareness statistics and workshop plans. The honest version is GHCIS, which found that its price and speed questions branched into samples too small to use and explicitly refused to convert 'within RMB 30' into a product requirement, carrying it forward as a question for frontline users instead.",
+      "chips": [
+        "HFI",
+        "Peking",
+        "GHCIS",
+        "UCAS-China",
+        "Vocabulary, not vector"
+      ]
+    }
+  ],
+  "table": {
+    "head": [
+      "Team",
+      "Section",
+      "Score",
+      "What changed"
+    ],
+    "rows": [
+      [
+        "ABOA",
+        "Overgrad",
+        "4",
+        "Purified enzymes dropped for whole cells on carriers; reactor moved to a side stream"
+      ],
+      [
+        "Al-Nahrain-IRAQ",
+        "Undergrad",
+        "4",
+        "AI model abandoned for equation-based modelling; lab data entry page added"
+      ],
+      [
+        "Athens",
+        "Overgrad",
+        "4",
+        "Delivery moved from spray to feed; live phage dropped for a non-replicating enzyme"
+      ],
+      [
+        "BGCFullerton",
+        "High School",
+        "4",
+        "CIF peptides dropped; regolith mixture plan and model validation changed"
+      ],
+      [
+        "CHINAGuangdongShimen",
+        "High School",
+        "4",
+        "Multivalent antibody replaced by a single monovalent nanobody"
+      ],
+      [
+        "Cornell",
+        "Undergrad",
+        "4",
+        "Homemade high-voltage supply dropped; hypoxia AND gate added for specificity"
+      ],
+      [
+        "DTU-Denmark",
+        "Overgrad",
+        "4",
+        "Enzyme step reframed as solvolysis complement; chassis to K. phaffii; docking filter dropped"
+      ],
+      [
+        "ETH-Zurich",
+        "Overgrad",
+        "4",
+        "Pivot off the Drosophila biopesticide; split-cargo dual targeting invented"
+      ],
+      [
+        "Eton-College-UK",
+        "High School",
+        "4",
+        "Plasmid backbone changed; reusable reader plus disposable cartridge fixed"
+      ],
+      [
+        "GCGS",
+        "High School",
+        "4",
+        "VOC module de-scoped; temperature kill switch added, pH switch declined with a reason"
+      ],
+      [
+        "GEMS-Taiwan",
+        "High School",
+        "4",
+        "Sensing moved out of the cell; perfusion reactor added; proline delivery abandoned"
+      ],
+      [
+        "GYHS",
+        "High School",
+        "4",
+        "Bond strength replaced by a seven-part requirement set; V2 handling redesigned"
+      ],
+      [
+        "HFI",
+        "High School",
+        "4",
+        "Lysine-responsive promoter abandoned for constitutive expression"
+      ],
+      [
+        "HK-Joint-School",
+        "High School",
+        "4",
+        "Goal shifted from fire retardancy to non-toxic, low-smoke; benchmark added"
+      ],
+      [
+        "HKSSC",
+        "High School",
+        "4",
+        "Kill switch and controlled use; MIC/growth-rate design; pH range from regulator data"
+      ],
+      [
+        "HKU-HongKong",
+        "Unlisted",
+        "4",
+        "Hypothesis narrowed to partial inflammation modulation; M1/M2 framing dropped"
+      ],
+      [
+        "HUST-China",
+        "Undergrad",
+        "4",
+        "Reflectin module abandoned entirely for a fashion-waste cellulose route"
+      ],
+      [
+        "HangzhouFourteenAP",
+        "High School",
+        "4",
+        "Target moved from mineralised calculus to pre-mineralisation biofilm matrix"
+      ],
+      [
+        "Heidelberg",
+        "Undergrad",
+        "4",
+        "Expression host swapped to a Serratia cassette; engineering retargeted onto GvpC"
+      ],
+      [
+        "HongKong-HS",
+        "High School",
+        "4",
+        "Toehold switch replaced by HCR; ThT fluorescence replaced by G4/hemin colour"
+      ],
+      [
+        "HongKong-JSS",
+        "High School",
+        "4",
+        "Colour sensor replaced by spectrometer; syringe replaced by pump dosing"
+      ],
+      [
+        "Hongwen School",
+        "High School",
+        "4",
+        "IBS claims struck; selection marker changed; near-site processing made a hard constraint"
+      ],
+      [
+        "ICJFLS",
+        "High School",
+        "4",
+        "Capsule killed for mouthwash/lozenge/gum set; plasmid dropped for chromosomal integration"
+      ],
+      [
+        "IISER-Kolkata",
+        "Unlisted",
+        "4",
+        "Kill switch rebuilt around a hypochlorite sensor because plants do not use UV"
+      ],
+      [
+        "KAUST-KSA",
+        "Overgrad",
+        "4",
+        "Dsup added to the chassis; payload reprioritised by real mission conditions"
+      ],
+      [
+        "LYON",
+        "Undergrad",
+        "4",
+        "All living cells removed from the filter; households ruled out as customers"
+      ],
+      [
+        "Lambert-GA",
+        "High School",
+        "4",
+        "Nanobodies abandoned for minibinders; target narrowed to the VP3 P-domain"
+      ],
+      [
+        "MIT-MAHE",
+        "Undergrad",
+        "4",
+        "Target customer moved from fragrance houses to aroma compound manufacturers"
+      ],
+      [
+        "Madrid-UCM",
+        "Undergrad",
+        "4",
+        "Secretion and consortium killed for immobilised enzymes; containment above performance"
+      ],
+      [
+        "Marburg",
+        "Overgrad",
+        "4",
+        "5'UTR redesigned so the PPR site and RBS are disconnected; RBS testing dropped"
+      ],
+      [
+        "McGill",
+        "Undergrad",
+        "4",
+        "Dropped ultra-purification; feedstock moved to fresh tailings; tolling business model"
+      ],
+      [
+        "McMaster-Canada",
+        "Undergrad",
+        "4",
+        "Oncology and allergy concepts dropped for localised gut-associated systems"
+      ],
+      [
+        "Muenster-University",
+        "Overgrad",
+        "4",
+        "Prediction pipeline rebuilt with a geometric scoring layer; NLR route dropped"
+      ],
+      [
+        "NBJF",
+        "High School",
+        "4",
+        "DNA storage device abandoned for the enzymatic-writing bottleneck"
+      ],
+      [
+        "NFLSHS-CHINA",
+        "High School",
+        "4",
+        "Two plasmids collapsed into one; aqueous formulation killed for oil and capsule"
+      ],
+      [
+        "NJU-China",
+        "Undergrad",
+        "4",
+        "Recorded associations split from model predictions in every view"
+      ],
+      [
+        "NUS-Singapore",
+        "Undergrad",
+        "4",
+        "Primary use moved from industrial monitoring to early-stage R&D"
+      ],
+      [
+        "NYCU-Taiwan",
+        "Undergrad",
+        "4",
+        "Claimed advantages withdrawn after reading a competitor's documentation"
+      ],
+      [
+        "Oxford",
+        "Undergrad",
+        "4",
+        "Living symbiont chassis dropped for heat-inactivated yeast, with the cost published"
+      ],
+      [
+        "PSI Korea",
+        "High School",
+        "4",
+        "Auto-exposure disabled and imaging conditions fixed; instrument separated from material"
+      ],
+      [
+        "Princeton",
+        "Undergrad",
+        "4",
+        "AlphaFold3 cut from the pipeline; IL-6 and amyloid-beta targets dropped"
+      ],
+      [
+        "QingdaoAcademy",
+        "High School",
+        "4",
+        "One-pot process split in two; pH switch abandoned; desalting and endotoxin control added"
+      ],
+      [
+        "RDFZ-China",
+        "High School",
+        "4",
+        "Host switched to C41(DE3); metal anchors replaced by on-site stone"
+      ],
+      [
+        "SEHS",
+        "High School",
+        "4",
+        "Indication moved from liver to gastric cancer; binding re-tested per format"
+      ],
+      [
+        "SMS-Shenzhen",
+        "High School",
+        "4",
+        "Target customer relocated from front-end recyclers to hydrometallurgical tail streams"
+      ],
+      [
+        "SUIS-SFLS",
+        "High School",
+        "4",
+        "Deliverable rewritten from finished dressing to characterised protein plus QC records"
+      ],
+      [
+        "Stanford University",
+        "Undergrad",
+        "4",
+        "Burns dropped for keloids; target moved from prevention to established scars"
+      ],
+      [
+        "Stockholm",
+        "Overgrad",
+        "4",
+        "Open release abandoned for a sealed reactor sited at the membrane-bioreactor stage"
+      ],
+      [
+        "TAU-Israel",
+        "Overgrad",
+        "4",
+        "Markers stratified across superficial and deep lesions; biosensor demoted to triage"
+      ],
+      [
+        "TU Delft",
+        "Overgrad",
+        "4",
+        "Antibiotics dropped for AMPs; pre-coated implant instead of in-theatre paste"
+      ],
+      [
+        "UAlberta",
+        "Undergrad",
+        "4",
+        "Binding-pocket release abandoned; yeast dropped for E. coli; GFP to mScarlet"
+      ],
+      [
+        "UCAS-China",
+        "Undergrad",
+        "4",
+        "NKX2-1 cargo dropped for SLPI; repositioned to asthma maintenance"
+      ],
+      [
+        "UCNZ",
+        "Undergrad",
+        "4",
+        "Distributed plants dropped for one central facility; sustainability claim narrowed"
+      ],
+      [
+        "UFABC-Brazil",
+        "Overgrad",
+        "4",
+        "Pipetted cell-free reaction replaced by a paper strip; alert routed to a support network"
+      ],
+      [
+        "UNILausanne",
+        "Overgrad",
+        "4",
+        "Defend strategy kept against the model's own advice; model scope declared the limit"
+      ],
+      [
+        "UOttawa",
+        "Undergrad",
+        "4",
+        "Target stream moved from bitumen to diesel; pH loop added to the P&ID"
+      ],
+      [
+        "UZurich",
+        "Overgrad",
+        "4",
+        "Machine-learning plan dropped for established software; root cohesion added to the model"
+      ],
+      [
+        "Uni-Padua-IT",
+        "Undergrad",
+        "4",
+        "Cold-tolerance module cut; perchlorate genes compartmentalised in heterocysts"
+      ],
+      [
+        "Vilnius-Lithuania",
+        "Undergrad",
+        "4",
+        "Gel software moved off image classification onto band-distance matching"
+      ],
+      [
+        "WUXI-DSAS",
+        "High School",
+        "4",
+        "gtdT excised to restore linearity; output changed to a creatinine ratio"
+      ],
+      [
+        "WageningenUR",
+        "Overgrad",
+        "4",
+        "Biosensor and capture modules created; readout changed to released fluoride"
+      ],
+      [
+        "William-and-Mary",
+        "Undergrad",
+        "4",
+        "Readout replaced by CFU viability; seawater microcosm experiments added"
+      ],
+      [
+        "Worldshaper-Shanghai",
+        "High School",
+        "4",
+        "Capacity-building dropped for licensing; sunlight-is-greener claims deleted"
+      ],
+      [
+        "XJTLU-China",
+        "Undergrad",
+        "4",
+        "Success redefined as soluble protein, not total expression"
+      ],
+      [
+        "ASIJ-Tokyo",
+        "High School",
+        "3",
+        "Positioning moved from replacement to extra source; patch route added"
+      ],
+      [
+        "Baltimore",
+        "High School",
+        "3",
+        "Preservation study and patent strategy added; changes peripheral to the build"
+      ],
+      [
+        "CalPolySLO",
+        "Undergrad",
+        "3",
+        "Survivability testing and a misuse framework added; the build itself unchanged"
+      ],
+      [
+        "DKU",
+        "Undergrad",
+        "3",
+        "Per-application immunogenicity thresholds and clearer tool output; attribution collective"
+      ],
+      [
+        "GHCIS",
+        "High School",
+        "3",
+        "Microfluidic format replaced by filter paper, on unnamed industry advice"
+      ],
+      [
+        "GU Frankfurt",
+        "Overgrad",
+        "3",
+        "Binder accuracy made the governing constraint; biggest change was procedural"
+      ],
+      [
+        "Kyoto",
+        "Undergrad",
+        "3",
+        "Food themes abandoned and the question reframed; specific changes not itemised"
+      ],
+      [
+        "Peking",
+        "Undergrad",
+        "3",
+        "Broad-spectrum pesticide and crude biocontrol routes dropped; chain not attributed"
+      ],
+      [
+        "SDU-Denmark",
+        "Overgrad",
+        "3",
+        "Target moved to reliable low-power generation; no named source"
+      ],
+      [
+        "SJTU-BioX-Shanghai",
+        "Undergrad",
+        "3",
+        "Repositioned as a post-debridement dressing with physical containment; sources unnamed"
+      ],
+      [
+        "Toronto",
+        "Overgrad",
+        "3",
+        "Contained bioreactor and close-homology enzymes preferred; stakeholders unnamed"
+      ],
+      [
+        "UCL",
+        "Undergrad",
+        "3",
+        "Regulatory gap found and a techno-economic model built; the device did not change"
+      ],
+      [
+        "UPF-Barcelona",
+        "Undergrad",
+        "3",
+        "Central claim shrunk from bulk soil water to a hydration shell at the root"
+      ],
+      [
+        "ZJU-China",
+        "Undergrad",
+        "3",
+        "Cost weighted more heavily in material design; attribution aggregated"
+      ],
+      [
+        "ZQT-Nanjing",
+        "High School",
+        "3",
+        "Narrowed from general skincare to barrier repair after a 397-person survey"
+      ],
+      [
+        "BAID-China",
+        "High School",
+        "2",
+        "Communication depth differentiated by audience; accessibility artefacts revised"
+      ],
+      [
+        "BNDS-China",
+        "High School",
+        "2",
+        "Workflow discipline borrowed from a peer team; rest is framing"
+      ],
+      [
+        "BOKU-Vienna",
+        "Overgrad",
+        "2",
+        "Claims key design decisions changed but does not say which"
+      ],
+      [
+        "CAU-China",
+        "Undergrad",
+        "2",
+        "Need reported from Malawi and Zambia; no design consequence recorded"
+      ],
+      [
+        "GreatBay-SCIE",
+        "High School",
+        "2",
+        "Slogan changed on stigma grounds; design philosophy only loosely attributed"
+      ],
+      [
+        "HBUT-China",
+        "Undergrad",
+        "2",
+        "Named virologist fed the risk assessment; no design consequence stated"
+      ],
+      [
+        "Jilin-China",
+        "Undergrad",
+        "2",
+        "Double-loop reframing of what counts as success; consequences not shown"
+      ],
+      [
+        "KIT",
+        "Overgrad",
+        "2",
+        "Survey converted into two inclusivity deliverables; science untouched"
+      ],
+      [
+        "Labi-Taiwan",
+        "High School",
+        "2",
+        "Complements-not-replaces framing and a detects-not-diagnoses statement"
+      ],
+      [
+        "Mingdao",
+        "High School",
+        "2",
+        "Five honest questions, including a no-project condition; no design change recorded"
+      ],
+      [
+        "UMA Malaga",
+        "Undergrad",
+        "2",
+        "Question reframed around the diagnostic pathway, not the device"
+      ],
+      [
+        "UOregon",
+        "Overgrad",
+        "2",
+        "Plant operators confirmed the gap; equity framing shaped, design did not"
+      ],
+      [
+        "NIS Almaty-Medeu",
+        "High School",
+        "1",
+        "Questions published in advance; no answers or consequences recorded yet"
+      ],
+      [
+        "Yucai-SZ",
+        "High School",
+        "1",
+        "A 719-response survey tested the premise; no consequence recorded"
+      ]
+    ]
+  },
+  "method": "Every team in this report is a Top 10 or special-prize winner or nominee, so this is the most decorated tenth of the competition and not a representative sample. Read '64 of 93 closed the loop' as 'closing the loop is normal among teams that win things', not as a statement about iGEM at large. Every team file with any good.ihp content was scored on the four-point rubric from what the file itself states: a 4 required a named stakeholder, a specific thing said, and a change to the build, the deployment, the readout, the safety design or the business model that the file ties to that input. Teams whose only documented consequence was a change of framing, language, education material or evidence package scored 2 or 3 however elaborately the process was branded, and awards were ignored throughout. The rubric cannot verify that a change was made because of the advice rather than attributed to it afterwards, cannot see the wiki behind the summary, and cannot distinguish a thin causal chain from a thin write-up of a thick one. Files continued to land while the scoring ran; all 93 present at the end were read and scored, so the set is complete as of writing but not closed.",
+  "scored": 93
+}

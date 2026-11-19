@@ -1,0 +1,63 @@
+{
+  "id": "good-patterns",
+  "tab": "good",
+  "kicker": "Original analysis",
+  "title": "What separated real engagement from outreach theatre",
+  "title_zh": "真正的參與，和表演式推廣，差別在哪裡",
+  "lede": "Across the 2026 field, the teams whose Science for Good work counted did four things the rest did not.",
+  "lede_zh": "綜觀 2026 年的參賽團隊，那些「科學向善」真正有份量的隊伍，做了另外四件其他人沒做的事。",
+  "body": "**They designed education from data, then measured it like an experiment.** UCAS-China did not start from \"raise awareness\". It ran clinician interviews and a 461-person questionnaire, found that patients stop medication once they feel better and that parents refuse to start it for children out of fear of side effects, and made *compliance* the target instead of awareness. UOregon wrote three separate curricula for three audiences with different prior knowledge and ran them as three DBTL iterations across June, July and October, carrying each round's lessons forward. HFI ran everything through a five-step cycle it named CLEAR, in which **every activity had to report a measured outcome and a change for the next iteration**.\n\nThe sharpest version of this is publishing the results when they are bad. GEMS-Taiwan ran pre- and post-lesson surveys with 140 students across five schools and published per-question accuracy charts including the failures — only 30% of students got DNA base pairing right. That number is worth more to the next teacher than any photograph of a full classroom.\n\n**They trained themselves before training anybody else.** Nineteen GU Frankfurt members took the \"Basics of Science Communication\" workshop run by NaWik, Germany's national institute for science communication, and used its core-message and cloverleaf tools as the basis of everything that followed. Most teams treat communication as something you already know how to do because you can talk.\n\n**They put disagreeing people in the same room.** Oxford's *Buzz In* podcast is the most quietly radical format in the 2026 field: rather than interviewing stakeholders separately and summarising, it deliberately paired people who disagree — a Varroa-resistance academic with a commercial beekeeper on whether to treat at all, then an industry council CEO with amateur beekeepers. Disagreement is the thing most human-practices pages are built to smooth over; Oxford made it the content.\n\nKIT won Inclusivity by turning the same honesty inward. It read the iGEM Diversity and Inclusion Committee's own writing, surveyed five previous iGEM gender-equity projects, and noticed that nearly all of them face **outward** — role models, outreach to girls, awareness — and almost none examine the team itself. So KIT examined the team itself.\n\n**They quantified the need, and built a business model that was not \"sell the product\".** Oxford states the problem in numbers rather than adjectives: Australia's failed Varroa eradication cost A$101 million and destroyed about 30,000 hives; surveyed US commercial operations lost roughly 62% of colonies in 2024–25. DTU-Denmark anchors on a date and a measurement: the Danish wind industry's voluntary landfill ban took effect on 1 January 2026, and a Danish EPA screening detected bisphenol A in every tank leaching test on blade material.\n\nThen the models themselves. HongKong-JSS sells **Certification-as-a-Service** — farmers subscribe annually, the team tests soil on site, passing farms get a \"Heavy Metal-Free\" logo for supermarket packaging that earns a premium, and surprise re-tests throughout the year are affordable precisely because the test is cheap. GEMS-Taiwan deploys through farmer collectives rather than direct sales, because its own fleet analysis shows a reactor owned by a single farm sits idle most of the season. GU Frankfurt chose exclusive licensing over a start-up because an autologous cell therapy's facility and specialist-salary costs cannot be carried by a spin-out, and has a letter of support from Miltenyi Biotec to show for it. XJTLU-China gives catmaOS away, on the argument that accessibility *is* the commercial thesis.\n\nUAlberta's case is the most evidentially careful: demand is tabulated by customer role **with the strength of each piece of evidence named** — two clinician letters of support, a signed letter of intent from one clinic, 86% of 38 surveyed dry eye patients interested, an application at interview stage with Nucleate Canada. And UCAS-China opens its commercial section by stating outright that the case must rest on a defined unmet need rather than on technological novelty, then tabulates the strengths of the existing drugs it would have to displace. A team willing to argue against itself is a team worth believing.",
+  "body_zh": "**他們從資料出發設計教育，再像做實驗一樣去量測它。** UCAS-China 的起點不是「提升認知」。他們訪談臨床醫師、做了 461 人的問卷，發現病人一感覺好轉就停藥、家長因為害怕副作用而不願意讓孩子開始用藥，於是把目標從「認知」改成*服藥遵從性*。UOregon 為三種先備知識不同的對象寫了三套獨立課程，並在六月、七月與十月以三次 DBTL 迭代執行，把每一輪的教訓帶進下一輪。HFI 則讓所有活動都跑一個他們命名為 CLEAR 的五步驟循環，其中**每一項活動都必須回報一個量測到的結果，以及下一次要改什麼**。\n\n這件事最鋒利的版本，是在結果難看的時候照樣公布。GEMS-Taiwan 在五所學校對 140 名學生做了課前課後問卷，並公布逐題正確率圖表，包含失敗的部分——DNA 鹼基配對只有 30% 的學生答對。對下一位老師而言，這個數字比任何一張坐滿學生的照片都有價值。\n\n**他們先訓練自己，再去訓練別人。** GU Frankfurt 有 19 位成員上了德國國家科學傳播研究所 NaWik 的「科學傳播基礎」工作坊，並以其核心訊息與四葉草等工具作為後續一切的基礎。多數團隊把傳播當成「反正我會說話就會做」的事。\n\n**他們把意見不合的人放進同一個房間。** Oxford 的 *Buzz In* podcast 是 2026 年最安靜地激進的形式：它不是分別訪談各方再做摘要，而是刻意把意見相左的人配成一對——讓研究 Varroa 抗性的學者與商業養蜂人辯論「到底該不該用藥」，再讓產業公會執行長與業餘養蜂人對談。多數人類實踐頁面的設計目的就是把分歧抹平；Oxford 直接把分歧當成內容。\n\nKIT 則把同樣的誠實轉向內部，因而拿下包容性獎。他們讀了 iGEM 多元與包容委員會自己的文章，檢視了五個過去的 iGEM 性別平等專案，注意到它們幾乎全部朝**外**——榜樣、對女孩的推廣、意識提升——而幾乎沒有一個檢視團隊自身。於是 KIT 檢視了團隊自身。\n\n**他們把需求量化，而且做出來的商業模式不是「把產品賣掉」。** Oxford 用數字而非形容詞陳述問題：澳洲失敗的 Varroa 根除行動花了 1.01 億澳元、摧毀約 3 萬個蜂箱；受調查的美國商業蜂場在 2024–25 年損失了約 62% 的蜂群。DTU-Denmark 則錨定在一個日期與一次量測上：丹麥風電產業的自願掩埋禁令自 2026 年 1 月 1 日生效，而丹麥環保署的篩檢在葉片材料的每一次槽式溶出試驗中都測到雙酚 A。\n\n接著是商業模式本身。HongKong-JSS 賣的是**認證即服務**——農民年度訂閱，團隊到場檢測土壤，通過的農場取得「無重金屬」標章可用於超市包裝並賣出溢價，而全年不定期的突擊複檢之所以負擔得起，正是因為檢測又便宜又快。GEMS-Taiwan 透過農民合作社而非直接銷售來部署，因為他們自己的機隊分析顯示：單一農場自有的反應器一整季大部分時間都閒置。GU Frankfurt 選擇獨家授權而非自行創業，因為自體細胞治療的廠房與專業人力成本不是一間新創扛得起的，而他們手上有 Miltenyi Biotec 的支持信。XJTLU-China 則把 catmaOS 免費釋出，理由是可及性*本身*就是商業論點。\n\nUAlberta 的案例在證據上最為嚴謹：需求依客戶角色列表，而且**每一項證據的強度都被標明**——兩封臨床醫師支持信、一間診所簽署的意向書、38 位乾眼症受訪患者中 86% 有興趣、一件已進入面試階段的 Nucleate Canada 申請。UCAS-China 則在商業章節的開頭直接寫明：這個案子必須建立在明確的未滿足需求上，而不是技術新穎性，接著列表說明它必須取代的既有藥物有哪些優點。一支願意對自己提出反方論證的團隊，才值得相信。",
+  "cards": [
+    {
+      "kicker": "The format worth stealing",
+      "title": "Oxford's Buzz In: put the disagreement on the record",
+      "title_zh": "Oxford 的 Buzz In：把分歧記錄下來",
+      "body": "A three-episode podcast that deliberately paired stakeholders who disagree, rather than interviewing them separately and summarising. Episode one put a Varroa-resistance academic opposite a commercial beekeeper on whether to treat at all. Most human-practices pages exist to smooth disagreement away; this one makes it the content, and it is far harder to fake than a list of meetings.",
+      "body_zh": "一個三集的 podcast，刻意把意見相左的利害關係人配對，而不是分別訪談後再做摘要。第一集讓研究 Varroa 抗性的學者，與商業養蜂人正面交鋒「到底該不該用藥」。多數人類實踐頁面的存在目的是把分歧抹平；這一個把分歧變成內容，而且它比一份會議清單難假造得多。",
+      "chips": ["3 episodes", "paired opponents"]
+    },
+    {
+      "kicker": "The habit worth stealing",
+      "title": "Publish the question your students got wrong",
+      "title_zh": "公布學生答錯的那一題",
+      "body": "GEMS-Taiwan surveyed 140 students across five schools before and after each lesson and published per-question accuracy — including DNA base pairing, where only 30% answered correctly. Reporting the failure makes the whole dataset credible and hands the next teacher something actionable. A photograph of a full classroom does neither.",
+      "body_zh": "GEMS-Taiwan 在五所學校對 140 名學生做課前課後問卷，並公布逐題正確率——包括 DNA 鹼基配對，只有 30% 答對。報告失敗讓整份資料變得可信，也交給下一位老師一個可以採取行動的東西。一張坐滿學生的照片兩者都做不到。",
+      "chips": ["140 students · 5 schools", "30% on base pairing"]
+    },
+    {
+      "kicker": "The habit worth stealing",
+      "title": "Train the team before training the public",
+      "title_zh": "先訓練團隊，再去教公眾",
+      "body": "Nineteen GU Frankfurt members took the Basics of Science Communication workshop from NaWik, Germany's national science-communication institute, and built everything afterwards on its core-message and cloverleaf tools. Science communication is a craft with a literature; almost every other team treats it as something you can already do because you can talk.",
+      "body_zh": "GU Frankfurt 有 19 位成員上了德國國家科學傳播研究所 NaWik 的「科學傳播基礎」工作坊，並以其核心訊息與四葉草工具為基礎建構後續所有內容。科學傳播是一門有文獻的技藝；幾乎其他所有團隊都把它當成「我會說話所以我就會」。",
+      "chips": ["19 members trained", "NaWik"]
+    },
+    {
+      "kicker": "The business model worth stealing",
+      "title": "Sell the certificate, not the instrument",
+      "title_zh": "賣證書，不要賣儀器",
+      "body": "HongKong-JSS does not sell its mercury assay. Farmers subscribe annually, the team tests on site, passing farms get a 'Heavy Metal-Free' logo for supermarket packaging that commands a premium, and surprise re-tests through the year keep the certificate honest — affordable precisely because the test itself is cheap. The cheapness of the science becomes the business model rather than a weakness.",
+      "body_zh": "HongKong-JSS 不賣他們的汞檢測。農民年度訂閱，團隊到場檢測，通過的農場取得可用於超市包裝的「無重金屬」標章並賣出溢價，而全年不定期的突擊複檢維持證書的公信力——之所以負擔得起，正因為檢測本身很便宜。科學的廉價在這裡變成商業模式，而不是弱點。",
+      "chips": ["Certification-as-a-Service", "surprise re-tests"]
+    },
+    {
+      "kicker": "The business model worth stealing",
+      "title": "Name the strength of each piece of evidence",
+      "title_zh": "標明每一項證據的強度",
+      "body": "UAlberta tabulates demand by customer role and says how strong each item is: two clinician letters of support, one signed letter of intent, 86% of 38 surveyed patients interested, one application at interview stage with Nucleate Canada. A letter of intent and a survey response are not the same kind of evidence, and saying so is what makes the table worth reading.",
+      "body_zh": "UAlberta 依客戶角色把需求列表，並說明每一項證據有多強：兩封臨床醫師支持信、一封已簽署的意向書、38 位受訪患者中 86% 有興趣、一件進入面試階段的 Nucleate Canada 申請。一封意向書和一份問卷回覆不是同一種證據，而把這件事講清楚，正是這張表值得讀的原因。",
+      "chips": ["evidence graded by strength"]
+    },
+    {
+      "kicker": "For GEMS",
+      "title": "Argue against yourself in public",
+      "title_zh": "公開地為自己提出反方論證",
+      "body": "UCAS-China opens its commercial section by saying the case must rest on unmet need rather than technological novelty, then lists what the existing drugs do well. GEMS-Taiwan publishes a 68-year payback against a partner's 4.9-year figure and names the disagreement instead of resolving it. This is the practice that most distinguishes the 2026 podium, and it costs nothing but nerve.",
+      "body_zh": "UCAS-China 在商業章節的開頭就說：這個案子必須建立在未滿足需求上，而非技術新穎性，接著列出既有藥物的優點。GEMS-Taiwan 公布了 68 年的回收期，對照合作夥伴算出的 4.9 年，並指名這個歧異而不去解決它。這是 2026 年頒獎台上最顯著的共同做法，而它唯一的代價是膽識。",
+      "chips": ["no budget required"]
+    }
+  ],
+  "method": "Drawn from the Science for Good fields of the team files in this report, each researched from the team's own 2026 wiki. Audience numbers and survey sizes are the teams' own figures and are not independently verified. The judgement about what 'counted' is ours; the team files and the wikis behind them are linked so a reader can disagree. GEMS-Taiwan is the report author's own team and appears here on the same terms as the rest.",
+  "method_zh": "資料取自本報告團隊檔案中的「科學向善」欄位，每一份都來自該隊自己的 2026 wiki。參與人數與問卷樣本數為各隊自報數字，未經獨立查證。關於「什麼才算數」的判斷出自我們；團隊檔案與其背後的 wiki 都附有連結，讀者可以自行判斷是否同意。GEMS-Taiwan 是本報告作者自己的團隊，在此與其他隊伍適用相同標準。"
+}

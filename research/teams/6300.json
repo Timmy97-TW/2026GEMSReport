@@ -1,0 +1,86 @@
+{
+  "team": "NU Boston",
+  "id": "6300",
+  "section": "Undergrad",
+  "country": "United States",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/nu-boston/",
+  "projectTitle": "Soil Shield, with the FLARE soil simulation chamber",
+  "tagline": "A $300 fluorescence macroscope and controlled soil chamber that tests whether a strain still works under post-wildfire stress, instead of assuming it will.",
+  "summary": "NU Boston engineered Pseudomonas putida to survive post-wildfire soil conditions while degrading polycyclic aromatic hydrocarbons, using the ectABC/D hydroxyectoine pathway for desiccation tolerance and a salicylate-dependent ccdA/ccdB toxin-antitoxin kill switch for biocontainment. Their hardware answer to the obvious objection, that a strain which works on a bench says little about a burnt hillside, is FLARE: a light-tight soil chamber that recreates oxidative stress and desiccation and images salicylate fluorescence in situ. It replaces lasers and arc lamps with 295 nm UVB COB LEDs and a 410 nm bandpass filter, bringing a fluorescence imaging rig that commercially costs thousands to tens of thousands of dollars down to roughly $300 to $500 in parts, with the full bill of materials published line by line.",
+  "awards": [
+    "Best Hardware nominee (Undergraduate)"
+  ],
+  "dry": {
+    "frameworks": "A separate Design-Build-Test-Learn cycle is run for each major subsystem (enclosure, kill switch, UV/camera module, hydrogen peroxide delivery), and the team adds a fifth stage of their own, 'How We Moved Forward', which records explicitly what each cycle's learning changed in the next design. Requirements are elicited from the wet lab as the primary stakeholder and then renegotiated: a formal requirements meeting established what stressors were needed and what could be dropped, and a follow-up meeting after first use produced a feedback-to-design-change table.",
+    "dataviz": "A calibration curve relating sodium salicylate concentration to mean blue fluorescence signal; a current-versus-voltage characterisation plot for both UV LEDs with the minimum rated voltage and maximum rated current marked as reference lines; flow-rate-against-duty-cycle curves for both pumps with trendlines and R2 values; before-and-after dose image panels for small and large salicylate doses; excitation and emission spectra for sodium salicylate with the chosen LED and filter wavelengths marked; CAD drawings with dimensions and tolerances for the quartz shield, bandpass filter and lens tube.",
+    "datascience": "The instrument is characterised component by component before it is trusted as a whole. Both UV LEDs were swept on a programmable DC supply from 1 V to the manufacturer's 6.2 V maximum, with current recorded and illumination checked at each step for 5 seconds, the same exposure used in the final capture cycle; both drew no current below 5 V, and the team stopped at 5.9 V rather than risk the 700 mA ceiling, with LED 1 reaching it at 5.9 V and LED 2 at 5.7 V, documenting that two nominally identical parts differ. Optics are chosen from the fluorophore's spectra rather than by convention: sodium salicylate excites with a peak at 299 nm and a 10% minimum normalised intensity range of 262 to 325 nm, and emits from 359 to 509 nm peaking at 412 nm, so the team specified 295 +/- 5 nm COB LEDs and a 410 nm bandpass filter, and explains why a bandpass rather than the longpass filter used in the DIY designs they built on. Camera height was set empirically, adjusted while live-viewing then measured with calipers at 79 mm to give full coverage of the dish. The first user test produced the most useful measurement finding: at 5 mM salicylate about a third of the dish image reached the maximum pixel value of 255, so differences in brightness above that limit could not be recorded, an explicit saturation limit on the dynamic range. The same test showed that the dish had to be held in a fixed position so control and experimental images could be compared and background properly subtracted, and that perlite in the soil interfered with imaging and had to be removed. Quantification is by pixel-wise comparison of each post-dose image against its own pre-dose control rather than by visual inspection, validated by showing that fluorescence intensity and coverage scale with dose. The final run produced the calibration curve the team will use for all future tests, Signal = 0.0495 x C + 31.44 with R2 = 0.9871. The fluidics were calibrated as carefully: cycle 1 could only switch a pump on and off, which the team identified as controlling duration but not volume, so cycle 2 added PWM duty cycle as a control variable and measured delivered volume into a graduated cylinder over 60 seconds per setting. Both curves came out nonlinear with a dead zone below 20% and little gain above 60%, the two pumps differed by a factor of about 1.5 at full duty despite pumping the same liquid, and the team concluded that each pump needs its own calibration table and, crucially, that doses should be interpolated from the measured values rather than read off the fitted trendline, which misses points at 30 to 40%. On the biology side, an intended OD600 plate-reader assay for the kill switch was invalidated once the team found that ccdB induces filamentation, which changes light scattering so that filamentous and normal populations cannot be compared by turbidity; flow cytometry live/dead staining then showed viability mirroring the uninduced control, and only a CFU assay with cells induced in mid-log phase at OD600 0.4 to 0.6 gave a statistically significant difference, with the forward-scatter increase across arabinose concentrations retrospectively confirming the filamentation. The team publishes that whole chain of invalidated assays rather than only the one that worked.",
+    "software": "A published FLARE manual (PDF, 2.4 MB) accompanies the hardware. Firmware runs on a Raspberry Pi 5 with a Raspberry Pi Camera Module 3 for imaging, and an Arduino driving MOSFET-switched 12 V peristaltic pumps via PWM; the LED program is written to turn the UV lights on for only 5 seconds per capture, 4 seconds for the camera to adjust plus 1 second for the shot, at intervals of 5 minutes or more, which is also the argument that UV exposure is too low to degrade the printed components. The kill-switch interlock was redesigned so that the Raspberry Pi reads the magnetic reed switch state on a GPIO pin and cuts power itself, rather than the switch physically breaking a circuit it was not rated for.",
+    "stack": [
+      "Raspberry Pi 5 and Camera Module 3 (1080p, 11.9 MP)",
+      "Arduino with MOSFET-switched 12 V peristaltic pumps (PWM)",
+      "295 nm UVB COB LEDs, 60 degree viewing angle",
+      "Edmund Optics 410 nm bandpass filter and 20 mm SM1 lens tube",
+      "Quartz glass shields rated to 1148 C",
+      "Magnetic reed switch lid interlock",
+      "Onshape CAD",
+      "FDM 3D printing and laser-cut acrylic",
+      "Flow cytometry and CFU assays"
+    ],
+    "techniques": [
+      "Per-component characterisation before system validation",
+      "LED current-voltage sweep at the operational exposure time",
+      "Optics selected from measured excitation and emission spectra",
+      "Explicit pixel-saturation limit on dynamic range",
+      "Fixed sample positioning for background subtraction",
+      "Pixel-wise comparison against a matched pre-dose control",
+      "Calibration curve with R2 for concentration readout",
+      "Pump duty-cycle calibration by delivered volume",
+      "Interpolation from measured points rather than the fitted line",
+      "Published bill of materials with unit costs",
+      "Documented invalidated assays and why they failed"
+    ]
+  },
+  "good": {
+    "publicEngagement": "A two-year partnership with CitySprouts, which runs schoolyard gardens with Boston public schools focused on sustainability, community and equitable access for students in underfunded areas. The team took on two new gardens at Nathan Hale and Higginson Lewis Elementary in Roxbury and tended them weekly through the summer, watering, weeding and harvesting. The work fed back into the project: handling many soil types showed how much texture and environment change with weather, and watching an extreme Boston heatwave desiccate the gardens reinforced the case for the soil chamber as a testing ground. The team also ran a microfluidic chip design activity at a Geering Up workshop and rebuilt it with paper towels and paint for the next session after the paper version leaked.",
+    "ihp": "Expert consultation shaped the optics and the fluidics. Dr Kai Zhang, a postdoctoral research associate in physics at Northeastern, resolved the team's confusion between excitation and emission wavelengths and established that they needed both an LED in the fluorophore's excitation range and a filter isolating its emission. Professor Timothy Lannin warned that condensation on the quartz LED shields and the camera filter could degrade measurements over time and suggested adding a cold spot to collect it. The wet lab acted as the device's primary user throughout, and their feedback produced six concrete design changes including plastic rather than glass petri dishes, a lid handle, longer ribbon cables so modules can be removed while still connected, a friendlier interface, a kill switch against UV exposure, and ethanol-resistant materials for the final chamber.",
+    "realWorld": "The team states the broader case directly: fluorescence imaging is one of biology's most important tools and its price keeps it out of reach of smaller colleges, K-12 classrooms and community science programmes, with commercial systems running from a few thousand dollars into six figures. FLARE is costed at as low as $300 against $10,000, and the low cost is argued to enable running several units side by side to collect imaging data from many samples at once, which is impractical with one shared microscope. Beyond the wildfire application the team lists protein expression analysis, live/dead assays and expression-level detection as reusable uses. Chemical safety drove a scoping decision as well: the team avoided bringing naphthalene into an undergraduate teaching lab because of its carcinogenicity and shifted to salicylate and the nahG gene, keeping a genuinely relevant part of the degradation pathway while removing the exposure risk.",
+    "partners": [
+      "CitySprouts (Boston)",
+      "Nathan Hale Elementary and Higginson Lewis Elementary, Roxbury",
+      "Geering Up",
+      "Dr Kai Zhang (Northeastern University, Physics)",
+      "Professor Timothy Lannin (Northeastern University)"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6300/wiki/hardware/hardware.avif",
+      "caption": "FLARE, the team's controlled soil chamber and fluorescence macroscope. The laser-cut opaque black acrylic enclosure keeps ambient light out so the UV/camera module can image salicylate fluorescence directly in soil.",
+      "credit": "Team NU Boston, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6300/wiki/hardware/figures/flare-calibration-curve.avif",
+      "caption": "Calibration curve relating sodium salicylate concentration to mean blue fluorescence signal, Signal = 0.0495 x C + 31.44 with R2 = 0.9871, produced on the completed system and adopted for all future tests.",
+      "credit": "Team NU Boston, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6300/wiki/hardware/figures/flare-salicylate-5mm.avif",
+      "caption": "5 mM sodium salicylate imaged in the first wet-lab user test. About a third of the dish reached the camera's maximum pixel value of 255, so brightness differences above that limit could not be recorded, an explicit saturation ceiling on the instrument's dynamic range.",
+      "credit": "Team NU Boston, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6300/wiki/hardware/figures/flare-final-test.avif",
+      "caption": "The final test run on the completed FLARE system, after the wet lab's feedback produced plastic dishes, a lid handle, longer ribbon cables, a reworked interface, a UV kill switch and ethanol-resistant materials.",
+      "credit": "Team NU Boston, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Calibrate the actuator as carefully as the detector, and then do not use the fitted line: the team measured delivered volume against pump duty cycle, found both curves nonlinear with a dead zone and a plateau, and ruled that doses must be interpolated from the measured points because the trendline missed the data where it mattered.",
+  "sources": [
+    "https://2026.igem.wiki/nu-boston/hardware",
+    "https://2026.igem.wiki/nu-boston/engineering",
+    "https://2026.igem.wiki/nu-boston/description",
+    "https://2026.igem.wiki/nu-boston/outreach",
+    "https://2026.igem.wiki/nu-boston/results"
+  ]
+}

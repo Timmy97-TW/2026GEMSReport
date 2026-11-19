@@ -1,0 +1,60 @@
+{
+  "team": "WHU-China",
+  "id": "6220",
+  "section": "Undergrad",
+  "country": "China",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/whu-china/",
+  "projectTitle": "DifferPhase",
+  "tagline": "Phase-separated condensates split plasmids unevenly at division, so one founder population differentiates into a stable division of labour",
+  "summary": "WHU-China built DifferPhase, a platform that uses liquid-liquid phase separation to force asymmetric inheritance at cell division, so a single founder population can differentiate into several engineered sub-populations each carrying a different part of a long metabolic pathway. A YhjH-mCherry-PopZ fusion (Ymp) condenses at the cell pole and locally degrades c-di-GMP, so one daughter inherits the condensate and stays a low-c-di-GMP founder while the other becomes a high-c-di-GMP buffer cell; Slr supplies c-di-GMP to set up the gradient, and a tripartite split-GFP sensor built from GFP10-PilZ and FimX-GFP11 reports c-di-GMP in real time. Two orthogonal partitioning systems (ParB/parS and SopB/sopC) then drive different plasmids into different daughters, and a cross-interlocked dual toxin-antitoxin pair holds the resulting multi-plasmid state without antibiotics. They won Best New Composite Part in the Undergrad section and were nominated for Best New Basic Part.",
+  "awards": ["Best New Composite Part, Undergrad (winner)", "Best New Basic Part nominee"],
+  "dry": {
+    "frameworks": "Parts organised as a four-module architecture rather than a flat list (founder cell maintenance, buffer cell dedifferentiation, differentiation, plasmid maintenance), with each module's basic and composite parts grouped under a stated function, so a reader can take one module without the rest. Contribution is written as six separable deliverables: the platform, the founder-maintenance module, the asymmetric partitioning tool, the plasmid-maintenance toolkit, a semi-solid medium protocol, and the human-practices material.",
+    "dataviz": "Module-level schematics for each of the four contributions (LLPS differentiation platform, Ymp founder maintenance, ParBS/SopBC asymmetric partitioning, dual-TA plasmid maintenance toolkit), plasmid maps, and confocal images of polar condensates. Parts tables carry Registry IDs linked directly to each entry, with type and main function in separate columns.",
+    "datascience": "Quantitative readouts are designed into the parts rather than added afterward: the split-GFP sensor turns an intracellular second messenger into fluorescence, an MrkH/pmrkA-sfGFP cassette reports c-di-GMP-dependent activation, a parS-lacZ-J23106-mCherry-LAA reporter uses LAA-tagged degradation so fluorescence decays once the plasmid is lost (making partitioning failure measurable), and eCFP, mTagBFP and eYFP variants let several plasmids be tracked in the same field. A double-layer plate swimming assay provides a cheap quantifiable proxy for intracellular c-di-GMP.",
+    "software": "",
+    "stack": ["E. coli DH5-alpha, MG1655 and BL21(DE3)", "PopZ condensates from Caulobacter crescentus", "YhjH c-di-GMP phosphodiesterase", "Slr diguanylate cyclase from Synechocystis PCC 6803", "tripartite split-GFP (GFP1-9 / GFP10-PilZ / FimX-GFP11)", "ParB-parS and SopB-sopC partitioning systems", "EL222 blue-light transcription factor with pBLI", "LasR/pLas and FleQ quorum circuits", "ccdA/ccdB and mazE/mazF toxin-antitoxin pairs", "confocal microscopy with agarose embedding"],
+    "techniques": ["engineered asymmetric division via condensate inheritance", "orthogonal plasmid partitioning", "sopC repeat-number variation to tune partitioning", "cross-interlocked dual toxin-antitoxin plasmid maintenance", "dual-inducer (arabinose/IPTG) orthogonal control from one plasmid", "double-layer plate swimming assay"]
+  },
+  "good": {
+    "publicEngagement": "Three campus pop-up events, online and in-person teaching outreach, and science comics, each pitched at a different audience and explicitly framed as inviting discussion of the technology's limitations as well as its possibilities rather than only promoting it. Channels include WeChat and Xiaohongshu.",
+    "ihp": "Campus and medical-student surveys plus interviews with residents living near East Lake in Wuhan, chosen because the platform's candidate applications include water purification, so the people consulted are the ones who would live next to a deployment. Those conversations were used to understand information needs, attitudes and specific safety concerns rather than to gauge enthusiasm. Cross-disciplinary expert discussions and exchanges with other iGEM teams were then used to interrogate the platform's underlying principles and application requirements, and the team states that these perspectives clarified which questions the project still needs to answer around effectiveness, safety and public concern.",
+    "realWorld": "There is no venture, no company and no commercial claim here, and the implementation discussion is deliberately conditional: the engineered strains are designed for controlled laboratory use only, there is no plan for environmental release, and they state that any future move toward practical products would require sealed equipment and comprehensive safety testing first. Natural rubber biosynthesis is presented as a conceptual demonstration of the platform, not as a product, with cancer therapy, water purification and plastic degradation named as directions the architecture could serve. So the real-world value is as reusable infrastructure, and on that count this is one of the better part contributions of the year. What makes these parts genuinely inheritable is fourfold. First, modular packaging: 34 parts are grouped into four functionally independent modules, and the contribution text names, for each module, who else could use it and for what, so a future team can adopt the plasmid-maintenance toolkit without touching the differentiation platform. Second, every part description states its provenance and its role in the circuit, not just its identity, including which organism a protein came from and what it contributes to the system (PopZ as the condensate scaffold ensuring asymmetric inheritance, Slr as the c-di-GMP source that establishes the gradient). Third, measurement is built in: the split-GFP c-di-GMP sensor, the MrkH-driven reporter, and especially the LAA-tagged mCherry reporter whose signal decays on plasmid loss turn otherwise invisible behaviours into assayable ones, which is what lets another team verify the part works in their hands. Fourth, and most unusually, they publish the engineering failures as part annotations: the dual-input araC-pBAD-YmP / T7-lacO-Slr circuit is documented as needing stronger T7-optimised terminators to reduce read-through, and several cassettes are annotated with the specific biTT or T7 terminator placement used to prevent read-through between transcription units. An honest note about where the terminator problem bites is more useful to a reuser than a clean claim. The dual-TA design also removes antibiotic selection entirely, which they correctly frame as reducing the spread of resistance, and the safety reasoning is specific rather than boilerplate: all chassis are BSL-1 whitelist Risk Group 1 strains, MazF and CcdB are acknowledged as potent toxins whose killing is confined to the engineered population, and no gene used encodes a virulence factor. They also standardised and published protocols (Ymp condensate confocal imaging with induction, embedding and imaging parameters; the double-layer swimming assay with medium formulations, inoculation method and data-interpretation guidance), which is the part of a contribution that usually goes missing. Continuation is framed as community reuse rather than a company: tools, protocols and a reference framework offered to future teams building multi-cell division-of-labour systems, with sopC mutants and optimisation schemes earmarked for submission as further parts.",
+    "partners": [
+      "Wuhan University School of Life Sciences (BSL-1 facilities, Regulations on the Management of Laboratory Biosafety)",
+      "Residents near East Lake, Wuhan (interviews on water-purification application and safety concerns)",
+      "Cross-disciplinary academic experts and other iGEM teams (principle and application review)"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6220/wiki/whu-contribution2-fig1.avif",
+      "caption": "The LLPS-mediated platform for cellular functional differentiation, offered as a reference framework for future multi-cell division-of-labour systems",
+      "credit": "Team WHU-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6220/wiki/whu-contribution2-fig3.avif",
+      "caption": "ParBS and SopBC orthogonal condensate partitioning, the reusable tool for driving different plasmids into different daughter cells",
+      "credit": "Team WHU-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6220/wiki/whu-contribution2-fig4.avif",
+      "caption": "Cross-interlocked dual toxin-antitoxin plasmid maintenance toolkit: each plasmid supplies the antitoxin for the other's toxin, so neither can be lost and no antibiotic selection is needed",
+      "credit": "Team WHU-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6220/wiki/whu-contribution2-fig2.avif",
+      "caption": "Ymp (YhjH-mCherry-PopZ) founder-cell maintenance module, with the published confocal protocol for observing polar condensates",
+      "credit": "Team WHU-China, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Package parts the way WHU did: group them into functionally independent modules, and for each module state in writing who outside the project could reuse it and for what, so adopters can take one piece without the whole system. Then ship the three things that actually make reuse possible — a built-in measurement part (their LAA-tagged reporter that decays on plasmid loss), the standardised protocol with induction, sample-prep and imaging parameters, and an honest annotation of the known weakness, such as terminator read-through, recorded on the part itself.",
+  "sources": [
+    "https://2026.igem.wiki/whu-china/",
+    "https://2026.igem.wiki/whu-china/parts/",
+    "https://2026.igem.wiki/whu-china/contribution/",
+    "https://2026.igem.wiki/whu-china/safety/",
+    "https://2026.igem.wiki/whu-china/description/"
+  ]
+}

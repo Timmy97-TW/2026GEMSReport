@@ -1,0 +1,84 @@
+{
+  "team": "NCKU-Tainan",
+  "id": "6379",
+  "section": "Undergrad",
+  "country": "Taiwan",
+  "village": "Infectious Diseases",
+  "wiki": "https://2026.igem.wiki/ncku-tainan/",
+  "projectTitle": "Capture: detecting and inhibiting Pseudomonas aeruginosa quorum-sensing signals",
+  "tagline": "A US$54 to US$161 single-cuvette fluorescence reader, and a browser app that turns its counts into an AHL concentration with a 95% confidence interval.",
+  "summary": "NCKU-Tainan targeted the acyl-homoserine lactone signals that Pseudomonas aeruginosa uses to coordinate toxin release and biofilm formation in healthcare-associated infections, with two systems reading the same molecule: one that detects the signal and reports the infection, and one that inhibits it with published single-stranded DNA aptamers acting as molecular sponges. To read their GFP reporter without booking a shared plate reader in another building they built CAPTURE-Screen, a single-cuvette fluorescence reader in two versions, 3D-printed and laser-cut, costing 21 to 65 times less than an open-source plate reader. LasReader, a browser application, completes the chain by fitting a weighted four-parameter logistic calibration, deriving limits of detection from the blanks and returning each sample's concentration with an approximate confidence interval.",
+  "awards": [
+    "Best Infectious Diseases Project winner",
+    "Best Hardware nominee (Undergraduate)"
+  ],
+  "dry": {
+    "frameworks": "The hardware page opens by deriving its requirements from the assay rather than from an instrument wish list: 200 uL of sfGFP culture per reaction, read every hour for six hours at 37 C, benchmarked against the plate-reader standard of 485/510 nm, and cheap enough to rebuild. The modelling is split into three parts that each serve a different part of the team (an inhibition model for the wet lab, an imaging model for the software, a fluorescence model for the hardware). Software, hardware and model are written as one workflow, with LasReader checking the reader, showing which tube to read next, and keeping every saved curve with its limit of detection and usable range.",
+    "dataviz": "Plan-view and cut-away optical diagrams drawn to scale with a stated pixel-to-millimetre ratio; an interactive exploded view of the instrument; counts-versus-condition plots that always show the emission channel beside the scatter channel; a calibration page in the app that renders the fitted curve as a PNG alongside the CSV export; a step bar at the top of every CAPTURE-Screen page showing the reader status, the number of calibration runs, how many produced a usable curve, and whether Measure is ready.",
+    "datascience": "The instrument is honest about what its numbers are. Readings are raw sensor counts from an AS7341 ten-channel spectral sensor, with F4 (515 nm) as the emission channel and F3 (480 nm) reported beside it as the scatter channel, because the team found that dense suspensions give a few counts of F4 with no reporter present once F3 passes about 46 and none below about 33, so a few counts alone are not evidence of GFP. Excitation and emission are separated by angle (detection at 90 degrees) and by colour (the sensor's own bands), with no emission filter, and a light trap whose end wall slopes at about 41 degrees turns transmitted blue up into the roof rather than back at the sample. Every measurement cycle begins and ends with a dark read, and under the shield every channel must read exactly zero or the cycle is void. Repeatability is quantified at the level that actually varies: five re-insertions of one tube gave 0.76% standard deviation at about 50 counts. Validation is comparative rather than self-referential, with one batch of sfGFP culture at five dilutions plus medium and a non-fluorescent culture read on the team's reader and on a SpectraMax M3 on the same day, ranking the tubes the same way, with the green reading rising from 2.44 to 86.44 counts and about 104 counts per unit OD600 across the three denser tubes. The team states plainly that counts from the two readers are not interchangeable, and reports the failures: the laser-cut build could not distinguish the AHL sensor strain from cells without sfGFP, and the 3D-printed build read zero on its emission channel for that strain. LasReader carries the statistics. It requires at least four concentrations and two blanks as the minimum for a four-parameter curve and a limit of detection, and fits a weighted four-parameter logistic in which EC50 is fitted as its logarithm to keep it positive and the Hill slope is bounded between 0.05 and 20, with blanks entering at zero concentration so they fix the baseline directly. Weighting is used because replicates scatter more at high signal than at low, and the uncertainty of the fitted curve is propagated through the Jacobian of the model derivatives with a diagonal weight matrix, which is what produces the approximate 95% confidence interval on every reported concentration. Detection limits follow the blank-based convention, LOD as the inverse curve evaluated at the blank mean plus three blank standard deviations and LOQ at ten, with documented fallbacks when every blank reads identically, and the usable range starting at whichever is higher, the LOD or the lowest standard, so that a sample can clear the LOD and still be reported as below the usable range. Exports are auditable: one CSV with every reading, every exclusion and its reason, and every result, plus the curve as a PNG, with a curve's own exclusions kept with the curve in its JSON backup. The mechanistic modelling matches this care, with two parameters fitted to swarming data and uncertainty assessed by 400 joint draws combining plate-level bootstrap resampling with uncertain model inputs and refitting each time (296 successful), reporting 5th to 95th percentile ranges, PRCC sensitivity indices, and the explicit statement that these are effective values and not confidence intervals for measured biochemical constants.",
+    "software": "LasReader, a browser application with nothing to install, released under the MIT License with source on iGEM GitLab, carrying a research-use-only disclaimer that it reports concentrations inferred from a calibration curve and is not intended for diagnostic use. It works either with CAPTURE-Screen, where the instrument becomes part of the workflow, or with data from any plate reader through the same steps, and the analysis never uses the target's name so it transfers to other biosensors whose rising response suits a 4PL fit. The hardware is released as 53 STL files covering 66 pieces across both versions, with firmware that controls LED timing and integration, plus the laser-cut design, wiring and schematic.",
+    "stack": [
+      "AS7341 ten-channel spectral sensor (SEN0365 board)",
+      "Cree 470 nm excitation LED",
+      "UVette 200 uL cuvettes",
+      "3D printing (FDM) and laser cutting",
+      "SpectraMax M3 as reference instrument",
+      "Four-parameter logistic regression (weighted)",
+      "Bootstrap resampling and PRCC sensitivity analysis",
+      "Browser-based analysis app (MIT licence)"
+    ],
+    "techniques": [
+      "Dark read at the start and end of every cycle, voided if non-zero",
+      "Scatter channel reported alongside the emission channel",
+      "Re-insertion repeatability as a stated percentage",
+      "Side-by-side benchmarking against a commercial plate reader",
+      "Weighted 4PL calibration with bounded Hill slope",
+      "Confidence intervals propagated through the fit Jacobian",
+      "Blank-derived LOD and LOQ with documented fallbacks",
+      "Usable range set by the higher of LOD and lowest standard",
+      "Auditable CSV export of every exclusion and its reason",
+      "Bootstrap plus input-uncertainty joint refitting",
+      "PRCC parameter sensitivity"
+    ]
+  },
+  "good": {
+    "publicEngagement": "Education work includes a board game and an online game alongside a documented education programme, a promotion page and a survey.",
+    "ihp": "A meet-with-experts programme fed the project's scope and its claims. Prof. Nan-Si Li's framing, that at this stage the project detects signals and does not diagnose infections, is quoted directly in the software's own disclaimer, so the limit on the claim is visible inside the tool rather than only on the wiki.",
+    "realWorld": "The problem is framed around healthcare-associated infections, where P. aeruginosa resists many antibiotics, releases tissue-damaging toxins and forms biofilms that antibiotics struggle to cross, all behaviours that depend on cells coordinating through chemical signals. The instrument's justification is operational: a shared plate reader is booked, scheduled and in one building, while either build can sit next to the incubator. Cost is given against a named alternative, at most US$161 for the 3D-printed build and US$54 for the laser-cut one versus under US$3,500 for a published open-source plate reader, with the point that anyone with the source files can rebuild it. The reader is positioned for the commonest reading in synthetic biology, green fluorescence from a GFP reporter in a liquid sample, and for cell-free portable sensors that hold no cells at all.",
+    "partners": [
+      "Prof. Nan-Si Li",
+      "National Cheng Kung University"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6379/wiki/hardware/hardware.avif",
+      "caption": "CAPTURE-Screen, the team's single-cuvette fluorescence reader for GFP reporter cultures, built so it can sit next to the incubator instead of competing for a shared plate reader in another building.",
+      "credit": "Team NCKU-Tainan, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6379/wiki/hardware/printed-run-1-cuvette-in.avif",
+      "caption": "A 200 uL UVette loaded into the 3D-printed build. Excitation enters from the side and the AS7341 detector reads at 90 degrees, with no emission filter; the colour separation is the sensor's own.",
+      "credit": "Team NCKU-Tainan, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6379/wiki/haddwarelacerreader/haddwarelacerreader/front.avif",
+      "caption": "The laser-cut version of the reader in its own enclosure, costed at US$54 against under US$3,500 for the open-source plate reader the team benchmarked against.",
+      "credit": "Team NCKU-Tainan, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6379/wiki/software/curve.avif",
+      "caption": "LasReader's calibration view. A weighted four-parameter logistic curve is fitted with the blanks fixing the baseline, limits of detection and quantification are derived from the blanks, and each sample inside the usable range is returned with an approximate 95% confidence interval.",
+      "credit": "Team NCKU-Tainan, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Ship the analysis with the instrument: a calibration that fits a weighted 4PL, derives its detection limit from the blanks, propagates a confidence interval onto every reported concentration, and exports every excluded reading with its reason turns a cheap reader's raw counts into a number someone else can audit.",
+  "sources": [
+    "https://2026.igem.wiki/ncku-tainan/hardware",
+    "https://2026.igem.wiki/ncku-tainan/software",
+    "https://2026.igem.wiki/ncku-tainan/model",
+    "https://2026.igem.wiki/ncku-tainan/description",
+    "https://2026.igem.wiki/ncku-tainan/results",
+    "https://2026.igem.wiki/ncku-tainan/human-practices"
+  ]
+}

@@ -8,27 +8,80 @@
   "projectTitle": "AquaFlock",
   "tagline": "E. coli engineered to sequester groundwater nitrate as cyanophycin, then flocculate so the nitrogen can be harvested back as fertilizer",
   "summary": "UOregon engineered E. coli to pull excess environmental nitrate into the nitrogen storage polymer cyanophycin and, once a cyanophycin threshold is reached, to express flocculation proteins so cells sink and can be harvested as a fertilizer substitute, closing the nitrogen loop. The target users are rural well owners and farmers in Oregon whose water is rarely tested. The education practice is the standout: three original curricula built for three audiences with increasing prior knowledge, developed through an explicit Design-Build-Test-Learn loop and grounded in Universal Design for Learning plus STEAM. The team also built an offline desktop search engine indexing the full text of 1,354 iGEM team wikis and 20,761 pages from 2022-2025.",
-  "awards": ["Best Education nominee (Overgrad)"],
+  "awards": [
+    "Best Education nominee (Overgrad)"
+  ],
   "dry": {
     "frameworks": "Education itself was run as a DBTL engineering cycle, with a documented Reflective Theory of Change diagram and a standardised success rubric (engagement, science understanding, creativity), both adapted from an Oregon State University STEM Research Center presentation at the Polar STEAM Summit 2026. Learning objectives were written against the measurable verbs of Bloom's Taxonomy (Remember, Understand, Apply, Analyze, Evaluate, Create).",
     "dataviz": "Hand-illustrated scientific diagrams throughout: all educational materials were digitally illustrated by hand by the team, including a central-dogma comic, illustrated workbooks, and illustrated synthetic-biology-tool cards used as a tactile matching activity.",
     "datascience": "Post-workshop feedback surveys with section-level ranking; for Workshop 3, 8 of 15 respondents had heard of synthetic biology before attending, and bioethics and science communication ranked as the favourite sections, with the illustrated workbook, real-world examples and small-group discussions named the most effective learning tools.",
     "software": "iGEM Wiki Search: a desktop application that searches the full text of 1,354 team wikis and 20,761 pages from the 2022-2025 competitions from a single search box, running offline with no server. It automates wiki collection and processing, builds a full-text index, ranks whole projects rather than individual pages, crawls responsibly, handles JavaScript-only wikis, and was tested cross-platform. The team benchmarked it explicitly against iGEM's Phoenix Project (metadata only) and iGEM Munich 2024's Data Explorer (2019 wikis only, no source links), and links every result back to its original page.",
-    "stack": ["desktop application (offline)", "full-text indexing", "web crawler with JavaScript rendering", "Universal Design for Learning (UDL) framework", "STEAM curriculum design", "Bloom's Taxonomy"],
-    "techniques": ["cyanophycin nitrogen-storage pathway engineering", "flocculation-protein inducible circuit", "split biosensor", "nitrate sequestration assays", "AquaFlock hardware settling system"]
+    "stack": [
+      "desktop application (offline)",
+      "full-text indexing",
+      "web crawler with JavaScript rendering",
+      "Universal Design for Learning (UDL) framework",
+      "STEAM curriculum design",
+      "Bloom's Taxonomy"
+    ],
+    "techniques": [
+      "cyanophycin nitrogen-storage pathway engineering",
+      "flocculation-protein inducible circuit",
+      "split biosensor",
+      "nitrate sequestration assays",
+      "AquaFlock hardware settling system"
+    ],
+    "frameworks_zh": "教育本身就以 DBTL 工程迴圈的方式執行，並留下反思式改變理論（Reflective Theory of Change）圖與一套標準化的成效評分量表（參與度、科學理解、創造力），兩者都改編自奧勒岡州立大學 STEM Research Center 在 Polar STEAM Summit 2026 的報告。學習目標則依 Bloom's Taxonomy 的可測量動詞撰寫（記憶、理解、應用、分析、評鑑、創造）。",
+    "dataviz_zh": "全程使用手繪科學圖解：所有教材都由團隊成員親手數位繪製，包括一本中心法則漫畫、插畫式學習手冊，以及用於配對活動的插畫版合成生物學工具卡（可動手操作）。",
+    "datascience_zh": "工作坊後的回饋問卷採分段排序設計；第三場工作坊中，15 位回覆者有 8 人在參加前就聽過合成生物學，生物倫理與科學傳播被評為最喜歡的段落，插畫手冊、真實世界案例與小組討論則被指為最有效的學習工具。",
+    "software_zh": "iGEM Wiki Search：一款桌面應用程式，從單一搜尋框即可檢索 2022-2025 年各屆 1,354 個隊伍 wiki、20,761 個頁面的全文，離線執行、無需伺服器。它自動化了 wiki 的收集與處理、建立全文索引、以整個專案而非單一頁面為排序單位、以負責任的方式爬取、能處理僅靠 JavaScript 渲染的 wiki，並做過跨平台測試。團隊明確地把它與 iGEM 的 Phoenix Project（僅有詮釋資料）以及 iGEM Munich 2024 的 Data Explorer（僅 2019 年 wiki、無原始連結）做比較，並讓每一筆結果都連回原始頁面。"
   },
   "good": {
     "publicEngagement": "UOregon's central design principle is quotable and transferable: 'Accessibility should lower the barrier of entry into complex science, not the complexity of the science itself.' Instead of one generic outreach talk, the team wrote three original curricula for three audiences with increasing prior knowledge and ran them as three DBTL iterations across June, July and October 2026, carrying the lessons of each into the next. Workshop 1 ('Intro to Synthetic Biology') was a one-hour session plus an illustrated take-home worksheet delivered to 30 high school students at the Oregon Humane Society summer camp; students reviewed the central dogma and plasmid parts and then designed their own engineered bacterium to solve a problem of their choosing. Post-event debriefs with students and camp staff produced four concrete fixes (establish prior knowledge first, add more real-world relevance, shorten transitions to reduce cognitive load, create more peer-interaction points), which were fed directly into Workshop 2. Workshop 2 ('Engineering SynBio Solutions') was a two-hour session for 20 high school students at SAIL (Student Academy to Inspire Learning), an existing University of Oregon STEM summer camp for students from diverse learning backgrounds; materials were a fully illustrated workbook, a hand-drawn comic that told the central dogma as a story, slides, and hands-on activities, with each of five sections framed by its own guiding question and sequenced to scaffold from foundational biology to CRISPR and plasmids to genetic circuits to experimental design. Workshop 3 ('SynBio Solutions to Real-World Problems') was a two-hour session for 20 first- and second-year undergraduate science students at the University of Oregon, funded by a University of Oregon Knight Campus Graduate Student Association outreach mini-grant; because this audience already had foundational biology, the team swapped the comic for a matching-game refresher, added directed evolution and de novo protein design alongside CRISPR and plasmids, and then extended into two sections the earlier workshops could not reach: small-group bioethics analysis of three real-world synthetic biology applications, and a science-communication activity in which students decorated tote bags to explain what they had learned to an audience of their own choosing. Evidence of impact is tied to the standardised rubric rather than headcount alone: engagement, understanding and creativity were tracked across iterations through direct post-workshop feedback forms and indirect observation, Workshop 2 students asked unprompted questions beyond the taught material (one asked whether CRISPR and plasmids could be used at once), and the Workshop 3 survey ranked bioethics and science communication highest. Beyond workshops, the team published a comic illustrating the AquaFlock project's journey and released the iGEM Wiki Search desktop tool specifically to make it easier for future teams to find and build on predecessors' work - an education contribution aimed at the iGEM community itself.",
     "ihp": "Human Practices was framed around rural equity: people living outside major cities receive less financial backing, less testing of wells and waterways, and less proactive healthcare, so the project is designed as a circular chain of agricultural, health and economic support for communities marginalised by municipal systems. The team mapped a four-step implementation path (in the home, then at the agricultural source, then harvest, then reduce/reuse/recycle) and stated the striking design goal that 'our product is made to eventually become obsolete' once nitrate levels fall out of the unsafe range. A field trip to the Metropolitan Wastewater Management Commission regional wastewater treatment facility serving Eugene and Springfield let the team interview plant operators, who confirmed nitrate control (alongside PFAS and silicon) is an unsolved challenge, validating a gap their smaller-scale system could fill. Four UN SDGs were adopted as focal areas: 3 (good health), 4 (quality education), 6 (clean water and sanitation) and 12 (responsible consumption and production).",
     "realWorld": "The intended users are rural Oregon well owners and farmers; harvested flocs become a local fertilizer substitute, localising fertilizer access and cutting nitrate at source. Context established on the description page: roughly half of applied nitrogen fertilizer is taken up by plants and the rest leaches as nitrate, driving eutrophication, harmful algal blooms and hypoxia as well as direct human health risk from contaminated drinking water.",
-    "partners": ["Oregon Humane Society (summer camp, Workshop 1 venue and audience)", "SAIL - Student Academy to Inspire Learning, University of Oregon STEM summer camp (Workshop 2)", "University of Oregon Knight Campus Graduate Student Association (outreach mini-grant funding Workshop 3)", "Metropolitan Wastewater Management Commission (MWMC) Regional Wastewater Treatment Facility, Eugene-Springfield", "Oregon State University STEM Research Center (Reflective Theory of Change and success-measurement frameworks)"]
+    "partners": [
+      "Oregon Humane Society (summer camp, Workshop 1 venue and audience)",
+      "SAIL - Student Academy to Inspire Learning, University of Oregon STEM summer camp (Workshop 2)",
+      "University of Oregon Knight Campus Graduate Student Association (outreach mini-grant funding Workshop 3)",
+      "Metropolitan Wastewater Management Commission (MWMC) Regional Wastewater Treatment Facility, Eugene-Springfield",
+      "Oregon State University STEM Research Center (Reflective Theory of Change and success-measurement frameworks)"
+    ],
+    "publicEngagement_zh": "UOregon 的核心設計原則值得引用也可被其他隊伍沿用：「無障礙應該降低進入複雜科學的門檻，而不是降低科學本身的複雜度。」團隊沒有只做一場通用的外推演講，而是為先備知識遞增的三種受眾撰寫三套原創課程，並在 2026 年 6 月、7 月與 10 月以三次 DBTL 迭代實際執行，把每一次的經驗帶進下一次。第一場工作坊（Intro to Synthetic Biology）是一小時課程加一份插畫回家作業單，對象是奧勒岡人道協會夏令營的 30 位高中生；學生複習中心法則與質體組成，然後自行設計一株工程菌來解決自選的問題。活動後與學生及營隊人員的檢討產出四項具體修正（先建立先備知識、增加真實世界關聯、縮短段落轉換以降低認知負荷、增加同儕互動點），並直接帶入第二場工作坊。第二場工作坊（Engineering SynBio Solutions）是兩小時課程，對象是 SAIL（Student Academy to Inspire Learning，奧勒岡大學既有的 STEM 夏令營，招收來自多元學習背景的學生）的 20 位高中生；教材包含一本全插畫學習手冊、一本把中心法則說成故事的手繪漫畫、投影片與動手活動，五個段落各有自己的引導問題，並刻意從基礎生物學鋪陳到 CRISPR 與質體、再到基因迴路與實驗設計。第三場工作坊（SynBio Solutions to Real-World Problems）是兩小時課程，對象是奧勒岡大學 20 位大一、大二理學院學生，由奧勒岡大學 Knight Campus 研究生協會的外推小額補助支持；由於這群受眾已有基礎生物學，團隊把漫畫換成配對遊戲式複習，在 CRISPR 與質體之外加入定向演化與 de novo 蛋白質設計，再延伸出前兩場無法觸及的兩個段落：針對三個真實合成生物學應用的小組生物倫理分析，以及一個科學傳播活動，讓學生彩繪提袋，向自選的受眾說明自己學到什麼。成效證據扣在標準化量表上，而不只是人數：參與度、理解與創造力透過工作坊後的直接回饋表與間接觀察在各次迭代間追蹤，第二場的學生主動問出超出授課範圍的問題（有人問 CRISPR 與質體能否同時使用），第三場的問卷則把生物倫理與科學傳播排在最前面。工作坊之外，團隊出版了一本描繪 AquaFlock 專案歷程的漫畫，並釋出 iGEM Wiki Search 桌面工具，目的正是讓未來的隊伍更容易找到並接續前人的工作——這是一項針對 iGEM 社群本身的教育貢獻。",
+    "ihp_zh": "人類實踐以鄉村公平為框架：住在大城市以外的人得到較少財務支持、水井與水體較少被檢測、也較少獲得主動的醫療照護，因此本專案被設計成一條循環的鏈，為被市政系統邊緣化的社區提供農業、健康與經濟上的支持。團隊繪出四步落地路徑（先在住家、再到農業污染源、接著收取、最後減量／再利用／回收），並提出一個很鮮明的設計目標：「我們的產品被設計成最終會被淘汰」——一旦硝酸鹽濃度降回安全範圍即不再需要。團隊走訪服務 Eugene 與 Springfield 的 Metropolitan Wastewater Management Commission 區域污水處理廠，訪談廠務操作人員，他們確認硝酸鹽控制（與 PFAS、矽並列）仍是未解的難題，印證了這套較小規模系統可以補上的缺口。團隊選定四項聯合國 SDG 作為焦點：3（健康與福祉）、4（優質教育）、6（潔淨水與衛生）與 12（責任消費與生產）。",
+    "realWorld_zh": "預期使用者是奧勒岡州的鄉村水井持有者與農民；收取下來的絮凝物成為當地的肥料替代品，使肥料取得在地化，同時從源頭減少硝酸鹽。專案說明頁建立了脈絡：施用的氮肥大約只有一半被植物吸收，其餘淋溶成硝酸鹽，造成優養化、有害藻華與缺氧，也對飲用受污染水源的人體健康構成直接風險。"
   },
   "images": [
-    {"url": "https://static.igem.wiki/teams/6041/wiki/pages/education/edu-wksp1-main-photo.avif", "caption": "Workshop 1: one-hour intro to synthetic biology for 30 high school students at the Oregon Humane Society camp", "credit": "Team UOregon, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6041/wiki/pages/education/edu-wksp2-main-photo.avif", "caption": "Workshop 2 at the SAIL STEM summer camp: 20 high school students working through the illustrated workbook and comic", "credit": "Team UOregon, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6041/wiki/pages/education/edu-wksp1-wkst.avif", "caption": "The hand-illustrated take-home worksheet from Workshop 1, covering the central dogma and plasmid parts", "credit": "Team UOregon, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6041/wiki/pages/education/wksp3-1.avif", "caption": "Workshop 3 for 20 undergraduate science students, adding bioethics discussion and a tote-bag science-communication activity", "credit": "Team UOregon, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6041/wiki/pages/education/measuring-success.avif", "caption": "The team's standardised measure of success across workshop iterations: engagement, science understanding and creativity", "credit": "Team UOregon, iGEM 2026 wiki"}
+    {
+      "url": "https://static.igem.wiki/teams/6041/wiki/pages/education/edu-wksp1-main-photo.avif",
+      "caption": "Workshop 1: one-hour intro to synthetic biology for 30 high school students at the Oregon Humane Society camp",
+      "credit": "Team UOregon, iGEM 2026 wiki",
+      "caption_zh": "第一場工作坊：為奧勒岡人道協會營隊 30 位高中生舉辦的一小時合成生物學入門"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6041/wiki/pages/education/edu-wksp2-main-photo.avif",
+      "caption": "Workshop 2 at the SAIL STEM summer camp: 20 high school students working through the illustrated workbook and comic",
+      "credit": "Team UOregon, iGEM 2026 wiki",
+      "caption_zh": "在 SAIL STEM 夏令營的第二場工作坊：20 位高中生使用插畫學習手冊與漫畫"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6041/wiki/pages/education/edu-wksp1-wkst.avif",
+      "caption": "The hand-illustrated take-home worksheet from Workshop 1, covering the central dogma and plasmid parts",
+      "credit": "Team UOregon, iGEM 2026 wiki",
+      "caption_zh": "第一場工作坊的手繪回家作業單，內容涵蓋中心法則與質體組成"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6041/wiki/pages/education/wksp3-1.avif",
+      "caption": "Workshop 3 for 20 undergraduate science students, adding bioethics discussion and a tote-bag science-communication activity",
+      "credit": "Team UOregon, iGEM 2026 wiki",
+      "caption_zh": "第三場工作坊，對象為 20 位大學部理學院學生，新增生物倫理討論與提袋科學傳播活動"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6041/wiki/pages/education/measuring-success.avif",
+      "caption": "The team's standardised measure of success across workshop iterations: engagement, science understanding and creativity",
+      "credit": "Team UOregon, iGEM 2026 wiki",
+      "caption_zh": "團隊在各次工作坊迭代間使用的標準化成效量表：參與度、科學理解與創造力"
+    }
   ],
   "gemsTakeaway": "Run outreach as a DBTL cycle with a fixed success rubric: build three differentiated versions of the same curriculum for audiences at different prior-knowledge levels, debrief with the host staff after each delivery, and score every iteration on the same three criteria (engagement, understanding, creativity) so improvement is demonstrable rather than asserted.",
   "sources": [
@@ -39,5 +92,9 @@
     "https://2026.igem.wiki/uoregon/software",
     "https://2026.igem.wiki/uoregon/field-trip",
     "https://2026.igem.wiki/uoregon/sustainability"
-  ]
+  ],
+  "projectTitle_zh": "AquaFlock",
+  "tagline_zh": "改造 E. coli 將地下水中的硝酸鹽固定為氮儲存聚合物 cyanophycin，再誘導細胞絮凝沉降，使氮得以回收作為肥料",
+  "summary_zh": "UOregon 改造 E. coli，把環境中過量的硝酸鹽轉入氮儲存聚合物 cyanophycin，並在 cyanophycin 累積達到閾值後表現絮凝蛋白，使細胞沉降、可被收取作為肥料替代品，藉此閉合氮循環。目標使用者是奧勒岡州水質少有檢測的鄉村水井持有者與農民。最突出的是教育實踐：針對先備知識遞增的三種受眾，自行開發三套原創課程，以明確的 Design-Build-Test-Learn 迴圈迭代，並以通用學習設計（UDL）與 STEAM 為基礎。團隊另外做了一套離線桌面搜尋引擎，索引 2022-2025 年 1,354 個 iGEM 隊伍 wiki、共 20,761 個頁面的全文。",
+  "gemsTakeaway_zh": "把外推當成 DBTL 迴圈來跑，並搭配一套固定的成效量表：為先備知識不同的受眾做出同一套課程的三種差異化版本，每次執行後都與主辦單位人員檢討，並以同樣的三項標準（參與度、理解、創造力）為每次迭代評分，讓進步是可被證明的，而不是自己宣稱的。"
 }

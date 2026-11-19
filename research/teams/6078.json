@@ -6,8 +6,11 @@
   "village": "Food & Agriculture",
   "wiki": "https://2026.igem.wiki/upf-barcelona/",
   "projectTitle": "Vinesys",
+  "projectTitle_zh": "Vinesys",
   "tagline": "Where the rain runs out, the roots hold on: engineering root-associated Bacillus subtilis to hold water around grapevine roots.",
+  "tagline_zh": "雨水用盡之處，根系仍然守住：改造根際共生的 Bacillus subtilis，把水留在葡萄藤根部周圍。",
   "summary": "Vinesys engineers Bacillus subtilis to colonise the grapevine rhizosphere and overexpress gamma-PGA, a water-retaining biopolymer, plus ACC deaminase to trim the drought-stress hormone precursor ACC, forming a thin hydration shell where the bacterium attaches to the root. Drought is detected by a two-layer switch: an osmolarity-responsive promoter plus a salt-dependent intein (HutMCM2) that the team re-engineered in silico to splice at the roughly 600-725 mM intracellular K+ that B. subtilis actually reaches, rather than its native 1.5 M. The dry lab produced three distinct deliverables: RK4 solver, a standalone no-code genetic-circuit designer and simulator; a documented molecular-dynamics pipeline for tuning salt-dependent proteins; and iGEMforge, a Claude Code plugin of four research skills that they evaluated honestly and then declined to use for project decisions. Awards came for Software, Model and Education.",
+  "summary_zh": "Vinesys 改造 Bacillus subtilis，使其定殖於葡萄藤根際並過量表現保水生物聚合物 gamma-PGA，同時表現 ACC deaminase 以削減乾旱逆境荷爾蒙前驅物 ACC，在細菌附著於根部之處形成一層薄薄的保水殼。乾旱以雙層開關偵測：一個對滲透壓有反應的啟動子，加上一個依賴鹽濃度的內含肽（HutMCM2）；團隊以電腦重新改造該內含肽，使其在 B. subtilis 實際可達到的約 600-725 mM 胞內 K+ 濃度下進行剪接，而非其天然的 1.5 M。乾實驗產出三項明確的成果：RK4 solver，一套獨立、免寫程式的基因迴路設計與模擬工具；一條有完整文件的分子動力學流程，用於調校依賴鹽濃度的蛋白質；以及 iGEMforge，一個內含四項研究技能的 Claude Code 外掛——他們誠實地評估了它，然後決定不拿它來做專題決策。獲獎項目為軟體、模型與教育。",
   "awards": [
     "Best Software Tool winner, Undergraduate (co-winner)",
     "Best Education special prize (team-listed)",
@@ -15,25 +18,97 @@
   ],
   "dry": {
     "frameworks": "RK4 solver is a desktop Python application with a GUI built in Dear PyGui, structured as three partially independent modules (GUI, compiler, solver) so the solver can be driven from Python without drawing anything on screen. It ships for Windows, macOS and Linux. Interchange is handled by two formats: a readable personal JSON format and SBML Level 3, which gives round-trip compatibility with COPASI and Tellurium. The molecular-dynamics pipeline runs ColabFold/AlphaFold for structures, FoldX for stability screening, MAFFT and BLAST for candidate selection, UCSF Chimera for inspection, and OpenMM with Amber force fields (tleap setup) for the simulations. iGEMforge is a Claude Code plugin: four Markdown SKILL files plus a couple of Python scripts in a folder, deliberately with no subagents, hooks or custom MCP servers.",
+    "frameworks_zh": "RK4 solver 是一套桌面 Python 應用程式，介面以 Dear PyGui 建構，架構分成三個部分獨立的模組（介面、編譯器、解算器），因此解算器可以直接用 Python 驅動、不必在畫面上畫出任何東西。它提供 Windows、macOS 與 Linux 版本。資料交換支援兩種格式：一種可讀的自訂 JSON 格式，以及 SBML Level 3，後者讓它能與 COPASI 和 Tellurium 雙向往返。分子動力學流程以 ColabFold/AlphaFold 取得結構，以 FoldX 做穩定性篩選，以 MAFFT 與 BLAST 挑選候選，以 UCSF Chimera 檢視，並以 OpenMM 搭配 Amber 力場（由 tleap 建置）執行模擬。iGEMforge 則是一個 Claude Code 外掛：四個 Markdown SKILL 檔加上幾支 Python 腳本放在一個資料夾裡，刻意不使用子代理、hook 或自訂 MCP 伺服器。",
     "dataviz": "RK4 solver's results screen plots species concentrations while every parameter has a live slider that takes effect during the running simulation, which is the core interaction idea. The editor uses blocks whose icons follow SBOL Visual glyphs, with input pins always on the left and output pins on the right so links read left to right, collapsible blocks, and a diagnostics/warnings pane with connection rules that refuse to let you build an invalid circuit. The wiki itself is built as explanatory interactive JavaScript rather than static figures: an in-browser Euler-vs-RK4 comparison on x'' = -x, a step-through animation of the solver's operator stack, a replayable eval harness showing the same prompt answered with and without an iGEMforge skill, and a hoverable stakeholder map on the entrepreneurship page.",
+    "dataviz_zh": "RK4 solver 的結果畫面會繪製各物種濃度，而每個參數都配有即時滑桿，在模擬執行中就會生效，這是整個互動設計的核心想法。編輯器使用方塊，其圖示沿用 SBOL Visual 的字符，輸入接點一律在左、輸出接點在右，使連線由左讀到右；方塊可折疊，並有一個診斷／警示面板，其連接規則會直接拒絕讓你搭出不合法的迴路。wiki 本身是以解說性的互動 JavaScript 做成、而非靜態圖表：一個在瀏覽器內針對 x'' = -x 比較 Euler 與 RK4 的示範、一段逐步播放解算器運算子堆疊的動畫、一個可重播的評估面板展示同一道提示在有與沒有 iGEMforge 技能下的回答差異，以及創業頁面上一張可滑過查看的利害關係人地圖。",
     "datascience": "The solver was validated numerically against COPASI: three example circuits were exported to SBML and re-simulated in COPASI under LSODA with identical parameters, initial concentrations and simulation time, and every quantity that means the same thing in both tools agreed within 0.21%, most within 0.01%. The apparent 13.4% and 98.5% discrepancies on free mazF and mazE were traced to a labelling difference in rapid-equilibrium binding, not integration error, and resolved by comparing totals (mazF + 2*FEF, mazE + FEF), which then matched within 0.01% and 0.09%. iGEMforge was evaluated in two rounds: 11 hand-graded assertion tests in round one, then 28 cases run three times per arm (with-skill vs. without-skill) using Claude Code's `claude plugin eval` with an LLM-as-a-judge against team-written rubrics, including real cases, synthetic cases with deliberately planted flaws, and 'silence' cases where a skill should stay out of the way. The MD work used replicas, a wild-type positive control at its known 1.5 M threshold, an uncharged no-effect control, and re-ran its analysis under several different attack-distance cutoffs to show the conclusion did not depend on one arbitrary value.",
+    "datascience_zh": "解算器以數值方式對 COPASI 驗證：三個範例迴路匯出為 SBML，並在相同參數、起始濃度與模擬時間下用 COPASI 的 LSODA 重跑，凡是在兩套工具中意義相同的量值都在 0.21% 以內吻合，多數在 0.01% 以內。游離 mazF 與 mazE 上看似 13.4% 與 98.5% 的差異，被追溯為快速平衡結合下標示方式的差別、而非積分誤差，改以總量比較（mazF + 2*FEF、mazE + FEF）後即分別在 0.01% 與 0.09% 以內吻合。iGEMforge 經過兩輪評估：第一輪是 11 項人工評分的斷言測試，第二輪則是 28 個案例、每個組別（有技能對無技能）各跑三次，使用 Claude Code 的 `claude plugin eval`，以 LLM 當評審、對照隊員自行撰寫的評分準則，案例涵蓋真實情境、刻意植入瑕疪的合成情境，以及技能應當不出手的「沉默」情境。分子動力學工作使用了重複模擬、一個在已知 1.5 M 門檻下的野生型正對照、一個不帶電的無效應對照，並在數個不同的作用距離截斷值下重跑分析，以證明結論不取決於某一個任意選定的數值。",
     "software": "RK4 solver is the main tool: a free, open-source, cross-platform application that turns a hand-drawn genetic circuit into a running ODE simulation with no code at all, aimed squarely at iGEM teams, high-school and undergraduate students, and explicitly not at replacing COPASI or SimBiology. Eight block types are implemented (production with Hill activation/repression, degradation, complex formation in rapid-equilibrium or kinetic mode, extracellular species with six dosing regimes, cell entry, export, catalysis with Michaelis-Menten or mass action, and a link probe), and the compiler translates the drawing into a flat list of stack operators which the solver evaluates with Euler or 4th-order Runge-Kutta. The architecture is worth copying: the translator sorts each block's contribution by the species it points to rather than by the block's own species, a redesign forced by discovering that complex formation was writing its negative terms into the wrong derivative. It was validated twice, against COPASI numerically and against the team's own biocontainment toxin-antitoxin model biologically, and it was user-tested, with non-expert testers building and tuning a toggle switch in 5 to 20 minutes after a short introduction to the notation. Limitations are stated plainly on the wiki (deterministic only, partial SBML import, custom block unfinished, GUI not yet as intuitive as they want) with a three-horizon roadmap including SBOL-based integration with the iGEM Registry that would pull part parameters in and mark any user override as traceably overwritten. Source: https://gitlab.igem.org/2026/software/upf-barcelona/upf-software (team repo https://gitlab.igem.org/2026/upf-barcelona). It is distributed as a downloadable cross-platform application, not a hosted web service, so there is no click-and-use URL. The second tool, iGEMforge, is the most interesting negative result of the season: a Claude Code plugin of four skills (scientific-evidence, experimental-design, mathematical-modeling, bio-wiki-animations) built over two DBTL cycles, in which round-one hand-grading suggested the skills helped (bio-wiki-animations 12/13 assertions with the skill against 5/12 without) but round two with three runs per arm and an LLM judge showed no clear average gain (experimental-design -0.11, scientific-evidence +0.04, mathematical-modeling no clear difference), at substantially higher token cost (309k vs 224k; 468k vs 201k). Testing revealed that three of four skills intermittently stalled waiting on user confirmation and returned nothing; cycle two fixed it with a single rule written into the skills ('state the assumption or caveat and continue'), which restored output in 3 of 3 runs but still did not beat the base model. The team's conclusion, published on the wiki, is that the evidence was too thin to use iGEMforge for Vinesys decisions, and they list cost, privacy, over-trust and installation risks explicitly.",
-    "stack": ["Python", "Dear PyGui", "SBML Level 3", "SBOL Visual", "JSON", "COPASI (validation target)", "Tellurium", "OpenMM", "Amber force field / tleap", "ColabFold", "AlphaFold", "FoldX", "MAFFT", "BLAST", "UCSF Chimera", "Claude Code plugin (Markdown skills + Python)", "claude plugin eval", "iGEM GitLab", "JavaScript (interactive wiki figures)"],
-    "techniques": ["ODE modelling of genetic circuits", "4th-order Runge-Kutta and Euler integration", "stack-machine operator compilation of differential equations", "Hill activation/repression kinetics", "rapid-equilibrium and kinetic complex formation", "Michaelis-Menten catalysis", "molecular dynamics with near-attack-conformation (NAC) readout", "ddG stability screening", "pLDDT/PAE structure confidence assessment", "LLM-as-a-judge evaluation with pre-written rubrics", "A/B testing with planted-flaw synthetic cases", "SBML round-trip cross-validation"]
+    "software_zh": "RK4 solver 是主要工具：一套免費、開源、跨平台的應用程式，能把手繪的基因迴路變成可執行的 ODE 模擬，完全不需寫程式，明確針對 iGEM 隊伍、高中與大學部學生，也明確表示不是要取代 COPASI 或 SimBiology。已實作八種方塊類型（具 Hill 活化／抑制的生產、降解、以快速平衡或動力學模式處理的複合物形成、含六種投藥方式的胞外物種、進入細胞、輸出、以 Michaelis-Menten 或質量作用處理的催化，以及一個連線探針），編譯器把圖轉成一份扁平的堆疊運算子清單，解算器再以 Euler 或四階 Runge-Kutta 求解。它的架構值得借鏡：轉譯器是依每個方塊所指向的物種、而非方塊自身的物種來歸類其貢獻項，這項重新設計是在發現複合物形成會把負項寫進錯誤的微分式之後被迫做的。它驗證了兩次，一次是數值上對 COPASI，一次是生物上對團隊自己的生物圍堵毒素－抗毒素模型；也做過使用者測試，非專家測試者在簡短介紹符號後，於 5 到 20 分鐘內就能搭出並調校一個雙穩態開關。限制在 wiki 上直白列出（僅支援確定性模擬、SBML 匯入不完整、自訂方塊尚未完成、介面還沒有他們想要的那麼直覺），並附上一份三階段路線圖，其中包括以 SBOL 為基礎與 iGEM Registry 整合，可自動帶入元件參數，並把使用者的任何覆寫標記為可追溯的覆寫。原始碼：https://gitlab.igem.org/2026/software/upf-barcelona/upf-software （團隊 repo https://gitlab.igem.org/2026/upf-barcelona ）。它以可下載的跨平台應用程式形式散布，不是架在網路上的服務，因此沒有可以點開就用的網址。第二項工具 iGEMforge 是本季最有意思的負面結果：一個包含四項技能（scientific-evidence、experimental-design、mathematical-modeling、bio-wiki-animations）的 Claude Code 外掛，歷經兩輪 DBTL 開發；第一輪的人工評分看起來技能有幫助（bio-wiki-animations 在有技能時通過 12/13 項斷言，無技能時 5/12），但第二輪每組跑三次並加上 LLM 評審後，顯示平均並無明確增益（experimental-design -0.11、scientific-evidence +0.04、mathematical-modeling 無明確差異），而 token 成本卻顯著更高（309k 對 224k；468k 對 201k）。測試還發現四項技能中有三項會間歇卡住、等待使用者確認而什麼都不回；第二輪以寫進技能的一條規則修掉（「說明該假設或保留條件並繼續」），使 3 次執行都恢復輸出，但仍未勝過基礎模型。團隊公開在 wiki 上的結論是，證據太薄弱，不足以用 iGEMforge 來做 Vinesys 的決策，並明確列出成本、隱私、過度信任與安裝等風險。",
+    "stack": [
+      "Python",
+      "Dear PyGui",
+      "SBML Level 3",
+      "SBOL Visual",
+      "JSON",
+      "COPASI (validation target)",
+      "Tellurium",
+      "OpenMM",
+      "Amber force field / tleap",
+      "ColabFold",
+      "AlphaFold",
+      "FoldX",
+      "MAFFT",
+      "BLAST",
+      "UCSF Chimera",
+      "Claude Code plugin (Markdown skills + Python)",
+      "claude plugin eval",
+      "iGEM GitLab",
+      "JavaScript (interactive wiki figures)"
+    ],
+    "techniques": [
+      "ODE modelling of genetic circuits",
+      "4th-order Runge-Kutta and Euler integration",
+      "stack-machine operator compilation of differential equations",
+      "Hill activation/repression kinetics",
+      "rapid-equilibrium and kinetic complex formation",
+      "Michaelis-Menten catalysis",
+      "molecular dynamics with near-attack-conformation (NAC) readout",
+      "ddG stability screening",
+      "pLDDT/PAE structure confidence assessment",
+      "LLM-as-a-judge evaluation with pre-written rubrics",
+      "A/B testing with planted-flaw synthetic cases",
+      "SBML round-trip cross-validation"
+    ]
   },
   "good": {
     "publicEngagement": "Education is organised around an explicit six-step method the team named WONDER (Who, Objectives, Notice, Dialogue, Evidence, Record), whose last step feeds back into the first like a DBTL cycle, and which is rooted in Catalan educacio del lleure (leisure education) practice that several team members came from through scouting. Audiences were plotted on two axes, age and prior synbio interest, and the session language (Catalan, Spanish or English) was chosen from the barrier they wanted to lower. Each session required a before-and-after measure, at least one artefact participants made themselves, a rubric completed within 24 hours, and a written summary within a day covering what actually happened and what they would change, published on the wiki so other teams can run the session without them. Activities spanned a MiniGEM where pre-university students designed their own synthetic biology projects, an escape room at CosmoCaixa, La Nit de la Recerca, the UPF Summer School, a role-play at the PRBB, SynBYSS, Centre Civic Guinardo, scout groups (Cau La Floresta) and several schools, plus a round table with iGEM UB.",
+    "publicEngagement_zh": "教育工作圍繞團隊自行命名的六步方法 WONDER（Who、Objectives、Notice、Dialogue、Evidence、Record）展開，最後一步會像 DBTL 循環那樣回饋到第一步；這套方法源自加泰隆尼亞的 educació del lleure（休閒教育）實務，幾位隊員是透過童軍活動帶著這個背景進來的。對象依兩個軸向配置——年齡與既有的合成生物學興趣——使用的語言（加泰隆尼亞語、西班牙語或英語）則依他們想降低的哪一道門檻來決定。每一場活動都必須有前後對照的量測、至少一件由參與者自己動手做出的成品、在 24 小時內填完的評分表，以及一天內寫成的書面摘要，說明實際發生了什麼、以及下次會改什麼，並公開在 wiki 上，讓其他隊伍不需要他們在場也能照著辦。活動包括一場讓大學前學生自己設計合成生物學專題的 MiniGEM、在 CosmoCaixa 的密室逃脫、La Nit de la Recerca、UPF 暑期學校、在 PRBB 的角色扮演、SynBYSS、Centre Cívic Guinardó、童軍團（Cau La Floresta）與數所學校，另有一場與 iGEM UB 的圓桌。",
     "ihp": "Human practices is written as three acts with a stated principle of intentionality: every design choice should have a reason statable to an outsider, and where there is none they say so. 32 people outside the team across 8 countries, 52 documented exchanges and 103 survey respondents, with 9 of 10 project phases opened to outside input. The first grower they met corrected their founding premise, that drought was killing Catalan vineyards, by explaining that summer water stress is necessary for proper ripening and the real damage is to next season's crop; a second grower said vines did die in the first drought year, and the team kept both rather than reconciling them. A gamma-PGA geneticist in Pavia shrank the central claim from bulk soil water retention to a local hydration shell at the root. A Bordeaux researcher set a condition the design cannot meet (no deficit at flowering, moderate deficit later) and the team publishes it as a limit, not a feature. Two further conventions are worth copying: advice they chose not to follow stays on the page with the reason, and disagreements they could not resolve are printed unresolved. They also disclose that one advisor, Dr. Carolina Elizondo, holds an iGEM role, so readers can weigh her input.",
+    "ihp_zh": "人類實踐寫成三幕，並明示一項「刻意為之」的原則：每個設計選擇都應該有一個能對外人說清楚的理由，沒有理由的地方就直接說沒有。團隊外共 32 人、跨 8 個國家，52 次有紀錄的往來與 103 份問卷回覆，10 個專題階段中有 9 個開放外部意見。他們見到的第一位果農就糾正了他們的立論前提——他們原以為乾旱正在殺死加泰隆尼亞的葡萄園——說明夏季的水分逆境對正常成熟是必要的，真正受損的是下一季的收成；第二位果農則說在乾旱的第一年葡萄藤確實有死亡，團隊把兩種說法都保留下來，沒有去調和。一位在帕維亞研究 gamma-PGA 的遺傳學家把核心主張從整體土壤保水縮小為根部局部的保水殼。一位波爾多的研究者設下了這個設計做不到的條件（開花期不可有水分虧缺、之後可中度虧缺），團隊把它當成限制、而非賣點公開出來。另外兩項慣例值得借鏡：他們選擇不採納的建議連同理由留在頁面上，而無法化解的分歧就以未解決的狀態印出來。他們也揭露其中一位顧問 Dr. Carolina Elizondo 在 iGEM 內擔任職務，讓讀者得以衡量她的意見。",
     "realWorld": "The entrepreneurship page is explicit that the current value is knowledge, education and visibility rather than product sales, with the project at contained laboratory proof of concept and no environmental release. More than 50 organisations were contacted since June 2026; wineries Clos Montblanc (DO Conca de Barberà), Sumarroca and Vallformosa (DO Penedès) were interviewed about how a new input would fit existing practice, with Vallformosa noting that acting at root level could mean lower adoption friction. IRTA, the Catalan government's agrifood research institute, reviewed the approach against its own Penedès soil-and-water initiative and provided winery contacts. The regulatory finding was that certification, not GMO status, is the binding constraint, and the business work reached a cost per hectare and a route to a field trial. Scale context: 52,000 ha of Catalan vineyard, 8,500 viticulturists, EUR 3.27 bn annual turnover, reservoirs at 14.3% in 2024.",
-    "partners": ["IRTA (Institut de Recerca i Tecnologia Agroalimentàries)", "Celler Clos Montblanc", "Sumarroca", "Vallformosa", "Ajuntament de Barcelona (Departament de Ciència i Innovació)", "CosmoCaixa", "PRBB", "iGEM UB", "Anthropic (sponsor)", "University of Pavia (gamma-PGA genetics)"]
+    "realWorld_zh": "創業頁面明確表示目前的價值在於知識、教育與能見度，而不是產品銷售，專題處於封閉實驗室的概念驗證階段，沒有任何環境釋放。自 2026 年 6 月起接觸了超過 50 個組織；酒莊 Clos Montblanc（DO Conca de Barberà）、Sumarroca 與 Vallformosa（DO Penedès）接受訪談，談一項新投入品要如何融入既有做法，其中 Vallformosa 指出在根部層次作用可能代表採用阻力較低。加泰隆尼亞政府的農食研究機構 IRTA 以其自身的 Penedès 土壤與水計畫審視了這套做法，並提供酒莊人脈。法規上的發現是，真正的約束條件是認證、而不是基改身分；商業評估則推算出每公頃成本與一條走向田間試驗的路徑。規模背景：加泰隆尼亞葡萄園 52,000 公頃、8,500 位葡萄種植者、年營業額 32.7 億歐元，2024 年水庫蓄水率 14.3%。",
+    "partners": [
+      "IRTA (Institut de Recerca i Tecnologia Agroalimentàries)",
+      "Celler Clos Montblanc",
+      "Sumarroca",
+      "Vallformosa",
+      "Ajuntament de Barcelona (Departament de Ciència i Innovació)",
+      "CosmoCaixa",
+      "PRBB",
+      "iGEM UB",
+      "Anthropic (sponsor)",
+      "University of Pavia (gamma-PGA genetics)"
+    ]
   },
   "images": [
-    {"url": "https://static.igem.wiki/teams/6078/wiki/dry-lab/software/figure6.avif", "caption": "Screenshot of the RK4 solver editor with the biocontainment toxin-antitoxin circuit built from linked blocks.", "credit": "Team UPF-Barcelona, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6078/wiki/dry-lab/software/figure7.avif", "caption": "RK4 solver output: internal resveratrol, mazF and FEF levels over time under sinusoidal resveratrol production.", "credit": "Team UPF-Barcelona, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6078/wiki/dry-lab/software/figure4.avif", "caption": "The first hand-drawn sketches of the RK4 solver blocks, designed in the style of electronic circuit diagrams.", "credit": "Team UPF-Barcelona, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6078/wiki/dry-lab/software/rk4-icon-256.avif", "caption": "The RK4 solver application icon.", "credit": "Team UPF-Barcelona, iGEM 2026 wiki"}
+    {
+      "url": "https://static.igem.wiki/teams/6078/wiki/dry-lab/software/figure6.avif",
+      "caption": "Screenshot of the RK4 solver editor with the biocontainment toxin-antitoxin circuit built from linked blocks.",
+      "caption_zh": "RK4 solver 編輯器的畫面截圖，圖中是以連結方塊搭建的生物圍堵毒素－抗毒素迴路。",
+      "credit": "Team UPF-Barcelona, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6078/wiki/dry-lab/software/figure7.avif",
+      "caption": "RK4 solver output: internal resveratrol, mazF and FEF levels over time under sinusoidal resveratrol production.",
+      "caption_zh": "RK4 solver 的輸出：在正弦式的白藜蘆醇生產下，胞內白藜蘆醇、mazF 與 FEF 濃度隨時間的變化。",
+      "credit": "Team UPF-Barcelona, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6078/wiki/dry-lab/software/figure4.avif",
+      "caption": "The first hand-drawn sketches of the RK4 solver blocks, designed in the style of electronic circuit diagrams.",
+      "caption_zh": "RK4 solver 方塊最早的手繪草圖，設計上刻意採用電子電路圖的風格。",
+      "credit": "Team UPF-Barcelona, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6078/wiki/dry-lab/software/rk4-icon-256.avif",
+      "caption": "The RK4 solver application icon.",
+      "caption_zh": "RK4 solver 應用程式圖示。",
+      "credit": "Team UPF-Barcelona, iGEM 2026 wiki"
+    }
   ],
   "gemsTakeaway": "Validate a simulator against the established tool in the field and publish the discrepancy table, including the one that looked like a 98% error and turned out to be a labelling difference, because that table is what makes a student-built solver trustworthy. Their AI work is the sharper lesson for a research centre: build the agent plugin, then actually A/B evaluate it with planted-flaw cases and an LLM judge, and be willing to publish that it did not beat the base model and that you therefore did not use it.",
+  "gemsTakeaway_zh": "把自己寫的模擬器拿去和該領域既有的標準工具對驗，並公開差異對照表，包括那個看起來像 98% 誤差、實際上只是標示方式不同的項目——因為正是這張表讓學生自建的解算器變得可信。他們的 AI 工作對研究中心而言是更鋭利的一課：先把代理人外掛做出來，再真的用植入瑕疪的案例與 LLM 評審做 A/B 評估，並且願意公開它沒有勝過基礎模型、因此自己也沒有採用。",
   "sources": [
     "https://2026.igem.wiki/upf-barcelona/",
     "https://2026.igem.wiki/upf-barcelona/software",

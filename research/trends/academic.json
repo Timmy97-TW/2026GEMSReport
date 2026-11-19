@@ -41,224 +41,743 @@
     {
       "id": "cofolding-commodity",
       "title": "Structure and complex prediction became free infrastructure, and open weights beat the flagship",
+      "title_zh": "結構與複合物預測成為免費的基礎設施，開放權重更勝旗艦模型",
       "oneLine": "AlphaFold3's architecture was reproduced and surpassed in openness by Boltz-1/Boltz-2, Chai-1, Protenix and OpenFold3, so predicting a protein-ligand complex is now a commodity step, not a project.",
+      "oneLine_zh": "AlphaFold3 的架構已被 Boltz-1/Boltz-2、Chai-1、Protenix 與 OpenFold3 複現，並在開放程度上超越，預測蛋白質與配體的複合物如今只是一個標準化的步驟，而不是一個專案。",
       "body": "AlphaFold2 made monomer structure free; the 2024-2026 wave made co-folding (protein plus ligand, nucleic acid, ion and modified residue) free as well. AlphaFold3's weights remain gated to non-commercial use through a restricted-access agreement and its outputs may not be used to train competing models, which directly provoked an open counter-movement: MIT's Boltz-1 and then Boltz-2 shipped under MIT licence with weights, Chai Discovery released Chai-1, ByteDance released Protenix, and the OpenFold consortium released OpenFold3. Boltz-2 is the practically important one for engineering because it folds binding-affinity prediction into the same model rather than requiring a separate docking or free-energy pipeline. The downstream effect visible in the 2026 Nature literature is that structure prediction has stopped being the contribution and become the substrate: Nature Communications papers such as RASSCCoL (rapid physics-based design of small-molecule-binding proteins, 19 Oct 2026) and DeltaCata (geometric deep learning for mutation-induced changes in enzyme kinetic parameters, 5 Nov 2026) assume accurate structures and compete on what is predicted next - chemical complementarity, kcat/KM shifts, hydrogel stress relaxation. The honest caveat, raised repeatedly in 2026 benchmarking write-ups, is that co-folding models interpolate the PDB rather than learn physics, so they are strong on natural-like complexes and weak on genuinely novel chemistry and on affinity ranking within a congeneric series. For a teaching institution the significance is cost: the entire structural step of a project now runs on one GPU in seconds to minutes.",
+      "body_zh": "AlphaFold2 讓單體結構預測變成免費；2024 至 2026 年這一波浪潮則讓共摺疊（蛋白質加上配體、核酸、離子與修飾殘基）也免費了。AlphaFold3 的權重仍透過限制性使用協議僅開放給非商業用途，其輸出也不得用於訓練競爭模型，這直接引發了一場開放陣營的反制運動：MIT 先後以 MIT 授權釋出附帶權重的 Boltz-1 與 Boltz-2，Chai Discovery 釋出 Chai-1，ByteDance 釋出 Protenix，OpenFold 聯盟則釋出 OpenFold3。對工程應用而言，Boltz-2 才是真正重要的那一個，因為它把結合親和力預測整併進同一個模型，不必再另外搭一條對接或自由能計算的流程。在 2026 年的 Nature 系列文獻中可以看到的下游效應是：結構預測已不再是論文的貢獻，而成了底層材料。Nature Communications 上的 RASSCCoL（以物理為基礎快速設計小分子結合蛋白，2026 年 10 月 19 日）與 DeltaCata（以幾何深度學習預測突變造成的酵素動力學參數變化，2026 年 11 月 5 日）等論文都直接假定結構是準確的，競爭的是下一層要預測什麼——化學互補性、kcat/KM 的位移、水凝膠的應力鬆弛。必須誠實指出的保留是（2026 年多份基準評測報告反覆提到）：共摺疊模型是在 PDB 之間做內插，而不是學會物理，因此面對接近天然的複合物時表現很好，面對真正新穎的化學、以及同系列化合物之間的親和力排序時則很弱。對教學型機構來說，意義在於成本：一個專案的整個結構環節現在只需一張 GPU、在數秒到數分鐘內就能跑完。",
       "whyItMatters": "A research institution no longer needs a structural biology core, a crystallography budget or an HPC allocation to work at the frontier of protein engineering - it needs one GPU and a student who can read a PAE plot. That collapses the capital barrier between a well-funded university lab and a small institute, which is exactly the asymmetry GEMS can exploit. It also means the scarce skill has shifted from obtaining structures to judging which predicted structures to believe.",
+      "whyItMatters_zh": "研究機構要站上蛋白質工程的前沿，已不需要結構生物學核心設施、晶體學經費或高效能運算配額——只需要一張 GPU，和一位看得懂 PAE 圖的學生。這讓資源充裕的大學實驗室與小型研究機構之間的資本門檻瓦解，而這正是 GEMS 可以利用的不對稱。這也意味著稀缺的能力已經從「取得結構」轉移到「判斷哪些預測結構值得相信」。",
       "gemsAction": "Stand up a single shared GPU box (or a modest cloud budget) running Boltz-2 and ColabFold behind a simple internal queue, and make 'fold it, then check the confidence metrics' a required step in every student project rather than an optional extra. Build one hard institutional skill that most undergraduate programmes lack: reading pLDDT/PAE/ipTM honestly, including a written rule for when a prediction is too low-confidence to act on. Within 12 months GEMS should be able to show a project where a Boltz-2 affinity prediction was experimentally checked, right or wrong - the negative result is as valuable a teaching artefact as the positive one.",
+      "gemsAction_zh": "架一台共用的 GPU 主機（或一筆不大的雲端預算），在一個簡單的內部排程後面跑 Boltz-2 與 ColabFold，並把「先摺疊，再檢查信賴度指標」訂為每個學生專案的必要步驟，而不是可選的加分項。培養一項多數大學部課程都缺乏的硬能力：誠實地解讀 pLDDT/PAE/ipTM，並明文訂出什麼情況下的預測信賴度太低、不足以作為行動依據。12 個月內，GEMS 應該要能展示一個把 Boltz-2 親和力預測拿去實驗驗證的專案，對或錯都好——陰性結果作為教學素材，價值不輸正面結果。",
       "maturity": "mainstream",
       "refs": [
-        {"title": "Rapid assessment of chemical complementarity of ligands for protein design (RASSCCoL)", "url": "https://www.nature.com/search?q=protein+design&order=date", "venue": "Nature Communications", "year": 2026},
-        {"title": "Effective enzyme engineering through modeling kinetic parameter changes upon mutations with geometric deep learning (DeltaCata)", "url": "https://www.nature.com/articles/s41467-026-79287-x", "venue": "Nature Communications", "year": 2026},
-        {"title": "Tracking Boltz-2 Benchmarks", "url": "https://www.rowansci.com/blog/boltz2-benchmarks", "venue": "Rowan Scientific (independent benchmark write-up)", "year": 2026},
-        {"title": "Next-Generation Foundation Models: The Open Source Counter-Movement Led by Boltz and Chai, and the Post-AlphaFold 3 Drug Discovery Landscape", "url": "https://note.com/pharma_insight/n/nfe3c598ff7c3?hl=en", "venue": "Pharma Insight Lab (licensing survey)", "year": 2026},
-        {"title": "Five protein-design questions that still challenge AI", "url": "https://www.nature.com/articles/d41586-024-03595-9", "venue": "Nature", "year": 2024}
+        {
+          "title": "Rapid assessment of chemical complementarity of ligands for protein design (RASSCCoL)",
+          "url": "https://www.nature.com/search?q=protein+design&order=date",
+          "venue": "Nature Communications",
+          "year": 2026
+        },
+        {
+          "title": "Effective enzyme engineering through modeling kinetic parameter changes upon mutations with geometric deep learning (DeltaCata)",
+          "url": "https://www.nature.com/articles/s41467-026-79287-x",
+          "venue": "Nature Communications",
+          "year": 2026
+        },
+        {
+          "title": "Tracking Boltz-2 Benchmarks",
+          "url": "https://www.rowansci.com/blog/boltz2-benchmarks",
+          "venue": "Rowan Scientific (independent benchmark write-up)",
+          "year": 2026
+        },
+        {
+          "title": "Next-Generation Foundation Models: The Open Source Counter-Movement Led by Boltz and Chai, and the Post-AlphaFold 3 Drug Discovery Landscape",
+          "url": "https://note.com/pharma_insight/n/nfe3c598ff7c3?hl=en",
+          "venue": "Pharma Insight Lab (licensing survey)",
+          "year": 2026
+        },
+        {
+          "title": "Five protein-design questions that still challenge AI",
+          "url": "https://www.nature.com/articles/d41586-024-03595-9",
+          "venue": "Nature",
+          "year": 2024
+        }
       ]
     },
     {
       "id": "generative-design-crosses-into-function",
       "title": "Generative protein design crossed from 'does it fold' to 'does it work', including design from plain English",
+      "title_zh": "生成式蛋白質設計從「摺得起來嗎」跨到「有沒有功能」，甚至能直接從白話英文設計",
       "oneLine": "RFdiffusion2, LigandMPNN and BindCraft made de novo binders and enzymes routine enough to benchmark, and Pinal now designs functional proteins from a natural-language prompt.",
+      "oneLine_zh": "RFdiffusion2、LigandMPNN 與 BindCraft 讓從頭設計的結合蛋白與酵素普及到足以做基準評測，而 Pinal 已經能從自然語言提示設計出有功能的蛋白質。",
       "body": "The 2026 state of the art is no longer backbone generation but functional success rate, and the field has started reporting it honestly. BindCraft (Nature 2025) reported per-target success rates spanning 10 to 100 percent with a mean of 46.3 percent, while independent commentary puts the realistic cross-target rate nearer 25 percent and notes that the most comprehensive single-target dataset - the Nipah G binder competition - came in under 10 percent. On the enzyme side, a March 2026 preprint benchmarked RFdiffusion2 (which depends on LigandMPNN for sequence design followed by RF3 refolding) at 30/41 on an enzyme design benchmark, with the challenger model reaching 41/41. The Baker lab's De novo design of miniproteins targeting GPCRs (Nature, 21 May 2026) is the clearest proof that this now reaches hard, membrane-embedded, therapeutically relevant targets: designed miniprotein agonists and antagonists against receptors implicated in itch, pain, cancer, metabolic disease and migraine, validated through a receptor-diversion microscopy screen. The genuinely new modality is language-conditioned design: Pinal, a 16-billion-parameter model from Fajie Yuan's group at Westlake University (Nature, 21 Oct 2026), was trained on roughly 1.7 billion synthetically annotated protein-text pairs and designs candidates from a written functional description; its validated outputs span GFP, a PET-degrading enzyme, an alcohol dehydrogenase and a glycine-cleavage H-protein, where the designed version raised final product concentration to 1.7x the natural E. coli protein. Preprint versions report Pinal recovering roughly 77 percent of requested functional keywords against about 12 percent for ESM3 on keyword-only design, though the figure shifts between versions and should be treated as indicative.",
+      "body_zh": "2026 年的技術前沿已不在主鏈生成，而在功能成功率，而且這個領域開始誠實地回報這個數字。BindCraft（Nature 2025）回報各標的的成功率介於 10% 到 100%，平均 46.3%，但獨立評論認為跨標的的實際成功率更接近 25%，並指出目前最完整的單一標的資料集——Nipah G 結合蛋白競賽——成功率低於 10%。在酵素方面，2026 年 3 月的一篇預印本在酵素設計基準上評測 RFdiffusion2（它需要 LigandMPNN 做序列設計，再用 RF3 重新摺疊驗證），得分 30/41，而挑戰者模型達到 41/41。Baker 實驗室的 De novo design of miniproteins targeting GPCRs（Nature，2026 年 5 月 21 日）最清楚地證明這套方法已經能處理困難的、嵌在膜上的、具治療意義的標的：他們設計出針對與搔癢、疼痛、癌症、代謝疾病與偏頭痛相關受體的迷你蛋白促效劑與拮抗劑，並以受體轉移的顯微鏡篩選加以驗證。真正新的模式是以語言為條件的設計：Pinal 是西湖大學 Fajie Yuan 團隊的 160 億參數模型（Nature，2026 年 10 月 21 日），以約 17 億組合成標註的蛋白質—文字配對訓練，能從一段文字功能描述產生候選設計；已驗證的產出包括 GFP、一個可分解 PET 的酵素、一個醇脫氫酶，以及一個甘胺酸裂解系統的 H-protein，其中設計版本把最終產物濃度提高到天然 E. coli 蛋白的 1.7 倍。預印本版本回報，在僅給關鍵詞的設計任務上，Pinal 能還原約 77% 所要求的功能關鍵詞，ESM3 約為 12%，不過這個數字在不同版本之間有變動，應視為參考性數值。",
       "whyItMatters": "Design is becoming a text-and-screening problem rather than a structural-intuition problem, which is unusually accessible to early-career scientists - the bottleneck moves to assay design and honest hit calling, which is teachable. It also means an institution that cannot make 10,000 designs can still compete, because the discriminating skill is choosing the 20 to test and building a trustworthy assay for them.",
+      "whyItMatters_zh": "設計正在變成一個文字加篩選的問題，而不是結構直覺的問題，這對生涯初期的科學家格外友善——瓶頸轉移到檢測設計與誠實判讀命中，而這些都可以教。這也意味著做不出一萬個設計的機構仍然能競爭，因為真正拉開差距的能力是挑出要測的那 20 個，並為它們建立可信的檢測。",
       "gemsAction": "Run one contained design-and-test campaign in the next 12 months with a deliberately cheap, unambiguous readout - a de novo binder or a light-responsive switch against a target GEMS already has an assay for - using BindCraft or ProteinMPNN/LigandMPNN for design and ordering 10 to 20 constructs rather than hundreds. Record and publish the success rate including the failures, because calibrated in-house hit rates are the single most useful number an institution can own and almost nobody reports them at this scale. Treat Pinal-style natural-language design as a literacy exercise for students, not yet as a production tool.",
+      "gemsAction_zh": "在未來 12 個月內，針對 GEMS 已經有檢測方法的標的，執行一次範圍明確的設計與測試行動，刻意選用便宜且判讀無歧義的讀出訊號——一個從頭設計的結合蛋白，或一個光反應開關——用 BindCraft 或 ProteinMPNN/LigandMPNN 做設計，只訂製 10 到 20 個構築體，而不是幾百個。把成功率連同失敗一起記錄並發表，因為經過校準的自家命中率是一個機構能擁有的最有用的數字，而在這個規模上幾乎沒有人回報。把 Pinal 這類自然語言設計當成學生的素養訓練，而非現階段的生產工具。",
       "maturity": "accelerating",
       "refs": [
-        {"title": "De novo design of miniproteins targeting GPCRs", "url": "https://www.nature.com/articles/s41586-026-10656-8", "venue": "Nature", "year": 2026},
-        {"title": "Programmable design of functional proteins from natural language (Pinal)", "url": "https://www.nature.com/articles/s41586-026-11205-z", "venue": "Nature", "year": 2026},
-        {"title": "One-shot design of functional protein binders with BindCraft", "url": "https://www.nature.com/articles/s41586-025-09429-6", "venue": "Nature", "year": 2025},
-        {"title": "Scaling Atomistic Protein Binder Design with Generative Pretraining and Test-Time Compute (RFdiffusion2 enzyme benchmark comparison)", "url": "https://arxiv.org/pdf/2603.27950", "venue": "arXiv preprint", "year": 2026},
-        {"title": "Researchers Develop AI Model That Designs Proteins From Plain-Language Descriptions", "url": "https://en.westlake.edu.cn/news_events/westlakenews/research/202610/t20261023_70614.html", "venue": "Westlake University (institutional release)", "year": 2026}
+        {
+          "title": "De novo design of miniproteins targeting GPCRs",
+          "url": "https://www.nature.com/articles/s41586-026-10656-8",
+          "venue": "Nature",
+          "year": 2026
+        },
+        {
+          "title": "Programmable design of functional proteins from natural language (Pinal)",
+          "url": "https://www.nature.com/articles/s41586-026-11205-z",
+          "venue": "Nature",
+          "year": 2026
+        },
+        {
+          "title": "One-shot design of functional protein binders with BindCraft",
+          "url": "https://www.nature.com/articles/s41586-025-09429-6",
+          "venue": "Nature",
+          "year": 2025
+        },
+        {
+          "title": "Scaling Atomistic Protein Binder Design with Generative Pretraining and Test-Time Compute (RFdiffusion2 enzyme benchmark comparison)",
+          "url": "https://arxiv.org/pdf/2603.27950",
+          "venue": "arXiv preprint",
+          "year": 2026
+        },
+        {
+          "title": "Researchers Develop AI Model That Designs Proteins From Plain-Language Descriptions",
+          "url": "https://en.westlake.edu.cn/news_events/westlakenews/research/202610/t20261023_70614.html",
+          "venue": "Westlake University (institutional release)",
+          "year": 2026
+        }
       ]
     },
     {
       "id": "virtual-cell-foundation-models",
       "title": "Biological foundation models and the race to a virtual cell",
+      "title_zh": "生物基礎模型與通往虛擬細胞的競賽",
       "oneLine": "Evo 2, Arc's STATE and a Nature Perspective on a virtual yeast have turned 'simulate the cell' from rhetoric into a funded, benchmarked programme with an open prize.",
+      "oneLine_zh": "Evo 2、Arc 的 STATE，以及 Nature 上一篇關於虛擬酵母的 Perspective，把「模擬整個細胞」從口號變成有經費、有基準、還有公開獎金的研究計畫。",
       "body": "Three strands converged in 2026. First, DNA foundation models: Evo 2, published in Nature in March 2026, was trained on 9.3 trillion bases from more than 128,000 genomes across all domains of life, scaled to 40 billion parameters, handles context windows up to one million bases, and shipped with open weights. Second, perturbation models: Arc Institute's STATE, its first virtual cell model, was trained on observational data from roughly 170 million cells plus perturbational data from over 100 million cells across 70 human cell lines, split into a State Embedding model for the transcriptome and a State Transition model for predicting perturbation-induced shifts; it is released under a non-commercial licence with State 2 in development, and Arc added an in-context-learning successor in January 2026. Arc has made this a community sport through the 2026 Virtual Cell Challenge, which scores models on predicting gene-knockdown responses in six cell lines they never saw in training, with a 100,000 USD prize. Third, and most relevant to synthetic biology, the microbial virtual cell: Towards the construction of a virtual yeast (Nature Perspective, 1 July 2026, Qian, Zhou and Guo) proposes decomposing S. cerevisiae into eight function-centred modules - genetic, metabolic and structural - each as a domain-specific AI tool coordinated by an LLM orchestration layer over three data pillars (mechanistic knowledge, subcellular architecture, dynamic states), inside a closed loop that autonomously designs and runs experiments. Nature Methods separately highlighted a 4D whole-cell model of a minimal cell (14 April 2026), and bioRxiv work is already building virtual viruses inside a JCVI-syn3A-based spatial minimal cell. The honest status: none of these predicts a novel engineered phenotype reliably, and the Virtual Cell Challenge exists precisely because generalisation to unseen contexts is unsolved.",
+      "body_zh": "2026 年有三條線匯流。第一條是 DNA 基礎模型：2026 年 3 月發表於 Nature 的 Evo 2，以涵蓋三域生物、超過 128,000 個基因組的 9.3 兆個鹼基訓練，規模達 400 億參數，可處理長達一百萬個鹼基的上下文窗口，並附帶開放權重釋出。第二條是擾動模型：Arc Institute 的 STATE 是其第一個虛擬細胞模型，訓練資料包含約 1.7 億個細胞的觀察性資料，以及橫跨 70 條人類細胞株、超過 1 億個細胞的擾動資料，並拆成負責轉錄體的 State Embedding 模型與預測擾動造成位移的 State Transition 模型；它以非商業授權釋出，State 2 正在開發中，Arc 並於 2026 年 1 月加入了一個採用情境學習的後繼模型。Arc 透過 2026 年 Virtual Cell Challenge 把這件事變成社群競賽，以模型在訓練時從未見過的六條細胞株上預測基因敲低反應的表現評分，獎金 10 萬美元。第三條，也是與合成生物學最相關的，是微生物虛擬細胞：Towards the construction of a virtual yeast（Nature Perspective，2026 年 7 月 1 日，Qian、Zhou 與 Guo）主張把 S. cerevisiae 拆解成八個以功能為核心的模組——遺傳、代謝與結構——每個模組都是一個特定領域的 AI 工具，由一個 LLM 協調層統整，底下架在三根資料支柱上（機制知識、次細胞結構、動態狀態），整體置於一個能自主設計並執行實驗的閉環之中。Nature Methods 另外介紹了一個最小細胞的 4D 全細胞模型（2026 年 4 月 14 日），bioRxiv 上也已經有人在以 JCVI-syn3A 為基礎的空間最小細胞中建構虛擬病毒。誠實的現況是：這些模型都還不能可靠預測一個新設計出來的表現型，而 Virtual Cell Challenge 之所以存在，正是因為「推廣到未見過的情境」尚未解決。",
       "whyItMatters": "If virtual cells work even partially, the expensive part of synthetic biology moves from the bench to the GPU, and institutions that have invested in modelling literacy will set the agenda while wet-lab-only institutions become service providers. Yeast and minimal cells are where this will be decided first, and they are cheap, safe and teachable - which is a rare alignment of frontier relevance and institutional feasibility.",
+      "whyItMatters_zh": "虛擬細胞只要部分可行，合成生物學最花錢的環節就會從實驗檯移到 GPU 上，投資於建模素養的機構會主導議題，只有濕式實驗室的機構則會淪為服務提供者。這件事會先在酵母與最小細胞上見真章，而這兩者便宜、安全、好教——前沿相關性與機構可行性難得地對上了。",
       "gemsAction": "Enter a GEMS student team in the next Virtual Cell Challenge cycle: it is a free, externally scored, genuinely unsolved benchmark with a public leaderboard, which is the cheapest credible way for a young institution to demonstrate dry-lab capability. In parall, pick one microbial model system GEMS already runs wet (ideally Bacillus or yeast) and start assembling the three data pillars for it - curated mechanistic knowledge, growth and expression time-series, imaging - so that GEMS owns a dataset rather than only consuming models. Reach out to Arc Institute's tools community and to the virtual-yeast authors; both are actively recruiting benchmark contributors.",
+      "gemsAction_zh": "派一支 GEMS 學生隊伍參加下一輪 Virtual Cell Challenge：它免費、由外部評分、是真正未解的基準，而且有公開排行榜，對一所年輕機構而言，這是展現乾式實驗室能力最便宜又可信的方式。同時，挑一個 GEMS 已經在做濕式實驗的微生物模式系統（最好是 Bacillus 或酵母），開始為它組建那三根資料支柱——經過整理的機制知識、生長與表現量的時間序列、影像——讓 GEMS 擁有資料集，而不只是消費別人的模型。主動聯繫 Arc Institute 的工具社群，以及虛擬酵母論文的作者群；兩邊都在積極招募基準測試的貢獻者。",
       "maturity": "emerging",
       "refs": [
-        {"title": "Towards the construction of a virtual yeast", "url": "https://www.nature.com/articles/s41586-026-10574-9", "venue": "Nature (Perspective)", "year": 2026},
-        {"title": "The 2026 Virtual Cell Challenge: predicting perturbation responses in cell contexts a model has never seen", "url": "https://arcinstitute.org/news/virtual-cell-challenge-2026", "venue": "Arc Institute", "year": 2026},
-        {"title": "Arc Institute Releases its First Virtual Cell Model (STATE), trained on 270 million cells", "url": "https://www.biopharmatrend.com/news/arc-institute-releases-its-first-virtual-cell-model-trained-on-270-million-cells-1302/", "venue": "BiopharmaTrend", "year": 2025},
-        {"title": "4D whole-cell model of a minimal cell", "url": "https://www.nature.com/articles/s41592-026-03075-0", "venue": "Nature Methods (Research Highlight)", "year": 2026},
-        {"title": "Arc Tools Hub (Evo 2, STATE model releases and weights)", "url": "https://arcinstitute.org/tools", "venue": "Arc Institute", "year": 2026}
+        {
+          "title": "Towards the construction of a virtual yeast",
+          "url": "https://www.nature.com/articles/s41586-026-10574-9",
+          "venue": "Nature (Perspective)",
+          "year": 2026
+        },
+        {
+          "title": "The 2026 Virtual Cell Challenge: predicting perturbation responses in cell contexts a model has never seen",
+          "url": "https://arcinstitute.org/news/virtual-cell-challenge-2026",
+          "venue": "Arc Institute",
+          "year": 2026
+        },
+        {
+          "title": "Arc Institute Releases its First Virtual Cell Model (STATE), trained on 270 million cells",
+          "url": "https://www.biopharmatrend.com/news/arc-institute-releases-its-first-virtual-cell-model-trained-on-270-million-cells-1302/",
+          "venue": "BiopharmaTrend",
+          "year": 2025
+        },
+        {
+          "title": "4D whole-cell model of a minimal cell",
+          "url": "https://www.nature.com/articles/s41592-026-03075-0",
+          "venue": "Nature Methods (Research Highlight)",
+          "year": 2026
+        },
+        {
+          "title": "Arc Tools Hub (Evo 2, STATE model releases and weights)",
+          "url": "https://arcinstitute.org/tools",
+          "venue": "Arc Institute",
+          "year": 2026
+        }
       ]
     },
     {
       "id": "generative-genome-design",
       "title": "Genome-scale generative design: models now write whole genomes that boot",
+      "title_zh": "基因組尺度的生成式設計：模型現在寫出的整個基因組真的能啟動",
       "oneLine": "Genome language models have gone from annotating DNA to authoring viable bacteriophage genomes, and Nature Reviews is already publishing how-to pieces on it.",
+      "oneLine_zh": "基因組語言模型已從標註 DNA 進展到撰寫能存活的噬菌體基因組，Nature Reviews 甚至已經在刊登操作指南型的文章。",
       "body": "The landmark result is the Stanford and Arc Institute phage work: Evo 1 and Evo 2 were used to generate complete bacteriophage genomes modelled on the 5,386-nucleotide phiX174, roughly 700,000 candidate genomes were sampled, 285 were chemically synthesised and transformed, and 16 yielded viable, bacteria-killing phages - the first AI-authored genomes that function. Nature Reviews Genetics ran a Tools of the Trade piece by Samuel King on 17 November 2026, Generative genome design with DNA language models, walking through design, synthesis and validation, which is a reliable marker that a technique has moved from stunt to method. This sits alongside a hard-engineering track on the same problem: Nature Reviews Bioengineering published De novo design of synthetic microbial genomes (23 February 2026, Koster, da Costa Oliveira and Claassens) on rational genome design and genome-scale organisation; a bioRxiv group reported Generating E. coli 0.5 controlled by a half-sized genome by fleshing out an imperfect minimal genome through genome-scale debugging; Nature Biotechnology covered the Sc2.0 synthetic yeast chromosome programme; and Nature news reported both a genome transplant reviving 'zombie cells' (24 March 2026) and bacteria running key machinery on 19 rather than 20 amino acids via AI-guided redesign (30 April 2026). Nature also ran a Book Review by Kate Adamala in February 2026 asking directly whether AI genome design will upend how life evolves. Note the biosafety design choices embedded in the phage work: viruses infecting humans and close relatives were excluded from training, and only non-pathogenic E. coli hosts were used.",
+      "body_zh": "里程碑式的成果來自史丹佛與 Arc Institute 的噬菌體研究：他們用 Evo 1 與 Evo 2 以 5,386 個核苷酸的 phiX174 為範本生成完整的噬菌體基因組，取樣約 70 萬個候選基因組，化學合成並轉形其中 285 個，有 16 個長出能存活、能殺菌的噬菌體——這是第一批真正有功能的 AI 撰寫基因組。Nature Reviews Genetics 於 2026 年 11 月 17 日刊出 Samuel King 的 Tools of the Trade 文章 Generative genome design with DNA language models，逐步說明設計、合成與驗證流程，這是一項技術從噱頭變成方法的可靠指標。與此並行的是同一問題的硬工程路線：Nature Reviews Bioengineering 發表 De novo design of synthetic microbial genomes（2026 年 2 月 23 日，Koster、da Costa Oliveira 與 Claassens），討論理性基因組設計與基因組尺度的組織安排；一個 bioRxiv 團隊回報 Generating E. coli 0.5 controlled by a half-sized genome，以基因組尺度的除錯把一個不完美的最小基因組補齊；Nature Biotechnology 報導了 Sc2.0 合成酵母染色體計畫；Nature 新聞則報導了以基因組移植讓「殭屍細胞」復活（2026 年 3 月 24 日），以及透過 AI 引導的重新設計，讓細菌用 19 種而非 20 種胺基酸運作關鍵機制（2026 年 4 月 30 日）。Nature 也在 2026 年 2 月刊出 Kate Adamala 的書評，直接追問 AI 基因組設計是否會徹底改變生命演化的方式。值得注意的是噬菌體研究內建的生物安全設計：訓練資料排除了感染人類及其近親的病毒，宿主也只用非致病性的 E. coli。",
       "whyItMatters": "Genome-scale design shifts synthetic biology's unit of work from the part and the circuit to the whole chassis, which re-prices DNA synthesis as the real bottleneck and makes computational sequence design the highest-leverage skill in the pipeline. It is also the trend with the sharpest dual-use profile, so institutional credibility will depend on being visibly thoughtful about it before anyone asks.",
+      "whyItMatters_zh": "基因組尺度的設計把合成生物學的工作單位從元件與電路推進到整個底盤，於是 DNA 合成重新被定價為真正的瓶頸，而計算序列設計成為整條流程中槓桿最大的能力。這也是雙重用途風險最尖銳的一項趨勢，因此機構的可信度取決於在別人問起之前，就已經看得出有認真思考過。",
       "gemsAction": "Teach genome language models as a reading-and-critique unit rather than a build project: have students generate and computationally evaluate sequences (promoters, regulatory DNA, small operons) without synthesising anything, which captures nearly all the educational value at zero biosafety cost. Where GEMS does build, stay at the part and pathway scale and adopt the phage paper's conventions explicitly - non-pathogenic hosts, excluded sequence classes, documented rationale. Write that stance down now as a one-page institutional policy; it will be required for collaborations and funding within the year.",
+      "gemsAction_zh": "把基因組語言模型當成閱讀與批判的單元來教，而不是一個建構專案：讓學生生成序列（啟動子、調控 DNA、小型操縱子）並以計算方式評估，完全不做合成，這樣幾乎能取得全部的教學價值，而生物安全成本為零。GEMS 真的要動手建構時，就守在元件與路徑的尺度，並明確採用噬菌體那篇論文的規範——非致病宿主、排除特定序列類別、記錄下判斷理由。現在就把這個立場寫成一頁的機構政策；一年之內，合作與經費申請都會要求它。",
       "maturity": "emerging",
       "refs": [
-        {"title": "Generative genome design with DNA language models", "url": "https://www.nature.com/articles/s41576-026-01032-3", "venue": "Nature Reviews Genetics (Tools of the Trade)", "year": 2026},
-        {"title": "Generative design of novel bacteriophages with genome language models", "url": "https://www.biorxiv.org/content/10.1101/2025.09.12.675911.full.pdf", "venue": "bioRxiv preprint (subsequently published 2026)", "year": 2025},
-        {"title": "De novo design of synthetic microbial genomes", "url": "https://www.nature.com/articles/s44222-026-00410-0", "venue": "Nature Reviews Bioengineering", "year": 2026},
-        {"title": "World's first AI-designed viruses a step towards AI-generated life", "url": "https://www.nature.com/articles/d41586-025-03055-y", "venue": "Nature (News)", "year": 2025},
-        {"title": "AI tools can design genomes. Will they upend how life evolves?", "url": "https://www.nature.com/articles/d41586-026-00566-0", "venue": "Nature (Book Review, Kate Adamala)", "year": 2026},
-        {"title": "All life runs on 20 amino acids. These cells run key machinery on just 19", "url": "https://www.nature.com/articles/d41586-026-01396-w", "venue": "Nature (News)", "year": 2026}
+        {
+          "title": "Generative genome design with DNA language models",
+          "url": "https://www.nature.com/articles/s41576-026-01032-3",
+          "venue": "Nature Reviews Genetics (Tools of the Trade)",
+          "year": 2026
+        },
+        {
+          "title": "Generative design of novel bacteriophages with genome language models",
+          "url": "https://www.biorxiv.org/content/10.1101/2025.09.12.675911.full.pdf",
+          "venue": "bioRxiv preprint (subsequently published 2026)",
+          "year": 2025
+        },
+        {
+          "title": "De novo design of synthetic microbial genomes",
+          "url": "https://www.nature.com/articles/s44222-026-00410-0",
+          "venue": "Nature Reviews Bioengineering",
+          "year": 2026
+        },
+        {
+          "title": "World's first AI-designed viruses a step towards AI-generated life",
+          "url": "https://www.nature.com/articles/d41586-025-03055-y",
+          "venue": "Nature (News)",
+          "year": 2025
+        },
+        {
+          "title": "AI tools can design genomes. Will they upend how life evolves?",
+          "url": "https://www.nature.com/articles/d41586-026-00566-0",
+          "venue": "Nature (Book Review, Kate Adamala)",
+          "year": 2026
+        },
+        {
+          "title": "All life runs on 20 amino acids. These cells run key machinery on just 19",
+          "url": "https://www.nature.com/articles/d41586-026-01396-w",
+          "venue": "Nature (News)",
+          "year": 2026
+        }
       ]
     },
     {
       "id": "agentic-ai-autonomous-labs",
       "title": "Agentic AI moved from literature assistant to experiment designer and robot driver",
+      "title_zh": "代理式 AI 從文獻助手升級為實驗設計者與機器人操作者",
       "oneLine": "Robin, Biomni, Co-Scientist and cloud biofoundries closed the loop from hypothesis to robot to analysis, and the 2026 question is no longer whether agents can run experiments but how to validate what they conclude.",
+      "oneLine_zh": "Robin、Biomni、Co-Scientist 與雲端生物鑄造廠已把從假說到機器人再到分析的迴路閉合，2026 年的問題不再是代理能否執行實驗，而是如何驗證它們得出的結論。",
       "body": "A 2026 Cell review on agentic AI for autonomous science classifies three paradigms that all landed in top venues within about a year. Robin, a multi-agent system published in Nature in 2026, linked hypothesis generation to data analysis in a lab-in-the-loop cycle and identified ripasudil and KL001 as enhancers of RPE phagocytosis, proposing ripasudil for dry age-related macular degeneration. Biomni (Science, 2026) is a general-purpose biomedical agent released open source as an environment (Biomni-E1), architecture (Biomni-A1) and RL-trained models (Biomni-R0), reporting generalisation across causal gene prioritisation, drug repurposing and rare-disease diagnosis. Google's Co-Scientist (Gottweis et al., 2026) is a Gemini-based tournament of agents validated on AML drug repurposing with in vitro confirmation, novel target discovery and antimicrobial resistance mechanisms. Synthetic biology specifically is getting its own instances: an October 2026 bioRxiv preprint describes iCloudBiofoundry, a cloud-accessible platform pairing agentic AI with robotic execution through a layer that translates protocols into automation workflows, with three experimentally validated case studies; MicroGrowAgents (bioRxiv, June 2026) is an agentic system for microbial cultivation optimisation; a Scientific Reports paper (8 September 2026) integrates LLMs with knowledge graphs for metabolic pathway design in food synthetic biology; and a bioRxiv group is using LLMs for ontology-driven generation of SBOL knowledge-graph software with Beal, Myers and Misirli as authors. The counter-evidence matters: a 2026 arXiv study of agentic self-driving microscopy found that benchmarks support qualification but do not necessarily generalise to unseen tasks, and an Experiment-as-Code paper documents the real integration tax - one major orchestration framework maintains 28 device instances across 16 device types, each needing a hand-coded adapter. Emerald Cloud Lab remains the proof that fully programmable cloud labs are commercially viable and the warning that the ecosystem is closed and proprietary.",
+      "body_zh": "2026 年 Cell 上一篇關於自主科學中代理式 AI 的綜述，歸納出三種範式，而它們都在大約一年內登上頂級期刊。Robin 是 2026 年發表於 Nature 的多代理系統，在一個「實驗室在迴路中」的循環裡把假說生成與資料分析串接起來，找出 ripasudil 與 KL001 能增強 RPE 的吞噬作用，並提議以 ripasudil 治療乾性年齡相關性黃斑部病變。Biomni（Science，2026）是一個通用型生醫代理，以開放原始碼形式釋出，包含環境（Biomni-E1）、架構（Biomni-A1）與經強化學習訓練的模型（Biomni-R0），回報能泛化到致病基因優先排序、老藥新用與罕見疾病診斷等任務。Google 的 Co-Scientist（Gottweis 等人，2026）是一套基於 Gemini 的代理競賽機制，在 AML 老藥新用（並經體外實驗確認）、新標的發現與抗藥性機制上得到驗證。合成生物學也開始有自己的版本：2026 年 10 月的一篇 bioRxiv 預印本介紹 iCloudBiofoundry，一個可從雲端存取的平台，透過一層能把實驗流程翻譯成自動化工作流的中介，把代理式 AI 與機器人執行配對起來，並附三個經實驗驗證的案例；MicroGrowAgents（bioRxiv，2026 年 6 月）是用於微生物培養條件最佳化的代理系統；Scientific Reports 的一篇論文（2026 年 9 月 8 日）把 LLM 與知識圖譜整合起來，用於食品合成生物學的代謝路徑設計；還有一個 bioRxiv 團隊（作者包括 Beal、Myers 與 Misirli）正以 LLM 進行本體論驅動的 SBOL 知識圖譜軟體生成。反面證據同樣重要：2026 年 arXiv 上一份關於代理式自駕顯微鏡的研究發現，基準測試足以支持資格認定，但不必然能推廣到未見過的任務；一篇 Experiment-as-Code 論文則記錄了真實的整合成本——某個主要的流程協調框架維護著橫跨 16 種裝置型別的 28 個裝置實例，每一個都需要手寫的轉接程式。Emerald Cloud Lab 既證明了完全可程式化的雲端實驗室在商業上可行，也是一記警告：這個生態系是封閉且專有的。",
       "whyItMatters": "Agents compress the literature-to-hypothesis step that normally takes a graduate student months, which disproportionately helps institutions rich in motivated students but poor in senior specialist time - precisely GEMS's profile. The accompanying risk is that an agent produces confident, well-formatted, wrong hypotheses, so the institutional differentiator becomes a culture of verification rather than access to the agent.",
+      "whyItMatters_zh": "代理把通常要耗掉研究生數個月的「文獻到假說」環節大幅壓縮，這對學生動機充足、但資深專家時間匱乏的機構格外有利——正是 GEMS 的樣貌。隨之而來的風險是代理會產出自信、格式漂亮但錯誤的假說，因此機構真正的差異化不在於能不能用到代理，而在於有沒有驗證的文化。",
       "gemsAction": "Adopt one open agent stack (Biomni is open source and the natural choice) on institutional infrastructure and make every student project run a documented agent-assisted literature and hypothesis pass whose outputs are then manually checked, with disagreements logged. Build the verification habit as the deliverable: a standing rule that no agent-proposed claim enters a report without a human-traced primary citation. For automation, do not buy a biofoundry - instead negotiate time on an existing cloud lab or a regional biofoundry and write protocols in a machine-readable form from day one so GEMS work is portable when it does scale.",
+      "gemsAction_zh": "在機構自有的基礎設施上採用一套開放的代理堆疊（Biomni 是開放原始碼，也是自然的選擇），並要求每個學生專案都跑一輪有記錄的代理輔助文獻與假說回合，其產出再由人工逐項檢查，不一致之處要留下紀錄。把驗證習慣本身當成交付成果：訂一條長期規則——任何代理提出的主張，若沒有人工追溯到的原始文獻引用，就不得寫進報告。自動化方面不要自己買生物鑄造廠，而是去談現有雲端實驗室或區域性生物鑄造廠的機時，並從第一天就以機器可讀的格式撰寫實驗流程，這樣 GEMS 的工作在要放大規模時才具可攜性。",
       "maturity": "accelerating",
       "refs": [
-        {"title": "Toward autonomous science with agentic artificial intelligence", "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9?rss=yes", "venue": "Cell (Review)", "year": 2026},
-        {"title": "An AI-powered cloud biofoundry for autonomous biological research (iCloudBiofoundry)", "url": "https://www.biorxiv.org/content/10.64898/2026.09.30.750244v1.full", "venue": "bioRxiv preprint", "year": 2026},
-        {"title": "MicroGrowAgents: An Agentic AI System for Microbial Cultivation Engineering", "url": "https://www.biorxiv.org/content/10.64898/2026.06.04.729985v1", "venue": "bioRxiv preprint", "year": 2026},
-        {"title": "Agentic self-driving microscopy benchmarks support qualification but do not necessarily generalize to unseen tasks", "url": "https://arxiv.org/pdf/2608.05266", "venue": "arXiv preprint", "year": 2026},
-        {"title": "Experiment-as-Code Labs: A Declarative Stack for AI-Driven Scientific Discovery", "url": "https://arxiv.org/pdf/2605.04375", "venue": "arXiv preprint", "year": 2026},
-        {"title": "Ontology-driven software engineering using LLMs for knowledge graphs in engineering biology", "url": "https://www.biorxiv.org/content/10.64898/2026.05.29.728869v2", "venue": "bioRxiv preprint", "year": 2026},
-        {"title": "Synergistic integration of large language models and knowledge graphs for intelligent metabolic pathway design in food synthetic biology", "url": "https://www.nature.com/search?q=synthetic+biology&order=date", "venue": "Scientific Reports", "year": 2026}
+        {
+          "title": "Toward autonomous science with agentic artificial intelligence",
+          "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9?rss=yes",
+          "venue": "Cell (Review)",
+          "year": 2026
+        },
+        {
+          "title": "An AI-powered cloud biofoundry for autonomous biological research (iCloudBiofoundry)",
+          "url": "https://www.biorxiv.org/content/10.64898/2026.09.30.750244v1.full",
+          "venue": "bioRxiv preprint",
+          "year": 2026
+        },
+        {
+          "title": "MicroGrowAgents: An Agentic AI System for Microbial Cultivation Engineering",
+          "url": "https://www.biorxiv.org/content/10.64898/2026.06.04.729985v1",
+          "venue": "bioRxiv preprint",
+          "year": 2026
+        },
+        {
+          "title": "Agentic self-driving microscopy benchmarks support qualification but do not necessarily generalize to unseen tasks",
+          "url": "https://arxiv.org/pdf/2608.05266",
+          "venue": "arXiv preprint",
+          "year": 2026
+        },
+        {
+          "title": "Experiment-as-Code Labs: A Declarative Stack for AI-Driven Scientific Discovery",
+          "url": "https://arxiv.org/pdf/2605.04375",
+          "venue": "arXiv preprint",
+          "year": 2026
+        },
+        {
+          "title": "Ontology-driven software engineering using LLMs for knowledge graphs in engineering biology",
+          "url": "https://www.biorxiv.org/content/10.64898/2026.05.29.728869v2",
+          "venue": "bioRxiv preprint",
+          "year": 2026
+        },
+        {
+          "title": "Synergistic integration of large language models and knowledge graphs for intelligent metabolic pathway design in food synthetic biology",
+          "url": "https://www.nature.com/search?q=synthetic+biology&order=date",
+          "venue": "Scientific Reports",
+          "year": 2026
+        }
       ]
     },
     {
       "id": "ml-dbtl-digital-cell-factories",
       "title": "ML-guided DBTL and 'digital cell factories' now beat intuition on real titers",
+      "title_zh": "機器學習導引的 DBTL 與「數位細胞工廠」在真實產量上已勝過直覺",
       "oneLine": "Machine learning over genome-scale models has stopped being a methods paper and started delivering multi-fold titer gains in a handful of cycles, with the field explicitly pivoting from biological realism to economic prediction.",
+      "oneLine_zh": "在基因組尺度代謝模型之上做機器學習，已不再只是方法論文，而是在幾個循環內就帶來數倍的產量提升，而整個領域也明確地從追求生物真實性轉向預測經濟成果。",
       "body": "The numbers are now concrete enough to plan around. Carruthers et al. (Nature Communications, 2025) coupled lab automation with ML to optimise isoprenol in Pseudomonas putida: CRISPRi downregulation of combinations of up to four gene targets raised titer five-fold over six consecutive DBTL cycles, while ML reduced a design space of roughly 800,000 combinations to about 400 priority constructs, with high-throughput proteomics used to validate the mechanism. Van Lent et al. (ACS Synthetic Biology, 2026) ran two DBTL cycles on p-coumaric acid in S. cerevisiae over a library of 18 genes and 20 promoters spanning about 170 million possible designs, and showed a gradient-bandit exploration-exploitation recommender beating greedy feature-importance selection, reaching 1.23 g/L - a 2.37-fold improvement; an earlier Moreno Paz study reached 0.52 g/L with a 68 percent gain in two cycles. The framing is also shifting: Chen, Li and Nielsen's Comment Digital cell factories for biomanufacturing (Nature Reviews Bioengineering, 4 November 2026) argues for metabolism-centric digital cell factories that privilege predictions of production performance and economic outcomes over biological detail - an explicitly pragmatic turn. Supporting infrastructure arrived too: Persephone (Nature Protocols, 5 November 2026) is an automated pipeline for personalising and evaluating human whole-body metabolic models coupled to community microbiome models; Canopy (ICML 2026) is a heterograph foundation model for metabolic engineering that beats tabular baselines on fermentation titer prediction; ML4SD (bioRxiv, September 2026) runs active learning over genome-scale-model scores for growth-coupled knockout design with explicit uncertainty; and iModulon-based engraftment (Nature Communications) uses ML decomposition of transcriptome compendia to transfer functions across species. A June 2026 bioRxiv preprint benchmarks LLM competence on genome-scale model analysis and finds they surface structural and data-quality limitations in the models themselves.",
+      "body_zh": "這些數字現在已經具體到可以據此規劃。Carruthers 等人（Nature Communications，2025）把實驗室自動化與機器學習結合，最佳化 Pseudomonas putida 的 isoprenol 生產：用 CRISPRi 下調最多四個基因標的的各種組合，在連續六個 DBTL 循環中把產量提高五倍，機器學習則把約 80 萬種組合的設計空間縮減到約 400 個優先構築體，並以高通量蛋白質體學驗證機制。Van Lent 等人（ACS Synthetic Biology，2026）針對 S. cerevisiae 生產 p-coumaric acid 執行兩個 DBTL 循環，函式庫涵蓋 18 個基因與 20 個啟動子、約 1.7 億種可能設計，結果顯示採用 gradient-bandit 探索—利用策略的推薦系統勝過貪婪式的特徵重要度選擇，達到 1.23 g/L，提升 2.37 倍；更早的 Moreno Paz 研究則在兩個循環內達到 0.52 g/L，提升 68%。論述框架也在轉變：Chen、Li 與 Nielsen 的評論 Digital cell factories for biomanufacturing（Nature Reviews Bioengineering，2026 年 11 月 4 日）主張建立以代謝為核心的數位細胞工廠，優先預測生產表現與經濟成果，而非追求生物細節——這是一個明確的務實轉向。支援性的基礎設施也到位了：Persephone（Nature Protocols，2026 年 11 月 5 日）是一條自動化流程，用於個人化並評估與群落微生物體模型耦合的人體全身代謝模型；Canopy（ICML 2026）是用於代謝工程的異質圖基礎模型，在發酵產量預測上勝過表格式基準方法；ML4SD（bioRxiv，2026 年 9 月）在基因組尺度模型的評分之上執行主動學習，用於帶明確不確定度的生長耦合基因剔除設計；以 iModulon 為基礎的功能移植（Nature Communications）則用機器學習分解轉錄體資料彙編，把功能跨物種轉移。2026 年 6 月的一篇 bioRxiv 預印本評測 LLM 在基因組尺度模型分析上的能力，發現它們反而暴露出這些模型本身在結構與資料品質上的限制。",
       "whyItMatters": "This is the single clearest case where dry lab demonstrably outperforms expert intuition on an industrially meaningful metric, so it is the strongest evidence for the report's thesis. It is also unusually cheap to join: COBRApy, a published GEM and scikit-learn cost nothing, and the published benchmarks are reproducible, so a small institution can build real credibility before owning a fermenter.",
+      "whyItMatters_zh": "這是乾式實驗室在一個具工業意義的指標上明確勝過專家直覺的最清楚案例，因此也是本報告論點最有力的證據。它的入門成本也異常低廉：COBRApy、一個已發表的 GEM 加上 scikit-learn 都不花錢，而已發表的基準測試可以重現，所以小型機構在還沒有自己的發酵槽之前，就能累積真實的學術信譽。",
       "gemsAction": "Make genome-scale metabolic modelling a core taught competency within 12 months: COBRApy plus flux balance analysis plus one published Bacillus subtilis GEM, with students reproducing the van Lent exploration-versus-exploitation comparison in silico before touching a flask. Then run one real two-cycle ML-guided DBTL campaign on a small combinatorial library in GEMS's own chassis, with the recommender written by students and the design space documented - two cycles is enough to produce a publishable, honest result. Seek a collaboration with an Agile BioFoundry-style or regional biofoundry group for the build step rather than buying liquid handlers.",
+      "gemsAction_zh": "在 12 個月內把基因組尺度代謝模型訂為核心教學能力：COBRApy 加上通量平衡分析，再加一個已發表的 Bacillus subtilis GEM，讓學生在碰到搖瓶之前，先在電腦上重現 van Lent 的探索對利用比較。接著在 GEMS 自己的底盤上，針對一個小型組合式函式庫執行一次真正的兩循環機器學習導引 DBTL 行動，推薦系統由學生撰寫，設計空間完整記錄——兩個循環就足以產生一個可發表且誠實的結果。建構環節不要買自動分液工作站，而是尋求與 Agile BioFoundry 這類或區域性生物鑄造廠團隊合作。",
       "maturity": "accelerating",
       "refs": [
-        {"title": "Automation and machine learning drive rapid optimization of isoprenol production in Pseudomonas putida", "url": "https://consensus.app/papers/details/w:b89d3c61-1875-424b-bc8a-f2eb8872c5fc/", "venue": "Nature Communications", "year": 2025},
-        {"title": "Machine-Learning-Assisted Pathway Optimization in Large Combinatorial Design Spaces: A p-Coumaric Acid Case Study", "url": "https://consensus.app/papers/details/w:dd1e4b40-af66-4d27-a02a-77c20fcbd0ac/", "venue": "ACS Synthetic Biology", "year": 2026},
-        {"title": "Digital cell factories for biomanufacturing", "url": "https://www.nature.com/articles/s44222-026-00506-7", "venue": "Nature Reviews Bioengineering (Comment)", "year": 2026},
-        {"title": "Personalization and evaluation of human whole-body metabolic models and community microbiome models using Persephone", "url": "https://www.nature.com/articles/s41596-026-01437-8", "venue": "Nature Protocols", "year": 2026},
-        {"title": "Canopy: A Heterograph Foundation Model for Metabolic Engineering", "url": "https://arxiv.org/pdf/2607.06224", "venue": "arXiv / ICML", "year": 2026},
-        {"title": "ML4SD: Leveraging Machine Learning and High-Throughput Search Algorithms for an Iterative Growth-Coupled Design Innovation", "url": "https://www.biorxiv.org/content/10.64898/2026.09.11.750664v1.full", "venue": "bioRxiv preprint", "year": 2026}
+        {
+          "title": "Automation and machine learning drive rapid optimization of isoprenol production in Pseudomonas putida",
+          "url": "https://consensus.app/papers/details/w:b89d3c61-1875-424b-bc8a-f2eb8872c5fc/",
+          "venue": "Nature Communications",
+          "year": 2025
+        },
+        {
+          "title": "Machine-Learning-Assisted Pathway Optimization in Large Combinatorial Design Spaces: A p-Coumaric Acid Case Study",
+          "url": "https://consensus.app/papers/details/w:dd1e4b40-af66-4d27-a02a-77c20fcbd0ac/",
+          "venue": "ACS Synthetic Biology",
+          "year": 2026
+        },
+        {
+          "title": "Digital cell factories for biomanufacturing",
+          "url": "https://www.nature.com/articles/s44222-026-00506-7",
+          "venue": "Nature Reviews Bioengineering (Comment)",
+          "year": 2026
+        },
+        {
+          "title": "Personalization and evaluation of human whole-body metabolic models and community microbiome models using Persephone",
+          "url": "https://www.nature.com/articles/s41596-026-01437-8",
+          "venue": "Nature Protocols",
+          "year": 2026
+        },
+        {
+          "title": "Canopy: A Heterograph Foundation Model for Metabolic Engineering",
+          "url": "https://arxiv.org/pdf/2607.06224",
+          "venue": "arXiv / ICML",
+          "year": 2026
+        },
+        {
+          "title": "ML4SD: Leveraging Machine Learning and High-Throughput Search Algorithms for an Iterative Growth-Coupled Design Innovation",
+          "url": "https://www.biorxiv.org/content/10.64898/2026.09.11.750664v1.full",
+          "venue": "bioRxiv preprint",
+          "year": 2026
+        }
       ]
     },
     {
       "id": "automation-and-throughput-of-build",
       "title": "The Build step is being industrialised: cell-free prototyping, one-pot gene synthesis and million-scale design-space mapping",
+      "title_zh": "Build 環節正在工業化：無細胞原型製作、一鍋式基因合成與百萬尺度的設計空間繪製",
       "oneLine": "Robotic cell-free platforms, hybridisation-driven gene synthesis and long-read multiplexed profiling have broken the DNA-construction bottleneck that used to set the pace of every synthetic biology project.",
+      "oneLine_zh": "機器人化的無細胞平台、以雜交驅動的基因合成，以及長讀長多重定序分析，已經打破了過去決定每一個合成生物學專案節奏的 DNA 構築瓶頸。",
       "body": "Four 2026 papers together redefine what a 'build' costs. Automated prototyping of genetic codes (Nature, 26 August 2026, Radford, Sapers and Church) is a robotic cell-free platform that rapidly prototypes redesigned genetic codes, translating proteins with reassigned codons and non-standard amino acids without modifying any living genome - cell-free as the fast lane that avoids the viability constraint entirely. MOSAIC (Nature Biotechnology, 19 August 2026, Wu, Sun and Wei) replaces enzymatic processing with hybridisation: self-assembly of complementary oligonucleotides during thermal annealing, exploiting the full capacity of microchip oligo synthesis to produce over 1,000 distinct gene fragments and mutant libraries in a one-pot reaction. CLASSIC (Nature, 14 January 2026, Rai, O'Connell and Bashor) combines long- and short-read sequencing to quantitatively profile pools of arbitrary-length constructs with diverse genetic part compositions, which is how you actually map a genetic design space rather than sample it. Nature Biotechnology also published a microchip-based massively parallel DNA synthesis system, and Nature ran a Technology Feature on made-to-order DNA doubling achievable sequence length. The frugal end is advancing in parallel and matters more for GEMS: DropSynth-Gold (bioRxiv, June 2026, Plesa lab) extends emulsion-based multiplexed gene synthesis to longer genes via Golden Gate in droplets, and the Salis lab posted A Low-Cost, High-Throughput Design-Build-Test Pipeline for Engineering Genetic Systems (bioRxiv, June 2026) stress-tested on complex structural proteins - explicitly motivated by high DNA synthesis costs and assembly inefficiency. Also notable for throughput of measurement rather than build: Nature Biotechnology's Highly multiplexed mammalian metabolic engineering with a shotgun approach (Boeke lab, 6 October 2026).",
+      "body_zh": "2026 年有四篇論文合起來重新定義了「建構」的成本。Automated prototyping of genetic codes（Nature，2026 年 8 月 26 日，Radford、Sapers 與 Church）是一個機器人化的無細胞平台，能快速試做重新設計的遺傳密碼，用重新指派的密碼子與非標準胺基酸轉譯蛋白質，完全不必改動任何活體基因組——無細胞系統成為繞開存活性限制的快車道。MOSAIC（Nature Biotechnology，2026 年 8 月 19 日，Wu、Sun 與 Wei）以雜交取代酵素處理：在熱退火過程中讓互補寡核苷酸自組裝，充分利用微晶片寡核苷酸合成的產能，在一鍋反應中做出超過 1,000 個不同的基因片段與突變函式庫。CLASSIC（Nature，2026 年 1 月 14 日，Rai、O'Connell 與 Bashor）結合長讀長與短讀長定序，定量分析由任意長度、元件組成各異的構築體所組成的池，這才是真正繪製基因設計空間的做法，而不只是抽樣。Nature Biotechnology 另外發表了一套以微晶片為基礎的大規模平行 DNA 合成系統，Nature 也刊出一篇技術特寫，談客製化 DNA 合成可達序列長度翻倍。節約路線同時也在推進，而且對 GEMS 更重要：DropSynth-Gold（bioRxiv，2026 年 6 月，Plesa 實驗室）在液滴中以 Golden Gate 把乳化液為基礎的多重基因合成延伸到更長的基因；Salis 實驗室則發表 A Low-Cost, High-Throughput Design-Build-Test Pipeline for Engineering Genetic Systems（bioRxiv，2026 年 6 月），並以複雜的結構蛋白做壓力測試——其動機明確就是 DNA 合成成本高昂與組裝效率不佳。另外在量測通量（而非建構通量）上值得注意的是 Nature Biotechnology 的 Highly multiplexed mammalian metabolic engineering with a shotgun approach（Boeke 實驗室，2026 年 10 月 6 日）。",
       "whyItMatters": "When build capacity jumps by orders of magnitude, the binding constraint moves to design and measurement - which is the mechanism by which the dry lab becomes the engine. For a budget-constrained institution the frugal-pipeline papers are the actionable half: they are deliberately engineered for labs that cannot spend on commercial synthesis, and they are exactly the kind of method a strong student team can implement and own.",
+      "whyItMatters_zh": "當建構能力以數個數量級跳升，真正的限制就轉移到設計與量測——這正是乾式實驗室成為引擎的機制。對預算有限的機構來說，節約流程那幾篇論文才是可以動手的那一半：它們本來就是為買不起商業合成服務的實驗室設計的，也正是一支強的學生團隊能實作並據為己有的那種方法。",
       "gemsAction": "Implement one frugal high-throughput build method end to end - the Salis low-cost DBTL pipeline or DropSynth-style pooled assembly - as a flagship capability project, and publish the cost-per-construct GEMS achieves. Pair it with cell-free (TXTL) prototyping as the default first test for any new circuit, because cell-free removes transformation, growth and biosafety friction and is ideal for a student-paced institution. Budget for long-read sequencing access rather than more pipetting capacity; CLASSIC shows that measurement depth, not construct count, is what converts a library into knowledge.",
+      "gemsAction_zh": "把一套節約型高通量建構方法從頭到尾實作出來——Salis 的低成本 DBTL 流程，或 DropSynth 式的混池組裝——當作旗艦能力專案，並公布 GEMS 做到的每個構築體單位成本。搭配無細胞（TXTL）原型製作，作為任何新電路的預設第一輪測試，因為無細胞系統省去轉形、培養與生物安全的摩擦，非常適合以學生步調運作的機構。預算應該花在取得長讀長定序，而不是增加移液量能；CLASSIC 已經說明，把函式庫轉換成知識的是量測深度，而不是構築體數量。",
       "maturity": "accelerating",
       "refs": [
-        {"title": "Automated prototyping of genetic codes", "url": "https://www.nature.com/articles/s41586-026-10949-y", "venue": "Nature", "year": 2026},
-        {"title": "High-throughput synthesis of DNA fragments by molecular self-assembly of overlapping oligonucleotides (MOSAIC)", "url": "https://www.nature.com/articles/s41587-026-03266-2", "venue": "Nature Biotechnology", "year": 2026},
-        {"title": "Massive-scale parallel gene synthesis with oligonucleotide hybridization", "url": "https://www.nature.com/articles/s41587-026-03290-2", "venue": "Nature Biotechnology (Research Briefing)", "year": 2026},
-        {"title": "Ultra-high-throughput mapping of genetic design space (CLASSIC)", "url": "https://www.nature.com/articles/s41586-025-09933-9", "venue": "Nature", "year": 2026},
-        {"title": "DropSynth-Gold: Golden Gate Assembly in Emulsions Extends Multiplexed Gene Libraries to Greater Lengths", "url": "https://www.biorxiv.org/content/10.64898/2026.05.29.728538v1", "venue": "bioRxiv preprint", "year": 2026},
-        {"title": "A Low-Cost, High-Throughput Design-Build-Test Pipeline for Engineering Genetic Systems", "url": "https://www.biorxiv.org/content/10.64898/2026.06.08.729977v1", "venue": "bioRxiv preprint (Salis lab)", "year": 2026},
-        {"title": "Highly multiplexed mammalian metabolic engineering with a shotgun approach", "url": "https://www.nature.com/articles/s41587-026-03318-7", "venue": "Nature Biotechnology", "year": 2026}
+        {
+          "title": "Automated prototyping of genetic codes",
+          "url": "https://www.nature.com/articles/s41586-026-10949-y",
+          "venue": "Nature",
+          "year": 2026
+        },
+        {
+          "title": "High-throughput synthesis of DNA fragments by molecular self-assembly of overlapping oligonucleotides (MOSAIC)",
+          "url": "https://www.nature.com/articles/s41587-026-03266-2",
+          "venue": "Nature Biotechnology",
+          "year": 2026
+        },
+        {
+          "title": "Massive-scale parallel gene synthesis with oligonucleotide hybridization",
+          "url": "https://www.nature.com/articles/s41587-026-03290-2",
+          "venue": "Nature Biotechnology (Research Briefing)",
+          "year": 2026
+        },
+        {
+          "title": "Ultra-high-throughput mapping of genetic design space (CLASSIC)",
+          "url": "https://www.nature.com/articles/s41586-025-09933-9",
+          "venue": "Nature",
+          "year": 2026
+        },
+        {
+          "title": "DropSynth-Gold: Golden Gate Assembly in Emulsions Extends Multiplexed Gene Libraries to Greater Lengths",
+          "url": "https://www.biorxiv.org/content/10.64898/2026.05.29.728538v1",
+          "venue": "bioRxiv preprint",
+          "year": 2026
+        },
+        {
+          "title": "A Low-Cost, High-Throughput Design-Build-Test Pipeline for Engineering Genetic Systems",
+          "url": "https://www.biorxiv.org/content/10.64898/2026.06.08.729977v1",
+          "venue": "bioRxiv preprint (Salis lab)",
+          "year": 2026
+        },
+        {
+          "title": "Highly multiplexed mammalian metabolic engineering with a shotgun approach",
+          "url": "https://www.nature.com/articles/s41587-026-03318-7",
+          "venue": "Nature Biotechnology",
+          "year": 2026
+        }
       ]
     },
     {
       "id": "ml-designed-biosensors",
       "title": "Biosensors are now machine-designed, not discovered - including the receptor itself",
+      "title_zh": "生物感測器現在是機器設計出來的，不是找到的——連受體本身也是",
       "oneLine": "Nature Biotechnology published fully synthetic allosteric switches whose ligand-binding receptors were designed by machine learning, which turns biosensing from a search problem into a design problem.",
+      "oneLine_zh": "Nature Biotechnology 發表了完全人工合成的異位調節開關，其配體結合受體由機器學習設計，這把生物感測從搜尋問題變成設計問題。",
       "body": "Artificial allosteric protein switches with machine-learning-designed receptors (Nature Biotechnology, 15 April 2026, Guo, Smutok and Alexandrov) is the pivotal result: ML-engineered minimal ligand-binding domains work as efficient receptors in single-component allosteric switches despite lacking global conformational change, yielding colorimetric, luminescent and electrochemical biosensors for small molecules, peptides and proteins, which the authors then compile into intramolecular YES and AND logic gates. They report fully synthetic switches built from artificial receptor plus artificial reporter domains, use HDX-MS and 19F NMR to attribute the mechanism to ligand-induced reduction of conformational entropy raising reporter catalytic activity, and demonstrate utility by engineering E. coli with steroid-dependent antibiotic resistance and bioelectronic devices that quantify steroid hormones. Around it sits a dense 2026 biosensing literature: Synthetic microbial co-cultures for modular bioelectronic sensing in diverse environments (Nature Biotechnology, 17 April 2026, Li, Zhu and Ajo-Franklin) modularises whole-cell electrical sensing across environments; Bacteria as living biosensors for DNA (Nature Reviews Bioengineering, 30 October 2025) benchmarks bacterial DNA biosensors against in vitro ones in unpurified samples; Nature Methods highlighted Engineering gut biosensors (12 March 2026); Nature published engineered magneto-sensitive fluorescent proteins for multimodal quantum-spin-resonance sensing (21 January 2026, Abrahams, Stuhec and Steel); and Scientific Reports published a Corynebacterium glutamicum glutamate-binding protein as a fluorescence probe (13 November 2026). On the cell-free diagnostics side, 2026 reviews converge on lyophilisation compatibility as cell-free's decisive advantage, with reported lyophilised Cas12a wearable and face-mask formats reaching femtomolar detection in 56 to 78 minutes, and a January 2026 microfluidic paper device integrating lyophilised RPA plus Cas12a across seven functional zones for colorimetric HPV16 E7 detection - but field validation, shelf life and sensitivity remain the stated gaps, and I found no deployed field trial.",
+      "body_zh": "Artificial allosteric protein switches with machine-learning-designed receptors（Nature Biotechnology，2026 年 4 月 15 日，Guo、Smutok 與 Alexandrov）是關鍵成果：以機器學習設計的最小配體結合域，即使缺乏整體構形變化，仍能在單一元件的異位調節開關中作為高效受體，做出針對小分子、胜肽與蛋白質的比色、發光與電化學生物感測器，作者接著把它們組成分子內的 YES 與 AND 邏輯閘。他們回報由人工受體加人工報導域組成的完全合成開關，並以 HDX-MS 與 19F NMR 把機制歸因於配體誘導構形熵下降、進而提高報導域的催化活性，還以兩個應用展示實用性：工程化出抗生素抗性依賴類固醇的 E. coli，以及可定量類固醇激素的生物電子裝置。圍繞它的是 2026 年一片密集的生物感測文獻：Synthetic microbial co-cultures for modular bioelectronic sensing in diverse environments（Nature Biotechnology，2026 年 4 月 17 日，Li、Zhu 與 Ajo-Franklin）把全細胞電訊號感測模組化，可跨不同環境使用；Bacteria as living biosensors for DNA（Nature Reviews Bioengineering，2025 年 10 月 30 日）以未純化樣品比較細菌型 DNA 生物感測器與體外方法；Nature Methods 介紹了 Engineering gut biosensors（2026 年 3 月 12 日）；Nature 發表了用於多模態量子自旋共振感測的工程化磁敏螢光蛋白（2026 年 1 月 21 日，Abrahams、Stuhec 與 Steel）；Scientific Reports 則發表以 Corynebacterium glutamicum 的麩胺酸結合蛋白作為螢光探針（2026 年 11 月 13 日）。在無細胞診斷方面，2026 年的多篇綜述都認為「可凍乾」是無細胞系統的決定性優勢，已有報告指出凍乾的 Cas12a 穿戴式與口罩型格式能在 56 到 78 分鐘內達到飛莫耳級偵測；2026 年 1 月另有一個微流體紙基裝置，在七個功能區整合凍乾的 RPA 與 Cas12a，以比色法偵測 HPV16 E7——但現場驗證、保存期限與靈敏度仍是文獻自己點出的缺口，我也沒有找到任何已實地部署的試驗。",
       "whyItMatters": "Biosensing is the one frontier area where a small institution can do complete, publishable work, because the readout is cheap, the chassis can be non-pathogenic, and the ML design step is now the hard part rather than the receptor search. It is also the natural bridge between GEMS's dry-lab ambitions and its existing wet-lab strengths, and it feeds directly into the team's optogenetic Bacillus plant-protection project, where a sensor output is what makes a device rather than a demo.",
+      "whyItMatters_zh": "生物感測是小型機構唯一能做出完整、可發表成果的前沿領域，因為讀出訊號便宜、底盤可以用非致病菌，而且困難的環節已經從受體搜尋轉移到機器學習設計。它也是 GEMS 乾式實驗室企圖與既有濕式實驗室強項之間的自然橋樑，並直接餵進團隊的光遺傳學 Bacillus 植物保護專案——有感測器輸出，做出來的才是裝置，而不是展示品。",
       "gemsAction": "Make ML-designed biosensing GEMS's declared niche and build the Alexandrov-style workflow in house: take a published minimal binding domain, redesign its specificity computationally, and validate with a colorimetric or electrochemical readout - a project that fits a student timescale and produces a real number. Standardise on lyophilised cell-free (TXTL) as the delivery format so the output is a shelf-stable field test rather than a plate reading, and pair it with a low-cost reader. Approach the Alexandrov group (Queensland) and Ajo-Franklin lab (Rice) for a protocol-level collaboration; both publish open and both work on sensor modalities GEMS could extend to agricultural targets.",
+      "gemsAction_zh": "把「機器學習設計的生物感測」定為 GEMS 對外宣示的利基，並在內部建立 Alexandrov 式的工作流程：取一個已發表的最小結合域，用計算方法重新設計其專一性，再以比色或電化學讀出加以驗證——這個專案符合學生的時間尺度，而且會產出一個真實的數字。把凍乾無細胞（TXTL）標準化為交付格式，讓產出是一個可常溫保存的現場檢測，而不是一次盤讀數據，並搭配一台低成本讀取器。接洽 Alexandrov 團隊（Queensland）與 Ajo-Franklin 實驗室（Rice）尋求實驗流程層級的合作；兩者都走開放發表，而且研究的感測模式 GEMS 都能延伸到農業標的。",
       "maturity": "accelerating",
       "refs": [
-        {"title": "Artificial allosteric protein switches with machine-learning-designed receptors", "url": "https://www.nature.com/articles/s41587-026-03081-9", "venue": "Nature Biotechnology", "year": 2026},
-        {"title": "Synthetic microbial co-cultures for modular bioelectronic sensing in diverse environments", "url": "https://www.nature.com/articles/s41587-026-03075-7", "venue": "Nature Biotechnology", "year": 2026},
-        {"title": "Bacteria as living biosensors for DNA", "url": "https://www.nature.com/articles/s44222-025-00369-4", "venue": "Nature Reviews Bioengineering", "year": 2025},
-        {"title": "Quantum spin resonance in engineered proteins for multimodal sensing", "url": "https://www.nature.com/articles/s41586-025-09971-3", "venue": "Nature", "year": 2026},
-        {"title": "Engineering gut biosensors", "url": "https://www.nature.com/articles/s41592-026-03039-4", "venue": "Nature Methods (Research Highlight)", "year": 2026},
-        {"title": "Integrated Colorimetric CRISPR/Cas12a Detection of Double-Stranded DNA on Microfluidic Paper-Based Analytical Devices", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12839233/", "venue": "PMC", "year": 2026},
-        {"title": "Cell-Free Protein Synthesis-Based Biosensing Platforms for Clinical Diagnostics", "url": "https://pubmed.ncbi.nlm.nih.gov/41979265/", "venue": "ACS Sensors (review)", "year": 2026}
+        {
+          "title": "Artificial allosteric protein switches with machine-learning-designed receptors",
+          "url": "https://www.nature.com/articles/s41587-026-03081-9",
+          "venue": "Nature Biotechnology",
+          "year": 2026
+        },
+        {
+          "title": "Synthetic microbial co-cultures for modular bioelectronic sensing in diverse environments",
+          "url": "https://www.nature.com/articles/s41587-026-03075-7",
+          "venue": "Nature Biotechnology",
+          "year": 2026
+        },
+        {
+          "title": "Bacteria as living biosensors for DNA",
+          "url": "https://www.nature.com/articles/s44222-025-00369-4",
+          "venue": "Nature Reviews Bioengineering",
+          "year": 2025
+        },
+        {
+          "title": "Quantum spin resonance in engineered proteins for multimodal sensing",
+          "url": "https://www.nature.com/articles/s41586-025-09971-3",
+          "venue": "Nature",
+          "year": 2026
+        },
+        {
+          "title": "Engineering gut biosensors",
+          "url": "https://www.nature.com/articles/s41592-026-03039-4",
+          "venue": "Nature Methods (Research Highlight)",
+          "year": 2026
+        },
+        {
+          "title": "Integrated Colorimetric CRISPR/Cas12a Detection of Double-Stranded DNA on Microfluidic Paper-Based Analytical Devices",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12839233/",
+          "venue": "PMC",
+          "year": 2026
+        },
+        {
+          "title": "Cell-Free Protein Synthesis-Based Biosensing Platforms for Clinical Diagnostics",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41979265/",
+          "venue": "ACS Sensors (review)",
+          "year": 2026
+        }
       ]
     },
     {
       "id": "optogenetics-closed-loop-cybergenetics",
       "title": "Optogenetics grew up into closed-loop bioprocess control - and Bacillus is nearly untouched",
+      "title_zh": "光遺傳學成熟為閉環生物製程控制——而 Bacillus 幾乎還沒人碰",
       "oneLine": "Light has become a real-time actuator for feedback control of fermentation, with reported 60 percent titer gains in a 1 L photobioreactor, while optogenetics in Bacillus subtilis remains almost unexplored - twelve papers in all of PubMed.",
+      "oneLine_zh": "光已成為發酵回饋控制的即時致動器，有報告在 1 L 光生物反應器中取得 60% 的產量提升，但 Bacillus subtilis 的光遺傳學幾乎仍無人開發——整個 PubMed 只有十二篇論文。",
       "body": "Cybergenetics - closing a control loop around a live culture using light as the manipulated variable - matured in 2026 from proof of principle to bioprocess tool. A Trends in Biotechnology study reported closed-loop optogenetic feedback on the yeast unfolded protein response in a custom 1 L photobioreactor, adjusting alpha-amylase expression from real-time measurements and achieving roughly 60 percent higher product titers. LEMOS (ACS Synthetic Biology, 2026) is an LED-equipped microplate integrating programmable illumination with continuous growth and gene-expression measurement for closed-loop control, paired with GEAGS, a model accounting for how gene expression changes across growth stages - which is the practical answer to the fact that optogenetic dose-response curves are steep enough to push systems to fully on or fully off, making intermediate setpoints hard, hence the emergence of pulse-width-modulated switching-time control. Light-controlled Corynebacterium glutamicum fermentation has been reported at 6.2 g/L for chitooligosaccharides. The protein-engineering side advanced too: Nature Methods published Design and optimization of a kinase-controlled allosteric switch (21 July 2026, Cao and Toettcher) and previously ProDomino, an ML model predicting domain insertion sites from sequence alone to accelerate design of light- and drug-triggered protein switches; Nature Biotechnology published a photoactivatable A-to-I RNA base editor for in vivo gene therapy; Advanced Science (2026) reported engineered optogenetic circuits in yeast with self-sustained outputs. The striking gap, which I verified directly: a PubMed search for optogenetics plus Bacillus subtilis returns twelve records in total, across all years, with the foundational work being a CcaS/CcaR green-red system ported from cyanobacteria. There is no published light-controlled B. subtilis bioreactor, and no published optogenetic control of Bacillus biocontrol or plant-growth-promoting function.",
+      "body_zh": "Cybergenetics——以光作為操作變數，在活體培養物外圍閉合一個控制迴路——在 2026 年從原理驗證成熟為生物製程工具。Trends in Biotechnology 的一項研究回報，在自製的 1 L 光生物反應器中對酵母的未摺疊蛋白反應做閉環光遺傳回饋，依即時量測調整 alpha-amylase 的表現量，產物產量提高約 60%。LEMOS（ACS Synthetic Biology，2026）是一塊配備 LED 的微量盤，把可程式化照光與連續的生長及基因表現量測整合起來以實現閉環控制，並搭配 GEAGS——一個描述基因表現如何隨生長階段改變的模型。這是對一個現實問題的實務解答：光遺傳學的劑量反應曲線陡到會把系統推向全開或全關，中間的設定點很難維持，因此才出現以脈寬調變切換時間的控制方式。以光控制的 Corynebacterium glutamicum 發酵已有報告，幾丁寡糖產量達 6.2 g/L。蛋白質工程這一側也有進展：Nature Methods 發表 Design and optimization of a kinase-controlled allosteric switch（2026 年 7 月 21 日，Cao 與 Toettcher），先前也發表過 ProDomino——一個僅從序列預測結構域插入位點的機器學習模型，用來加速光與藥物觸發型蛋白質開關的設計；Nature Biotechnology 發表了可光活化的 A-to-I RNA 鹼基編輯器，用於體內基因治療；Advanced Science（2026）則回報在酵母中工程化出具自我維持輸出的光遺傳學電路。一個令人意外的空缺，我直接查證過：在 PubMed 以 optogenetics 加 Bacillus subtilis 搜尋，所有年份合計只有十二筆紀錄，其中奠基性的工作是從藍綠菌移植過來的 CcaS/CcaR 綠—紅光系統。目前沒有任何已發表的光控 B. subtilis 生物反應器，也沒有任何已發表的、以光遺傳學控制 Bacillus 生物防治或促進植物生長功能的研究。",
       "whyItMatters": "Closed-loop optogenetics is the clearest instance of control theory entering the wet lab, and it requires exactly the hybrid skill set - modelling, instrumentation, microbiology - that distinguishes a serious institution from a teaching lab. More importantly, the Bacillus intersection is genuine white space: a twelve-paper literature in a workhorse industrial and agricultural organism is an opportunity, not a warning, and it is directly where GEMS's 2026 project already sits.",
+      "whyItMatters_zh": "閉環光遺傳學是控制理論進入濕式實驗室最清楚的例子，而它需要的正是那種混合技能組合——建模、儀器、微生物學——這也是認真的研究機構與一般教學實驗室的分野。更重要的是，Bacillus 這個交集是真正的空白地帶：一個工業與農業上的主力菌種只有十二篇文獻，這是機會而非警訊，而 GEMS 2026 年的專案剛好就落在這裡。",
       "gemsAction": "Commit to the gap: make 'optogenetic control in Bacillus subtilis' a multi-year institutional line, starting by porting and properly characterising a CcaS/CcaR or LOV-based light-inducible cassette in B. subtilis with full dose-response and growth-stage characterisation - that alone is a publishable contribution to a twelve-paper field. Build or buy an LEMOS-style LED microplate (the design is published and cheap) so GEMS owns closed-loop capability rather than open-loop induction, and implement a simple PI or model-predictive controller as a joint dry-lab/wet-lab student project. Then connect it to the plant-protection application by putting a biocontrol-relevant output, not a fluorescent reporter, under light control.",
+      "gemsAction_zh": "就投入這個空缺：把「Bacillus subtilis 的光遺傳學控制」設為跨年度的機構主軸，起步工作是把 CcaS/CcaR 或 LOV 為基礎的光誘導卡匣移植到 B. subtilis 並做完整的劑量反應與生長階段特性分析——光是這一步，對一個只有十二篇文獻的領域就已經是可發表的貢獻。自製或購置一塊 LEMOS 式的 LED 微量盤（設計已公開且便宜），讓 GEMS 擁有閉環能力而不只是開環誘導，並以乾濕實驗室合作的學生專案形式實作一個簡單的 PI 或模型預測控制器。接著把它接到植物保護應用上：放在光控之下的，要是與生物防治相關的輸出，而不是螢光報導蛋白。",
       "maturity": "emerging",
       "refs": [
-        {"title": "Design and optimization of a kinase-controlled allosteric switch", "url": "https://www.nature.com/articles/s41592-026-03163-1", "venue": "Nature Methods", "year": 2026},
-        {"title": "Rational engineering of allosteric protein switches by in silico prediction of domain insertion sites (ProDomino)", "url": "https://www.nature.com/articles/s41592-025-02741-z", "venue": "Nature Methods", "year": 2025},
-        {"title": "Building real-time control for engineered biological systems", "url": "https://phys.org/news/2026-08-real-biological.html", "venue": "Phys.org reporting on Trends in Biotechnology", "year": 2026},
-        {"title": "Engineered Optogenetic Circuits In Yeast with Self-Sustained Outputs", "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.75865", "venue": "Advanced Science", "year": 2026},
-        {"title": "Switching-time bioprocess control with pulse-width-modulated optogenetics", "url": "https://arxiv.org/pdf/2511.22893", "venue": "arXiv preprint", "year": 2025},
-        {"title": "Optogenetic control of Bacillus subtilis gene expression (CcaS/CcaR green-light system)", "url": "https://www.researchgate.net/publication/334464808_Optogenetic_control_of_Bacillus_subtilis_gene_expression", "venue": "ACS Synthetic Biology (foundational)", "year": 2019},
-        {"title": "Engineering a photoactivatable A-to-I RNA base editor for gene therapy in vivo", "url": "https://www.nature.com/articles/s41587-025-02610-2", "venue": "Nature Biotechnology", "year": 2025}
+        {
+          "title": "Design and optimization of a kinase-controlled allosteric switch",
+          "url": "https://www.nature.com/articles/s41592-026-03163-1",
+          "venue": "Nature Methods",
+          "year": 2026
+        },
+        {
+          "title": "Rational engineering of allosteric protein switches by in silico prediction of domain insertion sites (ProDomino)",
+          "url": "https://www.nature.com/articles/s41592-025-02741-z",
+          "venue": "Nature Methods",
+          "year": 2025
+        },
+        {
+          "title": "Building real-time control for engineered biological systems",
+          "url": "https://phys.org/news/2026-08-real-biological.html",
+          "venue": "Phys.org reporting on Trends in Biotechnology",
+          "year": 2026
+        },
+        {
+          "title": "Engineered Optogenetic Circuits In Yeast with Self-Sustained Outputs",
+          "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.75865",
+          "venue": "Advanced Science",
+          "year": 2026
+        },
+        {
+          "title": "Switching-time bioprocess control with pulse-width-modulated optogenetics",
+          "url": "https://arxiv.org/pdf/2511.22893",
+          "venue": "arXiv preprint",
+          "year": 2025
+        },
+        {
+          "title": "Optogenetic control of Bacillus subtilis gene expression (CcaS/CcaR green-light system)",
+          "url": "https://www.researchgate.net/publication/334464808_Optogenetic_control_of_Bacillus_subtilis_gene_expression",
+          "venue": "ACS Synthetic Biology (foundational)",
+          "year": 2019
+        },
+        {
+          "title": "Engineering a photoactivatable A-to-I RNA base editor for gene therapy in vivo",
+          "url": "https://www.nature.com/articles/s41587-025-02610-2",
+          "venue": "Nature Biotechnology",
+          "year": 2025
+        }
       ]
     },
     {
       "id": "agri-synbio-living-infrastructure",
       "title": "Agricultural synthetic biology hit the deployment wall, and the blocker is market and acceptance, not science",
+      "title_zh": "農業合成生物學撞上了落地的牆，而阻礙來自市場與社會接受度，不是科學",
       "oneLine": "A Nature Biotechnology assessment of 77 agricultural biotechnologies found that market viability and social acceptance, not technological readiness, are the binding constraints - while engineered nitrogen-fixers entered real field trials.",
+      "oneLine_zh": "Nature Biotechnology 對 77 項農業生物技術的評估發現，真正的限制是市場可行性與社會接受度，而不是技術成熟度——同時，工程化的固氮菌已進入真正的田間試驗。",
       "body": "Deployability of biotechnologies for environmentally resilient agriculture (Nature Biotechnology Perspective, 10 November 2026, Mishra, Lui and Arkin) is the most strategically useful paper of the year for anyone building an agricultural synbio programme. It applies a Balanced Readiness Level assessment across technological, market, regulatory, acceptance and organisational dimensions to 77 biotechnologies in eight domains (crops, soils, livestock, watersheds, aquaculture, health and security, food loss and waste, frontiers) and concludes that market viability and social acceptance - not technological readiness - are the primary constraints. The high-readiness technologies share a profile: drop-in, contained, transient and perceived as natural. The authors name GMO containment as a concrete lever and set out a roadmap toward 'living infrastructure' - predictively designed multicomponent biological communities functioning at the ecosystem level - backed by a Fermi analysis of microbial fertilizers. The field evidence matches: Nature news (November 2026) reported a Nature Biotechnology comment arguing engineered bacteria could eventually displace up to half of synthetic fertilizer while requiring multi-species cooperation and more rigorous field trials, and noted that Brazil approved a transgenic bacterium for field testing for the first time; Switch Bioworks has permits and multi-state US corn trials with switchable nitrogen-fixing microbes, targeting a deliberately modest 25 percent nitrogen replacement. Plant-side tools advanced too: a modular extracellular contractile injection system repurposed from a bacterial nanomachine for receptor-mediated protein delivery into plant cells (Nature Nanotechnology, 18 November 2026, Legendre, Muchenje and Demirer); a synthetic gibberellin receptor giving spatiotemporal control of GA signalling in roots (Nature Plants, 22 October 2026); a modular high-throughput Chlamydomonas chloroplast engineering platform (Nature Plants, 2025); and Genome synthesis in plants (Nature Reviews Bioengineering, 2025). Containment research is advancing in step - a bioRxiv preprint from Nyerges and colleagues reports a firewalled synthetic commensal that blocks horizontal gene transfer in the gut.",
+      "body_zh": "Deployability of biotechnologies for environmentally resilient agriculture（Nature Biotechnology Perspective，2026 年 11 月 10 日，Mishra、Lui 與 Arkin）是今年對任何要建立農業合成生物學計畫的人而言，策略上最有用的一篇論文。它以平衡成熟度等級（Balanced Readiness Level）評估，橫跨技術、市場、法規、接受度與組織五個面向，評估八個領域（作物、土壤、畜產、流域、水產養殖、健康與安全、食物損耗與浪費、前沿）共 77 項生物技術，結論是主要限制在於市場可行性與社會接受度，而非技術成熟度。成熟度高的技術有共同特徵：可直接替換導入、受到圍阻、作用為暫時性，而且在觀感上被認為是天然的。作者指出基改生物的圍阻是一個具體的槓桿，並提出通往「活體基礎設施」的路線圖——可預測性設計、在生態系層級運作的多元件生物群落——並以微生物肥料的費米估算作為支持。田間證據也相符：Nature 新聞（2026 年 11 月）報導 Nature Biotechnology 的一篇評論，主張工程化細菌最終可能替代最多一半的合成肥料，但需要多物種協作與更嚴謹的田間試驗，並指出巴西首度核准一株基因轉殖細菌進行田間測試；Switch Bioworks 已取得許可，並在美國多州以可切換的固氮微生物進行玉米試驗，刻意把目標訂在較保守的 25% 氮肥替代。植物端的工具也有進展：把細菌奈米機械改造成模組化的胞外收縮型注射系統，以受體媒介方式把蛋白質送入植物細胞（Nature Nanotechnology，2026 年 11 月 18 日，Legendre、Muchenje 與 Demirer）；一個人工合成的激勃素受體，可對根部的 GA 訊息傳遞做時空控制（Nature Plants，2026 年 10 月 22 日）；一個模組化高通量的 Chlamydomonas 葉綠體工程平台（Nature Plants，2025）；以及 Genome synthesis in plants（Nature Reviews Bioengineering，2025）。圍阻研究也同步推進——Nyerges 與同事的一篇 bioRxiv 預印本回報一株設有防火牆的合成共生菌，可在腸道中阻斷水平基因轉移。",
       "whyItMatters": "This reframes what an agricultural synbio project must deliver: not a better strain but a containment story, a cost model and an acceptance argument. For GEMS, whose 2026 project is a Bacillus bioreactor for plant protection, the Arkin framework is effectively a scoring rubric - and the drop-in, contained, transient, perceived-as-natural profile describes a Bacillus biocontrol product almost exactly, which is a strategic advantage worth stating explicitly.",
+      "whyItMatters_zh": "這重新定義了一個農業合成生物學專案必須交付什麼：不是更好的菌株，而是一套圍阻說法、一個成本模型與一個社會接受度的論證。對 GEMS 來說——其 2026 年專案是用於植物保護的 Bacillus 生物反應器——Arkin 的框架實質上就是一份評分表，而「可直接替換導入、受到圍阻、暫時性、觀感上天然」這組特徵幾乎完全描述了一個 Bacillus 生物防治產品，這是值得明白說出來的策略優勢。",
       "gemsAction": "Score GEMS's own optogenetic Bacillus plant-protection concept against the Balanced Readiness Level dimensions from the Arkin paper and publish the assessment as part of the project write-up - it costs nothing and immediately distinguishes GEMS from teams that only report titers. Design for containment and transience from the start, since light-dependence is itself a containment mechanism (no light, no function) and that is a genuinely novel argument worth making. Seek a Taiwanese agricultural research partner (an agricultural research institute or university plant-pathology group) for a contained greenhouse trial, because the Arkin analysis says field and acceptance data, not lab data, are what the field is short of.",
+      "gemsAction_zh": "拿 Arkin 論文的平衡成熟度等級各面向，為 GEMS 自己的光遺傳學 Bacillus 植物保護構想打分，並把這份評估作為專案報告的一部分發表——它不花一毛錢，卻能立刻把 GEMS 和那些只回報產量的團隊區分開來。從一開始就為圍阻與暫時性而設計，因為光依賴性本身就是一種圍阻機制（沒有光就沒有功能），這是一個真正新穎、值得提出的論點。尋找台灣的農業研究夥伴（農業試驗研究機構或大學植物病理團隊）做一次受圍阻的溫室試驗，因為 Arkin 的分析指出，這個領域缺的是田間與社會接受度的資料，不是實驗室資料。",
       "maturity": "accelerating",
       "refs": [
-        {"title": "Deployability of biotechnologies for environmentally resilient agriculture", "url": "https://www.nature.com/articles/s41587-026-03373-0", "venue": "Nature Biotechnology (Perspective)", "year": 2026},
-        {"title": "Engineered bacteria are weaning farms away from synthetic fertilizers", "url": "https://www.nature.com/articles/d41586-026-03641-8", "venue": "Nature (News)", "year": 2026},
-        {"title": "An extracellular contractile injection system for receptor-mediated protein delivery into plant cells", "url": "https://www.nature.com/search?q=protein+design&order=date", "venue": "Nature Nanotechnology", "year": 2026},
-        {"title": "Synthetic activation of gibberellin signalling reveals spatial coordination of root growth", "url": "https://www.nature.com/search?q=synthetic+biology&order=date", "venue": "Nature Plants", "year": 2026},
-        {"title": "Genome synthesis in plants", "url": "https://www.nature.com/articles/s44222-025-00326-1", "venue": "Nature Reviews Bioengineering", "year": 2025},
-        {"title": "Firewalled synthetic commensal blocks horizontal gene transfer in the gut", "url": "https://www.biorxiv.org/content/10.64898/2026.09.17.752456v1", "venue": "bioRxiv preprint", "year": 2026},
-        {"title": "Switch Bioworks tests switchable nitrogen-fixing microbes in corn for fertilizer", "url": "https://agfundernews.com/switch-bioworks-tests-switchable-nitrogen-fixing-microbes-in-corn-for-fertilizer", "venue": "AgFunderNews", "year": 2026}
+        {
+          "title": "Deployability of biotechnologies for environmentally resilient agriculture",
+          "url": "https://www.nature.com/articles/s41587-026-03373-0",
+          "venue": "Nature Biotechnology (Perspective)",
+          "year": 2026
+        },
+        {
+          "title": "Engineered bacteria are weaning farms away from synthetic fertilizers",
+          "url": "https://www.nature.com/articles/d41586-026-03641-8",
+          "venue": "Nature (News)",
+          "year": 2026
+        },
+        {
+          "title": "An extracellular contractile injection system for receptor-mediated protein delivery into plant cells",
+          "url": "https://www.nature.com/search?q=protein+design&order=date",
+          "venue": "Nature Nanotechnology",
+          "year": 2026
+        },
+        {
+          "title": "Synthetic activation of gibberellin signalling reveals spatial coordination of root growth",
+          "url": "https://www.nature.com/search?q=synthetic+biology&order=date",
+          "venue": "Nature Plants",
+          "year": 2026
+        },
+        {
+          "title": "Genome synthesis in plants",
+          "url": "https://www.nature.com/articles/s44222-025-00326-1",
+          "venue": "Nature Reviews Bioengineering",
+          "year": 2025
+        },
+        {
+          "title": "Firewalled synthetic commensal blocks horizontal gene transfer in the gut",
+          "url": "https://www.biorxiv.org/content/10.64898/2026.09.17.752456v1",
+          "venue": "bioRxiv preprint",
+          "year": 2026
+        },
+        {
+          "title": "Switch Bioworks tests switchable nitrogen-fixing microbes in corn for fertilizer",
+          "url": "https://agfundernews.com/switch-bioworks-tests-switchable-nitrogen-fixing-microbes-in-corn-for-fertilizer",
+          "venue": "AgFunderNews",
+          "year": 2026
+        }
       ]
     },
     {
       "id": "biosecurity-governance-hardening",
       "title": "Biosecurity became a compliance requirement with teeth, and screening itself became a research field",
+      "title_zh": "生物安全成為有強制力的法遵要求，而篩查本身也成了一個研究領域",
       "oneLine": "The US tied federal life-science funding to buying DNA only from adherent suppliers, while Nature Communications published algorithms to defend synthesis screening against order-splitting evasion.",
+      "oneLine_zh": "美國把聯邦生命科學經費與「只向遵循規範的供應商購買 DNA」綁在一起，Nature Communications 則發表了演算法，防範以拆單規避合成篩查的手法。",
       "body": "Governance moved from voluntary norms to funding conditions. The White House issued NSTM-6 on 5 November 2026 with an attached National Policy for Nucleic Acid Synthesis Screening, replacing the 2024 Framework and, on full implementation, the 2023 HHS Screening Framework Guidance; it conditions federal life-sciences funding on procuring synthetic nucleic acids and benchtop synthesis equipment only from designated Adherent Suppliers, with a phase-in reaching customers in 2027, and it supplements rather than replaces export controls and the Select Agents regulations. The international picture is uneven: order screening is now central policy in the US, EU, New Zealand and UK, but IBBIS data indicate only a small fraction of more than 700 known providers worldwide maintain publicly identifiable screening, and the International Gene Synthesis Consortium remains voluntary. Crucially, screening is now a legitimate and publishable technical research area: Defending synthetic DNA orders against intra-order splitting-based obfuscation (Nature Communications, 28 September 2026, Tayouri-Attia, Kogan and Puzis) tests a Gene Edit Distance algorithm that detects obfuscated orders regardless of fragment length, and Evaluating AI-Assisted Customer Verification for Synthetic Nucleic Acid Screening (bioRxiv, 2026, with Nelson among the authors) studies the legitimacy-screening step - verifying who is ordering and why - as the primary human safeguard. Governance of the AI layer specifically is being worked out in Navigating regulatory fragmentation in the convergence of synthetic biology, artificial intelligence, and automation (Nature Communications Perspective, 29 August 2026, McLennan, Freemont and Pretorius), which analyses national regulations and proposes a SynBioxAI regulatory interoperability toolkit explicitly aimed at giving research institutes the capacity to navigate divergent regimes. Nature also kept the harder questions open with Ting Zhu's Comment on whether mirror-image molecular biology research should be stopped.",
+      "body_zh": "治理從自願性規範轉為經費條件。白宮於 2026 年 11 月 5 日發布 NSTM-6，附帶國家核酸合成篩查政策（National Policy for Nucleic Acid Synthesis Screening），取代 2024 年的框架，並在全面實施後取代 2023 年 HHS 的篩查框架指引；該政策規定聯邦生命科學經費以「只向指定的遵循供應商（Adherent Suppliers）採購合成核酸與桌上型合成設備」為條件，分階段實施並於 2027 年擴及客戶端，而且是補充而非取代出口管制與特定生物劑（Select Agents）法規。國際局勢並不平均：訂單篩查已是美國、歐盟、紐西蘭與英國的核心政策，但 IBBIS 的資料顯示，全球 700 多家已知供應商中，只有一小部分維持公開可查的篩查機制，而 International Gene Synthesis Consortium 仍屬自願性組織。關鍵的是，篩查現在是一個正當且可發表的技術研究領域：Defending synthetic DNA orders against intra-order splitting-based obfuscation（Nature Communications，2026 年 9 月 28 日，Tayouri-Attia、Kogan 與 Puzis）測試一個 Gene Edit Distance 演算法，不論片段長度都能偵測被混淆處理的訂單；Evaluating AI-Assisted Customer Verification for Synthetic Nucleic Acid Screening（bioRxiv，2026，作者包含 Nelson）則研究正當性審查這一步——確認是誰在下單、為什麼下單——作為最主要的人為防線。針對 AI 這一層的治理，Navigating regulatory fragmentation in the convergence of synthetic biology, artificial intelligence, and automation（Nature Communications Perspective，2026 年 8 月 29 日，McLennan、Freemont 與 Pretorius）正在處理，該文分析各國法規，並提出一套 SynBioxAI 法規互通性工具包，明確目的就是讓研究機構有能力應付彼此歧異的管制體制。Nature 也以 Ting Zhu 的評論保留了更難的問題：鏡像分子生物學研究是否應該停止。",
       "whyItMatters": "An institution that trains students and orders DNA now has concrete obligations - supplier choice, order documentation, institutional review - and partners and funders will begin asking about them, especially for a cross-border collaboration from Taiwan into US or EU networks. Equally important, the SynBioxAI paper exists because institutes are the unit that has to comply, so this is an area where modest, early effort buys disproportionate credibility.",
+      "whyItMatters_zh": "一個會訓練學生、也會訂購 DNA 的機構，現在有了具體義務——供應商選擇、訂單文件、機構內部審查——而合作夥伴與出資方將開始追問這些事項，對於從台灣跨境接入美國或歐盟網絡的合作尤其如此。同樣重要的是，SynBioxAI 這篇論文之所以存在，正是因為需要遵循規範的單位就是研究機構，所以這是一個只要早一點付出不多的努力，就能換到不成比例信譽的領域。",
       "gemsAction": "Within 12 months write and publish a short GEMS biosecurity and biosafety policy covering three things: ordering synthetic DNA only from IGSC-member or adherent suppliers, a documented internal review step for any sequence design work, and an explicit scope statement excluding pathogen and toxin sequences - then use the SynBioxAI toolkit framing to structure it. Teach screening as curriculum, not compliance: the Gene Edit Distance paper is an outstanding student exercise in sequence similarity and adversarial thinking that builds real bioinformatics skill. Nominate one staff member as biosecurity point of contact, because collaboration agreements will increasingly require a named person.",
+      "gemsAction_zh": "在 12 個月內寫出並公開一份簡短的 GEMS 生物安全政策（涵蓋 biosecurity 與 biosafety），內容包含三件事：只向 IGSC 會員或遵循規範的供應商訂購合成 DNA；任何序列設計工作都有一道有記錄的內部審查程序；以及一份明確排除病原體與毒素序列的範圍聲明——並用 SynBioxAI 工具包的框架來組織它。把篩查當成課程而不是法遵來教：Gene Edit Distance 那篇論文是極佳的學生習題，既練序列相似度，也練對抗性思考，能培養真正的生物資訊能力。指派一位同仁擔任生物安全聯絡人，因為合作協議將愈來愈要求有一位具名負責人。",
       "maturity": "accelerating",
       "refs": [
-        {"title": "Defending synthetic DNA orders against intra-order splitting-based obfuscation", "url": "https://www.nature.com/search?q=synthetic+biology&order=date", "venue": "Nature Communications", "year": 2026},
-        {"title": "Navigating regulatory fragmentation in the convergence of synthetic biology, artificial intelligence, and automation (SynBioxAI toolkit)", "url": "https://www.nature.com/search?q=synthetic+biology&order=date", "venue": "Nature Communications (Perspective)", "year": 2026},
-        {"title": "National Policy for Nucleic Acid Synthesis Screening (NSTM-6)", "url": "https://www.whitehouse.gov/wp-content/uploads/2026/11/NSTM-6-NASS-Policy.pdf", "venue": "US White House / OSTP", "year": 2026},
-        {"title": "Evaluating AI-Assisted Customer Verification for Synthetic Nucleic Acid Screening", "url": "https://www.biorxiv.org/content/10.64898/2026.02.27.708645v2", "venue": "bioRxiv preprint", "year": 2026},
-        {"title": "Compounding Asymmetries in Nucleic Acid Synthesis Screening", "url": "https://www.rand.org/pubs/external_publications/EP71386.html", "venue": "RAND", "year": 2026},
-        {"title": "Mirror of the unknown: should research on mirror-image molecular biology be stopped?", "url": "https://www.nature.com/articles/d41586-025-02912-0", "venue": "Nature (Comment)", "year": 2025}
+        {
+          "title": "Defending synthetic DNA orders against intra-order splitting-based obfuscation",
+          "url": "https://www.nature.com/search?q=synthetic+biology&order=date",
+          "venue": "Nature Communications",
+          "year": 2026
+        },
+        {
+          "title": "Navigating regulatory fragmentation in the convergence of synthetic biology, artificial intelligence, and automation (SynBioxAI toolkit)",
+          "url": "https://www.nature.com/search?q=synthetic+biology&order=date",
+          "venue": "Nature Communications (Perspective)",
+          "year": 2026
+        },
+        {
+          "title": "National Policy for Nucleic Acid Synthesis Screening (NSTM-6)",
+          "url": "https://www.whitehouse.gov/wp-content/uploads/2026/11/NSTM-6-NASS-Policy.pdf",
+          "venue": "US White House / OSTP",
+          "year": 2026
+        },
+        {
+          "title": "Evaluating AI-Assisted Customer Verification for Synthetic Nucleic Acid Screening",
+          "url": "https://www.biorxiv.org/content/10.64898/2026.02.27.708645v2",
+          "venue": "bioRxiv preprint",
+          "year": 2026
+        },
+        {
+          "title": "Compounding Asymmetries in Nucleic Acid Synthesis Screening",
+          "url": "https://www.rand.org/pubs/external_publications/EP71386.html",
+          "venue": "RAND",
+          "year": 2026
+        },
+        {
+          "title": "Mirror of the unknown: should research on mirror-image molecular biology be stopped?",
+          "url": "https://www.nature.com/articles/d41586-025-02912-0",
+          "venue": "Nature (Comment)",
+          "year": 2025
+        }
       ]
     },
     {
       "id": "standards-fair-and-access",
       "title": "Standards, FAIR data and equitable access became the field's self-identified weak link",
+      "title_zh": "標準、FAIR 資料與公平取用成為這個領域自己認定的弱點",
       "oneLine": "Synthetic biology is confronting the fact that its data are not machine-readable enough to train the models it now depends on, while a parallel movement works on who gets to participate at all.",
+      "oneLine_zh": "合成生物學正面對一個事實：它的資料機器可讀性不足，無法訓練它現在所依賴的模型；同時另一股並行的運動則在處理「究竟誰有資格參與」的問題。",
       "body": "The dependency is explicit: ML-guided DBTL and foundation models need consistent, annotated, cross-site data, and synthetic biology does not reliably produce it. A January 2026 ACS Synthetic Biology paper by Vitalis, Myers and colleagues proposes a standards-enabled FAIR data management workflow spanning the actual data types labs generate - sequences, models, protocols, images and time-series measurements. The SBOL ecosystem is modernising around SBOL3's fully graph-based, JSON-LD-aligned data model, with a 2026 Journal of Integrative Bioinformatics paper describing an SBOL converter that minimises data loss across versions, and a decade-review of SBOL Visual documenting growing adoption of the diagram standard. A 2026 FEMS Yeast Research review of high-throughput yeast engineering in biofoundries argues directly that alignment on QC thresholds, metadata standards and FAIR principles is now necessary for machine learning and cross-site validation. The access strand is equally substantive and more immediately relevant to a growing institution: Reclone, the Reagent Collaboration Network (Nature Methods Comment, 22 June 2026, Molloy, Federici and Rosca), builds regional distribution hubs and nodes for open sharing of biomaterials, protocols and knowledge to address the global R&D asymmetry; Nature Biotechnology ran Expanding global access to synthetic biology (12 October 2026, Karki and GC) on cost, logistics, local expertise and educator motivation; and Nature Communications previously published the frugal CRISPRkit, a smartphone-quantified CRISPR education kit explicitly designed so high-school students can do gene editing affordably and safely. Scientific Reports published A simplified modelling protocol for synthetic biology (16 September 2026, Alvarez, Turjanski and Sanchez), which is the methodological counterpart - lowering the barrier to doing the modelling at all. What is still missing, and I could not find 2026 work on it, is measurement metrology: calibrated, unit-bearing reporter measurements comparable across labs.",
+      "body_zh": "這個依賴關係很明確：機器學習導引的 DBTL 與基礎模型需要一致、有標註、跨機構可比的資料，而合成生物學並不能穩定地產出這種資料。2026 年 1 月 ACS Synthetic Biology 上，Vitalis、Myers 與同事提出一套以標準為基礎的 FAIR 資料管理工作流程，涵蓋實驗室真正會產生的資料型別——序列、模型、實驗流程、影像與時間序列量測。SBOL 生態系正圍繞 SBOL3 全圖形化、對齊 JSON-LD 的資料模型現代化，2026 年 Journal of Integrative Bioinformatics 的一篇論文描述了一個能把跨版本資料損失降到最低的 SBOL 轉換器，另有一篇 SBOL Visual 的十年回顧，記錄了這套圖示標準日漸普及。2026 年 FEMS Yeast Research 一篇關於生物鑄造廠中高通量酵母工程的綜述直接主張，要做機器學習與跨機構驗證，就必須先在品管閾值、詮釋資料標準與 FAIR 原則上取得一致。取用這條線同樣紮實，對一所成長中的機構更是立即相關：Reclone，即試劑協作網路（Nature Methods Comment，2026 年 6 月 22 日，Molloy、Federici 與 Rosca），建立區域性的配送樞紐與節點，以開放方式分享生物材料、實驗流程與知識，針對的是全球研發的不對稱；Nature Biotechnology 刊出 Expanding global access to synthetic biology（2026 年 10 月 12 日，Karki 與 GC），討論成本、物流、在地專業與教育者的動機；Nature Communications 先前也發表過節約型的 CRISPRkit，一套以智慧型手機定量的 CRISPR 教學套件，明確設計成讓高中生能以可負擔且安全的方式進行基因編輯。Scientific Reports 發表 A simplified modelling protocol for synthetic biology（2026 年 9 月 16 日，Alvarez、Turjanski 與 Sanchez），這是方法層面的對應——把「有沒有辦法開始做建模」的門檻降下來。仍然缺席、而我在 2026 年也找不到相關工作的，是量測計量學：經過校準、帶有單位、可跨實驗室比較的報導基因量測。",
       "whyItMatters": "Standards are the one trend where a small, new institution can be ahead rather than behind, because adopting SBOL3 and FAIR practice from scratch is far easier than retrofitting a thirty-year-old lab. It is also the route into the field's social infrastructure - Reclone and the access literature are actively looking for nodes and contributors outside the usual centres, and a Taiwanese institution with a strong school programme is a natural fit.",
+      "whyItMatters_zh": "標準是唯一一項小而新的機構可以領先而非落後的趨勢，因為從零開始採用 SBOL3 與 FAIR 實務，遠比替一個三十年歷史的實驗室改裝容易。它也是進入這個領域社會性基礎設施的途徑——Reclone 與取用相關的文獻正積極尋找傳統中心之外的節點與貢獻者，而一所有紮實學校課程的台灣機構天然就很合適。",
       "gemsAction": "Adopt SBOL3 and a FAIR data layout as GEMS's native format now, before there is legacy data to migrate: every student construct gets a machine-readable record, every assay gets structured metadata, and the whole thing lives in a versioned repository. Fix the metrology gap locally by calibrating all fluorescence measurements to absolute units (fluorescein or MEFL equivalents) so GEMS data are comparable with other labs - a cheap, concrete practice that very few teaching institutions follow. Apply to become a Reclone node or hub for Taiwan and East Asia, which converts GEMS's educational mission into international standing at close to zero marginal cost.",
+      "gemsAction_zh": "現在就把 SBOL3 與 FAIR 資料佈局採用為 GEMS 的原生格式，趁還沒有舊資料需要遷移：每個學生構築體都有一筆機器可讀的紀錄，每項檢測都有結構化詮釋資料，整體存放在有版本控制的儲存庫中。在自家範圍內補上計量學缺口：把所有螢光量測校準到絕對單位（fluorescein 或 MEFL 等效值），讓 GEMS 的資料能與其他實驗室比較——這是一項便宜又具體的做法，而極少有教學機構真的在做。申請成為 Reclone 在台灣與東亞的節點或樞紐，這能以近乎零的邊際成本，把 GEMS 的教育使命轉換成國際地位。",
       "maturity": "mainstream",
       "refs": [
-        {"title": "Reclone: a global research community building equitable access to reagents", "url": "https://www.nature.com/articles/s41592-026-03148-0", "venue": "Nature Methods (Comment)", "year": 2026},
-        {"title": "A Framework for a Standard-Enabled FAIR Data Management Workflow for Synthetic Biology", "url": "https://pubmed.ncbi.nlm.nih.gov/41498158/", "venue": "ACS Synthetic Biology", "year": 2026},
-        {"title": "SBOL converter: enabling backward compatibility for biological designs", "url": "https://doi.org/10.1515/jib-2026-0005", "venue": "Journal of Integrative Bioinformatics", "year": 2026},
-        {"title": "Expanding global access to synthetic biology", "url": "https://www.nature.com/search?q=synthetic+biology&order=date", "venue": "Nature Biotechnology (Comment)", "year": 2026},
-        {"title": "A simplified modelling protocol for synthetic biology", "url": "https://www.nature.com/search?q=synthetic+biology&order=date", "venue": "Scientific Reports", "year": 2026},
-        {"title": "A frugal CRISPR kit for equitable and accessible education in gene editing and synthetic biology", "url": "https://www.nature.com/search?q=synthetic+biology&order=date", "venue": "Nature Communications", "year": 2024},
-        {"title": "High-throughput yeast engineering in biofoundries: towards autonomous and scalable synthetic biology", "url": "https://academic.oup.com/femsyr/article/doi/10.1093/femsyr/foag003/8442238?login=false", "venue": "FEMS Yeast Research", "year": 2026}
+        {
+          "title": "Reclone: a global research community building equitable access to reagents",
+          "url": "https://www.nature.com/articles/s41592-026-03148-0",
+          "venue": "Nature Methods (Comment)",
+          "year": 2026
+        },
+        {
+          "title": "A Framework for a Standard-Enabled FAIR Data Management Workflow for Synthetic Biology",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41498158/",
+          "venue": "ACS Synthetic Biology",
+          "year": 2026
+        },
+        {
+          "title": "SBOL converter: enabling backward compatibility for biological designs",
+          "url": "https://doi.org/10.1515/jib-2026-0005",
+          "venue": "Journal of Integrative Bioinformatics",
+          "year": 2026
+        },
+        {
+          "title": "Expanding global access to synthetic biology",
+          "url": "https://www.nature.com/search?q=synthetic+biology&order=date",
+          "venue": "Nature Biotechnology (Comment)",
+          "year": 2026
+        },
+        {
+          "title": "A simplified modelling protocol for synthetic biology",
+          "url": "https://www.nature.com/search?q=synthetic+biology&order=date",
+          "venue": "Scientific Reports",
+          "year": 2026
+        },
+        {
+          "title": "A frugal CRISPR kit for equitable and accessible education in gene editing and synthetic biology",
+          "url": "https://www.nature.com/search?q=synthetic+biology&order=date",
+          "venue": "Nature Communications",
+          "year": 2024
+        },
+        {
+          "title": "High-throughput yeast engineering in biofoundries: towards autonomous and scalable synthetic biology",
+          "url": "https://academic.oup.com/femsyr/article/doi/10.1093/femsyr/foag003/8442238?login=false",
+          "venue": "FEMS Yeast Research",
+          "year": 2026
+        }
       ]
     }
   ],
   "readingList": [
-    {"title": "Towards the construction of a virtual yeast", "url": "https://www.nature.com/articles/s41586-026-10574-9", "venue": "Nature (Perspective)", "year": 2026, "why": "The clearest blueprint anywhere for what a dry-lab-first microbial research programme looks like - eight AI modules under an LLM orchestration layer in a closed experimental loop."},
-    {"title": "Deployability of biotechnologies for environmentally resilient agriculture", "url": "https://www.nature.com/articles/s41587-026-03373-0", "venue": "Nature Biotechnology (Perspective)", "year": 2026, "why": "Scores 77 agricultural biotechnologies and shows the blocker is market and acceptance, not science - effectively a rubric for GEMS's own plant-protection project."},
-    {"title": "Artificial allosteric protein switches with machine-learning-designed receptors", "url": "https://www.nature.com/articles/s41587-026-03081-9", "venue": "Nature Biotechnology", "year": 2026, "why": "The single most directly actionable paper for GEMS: ML-designed receptors driving colorimetric, luminescent and electrochemical sensors plus YES/AND logic."},
-    {"title": "Programmable design of functional proteins from natural language (Pinal)", "url": "https://www.nature.com/articles/s41586-026-11205-z", "venue": "Nature", "year": 2026, "why": "16B-parameter model turning written functional descriptions into experimentally validated enzymes - the clearest sign of where the design interface is heading."},
-    {"title": "Digital cell factories for biomanufacturing", "url": "https://www.nature.com/articles/s44222-026-00506-7", "venue": "Nature Reviews Bioengineering (Comment)", "year": 2026, "why": "Nielsen's argument for optimising predicted production and economics over biological realism - a short, strategic read that reframes what modelling is for."},
-    {"title": "Automated prototyping of genetic codes", "url": "https://www.nature.com/articles/s41586-026-10949-y", "venue": "Nature", "year": 2026, "why": "Church-lab robotic cell-free platform that prototypes redesigned genetic codes without touching a living genome - the template for fast, low-biosafety-burden iteration."},
-    {"title": "Generative genome design with DNA language models", "url": "https://www.nature.com/articles/s41576-026-01032-3", "venue": "Nature Reviews Genetics (Tools of the Trade)", "year": 2026, "why": "Short practitioner account of designing, synthesising and validating AI-written phage genomes - the best entry point to genome-scale generative design."},
-    {"title": "Toward autonomous science with agentic artificial intelligence", "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9?rss=yes", "venue": "Cell (Review)", "year": 2026, "why": "Taxonomy of the three agent paradigms (Co-Scientist, Robin, Biomni) with their validated results and limits - saves reading a dozen preprints."},
-    {"title": "Reclone: a global research community building equitable access to reagents", "url": "https://www.nature.com/articles/s41592-026-03148-0", "venue": "Nature Methods (Comment)", "year": 2026, "why": "The concrete mechanism by which a growing institution outside the traditional centres joins global synthetic biology infrastructure."},
-    {"title": "Automation and machine learning drive rapid optimization of isoprenol production in Pseudomonas putida", "url": "https://consensus.app/papers/details/w:b89d3c61-1875-424b-bc8a-f2eb8872c5fc/", "venue": "Nature Communications", "year": 2025, "why": "The benchmark ML-DBTL result with real numbers: 5-fold titer in six cycles, 800,000 designs narrowed to about 400 - the evidence base for the dry-lab-as-engine thesis."},
-    {"title": "De novo design of synthetic microbial genomes", "url": "https://www.nature.com/articles/s44222-026-00410-0", "venue": "Nature Reviews Bioengineering", "year": 2026, "why": "Pairs the rational-design and computational routes to synthetic genomes, so students see generative models in the context of decades of genome engineering."},
-    {"title": "Ultra-high-throughput mapping of genetic design space (CLASSIC)", "url": "https://www.nature.com/articles/s41586-025-09933-9", "venue": "Nature", "year": 2026, "why": "Shows that long-read multiplexed measurement, not construct count, is what converts a library into usable design rules."}
+    {
+      "title": "Towards the construction of a virtual yeast",
+      "url": "https://www.nature.com/articles/s41586-026-10574-9",
+      "venue": "Nature (Perspective)",
+      "year": 2026,
+      "why": "The clearest blueprint anywhere for what a dry-lab-first microbial research programme looks like - eight AI modules under an LLM orchestration layer in a closed experimental loop.",
+      "why_zh": "目前最清楚的藍圖，說明一個以乾式實驗室為先的微生物研究計畫長什麼樣子——在閉環實驗迴路中，由一個 LLM 協調層統整八個 AI 模組。"
+    },
+    {
+      "title": "Deployability of biotechnologies for environmentally resilient agriculture",
+      "url": "https://www.nature.com/articles/s41587-026-03373-0",
+      "venue": "Nature Biotechnology (Perspective)",
+      "year": 2026,
+      "why": "Scores 77 agricultural biotechnologies and shows the blocker is market and acceptance, not science - effectively a rubric for GEMS's own plant-protection project.",
+      "why_zh": "為 77 項農業生物技術打分，顯示阻礙來自市場與社會接受度，而非科學——實質上就是 GEMS 自己植物保護專案的評分準則。"
+    },
+    {
+      "title": "Artificial allosteric protein switches with machine-learning-designed receptors",
+      "url": "https://www.nature.com/articles/s41587-026-03081-9",
+      "venue": "Nature Biotechnology",
+      "year": 2026,
+      "why": "The single most directly actionable paper for GEMS: ML-designed receptors driving colorimetric, luminescent and electrochemical sensors plus YES/AND logic.",
+      "why_zh": "對 GEMS 而言最直接可以動手的一篇論文：機器學習設計的受體驅動比色、發光與電化學感測器，並實作 YES/AND 邏輯。"
+    },
+    {
+      "title": "Programmable design of functional proteins from natural language (Pinal)",
+      "url": "https://www.nature.com/articles/s41586-026-11205-z",
+      "venue": "Nature",
+      "year": 2026,
+      "why": "16B-parameter model turning written functional descriptions into experimentally validated enzymes - the clearest sign of where the design interface is heading.",
+      "why_zh": "160 億參數的模型，把書面的功能描述變成經實驗驗證的酵素——最清楚地指出設計介面正往哪裡走。"
+    },
+    {
+      "title": "Digital cell factories for biomanufacturing",
+      "url": "https://www.nature.com/articles/s44222-026-00506-7",
+      "venue": "Nature Reviews Bioengineering (Comment)",
+      "year": 2026,
+      "why": "Nielsen's argument for optimising predicted production and economics over biological realism - a short, strategic read that reframes what modelling is for.",
+      "why_zh": "Nielsen 主張最佳化的對象應該是預測的產量與經濟性，而非生物真實性——一篇篇幅短但具策略性的讀物，重新界定建模究竟是為了什麼。"
+    },
+    {
+      "title": "Automated prototyping of genetic codes",
+      "url": "https://www.nature.com/articles/s41586-026-10949-y",
+      "venue": "Nature",
+      "year": 2026,
+      "why": "Church-lab robotic cell-free platform that prototypes redesigned genetic codes without touching a living genome - the template for fast, low-biosafety-burden iteration.",
+      "why_zh": "Church 實驗室的機器人化無細胞平台，能在完全不動活體基因組的情況下試做重新設計的遺傳密碼——快速迭代且生物安全負擔低的範本。"
+    },
+    {
+      "title": "Generative genome design with DNA language models",
+      "url": "https://www.nature.com/articles/s41576-026-01032-3",
+      "venue": "Nature Reviews Genetics (Tools of the Trade)",
+      "year": 2026,
+      "why": "Short practitioner account of designing, synthesising and validating AI-written phage genomes - the best entry point to genome-scale generative design.",
+      "why_zh": "一篇簡短的實作者敘述，說明如何設計、合成並驗證由 AI 撰寫的噬菌體基因組——進入基因組尺度生成式設計的最佳入門。"
+    },
+    {
+      "title": "Toward autonomous science with agentic artificial intelligence",
+      "url": "https://www.cell.com/cell/fulltext/S0092-8674(26)01063-9?rss=yes",
+      "venue": "Cell (Review)",
+      "year": 2026,
+      "why": "Taxonomy of the three agent paradigms (Co-Scientist, Robin, Biomni) with their validated results and limits - saves reading a dozen preprints.",
+      "why_zh": "把三種代理範式（Co-Scientist、Robin、Biomni）分類整理，附上各自已驗證的成果與限制——省下讀十來篇預印本的工夫。"
+    },
+    {
+      "title": "Reclone: a global research community building equitable access to reagents",
+      "url": "https://www.nature.com/articles/s41592-026-03148-0",
+      "venue": "Nature Methods (Comment)",
+      "year": 2026,
+      "why": "The concrete mechanism by which a growing institution outside the traditional centres joins global synthetic biology infrastructure.",
+      "why_zh": "一所位於傳統中心之外、正在成長的機構，接入全球合成生物學基礎設施的具體機制。"
+    },
+    {
+      "title": "Automation and machine learning drive rapid optimization of isoprenol production in Pseudomonas putida",
+      "url": "https://consensus.app/papers/details/w:b89d3c61-1875-424b-bc8a-f2eb8872c5fc/",
+      "venue": "Nature Communications",
+      "year": 2025,
+      "why": "The benchmark ML-DBTL result with real numbers: 5-fold titer in six cycles, 800,000 designs narrowed to about 400 - the evidence base for the dry-lab-as-engine thesis.",
+      "why_zh": "機器學習 DBTL 的標竿結果，帶著真實數字：六個循環把產量提高 5 倍，80 萬個設計縮減到約 400 個——「乾式實驗室即引擎」這個論點的證據基礎。"
+    },
+    {
+      "title": "De novo design of synthetic microbial genomes",
+      "url": "https://www.nature.com/articles/s44222-026-00410-0",
+      "venue": "Nature Reviews Bioengineering",
+      "year": 2026,
+      "why": "Pairs the rational-design and computational routes to synthetic genomes, so students see generative models in the context of decades of genome engineering.",
+      "why_zh": "把通往合成基因組的理性設計路線與計算路線並置，讓學生在數十年基因組工程的脈絡中看待生成式模型。"
+    },
+    {
+      "title": "Ultra-high-throughput mapping of genetic design space (CLASSIC)",
+      "url": "https://www.nature.com/articles/s41586-025-09933-9",
+      "venue": "Nature",
+      "year": 2026,
+      "why": "Shows that long-read multiplexed measurement, not construct count, is what converts a library into usable design rules.",
+      "why_zh": "說明把函式庫轉換成可用設計規則的是長讀長多重量測，而不是構築體的數量。"
+    }
   ],
   "openQuestions": [
     "Can light-dependence serve as a genuine biological containment mechanism? Nobody has quantified the escape rate of an organism whose essential or payload function requires illumination. A student team could measure how often a light-dependent Bacillus strain regains constitutive function under selection - a contained, cheap, publishable experiment that speaks directly to the containment lever the Arkin deployability paper identifies as decisive.",
@@ -266,5 +785,12 @@
     "Do co-folding models' affinity predictions survive contact with a real titration? Boltz-2 bundles binding-affinity prediction with structure, but its calibration on non-drug-like, engineering-relevant targets (plant metabolites, agrochemicals, small-molecule inducers) is untested. Comparing predicted versus measured affinity for a handful of inducer-receptor pairs would probe where the interpolation breaks down.",
     "Why does optogenetic control have such steep dose-response in practice, and can growth-stage-aware models fix it? The pulse-width-modulation and GEAGS work exists precisely because intermediate setpoints are hard to hold, but there is no systematic characterisation in Bacillus at all. Mapping light intensity, duty cycle and growth phase against expression in B. subtilis would fill a twelve-paper literature's largest hole.",
     "Can engineered microbial consortia be made to hold a designed composition outside a bioreactor? The Nature Biotechnology fertilizer comment names multi-species cooperation as the unsolved requirement, and 2026 reviews report that rhizosphere engineering remains inconsistent in the field despite successful colonisation. Tracking a two- or three-member designed community's composition over weeks in non-sterile soil, with and without an external control input, is a tractable ecology-meets-engineering question."
+  ],
+  "openQuestions_zh": [
+    "光依賴性能否作為真正的生物圍阻機制？目前沒有人量化過一株「必要功能或酬載功能需要照光」的生物體的逃脫率。一支學生團隊可以測量在選汰壓力下，一株光依賴的 Bacillus 菌株多久會重新取得組成型的功能——這是一個受圍阻、便宜、而且可發表的實驗，也直接回應 Arkin 那篇可部署性論文所指出的決定性圍阻槓桿。",
+    "在一間規模普通的實驗室裡，生成式結合蛋白設計的真實成功率是多少？已發表的數字從低於 10%（Nipah G 競賽）到平均 46.3%（BindCraft）不等，而且幾乎全部來自開發這些工具的團隊。針對一個檢測方法成熟的標的做 20 個設計，獨立且誠實地回報命中率——包含失敗的那些——對整個領域都會很有用，而這完全在一支學生團隊的能力範圍內。",
+    "共摺疊模型的親和力預測，禁得起真實滴定實驗的檢驗嗎？Boltz-2 把結合親和力預測和結構預測打包在一起，但它在非類藥、具工程意義的標的（植物代謝物、農用化學品、小分子誘導物）上的校準尚未受檢驗。針對少數幾組誘導物—受體配對比較預測與實測的親和力，可以探出這種內插在哪裡失效。",
+    "為什麼光遺傳學控制在實務上的劑量反應如此陡峭，而考慮生長階段的模型能否解決這個問題？脈寬調變與 GEAGS 之類的工作之所以存在，正是因為中間的設定點難以維持，但在 Bacillus 上完全沒有系統性的特性分析。把光強度、工作週期與生長時期對 B. subtilis 表現量的影響繪製成圖譜，就能填上這個只有十二篇文獻的領域最大的一個洞。",
+    "工程化的微生物群落，能否在生物反應器之外維持設計好的組成？Nature Biotechnology 那篇肥料評論指出多物種協作是尚未解決的必要條件，而 2026 年的多篇綜述也回報，即使移生成功，根圈工程在田間仍然不穩定。在非無菌土壤中追蹤一個兩至三成員的設計群落數週內的組成變化，並比較有無外部控制輸入的差別，是一個可以著手的生態學與工程交會的問題。"
   ]
 }

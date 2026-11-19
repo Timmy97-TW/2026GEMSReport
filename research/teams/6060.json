@@ -8,26 +8,94 @@
   "projectTitle": "Enzymatic degradation of wind turbine blade epoxy",
   "tagline": "A chemo-enzymatic route to the resin fraction of decommissioned wind turbine blades, assessed honestly against the alternatives",
   "summary": "DTU engineered laccases (ItL-03 from a spruce bark beetle gut metagenome, CueO variants and homologues) and unspecific peroxygenases (PaDa-I, WamPa, PabUPO-II, MroUPO, Fett) to attack the amine crosslinks of cured epoxy from wind turbine blades, layered on top of a published acid-plus-peroxide solvolysis pretreatment. They used NNBT, a small water-soluble molecule carrying the tertiary amine of the crosslink, as a defined model substrate, and showed by MALDI-TOF that PaDa-I performs N-dealkylation on it with Purpald confirmation of lactaldehyde release. The decisive work is a prospective comparative life-cycle assessment in SimaPro (ReCiPe 2016 Midpoint H) of five end-of-life routes, which found their own enzymatic route is NOT the best option on almost any indicator - and they published that. Seven interviews across DTU Wind, DTU Sustain, DTU Chemistry, SDU and industry, plus documented non-responses from Siemens Gamesa, Orsted and MAKEEN Energy, drove changes to the chemical target, the model substrate, the host organism, the enzyme-ranking criterion and the project's stated goal.",
-  "awards": ["BEST SUSTAINABLE DEVELOPMENT IMPACT winner (Overgrad)", "Best New Basic Part nominee", "Best Presentation nominee", "Best Bioremediation nominee"],
+  "awards": [
+    "BEST SUSTAINABLE DEVELOPMENT IMPACT winner (Overgrad)",
+    "Best New Basic Part nominee",
+    "Best Presentation nominee",
+    "Best Bioremediation nominee"
+  ],
   "dry": {
     "frameworks": "Three parallel enzyme-discovery pipelines agreed after advice from the 2025 team's dry-lab head: an 'easy' track of literature enzymes known to oxidise the relevant bonds, a 'medium' track of homologue mining, and a 'hard' track of rational engineering and generative design. Plus a prospective comparative LCA (SimaPro, ReCiPe 2016 Midpoint H, functional unit of blade mass with cutting/transport/metal separation excluded as identical across routes) and a Kremser-equation model of the countercurrent solvent extraction stage.",
     "dataviz": "An interactive clickable process-flow diagram that zooms from the five-route overview into the enzymatic routes with every parameter on the box (acid molarity, temperature, residence time, enzyme loading in mg/L, number of reuses, recovery fractions); one SDG per plot with burdens above zero and credits below; an interactive stakeholder map where each pin opens the interview, colour-coded by engagement status so non-responses stay visible.",
     "datascience": "Sequence mining of UniProt, Pfam and BLAST rather than metagenomic libraries; multiple sequence alignment to transfer organic-solvent-tolerance mutations from PaDa-I onto GroGu and PabUPO-II; a novel substrate-access-channel discovery pipeline used in place of docking affinity ranking; molecular dynamics; generative enzyme design on the DTU HPC. Every LCA parameter is published with its source, the mismatch between source and use, and a 'weakest link' label (e.g. partition coefficients taken from a 1980 phenol-extraction paper using MIBK rather than ethyl acetate, flagged explicitly).",
     "software": "LCA input data, assumptions and mapping code released open source so other teams can rebuild the model in SimaPro or another tool; lectures, workshops and guides collected on the contribution page.",
-    "stack": ["SimaPro", "Ecoinvent", "ReCiPe 2016 Midpoint (H)", "Boltz-2", "molecular dynamics", "BAGEL", "Raygun", "BLAST / UniProt / Pfam", "DTU HPC", "Opentrons liquid handler"],
-    "techniques": ["molecular docking (deliberately demoted)", "substrate channel geometry analysis", "multiple sequence alignment mutation transfer", "generative protein design", "Gibson assembly (laccases)", "Golden Gate (UPOs)", "96-well colorimetric screening (ABTS, NNBT, NBD, Purpald)", "CO-difference spectroscopy for correctly folded heme", "MALDI-TOF product identification", "prospective LCA with contribution analysis"]
+    "stack": [
+      "SimaPro",
+      "Ecoinvent",
+      "ReCiPe 2016 Midpoint (H)",
+      "Boltz-2",
+      "molecular dynamics",
+      "BAGEL",
+      "Raygun",
+      "BLAST / UniProt / Pfam",
+      "DTU HPC",
+      "Opentrons liquid handler"
+    ],
+    "techniques": [
+      "molecular docking (deliberately demoted)",
+      "substrate channel geometry analysis",
+      "multiple sequence alignment mutation transfer",
+      "generative protein design",
+      "Gibson assembly (laccases)",
+      "Golden Gate (UPOs)",
+      "96-well colorimetric screening (ABTS, NNBT, NBD, Purpald)",
+      "CO-difference spectroscopy for correctly folded heme",
+      "MALDI-TOF product identification",
+      "prospective LCA with contribution analysis"
+    ],
+    "frameworks_zh": "在徵詢 2025 年隊伍乾實驗室負責人的建議後，確立三條並行的酵素探索管線：「容易」路線為文獻中已知能氧化相關鍵結的酵素，「中等」路線為同源蛋白探勘，「困難」路線為理性工程與生成式設計。此外還有一項前瞻式比較 LCA（SimaPro、ReCiPe 2016 Midpoint H，功能單位為葉片質量，切割／運輸／金屬分離因在各路線間相同而排除），以及一個以 Kremser 方程式建立的逆流溶劑萃取段模型。",
+    "dataviz_zh": "一張可互動點擊的製程流程圖，可由五路線總覽放大到各酵素路線，每個方塊上都標出參數（酸的莫耳濃度、溫度、滯留時間、以 mg/L 表示的酵素投加量、再利用次數、回收率）；每一項 SDG 各自一張圖，負擔畫在零線以上、效益畫在零線以下；還有一張可互動的利害關係人地圖，點選圖釘即展開該場訪談，並以顏色標示互動狀態，讓無回應者仍然看得見。",
+    "datascience_zh": "以 UniProt、Pfam 與 BLAST 做序列探勘，而非總體基因組資料庫；以多序列比對把 PaDa-I 的有機溶劑耐受突變轉移到 GroGu 與 PabUPO-II 上；以一套新的底物進入通道探索流程取代以嵌合親和力排序；分子動力學模擬；在 DTU HPC 上執行生成式酵素設計。每一個 LCA 參數都連同來源、來源與實際用途之間的落差，以及一個「最弱環節」標籤一併公開（例如分配係數取自 1980 年一篇使用 MIBK 而非乙酸乙酯的酚萃取論文，明確標示出來）。",
+    "software_zh": "LCA 的輸入資料、假設與對映程式碼皆以開源釋出，讓其他隊伍能在 SimaPro 或其他工具中重建模型；講座、工作坊與指南則整理在貢獻頁面上。"
   },
   "good": {
     "publicEngagement": "Education was pointed at the specific blind spot the project exposed rather than at synthetic biology in general: visits to international high schools taught the wind sector's end-of-life emissions and the idea of thinking in full sustainability circles early, and a Lifelong Learning workshop took the same low-impact recycling discussion to an audience of working professionals. For the iGEM community they ran a BioBrick workshop, an intellectual-property introduction ('Protecting Your Ideas'), a World Cafe team-to-team roundtable and a podcast, and presented at the Nordic iGEM Conference. State of Green gave them a platform to put the blade-waste problem to people from ministries, academia and the energy sector.",
     "ihp": "DTU's IHP is built as a decision trail, not a visitor log: every interview card carries an explicit 'Implementation' list, and there is a separate section on approaches they chose NOT to pursue. The single biggest change came from Dr Javier (Postdoc, DTU Sustain, one of the few in his group working on resin chemistry rather than glass-fibre recovery) across two interviews on 3 March and 24 June 2026. He posed what the team calls the sharpest experimental question raised in the project - can an enzyme replace the cleaving solvent, acting on a swollen but still crosslinked network? - and told them to start from a well-documented literature pretreatment rather than invent one and layer enzymes on top. The result was a hard reframing: the enzymatic step stopped being a standalone degradation claim and became a complement to solvolysis, with a new explicit objective of testing whether enzymes could substitute for part of the solvent-cleavage step, and a second research line on engineering solvent tolerance into the enzymes. Justine Beauson (Senior Researcher, Composites Manufacturing and Testing, DTU Wind) was the first contact; she confirmed thermoset epoxy is what is coming down now, referred the team to a turbine OEM, and in a 6 October email follow-up explained that the Blade Material Passport is compiled independently of any thinking about disposal and will tell you a blade is epoxy but never the formulation - which is why the team abandoned any attempt to match real blade resin and why 'collaboration between the production and the waste-management industries' became the organising claim on the sustainability page. Jesper Kjaer Jorgensen (Postdoc, Composites, DTU) then supplied fully cured SWANCOR 2519-1A/BS, a commercial non-NDA amine-cured bisphenol-A epoxy, and agreed with the team's hypothesis that the tertiary amine crosslink is the vulnerable point: the team writes plainly that 'without those cubes we would have had either no workable material or a different one', and the target shifted from the epoxy backbone to the amine crosslinks, changing which bonds they went after, how they measured degradation and which products they hoped to recover. Robert (PhD, Eukaryotic Molecular Cell Biology) delivered the hardest reality check - thermoset degradation is heavily researched, the field contains many low-quality papers with missing controls and uncharacterised substrates, and a six-month student project cannot run a metagenomic discovery campaign - and the team's response is laid out item by item: they screened roughly 33 enzymes rather than thousands, worked from public databases rather than metagenomic libraries, used a colorimetric assay rather than a fluorescent reporter, added MALDI-TOF, and had a postdoc rather than students perform the hazardous epoxy pretreatment. Carlos G. Acevedo-Rocha (Senior Researcher, Computational Protein Engineering, BRIGHT) told them not to base findings on docking affinity values because there is no significant correlation with experimental activity, and endorsed their early-stage channel-discovery pipeline: they abandoned the plan to filter homologue candidates on Boltz-2 affinity scores and rebuilt candidate selection around channel geometry plus molecular dynamics. Cecilia Castellvi Domingo (PhD, heterologous expression of UPOs) changed the chassis and the protocol - Komagataella phaffii on an episomal AP17 backbone rather than S. cerevisiae or E. coli, harvest at day 5 instead of day 6 to reduce proteolysis, lower induction temperature, and the CO-difference spectrum assay that gave them a direct measurement of correctly folded heme-containing enzyme (0.019 uM in a six-fold concentrated sample) that activity assays could not. Lykke Margot Ricard (Associate Professor in Sustainable Innovation, SDU, who had mapped Danish blade treatment options for the Danish EPA) asked who the retaker is, and in response every workstream was required to name a recoverable product, the quality it would need and a potential buyer - which is also why the team says the ideal process recovers a product rather than incinerating residues. The European Environment Agency answered that it holds no data on retired blade management, that the WEEE Directive does not cover wind turbines and that no dedicated EU legislation exists, so there is no reporting obligation; the team then marked the landfill share as an unverifiable input in the LCA rather than quoting a number. Most unusually, they publish their failures of access: Siemens Gamesa never replied to email and had no relevant expert at the DSE careers fair, nobody at Orsted could speak to blade end-of-life, MAKEEN Energy did not reply, and the team states outright that the groups with the greatest influence over adoption 'were therefore among the least represented in our discussions, limiting our analysis' - and makes those gaps visible on the stakeholder map, which rates each group by influence over adoption and interest separately, including 'unknown' for potential buyers of recovered compounds because no market has been shown to exist.",
     "realWorld": "The need is a quantified bottleneck rather than a slogan: Danish blade waste currently goes to mixed-waste landfill or is shipped abroad by lorry and ferry, the Danish wind industry's voluntary landfill ban took effect on 1 January 2026, a Danish EPA screening detected bisphenol A in every tank leaching test on blade material, and the EEA confirmed there is no EU legislation or reporting obligation for wind-turbine waste at all pending the WEEE revision in the Circular Economy Act. SDGs are justified target by target with numbers from their own LCA, and the headline finding is one most teams would hide: in the base industrial scale-up scenario (projected to about 2035) the enzymatic route emits 2.1 kg CO2 eq per kg of blade against 1.4 for solvolysis and 0.9 for pyrolysis, adds 0.38 person-equivalents of human carcinogenic toxicity against 0.022 for solvolysis, uses about 36% more water, and cement co-processing is best on almost every indicator - so they state that enzymatic and solvolysis are the only routes with clear net burdens, trace the hotspot to the H2O2 supply chain and UPO production, and convert that into a research direction (make UPO production more efficient, recover a product instead of incinerating residues, reuse immobilised enzyme and compute the break-even number of reuses). SDG targets are matched one-to-one with their own data on SDG 3 (illness from hazardous chemicals), 6 (water-use efficiency), 7 (renewable share and clean-energy research cooperation), 8 (the Energy Transition Alliance estimate that a UK blade-recycling segment could add 20,000 jobs to offshore wind's 60,000-by-2030 target), 9, 12, 13, 14, 15 and 17. Limitations are declared inside the SDG analysis rather than buried: unknown reaction product, no demonstration of enzyme performance on real blade material, one blade type only, transport excluded by the system boundary, microplastic and BPA leaching not characterised by ReCiPe, and no penalty in the cut-off model for losing glass fibre as a resource. What happens next: the LCA inputs, assumptions and mapping code are open source, the OEM's requirements (handle multi-material blades at reasonable cost and pace) are recorded as requirements for future development rather than achievements, and relationships with State of Green, the Center for Biosolutions and DTU are described as collaborations that can continue beyond iGEM.",
-    "partners": ["DTU Wind and Energy Systems", "DTU Sustain", "DTU Chemistry", "DTU Biotechnology and Biomedicine", "DTU Biosustain", "University of Southern Denmark (SDU Innovation and Design Engineering)", "Biotechnology Research Institute for the Green Transition (BRIGHT)", "European Environment Agency", "State of Green", "Center for Biosolutions", "an anonymous wind turbine OEM", "Tailwind Bio", "Danish Working Environment Authority (Arbejdstilsynet) epoxy certification"]
+    "partners": [
+      "DTU Wind and Energy Systems",
+      "DTU Sustain",
+      "DTU Chemistry",
+      "DTU Biotechnology and Biomedicine",
+      "DTU Biosustain",
+      "University of Southern Denmark (SDU Innovation and Design Engineering)",
+      "Biotechnology Research Institute for the Green Transition (BRIGHT)",
+      "European Environment Agency",
+      "State of Green",
+      "Center for Biosolutions",
+      "an anonymous wind turbine OEM",
+      "Tailwind Bio",
+      "Danish Working Environment Authority (Arbejdstilsynet) epoxy certification"
+    ],
+    "publicEngagement_zh": "教育瞄準的是這個專案所揭露的特定盲點，而不是泛泛的合成生物學：團隊走訪國際高中，講授風電產業的生命終期排放，以及及早以完整永續循環來思考的觀念；一場 Lifelong Learning 工作坊則把同樣關於低衝擊回收的討論帶給在職專業人士。對 iGEM 社群，他們辦了 BioBrick 工作坊、一場智慧財產權入門課（Protecting Your Ideas）、一場 World Cafe 形式的隊際圓桌，以及一集 podcast，並在 Nordic iGEM Conference 上報告。State of Green 則提供了舞台，讓他們把葉片廢棄物問題帶到部會、學界與能源業人士面前。",
+    "ihp_zh": "DTU 的 IHP 是一條決策軌跡，而不是一本訪客簽到簿：每一張訪談卡都附有明確的「落實」清單，另有一個專節說明他們「選擇不走」的方向。最大的一次轉向來自 Dr Javier（DTU Sustain 博士後，該組少數研究樹脂化學而非玻璃纖維回收的人）在 2026 年 3 月 3 日與 6 月 24 日的兩場訪談。他提出了團隊認為整個專案中最犀利的實驗問題——酵素能否取代裂解溶劑，直接作用在已膨潤但仍交聯的網狀結構上？——並建議他們從文獻中記載完整的前處理出發，而不是自己發明一套，再在上面疊加酵素。結果是一次徹底的重新定位：酵素步驟不再是獨立的降解主張，而成為溶劑分解的補充，並新增一個明確目標——測試酵素能否取代部分溶劑裂解步驟，同時開出第二條研究線，為酵素工程化出溶劑耐受性。Justine Beauson（DTU Wind 複合材料製造與測試資深研究員）是第一位聯繫對象；她確認現在退役下來的正是熱固性環氧樹脂，把團隊轉介給一家風機原廠（OEM），並在 10 月 6 日的電子郵件追問中說明，Blade Material Passport 的編製完全沒有考慮處置問題，只會告訴你葉片是環氧樹脂，卻絕不會給你配方——這正是團隊放棄去比對真實葉片樹脂的原因，也是「生產業與廢棄物管理業之間的協作」成為永續頁面核心主張的原因。接著 Jesper Kjaer Jorgensen（DTU 複合材料博士後）提供了完全固化的 SWANCOR 2519-1A/BS，一款無保密協議限制的商用胺固化雙酚 A 環氧樹脂，並同意團隊的假說：三級胺交聯是脆弱點。團隊直言「沒有那些方塊，我們手上要麼沒有可用的材料，要麼是另一種材料」，標的也因此從環氧樹脂主鏈轉到胺類交聯，改變了他們要攻擊哪些鍵結、如何量測降解，以及期望回收哪些產物。Robert（真核分子細胞生物學博士生）給出最嚴厲的現實檢驗——熱固性材料降解已被大量研究、該領域有許多缺少對照、底物未經鑑定的低品質論文，而一個六個月的學生專案不可能跑完整的總體基因組探索——團隊的回應逐條列出：他們篩選約 33 個酵素而非數千個、以公開資料庫而非總體基因組資料庫為起點、採用比色分析而非螢光報告子、加入 MALDI-TOF，並讓博士後而非學生執行危害性的環氧樹脂前處理。Carlos G. Acevedo-Rocha（BRIGHT 計算蛋白質工程資深研究員）告訴他們不要把結論建立在嵌合親和力數值上，因為那與實驗活性並無顯著相關，同時認可他們早期階段的通道探索流程：於是他們放棄以 Boltz-2 親和力分數篩選同源候選的計畫，改以通道幾何加上分子動力學重建候選篩選。Cecilia Castellvi Domingo（研究 UPO 異源表現的博士生）改變了宿主與操作流程——改用帶 episomal AP17 骨架的 Komagataella phaffii，而非 S. cerevisiae 或 E. coli；第 5 天而非第 6 天收取以減少蛋白水解；降低誘導溫度；以及 CO 差異光譜分析，讓他們得到正確折疊、含血基質酵素的直接量測值（六倍濃縮樣品中為 0.019 uM），這是活性分析做不到的。Lykke Margot Ricard（SDU 永續創新副教授，曾為丹麥環保署盤點丹麥葉片處理選項）問了「接手的人是誰？」，於是每條工作線都被要求指名一項可回收的產物、它需要達到的品質，以及可能的買家——這也是團隊主張理想製程應回收產物而非焚燒殘渣的原因。歐洲環境署答覆說他們並未掌握退役葉片管理的資料、WEEE 指令並不涵蓋風力機、也沒有專門的歐盟法規，因此不存在通報義務；團隊於是在 LCA 中把掩埋比例標記為無法驗證的輸入，而不是引用一個數字。最不尋常的是，他們把自己接觸失敗的部分也公開了：Siemens Gamesa 從未回信，在 DSE 就業博覽會上也沒有相關專家；Orsted 沒有人能談葉片生命終期；MAKEEN Energy 未回覆。團隊直接寫出，對採用與否影響力最大的那些群體「因此也是我們討論中代表性最低的，限制了我們的分析」，並把這些缺口標示在利害關係人地圖上——該圖分別以對採用的影響力與興趣程度評比每個群體，連回收化合物的潛在買家也標為「未知」，因為尚未有證據顯示市場存在。",
+    "realWorld_zh": "需求是被量化的瓶頸，而不是一句口號：丹麥的葉片廢棄物目前進入混合廢棄物掩埋場，或以卡車與渡輪運往國外；丹麥風電業自願性的掩埋禁令自 2026 年 1 月 1 日起生效；丹麥環保署的篩查在葉片材料的每一次槽式浸出試驗中都檢出雙酚 A；而歐洲環境署確認，在《循環經濟法》修訂 WEEE 之前，歐盟對風力機廢棄物根本沒有任何法規或通報義務。各項 SDG 都以團隊自己 LCA 的數字逐一標的論證，而最醒目的發現是多數隊伍會藏起來的：在工業規模放大的基準情境（推估至約 2035 年）下，酵素路線每公斤葉片排放 2.1 kg CO2 eq，相較溶劑分解為 1.4、熱裂解為 0.9；人體致癌毒性增加 0.38 人當量，相較溶劑分解為 0.022；用水量多約 36%；而水泥共處理在幾乎每一項指標上都最佳——於是他們明白寫出，酵素路線與溶劑分解是唯二有明顯淨負擔的路線，將熱點追溯到 H2O2 供應鏈與 UPO 生產，並把它轉化為研究方向（提高 UPO 生產效率、回收產物而非焚燒殘渣、重複使用固定化酵素並計算損益兩平的再利用次數）。SDG 標的與他們自己的資料一對一對應，涵蓋 SDG 3（危害性化學物質致病）、6（用水效率）、7（再生能源佔比與潔淨能源研究合作）、8（Energy Transition Alliance 估計英國葉片回收產業可為離岸風電 2030 年 6 萬個就業目標再增加 2 萬個工作機會）、9、12、13、14、15 與 17。限制條件寫在 SDG 分析之內，而非埋在角落：反應產物未知、未在真實葉片材料上展示酵素效能、只用一種葉片類型、運輸被系統邊界排除、微塑膠與 BPA 浸出未被 ReCiPe 納入特徵化，以及在截斷模型中沒有對玻璃纖維作為資源的損失給予懲罰。接下來的走向：LCA 的輸入、假設與對映程式碼皆為開源；OEM 的要求（能以合理成本與速度處理多材料葉片）被記錄為未來開發的需求而非已達成的成果；與 State of Green、Center for Biosolutions 及 DTU 的關係則被描述為可在 iGEM 之後延續的合作。"
   },
   "images": [
-    {"url": "https://static.igem.wiki/teams/6060/wiki/human-practices/stakeholder-photos/javier.webp", "caption": "Javier, postdoc at DTU Sustain working on resin chemistry, whose question about whether an enzyme could replace the cleaving solvent reframed the whole project as a complement to solvolysis", "credit": "Team DTU-Denmark, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6060/wiki/human-practices/stakeholder-photos/lykke.avif", "caption": "Lykke Margot Ricard (SDU), who mapped Danish blade treatment options for the Danish EPA and made every workstream name a recoverable product and a buyer", "credit": "Team DTU-Denmark, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6060/wiki/header-illustrations/engagement-human-practices.avif", "caption": "Header illustration for the integrated human practices section, which is organised as an interactive stakeholder map rated by influence over adoption and interest", "credit": "Team DTU-Denmark, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6060/wiki/education/photos/sog-1.avif", "caption": "At State of Green, where the team put the blade-waste problem to people from ministries, academia and the energy sector", "credit": "Team DTU-Denmark, iGEM 2026 wiki"}
+    {
+      "url": "https://static.igem.wiki/teams/6060/wiki/human-practices/stakeholder-photos/javier.webp",
+      "caption": "Javier, postdoc at DTU Sustain working on resin chemistry, whose question about whether an enzyme could replace the cleaving solvent reframed the whole project as a complement to solvolysis",
+      "credit": "Team DTU-Denmark, iGEM 2026 wiki",
+      "caption_zh": "Javier，DTU Sustain 從事樹脂化學研究的博士後，他關於酵素能否取代裂解溶劑的問題，讓整個專案重新定位為溶劑分解的補充"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6060/wiki/human-practices/stakeholder-photos/lykke.avif",
+      "caption": "Lykke Margot Ricard (SDU), who mapped Danish blade treatment options for the Danish EPA and made every workstream name a recoverable product and a buyer",
+      "credit": "Team DTU-Denmark, iGEM 2026 wiki",
+      "caption_zh": "Lykke Margot Ricard（SDU），曾為丹麥環保署盤點丹麥葉片處理選項，要求每條工作線都指名一項可回收產物與一位買家"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6060/wiki/header-illustrations/engagement-human-practices.avif",
+      "caption": "Header illustration for the integrated human practices section, which is organised as an interactive stakeholder map rated by influence over adoption and interest",
+      "credit": "Team DTU-Denmark, iGEM 2026 wiki",
+      "caption_zh": "整合式人類實踐章節的標頭插畫，該章節以一張依採用影響力與興趣程度評比的互動式利害關係人地圖編排"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6060/wiki/education/photos/sog-1.avif",
+      "caption": "At State of Green, where the team put the blade-waste problem to people from ministries, academia and the energy sector",
+      "credit": "Team DTU-Denmark, iGEM 2026 wiki",
+      "caption_zh": "在 State of Green，團隊把葉片廢棄物問題帶到部會、學界與能源業人士面前"
+    }
   ],
   "gemsTakeaway": "Run a comparative LCA against the incumbent technologies early enough that it can still change the research plan, and publish it even when it says your own route loses - then convert each losing indicator into a named engineering target, and record the stakeholders who never replied so the gaps in your evidence base are visible rather than invisible.",
   "sources": [
@@ -40,5 +108,9 @@
     "https://2026.igem.wiki/dtu-denmark/model",
     "https://2026.igem.wiki/dtu-denmark/engineering",
     "https://2026.igem.wiki/dtu-denmark/software"
-  ]
+  ],
+  "projectTitle_zh": "風力機葉片環氧樹脂的酵素降解",
+  "tagline_zh": "針對退役風力機葉片中樹脂部分的化學—酵素複合路線，並誠實地與其他替代方案比較",
+  "summary_zh": "DTU 改造了漆酶（來自雲杉樹皮甲蟲腸道總體基因組的 ItL-03、CueO 變異體與同源蛋白）與非專一性過氧合酶（PaDa-I、WamPa、PabUPO-II、MroUPO、Fett），用來攻擊風力機葉片已固化環氧樹脂中的胺類交聯，並疊加在一篇已發表的酸加過氧化氫溶劑分解前處理之上。他們以 NNBT 這個帶有交聯點三級胺、可溶於水的小分子作為定義明確的模型底物，並以 MALDI-TOF 顯示 PaDa-I 對其進行 N-脫烷基反應，再以 Purpald 確認乳醛的釋出。真正關鍵的工作是在 SimaPro 中（ReCiPe 2016 Midpoint H）對五種生命終期路線所做的前瞻式比較生命週期評估，結果發現他們自己的酵素路線在幾乎每一項指標上都不是最佳選項——而他們把這個結果公開了。橫跨 DTU Wind、DTU Sustain、DTU Chemistry、SDU 與產業界的七場訪談，加上 Siemens Gamesa、Orsted 與 MAKEEN Energy 無回應的完整記錄，促使他們更動了化學標的、模型底物、宿主生物、酵素排序標準，以及專案本身所宣稱的目標。",
+  "gemsTakeaway_zh": "及早做與現行技術的比較 LCA，早到它還能改變研究計畫，並且即使結果顯示自己的路線輸了也照樣公開——然後把每一項落敗的指標轉成一個指名的工程目標，並記錄下那些始終沒有回覆的利害關係人，讓證據基礎上的缺口被看見，而不是隱形。"
 }
