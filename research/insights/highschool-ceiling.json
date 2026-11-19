@@ -157,6 +157,68 @@
         "—",
         "The control case: Top 10 without a dry lab, but no modelling prize"
       ]
+    ],
+    "rows_zh": [
+      [
+        "Lambert-GA",
+        "四個連動模型：de novo minibinder 設計、口服藥物動力學、13 條 ODE 的 RNAi 網路、族群流行病學",
+        "BindCraft, Boltz-2, Protenix, Mosaic",
+        "對信心指標本身做基準測試，並公開自己成功的設計其實不是分數最高的"
+      ],
+      [
+        "Eton-College-UK",
+        "在 10,472 個切割視窗上建立七種蛋白酶的受質預測器",
+        "scikit-learn, PSSM, BLOSUM62, VHSE",
+        "以 Hamming 距離分群的交叉驗證，加上標籤洗牌與消融對照"
+      ],
+      [
+        "GEMS-Taiwan",
+        "以 25 年各縣市稻作產量擬合的作物逆境指數；光遺傳電路；異常偵測",
+        "Python, autoencoder, Kalman filter, ERA5, QGIS, AlphaFold",
+        "一個事後評分的預先登記預測，以及公開自己兩次實驗之間的矛盾"
+      ],
+      [
+        "GHCIS",
+        "Toehold 設計流程，外加可部署的顏色判讀平台 ARGUS",
+        "NUPACK 4.1.0.1, Node.js, Docker, SQLite",
+        "演算法明確寫到閾值，並設有明確的「無法判定」狀態"
+      ],
+      [
+        "HongKong-JSS",
+        "現場汞檢測的校正與反解預測",
+        "ImageJ, 對數線性校正, Onshape, ESP32",
+        "擬合前先切分校正組與驗證組；在保留批次上報告 RMSE 並保留失敗資料"
+      ],
+      [
+        "HKSSC",
+        "對羥苯甲酸酯分解酯酶的結構導向突變與酵素動力學",
+        "AlphaFold, UCSF Chimera, HotSpot Wizard, CB-Dock2",
+        "沒有報告無效的 kcat/Km，而是提出並論證一個質量標準化指標"
+      ],
+      [
+        "HFI",
+        "代理人基礎接觸模型與 13 變數 ODE 系統，兩者都作為濕實驗的守門員",
+        "NetLogo 3D, Runge-Kutta, 互動式 HTML 前端",
+        "在建出任何一個質體之前，先以運算篩選七個 RBS 元件"
+      ],
+      [
+        "HangzhouFourteenAP",
+        "CoGH66 的突變優先排序流程",
+        "PyMOL, FoldX, MAFFT, AlphaFold Server",
+        "公開那個被實驗推翻的運算預測，並控制了干擾因子"
+      ],
+      [
+        "HongKong-HS",
+        "尿液 miRNA 篩檢套組的 toehold switch 熱力學",
+        "NUPACK, miRADAR（Wageningen iGEM 2024）",
+        "沿用別隊已釋出的工具，而不是重做一個"
+      ],
+      [
+        "GCGS",
+        "沒有 model 頁，也沒有 software 頁",
+        "—",
+        "對照組：沒有乾實驗室也能進 Top 10，但拿不到建模類獎項"
+      ]
     ]
   },
   "method": "Drawn from the ten High School Top 10 team files in this report, each researched from the team's own 2026 wiki. Tool lists are what each team names; a team may have used more than it wrote down. The judgement about what 'stands out' is ours, and a reader who disagrees should open the team file and the wiki behind it — both are linked. GEMS-Taiwan is the report author's own team and has been assessed on the same terms as the rest.",
