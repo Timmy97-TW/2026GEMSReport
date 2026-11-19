@@ -698,3 +698,42 @@ as publishing the numbers. A judge on question 8 asks whether a stranger can che
 traced from a picture of a chart cannot be checked — the uncertainty is bounded by the tracing, not by the
 experiment. Also worth noting: the GEMS wiki is static HTML, not a Vite SPA, so all of this is plainly
 fetchable with curl, unlike most 2026 wikis.
+
+### HongKong-JSS, the key comparison — and it kills the two obvious theories
+
+HongKong-JSS took **1st Runner-up with zero special awards**. Before reading its wiki the two natural
+explanations for GEMS finishing below it were (a) GEMS's project chain was incomplete, and (b) GEMS's
+Registry documentation was too thin. **The evidence rules out both, because HongKong-JSS is worse on both.**
+
+- **Its chain is also incomplete, and it says so.** Two of three links joined. Biosensor to detector was
+  genuinely coupled (Hamamatsu C12880 reading Hg-exposed pellets, R² = 0.9898 with standard error). The
+  extraction platform **never fed the biosensor** — the soil work was hand-prepared and mercury recovery
+  was never measured. Their words: *"Extraction recovery, treatment effectiveness, and compatibility with
+  the biosensor must be validated before the complete workflow can support reliable environmental mercury
+  measurements."*
+- **Its Registry documentation is thinner than the nominee band.** Four new parts, all published with full
+  sequences, carrying **756 / 643 / 468 / 385 characters**. The flagship composite BBa_26BL7PZU — the part
+  nominated for Best New Composite Part — has **756 characters**, mechanism only, no fold change, no n, no
+  selectivity, `characterisedIn` empty. That is under a tenth of the lowest parts-award *winner* (10,388)
+  and well below the nominee floor (440–2,500). Their Parts page even claims a characterisation summary is
+  recorded on the Registry page; the API record contains none.
+- **It discloses more external dependency than most.** No cloning at all (*"Our team did not perform the
+  cloning"* — IDT, GenScript, BGI Genomics); *"Our supervisor prepared all mercury solutions"*; a lab
+  technician from Amgen Biotechnology Experience HK *"occasionally supervised us while we performed the
+  experiment"*; and a Secondary PI credited with hardware design, software development **and** writing and
+  maintaining the wiki — three of the four pillars, on the team's own form.
+
+So what did carry it? **It argues against itself better than a judge could.** There is no LOD on that wiki.
+The headline number is ~1 ppb, and the home page says directly beneath it: *"The detection limit of the
+complete portable system is not yet established."* The three-minute summary says *"1 ppb is the lowest
+concentration we tested, not a validated detection limit."* Nine numbered wet-lab DBTL cycles, the majority
+documenting **failures** — including a published conceptual error, where they built four constructs around
+mercury aptamers believing all aptamers are RNA, found D3/D4 are DNA aptamers whose selected structure cannot
+form in an mRNA, abandoned the route and published the sequences as a warning to other teams. Their
+calibration model holds out 10 of 30 measurements and reports RMSE in concentration units **including the
+predictions that failed**.
+
+**The lesson, and the likely answer to the user's question.** A judge reading that wiki cannot find a soft
+spot the team has not already named. That makes the project trustworthy on a whole-project view even with an
+incomplete chain and thin parts. Credibility is category-independent, which is exactly why three category
+wins did not substitute for it.
