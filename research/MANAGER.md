@@ -589,3 +589,49 @@ Two findings that matter more to GEMS than the headline:
 
 This went into `good-definition.json` as the strongest single piece of evidence for the programme: the
 institution comes back every year and the problem does not, which is what a season-shaped container does.
+
+**education-afterlife (good 42) — the trilogy's reversal.**
+The suspicion was that outreach survives only as photographs of children holding things. It was wrong, and
+the section leads with that. Of **285 education files** linked from 31 decorated wikis, **284 download today
+and one returns 403 — zero 404s.** Against software (8 of 21 still running) and hardware (6 of 20
+rebuildable), the mechanism is structural rather than cultural: a PDF on `static.igem.wiki` needs no server,
+so the wiki freeze that kills a web app preserves a worksheet for free. Four teams self-host a browser game
+**on the frozen wiki itself** — the most durable interactive format iGEM currently allows, and GEMS already
+does it.
+
+Where education actually fails:
+- **9 of 64 artefacts were never made into a file.** The sharpest case is the Best Education winner:
+  XJTLU-China's page counts "18 educational toolkits" and says the aim is for other educators to adopt and
+  adapt them, and links not one downloadable file. This is the hardware study's "rendered, never exported",
+  applied to paper.
+- **1 licence statement in 136 education PDFs** (Cornell's *Pass the Torch*, CC BY 4.0, on the artefact
+  itself). HKSSC's two CC BY mentions are attributions for borrowed figures, not permission.
+- **Only 3 of 31 teams published Traditional Chinese, and all three already read it** — NCKU-Tainan, HKSSC,
+  GEMS. Every other Chinese file is Simplified, including all thirteen of Lambert-GA's translations of its
+  children's book, which cover thirteen languages and skip Traditional. That is the Phase 4 opening.
+
+The separating habit is neither hosting nor export: it is **writing an instruction layer for a second adult**,
+which 33 of 64 do. And outside use is where education genuinely beats the other two artefact classes —
+**16 of 64 have evidence of a second user, against 1 of 20 devices.**
+
+**team-resources (teams 40) — a null, and the first base rate this report has ever been able to give.**
+Headcount against award count across 84 decorated teams: Spearman 0.06, p = 0.61. Within every section the
+Top 10 teams are statistically indistinguishable in size. Medians: high school 17.5, undergraduate 17,
+overgraduate 12.5. **Smallest Top 10 is Princeton at nine undergraduates** — with two PIs, a postdoctoral
+instructor and a PhD-student advisor behind them, one M13 chassis demonstrated across three applications,
+a binder pipeline that made a new target cost compute rather than months of hands, and an outreach activity
+that handed the public a real unsolved sub-problem and built the winning entry in. Princeton publishes no
+attributions page at all. GEMS fielded 35 students, twice the high-school median.
+
+The hidden-resource question has an honest and limited answer: **5 of 40 high-school teams state they worked
+in a university lab, and none of the five credits a graduate student or postdoc with hands-on work.** Seven
+teams name a doctoral student or postdoc among their staff and every one of those credits is worded as
+supervision. The method note states the limit rather than inferring past it: **the iGEM attributions form
+never asks who held the pipette.** Only 7 of 106 teams state any figure about their own funding.
+
+**The base rate, added by the manager from the full roster.** Because the iGEM API gives the complete 2026
+entrant list, organiser type could be measured on all 423 accepted teams instead of the decorated 106:
+**53 of 147 high-school teams are registered under a commercial organiser** (91 secondary school, 3
+community lab; the undergraduate section has none). It confers nothing — **14 of 53 commercial high-school
+teams were decorated (26%) against 26 of 94 others (28%).** GEMS-Taiwan is registered commercial, verified
+directly at `api.igem.org/v1/teams/6072`. All 106 decorated teams matched the roster by name.
