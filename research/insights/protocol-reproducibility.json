@@ -1,0 +1,739 @@
+{
+ "id": "protocol-reproducibility",
+ "tab": "drylab",
+ "order": 44,
+ "kicker": "Original analysis",
+ "kicker_zh": "原創分析",
+ "title": "Could a stranger repeat the experiment?",
+ "title_zh": "換一個人，這些實驗做得出來嗎？",
+ "lede": "The hypothesis failed. Where the hardware study found 9 of 20 award-winning instruments with no geometry file at all, all 30 of the 2026 Top 10 teams publish a wet-lab protocol a stranger could follow — volumes, temperatures, named kits. What they withhold is the evidence: 4 of 30 let a reader reach the numbers behind a results figure, and 13 of 30 publish a plasmid map or a sequence.",
+ "lede_zh": "假設不成立。硬體那份研究發現 20 台得獎儀器中有 9 台完全沒有釋出幾何檔案；但 2026 年三個組別的 30 支 Top 10 隊伍，每一支都公開了陌生人照著就能做的濕實驗流程——體積、溫度、具名的試劑套組都寫了。他們扣住不放的是證據：30 支裡只有 4 支讓讀者拿得到結果圖背後的數字，13 支公開質體圖譜或序列。",
+ "body": "**Thirty of thirty.** Every Top 10 team in 2026 — Undergrad, Overgrad and High School — publishes step-level procedures with reagent volumes, incubation temperatures and at least one named kit or supplier. The delivery varies more than the content: TU Delft ships a numbered library from P0.1 Media and buffers to P10.1 Golden Gate assembly; UCAS-China publishes 20 numbered PDF sheets; NUS-Singapore and Muenster-University hide theirs inside fold-out panels that only open in a browser (a plain fetch of either page returns an empty shell); GCGS writes catalogue numbers into its reagent list — *Vazyme ClonExpress II One Step Cloning Kit, Cat. No. C112*. This is the floor hardware never had. **Nothing in iGEM makes a team press Export on a CAD file, but every wet-lab team has been taught to write a protocol.**\n\n**The ceiling is the data.** Four teams in thirty let a reader reach the numbers behind a published experimental figure: Lambert-GA, whose GitLab carries `UAB Test Files/` and `GT Test Files/` with the two outside laboratories' test workbooks; GEMS-Taiwan, whose digital-twin repository holds the 434-hour OD600 run and its calibration tables as CSV; HongKong-JSS, whose 124-page wet-lab log prints the readings as they were taken; and HongKong-HS, which types its replicate tables straight into the Results page (*n, -ve C, +ve C, 21_7a-, 21_7a+ … 71.6, 2694, 98.7*). Nine further teams publish data files that turn out to be literature sets, docking scores, simulation batches, cost models or, in one case, an outreach pub-quiz scoreboard. Everyone else gives you a chart.\n\n**Several links fail the moment you check them rather than read them.** Toronto states that its datasets are deposited on Zenodo and prints the DOI for a 23.8 GB PETadex corpus; `doi.org/10.5281/zenodo.23457986` answers **DOI Not Found**, and the chronological lab notes beside it are a Google Doc that returns 401 to a signed-out reader — the same team whose bioreactor CAD sat in a sign-in-walled Drive folder in the hardware census. UZurich's and ETH-Zurich's Benchling libraries, the only route either gives to a construct sequence, land on Benchling's sign-in page. Two further sign-in walls sit on supporting material rather than data — Cornell's children's-book folder and Stanford's judges' scorecards — and they are worth a line only because Stanford's other Drive folder, its education slides, opens for anyone: the wall is a setting somebody did not change, not a decision. Princeton shows what the working version looks like, with 23 `benchling.com/s/seq-…` share links that open for anyone, titled construct by construct.\n\n**Sequences are where the cohort is thinnest.** 13 of 30 publish plasmid maps or sequences for the constructs they built; the other 17 publish a parts list and a Registry link. TU Delft is alone in shipping the files themselves — 49 GenBank `.gb` exports, served from the wiki and committed to its repository, each opening with `LOCUS BBa_26S9CPUO 3822 bp DNA linear SYN 15-OCT-2026`. The Registry itself is the one thing nobody fails: of 210 sampled 2026 accessions across all 30 teams, 208 return `published` with a non-empty sequence from the parts API, and the two that 404 are accessions mistyped on the wiki that prints them — Athens's BBa_26ROIV80 beside its working BBa_26R0IV80, UOttawa's BBa_26GSB34 beside its working BBa_26GSJB34. The deposit is mandatory, so it happens; the map on the wiki is optional, so it mostly does not.\n\n**The distribution, not the average.** One team of thirty scores 6 of 6, ten score 5, fifteen score 4 and four score 3; no team scores below 3, and nothing in this cohort resembles the nine hardware teams that published no file at all. The shape of the failure is the same everywhere: the point almost everyone drops is data, and the point most often dropped after that is the map. Five of the ten High School teams score 5 or better, and so do five of the ten Overgrad teams; one of the ten Undergrad teams does. The only 6 is Lambert-GA — the same high-school team that was the one case in the hardware census of a device an outside laboratory had actually used. The four at 3 are UOttawa, GU Frankfurt, Marburg and Muenster-University: all four publish protocols and parts, and none publishes a map, a number or a dated notebook.",
+ "body_zh": "**三十支，全部都有。** 2026 年三個組別的 Top 10 隊伍，每一支都寫出了逐步的操作說明：試劑體積、培養溫度，以及至少一個具名的套組或供應商。差別在於交付方式而不是內容：TU Delft 把流程編成一整套，從 P0.1 培養基與緩衝液到 P10.1 Golden Gate 組裝；UCAS-China 放了 20 份編號 PDF；NUS-Singapore 與 Muenster-University 把流程收在摺疊區塊裡，只有在瀏覽器裡才展得開（直接抓取頁面只會拿到空殼）；GCGS 更把試劑型號寫進材料表裡——*Vazyme ClonExpress II One Step Cloning Kit，Cat. No. C112*。這是硬體從來沒有的底線。**iGEM 從來不會要求一支隊伍把 CAD 檔匯出，但每一支濕實驗隊伍都被教過要寫實驗流程。**\n\n**天花板在數據。** 三十支裡只有四支，讓讀者拿得到已發表實驗圖背後的數字：Lambert-GA 的 GitLab 裡有 `UAB Test Files/` 與 `GT Test Files/`，放著兩間外部實驗室的測試原始檔；GEMS-Taiwan 的數位孿生倉庫收了 434 小時 OD600 連續量測與校正表，格式是 CSV；HongKong-JSS 的 124 頁濕實驗日誌把當下讀到的數字直接寫進去；HongKong-HS 則把逐重複值的表格整個打在 Results 頁上（*n、-ve C、+ve C、21_7a-、21_7a+⋯71.6、2694、98.7*）。另有九支隊伍確實放了資料檔，但打開來是文獻整理、對接分數、模擬批次、成本模型，其中一份是科普問答的計分表。其餘的隊伍，給你的就是一張圖。\n\n**有幾個連結，是你去點它、而不是去讀它的時候才垮掉的。** Toronto 寫明資料集已存放在 Zenodo，並列出 23.8 GB PETadex 語料庫的 DOI；`doi.org/10.5281/zenodo.23457986` 回應的是 **DOI Not Found**，旁邊那份依時間排序的實驗日誌則是一份 Google 文件，未登入時回 401——而在硬體普查裡，正是同一支隊伍把生物反應器的 CAD 放在需要登入的 Drive 資料夾。UZurich 與 ETH-Zurich 的 Benchling 序列庫是這兩支隊伍唯一給出構築序列的途徑，但點開來是 Benchling 的登入頁。另有兩道登入牆擋的是輔助材料而不是數據——Cornell 的童書資料夾與 Stanford 的評審計分表——之所以值得寫一句，是因為 Stanford 另一個 Drive 資料夾（教育活動的簡報）任何人都打得開：那道牆是沒人去改的設定，不是決定。Princeton 則示範了行得通的樣子：23 條 `benchling.com/s/seq-…` 分享連結任何人都打得開，而且逐一標明是哪個構築。\n\n**序列是這一批隊伍最薄的一環。** 30 支中有 13 支為自己做出來的構築公開質體圖譜或序列，其餘 17 支給的是零件清單加 Registry 連結。真的把檔案本身釋出的只有 TU Delft——49 個 GenBank `.gb` 匯出檔，既掛在 wiki 上也進了倉庫，開頭寫著 `LOCUS BBa_26S9CPUO 3822 bp DNA linear SYN 15-OCT-2026`。反而 Registry 這一關沒有人失手：30 支隊伍共抽查 210 個 2026 年編號，透過 parts API 查詢有 208 個是 `published` 且序列非空；另外兩個回 404 的，是印在 wiki 上就打錯的編號——Athens 的 BBa_26ROIV80 旁邊就是能用的 BBa_26R0IV80，UOttawa 的 BBa_26GSB34 旁邊就是能用的 BBa_26GSJB34。存放是強制的，所以做得到；wiki 上的圖譜是自由心證，所以大多沒有。\n\n**要看分布，不是平均。** 三十支裡有 1 支拿 6 分、10 支 5 分、15 支 4 分、4 支 3 分；沒有任何一支低於 3 分，也沒有任何一支像硬體那九支隊伍那樣完全沒有釋出檔案。失分的位置到處都一樣：幾乎所有人掉的那一分是數據，其次最常掉的是圖譜。十支高中隊中有五支拿到 5 分以上，研究生組十支中也有五支；大學部十支裡只有一支。唯一的 6 分是 Lambert-GA——也正是硬體普查裡，唯一有外部實驗室真的用過其裝置的那支高中隊。拿 3 分的四支是 UOttawa、GU Frankfurt、Marburg 與 Muenster-University：四支都公開了流程與零件，四支都沒有圖譜、沒有數字、沒有附日期的實驗記錄。",
+ "cards": [
+  {
+   "kicker": "The only six",
+   "kicker_zh": "唯一的滿分",
+   "title": "Lambert-GA clears all six checks",
+   "title_zh": "Lambert-GA 六項全過",
+   "body": "A high-school team is the only one of the thirty to pass every check. Protocols are written into the two lab notebooks (23 and 25 pages, dated 08/18/2026 onward, with buffer recipes in the entries themselves); the chassis is named (NEB 5-alpha for propagation, T7 Express for expression); pET-11a and pET-28a(+) maps sit beside codon-optimised sequences; 37 parts are deposited with sequence; the notebooks are dated day by day. The sixth is the rare one: the raw workbooks from the two outside laboratories that tested Vapor-X are committed to its GitLab as `UAB Test Files/Vapor_X_evaporator_test_101426.xlsm` and `GT Test Files/102026_igem-gfp_plate_reader_raw_data.xlsm`.",
+   "body_zh": "三十支裡唯一六項全過的是一支高中隊。實驗流程寫在兩本實驗記錄裡（23 頁與 25 頁，日期自 08/18/2026 起算，緩衝液配方直接寫在條目中）；菌株有名有姓（繁殖用 NEB 5-alpha，表現用 T7 Express）；pET-11a 與 pET-28a(+) 的圖譜旁邊就是密碼子最佳化後的序列；37 個零件都附序列存入 Registry；記錄逐日標註日期。第六項才是稀有的：兩間外部實驗室測試 Vapor-X 的原始檔，直接進了他們的 GitLab，檔名是 `UAB Test Files/Vapor_X_evaporator_test_101426.xlsm` 與 `GT Test Files/102026_igem-gfp_plate_reader_raw_data.xlsm`。",
+   "chips": [
+    "6/6",
+    "High School",
+    "2 outside labs",
+    "raw .xlsm published"
+   ],
+   "chips_zh": [
+    "6/6",
+    "高中組",
+    "兩間外部實驗室",
+    "公開原始 .xlsm"
+   ]
+  },
+  {
+   "kicker": "Checked, not read",
+   "kicker_zh": "點開才知道",
+   "title": "One team's dataset DOI does not exist; two teams' sequence libraries ask you to sign in",
+   "title_zh": "一支隊伍的資料集 DOI 根本不存在，兩支隊伍的序列庫要你登入",
+   "body": "Toronto's wiki names a Zenodo deposit for its 23.8 GB PETadex corpus; the DOI resolves to \"DOI Not Found\". Its chronological lab notes are a Google Doc that answers 401 signed out. UZurich and ETH-Zurich link Benchling libraries that show Benchling's sign-in page, and those links are the only route either team offers to a construct sequence. Neither case is a missing file — each is a file the team has and the reader cannot open, which from outside is the same thing. Princeton's 23 public Benchling share links, and TU Delft's 49 `.gb` files served straight off the wiki, are what the working version looks like. The habit worth copying is cheap: fetch your own links signed out, once, before the freeze.",
+   "body_zh": "Toronto 的 wiki 指明 23.8 GB 的 PETadex 語料庫已存入 Zenodo；但那個 DOI 解析出來是「DOI Not Found」。旁邊依時間排序的實驗日誌是一份 Google 文件，未登入回 401。UZurich 與 ETH-Zurich 連到的 Benchling 序列庫打開是 Benchling 的登入頁，而這些連結是兩支隊伍唯一給出構築序列的途徑。這兩種情況都不是檔案不存在——而是隊伍手上有、讀者卻打不開；從外面看，這兩件事沒有差別。Princeton 那 23 條公開的 Benchling 分享連結，以及 TU Delft 直接掛在 wiki 上的 49 個 `.gb` 檔，才是行得通的樣子。值得照抄的習慣其實很省事：在凍結之前，用未登入的狀態把自己的連結抓一次。",
+   "chips": [
+    "DOI 404",
+    "Google Doc 401",
+    "2 Benchling sign-ins",
+    "Princeton's links open"
+   ],
+   "chips_zh": [
+    "DOI 404",
+    "Google 文件 401",
+    "2 個 Benchling 要登入",
+    "Princeton 的連結打得開"
+   ]
+  },
+  {
+   "kicker": "The one file nobody else shipped",
+   "kicker_zh": "別人都沒釋出的那種檔案",
+   "title": "TU Delft published the plasmids, not a picture of them",
+   "title_zh": "TU Delft 釋出的是質體本身，不是質體的照片",
+   "body": "Forty-nine GenBank files — `bba-26s9cpuo.gb`, `k30-elp.gb`, `cm-pseva-gln-mety-metx.gb` and the rest — are served from the wiki's own asset path and committed under `src/contents/sequences/` in its repository, so a second team can open them in any sequence editor and re-order the DNA. Thirteen of thirty teams give you maps or sequences in some form; one gives you files. The remaining seventeen hand you a parts list and a Registry link, which is enough to read a part and not enough to rebuild a construct whose junctions, backbone and tags you cannot see.",
+   "body_zh": "49 個 GenBank 檔——`bba-26s9cpuo.gb`、`k30-elp.gb`、`cm-pseva-gln-mety-metx.gb` 等等——既由 wiki 自己的檔案路徑提供，也收在倉庫的 `src/contents/sequences/` 底下；另一支隊伍可以用任何序列編輯軟體打開，直接重新下單。30 支裡有 13 支以某種形式給了圖譜或序列，只有一支給的是檔案。其餘 17 支給你的是零件清單加 Registry 連結：足以讀懂一個零件，卻不足以重建一個你看不到接點、骨架與標籤的構築。",
+   "chips": [
+    "49 .gb files",
+    "13 of 30 show maps",
+    "17 give a parts list"
+   ],
+   "chips_zh": [
+    "49 個 .gb 檔",
+    "30 支中 13 支有圖譜",
+    "17 支只給零件清單"
+   ]
+  },
+  {
+   "kicker": "Assessed on the same terms",
+   "kicker_zh": "同一把尺",
+   "title": "GEMS-Taiwan scores five of six, and the sixth is softer than it looks",
+   "title_zh": "GEMS-Taiwan 六項過五項，而過的那一項比看起來鬆",
+   "body": "GEMS-Taiwan passes protocols (24 of its 25 sheets download as PDFs, with colony PCR given as a reaction table to 20 µL and transformation at 42 °C for 45 s), chassis (B. subtilis WB800 and 168, E. coli DH5-alpha), Registry deposit (every sampled 2026 accession comes back published, with sequence) and notebook (monthly PDFs, entries headed `Date: 20260801`). It fails maps and sequences: one plasmid map on the whole wiki, for pSTK-EXP1, against 35 deposited parts. And its data pass rests entirely on the instrument — the photometer and bioreactor runs are published as CSV, while the two protectant figures on the bioreactor page carry the caption \"redrawn from the team's chart\", and the wiki's own source file records why: `csv: null`, with the note \"The owner, 15 Oct: 'ill give data later'\".",
+   "body_zh": "GEMS-Taiwan 在實驗流程（25 份條目中 24 份可下載 PDF，菌落 PCR 給到 20 µL 的反應配方、轉型 42 °C 45 秒）、菌株（B. subtilis WB800 與 168、E. coli DH5-alpha）、Registry 存放（抽查到的每一個 2026 編號都回報 published，且附序列）與實驗記錄（逐月 PDF，條目開頭就是 `Date: 20260801`）這四項都過關。圖譜與序列這一項沒過：整個 wiki 只有一張質體圖譜，是 pSTK-EXP1 的，而存放的零件有 35 個。而數據這一項，過關完全靠儀器——光度計與生物反應器的連續量測以 CSV 公開，但生物反應器頁上兩張保護蛋白的圖，圖說寫的是「redrawn from the team's chart」（依團隊的圖重繪）；wiki 自己的原始檔也記下了原因：`csv: null`，旁邊註著「The owner, 15 Oct: 'ill give data later'」。",
+   "chips": [
+    "5/6",
+    "1 map, 35 parts",
+    "ELISA and DNPH redrawn",
+    "csv: null"
+   ],
+   "chips_zh": [
+    "5/6",
+    "1 張圖譜對 35 個零件",
+    "ELISA 與 DNPH 為重繪",
+    "csv: null"
+   ]
+  }
+ ],
+ "table": {
+  "head": [
+   "Team",
+   "Full protocols",
+   "Chassis named",
+   "Maps or sequence",
+   "Registry with sequence",
+   "Raw data",
+   "Dated notebook",
+   "Score"
+  ],
+  "head_zh": [
+   "隊伍",
+   "完整實驗流程",
+   "菌株名稱",
+   "圖譜或序列",
+   "Registry 含序列",
+   "原始數據",
+   "附日期的記錄",
+   "分數"
+  ],
+  "rows": [
+   [
+    "Cornell",
+    "yes, 5 PDF sheets",
+    "yes, E. coli SHuffle",
+    "no",
+    "yes",
+    "no",
+    "yes, dated, named operators",
+    "4/6"
+   ],
+   [
+    "Heidelberg",
+    "yes, 13 PDF notebooks",
+    "yes, BL21(DE3), BL21-AI",
+    "no",
+    "yes",
+    "no",
+    "yes, one PDF per subproject",
+    "4/6"
+   ],
+   [
+    "LYON",
+    "yes, 35-page lab book",
+    "yes, BL21(DE3), TOP10",
+    "yes, pET-29b(+) maps",
+    "yes",
+    "no",
+    "no, protocols only",
+    "4/6"
+   ],
+   [
+    "NUS-Singapore",
+    "yes, 25 fold-out sheets",
+    "yes, S. cerevisiae BY4741",
+    "no",
+    "yes",
+    "no",
+    "yes, 176-page PDF",
+    "4/6"
+   ],
+   [
+    "Princeton",
+    "yes, 46-page PDF",
+    "yes, BL21(DE3), ER2738",
+    "yes, 23 Benchling records",
+    "yes",
+    "no",
+    "yes, 95-page dated PDF",
+    "5/6"
+   ],
+   [
+    "Stanford University",
+    "yes, on Experiments",
+    "yes, Nissle 1917, HEK293T",
+    "no",
+    "yes",
+    "no",
+    "yes, 4 notebooks + weeks",
+    "4/6"
+   ],
+   [
+    "UAlberta",
+    "yes, SOP PDFs",
+    "yes, DH5-alpha, BL21(DE3)",
+    "no",
+    "yes",
+    "no, docking CSV only",
+    "yes, week by week",
+    "4/6"
+   ],
+   [
+    "UCAS-China",
+    "yes, 20 PDF sheets",
+    "yes, BL21(DE3), HEK293T",
+    "no",
+    "yes",
+    "no",
+    "yes, 6 Benchling PDFs",
+    "4/6"
+   ],
+   [
+    "UCNZ",
+    "yes, written into Results",
+    "yes, BL21(DE3), SHuffle",
+    "yes, xylanase maps",
+    "yes",
+    "no",
+    "no",
+    "4/6"
+   ],
+   [
+    "UOttawa",
+    "yes, page plus PDFs",
+    "yes, P. putida KT2440",
+    "no, registry links only",
+    "yes",
+    "no",
+    "no, /notebook is a 404",
+    "3/6"
+   ],
+   [
+    "Athens",
+    "yes, 19 PDF sheets",
+    "yes, BL21(DE3) pLysS",
+    "yes, vector maps",
+    "yes",
+    "no",
+    "yes, 15 dated weeks",
+    "5/6"
+   ],
+   [
+    "ETH-Zurich",
+    "yes, page plus protocols.io",
+    "yes, MG1655, EPI300",
+    "yes, sequences printed",
+    "yes",
+    "no, Benchling asks sign-in",
+    "yes, 6 notebook PDFs",
+    "5/6"
+   ],
+   [
+    "GU Frankfurt",
+    "yes, inside Methods",
+    "yes, DH5-alpha, Mach1",
+    "no",
+    "yes",
+    "no, uncropped blots only",
+    "no",
+    "3/6"
+   ],
+   [
+    "KAUST-KSA",
+    "yes, inside notebook PDFs",
+    "yes, INVSc1, GS115",
+    "yes, pBS4S maps",
+    "yes",
+    "no",
+    "yes, 3 dated PDFs",
+    "5/6"
+   ],
+   [
+    "Marburg",
+    "yes, protocols page",
+    "yes, DH5-alpha, BL21(DE3)",
+    "no, 1 map, from a game",
+    "yes",
+    "no",
+    "no",
+    "3/6"
+   ],
+   [
+    "Muenster-University",
+    "yes, inside fold-outs",
+    "yes, K-12, B. subtilis 168",
+    "no",
+    "yes",
+    "no",
+    "no",
+    "3/6"
+   ],
+   [
+    "Toronto",
+    "yes, 24-page PDF",
+    "yes, BL21(DE3), W3110",
+    "yes, PD and AS maps",
+    "yes",
+    "no, dataset DOI is dead",
+    "no, lab notes behind a login",
+    "4/6"
+   ],
+   [
+    "TU Delft",
+    "yes, numbered library",
+    "yes, BL21(DE3), Nissle 1917",
+    "yes, 49 .gb files",
+    "yes",
+    "no, literature set only",
+    "yes",
+    "5/6"
+   ],
+   [
+    "UZurich",
+    "yes, PDF sheets",
+    "yes, DSM33, BW29427",
+    "no",
+    "yes",
+    "no",
+    "yes, lab notes dated",
+    "4/6"
+   ],
+   [
+    "WageningenUR",
+    "yes, PDF sheets",
+    "yes, MG1655, CEN.PK113-7D",
+    "yes, map + whole-plasmid seq",
+    "yes",
+    "no, cost CSVs only",
+    "yes, 3 notebooks",
+    "5/6"
+   ],
+   [
+    "Eton-College-UK",
+    "yes, on Protocols",
+    "yes, BL21(DE3), DH5-alpha",
+    "yes, 3 maps",
+    "yes",
+    "no",
+    "yes",
+    "5/6"
+   ],
+   [
+    "GCGS",
+    "yes, with catalogue numbers",
+    "yes, EcN Nissle 1917",
+    "no",
+    "yes",
+    "no",
+    "yes, dated cycle PDFs",
+    "4/6"
+   ],
+   [
+    "GEMS-Taiwan",
+    "yes, 24 of 25 as PDF",
+    "yes, B. subtilis WB800",
+    "no, one map only",
+    "yes",
+    "part, instrument runs only",
+    "yes, monthly PDFs",
+    "5/6"
+   ],
+   [
+    "GHCIS",
+    "yes, inside notebook PDF",
+    "yes, DH5-alpha, BL21(DE3)",
+    "yes, switch sequences printed",
+    "yes",
+    "no",
+    "yes, dated entries",
+    "5/6"
+   ],
+   [
+    "HFI",
+    "yes, 4 notebook PDFs",
+    "yes, EcN Nissle 1917",
+    "no",
+    "yes",
+    "no",
+    "yes, dated, named recorder",
+    "4/6"
+   ],
+   [
+    "HKSSC",
+    "yes, on Experiments",
+    "yes, DH5-alpha, BL21(DE3)",
+    "yes, prbA-idt maps",
+    "yes",
+    "no, ANOVA table only",
+    "no, Day 1-20 only",
+    "4/6"
+   ],
+   [
+    "HangzhouFourteenAP",
+    "yes, inside the notebook",
+    "yes, Rosetta(DE3)",
+    "no",
+    "yes",
+    "no, “not transcribed”",
+    "yes, dated daily",
+    "4/6"
+   ],
+   [
+    "HongKong-HS",
+    "yes, on Experiments",
+    "no, only “E. coli”",
+    "no",
+    "yes",
+    "yes, replicate tables",
+    "yes, 44 dates",
+    "4/6"
+   ],
+   [
+    "HongKong-JSS",
+    "yes, page plus 124-page log",
+    "yes, DH5-alpha",
+    "no",
+    "yes",
+    "yes, inside the log",
+    "yes, dated log",
+    "5/6"
+   ],
+   [
+    "Lambert-GA",
+    "yes, inside the notebooks",
+    "yes, NEB 5-alpha",
+    "yes, maps and sequences",
+    "yes",
+    "yes, two outside labs' files",
+    "yes, 2 dated PDFs",
+    "6/6"
+   ]
+  ],
+  "rows_zh": [
+   [
+    "Cornell",
+    "有，5 份 PDF",
+    "有，E. coli SHuffle",
+    "無",
+    "有",
+    "無",
+    "有，註明日期與操作者",
+    "4/6"
+   ],
+   [
+    "Heidelberg",
+    "有，13 份 PDF 記錄",
+    "有，BL21(DE3)、BL21-AI",
+    "無",
+    "有",
+    "無",
+    "有，每個子題一份 PDF",
+    "4/6"
+   ],
+   [
+    "LYON",
+    "有，35 頁 lab book",
+    "有，BL21(DE3)、TOP10",
+    "有，pET-29b(+) 圖譜",
+    "有",
+    "無",
+    "無，只有流程",
+    "4/6"
+   ],
+   [
+    "NUS-Singapore",
+    "有，25 份展開式條目",
+    "有，S. cerevisiae BY4741",
+    "無",
+    "有",
+    "無",
+    "有，176 頁 PDF",
+    "4/6"
+   ],
+   [
+    "Princeton",
+    "有，46 頁 PDF",
+    "有，BL21(DE3)、ER2738",
+    "有，23 筆 Benchling 紀錄",
+    "有",
+    "無",
+    "有，95 頁、附日期",
+    "5/6"
+   ],
+   [
+    "Stanford University",
+    "有，寫在 Experiments",
+    "有，Nissle 1917、HEK293T",
+    "無",
+    "有",
+    "無",
+    "有，4 本記錄加週誌",
+    "4/6"
+   ],
+   [
+    "UAlberta",
+    "有，SOP 的 PDF",
+    "有，DH5-alpha、BL21(DE3)",
+    "無",
+    "有",
+    "無，只有對接計算 CSV",
+    "有，逐週記錄",
+    "4/6"
+   ],
+   [
+    "UCAS-China",
+    "有，20 份 PDF",
+    "有，BL21(DE3)、HEK293T",
+    "無",
+    "有",
+    "無",
+    "有，6 份 Benchling PDF",
+    "4/6"
+   ],
+   [
+    "UCNZ",
+    "有，寫在 Results 內文",
+    "有，BL21(DE3)、SHuffle",
+    "有，木聚醣酶質體圖譜",
+    "有",
+    "無",
+    "無",
+    "4/6"
+   ],
+   [
+    "UOttawa",
+    "有，頁面加 PDF",
+    "有，P. putida KT2440",
+    "無，只給 Registry 連結",
+    "有",
+    "無",
+    "無，/notebook 是 404",
+    "3/6"
+   ],
+   [
+    "Athens",
+    "有，19 份 PDF",
+    "有，BL21(DE3) pLysS",
+    "有，載體圖譜",
+    "有",
+    "無",
+    "有，15 個附日期的週",
+    "5/6"
+   ],
+   [
+    "ETH-Zurich",
+    "有，頁面加 protocols.io",
+    "有，MG1655、EPI300",
+    "有，序列直接印出",
+    "有",
+    "無，Benchling 要求登入",
+    "有，6 份記錄 PDF",
+    "5/6"
+   ],
+   [
+    "GU Frankfurt",
+    "有，寫在 Methods",
+    "有，DH5-alpha、Mach1",
+    "無",
+    "有",
+    "無，只有未裁切的西方墨點",
+    "無",
+    "3/6"
+   ],
+   [
+    "KAUST-KSA",
+    "有，寫在記錄 PDF 內",
+    "有，INVSc1、GS115",
+    "有，pBS4S 圖譜",
+    "有",
+    "無",
+    "有，3 份附日期 PDF",
+    "5/6"
+   ],
+   [
+    "Marburg",
+    "有，protocols 頁",
+    "有，DH5-alpha、BL21(DE3)",
+    "無，只有 1 張，還出自教學遊戲",
+    "有",
+    "無",
+    "無",
+    "3/6"
+   ],
+   [
+    "Muenster-University",
+    "有，收在摺疊區塊裡",
+    "有，K-12、B. subtilis 168",
+    "無",
+    "有",
+    "無",
+    "無",
+    "3/6"
+   ],
+   [
+    "Toronto",
+    "有，24 頁 PDF",
+    "有，BL21(DE3)、W3110",
+    "有，PD 與 AS 質體圖譜",
+    "有",
+    "無，資料集 DOI 連不到",
+    "無，實驗日誌要登入",
+    "4/6"
+   ],
+   [
+    "TU Delft",
+    "有，編號成冊",
+    "有，BL21(DE3)、Nissle 1917",
+    "有，49 個 .gb 檔",
+    "有",
+    "無，只有文獻資料集",
+    "有",
+    "5/6"
+   ],
+   [
+    "UZurich",
+    "有，PDF 條目",
+    "有，DSM33、BW29427",
+    "無",
+    "有",
+    "無",
+    "有，實驗日誌附日期",
+    "4/6"
+   ],
+   [
+    "WageningenUR",
+    "有，PDF 條目",
+    "有，MG1655、CEN.PK113-7D",
+    "有，圖譜加全質體定序",
+    "有",
+    "無，只有成本 CSV",
+    "有，3 份記錄",
+    "5/6"
+   ],
+   [
+    "Eton-College-UK",
+    "有，寫在 Protocols",
+    "有，BL21(DE3)、DH5-alpha",
+    "有，3 張圖譜",
+    "有",
+    "無",
+    "有",
+    "5/6"
+   ],
+   [
+    "GCGS",
+    "有，附試劑型號",
+    "有，EcN Nissle 1917",
+    "無",
+    "有",
+    "無",
+    "有，附日期的循環 PDF",
+    "4/6"
+   ],
+   [
+    "GEMS-Taiwan",
+    "有，25 份中 24 份為 PDF",
+    "有，B. subtilis WB800",
+    "無，只有一張圖譜",
+    "有",
+    "部分，只有儀器連續量測",
+    "有，逐月 PDF",
+    "5/6"
+   ],
+   [
+    "GHCIS",
+    "有，寫在記錄 PDF 內",
+    "有，DH5-alpha、BL21(DE3)",
+    "有，switch 序列直接印出",
+    "有",
+    "無",
+    "有，條目附日期",
+    "5/6"
+   ],
+   [
+    "HFI",
+    "有，4 份記錄 PDF",
+    "有，EcN Nissle 1917",
+    "無",
+    "有",
+    "無",
+    "有，附日期與記錄者",
+    "4/6"
+   ],
+   [
+    "HKSSC",
+    "有，寫在 Experiments",
+    "有，DH5-alpha、BL21(DE3)",
+    "有，prbA-idt 圖譜",
+    "有",
+    "無，只有 ANOVA 表",
+    "無，只標 Day 1-20",
+    "4/6"
+   ],
+   [
+    "HangzhouFourteenAP",
+    "有，寫在記錄裡",
+    "有，Rosetta(DE3)",
+    "無",
+    "有",
+    "無，自述「未謄錄」",
+    "有，逐日附日期",
+    "4/6"
+   ],
+   [
+    "HongKong-HS",
+    "有，寫在 Experiments",
+    "無，只寫 E. coli",
+    "無",
+    "有",
+    "有，逐重複值表格",
+    "有，44 個日期",
+    "4/6"
+   ],
+   [
+    "HongKong-JSS",
+    "有，頁面加 124 頁日誌",
+    "有，DH5-alpha",
+    "無",
+    "有",
+    "有，寫在日誌裡",
+    "有，日誌附日期",
+    "5/6"
+   ],
+   [
+    "Lambert-GA",
+    "有，寫在記錄本內",
+    "有，NEB 5-alpha",
+    "有，圖譜與序列",
+    "有",
+    "有，兩間外部實驗室的檔案",
+    "有，2 份附日期 PDF",
+    "6/6"
+   ]
+  ]
+ },
+ "checklist": [
+  "Publish a plasmid map or a .gb file for every construct, not one map for one of thirty-five parts. GEMS-Taiwan's parts page sends the reader to the Registry for each sequence; TU Delft put 49 GenBank files on its own wiki, and that is the gap to close in 2027.",
+  "Export the numbers behind every results figure as CSV into the GitLab repository, the way the photometer run already is. The ELISA, DNPH, Western densitometry, plant growth and chlorophyll figures currently exist only as pictures.",
+  "Never ship a figure redrawn from another figure. Two protectant plots on hardware-bioreactor say \"redrawn from the team's chart\", and growth-data.js still holds `csv: null` with \"ill give data later\" from 15 October — set a data-freeze date before the wiki freeze, and let a chart that has no numbers be a table of nothing rather than a traced line.",
+  "Finish the three protocol sheets that produced no result on this wiki — Bradford, large-scale extraction, purification and dialysis — or state on the sheet that the experiment was not run.",
+  "Keep what already works: the dated monthly notebook PDFs, the per-sheet PDF protocols with volumes and times, the strain named as B. subtilis WB800 rather than B. subtilis. Twenty-two of thirty teams have a dated notebook and only four have data; GEMS is already on the right side of the first and the wrong side of the second.",
+  "Add one line to each results figure naming the notebook date and the protocol sheet it came from. GEMS already has both objects; nothing on the wiki joins a number to the day it was measured.",
+  "Check every external link a month after the freeze. Toronto's own dataset DOI is dead and its lab notes need a Google login; GEMS's data links are GitLab paths, which is the right choice, but they should still be fetched signed-out before the Jamboree."
+ ],
+ "checklist_zh": [
+  "每一個構築都要有質體圖譜或 .gb 檔，而不是 35 個零件只有一張圖。GEMS-Taiwan 的 parts 頁把讀者導去 Registry 查序列；TU Delft 把 49 個 GenBank 檔放在自己的 wiki 上——2027 要補的就是這個缺口。",
+  "把每一張結果圖背後的數字輸出成 CSV 放進 GitLab 倉庫，就像光度計那次連續量測已經做到的那樣。目前 ELISA、DNPH、西方墨點灰階、植株生長與葉綠素這些圖，都只以圖片形式存在。",
+  "絕不要用「照著另一張圖重畫」的方式產出圖表。hardware-bioreactor 上兩張保護蛋白的圖寫著「redrawn from the team's chart」，而 growth-data.js 至今仍是 `csv: null`，旁邊留著 10 月 15 日那句「ill give data later」——請在 wiki 凍結之前先設一個數據凍結日；沒有數字的圖，寧可留白，也不要描一條線上去。",
+  "把這份 wiki 上三份沒有產出結果的流程補完——Bradford、大量萃取、純化與透析——或者直接在條目上寫明該實驗並未執行。",
+  "已經做對的要守住：逐月且附日期的記錄 PDF、每份都寫明體積與時間的 PDF 流程、把菌株寫成 B. subtilis WB800 而不是只寫 B. subtilis。30 支隊伍裡有 22 支有附日期的記錄，卻只有 4 支給得出數據；GEMS 在前一項站對邊，在後一項站錯邊。",
+  "在每張結果圖加一行字，標明它出自哪一天的記錄、哪一份流程條目。GEMS 這兩樣東西都有，但整個 wiki 沒有任何地方把一個數字接回它被量到的那一天。",
+  "凍結一個月後，把所有外部連結重新點一次。Toronto 自家資料集的 DOI 已經失效，實驗日誌還要 Google 登入；GEMS 的資料連結指向 GitLab，這個選擇是對的，但出發去 Jamboree 之前仍應以未登入的狀態實際抓一次。"
+ ],
+ "method": "Sample: all 30 teams in the 2026 Top 10 lists — ten Undergrad, ten Overgrad, ten High School — chosen because it is a complete, pre-defined set that needs no judgement call about which award counts as wet-lab, and because GEMS-Taiwan sits inside it rather than being added to it. The table is ordered Undergrad, then Overgrad, then High School. Each team was scored on six checks, one point each: (1) full protocols, meaning step-level procedures with volumes, temperatures, times and at least one named kit or supplier, published as wiki text, fold-out panel or downloadable PDF — prose summaries do not count; (2) the chassis named to the strain, for example BL21(DE3), DH5-alpha, Nissle 1917, WB800, BY4741, and not only \"E. coli\"; (3) plasmid maps or complete sequences covering the constructs actually built, whether as map figures, printed sequences, sequence files or public sequence-platform links — a Registry link alone does not count, and one map for a collection of thirty-five parts was scored as a fail; (4) parts deposited with sequence, tested by querying api.registry.igem.org/v1/parts/slugs/ for up to eight of each team's 2026 accessions with a browser User-Agent and 1.4-second spacing, 210 accessions in all; (5) raw data, meaning the numbers behind at least one published experimental figure are downloadable or printed — a statistics table, an uncropped blot image, or a chart alone is a fail, and economic, docking, literature or outreach CSVs were not counted as experimental data; (6) a dated notebook with calendar dates, on the wiki or in a PDF — \"Day 1 … Day 20\" is a fail. GEMS-Taiwan was scored a pass on data on the strength of the photometer and bioreactor CSV runs in its digital-twin repository; the table marks that cell \"part\" because no bench assay — ELISA, DNPH, Western, plant growth — has its numbers published. Wikis were read by crawling each site's pages and JavaScript bundles and by opening pages in a browser; roughly a third of these wikis are client-rendered, and several (NUS-Singapore, Muenster-University, Eton-College-UK, GU Frankfurt, KAUST-KSA) hold their protocols or parts inside panels that a plain fetch cannot see, so every low count was re-checked in a browser before being recorded. More than 110 PDFs were downloaded and their text extracted, which is how protocol and notebook PDFs could be scored rather than merely counted. Every data, sequence and repository link reported as failing was fetched signed-out and its HTTP status recorded. What this cannot see: a wiki that does not publish a protocol does not prove the team lacked one — this reads wikis, not lab books, and a team may hold complete records, raw spreadsheets and annotated maps that it simply never uploaded. It also cannot tell whether a published protocol actually works, whether a number is right, or whether a notebook was written on the day it claims. Scanned or image-only PDF pages yield no text, so a protocol that exists only as a photograph may have been undercounted. Registry checks sampled up to eight parts per team, not every part, and the parts API rate-limits, so a handful of accessions were retried rather than read on the first pass. The sample is decorated teams only — the 30 projects the judges ranked highest — and nothing here describes iGEM 2026 as a whole.",
+ "method_zh": "取樣：2026 年 Top 10 名單上的全部 30 支隊伍——大學部十支、研究生組十支、高中組十支。選這個集合，是因為它是事先就定義好的完整名單，不需要去判斷哪些獎項算濕實驗；也因為 GEMS-Taiwan 本來就在裡面，而不是另外補進來的。表格順序為大學部、研究生組、高中組。每支隊伍以六項檢核計分，每項一分：（1）完整實驗流程，指步驟層級、寫明體積、溫度、時間，並至少具名一個套組或供應商，形式可以是 wiki 內文、摺疊面板或可下載 PDF——只有敘述性摘要不算；（2）菌株寫到品系層級，例如 BL21(DE3)、DH5-alpha、Nissle 1917、WB800、BY4741，而不是只寫 E. coli；（3）質體圖譜或完整序列，且需涵蓋實際做出來的構築，形式可以是圖譜、直接印出的序列、序列檔或公開的序列平台連結——只給 Registry 連結不算；35 個零件只有一張圖譜，判定為未通過；（4）零件已附序列存入 Registry，做法是以瀏覽器 User-Agent、每次間隔 1.4 秒查詢 api.registry.igem.org/v1/parts/slugs/，每隊抽查最多八個 2026 年編號，合計 210 個；（5）原始數據，指至少一張已發表實驗圖背後的數字可下載或被印出來——只有統計表、未裁切的墨點影像或圖表本身都算未通過；經濟模型、分子對接、文獻整理或科普活動的 CSV 不列為實驗數據；（6）附日曆日期的實驗記錄，可以在 wiki 上或 PDF 裡——只寫「Day 1⋯Day 20」算未通過。GEMS-Taiwan 在數據這一項判定為通過，依據是其數位孿生倉庫裡光度計與生物反應器的 CSV 連續量測；表格中該格標為「部分」，因為沒有任何一項實驗台上的分析——ELISA、DNPH、西方墨點、植株生長——有公開數字。閱讀方式是抓取各站頁面與 JavaScript bundle，再輔以瀏覽器實際開啟；這批 wiki 約有三分之一是前端渲染，其中數支（NUS-Singapore、Muenster-University、Eton-College-UK、GU Frankfurt、KAUST-KSA）把流程或零件收在直接抓取看不到的面板裡，因此凡是數值偏低的項目，都先在瀏覽器裡重新確認過才記錄。共下載 110 份以上的 PDF 並抽取文字，所以流程與記錄 PDF 是被讀過內容，而不是只被數過份數。凡是被寫成失效的資料、序列或倉庫連結，都在未登入狀態下實際抓取並記下 HTTP 狀態碼。看不到的部分：wiki 上沒有流程，並不等於這支隊伍沒有流程——這份研究讀的是 wiki，不是實驗記錄本；隊伍手上可能有完整紀錄、原始試算表與註解過的圖譜，只是從未上傳。它同樣無法判斷已公開的流程是否真的做得出來、某個數字對不對，或某則記錄是否真的寫於它所標示的那一天。掃描或純影像的 PDF 抽不出文字，因此只以照片形式存在的流程可能被低估。Registry 每隊最多抽查八個零件，不是全部，且該 API 會限流，少數編號是重試後才讀到。樣本僅限得獎隊伍——評審排名最高的 30 個專案——此處沒有任何一句話在描述整個 iGEM 2026。"
+}

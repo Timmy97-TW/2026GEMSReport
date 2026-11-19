@@ -46,6 +46,7 @@
   /* ---------- tabs ---------- */
   var TABS = [
     { id: "overview", en: "Overview", zh: "總覽", icon: "M3 12h4l3 8 4-16 3 8h4" },
+    { id: "judging", en: "Judging", zh: "評審標準", icon: "M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2M9 14l2 2 4-4" },
     { id: "drylab", en: "Dry Lab", zh: "乾實驗室", icon: "M9 3v6l-5 9a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-9V3M8 3h8" },
     { id: "good", en: "Science for Good", zh: "科學向善", icon: "M20 9c0 6-8 11-8 11S4 15 4 9a8 8 0 0 1 16 0z" },
     { id: "teams", en: "Team Files", zh: "團隊檔案", icon: "M16 20v-2a4 4 0 0 0-8 0v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8" },
@@ -496,6 +497,12 @@ function isWin(a) { return /winner|grand prize|top 10/i.test(a); }
   }
 
   /* ---------- ROADMAP ---------- */
+  // The judging tab is pure analysis: the eight finalist questions, the three-team
+  // comparison and the full High School Top 10 read against them.
+  function viewJudging() {
+    return reportSections("judging");
+  }
+
   function viewRoadmap() {
     var h = reportSections("roadmap");
     var ph = REPORT.roadmap || [];
@@ -567,6 +574,7 @@ function isWin(a) { return /winner|grand prize|top 10/i.test(a); }
     else if (CUR === "drylab") h = evidenceView("dry");
     else if (CUR === "good") h = evidenceView("good");
     else if (CUR === "teams") h = viewTeams();
+    else if (CUR === "judging") h = viewJudging();
     else if (CUR === "academic") h = viewTrends("academic");
     else if (CUR === "industry") h = viewTrends("industry");
     else h = viewRoadmap();
