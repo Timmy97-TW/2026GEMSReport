@@ -1,0 +1,293 @@
+{
+ "id": "chassis-census",
+ "tab": "teams",
+ "order": 38,
+ "kicker": "Wet lab / chassis",
+ "kicker_zh": "濕實驗室 ‧ 底盤",
+ "title": "What 106 decorated teams actually built in",
+ "title_zh": "106 支得獎隊伍到底把東西做在什麼生物裡",
+ "lede": "Exactly 1 of the 106 decorated teams used light to control a *Bacillus subtilis* culture, and that team is GEMS-Taiwan itself — 5 teams used light as a control input in any organism, 5 worked with *B. subtilis*, and the two sets overlap in one place. The companion test returned a null: among these decorated teams a non-model chassis neither helped nor hurt the odds of a Top 10 place (9 of 27 against 21 of 79, Fisher exact p = 0.62).",
+ "lede_zh": "106 支得獎隊伍中，只有 1 支用光去控制 *Bacillus subtilis* 的培養，而那支隊伍就是 GEMS-Taiwan 自己——有 5 支隊伍在任何生物裡把光當成控制輸入，有 5 支隊伍碰了 *B. subtilis*，兩個集合只在一個點上重疊。另一項檢定則得到虛無結果：在這些得獎隊伍之中，使用非模式底盤既沒有提高也沒有降低擠進 Top 10 的機會（27 支中有 9 支，對比 79 支中有 21 支，Fisher 精確檢定 p = 0.62）。",
+ "body": "**E. coli is still the house organism.** 51 of the 106 decorated teams put a construct into *E. coli*, and 24 of those 51 name a strain — BL21(DE3) most often, then DH5-alpha, then Nissle 1917, MG1655, Rosetta(DE3), SHuffle, C41 and BL21-AI. The other 27 write only \"E. coli\" and stop there, which is enough to describe a project and not enough to repeat one. Yeast is a distant second at 13 teams: 8 name *S. cerevisiae* (EBY100, BY4741 and three-plasmid builds among them), 3 use *Pichia pastoris* or *Komagataella*, and 4 write \"yeast\" with no species at all. Mammalian cell lines appear in 8 teams and are overwhelmingly HEK293, with CHO, a piggyBac reporter line and an oncolytic HSV-2 complementing line making up the rest. *B. subtilis* appears in 5.\n\n**The tail is more interesting than the head.** 14 teams built in a named non-model organism and almost none of them chose the same one: *Pseudomonas putida* four times (KT2440 three times, F1 once), then *Streptococcus salivarius* K12, *Zymomonas mobilis*, *Komagataeibacter rhaeticus*, *Sporosarcina pasteurii*, *Magnetospirillum magneticum* AMB-1, *Shewanella oneidensis* MR-1, *Clostridium beijerinckii* S63 (isolated from a wetland by the team and made transformable from scratch), the thermophile pair *Acetivibrio thermocellus* and *Geobacillus thermocatenulatus*, *Photorhabdus* virulence cassettes, and arbuscular mycorrhizal fungi. Add *Nostoc* sp. PCC 7120, *Chlamydomonas reinhardtii* twice, *Nicotiana* and a *Stevia* hairy root, Sf9 insect cells and M13 phage. 9 teams ran cell-free systems, 6 worked only with purified enzymes or in vitro nucleic-acid chemistry, and exactly 1 decorated entry had no wet lab at all. 18 teams used more than one chassis.\n\n**The null, stated plainly.** Splitting the 106 into the 27 that used a chassis outside *E. coli*, *S. cerevisiae* and standard mammalian lines against the 79 that did not, 9 of 27 reached a Top 10 place versus 21 of 79 — 33 percent against 27 percent, Fisher exact p = 0.62. There is no effect here. The honest boundary on that sentence is that the sample is decorated teams only, so it says that among teams which already won something, chassis choice does not separate the Top 10 from the rest; it says nothing about whether a non-model chassis helps a team get decorated in the first place, because this analysis has no undecorated baseline and never could.\n\n**The white space, tested against iGEM.** The academic trend review puts it in one line: light has become a real-time actuator for feedback control of fermentation, with reported 60 percent titer gains in a 1 L photobioreactor, *while optogenetics in Bacillus subtilis remains almost unexplored — twelve papers in all of PubMed*, and no published light-controlled *B. subtilis* bioreactor at all. The industry review arrives from the other side: Fermeate raised seed money to control gene expression with light so existing stainless-steel fermenters can be retrofitted instead of replaced, which is the cheapest route past the capital-cost wall. Against iGEM 2026, the counts are these. **5 of 106** used light as a control input in any organism: McGill (VP16-EL222 / C120 driving flocculation in *S. cerevisiae*), GEMS-Taiwan (CcaSR green light in *B. subtilis* WB800), WHU-China (EL222 with pBLI in *E. coli*), Princeton (an AsLOV2 optomonobody releasing cargo at 450 nm on M13 phage), and William & Mary, who measured dark and light curves on one of four pre-existing circuits they were stress-testing. Marburg is a sixth near-miss: they investigated optogenetic induction with the PULSE system and called it the most attractive long-term inducer on safety grounds, then did not build it. **5 of 106** worked with *B. subtilis*: GEMS-Taiwan (WB800), UPF-Barcelona (rhizosphere colonisation, strain unnamed), Hongwen School (WB600 secretion host), KAUST-KSA (Dsup integrated for radiation resistance), and BGI-College, who cultivated a commercial strain on spent broth rather than engineering it. **1 of 106** did both. Four of the five *B. subtilis* teams induce with something other than light — a promoter, an osmolarity switch, a genomic integration — and four of the five light teams are working in an organism where the technique is already routine. Excluding GEMS-Taiwan, the intersection is **0 of 105**. The white space the Drylab roadmap points at is real inside iGEM as well as inside PubMed, and nobody else in this cohort is competing for it.",
+ "body_zh": "**E. coli 仍然是 iGEM 的當家生物。** 106 支得獎隊伍中有 51 支把構築體放進 *E. coli*，而這 51 支裡有 24 支寫出了具體菌株——最常見的是 BL21(DE3)，接著是 DH5-alpha、Nissle 1917、MG1655、Rosetta(DE3)、SHuffle、C41 與 BL21-AI。其餘 27 支只寫「E. coli」就打住了；這足以描述一個專題，卻不足以讓別人重做一次。酵母以 13 支隊伍居次，差距很大：8 支寫出 *S. cerevisiae*（其中包含 EBY100、BY4741 與三質體系統），3 支使用 *Pichia pastoris* 或 *Komagataella*，另外 4 支只寫「酵母」而完全沒有寫出物種。哺乳類細胞株出現在 8 支隊伍，絕大多數是 HEK293，其餘是 CHO、一株 piggyBac 報導細胞株，以及一株供溶瘤 HSV-2 增殖的互補細胞株。*B. subtilis* 出現在 5 支隊伍。\n\n**尾端比前端有意思。** 有 14 支隊伍做在具名的非模式生物上，而且幾乎沒有兩支選到同一種：*Pseudomonas putida* 出現四次（KT2440 三次、F1 一次），接著是 *Streptococcus salivarius* K12、*Zymomonas mobilis*、*Komagataeibacter rhaeticus*、*Sporosarcina pasteurii*、*Magnetospirillum magneticum* AMB-1、*Shewanella oneidensis* MR-1、*Clostridium beijerinckii* S63（由隊伍自己從濕地分離，並從零建立轉形系統）、嗜熱菌組合 *Acetivibrio thermocellus* 與 *Geobacillus thermocatenulatus*、*Photorhabdus* 毒力匣，以及叢枝菌根真菌。再加上 *Nostoc* sp. PCC 7120、兩次出現的 *Chlamydomonas reinhardtii*、*Nicotiana* 與一套 *Stevia* 毛狀根、Sf9 昆蟲細胞與 M13 噬菌體。有 9 支隊伍使用無細胞系統，6 支只處理純化酵素或體外核酸化學，而完全沒有濕實驗室的得獎專題正好只有 1 支。有 18 支隊伍用了不只一種底盤。\n\n**虛無結果，直說。** 把 106 支分成兩群：27 支使用 *E. coli*、*S. cerevisiae* 與標準哺乳類細胞株以外底盤的隊伍，以及其餘 79 支。前者有 9 支進入 Top 10，後者有 21 支——33% 對 27%，Fisher 精確檢定 p = 0.62。這裡沒有效應。這句話誠實的邊界在於樣本只有得獎隊伍，因此它說的是：在已經拿到名次的隊伍之間，底盤選擇無法把 Top 10 和其他人分開；它完全沒有說非模式底盤是否有助於一支隊伍先拿到名次，因為這份分析沒有、也不可能有未得獎隊伍作為對照。\n\n**把白地拿到 iGEM 上檢驗。** 學術趨勢回顧一句話講完：光已成為發酵回饋控制的即時致動器，在 1 L 光生物反應器中有 60% 產量提升的報告，*但 Bacillus subtilis 的光遺傳學幾乎仍無人開發——整個 PubMed 只有十二篇論文*，而且完全沒有已發表的光控 *B. subtilis* 生物反應器。產業趨勢回顧則從另一側抵達同一個點：Fermeate 募得種子輪資金，以光控制基因表現，讓既有的不鏽鋼發酵槽可以改裝而不必汰換，這是繞過資本支出高牆最便宜的路。拿到 iGEM 2026 上，數字是這樣。**106 支中有 5 支**在任何生物裡把光當成控制輸入：McGill（VP16-EL222 / C120 在 *S. cerevisiae* 中驅動絮凝）、GEMS-Taiwan（CcaSR 綠光系統於 *B. subtilis* WB800）、WHU-China（EL222 搭配 pBLI 於 *E. coli*）、Princeton（AsLOV2 optomonobody 在 450 nm 下釋出貨物，載於 M13 噬菌體），以及 William & Mary——他們在壓力測試的四組既有迴路中，量了其中一組的暗處與光照曲線。Marburg 是第六個擦身而過的例子：他們研究過以 PULSE 系統做光誘導，並從安全角度稱它是最有吸引力的長期誘導方式，然後沒有動手做。**106 支中有 5 支**碰了 *B. subtilis*：GEMS-Taiwan（WB800）、UPF-Barcelona（根圈定殖，未寫出菌株）、Hongwen School（WB600 分泌宿主）、KAUST-KSA（整合 Dsup 以取得抗輻射能力），以及 BGI-College——他們是把市售菌株養在發酵殘液上，而不是改造它。**106 支中有 1 支**兩者都做。五支 *B. subtilis* 隊伍中有四支用光以外的方式誘導——啟動子、滲透壓開關、基因體整合；而五支用光的隊伍中有四支，工作的生物本來就把這項技術當成例行工具。扣掉 GEMS-Taiwan，交集是 **105 支中的 0 支**。Drylab 路線圖所指的那塊白地，在 iGEM 裡和在 PubMed 裡一樣是真的，而且這一屆沒有別人在跟我們搶。",
+ "cards": [
+  {
+   "kicker": "Light",
+   "kicker_zh": "光",
+   "title": "5 of 106 used light as a control input",
+   "title_zh": "106 支中有 5 支把光當成控制輸入",
+   "body": "Four of the five work in organisms where optogenetics is already routine: *S. cerevisiae*, *E. coli*, and M13 phage displayed protein. Blue light accounts for four of the five systems (EL222 twice, AsLOV2 once, one unspecified); green light appears once. Only one of the five closes a control loop rather than switching a circuit on.",
+   "body_zh": "五支中有四支工作的生物本來就把光遺傳學當成例行工具：*S. cerevisiae*、*E. coli*，以及 M13 噬菌體表面展示的蛋白質。五套系統中有四套使用藍光（EL222 兩次、AsLOV2 一次、一次未指明），綠光只出現一次。五支之中只有一支做的是閉合控制迴路，而不是把迴路打開而已。",
+   "chips": [
+    "McGill — EL222 in yeast",
+    "GEMS-Taiwan — CcaSR in B. subtilis",
+    "WHU-China — EL222 in E. coli",
+    "Princeton — AsLOV2 on M13",
+    "William & Mary — dark/light curves"
+   ],
+   "chips_zh": [
+    "McGill — EL222，於酵母菌",
+    "GEMS-Taiwan — CcaSR，於 B. subtilis",
+    "WHU-China — EL222，於 E. coli",
+    "Princeton — AsLOV2，於 M13",
+    "William & Mary — 明暗對照曲線"
+   ]
+  },
+  {
+   "kicker": "B. subtilis",
+   "kicker_zh": "B. subtilis",
+   "title": "5 of 106 worked with B. subtilis, 4 engineered it",
+   "title_zh": "106 支中有 5 支碰 B. subtilis，其中 4 支改造它",
+   "body": "Two named a strain (WB800, WB600), one wrote only \"B. subtilis\", one integrated a cargo genomically across three hosts, and one cultivated a commercial strain without engineering it. A sixth team used *B. subtilis* only as a surrogate biofilm organism in an assay, which is a test subject rather than a chassis and is not counted here.",
+   "body_zh": "兩支寫出菌株（WB800、WB600），一支只寫「B. subtilis」，一支把一段基因整合進三種宿主的基因體，還有一支只是培養市售菌株而沒有改造它。第六支隊伍把 *B. subtilis* 當成生物膜試驗的替代菌種使用，那是受測對象而不是底盤，因此未計入。",
+   "chips": [
+    "GEMS-Taiwan WB800",
+    "UPF-Barcelona",
+    "Hongwen WB600",
+    "KAUST-KSA",
+    "BGI-College (cultivated only)"
+   ],
+   "chips_zh": [
+    "GEMS-Taiwan WB800",
+    "UPF-Barcelona",
+    "Hongwen WB600",
+    "KAUST-KSA",
+    "BGI-College（僅培養）"
+   ]
+  },
+  {
+   "kicker": "Reproducibility",
+   "kicker_zh": "可重現性",
+   "title": "27 of 51 E. coli teams never name the strain",
+   "title_zh": "51 支用 E. coli 的隊伍中，有 27 支沒寫出菌株",
+   "body": "A chassis is not a species, it is a strain: BL21(DE3) and DH5-alpha behave nothing alike, and Nissle 1917 is a different proposition again. 24 of 51 say which one. Beyond that, 12 of the 106 dossiers describe bench work whose host organism is nowhere in the write-up at all.",
+   "body_zh": "底盤不是一個物種，而是一株菌：BL21(DE3) 與 DH5-alpha 的行為完全不同，Nissle 1917 又是另一回事。51 支中有 24 支寫明用的是哪一株。除此之外，106 份資料裡有 12 份描述了實驗台上的工作，卻從頭到尾都沒有交代宿主生物是什麼。",
+   "chips": [
+    "24 of 51 name a strain",
+    "BL21(DE3) most common",
+    "12 of 106 name no host at all"
+   ],
+   "chips_zh": [
+    "51 支中有 24 支寫出菌株",
+    "BL21(DE3) 最常見",
+    "106 支中有 12 支完全沒寫宿主"
+   ]
+  }
+ ],
+ "table": {
+  "head": [
+   "Chassis",
+   "Teams",
+   "Of 106",
+   "Notes"
+  ],
+  "head_zh": [
+   "底盤",
+   "隊伍數",
+   "佔 106 支",
+   "說明"
+  ],
+  "rows": [
+   [
+    "E. coli",
+    "51",
+    "48%",
+    "24 name a strain; BL21(DE3) most common"
+   ],
+   [
+    "S. cerevisiae",
+    "8",
+    "8%",
+    "EBY100, BY4741, three-plasmid builds"
+   ],
+   [
+    "Yeast, species not named",
+    "4",
+    "4%",
+    "written only as \"yeast\""
+   ],
+   [
+    "Other yeast (Pichia / Komagataella)",
+    "3",
+    "3%",
+    "one of them the project's primary chassis"
+   ],
+   [
+    "B. subtilis",
+    "5",
+    "5%",
+    "4 engineered, 1 cultivated only"
+   ],
+   [
+    "Mammalian cell lines",
+    "8",
+    "8%",
+    "HEK293 dominant; CHO; reporter lines"
+   ],
+   [
+    "Cyanobacteria and algae",
+    "3",
+    "3%",
+    "Nostoc PCC 7120; C. reinhardtii twice"
+   ],
+   [
+    "Plant",
+    "2",
+    "2%",
+    "Nicotiana; Stevia hairy root"
+   ],
+   [
+    "Other non-model organisms",
+    "14",
+    "13%",
+    "P. putida ×4; 10 further species, each once"
+   ],
+   [
+    "Insect cells (Sf9)",
+    "1",
+    "1%",
+    "binder expression and BLI"
+   ],
+   [
+    "Bacteriophage (M13)",
+    "1",
+    "1%",
+    "phage itself used as the adsorbent"
+   ],
+   [
+    "Cell-free systems",
+    "9",
+    "8%",
+    "PURExpress, paper toehold, chloroplast extract"
+   ],
+   [
+    "Purified enzyme / in vitro only",
+    "6",
+    "6%",
+    "LAMP, Cas12a, Cas13a, protease timers"
+   ],
+   [
+    "No wet lab at all",
+    "1",
+    "1%",
+    "a software entry"
+   ],
+   [
+    "Chassis not stated",
+    "12",
+    "11%",
+    "bench work done, host organism never named"
+   ]
+  ],
+  "rows_zh": [
+   [
+    "E. coli",
+    "51",
+    "48%",
+    "24 支寫出菌株；最常見是 BL21(DE3)"
+   ],
+   [
+    "S. cerevisiae",
+    "8",
+    "8%",
+    "EBY100、BY4741、三質體系統"
+   ],
+   [
+    "酵母，未寫出物種",
+    "4",
+    "4%",
+    "只寫成「酵母」"
+   ],
+   [
+    "其他酵母（Pichia / Komagataella）",
+    "3",
+    "3%",
+    "其中一支以它作為專題主要底盤"
+   ],
+   [
+    "B. subtilis",
+    "5",
+    "5%",
+    "4 支改造，1 支僅培養"
+   ],
+   [
+    "哺乳類細胞株",
+    "8",
+    "8%",
+    "以 HEK293 為主；另有 CHO 與報導細胞株"
+   ],
+   [
+    "藍綠菌與藻類",
+    "3",
+    "3%",
+    "Nostoc PCC 7120；C. reinhardtii 兩次"
+   ],
+   [
+    "植物",
+    "2",
+    "2%",
+    "Nicotiana；Stevia 毛狀根"
+   ],
+   [
+    "其他非模式生物",
+    "14",
+    "13%",
+    "P. putida ×4；另有 10 種各出現一次"
+   ],
+   [
+    "昆蟲細胞（Sf9）",
+    "1",
+    "1%",
+    "用於結合蛋白表現與 BLI"
+   ],
+   [
+    "噬菌體（M13）",
+    "1",
+    "1%",
+    "噬菌體本身就是吸附材料"
+   ],
+   [
+    "無細胞系統",
+    "9",
+    "8%",
+    "PURExpress、紙基 toehold、葉綠體萃取液"
+   ],
+   [
+    "僅純化酵素／體外",
+    "6",
+    "6%",
+    "LAMP、Cas12a、Cas13a、蛋白酶計時器"
+   ],
+   [
+    "完全沒有濕實驗室",
+    "1",
+    "1%",
+    "一支軟體專題"
+   ],
+   [
+    "未交代底盤",
+    "12",
+    "11%",
+    "做了實驗，但從未寫出宿主生物"
+   ]
+  ]
+ },
+ "checklist": [
+  "Hold the B. subtilis optogenetics line for more than one season. The count is 1 of 106 and that one is us; no other decorated team in 2026 is in this space, and the published literature is twelve papers.",
+  "Publish a full CcaSR transfer function in WB800 — light intensity crossed with duty cycle crossed with growth phase — because no other team in this cohort has B. subtilis light data to compare against, and a single induction intensity cannot test a Hill curve.",
+  "Write the strain in every sentence where others write the species. 27 of 51 E. coli teams never do, and 1 of 5 B. subtilis teams never does. \"B. subtilis WB800\" costs five characters and is the difference between a description and a protocol.",
+  "Put the host organism on the Description page, not only in the notebook. 12 of 106 decorated dossiers describe bench work with no host named anywhere — judges and readers should never have to infer it.",
+  "Do not pick a non-model chassis to score points. Among decorated teams it moves nothing (p = 0.62). Pick B. subtilis for secretion and for light, and write down that reason.",
+  "Record the induction method as a measured variable, not a protocol footnote. Four of the five B. subtilis teams in 2026 induce with a promoter or an osmolarity switch; the argument for light is only as strong as the dose-response data behind it."
+ ],
+ "checklist_zh": [
+  "把 B. subtilis 光遺傳學當成跨年度的主軸，不要只做一季。數字是 106 支中的 1 支，而那一支就是我們；2026 年沒有其他得獎隊伍在這塊地上，已發表文獻也只有十二篇。",
+  "完整發表 WB800 的 CcaSR 轉移函數——光強度、工作週期與生長時期三者交叉——因為這一屆沒有別的隊伍有 B. subtilis 的光照資料可供對照，而單一光強度的誘導無法檢驗一條 Hill 曲線。",
+  "別人寫物種的地方，我們寫菌株。51 支用 E. coli 的隊伍中有 27 支從不這麼做，5 支用 B. subtilis 的隊伍中也有 1 支沒寫。「B. subtilis WB800」只多五個字元，卻是描述與實驗流程之間的差別。",
+  "把宿主生物寫在 Description 頁，而不是只留在實驗記錄裡。106 份得獎資料中有 12 份描述了實驗工作卻全篇沒有寫出宿主——評審和讀者不該需要自己猜。",
+  "不要為了拿分數而挑非模式底盤。在得獎隊伍之間，這一項完全不影響結果（p = 0.62）。選 B. subtilis 是為了分泌與光控，而且要把這個理由寫下來。",
+  "把誘導方式當成一個被量測的變項，而不是實驗流程的註腳。2026 年五支 B. subtilis 隊伍中有四支用啟動子或滲透壓開關誘導；選擇光的論證，強度只等於它背後那組劑量反應資料。"
+ ],
+ "method": "Sample: all 106 team dossiers in research/teams/, one per decorated team — every 2026 Top 10 team, special-prize winner and nominee. This is not the competition at large and nothing here describes undecorated teams. Counting: regular-expression sweeps for organism, strain, cell-line and light-control vocabulary across the English prose fields of each dossier (tagline, summary, dry, good, gemsTakeaway, award list), then every hit read in its surrounding sentence and classified by hand. Gene donor organisms, surrogate test organisms, rejected alternatives, modelling references (iML1515, iBsu1147) and education-activity mentions were excluded, which removed roughly a third of raw matches — \"laccase\" matches CcaS and \"Jaccard\" matches CcaR, so the unverified counts were wrong by several teams in both directions. A team is counted once per chassis category, so the table sums above 106: 18 teams used more than one chassis. Cloning and propagation hosts are counted where named. The B. subtilis count includes BGI-College, who cultivated a commercial strain without engineering it, and excludes HangzhouFourteenAP, who used it only as a surrogate biofilm organism in an assay. The light count includes William & Mary, who measured dark and light curves on a pre-existing light-responsive circuit although optogenetics was not their subject, and excludes Marburg, who investigated optogenetic induction in human practices and did not build it, and McMaster-Canada, whose only match was a blue-light transilluminator used for imaging. The placing test compares Top 10 placement against everything else using a two-sided Fisher exact test. What this cannot see: the dossiers are summaries of wikis, not the wikis themselves, so a chassis a team used but did not write up is invisible to this count. 12 teams describe wet-lab work whose host organism appears nowhere in their file; they are counted as \"not stated\" rather than assigned to E. coli, even though E. coli is the likely answer for most of them. The E. coli figure of 51 is therefore a floor, not a ceiling, and the same applies to every other category. Strain-naming counts reflect what the dossier records, not what the team's wiki or notebook may contain.",
+ "method_zh": "樣本：research/teams/ 底下全部 106 份隊伍資料，每支得獎隊伍一份——涵蓋 2026 年所有 Top 10 隊伍、特別獎得主與入圍者。這不是整個賽事的樣本，本篇任何一句話都不描述未得獎的隊伍。計數方式：以正規表達式在每份資料的英文敘述欄位（tagline、summary、dry、good、gemsTakeaway、獎項清單）掃過生物名、菌株名、細胞株名與光控相關詞彙，再把每一筆命中放回它所在的句子逐一人工判讀分類。基因來源生物、作為替代受測對象的生物、被否決的替代方案、建模用的參考資料（iML1515、iBsu1147）以及教育活動中的提及一律排除，這大約刪掉了三分之一的原始命中：「laccase」會命中 CcaS、「Jaccard」會命中 CcaR，未經查核的數字在兩個方向上都錯了好幾支隊伍。每支隊伍在每個底盤類別只計一次，因此表格總和超過 106：有 18 支隊伍用了不只一種底盤。具名的選殖與增殖宿主也計入。B. subtilis 的計數包含 BGI-College（只培養市售菌株而未改造），並排除 HangzhouFourteenAP（僅在試驗中作為生物膜的替代菌種）。光的計數包含 William & Mary（他們量了一組既有光反應迴路的暗處與光照曲線，雖然光遺傳學並非其主題），排除 Marburg（在人類實踐中研究過光誘導但沒有動手做）與 McMaster-Canada（唯一命中是用於成像的藍光透照台）。名次檢定以是否進入 Top 10 作為結果變項，採雙尾 Fisher 精確檢定。這份計數看不到什麼：這些資料是對維基的摘要，而不是維基本身，因此一支隊伍用過但沒有寫出來的底盤，在這裡是隱形的。有 12 支隊伍描述了濕實驗室工作，卻在整份資料中都沒有出現宿主生物；它們被計為「未交代」而不是歸給 E. coli，即使多數的答案很可能就是 E. coli。因此 51 這個 E. coli 數字是下限而不是上限，其他每一個類別也一樣。菌株命名的統計反映的是資料裡記了什麼，而不是該隊維基或實驗記錄裡可能有什麼。"
+}

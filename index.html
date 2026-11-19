@@ -147,6 +147,9 @@ html:lang(zh-Hant) .card .k{letter-spacing:.06em}
   box-shadow:inset 0 0 0 1px var(--line2);white-space:nowrap;max-width:100%}
 /* long award strings (village awards especially) must wrap on a phone rather than run off the card */
 @media (max-width:620px){.chip{white-space:normal;border-radius:11px;line-height:1.45}}
+/* and at ANY width: a village-award chip is long enough that flex shrinks it below its own
+   text and the tail is silently clipped. Editorial chips are short and keep the pill shape. */
+.chip.win{white-space:normal;border-radius:11px;line-height:1.45}
 .chip.b{color:var(--blue);background:rgba(1,103,239,.07);box-shadow:inset 0 0 0 1px rgba(1,103,239,.16)}
 .chip.g{color:#067a51;background:rgba(0,168,107,.08);box-shadow:inset 0 0 0 1px rgba(0,168,107,.18)}
 .chip.v{color:#5B3BD4;background:rgba(124,92,255,.08);box-shadow:inset 0 0 0 1px rgba(124,92,255,.18)}
@@ -339,10 +342,10 @@ html:lang(zh-Hant) .tbl th{letter-spacing:.04em}
 
 <dialog class="sheet" id="sheet"><div id="sheetIn"></div></dialog>
 
-<script src="data/results.js?v=202611200151"></script>
-<script src="data/report.js?v=202611200151"></script>
-<script src="data/teams.js?v=202611200151"></script>
-<script src="data/trends.js?v=202611200151"></script>
-<script src="app.js?v=202611200151"></script>
+<script src="data/results.js?v=202611200154"></script>
+<script src="data/report.js?v=202611200154"></script>
+<script src="data/teams.js?v=202611200154"></script>
+<script src="data/trends.js?v=202611200154"></script>
+<script src="app.js?v=202611200154"></script>
 </body>
 </html>

@@ -282,6 +282,23 @@
     "只有 4 支寫出界線"
    ],
    "link": "drylab"
+  },
+  {
+   "kicker": "The bet",
+   "kicker_zh": "這一賭",
+   "title": "One team in 106 shines light on B. subtilis, and it is this one",
+   "title_zh": "106 支隊伍裡只有 1 支把光打在 B. subtilis 上，而那支就是我們",
+   "body": "Both trend reviews independently named optogenetic control in *Bacillus subtilis* as the white space this roadmap should aim at — a twelve-paper literature in all of PubMed. The census tested that against the competition itself. **5 of 106** used light as a control input in any organism; **5 of 106** worked with *B. subtilis*; the two sets overlap in exactly **one** team, which is GEMS-Taiwan. Outside GEMS the intersection is **0 of 105**. The gap in the literature is mirrored precisely in iGEM, and nobody in this cohort is competing for it.",
+   "body_zh": "兩份趨勢回顧各自獨立地把「*Bacillus subtilis* 的光控」指為這份路線圖該瞄準的空白——整個 PubMed 只有十二篇文獻。這次普查拿這個說法去對照比賽本身。**106 支中有 5 支**在任何生物裡把光當成控制輸入；**106 支中有 5 支**碰過 *B. subtilis*；兩個集合恰好只重疊在**一支**隊伍上，就是 GEMS-Taiwan。把 GEMS 排除之後，交集是 **105 支中的 0 支**。文獻裡的那個缺口，在 iGEM 裡被原樣複製了一次，而這一屆沒有人在搶。",
+   "chips": [
+    "5 of 106 used light",
+    "intersection: 0 of 105"
+   ],
+   "chips_zh": [
+    "5/106 用了光",
+    "交集：0/105"
+   ],
+   "link": "teams"
   }
  ],
  "method": "Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see.",

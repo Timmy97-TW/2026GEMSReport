@@ -135,6 +135,7 @@ VILLAGE_ZH = {
     "Diagnostics": "診斷", "Infectious Diseases": "傳染病", "Oncology": "腫瘤",
     "Therapeutics": "治療", "Foundational Advance": "基礎推進",
     "Software & AI": "軟體與 AI", "Biomanufacturing": "生物製造", "Space": "太空",
+    "Art & Design": "藝術與設計", "Climate Crisis": "氣候危機",
 }
 
 
