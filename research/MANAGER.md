@@ -367,10 +367,14 @@ What changed on the site as a result:
   lead-in saying to read them as examples for the programme rather than as a rubric.
 - `report.json` overview section and the README now both state the distinction up front.
 
-**Privacy decision, deliberate and worth preserving:** the partner's name and her farm's specific
-difficulties are *withheld* on the public site. They were shared in conversation, not published by her, and
-consent to put a named person's difficulties on a public page was never sought. The pipeline says so in the
-body and in the method note. If the user wants her named, that is their call to make, not the report's.
+**Privacy decision, settled by the user on 19 Nov 2026 — the partner IS named.** The pipeline had
+withheld the name on the grounds that it was shared in conversation rather than published. Asked directly,
+the user said to name her: 陳惠雯老師 / Chen Hui-wen, who farms and teaches by natural-farming principles.
+Both live entries, the table's "Came from" column and the method note now carry the name. What stays off the
+page is the farm's *specific difficulties*, and the reason is no longer discretion — nobody has asked her
+yet, which is precisely what the first pipeline entry exists to fix. The checklist rule was reworded to keep
+the distinction live: naming someone is one thing, publishing their difficulties is another, and the second
+still needs asking first.
 
 Follow-on work this opens up (not started):
 - The pipeline wants real entries. The honest next step is a listening visit, not more analysis.

@@ -446,13 +446,13 @@ Right now GEMS has two of the first kind, and both arrived the same way: not thr
 
 The three proposals below come from the report and are marked as such. Each one passes the four criteria on paper, which is exactly their weakness: nobody outside GEMS has yet said they want any of them. They are candidates for a listening visit, not plans.
 
-*The partner names in the two live entries are deliberately withheld on this public page.* The problems described were shared in conversation, not published by the people who have them, and consent to put a name and a farm's difficulties on a public website is not something a report should assume. The internal version carries the names.
+*The partner behind both live entries is named here, at GEMS's decision: Chen Hui-wen (陳惠雯), who farms and teaches by natural-farming principles.* What is not written down here is what that farm's specific difficulties actually are — not out of discretion, but because nobody has asked yet. That is what the first entry below is for. When those constraints are finally recorded, they should be recorded in the farmer's own words and published only with their agreement.
 
-### Go back to the natural-farming farm without a method
-The ReLEAF season put the team in contact with a teacher who farms by natural-farming principles. The next visit should carry **no synthetic-biology requirement at all** — the point is to hear what that farm's actual constraints are and write them down before anyone proposes anything. It is entirely possible the answer is not biology. That outcome is a result, not a failure, and the programme has to be able to publish it.
+### Go back to Chen Hui-wen's farm without a method
+The ReLEAF season put the team in contact with Chen Hui-wen (陳惠雯), a teacher who farms by natural-farming principles. The next visit should carry **no synthetic-biology requirement at all** — the point is to hear what that farm's actual constraints are and write them down before anyone proposes anything. It is entirely possible the answer is not biology. That outcome is a result, not a failure, and the programme has to be able to publish it.
 
 ### A seed-exchange platform
-Raised by the same partner. Worth taking seriously precisely because it is **probably not a synthetic-biology problem** — it looks like a matching, trust and record-keeping problem, which is to say software, logistics and governance. If GEMS can only work on things that need a construct, it is a competition team with a longer deadline. The first question is not how to build it but who else is already trying, and why seed savers would use a new one.
+Raised by Chen Hui-wen, the same partner. Worth taking seriously precisely because it is **probably not a synthetic-biology problem** — it looks like a matching, trust and record-keeping problem, which is to say software, logistics and governance. If GEMS can only work on things that need a construct, it is a competition team with a longer deadline. The first question is not how to build it but who else is already trying, and why seed savers would use a new one.
 
 ### The shared measurement standard nobody built
 Not one of the 106 decorated teams of 2026 ran an inter-lab measurement ring. GEMS holds Best Measurement and Best Hardware, so it can credibly ship a calibrated construct and a written protocol to other Taiwanese labs and publish the between-lab variance. Passes all four criteria on paper. Untested against a real person's stated need — nobody has asked for it.
@@ -469,10 +469,10 @@ Taiwan took zero parts nominations in 2026, and the registry is the one artefact
 - Before any proposal is written for a partner, record their constraints in their own words, dated.
 - Return to every place the 2026 season reached, without a project in hand.
 - For each proposal, find one person outside GEMS who will say they want it — or close the entry.
-- Never publish a partner's name or their difficulties without asking them first.
+- Ask a partner before publishing what they told you — naming someone is one thing, publishing their difficulties is another.
 - Review twice a year; closing an entry with a written reason is a success, not an admission.
 
-_Method and limits. The two live entries come from GEMS Research's own 2026 season and are reported from the programme's account of them, not from any published source; partner names and the specific difficulties discussed are withheld here because they were shared in conversation and consent to publish was not sought. The three proposals are derived from analyses elsewhere in this report — the collaboration network, the hardware reproducibility census and the parts census — and each states there what it can and cannot see. No proposal here has been validated against a stated external need, which is recorded in the table as a No rather than smoothed over. This section is a plan, not a finding, and should be read as one._
+_Method and limits. The two live entries come from GEMS Research's own 2026 season and are reported from the programme's account of them, not from any published source; the partner is named at GEMS's decision, and no specific difficulty of the farm is described here because none has been recorded yet. The three proposals are derived from analyses elsewhere in this report — the collaboration network, the hardware reproducibility census and the parts census — and each states there what it can and cannot see. No proposal here has been validated against a stated external need, which is recorded in the table as a No rather than smoothed over. This section is a plan, not a finding, and should be read as one._
 
 ## Who actually let the outside world change the science
 
