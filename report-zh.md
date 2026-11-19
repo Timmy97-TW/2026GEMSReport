@@ -31,7 +31,7 @@ Eton-College-UK 用的是 logistic regression 與 PSSM，但做了分群感知�
 GEMS-Taiwan 的來源軌道，正好在量測結束、模擬開始之處轉為琥珀色。DKU 給「未評估」一個自己的判定，讓未量測的關卡不會被讀成通過。Mingdao 的圖說載明儀器、緩衝液、重複次數，並連結原始 CSV。DTU 則把從未回覆的利害關係人也顯示出來。
 
 ### 真正閉合的迴圈，是專家閉合的，不是公眾
-在 93 支獲獎隊伍中，有 64 支能指出一位明顯改變了設計的利害關係人。但這些利害關係人幾乎全是具備專業資格的技術專家。這個評審標準修辭上所指向的公眾、病人與社群，改變的是詞彙而不是方向——93 支中只有六、七個例外。
+在全部 106 支獲獎隊伍中，有 **71** 支能指出一位明顯改變了設計的利害關係人。但這些利害關係人幾乎全是具備專業資格的技術專家。這個評審標準修辭上所指向的公眾、病人與社群，改變的是詞彙而不是方向——**106 支中只有九到十個例外**。（第一輪評的是 93 份檔案，得到 64 支與六到七個例外；這裡的數字是集合封閉後的重算。）
 
 ### 最好的教育工作，是從資料設計、像實驗一樣量測的
 UCAS-China 在做完 461 人的問卷後，把目標設為服藥遵從性，而不是認知提升。GU Frankfurt 先送 19 位成員去上專業的科學傳播課程。Oxford 做了一個刻意把意見相左者配對的 podcast。而最犀利的團隊，會把失敗的那堂課也公布出來。
@@ -507,6 +507,56 @@ Heidelberg 的 wiki 在載入時偵測軟體 WebGL 轉譯器，並自動切換�
 - 把規定的章節清單當成資訊架構。一個深層連結的 judging 索引用一頁就做到同一件事，而且讀起來像論證，不像表格。
 
 _方法與限制。 我完整渲染並讀過四組得獎隊伍——Heidelberg、Uni-Padua-IT、TU Delft 和 Lambert-GA：伺服器端渲染的部分直接抓取頁面 HTML，TU Delft 的部分讀它的 Markdown 鏡像，客戶端渲染的頁面則在瀏覽器中載入；引用、圖、元件、影像格式、alt 屬性和 prefers-reduced-motion 規則的數量，都取自實際送出的原始碼。我以較淺的方式抽樣約三十組入圍隊伍與對照隊伍，為全部這些隊伍量測框架、渲染後文字長度、資產重量和替代文字覆蓋率，並把 Stanford 與 UCAS-China 的內容當成最接近的入圍者細讀。有幾組 Vite 單頁應用的入圍隊伍我無法深入渲染——包括 Oxford、UCSC、NUS-Singapore、KAUST-KSA、Muenster-University、IISER-Kolkata 和 UOttawa——因為共用的瀏覽器面板在過程中一直被導向其他頁面，所以它們不列入表格，本文也不描述它們的設計；此外，除了標記語言本身之外，我沒有量測真實的載入時間、行動版版面或螢幕閱讀器行為。_
+
+## 2026 年誰和誰合作
+
+_106 支得獎隊伍中有 69 支記錄了與至少一支其他 iGEM 隊伍的合作，37 支完全沒有。這些合作幾乎都是聚會。整個群體裡沒有任何一支隊伍跑過跨實驗室的量測環（inter-lab measurement ring），而唯一提出最接近做法的隊伍，一封回覆都沒收到。GEMS-Taiwan 沒有合作頁面，也沒出現在任何其他隊伍的頁面上——卻仍然拿下 Top 10 與三項大獎，而這正是尷尬的地方。_
+
+在 106 份隊伍研究檔案中，**69 支隊伍記錄了與至少一支其他 iGEM 隊伍的合作，37 支完全沒有**。但各種形式的份量並不相等。遙遙領先的主流形式是**區域聚會**：BFH 於 5 月 15 至 17 日在 Hamburg 舉辦的 European Meet-Up（第三屆，由 Bielefeld、Frankfurt 與 Hamburg 三隊合辦）、KIT 於 6 月 13 日舉辦的第一屆 iGEM Baden-Württemberg Meetup（八支德國隊伍）、HUST-China 於 7 月 12 日舉辦的第一屆華中 iGEM 論壇（15 支隊伍）、Uni-Padua-IT 於 7 月 25 日在 Botanical Garden of Padua 舉辦的 Italian Meet-Up（與 Bologna、Milan）、NYCU-Taiwan 於 7 月 27 日的 Taiwan iGEMers Meet-Up、Labi-Taiwan 於 8 月 22 日在台灣大學舉辦的 TGEM、8 月 16 至 19 日在 SUSTech 與香港大學舉行的 Grand APiC、ETH-Zurich 為五支隊伍合辦的 Swiss iGEM Meetup、Baltimore 參加的九隊 Mid-Atlantic Meetup，以及 TAU-Israel 八隊的線上 Mini-Jamboree。再往下才是大學隊伍對中學隊伍的指導、跨隊共同著作、同儕審查，以及一長串海報牆與播客客座。
+
+若以「第三方能不能拿去用」來篩選，清單立刻變短。**能通過陌生人檢驗的**：由 JLU-FBH 擔任主編、彙整 17 支以上隊伍投稿的破除迷思手冊《Together with iGEM: Across Villages, From Myths to Facts》；HBUT-China 與 ZJU-China、BNU-China、JLU-FBH、ZJUT-China 合寫的五校抗腫瘤專案聯合生物安全手冊，以 PDF 公開，並因五隊載體不同而刻意設計成可區分的風險評估流程；SJTU-BioX-Shanghai 參與的跨隊教育活動手冊，他們負責第 7 部分；由 Maastricht 營運的同儕審查期刊 MSP Vector，Madrid-UCM 在其中審了三支隊伍的論文，Stockholm 投了一篇文獻回顧並參與審查；McGill 的 BIOME Book，NYCU-Taiwan 提供 LbCas12a 條目的文字與概念、McGill 負責繪圖；以及 KCIS-Xiugang-Taipei 與 HKSSC 把中心法則一分為二做成兩套實體教具——8 月 20 日與 9 月 19 日兩次線上規劃會議、以共用 Google Drive 交換原型，然後各自針對自己的受眾改編：KCIS 把 HKSSC 的平面不織布轉譯框架重做成帶有 E、P、A 位點凹槽的立體觸覺盒，給台北啟明學校的七名學生使用。**通不過的**：破冰遊戲、疊疊樂、沙包投擲、社群佈告欄、「我們和其他隊伍交換了想法」。NYCU-Taiwan 自己在 wiki 上就把話說破了：把活動記錄下來，本身並不能證明它的長期影響。
+
+2026 年最大的缺口在技術面。**106 支隊伍中沒有任何一支跑過跨實驗室量測環**——也就是同一個構築體或樣本由數支隊伍在各自儀器上量測，並公布實驗室之間的差異。最接近的一次，結果是零。後來拿下大專組 Best Software Tool 與 Best Wiki 的 Uni-Padua-IT 在軟體頁上寫道：*「2026 年 8 月 9 日，我們發出一份公開的合作邀請，希望有人協助驗證這個軟體，並用兩種真的能觸及到人的管道發布：我們的社群媒體，以及直接寄給其他 iGEM 隊伍。條件很簡單：告訴我們你的宿主，我們幫你最佳化一條序列再寄回去。可惜的是，我們沒有收到任何回覆。」* 這個群體裡唯一真正的獨立重現來自 iGEM 之外——四名 Hanyang University 的機械工程系學生，僅憑公開文件就重建了 PSI Korea 的判讀器——或是跨年度的：HongKong-HS 用 Wageningen 2024 年釋出的 miRADAR 產生 toehold 候選序列，Mingdao 則在 34 °C、Bis-Tris pH 6.4 的條件下重新表徵 cenA 這條零件血脈（Edinburgh 2008、CAU_China 2019、XMU-China 2019、SYSU-CHINA 2021），而不是沿用標準的 50 °C 酸性條件。至於兩支 2026 年隊伍之間真正的零件或樣本交換：基本上不存在。
+
+**那合作和名次有關嗎？老實說，沒有。** 把 106 份檔案分成三類——實質共同產出（S，n = 48）、僅出席或露臉（A，n = 21）、沒有任何記錄（N，n = 37）——Top 10 的比例分別是 14/48（29%）、10/21（48%）與 6/37（16%）；至少拿下一項大獎的比例是 29/48（60%）、10/21（48%）與 15/37（41%）。「實質合作勝過單純出席」這個假設方向是反的，而且不顯著（Fisher 精確檢定 p = 0.17）。唯一還有點訊號的是最粗的對比——有任何跨隊記錄者 24/69 進 Top 10，對上完全沒有的 6/37——但 p = 0.069，最多只能說有暗示，而且還被一個事實干擾：寫得多的隊伍本來就得獎得多。整個網路裡兩個最大的連結點，辦了 European Meet-Up 與大約 37 隊經手的 Community Blackboard 的 Bielefeld-CeBiTec，以及主編 17 隊手冊的 JLU-FBH，各自只拿到一面金牌，別無其他。**只有一個獎項真的相關，而那個獎是其他隊伍投出來的。** 2026 年兩座 iGEMers Prize 都落在各自組別中社群建設記錄最完整的隊伍：主辦 15 隊論壇並為另外兩隊的出版品撰稿的 HUST-China，以及營運 TGEM 的 Labi-Taiwan。2026 年評審沒有獎勵合作，同儕有。
+
+台灣辦了**兩場**全國性活動，而 GEMS-Taiwan 兩場都不在。NYCU-Taiwan 於 7 月 27 日在博愛校區賢齊廳舉辦 2026 Taiwan iGEMers Meet-Up：53 名學生與指導老師、五支台灣隊伍（NYCU-Taiwan、HIA-Taiwan、NCKU-Tainan、VIS、WIST）外加線上參與的 Okinawa、四項破冰活動、五個圓桌主題、兩位講者、五場十五分鐘的模擬簡報，以及真正重要的那一項——把圓桌便利貼整理成一份 iGEM Team Operations Guide，並公開籌備 SOP、報名表單範本與議程，供未來的主辦者沿用。Labi-Taiwan 則於 8 月 22 日在台灣大學博雅教學館舉辦第四屆 TGEM，與台大生化科技學系合辦：模擬競賽採五分鐘簡報加二十分鐘由教授、PI 與業界評審提問的形式。TGEM 自 2023 年起每年舉辦，由康橋國際學校林口校區創立，也就是 Labi-Taiwan 自己的前身。2026 年具名的參與隊伍包括 NTHU Taiwan、Claremont CA、AEI Prep-Taiwan 與 KCIS-Xiugang-Taipei。NCKU-Tainan 是記錄上最忙碌的台灣夥伴：3 月 7 日指導 Mingdao、7 月的 NYCU 聚會、9 月 17 日與 WIST 的完整線上交流（涵蓋濕式實驗瓶頸與乾式建模比較）、9 月 19 日與 CCU-Taiwan、9 月 20 日與 HIA-Taiwan，以及 10 月 8 日和 NTHU 一起參加 TAU-Israel 的八隊 Mini-Jamboree。**GEMS-Taiwan 沒有 /collaborations 頁、沒有 /partnership 頁，整個 wiki 上也沒有提到任何一支其他 iGEM 隊伍。** 它唯一列出的「夥伴隊伍」是 Geospatial Analysis，那是隊內的分組。
+
+最後對證據本身提一個警告。**2026 年的合作宣稱經常只有單方面記錄。** NCKU-Tainan 詳述了三月指導 Mingdao、九月與 WIST 的技術交流；Mingdao 與 WIST 的 wiki 都沒提到 NCKU-Tainan。ASIJ-Tokyo 把 KCIS Xiugang 列入八支夥伴隊伍；KCIS-Xiugang-Taipei 的合作頁只寫了 HKSSC。NYCU-Taiwan 把 WIST 列為聚會出席者；WIST 的頁面沒提這場活動。當一項宣稱只出現在其中一方的 wiki 上，合作通常是真的，單方面的是記錄——而這本身就是教訓：寫下來的那一方拿到功勞，也拿到那個可重複使用的成果；沒寫的那一方只拿到照片。
+
+### NYCU-Taiwan 的 Taiwan iGEMers Meet-Up
+53 名學生與指導老師，來自五支台灣隊伍——NYCU-Taiwan、HIA-Taiwan、NCKU-Tainan、VIS 與 WIST——地點在博愛校區賢齊廳，Okinawa 以線上方式成為第六隊。四項破冰活動、五個圓桌主題、兩位講者、五場十五分鐘模擬簡報。可重複使用的成果是從圓桌便利貼整理出的 iGEM Team Operations Guide，加上公開給未來主辦者的籌備 SOP、報名表單範本與活動議程。NYCU 是先親自飛去沖繩才連上 Okinawa 的。HIA-Taiwan 另外在 7 月 21 日與 NYCU 做了一場雙邊交流並做了問卷：73.3% 的參與者對另一隊專案的理解程度自評 4 或 5 分。
+
+### TGEM，第四屆台灣 iGEM 聚會
+由 Labi-Taiwan 在台灣大學博雅教學館主辦，與台大生化科技學系合辦。形式為五分鐘專案概述，接著二十分鐘由教授、計畫主持人、業界專業人士與指導老師提問，之後是十分鐘的 village 簡報。自 2023 年起每年舉辦，由康橋國際學校林口校區創立——也就是 Labi-Taiwan 自己的前身，曾以 Taipei-KCISLK V1 至 V3 參賽。2026 年具名的參與隊伍包括 NTHU Taiwan、Claremont CA、AEI Prep-Taiwan 與 KCIS-Xiugang-Taipei，後者的 wiki 完整記錄了評審問答，以及因此促成的四項工程修正。Labi-Taiwan 拿下高中組由各隊互投的 iGEMers Prize。
+
+### 沒有人回覆 Uni-Padua
+2026 年 8 月 9 日，Uni-Padua-IT 發出公開邀請，提議用 ReTIsigner 替任何隊伍針對其宿主做密碼子最佳化並把結果寄回，透過社群媒體與直接聯繫其他 iGEM 隊伍兩種管道發布。他們沒有收到任何回覆，並把這件事寫在 wiki 上。即便如此，他們仍拿下大專組 Best Software Tool 與 Best Wiki。把這件事和「106 支得獎隊伍中沒有任何一支跑過跨實驗室量測環」放在一起看，結論是：2026 年的網路輸送了人和投影片，卻幾乎沒有輸送試劑、構築體或量測數據。
+
+### KCIS-Xiugang-Taipei × HKSSC
+兩次線上規劃會議，8 月 20 日與 9 月 19 日。兩隊把中心法則一分為二：KCIS 做出一條依序推進的樂高軌道，呈現轉錄與基因調控；HKSSC 做出帶有 E、P、A 位點凹槽的 mRNA 轉譯模型。原型以照片與影片記錄，透過共用的 Google Drive 交換，然後各自投入自己的受眾——HKSSC 用於香港校內的一般科學教學，KCIS 則把 HKSSC 的平面不織布框架重做成立體觸覺盒，以毛根代表 tRNA、保麗龍球代表胺基酸，給台北啟明學校的七名學生使用。KCIS 也寫出了限制：N = 7、沒有前測、七人中有四人覺得觸覺標記有幫助。這是 2026 年唯一一項與台灣有關、並產出兩隊都能繼續傳下去的實體成果的合作。
+
+### HUST-China：十五支隊伍、一場論壇、一座同儕獎
+2026 年 7 月 12 日，HUST-China 獨力在啟明學院創客空間舉辦第一屆華中 iGEM 論壇，刻意複製 Jamboree 本身的架構——開幕致詞、主題演講、LiveStage 時段、評審評論環節與海報攤位——共 15 支線上與線下隊伍參與，其中 14 支依序報告並收到具體評論。之後他們為 JLU-FBH 統整的 17 隊破除迷思手冊獨立撰寫了一則完整條目，也為 BUCT 的「空氣變蛋白」科普出版品提供專業內容，經互審後刊在 BUCT 的 wiki 上。他們拿下各隊互投的 iGEMers Prize。2026 年另一座 iGEMers Prize 在高中組，得主是營運 TGEM 的 Labi-Taiwan。兩座全中：由其他隊伍投票的獎項，落在兩個最大的社群建設者身上。
+
+### Bielefeld-CeBiTec、JLU-FBH、Lund、Okinawa
+撐起 2026 年這張網的隊伍並沒有因此得到回報。Bielefeld-CeBiTec（6221）與人合辦 5 月 15 至 17 日在 Hamburg 的 BFH European Meet-Up，以及大約 37 隊經手的 Community Blackboard：金牌加一項 Safety and Security 入圍。JLU-FBH（6056），17 支以上隊伍投稿的那本手冊的主編：金牌，沒有別的。BUCT（6055），與 HUST-China 共同產出：金牌，沒有別的。NAU-CHINA（6419），推動全國性 ICII 計畫、而 HUST 明言借用其邏輯：金牌加一項零件入圍。Lund（6160），其播客 The Sequence 收錄約十二支隊伍、包含 NYCU-Taiwan：銀牌。Okinawa（6155），唯一參加台灣聚會的日本隊伍：完全沒有獎牌。以上逐隊比對 api.igem.org 查證。
+
+### 零連結，三項大獎
+GEMS-Taiwan 沒有 /collaborations 頁，也沒有 /partnership 頁——兩者都回傳 404——整個 wiki 上也沒有具名提到任何其他 iGEM 隊伍。它唯一列出的夥伴隊伍 Geospatial Analysis 是隊內分組。它沒有出現在任何其他台灣隊伍的合作頁上：NYCU-Taiwan 沒有、NCKU-Tainan 沒有、KCIS-Xiugang-Taipei 沒有，也不在 Labi-Taiwan 的 TGEM 具名隊伍之列。它仍然拿下高中組 Top 10，以及最佳量測、最佳硬體與最佳整合式人類實踐三項大獎。這件事要講白：2026 年合作並沒有換來名次，GEMS 就是證明。建立網路的理由不是獎牌——而是 GEMS 現在沒有地方可以寄出一個構築體，也沒有人可以幫它驗證數字。
+
+**檢查清單**
+
+- 2027 年 3 月——GEMS 的人類實踐負責人寄信給 Labi-Taiwan 與台大生化科技學系，報名 TGEM 2027。TGEM 自 2023 年起每年八月舉辦，地點在台北，GEMS 本來就在台北；2026 年的形式是五分鐘簡報加二十分鐘由教授與業界提問。爭取高中組的名額，並在同一封信裡提議用 Best Measurement 的成果開一場三十分鐘的量測工作坊。
+- 2027 年 4 月——寄信給 NYCU-Taiwan。他們公開了聚會的籌備 SOP、報名表單範本與活動議程，明言供未來主辦者沿用，也在自己的 wiki 上寫下次想要的是一份合作意向表單而不是一張海報。就照他們說的做：提議在台北共同主辦 2027 年的 Taiwan iGEMers Meet-Up，或在他們的場次裡負責量測單元。
+- 2027 年 5 月——提出 2026 年沒有任何人做過的跨實驗室量測環。同時寫給四支具名隊伍：NCKU-Tainan 6379（Best Hardware 入圍、US$54-161 的 CAPTURE-Screen 螢光判讀器，也是台灣記錄上最忙碌的技術夥伴）、NTHU 6460（四通道頻率標記判讀器，採數位鎖相偵測）、Labi-Taiwan 6511（Best Measurement 入圍、可攜式電化學判讀器），以及 Mingdao 6105，台灣唯一已經在新條件下重新表徵過別隊零件的隊伍。提案要具體：GEMS 寄出一個經校正的參考構築體與光度計操作流程，各隊在自己的儀器上量測，實驗室之間的差異共同發表。
+- 2027 年 5 月——在任何一隊答應之前，先把量測環的流程放上 GEMS wiki，做成有日期、有版本的頁面，附校正曲線、接受標準與原始資料範本。Uni-Padua-IT 的公開邀請失敗時什麼也沒附；一份帶著完成的流程與寄送計畫送到的邀請，是完全不同的東西。
+- 2027 年 6 月——跨境嘗試就照 KCIS-Xiugang-Taipei 與 HKSSC 的做法複製，因為那是 2026 年台灣記錄中唯一產出共同成果的方法：兩次相隔六週的既定線上規劃會議、講好的分工、透過共用雲端硬碟交換原型，然後各自針對自己的受眾改編。對象可以是 HKSSC 6053（高中組 Top 10、Best New Basic Part 得主，已在 APiC 與 iGBA 社群內），或 ASIJ-Tokyo 6338，他們與八個國家的八支隊伍合辦活動，而且已經有一條通往台灣的線。
+- 2027 年 7 月——寫信給 Okinawa 6155 與 HG-Tokyo 6352。Okinawa 是在 NYCU 親自飛去之後才線上參加台灣聚會的，2026 年沒有拿到任何獎牌；HG-Tokyo 主辦 UTokyo、TUS、Waseda、Keio、Oakridge 與 ASIJ 參加的日本聚會。兩者都連得上，也都有 GEMS 能回應的需求。
+- 2027 年 8 月——報名 Grand APiC。第一屆亞太合成生物學青年大會於 2026 年 8 月 16 至 19 日在 SUSTech 與香港大學舉行；Peking 在該場拿下 Best Project，HKSSC 與 HKU-HongKong 都在 APiC 與 iGBA 社群裡。這是台灣的高中研究中心不需要任何單一隊伍邀請就能進入的區域傘狀組織。
+- 全程——把 /collaborations 做成一個有日期、有具名對象、有產出的頁面，不是相簿。並且建立互惠規則：每一次交流，在會議結束前就講好雙方 wiki 各留一段記錄。2026 年 NCKU-Tainan、ASIJ-Tokyo 與 NYCU-Taiwan 都寫下了夥伴，而那些夥伴自己的 wiki 卻一片沉默；寫下來的那一方，留住了功勞，也留住了那個可重複使用的成果。
+
+_方法與限制。 第一輪在本機進行：對 research/teams/ 下全部 106 份隊伍研究檔案做合作訊號的 grep（collaborat、meet-up、meetup、partner、exchange、inter-lab、interlab、conference、mentor、jointly、shared、co-hosted、iGEM team、other teams），在 74 份檔案中找到命中，並另外抽出所有具名提及 iGEM 隊伍或聚會的 good.partners[] 條目。這種做法看不到一支隊伍做了卻沒寫下來的合作，而且確實有漏：NCKU-Tainan 的檔案完全沒有合作訊號，但它的 wiki 上有五場標了日期的交流。因此，相關性分析背後的分類（S = 實質共同產出，n = 48；A = 僅出席或露臉，n = 21；N = 沒有記錄，n = 37）是一個「記錄」的代理指標，不是行為普查；所報的 Fisher 精確檢定為雙尾。名單與所有引用的獎項都取自 iGEM 的公開 API——api.igem.org/v1/teams?year=2026 取得分 24 頁的全部 463 筆報名，以及 api.igem.org/v1/teams/<id>/awards 取得個別隊伍的獎項，包括 Bielefeld-CeBiTec 6221、JLU-FBH 6056、BUCT 6055、NAU-CHINA 6419、Lund 6160、Okinawa 6155 與 Claremont CA 6317——而不是任何手寫清單。Wiki 查證涵蓋 131 個隊伍網址的 /collaborations、/collaboration、/partnership、/partnerships、/collaborations-and-partnerships、/collaboration-partnership 與 /public-outreach-and-collaboration：917 個網址中有 568 個回傳 404，其餘不少是用戶端渲染的單頁應用，任何路徑都回傳 HTTP 200，因此 Labi-Taiwan、CCU-Taiwan 與 Uni-Padua-IT 改用瀏覽器讀取，而 NYCU-Taiwan、NCKU-Tainan、KCIS-Xiugang-Taipei、Squirrel-Beijing 等則直接讀取。GEMS-Taiwan 的缺席是正面查證過的：/collaborations、/collaboration 與 /partnership 全部回傳 404，而其 human-practices、education 與 contribution 頁面都沒有具名提到任何其他 iGEM 隊伍。互惠性做了雙向抽查，三項單方面宣稱以發現的形式寫入。頁面讀取日期為 2026 年 11 月 19 日。_
 
 
 # 路線圖

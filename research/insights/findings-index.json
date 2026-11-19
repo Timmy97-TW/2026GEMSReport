@@ -62,11 +62,11 @@
    "kicker_zh": "人類實踐",
    "title": "The loops that closed were closed by experts, not by publics",
    "title_zh": "真正閉合的迴圈，是專家閉合的，不是公眾",
-   "body": "Of 93 decorated teams, 64 can point at a stakeholder who visibly changed the design. But almost every one of those stakeholders was a credentialled technical expert. The publics, patients and communities the criterion is rhetorically about changed the vocabulary and not the vector, with six or seven exceptions in 93.",
-   "body_zh": "在 93 支獲獎隊伍中，有 64 支能指出一位明顯改變了設計的利害關係人。但這些利害關係人幾乎全是具備專業資格的技術專家。這個評審標準修辭上所指向的公眾、病人與社群，改變的是詞彙而不是方向——93 支中只有六、七個例外。",
+   "body": "Of all 106 decorated teams, **71** can point at a stakeholder who visibly changed the design. But almost every one of those stakeholders was a credentialled technical expert. The publics, patients and communities the criterion is rhetorically about changed the vocabulary and not the vector, with **nine or ten exceptions in 106**. (The first pass scored 93 files and found 64 and six-to-seven; the figures here are the recount on the closed set.)",
+   "body_zh": "在全部 106 支獲獎隊伍中，有 **71** 支能指出一位明顯改變了設計的利害關係人。但這些利害關係人幾乎全是具備專業資格的技術專家。這個評審標準修辭上所指向的公眾、病人與社群，改變的是詞彙而不是方向——**106 支中只有九到十個例外**。（第一輪評的是 93 份檔案，得到 64 支與六到七個例外；這裡的數字是集合封閉後的重算。）",
    "chips": [
-    "64 of 93",
-    "6–7 exceptions"
+    "71 of 106",
+    "9–10 exceptions"
    ],
    "link": "good"
   },

@@ -27,9 +27,11 @@ Ten original cross-team analyses sit on the site. The short version:
 - **8 of 21 award-winning software tools are still usable.** Every live one was hosted on wiki-freeze day;
   every source-only tool's wiki lists localhost as its only address. Stars and forks across every repository
   checked: zero.
-- **The loops that closed were closed by experts.** Of 93 decorated teams, 64 can point at a stakeholder who
-  visibly changed the design — but almost every one of those stakeholders was a credentialled technical
-  expert, with six or seven exceptions in 93.
+- **The loops that closed were closed by experts.** Of all 106 decorated teams, 71 can point at a stakeholder
+  who visibly changed the design — but almost every one of those stakeholders was a credentialled technical
+  expert, with nine or ten exceptions in 106. The split is not medical against agricultural: it is platform
+  against applied. Across Foundational Advance, Space, Software & AI and Biomanufacturing, 2 of 26 teams
+  closed a design loop at all, against 14 of 45 in the applied villages.
 - **The credible commercial sections published a model showing their own product losing** —
   Worldshaper-Shanghai's negative NPV, DTU-Denmark's LCA, Stockholm dismantling its venture when the safety
   board killed open-water release.
