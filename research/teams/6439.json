@@ -1,0 +1,68 @@
+{
+  "team": "NFLSHS-CHINA",
+  "id": "6439",
+  "section": "High School",
+  "country": "China",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/nflshs-china/",
+  "projectTitle": "CroTeen",
+  "tagline": "Microbial crocetin: a controllable cell-factory supplement to saffron farming, taken all the way to B2B ingredient specs",
+  "summary": "NFLSHS-China built a fully heterologous crocetin pathway in E. coli (idi, CrtE, CrtB, CrtI, CrtY, CrtZ upstream to zeaxanthin; CsCCD2 plus Neurospora crassa NcALD downstream to free crocetin), then re-engineered it after wet-lab failure from a two-plasmid system into a single-plasmid, two-T7-cassette construct (pET-Ds-Cro) for strain stability under scale-up. They used AlphaFold3, PrankWeb and CB-Dock2 to guide semi-rational mutagenesis of the rate-limiting CsCCD2 enzyme, with the N366G mutant giving a 1.13-fold yield increase confirmed by HPLC. The commercial side is unusually disciplined for a high-school team: a named B2B beachhead, a filed and accepted patent application on the CsCCD2 mutant, two physical MVPs with full formula tables, and an explicit separation of what is designed from what is still unvalidated. They won Best Entrepreneurship and Best Presentation in the High School section.",
+  "awards": [
+    "Best Entrepreneurship, High School (winner)",
+    "Best Presentation, High School (winner)"
+  ],
+  "dry": {
+    "frameworks": "Lean Canvas (problem, solution, UVP, key metrics, customer segments, channels, unfair advantage, cost structure, revenue streams), TAM-SAM-SOM with an explicit refusal to take a percentage of the macro market, SWOT, a risk-assessment matrix, a stage-gated Gantt chart from 2026 to 2032, three named exit options, and Techno-Economic Analysis plus Life Cycle Assessment named as future obligations.",
+    "dataviz": "Nineteen numbered entrepreneurship figures: pathway maps for the two-plasmid and single-plasmid constructs, the biomanufacturing-to-application three-stage chain, a capability-gap table, a partnership-network map with a disclaimer about which relationships are confirmed, a risk matrix, a SWOT quadrant and an SDG panel. HPLC chromatograms carry the quantitative claims.",
+    "datascience": "HPLC quantification of crocetin as the core analytical readout; mutant screening comparing predicted variants against measured titre (N366G at 1.13x). No fermentation kinetics model or cost model with numbers.",
+    "software": "",
+    "stack": ["AlphaFold3", "PrankWeb", "CB-Dock2", "HPLC", "pET-Duet-1 backbone", "E. coli BL21(DE3)", "E. coli DH5-alpha"],
+    "techniques": ["heterologous carotenoid pathway assembly", "single-plasmid multi-cassette expression with RBS re-tuning", "semi-rational enzyme engineering from binding-pocket prediction", "site-directed mutagenesis", "vacuum freeze-drying and bead-beating extraction", "soft-capsule and essence-oil formulation"]
+  },
+  "good": {
+    "publicEngagement": "An online survey plus street interviews run 12-17 March 2026 across mixed demographics found over 60 percent of respondents had never heard of crocetin and routinely confused it with crocin, and that over 40 percent would pay only 5-10 RMB per day for a mood-soothing product. That cognitive gap triggered a dedicated education page and a Xiaohongshu (Rednote) account translating biosynthesis into public infographics. They also presented at the 10th iSCRM and the 1st Grand APiC conference, and built peer resources after hearing that team members elsewhere felt unsure their assigned role mattered.",
+    "ihp": "Five explicitly staged iHP phases, each written as motivation, action and integration, with dates and named interlocutors. Phase I traced the supply chain to source: an online interview with Iranian saffron grower Ali Norouzi (17 March) produced concrete constraints (15-20 day harvest window, 1-2 g dried saffron per person per day, water shortage, currency volatility), and visits to Daofengtang Rende TCM Clinic and chain pharmacies produced a real price point of 60-90 RMB per gram and the observation that pharmacies barely stock it. Phase II is the strongest: after near-zero crocetin yield on 12 May, Dr Huang Danqiong diagnosed metabolic burden and plasmid instability and told them to collapse to a single plasmid, which they did; Prof Huang Guanqin then reviewed the single-plasmid circuit against scale-up cost on 20 June; Fapon's technical director on 22 July pushed them off blind screening onto AI-guided rational design. Phase III used Associate Professor Li Chenyang twice to kill an unstable aqueous formulation on physicochemical grounds and pick the oil and capsule routes, and a perfumer, Ms Weng, taught the actual blending process. Phase IV took the business plan to Attorney Zhang on 17 September for NMPA/FDA classification, licensing and labelling risk, which changed their claims language across the wiki and social media. This is iHP that visibly rewrote both the construct and the marketing copy.",
+    "realWorld": "This is a real venture attempt, not a canvas exercise. The business model is specifically B2B-first: the beachhead is small-to-medium functional skincare brands and boutique cosmetic R&D labs, chosen because they have shorter decision cycles than multinationals, and the first deliverable is explicitly not a consumer product but standardised samples plus HPLC chromatograms to support a customer's own formulation prototyping. Market evidence is real but qualitative: interviews across the full chain (Iranian grower, TCM clinic and pharmacies, boutique formulators, Fapon, an iGEM-mentor founder, a lawyer), a public survey with reported percentages and a willingness-to-pay band, and a visit to Shenzhen University's fermentation facility. They refuse to multiply the roughly USD 2.0 billion TAM by a made-up share and instead say SOM must be computed from reachable R&D nodes times sample volume per test, which is the correct instinct even though they then do not finish the arithmetic. Hard assets exist: a patent application, Carotenoid Cleavage Dioxygenase 2 Mutant, Preparation Method and Application, filed and accepted, and two physical MVPs with published formula tables down to percentages (essence oil at 0.03 percent crocetin, 0.5 percent vitamin E in cold-pressed olive oil; capsule at 70 percent crocetin-olive oil, 15 percent L-theanine, 13 percent soy lecithin, 2 percent vitamin E). The regulatory path is credible and specific, naming NMPA and FDA classification, production and distribution licensing, and the prohibition on medical claims, with a consequence they actually implemented, standardising functional claims site-wide. The continuation plan is a stage-gated Gantt from 2026 lab validation through 2027 customer testing, 2028 CDMO pilot and 2029 B2B commercialisation to 2030-2032 international registration, where each gate has named prerequisite resources and a numeric-in-principle pass condition, plus three exit routes (trade sale to BASF, Givaudan or DSM-Firmenich; technology licensing with royalties; VC/PE buyout). What is genuinely missing is the money: there are no unit economics, no cost of goods, no price per gram, no funding raised, no registered entity and no incubator place, and the partnership map carries its own honest disclaimer that everything except university support and paid service relationships is a prospective contact rather than a formal agreement. They also list, in their own words, the data still absent before industrialisation, including yield, purity, recovery, batch consistency and pilot-scale mutant validation. Even the downside is faced squarely, including the possibility that fermentation's carbon footprint exceeds agriculture's and that cheap biomanufacturing could destroy saffron growers' livelihoods, for which they propose market segmentation that leaves the high-end plant premium alone.",
+    "partners": [
+      "Fapon (biotech company; technical director and business development; AI platform exposure and commercialisation advice)",
+      "Shenzhen University (Prof. Wang Chaogang, Prof. Huang Guanqin, Prof. Chen Weizhao; fermentation facility access)",
+      "Dr. Huang Danqiong (fermentation expert; diagnosed the two-plasmid failure)",
+      "Associate Professor Li Chenyang (formulation and safety screening)",
+      "Ali Norouzi (Iranian saffron grower and supplier)",
+      "Daofengtang Rende TCM Clinic and local chain pharmacies",
+      "Li Shiyuan (founder, Shanghai Transformant Information Technology Co.; iGEM mentor; technical evaluation)",
+      "Attorney Zhang (regulatory and IP legal review)",
+      "Ms. Weng (perfumer; essential-oil production process)"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6439/wiki/entrepreneurship8.avif",
+      "caption": "Patent application for the CsCCD2 mutant, filed and accepted, shown on the entrepreneurship page as the project's first hard IP asset",
+      "credit": "Team NFLSHS-CHINA, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6439/wiki/entrepreneurship10.avif",
+      "caption": "Stage-gated development plan from 2026 laboratory validation through 2029 B2B commercialisation to 2030-2032 international expansion",
+      "credit": "Team NFLSHS-CHINA, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6439/wiki/entrepreneurship9.avif",
+      "caption": "Business exit strategy: trade sale to an ingredient major, technology licensing with royalties, or VC/PE buyout",
+      "credit": "Team NFLSHS-CHINA, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6439/wiki/entrepreneurship17v2.avif",
+      "caption": "SWOT analysis supporting the B2B-first ingredient strategy",
+      "credit": "Team NFLSHS-CHINA, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Copy their honesty architecture: a 'Current Validation Status' block that splits completed designs from data still required, and a partnership map annotated to say which relationships are confirmed and which are merely prospective contacts. Pair it with their stage-gate habit, where each phase of the roadmap names its prerequisite resources and the single pass condition that unlocks the next phase, so a project cannot drift forward on enthusiasm.",
+  "sources": [
+    "https://2026.igem.wiki/nflshs-china/",
+    "https://2026.igem.wiki/nflshs-china/entrepreneurship/",
+    "https://2026.igem.wiki/nflshs-china/human-practices/",
+    "https://2026.igem.wiki/nflshs-china/product/"
+  ]
+}

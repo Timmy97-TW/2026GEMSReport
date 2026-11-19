@@ -1,0 +1,61 @@
+{
+  "team": "ICJFLS",
+  "id": "6098",
+  "section": "High School",
+  "country": "China",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/icjfls/",
+  "projectTitle": "ORA-GUARD",
+  "tagline": "An engineered oral probiotic that degrades the sulfur compounds causing halitosis instead of sterilising the mouth",
+  "summary": "ICJFLS engineered Streptococcus salivarius K12, a GRAS oral probiotic, to express a Sox enzyme cluster plus an MTO enzyme that catalytically degrade the volatile sulfur compounds (H2S, methanethiol, dimethyl sulfide) responsible for bad breath, positioning it as a Live Biotherapeutic Product rather than a mouthwash. Plasmid expression was abandoned after stability tests showed near-total plasmid loss within five days without selection, so the cassettes were moved into the chromosome by CRISPR-Cas9, and a four-layer biosafety system (D-alanine auxotrophy via alr knockout, a PcspA RNA-thermometer suicide switch, no antibiotic resistance markers) was added in direct response to public fear of live GMO bacteria. The entrepreneurship case is numerically specific, with per-dose cost, retail price, gross margin and a named contract manufacturer. They were nominated for Best Entrepreneurship in the High School section.",
+  "awards": ["Best Entrepreneurship nominee, High School"],
+  "dry": {
+    "frameworks": "TAM-SAM-SOM with figures carried through to a revenue target, Business Model Canvas, three-tier business model (B2C subscription, B2B2C through dental clinics, technology licensing), cost structure and pricing with gross margin, a capability gap analysis, a 2026-2035 development roadmap, a risk register, and a comparative regulatory table for LBPs across the US, EU and China. Seven named appendices are listed, including a five-year financial projection model and a patent landscape and IP strategy.",
+    "dataviz": "Twelve entrepreneurship figures plus six data tables: TAM/SAM/SOM breakdown, business model canvas, revenue projection chart, product-format panel, roadmap, capability-gap chart and the three-jurisdiction LBP regulatory comparison. Survey results are charted as public attitudes, concerns and information needs.",
+    "datascience": "A 745-response questionnaire analysed by age, gender and region, with roughly one third of respondents having experienced halitosis, and results segmented into pain points, safety concerns and information needs. In-vitro degradation efficiency in artificial saliva was benchmarked against purified enzymes. Plasmid-stability passaging produced the five-day loss figure that drove the architecture change.",
+    "software": "",
+    "stack": ["S. salivarius K12 chassis", "CRISPR-Cas9 genomic integration", "Sox enzyme gene cluster", "MTO enzyme", "PcspA RNA thermometer", "artificial saliva in-vitro system"],
+    "techniques": ["chromosomal integration instead of plasmid expression", "D-alanine auxotrophy by alr knockout", "temperature-inducible toxin kill switch", "VSC quantification in artificial saliva", "plasmid retention passaging assay"]
+  },
+  "good": {
+    "publicEngagement": "A 745-response online questionnaire spanning ages, genders and regions, surfacing the three questions the public actually asks about live engineered bacteria: will it get out of control in the body, will there be side effects, could it be transmitted to others. They then reported a finding most teams would bury, that patients care about what is in it for me and how it works rather than technical sophistication, and rewrote their communication from 'the technology is advanced' to 'it is safe and effective for you'. They also ran public education activities and attended CCIC, the Conference of China iGEMer Community.",
+    "ihp": "An explicit dialogue-reflection-iteration-redialogue loop with six documented stakeholder groups, and in each case the design consequence is named. Public fear turned a single safety mechanism into the four-layer defence system. Practising dentists and an oral microbiology researcher killed the original oral-capsule concept on the grounds that capsules have limited local effect in the mouth, which is what produced the mouthwash, lozenge, chewing gum and toothpaste format set and raised the priority on mucosal adhesion and colonisation. At CCIC, senior teams warned that gene editing in non-model organisms would be a bottleneck, so L. reuteri was adopted as a backup chassis, and they shared kill-switch leakage data that caused the team to drop a high-leakage design for the temperature-inducible one. A bioethics professor and a biosafety policy advisor are the reason plasmid expression was abandoned for CRISPR-Cas9 chromosomal integration and why genome-stability and animal toxicology studies were pre-planned.",
+    "realWorld": "This is a genuine business case with real numbers, and it is the unit economics that separate it from the typical canvas exercise. They state a production cost of roughly RMB 0.5 per dose for freeze-dried bacterial powder plus RMB 0.3 for packaging and filling, totalling about RMB 0.8 per dose falling to RMB 0.3-0.5 at volume; retail pricing of RMB 199 for a 30-dose mouthwash bottle and RMB 159 for a 30-tablet box; and a resulting gross margin of 70-80 percent benchmarked against high-end probiotics. The SOM is built bottom-up rather than taken as a share of the TAM: 100,000 halitosis sufferers at an average RMB 200 per month giving roughly RMB 20 million (about USD 2.8 million) in year one or two, through Tmall, JD.com, Douyin and dental-clinic channels. Market research is partly real and partly desk work: the 745-response questionnaire and dentist interviews are theirs, while the USD 13.44 billion global halitosis market and the RMB 77.9 billion China oral-care figure come from Insight Partners, Frost and Sullivan and similar reports. The competitive analysis is specific and fair, naming BLIS Technologies' BLIS K12 and correctly observing that its deodorising mechanism is indirect because it works through salivaricin bacteriocins, whereas ORA-GUARD catalytically destroys the VSC molecules. The regulatory analysis is the strongest part and is genuinely credible: they identify that NMPA's 2020 biological-products registration classification treats LBPs as therapeutic biological products containing microorganisms, note honestly that neither NMPA nor the FDA has yet issued complete LBP-specific technical guidance, and draw the correct strategic conclusion that this is both policy risk and a chance to help set the standard, with early regulator engagement as the stated tactic. Partners are named rather than implied: Shandong Bona Technology Group for probiotic fermentation and freeze-drying, with industrialisation discussions already begun, and Shijia Doctor Dental Hospital as a clinical and channel partner. Be blunt about the gaps, though. There is no registered company, no incubator place, no grant and no investor commitment; investment partners are described only as a category ('biotechnology VCs and oral care industry funds'). The IP position is weaker than it first reads: the strain construction strategy and genetic circuits are said to form technical barriers that are 'planned to be protected through patent applications', so nothing is filed. The revenue projection figure is labelled as internal estimates, and the appendices (five-year financial model, patent landscape) are listed as titles rather than linked documents, so the deepest financial work is asserted rather than shown. Continuation is a licensing-and-partnering intent rather than a funded plan, and an LBP approval route of that length will outlast any student team unless the Bona relationship becomes a formal transfer.",
+    "partners": [
+      "Shandong Bona Technology Group Co., Ltd. (probiotic fermentation, freeze-drying, technology transfer and industrialisation discussions)",
+      "Shijia Doctor Dental Hospital and dental clinics (clinical trials and channel)",
+      "Practising dentists and an oral microbiology researcher (dosage form and colonisation advice)",
+      "A bioethics professor and a biosafety policy advisor",
+      "CCIC (Conference of China iGEMer Community) experts and past award-winning teams",
+      "University synthetic biology laboratories"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6098/wiki/entrepre/fig-3-entrepre.avif",
+      "caption": "TAM, SAM and SOM analysis for ORA-GUARD, with the SOM built bottom-up from 100,000 target users at RMB 200 per month",
+      "credit": "Team ICJFLS, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6098/wiki/entrepre/fig-11-entrepre.avif",
+      "caption": "Comparative overview of Live Biotherapeutic Product regulatory pathways in the US, EU and China",
+      "credit": "Team ICJFLS, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6098/wiki/entrepre/fig-10-entrepre10.avif",
+      "caption": "ORA-GUARD development roadmap from 2026 proof of concept to 2035",
+      "credit": "Team ICJFLS, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6098/wiki/entrepre/fig-12-entrepre.avif",
+      "caption": "Gap analysis between current team capabilities and the capabilities needed to commercialise ORA-GUARD",
+      "credit": "Team ICJFLS, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Insist on three numbers before any market slide: cost per dose, price per unit and resulting gross margin, built from the actual process (freeze-drying plus fill-and-finish) rather than from a market-report percentage. And copy their SOM discipline, where the obtainable market is users times spend per user per month, not a fraction of a global TAM.",
+  "sources": [
+    "https://2026.igem.wiki/icjfls/",
+    "https://2026.igem.wiki/icjfls/entrepreneurship/",
+    "https://2026.igem.wiki/icjfls/human-practices/"
+  ]
+}

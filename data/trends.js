@@ -1,0 +1,1 @@
+window.TRENDS = {"academic":{},"industry":{}};

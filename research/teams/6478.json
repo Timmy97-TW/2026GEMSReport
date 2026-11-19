@@ -1,0 +1,66 @@
+{
+  "team": "Athens",
+  "id": "6478",
+  "section": "Overgrad",
+  "country": "Greece",
+  "village": "Conservation",
+  "wiki": "https://2026.igem.wiki/athens/",
+  "projectTitle": "ApiconIASIS",
+  "tagline": "Healing honeybees, sustaining pollinators: a precision phage-derived enzyme therapy for European Foulbrood",
+  "summary": "ApiconIASIS targets European Foulbrood (EFB), a statutory honeybee brood disease caused by Melissococcus plutonius for which the only legal response in most of Europe is burning the colony. The team mined 165 M. plutonius genomes for dormant prophages, ranked hundreds of candidate lysins and selected two enzymes (an endolysin and a GH25 muramidase), each built with and without a fused antimicrobial peptide, expressed and purified in E. coli. They showed roughly 40% loss of OD600 against M. plutonius (LMG 20360) with 50 ug/mL purified endolysin while producing no effect distinguishable from the untreated control against the bee-gut commensals Lactobacillus apis and Bombilactobacillus mellis, both Lactobacillales like the pathogen. It won because the whole chain is closed: a protein (not a replicating phage) delivered in brood food, three linked dry-lab models (protein optimisation, larval-gut pharmacokinetics, bioprocess scale-up), and an entrepreneurship case built on the cost of hive burning.",
+  "awards": [
+    "Overgrad Top 10",
+    "Best Entrepreneurship winner (Overgrad)",
+    "Best Conservation Project winner",
+    "Best Model nominee",
+    "Best Education nominee"
+  ],
+  "dry": {
+    "frameworks": "Three distinct model layers. (1) A semi-rational protein engineering cascade for the poorly soluble GH25 muramidase (Protein-Sol 0.411, below the 0.45 aggregation threshold, with inclusion bodies confirmed in the wet lab): a 40-residue 'freeze list' built from three independent evidence sources (structural role, ESM-2 650M evolutionary constraint, literature), validated by all-atom molecular dynamics (RMSF < 2 A), then ThermoMPNN point-mutation ddG scanning, an ESM-2 log-likelihood filter at -2.0 to drop family-implausible substitutions, NSGA-II multi-objective search via pymoo over the 17 surviving mutations, and ColabFold refolding as a final structural gate catching epistasis; AlphaFold pLDDT > 70 was a stated input requirement. (2) A deterministic single-compartment ODE pharmacokinetic model of the honeybee larval midgut treating the lumen as a sealed, expanding compartment and the pathogen as absolute cell number N, with an Emax saturating kill law fitted to in-vitro lysis data (phi_max ~ 0.006125 /min, KE ~ 0.633 ug/mL, R2 = 0.935). (3) A bioprocess flowsheet model of a medium-scale E. coli plant with a three-stage seed train (baffled shake flask, seed bioreactor, production fermenter under high-cell-density culture), solving for biomass and product mass per batch.",
+    "dataviz": "The wiki stages results as a narrative rather than a figure dump: the landing page counts down the disease (90% brood mortality, 36% of surveyed colonies carrying the bacterium with 72% of those looking healthy) before showing the funnel 165 genomes to hundreds of candidates to two enzymes to one lead, then flask to bioreactor to hive to landscape. The model section front-loads a one-sentence summary of each pipeline and marks P1-P4 as falsifiable predictions, with P4 flagged as the main untested exposure because binding selectivity was never an optimisation objective. The optimisation page carries a Venn diagram of the three freeze-list evidence sources, RMSF and DCCM plots from the MD run, an ESM-2 log-likelihood filter plot and the NSGA-II Pareto front.",
+    "datascience": "Biological measurements were converted into decision rules rather than descriptive statistics. A pH-plate experiment was decomposed into two separable effects: kill rate is essentially flat across the lumen band (pH 5.5-7.5) while stability is strongly pH-dependent (t_half ~140-280 h at pH 5.5-6.7, ~7 h at pH 4, ~12 h at pH 7.5), which showed the enzyme is about 30x more stable in the lumen than assumed and dropped the required food concentration about 31-fold, making dilution rather than degradation the dominant loss term. Because nurse bees feed roughly 4,300 times a day, delivery was modelled as a continuous infusion at quasi-steady state. Full sterilisation within 48 h holds only up to about 455 cells (a saturation, not a dose, limit; a 300-cell inoculum already needs 26.2 ug/mL against a larva-safe cap of 23 ug/mL), so the team switched to a 'recovery' criterion that raised the handleable inoculum by four to five orders of magnitude to about 10^7 cells. The model's stated output is a starting dose plus an exposure profile (peak concentration, AUC, dosing duration, clearance time) handed to the wet lab and to a companion toxicity model.",
+    "software": "ApiconIASIS: Bee Wanderer, a browser-based educational game built for the EU-CONEXUS Hackathon in plain JavaScript, HTML5 Canvas, CSS3 and Three.js with no game engine: a custom 2D platformer engine (requestAnimationFrame loop, AABB collision, sinusoidal moving platforms, parallax) in level-engine.js with per-level config files, plus an interactive WebGL globe using Three.js OrbitControls and raycasting for level selection across Athens, the Himalayas, Tanzania, Uganda and New Zealand. Collectibles map to biotech stages (DNA Pollen, Enzyme Drops, Purification Beads); progression persists in localStorage with no backend, and a Weather Station pulls live data from Open-Meteo and wttr.in. All dry-lab scripts are released at https://github.com/igemathens2026/iGEM-Athens-2026---Software-; the wiki repository is gitlab.igem.org/2026/athens.",
+    "stack": ["ESM-2 650M", "ThermoMPNN", "pymoo (NSGA-II)", "ColabFold", "AlphaFold", "Protein-Sol", "all-atom molecular dynamics (RMSF, DCCM)", "Python", "JavaScript / HTML5 Canvas", "Three.js / WebGL", "Open-Meteo API", "wttr.in API", "GitHub", "GitLab"],
+    "techniques": ["multi-objective Pareto optimisation (NSGA-II)", "protein language model constraint profiling", "hard-constraint freeze lists from multi-source evidence", "ddG stability scanning", "structural validation gate (refolding)", "single-compartment ODE pharmacokinetics", "Emax saturating kill-law fitting", "prophage mining across 165 genomes", "bioprocess flowsheet simulation", "seed-train scale-up modelling"]
+  },
+  "good": {
+    "publicEngagement": "Education was run as a programme rather than a set of visits, across age groups and education levels, and deliberately bilingual (every pamphlet and deck in English and Greek). At NTUA Open Days (17 March 2026) they reached over 100 STEM-track candidates at an engineering school where students have largely dropped biology, pairing an interactive presentation on industrial biotechnology and its ethical framework with a tour of the Laboratory of Biotechnology and Industrial Biocatalysis; the team recorded that the students were most engaged by ethics, and built that framing into every later event. The portfolio also includes a multi-day summer programme at Villa Aimilia (design-a-microbe, strawberry DNA extraction, bees-leaves-cells), Second Chance Schools in Peristeri and Piraeus for adult learners, the 4th Panhellenic Synthetic Biology Riddle Competition, ChemExpo, the Pasteur institute and iGEM Fest. The Bee Wanderer game extends the same material into a free browser format.",
+    "ihp": "The human practices page is written as a ledger of what the project gave up. Two requirements came from beekeeping, not from the team, and now define success: the protein must reach the brood, and it must survive the larval gut. Delivery was moved from spray to feed because adjuvant surfactants are documented to harm bees and because the person holding the sprayer inhales it; protective equipment therefore appears in the protocols, not in the product. They chose a purified non-replicating enzyme over a live phage knowing it is weaker and more expensive, because a protein cannot spread, establish or transfer genes. They counter-screened against Lactobacillus apis and Bombilactobacillus mellis, the closest relatives of the pathogen in the hive, instead of easier distant organisms, and they used a reduced-virulence M. plutonius lineage although a virulent strain was available, accepting a weaker efficacy claim. Advisor Anastasis Galanis and beekeeper Peter Kasztelewicz (whose own hive footage is on the wiki) shaped these choices while they were being made; Peter's gentler methods, requeening and partial clean-out, are what motivated the feed route.",
+    "realWorld": "ApiconIASIS is positioned as the first target-specific sustainable EFB treatment, with the value proposition pinned to a quantified loss: quarantine and hive burning halt honey production for about eight weeks on top of the destroyed colony. Unlike antibiotics (not authorised in the EU, and resistance-breeding where used) or fungal extracts, the enzyme is argued to leave the bee microbiome intact and to leave no residue in honey, preserving market value. The business plan carries a pitch deck and an investor one-pager; the entrepreneurial analysis includes a customer map built from interviews with commercial beekeeping companies and individual beekeepers, and the scale-up model gives the costing basis (105 L final working volume, 51.62 g/L maximum biomass, 2.55 g product per batch) with the explicit target of pricing below the financial loss of hive burning so that no beekeeper is excluded.",
+    "partners": ["Peter Kasztelewicz ('Beeman'), beekeeper, UK", "Anastasis Galanis (team advisor)", "National Technical University of Athens, School of Chemical Engineering (Prof. E. Topakas)", "Laboratory of Biotechnology and Industrial Biocatalysis, NTUA", "EU-CONEXUS Hackathon", "TechnosetBee", "Greek beekeeping associations", "Villa Aimilia summer programme", "Second Chance Schools, Peristeri and Piraeus", "Hellenic Pasteur Institute", "Twist Bioscience", "SnapGene"]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6478/wiki/optimization/fig7-pareto.avif",
+      "caption": "Pareto front from the NSGA-II search over the 17 mutable positions, trading predicted solubility against thermostability (ddG) for the GH25 muramidase; variants A, B and C were selected along this front.",
+      "credit": "Team Athens, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6478/wiki/optimization/venn-freeze.avif",
+      "caption": "Venn diagram of the three independent evidence sources (structural role, ESM-2 evolutionary constraint, literature) used to build the 40-residue freeze list; a position was frozen only if at least two sources agreed.",
+      "credit": "Team Athens, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6478/wiki/optimization/fig6a-rmsf.avif",
+      "caption": "Root-mean-square fluctuation from the all-atom MD run, confirming that the frozen residues are genuinely rigid (RMSF below 2 A) and turning the freeze list from a heuristic into a tested claim.",
+      "credit": "Team Athens, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6478/wiki/education/day2-strawberry-dna-villa-aimilia.avif",
+      "caption": "Strawberry DNA extraction with children at the Villa Aimilia summer programme, day two of a hands-on sequence that began with design-a-microbe and ended with bees, leaves and cells.",
+      "credit": "Team Athens, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Copy the freeze-list discipline: before optimising anything, lock the residues (or variables) that at least two independent lines of evidence call functional, then prove the lock with a simulation, and only then search aggressively over what is left; it converts a student ML pipeline into a defensible claim. Equally transferable is Athens' habit of writing down what each stakeholder conversation cost them (spray to feed, phage to enzyme, virulent to weak strain), which is far more persuasive to judges than a list of meetings.",
+  "sources": [
+    "https://2026.igem.wiki/athens/",
+    "https://2026.igem.wiki/athens/model",
+    "https://2026.igem.wiki/athens/model/in-silico-optimization",
+    "https://2026.igem.wiki/athens/model/pharmacokinetics-model",
+    "https://2026.igem.wiki/athens/model/software",
+    "https://2026.igem.wiki/athens/human-practices",
+    "https://2026.igem.wiki/athens/education",
+    "https://2026.igem.wiki/athens/entrepreneurship",
+    "https://2026.igem.wiki/athens/entrepreneurship/business-plan"
+  ]
+}

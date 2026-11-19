@@ -1,0 +1,119 @@
+{
+  "team": "Princeton",
+  "id": "6295",
+  "section": "Undergrad",
+  "country": "United States",
+  "village": "Foundational Advance",
+  "wiki": "https://2026.igem.wiki/princeton/",
+  "projectTitle": "SymPleco: Making Precision Sequestration Sym-ple",
+  "tagline": "One M13 phage chassis, any cargo — bulk-capacity adsorption with antibody-grade specificity and light-triggered release.",
+  "summary": "SymPleco attacks a trade-off that runs through all remediation chemistry: activated carbon captures a lot but cannot tell similar molecules apart, while monoclonal antibodies bind precisely but need harsh pH or chaotropic salts to release and cannot be recovered or scaled. Princeton's answer is a filamentous M13 bacteriophage used as a programmable adsorbent: sortase A-mediated ligation staples engineered fusion proteins onto the N-terminus of every pVIII copy (making 'furry' phage that bypass classical display size limits), with pIII carrying a Cg-Defensin anchor for PLA filter attachment, a VHH7 nanobody for macrophage clearance, and an AsLOV2 optomonobody that holds cargo in the dark and lets go under 450 nm light. Because swapping the target means swapping only the displayed binder, the team paired it with SymPlify, a de novo binder design pipeline, so a new target does not wait on a new antibody. It won on foundational-advance logic: a genuinely modular chassis demonstrated across three deliberately unrelated applications (melanoma exosome sequestration, Parkinson's alpha-synuclein interception, microcystin/BPA water remediation), backed by an unusually self-critical ODE model and an IRB-approved patient engagement programme."
+,
+  "awards": [
+    "Undergrad Top 10",
+    "2nd Runner-up Grand Prize (Undergrad)",
+    "Best Foundational Advance Project winner (Undergrad)",
+    "Nominee, Best Part Collection",
+    "Nominee, Best Measurement"
+  ],
+  "dry": {
+    "frameworks": "Two distinct computational efforts. SymPlify is a de novo protein binder design pipeline that routes a target by type: a protein chain goes to BindCraft (AlphaFold2-multimer hallucination with gradient descent on logits through softmax, SolubleMPNN sequence design, AF2-monomer re-prediction as a deliberately harsh filter, then PyRosetta physical metrics for binding energy and surface hydrophobicity), while a small-molecule or macrocycle chain goes to RFdiffusion3 all-atom diffusion plus LigandMPNN (eight sequences per backbone) and an independent complex-prediction model. PeSTo supplies hotspot residue scoring, RDKit renders structures and finds pharmacophores, and freesasa computes hydrophobic patch fraction. Separately, the measurement work is backed by a mechanistic ODE model of the recursive Phage Jumpstart Assay (jumpstart.py, jumpstart_mechanistic.py, passage.py, phase2.py, recursion.py) tracking naive, infected and free-particle pools with superinfection exclusion (sigma = 0.05), saturating infection, carrying capacity, and a hybrid-coat infectivity a_h derived from real pIII gene dosage (a_h ~0.729 at m13ko7_copies=20); the 1:11 passage step samples each particle pool by Poisson rather than plain division so a lineage can genuinely go extinct.",
+    "dataviz": "SymPlify's web interface is the visualisation centrepiece: an RDKit 3D viewer colours the target by PeSTo binding probability, lists top hotspot residues with confidence scores, lets the user delete low-scoring ones with an x to tighten the patch, and recomputes the difficulty breakdown (spread, hydrophobic surface fraction, globularity) live as the selection changes — plus a warning when residues sit more than 30 A apart, because one binder cannot reach them all. A run-status page shows pipeline stage, target type, elapsed time, auto-resubmits, design count and job ID, and a final ranking screen lets the user click through designs and download .pdb files with or without GS linkers. The model page is unusually transparent as data presentation: it prints the full command reference, labels every parameter as measured, derived or assumed, and ranks assumptions by their sensitivity on the round-2 plate ratio.",
+    "datascience": "The Jumpstart assay turned a single colony-ratio readout into a trajectory: because each recursion is both a manipulation and a measurement, repeated rounds on a population being driven toward one genotype reveal behaviour a single ratio cannot. Statistics are handled carefully — intervals bootstrap over wells, leave-one-well-out checks are reported, panels yielding 0-2 Amp colonies out of 165-272 are reported as upper bounds rather than measurements, and a chi-square test (197 on 5 df) establishes that the six Run B constructs are not interchangeable while the team explicitly declines to lean on the ordering because the bottom four are indistinguishable from zero. They also report that three magnitude-based titer estimators disagreed by up to 20,000-fold on the same panel, which is why they built a ratio readout instead. Most notably the model documents its own error history: an initial m13ko7_copies=200 was simply the wrong figure (wild-type M13 rolling-circle copy number rather than M13KO7's actual p15A-driven one), corrected to 10 and then 20 as evidence improved, with the admission that the corrected model is more parameter-sensitive, not less.",
+    "software": "SymPlify, an integrated de novo binder design pipeline with a web interface, hotspot prediction, cluster job submission with auto-resubmission, and post-design filtering and ranking; released for the wider synthetic biology community and wet-lab tested on the team's own targets. Team repository: https://github.com/dianalluu/puigem2026, with an AlphaFold deployment for the Princeton Della cluster at https://github.com/09aaronl/alphafold_princeton-della. The ODE model ships as a Python package with 52 automated checks in test_model.py (~80 s full run, ~8 s in fast mode) covering mass-balance and neutrality invariants, the hybrid-coat gene-dosage derivation, the Poisson passage statistics and pinned regression values. Hardware: a 3D-printed PLA gyroid biofilter cartridge whose two winning PITCCH designs are published as downloadable source STEP assemblies.",
+    "stack": [
+      "BindCraft",
+      "AlphaFold2-multimer",
+      "AlphaFold2 monomer",
+      "RFdiffusion3 (RosettaCommons foundry)",
+      "LigandMPNN",
+      "SolubleMPNN / ProteinMPNN",
+      "PeSTo",
+      "PyRosetta",
+      "RDKit",
+      "freesasa",
+      "ChimeraX",
+      "Python (NumPy/SciPy ODE integration)",
+      "Benchling",
+      "SLURM GPU cluster (Princeton Della)"
+    ],
+    "techniques": [
+      "De novo binder design by AF2 hallucination with gradient descent on logits",
+      "All-atom diffusion backbone generation around a fixed ligand",
+      "Inverse folding / sequence design",
+      "Hotspot (epitope) prediction and patch-tightness scoring",
+      "Target difficulty scoring (0-100, Easy to Very Hard) from flexibility, globularity, hotspot patch, size, epitope chemistry",
+      "Small-molecule scoring by logP 30%, size 20%, rigidity 20%, TPSA 20%, aromaticity 10%",
+      "ODE compartment modelling of phage-host population dynamics",
+      "Poisson resampling of passage dilutions to allow true extinction",
+      "One-at-a-time parameter sensitivity ranking",
+      "Bootstrap confidence intervals over wells and leave-one-well-out robustness",
+      "Chi-square test of construct interchangeability",
+      "Regression-pinned unit testing of a scientific model"
+    ]
+  },
+  "good": {
+    "publicEngagement": "PITCCH, the Princeton iGEM Team CAD Competition for Hardware, is the standout: entrants were given a real open engineering problem from the project — design a 3D-printable gyroid biofilter, 20 mm diameter by 25 mm height, maximising contact surface area — along with the team's actual print parameters. It ran free, fully asynchronous and online in a junior division (grades 5-12) and an open division (18+), explicitly permitted responsible AI use, and drew 42 registered submissions from the United States, United Kingdom and Mexico, of which 26 passed dimensional and printability screening before being sliced and computationally ranked by total surface area. Announcement emails went to thousands more via high school superintendents, undergraduate engineering directors and makerspaces, each carrying a project description and iGEM links. The team frames it as citizen science and backed that framing with credit: two winning designs appear on the wiki with the designers named on the attribution form, and the registration terms stated plainly that the team reserves the right to draw inspiration from submissions with attribution. They also postered at symposiums and presented at bioethics exchanges, and at the US-China iGEM Human Practices Summit showed their halted immunology work as a case study in how to pivot.",
+    "ihp": "This is the strongest documented chain of design changes of any team here, and several of them cut capability rather than adding it. Dr Bowen Jing's technical advice seeded SymPlify and his steric clash filter was adopted, but the team then cut AlphaFold3 from the pipeline entirely because Dr Martin Pacesa argued it often mispredicts binding sites; Pacesa also supplied PeSTo as the hotspot engine and, after the team ran competing designs to compare, AF2 monomer was implemented on his side of the argument. Dr Reynold Panettieri talked them out of sequestering IL-6 — their original software benchmark target — by pointing out IL-6's dual-sided effects on blood cell production and T-cell regulation, redirecting them toward a niche where cheaper-than-mAb production is the real advantage and toward naming one indication and working from there, which is exactly how the final applications are framed. Dr Douglas Galasko's distinction between biomarkers and toxins moved them off amyloid-beta for Alzheimer's and into the Parkinson's and rabies work. Two multiple myeloma patients, interviewed under Princeton IRB Protocol #20003, independently said the word 'virus' for a bacteriophage was a problem — one noting roughly 80% of myeloma patients are treated in community settings and take their doctor's word — which changed how the team describes the project in all outreach. A former FDA biologics deputy director, Dr Celia Witten, pointed them to CBER's phage therapy work; EPA Office of Pesticide Programs and OPPT staff sent them to the statutes; and marine microbiologist Dr Stephen Giovannoni plus phage ecologist Prof Forest Rohwer turned the Cg-Defensin antimicrobial worry into a specific planned avidity-comparison assay. Dr John Wnek, who conserves Diamondback terrapins, chose their environmental targets: microcystins and BPA, because nearby New Jersey plants discharge effluent half a mile offshore with no process for xenobiotics.",
+    "realWorld": "The regulatory path is mapped rather than asserted: phage therapy under FDA CBER for the clinical arms, and statute-level grounding for the environmental arm after meetings with EPA Office of Pesticide Programs and Office of Pollution Prevention and Toxics, with the team careful to state that nothing should be read as EPA guidance. Containment is designed for deployment — the phage stays inside a closed water treatment facility bound to a biodegradable PLA filter so it is retrievable and localised, with macrophage clearance via VHH7 as the biosafety route for therapeutic use. The commercial argument is reconfiguration cost: because capture specificity lives in one genetic part on pVIII, changing target means changing that part and not the media, housing, attachment chemistry or capital cycle, which is the case made against granular activated carbon for PFAS where GAC retains poorly over realistic service lifetimes. Work is mapped to SDG 3.4, 6.3 and 9. Continuation is concrete: further IRB submissions to interview melanoma patients and Parkinson's patients and caregivers, the Rohwer avidity assay, qPCR of M13KO7 copy number to settle the model's most sensitive parameter, and phage hydrogels as an alternative anchor that would remove the Cg-Defensin concern altogether.",
+    "partners": [
+      "Dr Martin Pacesa (BindCraft author)",
+      "Dr Bowen Jing (computational biology)",
+      "Dr Reynold Panettieri, Rutgers Translational Medicine and Science",
+      "Dr Jared Radbel, Robert Wood Johnson Medical School",
+      "Dr Douglas Galasko (neurology)",
+      "Dr Celia Witten, former deputy director, FDA biologics center",
+      "US EPA Office of Pesticide Programs and Office of Pollution Prevention and Toxics",
+      "Dr John Wnek (environmental conservation, Diamondback terrapin)",
+      "Dr Stephen Giovannoni (marine microbiology)",
+      "Prof Forest Rohwer (marine phage ecology)",
+      "Prof Ned Wingreen and Lawrence Abad (phage biology)",
+      "Prof Jared Toettcher (faculty PI, IRB Protocol #20003)",
+      "Princeton Institutional Biosafety Committee",
+      "Multiple myeloma patient advocacy organisations",
+      "US-China iGEM Human Practices Summit",
+      "IDT, GenScript, ODI (sponsors)"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6295/wiki/figures/symplify-hotspots-protein.avif",
+      "caption": "SymPlify's hotspot selection screen: the protein target rendered in 3D and coloured by PeSTo binding probability, with top hotspot residues listed by confidence so low-scoring ones can be removed to leave the focused patch of three to five that BindCraft works best with.",
+      "credit": "Team Princeton, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6295/wiki/figures/symplify-filtered-designs.avif",
+      "caption": "SymPlify's ranking and filtering view, where accepted binder designs are sorted by AlphaFold confidence metrics and PyRosetta physical scores and can be downloaded as .pdb files with or without GS linkers.",
+      "credit": "Team Princeton, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6295/wiki/figures/hardware-pitcch-surface-area.avif",
+      "caption": "Ranked printable surface area for the 26 PITCCH entries that passed dimensional and printability screening, plotted against reference geometries — public CAD submissions evaluated computationally and used to pick the biofilter geometry.",
+      "credit": "Team Princeton, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6295/wiki/figures/saf-macrophage-uptake-gfp.avif",
+      "caption": "Overlaid phase-contrast and green-fluorescence micrograph of cultured macrophages after incubation with GFP-expressing phage, showing uptake by the VHH7 clearance arm. Scale bar 150 micrometres.",
+      "credit": "Team Princeton, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Copy PITCCH: hand the public a genuine, unsolved sub-problem from your own project with real constraints and real print parameters, judge entries computationally on a single objective metric, then credit the winners by name and actually build their design in. It converts outreach into contributed engineering at almost no cost, and it works for high-school students because spatial creativity, not synthetic biology training, is what the task rewards. Pair it with Princeton's habit of writing down which model parameters are measured, derived or merely assumed — and publishing the history of their own corrected mistakes — which is the cheapest credibility a student dry lab can buy.",
+  "sources": [
+    "https://2026.igem.wiki/princeton/",
+    "https://2026.igem.wiki/princeton/description",
+    "https://2026.igem.wiki/princeton/design-rationale",
+    "https://2026.igem.wiki/princeton/software",
+    "https://2026.igem.wiki/princeton/model",
+    "https://2026.igem.wiki/princeton/measurement",
+    "https://2026.igem.wiki/princeton/hardware",
+    "https://2026.igem.wiki/princeton/engineering",
+    "https://2026.igem.wiki/princeton/human-practices",
+    "https://2026.igem.wiki/princeton/application",
+    "https://2026.igem.wiki/princeton/sustainability",
+    "https://2026.igem.wiki/princeton/results",
+    "https://2026.igem.wiki/princeton/parts",
+    "https://2026.igem.wiki/princeton/contribution",
+    "https://2026.igem.wiki/princeton/safety-and-security",
+    "https://2026.igem.wiki/princeton/judging"
+  ]
+}
