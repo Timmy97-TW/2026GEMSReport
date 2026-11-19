@@ -161,5 +161,6 @@
   },
   "method": "Drawn from the ten High School Top 10 team files in this report, each researched from the team's own 2026 wiki. Tool lists are what each team names; a team may have used more than it wrote down. The judgement about what 'stands out' is ours, and a reader who disagrees should open the team file and the wiki behind it — both are linked. GEMS-Taiwan is the report author's own team and has been assessed on the same terms as the rest.",
   "method_zh": "資料來自本報告中高中組 Top 10 的十份團隊檔案，每一份都取自該隊自己的 2026 wiki。工具清單是各隊自己寫出來的；團隊實際用到的可能多於其所記載。關於「什麼最突出」的判斷出自我們，不同意的讀者可以直接打開團隊檔案與其背後的 wiki——兩者都有連結。GEMS-Taiwan 是本報告作者自己的團隊，評判標準與其他隊伍相同。",
-  "kicker_zh": "原創分析"
+  "kicker_zh": "原創分析",
+  "order": 32
 }

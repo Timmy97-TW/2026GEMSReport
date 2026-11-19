@@ -472,5 +472,6 @@
     "stub": 0,
     "gone": 2
   },
-  "kicker_zh": "原創分析"
+  "kicker_zh": "原創分析",
+  "order": 34
 }

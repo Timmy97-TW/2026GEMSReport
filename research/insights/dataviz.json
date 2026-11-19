@@ -17,7 +17,9 @@
       "title_zh": "在量測終止之處替軌道換色",
       "body": "GEMS-Taiwan draws its dose ledger as one chain from 1.67 mL on a plate to US$3,800 per hectare, with a rail down the left that is green while each row rests on a measurement and turns amber at the rice canopy correction. Anyone can see where the evidence ends. TU Delft does the same with Factual / Inferred / Estimated / Speculative tags on every cell of its decision matrix.",
       "body_zh": "GEMS-Taiwan 把劑量帳本畫成一條鏈：從培養皿上的 1.67 毫升到每公頃 3,800 美元，左側軌道在每列仍立基於量測時保持綠色，到水稻冠層修正那一列轉為琥珀色。任何人都看得出證據在哪裡結束。TU Delft 用另一種方式做同一件事：在決策矩陣的每一格標上 Factual / Inferred / Estimated / Speculative。",
-      "chips": ["provenance made visible"]
+      "chips": [
+        "provenance made visible"
+      ]
     },
     {
       "kicker": "The device worth stealing",
@@ -26,7 +28,9 @@
       "title_zh": "給「未評估」一個自己的狀態",
       "body": "DKU's safety panel resolves to clear, exceeded, borderline and not assessed — four verdicts, so an unmeasured gate can never read as a passed one. 198 of its 496 constructs have no immunogenicity measurement and the interface says so instead of showing a zero. GHCIS ships the same idea as \"unresolved, and must not be treated as Negative\".",
       "body_zh": "DKU 的安全面板有四種判定：clear、exceeded、borderline、not assessed——四種，因此「未量測」永遠不會被讀成「通過」。496 個構築中有 198 個沒有免疫原性量測，介面就直接說明，而不是顯示 0。GHCIS 以「無法判定，且不得視為陰性」實作了同樣的概念。",
-      "chips": ["198 of 496 say so"]
+      "chips": [
+        "198 of 496 say so"
+      ]
     },
     {
       "kicker": "The device worth stealing",
@@ -35,7 +39,10 @@
       "title_zh": "把整個實驗寫進圖說",
       "body": "Mingdao's figures are plain and rigorous. Each names the instrument, the buffer, the temperature, the replicate count and the error measure, and links its own raw CSV by filename. Where the error bars are too small to see, the caption says so and points at the table of values. A figure a reader can audit beats a figure a reader can admire.",
       "body_zh": "Mingdao 的圖樸素而嚴謹。每張圖都標明儀器、緩衝液、溫度、重複次數與誤差量度，並以檔名連結自己的原始 CSV。當誤差棒小到看不見，圖說會直接寫明並指向數值表。一張讀者能稽核的圖，勝過一張讀者只能讚嘆的圖。",
-      "chips": ["instrument · buffer · n · error", "raw CSV linked"]
+      "chips": [
+        "instrument · buffer · n · error",
+        "raw CSV linked"
+      ]
     },
     {
       "kicker": "The device worth stealing",
@@ -44,7 +51,9 @@
       "title_zh": "把沒有回覆的人也畫出來",
       "body": "DTU-Denmark colour-codes every pin on its stakeholder map by engagement status, so non-responses stay visible, and names the organisations that never answered. BNDS-China prints the caveat on its influence map that appearing there does not mean an interview happened. A map with no gaps is a map that has been tidied.",
       "body_zh": "DTU-Denmark 依接觸狀態為利害關係人地圖上的每個圖釘上色，讓未回覆者保持可見，並點名從未回信的機構。BNDS-China 則把警語印在影響力地圖上：出現在圖上不代表訪談真的發生過。一張沒有空缺的地圖，是一張被整理過的地圖。",
-      "chips": ["non-responses stay visible"]
+      "chips": [
+        "non-responses stay visible"
+      ]
     },
     {
       "kicker": "Accessibility, done early",
@@ -53,7 +62,10 @@
       "title_zh": "BAID-China 用色盲友善色票重繪了每一張圖",
       "body": "The eight-colour Okabe-Ito palette, chosen for luminance separation so the figures survive greyscale, with a published colour-blindness simulation verifying that elements stay distinguishable under red-green, blue-yellow and total colour-blindness. The wiki analysis found late alt-text sweeps correlate with nothing; this is the alternative — a decision taken at the start.",
       "body_zh": "採用八色 Okabe-Ito 色票，選色依據是亮度差異足以讓圖在灰階下仍可辨識，並公開色盲模擬圖驗證元素在紅綠、藍黃與全色盲模擬下仍可區分。wiki 分析發現最後才補的替代文字與得獎毫無相關；這就是替代方案——一個在一開始就做的決定。",
-      "chips": ["Okabe-Ito", "simulation published"]
+      "chips": [
+        "Okabe-Ito",
+        "simulation published"
+      ]
     },
     {
       "kicker": "For GEMS",
@@ -62,9 +74,13 @@
       "title_zh": "互動只有在讀者能改變答案時才算數",
       "body": "UPF-Barcelona gives every parameter a live slider that takes effect during the running simulation. BOKU-Vienna moves vitamin flux against growth rate with the team's own measured points overlaid and a \"How to read this graph\" panel beside it. DTU prints every parameter on the box of a zoomable process diagram. An animation that only plays is decoration.",
       "body_zh": "UPF-Barcelona 為每個參數配上即時滑桿，而且在模擬執行中就會生效。BOKU-Vienna 讓維生素通量對生長速率移動，疊上團隊自己量到的點，旁邊還附「如何閱讀這張圖」面板。DTU 在可縮放流程圖的每個方塊上都印出參數。只會播放的動畫是裝飾。",
-      "chips": ["sliders during the run", "How to read this graph"]
+      "chips": [
+        "sliders during the run",
+        "How to read this graph"
+      ]
     }
   ],
   "method": "Drawn from the dataviz field of every team file in this report, each researched from the team's own 2026 wiki. Interactive behaviour is as the analysts described it after opening the pages; we have not re-tested every widget here. The examples are chosen because they illustrate a transferable device, not because they are the only teams doing good work. GEMS-Taiwan is the report author's own team and appears on the same terms as the rest.",
-  "method_zh": "資料取自本報告每一份團隊檔案的 dataviz 欄位，皆來自各隊自己的 2026 wiki。互動行為依分析員實際開啟頁面後的描述記錄，我們並未在此重新測試每一個元件。所舉案例是因為它們示範了一個可移植的手法而被選出，並非表示只有這些團隊做得好。GEMS-Taiwan 是本報告作者自己的團隊，與其他隊伍適用相同標準。"
+  "method_zh": "資料取自本報告每一份團隊檔案的 dataviz 欄位，皆來自各隊自己的 2026 wiki。互動行為依分析員實際開啟頁面後的描述記錄，我們並未在此重新測試每一個元件。所舉案例是因為它們示範了一個可移植的手法而被選出，並非表示只有這些團隊做得好。GEMS-Taiwan 是本報告作者自己的團隊，與其他隊伍適用相同標準。",
+  "order": 36
 }

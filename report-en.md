@@ -43,154 +43,6 @@ Thirteen competing teams returned six award wins — more than any East Asian te
 
 _Method and limits. Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see._
 
-## Two questions, thirty teams
-
-_This report asks the same two questions of every team it looks at._
-
-The first question is computational. Where does a project stop being wet biology and start being a model, a pipeline, a dataset, a piece of software? What did that layer actually decide — did it change an experiment, or was it decoration added after the fact? The teams that win are increasingly the ones where the answer is "it changed the experiment".
-
-The second question is social. Who outside the team touched this project, and what did they change about it? A list of meetings is not integrated human practices. A design that is visibly different because somebody outside the lab said something is.
-
-Everything else here — the trend tabs, the roadmap — exists to answer a third question that only GEMS Research can answer: given what 2026 looked like, what should a growing research institution in Taiwan be building in 2027 and beyond?
-
-## Why the dry lab is the roadmap
-
-_GEMS Research is becoming an institution, not a team. Institutions are defined by what they can still do after the current students graduate._
-
-A wet lab is bounded by its benches, its reagents budget and the hours its students are physically present. A dry lab is bounded by what its people know and what they have written down. That asymmetry is the whole argument: computational capability compounds across years in a way that pipetting skill does not, because a model, a pipeline or a calibrated measurement protocol survives the student who built it.
-
-This is also where the field has moved. Protein design, metabolic modelling and measurement standardisation are no longer the specialist corner of a project — in 2026 they are frequently the project. The teams on the 2026 podium did not win because they ran more gels.
-
-So the roadmap below is deliberately about capability, not about any single 2027 project idea. Pick a phase and start.
-
-## Two independent analyses, one answer
-
-_The academic trend review and the industry trend review were run separately, from different sources, with no knowledge of each other. They landed on the same white space._
-
-From the literature side: light has matured from a laboratory curiosity into a real-time actuator for closed-loop control of fermentation, with reported titre gains around 60% in a 1 L photobioreactor — and optogenetics in **Bacillus subtilis** is a twelve-paper literature in the whole of PubMed.
-
-From the industry side, reached by an entirely different route: optogenetics is becoming the control and cleaning layer of bioprocessing, because light lets you retrofit an existing steel fermenter instead of building a new one. That makes it the cheapest route past the capital-expenditure wall that is currently the binding constraint on biomanufacturing.
-
-GEMS Research already stands in that gap. ReLEAF was a CcaS/CcaR optogenetic circuit in *Bacillus subtilis* driving a bioreactor, and it won Best Measurement and Best Hardware at high-school level for exactly the instrumentation this line needs. The competition project is over; the research line it opened is not.
-
-There is a second, blunter finding underneath this. Taiwan's state-backed biotechnology push is a manufacturing play — contract development and manufacturing, GMP capacity — with no visible synthetic-biology **design** layer, while Singapore and Israel are explicitly funding exactly that layer. A small institution cannot out-build a CDMO. It can occupy the design position that nobody in Taiwan currently holds.
-
-## How the best teams made complex data honest, not just pretty
-
-_The visualisation work that stood out in 2026 was not the most beautiful. It was the work that made it impossible to misread the data._
-
-Almost every 2026 wiki has charts. The ones worth studying share a single instinct: **they build the reader's doubt into the picture**.
-
-The clearest example is **GEMS-Taiwan**'s provenance colour-coding. Its dose ledger is drawn as one top-to-bottom chain, from 1.67 mL on a 10 cm plate down to US$3,800 of capital per hectare, with a rail running down the left that is green while every row still rests on a measurement and **turns amber at the rice canopy correction** — so a reader sees exactly where measurement stops and modelling begins. Every model input is tabulated with a provenance column. **TU Delft** does the same thing in a different register, labelling every cell of its decision matrix Factual, Inferred, Estimated or Speculative, with a legend stating that the tag records the evidence and not the judgement. **BOKU-Vienna** attaches a parameter-provenance table to its interactive widget. **XJTLU-China** runs an evidence-coverage track underneath its priority profiles, so a high score sitting on thin evidence cannot be mistaken for a finding.
-
-The second instinct is **a state that refuses to be misread**. **DKU**'s safety panel resolves to four verdicts rather than three — clear, exceeded, borderline, and *not assessed* — precisely so an unmeasured gate can never be read as a passed one; 198 of its 496 constructs carry no immunogenicity measurement, and the interface says so rather than showing a zero. It goes further: because the MHC class I predictor accepts only 5-15 residue peptides and returns zero outside that window, a stored zero is explicitly not presented as evidence of low immunogenicity. **GHCIS** ships the same idea in its colour classifier, with an explicit "unresolved, and must not be treated as Negative" state. **UMA Malaga** conveys status by shape and text rather than colour alone.
-
-The third is **telling the reader how to read it**. BOKU-Vienna puts an explicit "How to read this graph" panel beside each one. XJTLU-China numbers eighteen model figures so they read as a single argument rather than a gallery, aligning six normalised feature tracks above a composite score so you can see which feature drove a peak.
-
-The fourth is **captions that carry the whole experiment**. **Mingdao**'s figures are plain, and that is the point — each names the instrument (a BioTek Synergy H1 plate reader; a FORA G31 glucose meter, range 20-600 mg/dL), the buffer, the temperature, the replicate count and the error measure, links its own raw CSV by filename, and where error bars are too small to see, *the caption says so* and points at the table of values.
-
-The fifth is **showing the absences**. **DTU-Denmark**'s interactive stakeholder map colour-codes each pin by engagement status so that non-responses stay visible, and the team names the organisations that never replied. **BNDS-China** prints a caveat directly on its influence map stating that appearing on it does not mean an interview took place.
-
-And a note on accessibility, because the wiki analysis found that late alt-text compliance sweeps correlate with nothing. **BAID-China** shows what doing it properly looks like instead: every chart on the wiki redrawn in the eight-colour Okabe-Ito colour-blind-safe palette, chosen for luminance separation so the figures survive greyscale, with a published colour-blindness simulation verifying that elements stay distinguishable under red-green, blue-yellow and total colour-blindness. That is a design decision taken at the start, not a checkbox at the end.
-
-Interactivity, finally, earns its place only when it lets the reader change something. **UPF-Barcelona**'s RK4 solver gives every parameter a live slider that takes effect *during* the running simulation. BOKU-Vienna's trade-off widget moves a vitamin flux against growth rate with the team's own measured points overlaid. DTU-Denmark's process-flow diagram zooms from a five-route overview into the enzymatic routes with every parameter printed on the box - acid molarity, temperature, residence time, enzyme loading, number of reuses. An animation that only plays is decoration; a control that changes the answer is an argument.
-
-### Colour the rail where measurement stops
-GEMS-Taiwan draws its dose ledger as one chain from 1.67 mL on a plate to US$3,800 per hectare, with a rail down the left that is green while each row rests on a measurement and turns amber at the rice canopy correction. Anyone can see where the evidence ends. TU Delft does the same with Factual / Inferred / Estimated / Speculative tags on every cell of its decision matrix.
-
-### Give "not assessed" its own state
-DKU's safety panel resolves to clear, exceeded, borderline and not assessed — four verdicts, so an unmeasured gate can never read as a passed one. 198 of its 496 constructs have no immunogenicity measurement and the interface says so instead of showing a zero. GHCIS ships the same idea as "unresolved, and must not be treated as Negative".
-
-### Put the whole experiment in the caption
-Mingdao's figures are plain and rigorous. Each names the instrument, the buffer, the temperature, the replicate count and the error measure, and links its own raw CSV by filename. Where the error bars are too small to see, the caption says so and points at the table of values. A figure a reader can audit beats a figure a reader can admire.
-
-### Show who did not reply
-DTU-Denmark colour-codes every pin on its stakeholder map by engagement status, so non-responses stay visible, and names the organisations that never answered. BNDS-China prints the caveat on its influence map that appearing there does not mean an interview happened. A map with no gaps is a map that has been tidied.
-
-### BAID-China redrew every chart in a colour-blind-safe palette
-The eight-colour Okabe-Ito palette, chosen for luminance separation so the figures survive greyscale, with a published colour-blindness simulation verifying that elements stay distinguishable under red-green, blue-yellow and total colour-blindness. The wiki analysis found late alt-text sweeps correlate with nothing; this is the alternative — a decision taken at the start.
-
-### Interactivity only counts if the reader can change the answer
-UPF-Barcelona gives every parameter a live slider that takes effect during the running simulation. BOKU-Vienna moves vitamin flux against growth rate with the team's own measured points overlaid and a "How to read this graph" panel beside it. DTU prints every parameter on the box of a zoomable process diagram. An animation that only plays is decoration.
-
-_Method and limits. Drawn from the dataviz field of every team file in this report, each researched from the team's own 2026 wiki. Interactive behaviour is as the analysts described it after opening the pages; we have not re-tested every widget here. The examples are chosen because they illustrate a transferable device, not because they are the only teams doing good work. GEMS-Taiwan is the report author's own team and appears on the same terms as the rest._
-
-## What separated real engagement from outreach theatre
-
-_Across the 2026 field, the teams whose Science for Good work counted did four things the rest did not._
-
-**They designed education from data, then measured it like an experiment.** UCAS-China did not start from "raise awareness". It ran clinician interviews and a 461-person questionnaire, found that patients stop medication once they feel better and that parents refuse to start it for children out of fear of side effects, and made *compliance* the target instead of awareness. UOregon wrote three separate curricula for three audiences with different prior knowledge and ran them as three DBTL iterations across June, July and October, carrying each round's lessons forward. HFI ran everything through a five-step cycle it named CLEAR, in which **every activity had to report a measured outcome and a change for the next iteration**.
-
-The sharpest version of this is publishing the results when they are bad. GEMS-Taiwan ran pre- and post-lesson surveys with 140 students across five schools and published per-question accuracy charts including the failures — only 30% of students got DNA base pairing right. That number is worth more to the next teacher than any photograph of a full classroom.
-
-**They trained themselves before training anybody else.** Nineteen GU Frankfurt members took the "Basics of Science Communication" workshop run by NaWik, Germany's national institute for science communication, and used its core-message and cloverleaf tools as the basis of everything that followed. Most teams treat communication as something you already know how to do because you can talk.
-
-**They put disagreeing people in the same room.** Oxford's *Buzz In* podcast is the most quietly radical format in the 2026 field: rather than interviewing stakeholders separately and summarising, it deliberately paired people who disagree — a Varroa-resistance academic with a commercial beekeeper on whether to treat at all, then an industry council CEO with amateur beekeepers. Disagreement is the thing most human-practices pages are built to smooth over; Oxford made it the content.
-
-KIT won Inclusivity by turning the same honesty inward. It read the iGEM Diversity and Inclusion Committee's own writing, surveyed five previous iGEM gender-equity projects, and noticed that nearly all of them face **outward** — role models, outreach to girls, awareness — and almost none examine the team itself. So KIT examined the team itself.
-
-**They quantified the need, and built a business model that was not "sell the product".** Oxford states the problem in numbers rather than adjectives: Australia's failed Varroa eradication cost A$101 million and destroyed about 30,000 hives; surveyed US commercial operations lost roughly 62% of colonies in 2024–25. DTU-Denmark anchors on a date and a measurement: the Danish wind industry's voluntary landfill ban took effect on 1 January 2026, and a Danish EPA screening detected bisphenol A in every tank leaching test on blade material.
-
-Then the models themselves. HongKong-JSS sells **Certification-as-a-Service** — farmers subscribe annually, the team tests soil on site, passing farms get a "Heavy Metal-Free" logo for supermarket packaging that earns a premium, and surprise re-tests throughout the year are affordable precisely because the test is cheap. GEMS-Taiwan deploys through farmer collectives rather than direct sales, because its own fleet analysis shows a reactor owned by a single farm sits idle most of the season. GU Frankfurt chose exclusive licensing over a start-up because an autologous cell therapy's facility and specialist-salary costs cannot be carried by a spin-out, and has a letter of support from Miltenyi Biotec to show for it. XJTLU-China gives catmaOS away, on the argument that accessibility *is* the commercial thesis.
-
-UAlberta's case is the most evidentially careful: demand is tabulated by customer role **with the strength of each piece of evidence named** — two clinician letters of support, a signed letter of intent from one clinic, 86% of 38 surveyed dry eye patients interested, an application at interview stage with Nucleate Canada. And UCAS-China opens its commercial section by stating outright that the case must rest on a defined unmet need rather than on technological novelty, then tabulates the strengths of the existing drugs it would have to displace. A team willing to argue against itself is a team worth believing.
-
-### Oxford's Buzz In: put the disagreement on the record
-A three-episode podcast that deliberately paired stakeholders who disagree, rather than interviewing them separately and summarising. Episode one put a Varroa-resistance academic opposite a commercial beekeeper on whether to treat at all. Most human-practices pages exist to smooth disagreement away; this one makes it the content, and it is far harder to fake than a list of meetings.
-
-### Publish the question your students got wrong
-GEMS-Taiwan surveyed 140 students across five schools before and after each lesson and published per-question accuracy — including DNA base pairing, where only 30% answered correctly. Reporting the failure makes the whole dataset credible and hands the next teacher something actionable. A photograph of a full classroom does neither.
-
-### Train the team before training the public
-Nineteen GU Frankfurt members took the Basics of Science Communication workshop from NaWik, Germany's national science-communication institute, and built everything afterwards on its core-message and cloverleaf tools. Science communication is a craft with a literature; almost every other team treats it as something you can already do because you can talk.
-
-### Sell the certificate, not the instrument
-HongKong-JSS does not sell its mercury assay. Farmers subscribe annually, the team tests on site, passing farms get a 'Heavy Metal-Free' logo for supermarket packaging that commands a premium, and surprise re-tests through the year keep the certificate honest — affordable precisely because the test itself is cheap. The cheapness of the science becomes the business model rather than a weakness.
-
-### Name the strength of each piece of evidence
-UAlberta tabulates demand by customer role and says how strong each item is: two clinician letters of support, one signed letter of intent, 86% of 38 surveyed patients interested, one application at interview stage with Nucleate Canada. A letter of intent and a survey response are not the same kind of evidence, and saying so is what makes the table worth reading.
-
-### Argue against yourself in public
-UCAS-China opens its commercial section by saying the case must rest on unmet need rather than technological novelty, then lists what the existing drugs do well. GEMS-Taiwan publishes a 68-year payback against a partner's 4.9-year figure and names the disagreement instead of resolving it. This is the practice that most distinguishes the 2026 podium, and it costs nothing but nerve.
-
-_Method and limits. Drawn from the Science for Good fields of the team files in this report, each researched from the team's own 2026 wiki. Audience numbers and survey sizes are the teams' own figures and are not independently verified. The judgement about what 'counted' is ours; the team files and the wikis behind them are linked so a reader can disagree. GEMS-Taiwan is the report author's own team and appears here on the same terms as the rest._
-
-## The high-school ceiling, measured honestly
-
-_What a high-school dry lab can actually reach in one season — and the finding that the gap is not about tools._
-
-Read the ten High School Top 10 dry labs side by side and the first surprise is how ordinary the software is. **Eton-College-UK** built its protease substrate predictor out of L2-regularised logistic regression and a BLOSUM62-smoothed position-specific scoring matrix — techniques older than the students using them. **HFI** used NetLogo, which is free and was designed for schools. **GHCIS** used a local install of NUPACK. **HangzhouFourteenAP** used PyMOL and FoldX. **HKSSC** used AlphaFold, UCSF Chimera and HotSpot Wizard. **HongKong-HS** reused another team's tool outright — miRADAR, released by Wageningen's 2024 team — rather than rebuilding it. Almost none of this costs money, and none of it requires a cluster.
-
-Only **Lambert-GA**, the Grand Prize winner, works at the frontier of the toolchain: BindCraft, Boltz-2, Protenix, Mosaic. And even there the thing that earned Best Model was not the tools. It was that they **benchmarked the confidence metrics themselves** — ipSAE, ipTM and a 38-metric ensemble, against 5,721 labelled experimental designs — found the ensemble barely beat chance at ROC-AUC 0.541, noticed that their own eventual hit did not have the best score, and published all of that rather than quietly reporting the hit.
-
-That is the pattern, and it holds across the whole tier. **The differentiator at high-school level is evaluation discipline, not tool sophistication.**
-
-The evidence is specific. Eton clustered near-duplicate sequences by Hamming distance and split whole clusters across folds, then ran a label-shuffle control and a composition-only ablation — three cheap steps that separate a real classifier from a leaky one. **HongKong-JSS** split runs into calibration and validation *before* fitting anything, subtracted a matched control from the same run and timepoint, and reported RMSE on held-out runs with the failures left in. HKSSC could not measure molar enzyme concentration, so rather than report an invalid *k*cat/*K*m they defined and justified a mass-normalised metric valid only below *K*m, then ran a two-way ANOVA, found unequal variances, and moved to a median-based test. GHCIS specified its colour-classification algorithm down to the equation and the threshold, including an explicit **"unresolved, and must not be read as Negative"** state, and shipped it with one-command Docker deployment. HangzhouFourteenAP reported the prediction that lost: FoldX ranked Y166Q first, the bench preferred Q172P, and the wiki revises its own ranking while using BCA normalisation to rule out protein load as the explanation.
-
-**GEMS-Taiwan** belongs on that list and is worth reading closely, because the wiki is unusually candid about its own weaknesses. The strengths are real: a genuinely pre-registered growth-rate forecast, registered on 1 October and scored on run 6, which landed inside its stated interval; an autoencoder that flagged a failing photometer 26.7 hours before it died; and a crop-stress index fitted to 25 years of county rice yields rather than to expert judgement. The weaknesses are stated by the team itself: secreted activity at n=1 and below the limit of quantitation; two induction runs that disagree on the *sign* of the change; a Hill curve assumed to hold at 20 L when every induction ran at a single light intensity; a 2.44× rice canopy correction that is modelled, not measured; an efficacy coefficient of 0.58 explicitly withdrawn; and a payback period of 68 years on the team's own loss figure against a partner's 4.9 years, with the disagreement named rather than resolved. Naming the disagreement instead of picking the flattering number is the practice worth keeping.
-
-**And the control case.** **GCGS** reached the High School Top 10 with no model page and no software page at all — both routes return 404. Its one modelling claim is an undocumented circuit-level simulation with no parameters, equations or tooling named. A team can still place in the top ten of its section with essentially no dry lab. What GCGS could not do is win a modelling, measurement or software prize, and that is the precise shape of the opportunity.
-
-### Lambert-GA, and what the frontier costs
-Four linked models: protein-design metric benchmarking on 5,721 labelled designs, a Sobol-analysed oral pharmacokinetic model, a 13-ODE SimBiology RNAi network, and an individual-based six-year, 800-run colony epidemiology. They produced the first reported DWV VP3 minibinder for under $400 of compute, released the open-source PRINCE site ranker (45.8% top-3 hit rate against 23.8% random on a no-homolog subset), and an $80 dryer externally validated at two universities. This is the ceiling, and it is reachable.
-
-### GCGS: Top 10 with no dry lab at all
-Both /model and /software return 404. The single modelling claim is an undocumented circuit-level simulation with no parameters, equations or tooling named. GCGS still reached the High School Top 10 on the strength of a clean two-cycle DBTL and its Best New Improved Part. Read it as the honest floor: the dry lab is not what gets you into the top ten — it is what gets you a prize.
-
-### Three cheap controls that separate real from leaky
-From Eton-College-UK, and transferable to any student machine-learning project: cluster near-duplicate sequences by Hamming distance and split whole clusters across folds, so the model cannot memorise a near-copy; run a label-shuffle control, which must collapse to chance; run an ablation that strips the information you claim to be using. None of these needs a GPU. Together they turn a high-school classifier into something a reviewer can believe.
-
-### Split before you fit
-HongKong-JSS divided its runs into calibration and validation before fitting anything, subtracted a matched control from the same run and timepoint, inverted the fit to predict unknowns, and reported RMSE on the held-out runs with the failures left in — then published a list of the statistics they had not yet done. That last habit is rarer and more valuable than the first.
-
-### Publish the prediction that lost
-HangzhouFourteenAP's FoldX pipeline ranked Y166Q first; the bench preferred Q172P. Rather than bury it, the wiki revises its own ranking, demotes the failed candidate to a mechanistic probe, and uses BCA normalisation to rule out protein load as the confound. Lambert-GA did the same at a larger scale by showing its own hit was not the top-scoring design. A dry lab earns more credibility from one well-controlled loss than from three unexamined wins.
-
-### The gap is one term of teaching, not a budget line
-Every practice above — cluster-aware splits, label-shuffle controls, calibration/validation separation, provenance tagging, publishing the loss — costs nothing but attention and can be taught in a term. The tools the 2026 high-school field actually used are free: NetLogo, NUPACK, PyMOL, FoldX, scikit-learn, ImageJ, Chimera, the AlphaFold server. GEMS does not need to buy its way to the ceiling. It needs to make evaluation discipline the house style.
-
-_Method and limits. Drawn from the ten High School Top 10 team files in this report, each researched from the team's own 2026 wiki. Tool lists are what each team names; a team may have used more than it wrote down. The judgement about what 'stands out' is ours, and a reader who disagrees should open the team file and the wiki behind it — both are linked. GEMS-Taiwan is the report author's own team and has been assessed on the same terms as the rest._
-
 ## Who actually let the outside world change the science
 
 _Across 93 teams, closing the loop has stopped being the distinction and become the norm — and almost every loop that closed was closed by a credentialled expert rather than by anybody the criterion is rhetorically about._
@@ -224,97 +76,6 @@ Madrid-UCM built a five-rung integration ladder with an explicit closure criteri
 Large public surveys are the most common instrument in the cohort and the least consequential for design. HFI's 434 responses replaced 'genetically modified' with 'engineered' across all materials and rebuilt the education from basics. Peking's 539 respondents named three priorities the team concedes already outlined the finished project. UCAS-China's 419 public respondents and HongKong-HS's 420 produced awareness statistics and workshop plans. The honest version is GHCIS, which found that its price and speed questions branched into samples too small to use and explicitly refused to convert 'within RMB 30' into a product requirement, carrying it forward as a question for frontline users instead.
 
 _Method and limits. Every team in this report is a Top 10 or special-prize winner or nominee, so this is the most decorated tenth of the competition and not a representative sample. Read '64 of 93 closed the loop' as 'closing the loop is normal among teams that win things', not as a statement about iGEM at large. Every team file with any good.ihp content was scored on the four-point rubric from what the file itself states: a 4 required a named stakeholder, a specific thing said, and a change to the build, the deployment, the readout, the safety design or the business model that the file ties to that input. Teams whose only documented consequence was a change of framing, language, education material or evidence package scored 2 or 3 however elaborately the process was branded, and awards were ignored throughout. The rubric cannot verify that a change was made because of the advice rather than attributed to it afterwards, cannot see the wiki behind the summary, and cannot distinguish a thin causal chain from a thin write-up of a thick one. Files continued to land while the scoring ran; all 93 present at the end were read and scored, so the set is complete as of writing but not closed._
-
-## The commercial work that was worth reading argued against itself
-
-_Across the 2026 field, the teams with credible real-world plans are the ones that published a model showing their own product losing._
-
-Almost every iGEM team produces a business model canvas. Very few produce a number that could have gone against them. The difference is the whole of what separates a credible 2026 commercial section from a template.
-
-**Worldshaper-Shanghai** published a recomputable net-present-value model and reported the result honestly: their own enzyme gives a **negative NPV**. They did not bury it, soften it, or quietly change the discount rate. **BGI-College** did the same with arithmetic instead of finance — a break-even calculation comparing 6.70 against 4.0 mol H₂ per mol glucose disproved the team's own premise, and forced a redesign around byproduct valorisation. **DTU-Denmark** ran a prospective life-cycle assessment in SimaPro with ReCiPe 2016 H and found its enzymatic route emits 2.1 kg CO₂-eq/kg against 1.4 for solvolysis and 0.9 for pyrolysis, with cement co-processing beating them on almost every indicator — then converted each losing indicator into a named engineering target. **Madrid-UCM** published an ISO 14040/44 openLCA result that currently rules against its own technology.
-
-**Stockholm** went furthest. Its safety advisory board killed the open-water release the project was built around, so the team dismantled the venture, retreated to a contained membrane bioreactor on a smaller industrial stream, and made the deliverable **reusable safety infrastructure** instead: an STPA hazard analysis, a nine-system wastewater containment guidebook, and a measurement-uncertainty toolkit. Giving up the product and shipping the method is a result, and it was recognised with the Safety and Security Award.
-
-Set against that, the template is easy to spot once you know the tell: **the cost side is real and the revenue side is fantasy**. ZJU-China itemises equipment at CNY 7.45 million, media, IPTG and labour, and publishes a downloadable cost sheet — genuinely good work — then assumes **100% capture of its serviceable obtainable market** to reach a USD 427 million NPV. The discipline applied to the inputs evaporates at the outputs.
-
-The high-school tier is not behind here, and in places it is ahead. **SUIS-SFLS** built the only full financial model in the high-school set: capital expenditure of CNY 6.8 and 11.65 million across two scenarios, CNY 71 and 163.5 per litre, 34% against 15.9% margins, break-even years, and the spreadsheets published as downloadable PDFs, on a dual NMPA and ISO 13485 regulatory track. **ICJFLS** works bottom-up from unit economics — RMB 0.8 per dose against RMB 199 retail — with a 745-response survey and a named CDMO. **NFLSHS-CHINA** has a filed and accepted patent on a CsCCD2 mutant, two physical minimum viable products with formula tables, and labels its partnerships as prospective rather than implying they are signed.
-
-The second thing the credible teams do is **name the stage of each claim**. Baltimore runs Venture Creation Labs OKRs with numeric gates and IRB-approved trilingual surveys, and says plainly that its letters of intent and grants are targets rather than commitments. McGill has a full techno-economic analysis — $11.83 to $20.58 per kg of rare earth oxide, an Ashram project NPV of +USD 51 million, seven sensitivity analyses — an accelerator place, a venture-capital mentor, two letters of support and secured tailings samples, and states that it is not yet incorporated. Nobody is penalised for an early-stage venture. Teams are penalised, correctly, for presenting an aspiration in the grammar of an achievement.
-
-And a reminder that not every project should become a company. **HBUT-China**, **WHU-China**, **Squirrel-Beijing** and **BASIS-China** have no venture at all. Their deliverable is infrastructure other teams can use: 34 parts in four independently reusable modules with measurement parts built in and honest terminator read-through annotations; a five-layer characterisation of Neo-IL-2 including surface plasmon resonance and high-passage stability; a tunable bile-acid kill switch with a measured 0.1–0.2 mM threshold compared against real sewage and soil concentrations, plus a published five-step framework for characterising kill switches. That is a real-world contribution with a longer half-life than most business plans.
-
-### Publish the model that says no
-Worldshaper-Shanghai's recomputable NPV model finds their own enzyme gives a negative NPV, and says so. DTU-Denmark's prospective LCA finds cement co-processing beats their enzymatic route on almost every indicator, then turns each losing indicator into an engineering target. Madrid-UCM's ISO 14040/44 assessment currently rules against its own technology. A model that could only ever have agreed with you is not evidence.
-
-### Real costs, fantasy revenue
-ZJU-China itemises CNY 7.45 million of equipment, media, IPTG and labour and publishes a downloadable cost sheet — then assumes 100% capture of its serviceable obtainable market to reach a USD 427 million NPV. This is the most common failure mode in iGEM commercial sections: rigour on the inputs, where the team has data, and none on the outputs, where it does not.
-
-### Stockholm dismantled its own venture
-A safety advisory board killed the open-water release the project was built on. Rather than argue, the team retreated to a contained membrane bioreactor on a smaller stream and shipped reusable safety infrastructure instead — an STPA hazard analysis, a nine-system wastewater containment guidebook, a measurement-uncertainty toolkit. It won the Safety and Security Award. Giving up the product and publishing the method is a result.
-
-### SUIS-SFLS built the only full financial model in its tier
-Capital expenditure of CNY 6.8 and 11.65 million across two scenarios, CNY 71 and 163.5 per litre, 34% against 15.9% margins, break-even years, spreadsheets published as downloadable PDFs, on a dual NMPA and ISO 13485 track. ICJFLS works bottom-up from RMB 0.8 per dose against RMB 199 retail with a named CDMO. The census found high-school teams do more techno-economic analysis than undergraduates; this is what that looks like up close.
-
-### Name the stage of every claim
-Baltimore says plainly that its letters of intent and grants are targets, not commitments. McGill has a full techno-economic analysis, an accelerator place, a VC mentor, two letters of support and secured tailings samples — and states it is not yet incorporated. NFLSHS-CHINA labels its partnerships prospective. Nobody is penalised for being early. Teams are penalised for writing an aspiration in the grammar of an achievement.
-
-### Not every project should become a company
-HBUT-China, WHU-China, Squirrel-Beijing and BASIS-China have no venture at all. They shipped infrastructure instead — 34 parts in four reusable modules with measurement parts built in, a five-layer Neo-IL-2 characterisation, a tunable kill switch with a measured 0.1–0.2 mM threshold checked against real sewage concentrations, and a published five-step framework for characterising kill switches. For an institution building a reputation, that has a longer half-life than a business plan.
-
-_Method and limits. Drawn from the realWorld fields of the team files in this report, each researched from the team's own 2026 wiki. Financial figures are the teams' own and are not independently audited; where a team's assumptions looked unsupported that is noted as our reading, not as a finding of error. Teams that published a model unfavourable to themselves are over-represented here because that is exactly what the analysis is about — it is not a claim that most 2026 teams did so._
-
-## Does award-winning iGEM software survive the Jamboree?
-
-_Of 21 software tools released by award-winning iGEM 2026 teams, 8 are live and usable by a stranger today, 11 are source-only, and 2 have already gone dark._
-
-**Eight of twenty-one.** That is the honest base rate for award-winning iGEM 2026 software that a stranger can open and use today, four weeks after the Jamboree. Eleven more are source-only: the code is public, populated and often genuinely good, but using it means cloning a repository and running Docker. Two are already dead — Vilnius-Lithuania's Ladder Detector now answers "This service has been suspended by its owner" at ladder-detector.onrender.com, and TAU-Israel's CERNAL fails to resolve at both cernal.app and cernal.duckdns.org, the two addresses its own wiki advertises.
-
-The striking thing is that nothing is a stub. Every repository checked was populated with real code, a README and a licence. iGEM's mandatory GitLab deposit has solved the empty-repo problem completely. What it has not solved, and cannot, is hosting: the competition requires you to publish source, and publishing source is where most teams stop.
-
-The live ones have one habit in common, and it is not budget. **They bought a domain and pointed it at a running backend before the wiki freeze, then wrote the wiki around a URL rather than around an install command.** NJU-China's Atlas sits on starase-atlas.org, XJTLU-Software's AMPilot on ampilotlab.com, Toronto's PETadex on petadex.net, Stanford's RADAR-Scout on Vercel. Two of the eight are high-school teams running real inference in public: GHCIS's ARGUS answers `{"status":"ready"}` at argus.ucuv.dpdns.org, and HK-Joint-School's PyroForge reports `models_ready: true, esm_ready: true` — an ESM protein model loaded and serving, from a school team.
-
-The source-only group is not lazy; it is mostly careful. ETH-Zurich's deCISion ships 28 CI-tested checks, a Docker build and an MIT licence. UMA Malaga's Diana has a 10 GB reproducible Docker stack and a BIOLOGICAL_REPORT.md mapping each biological step to code. Uni-Padua-IT's ReTIsigner is a thoughtful fork of a published tool, Apache 2.0, one `docker run` from working. These teams decided, often explicitly and for defensible reasons — cost, patient data, a 4 GB index — that local execution was the right call. The cost is simply that nobody will ever casually try them.
-
-Two teams published a live URL that is not the tool, and both said so honestly. UMA Malaga's diana-grna-designer-7723f5.igem.wiki opens with "Saved results, not the live tool... The pages cannot analyse a variant you type." GU Frankfurt's HUSH page says "This page shows its web app in action" and then presents a clickable mockup of screenshots. Judges reward the appearance of a deployed tool, so the gap between a demo and a deployment is exactly where a link check gets fooled.
-
-Outside use is the bleakest column. Across every GitLab repository examined the star count is zero, the fork count is zero, and the last commit falls in the October freeze window — with one exception, DKU's pepticraft-2, touched on 5 November. Uni-Padua-IT published an open call on 9 August offering to codon-optimise any team's sequence, received no replies, and reported that on their wiki. The only genuine external-adoption signal found anywhere was on Stanford's SynBase, which displays "837 learners" — and that is a teaching platform, not a research tool.
-
-One more caution for anyone citing datasets as deliverables. Toronto's PETadex front end is live and excellent, but the 23.8 GB Zenodo deposit its wiki cites, doi:10.5281/zenodo.23457986, returns 404, and a Zenodo search for "petadex" returns zero records. The web app survived; the archival half of the release did not.
-
-For GEMS the lesson is narrow and cheap. Shipping a tool outsiders use is achievable — eight teams did it, including two high schools — but it is a hosting decision, not a coding decision, and it has to be made months before the wiki freeze. The teams that got there treated the public URL as the deliverable and the repository as the backup. The ones that did not now own excellent code that nobody will run.
-
-### AMPilot — the only tool with a working public API
-XJTLU-Software's antimicrobial-peptide workbench at ampilotlab.com opens in guest mode with no account, and its /api/v1 routes are documented in a published OpenAPI 3.1 spec. A live call to /api/v1/corpus/search returned real literature evidence with provenance, licence and retrieval date attached — no key, no sign-up. The spec states the API is deterministic, stateless and calls no language model, which is what makes it safe for someone else to build on. It is the clearest example this year of a team designing for a second user rather than a judge.
-
-### Two high-school teams out-shipped most universities
-GHCIS's ARGUS runs a real backend at argus.ucuv.dpdns.org — its /api/ready endpoint answers with JSON, not a static shell — alongside a Docker and a native Node deploy path, role-based access and SQLite persistence. HK-Joint-School's PyroForge serves protein thermostability prediction at pyroforge.26650078.xyz with /health reporting ESM models loaded and ready. Both URLs are reachable right now. Neither team had a university budget; they had a cheap domain and a decision to host.
-
-### Vilnius deployed, then switched it off
-Ladder Detector automates gel-image annotation, a genuinely unglamorous and genuinely useful job, and Vilnius-Lithuania did the right thing by deploying it publicly. The URL on their wiki, ladder-detector.onrender.com, now returns HTTP 503 and the text "This service has been suspended by its owner." The Apache-2.0 source is intact on GitLab and still runs via docker compose, so the work is not lost — but every citation of that wiki link now points at a dead page. A free hosting tier is a deadline, not a deployment.
-
-### Diana and HUSH publish a URL that is not the tool
-UMA Malaga's live site opens with a disclaimer: "Saved results, not the live tool... The pages cannot analyse a variant you type." It publishes unedited CLI output with the commit hash, Docker image digest and tool versions recorded — excellent reproducibility practice, but not a service. GU Frankfurt's HUSH page likewise says it "shows its web app in action" and then walks through a mockup of screenshots. Both are more honest than most, and both are exactly why a 200 response proves nothing until you read the page.
-
-### ETH-Zurich's deCISion is the best source-only release
-The Best Software winner for Overgrad ships MIT-licensed with a web interface, a JSON API, a CLI, 28 automated tests on every push through GitLab CI, a Docker build, a CITATION.cff and a demo video. It exports FASTA, GenBank and SBOL3 and takes any .pdb or .cif structure, so it would work on someone else's data without modification. The only address on the wiki is localhost:4173. Everything needed to deploy it exists in the repository; nobody deployed it.
-
-### Toronto's app is live; its dataset DOI is not
-PETadex at petadex.net is one of the strongest tools of the year: a sharded DIAMOND search over a 298.7M-sequence corpus, with worked examples loaded and ready to run, nothing to install. But the wiki cites a 23.8 GB Zenodo deposit at doi:10.5281/zenodo.23457986, and that DOI returns 404 — a Zenodo API search for "petadex" finds zero records. The interactive half survived and the archival half did not, which is the opposite of what long-term preservation is supposed to deliver.
-
-**Checklist**
-
-- Buy a domain and deploy the tool publicly before the wiki freeze, not after it — every tool that is alive today was hosted on freeze day.
-- Put a clickable URL at the top of the software page; if the only address on the page is localhost, assume nobody outside the team will ever run it.
-- Let strangers in without an account — guest mode or a no-key API. CERNAL gated behind a lab login is dead; AMPilot's keyless API still answers.
-- Pay for hosting that outlives the free tier, and check the URL again a month after the Jamboree. Vilnius's deployment lasted weeks.
-- Expose a documented HTTP API with an OpenAPI spec alongside the UI, so the tool can be a step in someone else's pipeline rather than a destination.
-- Ship a health endpoint that returns real JSON, so anyone — including a judge or a reviewer — can prove the backend is running and not a static shell.
-- Accept standard inputs (FASTA, GenBank, SBML, .pdb/.cif) and export standard outputs (SBOL, GenBank, CSV); hard-wiring the tool to your own chassis caps its audience at your team.
-- Never present a mockup or saved output as the running tool — and if you do publish saved results, label them as plainly as UMA Malaga did.
-- Verify every archival DOI resolves before you cite it; Toronto's 23.8 GB Zenodo deposit 404s while the web app it supports stays up.
-- Recruit one outside user and record what they did. Across all 21 tools the only external-adoption number found anywhere was SynBase's 837 learners; stars and forks were zero everywhere.
-
-_Method and limits. Starting from the 2026 Best Software winners and nominees, the Best Software & AI winners and nominees, and the Best Model and Best Hardware winners, every tool's wiki software page was read (via curl where server-rendered, via the browser pane for client-rendered SPAs), every GitLab and GitHub repository was queried through the GitLab API for file tree, licence, stars, forks and last-commit date, and every candidate deployment was first checked with curl and then opened in a browser and read, because a 200 from an SPA catch-all route proves nothing — starase-atlas.org returns its index page for any /api path, so apparent API endpoints had to be inspected by content. Where a backend health endpoint existed it was called directly (ARGUS /api/ready, PyroForge /health, AMPilot /api/v1/corpus/search, which returned real data). A link check cannot tell you whether the science is correct, whether the tool gives sensible answers on data it has not seen, whether the maintainers intend to keep paying for hosting, or whether anyone is actually using it — zero stars and zero forks mean no public signal, not necessarily no users. Cornell and KAUST-KSA released no standalone software and are listed but excluded from the base rate; TAU-Israel, HK-Joint-School, DKU and XJTLU-Software had no local research file, so their tools were identified from their wikis directly._
 
 ## Taiwan at iGEM 2026
 
@@ -413,6 +174,82 @@ Closing the model-data loop needs no GPU, no licence, no partner lab and no new 
 
 _Method and limits. Counts come from pattern-matching the `dry` and `good` fields of every team file in this report, not from reading the wikis a second time, so a technique a team used but did not write up is invisible here. The sample is decorated teams only — every file is a Top 10 or special-prize winner or nominee — so the baselines are not the whole competition. The loop-closure test looks for explicit language about fitting, uncertainty and validation; a team that did the work but described it loosely will be undercounted. Read the numbers as a ranking, not a measurement._
 
+## What separated real engagement from outreach theatre
+
+_Across the 2026 field, the teams whose Science for Good work counted did four things the rest did not._
+
+**They designed education from data, then measured it like an experiment.** UCAS-China did not start from "raise awareness". It ran clinician interviews and a 461-person questionnaire, found that patients stop medication once they feel better and that parents refuse to start it for children out of fear of side effects, and made *compliance* the target instead of awareness. UOregon wrote three separate curricula for three audiences with different prior knowledge and ran them as three DBTL iterations across June, July and October, carrying each round's lessons forward. HFI ran everything through a five-step cycle it named CLEAR, in which **every activity had to report a measured outcome and a change for the next iteration**.
+
+The sharpest version of this is publishing the results when they are bad. GEMS-Taiwan ran pre- and post-lesson surveys with 140 students across five schools and published per-question accuracy charts including the failures — only 30% of students got DNA base pairing right. That number is worth more to the next teacher than any photograph of a full classroom.
+
+**They trained themselves before training anybody else.** Nineteen GU Frankfurt members took the "Basics of Science Communication" workshop run by NaWik, Germany's national institute for science communication, and used its core-message and cloverleaf tools as the basis of everything that followed. Most teams treat communication as something you already know how to do because you can talk.
+
+**They put disagreeing people in the same room.** Oxford's *Buzz In* podcast is the most quietly radical format in the 2026 field: rather than interviewing stakeholders separately and summarising, it deliberately paired people who disagree — a Varroa-resistance academic with a commercial beekeeper on whether to treat at all, then an industry council CEO with amateur beekeepers. Disagreement is the thing most human-practices pages are built to smooth over; Oxford made it the content.
+
+KIT won Inclusivity by turning the same honesty inward. It read the iGEM Diversity and Inclusion Committee's own writing, surveyed five previous iGEM gender-equity projects, and noticed that nearly all of them face **outward** — role models, outreach to girls, awareness — and almost none examine the team itself. So KIT examined the team itself.
+
+**They quantified the need, and built a business model that was not "sell the product".** Oxford states the problem in numbers rather than adjectives: Australia's failed Varroa eradication cost A$101 million and destroyed about 30,000 hives; surveyed US commercial operations lost roughly 62% of colonies in 2024–25. DTU-Denmark anchors on a date and a measurement: the Danish wind industry's voluntary landfill ban took effect on 1 January 2026, and a Danish EPA screening detected bisphenol A in every tank leaching test on blade material.
+
+Then the models themselves. HongKong-JSS sells **Certification-as-a-Service** — farmers subscribe annually, the team tests soil on site, passing farms get a "Heavy Metal-Free" logo for supermarket packaging that earns a premium, and surprise re-tests throughout the year are affordable precisely because the test is cheap. GEMS-Taiwan deploys through farmer collectives rather than direct sales, because its own fleet analysis shows a reactor owned by a single farm sits idle most of the season. GU Frankfurt chose exclusive licensing over a start-up because an autologous cell therapy's facility and specialist-salary costs cannot be carried by a spin-out, and has a letter of support from Miltenyi Biotec to show for it. XJTLU-China gives catmaOS away, on the argument that accessibility *is* the commercial thesis.
+
+UAlberta's case is the most evidentially careful: demand is tabulated by customer role **with the strength of each piece of evidence named** — two clinician letters of support, a signed letter of intent from one clinic, 86% of 38 surveyed dry eye patients interested, an application at interview stage with Nucleate Canada. And UCAS-China opens its commercial section by stating outright that the case must rest on a defined unmet need rather than on technological novelty, then tabulates the strengths of the existing drugs it would have to displace. A team willing to argue against itself is a team worth believing.
+
+### Oxford's Buzz In: put the disagreement on the record
+A three-episode podcast that deliberately paired stakeholders who disagree, rather than interviewing them separately and summarising. Episode one put a Varroa-resistance academic opposite a commercial beekeeper on whether to treat at all. Most human-practices pages exist to smooth disagreement away; this one makes it the content, and it is far harder to fake than a list of meetings.
+
+### Publish the question your students got wrong
+GEMS-Taiwan surveyed 140 students across five schools before and after each lesson and published per-question accuracy — including DNA base pairing, where only 30% answered correctly. Reporting the failure makes the whole dataset credible and hands the next teacher something actionable. A photograph of a full classroom does neither.
+
+### Train the team before training the public
+Nineteen GU Frankfurt members took the Basics of Science Communication workshop from NaWik, Germany's national science-communication institute, and built everything afterwards on its core-message and cloverleaf tools. Science communication is a craft with a literature; almost every other team treats it as something you can already do because you can talk.
+
+### Sell the certificate, not the instrument
+HongKong-JSS does not sell its mercury assay. Farmers subscribe annually, the team tests on site, passing farms get a 'Heavy Metal-Free' logo for supermarket packaging that commands a premium, and surprise re-tests through the year keep the certificate honest — affordable precisely because the test itself is cheap. The cheapness of the science becomes the business model rather than a weakness.
+
+### Name the strength of each piece of evidence
+UAlberta tabulates demand by customer role and says how strong each item is: two clinician letters of support, one signed letter of intent, 86% of 38 surveyed patients interested, one application at interview stage with Nucleate Canada. A letter of intent and a survey response are not the same kind of evidence, and saying so is what makes the table worth reading.
+
+### Argue against yourself in public
+UCAS-China opens its commercial section by saying the case must rest on unmet need rather than technological novelty, then lists what the existing drugs do well. GEMS-Taiwan publishes a 68-year payback against a partner's 4.9-year figure and names the disagreement instead of resolving it. This is the practice that most distinguishes the 2026 podium, and it costs nothing but nerve.
+
+_Method and limits. Drawn from the Science for Good fields of the team files in this report, each researched from the team's own 2026 wiki. Audience numbers and survey sizes are the teams' own figures and are not independently verified. The judgement about what 'counted' is ours; the team files and the wikis behind them are linked so a reader can disagree. GEMS-Taiwan is the report author's own team and appears here on the same terms as the rest._
+
+## The high-school ceiling, measured honestly
+
+_What a high-school dry lab can actually reach in one season — and the finding that the gap is not about tools._
+
+Read the ten High School Top 10 dry labs side by side and the first surprise is how ordinary the software is. **Eton-College-UK** built its protease substrate predictor out of L2-regularised logistic regression and a BLOSUM62-smoothed position-specific scoring matrix — techniques older than the students using them. **HFI** used NetLogo, which is free and was designed for schools. **GHCIS** used a local install of NUPACK. **HangzhouFourteenAP** used PyMOL and FoldX. **HKSSC** used AlphaFold, UCSF Chimera and HotSpot Wizard. **HongKong-HS** reused another team's tool outright — miRADAR, released by Wageningen's 2024 team — rather than rebuilding it. Almost none of this costs money, and none of it requires a cluster.
+
+Only **Lambert-GA**, the Grand Prize winner, works at the frontier of the toolchain: BindCraft, Boltz-2, Protenix, Mosaic. And even there the thing that earned Best Model was not the tools. It was that they **benchmarked the confidence metrics themselves** — ipSAE, ipTM and a 38-metric ensemble, against 5,721 labelled experimental designs — found the ensemble barely beat chance at ROC-AUC 0.541, noticed that their own eventual hit did not have the best score, and published all of that rather than quietly reporting the hit.
+
+That is the pattern, and it holds across the whole tier. **The differentiator at high-school level is evaluation discipline, not tool sophistication.**
+
+The evidence is specific. Eton clustered near-duplicate sequences by Hamming distance and split whole clusters across folds, then ran a label-shuffle control and a composition-only ablation — three cheap steps that separate a real classifier from a leaky one. **HongKong-JSS** split runs into calibration and validation *before* fitting anything, subtracted a matched control from the same run and timepoint, and reported RMSE on held-out runs with the failures left in. HKSSC could not measure molar enzyme concentration, so rather than report an invalid *k*cat/*K*m they defined and justified a mass-normalised metric valid only below *K*m, then ran a two-way ANOVA, found unequal variances, and moved to a median-based test. GHCIS specified its colour-classification algorithm down to the equation and the threshold, including an explicit **"unresolved, and must not be read as Negative"** state, and shipped it with one-command Docker deployment. HangzhouFourteenAP reported the prediction that lost: FoldX ranked Y166Q first, the bench preferred Q172P, and the wiki revises its own ranking while using BCA normalisation to rule out protein load as the explanation.
+
+**GEMS-Taiwan** belongs on that list and is worth reading closely, because the wiki is unusually candid about its own weaknesses. The strengths are real: a genuinely pre-registered growth-rate forecast, registered on 1 October and scored on run 6, which landed inside its stated interval; an autoencoder that flagged a failing photometer 26.7 hours before it died; and a crop-stress index fitted to 25 years of county rice yields rather than to expert judgement. The weaknesses are stated by the team itself: secreted activity at n=1 and below the limit of quantitation; two induction runs that disagree on the *sign* of the change; a Hill curve assumed to hold at 20 L when every induction ran at a single light intensity; a 2.44× rice canopy correction that is modelled, not measured; an efficacy coefficient of 0.58 explicitly withdrawn; and a payback period of 68 years on the team's own loss figure against a partner's 4.9 years, with the disagreement named rather than resolved. Naming the disagreement instead of picking the flattering number is the practice worth keeping.
+
+**And the control case.** **GCGS** reached the High School Top 10 with no model page and no software page at all — both routes return 404. Its one modelling claim is an undocumented circuit-level simulation with no parameters, equations or tooling named. A team can still place in the top ten of its section with essentially no dry lab. What GCGS could not do is win a modelling, measurement or software prize, and that is the precise shape of the opportunity.
+
+### Lambert-GA, and what the frontier costs
+Four linked models: protein-design metric benchmarking on 5,721 labelled designs, a Sobol-analysed oral pharmacokinetic model, a 13-ODE SimBiology RNAi network, and an individual-based six-year, 800-run colony epidemiology. They produced the first reported DWV VP3 minibinder for under $400 of compute, released the open-source PRINCE site ranker (45.8% top-3 hit rate against 23.8% random on a no-homolog subset), and an $80 dryer externally validated at two universities. This is the ceiling, and it is reachable.
+
+### GCGS: Top 10 with no dry lab at all
+Both /model and /software return 404. The single modelling claim is an undocumented circuit-level simulation with no parameters, equations or tooling named. GCGS still reached the High School Top 10 on the strength of a clean two-cycle DBTL and its Best New Improved Part. Read it as the honest floor: the dry lab is not what gets you into the top ten — it is what gets you a prize.
+
+### Three cheap controls that separate real from leaky
+From Eton-College-UK, and transferable to any student machine-learning project: cluster near-duplicate sequences by Hamming distance and split whole clusters across folds, so the model cannot memorise a near-copy; run a label-shuffle control, which must collapse to chance; run an ablation that strips the information you claim to be using. None of these needs a GPU. Together they turn a high-school classifier into something a reviewer can believe.
+
+### Split before you fit
+HongKong-JSS divided its runs into calibration and validation before fitting anything, subtracted a matched control from the same run and timepoint, inverted the fit to predict unknowns, and reported RMSE on the held-out runs with the failures left in — then published a list of the statistics they had not yet done. That last habit is rarer and more valuable than the first.
+
+### Publish the prediction that lost
+HangzhouFourteenAP's FoldX pipeline ranked Y166Q first; the bench preferred Q172P. Rather than bury it, the wiki revises its own ranking, demotes the failed candidate to a mechanistic probe, and uses BCA normalisation to rule out protein load as the confound. Lambert-GA did the same at a larger scale by showing its own hit was not the top-scoring design. A dry lab earns more credibility from one well-controlled loss than from three unexamined wins.
+
+### The gap is one term of teaching, not a budget line
+Every practice above — cluster-aware splits, label-shuffle controls, calibration/validation separation, provenance tagging, publishing the loss — costs nothing but attention and can be taught in a term. The tools the 2026 high-school field actually used are free: NetLogo, NUPACK, PyMOL, FoldX, scikit-learn, ImageJ, Chimera, the AlphaFold server. GEMS does not need to buy its way to the ceiling. It needs to make evaluation discipline the house style.
+
+_Method and limits. Drawn from the ten High School Top 10 team files in this report, each researched from the team's own 2026 wiki. Tool lists are what each team names; a team may have used more than it wrote down. The judgement about what 'stands out' is ours, and a reader who disagrees should open the team file and the wiki behind it — both are linked. GEMS-Taiwan is the report author's own team and has been assessed on the same terms as the rest._
+
 ## What the Best Wiki winners did differently
 
 _The four 2026 Best Wiki winners did not win on visual polish or page weight; they won by building an executive layer that tells a judge where the evidence is, and then by being unusually specific and unusually honest underneath it._
@@ -471,6 +308,169 @@ Heidelberg's wiki detects a software WebGL renderer on load and automatically sw
 - Treating the mandatory section list as the information architecture. A deep-linked judging index does the same job in one page and reads as an argument rather than a form.
 
 _Method and limits. I rendered and read the four winners in full — Heidelberg, Uni-Padua-IT, TU Delft and Lambert-GA — by fetching their page HTML directly where it is server-rendered, by reading TU Delft's Markdown mirrors, and by loading the client-rendered pages in a browser; counts of references, figures, components, image formats, alt attributes and prefers-reduced-motion rules were taken from the shipped source. I sampled around thirty nominees and controls more shallowly, measuring framework, rendered text length, asset weight and alt-text coverage for all of them, and reading Stanford's and UCAS-China's content in detail as the closest nominees. I could not render several Vite single-page nominees deeply — Oxford, UCSC, NUS-Singapore, KAUST-KSA, Muenster-University, IISER-Kolkata and UOttawa among them — because a shared browser pane kept being navigated away mid-session, so they are excluded from the table and their design is not characterised here; I also did not measure real-world load time, mobile layout or screen-reader behaviour beyond the markup._
+
+## The commercial work that was worth reading argued against itself
+
+_Across the 2026 field, the teams with credible real-world plans are the ones that published a model showing their own product losing._
+
+Almost every iGEM team produces a business model canvas. Very few produce a number that could have gone against them. The difference is the whole of what separates a credible 2026 commercial section from a template.
+
+**Worldshaper-Shanghai** published a recomputable net-present-value model and reported the result honestly: their own enzyme gives a **negative NPV**. They did not bury it, soften it, or quietly change the discount rate. **BGI-College** did the same with arithmetic instead of finance — a break-even calculation comparing 6.70 against 4.0 mol H₂ per mol glucose disproved the team's own premise, and forced a redesign around byproduct valorisation. **DTU-Denmark** ran a prospective life-cycle assessment in SimaPro with ReCiPe 2016 H and found its enzymatic route emits 2.1 kg CO₂-eq/kg against 1.4 for solvolysis and 0.9 for pyrolysis, with cement co-processing beating them on almost every indicator — then converted each losing indicator into a named engineering target. **Madrid-UCM** published an ISO 14040/44 openLCA result that currently rules against its own technology.
+
+**Stockholm** went furthest. Its safety advisory board killed the open-water release the project was built around, so the team dismantled the venture, retreated to a contained membrane bioreactor on a smaller industrial stream, and made the deliverable **reusable safety infrastructure** instead: an STPA hazard analysis, a nine-system wastewater containment guidebook, and a measurement-uncertainty toolkit. Giving up the product and shipping the method is a result, and it was recognised with the Safety and Security Award.
+
+Set against that, the template is easy to spot once you know the tell: **the cost side is real and the revenue side is fantasy**. ZJU-China itemises equipment at CNY 7.45 million, media, IPTG and labour, and publishes a downloadable cost sheet — genuinely good work — then assumes **100% capture of its serviceable obtainable market** to reach a USD 427 million NPV. The discipline applied to the inputs evaporates at the outputs.
+
+The high-school tier is not behind here, and in places it is ahead. **SUIS-SFLS** built the only full financial model in the high-school set: capital expenditure of CNY 6.8 and 11.65 million across two scenarios, CNY 71 and 163.5 per litre, 34% against 15.9% margins, break-even years, and the spreadsheets published as downloadable PDFs, on a dual NMPA and ISO 13485 regulatory track. **ICJFLS** works bottom-up from unit economics — RMB 0.8 per dose against RMB 199 retail — with a 745-response survey and a named CDMO. **NFLSHS-CHINA** has a filed and accepted patent on a CsCCD2 mutant, two physical minimum viable products with formula tables, and labels its partnerships as prospective rather than implying they are signed.
+
+The second thing the credible teams do is **name the stage of each claim**. Baltimore runs Venture Creation Labs OKRs with numeric gates and IRB-approved trilingual surveys, and says plainly that its letters of intent and grants are targets rather than commitments. McGill has a full techno-economic analysis — $11.83 to $20.58 per kg of rare earth oxide, an Ashram project NPV of +USD 51 million, seven sensitivity analyses — an accelerator place, a venture-capital mentor, two letters of support and secured tailings samples, and states that it is not yet incorporated. Nobody is penalised for an early-stage venture. Teams are penalised, correctly, for presenting an aspiration in the grammar of an achievement.
+
+And a reminder that not every project should become a company. **HBUT-China**, **WHU-China**, **Squirrel-Beijing** and **BASIS-China** have no venture at all. Their deliverable is infrastructure other teams can use: 34 parts in four independently reusable modules with measurement parts built in and honest terminator read-through annotations; a five-layer characterisation of Neo-IL-2 including surface plasmon resonance and high-passage stability; a tunable bile-acid kill switch with a measured 0.1–0.2 mM threshold compared against real sewage and soil concentrations, plus a published five-step framework for characterising kill switches. That is a real-world contribution with a longer half-life than most business plans.
+
+### Publish the model that says no
+Worldshaper-Shanghai's recomputable NPV model finds their own enzyme gives a negative NPV, and says so. DTU-Denmark's prospective LCA finds cement co-processing beats their enzymatic route on almost every indicator, then turns each losing indicator into an engineering target. Madrid-UCM's ISO 14040/44 assessment currently rules against its own technology. A model that could only ever have agreed with you is not evidence.
+
+### Real costs, fantasy revenue
+ZJU-China itemises CNY 7.45 million of equipment, media, IPTG and labour and publishes a downloadable cost sheet — then assumes 100% capture of its serviceable obtainable market to reach a USD 427 million NPV. This is the most common failure mode in iGEM commercial sections: rigour on the inputs, where the team has data, and none on the outputs, where it does not.
+
+### Stockholm dismantled its own venture
+A safety advisory board killed the open-water release the project was built on. Rather than argue, the team retreated to a contained membrane bioreactor on a smaller stream and shipped reusable safety infrastructure instead — an STPA hazard analysis, a nine-system wastewater containment guidebook, a measurement-uncertainty toolkit. It won the Safety and Security Award. Giving up the product and publishing the method is a result.
+
+### SUIS-SFLS built the only full financial model in its tier
+Capital expenditure of CNY 6.8 and 11.65 million across two scenarios, CNY 71 and 163.5 per litre, 34% against 15.9% margins, break-even years, spreadsheets published as downloadable PDFs, on a dual NMPA and ISO 13485 track. ICJFLS works bottom-up from RMB 0.8 per dose against RMB 199 retail with a named CDMO. The census found high-school teams do more techno-economic analysis than undergraduates; this is what that looks like up close.
+
+### Name the stage of every claim
+Baltimore says plainly that its letters of intent and grants are targets, not commitments. McGill has a full techno-economic analysis, an accelerator place, a VC mentor, two letters of support and secured tailings samples — and states it is not yet incorporated. NFLSHS-CHINA labels its partnerships prospective. Nobody is penalised for being early. Teams are penalised for writing an aspiration in the grammar of an achievement.
+
+### Not every project should become a company
+HBUT-China, WHU-China, Squirrel-Beijing and BASIS-China have no venture at all. They shipped infrastructure instead — 34 parts in four reusable modules with measurement parts built in, a five-layer Neo-IL-2 characterisation, a tunable kill switch with a measured 0.1–0.2 mM threshold checked against real sewage concentrations, and a published five-step framework for characterising kill switches. For an institution building a reputation, that has a longer half-life than a business plan.
+
+_Method and limits. Drawn from the realWorld fields of the team files in this report, each researched from the team's own 2026 wiki. Financial figures are the teams' own and are not independently audited; where a team's assumptions looked unsupported that is noted as our reading, not as a finding of error. Teams that published a model unfavourable to themselves are over-represented here because that is exactly what the analysis is about — it is not a claim that most 2026 teams did so._
+
+## Does award-winning iGEM software survive the Jamboree?
+
+_Of 21 software tools released by award-winning iGEM 2026 teams, 8 are live and usable by a stranger today, 11 are source-only, and 2 have already gone dark._
+
+**Eight of twenty-one.** That is the honest base rate for award-winning iGEM 2026 software that a stranger can open and use today, four weeks after the Jamboree. Eleven more are source-only: the code is public, populated and often genuinely good, but using it means cloning a repository and running Docker. Two are already dead — Vilnius-Lithuania's Ladder Detector now answers "This service has been suspended by its owner" at ladder-detector.onrender.com, and TAU-Israel's CERNAL fails to resolve at both cernal.app and cernal.duckdns.org, the two addresses its own wiki advertises.
+
+The striking thing is that nothing is a stub. Every repository checked was populated with real code, a README and a licence. iGEM's mandatory GitLab deposit has solved the empty-repo problem completely. What it has not solved, and cannot, is hosting: the competition requires you to publish source, and publishing source is where most teams stop.
+
+The live ones have one habit in common, and it is not budget. **They bought a domain and pointed it at a running backend before the wiki freeze, then wrote the wiki around a URL rather than around an install command.** NJU-China's Atlas sits on starase-atlas.org, XJTLU-Software's AMPilot on ampilotlab.com, Toronto's PETadex on petadex.net, Stanford's RADAR-Scout on Vercel. Two of the eight are high-school teams running real inference in public: GHCIS's ARGUS answers `{"status":"ready"}` at argus.ucuv.dpdns.org, and HK-Joint-School's PyroForge reports `models_ready: true, esm_ready: true` — an ESM protein model loaded and serving, from a school team.
+
+The source-only group is not lazy; it is mostly careful. ETH-Zurich's deCISion ships 28 CI-tested checks, a Docker build and an MIT licence. UMA Malaga's Diana has a 10 GB reproducible Docker stack and a BIOLOGICAL_REPORT.md mapping each biological step to code. Uni-Padua-IT's ReTIsigner is a thoughtful fork of a published tool, Apache 2.0, one `docker run` from working. These teams decided, often explicitly and for defensible reasons — cost, patient data, a 4 GB index — that local execution was the right call. The cost is simply that nobody will ever casually try them.
+
+Two teams published a live URL that is not the tool, and both said so honestly. UMA Malaga's diana-grna-designer-7723f5.igem.wiki opens with "Saved results, not the live tool... The pages cannot analyse a variant you type." GU Frankfurt's HUSH page says "This page shows its web app in action" and then presents a clickable mockup of screenshots. Judges reward the appearance of a deployed tool, so the gap between a demo and a deployment is exactly where a link check gets fooled.
+
+Outside use is the bleakest column. Across every GitLab repository examined the star count is zero, the fork count is zero, and the last commit falls in the October freeze window — with one exception, DKU's pepticraft-2, touched on 5 November. Uni-Padua-IT published an open call on 9 August offering to codon-optimise any team's sequence, received no replies, and reported that on their wiki. The only genuine external-adoption signal found anywhere was on Stanford's SynBase, which displays "837 learners" — and that is a teaching platform, not a research tool.
+
+One more caution for anyone citing datasets as deliverables. Toronto's PETadex front end is live and excellent, but the 23.8 GB Zenodo deposit its wiki cites, doi:10.5281/zenodo.23457986, returns 404, and a Zenodo search for "petadex" returns zero records. The web app survived; the archival half of the release did not.
+
+For GEMS the lesson is narrow and cheap. Shipping a tool outsiders use is achievable — eight teams did it, including two high schools — but it is a hosting decision, not a coding decision, and it has to be made months before the wiki freeze. The teams that got there treated the public URL as the deliverable and the repository as the backup. The ones that did not now own excellent code that nobody will run.
+
+### AMPilot — the only tool with a working public API
+XJTLU-Software's antimicrobial-peptide workbench at ampilotlab.com opens in guest mode with no account, and its /api/v1 routes are documented in a published OpenAPI 3.1 spec. A live call to /api/v1/corpus/search returned real literature evidence with provenance, licence and retrieval date attached — no key, no sign-up. The spec states the API is deterministic, stateless and calls no language model, which is what makes it safe for someone else to build on. It is the clearest example this year of a team designing for a second user rather than a judge.
+
+### Two high-school teams out-shipped most universities
+GHCIS's ARGUS runs a real backend at argus.ucuv.dpdns.org — its /api/ready endpoint answers with JSON, not a static shell — alongside a Docker and a native Node deploy path, role-based access and SQLite persistence. HK-Joint-School's PyroForge serves protein thermostability prediction at pyroforge.26650078.xyz with /health reporting ESM models loaded and ready. Both URLs are reachable right now. Neither team had a university budget; they had a cheap domain and a decision to host.
+
+### Vilnius deployed, then switched it off
+Ladder Detector automates gel-image annotation, a genuinely unglamorous and genuinely useful job, and Vilnius-Lithuania did the right thing by deploying it publicly. The URL on their wiki, ladder-detector.onrender.com, now returns HTTP 503 and the text "This service has been suspended by its owner." The Apache-2.0 source is intact on GitLab and still runs via docker compose, so the work is not lost — but every citation of that wiki link now points at a dead page. A free hosting tier is a deadline, not a deployment.
+
+### Diana and HUSH publish a URL that is not the tool
+UMA Malaga's live site opens with a disclaimer: "Saved results, not the live tool... The pages cannot analyse a variant you type." It publishes unedited CLI output with the commit hash, Docker image digest and tool versions recorded — excellent reproducibility practice, but not a service. GU Frankfurt's HUSH page likewise says it "shows its web app in action" and then walks through a mockup of screenshots. Both are more honest than most, and both are exactly why a 200 response proves nothing until you read the page.
+
+### ETH-Zurich's deCISion is the best source-only release
+The Best Software winner for Overgrad ships MIT-licensed with a web interface, a JSON API, a CLI, 28 automated tests on every push through GitLab CI, a Docker build, a CITATION.cff and a demo video. It exports FASTA, GenBank and SBOL3 and takes any .pdb or .cif structure, so it would work on someone else's data without modification. The only address on the wiki is localhost:4173. Everything needed to deploy it exists in the repository; nobody deployed it.
+
+### Toronto's app is live; its dataset DOI is not
+PETadex at petadex.net is one of the strongest tools of the year: a sharded DIAMOND search over a 298.7M-sequence corpus, with worked examples loaded and ready to run, nothing to install. But the wiki cites a 23.8 GB Zenodo deposit at doi:10.5281/zenodo.23457986, and that DOI returns 404 — a Zenodo API search for "petadex" finds zero records. The interactive half survived and the archival half did not, which is the opposite of what long-term preservation is supposed to deliver.
+
+**Checklist**
+
+- Buy a domain and deploy the tool publicly before the wiki freeze, not after it — every tool that is alive today was hosted on freeze day.
+- Put a clickable URL at the top of the software page; if the only address on the page is localhost, assume nobody outside the team will ever run it.
+- Let strangers in without an account — guest mode or a no-key API. CERNAL gated behind a lab login is dead; AMPilot's keyless API still answers.
+- Pay for hosting that outlives the free tier, and check the URL again a month after the Jamboree. Vilnius's deployment lasted weeks.
+- Expose a documented HTTP API with an OpenAPI spec alongside the UI, so the tool can be a step in someone else's pipeline rather than a destination.
+- Ship a health endpoint that returns real JSON, so anyone — including a judge or a reviewer — can prove the backend is running and not a static shell.
+- Accept standard inputs (FASTA, GenBank, SBML, .pdb/.cif) and export standard outputs (SBOL, GenBank, CSV); hard-wiring the tool to your own chassis caps its audience at your team.
+- Never present a mockup or saved output as the running tool — and if you do publish saved results, label them as plainly as UMA Malaga did.
+- Verify every archival DOI resolves before you cite it; Toronto's 23.8 GB Zenodo deposit 404s while the web app it supports stays up.
+- Recruit one outside user and record what they did. Across all 21 tools the only external-adoption number found anywhere was SynBase's 837 learners; stars and forks were zero everywhere.
+
+_Method and limits. Starting from the 2026 Best Software winners and nominees, the Best Software & AI winners and nominees, and the Best Model and Best Hardware winners, every tool's wiki software page was read (via curl where server-rendered, via the browser pane for client-rendered SPAs), every GitLab and GitHub repository was queried through the GitLab API for file tree, licence, stars, forks and last-commit date, and every candidate deployment was first checked with curl and then opened in a browser and read, because a 200 from an SPA catch-all route proves nothing — starase-atlas.org returns its index page for any /api path, so apparent API endpoints had to be inspected by content. Where a backend health endpoint existed it was called directly (ARGUS /api/ready, PyroForge /health, AMPilot /api/v1/corpus/search, which returned real data). A link check cannot tell you whether the science is correct, whether the tool gives sensible answers on data it has not seen, whether the maintainers intend to keep paying for hosting, or whether anyone is actually using it — zero stars and zero forks mean no public signal, not necessarily no users. Cornell and KAUST-KSA released no standalone software and are listed but excluded from the base rate; TAU-Israel, HK-Joint-School, DKU and XJTLU-Software had no local research file, so their tools were identified from their wikis directly._
+
+## How the best teams made complex data honest, not just pretty
+
+_The visualisation work that stood out in 2026 was not the most beautiful. It was the work that made it impossible to misread the data._
+
+Almost every 2026 wiki has charts. The ones worth studying share a single instinct: **they build the reader's doubt into the picture**.
+
+The clearest example is **GEMS-Taiwan**'s provenance colour-coding. Its dose ledger is drawn as one top-to-bottom chain, from 1.67 mL on a 10 cm plate down to US$3,800 of capital per hectare, with a rail running down the left that is green while every row still rests on a measurement and **turns amber at the rice canopy correction** — so a reader sees exactly where measurement stops and modelling begins. Every model input is tabulated with a provenance column. **TU Delft** does the same thing in a different register, labelling every cell of its decision matrix Factual, Inferred, Estimated or Speculative, with a legend stating that the tag records the evidence and not the judgement. **BOKU-Vienna** attaches a parameter-provenance table to its interactive widget. **XJTLU-China** runs an evidence-coverage track underneath its priority profiles, so a high score sitting on thin evidence cannot be mistaken for a finding.
+
+The second instinct is **a state that refuses to be misread**. **DKU**'s safety panel resolves to four verdicts rather than three — clear, exceeded, borderline, and *not assessed* — precisely so an unmeasured gate can never be read as a passed one; 198 of its 496 constructs carry no immunogenicity measurement, and the interface says so rather than showing a zero. It goes further: because the MHC class I predictor accepts only 5-15 residue peptides and returns zero outside that window, a stored zero is explicitly not presented as evidence of low immunogenicity. **GHCIS** ships the same idea in its colour classifier, with an explicit "unresolved, and must not be treated as Negative" state. **UMA Malaga** conveys status by shape and text rather than colour alone.
+
+The third is **telling the reader how to read it**. BOKU-Vienna puts an explicit "How to read this graph" panel beside each one. XJTLU-China numbers eighteen model figures so they read as a single argument rather than a gallery, aligning six normalised feature tracks above a composite score so you can see which feature drove a peak.
+
+The fourth is **captions that carry the whole experiment**. **Mingdao**'s figures are plain, and that is the point — each names the instrument (a BioTek Synergy H1 plate reader; a FORA G31 glucose meter, range 20-600 mg/dL), the buffer, the temperature, the replicate count and the error measure, links its own raw CSV by filename, and where error bars are too small to see, *the caption says so* and points at the table of values.
+
+The fifth is **showing the absences**. **DTU-Denmark**'s interactive stakeholder map colour-codes each pin by engagement status so that non-responses stay visible, and the team names the organisations that never replied. **BNDS-China** prints a caveat directly on its influence map stating that appearing on it does not mean an interview took place.
+
+And a note on accessibility, because the wiki analysis found that late alt-text compliance sweeps correlate with nothing. **BAID-China** shows what doing it properly looks like instead: every chart on the wiki redrawn in the eight-colour Okabe-Ito colour-blind-safe palette, chosen for luminance separation so the figures survive greyscale, with a published colour-blindness simulation verifying that elements stay distinguishable under red-green, blue-yellow and total colour-blindness. That is a design decision taken at the start, not a checkbox at the end.
+
+Interactivity, finally, earns its place only when it lets the reader change something. **UPF-Barcelona**'s RK4 solver gives every parameter a live slider that takes effect *during* the running simulation. BOKU-Vienna's trade-off widget moves a vitamin flux against growth rate with the team's own measured points overlaid. DTU-Denmark's process-flow diagram zooms from a five-route overview into the enzymatic routes with every parameter printed on the box - acid molarity, temperature, residence time, enzyme loading, number of reuses. An animation that only plays is decoration; a control that changes the answer is an argument.
+
+### Colour the rail where measurement stops
+GEMS-Taiwan draws its dose ledger as one chain from 1.67 mL on a plate to US$3,800 per hectare, with a rail down the left that is green while each row rests on a measurement and turns amber at the rice canopy correction. Anyone can see where the evidence ends. TU Delft does the same with Factual / Inferred / Estimated / Speculative tags on every cell of its decision matrix.
+
+### Give "not assessed" its own state
+DKU's safety panel resolves to clear, exceeded, borderline and not assessed — four verdicts, so an unmeasured gate can never read as a passed one. 198 of its 496 constructs have no immunogenicity measurement and the interface says so instead of showing a zero. GHCIS ships the same idea as "unresolved, and must not be treated as Negative".
+
+### Put the whole experiment in the caption
+Mingdao's figures are plain and rigorous. Each names the instrument, the buffer, the temperature, the replicate count and the error measure, and links its own raw CSV by filename. Where the error bars are too small to see, the caption says so and points at the table of values. A figure a reader can audit beats a figure a reader can admire.
+
+### Show who did not reply
+DTU-Denmark colour-codes every pin on its stakeholder map by engagement status, so non-responses stay visible, and names the organisations that never answered. BNDS-China prints the caveat on its influence map that appearing there does not mean an interview happened. A map with no gaps is a map that has been tidied.
+
+### BAID-China redrew every chart in a colour-blind-safe palette
+The eight-colour Okabe-Ito palette, chosen for luminance separation so the figures survive greyscale, with a published colour-blindness simulation verifying that elements stay distinguishable under red-green, blue-yellow and total colour-blindness. The wiki analysis found late alt-text sweeps correlate with nothing; this is the alternative — a decision taken at the start.
+
+### Interactivity only counts if the reader can change the answer
+UPF-Barcelona gives every parameter a live slider that takes effect during the running simulation. BOKU-Vienna moves vitamin flux against growth rate with the team's own measured points overlaid and a "How to read this graph" panel beside it. DTU prints every parameter on the box of a zoomable process diagram. An animation that only plays is decoration.
+
+_Method and limits. Drawn from the dataviz field of every team file in this report, each researched from the team's own 2026 wiki. Interactive behaviour is as the analysts described it after opening the pages; we have not re-tested every widget here. The examples are chosen because they illustrate a transferable device, not because they are the only teams doing good work. GEMS-Taiwan is the report author's own team and appears on the same terms as the rest._
+
+## Two questions, thirty teams
+
+_This report asks the same two questions of every team it looks at._
+
+The first question is computational. Where does a project stop being wet biology and start being a model, a pipeline, a dataset, a piece of software? What did that layer actually decide — did it change an experiment, or was it decoration added after the fact? The teams that win are increasingly the ones where the answer is "it changed the experiment".
+
+The second question is social. Who outside the team touched this project, and what did they change about it? A list of meetings is not integrated human practices. A design that is visibly different because somebody outside the lab said something is.
+
+Everything else here — the trend tabs, the roadmap — exists to answer a third question that only GEMS Research can answer: given what 2026 looked like, what should a growing research institution in Taiwan be building in 2027 and beyond?
+
+## Why the dry lab is the roadmap
+
+_GEMS Research is becoming an institution, not a team. Institutions are defined by what they can still do after the current students graduate._
+
+A wet lab is bounded by its benches, its reagents budget and the hours its students are physically present. A dry lab is bounded by what its people know and what they have written down. That asymmetry is the whole argument: computational capability compounds across years in a way that pipetting skill does not, because a model, a pipeline or a calibrated measurement protocol survives the student who built it.
+
+This is also where the field has moved. Protein design, metabolic modelling and measurement standardisation are no longer the specialist corner of a project — in 2026 they are frequently the project. The teams on the 2026 podium did not win because they ran more gels.
+
+So the roadmap below is deliberately about capability, not about any single 2027 project idea. Pick a phase and start.
+
+## Two independent analyses, one answer
+
+_The academic trend review and the industry trend review were run separately, from different sources, with no knowledge of each other. They landed on the same white space._
+
+From the literature side: light has matured from a laboratory curiosity into a real-time actuator for closed-loop control of fermentation, with reported titre gains around 60% in a 1 L photobioreactor — and optogenetics in **Bacillus subtilis** is a twelve-paper literature in the whole of PubMed.
+
+From the industry side, reached by an entirely different route: optogenetics is becoming the control and cleaning layer of bioprocessing, because light lets you retrofit an existing steel fermenter instead of building a new one. That makes it the cheapest route past the capital-expenditure wall that is currently the binding constraint on biomanufacturing.
+
+GEMS Research already stands in that gap. ReLEAF was a CcaS/CcaR optogenetic circuit in *Bacillus subtilis* driving a bioreactor, and it won Best Measurement and Best Hardware at high-school level for exactly the instrumentation this line needs. The competition project is over; the research line it opened is not.
+
+There is a second, blunter finding underneath this. Taiwan's state-backed biotechnology push is a manufacturing play — contract development and manufacturing, GMP capacity — with no visible synthetic-biology **design** layer, while Singapore and Israel are explicitly funding exactly that layer. A small institution cannot out-build a CDMO. It can occupy the design position that nobody in Taiwan currently holds.
 
 ## Academic trends
 

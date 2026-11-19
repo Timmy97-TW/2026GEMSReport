@@ -277,15 +277,16 @@
   /* ---------- TEAMS ---------- */
   var FILTER = { sec: "all", award: "all", q: "" };
   function viewTeams() {
-    return reportSections("teams") +
-      '<section class="sec"><div class="wrap">' +
+    // the browsable index first — it is what the tab is for — then the analyses
+    return '<section class="sec"><div class="wrap">' +
       sechead(L("Team files", "團隊檔案"), "Every team we studied", "我們研究過的每一支團隊",
         "Researched from each team's own iGEM 2026 wiki. Filter by section or award, or search for a technique — \"AlphaFold\", \"ODE\", \"workshop\", \"policy\".",
         "資料來自各隊 iGEM 2026 官方 wiki。可依組別或獎項篩選，或直接搜尋技術關鍵字——「AlphaFold」、「ODE」、「workshop」、「policy」。") +
       '<div class="filters" id="filters"></div>' +
       '<div class="grid g3" id="teamgrid"></div>' +
       '<p style="margin-top:20px;color:var(--ink3);font-size:13px" id="teamcount"></p>' +
-      "</div></section>";
+      "</div></section>" +
+      reportSections("teams");
   }
   var AWARDF = [
     ["all", "All awards", "全部獎項", null],

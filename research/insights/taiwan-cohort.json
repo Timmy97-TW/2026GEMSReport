@@ -340,5 +340,6 @@
     }
   ],
   "method": "The tally is built from research/results2026.json (captured from competition.igem.org/results/2026 on 19 November 2026) cross-checked team by team against iGEM's own public API — api.igem.org/v1/teams?year=2026 for the full 463-team roster with countries, cities, sections and acceptance status, and api.igem.org/v1/teams/<id>/awards for each team's medals, nominations and wins — which is how nine Taiwanese registrations absent from the results table were found, including NTHU Taiwan (6416), CCU-Taiwan (6408), WIST (6062) and AEI Prep-Taiwan (6200). Project detail comes from the teams' own 2026 wikis, read directly where server-rendered and through a browser for the client-rendered single-page sites (Labi-Taiwan, CCU-Taiwan), plus the existing researched file at research/teams/6072.json for GEMS-Taiwan and research/trends/industry.json for the TBMC, DayOne and Israel Innovation Authority figures. Two Taiwanese registrations could not be verified beyond their API records: Taipei-TWN (6142) is marked not eligible and has no wiki content, and Oros Biotech (6543) returns a 404 wiki, so nothing is claimed about either project; KCIS-Xiugang-Taipei's project could only be identified by name and navigation structure because its wiki ships a largely unmodified template, and Mingdao's medal-level claims rest on the API rather than on a wiki statement.",
-  "kicker_zh": "原創分析"
+  "kicker_zh": "原創分析",
+  "order": 30
 }

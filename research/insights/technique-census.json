@@ -88,5 +88,6 @@
   ],
   "method": "Counts come from pattern-matching the `dry` and `good` fields of every team file in this report, not from reading the wikis a second time, so a technique a team used but did not write up is invisible here. The sample is decorated teams only — every file is a Top 10 or special-prize winner or nominee — so the baselines are not the whole competition. The loop-closure test looks for explicit language about fitting, uncertainty and validation; a team that did the work but described it loosely will be undercounted. Read the numbers as a ranking, not a measurement.",
   "method_zh": "計數方式是對本報告每一份團隊檔案的 `dry` 與 `good` 欄位做樣式比對，而非重新閱讀 wiki，因此團隊做了卻沒寫下來的技術在這裡是看不見的。樣本僅限獲獎隊伍——每一份檔案都是 Top 10 或特別獎得主／入圍者——所以基準值並不代表整個競賽。迴圈閉合的判準是尋找明確描述擬合、不確定度與驗證的文字；做了卻寫得含糊的團隊會被低估。請把這些數字當成排序，而不是量測。",
-  "kicker_zh": "原創分析"
+  "kicker_zh": "原創分析",
+  "order": 30
 }

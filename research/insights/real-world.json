@@ -81,5 +81,6 @@
   ],
   "method": "Drawn from the realWorld fields of the team files in this report, each researched from the team's own 2026 wiki. Financial figures are the teams' own and are not independently audited; where a team's assumptions looked unsupported that is noted as our reading, not as a finding of error. Teams that published a model unfavourable to themselves are over-represented here because that is exactly what the analysis is about — it is not a claim that most 2026 teams did so.",
   "method_zh": "資料取自本報告團隊檔案中的 realWorld 欄位，每一份都來自該隊自己的 2026 wiki。財務數字為各隊自報且未經獨立查核；凡判斷某隊假設缺乏支撐之處，均屬我們的閱讀判斷，而非認定其有誤。公開了對自己不利之模型的團隊在此被過度呈現，因為那正是本篇分析的主題——這並不表示 2026 年多數團隊都這麼做。",
-  "kicker_zh": "原創分析"
+  "kicker_zh": "原創分析",
+  "order": 34
 }
