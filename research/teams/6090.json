@@ -6,32 +6,106 @@
   "village": "",
   "wiki": "https://2026.igem.wiki/boku-vienna/",
   "projectTitle": "Algaeneering",
+  "projectTitle_zh": "Algaeneering",
   "tagline": "Engineering the microalga Chlamydomonas reinhardtii into a vitamin C and folate factory to fight hidden hunger",
+  "tagline_zh": "把微藻 Chlamydomonas reinhardtii 改造成維生素 C 與葉酸工廠，對抗隱性飢餓",
   "summary": "BOKU-Vienna overexpressed GGP (vitamin C) and GTPCHI plus ADCS (folate) in Chlamydomonas reinhardtii using Golden Gate Level 0/1/2 assembly, reaching a 4.5x increase in vitamin C in the GGP strain. The project was framed around hidden hunger, which affects an estimated two billion people, and was linked to UN SDGs 2, 3 and 12. Its education practice was built on an explicit didactic framework (the Didactic Triangle) and spanned four goals: sparking curiosity, classroom science, public dialogue and educational media. A genome-scale metabolic model was coupled to a calibrated bioreactor model and a nutritional impact model to translate lab titres into how many people a production plant could feed.",
-  "awards": ["Best Education nominee (Overgrad)"],
+  "summary_zh": "BOKU-Vienna 以 Golden Gate Level 0/1/2 組裝，在 Chlamydomonas reinhardtii 中過表現 GGP（維生素 C）以及 GTPCHI 加 ADCS（葉酸），GGP 菌株的維生素 C 提高了 4.5 倍。專案以隱性飢餓為主軸，估計影響全球約 20 億人，並連結到聯合國永續發展目標 SDG 2、3 與 12。教育實踐建立在明確的教學框架（教學三角）之上，涵蓋四項目標：引發好奇、課堂科學、公眾對話與教育媒體。他們也把基因組尺度代謝模型接上經校正的生物反應器模型與營養影響模型，把實驗室效價換算成一座生產廠能餵養多少人。",
+  "awards": [
+    "Best Education nominee (Overgrad)"
+  ],
   "dry": {
     "frameworks": "Genome-scale metabolic modelling of C. reinhardtii (iCre1355, mixotrophic version) with flux balance analysis (FBA), flux variability analysis (FVA), in-silico knockouts and enzyme protein-cost ranking; dynamic FBA bioreactor model calibrated and validated against the team's own flask cultures; a nutritional impact model converting measured vitamin content into daily requirements and people supplied.",
+    "frameworks_zh": "C. reinhardtii 的基因組尺度代謝模型（iCre1355，混營版本），搭配通量平衡分析（FBA）、通量變異分析（FVA）、電腦模擬基因剔除與酵素蛋白成本排序；動態 FBA 生物反應器模型以團隊自己的搖瓶培養資料校正與驗證；另有營養影響模型，把量測到的維生素含量換算成每日需求量與可供應人數。",
     "dataviz": "Interactive 'Try the trade-off' widget on the wiki: sliders let a visitor pick a vitamin and see (left) maximum vitamin flux versus growth rate from the genome-scale model and (right) the calibrated flask culture's biomass, ammonium, acetate and vitamin titre over up to 120 h, with the team's own measured points overlaid and a harvest-point marker. Each graph carries an explicit 'How to read this graph' panel and a parameter-provenance table.",
+    "dataviz_zh": "wiki 上的互動元件 Try the trade-off：訪客可用滑桿選擇一種維生素，左側顯示基因組尺度模型算出的最大維生素通量與生長速率之間的取捨，右側顯示經校正的搖瓶培養在最多 120 小時內的生物量、銨、乙酸與維生素效價，並疊上團隊自己的量測點與收穫時間點標記。每張圖都附一個明確的「如何讀這張圖」面板與參數來源表。",
     "datascience": "Lab-to-model feedback loop: flask measurements (biomass, ammonium, acetate, vitamin titre) were used to calibrate model parameters, and the model's pre-registered 1-10x overexpression band was compared against the measured 4.5x vitamin C result. Known model gaps were stated openly (measured ammonium ~2 mM below model; no cell-death term).",
+    "datascience_zh": "實驗室與模型之間形成回饋迴圈：搖瓶量測（生物量、銨、乙酸、維生素效價）用來校正模型參數，模型事先登記的 1-10 倍過表現區間則與實測的 4.5 倍維生素 C 結果對照。已知的模型落差也公開寫明（實測銨濃度比模型低約 2 mM；模型沒有細胞死亡項）。",
     "software": "Custom interactive children's learning platform (web app, guided by an algae mascot, virtual-microscope zoom from cell to molecule, 3D DNA double helix with VR headset support, base-pairing puzzle game) and a separate 13-module self-paced interactive learning platform with mini-games (lac operon switch, PCR exponential-growth slider, mRNA translation, Cas9 cut-site finder), instant feedback, no sign-up, and a teacher preview mode that unlocks all modules for classroom prep.",
-    "stack": ["genome-scale metabolic model iCre1355", "flux balance analysis", "flux variability analysis", "dynamic FBA", "web-based interactive learning platform", "WebVR / 3D DNA model", "Kahoot", "Mentimeter / QR-code live surveys"],
-    "techniques": ["Golden Gate Assembly (Level 0 to Level 2)", "C. reinhardtii transformation (UVM4)", "vitamin C and folate assays", "microscopy", "protein-cost analysis of enzyme targets", "bioreactor scale-up scenario modelling"]
+    "software_zh": "自製的互動式兒童學習平台（網頁應用，由一隻藻類吉祥物帶路，虛擬顯微鏡可從細胞縮放到分子，3D DNA 雙螺旋並支援 VR 頭戴裝置，還有鹼基配對拼圖遊戲），以及另一個 13 個模組、可自行調整進度的互動學習平台，內含小遊戲（lac operon 開關、PCR 指數成長滑桿、mRNA 轉譯、Cas9 切位尋找），提供即時回饋、免註冊，並有教師預覽模式可解鎖所有模組供課前準備。",
+    "stack": [
+      "genome-scale metabolic model iCre1355",
+      "flux balance analysis",
+      "flux variability analysis",
+      "dynamic FBA",
+      "web-based interactive learning platform",
+      "WebVR / 3D DNA model",
+      "Kahoot",
+      "Mentimeter / QR-code live surveys"
+    ],
+    "techniques": [
+      "Golden Gate Assembly (Level 0 to Level 2)",
+      "C. reinhardtii transformation (UVM4)",
+      "vitamin C and folate assays",
+      "microscopy",
+      "protein-cost analysis of enzyme targets",
+      "bioreactor scale-up scenario modelling"
+    ]
   },
   "good": {
     "publicEngagement": "BOKU-Vienna ran a four-pillar education strategy explicitly grounded in the Didactic Triangle (learner-educator-content), and designed every child-facing print and digital resource in the dyslexia-friendly ABeeZee font. Pillar 1 (sparking curiosity) included a three-day Children's University (KinderUNI) booth built as a six-station progressive learning path: project poster, live Chlorella tubes and Chlamydomonas microscope images, a handcrafted 3D algae organelle model, a custom web learning platform plus a VR headset for exploring a 3D DNA double helix, an interactive genetic-engineering poster, and a gamified 'plasmid toss' into a large algae model to represent transformation; gummy-bear DNA building ran alongside. The same station set was then carried to Karwan Haus, a Caritas Wien refugee shelter in Vienna, on 17 August 2026 for children aged 4-12, with the flyer translated into four languages, Arabic- and Russian-speaking team members explaining stations, illustration-heavy materials, child-sized lab coats and goggles lent by KinderUNI BOKU, Lego-brick Golden Gate Cloning, stamps and science badges; in the exit survey most children chose 'I would love to work in science in the future'. Pillar 2 put a three-week, four-visit curriculum into two primary schools (Ruckergasse in Vienna and Neuarzl in Tyrol) with strawberry DNA extraction, lab-safety and pipetting sessions, a construct-assembly exercise for the GGP enzyme, vitamin C detection, Kahoot recaps and a field trip to the ZOOM Children's Museum where pupils wrote, drew and voiced two stop-motion films about algae and genetic modification; a middle-school workshop ('Code of Life - How We Program Cells') added a red-cabbage anthocyanin biosensor experiment, and a high-school visit to BG/BRG Tulln had students identify C. reinhardtii against Spirulina and Chlorella under the microscope. Measured impact: in the primary-school pre/post evaluation, zero children named science as a desired profession at the start versus five at the end, and 75.0% said they had become curious about programming cells (16.7% wanted to learn more first, 8.3% said they definitely want to do it in future). Pillar 3 (public dialogue) comprised a booth at Austria's Long Night of Research (24 April 2026) with a live visitor survey board on GMO acceptance and awareness that over 5 billion people face micronutrient deficiency, the Muthgassen Summer Festival, a 'Future of Food' panel discussion at TU Wien's Boecklsaal on 3 October 2026 with about 60 attendees and four panelists spanning algae cosmetics (Rita Mota), UNICEF Austria malnutrition work (Michael Blauensteiner), algae production engineering (Lukas Neuwirth, ex-Ecoduna) and microalgae research (Johannes Stadlmann), run in three blocks with anonymous QR-code audience polling and spirulina cotton candy, plus a pub quiz for about thirty STEM and non-STEM students. Pillar 4 produced durable media: an illustrated German children's book 'Welche Sprache spricht das Leben?' co-developed with KinderBOKU (characters such as 'Grandma Polymerase' who knits DNA together), launched at Vienna's Pappenheimgasse public library for a 4th-grade and a 5th-grade class with a copy donated to the library's lending collection and a copy given to every child; a comic advised by Martina Froehlich of KinderBOKU; the German-language podcast 'AlgaeHearing' on Spotify, deliberately in German because accessible German science content is scarce; the 13-module interactive learning platform with a teacher preview mode; and a feature article in the German-language life-science magazine BioSpektrum (issue 32, 4 June 2026). Critically, all tested worksheets, workshop guides and experiment protocols were published as downloadable Open Educational Resources on eduvidual.at, the official learning platform of the Austrian Federal Ministry of Education, Science and Research, so Austrian teachers nationwide can reuse them. Named-attribution testimonials were collected from the teacher at Ruckergasse, the head of the Pappenheimgasse library, the head of KinderBOKU and a social worker at Karwan Haus.",
+    "publicEngagement_zh": "BOKU-Vienna 推動四大支柱的教育策略，明確以教學三角（學習者—教育者—內容）為基礎，並把所有面向兒童的印刷與數位素材都以對閱讀障礙友善的 ABeeZee 字體設計。支柱一（引發好奇）包含為期三天的兒童大學（KinderUNI）攤位，設計成六站循序漸進的學習動線：專案海報、活體 Chlorella 試管與 Chlamydomonas 顯微照片、手工製作的 3D 藻類胞器模型、自製網頁學習平台搭配 VR 頭戴裝置探索 3D DNA 雙螺旋、互動式基因工程海報，以及把質體投進大型藻類模型以代表轉形的遊戲化「丟質體」活動；旁邊同時進行用軟糖熊搭 DNA 的活動。同一組站點在 2026 年 8 月 17 日搬到維也納的 Karwan Haus（Caritas Wien 的難民收容所），對象是 4-12 歲兒童：傳單翻成四種語言、由會說阿拉伯語與俄語的隊員解說各站、素材以插圖為主、兒童尺寸的實驗衣與護目鏡由 KinderUNI BOKU 出借，另有樂高積木版 Golden Gate Cloning、印章與科學徽章；離場問卷中多數孩子選了「我以後很想做科學工作」。支柱二把一套為期三週、共四次到校的課程帶進兩所小學（維也納的 Ruckergasse 與提洛邦的 Neuarzl），內容包括草莓 DNA 萃取、實驗安全與移液練習、GGP 酵素的構築組裝練習、維生素 C 檢測、以 Kahoot 複習，以及到 ZOOM 兒童博物館的校外教學，學生在那裡自己撰稿、繪圖並配音完成兩部關於藻類與基因改造的停格動畫；國中階段的工作坊（Code of Life - How We Program Cells）加入紅甘藍花青素生物感測器實驗；到 BG/BRG Tulln 高中的參訪則讓學生在顯微鏡下分辨 C. reinhardtii 與 Spirulina、Chlorella。量測到的影響：小學課程的前後測中，一開始沒有任何孩子把科學列為想從事的職業，結束時有五位；75.0% 表示自己對改寫細胞的程式產生了好奇（16.7% 想先多了解一些，8.3% 表示未來一定要做）。支柱三（公眾對話）包括 2026 年 4 月 24 日奧地利研究長夜的攤位，現場設有看板調查訪客對基因改造的接受度，以及對全球逾 50 億人面臨微量營養素缺乏的認知；Muthgassen 夏日慶典；2026 年 10 月 3 日在 TU Wien Boecklsaal 舉辦的 Future of Food 論壇，約 60 人出席，四位與談人分別來自藻類化妝品（Rita Mota）、UNICEF Austria 的營養不良工作（Michael Blauensteiner）、藻類生產工程（Lukas Neuwirth，前 Ecoduna）與微藻研究（Johannes Stadlmann），分三段進行，搭配匿名 QR code 現場投票與螺旋藻棉花糖；另有一場約三十位 STEM 與非 STEM 學生參加的酒吧問答。支柱四產出可長期留存的媒材：與 KinderBOKU 共同開發的德文插畫童書 Welche Sprache spricht das Leben?（書中有像「聚合酶奶奶」這樣把 DNA 編織起來的角色），在維也納 Pappenheimgasse 公共圖書館對一個四年級與一個五年級班級舉行發表會，捐一本給圖書館的外借館藏，並送給每位孩子一本；由 KinderBOKU 的 Martina Froehlich 擔任顧問的漫畫；在 Spotify 上的德語 podcast AlgaeHearing，刻意用德語，因為平易近人的德語科學內容相當稀少；有教師預覽模式的 13 模組互動學習平台；以及在德語生命科學雜誌 BioSpektrum 刊出的專題文章（第 32 期，2026 年 6 月 4 日）。最關鍵的是，所有經過實測的學習單、工作坊指引與實驗流程，都以可下載的開放教育資源發布在 eduvidual.at，也就是奧地利聯邦教育、科學與研究部的官方學習平台，讓全國教師都能重複使用。他們也收集了具名的推薦意見，分別來自 Ruckergasse 的老師、Pappenheimgasse 圖書館館長、KinderBOKU 負責人與 Karwan Haus 的一位社工。",
     "ihp": "Human Practices was structured into three sequential phases, each with its own stakeholder set: (1) lab experts for technical feasibility, which changed key design decisions; (2) outside critics on GMOs, sustainability and ethics, where the team explicitly sought disconfirming rather than validating views; (3) nutrition and product-design conversations about who should be prioritised as a target group and how the product would be delivered. The team framed iHP against the reflective/responsible/responsive triad, mapped the project to SDGs 2, 3 and 12, and used the 'Future of Food' panel plus audience polling as a live iHP instrument. The panel's main takeaway was recorded honestly as 'our work is meaningful, but GMO-based projects are not without risk and open questions, especially when implemented at a larger scale'.",
+    "ihp_zh": "人類實踐分成三個依序進行的階段，各有自己的利害關係人：（1）實驗室專家，用於確認技術可行性，這一階段改變了關鍵設計決策；（2）針對基因改造、永續性與倫理的外部批評者，團隊明確尋求能證反自己的意見，而不是來背書的意見；（3）營養與產品設計的對話，討論該優先服務哪一個目標族群、產品又該如何遞送。團隊以反思性、負責性、回應性三者構成的框架檢視整合式人類實踐，把專案對應到 SDG 2、3 與 12，並把 Future of Food 論壇與現場投票當作即時的人類實踐工具。論壇的主要結論也誠實記錄下來：我們的工作有意義，但以基因改造為基礎的專案並非沒有風險與未解的問題，尤其是放大到更大規模實施的時候。",
     "realWorld": "The impact model translated measured vitamin content into concrete figures: 25 g dry algae per day covers one daily folate requirement and 116 g covers vitamin C; a hypothetical 100 m3 production plant at wild-type folate content could cover the yearly folate need of roughly 900 adults or 490 pregnant women. The design reactor scenario produced 0.46 g/L/day, nitrogen-capped, at about 1.5x the flask vitamin titre. The team also published a separate 'iGEM guide' page for teams starting out.",
-    "partners": ["KinderBOKU / KinderUNI BOKU (BOKU University children's science programme)", "Caritas Wien - Karwan Haus refugee shelter", "ZOOM Children's Museum, Vienna", "Pappenheimgasse public library, Vienna", "Ruckergasse Primary School, Vienna", "Neuarzl Primary School, Tyrol", "BG/BRG 21 bilingual middle school", "BG/BRG Tulln high school", "TU Wien (Boecklsaal venue)", "eduvidual.at - Austrian Federal Ministry of Education, Science and Research learning platform", "BioSpektrum magazine", "UNICEF Austria (panelist)", "Stroeck (sponsor, panel catering)", "Polymun"]
+    "realWorld_zh": "影響模型把量測到的維生素含量換算成具體數字：每天 25 g 乾藻可滿足一日的葉酸需求，116 g 可滿足維生素 C；若以野生型的葉酸含量計算，一座假想的 100 m3 生產廠可覆蓋約 900 名成人或 490 名孕婦一年的葉酸需求。設計反應器情境的產量為 0.46 g/L/day，受氮源上限限制，維生素效價約為搖瓶的 1.5 倍。團隊另外也做了一個給新手隊伍的 iGEM 指南頁面。",
+    "partners": [
+      "KinderBOKU / KinderUNI BOKU (BOKU University children's science programme)",
+      "Caritas Wien - Karwan Haus refugee shelter",
+      "ZOOM Children's Museum, Vienna",
+      "Pappenheimgasse public library, Vienna",
+      "Ruckergasse Primary School, Vienna",
+      "Neuarzl Primary School, Tyrol",
+      "BG/BRG 21 bilingual middle school",
+      "BG/BRG Tulln high school",
+      "TU Wien (Boecklsaal venue)",
+      "eduvidual.at - Austrian Federal Ministry of Education, Science and Research learning platform",
+      "BioSpektrum magazine",
+      "UNICEF Austria (panelist)",
+      "Stroeck (sponsor, panel catering)",
+      "Polymun"
+    ]
   },
   "images": [
-    {"url": "https://static.igem.wiki/teams/6090/wiki/hp-and-education/kinderuni/kinderuni-02.avif", "caption": "Children at the Children's University (KinderUNI) six-station synthetic biology booth in Vienna", "credit": "Team BOKU-Vienna, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6090/wiki/hp-and-education/karwan-haus/karwan-haus-golden-gate-assembly-via-lego-bricks.avif", "caption": "Teaching Golden Gate assembly with Lego bricks at Karwan Haus, a Caritas Wien refugee shelter", "credit": "Team BOKU-Vienna, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6090/wiki/hp-and-education/childrensbook/childrensbook-front.avif", "caption": "The team's illustrated German children's book, co-developed with KinderBOKU and donated to a Vienna public library", "credit": "Team BOKU-Vienna, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6090/wiki/hp-and-education/lernplattform/1-overview-of-our-interactive-learning-platform-with-13-modules.avif", "caption": "The free 13-module interactive learning platform, with no sign-up and a teacher preview mode", "credit": "Team BOKU-Vienna, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6090/wiki/hp-and-education/panel-discussion/panel-discussion-people.avif", "caption": "The 'Future of Food' public panel discussion at TU Wien, about 60 attendees with live QR-code polling", "credit": "Team BOKU-Vienna, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6090/wiki/hp-and-education/primary-school/primary-school-02.avif", "caption": "Pupils extracting DNA during the three-week primary-school curriculum", "credit": "Team BOKU-Vienna, iGEM 2026 wiki"}
+    {
+      "url": "https://static.igem.wiki/teams/6090/wiki/hp-and-education/kinderuni/kinderuni-02.avif",
+      "caption": "Children at the Children's University (KinderUNI) six-station synthetic biology booth in Vienna",
+      "caption_zh": "維也納兒童大學（KinderUNI）六站式合成生物學攤位上的孩子們",
+      "credit": "Team BOKU-Vienna, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6090/wiki/hp-and-education/karwan-haus/karwan-haus-golden-gate-assembly-via-lego-bricks.avif",
+      "caption": "Teaching Golden Gate assembly with Lego bricks at Karwan Haus, a Caritas Wien refugee shelter",
+      "caption_zh": "在 Caritas Wien 的難民收容所 Karwan Haus 用樂高積木教 Golden Gate 組裝",
+      "credit": "Team BOKU-Vienna, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6090/wiki/hp-and-education/childrensbook/childrensbook-front.avif",
+      "caption": "The team's illustrated German children's book, co-developed with KinderBOKU and donated to a Vienna public library",
+      "caption_zh": "團隊與 KinderBOKU 共同開發的德文插畫童書，並捐贈給維也納一間公共圖書館",
+      "credit": "Team BOKU-Vienna, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6090/wiki/hp-and-education/lernplattform/1-overview-of-our-interactive-learning-platform-with-13-modules.avif",
+      "caption": "The free 13-module interactive learning platform, with no sign-up and a teacher preview mode",
+      "caption_zh": "免費的 13 模組互動學習平台，免註冊並具教師預覽模式",
+      "credit": "Team BOKU-Vienna, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6090/wiki/hp-and-education/panel-discussion/panel-discussion-people.avif",
+      "caption": "The 'Future of Food' public panel discussion at TU Wien, about 60 attendees with live QR-code polling",
+      "caption_zh": "在 TU Wien 舉辦的 Future of Food 公開論壇，約 60 人出席並以 QR code 現場投票",
+      "credit": "Team BOKU-Vienna, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6090/wiki/hp-and-education/primary-school/primary-school-02.avif",
+      "caption": "Pupils extracting DNA during the three-week primary-school curriculum",
+      "caption_zh": "三週小學課程中正在萃取 DNA 的學生",
+      "credit": "Team BOKU-Vienna, iGEM 2026 wiki"
+    }
   ],
   "gemsTakeaway": "Publish every tested worksheet, workshop guide and experiment protocol as open educational resources on the national ministry education platform (as BOKU did on eduvidual.at), so school use continues after the project ends, and measure the same cohort before and after (career aspirations plus curiosity items) so learning gain is a number, not an anecdote.",
+  "gemsTakeaway_zh": "把每一份實測過的學習單、工作坊指引與實驗流程，都當作開放教育資源發布在國家教育部的學習平台上（就像 BOKU 放在 eduvidual.at 那樣），讓專案結束後學校仍能繼續使用；並對同一批學生做前後測（職業志向加上好奇心題項），讓學習成效成為一個數字，而不是一則軼事。",
   "sources": [
     "https://2026.igem.wiki/boku-vienna/",
     "https://2026.igem.wiki/boku-vienna/education",

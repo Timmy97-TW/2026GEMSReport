@@ -21,40 +21,106 @@
     "dataviz": "The model landing page opens with a scripted animation that walks the whole mechanism in sequence - the E. coli shell fills with protein, lyses, chains assemble into PARCEL, the particle travels into the bronchi, binds a club-cell receptor, is endocytosed, disassembles, releases mRNA, and mucus drops one step per round - with replay and skip controls and a text fallback when JavaScript is off. AlphaFold monomer structures are embedded as interactive viewers with pLDDT and protein-region colouring and cartoon/C-alpha toggles, so a reader can see directly why Pum2 was treated as rigid and ELP as flexible. The wiki also carries font-size controls (A-/Default/A+) for accessibility. On the software side, the AeroEase Android app turns raw device timestamps into an expandable-card Overview with a seven-day activity chart and a date-filtered History, and the FeroEase app plots live temperature, pH and OD600 with a falling-trend detector that flags the harvest window.",
     "datascience": "Two concrete pieces. The target screen: using the Human Lung Cell Atlas they compared healthy adult club cells against other lung epithelial cells on fold change, adjusted p-value and detection fraction, and from 68 genes passing the criteria selected UPK1B - 2.28-fold enriched, adjusted p = 0.00559, RNA detected in 45.92% of club cells versus 3.43% of other epithelial cells. They then checked antibody accessibility (Human Surfaceome; UniProt O75841, 260 aa, four transmembrane regions, extracellular stretches at 37-60 and 108-229) and cross-tissue selectivity (archived GTEx: 0.11 TPM lung vs 21.90 TPM bladder; Human Protein Atlas showing membranous expression in urothelium), and stated plainly that UPK1B is not club-cell exclusive so the analysis prioritises an experimental candidate rather than demonstrating selective targeting. The response-prediction benchmark is equally honest: affine mapping cut mean-expression error 7.1% against predicting no change and beat the mean-response baseline, while the nonlinear residual CellFlow model improved some mean-expression predictions but worsened distributional agreement and the selected RNA panels - so they kept affine as the reference model and named cross-donor validation and RNA reconstruction as the open problems. Tasks were set up as donor-held-out rotations on GSE249307 and GSE246368 with unpaired source and target cells.",
     "software": "Four software deliverables. AeroEase, an Android companion app for the nebulizer, syncs ESP32-C3 button timestamps over BLE through a validated handshake with checksum, session and duplicate checks, clock calibration from the phone, and acknowledgement only after durable storage, then presents them as a locally stored medication-use diary with daily and seven-day counts, date-filtered history, CSV export, and a rule-based offline assistant that answers questions without any cloud call; the team repeatedly states the records document device actions, not delivered dose or confirmed inhalation. FeroEase, written in Flutter, monitors the two-stage fermentation over Wi-Fi with temperature, pH, stirring control and a falling-OD600 trend detector that identifies the lysis harvest window a bench fermenter does not report. The bioinformatics pipeline for club-cell target selection is the third. A browser-based quiz game supports the education activities. Hardware: AeroEase is a portable vibrating-mesh nebulizer on an ESP32-C3 with rechargeable power, session logging, BLE, a gravity-fed reservoir and physically separated liquid and electronics compartments in a modular 3D-printed housing; FeroEase is an ESP32-S3 two-stage culture platform with pH and temperature sensing, controlled heating, motor stirring and transmitted-light OD600 tracking. Build resources and a user manual with source code access are published on the wiki.",
-    "stack": ["AlphaFold 3", "GROMACS", "Martini 3 coarse-grained force field", "MATLAB SimBiology", "MPPD v3.04 (Multiple-Path Particle Dosimetry)", "ANSYS Fluent", "CellFlow (flow matching)", "Human Lung Cell Atlas (HLCA)", "Human Surfaceome", "UniProt", "GTEx", "Human Protein Atlas", "GEO (GSE249307, GSE246368)", "Flutter", "Android / Kotlin", "ESP32-C3", "ESP32-S3", "Bluetooth Low Energy", "SQLite (on-device)"],
-    "techniques": ["Coarse-grained molecular dynamics", "Reduced free-energy modelling (custom CAPE model)", "Bayesian optimization for sequence design", "Quorum-sensing ODE modelling with growth dilution", "Computational fluid dynamics aerosol deposition", "Regional lung dosimetry screening", "Hybrid ODE-stochastic single-endosome simulation", "Compartmental PK-PD with Hill-function assignment rules", "Differential expression with detection-fraction filtering", "Affine distribution mapping", "Flow matching for single-cell perturbation response", "Donor-held-out cross-validation", "Membrane topology and surfaceome annotation screening", "SWOT analysis"]
+    "stack": [
+      "AlphaFold 3",
+      "GROMACS",
+      "Martini 3 coarse-grained force field",
+      "MATLAB SimBiology",
+      "MPPD v3.04 (Multiple-Path Particle Dosimetry)",
+      "ANSYS Fluent",
+      "CellFlow (flow matching)",
+      "Human Lung Cell Atlas (HLCA)",
+      "Human Surfaceome",
+      "UniProt",
+      "GTEx",
+      "Human Protein Atlas",
+      "GEO (GSE249307, GSE246368)",
+      "Flutter",
+      "Android / Kotlin",
+      "ESP32-C3",
+      "ESP32-S3",
+      "Bluetooth Low Energy",
+      "SQLite (on-device)"
+    ],
+    "techniques": [
+      "Coarse-grained molecular dynamics",
+      "Reduced free-energy modelling (custom CAPE model)",
+      "Bayesian optimization for sequence design",
+      "Quorum-sensing ODE modelling with growth dilution",
+      "Computational fluid dynamics aerosol deposition",
+      "Regional lung dosimetry screening",
+      "Hybrid ODE-stochastic single-endosome simulation",
+      "Compartmental PK-PD with Hill-function assignment rules",
+      "Differential expression with detection-fraction filtering",
+      "Affine distribution mapping",
+      "Flow matching for single-cell perturbation response",
+      "Donor-held-out cross-validation",
+      "Membrane topology and surfaceome annotation screening",
+      "SWOT analysis"
+    ],
+    "frameworks_zh": "六個相互連接的模組，共用參數並明確宣告輸入輸出關係。(1) 生產：以 SimBiology 建立一個群體感應自殺開關的 ODE 模型（LuxI/LuxRm A1 變異體，由 pLuxRm 驅動裂解），結合生長造成的稀釋與 AHL 動力學，掃過各個 Anderson 啟動子，找出恰好在 ELP 相變之前讓培養液裂解的那一個——這決定了濕實驗室使用的啟動子。(2) 組裝：以 AlphaFold 3 預測三個融合蛋白單體（1052-1322 個殘基），粗粒化為 Martini 3 並在 GROMACS 中以 298 K、1 bar、150 mM NaCl、50 mg/mL 蛋白濃度執行 2-3 微秒，並以 pLDDT 作為「穩定 Pum2 摺疊、同時保留 ELP 柔性」的依據；同時他們建立了 CAPE（Coverage and Assembly Prediction for Protein Ensembles），一個以濕實驗室資料校準的簡化自由能模型，並以 CAPE 為目標函數做貝氏最佳化，重新分配 Pum2 周圍的 ELP 重複單元，而不是暴力枚舉所有組合。(3) 肺部遞送：以 MPPD v3.04 在成人 Yeh-Schum 五肺葉幾何上，針對各肺葉最後三個傳導分支世代的沉積量，篩選對數常態的氣霧粒徑分布、流速與吸入體積；再以 ANSYS Fluent CFD 模擬三維呼吸道傳輸，接著餵入末端呼吸道與呼吸道表面液層的傳輸模型，以及一個參考細胞組成對映，把沉積量換算為每個棒狀細胞的表面接觸數。(4) 細胞內釋放：一個每個內體一顆粒的 ODE-隨機混合模型（中位粒徑 560 nm，每顆約 2,400 條融合蛋白鏈、因此有 2,400 份 EEP），追蹤酸化、ELP 解組裝、EEP 媒介的膜開孔與 RNA 降解，輸出隨時間變化的完整細胞質 RNA 量，並把完整 RNA 與螢光標記分開追蹤。(5) PK-PD：一個四區室模型（骨髓、血液、呼吸道壁、上皮襯液），含 25 個物種、53 條指派規則與 51 個反應，改編自 Gadkar 等人的重度氣喘免疫網路，產出四項臨床讀值——FeNO、FEV1、相對杯狀細胞數與 15 分鐘黏液素釋放量——用於比較 SLPI:IFN-lambda-1 的載量比與給藥頻率。(6) 反應預測：一個仿射對映的基線，加上以公開細胞激素擾動 scRNA-seq 訓練的殘差式 CellFlow（flow matching）。",
+    "dataviz_zh": "模型首頁一開始就是一段腳本化動畫，依序走過整個機制——E. coli 外殼充滿蛋白、裂解、蛋白鏈組裝成 PARCEL、顆粒進入支氣管、結合棒狀細胞受體、被內吞、解組裝、釋出 mRNA，而黏液每一輪下降一階——並附重播與跳過控制，在 JavaScript 關閉時還有純文字替代版本。AlphaFold 單體結構以互動檢視器嵌入，可依 pLDDT 與蛋白區域著色、並切換 cartoon/C-alpha 呈現，讓讀者直接看出為何 Pum2 被視為剛性、ELP 被視為柔性。wiki 另附字級控制（A-/預設/A+）以提升無障礙性。軟體方面，AeroEase Android 應用程式把裝置的原始時間戳轉成可展開卡片的總覽，含七日活動圖表與可依日期篩選的歷史紀錄；FeroEase 應用程式則即時繪出溫度、pH 與 OD600，並以下降趨勢偵測器標出收取時機。",
+    "datascience_zh": "兩項具體工作。標靶篩選：他們以 Human Lung Cell Atlas 比較健康成人棒狀細胞與其他肺上皮細胞的倍數變化、校正後 p 值與偵測比例，從 68 個通過門檻的基因中選出 UPK1B——富集 2.28 倍、校正後 p = 0.00559，RNA 在 45.92% 的棒狀細胞中被偵測到，其他上皮細胞僅 3.43%。接著他們檢查抗體可及性（Human Surfaceome；UniProt O75841，260 個胺基酸，四個跨膜區，細胞外區段在 37-60 與 108-229）與跨組織選擇性（存檔的 GTEx：肺 0.11 TPM 對膀胱 21.90 TPM；Human Protein Atlas 顯示尿路上皮有膜上表現），並直言 UPK1B 並非棒狀細胞專屬，因此這份分析是在排序一個可供實驗的候選，而非證明選擇性標靶。反應預測的基準測試同樣誠實：仿射對映相較於「預測沒有變化」把平均表現量誤差降低 7.1%，也優於平均反應基線；而非線性的殘差 CellFlow 模型雖改善了部分平均表現量預測，卻使分布一致性與所選的 RNA panel 變差——因此他們保留仿射模型作為參考模型，並把跨捐贈者驗證與 RNA 重建列為未解問題。任務設定為在 GSE249307 與 GSE246368 上以捐贈者留出輪替，來源細胞與目標細胞未配對。",
+    "software_zh": "四項軟體產出。AeroEase 是霧化器的 Android 伴隨應用程式，透過 BLE 同步 ESP32-C3 按鈕的時間戳，採用帶檢查碼、session 與重複檢查的驗證握手、以手機校正時鐘，並且只有在資料持久儲存後才回覆確認；接著把這些資料呈現為本機儲存的用藥日誌，含每日與七日次數、依日期篩選的歷史、CSV 匯出，以及一個規則式的離線助理，不需任何雲端呼叫即可回答問題；團隊反覆強調這些紀錄記載的是裝置動作，而非實際遞送劑量或已確認的吸入。FeroEase 以 Flutter 撰寫，透過 Wi-Fi 監測兩階段發酵，提供溫度、pH、攪拌控制，以及一個 OD600 下降趨勢偵測器，用來判定一般實驗室發酵槽不會回報的裂解收取窗口。第三項是用於棒狀細胞標靶選擇的生物資訊管線。另有一個瀏覽器版益智遊戲支援教育活動。硬體方面：AeroEase 是建立在 ESP32-C3 上的可攜式振動篩網霧化器，具可充電電源、session 記錄、BLE、重力供液儲槽，以及在模組化 3D 列印外殼中實體隔開的液體與電子艙；FeroEase 則是一套 ESP32-S3 兩階段培養平台，具 pH 與溫度感測、受控加熱、馬達攪拌與穿透光 OD600 追蹤。製作資源與含原始碼取得方式的使用手冊都公開在 wiki 上。"
   },
   "good": {
     "publicEngagement": "Education was designed from two findings in their own clinician interviews and 461-person questionnaire: patients stop medication once they feel better, and parents refuse to start it for children out of fear of side effects, so compliance - not just awareness - became the target. Activities are segmented by audience. For children: a booth with biology-themed games at the Huairou District National Science Popularization Month fair (September 2026), doubling as a questionnaire collection point, plus a Life Science Classroom proposal for fifth and sixth graders in Huairou primary schools teaching respiratory tract structure through illustrations and interactive demos, published as a downloadable PDF so other teams can run it. For university students: an iGEM Winter Camp training new members with offline wet-lab tutorials (plasmid extraction, PCR, homologous recombination, protein purification) and online dry-lab and modelling tracks, and an annual Microbial Painting competition open to all majors as a recruitment funnel - which failed to produce the expected colony patterns, and the team published the three reasons why (cell sedimentation from static suspension, insufficient streaking density, IPTG induction of EGFP suppressing growth) and used it to teach participants that negative results are normal and troubleshooting is the skill. For the general public: a Public Science Day stall and a browser quiz game on synthetic biology and iGEM.",
     "ihp": "The team formalised its own cycle, RCSF (Reflect-Connect-Share-Feedback), as a deliberate parallel to the DBTL engineering cycle, and ran the project through nine documented iterations with 20 individuals, teams and institutions across six defined communities (academia, medical professionals, industry, supervisors, patients and families, the public), 44 asthma patient representatives and 419 public representatives from under-10s to over-60s. Each community is introduced with who they are, what they know, and why their position matters. The changes are specific and traceable. Doctor Fei Wang's input moved the project from rapid-acting therapy to asthma maintenance treatment, which reset the whole target population. Professor Huaiyong Chen, who studies respiratory disease mechanisms, explained that in asthma many club cells differentiate into mucus-producing goblet cells - supporting the shift away from immune cells to airway epithelium - and told them that NKX2-1, one of their two original cargoes, matters in development but has little effect in adulthood, so it was dropped and SLPI took its place. Professor Pingsheng Liu's survey of liposome, LNP and polymeric carrier limitations fed directly into the ELP carrier rationale and the protein sequence design. Professor Yufei Xia flagged subtle flaws in the experimental design and walked them through the standard in vivo/in vitro validation workflow. Yaozhong Cao, a former iGEMer, argued with them about target specificity, which is upstream of the UPK1B antibody screen. Professor Xiaoru Huang, an ethics of science and technology researcher, reviewed the biosafety and bioethics discipline. They contacted the Huairou District Bureau of Landscaping and Forestry about local pollen and catkin management, grounding the project in Beijing's own regulation (the Measures implementing the Forest Law, effective 1 January 2026) and in observed thunderstorm asthma cases. Patient work was handled with explicit informed consent and privacy statements, and the questionnaire reports its own demographics (21 recovered, 21 currently medicated, 419 unaffected). The team states its guiding principle as 'local people solving local problems', and the HP group's standing job was to track every subteam's bottlenecks and feed external input back into each one.",
     "realWorld": "The entrepreneurship work is a self-critical commercial assessment rather than a pitch. The team states outright that PARCEL's case must rest on defined unmet needs rather than technological novelty, and tabulates the strengths as well as the limitations of inhaled corticosteroids, bronchodilators and biologics before positioning PARCEL as a non-hormonal, lower-frequency, modular maintenance option. The SWOT names real weaknesses: delivery efficiency and duration of expression were only shown in HEK293T in vitro, so mucus, mucociliary clearance, local enzymes and immune uptake remain unaddressed; a combined protein-plus-mRNA product multiplies CMC burden across ELP molecular weight, purity, impurity profile and phase-transition behaviour and mRNA sequence integrity and stability, then payload ratio, condensate characteristics, batch consistency and storage; and the team lists the expertise it does not have (toxicology, regulatory affairs, clinical development, IP, market access). Opportunities are equally concrete - the modular Pum2/PRS-tag design means a new payload needs no new carrier, CAS institutes supply the analytical capability they lack, and China's pay-for-performance medical insurance pilot offers a reimbursement pathway for a therapy that can demonstrate efficacy. They commit to re-reviewing the SWOT at each development milestone.",
-    "partners": ["Institute of Biophysics, Chinese Academy of Sciences", "Institute of Process Engineering, Chinese Academy of Sciences", "Institute of Chemistry, Chinese Academy of Sciences", "Tsinghua University", "Haihe Hospital, Tianjin University", "Inner Mongolia International Hospital of Mongolian Medicine", "Qingdao Municipal Hospital", "Central Hospital of Kaifeng, Henan Province", "Meishan Cardio Cerebrovascular Disease Hospital", "242 Hospital, Shenyang Medical College", "Weikang Pingsheng (Beijing) Biotechnology Co., Ltd.", "Huairou District Bureau of Landscaping and Forestry, Beijing", "iGEM ENTER team (Harvard Medical School)", "Conference of China iGEMer Community (CCiC)", "Huairou District primary schools", "GenScript", "MathWorks", "SnapGene"]
+    "partners": [
+      "Institute of Biophysics, Chinese Academy of Sciences",
+      "Institute of Process Engineering, Chinese Academy of Sciences",
+      "Institute of Chemistry, Chinese Academy of Sciences",
+      "Tsinghua University",
+      "Haihe Hospital, Tianjin University",
+      "Inner Mongolia International Hospital of Mongolian Medicine",
+      "Qingdao Municipal Hospital",
+      "Central Hospital of Kaifeng, Henan Province",
+      "Meishan Cardio Cerebrovascular Disease Hospital",
+      "242 Hospital, Shenyang Medical College",
+      "Weikang Pingsheng (Beijing) Biotechnology Co., Ltd.",
+      "Huairou District Bureau of Landscaping and Forestry, Beijing",
+      "iGEM ENTER team (Harvard Medical School)",
+      "Conference of China iGEMer Community (CCiC)",
+      "Huairou District primary schools",
+      "GenScript",
+      "MathWorks",
+      "SnapGene"
+    ],
+    "publicEngagement_zh": "教育是從團隊自己的臨床訪談與 461 人問卷中的兩項發現設計出來的：病患一覺得好轉就停藥，而家長因為害怕副作用而拒絕讓孩子開始用藥——因此目標變成服藥遵從性，而不只是知識認知。活動依受眾分層。對兒童：在懷柔區全國科普月市集（2026 年 9 月）設攤，辦生物主題遊戲，同時兼作問卷蒐集點；另提出一份「生命科學課堂」方案，針對懷柔區小學五、六年級學生，透過插畫與互動示範教授呼吸道結構，並以可下載 PDF 發布，讓其他隊伍也能照著做。對大學生：辦 iGEM 冬令營培訓新成員，實體課程教濕實驗（質體萃取、PCR、同源重組、蛋白質純化），線上則有乾實驗與建模組；還有一年一度、不限系所的「微生物繪畫」競賽作為招募漏斗——這項活動並未長出預期的菌落圖樣，團隊公開了三個原因（靜置懸浮液造成細胞沉降、塗盤密度不足、IPTG 誘導 EGFP 抑制生長），並藉此教參與者：負面結果是正常的，排除問題才是真功夫。對一般大眾：公眾科學日攤位，以及一個關於合成生物學與 iGEM 的瀏覽器益智遊戲。",
+    "ihp_zh": "團隊把自己的循環形式化為 RCSF（Reflect-Connect-Share-Feedback），刻意與工程的 DBTL 循環平行，並讓專案走過九次有記錄的迭代，涉及六個明確界定社群（學界、醫療專業人員、產業、指導教師、病患與家屬、公眾）中的 20 位個人、團隊與機構，以及 44 位氣喘病患代表和 419 位從未滿 10 歲到 60 歲以上的公眾代表。每個社群在介紹時都說明他們是誰、知道什麼，以及為何他們的立場重要。改變具體且可追溯。王飛醫師的意見把專案從速效治療轉向氣喘長期控制治療，整個目標族群因此重設。研究呼吸道疾病機制的陳懷勇教授說明，在氣喘中許多棒狀細胞會分化為產生黏液的杯狀細胞——支持了從免疫細胞轉向呼吸道上皮的方向——並告訴他們兩個原始貨物之一的 NKX2-1 在發育期重要、但在成年期影響甚微，因此該基因被捨棄，由 SLPI 取代。劉平生教授對微脂體、LNP 與高分子載體限制的梳理，直接進入 ELP 載體的立論與蛋白序列設計。夏宇飛教授指出實驗設計中細微的缺陷，並帶他們走過標準的體內／體外驗證流程。前 iGEMer 曹耀中與他們就標靶專一性爭論過，而這正位於 UPK1B 抗體篩選的上游。研究科技倫理的黃小茹教授審閱了生物安全與生物倫理的規範。他們也就當地花粉與柳絮管理聯繫懷柔區園林綠化局，把專案扣回北京自身的法規（《森林法》實施辦法，2026 年 1 月 1 日生效）與觀察到的雷雨氣喘案例。涉及病患的工作都有明確的知情同意與隱私聲明，問卷也報告自身的人口組成（21 位已康復、21 位正在用藥、419 位未受影響）。團隊把自己的指導原則寫為「在地的人解決在地的問題」，而 HP 組的常態任務就是追蹤各子組的瓶頸，並把外部意見回灌到每一組。",
+    "realWorld_zh": "創業部分是一份自我批判的商業評估，而不是推銷說詞。團隊直接寫明，PARCEL 的立論必須建立在明確未被滿足的需求之上，而不是技術新穎性，並在把 PARCEL 定位為非荷爾蒙、較低給藥頻率、模組化的長期控制選項之前，先列表比較吸入型皮質類固醇、支氣管擴張劑與生物製劑各自的優點與限制。SWOT 直指真正的弱點：遞送效率與表現持續時間只在 HEK293T 的體外系統中展示過，因此黏液、黏液纖毛清除、局部酵素與免疫吞噬都還沒處理；蛋白加 mRNA 的複合產品會讓 CMC 負擔倍增，橫跨 ELP 分子量、純度、雜質輪廓與相變行為，以及 mRNA 序列完整性與穩定性，再加上載量比、凝聚體特性、批次一致性與保存；團隊也列出自己不具備的專業（毒理、法規事務、臨床開發、智慧財產、市場准入）。機會同樣具體——模組化的 Pum2/PRS 標籤設計意味著換新貨物不需要新載體；中科院各所能提供他們缺少的分析能力；中國的醫保按療效付費試點，為能展示療效的療法提供了給付途徑。他們承諾在每個開發里程碑重新檢視這份 SWOT。"
   },
   "images": [
     {
       "url": "https://static.igem.wiki/teams/6157/wiki/humanpractices/hp-overview0.avif",
       "caption": "The Human Practices overview: 20 individuals and institutions across six defined communities, 44 asthma patient representatives and 419 public representatives, mapped onto nine project iterations of the team's own RCSF cycle.",
-      "credit": "Team UCAS-China, iGEM 2026 wiki"
+      "credit": "Team UCAS-China, iGEM 2026 wiki",
+      "caption_zh": "人類實踐總覽：六個明確界定社群中的 20 位個人與機構、44 位氣喘病患代表與 419 位公眾代表，對映到團隊自創 RCSF 循環的九次專案迭代。"
     },
     {
       "url": "https://static.igem.wiki/teams/6157/wiki/software/upk1b-volcano-2.avif",
       "caption": "The club-cell antibody target screen: UPK1B highlighted in the differential-expression volcano against other lung epithelial cells, 2.28-fold enriched with adjusted p = 0.00559 and detected in 45.92% of club cells.",
-      "credit": "Team UCAS-China, iGEM 2026 wiki"
+      "credit": "Team UCAS-China, iGEM 2026 wiki",
+      "caption_zh": "棒狀細胞抗體標靶篩選：UPK1B 在與其他肺上皮細胞比較的差異表現火山圖中被標出，富集 2.28 倍、校正後 p = 0.00559，並在 45.92% 的棒狀細胞中被偵測到。"
     },
     {
       "url": "https://static.igem.wiki/teams/6157/wiki/hardware/aeroease/pictures/fig6-hardware-2-yhz.avif",
       "caption": "The AeroEase portable vibrating-mesh nebulizer prototype, built on an ESP32-C3 with BLE session logging and a modular 3D-printed housing separating the liquid reservoir from the electronics.",
-      "credit": "Team UCAS-China, iGEM 2026 wiki"
+      "credit": "Team UCAS-China, iGEM 2026 wiki",
+      "caption_zh": "AeroEase 可攜式振動篩網霧化器原型，建立在 ESP32-C3 上，具 BLE session 記錄，模組化 3D 列印外殼把液體儲槽與電子元件隔開。"
     },
     {
       "url": "https://static.igem.wiki/teams/6157/wiki/education/education-huairou0.avif",
       "caption": "The team's booth at the Huairou District National Science Popularization Month fair, running biology games with children while collecting the public asthma-perception questionnaire.",
-      "credit": "Team UCAS-China, iGEM 2026 wiki"
+      "credit": "Team UCAS-China, iGEM 2026 wiki",
+      "caption_zh": "團隊在懷柔區全國科普月市集的攤位，與兒童進行生物遊戲，同時蒐集公眾氣喘認知問卷。"
     },
     {
       "url": "https://static.igem.wiki/teams/6157/wiki/software/app-charts-3up.avif",
       "caption": "The AeroEase Android app turning raw BLE device timestamps into a medication-use diary with daily and seven-day activity charts, date-filtered history and CSV export, all stored on the phone.",
-      "credit": "Team UCAS-China, iGEM 2026 wiki"
+      "credit": "Team UCAS-China, iGEM 2026 wiki",
+      "caption_zh": "AeroEase Android 應用程式把 BLE 裝置的原始時間戳轉為用藥日誌，含每日與七日活動圖表、依日期篩選的歷史與 CSV 匯出，全部儲存在手機本機。"
     }
   ],
   "gemsTakeaway": "Steal the RCSF cycle: UCAS-China gave human practices the same named, repeatable four-step loop (Reflect, Connect, Share, Feedback) that engineering gets with DBTL, mapped every stakeholder into one of six communities with a stated reason for including them, and then showed nine iterations where the loop closed - including dropping a cargo gene because one researcher said it does nothing in adults. A school research centre can run that loop on any project, and the second lesson is just as cheap to copy: publish what failed, as they did with the microbial painting that never grew, and the reasons why.",
@@ -78,5 +144,9 @@
     "https://2026.igem.wiki/ucas-china/contribution",
     "https://2026.igem.wiki/ucas-china/inclusivity",
     "https://2026.igem.wiki/ucas-china/measurement"
-  ]
+  ],
+  "projectTitle_zh": "PARCEL",
+  "tagline_zh": "一種吸入式、以蛋白質為基礎的 mRNA 載體，讓呼吸道細胞自己製造氣喘藥。",
+  "summary_zh": "PARCEL 是一個吸入式 mRNA 遞送平台，以類彈性蛋白多肽（ELP）而非脂質奈米顆粒構成。融合蛋白 ELP-Pum2-EEP13 以 Pum2 抓取 3' UTR 帶有 PRS 標籤的 mRNA，利用 ELP 的相分離把它包裹並保護起來，再以內體逃脫肽離開內體，並以 Sortase A 接合的抗 UPK1B scFv 鎖定呼吸道棒狀細胞（club cell）；所攜帶的貨物是 SLPI 的 mRNA（抑制嗜中性球彈性蛋白酶及其引發的黏液過度分泌），加上較低劑量的 IFN-lambda-1（抗病毒防禦與 Th2 抑制）。本專案獲得亞軍與 Best Integrated Human Practices，因為利害關係人工作真的導引了科學：臨床醫師把專案從急救治療轉向長期控制治療，而一位氣喘機制研究者則直接否決了兩個原始貨物之一。乾實驗室的完整度相當罕見，從 E. coli 生產、經霧化器氣霧沉積，一路模擬到以 FEV1 與 FeNO 表示的 PK-PD 讀值，每一個模組都餵給下一個。",
+  "gemsTakeaway_zh": "把 RCSF 循環學走：UCAS-China 讓人類實踐擁有和工程的 DBTL 一樣有名字、可重複的四步迴圈（Reflect、Connect、Share、Feedback），把每位利害關係人歸入六個社群之一並說明納入理由，然後展示了九次確實閉合的迭代——包括因為一位研究者說某基因在成年期沒有作用，就直接拿掉一個貨物基因。學校的研究單位在任何專案上都能跑這個迴圈；第二個教訓同樣便宜好學：公開失敗的部分，就像他們公開那場始終沒長起來的微生物繪畫活動，以及失敗的原因。"
 }

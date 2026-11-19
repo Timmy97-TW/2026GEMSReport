@@ -7,7 +7,7 @@
 
 The site itself is a client-rendered application. These Markdown mirrors carry the full text.
 
-- [Full report, English](report-en.md): every written section, all 103 team files, 24 trends and the roadmap
+- [Full report, English](report-en.md): every written section, all 106 team files, 24 trends and the roadmap
 - [Full report, Traditional Chinese](report-zh.md): the same, in 繁體中文
 - [Official 2026 results](https://competition.igem.org/results/2026): the source for every award in this report
 

@@ -1,0 +1,62 @@
+{
+  "team": "BASIS-China",
+  "id": "6123",
+  "section": "High School",
+  "country": "China",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/basis-china/",
+  "projectTitle": "HEAL — Hairball Elimination and Lysis",
+  "tagline": "Keratinases for cat hairballs, held inside the cat by a kill switch keyed to bile acid, with the containment claim measured against real sewage and soil concentrations",
+  "summary": "BASIS-China engineered E. coli to express keratinases and proteases (p-Ker, Protease 1, Protease 2, MGY1820, MGY4907) with thioredoxin and thioredoxin reductase as synergistic helpers and LGOX plus KatG as gut antioxidant modules, aimed at digesting cat hairballs. The safety engineering is the standout: a bile-acid-responsive suicide switch in which membrane sensors TcpH and CadC-TcpP activate the pCadBA promoter to produce the unstable CcdA antitoxin, while the stable CcdB toxin is expressed constitutively, so the cell survives only where bile acid is present. Four Anderson promoters (J23100, J23102, J23104, J23114) were built to tune CcdB strength, and the response threshold was measured at roughly 0.1-0.2 mM taurocholic acid, then compared against feline duodenal bile salts at 15-42 mM and against published sewage and soil bile-acid levels orders of magnitude below the threshold. They won the Safety and Security Award in the High School section and were nominated for Best New Basic Part.",
+  "awards": ["Safety and Security Award, High School (winner)", "Best New Basic Part nominee, High School"],
+  "dry": {
+    "frameworks": "A published five-step characterisation framework for environmentally responsive kill switches, written because the team found limited end-to-end guidance in existing iGEM wikis: confirm construction by gel and sequencing; tune toxin expression across promoters of differing strength to find an operating window; characterise the concentration-dependent growth response by time course; compare the measured response range against published signal concentrations in both the intended host and the likely receiving environments; and add an orthogonal reporter readout alongside growth. Alongside it, a transferable design concept (use an endogenous molecule abundant in the target host's intestine and scarce outside it) with the caveat that bile-acid composition varies by species so adopters must establish their own host's signal profile.",
+    "dataviz": "Circuit diagrams for the switch in both the bile-acid-present and bile-acid-absent states, a promoter-variant design figure, assembly gels against the expected 3,704 bp fragment, OD600 growth curves at 0 and 30 mM TCA, serial-dilution spot plates across six TCA concentrations (0, 0.1, 1, 10, 15, 30 mM) for all four promoter variants plus empty vector, 270-minute time-course growth curves per promoter across 0-1 mM, fluorescence panels for all four variants, and a supplemented-versus-depleted sfGFP comparison. The iGEM approval email and a 17-page laboratory safety rules PDF are embedded.",
+    "datascience": "The containment claim is quantified on both sides, which is what distinguishes it. The switch threshold is placed at approximately 0.1-0.2 mM TCA, with limited growth below 0.2 mM and similar growth rates above 0.4 mM. That is then set against feline duodenal bile salts at 15-42 mM (Reber and Mosley), sewage total bile acids at 184-356 micrograms per litre, which they convert to roughly 4.7 x 10^-4 to 9.1 x 10^-4 mM using a representative molecular weight of 392.6 g/mol (Sebok et al.), and soil deoxycholic acid at 13.3 pmol/g in archaeological soil from Pompeii, converted to 1.33 x 10^-5 mmol/kg (Porru et al.). They show the unit conversions and then state that total bile salts and soil-associated bile acids are not directly equivalent to TCA in culture medium.",
+    "software": "",
+    "stack": ["E. coli DH5-alpha and BL21(DE3)", "SnapGene", "TcpH and CadC-TcpP bile-acid sensors with pCadBA", "CcdA/CcdB toxin-antitoxin", "Anderson promoter series BBa_J23100/J23102/J23104/J23114", "sfGFP fused to CcdB", "pET-28a and pET-32a", "Ni-NTA affinity chromatography", "SDS-PAGE"],
+    "techniques": ["bile-acid-gated conditional viability", "promoter-strength tuning of a toxin to set an operating window", "serial-dilution spot plating across an inducer gradient", "time-course growth response curves", "reporter fluorescence after inducer withdrawal as a viability proxy", "in-vitro keratin degradation on washed shed hair and pharmaceutical-grade beta-keratin"]
+  },
+  "good": {
+    "publicEngagement": "",
+    "ihp": "An interview with an experienced stray-cat rescuer from Xiaobabenben in Shenzhen reframed the product requirement: limited volunteer capacity, poor acceptance of existing remedies and stress-related overgrooming pushed the team toward palatable formats cats would take voluntarily, minimising restraint and forced administration, and made gastrointestinal safety and animal comfort explicit evaluation priorities. The more unusual engagement was with iGEM itself: knowing that the Animal Use Form is not available to high-school teams, they contacted the iGEM Safety and Regulatory Committee before collecting any samples, and Chris Isaac, Director of Responsibility at iGEM HQ, approved the collection without an Animal Use Form on the basis that routine grooming causes no harm, which they then documented on their official Project Safety Form as instructed and published the approval email.",
+    "realWorld": "No company, no patent, no pricing and no funding here, so the material worth taking is the safety practice, and it is the most rigorous high-school biocontainment work in this group. Four features make it serious. First, the switch is engineered as a tunable system rather than a single construct: four Anderson promoters of differing strength drive CcdB so the operating window can be matched to a required kill sensitivity, and all four variants are characterised in parallel in every assay, with empty vector alongside. Second, the containment claim is tested against the actual release pathway rather than a lab abstraction. They ask where the bacteria would end up after excretion, find published bile-acid concentrations for sewage and soil, convert them into the same units as their assay, and show the receiving environments sit three to four orders of magnitude below their measured threshold. Third, the evidence hierarchy is stated explicitly and never collapsed. They separate 'evidence of construct assembly, conditional growth suppression, and reporter expression' from 'evidence required to demonstrate containment in real-world settings', and they list, in their own words, what still stands in the way: residual bile acids in faecal material, differences between laboratory medium and environmental conditions, circuit drift over time, and possible horizontal transfer. They add two caveats most teams would omit, that genetic containment neither removes extracellular DNA nor replaces waste decontamination, and that their delivery microcapsules are designed to release bacteria in the intestine and therefore must not be counted as physical containment. They also note sfGFP tracks the circuit but does not independently establish viability, and that soil and sewage total bile acids are not equivalent to TCA in medium. Fourth, the chassis plan is honest about its own role: BSL-1 E. coli is declared a proof-of-concept model only, chosen because high-school teams may not use untested wild isolates or run animal trials, with the translational chassis identified as GRAS feline-native probiotics (Lactiplantibacillus plantarum, Lactobacillus acidophilus, Bifidobacterium animalis) to be ported into only after validation and under veterinary compliance. Enzyme safety is argued mechanistically rather than asserted, noting that gut mucus is glycoprotein-based while keratinases target cross-linked keratin disulfides, and substrate safety is covered by using washed, sterilised naturally shed hair and pharmaceutical-grade beta-keratin. Laboratory risk management is reagent-specific rather than generic, naming beta-mercaptoethanol (fume hood only, sealed tubes), unpolymerised acrylamide (pre-cast gels preferred, dedicated hazardous waste), kanamycin and ampicillin with the resistance marker on each vector identified and media neutralised and autoclaved before disposal, and Ni-NTA nickel waste segregated for hazardous recycling, plus a preference for blue LED over UV transilluminators. Waste is bleached at 10 percent for at least 30 minutes or autoclaved at 121 degrees C for 30 minutes before discharge. Continuation is community-facing: the five-step framework, the design concept, and characterisation data for the circuit and all four promoter variants submitted to the Registry as a reference for future teams building bile-acid-responsive kill switches, with the honest framing that the data are 'a starting point for further validation, rather than a claim that this circuit is ready for unrestricted deployment'. No animal trials were conducted, and they say so repeatedly rather than once.",
+    "partners": [
+      "iGEM Safety and Regulatory Committee / Chris Isaac, Director of Responsibility, iGEM HQ (proactive animal-use consultation and written approval)",
+      "Xiaobabenben stray-cat rescue, Shenzhen (animal-welfare and administration-format requirements)",
+      "Avant Nanshan Science Innovation Center (certified BSL-1 facility, lab managers, safety training)",
+      "Sangon Biotech, Shanghai (gene synthesis)",
+      "Cat owners who supplied routinely groomed shed hair"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6123/wiki/safety-20261021/switch-promoters.webp",
+      "caption": "Four Anderson promoter variants driving ccdB, built to tune toxin strength and find the suicide switch's operating window rather than ship a single construct",
+      "credit": "Team BASIS-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6123/wiki/safety-20261021/gfp-tca-withdrawal.webp",
+      "caption": "sfGFP fluorescence before and after taurocholic acid withdrawal, used as an orthogonal readout alongside growth and reported with the caveat that it does not independently establish viability",
+      "credit": "Team BASIS-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6123/wiki/safety/igem-approval.webp",
+      "caption": "Written approval from iGEM HQ's Director of Responsibility for the shed-hair collection, obtained before any samples were taken and documented on the Project Safety Form",
+      "credit": "Team BASIS-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6123/wiki/safety/2.avif",
+      "caption": "Behaviour of the suicide switch with and without bile acid: the unstable CcdA antitoxin is made only when the sensor is on, leaving the stable CcdB toxin unopposed outside the host",
+      "credit": "Team BASIS-China, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Characterise any containment switch the way they did: tune the toxin across a promoter series to find an operating window, measure the response threshold as a number, then look up the signal concentration in the actual receiving environment, convert it into your assay's units, and show the gap — a containment claim is only as good as the comparison behind it. Pair that with their evidence ledger, a 'what our results establish' section beside a 'what remains before real-world use' section, and with asking the governing body in advance rather than assuming an unavailable form means the work cannot be done compliantly.",
+  "sources": [
+    "https://2026.igem.wiki/basis-china/",
+    "https://2026.igem.wiki/basis-china/safety-and-security/",
+    "https://2026.igem.wiki/basis-china/contribution/",
+    "https://2026.igem.wiki/basis-china/description/",
+    "https://registry.igem.org/parts/BBa_26NOEGF3"
+  ]
+}
