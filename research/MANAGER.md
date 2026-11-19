@@ -839,3 +839,33 @@ either explanation directly." Both are about a week of work.
 Published as `judging-three-teams` (judging tab, order 20): 8 cards one per question, a 4-column
 three-team table across all eight, and an 8-line checklist. Verified live: tab renders, both tables, 24
 cards, all chips Chinese, no console errors.
+
+### The 2026 High School Top 10, verified from iGEM's API
+
+| Team | Country | Medal | Finalist | Section wins | Noms |
+|---|---|---|---|---|---|
+| Lambert-GA | USA | Gold | **YES** | 5 (incl. Grand Prize, Village) | 1 |
+| HongKong-JSS | HKG | Gold | **YES** | 2 (1st Runner-up, Village) | 4 |
+| GEMS-Taiwan | TWN | Gold | — | **3** (Measurement, Hardware, IHP) | 3 |
+| GHCIS | CHN | Gold | — | 2 (Part Collection, Software) | 2 |
+| HFI | CHN | Gold | — | 2 (Education, Village) | 3 |
+| GCGS | CHN | Gold | — | 1 (New Improved Part) | 3 |
+| HangzhouFourteenAP | CHN | Gold | — | 1 (Village) | 4 |
+| HKSSC | HKG | **Silver** | — | 1 (New Basic Part) | 2 |
+| Eton-College-UK | GBR | Gold | — | 0 | 3 |
+| HongKong-HS | HKG | Gold | — | 0 | 2 |
+
+Facts worth carrying forward:
+- **GEMS-Taiwan is the most-decorated non-finalist in the section** — three section wins, more than either
+  of the two teams that did make the finalist slate on special awards alone (HongKong-JSS won none).
+- **HKSSC reached the Top 10 on a Silver medal**, the only team in the ten without Gold. A medal is a
+  checklist and the Top 10 is a judgement; they are genuinely independent.
+- **Three of the ten won a parts award**: GCGS (New Improved Part), GHCIS (Part Collection), HKSSC (New
+  Basic Part). None of the three is a finalist, and the two finalists won no parts award — so parts awards
+  do not lead to the podium either, in this section.
+- Country spread: China 4, Hong Kong 3, USA 1, UK 1, Taiwan 1. Hong Kong put three teams in ten from a
+  single small territory, and one of them took 1st Runner-up.
+
+Section base rates for context (from the API, all 423 accepted teams): 147 high-school teams entered, 135
+have a medal recorded (63 Gold, 68 Silver, 4 Bronze), **17 won any section-level or village award**, 47
+received at least one nomination, 10 made the Top 10 and **2 were named Finalists**.
