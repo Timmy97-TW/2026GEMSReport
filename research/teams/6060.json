@@ -108,5 +108,9 @@
     "https://2026.igem.wiki/dtu-denmark/model",
     "https://2026.igem.wiki/dtu-denmark/engineering",
     "https://2026.igem.wiki/dtu-denmark/software"
-  ]
+  ],
+  "projectTitle_zh": "風力機葉片環氧樹脂的酵素降解",
+  "tagline_zh": "針對退役風力機葉片中樹脂部分的化學—酵素複合路線，並誠實地與其他替代方案比較",
+  "summary_zh": "DTU 改造了漆酶（來自雲杉樹皮甲蟲腸道總體基因組的 ItL-03、CueO 變異體與同源蛋白）與非專一性過氧合酶（PaDa-I、WamPa、PabUPO-II、MroUPO、Fett），用來攻擊風力機葉片已固化環氧樹脂中的胺類交聯，並疊加在一篇已發表的酸加過氧化氫溶劑分解前處理之上。他們以 NNBT 這個帶有交聯點三級胺、可溶於水的小分子作為定義明確的模型底物，並以 MALDI-TOF 顯示 PaDa-I 對其進行 N-脫烷基反應，再以 Purpald 確認乳醛的釋出。真正關鍵的工作是在 SimaPro 中（ReCiPe 2016 Midpoint H）對五種生命終期路線所做的前瞻式比較生命週期評估，結果發現他們自己的酵素路線在幾乎每一項指標上都不是最佳選項——而他們把這個結果公開了。橫跨 DTU Wind、DTU Sustain、DTU Chemistry、SDU 與產業界的七場訪談，加上 Siemens Gamesa、Orsted 與 MAKEEN Energy 無回應的完整記錄，促使他們更動了化學標的、模型底物、宿主生物、酵素排序標準，以及專案本身所宣稱的目標。",
+  "gemsTakeaway_zh": "及早做與現行技術的比較 LCA，早到它還能改變研究計畫，並且即使結果顯示自己的路線輸了也照樣公開——然後把每一項落敗的指標轉成一個指名的工程目標，並記錄下那些始終沒有回覆的利害關係人，讓證據基礎上的缺口被看見，而不是隱形。"
 }

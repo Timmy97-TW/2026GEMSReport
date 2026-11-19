@@ -32,7 +32,11 @@
       "cost-per-use rather than cost-per-batch framing for a reusable bead (taken directly from an industry interview)",
       "explicit trade-off register (removal efficiency vs energy, valorisation vs reagent burden, cellulose recycling vs enzyme input, cost vs treatment stability)",
       "sample fractionation reasoning (residual liquid A vs digestion liquid B) to keep figure interpretation within what controls support"
-    ]
+    ],
+    "frameworks_zh": "一套前瞻性的碳足跡與技術經濟模型，分兩層建構：A 層是以團隊自己量測的發酵參數，對材料生產模組所做的初步估算；B 層是完整的廢水處理系統，但因吸附與回收效能尚未取得而暫緩。功能單位是處理 1 公噸電池回收末端廢水，且 kisMET 路線與化學沉澱基準線採用完全相同的系統邊界（僅計入試劑製造與污泥處置；排除泵送與攪拌能耗）。排放係數取自同儕審查文獻，使用 ecoinvent v3.9.1 的全球平均資料集，範圍為搖籃到大門。沒有任何機制性或動力學模型——沒有 Langmuir 或 Freundlich 等溫線擬合、沒有吸附動力學、沒有離子結合肽的結構建模——這是一個吸附專案最明顯的缺口。",
+    "dataviz_zh": "Engineering 與 Results 頁面有 HiBiT 報導訊號、構築體與支架比較、單一金屬（Li/Co/Ni/Mn）實驗與纖維素降解的圖；質體設計示意圖呈現可互換的 IBP 模組，旁邊並列最佳化後 pSEVA331 構築體的環狀圖譜；一張 LCA 系統邊界圖把 A 層與 B 層模組分開；以及一張 SDG 交互關係圖。教育部分以表格呈現各平台數據，並註明觸及人數不是學習成效的量尺。",
+    "datascience_zh": "用的是情境與敏感度推論，而非推論統計：先算出 40 mL YPD 批次的原料排放，再因團隊始終未量測自己的乾重產率而套用三種細菌纖維素乾重產率情境放大，最後換算成每公噸廢水；排放抵換則逐一金屬計算，一組對應取代原生鹽類，另一組對應纖維素回收只取代葡萄糖碳源。誠實是值得一提的地方：輸出被標示為僅供趨勢分析，顆粒生產力取自同一菌株已發表的搖瓶範圍，中國當地電網係數未納入，整件事也被明講為定性趨勢比較，而非符合 ISO 的 LCA。團隊也依專家建議，具名列出哪些參數是優先的模型輸入（發酵產率、吸附效能、循環使用次數）。",
+    "software_zh": "除了 wiki 本身之外沒有軟體產出。頁面上有明確的生成式 AI 揭露，說明 AI 僅用於可讀性潤稿與網站實作，沒有任何科學主張、數據圖、膠體影像、顯微影像、量測圖或參考文獻是由模型生成的。"
   },
   "good": {
     "publicEngagement": "The most intellectually honest education page in this cohort, and worth reading as a model regardless of its scale. Four channels, chosen because the audience already uses them rather than building a team website: a WeChat official account, a Xiaohongshu account, a printed two-page bilingual handbook, and two offline events (a school-wide iGEM club class for 59 students on 14 September 2026, and a community booth at Xiangmi Park on 2 October 2026 reaching over 70 visitors, run jointly with iGEM team Yucai-SZ). Three stated principles, each derived from something that failed: teach the phenomenon before the technology (their third and best post never mentions kisMET at all, only where the metal in water comes from); keep the channel open in both directions; and republish the same material in two formats. The analytics are reported against the team's own interest: the team introduction outperformed the project introduction roughly two to one, the purely scientific piece reached the fewest readers, and across three posts and 1,206 reads they received zero comments - from which they conclude that an open door is not an invitation, and propose polls and photo requests instead. The handbook uses one visual language and three analogies (a sponge for the cellulose bead, a magnet for the ion-binding peptide, one grain of rice in a swimming pool for ppm) and is released under CC BY 4.0 for other teams to print, translate or re-analogise.",
@@ -47,28 +51,35 @@
       "Ministry of Ecology and Environment officials",
       "iGEM team BIT-China (commercial pathway advice)",
       "iGEM team Yucai-SZ (joint Xiangmi Park community booth)"
-    ]
+    ],
+    "publicEngagement_zh": "本屆最具學術誠實的教育頁面，不論規模大小都值得當作範例來讀。他們用四個管道，選擇的理由是受眾本來就在用這些平台，而不是自建團隊網站：微信公眾號、小紅書帳號、一份雙語兩頁印刷手冊，以及兩場實體活動（2026 年 9 月 14 日為 59 名學生開設的全校 iGEM 社課，以及 2026 年 10 月 2 日在 Xiangmi Park 與 iGEM 隊伍 Yucai-SZ 合辦的社區攤位，觸及逾 70 位參觀者）。他們明述三項原則，每一項都來自某次失敗的經驗：先講現象再講技術（他們第三篇、也是最好的一篇貼文完全沒提到 kisMET，只談水中的金屬從哪裡來）；讓管道保持雙向暢通；以及同一份材料用兩種格式重新發布。數據是以不利於自己的方式報出來的：團隊介紹的表現約為專案介紹的兩倍，純科學那篇的讀者最少，而三篇貼文、1,206 次閱讀之下他們收到零則留言——他們由此得出「門開著不等於邀請」的結論，並提議改用投票與徵照片的方式。手冊採用一套統一的視覺語言與三個類比（纖維素顆粒是海綿、離子結合肽是磁鐵、ppm 是游泳池裡的一粒米），並以 CC BY 4.0 釋出，供其他團隊印製、翻譯或改寫類比。",
+    "ihp_zh": "一套五階段的流程，架在 Motivation -> Message -> Move 的反思迴圈上，幾乎完全由產業訪談構成，而且真的讓專案的目標使用者換了位置。Lu Binda（SUSTech 博士生，參與 Juhefeng 的電池回收研發）為他們梳理了價值鏈，確立前端與後端公司的廢水完全不同。團隊接著拜訪前端物理回收商 Meizhou Zhongrun，得知該公司把電極粉料賣往下游、幾乎不產生廢水——因此不是客戶。這個發現把他們導向下游的濕法冶金公司 GEM，對方確認溶劑萃取後的末端流中確實殘留鋰、鎳、鈷、錳，必須靠沉澱或吸附處理。後續訪談還包括 Dynanonic、專業廢水處理公司、就生物安全與法規遵循諮詢生態環境部官員，以及兩度訪問 Lingzhu Tech 的 Li Zongjin——第二次談出了每個製程步驟的產業成本區間，以及一條建模準則：決定一顆可重複使用的顆粒有無競爭力的是每次使用成本，而不是每批次成本。",
+    "realWorld_zh": "平台刻意設計成模組化：更換離子結合肽就能把目標轉向電子廢棄物中的稀土或其他重金屬，核心系統不必動。依據 BIT-China 的建議與自己的產業訪談，團隊選擇與既有電池公司進行技術授權，而不是創業——這是對自身位置的現實判斷。具名的限制是公開寫出來而非埋起來：Komagataeibacter 的發酵在攪拌式生物反應器中對氧氣傳遞與剪切力敏感；候選肽只在單一金屬溶液中測試過；而纖維素被分解本身並不足以證明工程菌已去活化，因此仍需要一套經驗證的收容與廢棄處理程序。他們結尾的自我評估——身為高中團隊，他們能提供的不是規模，而是時間、願意再解釋一次的意願，以及承認某次解釋失敗的誠實——是正確的定位。"
   },
   "images": [
     {
       "url": "https://static.igem.wiki/teams/6165/wiki/description-fig3-ibp-swap.avif",
       "caption": "Molecular design of the pSEVA331 expression system, showing the interchangeable ion-binding-peptide modules that let the platform be retargeted to a different metal without redesign.",
-      "credit": "Team SMS-Shenzhen, iGEM 2026 wiki"
+      "credit": "Team SMS-Shenzhen, iGEM 2026 wiki",
+      "caption_zh": "pSEVA331 表現系統的分子設計，顯示可互換的離子結合肽模組，使平台能在不重新設計的情況下改為針對另一種金屬。"
     },
     {
       "url": "https://static.igem.wiki/teams/6165/wiki/education-handbook-page-b-kismet-kombucha.avif",
       "caption": "Page B of the bilingual printed handbook, telling the kombucha bacterial-cellulose story and introducing the sponge and magnet analogies; released under CC BY 4.0 for reuse.",
-      "credit": "Team SMS-Shenzhen, iGEM 2026 wiki"
+      "credit": "Team SMS-Shenzhen, iGEM 2026 wiki",
+      "caption_zh": "雙語印刷手冊的 B 頁，講述康普茶細菌纖維素的來歷，並引入海綿與磁鐵兩個類比；以 CC BY 4.0 釋出供再利用。"
     },
     {
       "url": "https://static.igem.wiki/teams/6165/wiki/education-wechat-article-stats.avif",
       "caption": "The WeChat account back end, reported by the team against their own interest: the team introduction outperformed the project introduction, and the purely scientific post reached the fewest readers of all.",
-      "credit": "Team SMS-Shenzhen, iGEM 2026 wiki"
+      "credit": "Team SMS-Shenzhen, iGEM 2026 wiki",
+      "caption_zh": "微信公眾號後台，由團隊以不利於自己的方式報出：團隊介紹的表現優於專案介紹，而純科學那篇貼文的讀者數是全部中最少的。"
     },
     {
       "url": "https://static.igem.wiki/teams/6165/wiki/hp-gem.avif",
       "caption": "Interview with GEM, the downstream hydrometallurgical recycler whose confirmation that metals remain in the tail stream after solvent extraction validated kisMET's target application point.",
-      "credit": "Team SMS-Shenzhen, iGEM 2026 wiki"
+      "credit": "Team SMS-Shenzhen, iGEM 2026 wiki",
+      "caption_zh": "與下游濕法冶金回收商 GEM 的訪談；對方確認溶劑萃取後金屬仍殘留於末端流中，驗證了 kisMET 的目標應用點。"
     }
   ],
   "gemsTakeaway": "The dry lab is real but narrow: a spreadsheet-level carbon-footprint and techno-economic model with a defined functional unit, literature emission factors and a three-scenario sensitivity sweep is squarely within one high-school season and is exactly the kind of modelling most teams skip, yet for an adsorption project the absence of any isotherm or kinetics fitting is a conspicuous hole that a single afternoon with their own single-metal data would have filled. The limiting factor is mentorship rather than tooling, compute or time - nobody told them that Langmuir and Freundlich fits are a spreadsheet exercise, while someone clearly did teach them how to scope an LCA.",
@@ -77,5 +88,9 @@
     "https://2026.igem.wiki/sms-shenzhen/attributions",
     "https://2026.igem.wiki/sms-shenzhen/team",
     "https://2026.igem.wiki/sms-shenzhen/safety"
-  ]
+  ],
+  "projectTitle_zh": "kisMET——從電池回收廢水中選擇性生物吸附殘餘金屬",
+  "tagline_zh": "不靠更多化學藥劑，把鋰、鈷、鎳、錳的最後百分之一攔下來",
+  "summary_zh": "kisMET 瞄準廢鋰離子電池回收的末端廢水：此時金屬濃度已降到 ppm 等級，溶劑萃取不再符合經濟效益。團隊改造 Komagataeibacter rhaeticus，讓它以自身分泌的融合蛋白修飾自己產生的細菌纖維素；該融合蛋白由訊息肽、碳水化合物結合模組、HiBiT 報導標籤與可替換的離子結合肽組成，以 Golden Gate 組裝於 pSEVA331 骨架上，由鼠李糖誘導型啟動子驅動。他們設計了四組 SP/CBM 支架與八個成員的離子結合肽組，使結合專一性可在不重新設計平台的情況下更換。目前的證據涵蓋培養、構築體與報導基因比較、單一金屬結合實驗以及纖維素降解分析；團隊明確表示，混合廢水中的選擇性、纖維素的閉環再利用與金屬的完全回收都是設計目標，而非已得的結果。",
+  "gemsTakeaway_zh": "乾實驗是真的做了，但範圍很窄：以試算表層級完成的碳足跡與技術經濟分析，有明確定義的功能單位、取自文獻的排放係數與三情境敏感度掃描，這完全在一個高中賽季做得到，也正是多數團隊會跳過的建模。然而對一個吸附專案來說，完全沒有任何等溫線或動力學擬合是個顯眼的缺口——用他們自己的單一金屬數據，一個下午就能補上。限制因素是指導，而不是工具、算力或時間：沒有人告訴他們 Langmuir 與 Freundlich 擬合其實是試算表作業，但顯然有人教過他們如何界定一份 LCA 的範圍。"
 }

@@ -6,8 +6,11 @@
   "village": "Space",
   "wiki": "https://2026.igem.wiki/kaust-ksa/",
   "projectTitle": "SHIHAB",
+  "projectTitle_zh": "SHIHAB",
   "tagline": "SHIHAB (shooting star): resilient microbial chassis and a suitcase bioreactor for on-demand therapeutic protein manufacturing in space",
+  "tagline_zh": "SHIHAB（流星）：耐受性強的微生物底盤，加上一台行李箱式生物反應器，用於在太空中按需製造治療性蛋白質",
   "summary": "Stocking an inventory of medicines for long-duration missions costs payload mass, so SHIHAB makes the medicine instead: a small library of lyophilised engineered microbes ('pills'), each producing a different nanobody, plus a compact automated bioreactor and purification train that an untrained astronaut can run. The wet lab integrated Dsup, the tardigrade damage-suppressor protein, genomically into three chassis (Bacillus subtilis, Saccharomyces cerevisiae, Pichia pastoris) and quantified radiation resistance against UV-C and X-ray doses with four complementary readouts, then expressed and purified a payload protein by HisTrap. The dry lab answered which host, what feedstock and when to induce using genome-scale metabolic models plus an ODE layer, and COMSOL CFD decided the rotor geometry for mixing under Mars, Moon and transit gravity. It won Best Hardware and Best Space Project; the whole platform was taken out of the lab and run on desert dunes to prove the 'anywhere' claim.",
+  "summary_zh": "為長期任務備齊一整櫃藥品要付出酬載質量的代價，因此 SHIHAB 選擇現場製藥：一小套凍乾的工程微生物（「藥丸」），每一顆生產一種不同的奈米抗體，再加上一台小型自動化生物反應器與純化串列，讓未受訓練的太空人也能操作。濕實驗把水熊蟲的損傷抑制蛋白 Dsup 以基因組整合方式導入三種底盤（Bacillus subtilis、Saccharomyces cerevisiae、Pichia pastoris），並以四種互補的判讀方式量化其對 UV-C 與 X 光劑量的抗性，接著表現並以 HisTrap 純化了一個酬載蛋白質。乾實驗以基因組尺度代謝模型加上一層 ODE，回答了該用哪個宿主、用什麼進料與何時誘導，而 COMSOL 的流體力學模擬則決定了在火星、月球與航行期重力下用於混合的轉子幾何。本案拿下 Best Hardware 與 Best Space Project；為了證明「在任何地方都能用」的說法，整套平台被搬出實驗室、在沙漠沙丘上實際運行。",
   "awards": [
     "Overgrad Top 10",
     "Best Hardware winner (Overgrad)",
@@ -18,41 +21,98 @@
   ],
   "dry": {
     "frameworks": "Flux balance analysis on three published genome-scale reconstructions (Yeast9 for S. cerevisiae, iBsu1147 for B. subtilis, iMS837 for Synechococcus elongatus PCC 7942, itself built on iJB792), plus a dynamic ODE layer integrated with scipy.integrate.solve_ivp (RK45) because FBA assumes steady state and cannot answer a timing question. Shared constraints are stated: glucose exchange 5, glycerol 0, oxygen 10 (aerobic) or 0 (anaerobic) mmol/gDW/h, nitrate capped at 10 for anaerobic Bacillus, habitat-analogue light at 145 mmol photons/gDW/h for the cyanobacterium, maximum nanobody flux computed with no growth requirement. The team repaired iBsu1147 by adding two reactions (NadB L-aspartate oxidase for de novo NAD+ synthesis and PyrD/PyrK dihydroorotate dehydrogenase for orotate), each justified with in-vitro literature evidence, because the published model failed without oxygen. Results: under oxygen restriction B. subtilis out-produces yeast roughly 3.4-fold on nanobody flux provided nitrate is supplied, and loses 46% of growth capacity against yeast's 82%; an engineered cyanobacterial supplier raises anaerobic yeast growth 13-fold (0.014 to 0.18 /h) once its sucrose export (0.81 mmol/gDW/h, tripled by capping the supplier's own growth) and oxygen (up to 4.2 mmol/gDW/h) are passed in as uptake bounds; the supplier is nitrogen-limited rather than carbon- or light-limited, and candidate gene knockouts do nothing. The ODE layer returns a closed-form optimal induction window of 6.5 to 7 h. Hardware modelling is COMSOL Multiphysics CFD comparing three rotor geometries for bubble fate, air distribution and vortex depth at 50-400 rpm across Earth, Mars, Moon and transit gravity.",
+    "frameworks_zh": "在三個已發表的基因組尺度重建模型上執行通量平衡分析（S. cerevisiae 用 Yeast9、B. subtilis 用 iBsu1147、Synechococcus elongatus PCC 7942 用 iMS837，後者本身建立在 iJB792 之上），再加上一層以 scipy.integrate.solve_ivp（RK45）積分的動態 ODE，因為 FBA 假設穩態，無法回答「何時」這類問題。共通的限制條件都有載明：葡萄糖交換通量 5、甘油 0、氧氣 10（好氧）或 0（厭氧）mmol/gDW/h，厭氧 Bacillus 的硝酸鹽上限為 10，藍綠菌的類棲地光照為 145 mmol photons/gDW/h，而最大奈米抗體通量則在不要求生長的條件下計算。團隊修補了 iBsu1147，補上兩個反應（供 NAD+ 從頭合成的 NadB L-天門冬胺酸氧化酶，以及生成乳清酸的 PyrD/PyrK 二氫乳清酸脫氫酶），每一個都以體外文獻證據佐證，因為已發表的模型在缺氧條件下無法求解。結果如下：在氧氣受限時，只要供應硝酸鹽，B. subtilis 的奈米抗體通量約為酵母的 3.4 倍，且其生長能力只損失 46%，而酵母損失 82%；一個經改造的藍綠菌供養者可讓厭氧酵母的生長提升 13 倍（由 0.014 升至 0.18 /h），前提是把它的蔗糖輸出（0.81 mmol/gDW/h，透過限制供養者自身的生長而提高為三倍）與氧氣（最高 4.2 mmol/gDW/h）當作攝取上限傳入；該供養者受限的是氮而不是碳或光，而候選的基因剔除則毫無作用。ODE 層給出一個封閉形式解的最佳誘導時間窗，為 6.5 至 7 小時。硬體建模則以 COMSOL Multiphysics 的流體力學模擬，在 50 至 400 rpm、涵蓋地球、火星、月球與航行期重力的條件下，比較三種轉子幾何的氣泡去向、空氣分布與漩渦深度。",
     "dataviz": "The dry-lab page is an interactive model map: a scheme of the three chassis plus the cyanobacterial supplier where every label is a clickable result, and a 'TRY ME' prompt tells the reader to select a label to open that finding and jump to the section that develops it. Each result is also stated as a one-line claim before any plot ('Induction window: 6.5 to 7 h', 'Knockouts do nothing', 'Capping growth triples sucrose export'), with headline deltas as large-type stat tiles (3.4x, -46% vs -82%, 13x, 2 reactions). Table 1 is the most unusual piece of visualisation discipline on any of these wikis: for every link between models it states what is actually passed between them and labels the link Modeled, Identified or Assumed, so the reader can see exactly where the chain is evidence and where it is an assumption. The hardware page carries an animated 3D walkthrough of the purification sequence in its carry case, labelled 'illustrative flow, not measured data', and a live simulation of the bioreactor's touchscreen dashboard where the reader can drag the motor-speed dial and change temperature and pH setpoints. CFD results are shown as four-gravity comparison panels. All stat tiles and dashboards are reader-operable rather than screenshots.",
+    "dataviz_zh": "乾實驗頁面是一張互動式的模型地圖：一張涵蓋三種底盤加藍綠菌供養者的示意圖，其中每個標籤都是可點選的結果，而一句「TRY ME」提示讀者點選標籤即可展開該項發現並跳到闡述它的章節。每一項結果在任何圖表之前都先以一行主張陳述（「誘導時間窗：6.5 至 7 小時」、「基因剔除毫無作用」、「限制生長使蔗糖輸出變成三倍」），關鍵的變化量則以大字級統計方塊呈現（3.4 倍、-46% 對 -82%、13 倍、2 個反應）。表 1 是這批 wiki 中最不尋常的一項視覺化紀律：對每一個模型之間的連結，它都載明兩者之間實際傳遞的是什麼，並把該連結標示為已建模、已查定或假設，讓讀者精確看出這條鏈在哪裡是證據、在哪裡只是假設。硬體頁面附有一段攜行箱內純化流程的 3D 動畫導覽，並標註「僅為示意流程，非量測資料」，另有一個生物反應器觸控螢幕儀表板的即時模擬，讀者可以拖曳馬達轉速旋鈕並更改溫度與 pH 設定值。流體力學模擬結果以四種重力的對照面板呈現。所有統計方塊與儀表板都是讀者可操作的，而不是截圖。",
     "datascience": "Measurement was designed as a framework rather than a set of assays: wild-type and Dsup-expressing B. subtilis, S. cerevisiae and P. pastoris were exposed to UV-C (0-30 mJ/cm2, and 0-300 J/m2 series) or X-rays (mock to 2000 Gy in 200 Gy steps) and read out four complementary ways (serial-dilution spot assay, OD600 time course, resazurin dye-reduction and FUN-1 staining), so a resistance claim has to survive four independent readouts rather than one. Three Dsup integration strains per host were compared against wild type and a nanobody control. On the engineering side the team derived a calibration mapping the analog voltage of a DFRobot SEN0189 turbidity sensor to NTU and then a linear OD600 = a(NTU) + b fit against reference spectrophotometer readings, following Fan et al. (2016) on Bacillus coagulans, which is what makes automatic IPTG induction at OD600 0.5 possible with no human in the loop. The modelling output is explicitly handed to the bench: a 'For the Wet Lab' box tells the experimenters where to start the co-culture and what growth cap to impose on the cyanobacteria.",
+    "datascience_zh": "量測是被設計成一套框架，而不是一組檢定：野生型與表現 Dsup 的 B. subtilis、S. cerevisiae 與 P. pastoris 分別暴露於 UV-C（0 至 30 mJ/cm2，以及 0 至 300 J/m2 兩個系列）或 X 光（由假照射到 2000 Gy，以 200 Gy 為間隔），並以四種互補方式判讀（序列稀釋點滴試驗、OD600 時間歷程、resazurin 染料還原法與 FUN-1 染色），因此一項抗性主張必須通過四種獨立判讀而不是只有一種。每個宿主各有三株 Dsup 整合菌株，與野生型以及一個奈米抗體對照相比較。工程面上，團隊推導出一條校正曲線，把 DFRobot SEN0189 濁度感測器的類比電壓對應到 NTU，再依參考分光光度計的讀值擬合出線性關係 OD600 = a(NTU) + b，做法沿用 Fan et al.（2016）在 Bacillus coagulans 上的方法，而這正是能在 OD600 達 0.5 時自動進行 IPTG 誘導、完全無需人為介入的關鍵。建模的輸出也明確交到實驗台上：一個「給濕實驗」方塊告訴實驗人員共培養該從哪裡起步，以及該對藍綠菌施加什麼樣的生長上限。",
     "software": "No standalone released application, but the code is published: ODE models and GEM notebooks are linked from the model page, and the whole wiki plus hardware design lives at gitlab.igem.org/2026/kaust-ksa under CC BY 4.0. The hardware itself is the deliverable and is documented for reproduction: an Arduino Mega control stack with a touchscreen dashboard in a compact enclosure, closed-loop temperature (DS18B20 probe to heating elements), pH (DANOPLUS KIB-87 probe with signal-conditioning board to acid/base dispensing) and OD (turbidity sensor to IPTG induction), hollow structural supports routing all wiring, a filtration unit with user-selectable stages of decreasing pore size in gasketed modules (Kapton, paper, Acrodisc), syringe-pump buffer handling and affinity chromatography, all released with a Hardware User Manual, a Radiation Resistance Testing Handbook and a Protein Expression and AKTA Purification Handbook.",
-    "stack": ["COBRA-style FBA on Yeast9, iBsu1147, iMS837 (iJB792 lineage)", "scipy.integrate.solve_ivp (RK45)", "Python / Jupyter notebooks", "COMSOL Multiphysics (CFD)", "Arduino Mega", "DS18B20 temperature probe", "DANOPLUS KIB-87 pH probe", "DFRobot SEN0189 turbidity sensor", "3D printing / CAD", "Xstrahl X-ray irradiator", "AKTA / HisTrap affinity chromatography", "GitLab", "React (wiki)"],
-    "techniques": ["genome-scale metabolic modelling and model curation (gap repair with literature-backed reactions)", "anaerobic and oxygen-sweep constraint analysis", "co-culture modelling by passing computed fluxes as uptake bounds", "sequential nutrient co-limitation cascade", "growth versus product-secretion trade-off (Pareto) analysis", "in-silico knockout screening", "ODE dynamic induction-timing optimisation with closed-form optimum", "computational fluid dynamics across multiple gravity regimes", "sensor calibration to OD600 for closed-loop autoinduction", "four-readout radiation resistance characterisation", "genomic integration of Dsup", "Comet assay for DNA damage"]
+    "software_zh": "沒有獨立釋出的應用程式，但程式碼有公開：ODE 模型與 GEM 計算筆記本都由模型頁面連出，整個 wiki 連同硬體設計則放在 gitlab.igem.org/2026/kaust-ksa，採 CC BY 4.0 授權。硬體本身就是交付成果，並有完整的複製文件：一套 Arduino Mega 控制系統搭配置於小型機殼中的觸控螢幕儀表板、閉迴路的溫度控制（DS18B20 探針驅動加熱元件）、pH 控制（DANOPLUS KIB-87 探針搭配訊號調理板，驅動酸鹼加注）與 OD 控制（濁度感測器觸發 IPTG 誘導），中空的結構支柱負責走線，過濾單元採使用者可選擇、孔徑遞減的多段式帶墊圈模組（Kapton、濾紙、Acrodisc），另有注射泵式的緩衝液處理與親和層析；全部連同一本硬體使用手冊、一本抗輻射測試手冊與一本蛋白質表現與 AKTA 純化手冊一併釋出。",
+    "stack": [
+      "COBRA-style FBA on Yeast9, iBsu1147, iMS837 (iJB792 lineage)",
+      "scipy.integrate.solve_ivp (RK45)",
+      "Python / Jupyter notebooks",
+      "COMSOL Multiphysics (CFD)",
+      "Arduino Mega",
+      "DS18B20 temperature probe",
+      "DANOPLUS KIB-87 pH probe",
+      "DFRobot SEN0189 turbidity sensor",
+      "3D printing / CAD",
+      "Xstrahl X-ray irradiator",
+      "AKTA / HisTrap affinity chromatography",
+      "GitLab",
+      "React (wiki)"
+    ],
+    "techniques": [
+      "genome-scale metabolic modelling and model curation (gap repair with literature-backed reactions)",
+      "anaerobic and oxygen-sweep constraint analysis",
+      "co-culture modelling by passing computed fluxes as uptake bounds",
+      "sequential nutrient co-limitation cascade",
+      "growth versus product-secretion trade-off (Pareto) analysis",
+      "in-silico knockout screening",
+      "ODE dynamic induction-timing optimisation with closed-form optimum",
+      "computational fluid dynamics across multiple gravity regimes",
+      "sensor calibration to OD600 for closed-loop autoinduction",
+      "four-readout radiation resistance characterisation",
+      "genomic integration of Dsup",
+      "Comet assay for DNA damage"
+    ]
   },
   "good": {
     "publicEngagement": "Engagement was built around a stated regional gap: synthetic biology is largely absent from secondary curricula in Saudi Arabia and the wider MENA region, and almost no learning resources exist in Arabic. The flagship is the Tawasol Initiative, a network uniting MENA iGEM teams through film, podcasts and social media specifically to reach Arabic speakers, run alongside a Tawasol Hackathon; it extended to a joint programme with NYU Abu Dhabi iGEM (28-30 August) and reached as far as Peru and Kazakhstan. Programmes are differentiated by audience: the Thuwal Science Pioneers Program brought middle and high school students onto the KAUST campus for a lecture with a before-and-after knowledge check, a 'design your own microbe to help astronauts' activity, tours of the Nanofabrication and Robotics core labs, and lunch with the team; a trip to Zahrat Al Sahra International School 80 km south reached 58 middle schoolers; a KAUST Summer Mentorship Program is paired with Oboor (Arabic for 'transition'), a university-adaptation programme for Saudi students built with a counselling-psychology researcher at Umm Al-Qura University; a farmer-facing course trains youth volunteers who then teach rural farmers; and family-facing 'Copy-Paste Plants' booths and science movie nights ran for the wider community, with just over two thirds of the film audience staying for the discussion. One standout artefact is a bilingual illustrated dialogue between two young Peruvian students working through whether a CRISPR edit of a plant's own gene is a Living Modified Organism under Peru's Law 31.111 moratorium or exempt under Ministerial Resolution D000068-2026-MINAM-DM of April 2026, a genuinely difficult regulatory distinction turned into a readable comic.",
+    "publicEngagement_zh": "推廣工作建立在一個明確指出的區域落差上：合成生物學在沙烏地阿拉伯以及更廣的 MENA 地區的中學課綱中幾乎不存在，而阿拉伯語的學習資源也幾乎沒有。旗艦計畫是 Tawasol Initiative，一個以影片、播客與社群媒體串連 MENA 各 iGEM 團隊、專門面向阿拉伯語使用者的網路，並同時舉辦 Tawasol Hackathon；它後來延伸成與 NYU Abu Dhabi iGEM 的聯合計畫（8 月 28 至 30 日），影響範圍遠達秘魯與哈薩克。各項方案依受眾區分：Thuwal Science Pioneers Program 把國中與高中生帶進 KAUST 校園，進行一場附前後測知識檢核的講座、一個「設計你自己的微生物來幫助太空人」活動、參訪奈米製造與機器人核心實驗室，並與團隊共進午餐；一趟前往 80 公里外南方 Zahrat Al Sahra International School 的行程觸及 58 位國中生；KAUST Summer Mentorship Program 則與 Oboor（阿拉伯語的「過渡」）搭配，那是一個為沙烏地學生設計、與 Umm Al-Qura University 一位諮商心理學研究者共同建立的大學適應方案；另有一門面向農民的課程，訓練青年志工再由他們去教導偏鄉農民；而面向家庭的「Copy-Paste Plants」攤位與科學電影之夜則服務更廣大的社群，電影觀眾中有略超過三分之二留下來參加討論。其中一項突出的產出，是一篇雙語圖文對話，由兩位秘魯年輕學生逐步推敲一個問題：以 CRISPR 編輯植物自身的基因，究竟算是秘魯第 31.111 號法律禁令下的活體改造生物，還是依 2026 年 4 月的部長決議 D000068-2026-MINAM-DM 獲得豁免，一個確實困難的法規區分被轉化成一則讀得下去的漫畫。",
     "ihp": "Over 30 activities and 15 named conversations, and the wiki is explicit that seven parts of SHIHAB changed, with an interactive map letting the reader pick either a person or a component. The team built their own ORBIT framework (Observe, Reach, Build, Iterate, Translate) and four values (autonomy, adaptability, responsibility, accessibility). Documented changes: Dr. Christopher E. Mason's feedback made Dsup one of the protective genes in the chassis-engineering strategy and added the Comet assay to the experimental workflow; Konstantinos Vergos and Dr. Akshay Chandrashekhar converged on microgravity as a mandatory part of validation, which is why the COMSOL simulations exist (as a precursor to parabolic flight); Sarah Al Harbi's point about crew supervision load produced the dry-lab monitoring dashboard and shaped the hardware; KAUST Health, Safety and Environment directly wrote the structure of the Safety Handbook (hazard identification, risk assessment, containment failure, accidental exposure, environmental release, emergency response) and shaped the Hardware manual; a regulatory expert pushed them to prioritise therapeutics by the conditions astronauts actually face on specific missions rather than by ease of production, which is how Spaceflight-Associated Neuro-ocular Syndrome and carcinogenesis entered the payload list; and conversations with humanitarian responders Rachel Kessler and Jonathan Grant replaced a generic 'disaster zone' use case with a stated principle, design for a specific context, not an abstract disaster zone. The project also started on oxygen production and moved to therapeutics after team and PI discussion, with the earlier adviser's emphasis on automation, monitoring, product quality and space-relevant validation carried over. Astronaut Rayyanah Barnawi and Starr Corbin informed the astronaut-facing requirements; the Tawasol Hackathon surfaced three governance priorities (remote quality assurance, operational accountability, healthcare integration).",
+    "ihp_zh": "超過 30 項活動與 15 場具名對話，而 wiki 明白指出 SHIHAB 有七個部分因此改變，並以一張互動地圖讓讀者從「人」或「元件」任一側切入查看。團隊自建了 ORBIT 框架（Observe、Reach、Build、Iterate、Translate）與四項價值（自主性、適應性、責任、可及性）。有紀錄的改變包括：Dr. Christopher E. Mason 的回饋使 Dsup 成為底盤改造策略中的保護基因之一，並把彗星試驗（Comet assay）加進實驗流程；Konstantinos Vergos 與 Dr. Akshay Chandrashekhar 不約而同認為微重力是驗證中必要的一環，這正是那些 COMSOL 模擬存在的原因（作為拋物線飛行的前置工作）；Sarah Al Harbi 關於組員監看負擔的意見，催生了乾實驗的監測儀表板並形塑了硬體；KAUST 的健康、安全與環境部門直接寫定了安全手冊的結構（危害辨識、風險評估、圍阻失效、意外暴露、環境釋出、緊急應變），也形塑了硬體手冊；一位法規專家促使他們依太空人在特定任務中實際面對的病症、而不是依生產難易度來排定治療標的的優先順序，太空飛行相關神經眼症候群與致癌風險因此進入酬載清單；而與人道救援工作者 Rachel Kessler 和 Jonathan Grant 的對話，則讓原本籠統的「災區」使用情境被一條明確原則取代，也就是為特定情境設計，而不是為一個抽象的災區設計。這個專案最初做的是氧氣生產，在團隊與 PI 討論後才轉向治療用途，而先前顧問對自動化、監測、產品品質與太空相關驗證的強調則延續了下來。太空人 Rayyanah Barnawi 與 Starr Corbin 提供了面向太空人的需求意見；Tawasol Hackathon 則浮現出三項治理優先事項（遠端品質保證、操作問責、醫療體系整合）。",
     "realWorld": "Two application contexts are carried in parallel and the second was added because of stakeholder input: space missions, and remote or disaster-affected settings with disrupted medicine supply chains, each treated as a specific deployment context rather than one generic 'remote healthcare' market. The continuation plan is staged as a roadmap, beginning with demonstrating small-scale biomanufacturing in Low Earth Orbit and evaluating production under microgravity and space radiation, with a long-term pathway developed out of conversations with Savi Glowe and industry contacts (Deep Space Biology, BIOASTRA). Practical adoptability is the strongest part of the case: the only manual step is loading the pill, the platform is designed for low power and low payload mass, and it is documented well enough for a non-specialist to run from the Hardware User Manual, which the team tested by setting the bioreactor and fluid-dispensing system up on a folding table in the desert dunes, far from any bench.",
-    "partners": ["Rayyanah Barnawi (Saudi astronaut)", "Starr Corbin", "Dr. Christopher E. Mason, Weill Cornell Medicine", "Prof. Alexandre Rosado, KAUST", "Dr. Luis Zea", "Konstantinos Vergos and Dr. Akshay Chandrashekhar", "Kimberly Washington, Deep Space Biology", "BIOASTRA", "Savi Glowe", "KAUST Health, Safety and Environment", "Rachel Kessler and Jonathan Grant (humanitarian response)", "NYU Abu Dhabi iGEM", "Tawasol Initiative (MENA iGEM network)", "Zahrat Al Sahra International School, Jeddah", "Thuwal community schools", "Renad Almalki, Umm Al-Qura University (Oboor programme)", "StruBE Lab, KAUST"]
+    "realWorld_zh": "兩個應用情境被並行推進，而第二個正是因為利害關係人意見才加入的：太空任務，以及藥品供應鏈中斷的偏遠或受災地區，兩者都被當成具體的部署情境處理，而不是合併成一個籠統的「偏遠醫療」市場。後續計畫以路線圖分階段編排，先在近地軌道示範小規模生物製造，並評估微重力與太空輻射下的生產表現，長期路徑則由與 Savi Glowe 及業界聯繫人（Deep Space Biology、BIOASTRA）的對話發展而成。這份論證最強的部分是實際的可採用性：唯一的人工步驟是放入藥丸，平台設計上耗電低、酬載質量小，而且文件完善到讓非專業人士也能照著硬體使用手冊操作；團隊為此做了實測，把生物反應器與流體加注系統架在沙漠沙丘的一張折疊桌上，遠離任何實驗台。",
+    "partners": [
+      "Rayyanah Barnawi (Saudi astronaut)",
+      "Starr Corbin",
+      "Dr. Christopher E. Mason, Weill Cornell Medicine",
+      "Prof. Alexandre Rosado, KAUST",
+      "Dr. Luis Zea",
+      "Konstantinos Vergos and Dr. Akshay Chandrashekhar",
+      "Kimberly Washington, Deep Space Biology",
+      "BIOASTRA",
+      "Savi Glowe",
+      "KAUST Health, Safety and Environment",
+      "Rachel Kessler and Jonathan Grant (humanitarian response)",
+      "NYU Abu Dhabi iGEM",
+      "Tawasol Initiative (MENA iGEM network)",
+      "Zahrat Al Sahra International School, Jeddah",
+      "Thuwal community schools",
+      "Renad Almalki, Umm Al-Qura University (Oboor programme)",
+      "StruBE Lab, KAUST"
+    ]
   },
   "images": [
     {
       "url": "https://static.igem.wiki/teams/6341/wiki/content/hardware/cfd-prototype-3.webp",
       "caption": "COMSOL Multiphysics CFD of the third rotor concept (three rows of small tilted blades) at 200 rpm, comparing bubble fate under Earth, Mars, Moon and transit gravity: the simulation that selected the final rotor geometry.",
+      "caption_zh": "第三種轉子構想（三排小型傾斜葉片）在 200 rpm 下的 COMSOL Multiphysics 流體力學模擬，比較地球、火星、月球與航行期重力下的氣泡去向：這就是選定最終轉子幾何的那次模擬。",
       "credit": "Team KAUST-KSA, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6341/wiki/content/hardware/final-bioreactor.avif",
       "caption": "The built SHIHAB bioreactor: glass vessel with 3D-printed lid and rotor between two hollow supports carrying all wiring, heating band around the vessel, and the Arduino-driven touchscreen dashboard in the base.",
+      "caption_zh": "實際做出來的 SHIHAB 生物反應器：玻璃反應槽搭配 3D 列印的上蓋與轉子，置於兩根負責走線的中空支柱之間，槽身外圍包覆加熱帶，底座則是由 Arduino 驅動的觸控螢幕儀表板。",
       "credit": "Team KAUST-KSA, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6341/wiki/content/hardware/desert-pic-1.avif",
       "caption": "SHIHAB tested on desert dunes with a folding table and a laptop, putting the 'operable anywhere' claim to a field test rather than asserting it.",
+      "caption_zh": "SHIHAB 在沙漠沙丘上以一張折疊桌與一台筆電進行測試，把「在任何地方都能操作」這個說法拿去做實地檢驗，而不是光靠嘴上宣稱。",
       "credit": "Team KAUST-KSA, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6341/wiki/content/public-engagement/copy-paste-plants-activity.avif",
       "caption": "The Copy-Paste Plants activity at a family-facing community booth, part of an engagement programme built around the near-absence of synthetic biology from MENA school curricula and of Arabic-language resources.",
+      "caption_zh": "面向家庭的社區攤位上的 Copy-Paste Plants 活動，屬於一套針對「合成生物學在 MENA 學校課綱中幾乎不存在、阿拉伯語資源也幾乎沒有」而設計的推廣方案。",
       "credit": "Team KAUST-KSA, iGEM 2026 wiki"
     }
   ],
   "gemsTakeaway": "Steal Table 1: for every link between two models, write down what is actually passed and label it Modeled, Identified or Assumed. It costs one table and it immunises a student modelling chain against the usual criticism that the pieces were never really connected. Pair that with KAUST's four-readout rule (no resistance or phenotype claim unless it survives several independent assays) and the habit of ending each model section with a 'For the Wet Lab' instruction, so the dry lab visibly changes what gets done at the bench.",
+  "gemsTakeaway_zh": "把表 1 學起來：對每一個模型與模型之間的連結，寫下實際被傳遞的究竟是什麼，並標示為已建模、已查定或假設。它只花一張表的成本，卻能讓學生團隊的建模鏈免受那個最常見的批評，也就是這些片段其實從未真正接起來。再搭配 KAUST 的四判讀規則（除非通過數項獨立檢定，否則不得宣稱任何抗性或表型），以及在每個模型章節結尾放一則「給濕實驗」指示的習慣，讓乾實驗明顯改變了實驗台上實際會做的事。",
   "sources": [
     "https://2026.igem.wiki/kaust-ksa/",
     "https://2026.igem.wiki/kaust-ksa/model",

@@ -6,8 +6,11 @@
   "village": "Conservation",
   "wiki": "https://2026.igem.wiki/athens/",
   "projectTitle": "ApiconIASIS",
+  "projectTitle_zh": "ApiconIASIS",
   "tagline": "Healing honeybees, sustaining pollinators: a precision phage-derived enzyme therapy for European Foulbrood",
+  "tagline_zh": "治癒蜜蜂、維繫授粉者：一種源自噬菌體的精準酵素療法，用於歐洲幼蟲病",
   "summary": "ApiconIASIS targets European Foulbrood (EFB), a statutory honeybee brood disease caused by Melissococcus plutonius for which the only legal response in most of Europe is burning the colony. The team mined 165 M. plutonius genomes for dormant prophages, ranked hundreds of candidate lysins and selected two enzymes (an endolysin and a GH25 muramidase), each built with and without a fused antimicrobial peptide, expressed and purified in E. coli. They showed roughly 40% loss of OD600 against M. plutonius (LMG 20360) with 50 ug/mL purified endolysin while producing no effect distinguishable from the untreated control against the bee-gut commensals Lactobacillus apis and Bombilactobacillus mellis, both Lactobacillales like the pathogen. It won because the whole chain is closed: a protein (not a replicating phage) delivered in brood food, three linked dry-lab models (protein optimisation, larval-gut pharmacokinetics, bioprocess scale-up), and an entrepreneurship case built on the cost of hive burning.",
+  "summary_zh": "ApiconIASIS 針對歐洲幼蟲病（EFB），這是一種由 Melissococcus plutonius 造成的法定通報蜂子疾病，而在歐洲大部分地區，唯一合法的處置就是把整個蜂群燒掉。該隊從 165 個 M. plutonius 基因組中挖掘休眠的原噬菌體，對數百個候選溶解酶排序，選出兩個酵素（一個內溶素與一個 GH25 胞壁質酶），每個都做了接上與不接抗菌肽的版本，並在 E. coli 中表現與純化。他們顯示 50 ug/mL 的純化內溶素對 M. plutonius（LMG 20360）可造成約 40% 的 OD600 下降，而對蜂腸共生菌 Lactobacillus apis 與 Bombilactobacillus mellis（兩者與病原同屬 Lactobacillales）則沒有可與未處理對照區分的效果。它之所以出色，是因為整條鏈是閉合的：投遞的是一個蛋白質（不是會複製的噬菌體），透過蜂子食物給予；三個互相銜接的乾實驗模型（蛋白質最佳化、幼蟲腸道藥物動力學、生物製程放大）；以及一份以燒毀蜂箱的成本為基礎建立的創業論述。",
   "awards": [
     "Overgrad Top 10",
     "Best Entrepreneurship winner (Overgrad)",
@@ -17,41 +20,92 @@
   ],
   "dry": {
     "frameworks": "Three distinct model layers. (1) A semi-rational protein engineering cascade for the poorly soluble GH25 muramidase (Protein-Sol 0.411, below the 0.45 aggregation threshold, with inclusion bodies confirmed in the wet lab): a 40-residue 'freeze list' built from three independent evidence sources (structural role, ESM-2 650M evolutionary constraint, literature), validated by all-atom molecular dynamics (RMSF < 2 A), then ThermoMPNN point-mutation ddG scanning, an ESM-2 log-likelihood filter at -2.0 to drop family-implausible substitutions, NSGA-II multi-objective search via pymoo over the 17 surviving mutations, and ColabFold refolding as a final structural gate catching epistasis; AlphaFold pLDDT > 70 was a stated input requirement. (2) A deterministic single-compartment ODE pharmacokinetic model of the honeybee larval midgut treating the lumen as a sealed, expanding compartment and the pathogen as absolute cell number N, with an Emax saturating kill law fitted to in-vitro lysis data (phi_max ~ 0.006125 /min, KE ~ 0.633 ug/mL, R2 = 0.935). (3) A bioprocess flowsheet model of a medium-scale E. coli plant with a three-stage seed train (baffled shake flask, seed bioreactor, production fermenter under high-cell-density culture), solving for biomass and product mass per batch.",
+    "frameworks_zh": "三個不同層次的模型。(1) 針對溶解度不佳的 GH25 胞壁質酶（Protein-Sol 0.411，低於 0.45 的聚集門檻，且濕實驗中確認形成包涵體）建立的半理性蛋白質工程串級流程：先以三個獨立證據來源（結構角色、ESM-2 650M 的演化約束、文獻）建出一份 40 個殘基的「凍結清單」，並以全原子分子動力學驗證（RMSF < 2 A），接著以 ThermoMPNN 做點突變 ddG 掃描，以 ESM-2 對數似然在 -2.0 處設濾網剔除在家族中不合理的取代，再以 pymoo 的 NSGA-II 對存活下來的 17 個突變做多目標搜尋，最後以 ColabFold 重新折疊作為結構關卡，捕捉上位效應；AlphaFold pLDDT > 70 是明定的輸入要求。(2) 一個確定性的單室 ODE 藥物動力學模型，描述蜜蜂幼蟲中腸，把腸腔當成一個密封且體積膨脹的隔室，病原則以絕對細胞數 N 表示，並以 Emax 飽和型殺滅定律擬合體外裂解資料（phi_max 約 0.006125 /min，KE 約 0.633 ug/mL，R2 = 0.935）。(3) 一個中等規模 E. coli 廠的生物製程流程圖模型，含三階段種子培養序列（帶擋板搖瓶、種子生物反應器、以高細胞密度培養運轉的生產發酵槽），求解每批次的生物量與產物質量。",
     "dataviz": "The wiki stages results as a narrative rather than a figure dump: the landing page counts down the disease (90% brood mortality, 36% of surveyed colonies carrying the bacterium with 72% of those looking healthy) before showing the funnel 165 genomes to hundreds of candidates to two enzymes to one lead, then flask to bioreactor to hive to landscape. The model section front-loads a one-sentence summary of each pipeline and marks P1-P4 as falsifiable predictions, with P4 flagged as the main untested exposure because binding selectivity was never an optimisation objective. The optimisation page carries a Venn diagram of the three freeze-list evidence sources, RMSF and DCCM plots from the MD run, an ESM-2 log-likelihood filter plot and the NSGA-II Pareto front.",
+    "dataviz_zh": "這個 wiki 把結果編排成敘事而非圖片堆疊：首頁先以數字倒數這個疾病（蜂子死亡率 90%、受調查蜂群有 36% 帶有該細菌，而其中 72% 看起來健康），再呈現漏斗——165 個基因組到數百個候選、到兩個酵素、到一個領先候選——接著是從搖瓶到生物反應器、到蜂箱、到整片地景。模型章節把每條流程的一句話摘要放在最前面，並把 P1-P4 標記為可被否證的預測，其中 P4 被標示為主要尚未驗證的風險，因為結合選擇性從未被列為最佳化目標。最佳化頁面則有一張三個凍結清單證據來源的文氏圖、MD 模擬得出的 RMSF 與 DCCM 圖、一張 ESM-2 對數似然濾網圖，以及 NSGA-II 的 Pareto 前緣。",
     "datascience": "Biological measurements were converted into decision rules rather than descriptive statistics. A pH-plate experiment was decomposed into two separable effects: kill rate is essentially flat across the lumen band (pH 5.5-7.5) while stability is strongly pH-dependent (t_half ~140-280 h at pH 5.5-6.7, ~7 h at pH 4, ~12 h at pH 7.5), which showed the enzyme is about 30x more stable in the lumen than assumed and dropped the required food concentration about 31-fold, making dilution rather than degradation the dominant loss term. Because nurse bees feed roughly 4,300 times a day, delivery was modelled as a continuous infusion at quasi-steady state. Full sterilisation within 48 h holds only up to about 455 cells (a saturation, not a dose, limit; a 300-cell inoculum already needs 26.2 ug/mL against a larva-safe cap of 23 ug/mL), so the team switched to a 'recovery' criterion that raised the handleable inoculum by four to five orders of magnitude to about 10^7 cells. The model's stated output is a starting dose plus an exposure profile (peak concentration, AUC, dosing duration, clearance time) handed to the wet lab and to a companion toxicity model.",
+    "datascience_zh": "生物量測被轉換成決策規則，而不是描述性統計。一次 pH 盤實驗被拆解成兩個可分離的效應：殺滅速率在腸腔的 pH 區間（5.5-7.5）內基本持平，而穩定性則強烈依賴 pH（pH 5.5-6.7 時半衰期約 140-280 小時、pH 4 時約 7 小時、pH 7.5 時約 12 小時），這顯示該酵素在腸腔中的穩定性約為原先假設的 30 倍，使所需的食物中濃度降低約 31 倍，於是主導的損失項變成稀釋而不是降解。由於育幼蜂一天餵食約 4,300 次，投遞被建模為準穩態下的連續輸注。48 小時內完全滅菌只在大約 455 個細胞以下成立（這是飽和限制而非劑量限制；300 個細胞的接種量就已需要 26.2 ug/mL，而對幼蟲安全的上限是 23 ug/mL），因此該隊改採「恢復」判準，把可處理的接種量提高四到五個數量級，達到約 10^7 個細胞。模型明示的輸出是一個起始劑量加上一份暴露曲線（峰值濃度、AUC、給藥持續時間、清除時間），交給濕實驗以及一個配套的毒性模型。",
     "software": "ApiconIASIS: Bee Wanderer, a browser-based educational game built for the EU-CONEXUS Hackathon in plain JavaScript, HTML5 Canvas, CSS3 and Three.js with no game engine: a custom 2D platformer engine (requestAnimationFrame loop, AABB collision, sinusoidal moving platforms, parallax) in level-engine.js with per-level config files, plus an interactive WebGL globe using Three.js OrbitControls and raycasting for level selection across Athens, the Himalayas, Tanzania, Uganda and New Zealand. Collectibles map to biotech stages (DNA Pollen, Enzyme Drops, Purification Beads); progression persists in localStorage with no backend, and a Weather Station pulls live data from Open-Meteo and wttr.in. All dry-lab scripts are released at https://github.com/igemathens2026/iGEM-Athens-2026---Software-; the wiki repository is gitlab.igem.org/2026/athens.",
-    "stack": ["ESM-2 650M", "ThermoMPNN", "pymoo (NSGA-II)", "ColabFold", "AlphaFold", "Protein-Sol", "all-atom molecular dynamics (RMSF, DCCM)", "Python", "JavaScript / HTML5 Canvas", "Three.js / WebGL", "Open-Meteo API", "wttr.in API", "GitHub", "GitLab"],
-    "techniques": ["multi-objective Pareto optimisation (NSGA-II)", "protein language model constraint profiling", "hard-constraint freeze lists from multi-source evidence", "ddG stability scanning", "structural validation gate (refolding)", "single-compartment ODE pharmacokinetics", "Emax saturating kill-law fitting", "prophage mining across 165 genomes", "bioprocess flowsheet simulation", "seed-train scale-up modelling"]
+    "software_zh": "ApiconIASIS: Bee Wanderer，一款為 EU-CONEXUS Hackathon 製作的瀏覽器教育遊戲，以純 JavaScript、HTML5 Canvas、CSS3 與 Three.js 寫成，沒有使用遊戲引擎：level-engine.js 中是自製的 2D 平台跳躍引擎（requestAnimationFrame 迴圈、AABB 碰撞偵測、正弦移動平台、視差捲動），搭配每個關卡各自的設定檔，另有一個互動式 WebGL 地球儀，以 Three.js 的 OrbitControls 與射線投射選取關卡，地點涵蓋雅典、喜馬拉雅、坦尚尼亞、烏干達與紐西蘭。可收集道具對應到生技流程階段（DNA 花粉、酵素液滴、純化微珠）；進度以 localStorage 保存，不需後端，另有一個氣象站功能從 Open-Meteo 與 wttr.in 取得即時資料。所有乾實驗腳本釋出於 https://github.com/igemathens2026/iGEM-Athens-2026---Software-；wiki 的程式庫為 gitlab.igem.org/2026/athens。",
+    "stack": [
+      "ESM-2 650M",
+      "ThermoMPNN",
+      "pymoo (NSGA-II)",
+      "ColabFold",
+      "AlphaFold",
+      "Protein-Sol",
+      "all-atom molecular dynamics (RMSF, DCCM)",
+      "Python",
+      "JavaScript / HTML5 Canvas",
+      "Three.js / WebGL",
+      "Open-Meteo API",
+      "wttr.in API",
+      "GitHub",
+      "GitLab"
+    ],
+    "techniques": [
+      "multi-objective Pareto optimisation (NSGA-II)",
+      "protein language model constraint profiling",
+      "hard-constraint freeze lists from multi-source evidence",
+      "ddG stability scanning",
+      "structural validation gate (refolding)",
+      "single-compartment ODE pharmacokinetics",
+      "Emax saturating kill-law fitting",
+      "prophage mining across 165 genomes",
+      "bioprocess flowsheet simulation",
+      "seed-train scale-up modelling"
+    ]
   },
   "good": {
     "publicEngagement": "Education was run as a programme rather than a set of visits, across age groups and education levels, and deliberately bilingual (every pamphlet and deck in English and Greek). At NTUA Open Days (17 March 2026) they reached over 100 STEM-track candidates at an engineering school where students have largely dropped biology, pairing an interactive presentation on industrial biotechnology and its ethical framework with a tour of the Laboratory of Biotechnology and Industrial Biocatalysis; the team recorded that the students were most engaged by ethics, and built that framing into every later event. The portfolio also includes a multi-day summer programme at Villa Aimilia (design-a-microbe, strawberry DNA extraction, bees-leaves-cells), Second Chance Schools in Peristeri and Piraeus for adult learners, the 4th Panhellenic Synthetic Biology Riddle Competition, ChemExpo, the Pasteur institute and iGEM Fest. The Bee Wanderer game extends the same material into a free browser format.",
+    "publicEngagement_zh": "教育是以計畫的方式推動，而不是一組零散的參訪，跨越年齡層與教育階段，並刻意採雙語（每一份手冊與簡報都有英文與希臘文）。在 NTUA 開放日（2026 年 3 月 17 日），他們在一所學生大多已放棄生物學的工學院觸及 100 多位 STEM 組考生，把一場關於工業生物技術及其倫理框架的互動簡報，搭配生物技術與工業生物催化實驗室的導覽；該隊記錄下學生最投入的部分是倫理，並把這個切入點寫進之後每一場活動。活動組合還包括 Villa Aimilia 的多日夏季營（設計一隻微生物、草莓 DNA 萃取、蜜蜂—葉片—細胞）、佩里斯特里與比雷埃夫斯的第二次機會學校（成人學習者）、第 4 屆全希臘合成生物學謎題競賽、ChemExpo、巴斯德研究所與 iGEM Fest。Bee Wanderer 這款遊戲則把同一批素材延伸成免費的瀏覽器形式。",
     "ihp": "The human practices page is written as a ledger of what the project gave up. Two requirements came from beekeeping, not from the team, and now define success: the protein must reach the brood, and it must survive the larval gut. Delivery was moved from spray to feed because adjuvant surfactants are documented to harm bees and because the person holding the sprayer inhales it; protective equipment therefore appears in the protocols, not in the product. They chose a purified non-replicating enzyme over a live phage knowing it is weaker and more expensive, because a protein cannot spread, establish or transfer genes. They counter-screened against Lactobacillus apis and Bombilactobacillus mellis, the closest relatives of the pathogen in the hive, instead of easier distant organisms, and they used a reduced-virulence M. plutonius lineage although a virulent strain was available, accepting a weaker efficacy claim. Advisor Anastasis Galanis and beekeeper Peter Kasztelewicz (whose own hive footage is on the wiki) shaped these choices while they were being made; Peter's gentler methods, requeening and partial clean-out, are what motivated the feed route.",
+    "ihp_zh": "human practices 頁面寫成一本「放棄了什麼」的帳簿。兩項需求來自養蜂實務而非團隊本身，而它們現在定義了何謂成功：這個蛋白質必須抵達蜂子，而且必須在幼蟲腸道中存活。投遞方式從噴灑改為餵食，原因是佐劑界面活性劑已有文獻紀錄會傷害蜜蜂，而且拿著噴槍的人會吸入它；因此防護裝備出現在實驗流程中，而不是出現在產品裡。他們明知純化的非複製型酵素比活噬菌體效力更弱、成本更高，仍然選了它，因為蛋白質不會擴散、不會建立族群、也不會轉移基因。他們以蜂箱中與病原最親近的 Lactobacillus apis 與 Bombilactobacillus mellis 做反向篩選，而不是挑比較容易過關的遠緣菌種；而且即使有高毒力株可用，他們仍使用一株低毒力的 M. plutonius 株系，因而接受一個較弱的效力主張。顧問 Anastasis Galanis 與養蜂人 Peter Kasztelewicz（wiki 上有他自己蜂箱的影片）在這些選擇形成的過程中就參與其中；Peter 較溫和的做法——更換蜂王與部分清巢——正是餵食路線的動機來源。",
     "realWorld": "ApiconIASIS is positioned as the first target-specific sustainable EFB treatment, with the value proposition pinned to a quantified loss: quarantine and hive burning halt honey production for about eight weeks on top of the destroyed colony. Unlike antibiotics (not authorised in the EU, and resistance-breeding where used) or fungal extracts, the enzyme is argued to leave the bee microbiome intact and to leave no residue in honey, preserving market value. The business plan carries a pitch deck and an investor one-pager; the entrepreneurial analysis includes a customer map built from interviews with commercial beekeeping companies and individual beekeepers, and the scale-up model gives the costing basis (105 L final working volume, 51.62 g/L maximum biomass, 2.55 g product per batch) with the explicit target of pricing below the financial loss of hive burning so that no beekeeper is excluded.",
-    "partners": ["Peter Kasztelewicz ('Beeman'), beekeeper, UK", "Anastasis Galanis (team advisor)", "National Technical University of Athens, School of Chemical Engineering (Prof. E. Topakas)", "Laboratory of Biotechnology and Industrial Biocatalysis, NTUA", "EU-CONEXUS Hackathon", "TechnosetBee", "Greek beekeeping associations", "Villa Aimilia summer programme", "Second Chance Schools, Peristeri and Piraeus", "Hellenic Pasteur Institute", "Twist Bioscience", "SnapGene"]
+    "realWorld_zh": "ApiconIASIS 定位為第一個具標的專一性且永續的 EFB 處理方式，其價值主張釘在一個量化的損失上：隔離與燒毀蜂箱除了毀掉整個蜂群之外，還讓蜂蜜生產停擺約八週。相較於抗生素（在歐盟未獲授權，而且在使用的地方會培養出抗藥性）或真菌萃取物，他們論證這個酵素不會破壞蜜蜂的微生物相，也不會在蜂蜜中留下殘留，因而保住市場價值。商業計畫附一份簡報與一份投資人單頁說明；創業分析包含一張由與商業養蜂公司及個體養蜂人訪談建立的客戶地圖；而放大模型提供了成本計算的基礎（最終工作體積 105 L、最大生物量 51.62 g/L、每批次產物 2.55 g），並明確以定價低於燒毀蜂箱的財務損失為目標，使任何養蜂人都不會被排除在外。",
+    "partners": [
+      "Peter Kasztelewicz ('Beeman'), beekeeper, UK",
+      "Anastasis Galanis (team advisor)",
+      "National Technical University of Athens, School of Chemical Engineering (Prof. E. Topakas)",
+      "Laboratory of Biotechnology and Industrial Biocatalysis, NTUA",
+      "EU-CONEXUS Hackathon",
+      "TechnosetBee",
+      "Greek beekeeping associations",
+      "Villa Aimilia summer programme",
+      "Second Chance Schools, Peristeri and Piraeus",
+      "Hellenic Pasteur Institute",
+      "Twist Bioscience",
+      "SnapGene"
+    ]
   },
   "images": [
     {
       "url": "https://static.igem.wiki/teams/6478/wiki/optimization/fig7-pareto.avif",
       "caption": "Pareto front from the NSGA-II search over the 17 mutable positions, trading predicted solubility against thermostability (ddG) for the GH25 muramidase; variants A, B and C were selected along this front.",
+      "caption_zh": "NSGA-II 在 17 個可突變位置上搜尋所得的 Pareto 前緣，為 GH25 胞壁質酶權衡預測溶解度與熱穩定性（ddG）；變體 A、B、C 即沿此前緣選出。",
       "credit": "Team Athens, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6478/wiki/optimization/venn-freeze.avif",
       "caption": "Venn diagram of the three independent evidence sources (structural role, ESM-2 evolutionary constraint, literature) used to build the 40-residue freeze list; a position was frozen only if at least two sources agreed.",
+      "caption_zh": "用來建立 40 個殘基凍結清單的三個獨立證據來源（結構角色、ESM-2 演化約束、文獻）的文氏圖；只有至少兩個來源一致時，該位置才會被凍結。",
       "credit": "Team Athens, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6478/wiki/optimization/fig6a-rmsf.avif",
       "caption": "Root-mean-square fluctuation from the all-atom MD run, confirming that the frozen residues are genuinely rigid (RMSF below 2 A) and turning the freeze list from a heuristic into a tested claim.",
+      "caption_zh": "全原子 MD 模擬得出的均方根波動，確認被凍結的殘基確實僵硬（RMSF 低於 2 A），把凍結清單從一條經驗法則變成一項經檢驗的主張。",
       "credit": "Team Athens, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6478/wiki/education/day2-strawberry-dna-villa-aimilia.avif",
       "caption": "Strawberry DNA extraction with children at the Villa Aimilia summer programme, day two of a hands-on sequence that began with design-a-microbe and ended with bees, leaves and cells.",
+      "caption_zh": "在 Villa Aimilia 夏季營與孩子一起做草莓 DNA 萃取，這是動手系列的第二天，該系列從「設計一隻微生物」開始，以蜜蜂、葉片與細胞收尾。",
       "credit": "Team Athens, iGEM 2026 wiki"
     }
   ],
   "gemsTakeaway": "Copy the freeze-list discipline: before optimising anything, lock the residues (or variables) that at least two independent lines of evidence call functional, then prove the lock with a simulation, and only then search aggressively over what is left; it converts a student ML pipeline into a defensible claim. Equally transferable is Athens' habit of writing down what each stakeholder conversation cost them (spray to feed, phage to enzyme, virulent to weak strain), which is far more persuasive to judges than a list of meetings.",
+  "gemsTakeaway_zh": "值得照抄「凍結清單」這套紀律：在最佳化任何東西之前，先把至少有兩條獨立證據指向具功能的殘基（或變數）鎖住，再以模擬證明這個鎖是對的，然後才對剩下的部分積極搜尋；這能把一條學生等級的機器學習流程變成一個站得住腳的主張。同樣可轉移的是 Athens 的另一個習慣：把每一場利害關係人對話讓他們付出的代價寫下來（從噴灑改為餵食、從噬菌體改為酵素、從高毒力株改為弱毒株），這對評審而言，比一串會議清單有說服力得多。",
   "sources": [
     "https://2026.igem.wiki/athens/",
     "https://2026.igem.wiki/athens/model",

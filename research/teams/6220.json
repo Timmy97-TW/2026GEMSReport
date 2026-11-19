@@ -6,21 +6,51 @@
   "village": "",
   "wiki": "https://2026.igem.wiki/whu-china/",
   "projectTitle": "DifferPhase",
+  "projectTitle_zh": "DifferPhase",
   "tagline": "Phase-separated condensates split plasmids unevenly at division, so one founder population differentiates into a stable division of labour",
+  "tagline_zh": "相分離凝聚體在細胞分裂時把質體不均勻地分配出去，讓單一起始族群分化成穩定的分工體系",
   "summary": "WHU-China built DifferPhase, a platform that uses liquid-liquid phase separation to force asymmetric inheritance at cell division, so a single founder population can differentiate into several engineered sub-populations each carrying a different part of a long metabolic pathway. A YhjH-mCherry-PopZ fusion (Ymp) condenses at the cell pole and locally degrades c-di-GMP, so one daughter inherits the condensate and stays a low-c-di-GMP founder while the other becomes a high-c-di-GMP buffer cell; Slr supplies c-di-GMP to set up the gradient, and a tripartite split-GFP sensor built from GFP10-PilZ and FimX-GFP11 reports c-di-GMP in real time. Two orthogonal partitioning systems (ParB/parS and SopB/sopC) then drive different plasmids into different daughters, and a cross-interlocked dual toxin-antitoxin pair holds the resulting multi-plasmid state without antibiotics. They won Best New Composite Part in the Undergrad section and were nominated for Best New Basic Part.",
-  "awards": ["Best New Composite Part, Undergrad (winner)", "Best New Basic Part nominee"],
+  "summary_zh": "WHU-China 建立了 DifferPhase 平台，利用液-液相分離在細胞分裂時強制產生不對稱繼承，讓單一起始族群能分化成數個工程化子族群，各自攜帶長代謝途徑的不同片段。YhjH-mCherry-PopZ 融合蛋白（Ymp）會在細胞極凝聚，並在局部降解 c-di-GMP，因此一個子代細胞繼承凝聚體、維持低 c-di-GMP 的起始細胞狀態，另一個則變成高 c-di-GMP 的緩衝細胞；Slr 負責提供 c-di-GMP 以建立濃度梯度，而由 GFP10-PilZ 與 FimX-GFP11 組成的三元 split-GFP 感測器則即時回報 c-di-GMP 濃度。接著以兩套正交的分配系統（ParB/parS 與 SopB/sopC）把不同質體推進不同的子代細胞，並用一對交互連鎖的雙毒素-抗毒素系統，在不使用抗生素的情況下維持多質體狀態。他們獲得大學部組的 Best New Composite Part，並入圍 Best New Basic Part。",
+  "awards": [
+    "Best New Composite Part, Undergrad (winner)",
+    "Best New Basic Part nominee"
+  ],
   "dry": {
     "frameworks": "Parts organised as a four-module architecture rather than a flat list (founder cell maintenance, buffer cell dedifferentiation, differentiation, plasmid maintenance), with each module's basic and composite parts grouped under a stated function, so a reader can take one module without the rest. Contribution is written as six separable deliverables: the platform, the founder-maintenance module, the asymmetric partitioning tool, the plasmid-maintenance toolkit, a semi-solid medium protocol, and the human-practices material.",
+    "frameworks_zh": "元件以四模組架構組織，而不是列成一張平面清單（起始細胞維持、緩衝細胞去分化、分化、質體維持），每個模組底下的基本元件與複合元件都歸在一個明述的功能之下，讀者因此可以只取走其中一個模組。貢獻則寫成六項可分開取用的交付物：平台本身、起始細胞維持模組、不對稱分配工具、質體維持工具包、一份半固體培養基操作流程，以及人類實踐的材料。",
     "dataviz": "Module-level schematics for each of the four contributions (LLPS differentiation platform, Ymp founder maintenance, ParBS/SopBC asymmetric partitioning, dual-TA plasmid maintenance toolkit), plasmid maps, and confocal images of polar condensates. Parts tables carry Registry IDs linked directly to each entry, with type and main function in separate columns.",
+    "dataviz_zh": "四項貢獻各自的模組層級示意圖（LLPS 分化平台、Ymp 起始細胞維持、ParBS/SopBC 不對稱分配、雙 TA 質體維持工具包）、質體圖譜，以及細胞極凝聚體的共軛焦顯微影像。元件表格附有 Registry ID 並直接連到各個條目，型別與主要功能分列不同欄位。",
     "datascience": "Quantitative readouts are designed into the parts rather than added afterward: the split-GFP sensor turns an intracellular second messenger into fluorescence, an MrkH/pmrkA-sfGFP cassette reports c-di-GMP-dependent activation, a parS-lacZ-J23106-mCherry-LAA reporter uses LAA-tagged degradation so fluorescence decays once the plasmid is lost (making partitioning failure measurable), and eCFP, mTagBFP and eYFP variants let several plasmids be tracked in the same field. A double-layer plate swimming assay provides a cheap quantifiable proxy for intracellular c-di-GMP.",
+    "datascience_zh": "量化讀值是設計進元件裡的，而不是事後補上：split-GFP 感測器把一個胞內第二傳訊者轉成螢光訊號；MrkH/pmrkA-sfGFP 卡匣回報 c-di-GMP 依賴性的活化；parS-lacZ-J23106-mCherry-LAA 報導子利用 LAA 標籤造成的降解，使質體一流失螢光就衰減，讓分配失敗變成可量測的事件；eCFP、mTagBFP 與 eYFP 等變異體則讓多個質體能在同一視野中同時追蹤。雙層培養盤的游動試驗另提供一個便宜又可量化的胞內 c-di-GMP 代用指標。",
     "software": "",
-    "stack": ["E. coli DH5-alpha, MG1655 and BL21(DE3)", "PopZ condensates from Caulobacter crescentus", "YhjH c-di-GMP phosphodiesterase", "Slr diguanylate cyclase from Synechocystis PCC 6803", "tripartite split-GFP (GFP1-9 / GFP10-PilZ / FimX-GFP11)", "ParB-parS and SopB-sopC partitioning systems", "EL222 blue-light transcription factor with pBLI", "LasR/pLas and FleQ quorum circuits", "ccdA/ccdB and mazE/mazF toxin-antitoxin pairs", "confocal microscopy with agarose embedding"],
-    "techniques": ["engineered asymmetric division via condensate inheritance", "orthogonal plasmid partitioning", "sopC repeat-number variation to tune partitioning", "cross-interlocked dual toxin-antitoxin plasmid maintenance", "dual-inducer (arabinose/IPTG) orthogonal control from one plasmid", "double-layer plate swimming assay"]
+    "stack": [
+      "E. coli DH5-alpha, MG1655 and BL21(DE3)",
+      "PopZ condensates from Caulobacter crescentus",
+      "YhjH c-di-GMP phosphodiesterase",
+      "Slr diguanylate cyclase from Synechocystis PCC 6803",
+      "tripartite split-GFP (GFP1-9 / GFP10-PilZ / FimX-GFP11)",
+      "ParB-parS and SopB-sopC partitioning systems",
+      "EL222 blue-light transcription factor with pBLI",
+      "LasR/pLas and FleQ quorum circuits",
+      "ccdA/ccdB and mazE/mazF toxin-antitoxin pairs",
+      "confocal microscopy with agarose embedding"
+    ],
+    "techniques": [
+      "engineered asymmetric division via condensate inheritance",
+      "orthogonal plasmid partitioning",
+      "sopC repeat-number variation to tune partitioning",
+      "cross-interlocked dual toxin-antitoxin plasmid maintenance",
+      "dual-inducer (arabinose/IPTG) orthogonal control from one plasmid",
+      "double-layer plate swimming assay"
+    ]
   },
   "good": {
     "publicEngagement": "Three campus pop-up events, online and in-person teaching outreach, and science comics, each pitched at a different audience and explicitly framed as inviting discussion of the technology's limitations as well as its possibilities rather than only promoting it. Channels include WeChat and Xiaohongshu.",
+    "publicEngagement_zh": "三場校園快閃活動、線上與實體的教學推廣，以及科普漫畫，各自針對不同受眾設計，並明確定位為邀請大家一起討論這項技術的限制與可能性，而不只是宣傳它。使用的管道包括微信與小紅書。",
     "ihp": "Campus and medical-student surveys plus interviews with residents living near East Lake in Wuhan, chosen because the platform's candidate applications include water purification, so the people consulted are the ones who would live next to a deployment. Those conversations were used to understand information needs, attitudes and specific safety concerns rather than to gauge enthusiasm. Cross-disciplinary expert discussions and exchanges with other iGEM teams were then used to interrogate the platform's underlying principles and application requirements, and the team states that these perspectives clarified which questions the project still needs to answer around effectiveness, safety and public concern.",
+    "ihp_zh": "團隊做了校園與醫學生問卷，並訪談住在武漢東湖附近的居民——之所以選他們，是因為平台的候選應用之一是水質淨化，被諮詢的正是未來會住在部署地點旁邊的人。這些對話被用來理解民眾的資訊需求、態度與具體的安全顧慮，而不是用來測量支持熱度。接著以跨領域專家討論與其他 iGEM 隊伍的交流，去檢驗平台的基本原理與應用條件；團隊表示這些觀點讓他們更清楚：在成效、安全與公眾顧慮上，專案還有哪些問題需要回答。",
     "realWorld": "There is no venture, no company and no commercial claim here, and the implementation discussion is deliberately conditional: the engineered strains are designed for controlled laboratory use only, there is no plan for environmental release, and they state that any future move toward practical products would require sealed equipment and comprehensive safety testing first. Natural rubber biosynthesis is presented as a conceptual demonstration of the platform, not as a product, with cancer therapy, water purification and plastic degradation named as directions the architecture could serve. So the real-world value is as reusable infrastructure, and on that count this is one of the better part contributions of the year. What makes these parts genuinely inheritable is fourfold. First, modular packaging: 34 parts are grouped into four functionally independent modules, and the contribution text names, for each module, who else could use it and for what, so a future team can adopt the plasmid-maintenance toolkit without touching the differentiation platform. Second, every part description states its provenance and its role in the circuit, not just its identity, including which organism a protein came from and what it contributes to the system (PopZ as the condensate scaffold ensuring asymmetric inheritance, Slr as the c-di-GMP source that establishes the gradient). Third, measurement is built in: the split-GFP c-di-GMP sensor, the MrkH-driven reporter, and especially the LAA-tagged mCherry reporter whose signal decays on plasmid loss turn otherwise invisible behaviours into assayable ones, which is what lets another team verify the part works in their hands. Fourth, and most unusually, they publish the engineering failures as part annotations: the dual-input araC-pBAD-YmP / T7-lacO-Slr circuit is documented as needing stronger T7-optimised terminators to reduce read-through, and several cassettes are annotated with the specific biTT or T7 terminator placement used to prevent read-through between transcription units. An honest note about where the terminator problem bites is more useful to a reuser than a clean claim. The dual-TA design also removes antibiotic selection entirely, which they correctly frame as reducing the spread of resistance, and the safety reasoning is specific rather than boilerplate: all chassis are BSL-1 whitelist Risk Group 1 strains, MazF and CcdB are acknowledged as potent toxins whose killing is confined to the engineered population, and no gene used encodes a virulence factor. They also standardised and published protocols (Ymp condensate confocal imaging with induction, embedding and imaging parameters; the double-layer swimming assay with medium formulations, inoculation method and data-interpretation guidance), which is the part of a contribution that usually goes missing. Continuation is framed as community reuse rather than a company: tools, protocols and a reference framework offered to future teams building multi-cell division-of-labour systems, with sopC mutants and optimisation schemes earmarked for submission as further parts.",
+    "realWorld_zh": "這裡沒有創業、沒有公司、也沒有商業主張，落地討論也刻意保持在條件句的層次：工程菌株只設計給受控的實驗室環境使用，沒有任何環境釋出的計畫；團隊也說明，未來若要往實用產品推進，必須先有密閉設備與完整的安全測試。天然橡膠的生合成只是用來概念性展示平台，不是產品；癌症治療、水質淨化與塑膠降解則被列為這套架構可能服務的方向。因此它的真實世界價值在於可重複使用的基礎設施，而就這一點而言，這是今年比較好的元件貢獻之一。讓這些元件真正可被後人接手的原因有四個。第一是模組化包裝：34 個元件被歸入四個功能獨立的模組，貢獻說明針對每個模組指名誰還能拿去用、用來做什麼，因此未來的隊伍可以只採用質體維持工具包，完全不必碰分化平台。第二，每個元件的說明都寫出來源與它在迴路中的角色，而不只是它是什麼，包括某個蛋白質取自哪種生物、以及它對整個系統有什麼貢獻（PopZ 作為確保不對稱繼承的凝聚體骨架、Slr 作為建立梯度的 c-di-GMP 來源）。第三，量測是內建的：split-GFP 的 c-di-GMP 感測器、由 MrkH 驅動的報導子，尤其是質體一流失訊號就衰減的 LAA 標籤 mCherry 報導子，把原本看不見的行為變成可檢測的對象，這正是別的隊伍能驗證元件在自己手上是否管用的關鍵。第四，也是最少見的：他們把工程失敗寫成元件註記——雙輸入的 araC-pBAD-YmP / T7-lacO-Slr 迴路被註明需要更強、針對 T7 最佳化的終止子以降低讀通，數個卡匣也標註了為避免轉錄單元之間讀通而採用的 biTT 或 T7 終止子配置位置。對重用者而言，老實說明終止子問題會在哪裡咬人，比一句漂亮的結論有用得多。雙 TA 設計也完全免除了抗生素篩選，團隊正確地把這一點解釋為減少抗藥性擴散；安全論述是具體的，而不是罐頭文字：所有底盤都是 BSL-1 白名單的 Risk Group 1 菌株，MazF 與 CcdB 被明白承認是強效毒素、但其殺菌作用限制在工程化族群之內，而且所用的基因沒有一個編碼毒力因子。他們也把操作流程標準化並公開（Ymp 凝聚體的共軛焦影像拍攝，含誘導、包埋與拍攝參數；雙層游動試驗，含培養基配方、接種方式與數據判讀指引），而這通常正是一份貢獻中最常被省略的一塊。後續規劃是面向社群重用，而不是開公司：把工具、流程與一套參考框架提供給未來要建構多細胞分工系統的隊伍，並預計把 sopC 突變體與最佳化方案再提交為新的元件。",
     "partners": [
       "Wuhan University School of Life Sciences (BSL-1 facilities, Regulations on the Management of Laboratory Biosafety)",
       "Residents near East Lake, Wuhan (interviews on water-purification application and safety concerns)",
@@ -31,25 +61,30 @@
     {
       "url": "https://static.igem.wiki/teams/6220/wiki/whu-contribution2-fig1.avif",
       "caption": "The LLPS-mediated platform for cellular functional differentiation, offered as a reference framework for future multi-cell division-of-labour systems",
+      "caption_zh": "以 LLPS 介導的細胞功能分化平台，作為未來多細胞分工系統的參考框架",
       "credit": "Team WHU-China, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6220/wiki/whu-contribution2-fig3.avif",
       "caption": "ParBS and SopBC orthogonal condensate partitioning, the reusable tool for driving different plasmids into different daughter cells",
+      "caption_zh": "ParBS 與 SopBC 的正交凝聚體分配，是把不同質體推進不同子代細胞的可重用工具",
       "credit": "Team WHU-China, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6220/wiki/whu-contribution2-fig4.avif",
       "caption": "Cross-interlocked dual toxin-antitoxin plasmid maintenance toolkit: each plasmid supplies the antitoxin for the other's toxin, so neither can be lost and no antibiotic selection is needed",
+      "caption_zh": "交互連鎖的雙毒素-抗毒素質體維持工具包：每個質體提供對方毒素所需的抗毒素，因此兩者都不會流失，也不需要抗生素篩選",
       "credit": "Team WHU-China, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6220/wiki/whu-contribution2-fig2.avif",
       "caption": "Ymp (YhjH-mCherry-PopZ) founder-cell maintenance module, with the published confocal protocol for observing polar condensates",
+      "caption_zh": "Ymp（YhjH-mCherry-PopZ）起始細胞維持模組，附上已公開的共軛焦操作流程以觀察細胞極凝聚體",
       "credit": "Team WHU-China, iGEM 2026 wiki"
     }
   ],
   "gemsTakeaway": "Package parts the way WHU did: group them into functionally independent modules, and for each module state in writing who outside the project could reuse it and for what, so adopters can take one piece without the whole system. Then ship the three things that actually make reuse possible — a built-in measurement part (their LAA-tagged reporter that decays on plasmid loss), the standardised protocol with induction, sample-prep and imaging parameters, and an honest annotation of the known weakness, such as terminator read-through, recorded on the part itself.",
+  "gemsTakeaway_zh": "元件就該照 WHU 的方式包裝：依功能分成彼此獨立的模組，並為每個模組明文寫出專案之外的誰可以拿去重用、用來做什麼，讓採用者能只取走其中一塊，而不必整套搬走。接著交付三樣真正讓重用成為可能的東西——內建的量測元件（他們那個質體一流失螢光就衰減的 LAA 標籤報導子）、含誘導、樣品製備與影像參數的標準化操作流程，以及對已知弱點的誠實註記，例如終止子讀通的問題，直接記在該元件本身上。",
   "sources": [
     "https://2026.igem.wiki/whu-china/",
     "https://2026.igem.wiki/whu-china/parts/",

@@ -180,6 +180,49 @@ def build_teams(results):
     return teams, problems
 
 
+ZH_TOP = ("projectTitle", "tagline", "summary", "gemsTakeaway")
+ZH_DRY = ("frameworks", "dataviz", "datascience", "software")
+ZH_GOOD = ("publicEngagement", "ihp", "realWorld")
+
+
+def zh_audit(teams):
+    """Per-file translation state.
+
+    Worth doing properly: translation agents share a scratchpad, and a helper
+    script clobbered by a sibling can no-op a file without raising, so an
+    agent's own "translated N files" is not evidence. This counts the keys.
+    """
+    full, partial, none = [], [], []
+    for t in teams:
+        need = done = 0
+        missing = []
+
+        def chk(obj, keys, prefix=""):
+            nonlocal need, done
+            for k in keys:
+                v = (obj or {}).get(k)
+                if isinstance(v, str) and v.strip():
+                    need += 1
+                    if (obj or {}).get(k + "_zh"):
+                        done += 1
+                    else:
+                        missing.append(prefix + k)
+
+        chk(t, ZH_TOP)
+        chk(t.get("dry"), ZH_DRY, "dry.")
+        chk(t.get("good"), ZH_GOOD, "good.")
+        for i, m in enumerate(t.get("images") or []):
+            if (m.get("caption") or "").strip():
+                need += 1
+                if m.get("caption_zh"):
+                    done += 1
+                else:
+                    missing.append("img%d.caption" % i)
+        row = (t["id"], t["team"], done, need, missing)
+        (full if done == need else partial if done else none).append(row)
+    return full, partial, none
+
+
 def coverage(teams, results):
     """Which decorated teams do we still have no file for?"""
     have = {t["team"] for t in teams}
@@ -372,10 +415,20 @@ def main():
     write_text_mirror(results, teams, trends, report)
     print("  index.html     %d script tags versioned" % stamp_index(stamp))
 
-    zh = sum(1 for t in teams if t.get("summary_zh"))
-    print("\n%d team files · %d translated to Chinese · %d academic trends · %d industry trends · %d insight blocks"
-          % (len(teams), zh, len(trends["academic"].get("trends", [])),
-             len(trends["industry"].get("trends", [])), len(insights)))
+    zh_full, zh_part, zh_none = zh_audit(teams)
+    zh_ins = sum(1 for b in insights if b.get("body_zh"))
+    print("\n%d team files · %d academic trends · %d industry trends · %d insight blocks (%d translated)"
+          % (len(teams), len(trends["academic"].get("trends", [])),
+             len(trends["industry"].get("trends", [])), len(insights), zh_ins))
+    print("Chinese: %d complete · %d PARTIAL · %d untouched"
+          % (len(zh_full), len(zh_part), len(zh_none)))
+    if zh_part:
+        print("\npartially translated — these look done but are not:")
+        for tid, name, done, need, missing in sorted(zh_part, key=lambda r: r[2] - r[3]):
+            print("  %-6s %-22s %2d/%-2d  missing: %s"
+                  % (tid, name, done, need, ", ".join(missing[:6])))
+    if zh_none:
+        print("\nno Chinese yet: %s" % " ".join(r[0] for r in zh_none))
     missing = coverage(teams, results)
     if missing:
         print("\nstill missing a file (Top 10 or special-prize winner):")

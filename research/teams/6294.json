@@ -6,17 +6,24 @@
   "village": "",
   "wiki": "https://2026.igem.wiki/sdu-denmark/",
   "projectTitle": "Shewanode",
+  "projectTitle_zh": "Shewanode",
   "tagline": "A microbial fuel cell built from scratch, and a measurement workflow for the outer membrane vesicles that carry its electrons.",
+  "tagline_zh": "一座從零打造的微生物燃料電池，以及一套量測承載其電子的外膜囊泡的工作流程。",
   "summary": "SDU-Denmark engineered Shewanella oneidensis MR-1 to improve extracellular electron transfer and built the hardware to measure it: first a two-chamber microbial fuel cell as proof of concept, then a single-chamber design with an air-breathing cathode and carbon felt electrode that became the team's primary electrochemical measurement system. The measurement work centres on the outer membrane vesicles that carry the MtrCAB cytochrome complex, asking how to isolate them reproducibly and how to quantify their size, morphology, charge and concentration. Each question is answered with complementary methods, each with stated calibration, controls, replicates and limitations. Along the way the team documented a working anolyte recipe, which the literature generally leaves as 'Shewanella basal medium', and released it for other teams.",
+  "summary_zh": "SDU-Denmark 改造 Shewanella oneidensis MR-1 以提升胞外電子傳遞，並自行做出量測它的硬體：先是一座雙室微生物燃料電池作為概念驗證，之後是採用空氣呼吸陰極與碳氈電極的單室設計，後者成為團隊主要的電化學量測系統。量測工作的核心是承載 MtrCAB 細胞色素複合體的外膜囊泡，要問的是如何可重現地分離它們，以及如何量化它們的大小、形態、電荷與濃度。每個問題都以互補的方法回答，每一種方法都寫明校正、對照、重複次數與限制。過程中團隊也把一份可行的陽極液配方記錄下來，文獻通常只寫成 Shewanella basal medium，而他們把配方公開給其他團隊使用。",
   "awards": [
     "Best Measurement nominee (Overgraduate)",
     "Best Alternative Platform nominee (Overgraduate)"
   ],
   "dry": {
     "frameworks": "The measurement page is structured by goal rather than by technique: each goal states the question, the method, the calibration, the controls and replicates, the results, a discussion and an explicit limitations section. Complementary quantitative and qualitative methods are paired deliberately (preparative size exclusion chromatography with quantitative BCA; qualitative helium ion and scanning electron microscopy with quantitative DLS and zeta potential), and the team states where a method cannot support a claim.",
+    "frameworks_zh": "量測頁面是依目標而不是依技術來組織：每個目標都寫出問題、方法、校正、對照與重複、結果、討論，以及一段明確的限制。量化與定性方法刻意成對搭配（製備型粒徑排除層析搭配定量的 BCA；定性的氦離子顯微術與掃描式電子顯微術搭配定量的 DLS 與界面電位），而且團隊會寫明哪一種方法不足以支撐某個主張。",
     "dataviz": "BCA calibration curve of blank-corrected absorbance against BSA concentration; per-fraction protein concentration plots with lysed and unlysed series and a zoomed inset; DLS size-distribution-by-intensity panels with correlation functions for each biological replicate; full Zetasizer statistics tables reporting mean, standard deviation, relative standard deviation, minimum and maximum, and including the instrument's own intercept and fit error; current-versus-time traces from the single-chamber MFC and the H-cell; heme concentration bar plots showing both means and individual replicate points.",
+    "dataviz_zh": "BCA 的校正曲線，以扣除空白後的吸光度對 BSA 濃度作圖；各分管的蛋白濃度圖，同時呈現裂解與未裂解兩組並附放大插圖；DLS 的強度粒徑分布圖，每個生物重複都附相關函數；完整的 Zetasizer 統計表，回報平均值、標準差、相對標準差、最小值與最大值，並包含儀器自身的截距與擬合誤差；單室微生物燃料電池與 H 型電池的電流對時間曲線；血基質濃度長條圖，同時顯示平均值與各重複的個別資料點。",
     "datascience": "Vesicle isolation is verified rather than assumed. A BCA assay against a BSA dilution series at 562 nm gives the standard curve, and each size-exclusion fraction is then measured twice, once untreated and once lysed with Triton X-100 for 10 minutes on ice, with an isolation-buffer-plus-Triton control confirming the detergent itself does not shift absorbance. The lysed fractions read 100 to 200 ug/mL against lower unlysed values, which is the argument that intact vesicles are present and only open on lysis; fractions above 2 mg/mL are explicitly flagged as exceeding the assay's upper linear range and excluded from interpretation. Morphology is imaged by helium ion microscopy and SEM and quantified in Fiji (wildtype n = 29 particles, mean Feret diameter 288.3 +/- 97.9 nm, circularity 0.837; mutant n = 18, 300.6 +/- 69.6 nm, circularity 0.767), and the team then states that without a buffer-only blank slide taken through the same fixation and drying the structures cannot be definitively identified as vesicles, and that some sharp-edged objects may be crystallised solvent. Size, concentration and charge come from a Malvern Zetasizer Advance Ultra Red Label with every instrument setting published (material refractive index 1.45, absorption 0.001, 25 C, dispersant RI 1.33, viscosity 0.887, dielectric constant 78.5), three biological replicates from different colonies, and technical replicates where the instrument allowed. Main-peak diameters cluster at 130 to 171 nm with z-averages of 87 to 147 nm, polydispersity indices up to 0.39 are read as genuine heterogeneity, and the team reasons through the candidate causes (subpopulations, artefacts, residual protein) using the BCA separation as evidence against one of them. Zeta potential is reported as wildtype -5.532 +/- 0.5955 mV versus MtrCAB-overexpressing mutant -4.671 +/- 0.3632 mV, the direction predicted by the hypothesis but a smaller change than expected, which the team attributes to PBS ions partially neutralising surface charge and proposes repeating in lower-ionic-strength solvents. The reported limitations are unusually candid: BSA is acknowledged as an imperfect standard for a mixed vesicle proteome; DLS is noted as sensitive to dust and aggregates, blind to morphology, and dependent on analysis models the team could not inspect because only data reports were produced; and technical replicates missing from some samples are identified as a possible artificial source of the observed subpopulations. Electrochemistry is logged as a voltage drop across a 100 ohm resistor on a PicoLog 1216, with the first current rise after about two days reported as indicative only because the experiment ran without biological replicates. The heme assay uses a standard curve to convert absorbance to micromolar concentration, with two biological replicates whose individual points are plotted alongside the means and the explicit statement that no standardised protocol exists for this application so the method would need further validation.",
+    "datascience_zh": "囊泡的分離是經過驗證的，不是假設成立的。以 BSA 稀釋系列在 562 nm 下的 BCA 分析建立標準曲線，接著每一個粒徑排除分管都量兩次，一次未處理、一次以 Triton X-100 在冰上裂解 10 分鐘，並以分離緩衝液加 Triton 的對照確認清潔劑本身不會改變吸光度。裂解後的分管讀到 100 至 200 ug/mL，未裂解的數值較低，這就是囊泡確實完整存在、只有在裂解時才打開的論據；高於 2 mg/mL 的分管則被明確標示超出分析的線性上限，並排除在解讀之外。形態以氦離子顯微術與 SEM 成像，並在 Fiji 中量化（野生型 n = 29 個顆粒，平均 Feret 直徑 288.3 ± 97.9 nm、圓形度 0.837；突變株 n = 18，300.6 ± 69.6 nm、圓形度 0.767）；團隊接著說明，若沒有一張只含緩衝液、經過同樣固定與乾燥流程的空白載片，這些結構就無法被確認為囊泡，而有些邊緣銳利的物體可能只是結晶的溶劑。大小、濃度與電荷由 Malvern Zetasizer Advance Ultra Red Label 量得，所有儀器設定都公開（材料折射率 1.45、吸收 0.001、25 C、分散介質折射率 1.33、黏度 0.887、介電常數 78.5），採用來自不同菌落的三個生物重複，並在儀器允許的情況下做技術重複。主峰直徑集中在 130 至 171 nm，z 平均值為 87 至 147 nm，最高達 0.39 的多分散指數被解讀為真實的異質性，團隊也逐一討論可能原因（次族群、假影、殘留蛋白），並用 BCA 的分離結果作為排除其中一項的證據。界面電位回報為野生型 -5.532 ± 0.5955 mV，過表現 MtrCAB 的突變株為 -4.671 ± 0.3632 mV，方向與假說預測一致，但變化幅度小於預期；團隊把原因歸於 PBS 中的離子部分中和了表面電荷，並提議改用離子強度較低的溶劑重做。他們列出的限制異常坦白：承認以 BSA 作為混合囊泡蛋白體的標準並不理想；指出 DLS 對灰塵與聚集體敏感、看不出形態，而且依賴他們無法檢視的分析模型，因為儀器只產出資料報告；還指出部分樣本缺少技術重複，可能是觀察到次族群的人為來源。電化學資料以 PicoLog 1216 記錄 100 歐姆電阻上的電壓降；約兩天後出現的第一次電流上升只被當作指示性結果，因為該實驗沒有生物重複。血基質分析以標準曲線把吸光度換算成微莫耳濃度，使用兩個生物重複，個別資料點與平均值一併作圖，並明確說明這個應用上並沒有標準化的實驗流程，因此方法仍需進一步驗證。",
     "software": "An Arduino-based voltage logger was built for the two-chamber MFC as a low-cost alternative to dedicated logging equipment; the single-chamber system was logged on a PicoLog 1216. A hardware parts list is published for download, together with the anolyte recipe and standard operating procedures for each measurement method.",
+    "software_zh": "他們為雙室微生物燃料電池自製了一個以 Arduino 為基礎的電壓記錄器，作為專用記錄設備的低成本替代方案；單室系統則以 PicoLog 1216 記錄。硬體零件清單已公開供下載，另附陽極液配方與每一種量測方法的標準作業程序。",
     "stack": [
       "Malvern Zetasizer Advance Ultra Red Label (DLS and zeta potential)",
       "Helium ion microscopy",
@@ -46,7 +53,9 @@
   "good": {
     "publicEngagement": "",
     "ihp": "Human Practices is the largest single page on the wiki and is credited with changing the project's direction. Stakeholder discussion moved the target away from large-scale energy production toward reliability of low-power generation, which reframed the application space around environmental monitoring sensors, decentralised low-power supply, wastewater treatment with simultaneous energy recovery, and biosensor-style monitoring of marine, agricultural and remote infrastructure.",
+    "ihp_zh": "人類實踐是整個 wiki 上篇幅最大的單一頁面，也被認為改變了專案的方向。與利害關係人的討論把目標從大規模發電轉向低功率發電的可靠性，進而把應用範圍重新框定在環境監測感測器、分散式低功率供電、同時回收能源的污水處理，以及用於海洋、農業與偏遠基礎設施的生物感測式監測。",
     "realWorld": "The application page sets out five pathways with explicit preconditions rather than claims: low-power generation for sensors triggered by a pollutant; decentralised continuous supply, conditional on storage; a battery alternative justified by the environmental cost of lithium, cobalt and nickel extraction; wastewater treatment, which would require redesigning the cell so water can flow through; and monitoring circuits where an interruption produces a signal. The team states that stability, output and maintenance all need assessment before any of these is feasible, and that the right application depends on matching the cell's capability to a specific device's energy requirement.",
+    "realWorld_zh": "應用頁面列出五條路徑，而且寫的是明確的前提條件，不是宣稱：由污染物觸發的感測器低功率供電；分散式的連續供電，前提是要有儲能；以鋰、鈷與鎳開採的環境代價為理由的電池替代方案；污水處理，這需要重新設計電池讓水能流過；以及中斷即產生訊號的監測迴路。團隊也說明在這些方案任何一項可行之前，穩定性、輸出與維護都需要評估，而正確的應用取決於把電池的能力對上某個特定裝置的能耗需求。",
     "partners": [
       "IZON Science (qEV columns)",
       "University of Southern Denmark microscopy facilities",
@@ -59,25 +68,30 @@
     {
       "url": "https://static.igem.wiki/teams/6294/wiki/wetlab/calibration-curve-bca.avif",
       "caption": "Calibration curve for the bicinchoninic acid assay: blank-corrected absorbance at 562 nm against a dilution series of bovine serum albumin, used to convert fraction absorbances into protein concentration.",
+      "caption_zh": "二喹啉甲酸（BCA）分析的校正曲線：扣除空白後在 562 nm 的吸光度對牛血清白蛋白稀釋系列作圖，用來把各分管的吸光度換算成蛋白濃度。",
       "credit": "Team SDU-Denmark, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6294/wiki/subpages/hardware/tc-mfc-prototype.avif",
       "caption": "The two-chamber microbial fuel cell prototype assembled in the laboratory from two 50 mL falcon tubes, an inverted U-tube salt bridge and a hand-matted carbon weave electrode. It served as proof of concept before the team moved to a single-chamber air-breathing design.",
+      "caption_zh": "在實驗室中組裝的雙室微生物燃料電池原型，由兩支 50 mL falcon 管、一個倒 U 型鹽橋與一片手工壓製的碳編織電極做成。在團隊轉向單室空氣呼吸設計之前，它擔任概念驗證。",
       "credit": "Team SDU-Denmark, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6294/wiki/wetlab/him.avif",
       "caption": "Helium ion microscopy of isolated vesicles from Shewanella oneidensis MR-1 wildtype and the MtrCAB-overexpressing mutant. Fiji analysis gave mean Feret diameters of 288 and 301 nm; the team notes that without a buffer-only blank slide taken through the same drying procedure these structures cannot be definitively called vesicles.",
+      "caption_zh": "Shewanella oneidensis MR-1 野生型與過表現 MtrCAB 突變株所分離出囊泡的氦離子顯微影像。Fiji 分析給出平均 Feret 直徑 288 與 301 nm；團隊指出，若沒有一張只含緩衝液、經過同樣乾燥流程的空白載片，這些結構還不能確定稱為囊泡。",
       "credit": "Team SDU-Denmark, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6294/wiki/wetlab/wetlab-results-figure7-current-scmfc.svg",
       "caption": "Current from the single-chamber microbial fuel cell, recorded as the voltage drop across a 100 ohm resistor on a PicoLog 1216. The team reports the two-day rise as indicative only, because the experiment ran without biological replicates.",
+      "caption_zh": "單室微生物燃料電池的電流，以 PicoLog 1216 記錄 100 歐姆電阻上的電壓降而得。團隊說明兩天後的上升只是指示性結果，因為該實驗沒有生物重複。",
       "credit": "Team SDU-Denmark, iGEM 2026 wiki"
     }
   ],
   "gemsTakeaway": "Publish the instrument settings, not just the result: the refractive index, absorption, viscosity and dielectric constant used for a DLS run, the resistor value behind a current measurement, and the statistics the instrument reports about its own fit quality. A number without its acquisition settings cannot be reproduced or contested.",
+  "gemsTakeaway_zh": "要公開的是儀器設定，不只是結果：DLS 執行時所用的折射率、吸收、黏度與介電常數，電流量測背後的電阻值，以及儀器自己回報的擬合品質統計量。一個沒有附上取得條件的數字，既無法被重現，也無法被質疑。",
   "sources": [
     "https://2026.igem.wiki/sdu-denmark/measurement",
     "https://2026.igem.wiki/sdu-denmark/hardware",

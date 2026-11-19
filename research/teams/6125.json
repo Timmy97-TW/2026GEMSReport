@@ -6,21 +6,49 @@
   "village": "",
   "wiki": "https://2026.igem.wiki/squirrel-beijing/",
   "projectTitle": "PNPeeker",
+  "projectTitle_zh": "PNPeeker",
   "tagline": "A whole-cell sensor that reports the bioavailable fraction of p-nitrophenol in soil, paired with a five-enzyme pathway that destroys it and a cold-triggered suicide switch",
+  "tagline_zh": "一種全細胞感測器，可報告土壤中對硝基苯酚（p-nitrophenol）的生物可利用部分，並搭配一條將其分解的五酵素途徑與一組低溫觸發的自殺開關",
   "summary": "Squirrel-Beijing targeted p-nitrophenol, a US EPA priority pollutant found in more than 32 percent of Chinese agricultural soils at 0.8-30.5 micrograms per gram in places, and attacked the measurement problem rather than just the pollutant: HPLC reports total concentration, but ecological risk depends on the bioavailable fraction, which only a living sensor can read. They engineered the PobR transcriptional regulator with its PpobA promoter into an RFP reporter circuit showing concentration-dependent response from 0.001 to 10 mg/L, reconstructed the five-enzyme hydroquinone pathway (pnpA, B, C, E, D) that converts pNP all the way to beta-ketoadipate, and achieved 87-95 percent pNP removal at 10-500 micrograms per litre within 24 hours. They won Best New Composite Part in the High School section and were nominated for Best Village Project.",
-  "awards": ["Best New Composite Part, High School (winner)", "Best Village Project nominee"],
+  "summary_zh": "Squirrel-Beijing 針對對硝基苯酚（p-nitrophenol）。這是美國 EPA 列管的優先污染物，出現在超過 32% 的中國農業土壤中，部分地點濃度達每公克 0.8-30.5 微克。團隊處理的不只是污染物本身，而是量測問題：HPLC 報告的是總濃度，但生態風險取決於生物可利用的那一部分，而這只有活體感測器才讀得出來。他們把 PobR 轉錄調控因子與其 PpobA 啟動子構築成 RFP 報告迴路，在 0.001 至 10 mg/L 之間呈現濃度依賴性反應；重建了把 pNP 一路轉化為 beta-ketoadipate 的五酵素氫醌途徑（pnpA、B、C、E、D）；並在 10-500 微克每公升的初始濃度下，於 24 小時內達成 87-95% 的 pNP 去除率。他們在 High School 組別獲得 Best New Composite Part 獎，並獲 Best Village Project 提名。",
+  "awards": [
+    "Best New Composite Part, High School (winner)",
+    "Best Village Project nominee"
+  ],
   "dry": {
     "frameworks": "Parts presented with explicit medal-tier labelling (Gold Medal Part, Silver Medal Part, Bronze Medal Part) so a reader can see which contribution criterion each satisfies, plus a dedicated 'Applications for Future iGEM Teams' section with four named reuse routes. For collaboration they defined P-E-A-F (Preparation, Exchange, Action, Feedback) as a transferable framework for cross-team work. The entrepreneurship page runs TAM-SAM-SOM, PEST, Porter's Five Forces, SWOT, 4Ps, Business Model Canvas, a milestone timeline, a five-year financial forecast, a five-category risk register and three exit routes.",
+    "frameworks_zh": "零件以明確的獎牌層級標示呈現（Gold Medal Part、Silver Medal Part、Bronze Medal Part），讀者因此能看出每項貢獻滿足的是哪一條標準；另有專設的「Applications for Future iGEM Teams」一節，列出四條指名的重用路徑。在合作方面，他們把 P-E-A-F（Preparation、Exchange、Action、Feedback）定義為可移轉的跨隊合作框架。創業頁面則跑過 TAM-SAM-SOM、PEST、Porter 五力分析、SWOT、4Ps、商業模式畫布、里程碑時程、五年財務預測、分五類的風險清單，以及三條退場路徑。",
     "dataviz": "Characterisation figures that answer the questions a reuser actually asks: normalised GFP/OD600 promoter activity across five temperatures over 0-10 hours, growth curves of the lysis strain at 16, 25 and 37 degrees C over 12 hours, PCR gels confirming expected fragment sizes (GFP 717 bp, T4 Holin 657 bp, T4 Lysozyme 492 bp), the TAM-SAM-SOM illustration, the P-E-A-F framework diagram and a five-year financial forecast chart. A 28-term project glossary sits beside every page.",
+    "dataviz_zh": "特性分析圖表回答的是重用者真正會問的問題：五種溫度下 0-10 小時內經正規化的 GFP/OD600 啟動子活性、裂解菌株在 16、25 與 37 度 C 下 12 小時的生長曲線、確認片段大小符合預期的 PCR 膠體圖（GFP 717 bp、T4 Holin 657 bp、T4 Lysozyme 492 bp）、TAM-SAM-SOM 示意圖、P-E-A-F 框架圖，以及五年財務預測圖。每一頁旁邊都附有一份 28 條詞彙的專案詞彙表。",
     "datascience": "Numbers are reported with ranges and conditions attached rather than as single best values: the sensor's response spans 0.001-10 mg/L, degradation is 87-95 percent across an initial-concentration range of 10-500 micrograms per litre at 24 hours, and the cold promoter reaches about 270.2 A.U. at 20 degrees C against 14.1 A.U. at 37 degrees C, a 19.2-fold window, with 15, 25 and 30 degrees C values all given so another team can pick an induction temperature. PobR itself was improved by computational screening (docking plus molecular dynamics) followed by site-directed mutation.",
+    "datascience_zh": "數字都連同範圍與條件一併報告，而不是只給單一最佳值：感測器的反應範圍橫跨 0.001-10 mg/L；在 10-500 微克每公升的初始濃度區間內，24 小時的降解率為 87-95%；低溫啟動子在 20 度 C 下約達 270.2 A.U.，在 37 度 C 下為 14.1 A.U.，形成 19.2 倍的操作窗口，並一併給出 15、25 與 30 度 C 的數值，讓別的團隊能自行挑選誘導溫度。PobR 本身則先以計算篩選（分子嵌合加上分子動力學模擬）改良，再進行定點突變。",
     "software": "",
-    "stack": ["E. coli", "PobR / PpobA regulatory pair", "pnpABCDE hydroquinone pathway", "J23100 promoter with B0034 RBS", "pCspA cold-inducible promoter with T4 Holin and T4 Lysozyme", "RFP and GFP reporters", "molecular docking and molecular dynamics", "BioBrick RFC#10 assembly"],
-    "techniques": ["whole-cell biosensing of bioavailable pollutant fraction", "computational regulator engineering then site-directed mutagenesis", "dual-operon splitting of a long pathway to avoid transcription attenuation", "temperature- and time-resolved promoter characterisation", "cold-triggered lysis biocontainment", "standardised quantitative pNP detection validated in complex environmental matrices"]
+    "stack": [
+      "E. coli",
+      "PobR / PpobA regulatory pair",
+      "pnpABCDE hydroquinone pathway",
+      "J23100 promoter with B0034 RBS",
+      "pCspA cold-inducible promoter with T4 Holin and T4 Lysozyme",
+      "RFP and GFP reporters",
+      "molecular docking and molecular dynamics",
+      "BioBrick RFC#10 assembly"
+    ],
+    "techniques": [
+      "whole-cell biosensing of bioavailable pollutant fraction",
+      "computational regulator engineering then site-directed mutagenesis",
+      "dual-operon splitting of a long pathway to avoid transcription attenuation",
+      "temperature- and time-resolved promoter characterisation",
+      "cold-triggered lysis biocontainment",
+      "standardised quantitative pNP detection validated in complex environmental matrices"
+    ]
   },
   "good": {
     "publicEngagement": "The 28-term project glossary deserves counting as public engagement in its own right, since it defines every technical term used across the wiki in plain language and is linked from every page. Its entry for OD600 is the giveaway on quality: it states that OD600 is a proxy for culture turbidity and 'does not by itself establish cell viability or complete cell lysis', which is a caveat on their own headline lysis result rather than a textbook definition.",
+    "publicEngagement_zh": "那份 28 條詞彙的專案詞彙表本身就值得被算作公眾參與，因為它用白話定義了整個 wiki 所使用的每一個專業名詞，並從每一頁連結過去。它關於 OD600 的條目最能看出品質：它指出 OD600 只是培養液濁度的替代指標，「本身並不足以證明細胞存活率或細胞完全裂解」，這是對他們自己的主要裂解結果所下的保留，而不是一條教科書式的定義。",
     "ihp": "Expert interviews drove the project's framing toward bioavailability rather than total concentration, and the team captain made a specific management decision about them: recognising that the dry team could interview fluently but could not field highly technical follow-ups, and that the wet-lab team had the knowledge but not the interview role, the captain personally attended every human-practices expert interview to capture professional questions and suggestions on site and minimise information loss across the knowledge gap between subgroups. That is a documented organisational fix to a problem most teams never name.",
+    "ihp_zh": "專家訪談把專案的問題框架推向生物可利用度而非總濃度，而隊長針對訪談做了一項具體的管理決定：他認知到乾實驗組能流暢地訪談，但接不住高度技術性的追問，而濕實驗組有知識卻不擔任訪談角色，因此隊長親自出席每一場人類實踐的專家訪談，當場記錄專業問題與建議，把兩個分組之間知識落差造成的資訊流失降到最低。這是針對一個多數團隊從未指明的問題所做的、有記錄的組織性修正。",
     "realWorld": "Two things to assess here, and the parts work is the stronger. On reusability, this is close to a model contribution. Every part is codon-optimised for E. coli and BioBrick RFC#10 compatible, so adoption needs no re-synthesis. Each part description states its position in the pathway and what it hands to the next step, so the five degradation enzymes read as a sequence rather than five entries. The composite parts are quantified with the conditions stated (the reporter circuit over 0.001-10 mg/L; the pnpABCDE module at 87-95 percent removal from 10-500 micrograms per litre in 24 hours), which is what lets another team tell whether their own result matches. The dual-operon design is explained as a solution to a named general problem, transcription attenuation in long polycistronic mRNAs causing downstream genes to under-express, and offered as a transferable strategy for any long pathway, which is the difference between publishing a part and publishing a technique. Best of all, they chose to satisfy the Bronze contribution criterion properly: rather than registering another new part, they took an existing Registry entry, BBa_K5083099, and generated the characterisation data it was missing, a full temperature gradient (15, 20, 25, 30, 37 degrees C) crossed with culture time, plus growth curves of the lysis strain at 16, 25 and 37 degrees C, concluding with exactly the practical guidance a reuser needs: strong induction at 15-20 degrees C with low basal expression at 30-37, high GFP at 20 degrees C, and clear density collapse to about 0.11 OD at 16 degrees C by 12 hours. They also label their own evidence carefully, saying the lysis data 'preliminarily demonstrate' an association between lower temperature and decreased cell density rather than claiming proven containment. The 'Applications for Future iGEM Teams' section then spells out four concrete reuse routes: swap the reporter to port the sensor to a colorimetric or portable platform; reuse the degradation module or borrow the operon-splitting strategy for a different pathway; use the temperature-resolved data to design a cold suicide switch; or combine sensing and degradation modules via RFC#10 for an integrated monitor-and-remediate strain, which they built themselves as a demonstration. On the commercial side the work is competent but thinner than the parts work, though it does carry real unit economics: pricing anchored at 30-50 percent of the HPLC/GC-MS comprehensive per-test cost of 150-300 RMB, giving 150 RMB per kit (lyophilised strain tube, reaction buffer, operating manual), against a unit cost of 75 RMB falling to 45 RMB at scale, so gross margin runs 50 percent to about 70 percent; a five-year forecast from 500 to 15,000 kits with break-even in year three at roughly 4,000 kits and 600,000 RMB revenue; and a start-up need of about 450,000 RMB over years one and two. The SOM is built bottom-up from Guangdong's roughly 2.5 million hectares of arable land with its three assumptions stated (South China at about 20 percent of the national market, biosensor penetration at 5-8 percent, initial share 3-5 percent), landing at USD 2-4 million. Be blunt, though: there is no registered entity, no patent, no incubator place, no investor conversation and no letter of intent, the funding sources are listed as categories (iGEM grants, school research funding, angel or incubator seed money, supervisor channels) rather than named prospects, and the regulatory discussion is a risk category rather than a mapped approval route. The venture is a well-constructed plan on paper; the parts are a real, usable deliverable.",
+    "realWorld_zh": "這裡有兩件事要評估，而零件方面的工作是較強的一邊。在可重用性上，這接近一個典範式的貢獻。每個零件都針對 E. coli 做過密碼子最佳化，並相容於 BioBrick RFC#10，因此採用者不需重新合成。每個零件的描述都說明它在途徑中的位置，以及它交給下一步的是什麼，因此那五個降解酵素讀起來是一條序列，而不是五筆各自獨立的條目。複合零件都附上條件做了量化（報告迴路涵蓋 0.001-10 mg/L；pnpABCDE 模組在 10-500 微克每公升下 24 小時去除 87-95%），這正是讓別的團隊能判斷自己的結果是否相符的依據。雙操縱子設計被解釋為針對一個明確指名的通用問題的解法，即長的多順反子 mRNA 中的轉錄衰減會使下游基因表現不足，並作為適用於任何長途徑的可移轉策略提出，這正是發表一個零件與發表一種技術之間的差別。最值得一提的是，他們選擇以踏實的方式滿足銅牌的貢獻條件：不是再註冊一個新零件，而是取用 Registry 上既有的條目 BBa_K5083099，補上它所缺少的特性分析資料，包括完整的溫度梯度（15、20、25、30、37 度 C）與培養時間交叉，加上裂解菌株在 16、25 與 37 度 C 的生長曲線，最後給出的正是重用者需要的實用建議：在 15-20 度 C 有強誘導、在 30-37 度 C 基礎表現低，20 度 C 下 GFP 高，而在 16 度 C 下到 12 小時時菌體密度明顯崩落至約 0.11 OD。他們也謹慎標示自己的證據強度，說裂解資料「初步顯示」較低溫度與細胞密度下降之間存在關聯，而不是宣稱生物圍阻已獲證實。「Applications for Future iGEM Teams」一節接著寫明四條具體的重用路徑：更換報告基因，把感測器移植到比色或可攜式平台；重用降解模組，或為另一條途徑借用操縱子切分策略；利用隨溫度解析的資料設計低溫自殺開關；或透過 RFC#10 把感測與降解模組組合成一株整合監測與修復的菌株，而這一株他們自己也做出來作為示範。商業面的工作稱得上紮實，但比零件部分薄了一些，不過它確實帶有真實的單位經濟：定價錨定在 HPLC/GC-MS 每次檢測綜合成本人民幣 150-300 元的 30-50%，得出每套試劑組人民幣 150 元（凍乾菌株管、反應緩衝液、操作手冊），對應單位成本人民幣 75 元、規模化後降至 45 元，因此毛利率從 50% 到約 70%；五年預測從 500 套成長到 15,000 套，第三年在約 4,000 套、人民幣 60 萬元營收處損益兩平；第一、二年合計需要約人民幣 45 萬元的啟動資金。SOM 由下而上從廣東約 250 萬公頃耕地推算而來，三項假設都明講（華南約占全國市場 20%、生物感測器滲透率 5-8%、初期市占 3-5%），最後落在 200 萬至 400 萬美元。但話說白了：沒有登記的法人實體、沒有專利、沒有進駐育成中心、沒有與投資人談過、也沒有意向書；資金來源只列出類別（iGEM 補助、學校研究經費、天使或育成種子資金、指導老師管道）而非具名的對象，法規討論也只是一個風險類別，而不是一條已繪製出的核准路徑。這個創業案在紙上是一份架構良好的計畫；零件才是真正可用的交付成果。",
     "partners": [
       "Partner iGEM teams engaged through the P-E-A-F collaboration framework",
       "Academic experts consulted in human practices (attended personally by the team captain)",
@@ -31,25 +59,30 @@
     {
       "url": "https://static.igem.wiki/teams/6125/wiki/contribution/img1.avif",
       "caption": "Supplementary characterisation of the existing Registry part BBa_K5083099: PCR confirmation of GFP, T4 Holin and T4 Lysozyme fragments, normalised pCspA activity across temperatures and times, and growth curves of the lysis strain",
+      "caption_zh": "對 Registry 既有零件 BBa_K5083099 的補充特性分析：GFP、T4 Holin 與 T4 Lysozyme 片段的 PCR 確認、不同溫度與時間下經正規化的 pCspA 活性，以及裂解菌株的生長曲線",
       "credit": "Team Squirrel-Beijing, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6125/wiki/contribution/img2.avif",
       "caption": "Time-resolved response of the pCspA cold-inducible promoter at five temperatures, the data a future team needs to choose an induction temperature",
+      "caption_zh": "pCspA 低溫誘導型啟動子在五種溫度下隨時間解析的反應，正是未來團隊挑選誘導溫度所需的資料",
       "credit": "Team Squirrel-Beijing, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6125/wiki/contribution/img4.avif",
       "caption": "The Preparation-Exchange-Action-Feedback (P-E-A-F) collaboration framework, published as a transferable method for cross-team work",
+      "caption_zh": "Preparation-Exchange-Action-Feedback（P-E-A-F）合作框架，作為可移轉的跨隊合作方法發表",
       "credit": "Team Squirrel-Beijing, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6125/wiki/entrepreneurship/img1.avif",
       "caption": "TAM-SAM-SOM market sizing, with the obtainable market built bottom-up from Guangdong arable hectarage and three stated penetration assumptions",
+      "caption_zh": "TAM-SAM-SOM 市場規模估算，其中可取得市場是由廣東耕地面積與三項明示的滲透率假設由下而上推算而來",
       "credit": "Team Squirrel-Beijing, iGEM 2026 wiki"
     }
   ],
   "gemsTakeaway": "Make one deliverable per project be characterisation data added to somebody else's existing part, chosen because that part lacked the numbers a user would need, and report it as a parameter sweep (temperature crossed with time, with all intermediate values shown) rather than a single demonstration. Then write an explicit 'Applications for Future Teams' section naming who could reuse each module and how, and keep a plain-language glossary whose entries state the limits of your own measurements, as theirs does for OD600.",
+  "gemsTakeaway_zh": "讓每個專案至少有一項交付成果是為別人既有的零件補上特性分析資料，而挑選那個零件的理由正是它缺少使用者會需要的數據；並以參數掃描的形式報告（溫度與時間交叉，所有中間值都呈現），而不是單一次示範。接著寫一節明確的「Applications for Future Teams」，指名每個模組可以被誰重用、如何重用；再維護一份白話詞彙表，其中的條目要說明自己量測的侷限，就像他們對 OD600 所做的那樣。",
   "sources": [
     "https://2026.igem.wiki/squirrel-beijing/",
     "https://2026.igem.wiki/squirrel-beijing/parts/",

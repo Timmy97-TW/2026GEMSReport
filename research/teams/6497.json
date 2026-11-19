@@ -8,14 +8,35 @@
   "projectTitle": "SweetCycle",
   "tagline": "Don't sell the molecule, sell the step that makes it cheap to separate: engineered glycosyltransferases licensed into existing Reb A refineries",
   "summary": "Worldshaper-Shanghai engineered the two glycosyltransferases that perform the final steps to Rebaudioside M (SrUGT76G1 and SrUGT91D2), screened eight designed variants in a contained Stevia hairy-root chassis with qPCR and HPLC read-out, and found that T284I raised Reb M to 21.96 micrograms per gram fresh weight against 15.44 for wild type while the SrUGT91D2 variants did nothing. The commercial insight is genuinely original: Reb M is expensive not because the pathway is hard but because it sits at about 2 percent of a pool of near-identical glycosides, so the only lever that matters is raising that fraction (eta), and the party who benefits is whoever owns the separation column. They therefore sell a licensed process asset to Reb A refiners rather than a product, backed by a published, recomputable techno-economic model that ranks three production routes and finds their own current enzyme performance gives a negative NPV in every scenario. They were nominated for Best Entrepreneurship in the High School section.",
-  "awards": ["Best Entrepreneurship nominee, High School"],
+  "awards": [
+    "Best Entrepreneurship nominee, High School"
+  ],
   "dry": {
     "frameworks": "A purpose-built Reb M Commercialisation Decision Model (25-year NPV at a 12 percent discount rate across mild, neutral and fast price-convergence scenarios) plus PESTEL, Porter's Five Forces scored force by force, SWOT with deliberately unbalanced counts because the null results are listed as weaknesses, 4P, Business Model Canvas rewritten for licensing, bottom-up TAM/SAM/SOM, a four-phase milestone table with quantitative gates and pre-committed fallback decisions, and a risk register where every row has a triggering measurement and the decision that follows.",
     "dataviz": "Eighteen figures carrying analysis rather than decoration: an evidence chain where node area is influence on the plan and colour is source type, a log-scale cost-per-sweetness positioning map, an S3 cost build-up split into bought-in versus engineerable lines, a Sherwood-type separation-cost curve, a compliance-status matrix with ok / work-in-progress / not-assessed, a 25-year NPV chart, an economic-window heatmap, a product-architecture diagram and a stakeholder map that deliberately includes the parties their success would harm.",
     "datascience": "The standout dry-lab contribution. They normalise every price to RMB per kilogram of sucrose sweetness equivalent (RMB/SSE) because a 300x and a 250x sweetener cannot be compared per kilogram, which immediately shows that their real competitor is sucralose at 0.33 RMB/SSE, not sucrose at 5.40. The separation-cost model is calibrated as C_sep = 40/eta on top of a shared RMB 198.9/kg, giving a twenty-fold fall from about RMB 2,000/kg at eta = 2 percent to about RMB 100/kg at 40 percent. Decision thresholds are stated as checkable numbers: alpha greater than or equal to 0.9 or TON greater than or equal to 108 for the enzyme route to beat the fermentation proxy, eta greater than or equal to 9, 16.8 and 26.5 percent for three different comparisons. The model is published as runnable code with a parameter spreadsheet.",
     "software": "model_core.py producing model_results.json and then the figures, published so a counterparty can re-run the analysis, with a supplementary Excel of parameters and scenarios.",
-    "stack": ["Python (model_core.py)", "JSON results pipeline", "Excel parameter and scenario workbook", "HPLC", "qPCR", "Stevia hairy-root culture via Rhizobium rhizogenes", "Questionnaire Star"],
-    "techniques": ["glycosyltransferase variant design (T284I, T284S)", "RFC-compliant part registration", "contained hairy-root functional screening in 8-10 weeks", "steviol glycoside quantification by HPLC", "techno-economic route modelling with NPV and sensitivity", "Sherwood separation-cost calibration"]
+    "stack": [
+      "Python (model_core.py)",
+      "JSON results pipeline",
+      "Excel parameter and scenario workbook",
+      "HPLC",
+      "qPCR",
+      "Stevia hairy-root culture via Rhizobium rhizogenes",
+      "Questionnaire Star"
+    ],
+    "techniques": [
+      "glycosyltransferase variant design (T284I, T284S)",
+      "RFC-compliant part registration",
+      "contained hairy-root functional screening in 8-10 weeks",
+      "steviol glycoside quantification by HPLC",
+      "techno-economic route modelling with NPV and sensitivity",
+      "Sherwood separation-cost calibration"
+    ],
+    "frameworks_zh": "一個專門打造的 Reb M 商業化決策模型（25 年期 NPV，折現率 12%，涵蓋溫和、中性與快速價格收斂三種情境），加上 PESTEL、逐項評分的波特五力、SWOT（各欄數目刻意不對稱，因為負面結果被列為弱點）、4P、為授權模式改寫的商業模式畫布、由下而上的 TAM/SAM/SOM、一張附量化門檻與預先承諾退路決策的四階段里程碑表，以及一份風險登錄表——每一列都有觸發的量測指標與隨之而來的決策。",
+    "dataviz_zh": "十八張承載分析而非裝飾的圖：一張證據鏈圖，節點面積代表對計畫的影響力、顏色代表來源類型；一張對數尺度的「每單位甜度成本」定位圖；一張 S3 成本堆疊圖，拆成外購項與可工程化項；一條 Sherwood 式分離成本曲線；一張合規狀態矩陣，分為可行／進行中／未評估；一張 25 年 NPV 圖；一張經濟窗口熱圖；一張產品架構圖；以及一張刻意納入「他們成功會傷害到的當事方」的利害關係人地圖。",
+    "datascience_zh": "這是乾實驗室最突出的貢獻。他們把所有價格都正規化為每公斤蔗糖甜度當量的人民幣價（RMB/SSE），因為 300 倍甜與 250 倍甜的甜味劑無法按公斤比較；這立刻顯示他們真正的競爭者是 0.33 RMB/SSE 的三氯蔗糖，而不是 5.40 的蔗糖。分離成本模型校準為在共同的 198.9 元/公斤之上加上 C_sep = 40/eta，於是從 eta = 2% 時的約 2,000 元/公斤，下降到 40% 時的約 100 元/公斤，相差二十倍。決策門檻都寫成可查核的數字：酵素路線要勝過發酵代理方案，需 alpha 大於或等於 0.9、或 TON 大於或等於 108；而三組不同比較則分別要求 eta 大於或等於 9%、16.8% 與 26.5%。模型以可執行的程式碼公開，並附參數試算表。",
+    "software_zh": "model_core.py 產出 model_results.json 再生成各張圖，並公開發布，讓交易對手能自行重跑整份分析；另附一份參數與情境的 Excel 補充檔。"
   },
   "good": {
     "publicEngagement": "A 503-respondent consumer survey (Questionnaire Star, 2026) reported with the uncomfortable parts intact: natural/healthy/safe drives 61.95 percent of motivation but taste only 12.06 percent and price 4.16 percent, while 57.38 percent would preferentially buy if taste approached sucrose at a reasonable price, and 35.34 percent had never heard of stevia or monk-fruit sweeteners at all. They pair this with a brand-marketing observation that 80-90 percent of consumers cannot distinguish sweetener types, and draw the warning rather than the flattering conclusion: a natural label does not sell itself. Consumer content on Xiaohongshu and Douyin is scoped explicitly to label literacy and evidence-based sugar reduction, with a stated compliance boundary of no health claims and no in-house taste panels.",
@@ -29,28 +50,35 @@
       "Shanghai Chenshan Botanical Garden (plant and scientific infrastructure)",
       "A fermentation engineer and a plant synthetic biologist (route and containment advice)",
       "Toll manufacturer or enzyme house (to be contracted in Phase 2)"
-    ]
+    ],
+    "publicEngagement_zh": "一份 503 份回覆的消費者問卷（問卷星，2026），報告時連難堪的部分都原樣保留：天然／健康／安全驅動了 61.95% 的購買動機，而口味只有 12.06%、價格只有 4.16%；同時 57.38% 表示若口味接近蔗糖且價格合理就會優先購買，而有 35.34% 根本沒聽過甜菊或羅漢果甜味劑。他們把這份結果與一項品牌行銷觀察並列——80-90% 的消費者分辨不出甜味劑種類——並且得出警示而非討喜的結論：「天然」這個標籤不會自己把產品賣掉。在小紅書與抖音上的消費者內容，範圍明確限定在標示識讀與以證據為基礎的減糖，並宣告合規邊界：不做健康聲稱、不自辦內部品評。",
+    "ihp_zh": "十三場利害關係人訪談加上問卷，列表記錄誰說了什麼，並另闢一欄寫明它究竟改變了什麼。有三個決定可追溯到特定對話，而不是任何市場報告。AGV（愛之味）品牌研發給出的優先順序是成本先於供應穩定性、再先於天然來源，這使成功指標改為每單位甜度成本，並把第一個市場收窄到高階飲料；AGV 的行銷端則補上「不該在哪裡競爭」，指名大眾市場果茶是打不贏的，而部分取代才是現實的訴求。功能性食品原料供應商天草科技則直接否決了「植物來源更便宜」的說法，把他們從自建產能推向授權模式。一位發酵工程師重排了路線圖，他指出未來 5-10 年發酵或體外催化才是務實的路線、一個新植物品種要 7-12 年才能商業化，而 LCA 通常顯示發酵相較於葉片萃取可少用約 92% 的農地與 90% 的水——這使他們刪掉了所有「陽光讓植物更環保」的說法。種植戶兼推廣文章作者盧先生提供了種植者真正會回應的三項條件（產量不減、收購溢價、保證契約），以及一句「沒有示範田就沒有信任」，後者成為第三階段的硬性門檻。中國食品飲料協會則確立了一件事：即使是同一個分子，不同生產製程在法規上就是不同的原料，這使製程揭露成為一條指名的工作線。最能說明問題的是，有三場各自獨立的訪談都告訴他們，全株殘渣加值利用只是品牌故事、而不是採購準則，而他們就把它從基礎商業論證中移除，沒有去跟資料爭辯。",
+    "realWorld_zh": "這是本批隊伍中——不論高中組或其他組別——智識上最誠實的一份商業化分析，而這份誠實是結構性的，不是裝飾性的。商業模式是授權，不是產品：一個已鑑定的 SrUGT76G1 變異體，加上固定化與 UDP-葡萄糖回收的參數，以技術移轉文件的形式交付，定價為被授權方增量毛利的 15% running royalty（區間 10-25%），簽約金與里程碑金的額度只以回收移轉成本為限；後續再加上每公頃 10-15% 的性狀權利金，以及全程提供的毛狀根預篩服務。每一個價格都錨定在交易對手能在自己廠內驗證的數字上，而他們明說這正是重點：沒有人被要求相信任何主張，只被要求跑一次計算。單位經濟完整建構：在 alpha 0.90、TON 30 下，目標製程成本為 438 元/公斤；在 Reb M 價格為 800 元/公斤時，被授權方的增量毛利為 362 元/公斤，權利金約 54 元/公斤；並附一份五年指示性損益表，每一項投入都是可替換的一列，累積損益兩平落在商業化第 2 至 3 年；未來十二個月的募資需求為 15 萬至 20 萬人民幣（2.1 萬至 2.9 萬美元），細列到校正標準品與兩次交易對手拜訪，並明白表示他們寧可提出一個細列的小額需求，也不要一個整數。市場證據以一手為主：13 場訪談與 503 人問卷，二手市場資料（Mordor、Grand View）只用在適當的層級上，並明確宣告兩組數列不可相互比較。TAM 則留白、標示為資料缺口 G1，而不是憑空捏造。法規路徑具體，而且對領先路線已經打開：中國國家衛生健康委員會 2024 年第 2 號與 2025 年第 1 號公告，已核准以酵素轉化與以發酵法製得的甜菊醇糖苷作為食品添加物——這正是酵素路線領先、而工程化性狀跟在後面的原因；而非基改的常規雜交路線（已發表的 Reb M 比例為 56.8-61.6%）則作為預先規劃的退路保留，可避開基改這一層。接著是直白的評估。沒有公司、沒有已簽署的授權、沒有意向書，只有一個已接觸的交易對手而非客戶；他們自己把這些寫在弱點裡。他們的 SrUGT91D2 變異體在五個樣本上都得到空結果，而他們照實公開，並正確地主張：正因為這麼做，SrUGT76G1 的結果才可信。他們自己的 Reb M 定量被標示為僅供方向參考：單一批次、沒有生物重複、所有峰面積都低於最低校正標準品，因此絕對值是外推而來，而修補方法（0.5、1 與 2 微克標準品）被列為待辦工作。商業論證中的每一個效能數字目前仍是文獻值，這點他們也直說。而模型最重要的發現，正是一個戳破自己提案的發現：以今天的酵素效能，每一種情境下的 NPV 都是負的，而體外路線的經濟窗口只有 0.7 至 4.6 年，比回收期更短——所以他們擁有的是一個窗口，而不是一道護城河。後續計畫也相應地嚴謹：未來十二個月設下一道由四項成果構成的客戶驗證門檻（一家指名的精煉廠完成非食品用途的效能測試、一個品牌定義部分取代的接受標準、一家代工廠對公斤級製程報價、一份法規與自由實施（FTO）審查），並聲明在這些成果出現之前，NPV 與損益表仍是情境分析，而不是銷售預測。他們甚至列出自己成功會讓哪些當事方不利，包括手上持有錯誤資產的純 Reb A 精煉商，以及很可能最後才被觸及的小農，還有一個公共衛生上的取捨：更便宜的、近似蔗糖的甜味只有在取代糖、而不是取代水的時候才算是收益。"
   },
   "images": [
     {
       "url": "https://static.igem.wiki/teams/6497/wiki/worldshaper-shanghai/entrepreneurship/image3.webp",
       "caption": "Positioning map of cost per sucrose-sweetness equivalent on a log scale, showing sucralose at 0.33 RMB/SSE as the ceiling over the whole natural-sweetener category",
-      "credit": "Team Worldshaper-Shanghai, iGEM 2026 wiki"
+      "credit": "Team Worldshaper-Shanghai, iGEM 2026 wiki",
+      "caption_zh": "以對數尺度呈現的每單位蔗糖甜度當量成本定位圖，顯示 0.33 RMB/SSE 的三氯蔗糖構成整個天然甜味劑類別的天花板"
     },
     {
       "url": "https://static.igem.wiki/teams/6497/wiki/worldshaper-shanghai/entrepreneurship/image15.webp",
       "caption": "Twenty-five-year NPV by route and scenario at a 12 percent discount rate; only the combined enzyme-then-trait strategy stays positive across all three price-convergence paths",
-      "credit": "Team Worldshaper-Shanghai, iGEM 2026 wiki"
+      "credit": "Team Worldshaper-Shanghai, iGEM 2026 wiki",
+      "caption_zh": "折現率 12% 下，各路線與各情境的 25 年期 NPV；只有「先酵素、後性狀」的組合策略在三條價格收斂路徑上都維持正值"
     },
     {
       "url": "https://static.igem.wiki/teams/6497/wiki/worldshaper-shanghai/entrepreneurship/image16.webp",
       "caption": "Economic-window heatmap: the year the enzyme licence stops making money under each price path, giving the 0.7 to 4.6 year window on today's enzyme performance",
-      "credit": "Team Worldshaper-Shanghai, iGEM 2026 wiki"
+      "credit": "Team Worldshaper-Shanghai, iGEM 2026 wiki",
+      "caption_zh": "經濟窗口熱圖：在每一條價格路徑下，酵素授權不再賺錢的年份，由此得出以今日酵素效能計算的 0.7 至 4.6 年窗口"
     },
     {
       "url": "https://static.igem.wiki/teams/6497/wiki/worldshaper-shanghai/entrepreneurship/image1.webp",
       "caption": "Evidence chain in which node area is the influence a source had on the plan and colour is the source type, built from 13 interviews and a 503-person survey",
-      "credit": "Team Worldshaper-Shanghai, iGEM 2026 wiki"
+      "credit": "Team Worldshaper-Shanghai, iGEM 2026 wiki",
+      "caption_zh": "證據鏈圖，節點面積代表該來源對計畫的影響力、顏色代表來源類型，由 13 場訪談與 503 人問卷建成"
     }
   ],
   "gemsTakeaway": "Build one recomputable decision model per project, published as code plus parameters, whose job is to tell you which route your asset belongs in and what performance threshold makes it worth pursuing, then write every milestone as a quantitative gate with a pre-committed continue, modify or stop decision. The practice that makes it work is publishing the result that hurts: their model says today's enzyme gives a negative NPV, and saying so is what makes every other number believable.",
@@ -58,5 +86,9 @@
     "https://2026.igem.wiki/worldshaper-shanghai/",
     "https://2026.igem.wiki/worldshaper-shanghai/entrepreneurship/",
     "https://2026.igem.wiki/worldshaper-shanghai/assets/entrepreneurship-DyASDvRD.js"
-  ]
+  ],
+  "projectTitle_zh": "SweetCycle",
+  "tagline_zh": "不賣分子，賣讓分離變便宜的那一步：把工程化的糖基轉移酶授權給既有的 Reb A 精煉廠",
+  "summary_zh": "Worldshaper-Shanghai 改造了負責 Rebaudioside M 最後幾步反應的兩個糖基轉移酶（SrUGT76G1 與 SrUGT91D2），在受圍堵的甜菊毛狀根載體中篩選八個設計變異體，以 qPCR 與 HPLC 讀值判定，結果發現 T284I 把 Reb M 提升到每公克鮮重 21.96 微克，而野生型為 15.44；SrUGT91D2 的變異體則毫無作用。商業洞見確實原創：Reb M 之所以昂貴，不是因為路徑困難，而是因為它只占一池幾乎無法區分的糖苷中的約 2%，因此唯一真正有用的槓桿是提高這個比例（eta），而受益者是擁有分離管柱的那一方。於是他們把授權式的製程資產賣給 Reb A 精煉商，而不是賣產品，並以一份公開、可重新計算的技術經濟模型為支撐——該模型對三條生產路線排序，並發現以他們目前的酵素效能，在每一種情境下的 NPV 都是負的。他們獲得高中組 Best Entrepreneurship 提名。",
+  "gemsTakeaway_zh": "為每個專案建立一個可重新計算的決策模型，以程式碼加參數的形式公開，它的任務是告訴你自己的資產該走哪一條路線，以及什麼效能門檻才值得追下去；然後把每一個里程碑都寫成量化門檻，附上預先承諾的繼續、修改或停止決策。讓這套做法真正奏效的關鍵，是把傷害自己的結果也公開：他們的模型說今天的酵素給出負的 NPV，而正因為他們這麼說，其他每一個數字才變得可信。"
 }

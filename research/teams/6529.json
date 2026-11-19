@@ -6,15 +6,21 @@
   "village": "",
   "wiki": "https://2026.igem.wiki/chinaguangdongshimen/",
   "projectTitle": "Re-CDI Alert: an engineered EcN platform for monitoring and treating recurrent Clostridioides difficile infection",
+  "projectTitle_zh": "Re-CDI Alert：用於監測與治療復發性 Clostridioides difficile 感染的工程化 EcN 平台",
   "tagline": "A p-cresol-sensing probiotic biosensor, characterised with a measurement protocol written so that other teams can repeat it.",
+  "tagline_zh": "一個偵測 p-cresol 的益生菌生物感測器，其特性分析搭配一份寫成可供其他隊伍重複執行的量測規程。",
   "summary": "Shimen built an Escherichia coli Nissle 1917 (EcN) biosensor that detects p-cresol, the metabolite Clostridioides difficile produces to suppress competing gut microbes and secure its own niche, and couples detection to a therapeutic output targeting the TcdB toxin. Because recurrence after CDI treatment is diagnosed only once symptoms return, the aim is to shift from symptom-triggered diagnosis toward proactive risk sensing during the post-treatment window. The dry-lab contribution is the measurement protocol itself: a documented, reusable workflow for characterising a small-molecule biosensor, covering plate layout, normalisation, chassis comparison, tolerance limits, dose response and specificity against structural analogues.",
+  "summary_zh": "Shimen 建了一個 Escherichia coli Nissle 1917（EcN）生物感測器，偵測 p-cresol——那是 Clostridioides difficile 用來壓制競爭的腸道微生物、為自己保住生態棲位的代謝物——並把偵測結果耦合到針對 TcdB 毒素的治療性輸出。由於 CDI 治療後的復發要等症狀再出現才會被診斷出來，他們的目標是從症狀觸發的診斷，轉向在治療後窗口期主動感測風險。乾實驗的貢獻就是那份量測規程本身：一套有完整文件、可重複使用的小分子生物感測器特性分析流程，涵蓋盤面配置、標準化、底盤比較、耐受上限、劑量反應，以及對結構類似物的專一性。",
   "awards": [
     "Best Measurement nominee (High School)"
   ],
   "dry": {
     "frameworks": "The measurement page is written as a contribution: seven numbered measurement strategies are stated up front, then each is given its own design, methods, results and discussion, with the standardisation framed explicitly as something future iGEM teams can reuse. Measurements are ordered so that each answers a prerequisite for the next, establishing the reporter, then the chassis, then the tolerance window, then the dose response, then specificity.",
+    "frameworks_zh": "量測頁面是當成一項貢獻來寫的：開頭先列出七項編號的量測策略，接著每一項各有自己的設計、方法、結果與討論，而標準化則明確定位為未來 iGEM 隊伍可以重複使用的東西。各項量測的順序安排成每一項都回答下一項的前提條件：先確立報告基因，再是底盤，再是耐受窗口，再是劑量反應，最後是專一性。",
     "dataviz": "Nine numbered measurement figures covering the chassis comparison, the tolerance assay, the concentration-response series and the specificity panel, each expandable on the wiki alongside the protocol that produced it.",
+    "dataviz_zh": "九張編號的量測圖，涵蓋底盤比較、耐受試驗、濃度反應系列與專一性面板，每一張都可在 wiki 上展開，並與產生該圖的規程並列。",
     "datascience": "Three parts of this stand out for a high-school team. First, plate layout is treated as a source of error: three empty wells are left between each set of three replicate wells, because repeated experiments showed that when adjacent wells differed substantially in p-cresol concentration, the high-concentration wells affected the readings from the low-concentration wells. That is an optical and chemical cross-talk control most teams never run. Second, normalisation is written out as a formula rather than implied, with normalised fluorescence calculated as (sample fluorescence minus fluorescence background) divided by (sample OD600 minus medium OD600 blank), and the team specifies what each blank must be: the fluorescence background from a GFP-negative culture matched to the experimental conditions, and the OD600 blank from cell-free medium. The stated reason is that total fluorescence depends on cell abundance, so raw fluorescence cannot be compared across conditions and only a per-biomass value answers the question. Third, the viable measurement window is established before the dose response is interpreted: a tolerance assay incubating EcN at 0 to 20 mM p-cresol with OD600 read every two hours over 24 hours found no appreciable inhibition at 0.1 to 1 mM, inhibition emerging at 2 mM, strong inhibition at 5 to 10 mM and near-total inhibition at 20 mM, which produced the rule that induction experiments must stay at or below 1 mM so that growth inhibition cannot be mistaken for a sensor response. Only then is the full dose response run, across fifteen concentrations from 0 to 5 mM, locating a discernible rise at roughly 500 nM to 1 uM and a working range of 1 uM to 1 mM. Chassis comparison is measured rather than argued: BL21 and modified EcN (cryptic plasmids pMUT1 and pMUT2 removed and the flagellar regulators flhDC deleted to free cellular resources) are run side by side, and the team reports that OD600 stayed between about 0.77 and 0.89 in both strains with no decrease as concentration rose, which is what licenses the claim that the fluorescence rise is not a cell-number artefact. Specificity is tested against the structural analogues that would actually confound a gut measurement, with o-cresol, m-cresol and phenol all at the same 10 uM concentration, and all reading close to the uninduced control while only p-cresol rose. All fluorescence is read on a BioTek plate reader at 485 nm excitation and 528 nm emission in triplicate, with a no-p-cresol negative control throughout. The team notes a p-cresol stock preparation protocol down to the weighed mass and 0.22 um filtration, with light-protected aliquots stored at -20 C.",
+    "datascience_zh": "對一支高中隊伍來說，這裡有三點特別突出。第一，盤面配置被當成誤差來源處理：每一組三個重複孔之間都留三個空孔，因為反覆實驗顯示，當相鄰孔的 p-cresol 濃度差異很大時，高濃度孔會影響低濃度孔的讀數。這是一項光學與化學串擾的對照，多數隊伍根本不會做。第二，標準化被寫成明確的公式、而不是暗示：標準化螢光值 =（樣品螢光值減去螢光背景）除以（樣品 OD600 減去培養基 OD600 空白值），而團隊也指明每個空白值該是什麼：螢光背景取自與實驗條件相同、但不帶 GFP 的培養液，OD600 空白值則取自無細胞的培養基。所述理由是總螢光值取決於細胞數量，因此原始螢光值無法跨條件比較，只有以單位生物量為基準的數值才回答得了問題。第三，可用的量測窗口在解讀劑量反應之前就先確立：一項耐受試驗把 EcN 培養在 0 至 20 mM 的 p-cresol 中，24 小時內每兩小時讀一次 OD600，發現在 0.1 至 1 mM 沒有明顯抑制、2 mM 時開始出現抑制、5 至 10 mM 時抑制強烈、20 mM 時幾乎完全抑制；由此訂出一條規則：誘導實驗必須維持在 1 mM 以下，使生長抑制不會被誤認為感測器的反應。只有在此之後才跑完整的劑量反應，橫跨 0 至 5 mM 共十五個濃度，定位出大約在 500 nM 至 1 uM 之間開始出現可辨識的上升，工作範圍為 1 uM 至 1 mM。底盤比較是量出來、不是講出來的：BL21 與改造過的 EcN（移除隱性質體 pMUT1 與 pMUT2，並剔除鞭毛調控基因 flhDC 以釋出細胞資源）並行測試，團隊報告兩個菌株的 OD600 都維持在約 0.77 至 0.89 之間、且未隨濃度上升而下降，正是這點才使「螢光上升不是細胞數量造成的假象」這個主張站得住腳。專一性則針對真正會干擾腸道量測的結構類似物測試，o-cresol、m-cresol 與 phenol 全部用同樣的 10 uM 濃度，結果都接近未誘導的對照，只有 p-cresol 上升。所有螢光都在 BioTek 盤式讀取儀上以激發 485 nm、發射 528 nm 讀取，三重複，並全程設置不加 p-cresol 的負對照。團隊並記下 p-cresol 母液的配製規程，細到秤取的質量與 0.22 um 過濾，分裝後避光保存於 -20 C。",
     "software": "",
     "stack": [
       "BioTek microplate reader (485/528 nm)",
@@ -36,8 +42,11 @@
   },
   "good": {
     "publicEngagement": "An education page and an inclusivity page accompany the project.",
+    "publicEngagement_zh": "專題附有一個教育頁面與一個包容性頁面。",
     "ihp": "Human Practices is reported in four stages with four named changes of direction. Conversations with a Chinese clinician reframed the opening question from whether CDI exists in China to whether patients are being identified in time, because the physician attributed low reported incidence partly to insufficient testing and clinical awareness rather than low disease occurrence. Interviews with two physicians abroad narrowed the target population from the general public to people with a confirmed CDI history who remain at high risk of recurrence. Interviews at Guangdong Hospital of Integrated Chinese and Western Medicine highlighted that antibiotic treatment itself further disturbs the gut microbiota, which moved the project from a standalone detection concept to coupling monitoring with targeted intervention. Advice from a microbiology researcher, Dr Peng, replaced a planned multivalent antibody with a single E3 monovalent nanobody against TcdB to improve experimental feasibility and reduce cost, and also informed the EcN chassis optimisation that improved protein expression.",
+    "ihp_zh": "人類實踐以四個階段報告，並有四項具名的方向改動。與一位中國臨床醫師的對話把開場問題重新框定：從「CDI 在中國是否存在」改成「病人是否被及時辨識出來」，因為該醫師認為通報發生率偏低，有一部分是檢驗量與臨床警覺不足所致、而不是疾病真的少見。與兩位國外醫師的訪談把目標族群從一般大眾收斂為有確診 CDI 病史、且仍處於高復發風險的人。在廣東省中西醫結合醫院的訪談指出抗生素治療本身會進一步擾亂腸道菌相，這使專題從單純的偵測構想，轉為把監測與標的性介入耦合起來。一位微生物學研究者彭博士的建議，則把原本計畫的多價抗體換成針對 TcdB 的單一 E3 單價奈米抗體，以提高實驗可行性並降低成本；他的意見也促成了 EcN 底盤的最佳化，進而改善蛋白質表現。",
     "realWorld": "The intended use is a monitoring platform for the post-treatment recurrence window in patients with a confirmed CDI history, chosen because recurrence occurs in 20 to 30% of patients after an initial episode and up to 60% after a second, and because diagnosis of recurrence usually waits for overt symptoms such as diarrhoea. Chassis selection is justified against three stated criteria: adaptation to the human intestinal environment, availability of established genetic tools, and biosafety with a history of clinical use. The project also states a biosafety framework as one of its outputs.",
+    "realWorld_zh": "預期用途是為有確診 CDI 病史的病人，在治療後的復發窗口期提供一個監測平台；之所以如此設定，是因為初次發作後有 20 至 30% 的病人復發，第二次之後更高達 60%，而復發的診斷通常要等到腹瀉等明顯症狀出現。底盤的選擇依三項明示標準論證：對人體腸道環境的適應性、是否有成熟的遺傳工具可用，以及生物安全性與臨床使用歷史。該專題也把一套生物安全框架列為其產出之一。",
     "partners": [
       "Guangdong Hospital of Integrated Chinese and Western Medicine",
       "Dr Peng (microbiology researcher)",
@@ -48,20 +57,24 @@
     {
       "url": "https://static.igem.wiki/teams/6529/wiki/public/measurement/measurement-figure-01.webp",
       "caption": "Measurement figure from the Re-CDI Alert characterisation workflow, which reads GFP fluorescence at 485 nm excitation and 528 nm emission alongside OD600 so that every value can be normalised per unit biomass.",
+      "caption_zh": "Re-CDI Alert 特性分析流程中的量測圖；該流程在激發 485 nm、發射 528 nm 下讀取 GFP 螢光，並同時讀取 OD600，使每個數值都能依單位生物量標準化。",
       "credit": "Team CHINAGuangdongShimen, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6529/wiki/public/measurement/measurement-figure-05.webp",
       "caption": "Measurement figure from the chassis and dose-response work comparing BL21 with the modified EcN strain across a p-cresol gradient, with OD600 recorded alongside fluorescence to show that the rise is not driven by changes in cell number.",
+      "caption_zh": "底盤與劑量反應工作的量測圖，在一系列 p-cresol 濃度梯度下比較 BL21 與改造後的 EcN 菌株，並與螢光值一併記錄 OD600，以顯示訊號上升並非由細胞數量變化所驅動。",
       "credit": "Team CHINAGuangdongShimen, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6529/wiki/public/measurement/measurement-figure-07.webp",
       "caption": "Measurement figure from the tolerance and specificity work. The tolerance assay fixed 1 mM as the upper usable p-cresol concentration, and the specificity panel compared p-cresol with o-cresol, m-cresol and phenol at a matched 10 uM.",
+      "caption_zh": "耐受與專一性工作的量測圖。耐受試驗把 1 mM 定為 p-cresol 可用濃度的上限，而專一性面板則在相同的 10 uM 濃度下比較 p-cresol 與 o-cresol、m-cresol 及 phenol。",
       "credit": "Team CHINAGuangdongShimen, iGEM 2026 wiki"
     }
   ],
   "gemsTakeaway": "Run a tolerance curve before the dose-response curve. Establishing the concentration at which the chassis itself starts to suffer defines the window in which a reporter signal can honestly be attributed to sensing rather than to dying cells, and it costs one 24-hour plate.",
+  "gemsTakeaway_zh": "在做劑量反應曲線之前，先做耐受曲線。確立底盤本身開始受損的濃度，就界定出一個區間，在其中報告基因的訊號才能誠實地歸因於感測、而不是歸因於正在死去的細胞——而這只要花一塊培養盤、24 小時。",
   "sources": [
     "https://2026.igem.wiki/chinaguangdongshimen/measurement",
     "https://2026.igem.wiki/chinaguangdongshimen/description",

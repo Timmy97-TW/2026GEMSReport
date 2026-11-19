@@ -195,3 +195,19 @@ of tokens of fetching. Keep doing this.
    "experts only" pattern worse in therapeutics than in agriculture?
 6. GEMS has **no collaboration page at all**, and appears on no other Taiwanese team's. NYCU-Taiwan's
    27 July Meet-Up drew 53 people from five teams. That is a standing opportunity, not an observation.
+
+### Operational hazard found the hard way: the shared scratchpad
+Translation agents all write helper scripts into the same scratchpad root, and two of them clobbered each
+other's helpers mid-run. The failure is **silent** — a clobbered helper no-ops and the agent still reports
+"translated N files". One file (6060, DTU-Denmark) also lost four top-level `_zh` keys between a write and
+its own verification pass, because a concurrent writer touched it.
+
+Two consequences, both now handled:
+1. **Never trust an agent's own completion count.** `build.py` now runs a per-key translation audit and
+   prints `Chinese: N complete · N PARTIAL · N untouched`, naming every partially translated file and the
+   exact fields it is missing. A file that "looks done but is not" shows up immediately.
+2. **Tell each translation agent to work in its own scratch subdirectory**, and to verify its per-file
+   `_zh` counts by re-reading the files rather than trusting an earlier "added N" line.
+
+Two agents caught their own errors and said so unprompted — one removed a Cyrillic fragment it had typed
+into a Chinese field, one re-added the keys it lost. That is the behaviour to keep asking for.

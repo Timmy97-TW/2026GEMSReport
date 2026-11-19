@@ -8,26 +8,89 @@
   "projectTitle": "GlacierGuard",
   "tagline": "Protect the ice. Leave less behind.",
   "summary": "RDFZ-China engineered E. coli to produce bacterial cellulose (BC) and built GlacierGuard, a biodegradable BC composite membrane intended to slow localized glacier surface ablation. Three genetic systems support it: heterologous bcsABCD plus a pgm/galU UDP-glucose precursor boost for BC yield, a urease (ureABC) biomineralization module that precipitates white CaCO3 inside the BC fibre network to raise albedo, and a CspA cold-shock-protein module to lower the fermentation temperature needed on the Qinghai-Tibet Plateau. BC production reached 230.6 +/- 15.3 mg/L in C41(DE3), roughly 65.9x the empty-vector control, and covered ice retained 3.2 percentage points more mass than geotextile-covered ice in a refrigerator day-night simulation. The team deliberately deployed only commercially sourced (non-engineered) BC membranes during its Tibet field trial and removed all material before leaving.",
-  "awards": ["Best Sustainable Development nominee (High School)"],
+  "awards": [
+    "Best Sustainable Development nominee (High School)"
+  ],
   "dry": {
     "frameworks": "ESM-C protein language model scoring combined with a MuZero reinforcement-learning agent and Monte Carlo Tree Search over AlphaFold-predicted structure; Rosetta used for structural-energy scoring. Candidates ranked by AI Score = 0.5 x ESM-C percentile + 0.5 x Rosetta percentile.",
     "dataviz": "Figure-based reporting of screening hit rates and benchmark score distributions, BC yield comparisons, ice-mass-retention curves, infrared transmission by membrane layer count, and a power/interest stakeholder map. The wiki also carries an interactive 3D 'Glacier Atlas' globe with five Chinese glacier records (Dagu, Azha, Urumqi No. 1, Baishui River No. 1, Mingyong).",
     "datascience": "Benchmarked MuZero/MCTS against genetic algorithms, Beam Search and Random Search, and against SaProt, ESM-C and ESM-1v foundation models, using 50 candidate sequences per method and a hit rate defined as the fraction falling in the top 10% of the benchmark score distribution. MuZero/MCTS reached 24% hit rate vs GA 10%, Beam Search 8%, Random Search 0%; 40% vs 0% for all three foundation models. 1,855 unique BcsD variants were generated after 10,000 model updates; top candidate W19R + G113E (AI score 0.8445).",
     "software": "No standalone released software tool; the dry lab is an in-house screening pipeline. The wiki itself is a hand-built server-rendered site with an interactive glacier atlas. Note: the /model path on this wiki serves leftover template content from an unrelated project and is not the team's dry lab.",
-    "stack": ["ESM-C", "ESM-1v", "SaProt", "AlphaFold", "Rosetta", "MuZero", "Monte Carlo Tree Search"],
-    "techniques": ["protein language model variant scoring", "reinforcement-learning sequence search", "structural energy calculation", "method benchmarking against GA/Beam/Random search", "life-cycle and cost reasoning drawn from published BC LCA and techno-economic studies"]
+    "stack": [
+      "ESM-C",
+      "ESM-1v",
+      "SaProt",
+      "AlphaFold",
+      "Rosetta",
+      "MuZero",
+      "Monte Carlo Tree Search"
+    ],
+    "techniques": [
+      "protein language model variant scoring",
+      "reinforcement-learning sequence search",
+      "structural energy calculation",
+      "method benchmarking against GA/Beam/Random search",
+      "life-cycle and cost reasoning drawn from published BC LCA and techno-economic studies"
+    ],
+    "frameworks_zh": "以 ESM-C 蛋白質語言模型評分，結合一個 MuZero 強化學習代理人與蒙地卡羅樹搜尋，在 AlphaFold 預測的結構上進行搜尋；Rosetta 則用於結構能量評分。候選以 AI Score = 0.5 x ESM-C 百分位 + 0.5 x Rosetta 百分位 排序。",
+    "dataviz_zh": "以圖表呈現篩選命中率與基準分數分布、BC 產量比較、冰質量保留曲線、不同膜層數的紅外穿透率，以及一張權力／興趣的利害關係人地圖。wiki 另有一個互動式 3D「冰川地圖」地球儀，收錄五條中國冰川的記錄（達古、阿札、烏魯木齊 1 號、白水河 1 號、明永）。",
+    "datascience_zh": "他們把 MuZero/MCTS 與基因演算法、Beam Search 與隨機搜尋做基準比較，也與 SaProt、ESM-C 與 ESM-1v 等基礎模型比較，每種方法各取 50 條候選序列，命中率定義為落在基準分數分布前 10% 的比例。MuZero/MCTS 達到 24% 命中率，而 GA 為 10%、Beam Search 為 8%、隨機搜尋為 0%；對三個基礎模型則是 40% 對 0%。在 10,000 次模型更新後產生 1,855 個獨特的 BcsD 變異體；最佳候選為 W19R + G113E（AI 分數 0.8445）。",
+    "software_zh": "沒有獨立釋出的軟體工具；乾實驗室是一條自製的篩選管線。wiki 本身是手工打造、伺服器端渲染的網站，附一個互動式冰川地圖。附註：此 wiki 的 /model 路徑提供的是某個無關專案遺留的範本內容，並非團隊的乾實驗室。"
   },
   "good": {
     "publicEngagement": "A 440-response public survey (online forms, social media, QR codes on posters) found 93.6% thought glacier protection 'very necessary' but 92.0% knew little or nothing about glacier blankets, and 70.5% named 'biodegradable and free from harmful substances or microplastic release' as a top material requirement. The team turned respondents' nicknames and messages into a physical team flag and carried it to the glacier. Other engagement: a visit to the China Quaternary Glacial Vestige Exhibition Hall in Beijing (interview with a staff member surnamed Ma); Xiaohongshu/RedNote science communication that deliberately shifted the message from 'how do we protect a glacier' to 'why protect glaciers and what can individuals do'; a campus exhibition of BC samples and expedition photographs; glacier-themed penguin badges; project slogans printed on racing apparel and a racing helmet sticker; and an online fundraiser for Tibet disaster relief after the August 2026 Gyirong Port debris-flow disaster. In Tibet the team ran outreach for about 150 students across three classes at Bomi County Middle School, built around local glaciers and ecosystems, with a Tibetan-language title and a strawberry DNA extraction experiment; feedback cards came back in both Chinese and Tibetan.",
     "ihp": "This is one of the strongest high-school IHP chains of the year: 27 interviews, site visits and engagement activities organised under an explicit Why-How-What-Adaptation (WHWA) loop in which each entry states the change made. Dr. Donghui Shangguan (cryosphere scientist, glacier change) said in substance 'rather than trying to protect every glacier, we should first determine which glaciers should be prioritised,' and pointed out that glacier surfaces host microorganisms and pioneer plants; the team therefore abandoned 'cover as much glacier area as possible' and repositioned GlacierGuard as targeted protection of high-value, human-accessible sites (parks, research stations, culturally or scientifically significant glaciers), and rewrote its customer definition from bulk consumers to institutions with monitoring and impact-assessment capacity. Jiaojiao Hu of Polar Future warned that glacier winds lift and tear thin membranes and that the team's planned metal anchoring nails would add thermal conductivity and foreign material; she suggested using stones already present on site, and the team both adopted stone/biodegradable anchoring and converted her concern into measurable tests - 11.7 N peak force to failure under freezing conditions and a twisted BC rope carrying 9.5 kg. Professor Haibo Zhang told them a working genetic module does not guarantee an efficient host, so instead of keeping their assumed chassis they built bcsABCD in both BL21(DE3) and C41(DE3), measured yields, and switched to C41(DE3). Polar scientist Limin Xia said unmodified BC alone would probably not reach the needed optical performance and recommended biomineralisation whitening plus attention to infrared wavelengths - this is the direct origin of the ureABC/CaCO3 System 2, and of the added water-absorption (842.0% mass gain) and layered infrared transmission tests (1200 W/m2 bare, falling to 605/370/340 W/m2 for one/two/three layers). Associate Professor Xuan Yu of Xihua University was consulted about using highland barley (qingke) liquor residues as a cheap local carbon source (an idea seeded by iGEM team BUCT-China); she judged the residue route technically difficult and instead recommended the cold-shock protein CspA to cut fermentation heating, which became System 3, while the barley residue was honestly demoted to 'future investigation, yield unmeasured.' Arctic researcher Dr. Ma Liheng pushed them on a hypothetical polar bear ingesting the membrane, which triggered a comparative soil-burial test (BC fully degraded in 7 days, geotextile unchanged) and an explicit admission that wildlife-ingestion safety is unresolved. Professor Jian Zhang (Tsinghua) attacked the evidence base - summer-only observations cannot represent annual glacier trends, biodegradation in soil does not predict biodegradation at glacier temperatures, retention and refreezing on sloping ice is unproven, and someone must pay for production, transport, installation and maintenance - and the team responded by date-stamping its late-August observation window, flagging those uncertainties as open, and adding campus exhibition and Glacier Casualty List-style storytelling to its plan. Negative results are reported with equal weight: essential-oil hydrophobic coating failed the contact-angle test and was dropped, mechanical reinforcement was dropped because the unmodified membrane already passed the tests and extra layers would hurt biodegradability and cost, and a judge's suggestion (Ho Chun Loong, Shenzhen SynBio Challenge) to add ice-nucleating proteins was researched and then explicitly rejected because INPs address nucleation rather than meltwater runoff or radiation absorption. The stakeholder map is two-dimensional (power x interest) and, unusually, names non-human stakeholders - glacier ecosystems, glacier microbial communities, alpine ecosystems and downstream aquatic ecosystems - as parties whose needs must enter design decisions.",
     "realWorld": "Implementation is specified down to a four-step field procedure (site preparation to remove sharp gravel, membrane placement with overlapping sheets and minimal trapped air, biodegradable edge anchoring, final inspection), with membranes dried, cut, folded or rolled for compact transport and hand-carried in batches to glaciers vehicles cannot reach, installed in a cold window before the melt season. Named customers are glacier conservation organisations, national park and nature reserve authorities, high-altitude local governments and restoration/adaptation programmes, with glacier tourism sites and high-altitude ski resorts as early pilot hosts. The regulatory path is real rather than gestural: the team read the Ecological and Environmental Code of the People's Republic of China and the Regulations of the Tibet Autonomous Region on Glacier Protection, emailed iGEM Headquarters and submitted an Environmental Risk Assessment before fieldwork, used only commercial non-engineered BC on the ice, and removed every membrane before leaving. SDG claims are tied to named sub-targets with the team's own evidence: 13.1/13.2/13.3 (melt-reduction test, policy reference materials, climate education), 12.2/12.4/12.5/12.8 (BC life-cycle, cited cradle-to-gate LCA by Forte et al. 2021, residue reuse), 9.5 (industrial fermentation feasibility, citing Dourado et al. 2016), 6.1/6.4/6.6 and 15.1/15.4, plus a candid spillover analysis flagging SDG 7 energy demand from scale-up, SDG 8 high-altitude worker safety, and an SDG 10 equity risk that high deployment cost would concentrate protection in well-funded locations. On cost the team refuses to overclaim: it states that agricultural by-products do not automatically make BC cheaper, that the alternative-carbon-source process is unvalidated and its yield unmeasured, and that a full-life-cycle cost model covering production, maintenance, replacement, waste treatment and recovery - expressed as cost per unit area and per unit of ice melt avoided - must precede any scale-up. Next steps are paired control/treatment plots on real glaciers with continuous monitoring through research stations such as the Aza Glacier Citizen Science Monitoring Site (now part of Polar Future's long-term observation network), plus a standing offer from Professor Xian-En Zhang (Shenzhen University of Advanced Technology) to host further experiments.",
-    "partners": ["Polar Research Institute of China (virtual tour led by Dr. Wang Luo)", "China's Zhongshan Station, Antarctica (station leader Cui Xiangbin)", "Dr. Ma Liheng, Arctic field researcher", "Dr. Donghui Shangguan, glacier/cryosphere scientist", "Jiaojiao Hu, Polar Future", "Limin Xia, polar expedition scientist", "Professor Haibo Zhang", "Professor Weilin Xu", "Professor Jian Zhang, Tsinghua University", "Associate Professor Xuan Yu, Xihua University", "Professor Xian-En Zhang, Shenzhen University of Advanced Technology", "Lanzhou University Chayu Monsoon Corridor Multisphere Research Station, Tibet", "Southeast Tibet Observation and Research Station for the Alpine Environment, Chinese Academy of Sciences", "Aza Glacier Citizen Science Monitoring Site", "Daosheng Bio fermentation facility", "China Quaternary Glacial Vestige Exhibition Hall, Beijing", "Bomi County Middle School, Tibet", "iGEM team BUCT-China", "Ho Chun Loong, Shenzhen SynBio Challenge judge"]
+    "partners": [
+      "Polar Research Institute of China (virtual tour led by Dr. Wang Luo)",
+      "China's Zhongshan Station, Antarctica (station leader Cui Xiangbin)",
+      "Dr. Ma Liheng, Arctic field researcher",
+      "Dr. Donghui Shangguan, glacier/cryosphere scientist",
+      "Jiaojiao Hu, Polar Future",
+      "Limin Xia, polar expedition scientist",
+      "Professor Haibo Zhang",
+      "Professor Weilin Xu",
+      "Professor Jian Zhang, Tsinghua University",
+      "Associate Professor Xuan Yu, Xihua University",
+      "Professor Xian-En Zhang, Shenzhen University of Advanced Technology",
+      "Lanzhou University Chayu Monsoon Corridor Multisphere Research Station, Tibet",
+      "Southeast Tibet Observation and Research Station for the Alpine Environment, Chinese Academy of Sciences",
+      "Aza Glacier Citizen Science Monitoring Site",
+      "Daosheng Bio fermentation facility",
+      "China Quaternary Glacial Vestige Exhibition Hall, Beijing",
+      "Bomi County Middle School, Tibet",
+      "iGEM team BUCT-China",
+      "Ho Chun Loong, Shenzhen SynBio Challenge judge"
+    ],
+    "publicEngagement_zh": "一份 440 份回覆的公眾問卷（線上表單、社群媒體、海報上的 QR code）發現，93.6% 認為保護冰川「非常必要」，但 92.0% 對冰川覆蓋被幾乎一無所知，而 70.5% 把「可生物降解、不含有害物質或釋出微塑膠」列為材料的首要要求。團隊把回覆者的暱稱與留言做成一面實體隊旗，帶上冰川。其他參與活動包括：造訪北京的中國第四紀冰川遺跡陳列館（訪談一位馬姓工作人員）；在小紅書上做科學傳播，並刻意把訊息從「我們要怎麼保護一條冰川」轉向「為什麼要保護冰川，以及個人能做什麼」；在校內展出 BC 樣品與考察照片；製作冰川主題的企鵝徽章；把專案標語印在賽車服上並做成賽車頭盔貼紙；以及在 2026 年 8 月吉隆口岸泥流災害後為西藏賑災舉辦線上募款。在西藏，團隊為波密縣中學三個班約 150 位學生進行外推活動，內容圍繞當地冰川與生態系統，標題使用藏文，並做了草莓 DNA 萃取實驗；回饋卡上以中文與藏文兩種文字寫回。",
+    "ihp_zh": "這是今年高中組最強的 IHP 鏈之一：27 場訪談、實地走訪與參與活動，統整在一個明確的 Why-How-What-Adaptation（WHWA）迴圈之下，每一筆都寫出所做的改變。上官冬輝博士（冰凍圈科學家，研究冰川變化）的意見實質上是「與其試圖保護每一條冰川，應該先判定哪些冰川該被優先保護」，並指出冰川表面本身就有微生物與先鋒植物；團隊因此放棄「盡可能覆蓋更大冰川面積」，把 GlacierGuard 重新定位為針對高價值、人員可達場址（公園、研究站、具文化或科學意義的冰川）的標的式保護，並把客戶定義從大量採購者改寫為具備監測與影響評估能力的機構。極地未來的胡嬌嬌警告冰川風會把薄膜掀起並撕裂，而團隊原本規劃的金屬固定釘會增加熱傳導並引入外來物質；她建議就地取用現場已有的石塊，團隊既採納了石塊／可生物降解的固定方式，也把她的顧慮轉成可量測的測試——在冰凍條件下破壞時的尖峰力為 11.7 N，而一條扭製的 BC 繩可承載 9.5 kg。張海波教授告訴他們，一個能運作的基因模組並不保證宿主效率也高，因此他們沒有沿用原本假定的載體，而是在 BL21(DE3) 與 C41(DE3) 中都建構 bcsABCD、量測產量，最後改用 C41(DE3)。極地科學家夏立民表示，單靠未修飾的 BC 大概達不到所需的光學性能，並建議加上生物礦化增白，同時注意紅外波段——這正是 ureABC/CaCO3 系統 2 的直接來源，也是新增吸水測試（質量增加 842.0%）與分層紅外穿透測試（裸冰 1200 W/m2，一／二／三層分別降至 605/370/340 W/m2）的來源。西華大學余璇副教授則被諮詢是否能用青稞酒糟作為廉價的當地碳源（這個想法由 iGEM 隊伍 BUCT-China 啟發）；她判斷酒糟路線技術上困難，改而建議使用冷震蛋白 CspA 以減少發酵加熱，這成了系統 3，而青稞酒糟則被誠實地降級為「未來研究、產量未量測」。北極研究者馬立恆博士追問一個假設情境：若北極熊吃下這層膜會怎樣？這促成了一項對照式土壤埋藏試驗（BC 在 7 天內完全降解，土工織物毫無變化），以及一句明確的承認：野生動物誤食的安全性尚未解決。清華大學張見教授則直攻證據基礎——只有夏季的觀測無法代表冰川的全年趨勢、在土壤中的生物降解無法預測在冰川溫度下的降解、在傾斜冰面上的滯留與再凍結未經證實，而且總得有人支付生產、運輸、安裝與維護的費用——團隊的回應是為八月下旬的觀測窗標上日期、把這些不確定性標示為未解，並在計畫中加入校內展覽與「冰川死亡名單」式的敘事。負面結果也以同等篇幅報告：精油疏水塗層在接觸角測試中失敗而被放棄；機械補強被放棄，因為未修飾的膜已通過測試，而額外層數會損及生物降解性與成本；而一位評審（深圳 SynBio Challenge 的 Ho Chun Loong）建議加入冰核蛋白的提案，在研究後被明確否決，因為冰核蛋白處理的是結晶核形成，而不是融水逕流或輻射吸收。利害關係人地圖是二維的（權力 x 興趣），而且很不尋常地納入非人類的利害關係人——冰川生態系統、冰川微生物群落、高山生態系統與下游水域生態系統——把它們列為其需求必須進入設計決策的當事方。",
+    "realWorld_zh": "落地細節具體到一套四步現場程序（場址整理以清除尖銳碎石、以重疊方式鋪設膜並盡量減少夾住的空氣、以可生物降解方式固定邊緣、最後檢查），膜經乾燥、裁切、折疊或捲起以便精簡運輸，分批以人力背運到車輛無法抵達的冰川，並在融雪季前的低溫窗口安裝。指名的客戶是冰川保育組織、國家公園與自然保護區主管機關、高海拔地方政府，以及復育／調適計畫，另以冰川觀光景點與高海拔滑雪場作為早期試行場址。法規路徑是真的走過而非做樣子：團隊研讀了《中華人民共和國生態環境法典》與《西藏自治區冰川保護條例》，在實地工作前致信 iGEM 總部並提交環境風險評估，在冰上只使用商購的非工程化 BC，並在離開前把每一片膜都移除。SDG 主張都扣在指名的子目標上並附團隊自己的證據：13.1/13.2/13.3（減融測試、政策參考資料、氣候教育）、12.2/12.4/12.5/12.8（BC 生命週期，引用 Forte 等人 2021 的搖籃到廠門 LCA、酒糟再利用）、9.5（工業發酵可行性，引用 Dourado 等人 2016）、6.1/6.4/6.6 與 15.1/15.4，另加一份坦率的外溢效應分析，點出放大規模會帶來 SDG 7 的能源需求、SDG 8 的高海拔工作者安全，以及 SDG 10 的公平風險——高昂的部署成本會讓保護集中在資金充裕的地點。在成本上，團隊拒絕誇大：他們明白表示農業副產物並不會自動讓 BC 變便宜、替代碳源的製程尚未驗證且產量未量測，而且在任何規模放大之前，必須先有一個涵蓋生產、維護、更換、廢棄處理與回收的全生命週期成本模型，並以每單位面積成本與每單位避免冰融量的成本表示。下一步是在真實冰川上設置成對的對照／處理樣區，透過研究站進行連續監測，例如阿札冰川公民科學監測點（現已納入極地未來的長期觀測網絡），另有深圳理工大學張先恩教授主動提供場地以承接後續實驗。"
   },
   "images": [
-    {"url": "https://static.igem.wiki/teams/6409/wiki/human-practices/img16.avif", "caption": "GlacierGuard stakeholder map plotted on power and interest axes, including non-human stakeholders such as glacier microbial communities and downstream aquatic ecosystems.", "credit": "Team RDFZ-China, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6409/wiki/human-practices/img18.avif", "caption": "The team interviewing glacier scientist Dr. Donghui Shangguan, whose advice to prioritise specific glaciers rather than cover area redefined the project's target users.", "credit": "Team RDFZ-China, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6409/wiki/human-practices/img55.avif", "caption": "Temporary on-site placement of a commercially sourced (non-engineered) bacterial cellulose membrane on the Aza Glacier surface during the Tibet field investigation; all material was removed before leaving.", "credit": "Team RDFZ-China, iGEM 2026 wiki"},
-    {"url": "https://static.igem.wiki/teams/6409/wiki/human-practices/img26.avif", "caption": "Nature education session at Bomi County Middle School in Tibet, linking glaciers to forests, wetlands and grasslands for roughly 150 local students.", "credit": "Team RDFZ-China, iGEM 2026 wiki"}
+    {
+      "url": "https://static.igem.wiki/teams/6409/wiki/human-practices/img16.avif",
+      "caption": "GlacierGuard stakeholder map plotted on power and interest axes, including non-human stakeholders such as glacier microbial communities and downstream aquatic ecosystems.",
+      "credit": "Team RDFZ-China, iGEM 2026 wiki",
+      "caption_zh": "GlacierGuard 的利害關係人地圖，繪於權力與興趣兩軸上，並納入冰川微生物群落與下游水域生態系統等非人類利害關係人。"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6409/wiki/human-practices/img18.avif",
+      "caption": "The team interviewing glacier scientist Dr. Donghui Shangguan, whose advice to prioritise specific glaciers rather than cover area redefined the project's target users.",
+      "credit": "Team RDFZ-China, iGEM 2026 wiki",
+      "caption_zh": "團隊訪談冰川科學家上官冬輝博士，他關於「應優先選定特定冰川而非追求覆蓋面積」的建議，重新界定了專案的目標使用者。"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6409/wiki/human-practices/img55.avif",
+      "caption": "Temporary on-site placement of a commercially sourced (non-engineered) bacterial cellulose membrane on the Aza Glacier surface during the Tibet field investigation; all material was removed before leaving.",
+      "credit": "Team RDFZ-China, iGEM 2026 wiki",
+      "caption_zh": "西藏實地考察期間，在阿札冰川表面暫時鋪設一片商購（非工程化）的細菌纖維素膜；所有材料在離開前都已移除。"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6409/wiki/human-practices/img26.avif",
+      "caption": "Nature education session at Bomi County Middle School in Tibet, linking glaciers to forests, wetlands and grasslands for roughly 150 local students.",
+      "credit": "Team RDFZ-China, iGEM 2026 wiki",
+      "caption_zh": "在西藏波密縣中學的自然教育課程，為約 150 位當地學生把冰川與森林、濕地與草原連結起來。"
+    }
   ],
   "gemsTakeaway": "Adopt RDFZ-China's Why-How-What-Adaptation template, where every stakeholder entry must end in a named design change or an explicitly rejected option, and copy their habit of converting a stakeholder's worry into a measurable bench test (wind-tearing concern becomes an 11.7 N tensile figure; reflectivity advice becomes an infrared transmission curve).",
   "sources": [
@@ -41,5 +104,9 @@
     "https://2026.igem.wiki/rdfz-china/safety-and-security",
     "https://2026.igem.wiki/rdfz-china/team",
     "https://2026.igem.wiki/rdfz-china/education"
-  ]
+  ],
+  "projectTitle_zh": "GlacierGuard",
+  "tagline_zh": "守護冰川，少留痕跡。",
+  "summary_zh": "RDFZ-China 改造 E. coli 生產細菌纖維素（BC），並做出 GlacierGuard——一種可生物降解的 BC 複合膜，用來減緩局部冰川表面消融。三套基因系統支撐它：異源的 bcsABCD 加上 pgm/galU 的 UDP-葡萄糖前驅物增補以提升 BC 產量；一個尿素酶（ureABC）生物礦化模組，在 BC 纖維網絡內析出白色 CaCO3 以提高反照率；以及一個 CspA 冷震蛋白模組，用來降低在青藏高原發酵所需的溫度。BC 產量在 C41(DE3) 中達到 230.6 +/- 15.3 mg/L，約為空載體對照的 65.9 倍；在冰箱日夜循環模擬中，覆蓋膜的冰比覆蓋土工織物的冰多保留 3.2 個百分點的質量。團隊在西藏實地考察時刻意只部署商購（非工程化）的 BC 膜，並在離開前把所有材料全部移除。",
+  "gemsTakeaway_zh": "採用 RDFZ-China 的 Why-How-What-Adaptation 範本——每一筆利害關係人記錄都必須以一項指名的設計變更、或一個被明確否決的選項作結；同時學他們把利害關係人的擔憂轉成可量測實驗的習慣（對風力撕裂的顧慮變成 11.7 N 的抗拉數值；關於反射率的建議變成一條紅外穿透曲線）。"
 }
