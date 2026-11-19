@@ -536,3 +536,56 @@ among decorated teams (33% against 27%, Fisher p = 0.62).
 Method note worth preserving: naive regex would have been badly wrong here. "laccase" matches `CcaS`,
 "Jaccard" matches `CcaR`, and `\b168\b` matches "7,168". The unverified light-user count was 22 teams; the
 verified count is 5. Every hit was read in context before it was classified.
+
+### The iGEM API — use this instead of scraping competition.igem.org
+
+competition.igem.org is a Vite SPA, but **its backing API is open and unauthenticated**, and it removes the
+single biggest limitation this report has carried: every analysis before this one was decorated-teams-only
+and could not describe the competition at large. It no longer has to be.
+
+```
+https://api.igem.org/v1/competitions
+https://api.igem.org/v1/competitions/<uuid>/teams?page=1&pageSize=100
+https://api.igem.org/v1/competitions/<uuid>/awards/results
+```
+
+`/teams` returns the **full accepted roster** with name, country, section, village and status. The awards
+endpoint includes medals, which nearly every team earns, so a medal-level baseline across all entrants is
+available for the asking.
+
+**Two traps, both hit for real:**
+1. **There is more than one competition per year.** 2026 has a `venture-foundry` competition (30 teams)
+   *and* the `igem` one (423 accepted). Picking the first entry whose `year` is 2026 gets you the wrong
+   one — the manager did exactly that while checking the analyst's numbers, got 30 rows, and briefly
+   believed the analyst was wrong. **Filter on `type == "igem"`.** The two rosters do not overlap at all.
+2. **Team IDs are reissued every season.** Heidelberg is 5237, then 5775, then 6249. Names are the only
+   usable key across years, and a team that renames between seasons is undetectable — that limit is stated
+   in the section's method note rather than hidden.
+
+Verified accepted-team counts: **2026: 423** (undergrad 201, high school 147, overgrad 75) · 2025: 413 ·
+2024: 391 · 2023: 391. Raw JSON is cached in the session scratchpad under `continuity/` (`rosters.json`,
+`aw2024/25/26.json`, `desc2025.json`); a scratchpad is wiped on reboot, so re-fetch rather than rely on it.
+
+**multiyear-continuity (good 40) — a null that strengthens the argument it failed to prove.**
+The brief asked whether carrying a problem across years pays, and warned the analyst that a winners-only
+sample might make it unanswerable. The real obstacle turned out to be different and more interesting:
+**almost nobody continues, so there is nothing to compare.** Of the 81 decorated 2026 teams that had
+entered before, 78 had a readable previous project and **5 carried a project line forward** (Michigan,
+NCKU-Tainan, XJTLU-Software, LYON, NU Boston). **None of the six returning Grand Prize teams did.**
+
+What the full rosters *do* support, with no survivorship problem: 284 of 423 2026 teams had competed
+before, and returning tracks with results — Gold 59% against 42%, Top 10 twenty-four against six, and 6 of
+7 Grand Prize winners and runners-up had competed before (Stanford is the exception). The section refuses
+to call this continuity paying off: returning is confounded with lab, supervisor, budget and a working wiki
+template, so it measures **institutional survival, not problem continuity**, and says so.
+
+Two findings that matter more to GEMS than the headline:
+- **Return rate falls with age.** Undergrad 160 of 201, overgrad 49 of 75, **high school 75 of 147.** GEMS
+  is a high-school programme, so the base rate it is working against is the worst of the three.
+- **The handover is almost never written down.** Only **3 of 106** decorated teams credit their own
+  predecessor with anything, and one of those three files it under *partners*, beside other universities.
+  Four of the five continuers never mention the continuation on their Description page. Whatever a team
+  learns leaves with the students who learned it.
+
+This went into `good-definition.json` as the strongest single piece of evidence for the programme: the
+institution comes back every year and the problem does not, which is what a season-shaped container does.

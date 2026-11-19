@@ -1,0 +1,193 @@
+{
+ "id": "multiyear-continuity",
+ "tab": "good",
+ "order": 40,
+ "kicker": "Testing our own argument",
+ "kicker_zh": "檢驗我們自己的主張",
+ "title": "Carrying a problem across years cannot be shown to pay, because almost nobody does it",
+ "title_zh": "「讓題目跨年」無法被證明有效，因為幾乎沒有人這樣做",
+ "lede": "The hypothesis fails for lack of cases, not for lack of effect. Of the 81 decorated 2026 teams that had entered iGEM before, 78 had a readable previous project, and 5 of those 78 carried a project line into 2026. Five teams cannot be compared with anything. What iGEM's own data does show is a different thing entirely: returning to the competition tracks with better results, and returning is not continuing.",
+ "lede_zh": "這個假說不是被推翻，而是根本沒有足夠的案例。106 支 2026 年得獎隊伍中，有 81 支先前參加過 iGEM；其中 78 支的前一年專案內容查得到，而這 78 支裡只有 5 支把同一條題目線帶進 2026 年。五支隊伍不足以和任何東西相比。iGEM 自己的資料能顯示的，是另一件完全不同的事：重複參賽和較好的成績有關——但重複參賽不等於延續題目。",
+ "body": "iGEM publishes more than the winners. `api.igem.org` returns the full accepted roster for every season — 423 teams in 2026, 413 in 2025, 391 in 2024 — together with the medal that nearly every one of them earns. That is a complete entrant list, not a winners' list, so one half of this question escapes survivorship bias outright: whether *returning* is associated with doing better can be measured on the whole field. One warning for anyone repeating this. Team IDs are reissued every season — Heidelberg is 5237, then 5775, then 6249 — so names are the only key that holds.\n\n**Returning is common, and it tracks with results.** 284 of the 423 teams accepted in 2026 had also been accepted in 2023, 2024 or 2025. Those returners took Gold 168 times out of 284 (59 percent) against 58 of 139 (42 percent) for teams with no entry in three years; they reached the Top 10 24 times against 6; they won or were nominated for a special or village prize 107 times against 36. Six of the seven Grand Prize winners and runners-up had competed before, the exception being Stanford University. None of that is evidence for carrying a problem across years. A team that returns has a laboratory, a supervisor, a budget line and a wiki template that already works. Returning measures institutional survival, not the continuity of a question.\n\n**The thing this tab actually claims is rare to the point of being unmeasurable.** Michigan kept *Magnetospirillum magneticum* and its tumour-seeking behaviour from a 2025 ovarian-cancer project into MagNav. NCKU-Tainan went from ByeFilm, against implant biofilm, to Capture, against the quorum-sensing signals that build it. XJTLU-Software turned the SPADE antimicrobial-peptide database into the AMPilot workbench. LYON followed fluorinated pollutants from FLUOROBREAKER to trifluoroacetate in BioThetis. NU Boston stayed on post-wildfire soil. That is the complete list. The other 73 started on something unrelated: TU Delft from an oral phage vaccine to an implant coating, Cornell from Martian perchlorate to a smart bandage, Lambert-GA from Lyme disease to honeybees, UAlberta from wildfire foam to dry eye. **Zero of the six returning Grand Prize teams continued a line.**\n\nAnd where continuation does happen, the handover is almost never written down. Across all 106 team files and every wiki we could read, three teams credit their own predecessor with anything at all: LYON lists *iGEM Lyon 2025 (inherited plasmids)* among its partners, in the same list as Berlin and Wageningen — its own former self, credited like an outside collaborator. DTU-Denmark says its three enzyme-discovery tracks were settled after advice from the 2025 team's dry-lab head. Jilin-China carries its 5C Guidelines over from 2025. Michigan, NCKU-Tainan, XJTLU-Software and NU Boston continue a project line without saying on their Description page that this is what they are doing.\n\n**So the argument on this tab is untested, not refuted — and iGEM is the wrong instrument for testing it.** Five continuers, all Undergrad, all Gold, one of them in the Top 10, cannot be compared with 73 fresh starts or with anyone else; at that rate the whole 2026 field would hold about eighteen. Answering the question properly needs the sample we did not build: the project content of all 413 teams accepted in 2025 and all 423 accepted in 2026, every returning team classified as continuing or fresh, with medals and prizes attached to all of them — the entrant lists, not the decorated ones. The rosters and the medals are already public; the missing work is reading roughly 280 pairs of wikis. Even then the result would be a rate difference across perhaps twenty continuers, which is a pattern and not a cause. The honest position is that GEMS is proposing something iGEM has barely tried.",
+ "body_zh": "iGEM 公開的不只是得獎名單。`api.igem.org` 會回傳每一季完整的正式參賽名冊——2026 年 423 隊、2025 年 413 隊、2024 年 391 隊——以及幾乎每一隊都拿得到的獎牌等級。那是一份完整的參賽者清單，不是得獎者清單；因此這個問題有一半可以完全避開倖存者偏誤：「重複參賽」是否伴隨更好的成績，可以在全體隊伍上量出來。要重做這件事的人請注意一點：隊伍編號每一季都會重新發放——Heidelberg 是 5237、然後 5775、再來 6249——所以唯一靠得住的對照鍵是隊名。\n\n**重複參賽很普遍，而且和成績相關。** 2026 年正式參賽的 423 隊中，有 284 隊在 2023、2024 或 2025 年也正式參賽過。這些回鍋隊伍拿到金牌的比例是 284 隊中的 168 隊（59%），三年內未曾參賽的隊伍則是 139 隊中的 58 隊（42%）；進入 Top 10 的是 24 比 6；拿下或入圍特別獎與 village 獎的是 107 比 36。七個大獎與亞軍席次中有六個由先前參賽過的隊伍取得，唯一的例外是 Stanford University。這些都不足以證明「把題目帶過好幾年」有用。一支回來的隊伍，手上已經有實驗室、有指導老師、有一條預算、有一套能跑的 wiki 模板。重複參賽量到的是機構活得下來，不是問題本身的延續。\n\n**這一頁真正主張的那件事，罕見到無法量測。** Michigan 把 2025 年卵巢癌專案中的 *Magnetospirillum magneticum* 及其趨向腫瘤的特性延續到 MagNav。NCKU-Tainan 從對付植入物生物膜的 ByeFilm，走到攔截生物膜形成訊號的 Capture。XJTLU-Software 把 SPADE 抗菌胜肽資料庫變成 AMPilot 工作台。LYON 沿著含氟污染物，從 FLUOROBREAKER 一路走到 BioThetis 的三氟乙酸。NU Boston 留在野火後的土壤。這就是全部了。其餘 73 支做的是完全不相干的題目：TU Delft 從口服噬菌體疫苗轉到植入物鍍層，Cornell 從火星過氯酸鹽轉到智慧敷料，Lambert-GA 從萊姆病轉到蜜蜂，UAlberta 從野火泡沫轉到乾眼症。**六支回鍋的大獎隊伍中，延續題目線的是零支。**\n\n而且就算真的延續了，交接幾乎都沒有被寫下來。在全部 106 份隊伍檔案以及所有讀得到的 wiki 裡，只有三支隊伍把自己的前一屆列為任何東西的來源：LYON 在合作夥伴名單中列出 *iGEM Lyon 2025（承接下來的質體）*，和 Berlin、Wageningen 並列——把自己的前身當成外部合作者來標註。DTU-Denmark 寫明三條酵素探索路線是在徵詢 2025 年隊伍乾實驗室負責人的建議後才定案。Jilin-China 把 5C Guidelines 從 2025 年延續下來。而 Michigan、NCKU-Tainan、XJTLU-Software 與 NU Boston 延續了題目線，卻沒有在 Description 頁上說明自己正在這樣做。\n\n**所以這一頁的論點是「尚未被檢驗」，不是「已被推翻」——而且 iGEM 並不是檢驗它的合適工具。** 五支延續者，全部是大學部、全部拿金牌、其中一支進了 Top 10；這樣的數量無法和 73 支重新開始的隊伍相比，也無法和任何人相比。依這個比例推算，2026 年全體隊伍裡大約也只有十八支。要正確回答這個問題，需要一份我們沒有建立的樣本：2025 年全部 413 支與 2026 年全部 423 支正式參賽隊伍的專案內容，把每一支回鍋隊伍判定為延續或重啟，並且為所有隊伍附上獎牌與獎項——用的是參賽者名單，不是得獎者名單。名冊與獎牌都已經是公開的，缺的是讀完大約 280 對 wiki 的工。就算做完了，得到的也只是大約二十支延續者之間的比例差異，那是一個樣態，不是一個因果。誠實的說法是：GEMS 打算做的，是 iGEM 幾乎沒有試過的事。",
+ "cards": [
+  {
+   "kicker": "Sample",
+   "kicker_zh": "樣本",
+   "title": "The whole field, not just the decorated",
+   "title_zh": "拿到的是全體，不只是得獎者",
+   "body": "iGEM's public API returns every accepted team for every season plus the medal each one earned, so return rates and medal outcomes are measured on the complete 2026 field rather than on this report's 106 team files. Only the continuation question is stuck inside the decorated sample.",
+   "body_zh": "iGEM 的公開 API 可以取得每一季所有正式參賽隊伍，以及每一隊拿到的獎牌，因此重複參賽率與獎牌結果是在 2026 年全體隊伍上量的，而不是在本報告的 106 份隊伍檔案上。只有「是否延續題目」這一題被困在得獎者樣本裡。",
+   "chips": [
+    "423 accepted in 2026",
+    "413 in 2025",
+    "391 in 2024",
+    "team IDs change every year"
+   ],
+   "chips_zh": [
+    "2026 年 423 支正式參賽",
+    "2025 年 413 支",
+    "2024 年 391 支",
+    "隊伍編號每年重發"
+   ]
+  },
+  {
+   "kicker": "Confound",
+   "kicker_zh": "干擾因子",
+   "title": "Returning is not continuing",
+   "title_zh": "重複參賽不等於延續題目",
+   "body": "Teams that come back do better, and that gap is measured without survivorship bias. But a returning team brings a laboratory, a supervisor, a budget and a working wiki, not necessarily a question. The gap belongs to institutional survival, and reading it as evidence for multi-year problems would be laundering it.",
+   "body_zh": "回鍋的隊伍成績較好，而且這個差距是在沒有倖存者偏誤的情況下量到的。但一支回來的隊伍帶回來的是實驗室、指導老師、預算和一套能用的 wiki，不一定是一個問題。這個差距屬於機構的存活能力；把它讀成「題目跨年有效」的證據，就是在替結論漂白。",
+   "chips": [
+    "284 of 423 returned",
+    "gold 59% vs 42%",
+    "Top 10 24 vs 6",
+    "6 of 7 Grand Prize teams returned"
+   ],
+   "chips_zh": [
+    "423 支中有 284 支是回鍋",
+    "金牌 59% 對 42%",
+    "Top 10 24 對 6",
+    "7 支總冠軍級隊伍中 6 支回鍋"
+   ]
+  },
+  {
+   "kicker": "The five",
+   "kicker_zh": "那五支",
+   "title": "Every continuer in the decorated sample",
+   "title_zh": "得獎樣本中全部的延續者",
+   "body": "Michigan carried a magnetotactic tumour-seeking chassis forward; NCKU-Tainan moved from biofilm to the quorum-sensing signal behind it; XJTLU-Software grew a database into a workbench; LYON followed fluorinated pollutants from PFAS to trifluoroacetate and inherited the plasmids; NU Boston stayed on post-wildfire soil. All five are Undergrad, all five took Gold, one reached the Top 10.",
+   "body_zh": "Michigan 把趨磁、趨向腫瘤的底盤延續下來；NCKU-Tainan 從生物膜轉向形成生物膜的群體感應訊號；XJTLU-Software 把一個資料庫長成一個工作台；LYON 沿著含氟污染物從 PFAS 走到三氟乙酸，並承接了質體；NU Boston 留在野火後的土壤。五支全部是大學部、全部拿金牌，其中一支進入 Top 10。",
+   "chips": [
+    "Michigan",
+    "NCKU-Tainan",
+    "XJTLU-Software",
+    "LYON",
+    "NU Boston"
+   ],
+   "chips_zh": [
+    "Michigan",
+    "NCKU-Tainan",
+    "XJTLU-Software",
+    "LYON",
+    "NU Boston"
+   ]
+  },
+  {
+   "kicker": "Handover",
+   "kicker_zh": "交接",
+   "title": "The inheritance is almost never written down",
+   "title_zh": "承接下來的東西幾乎從不被寫下來",
+   "body": "LYON is the only team in 106 that records a physical inheritance, and it does so by listing its own 2025 team among its partners, beside Berlin and Wageningen. DTU-Denmark credits the previous dry-lab head with advice; Jilin-China carries a framework over. Four of the five continuers never mention the predecessor at all, which means a reader cannot see the arc even when there is one.",
+   "body_zh": "106 支隊伍中，只有 LYON 記錄了實體的承接，而且是把自己 2025 年的隊伍列進合作夥伴名單，和 Berlin、Wageningen 並列。DTU-Denmark 把建議歸功給前一屆乾實驗室負責人；Jilin-China 延續了一套框架。五支延續者中有四支完全沒有提到前一屆——這表示就算真的有一條跨年的線，讀者也看不見。",
+   "chips": [
+    "3 of 106 credit their own last year",
+    "4 of 5 continuers say nothing",
+    "no wiki page records a handover"
+   ],
+   "chips_zh": [
+    "106 支中只有 3 支感謝自己的前一屆",
+    "5 支延續者中有 4 支隻字未提",
+    "沒有任何一頁 wiki 記下交接"
+   ]
+  },
+  {
+   "kicker": "Return rate",
+   "kicker_zh": "回鍋率",
+   "title": "Coming back is hardest in high school",
+   "title_zh": "高中組最難回來",
+   "body": "Return rates fall as the section gets younger, which is the structural fact underneath everything on this page: a programme that carries problems across years needs an institution that outlives its members, and high-school teams turn over fastest. GEMS is a high-school programme.",
+   "body_zh": "組別越年輕，回鍋率越低，而這正是本頁一切的結構性前提：一個要讓題目跨年的計畫，需要一個比成員活得更久的組織，而高中隊伍的人員更替最快。GEMS 正是一個高中計畫。",
+   "chips": [
+    "Undergrad 160 of 201",
+    "Overgrad 49 of 75",
+    "High School 75 of 147"
+   ],
+   "chips_zh": [
+    "大學組 201 支中 160 支",
+    "研究生組 75 支中 49 支",
+    "高中組 147 支中 75 支"
+   ]
+  }
+ ],
+ "table": {
+  "head": [
+   "Group",
+   "Teams",
+   "Gold",
+   "Top 10",
+   "Special or village prize"
+  ],
+  "head_zh": [
+   "分組",
+   "隊伍數",
+   "金牌",
+   "Top 10",
+   "特別獎或 village 獎"
+  ],
+  "rows": [
+   [
+    "Returned: entered 2023, 2024 or 2025",
+    "284 of 423",
+    "168 (59%)",
+    "24 (8.5%)",
+    "107 (38%)"
+   ],
+   [
+    "New: no entry in three years",
+    "139 of 423",
+    "58 (42%)",
+    "6 (4.3%)",
+    "36 (26%)"
+   ],
+   [
+    "Continued a project line (decorated teams only, not comparable to the rows above)",
+    "5 of 78 checked",
+    "5",
+    "1",
+    "4"
+   ]
+  ],
+  "rows_zh": [
+   [
+    "回鍋：2023、2024 或 2025 年參賽過",
+    "423 之中的 284",
+    "168（59%）",
+    "24（8.5%）",
+    "107（38%）"
+   ],
+   [
+    "新隊：三年內未曾參賽",
+    "423 之中的 139",
+    "58（42%）",
+    "6（4.3%）",
+    "36（26%）"
+   ],
+   [
+    "延續題目線（僅限得獎隊伍，無法與上面兩列相比）",
+    "查核的 78 之中的 5",
+    "5",
+    "1",
+    "4"
+   ]
+  ]
+ },
+ "checklist": [
+  "Stop citing iGEM results as support for the multi-year claim on this tab; mark it as untested and let this section be the reason.",
+  "Keep a dated public file per problem showing what was carried forward each year, because no iGEM wiki makes a continuation visible from outside.",
+  "Write a handover per problem — what was tried, what failed, what material and data exist — and have the next year's owner accept it in writing.",
+  "Name the physical inheritance the way LYON names its plasmids: strains, devices, datasets and scripts, listed with the year they came from.",
+  "If GEMS enters iGEM, draw the season's project from a problem already in its second year, and say so on the wiki, which four of the five continuers in 2026 did not.",
+  "Measure the claim on GEMS itself: for every problem, record how many years it has been carried and what number moved in each of them."
+ ],
+ "checklist_zh": [
+  "不要再引用 iGEM 的成績來支持本頁的跨年主張；把它標記為尚未檢驗，並以這一節作為理由。",
+  "每一個題目都留一份標了日期的公開檔案，記錄每一年承接了什麼——因為沒有任何一個 iGEM wiki 能讓外人看見延續。",
+  "每個題目都寫一份交接文件：試過什麼、什麼失敗了、留下哪些材料與資料，並且由下一年的負責人書面簽收。",
+  "像 LYON 列出質體那樣，把承接下來的實體清楚具名：菌株、裝置、資料集與程式，並標註它們來自哪一年。",
+  "如果 GEMS 要參加 iGEM，就從已經進入第二年的題目裡取這一季的專案，並且寫在 wiki 上——2026 年的五支延續者中，有四支沒有這麼做。",
+  "用 GEMS 自己來檢驗這個主張：每一個題目都記錄它被帶了幾年，以及每一年有哪一個數字動了。"
+ ],
+ "method": "Three sources. First, this report's 106 decorated 2026 team files. Second, iGEM's public API (api.igem.org/v1), which returns the full accepted roster for 2023 (391), 2024 (391), 2025 (413) and 2026 (423) plus every award including medals, so medal and prize outcomes are counted on the whole 2026 field and not on winners alone. Third, the 2025 and 2024 team wikis, read for every repeat entrant among the 106. Teams were matched across years by lower-cased, punctuation-stripped name, because team IDs are reissued every season (Heidelberg: 5237, 5775, 6249); a team that changes its name between seasons would therefore be counted as new, and we found no way to detect that. 'Continued a project line' means the 2026 project shares its problem and its technical approach with the team's own previous project, judged by reading both; it is our judgement, not the teams' declaration, because only three teams in 106 declare anything of the kind. What this cannot see, and it is most of the ballgame: continuation was classified only inside the decorated sample, so a team that continued a project and finished without a prize is invisible to us, and so is a team that continued and did worse — textbook survivorship bias, and the reason no claim is made here about continuation paying off. Three repeat entrants could not be classified at all (Stockholm's 2025 wiki is the unedited iGEM template, ASIJ-Tokyo has no 2025 wiki, Madrid-UCM's 2024 wiki is an empty shell), so the denominator is 78 of 81. Separately, the return-rate and medal comparison is complete for the 2026 field but is not causal: returning is confounded with laboratory access, supervision, funding and institutional age, none of which we measured, and medals are awarded against a checklist rather than on a scale, so the Gold rate is a floor measure of quality at best. Villages were not compared for continuation, because five cases cannot be split.",
+ "method_zh": "三個來源。第一，本報告 106 份 2026 年得獎隊伍檔案。第二，iGEM 的公開 API（api.igem.org/v1），可取得 2023 年（391 隊）、2024 年（391 隊）、2025 年（413 隊）與 2026 年（423 隊）完整的正式參賽名冊，以及包含獎牌在內的所有獎項；因此獎牌與獎項的統計是在 2026 年全體隊伍上做的，不是只看得獎者。第三，106 支中每一支回鍋隊伍的 2025 與 2024 年 wiki。跨年度的隊伍對照是以轉小寫、去標點後的隊名進行，因為隊伍編號每一季都會重新發放（Heidelberg：5237、5775、6249）；若有隊伍在兩季之間改名，就會被我們算成新隊，而我們找不到辨識這種情況的方法。「延續題目線」指的是 2026 年的專案在問題與技術路線上都與該隊自己前一年的專案相連，由我們讀完兩邊後判定；這是我們的判斷，不是隊伍自己的宣告，因為 106 支中只有三支做過類似的宣告。而這個計數看不見的部分，正是整件事的關鍵：延續與否只在得獎樣本內判定，所以一支延續了題目卻沒有拿到獎的隊伍，我們完全看不到；一支延續了題目但表現更差的隊伍也一樣——這是教科書等級的倖存者偏誤，也正是本節不對「延續是否值得」下任何結論的原因。另有三支回鍋隊伍完全無法判定（Stockholm 的 2025 wiki 是未編輯的 iGEM 範本、ASIJ-Tokyo 沒有 2025 wiki、Madrid-UCM 的 2024 wiki 是空殼），因此分母是 81 之中的 78。另外，回鍋率與獎牌的比較雖然涵蓋 2026 年全體隊伍，但不具因果性：重複參賽與實驗室取得、指導人力、經費與組織年資互相糾纏，而這些我們都沒有量；獎牌又是依檢核表而非量尺頒發，所以金牌比例頂多只是品質的下限指標。至於 village 之間的延續差異，我們沒有比較，因為五個案例無法再切分。"
+}

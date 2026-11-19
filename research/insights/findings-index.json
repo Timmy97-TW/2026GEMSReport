@@ -299,6 +299,23 @@
     "交集：0/105"
    ],
    "link": "teams"
+  },
+  {
+   "kicker": "Continuity",
+   "kicker_zh": "延續",
+   "title": "The institution comes back every year; the problem almost never does",
+   "title_zh": "機構每年都回來，題目幾乎從不回來",
+   "body": "Measured across iGEM's full accepted rosters rather than the winners — **284 of 423** 2026 teams had competed before, and returning tracks with results (Gold 59% against 42%). But returning is not continuing. Of the 81 decorated teams that had entered before, **5 carried a project line forward**, and **none of the six returning Grand Prize teams did**. Only **3 of 106** credit their own predecessor with anything. The hypothesis that continuing pays could not be tested — not for want of a baseline, but for want of cases.",
+   "body_zh": "這次是用 iGEM 完整的正式參賽名單、而不是得獎名單來算——2026 年 **423 支中有 284 支**先前就參賽過，而回鍋確實與成績相關（金牌率 59% 對 42%）。但「回來」不等於「延續」。在 81 支先前參賽過的得獎隊伍裡，**只有 5 支把一條題目線帶到今年**，**六支回鍋的總冠軍級隊伍一支也沒有**。106 支之中只有 **3 支**對自己的前一屆表示過任何感謝。「延續有沒有用」這個假說無法檢定——不是因為缺少對照組，而是因為缺少案例。",
+   "chips": [
+    "5 of 78 continued",
+    "3 of 106 credit last year"
+   ],
+   "chips_zh": [
+    "78 支中 5 支延續",
+    "106 支中 3 支感謝前一屆"
+   ],
+   "link": "good"
   }
  ],
  "method": "Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see.",
