@@ -375,3 +375,45 @@ body and in the method note. If the user wants her named, that is their call to 
 Follow-on work this opens up (not started):
 - The pipeline wants real entries. The honest next step is a listening visit, not more analysis.
 - A short "how a problem enters and leaves the pipeline" governance note, once the programme has run once.
+
+### Wave 4 and 5 — the remaining five results
+
+**measurement-discipline (drylab 40) — a clean null, and it cost the roadmap an argument.**
+Read directly off 39 decorated wikis: blank control 38/39, instrument named in a protocol 35/39, calibration
+into an absolute unit 28/39, replicates typed biological vs technical 23/39, error bar whose meaning is
+stated 23/39 — but a numeric LOD for the team's own assay **6/39 (15%)** and the same sample measured twice
+**2/39 (5%)**. And it does not predict placing: across all 106 files, calibration mention gives 27% Top 10
+against 29%. **No effect**, and split by outcome it reverses (Top 10 3.93, decorated non-Top-10 4.11 on a
+/7 score). The sharpest single fact: CalPolySLO, the undergraduate Best Measurement winner, uses the words
+*error bar* and *standard deviation* zero times across 124k characters and nine pages, with headline curves
+at n=2. GEMS-Taiwan is the only 7/7 and still has an n=1 headline figure it labels "below quantitation".
+Consequence: roadmap Phase 2 now carries an explicit item saying the case for teaching uncertainty first is
+*not* that it wins, because the data says it does not.
+
+**hardware-afterlife (drylab 38).** Of 20 instruments across Best Hardware, Best Measurement and Best
+Alternative Platform, **6** publish enough to be rebuilt by a stranger; **9 publish no geometry file at all**;
+exactly **one** has ever been used by anyone outside the team that built it.
+
+**safety-practice (good 38) — "Nobody measured an escape rate."**
+19 of 106 describe a genetic containment device, 28 use the words biosafety or biosecurity, 4 discuss dual
+use, **2 name a DNA-synthesis screening regime, and 0 report a measured escape frequency.** Best available
+is BASIS-China's suicide-switch threshold (~0.1–0.2 mM taurocholate) set against feline duodenum 15–42 mM
+and sewage 4.7–9.1x10^-4 mM. William-and-Mary, the undergraduate winner, has the sharpest result and it is
+negative: a published Addgene kill switch failed first, weeks before the team's own circuits. Designs
+abandoned on safety grounds, verified: Stockholm (open-water release), Oxford (living *S. alvi*),
+Bielefeld-CeBiTec (BBB-crossing LNPs, dual use). Only CalPolySLO and TAU-Israel document DNA-order screening.
+
+**parts-census (teams 36).** Winners' headline parts carry **10,388–83,030 characters** of registry
+documentation across three to six typed documents; sampled nominee parts carry 440–2,500, usually Design
+only. Novelty is not the lever — the high-school basic-part winner is a 247 bp native promoter copied from
+GenBank. Figures live at registry.igem.wiki/documentation, not on team wikis. Both Best New Improved Part
+awards had **zero nominees**, which makes it the cheapest category in iGEM to enter and the checklist's
+recommended target for GEMS in 2027. Most teachable example: GCGS's BBa_26QSD9SO — named parent, named
+defect, two discrete changes, side-by-side benchmark against parent and four variants.
+
+**collaboration-network and ihp-by-village** are written up earlier in this file.
+
+Pattern worth naming across waves 4 and 5: **three of seven analyses returned nulls or reversals**
+(collaboration does not predict placing; measurement discipline does not predict placing; the medical-versus-
+agricultural hypothesis failed). All three are on the page with the null stated in the lede. That is the
+house style now — see also the honest-failure effect that shrank from 54/41 to 33/27 when the dataset closed.
