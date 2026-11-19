@@ -102,6 +102,76 @@ def award_index(results):
     return idx
 
 
+PRIZE_ZH = {
+    "iGEM Spirit Award": "iGEM 精神獎",
+    "Best New Basic Part": "最佳新基礎元件",
+    "Best New Composite Part": "最佳新複合元件",
+    "Best New Improved Part": "最佳改良元件",
+    "Best Part Collection": "最佳元件集",
+    "Best Alternative Platform": "最佳替代平台",
+    "Best Measurement": "最佳量測",
+    "Best Model": "最佳模型",
+    "Best Software": "最佳軟體",
+    "Best Hardware": "最佳硬體",
+    "Best Education": "最佳教育",
+    "Best Project Promotion Video": "最佳專案宣傳影片",
+    "Best Presentation": "最佳簡報",
+    "Best Wiki": "最佳 Wiki",
+    "Best Integrated Human Practices": "最佳整合式人類實踐",
+    "Inclusivity Award": "包容性獎",
+    "Safety and Security Award": "安全與保安獎",
+    "Best Sustainable Development Impact": "最佳永續發展影響",
+    "Best Entrepreneurship": "最佳創業",
+    "iGEMers Prize": "iGEMers 票選獎",
+    "Best Village Project": "最佳 Village 專案",
+}
+SECTION_ZH = {"Undergrad": "大學組", "Overgrad": "研究生組", "High School": "高中組",
+              "Undergrad & Overgrad": "大學暨研究生組"}
+VILLAGE_ZH = {
+    "Conservation": "保育", "Bioremediation": "生物復育", "Agriculture": "農業",
+    "Food & Nutrition": "食品與營養", "Fashion & Cosmetics": "時尚與美妝",
+    "Diagnostics": "診斷", "Infectious Diseases": "傳染病", "Oncology": "腫瘤",
+    "Therapeutics": "治療", "Foundational Advance": "基礎推進",
+    "Software & AI": "軟體與 AI", "Biomanufacturing": "生物製造", "Space": "太空",
+}
+
+
+def award_zh(label):
+    """Translate one generated award string, e.g. 'Best Model - Winner (Overgrad)'."""
+    s = label
+    m = re.match(r"^Grand Prize Winner \((.+)\)$", s)
+    if m:
+        return "總冠軍（%s）" % SECTION_ZH.get(m.group(1), m.group(1))
+    m = re.match(r"^(1st|2nd) Runner-up \((.+)\)$", s)
+    if m:
+        return "%s（%s）" % ("亞軍" if m.group(1) == "1st" else "季軍",
+                              SECTION_ZH.get(m.group(2), m.group(2)))
+    m = re.match(r"^Top 10 \((.+)\)$", s)
+    if m:
+        return "Top 10（%s）" % SECTION_ZH.get(m.group(1), m.group(1))
+    m = re.match(r"^Best Village Project — (Winner|Nominee) \((.+)\)$", s)
+    if m:
+        village = m.group(2)
+        for en, zh in VILLAGE_ZH.items():
+            village = village.replace(en, zh)
+        return "最佳 Village 專案 — %s（%s）" % ("得主" if m.group(1) == "Winner" else "入圍", village)
+    m = re.match(r"^(.+?) — (Winner|Nominee)(?: \((.+)\))?$", s)
+    if m:
+        prize, kind, sec = m.group(1), m.group(2), m.group(3)
+        zh_prize = PRIZE_ZH.get(prize)
+        if zh_prize is None:
+            mm = re.match(r"^Best (.+) Project$", prize)
+            if mm:
+                zh_prize = "最佳%s專案" % VILLAGE_ZH.get(mm.group(1), mm.group(1))
+            else:
+                zh_prize = prize
+        out = "%s — %s" % (zh_prize, "得主" if kind == "Winner" else "入圍")
+        if sec:
+            out += "（%s）" % SECTION_ZH.get(sec, sec)
+        return out
+    return s
+
+
 def rank_of(awards):
     """Sort weight: the more decorated, the higher up the page."""
     s = 0
@@ -155,6 +225,7 @@ def build_teams(results):
         if official:
             t["awards"] = official
         t["awards"] = t.get("awards") or []
+        t["awards_zh"] = [award_zh(a) for a in t["awards"]]
         t["rank"] = rank_of(t["awards"])
         t["section"] = section_for(t["team"], results) or t.get("section") or ""
 
@@ -391,7 +462,7 @@ def main():
     # The full team records are large, and most of that weight is prose nobody
     # reads until they open a tab that needs it. Ship a light index up front and
     # lazy-load the rest on the first tab (or sheet) that actually uses it.
-    INDEX_KEYS = ("id", "team", "section", "country", "village", "wiki", "rank", "awards",
+    INDEX_KEYS = ("id", "team", "section", "country", "village", "wiki", "rank", "awards", "awards_zh",
                   "projectTitle", "projectTitle_zh", "tagline", "tagline_zh",
                   "summary", "summary_zh")
     index = []

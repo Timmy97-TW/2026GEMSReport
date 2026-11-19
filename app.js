@@ -248,7 +248,7 @@
             '<div class="k">' + esc(t.team) + " · " + esc(secLabel(t.section)) + "</div>" +
             "<h4>" + esc(T(t, "projectTitle") || t.team) + "</h4>" +
             "<p>" + rich(clip(T(t[kind], f[0]), 460)) + "</p>" +
-            chips((t.awards || []).filter(isWin), "win", 2) + "</div>";
+            chips(awardList(t, true), "win", 2) + "</div>";
         }).join("") + "</div></div></section>";
     });
     return h;
@@ -260,7 +260,17 @@
     var i = cut.lastIndexOf(". ");
     return (i > n * 0.5 ? cut.slice(0, i + 1) : cut.trimEnd() + "…");
   }
-  function isWin(a) { return /winner|grand prize|top 10|冠軍|得主/i.test(a); }
+  function isWin(a) { return /winner|grand prize|top 10/i.test(a); }
+  /* Award strings are generated in English and translated alongside; filter on
+     the English so the test stays one regex, then display in the active language. */
+  function awardList(t, winOnly) {
+    var en = t.awards || [], zh = t.awards_zh || [], out = [];
+    for (var i = 0; i < en.length; i++) {
+      if (winOnly && !isWin(en[i])) continue;
+      out.push(LANG === "zh" ? (zh[i] || en[i]) : en[i]);
+    }
+    return out;
+  }
 
   /* ---------- TEAMS ---------- */
   var FILTER = { sec: "all", award: "all", q: "" };
@@ -330,7 +340,7 @@
       '<div class="bd"><div class="nm"><h4>' + esc(t.team) + '</h4><span class="sec-l">' + esc(secLabel(t.section)) + "</span></div>" +
       (t.projectTitle ? '<div class="pt">' + esc(T(t, "projectTitle")) + "</div>" : "") +
       '<p class="sm">' + rich(clip(T(t, "summary"), 190)) + "</p>" +
-      chips((t.awards || []).filter(isWin), "win", 2) +
+      chips(awardList(t, true), "win", 2) +
       '<div class="ft"><span style="color:var(--ink3)">' + esc(t.country || "") + "</span>" +
       '<span class="more">' + esc(L("Open file →", "展開檔案 →")) + "</span></div></div></article>";
   }
@@ -350,7 +360,7 @@
       (t.tagline ? '<p style="font-size:14.5px;color:var(--ink2);margin:7px 0 0;max-width:46em">' + rich(T(t, "tagline")) + "</p>" : "") +
       "</div><button class='x' id='shx' aria-label='Close'>×</button></div><div class='sh-body'>";
 
-    h += chips(t.awards || [], "win");
+    h += chips(awardList(t), "win");
     if (t.summary) h += "<h3>" + esc(L("The project", "專案概述")) + "</h3>" + paras(T(t, "summary"));
 
     if (t.images && t.images.length) {
