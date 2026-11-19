@@ -74,18 +74,18 @@
    "kicker_zh": "同一把尺",
    "title": "GEMS-Taiwan scores five of six, and the sixth is softer than it looks",
    "title_zh": "GEMS-Taiwan 六項過五項，而過的那一項比看起來鬆",
-   "body": "GEMS-Taiwan passes protocols (24 of its 25 sheets download as PDFs, with colony PCR given as a reaction table to 20 µL and transformation at 42 °C for 45 s), chassis (B. subtilis WB800 and 168, E. coli DH5-alpha), Registry deposit (every sampled 2026 accession comes back published, with sequence) and notebook (monthly PDFs, entries headed `Date: 20260801`). It fails maps and sequences: one plasmid map on the whole wiki, for pSTK-EXP1, against 35 deposited parts. And its data pass rests entirely on the instrument — the photometer and bioreactor runs are published as CSV, while the two protectant figures on the bioreactor page carry the caption \"redrawn from the team's chart\", and the wiki's own source file records why: `csv: null`, with the note \"The owner, 15 Oct: 'ill give data later'\".",
-   "body_zh": "GEMS-Taiwan 在實驗流程（25 份條目中 24 份可下載 PDF，菌落 PCR 給到 20 µL 的反應配方、轉型 42 °C 45 秒）、菌株（B. subtilis WB800 與 168、E. coli DH5-alpha）、Registry 存放（抽查到的每一個 2026 編號都回報 published，且附序列）與實驗記錄（逐月 PDF，條目開頭就是 `Date: 20260801`）這四項都過關。圖譜與序列這一項沒過：整個 wiki 只有一張質體圖譜，是 pSTK-EXP1 的，而存放的零件有 35 個。而數據這一項，過關完全靠儀器——光度計與生物反應器的連續量測以 CSV 公開，但生物反應器頁上兩張保護蛋白的圖，圖說寫的是「redrawn from the team's chart」（依團隊的圖重繪）；wiki 自己的原始檔也記下了原因：`csv: null`，旁邊註著「The owner, 15 Oct: 'ill give data later'」。",
+   "body": "GEMS-Taiwan passes protocols (24 of its 25 sheets download as PDFs, with colony PCR given as a reaction table to 20 µL and transformation at 42 °C for 45 s), chassis (B. subtilis WB800 and 168, E. coli DH5-alpha), Registry deposit (every sampled 2026 accession comes back published, with sequence) and notebook (monthly PDFs, entries headed `Date: 20260801`). It fails maps and sequences: one plasmid map on the whole wiki, for pSTK-EXP1, against 35 deposited parts. And its data pass rests entirely on the instrument. The photometer and bioreactor runs are published as CSV in the digital-twin repository, but five figures on the hardware-bioreactor page are captioned \"redrawn from the team's chart\" — the ELISA, the DNPH activity assay, prototype 4's OD600 and pH, the pressure traces and the shell-permeate panel — so what the reader sees is a re-rendering of a chart image, not a plot of a published dataset. On the hardware-photometer page the two bacterial-growth charts are the same story and the wiki says so in its own source: `static/hardware/photometer/js/growth-data.js` holds `growth_c1` and `growth_c2` with `csv: null` under the heading \"THE ONE PLACE THE RAW DATA GOES\" and the note \"The owner, 15 Oct: 'ill give data later'\".",
+   "body_zh": "GEMS-Taiwan 在實驗流程（25 份條目中 24 份可下載 PDF，菌落 PCR 給到 20 µL 的反應配方、轉型 42 °C 45 秒）、菌株（B. subtilis WB800 與 168、E. coli DH5-alpha）、Registry 存放（抽查到的每一個 2026 編號都回報 published，且附序列）與實驗記錄（逐月 PDF，條目開頭就是 `Date: 20260801`）這四項都過關。圖譜與序列這一項沒過：整個 wiki 只有一張質體圖譜，是 pSTK-EXP1 的，而存放的零件有 35 個。而數據這一項，過關完全靠儀器。光度計與生物反應器的連續量測確實以 CSV 公開在數位孿生倉庫裡，但 hardware-bioreactor 頁上有五張圖的圖說寫著「redrawn from the team's chart」（依團隊的圖重繪）——ELISA、DNPH 活性分析、原型 4 的 OD600 與 pH、壓力曲線，以及殼側穿透液那組圖——讀者看到的是一張圖片被重新畫過，而不是一份已公開資料集的繪圖。hardware-photometer 頁上那兩張細菌生長曲線也是同樣的情況，而這一點是 wiki 自己的原始檔寫出來的：`static/hardware/photometer/js/growth-data.js` 裡的 `growth_c1` 與 `growth_c2` 都是 `csv: null`，上面的標題是「THE ONE PLACE THE RAW DATA GOES」，旁邊註著「The owner, 15 Oct: 'ill give data later'」。",
    "chips": [
     "5/6",
     "1 map, 35 parts",
-    "ELISA and DNPH redrawn",
+    "5 figures redrawn",
     "csv: null"
    ],
    "chips_zh": [
     "5/6",
     "1 張圖譜對 35 個零件",
-    "ELISA 與 DNPH 為重繪",
+    "5 張圖為重繪",
     "csv: null"
    ]
   }
@@ -718,8 +718,8 @@
  },
  "checklist": [
   "Publish a plasmid map or a .gb file for every construct, not one map for one of thirty-five parts. GEMS-Taiwan's parts page sends the reader to the Registry for each sequence; TU Delft put 49 GenBank files on its own wiki, and that is the gap to close in 2027.",
-  "Export the numbers behind every results figure as CSV into the GitLab repository, the way the photometer run already is. The ELISA, DNPH, Western densitometry, plant growth and chlorophyll figures currently exist only as pictures.",
-  "Never ship a figure redrawn from another figure. Two protectant plots on hardware-bioreactor say \"redrawn from the team's chart\", and growth-data.js still holds `csv: null` with \"ill give data later\" from 15 October — set a data-freeze date before the wiki freeze, and let a chart that has no numbers be a table of nothing rather than a traced line.",
+  "Export the numbers behind every results figure as CSV into the GitLab repository, the way the photometer run already is. The ELISA, DNPH, prototype-4 OD600 and pH, pressure and shell-permeate figures are all captioned as redrawn from the team's own charts, with no dataset behind them; the Western densitometry, plant growth and chlorophyll figures have none either.",
+  "Never ship a figure redrawn from another figure, and never ship a disclosure that only exists in the source. Five figures on hardware-bioreactor say \"redrawn from the team's chart\"; the two growth charts on hardware-photometer are traced too, and `growth-data.js` says a line under each chart should say so — on the live page those two captions do not say it. Set a data-freeze date before the wiki freeze, and let a chart with no numbers behind it be left out rather than traced.",
   "Finish the three protocol sheets that produced no result on this wiki — Bradford, large-scale extraction, purification and dialysis — or state on the sheet that the experiment was not run.",
   "Keep what already works: the dated monthly notebook PDFs, the per-sheet PDF protocols with volumes and times, the strain named as B. subtilis WB800 rather than B. subtilis. Twenty-two of thirty teams have a dated notebook and only four have data; GEMS is already on the right side of the first and the wrong side of the second.",
   "Add one line to each results figure naming the notebook date and the protocol sheet it came from. GEMS already has both objects; nothing on the wiki joins a number to the day it was measured.",
@@ -727,8 +727,8 @@
  ],
  "checklist_zh": [
   "每一個構築都要有質體圖譜或 .gb 檔，而不是 35 個零件只有一張圖。GEMS-Taiwan 的 parts 頁把讀者導去 Registry 查序列；TU Delft 把 49 個 GenBank 檔放在自己的 wiki 上——2027 要補的就是這個缺口。",
-  "把每一張結果圖背後的數字輸出成 CSV 放進 GitLab 倉庫，就像光度計那次連續量測已經做到的那樣。目前 ELISA、DNPH、西方墨點灰階、植株生長與葉綠素這些圖，都只以圖片形式存在。",
-  "絕不要用「照著另一張圖重畫」的方式產出圖表。hardware-bioreactor 上兩張保護蛋白的圖寫著「redrawn from the team's chart」，而 growth-data.js 至今仍是 `csv: null`，旁邊留著 10 月 15 日那句「ill give data later」——請在 wiki 凍結之前先設一個數據凍結日；沒有數字的圖，寧可留白，也不要描一條線上去。",
+  "把每一張結果圖背後的數字輸出成 CSV 放進 GitLab 倉庫，就像光度計那次連續量測已經做到的那樣。ELISA、DNPH、原型 4 的 OD600 與 pH、壓力與殼側穿透液這幾張圖，圖說都寫明是依團隊自己的圖重繪，背後沒有資料集；西方墨點灰階、植株生長與葉綠素那幾張也同樣沒有。",
+  "絕不要用「照著另一張圖重畫」的方式產出圖表，也絕不要讓揭露只存在於原始碼裡。hardware-bioreactor 上有五張圖寫著「redrawn from the team's chart」；hardware-photometer 上那兩張生長曲線同樣是描出來的，而 `growth-data.js` 寫明每張圖下面應該有一行字講明這件事——但在實際頁面上，那兩張圖的圖說並沒有寫。請在 wiki 凍結之前先設一個數據凍結日；背後沒有數字的圖，寧可不要放，也不要描一張出來。",
   "把這份 wiki 上三份沒有產出結果的流程補完——Bradford、大量萃取、純化與透析——或者直接在條目上寫明該實驗並未執行。",
   "已經做對的要守住：逐月且附日期的記錄 PDF、每份都寫明體積與時間的 PDF 流程、把菌株寫成 B. subtilis WB800 而不是只寫 B. subtilis。30 支隊伍裡有 22 支有附日期的記錄，卻只有 4 支給得出數據；GEMS 在前一項站對邊，在後一項站錯邊。",
   "在每張結果圖加一行字，標明它出自哪一天的記錄、哪一份流程條目。GEMS 這兩樣東西都有，但整個 wiki 沒有任何地方把一個數字接回它被量到的那一天。",

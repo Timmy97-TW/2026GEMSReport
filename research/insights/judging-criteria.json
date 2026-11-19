@@ -6,10 +6,10 @@
  "kicker_zh": "評分標準",
  "title": "Special awards do not buy a podium — the finalist questions do",
  "title_zh": "特別獎買不到頒獎台，決賽那幾道問題才能",
- "lede": "GEMS-Taiwan won three High School special awards in 2026 — Measurement, Hardware and Integrated Human Practices — the same number of special wins as the Grand Prize winner, and finished outside the podium. HongKong-JSS won none, and came second. That is not an anomaly to explain away; it is how the judging is built, and it says exactly where to look.",
- "lede_zh": "GEMS-Taiwan 在 2026 年拿下三個高中組特別獎——量測、硬體、整合式人類實踐——特別獎得獎數與總冠軍相同，卻沒有進入頒獎台。HongKong-JSS 一個特別獎也沒有，卻拿到亞軍。這不是需要辯解的異常，這就是評審制度的設計方式，而它正好指出該往哪裡看。",
- "body": "Two different sets of judges are doing two different jobs. A special award is scored by judges who look at one dimension and ask who did it best — the best measurement work in the section, the best instrument, the best human practices. Finalists are chosen by judges looking at the whole project and asking nine questions, of which eight leave a public record. **Winning a dimension says you were the best at that dimension. It says nothing about the project as an object.**\n\nSo a team can collect three dimension wins and still answer the whole-project questions less well than a team that won no dimension at all. The table below is the full 2026 High School Top 10 by placing. Read down the special-wins column and it is immediately clear that it does not sort the field: the two teams with the most special wins are first and fifth, and the team in second has none.\n\nWhat the eight questions actually reward is narrower and harder than being strong in several places. Three of them — questions 1, 2 and 7 — converge on a single demand: **one legible result, finished, built on characterised biology.** Two more, questions 6 and 8, are about whether a stranger can verify what you claim. The cards below set out each question and what the 2026 High School evidence shows it rewarding.\n\nThe sections that follow put Lambert-GA, HongKong-JSS and GEMS-Taiwan against all eight with evidence from their own wikis and Registry pages, and then read the whole Top 10 the same way.",
- "body_zh": "有兩組不同的評審在做兩件不同的事。特別獎由只看一個面向的評審評分，問的是「誰在這個面向做得最好」——這一組裡最好的量測工作、最好的儀器、最好的人類實踐。決賽入選者則由看整個專案的評審決定，他們問九道問題，其中八道留下了公開可查的紀錄。**贏下一個面向，說明你在那個面向最強，但對「這個專案作為一個整體」什麼都沒說。**\n\n所以一支隊伍可以收下三個面向的獎，卻在整體問題上答得比一個面向都沒贏的隊伍更差。下面的表格是 2026 年高中組 Top 10 的完整排名。把「特別獎得獎數」那一欄往下讀，立刻就能看出它並不決定排序：特別獎最多的兩支隊伍，一支第一、一支第五，而第二名那一支一個都沒有。\n\n那八道問題真正獎勵的東西，比「在好幾個地方都很強」更窄、也更難。其中三道——第 1、2、7 題——指向同一個要求：**一個清楚可讀、已經做完、建立在已表徵生物學之上的成果。** 另外兩道，第 6 和第 8 題，問的是陌生人能不能驗證你所聲稱的東西。下面的卡片逐題說明，以及 2026 年高中組的證據顯示它們各自在獎勵什麼。\n\n接下來的幾節，會拿 Lambert-GA、HongKong-JSS 和 GEMS-Taiwan 對照全部八題，證據取自他們自己的 wiki 與 Registry 頁面，然後用同一把尺讀完整個 Top 10。",
+ "lede": "iGEM's own results data records a designation most reports never mention: **Finalist**. In the 2026 High School section, 147 teams entered, 10 reached the Top 10, and **exactly 2 were named Finalists** — Lambert-GA and HongKong-JSS. GEMS-Taiwan was one of the eight that were not, despite winning three section special awards, the same number of special wins as the Grand Prize winner, while HongKong-JSS won none. The eight questions below are the ones that make that cut.",
+ "lede_zh": "iGEM 官方結果資料裡記著一個幾乎沒有報告提過的身分：**Finalist（決賽入選）**。2026 年高中組有 147 支隊伍參賽、10 支進入 Top 10，而**只有 2 支被列為 Finalist**——Lambert-GA 和 HongKong-JSS。GEMS-Taiwan 是沒進去的那八支之一，儘管它拿下三個組別特別獎，特別獎得獎數與總冠軍相同，而 HongKong-JSS 一個都沒有。下面那八道問題，就是做出這道切分的問題。",
+ "body": "There are three separate decisions in an iGEM season and they are easy to collapse into one. A **medal** is a checklist: you meet the deliverables and you get it, which is why 135 of the 147 High School teams have one and 63 of them are Gold. A **special award** is scored by judges who look at a single dimension and ask who did it best. The **Top 10** and the **Finalist** slate are decided by judges looking at the whole project and asking nine questions, of which eight leave a public record.\n\nThose are three different games, and GEMS played two of them extremely well. Of 147 accepted High School teams, only **17 won any section-level award at all** and GEMS holds three of them; only 47 got so much as a nomination. Any account of 2026 that treats this as a failure is not reading the field. But the third game selected two teams out of ten, and that is the one this tab is about.\n\nRead the special-wins column in the table and it plainly does not sort the field: the two teams with three special wins each finished **first and fifth**, and the team that finished second won nothing. Dimension strength and whole-project strength are measured by different people asking different questions, and a team can be near the top of one distribution and mid-table in the other.\n\nWhat the eight questions reward is narrower and harder than being strong in several places. Three of them — 1, 2 and 7 — converge on a single demand: **one legible result, finished, built on characterised biology.** Two more, 6 and 8, ask whether a stranger can verify what you claim. The cards below take each question in turn with what the 2026 High School evidence shows it rewarding; the sections after them put Lambert-GA, HongKong-JSS and GEMS-Taiwan against all eight from their own wikis and Registry pages, then read the whole Top 10 the same way.",
+ "body_zh": "一個 iGEM 賽季裡其實有三個互相獨立的決定，而它們很容易被當成一件事。**獎牌**是一張檢核表：做到交付項目就拿得到，所以 147 支高中隊伍裡有 135 支有獎牌，其中 63 支是金牌。**特別獎**由只看單一面向的評審評分，問「誰在這個面向做得最好」。而 **Top 10** 與 **Finalist** 名單，是由看整個專案的評審決定的，他們問九道問題，其中八道留下了公開紀錄。\n\n這是三個不同的遊戲，而 GEMS 把其中兩個玩得非常好。147 支正式參賽的高中隊伍中，**只有 17 支拿到任何一項組別層級的獎**，GEMS 一個人就佔了三項；連入圍都算進去也只有 47 支。任何把 2026 年說成「失敗」的說法，都沒有在讀這個賽場。但第三個遊戲是從十支裡選兩支，而這個頁面談的就是那一個。\n\n把表格裡「特別獎得獎」那一欄讀下來，它顯然不決定排序：各有三個特別獎的兩支隊伍，一支**第一名、一支第五名**，而第二名那一支什麼特別獎都沒拿。面向上的強度和整體專案的強度，是由不同的人問不同的問題量出來的；一支隊伍完全可以在其中一個分布的頂端，在另一個分布裡位居中段。\n\n那八道問題獎勵的東西，比「在好幾個地方都很強」更窄、也更難。其中三道——第 1、2、7 題——指向同一個要求：**一個清楚可讀、已經做完、建立在已表徵生物學之上的成果。** 另外兩道，第 6 和第 8 題，問的是陌生人能不能驗證你所聲稱的東西。下面的卡片逐題說明，以及 2026 年高中組的證據顯示它們各自在獎勵什麼；再往後的幾節，則用 Lambert-GA、HongKong-JSS 和 GEMS-Taiwan 自己的 wiki 與 Registry 頁面對照全部八題，然後用同一把尺讀完整個 Top 10。",
  "cards": [
   {
    "kicker": "Question 1",
@@ -128,6 +128,7 @@
   "head": [
    "Team",
    "Placing",
+   "Finalist",
    "Special wins",
    "Nominations",
    "Parts award",
@@ -136,6 +137,7 @@
   "head_zh": [
    "隊伍",
    "名次",
+   "Finalist",
    "特別獎得獎",
    "入圍",
    "元件獎",
@@ -145,6 +147,7 @@
    [
     "Lambert-GA",
     "Grand Prize winner",
+    "Yes",
     "3",
     "1",
     "No",
@@ -153,6 +156,7 @@
    [
     "HongKong-JSS",
     "1st Runner-up",
+    "Yes",
     "0",
     "4",
     "Nominee (Composite)",
@@ -161,6 +165,7 @@
    [
     "GEMS-Taiwan",
     "Top 10",
+    "No",
     "3",
     "3",
     "No",
@@ -169,6 +174,7 @@
    [
     "GHCIS",
     "Top 10",
+    "No",
     "2",
     "2",
     "Winner (Collection)",
@@ -177,6 +183,7 @@
    [
     "HFI",
     "Top 10",
+    "No",
     "1",
     "3",
     "Nominee (Collection)",
@@ -185,6 +192,7 @@
    [
     "GCGS",
     "Top 10",
+    "No",
     "1",
     "3",
     "Winner (Improved)",
@@ -193,6 +201,7 @@
    [
     "HKSSC",
     "Top 10",
+    "No",
     "1",
     "2",
     "Winner (Basic)",
@@ -201,6 +210,7 @@
    [
     "HangzhouFourteenAP",
     "Top 10",
+    "No",
     "0",
     "4",
     "No",
@@ -209,6 +219,7 @@
    [
     "Eton-College-UK",
     "Top 10",
+    "No",
     "0",
     "3",
     "No",
@@ -217,6 +228,7 @@
    [
     "HongKong-HS",
     "Top 10",
+    "No",
     "0",
     "2",
     "No",
@@ -227,6 +239,7 @@
    [
     "Lambert-GA",
     "總冠軍",
+    "是",
     "3",
     "1",
     "否",
@@ -235,6 +248,7 @@
    [
     "HongKong-JSS",
     "亞軍",
+    "是",
     "0",
     "4",
     "入圍（Composite）",
@@ -243,6 +257,7 @@
    [
     "GEMS-Taiwan",
     "Top 10",
+    "否",
     "3",
     "3",
     "否",
@@ -251,6 +266,7 @@
    [
     "GHCIS",
     "Top 10",
+    "否",
     "2",
     "2",
     "得獎（Collection）",
@@ -259,6 +275,7 @@
    [
     "HFI",
     "Top 10",
+    "否",
     "1",
     "3",
     "入圍（Collection）",
@@ -267,6 +284,7 @@
    [
     "GCGS",
     "Top 10",
+    "否",
     "1",
     "3",
     "得獎（Improved）",
@@ -275,6 +293,7 @@
    [
     "HKSSC",
     "Top 10",
+    "否",
     "1",
     "2",
     "得獎（Basic）",
@@ -283,6 +302,7 @@
    [
     "HangzhouFourteenAP",
     "Top 10",
+    "否",
     "0",
     "4",
     "否",
@@ -291,6 +311,7 @@
    [
     "Eton-College-UK",
     "Top 10",
+    "否",
     "0",
     "3",
     "否",
@@ -299,6 +320,7 @@
    [
     "HongKong-HS",
     "Top 10",
+    "否",
     "0",
     "2",
     "否",
@@ -306,6 +328,6 @@
    ]
   ]
  },
- "method": "Placings and awards are from the official 2026 results at competition.igem.org, as captured in research/results2026.json, cross-checked against iGEM's own API. The special-wins column counts section-level special awards only: it excludes the Top 10 placing itself, the Grand Prize placings, and Best Village Project, which is a village award rather than a section award and is shown separately where relevant. Nominations count every nomination listed, including village-project nominations. The nine finalist questions are iGEM's published criteria for choosing finalists; question 9, on how competently a team answered judges' questions live, is excluded throughout this tab because it leaves no public record and nothing in a wiki can evidence it. That omission matters: it is entirely possible that the live session is where some of the gap described here was actually created, and no public analysis can see it.",
- "method_zh": "名次與獎項來自 competition.igem.org 的 2026 年官方結果，紀錄於 research/results2026.json，並與 iGEM 自己的 API 交叉核對。「特別獎得獎」一欄只計算組別層級的特別獎：不計入 Top 10 本身、不計入總冠軍名次，也不計入 Best Village Project（那是 village 層級的獎，不是組別獎，必要時另行標示）。「入圍」欄計入所列的每一項入圍，包含 village project 入圍。那九道決賽問題是 iGEM 公布的決賽入選標準；第 9 題關於團隊現場回答評審問題的能力，在本頁全程排除，因為它沒有留下任何公開紀錄，wiki 裡也沒有任何東西能證明它。這個排除本身很重要：這裡描述的落差，完全有可能有一部分其實是在現場問答產生的，而任何公開分析都看不到那一段。"
+ "method": "Placings and awards are from the official 2026 results at competition.igem.org (research/results2026.json), cross-checked against iGEM's own API at api.igem.org/v1, which is open and unauthenticated and which is also where the Finalist designation and the medal distribution come from: of 147 accepted High School teams, 135 have a recorded medal (63 Gold, 68 Silver, 4 Bronze), 17 won at least one section-level or village award and 47 received at least one nomination. Two High School teams were named Finalists; the Undergraduate section had three and the Overgraduate section two. The special-wins column counts section-level special awards only, excluding the Top 10 placing, the Grand Prize placings and Best Village Project, which is a village award and is shown separately. The nine finalist questions are iGEM's published criteria, supplied by the report's own team. Question 9, on how competently a team answered judges' questions live, is excluded from this entire tab because it leaves no public record and nothing in a wiki can evidence it. That omission is material: the live session may be exactly where part of the gap described here was created, and no public analysis can see it. Everything on this tab is therefore an account of what a judge could learn from the published record, which is a real but incomplete share of what judges actually saw.",
+ "method_zh": "名次與獎項來自 competition.igem.org 的 2026 年官方結果（research/results2026.json），並與 iGEM 自己在 api.igem.org/v1 的 API 交叉核對；該 API 公開且不需驗證，Finalist 身分與獎牌分布也來自那裡：147 支正式參賽的高中隊伍中，135 支有獎牌紀錄（63 金、68 銀、4 銅），17 支至少拿下一項組別或 village 層級的獎，47 支至少獲得一次入圍。高中組有 2 支隊伍被列為 Finalist，大學組 3 支，研究生組 2 支。「特別獎得獎」一欄只計組別層級的特別獎，不含 Top 10 名次、不含總冠軍名次，也不含 Best Village Project（那是 village 層級的獎，另行標示）。那九道決賽問題是 iGEM 公布的標準，由本報告自己的團隊提供。第 9 題關於團隊現場回答評審問題的能力，在整個頁面中都被排除，因為它沒有留下任何公開紀錄，wiki 裡也沒有任何東西能證明它。這個排除很重要：這裡描述的落差，很可能有一部分正是在現場問答中產生的，而任何公開分析都看不到那一段。因此本頁所有內容，都只是「一位評審能從公開紀錄中讀到什麼」的說明；那是真實的一部分，但不是評審實際看到的全部。"
 }
