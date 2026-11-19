@@ -8,14 +8,40 @@
   "projectTitle": "BioH2",
   "tagline": "A wild Clostridium isolated from a Guangdong wetland, made genetically tractable, then redesigned into a closed-loop biorefinery once the arithmetic killed hydrogen-only",
   "summary": "BGI-College took Clostridium beijerinckii S63, a strain newly isolated from sediment at Yundonghai Wetland Park in Foshan, Guangdong (a site of interest because of unusually high natural soil hydrogen in the Sanshui Basin), and turned a non-model anaerobe into a working chassis. They sequenced it to a single circular 5,870,246 bp chromosome, measured 40.20 plus or minus 3.45 percent hydrogen in its gas output, built a metabolic flux model that identified PFOR and HydA overexpression plus thl deletion as targets, and established an electroporation transformation system through three documented DBTL cycles, two of which failed outright. Their economic check then did something unusual: it proved their own original premise impossible, since breaking even on glucose alone would need 6.70 mol H2 per mol glucose against a hard biochemical ceiling of 4.0, which forced a redesign around byproduct valorisation. They won Best Alternative Platform in the High School section and were nominated for Best New Basic Part and Best Presentation.",
-  "awards": ["Best Alternative Platform, High School (winner)", "Best New Basic Part nominee", "Best Presentation nominee"],
+  "awards": [
+    "Best Alternative Platform, High School (winner)",
+    "Best New Basic Part nominee",
+    "Best Presentation nominee"
+  ],
   "dry": {
     "frameworks": "Explicit DBTL cycles used as the organising structure for platform development, each written as Design, Build and Test, then Learn, with the failed cycles kept in place. A metabolic flux framework integrating pathway stoichiometry, carbon allocation and electron transfer, released with a visual interface so non-modellers can use it. Hydrogen pathways benchmarked in a four-way comparison table (grey, blue, green, bio-green) on carbon footprint, levelised cost, supply-chain risk and commercial status.",
     "dataviz": "Baseline versus engineered model runs shown side by side so the predicted yield change is legible, the full electroporation workflow drawn as a process diagram with voltages and buffers labelled, a parameter-sweep figure for the optimisation attempts, and, notably, photographs of the empty selective plates from the failed transformations alongside the successful ones. Field photographs of the wetland sampling site locate the strain in a real place.",
     "datascience": "The modelling is used as a decision tool, not decoration: it put theoretical yield at 2.46 mol H2/mol glucose for wild type rising to 3.60 under an idealised engineered scenario, and the HPLC product profile (acetate and butyrate dominant, little lactate) is what selected thl as the deletion target rather than a generic guess. The economic model is the standout piece of quantitative reasoning: industrial glucose at about 3,000 RMB per tonne against hydrogen at 40 RMB per kg requires 6.70 mol H2 per mol glucose to cover feedstock alone, which exceeds the 4.0 mol theoretical maximum of dark fermentation, so a hydrogen-only business is arithmetically impossible. Genome work includes ANI above 98 percent against C. beijerinckii DSM 791 (GCF_018223745.1), phylogenetic placement, whole-genome alignment and VFDB virulence screening, published as a separate PDF.",
     "software": "A visual interface over the metabolic flux model, built explicitly to lower the barrier for researchers who do not routinely do computational modelling.",
-    "stack": ["Clostridium beijerinckii S63 (non-model anaerobe)", "Bacillus subtilis 941", "E. coli DH5-alpha", "pNICKclos2.0 CRISPR editing vector", "electroporation in an anaerobic chamber", "whole-genome sequencing and annotation", "ANI and phylogenetic analysis", "VFDB", "HPLC", "gas chromatography"],
-    "techniques": ["electrocompetent cell preparation under strict anaerobiosis", "electroporation at 1.8 kV in a 2 mm cuvette with erythromycin selection", "CRISPR knockout design in Clostridium", "native promoter plus CDS plus terminator part cloning from a wild isolate", "dark fermentation with HPLC organic-acid tracking", "secondary cultivation of B. subtilis on spent fermentation broth"]
+    "stack": [
+      "Clostridium beijerinckii S63 (non-model anaerobe)",
+      "Bacillus subtilis 941",
+      "E. coli DH5-alpha",
+      "pNICKclos2.0 CRISPR editing vector",
+      "electroporation in an anaerobic chamber",
+      "whole-genome sequencing and annotation",
+      "ANI and phylogenetic analysis",
+      "VFDB",
+      "HPLC",
+      "gas chromatography"
+    ],
+    "techniques": [
+      "electrocompetent cell preparation under strict anaerobiosis",
+      "electroporation at 1.8 kV in a 2 mm cuvette with erythromycin selection",
+      "CRISPR knockout design in Clostridium",
+      "native promoter plus CDS plus terminator part cloning from a wild isolate",
+      "dark fermentation with HPLC organic-acid tracking",
+      "secondary cultivation of B. subtilis on spent fermentation broth"
+    ],
+    "frameworks_zh": "明確的 DBTL 循環被當作平台開發的組織結構，每一輪都寫成 Design、Build、Test 再加 Learn，失敗的循環也原樣保留。一個代謝通量框架整合途徑化學計量、碳流分配與電子傳遞，並附上視覺化介面發布，讓不做建模的人也能使用。氫氣製程則以四路比較表（灰氫、藍氫、綠氫、生物綠氫）在碳足跡、均化成本、供應鏈風險與商業化狀態上做基準比較。",
+    "dataviz_zh": "基準與工程化後的模型執行結果並排呈現，使預測產率的變化一眼可讀；完整的電穿孔流程畫成製程圖，電壓與緩衝液都標示清楚；最佳化嘗試有一張參數掃描圖；特別值得注意的是，失敗轉形所留下的空白選擇盤照片，與成功的照片並列。濕地採樣現場的照片把這株菌定位在一個真實的地方。",
+    "datascience_zh": "建模是當決策工具用的，不是裝飾：模型算出野生型的理論產率為 2.46 mol H2/mol glucose，在理想化的工程情境下升到 3.60；而 HPLC 的產物圖譜（以乙酸與丁酸為主，乳酸很少）正是選定 thl 作為剔除目標的依據，而不是隨便猜的。經濟模型是整份量化推理中最突出的一塊：工業級葡萄糖約每公噸 3,000 人民幣，氫氣每公斤 40 人民幣，光要打平原料成本就需要每莫耳葡萄糖產出 6.70 莫耳 H2，已超過暗發酵 4.0 莫耳的理論上限，因此只賣氫氣的生意在算術上不可能成立。基因組工作包括與 C. beijerinckii DSM 791（GCF_018223745.1）比對的 ANI 高於 98%、親緣關係定位、全基因組比對，以及 VFDB 毒力因子篩查，並另以 PDF 發表。",
+    "software_zh": "代謝通量模型之上加了一層視覺化介面，明確是為了降低不常做計算建模的研究者的門檻。"
   },
   "good": {
     "publicEngagement": "",
@@ -26,28 +52,34 @@
       "Dr. Youduo Wu, Dalian University of Technology (diagnosed oxygen exposure as the transformation bottleneck)",
       "China General Nuclear Power (CGN) engineers (cost and scale-up framing that drove the redesign)",
       "Yundonghai Wetland Park, Foshan, Guangdong (environmental source of strain S63)"
-    ]
+    ],
+    "ihp_zh": "人類實踐是當作對專案核心假設的檢驗來做的，而不是當成對外推廣。他們諮詢了學術研究者與產業實務人士，包括中國廣核集團（CGN）的工程師，並報告兩群人框定問題的方式有何不同：學者問這條途徑在技術上是否可行、是否嚴謹；業界問它要花多少錢、能不能放大。產業方面關於氫氣運輸與儲存障礙的意見，加上他們自己的損益兩平算術，正是把一個只做氫氣的專案轉成閉環生物精煉廠的原因。第二場諮詢在技術上具決定性：在兩個 DBTL 循環失敗之後，大連理工大學的 Dr. Youduo Wu 要他們重新檢視整條流程的厭氧操作，而不是繼續調電穿孔參數；他們因此把電穿孔儀搬進厭氧操作箱內，終於得到轉形株。",
+    "realWorld_zh": "這裡有三件事值得學，而貫穿三者的誠實，正是這個平台可信的原因。第一是經濟性。他們的損益兩平計算是本屆最有用的一段商業化推理，正因為它推翻了自己的前提：工業級葡萄糖約每公噸 3,000 人民幣、氫氣每公斤 40 人民幣，光要打平糖源成本就需要每莫耳葡萄糖 6.70 莫耳 H2，而暗發酵無法超過 4.0 莫耳，因此不論菌株改良到什麼程度，只賣氫氣的產品都無法獲利。他們把這點直說，然後重新設計，而不是打迷糊仗。替代的商業模式是自洽的：HPLC 證實氫氣停止產生後，培養液中仍留有有機酸，於是他們不去付化學廢棄物處理費，而是把發酵後的培養液當成免費基質來培養商用 Bacillus subtilis，再以液態生物肥料出售；這條次級收入既抵掉原料成本，也完全避開氫氣的儲存與運輸問題。要注意他們主張了什麼、沒主張什麼：他們說生物肥料的收入在對比原料投入放大後能「大幅抵銷」原料成本，但沒有公布套組價格、生物肥料價格、每公升培養液的產量，也沒有完整損益表，因此這個閉環是一個已驗證的概念，但單位經濟仍然缺席。沒有公司、沒有專利、也沒有投資人。第二是平台。讓 S63 真的能被其他團隊重複使用的原因，是他們發表了進入的路徑而不只是終點：完整的電穿孔流程，緩衝液、電壓與電穿孔槽間距都寫明；他們試過的參數掃描（OD600 0.2 至 1.0、600 至 1800 V、100 至 400 微升、1 mm 與 2 mm 電穿孔槽，電阻固定 200 歐姆、電容 25 微法拉）；兩次失敗循環的空白培養盤照片；以及真正奏效的那一個改動。他們也記下一個始終沒解決的失敗：針對 Thl 的編輯質體始終組不起來，儘管四個片段都成功增幅且定序正確。他們從 S63 選殖出 15 個基本零件，形式是原生啟動子加 CDS 加終止子的三件組，涵蓋三個 HydA 與兩個 PFOR 基因；對一個異源調控元件可能無法運作的非模式宿主而言，這正是對的格式。基因組另以一份帶註解的報告發表。限制也標示得很精準：轉形系統是「早期階段的平台，而不是已完全最佳化或普遍可靠的流程」；模型「並不是實驗所達成氫氣產量的已驗證預測工具」；而關於氧氣的假說「還需要進一步的對照實驗」才能確認其具體貢獻。第三是生物安全的推理，比多數大學部的工作更細緻。底盤在早期安全審查中從 C. butyricum 改為 C. beijerinckii，以避免因菌株而異的致病性風險；他們明確拒絕把物種層級的 BSL-1 分類（ATCC 35702）直接套到自己的分離株上，而是以 ANI 與親緣關係確認身分，並對 VFDB 做篩查，同時記下正確的保留意見：資料庫比對到並不等於存在具功能的毒力因子，而且其中幾個命中只是部分比對或覆蓋率偏低。他們也坦白身為高中生，安全決策與可執行的任務都倚賴指導老師，氣體供應設定與氣路接頭不由自己調整；並且報告有三位學生第一次安全評量未通過、必須重考，團隊才達到 100% 通過率。後續則定位為社群再利用：模型、零件、轉形流程與除錯紀錄都提供出來，好讓未來做暗發酵的團隊「重複使用我們的推理、流程與教訓，而不是重複經歷一遍」。"
   },
   "images": [
     {
       "url": "https://static.igem.wiki/teams/6345/wiki/assets/alternative-platform/fig3.avif",
       "caption": "The electroporation transformation workflow established for Clostridium beijerinckii S63, published with buffers, voltage and cuvette gap specified so another group can reproduce it",
-      "credit": "Team BGI-College, iGEM 2026 wiki"
+      "credit": "Team BGI-College, iGEM 2026 wiki",
+      "caption_zh": "為 Clostridium beijerinckii S63 建立的電穿孔轉形流程，發表時寫明緩衝液、電壓與電穿孔槽間距，讓其他團隊能夠重現"
     },
     {
       "url": "https://static.igem.wiki/teams/6345/wiki/assets/alternative-platform/fig4.avif",
       "caption": "Published evidence of failure: blank erythromycin selective plates from the first transformation attempt, kept on the wiki alongside the eventual success",
-      "credit": "Team BGI-College, iGEM 2026 wiki"
+      "credit": "Team BGI-College, iGEM 2026 wiki",
+      "caption_zh": "公開發表的失敗證據：第一次轉形嘗試所得的空白紅黴素選擇盤，與最終成功的結果一併留在 wiki 上"
     },
     {
       "url": "https://static.igem.wiki/teams/6345/wiki/assets/alternative-platform/fig5.avif",
       "caption": "The electroporation parameter sweep across cell density, voltage, competent-cell volume and cuvette gap that still did not yield transformants, before the anaerobic-chamber redesign",
-      "credit": "Team BGI-College, iGEM 2026 wiki"
+      "credit": "Team BGI-College, iGEM 2026 wiki",
+      "caption_zh": "在改成厭氧操作箱內作業之前，橫跨細胞密度、電壓、勝任細胞體積與電穿孔槽間距的電穿孔參數掃描，仍然沒有得到轉形株"
     },
     {
       "url": "https://static.igem.wiki/teams/6345/wiki/assets/contribution/fig2.avif",
       "caption": "Model-guided engineering run showing the theoretical hydrogen yield change from PFOR and HydA overexpression with thl deletion, shown against the wild-type baseline",
-      "credit": "Team BGI-College, iGEM 2026 wiki"
+      "credit": "Team BGI-College, iGEM 2026 wiki",
+      "caption_zh": "模型導引的工程化執行結果，顯示 PFOR 與 HydA 過量表現加上 thl 剔除所帶來的理論氫氣產率變化，並與野生型基準對照"
     }
   ],
   "gemsTakeaway": "Run the break-even arithmetic against the biochemical ceiling before committing a year of lab work: BGI-College showed a hydrogen-only product needs 6.70 mol H2 per mol glucose while dark fermentation caps at 4.0, which killed their premise early and forced a byproduct-valorisation design that actually closes. And when publishing a platform for a non-model chassis, publish the failed cycles too — the parameter sweep that did nothing, the photographs of blank plates, the plasmid that would never assemble — because the route in is what another lab needs, not the destination.",
@@ -58,5 +90,9 @@
     "https://2026.igem.wiki/bgi-college/contribution/",
     "https://2026.igem.wiki/bgi-college/safety-and-security/",
     "https://static.igem.wiki/teams/6345/wiki/assets/alternative-platform/genome-analysis-of-s63.pdf"
-  ]
+  ],
+  "projectTitle_zh": "BioH2",
+  "tagline_zh": "一株從廣東濕地分離出的野生 Clostridium，被改造成可做基因操作的宿主；當算術否決了只賣氫氣這條路之後，整個專案又被重新設計成閉環生物精煉廠",
+  "summary_zh": "BGI-College 取用 Clostridium beijerinckii S63——一株新分離自廣東佛山雲東海濕地公園底泥的菌株（該地之所以受注意，是因為三水盆地的天然土壤氫含量異常高）——把一株非模式厭氧菌變成能用的底盤。他們把它定序到單一環狀染色體 5,870,246 bp，量得氣體產物中氫氣含量為 40.20 加減 3.45%，建立代謝通量模型並據以指出 PFOR 與 HydA 過量表現加上 thl 剔除為工程目標，並經由三個有完整記錄的 DBTL 循環（其中兩個徹底失敗）建立電穿孔轉形系統。他們的經濟性檢核接著做了一件不尋常的事：它證明了自己最初的前提不可能成立——若只靠葡萄糖要達到損益兩平，每莫耳葡萄糖需產生 6.70 莫耳 H2，而生化上的硬上限是 4.0，這迫使他們圍繞副產物加值利用重新設計。他們獲得高中組的 Best Alternative Platform，並入圍 Best New Basic Part 與 Best Presentation。",
+  "gemsTakeaway_zh": "在投入一年的實驗工作之前，先把損益兩平的算術拿去對照生化上限：BGI-College 證明只賣氫氣的產品需要每莫耳葡萄糖 6.70 莫耳 H2，而暗發酵的上限是 4.0，這及早否決了他們的前提，逼出一個真的能收攏的副產物加值設計。而當你要為非模式底盤發表一個平台時，也請把失敗的循環一起發表——那個毫無效果的參數掃描、空白培養盤的照片、那個始終組不起來的質體——因為別的實驗室需要的是進得去的路，而不是終點。"
 }
