@@ -1,0 +1,457 @@
+{
+  "id": "award-economics",
+  "tab": "judging",
+  "order": 50,
+  "kicker": "What a category measures",
+  "kicker_zh": "一個類別在量什麼",
+  "title": "Seventeen categories, four of them close to a whole-project verdict, and the circularity in saying so",
+  "title_zh": "十七個類別，其中四個接近整體專案的判決，以及這麼說本身的循環問題",
+  "lede": "Across 2024-26 these 17 special categories nominate between 3 and 26 teams a season and co-occur with a Top 10 place at rates running from **60% down to 0%**. Best Wiki nominates 26 teams, nine of them high-school every single season, and **49 of 81 pooled nominees (60%) also placed Top 10**; Safety and Security, Best Alternative Platform and Best New Improved Part nominate a handful and **0 of 9, 0 of 4 and 0 of 3** of theirs ever did. The caveat belongs in the same breath as the number: this is co-occurrence, it is close to circular, and the circularity is structural — Best Wiki and Best Presentation are assessed on how the whole project is *communicated*, which is the same material a Top 10 judgement is working on. As a prediction the column is worth nothing. As a map of **which categories function as a proxy for a whole-project verdict and which certify one isolated dimension**, it explains something this report already published: GEMS won three 2026 category awards and missed the finalist slate, and those three sit at **45%, 22% and 21%**.",
+  "lede_zh": "在 2024 至 2026 三個賽季中，這 17 個特別獎類別每季入圍隊數從 3 支到 26 支不等，而與 Top 10 同時發生的比率從 **60% 一路落到 0%**。Best Wiki 入圍 26 支隊伍，其中每一季都剛好有九支來自高中組，而**三季合計 81 個入圍名額中，有 49 個（60%）同時也拿到 Top 10**；Safety and Security、Best Alternative Platform 與 Best New Improved Part 只入圍少數幾支，而它們的入圍者**分別是 9 取 0、4 取 0、3 取 0**，從未有人同時進榜。警告必須與數字同時說出：這是同時發生，不是因果，而且接近循環論證，循環還是結構性的——Best Wiki 與 Best Presentation 評的是整個專案如何被*傳達*，而那正是 Top 10 評審所處理的同一批材料。當作預測，這一欄一文不值。但當作一張地圖，標出**哪些類別實質上是整體專案判決的替身，哪些只認證單一孤立面向**，它就解釋了本報告已經發表過的一件事：GEMS 在 2026 年贏下三個類別獎卻沒有進入決賽名單，而那三個獎分別落在 **45%、22% 與 21%**。",
+  "body": "Seventeen special award categories appear in the 2026 results. They are not comparable instruments. In 2026 Best Wiki and Best Presentation each nominated 26 teams and crowned 4; Best Model nominated 15; seven categories nominated between 10 and 12; Best Software and the Inclusivity Award nominated 6; Best Alternative Platform nominated 4, Safety and Security 3, and Best New Improved Part nominated nobody at all and still named 2 winners. A nomination means a different thing in each column, and so does its absence.\n\nPooled across the three seasons, **198 of 550 nominations (36%)** in these categories went to a team that also took a Top 10 place, against **89 of 155 outright wins (57%)**. The per-category spread is the finding: Best Wiki 49 of 81 (60%), Best Presentation 42 of 79 (53%), Best Model 20 of 40 (50%) and Integrated Human Practices 17 of 38 (45%) at the top; Best New Basic Part 3 of 35 (9%), Sustainable Development Impact 3 of 30 (10%) and the Inclusivity Award 2 of 16 (12%) near the bottom; and zero across all three seasons for Safety and Security (0/9), Best Alternative Platform (0/4) and Best New Improved Part (0/3).\n\nThe number has to be handled rather than ranked. It is co-occurrence and it is close to circular. A project strong enough to attract a Best Wiki nomination is usually strong enough to place Top 10, and the nomination plainly did not cause the place. Worse than ordinary confounding, the overlap is partly definitional: Best Wiki and Best Presentation are assessed on how the whole project is communicated, which is the same faculty a Top 10 judgement exercises on the same material. So the column cannot predict anything. What it can do is sort the 17 categories into those that function as a proxy for a whole-project verdict and those that certify one isolated dimension — and that sorting is stable across three seasons, which a coincidence would have to work to achieve.\n\nThe sorting matches something this report has already published. GEMS-Taiwan won three 2026 category awards and did not make the finalist slate; the three sit at 45% (Integrated Human Practices), 22% (Measurement) and 21% (Hardware) — one at the proxy end, two below the 36% pooled baseline. The section's 1st Runner-up, HongKong-JSS, collected four special citations and **won no category outright at all**. Categories are judged one dimension at a time by a panel asking a narrow question; finalist selection asks whether the project holds together, and the 2026 high-school results show every combination of the two.\n\nHigh-school slate sizes are remarkably fixed. Best Wiki and Best Presentation each gave the section 9 nominee slots in 2024, 9 in 2025 and 9 in 2026; Best Model, Best Education and Integrated Human Practices gave 4, 4 and 4. Across all 17 categories the section had 74 citation slots in 2024, 80 in 2025 and 82 in 2026, spread over 37, 40 and 45 distinct teams out of 128, 143 and 147 accepted — **fewer than a third of high-school teams are cited at all in any season**. GEMS held 5 of 74, 4 of 80 and 5 of 82, and was the most-cited high-school team in the 2026 section.\n\nThe nine categories GEMS has never been cited in across three seasons do not share a cause. Four of them barely exist for high-school teams: Best Alternative Platform offered the section 0, 0 and 1 nominee slots, Best Software 0, 1 and 1, Safety and Security 0, 1 and 0, Best New Improved Part 2, 0 and 0. The other five are ordinarily sized — Best Part Collection, Best New Composite Part, Best Entrepreneurship and Sustainable Development Impact each gave high-school teams 13 pooled nominations over three seasons, the same order as categories GEMS does hold — and three of those five are parts awards, in a line GEMS has already won once, with Best New Basic Part in 2024. The blanks that can be filled are mostly documentation and curation work; the blanks that cannot are the section's, not the team's. Neither sort is a route to the finalist slate, since Part Collection sits at 35%, New Composite Part at 34%, Entrepreneurship at 29% and Sustainable Development Impact at 10%.",
+  "body_zh": "2026 年的成績裡出現了 17 個特別獎類別，而它們並不是可以互相比較的量具。2026 年 Best Wiki 與 Best Presentation 各入圍 26 支隊伍、各頒出 4 個獎；Best Model 入圍 15 支；七個類別入圍 10 到 12 支；Best Software 與 Inclusivity Award 入圍 6 支；Best Alternative Platform 入圍 4 支、Safety and Security 入圍 3 支；而 Best New Improved Part 完全沒有入圍任何一支，卻仍然頒出 2 個獎。同樣一個「入圍」，在每一欄裡的意思都不一樣，「沒有入圍」也一樣。\n\n三季合併計算，這些類別的 **550 個入圍名額中有 198 個（36%）**落在同時拿到 Top 10 的隊伍身上，而**獲獎的 155 個名額中有 89 個（57%）**如此。真正的發現在於各類別之間的落差：高端是 Best Wiki 的 81 取 49（60%）、Best Presentation 的 79 取 42（53%）、Best Model 的 40 取 20（50%）與 Best Integrated Human Practices 的 38 取 17（45%）；低端接近底部的是 Best New Basic Part 的 35 取 3（9%）、Best Sustainable Development Impact 的 30 取 3（10%）與 Inclusivity Award 的 16 取 2（12%）；而 Safety and Security（9 取 0）、Best Alternative Platform（4 取 0）與 Best New Improved Part（3 取 0）三季合計都是零。\n\n這個數字需要被處理，而不是被排名。它是同時發生，而且接近循環論證。一個強到足以獲得 Best Wiki 入圍的專案，通常也強到足以進 Top 10，而入圍顯然不是名次的原因。比一般的混淆更麻煩的是，這個重疊有一部分來自定義本身：Best Wiki 與 Best Presentation 評的是整個專案如何被傳達，而那正是 Top 10 評審在同一批材料上動用的同一種判斷。所以這一欄無法預測任何事。它能做的是把 17 個類別分成兩堆：一堆實質上是整體專案判決的替身，另一堆只認證單一孤立面向。而這個分法在三季之間是穩定的——若純屬巧合，巧合得相當費力。\n\n這個分法對上了本報告已經發表過的一件事。GEMS-Taiwan 在 2026 年贏下三個類別獎，卻沒有進入決賽名單；那三個獎分別落在 45%（Best Integrated Human Practices）、22%（Best Measurement）與 21%（Best Hardware）——一個在替身那一端，兩個低於 36% 的整體基準。而本組的亞軍 HongKong-JSS 累積了四項特別獎列名，**卻一個類別獎都沒有贏下**。類別獎是由一個問著狹窄問題的評審組，一次評一個面向；決賽遴選問的則是這個專案是否撐得起來。2026 年高中組的成績把這兩者的所有組合都演了一遍。\n\n高中組的入圍名額數量穩定得驚人。Best Wiki 與 Best Presentation 在 2024、2025、2026 各給本組 9、9、9 個入圍名額；Best Model、Best Education 與 Best Integrated Human Practices 給的是 4、4、4。17 個類別合計，本組在 2024 年有 74 個列名名額、2025 年 80 個、2026 年 82 個，分散在 37、40、45 支不同隊伍身上，而三年各有 128、143、147 支高中隊伍獲准參賽——**任何一季都有不到三分之一的高中隊伍得到任何列名**。GEMS 分別占住 74 取 5、80 取 4、82 取 5，並且是 2026 年高中組被列名次數最多的隊伍。\n\nGEMS 三季從未被列名的九個類別並沒有共同原因。其中四個對高中組而言幾乎不存在：Best Alternative Platform 三季給本組的入圍名額是 0、0、1，Best Software 是 0、1、1，Safety and Security 是 0、1、0，Best New Improved Part 是 2、0、0。另外五個則是正常大小——Best Part Collection、Best New Composite Part、Best Entrepreneurship 與 Best Sustainable Development Impact 三季各給高中組 13 個入圍名額，與 GEMS 確實持有的那些類別同一個量級——而這五個裡有三個是元件獎，屬於 GEMS 已經贏過一次的那一條線：2024 年的 Best New Basic Part。可以填的空白，多半是文件與整理的工作；填不了的空白，是整個高中組的，不是這支隊伍的。但兩種都不是通往決賽名單的路，因為 Part Collection 只有 35%、New Composite Part 34%、Entrepreneurship 29%、Sustainable Development Impact 10%。",
+  "cards": [
+    {
+      "kicker": "The spread",
+      "kicker_zh": "落差",
+      "title": "From 60% to 0%, and the number is almost circular",
+      "title_zh": "從 60% 到 0%，而這個數字幾乎是循環論證",
+      "body": "Pooled over 2024-26, 198 of 550 nominations in these 17 categories went to a team that also placed Top 10 — 36% overall. The per-category figures run from Best Wiki's 49 of 81 (60%) and Best Presentation's 42 of 79 (53%) down to three categories where it has never happened once: Safety and Security 0 of 9, Best Alternative Platform 0 of 4, Best New Improved Part 0 of 3.\n\nThe honest reading has to arrive with the number rather than after it. This is co-occurrence, not causation, and it is close to circular. Nobody takes a Top 10 place because they were nominated for Best Wiki; a project good enough to attract one is usually good enough to attract the other. And Best Wiki and Best Presentation are explicitly assessed on how the whole project is communicated, which is the same faculty a Top 10 judgement is exercising on the same wiki and the same twenty minutes. Part of the correlation is a definition, not a result.\n\nSo the ranking is worthless as a prediction and useful as a description: it says which categories are being judged on the whole project and which on one isolated dimension.",
+      "body_zh": "2024 至 2026 三季合計，這 17 個類別的 550 個入圍名額中，有 198 個落在同時進入 Top 10 的隊伍身上——整體 36%。各類別的數字從 Best Wiki 的 81 取 49（60%）與 Best Presentation 的 79 取 42（53%），一路落到三個從未發生過一次的類別：Safety and Security 9 取 0、Best Alternative Platform 4 取 0、Best New Improved Part 3 取 0。\n\n誠實的讀法必須與數字一起出現，而不是跟在後面。這是同時發生，不是因果，而且接近循環論證。沒有人是因為獲得 Best Wiki 入圍才拿到 Top 10；一個好到足以取得其中一項的專案，通常也好到足以取得另一項。而 Best Wiki 與 Best Presentation 明確評的是整個專案如何被傳達，那正是 Top 10 評審在同一個 wiki、同一段二十分鐘上所動用的同一種判斷。這份相關性有一部分是定義，不是結果。\n\n因此，這個排名作為預測一文不值，作為描述卻很有用：它說出哪些類別實際上是在評整個專案，哪些只在評單一孤立面向。",
+      "chips": [
+        "36% overall (198/550)",
+        "60% top, 0% bottom",
+        "Co-occurrence, not cause"
+      ],
+      "chips_zh": [
+        "整體 36%（550 取 198）",
+        "最高 60%，最低 0%",
+        "同時發生，非因果"
+      ]
+    },
+    {
+      "kicker": "GEMS 2026",
+      "kicker_zh": "GEMS 2026",
+      "title": "Two of the three awards GEMS won sit below the pooled baseline",
+      "title_zh": "GEMS 贏下的三個獎，有兩個低於整體基準",
+      "body": "GEMS-Taiwan's three 2026 wins land at Best Integrated Human Practices 45% (17/38), Best Measurement 22% (7/32) and Best Hardware 21% (6/29), against a pooled baseline of 36% (198/550). One is at the whole-project-proxy end; two are roughly half the baseline. In the two categories above 50% — Best Wiki 60% and Best Presentation 53% — GEMS was nominated and won neither.\n\nRead structurally rather than as a scoreboard, that is the shape of a team certified on three narrow dimensions and not on the whole. Each of the three panels was asked one question about ReLEAF: is the measurement sound, is the hardware good, is the human practices work integrated. **None of them was asked whether the parts belong to one working system**, and the finalist judgement that does ask it did not select the team. That is not a reinterpretation of the award record; it is what the award record is for.",
+      "body_zh": "GEMS-Taiwan 2026 年的三個獎分別落在 Best Integrated Human Practices 的 45%（38 取 17）、Best Measurement 的 22%（32 取 7）與 Best Hardware 的 21%（29 取 6），而整體基準是 36%（550 取 198）。一個在整體專案替身那一端；兩個大約只有基準的一半。至於超過 50% 的兩個類別——Best Wiki 的 60% 與 Best Presentation 的 53%——GEMS 都入圍，但都沒有贏。\n\n若把它當成結構而不是計分板來讀，這就是一支「在三個狹窄面向上獲得認證、在整體上沒有」的隊伍的形狀。那三個評審組各被問了關於 ReLEAF 的一個問題：量測是否紮實、硬體是否優良、人文實踐是否整合。**沒有任何一組被問到這些零件是否屬於同一個能運作的系統**，而真正會問這個問題的決賽評審，沒有選上這支隊伍。這不是對獎項紀錄的重新解讀，這正是獎項紀錄本來的用途。",
+      "chips": [
+        "IHP 45%",
+        "Measurement 22%",
+        "Hardware 21%"
+      ],
+      "chips_zh": [
+        "IHP 45%",
+        "Measurement 22%",
+        "Hardware 21%"
+      ]
+    },
+    {
+      "kicker": "Wiki and Presentation",
+      "kicker_zh": "Wiki 與 Presentation",
+      "title": "GEMS was nominated in both top categories in 2026 and did place Top 10 — the co-occurrence held, the conversion did not",
+      "title_zh": "GEMS 2026 年在兩個最高類別都入圍，也確實進了 Top 10——同時發生成立了，轉換沒有",
+      "body": "This is the point where the easy story has to be refused. The 60% and 53% figures are about co-occurrence with a Top 10 place, and **GEMS satisfied them**: it placed Top 10 in 2024, 2025 and 2026. The nomination did not fail to co-occur. What it did not become is the category win — high-school Best Wiki 2026 went to Lambert-GA and Best Presentation to NFLSHS-CHINA — or a finalist slot.\n\nAnd a nomination is not a near-miss. Best Wiki nominates 26 and crowns 4; the slate is a long list, not a shortlist, and the public record contains no ordering inside it. Nothing here can distinguish second place from twenty-sixth, and no ballot is published.\n\nOne observation is worth making and it is weak. In 2024 GEMS won Best Wiki outright, and 2024 is also the season it won the high-school Grand Prize — the one season in which the whole-project-proxy category and the whole-project prize pointed at the same team. In 2026 it converted three single-dimension categories and neither proxy. **That is two seasons, one data point each, and it cannot carry a mechanism** — it is recorded because it is the direction the rest of this block predicts, not because the record confirms it.",
+      "body_zh": "這裡正是必須拒絕那個好聽故事的地方。60% 與 53% 這兩個數字講的是與 Top 10 的同時發生，而 **GEMS 滿足了它們**：它在 2024、2025、2026 三季都進了 Top 10。入圍並沒有「沒有同時發生」。它沒有變成的是類別獎本身——2026 年高中組的 Best Wiki 由 Lambert-GA 拿下，Best Presentation 由 NFLSHS-CHINA 拿下——也沒有變成決賽席次。\n\n而且，入圍不等於「差一點」。Best Wiki 入圍 26 支、頒出 4 個獎；那份名單是一份長名單，不是決選名單，而公開紀錄裡沒有名單內部的排序。這裡的資料無法區分第二名與第二十六名，也沒有任何票選結果公開。\n\n有一項觀察值得說，但它很弱。2024 年 GEMS 贏下 Best Wiki，而 2024 也正是它贏下高中組總冠軍的那一季——那是唯一一季，整體專案替身類別與整體專案大獎指向同一支隊伍。2026 年它轉換了三個單一面向類別，兩個替身類別都沒有。**這是兩季、各一個資料點，撐不起任何機制**——它被記下來，是因為它是本段其餘內容所預測的方向，而不是因為紀錄證實了它。",
+      "chips": [
+        "Top 10 in all 3 seasons",
+        "26 nominated, 4 win",
+        "2024: Wiki win + Grand Prize"
+      ],
+      "chips_zh": [
+        "三季都進 Top 10",
+        "入圍 26 支，獲獎 4 支",
+        "2024：Wiki 獲獎＋總冠軍"
+      ]
+    },
+    {
+      "kicker": "Slate stability",
+      "kicker_zh": "名額穩定度",
+      "title": "Five categories gave high-school teams exactly the same number of nominee slots three years running",
+      "title_zh": "五個類別連續三年給高中組完全相同的入圍名額",
+      "body": "Best Wiki 9/9/9, Best Presentation 9/9/9, Best Model 4/4/4, Best Education 4/4/4, Best Integrated Human Practices 4/4/4. The rest move by one slot at most, except where a category empties out. Whatever the allocation rule is, it is not being re-derived each season.\n\nThat fixes the size of the opportunity. Across all 17 categories the high-school section had 74 citation slots in 2024, 80 in 2025 and 82 in 2026 (nominees plus winners), spread over 37, 40 and 45 distinct teams out of 128, 143 and 147 accepted. **About three in ten high-school teams are cited at all; the other seven get a medal and nothing else.**\n\nGEMS held 5 of 74 in 2024, 4 of 80 in 2025 and 5 of 82 in 2026 — the most-cited high-school team in the 2026 section, and tied at the top in 2024. The practical implication is uncomfortable: the team is already at or near the citation ceiling its section offers, so a sixth citation is not the available move. Twice now it has been at that ceiling, and in 2026 that produced no finalist slot.",
+      "body_zh": "Best Wiki 是 9/9/9、Best Presentation 9/9/9、Best Model 4/4/4、Best Education 4/4/4、Best Integrated Human Practices 4/4/4。其餘類別最多只動一個名額，除了整個類別被清空的情況。不論分配規則是什麼，它顯然不是每一季重新推導一次的。\n\n這也就固定了機會的大小。17 個類別合計，高中組在 2024 年有 74 個列名名額、2025 年 80 個、2026 年 82 個（入圍加獲獎），分散在 37、40、45 支不同隊伍身上，而三年各有 128、143、147 支隊伍獲准參賽。**大約每十支高中隊伍有三支會得到任何列名；另外七支拿到一面獎牌，然後什麼都沒有。**\n\nGEMS 在 2024 年占住 74 取 5、2025 年 80 取 4、2026 年 82 取 5——是 2026 年高中組被列名最多的隊伍，2024 年也並列最高。實際的含意並不舒服：這支隊伍已經在本組所能提供的列名上限附近，因此「再多一個列名」不是可用的招。它已經兩次站在那個上限上，而 2026 年那並沒有換到決賽席次。",
+      "chips": [
+        "5 categories constant",
+        "82 HS slots, 45 teams",
+        "GEMS 5 of 82"
+      ],
+      "chips_zh": [
+        "五個類別三季不變",
+        "高中組 82 個名額、45 支隊伍",
+        "GEMS 占 82 取 5"
+      ]
+    },
+    {
+      "kicker": "The nine blanks",
+      "kicker_zh": "九個空白",
+      "title": "Four of the nine categories GEMS has never been cited in barely exist for high-school teams",
+      "title_zh": "GEMS 從未列名的九個類別裡，有四個對高中組而言幾乎不存在",
+      "body": "The nine are Best New Composite Part, Best New Improved Part, Best Part Collection, Best Alternative Platform, Best Software, the Inclusivity Award, the Safety and Security Award, Best Sustainable Development Impact and Best Entrepreneurship. They do not form one group and should not be read as one list of failures.\n\n**Four are structurally thin for the section.** Best Alternative Platform gave high-school teams 0, 0 and 1 nominee slots across the three seasons; Best Software 0, 1 and 1; the Safety and Security Award 0, 1 and 0; Best New Improved Part 2, 0 and 0. That is four categories offering the entire high-school section between one and two nominations in three years. An absence there is the section's, not GEMS's, and chasing one would be chasing a slot that mostly is not issued.\n\n**Five are ordinarily sized and genuinely unoccupied.** Best Part Collection, Best New Composite Part, Best Entrepreneurship and Best Sustainable Development Impact each gave high-school teams 13 pooled nominations over three seasons — the same order as Best Measurement (11) and Best Hardware (12), which GEMS now wins. Three of the five are parts awards, and GEMS has already won in that line once with Best New Basic Part in 2024, so the route is demonstrably open. These blanks are curation and documentation work, not a structural barrier.\n\nWhat neither sort offers is a route to the finalist slate, because the reachable five sit at the low end of the co-occurrence column: Part Collection 35%, New Composite Part 34%, Entrepreneurship 29%, Sustainable Development Impact 10%.",
+      "body_zh": "這九個是 Best New Composite Part、Best New Improved Part、Best Part Collection、Best Alternative Platform、Best Software、Inclusivity Award、Safety and Security Award、Best Sustainable Development Impact 與 Best Entrepreneurship。它們不構成一個群體，也不該當成一份失敗清單來讀。\n\n**其中四個對高中組是結構性稀薄的。**Best Alternative Platform 三季給高中組的入圍名額是 0、0、1；Best Software 是 0、1、1；Safety and Security Award 是 0、1、0；Best New Improved Part 是 2、0、0。也就是說，這四個類別三年來總共只給整個高中組一到兩個入圍名額。這裡的空白是整個高中組的，不是 GEMS 的；去追其中任何一個，等於在追一個多半根本不會發出的名額。\n\n**另外五個大小正常，而且確實空著。**Best Part Collection、Best New Composite Part、Best Entrepreneurship 與 Best Sustainable Development Impact 三季各給高中組 13 個入圍名額——與 GEMS 如今會贏的 Best Measurement（11 個）和 Best Hardware（12 個）同一個量級。五個裡有三個是元件獎，而 GEMS 已經在這條線上贏過一次：2024 年的 Best New Basic Part，可見這條路確實是開著的。這些空白是整理與文件的工作，不是結構性的障礙。\n\n但兩種空白都不提供通往決賽名單的路，因為那可及的五個都落在同時發生比率的低端：Part Collection 35%、New Composite Part 34%、Entrepreneurship 29%、Sustainable Development Impact 10%。",
+      "chips": [
+        "4 near-empty for HS",
+        "Parts route open (2024 win)",
+        "Reachable five: 35% to 10%"
+      ],
+      "chips_zh": [
+        "四個對高中組近乎空的",
+        "元件路已開（2024 獲獎）",
+        "可及的五個：35% 到 10%"
+      ]
+    },
+    {
+      "kicker": "Nominee against winner",
+      "kicker_zh": "入圍與獲獎",
+      "title": "Winning a category co-occurs with Top 10 far more than being nominated for it",
+      "title_zh": "贏下一個類別與 Top 10 的同時發生率，遠高於只是入圍",
+      "body": "Pooled across the three seasons, **89 of 155 winners (57%)** also placed Top 10 against **198 of 550 nominees (36%)**. The gap holds inside almost every category: Best Wiki 10 of 12 winners (83%) against 60% of nominees, Best Part Collection 9 of 10 (90%) against 35%, Best Alternative Platform 2 of 3 (67%) against 0 of 4.\n\nTwo readings fit this and the data cannot separate them. Either the winner really is the stronger project and the nominee slate is a wide net, or winners and Top 10 places are drawn from the same small set of teams that judges across panels happen to remember. **Both readings are consistent with every number above**, which is a limit of this evidence and not a subtlety to be resolved by argument.\n\nThe operational consequence is the same either way: nominations and wins must be counted separately and never added. A season summary that reports a citation total hides which half of the 57/36 split the team is on.",
+      "body_zh": "三季合併，**獲獎的 155 個名額中有 89 個（57%）**同時進入 Top 10，而**入圍的 550 個名額中只有 198 個（36%）**。這個落差在幾乎每個類別內部都成立：Best Wiki 的獲獎者 12 取 10（83%），對入圍者的 60%；Best Part Collection 獲獎者 10 取 9（90%），對 35%；Best Alternative Platform 獲獎者 3 取 2（67%），對入圍者的 4 取 0。\n\n有兩種讀法都說得通，而資料無法分開它們。一是獲獎者確實是更強的專案，而入圍名單只是一張撒得很寬的網；二是獲獎與 Top 10 都是從同一小群「跨評審組都剛好記得的隊伍」裡抽出來的。**兩種讀法都與上面每一個數字相容**，這是本證據的極限，不是靠論述就能解決的細節。\n\n不論哪一種，實務後果都一樣：入圍與獲獎必須分開計算，絕不能相加。一份只報「列名總數」的賽季總結，會藏起這支隊伍落在 57 比 36 這道落差的哪一邊。",
+      "chips": [
+        "Winners 57% (89/155)",
+        "Nominees 36% (198/550)",
+        "Two readings fit"
+      ],
+      "chips_zh": [
+        "獲獎 57%（155 取 89）",
+        "入圍 36%（550 取 198）",
+        "兩種讀法都相容"
+      ]
+    },
+    {
+      "kicker": "The counter-example",
+      "kicker_zh": "反例",
+      "title": "The 1st Runner-up won no category at all, and the team with three wins was not a finalist",
+      "title_zh": "亞軍一個類別獎都沒拿，而拿下三個類別獎的那支不是決賽隊伍",
+      "body": "In the 2026 high-school section the numbers come apart cleanly. HongKong-JSS collected 4 special citations and **not one outright win**, and finished 1st Runner-up. GEMS-Taiwan collected 5 citations including 3 wins and was not named a finalist. Lambert-GA had 4 citations, 3 wins and the Grand Prize. Three teams, three different relationships between category hardware and the podium.\n\nThat is the clearest available statement that the two judgements are not the same instrument, and it is also the clearest statement of the limit on all of this: with ten teams in the Top 10 and two finalist slots, any pattern across them is fragile, and one team moving would change the picture. The block reports the shape of the counter-example, not a trend in it. Only 2 of the 10 high-school Top 10 teams were named finalists at all, which is the base rate every claim here is competing against.",
+      "body_zh": "在 2026 年高中組，這些數字分得相當乾淨。HongKong-JSS 累積了 4 項特別獎列名，**一個類別獎都沒有贏下**，最後拿到亞軍。GEMS-Taiwan 累積了 5 項列名、其中 3 項是獲獎，卻沒有被列為決賽隊伍。Lambert-GA 有 4 項列名、3 項獲獎，以及總冠軍。三支隊伍，在「類別獎的數量」與「頒獎台」之間呈現三種不同的關係。\n\n這是手上最清楚的一項說明，指出這兩種判決並不是同一具量具；它同時也是最清楚的一項限制說明：Top 10 只有十支隊伍、決賽席次只有兩個，任何橫跨它們的模式都很脆弱，只要一支隊伍換位置，整張圖就會變。本段報告的是這個反例的形狀，不是其中的趨勢。十支高中組 Top 10 隊伍中，只有 2 支被列為決賽隊伍，而這就是這裡每一項主張都必須對抗的基礎比率。",
+      "chips": [
+        "JSS: 0 wins, 2nd place",
+        "GEMS: 3 wins, no slate",
+        "2 of 10 made finalist"
+      ],
+      "chips_zh": [
+        "JSS：0 獲獎、亞軍",
+        "GEMS：3 獲獎、未入決賽",
+        "10 支中 2 支進決賽"
+      ]
+    }
+  ],
+  "table": {
+    "head": [
+      "Award",
+      "2026 nominees",
+      "2026 winners",
+      "HS nominees 24/25/26",
+      "Nominees also Top 10",
+      "GEMS 2024-26"
+    ],
+    "head_zh": [
+      "獎項",
+      "2026 入圍",
+      "2026 獲獎",
+      "高中組入圍 24/25/26",
+      "入圍者同時進 Top 10",
+      "GEMS 2024-26"
+    ],
+    "rows": [
+      [
+        "Best Wiki",
+        "26",
+        "4",
+        "9/9/9",
+        "**60% (49/81)**",
+        "**2024 win · 2025 nom · 2026 nom**"
+      ],
+      [
+        "Best Presentation",
+        "26",
+        "4",
+        "9/9/9",
+        "**53% (42/79)**",
+        "2024 nom · 2026 nom"
+      ],
+      [
+        "Best Model",
+        "15",
+        "3",
+        "4/4/4",
+        "**50% (20/40)**",
+        "2024 nom · 2025 nom"
+      ],
+      [
+        "Best Integrated Human Practices",
+        "12",
+        "3",
+        "4/4/4",
+        "**45% (17/38)**",
+        "**2026 win**"
+      ],
+      [
+        "Best Part Collection",
+        "12",
+        "3",
+        "3/5/5",
+        "35% (11/31)",
+        "never cited"
+      ],
+      [
+        "Best New Composite Part",
+        "10",
+        "3",
+        "4/5/4",
+        "34% (12/35)",
+        "never cited"
+      ],
+      [
+        "Best Education",
+        "12",
+        "3",
+        "4/4/4",
+        "33% (12/36)",
+        "2024 nom · 2025 nom"
+      ],
+      [
+        "Best Entrepreneurship",
+        "12",
+        "3",
+        "4/5/4",
+        "29% (10/35)",
+        "never cited"
+      ],
+      [
+        "Best Software",
+        "6",
+        "4",
+        "0/1/1",
+        "24% (4/17)",
+        "never cited"
+      ],
+      [
+        "Best Measurement",
+        "11",
+        "3",
+        "3/4/4",
+        "22% (7/32)",
+        "**2025 nom · 2026 win**"
+      ],
+      [
+        "Best Hardware",
+        "11",
+        "3",
+        "3/4/5",
+        "21% (6/29)",
+        "**2026 win**"
+      ],
+      [
+        "Inclusivity Award",
+        "6",
+        "3",
+        "1/1/2",
+        "12% (2/16)",
+        "never cited"
+      ],
+      [
+        "Best Sustainable Development Impact",
+        "10",
+        "3",
+        "4/4/5",
+        "10% (3/30)",
+        "never cited"
+      ],
+      [
+        "Best New Basic Part",
+        "11",
+        "3",
+        "5/4/4",
+        "9% (3/35)",
+        "**2024 win**"
+      ],
+      [
+        "Best Alternative Platform",
+        "4",
+        "3",
+        "0/0/1",
+        "**0% (0/4)**",
+        "never cited"
+      ],
+      [
+        "Safety and Security Award",
+        "3",
+        "3",
+        "0/1/0",
+        "**0% (0/9)**",
+        "never cited"
+      ],
+      [
+        "Best New Improved Part",
+        "0",
+        "2",
+        "2/0/0",
+        "**0% (0/3)**",
+        "never cited"
+      ]
+    ],
+    "rows_zh": [
+      [
+        "Best Wiki",
+        "26",
+        "4",
+        "9/9/9",
+        "**60% (49/81)**",
+        "**2024 獲獎 · 2025 入圍 · 2026 入圍**"
+      ],
+      [
+        "Best Presentation",
+        "26",
+        "4",
+        "9/9/9",
+        "**53% (42/79)**",
+        "2024 入圍 · 2026 入圍"
+      ],
+      [
+        "Best Model",
+        "15",
+        "3",
+        "4/4/4",
+        "**50% (20/40)**",
+        "2024 入圍 · 2025 入圍"
+      ],
+      [
+        "Best Integrated Human Practices",
+        "12",
+        "3",
+        "4/4/4",
+        "**45% (17/38)**",
+        "**2026 獲獎**"
+      ],
+      [
+        "Best Part Collection",
+        "12",
+        "3",
+        "3/5/5",
+        "35% (11/31)",
+        "從未列名"
+      ],
+      [
+        "Best New Composite Part",
+        "10",
+        "3",
+        "4/5/4",
+        "34% (12/35)",
+        "從未列名"
+      ],
+      [
+        "Best Education",
+        "12",
+        "3",
+        "4/4/4",
+        "33% (12/36)",
+        "2024 入圍 · 2025 入圍"
+      ],
+      [
+        "Best Entrepreneurship",
+        "12",
+        "3",
+        "4/5/4",
+        "29% (10/35)",
+        "從未列名"
+      ],
+      [
+        "Best Software",
+        "6",
+        "4",
+        "0/1/1",
+        "24% (4/17)",
+        "從未列名"
+      ],
+      [
+        "Best Measurement",
+        "11",
+        "3",
+        "3/4/4",
+        "22% (7/32)",
+        "**2025 入圍 · 2026 獲獎**"
+      ],
+      [
+        "Best Hardware",
+        "11",
+        "3",
+        "3/4/5",
+        "21% (6/29)",
+        "**2026 獲獎**"
+      ],
+      [
+        "Inclusivity Award",
+        "6",
+        "3",
+        "1/1/2",
+        "12% (2/16)",
+        "從未列名"
+      ],
+      [
+        "Best Sustainable Development Impact",
+        "10",
+        "3",
+        "4/4/5",
+        "10% (3/30)",
+        "從未列名"
+      ],
+      [
+        "Best New Basic Part",
+        "11",
+        "3",
+        "5/4/4",
+        "9% (3/35)",
+        "**2024 獲獎**"
+      ],
+      [
+        "Best Alternative Platform",
+        "4",
+        "3",
+        "0/0/1",
+        "**0% (0/4)**",
+        "從未列名"
+      ],
+      [
+        "Safety and Security Award",
+        "3",
+        "3",
+        "0/1/0",
+        "**0% (0/9)**",
+        "從未列名"
+      ],
+      [
+        "Best New Improved Part",
+        "0",
+        "2",
+        "2/0/0",
+        "**0% (0/3)**",
+        "從未列名"
+      ]
+    ]
+  },
+  "checklist": [
+    "Treat a nomination as a nomination. Best Wiki nominates 26 and crowns 4, and the public record carries no ordering inside the slate, so \"nearly won\" is not a claim the data supports about any of the three 2026 nominations.",
+    "If the 2027 goal is the finalist slate, do not plan it as a category haul. GEMS already held the highest citation count in its section in 2026 — 5 of 82 slots, 3 of them wins — and did not make the slate.",
+    "Count nominations and wins in separate columns and never add them. Winning co-occurs with Top 10 at 57% and being nominated at 36%, so a combined citation total hides which half of that you have.",
+    "Treat Best Wiki and Best Presentation as whole-project work, not as wiki work and slide work. They are assessed on how the project is communicated, which is why they co-occur with Top 10 at 60% and 53% — and why a weak project cannot be rescued in them.",
+    "The parts route is open and unoccupied: GEMS has won Best New Basic Part but never New Composite, New Improved or Part Collection, each of which gives high-school teams around 13 nominations over three seasons. That is a documentation job with a known cost and a low ceiling.",
+    "Do not spend effort on Best Alternative Platform, Best Software or the Safety and Security Award to fill the blanks. Across three seasons they offered the whole high-school section 1, 2 and 1 nominations; the absence there is structural.",
+    "Expect no finalist credit from Best Sustainable Development Impact or Best New Basic Part — 10% and 9% of their nominees place Top 10. Enter them when the work exists anyway, not as a route.",
+    "Before next season closes, ask what single dimension each 2026 win actually certified — measurement, hardware, integrated human practices — and whether anything in the published record certifies that the three belong to one working system. No category panel was asked that question."
+  ],
+  "checklist_zh": [
+    "把入圍就當成入圍。Best Wiki 入圍 26 支、頒出 4 個獎，而公開紀錄裡沒有名單內部的排序，因此關於 2026 年那三項入圍，「差一點就贏」都不是資料支持得起的說法。",
+    "如果 2027 年的目標是決賽名單，就不要把它規畫成類別獎的收集。GEMS 2026 年已經是本組列名次數最高的隊伍——82 個名額中占 5 個、其中 3 個是獲獎——而它沒有進入決賽名單。",
+    "把入圍與獲獎分成兩欄計算，絕不相加。獲獎與 Top 10 的同時發生率是 57%，入圍是 36%，所以一個合併的列名總數會藏起你落在哪一邊。",
+    "把 Best Wiki 與 Best Presentation 當成整體專案的工作，不是當成 wiki 的工作與投影片的工作。它們評的是這個專案如何被傳達，這正是它們與 Top 10 的同時發生率高達 60% 與 53% 的原因——也是一個體質弱的專案無法靠它們挽救的原因。",
+    "元件這條路是開著而且空著的：GEMS 贏過 Best New Basic Part，卻從未在 New Composite、New Improved 或 Part Collection 列名，而這三者三季各給高中組大約 13 個入圍名額。那是一份成本已知、天花板也不高的文件工作。",
+    "不要為了填補空白而投入 Best Alternative Platform、Best Software 或 Safety and Security Award。三季下來，它們總共只給整個高中組 1、2、1 個入圍名額；那裡的空白是結構性的。",
+    "不要期待 Best Sustainable Development Impact 或 Best New Basic Part 能換到決賽的分數——它們的入圍者只有 10% 與 9% 進入 Top 10。有現成的成果就去報，但別把它當成一條路。",
+    "在下一季結束之前，問清楚 2026 年那三個獎各自認證了哪一個單一面向——量測、硬體、整合式人文實踐——以及公開紀錄裡有沒有任何東西認證這三者屬於同一個能運作的系統。沒有任何一個類別評審組被問過這個問題。"
+  ],
+  "method": "Three seasons of results — 2024, 2025 and 2026 — read from the iGEM public API's award records and team rosters; nothing on this page comes from a wiki. The category set is the 17 special awards present in the 2026 results, with \"Best Village Project\" excluded: it is awarded within each village rather than across the cohort, so its nominee count and its co-occurrence rate are not comparable with the others. \"Best Software Tool\" and \"Best Software\" are treated as one category, being the same award renamed between seasons. \"Best Plant Synthetic Biology\" appears in earlier seasons and is absent from the 2026 special set, so it is not in the table. Team ids are reissued every season, so team names are the only cross-year key available; a team that renamed itself between seasons would be read here as two teams, no such case was detected, and none can be ruled out. The \"nominees also Top 10\" column is the share of pooled 2024-26 nominations in a category whose team also appears in that same season's Top 10, across all sections rather than high-school only; the high-school-only rates are referred to in the text but rest on denominators as small as 1 and 2 and are not tabulated. That column is co-occurrence and nothing else. It is close to circular, and the circularity is structural rather than incidental: a project strong enough to be nominated is usually strong enough to place, and Best Wiki and Best Presentation are assessed on how the whole project is communicated, which overlaps directly with what a Top 10 judgement rewards, so part of the correlation is built into the definitions. No causal claim is made from it, it should not be read as a prediction, and the sorting it supports — proxy for a whole-project verdict against certificate for one dimension — is the only use made of it. Slate sizes are counted as awarded, so a category's nominee count is what the published record shows rather than a stated quota, and \"Best New Improved Part\" having 2 winners and 0 nominees in 2026 is reported as found. The 2026 section context — 423 accepted teams, 147 of them high-school, 145 decorated on at least one non-medal award, 59 winning at least one outright, 10 high-school teams in the Top 10 and 2 named finalists — is counted from the same records. GEMS-Taiwan is the report author's own team and is counted on the same lines as every other team.",
+  "method_zh": "三個賽季的成績——2024、2025、2026——取自 iGEM 公開 API 的獎項紀錄與隊伍名冊；本頁沒有任何內容來自 wiki。類別集合是 2026 年成績中出現的 17 個特別獎，並排除「Best Village Project」：它是在各個 village 內部頒發，而不是跨全體頒發，因此它的入圍數與同時發生比率無法與其他類別相比。「Best Software Tool」與「Best Software」視為同一個類別，因為那是同一個獎在不同賽季改名。「Best Plant Synthetic Biology」出現在較早的賽季，而 2026 年的特別獎集合中沒有它，因此不列入本表。隊伍編號每一季都會重新發放，所以隊伍名稱是唯一可用的跨年度對照鍵；若有隊伍在賽季之間改名，在這裡就會被讀成兩支隊伍，目前沒有偵測到這樣的案例，但也無法排除。「入圍者同時進 Top 10」一欄，是某個類別在 2024 至 2026 三季合計的入圍名額中，其隊伍同時出現在該季 Top 10 的比例，計算範圍是所有組別，而不只是高中組；只算高中組的比率在正文中提到，但其分母小到只有 1 或 2，因此不列表。該欄只是同時發生，別無其他。它接近循環論證，而且這個循環是結構性的，不是偶然的：強到能夠入圍的專案，通常也強到能夠進榜，而 Best Wiki 與 Best Presentation 評的是整個專案如何被傳達，這與 Top 10 評審所獎勵的東西直接重疊，因此這份相關性有一部分是內建在定義裡的。本頁不從它導出任何因果主張，它也不該被當成預測來讀；它唯一的用途是支撐那個分法——整體專案判決的替身，對比單一面向的認證。各類別的名額數量以實際頒出為準，因此某個類別的入圍數是公開紀錄所顯示的數字，而不是官方宣告的配額；「Best New Improved Part」在 2026 年有 2 個獲獎、0 個入圍，就照查到的樣子報告。2026 年的全組背景數字——423 支獲准參賽隊伍、其中 147 支為高中組、145 支取得至少一項非獎牌類獎項、59 支至少贏下一項、高中組 10 支進入 Top 10、2 支被列為決賽隊伍——也是從同一批紀錄計算而來。GEMS-Taiwan 是本報告作者自己的團隊，與其他每一支隊伍以相同標準計算。"
+}
