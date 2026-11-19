@@ -8,14 +8,34 @@
   "projectTitle": "BITE — Biosensing for Instant Target Pathogen Evaluation",
   "tagline": "A two-chamber swab that turns Cas12a collateral cleavage into a blue colour you can read with your eyes",
   "summary": "NYCU-Taiwan built BITE, a hand-operated two-chamber cartridge for foodborne Salmonella detection: chamber one releases magnetic beads carrying DNA capture probes plus lysis buffer, heat lysis frees bacterial DNA, a magnet concentrates the bead-bound target, then chamber two delivers Cas12a with crRNA and a hairpin reporter whose G-rich segment, once cleaved, folds into a potassium-stabilised G-quadruplex that binds hemin to form a DNAzyme and oxidises TMB from colourless to blue. The point of the design is that the final step needs no instrument. They won Best Project Promotion Video in the Undergrad/Overgrad section, and the same communication discipline runs through the wiki, which is built as a scroll-driven narrative rather than a document.",
-  "awards": ["Best Project Promotion Video, Undergrad/Overgrad (winner)"],
+  "awards": [
+    "Best Project Promotion Video, Undergrad/Overgrad (winner)"
+  ],
   "dry": {
     "frameworks": "A narrative structure applied consistently: everyday stakes, then the quantified global burden with its source named, then what existing methods do well, then the specific real-world constraints that make them impractical, then a refusal of the implied trade-off, then the solution and only then the mechanism. Each mechanistic step is introduced by the question it answers (Cas12a can cut DNA, but how do we turn an invisible molecular reaction into something we can see?), so the chemistry arrives as an answer rather than as content.",
     "dataviz": "Roughly 67 separately numbered illustration layers on the landing page alone, assembled into a scroll-driven walkthrough: an exploded device diagram with each component labelled (two chambers, Y-connector, sampling swab, collection tube), a magnetic-bead sequence split into meet-the-beads, capture and magnetic separation, an RNP assembly and trans-cleavage sequence, and a hairpin-to-G4-to-DNAzyme-to-blue-TMB chain. Numbers are set as display type (866 million ill, 1.52 million deaths) with the WHO foodborne-hazards estimate cited beneath them.",
     "datascience": "Education impact is measured rather than asserted: paired pre- and post-surveys at the 16 May outreach session moved the share of 102 high-school candidates rating their understanding of synthetic biology at 4 to 5 from 13.3 percent to 80.0 percent. The April workshop, lacking reflection surveys, was instead scored against observational rubrics and task-completion rates (96 percent produced clean four-tier density gradients, 92 percent kept sterile boundaries in the laminar hood, 88 percent of culture tubes stayed contamination-free at 14 days, 85 percent distinguished nicked, supercoiled and linear plasmid bands, 95 percent built a correct genetic circuit first time). Instagram is reported with the diagnostic metric rather than the vanity one: 41,851 views across 6 July to 6 October, views up 209.6 percent on the previous period, and 57.9 percent of views from non-followers.",
     "software": "BITE & SEEK, a bilingual public food-safety website launched 10 August 2026, with a card-based kitchen-decision quiz that reshuffles each round so replaying tests understanding rather than recall, a Facts page keyed to the 7-60 degrees C temperature danger zone per Taiwan FDA guidance and the WHO Five Keys, a History page tracing five outbreaks that changed food-safety law, and a live visitor map with per-country quiz averages.",
-    "stack": ["LbCas12a", "crRNA", "G-quadruplex/hemin DNAzyme", "TMB colorimetry", "streptavidin-biotin magnetic beads", "HRP/TMB control readout", "fluorescence time-course assays"],
-    "techniques": ["magnetic-bead target enrichment with capture probes", "heat lysis", "Cas12a trans-cleavage of a hairpin reporter", "potassium-dependent G4 folding", "colorimetric readout development and background characterisation"]
+    "stack": [
+      "LbCas12a",
+      "crRNA",
+      "G-quadruplex/hemin DNAzyme",
+      "TMB colorimetry",
+      "streptavidin-biotin magnetic beads",
+      "HRP/TMB control readout",
+      "fluorescence time-course assays"
+    ],
+    "techniques": [
+      "magnetic-bead target enrichment with capture probes",
+      "heat lysis",
+      "Cas12a trans-cleavage of a hairpin reporter",
+      "potassium-dependent G4 folding",
+      "colorimetric readout development and background characterisation"
+    ],
+    "frameworks_zh": "一套一貫套用的敘事結構：先講日常的切身利害，再給出具名出處的全球疾病負擔數字，接著是現有方法做得好的地方，然後是讓它們在現實中不切實際的具體限制，接著拒絕那個隱含的取捨，才給出解方，最後才講機制。每個機制步驟都由它所回答的問題引入（Cas12a 能切 DNA，但我們要怎麼把看不見的分子反應變成看得見的東西？），因此化學是作為答案出現，而不是作為內容堆上來。",
+    "dataviz_zh": "光是首頁就有約 67 層分別編號的插圖，組合成一段捲動式導覽：一張爆炸圖標出裝置的每個元件（兩個腔室、Y 型接頭、採樣棒、收集管），磁珠的流程拆成認識磁珠、捕捉與磁性分離三段，一段 RNP 組裝與反式切割的序列，以及髮夾到 G-四聯體到 DNAzyme 到藍色 TMB 的連鎖。數字以大字標題呈現（8.66 億人患病、152 萬人死亡），底下引用 WHO 的食源性危害估計。",
+    "datascience_zh": "教育成效是量出來的，不是宣稱出來的：5 月 16 日那場推廣活動以配對的前後測問卷，讓 102 位高中考生中把自己對合成生物學理解程度評為 4 到 5 分的比例，從 13.3% 上升到 80.0%。4 月那場工作坊沒有做反思問卷，改以觀察評分表與任務完成率評量（96% 做出乾淨的四層密度梯度，92% 在無菌操作台內維持無菌邊界，88% 的培養管在第 14 天仍無污染，85% 能分辨缺口型、超螺旋與線型質體條帶，95% 第一次就組出正確的基因迴路）。Instagram 的數據報告用的是有診斷價值的指標，而不是好看的虛榮指標：7 月 6 日至 10 月 6 日共 41,851 次觀看，比前一期成長 209.6%，其中 57.9% 的觀看來自非追蹤者。",
+    "software_zh": "BITE & SEEK 是一個雙語的食品安全公眾網站，2026 年 8 月 10 日上線：有一套卡片式的廚房決策測驗，每一輪都會重新洗牌，因此重玩測的是理解而不是記憶；一個 Facts 頁面對應台灣食藥署指引所定的 7 至 60 度 C 危險溫度帶與 WHO 食品安全五大要點；一個 History 頁面追溯五起改變食品安全法規的事件；還有一張即時訪客地圖，顯示各國的測驗平均分數。"
   },
   "good": {
     "publicEngagement": "Three channels with distinct jobs rather than three copies of the same message. BITE & SEEK carries the knowledge in replayable interactive form (133 visits from 5 countries by 18 October, which they report honestly as modest). A four-station hands-on workshop on 18 April took 25 students through micropipetting, sundew tissue culture, gel electrophoresis and BioBrick LEGO modelling, with the full station protocols published so another team can run it. A 16 May session reached 102 high-school candidates during departmental interviews, deliberately timed when the audience was already thinking about studying biotechnology. Instagram splits formats by function: posts for team and event information, Reels for lab life and concepts, Stories for real-time interaction, and the best-performing content was the team introduction post (4,169 views) and a lab Reel (3,039 views), which also drove the most new followers. Their own conclusion from that is the useful one: real people in authentic settings outperform polished explanation, and content anchored to daily life travels furthest.",
@@ -26,28 +46,35 @@
       "AccuSens Biomed Co., Ltd. (Dr. Chen; competitive positioning, field-deployment requirements, offered materials for reagent pre-mixing tests)",
       "National Yang Ming Chiao Tung University, Department of Biological Science and Technology",
       "IDT and CEB (listed sponsors)"
-    ]
+    ],
+    "publicEngagement_zh": "三個管道各有不同任務，而不是同一則訊息的三份複本。BITE & SEEK 以可重玩的互動形式承載知識（到 10 月 18 日為止有來自 5 個國家的 133 次造訪，他們誠實地說這個數字不大）。4 月 18 日的四站式動手工作坊帶 25 名學生做微量吸管操作、毛氈苔組織培養、膠體電泳與以樂高建構 BioBrick 模型，各站的完整操作流程都已公開，別的團隊可以照辦。5 月 16 日的場次在系所面試期間觸及 102 位高中考生，刻意安排在受眾本來就在思考要不要唸生物科技的時候。Instagram 則按功能分配格式：貼文放團隊與活動資訊，Reels 放實驗室生活與概念，Stories 做即時互動；表現最好的內容是團隊介紹貼文（4,169 次觀看）與一支實驗室 Reel（3,039 次觀看），後者也帶來最多新追蹤者。他們由此得出的結論很有用：真實場景裡的真實人物勝過打磨過的解說，而扣住日常生活的內容傳得最遠。",
+    "ihp_zh": "9 月 5 日的兩場企業拜訪，兩場都改變了具體的東西。Trade Wind Biotech 的創辦人兼執行董事 Dr. Lance Chang 建議改採微流體形式以降低試劑消耗（G4 讀值正是他們主要的試劑成本），並問他們 Cas12a 的切割能不能不經轉移步驟就直接與 G4 反應耦合、試劑能不能預先乾燥在裝置裡；他也給了全篇報告中最重要的一句溝通指示：不要用 Cas12a 附帶切割的分子機制開場，要從看得見的訊號開始，然後再解釋目標辨識是如何產生它的。他並且強調，講得清楚的前提是真的懂這門科學，這促使他們去查文獻，弄懂為什麼 G4 偏好鉀離子而非鈉離子（離子配位，加上鈉離子去水合所需的能量代價更高）。在 AccuSens Biomed，Dr. Chen 要他們挑出一個具體的潛在優勢，並定義出支持它所需要的證據，而不是想在每個面向上都打贏 PCR。照著做之後，他們認真讀了競爭者的技術文件，發現 Hygiena 的 BAX System Real-Time Salmonella 檢測早已採用冷凍乾燥的單管試劑，取得 AOAC OMA 與 AFNOR 認證，並透過 SalQuant 提供定量功能——也就是說，他們原以為獨到的好幾項特點，市面上早就有了。他們把這個發現公開寫出來。Dr. Chen 也給了實驗檯層級的除錯建議（純化質體 1-5 ng、挑中等大小的菌落、用 20 微升吸管尖而非金屬接種環做三區或四區畫線、IPTG 濃度採遞減序列、誘導前培養到 OD600 約 0.5 且絕不超過 0.6），並設下現地部署的目標——他們也明確標示那是目標而非既有功能：可室溫保存的冷凍乾燥試劑珠、能以一般行動電源供電的判讀器，以及可在本地離線網路運作、待連線恢復後再同步上雲的軟體。",
+    "realWorld_zh": "這裡沒有任何商業化的主張，而這份克制正是重點。每一頁都用明白的文字把已驗證的結果與未來發展方向分開：微流體形式、試劑預混與儲存穩定性「仍屬未來發展方向」，其可行性「尚未確立」；目前的結果「並未證實更短的樣本濃縮時間、室溫試劑穩定性或可現地操作」；背景呈色也被具名為他們自己比色讀值仍存在的限制。他們也寫出那個一般性的教訓，而這正是多數 iGEM 團隊漏掉的：元件測試成功只是奠定基礎，並不能確立整個系統的效能。在競爭分析上的誠實同樣罕見：發現某個商用檢測早已具備你的差異化特點，然後把這個發現公開，這與一場推銷所獎勵的行為正好相反。不過真正值得學的是他們的溝通手藝。有四件事讓它成立。第一，敘事弧把切身利害放在機制之前，因此在任何分子生物學登場之前，觀眾已經知道自己為什麼該在意。第二，它用平實的操作語言說明既有方法為何不適用（檢測可能需要實驗室設備、結果可能要等、操作可能需要受訓人員），而不是宣稱既有方法不好，這讓主張站得住腳。第三，它大聲拒絕一個假的二選一（「但我們憑什麼非得選？」），而這個拒絕就成了產品定義：五項要求（快速、靈敏且專一、簡單、可取得、可攜）正好拼出裝置名稱的縮寫。第四，每個機制步驟都被寫成前一步所提出問題的答案，而整條鏈收束在一件感官可感的事物上——藍色——那同時也是真正的工程貢獻。行動呼籲是一句雙關：take a BITE before every bite。支撐這一切的是實際的製作投入：數十層客製插圖、三款自訂網頁字型（其中一款是手寫字）、雙語內容，以及捲動驅動的網站架構，而不是一頁文字加圖。後續規劃被定位為社群基礎設施而非公司：在 Grand Jamboree 把 BITE & SEEK 測驗開放給每一支 iGEM 隊伍並設團隊排行榜、前十名有獎、逐級加難的挑戰、可分享的成績卡、完整英文版，以及把網站與動手示範串起來的實體工作坊。"
   },
   "images": [
     {
       "url": "https://static.igem.wiki/teams/6306/wiki/01-home/279-home-walk-dev-base.webp",
       "caption": "One layer of the exploded BITE device walkthrough, built from dozens of separately drawn illustration components so the cartridge can be assembled step by step as the reader scrolls",
-      "credit": "Team NYCU-Taiwan, iGEM 2026 wiki"
+      "credit": "Team NYCU-Taiwan, iGEM 2026 wiki",
+      "caption_zh": "BITE 裝置爆炸圖導覽中的一層，由數十個分別繪製的插圖元件組成，讀者一邊捲動，匣式裝置就一步一步組起來"
     },
     {
       "url": "https://static.igem.wiki/teams/6306/wiki/01-home/138-home-hero-people-back.webp",
       "caption": "Opening illustration of the landing-page narrative, which starts at a shared meal rather than at a molecule",
-      "credit": "Team NYCU-Taiwan, iGEM 2026 wiki"
+      "credit": "Team NYCU-Taiwan, iGEM 2026 wiki",
+      "caption_zh": "首頁敘事的開場插圖，起點是一頓共享的餐食，而不是一個分子"
     },
     {
       "url": "https://static.igem.wiki/teams/6306/wiki/17-hp-integrated-hp/253-ihp-tradewind-1.webp",
       "caption": "Visit to Trade Wind Biotech, where Dr. Lance Chang told the team to lead with the visible signal rather than with Cas12a collateral cleavage",
-      "credit": "Team NYCU-Taiwan, iGEM 2026 wiki"
+      "credit": "Team NYCU-Taiwan, iGEM 2026 wiki",
+      "caption_zh": "拜訪 Trade Wind Biotech，Dr. Lance Chang 在此告訴團隊要從看得見的訊號開場，而不是從 Cas12a 的附帶切割開場"
     },
     {
       "url": "https://static.igem.wiki/teams/6306/wiki/18-hp-education/30-hp-edu-expo-2.avif",
       "caption": "Four-station hands-on workshop, with full station protocols published so other teams can reproduce it",
-      "credit": "Team NYCU-Taiwan, iGEM 2026 wiki"
+      "credit": "Team NYCU-Taiwan, iGEM 2026 wiki",
+      "caption_zh": "四站式動手工作坊，各站完整操作流程皆已公開，其他團隊可以重現"
     }
   ],
   "gemsTakeaway": "Adopt their narrative order for every public-facing explanation: stakes with a sourced number, what current methods do well, the operational constraints that disqualify them, an explicit refusal of the trade-off, then the solution, then the mechanism told as a chain of answers ending in something a person can see. And take Trade Wind's instruction literally: open with the visible result, not the enzyme, and only explain the molecular step once the audience wants to know how the result happened.",
@@ -57,5 +84,9 @@
     "https://2026.igem.wiki/nycu-taiwan/human-practices/",
     "https://2026.igem.wiki/nycu-taiwan/project",
     "https://www.youtube.com/@NYCU_Taiwan_2026"
-  ]
+  ],
+  "projectTitle_zh": "BITE——即時目標病原評估的生物感測（Biosensing for Instant Target Pathogen Evaluation）",
+  "tagline_zh": "一支雙腔室採樣棒，把 Cas12a 的附帶切割變成肉眼就讀得出來的藍色",
+  "summary_zh": "NYCU-Taiwan 做出 BITE，一個手動操作的雙腔室匣式裝置，用於檢測食品中的沙門氏菌：第一腔室釋出帶有 DNA 捕捉探針的磁珠與裂解緩衝液，加熱裂解釋出細菌 DNA，再以磁鐵把結合在磁珠上的目標濃縮；接著第二腔室送出帶 crRNA 的 Cas12a 與一個髮夾報導子，其富含 G 的片段一旦被切斷，就會折疊成由鉀離子穩定的 G-四聯體，結合 hemin 形成 DNAzyme，把 TMB 由無色氧化成藍色。這個設計的重點在於最後一步不需要任何儀器。他們獲得大學部／研究生組的 Best Project Promotion Video 獎，而同一份溝通紀律貫穿整個 wiki——它是以捲動驅動的敘事方式建成，而不是一份文件。",
+  "gemsTakeaway_zh": "任何對外說明都值得照搬他們的敘事順序：先用有出處的數字講清利害關係，再講現有方法做得好的地方，接著是讓它們在實務上行不通的操作限制，然後明白地拒絕那個取捨，才講解方，最後把機制講成一連串問答，收尾在一件人眼看得見的事情上。還有，把 Trade Wind 的指示照字面執行：開場講看得見的結果，不要講酵素；只有在觀眾想知道這個結果是怎麼來的時候，才解釋分子層次的步驟。"
 }

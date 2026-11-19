@@ -6,21 +6,54 @@
   "village": "",
   "wiki": "https://2026.igem.wiki/hbut-china/",
   "projectTitle": "IGNITE — oHSV2-Neo-IL-2",
+  "projectTitle_zh": "IGNITE — oHSV2-Neo-IL-2",
   "tagline": "An AI-redesigned IL-2 that activates CD8 T cells without expanding Tregs, delivered from an oncolytic HSV-2 into microsatellite-stable cold tumours",
+  "tagline_zh": "一種經 AI 重新設計的 IL-2，能活化 CD8 T 細胞而不擴增 Treg，並以溶瘤型 HSV-2 遞送至微衛星穩定的冷腫瘤",
   "summary": "HBUT-China targeted microsatellite-stable colorectal cancer, the roughly 80-85 percent of advanced cases that behave as immunologically cold tumours, by arming an attenuated oncolytic herpes simplex virus type 2 with an engineered interleukin-2. Their Best New Basic Part, Neo-IL-2, is an AI-guided interface redesign that weakens binding to IL-2R-alpha (CD25) while keeping signalling through the IL-2R-beta/gamma-c complex, so it activates CD8 T cells and NK cells without driving the regulatory T-cell expansion and dose-limiting toxicity that have crippled wild-type IL-2. The cassette was recombined into an HG52 backbone already deleted for ICP34.5 (neurovirulence) and ICP47 (TAP inhibition, so MHC class I presentation is restored), replacing a CMV-GFP cassette at the gamma-34.5 locus. They won Best New Basic Part in the Undergrad section and Best Oncology Project.",
-  "awards": ["Best New Basic Part, Undergrad (winner)", "Best Oncology Project (winner)"],
+  "summary_zh": "HBUT-China 針對微衛星穩定（MSS）型結腸直腸癌，也就是在晚期病例中約占 80-85%、表現為免疫冷腫瘤的那一群，做法是為一株減毒的溶瘤型第 2 型單純疱疹病毒裝上經改造的介白素-2。他們獲得 Best New Basic Part 的 Neo-IL-2 是一項以 AI 引導的界面重新設計，削弱與 IL-2R-alpha（CD25）的結合，同時保留透過 IL-2R-beta/gamma-c 複合體的訊號傳遞，因此能活化 CD8 T 細胞與 NK 細胞，而不會引發重創野生型 IL-2 的調節型 T 細胞擴增與劑量限制毒性。該表現匣以同源重組置入已刪除 ICP34.5（神經毒力）與 ICP47（TAP 抑制，因此 MHC class I 呈現得以恢復）的 HG52 骨架，取代 gamma-34.5 位點上原有的 CMV-GFP 匣。他們在 Undergrad 組獲得 Best New Basic Part 與 Best Oncology Project。",
+  "awards": [
+    "Best New Basic Part, Undergrad (winner)",
+    "Best Oncology Project (winner)"
+  ],
   "dry": {
     "frameworks": "Two named, reusable frameworks offered as contributions: SHIELD, a six-module full-chain safety paradigm covering safety-by-design, wet-lab operational governance, hardware infrastructure assurance, emergency response, training and education, and public outreach; and HOPES, a closed-loop human-centred methodology for integrated human practices. Plus a documented chassis-comparison exercise weighing HSV-1 against HSV-2 across oncolytic capacity, payload size and other dimensions before committing.",
+    "frameworks_zh": "兩個具名且可重用的框架被當作貢獻提出：SHIELD，一個六模組的全鏈安全範式，涵蓋設計階段安全、濕實驗操作治理、硬體基礎設施保證、緊急應變、訓練與教育，以及公眾推廣；還有 HOPES，一套以人為中心的閉環方法論，用於整合式人類實踐。此外還有一份有記錄的載體比較作業，在定案之前就溶瘤能力、負載容量等多個面向權衡 HSV-1 與 HSV-2。",
     "dataviz": "Construction schematics showing the HG52 (ICP34.5-/ICP47-) backbone with TRL/IRL/IRS/TRS repeats and the homologous-recombination replacement of CMV-GFP with CMV-Neo-IL-2-BGH-polyA, three-round plaque-purification panels in bright-field, green and merged channels, flow-cytometry Treg percentage comparisons, qPCR and RTCA traces, tumour growth curves and survival plots, and a watercolour shield diagram linking the six SHIELD dimensions.",
+    "dataviz_zh": "建構示意圖呈現帶有 TRL/IRL/IRS/TRS 重複序列的 HG52（ICP34.5-/ICP47-）骨架，以及以同源重組把 CMV-GFP 置換為 CMV-Neo-IL-2-BGH-polyA 的過程；三輪病毒斑純化的明視野、綠色與疊合通道圖組；流式細胞術的 Treg 百分比比較；qPCR 與 RTCA 曲線；腫瘤生長曲線與存活曲線；以及一張把 SHIELD 六個面向串連起來的水彩盾牌圖。",
     "datascience": "AI-assisted protein interface design followed by multi-tool computational triage: molecular docking, affinity prediction, stability and manufacturability analysis, with PRODIGY used to forecast receptor-binding profiles at 37 degrees C and confirm reduced CD25 affinity alongside retained CD122/CD132 association. The design hypothesis is then tested rather than assumed, with SPR used for direct receptor-binding verification.",
+    "datascience_zh": "以 AI 輔助的蛋白質界面設計，接著進行多工具的計算分流：分子嵌合、親和力預測、穩定性與可製造性分析，並以 PRODIGY 預測 37 度 C 下的受體結合輪廓，確認對 CD25 的親和力下降、同時保留與 CD122/CD132 的結合。設計假設隨後是被檢驗而非被假定成立，他們以 SPR 直接驗證受體結合。",
     "software": "",
-    "stack": ["AI-assisted protein design", "PRODIGY affinity prediction", "molecular docking", "HSV-2 HG52 (ICP34.5-/ICP47-) backbone", "pHG52d34.5-CMV-GFP shuttle vector", "ICP4 complementing cells", "calcium phosphate co-transfection", "SPR", "RTCA real-time cytotoxicity", "flow cytometry", "ELISA", "qPCR"],
-    "techniques": ["rational receptor-bias engineering of a cytokine", "homologous recombination into a viral genome at a defined locus", "three-round plaque purification", "Treg selective-activation assay", "T-cell activation assay", "high-passage stability testing of a transgene in a recombinant virus", "in vivo tumour volume and survival monitoring in tumour-bearing mice"]
+    "stack": [
+      "AI-assisted protein design",
+      "PRODIGY affinity prediction",
+      "molecular docking",
+      "HSV-2 HG52 (ICP34.5-/ICP47-) backbone",
+      "pHG52d34.5-CMV-GFP shuttle vector",
+      "ICP4 complementing cells",
+      "calcium phosphate co-transfection",
+      "SPR",
+      "RTCA real-time cytotoxicity",
+      "flow cytometry",
+      "ELISA",
+      "qPCR"
+    ],
+    "techniques": [
+      "rational receptor-bias engineering of a cytokine",
+      "homologous recombination into a viral genome at a defined locus",
+      "three-round plaque purification",
+      "Treg selective-activation assay",
+      "T-cell activation assay",
+      "high-passage stability testing of a transgene in a recombinant virus",
+      "in vivo tumour volume and survival monitoring in tumour-bearing mice"
+    ]
   },
   "good": {
     "publicEngagement": "Tiered outreach designed per audience rather than one talk repeated: young children (storybooks, five published as PDFs), special-needs children and groups with intellectual disabilities, university students, and elderly communities, including a graded calisthenics set with a basic and an advanced version so seniors of different fitness levels can use it. Formats span hands-on experiments, physical teaching aids and salons.",
+    "publicEngagement_zh": "分層的推廣活動是依對象分別設計，而不是同一場演講重複講：幼童（繪本，其中五本以 PDF 發表）、特殊需求兒童與智能障礙群體、大學生，以及高齡社區，後者包括一套分級的徒手健身操，有基礎版與進階版，讓體能不同的長者都能使用。形式涵蓋動手實驗、實體教具與沙龍。",
     "ihp": "Patient, clinician and expert interview transcripts were analysed alongside a public questionnaire on understanding of cold versus hot tumours and a review of previous iGEM human-practices cases, organised through their HOPES closed-loop framework. Safety input came from named virologists, including Qiu Yang, a researcher at the Wuhan Institute of Virology, Chinese Academy of Sciences, who works on viral vector safety evaluation and animal model assessment, with multiple rounds of interviews on virology and animal experimentation feeding the risk-assessment design.",
+    "ihp_zh": "病患、臨床醫師與專家的訪談逐字稿，與一份關於民眾對冷腫瘤與熱腫瘤理解程度的公眾問卷，以及對過往 iGEM 人類實踐案例的回顧一併分析，並以他們的 HOPES 閉環框架加以組織。安全方面的意見來自具名的病毒學家，包括中國科學院武漢病毒研究所研究員 Qiu Yang，其研究領域為病毒載體安全評估與動物模式評估；關於病毒學與動物實驗的多輪訪談，則餵進了風險評估的設計。",
     "realWorld": "There is no venture here and the team does not pretend otherwise, so the instructive material is the part and the safety practice. On reusability, Neo-IL-2 is one of the better-engineered iGEM parts because the characterisation is layered rather than single-assay: SDS-PAGE for expression, qPCR and ELISA for transcript and protein, SPR for direct receptor binding, a Treg selective-activation assay and a T-cell activation assay for the functional claim that actually matters, RTCA for real-time cytotoxicity, and crucially a stability test of Neo-IL-2 expression after high-passage propagation of the recombinant virus, which is the test that tells a downstream user whether the part survives in a working vector. They also state the reuse envelope explicitly and in vector-agnostic terms: the coding sequence is intended for any context needing selective CD8 T-cell and NK activation without Treg expansion, and they name oncolytic viruses, mRNA-LNP and chassis strains as delivery platforms it can move into. Eight new parts were built (six basic, two composite), two existing parts reused, and functional annotations and characterisation descriptions on the Registry entries were deliberately expanded, with a named Part Leader owning the documentation. That combination, a design rationale, a computational prediction, an orthogonal physical measurement of the predicted property, a functional assay of the intended benefit, and a passage-stability result, is what makes a part genuinely inheritable rather than merely registered. On safety, the standout is institutional rather than technical: HBUT initiated and led a five-school joint biosafety manual for anti-tumour synthetic-biology projects with four other university iGEM teams (ZJU-China, BNU-China, JLU-FBH and ZJUT-China), covering oncolytic-virus modification operating standards, GMO leakage hazards and waste-disposal guidance, published as a downloadable PDF and explicitly designed with internally unified but differentiable risk-assessment protocols, since the five teams use different carriers. Their reasoning for doing it is the honest one: an individual iGEM team is limited in research vision, experimental conditions and risk-assessment competence, so cross-team safety communication is how those limits get overcome. Safety is also built into the construct rather than bolted on, with ICP34.5 deleted to cut neurovirulence and improve tumour selectivity and ICP47 deleted to restore antigen presentation, and they state plainly that genetic attenuation cannot eliminate risk entirely because viruses are inherently infectious. Wet-lab practice is documented at BSL-2 with risk assessment, PPE, waste handling and training, photographed down to biosafety-cabinet operation, eyewash stations and fridge labelling. The blunt limitations are theirs: the project is explicitly still in progress, systematic toxicity assessment requires expansion to multiple animal models, and the AI protein-screening system needs further experimental iteration.",
+    "realWorld_zh": "這裡沒有創業案，團隊也不假裝有，因此真正有教益的是零件本身與安全實務。在可重用性上，Neo-IL-2 是工程上較為紮實的 iGEM 零件之一，因為它的特性分析是分層的，而不是只做一種檢測：以 SDS-PAGE 檢查表現、以 qPCR 與 ELISA 檢查轉錄本與蛋白、以 SPR 直接檢驗受體結合、以 Treg 選擇性活化檢測與 T 細胞活化檢測支撐那項真正要緊的功能主張、以 RTCA 做即時細胞毒性，而最關鍵的是對重組病毒高次傳代後 Neo-IL-2 表現的穩定性測試，這正是能告訴下游使用者這個零件在實際使用的載體中能否存活的那項測試。他們也以不綁定特定載體的方式明確說出重用範圍：這段編碼序列適用於任何需要選擇性活化 CD8 T 細胞與 NK 細胞、又不擴增 Treg 的情境，並點名溶瘤病毒、mRNA-LNP 與底盤菌株作為它可以移入的遞送平台。團隊共建立八個新零件（六個基本、兩個複合），重用兩個既有零件，並刻意擴充 Registry 條目上的功能註釋與特性分析描述，還指派一位具名的 Part Leader 負責文件。設計理由、計算預測、對所預測性質的獨立物理量測、對預期益處的功能檢測，再加上傳代穩定性結果，這樣的組合才讓一個零件真正可被繼承，而不只是被註冊。在安全方面，最突出的是制度性而非技術性的做法：HBUT 發起並主導一本針對抗腫瘤合成生物學專案的五校聯合生物安全手冊，合作對象是另外四支大學 iGEM 隊伍（ZJU-China、BNU-China、JLU-FBH 與 ZJUT-China），內容涵蓋溶瘤病毒改造的操作標準、GMO 外洩危害與廢棄物處置指引，以可下載的 PDF 發表，並刻意設計成內部統一但可分化的風險評估流程，因為五支團隊使用的載體各不相同。他們這麼做的理由很誠實：單一 iGEM 團隊在研究視野、實驗條件與風險評估能力上都有限，因此跨隊的安全溝通正是突破這些限制的方式。安全也是內建在構築體裡而不是事後加上：刪除 ICP34.5 以降低神經毒力並提升腫瘤選擇性，刪除 ICP47 以恢復抗原呈現；他們並直言基因減毒無法完全消除風險，因為病毒本質上具感染性。濕實驗實務以 BSL-2 等級記錄，包含風險評估、個人防護裝備、廢棄物處理與訓練，連生物安全櫃操作、洗眼設備與冰箱標示都有照片。那些直白的限制也是他們自己說的：專案明確仍在進行中，系統性的毒性評估需要擴展到多種動物模式，而 AI 蛋白質篩選系統還需要進一步的實驗迭代。",
     "partners": [
       "Qiu Yang, Wuhan Institute of Virology, Chinese Academy of Sciences (viral vector safety evaluation and animal models)",
       "ZJU-China, BNU-China, JLU-FBH and ZJUT-China iGEM teams (five-school joint biosafety manual for anti-tumour synthetic biology)",
@@ -31,25 +64,30 @@
     {
       "url": "https://static.igem.wiki/teams/6330/wiki/safety/wiki/safety/review-20261019/d-shield-framework.webp",
       "caption": "The SHIELD safety framework, consolidating safety-by-design, wet-lab governance, hardware infrastructure, emergency response, training and outreach into one reusable full-chain paradigm",
+      "caption_zh": "SHIELD 安全框架，把設計階段安全、濕實驗治理、硬體基礎設施、緊急應變、訓練與推廣整合成一個可重用的全鏈範式",
       "credit": "Team HBUT-China, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6330/wiki/description/description-figure-6-hd.avif",
       "caption": "Construction of oHSV2-Neo-IL-2: homologous recombination replaces the CMV-GFP cassette at the gamma-34.5 locus of the ICP34.5-/ICP47- HG52 backbone with CMV-Neo-IL-2 and a BGH poly(A) signal",
+      "caption_zh": "oHSV2-Neo-IL-2 的建構：以同源重組把 ICP34.5-/ICP47- HG52 骨架 gamma-34.5 位點上的 CMV-GFP 匣，置換為 CMV-Neo-IL-2 與 BGH poly(A) 訊號",
       "credit": "Team HBUT-China, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6330/wiki/safety/icp47-antigen-presentation-20261021.avif",
       "caption": "Rationale for the ICP47 deletion: relieving TAP inhibition restores MHC class I antigen presentation, a safety and efficacy choice made at the design stage",
+      "caption_zh": "刪除 ICP47 的理由：解除 TAP 抑制可恢復 MHC class I 抗原呈現，這是在設計階段就做出的安全與療效選擇",
       "credit": "Team HBUT-China, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6330/wiki/safety/wiki/safety/review-20261019/i-bsc-front.webp",
       "caption": "Documented BSL-2 practice for oncolytic HSV-2 work, photographed as part of the SHIELD infrastructure-assurance module",
+      "caption_zh": "針對溶瘤 HSV-2 工作所記錄的 BSL-2 實務，作為 SHIELD 基礎設施保證模組的一部分拍照留存",
       "credit": "Team HBUT-China, iGEM 2026 wiki"
     }
   ],
   "gemsTakeaway": "For any part GEMS wants other groups to reuse, publish the five-layer evidence stack HBUT used for Neo-IL-2: design rationale, computational prediction of the specific property changed, an orthogonal physical measurement of that property (SPR, not just docking), a functional assay of the intended benefit and of the harm avoided, and a stability result after many passages in the working vector. Separately, copy the five-school joint biosafety manual: co-author a shared risk-assessment document with other groups working on the same hazard class, since one lab's risk-assessment competence is narrower than five labs'.",
+  "gemsTakeaway_zh": "任何 GEMS 希望其他團隊重用的零件，都該公布 HBUT 為 Neo-IL-2 建立的五層證據堆疊：設計理由、對所改變之特定性質的計算預測、對該性質的獨立物理量測（要有 SPR，不只是分子嵌合）、針對預期益處與所避免危害的功能檢測，以及在實際使用的載體中經多次傳代後的穩定性結果。另外也該照抄那本五校聯合生物安全手冊：與處理同一危害等級的其他團隊共同撰寫一份風險評估文件，因為單一實驗室的風險評估能力，比五個實驗室加起來要窄得多。",
   "sources": [
     "https://2026.igem.wiki/hbut-china/",
     "https://2026.igem.wiki/hbut-china/parts",
