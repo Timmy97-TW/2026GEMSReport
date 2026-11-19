@@ -316,6 +316,40 @@
     "106 支中 3 支感謝前一屆"
    ],
    "link": "good"
+  },
+  {
+   "kicker": "Education",
+   "kicker_zh": "教育",
+   "title": "Education artefacts outlive software and hardware, by a wide margin",
+   "title_zh": "教育產出活得比軟體和硬體久，而且差距很大",
+   "body": "The suspicion going in was that outreach survives only as photographs of children holding things. It was wrong. Of **285 education files** linked from 31 decorated wikis, **284 download today** and one returns 403 — not a single 404. Against 8 of 21 software tools still running and 6 of 20 devices rebuildable, the reason is structural: a PDF on static.igem.wiki needs no server to stay alive. The failures are elsewhere — **1 licence statement in 136 PDFs**, and the Best Education winner publishes no downloadable file at all.",
+   "body_zh": "一開始的懷疑是：教育推廣最後只會以「孩子們拿著東西的照片」留下來。這個懷疑錯了。31 份得獎 wiki 連出的 **285 個教育檔案**中，**284 個今天仍下載得到**，一個回 403——一個 404 都沒有。對照軟體 21 個中 8 個還能跑、硬體 20 台中 6 台重建得出來，原因是結構性的：放在 static.igem.wiki 上的一份 PDF，不需要任何伺服器就能活著。真正的失敗在別處——**136 份 PDF 裡只有 1 份寫了授權條款**，而最佳教育獎得主根本沒有提供任何可下載的檔案。",
+   "chips": [
+    "284 of 285 download",
+    "1 licence in 136 PDFs"
+   ],
+   "chips_zh": [
+    "285 個中 284 個下載得到",
+    "136 份 PDF 中 1 份有授權"
+   ],
+   "link": "good"
+  },
+  {
+   "kicker": "Resources",
+   "kicker_zh": "資源",
+   "title": "Size buys nothing — the smallest Top 10 team had nine students",
+   "title_zh": "人多買不到名次——最小的 Top 10 隊伍只有九名學生",
+   "body": "Across 84 decorated teams, headcount and award count correlate at **0.06** (Spearman, p = 0.61), and within every section the Top 10 teams are statistically indistinguishable in size. Medians: high school 17.5, undergraduate 17, overgraduate 12.5. **Princeton reached 2nd runner-up Grand Prize with nine undergraduates** — and four named scientists behind them, one chassis reused across three applications, and a binder pipeline that made a new target cost compute instead of hands. The substitution for people is scope, software and supervision.",
+   "body_zh": "在 84 支得獎隊伍中，人數與獎項數的相關係數是 **0.06**（Spearman，p = 0.61），而且在每一個組別裡，Top 10 隊伍的人數與其他得獎隊伍在統計上沒有差別。中位數：高中組 17.5、大學組 17、研究生組 12.5。**Princeton 以九名大學生拿下總冠軍季軍**——他們背後有四位具名的科學家、一個底盤重複用在三個應用上，以及一條結合子設計流程，讓換一個標的花的是算力而不是人手。能取代人的，是範圍、軟體與指導。",
+   "chips": [
+    "r = 0.06, p = 0.61",
+    "smallest Top 10: 9 students"
+   ],
+   "chips_zh": [
+    "r = 0.06、p = 0.61",
+    "最小的 Top 10：9 名學生"
+   ],
+   "link": "teams"
   }
  ],
  "method": "Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see.",

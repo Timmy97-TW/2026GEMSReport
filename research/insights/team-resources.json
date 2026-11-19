@@ -1,0 +1,275 @@
+{
+ "id": "team-resources",
+ "tab": "teams",
+ "order": 40,
+ "kicker": "Original analysis",
+ "kicker_zh": "原創分析",
+ "title": "What it actually costs to win",
+ "title_zh": "得獎究竟要付出什麼",
+ "lede": "Team size does not separate these winners from each other: across 84 decorated teams the correlation between headcount and number of awards is 0.06 (Spearman, p = 0.61), and within every section the Top 10 teams are statistically indistinguishable in size from the rest. What does vary, enormously, is the staff and the lab standing behind the students.",
+ "lede_zh": "團隊人數並不能把這些得獎隊伍彼此區分開來：在 84 支有人數可查的得獎隊伍中，人數與獎項數的相關係數只有 0.06（Spearman，p = 0.61），而且在每一個組別裡，Top 10 隊伍的規模在統計上都與其他得獎隊伍沒有差別。真正差距巨大的，是學生背後的指導人力與實驗室。",
+ "body": "**The null first.** Of the 106 decorated teams in this report, 84 publish enough to count their student members. Across those 84, the rank correlation between team size and number of awards is 0.06 (Spearman, p = 0.61). Splitting Top 10 teams from the other decorated teams inside the same section, the size difference is not significant anywhere: High School p = 0.21, Undergraduate p = 0.27, Overgraduate p = 0.27 (Mann-Whitney). The careful sentence is the long one. *Size does not separate winners from each other, and this sample — decorated teams only — cannot tell you whether it separates winners from the teams that did not place at all.* Nobody in this dataset lost, so no claim about the competition at large follows from it.\n\n**Medians, stated separately.** High School: median **17.5** students, range 6 to 60, counted for 38 of 40 teams. Undergraduate: median **17**, range 4 to 46, counted for 30 of 42. Overgraduate: median **12.5**, range 7 to 70, counted for 16 of 22. Twenty-two teams could not be counted at all, and the missing count is part of the result: Cornell renders its roster as a clickable temple with no list behind it, BGCFullerton as a filtered crew grid that never loads a name, HK-Joint-School as six school photographs with no individual names. A roster is a medal-criteria page nobody checks, so a surprising number of teams simply do not publish one in readable form.\n\n**The smallest team in any Top 10 was Princeton: nine undergraduates.** They finished second runner-up for the Grand Prize and won Best Foundational Advance. What they had instead of people is written plainly on their members page: two principal investigators running their own labs (Jared Toettcher, Josh Atkinson), one instructor who is a **postdoctoral fellow**, and one advisor who is a **PhD student**. Four named scientists for nine students. Three further substitutions are visible in the project itself. First, they chose one chassis — M13 phage — and demonstrated it across three unrelated applications, so the three \"projects\" shared a single wet-lab build. Second, they wrote SymPlify, a de novo binder design pipeline, so adding a target cost compute rather than months of antibody work; software did what extra hands would otherwise have done. Third, PITCCH handed the public a genuine unsolved sub-problem from the project with real print parameters, judged entries on one computational metric, and built the winning design in — converting outreach into contributed engineering at almost no labour cost. Princeton also publishes **no attributions page at all**, which is worth noting in a piece that treats attributions as the honest page.\n\n**The hidden-resource question, answered as honestly as the pages allow.** Of the 40 decorated high-school teams, **5 state that they worked in a university laboratory**: BGCFullerton (Chapman University, UC Irvine and California State University, Fullerton all recorded as providing laboratory access), Eton-College-UK (University of Greenwich, where the safety induction and the first bench work are logged), Labi-Taiwan (a BSL-1 laboratory at the Biotechnology Center of National Taiwan University), Yucai-SZ (a joint synthetic biology laboratory with the School of Synthetic Biology at Shenzhen University of Advanced Technology) and HangzhouFourteenAP (an unnamed \"university synthetic biology laboratory\"). A sixth, NFLSHS-CHINA, names a Shenzhen University professor as its advisor and carries a Shenzhen University logo in its sponsor strip but does not state lab access. **Of those five, none credits a graduate student or postdoc with hands-on wet-lab work.** Every such credit on every high-school wiki is worded as supervision, lecturing, training or guidance. Seven of the 40 high-school teams name a doctoral student, PhD candidate or postdoc somewhere in their staff list — HangzhouFourteenAP, QingdaoAcademy, GYHS, CHINAGuangdongShimen, Yucai-SZ, Labi-Taiwan and Worldshaper-Shanghai — and in all seven the role given is advisory. That is the honest answer, and it comes with an honest limit: the iGEM attributions form never asks who held the pipette, so a wiki cannot settle the question either way.\n\n**University teams are far more open about it, and the numbers are striking.** WageningenUR — 1st runner-up for the Overgraduate Grand Prize — lists **11 students against 13 named PIs and instructors**, most of the instructors PhD candidates and postdocs in Wageningen groups. Marburg lists 16 students against 17 instructors and advisors. UCL lists 6 students against 8. SDU-Denmark's instructors are four PhD students. Money, by contrast, is almost never published: **7 of 106 teams state any figure about their own funding.** BGCFullerton, a high-school team run out of a Boys and Girls Club, is the only one with anything resembling a ledger — IFC Advisors \"Provided $15,000 in proof-of-concept research support through the Boys & Girls Club of Fullerton\", the Beckman Foundation \"Provided a $10,000 grant for the team's research\", \"John Phelps donated $5,000 to support the MycoVela project\", and Opentrons \"Provided laboratory equipment with an approximate in-kind value of $28,000\". Eton-College-UK records \"an initial £10,000 fundraising target\"; XJTLU-China \"a total of RMB 20,000\"; Tsinghua-T RMB 100,000 from one sponsor; TU Delft \"over €2,500\"; Hongwen School a material cost of RMB 3,480.29; Marburg publishes only sponsorship tiers (€500–1,000, €1,000–4,999) rather than what it raised. Everyone else shows logos and no numbers.\n\n**And GEMS-Taiwan's own position, on the same terms.** GEMS fielded **35 students** in 2026 — 5 project leads, 12 student leaders, 14 members and 4 student advisors — with 6 instructors and 1 project advisor, registered with iGEM as a commercial organiser rather than a school. That is twice the high-school median of 17.5 and more than three times HangzhouFourteenAP, the smallest high-school Top 10. GEMS ran its own hardware and its own lab, and visited a National Taiwan University laboratory rather than being hosted in one. On the evidence here, the 2026 team was large for what it achieved, not small.",
+ "body_zh": "**先講虛無結果。** 本報告收錄的 106 支得獎隊伍中，有 84 支公開到足以數出學生人數。在這 84 支裡，團隊人數與獎項數的等級相關係數只有 0.06（Spearman，p = 0.61）。若在同一組別內把 Top 10 與其他得獎隊伍分開比較，規模差異在任何一組都不顯著：高中組 p = 0.21、大學部 p = 0.27、研究生組 p = 0.27（Mann-Whitney）。謹慎的說法要講長一點：*人數無法把得獎隊伍彼此區分開來；而本樣本只收錄得獎隊伍，因此無法告訴你人數能不能把得獎隊伍與完全沒有名次的隊伍區分開來。* 這份資料裡沒有輸家，所以它推不出任何關於整場競賽的結論。\n\n**中位數，分組分開講。** 高中組：中位數 **17.5** 人，全距 6 到 60，40 隊中數得出 38 隊。大學部：中位數 **17** 人，全距 4 到 46，42 隊中數得出 30 隊。研究生組：中位數 **12.5** 人，全距 7 到 70，22 隊中數得出 16 隊。有 22 支隊伍完全數不出來，而這個缺漏本身就是結果的一部分：Cornell 把成員名冊做成一座要用滑鼠點的神殿，背後沒有名單；BGCFullerton 做成會篩選的成員牆，但名字始終不載入；HK-Joint-School 只放六所學校的合照，沒有個別姓名。成員頁是獎牌條件裡沒人會去查的一頁，所以出乎意料多的隊伍，乾脆就不以可讀的形式公開它。\n\n**所有 Top 10 之中人數最少的是 Princeton：九位大學部學生。** 他們拿下大學部總冠軍第二亞軍，並贏得 Best Foundational Advance。他們用什麼取代人力，成員頁上寫得很清楚：兩位各自主持實驗室的主持人（Jared Toettcher、Josh Atkinson）、一位身分是**博士後研究員**的 instructor，以及一位身分是**博士生**的 advisor。九個學生，四位具名的科學家。專案本身還看得到三項替代。其一，他們只選一種底盤——M13 噬菌體——再把它用在三個彼此無關的應用上，所以三個「專案」共用同一套濕實驗室建構。其二，他們寫了 SymPlify，一條 de novo 結合蛋白設計流程，使得增加一個標的只要花運算資源，而不是花好幾個月做抗體；軟體做掉了原本要靠多一雙手才能做的事。其三，PITCCH 把專案裡一個真正未解的子問題連同真實列印參數交給大眾，以單一運算指標評分，再把得獎設計真的做進專案裡——幾乎不花人力就把科普活動轉成了實際的工程貢獻。順帶一提，Princeton **完全沒有 attributions 頁面**，在一篇把 attributions 視為最誠實一頁的分析裡，這點值得記上一筆。\n\n**隱藏資源的問題，就頁面所能支撐的程度誠實回答。** 40 支得獎高中隊伍中，**有 5 支明講自己在大學實驗室裡工作**：BGCFullerton（Chapman University、UC Irvine 與 California State University, Fullerton 都被記載為提供實驗室使用權）、Eton-College-UK（University of Greenwich，安全訓練與最初的實驗操作都登記在那裡）、Labi-Taiwan（National Taiwan University 生物技術中心的 BSL-1 實驗室）、Yucai-SZ（與 Shenzhen University of Advanced Technology 合成生物學院共建的聯合實驗室），以及 HangzhouFourteenAP（一間未具名的「大學合成生物學實驗室」）。第六支 NFLSHS-CHINA 把一位 Shenzhen University 的教授列為 advisor，贊助列也掛著該校標誌，但沒有寫到實驗室使用權。**這五支之中，沒有任何一支把動手做濕實驗的功勞歸給研究生或博士後。** 所有高中隊伍網站上的這類致謝，用字一律是督導、授課、訓練或指導。40 支高中隊伍中有 7 支在人員名單裡出現博士生、博士候選人或博士後——HangzhouFourteenAP、QingdaoAcademy、GYHS、CHINAGuangdongShimen、Yucai-SZ、Labi-Taiwan 與 Worldshaper-Shanghai——而這七支給的身分全是顧問性質。這就是誠實的答案，而它也附帶一個誠實的限制：iGEM 的 attributions 表格從來不問是誰握著微量吸管，所以網站本來就無法替這件事做出定論。\n\n**大學隊伍對此坦率得多，而且數字很驚人。** WageningenUR——研究生組總冠軍第一亞軍——列出 **11 位學生對 13 位具名的 PI 與 instructor**，其中多數 instructor 是 Wageningen 各研究群的博士候選人與博士後。Marburg 是 16 位學生對 17 位 instructor 與 advisor。UCL 是 6 位學生對 8 位。SDU-Denmark 的 instructor 則是四位博士生。相對地，錢幾乎從來不公開：**106 支隊伍中只有 7 支寫出任何一個與自身經費有關的數字。** 由一間 Boys and Girls Club 主辦的高中隊伍 BGCFullerton，是唯一有近似帳本的一支——IFC Advisors「Provided $15,000 in proof-of-concept research support through the Boys & Girls Club of Fullerton」、Beckman Foundation「Provided a $10,000 grant for the team's research」、「John Phelps donated $5,000 to support the MycoVela project」，以及 Opentrons「Provided laboratory equipment with an approximate in-kind value of $28,000」。Eton-College-UK 寫下「an initial £10,000 fundraising target」；XJTLU-China 是「a total of RMB 20,000」；Tsinghua-T 是單一贊助者的人民幣 100,000 元；TU Delft 是「over €2,500」；Hongwen School 則列出人民幣 3,480.29 元的材料費；Marburg 只公開贊助分級（€500–1,000、€1,000–4,999），而不是實際募得的金額。其餘所有隊伍都只放標誌，不放數字。\n\n**最後，用同一把尺量 GEMS-Taiwan 自己。** GEMS 在 2026 年投入 **35 位學生**——5 位專案負責人、12 位學生組長、14 位組員與 4 位學生顧問——搭配 6 位 instructor 與 1 位專案顧問，並以商業機構而非學校的身分向 iGEM 註冊。這是高中組中位數 17.5 的兩倍，也是高中組 Top 10 裡人數最少的 HangzhouFourteenAP 的三倍有餘。GEMS 自建硬體、自用實驗室，並且是去參訪 National Taiwan University 的實驗室，而不是被收容在裡面。就本文的證據而言，2026 年這支隊伍相對於它的成果是偏大的，不是偏小。",
+ "cards": [
+  {
+   "kicker": "Smallest Top 10",
+   "kicker_zh": "Top 10 中最小的一支",
+   "title": "Princeton: nine students, four scientists",
+   "title_zh": "Princeton：九個學生，四位科學家",
+   "body": "Nine undergraduates, 2nd runner-up for the Undergraduate Grand Prize and Best Foundational Advance winner. Named support: two PIs with their own labs, one instructor who is a postdoctoral fellow, one advisor who is a PhD student. The substitutions for headcount are visible in the design: one M13 chassis reused across three unrelated applications, a de novo binder pipeline so a new target costs compute rather than months of hands, and a public design contest whose winning entry was built into the project.",
+   "body_zh": "九位大學部學生，拿下大學部總冠軍第二亞軍與 Best Foundational Advance。具名的支援人力：兩位自己主持實驗室的 PI、一位身分為博士後研究員的 instructor、一位身分為博士生的 advisor。用什麼取代人力，從設計上就看得出來：同一套 M13 底盤重複用在三個互不相關的應用上；一條 de novo 結合蛋白設計流程，讓新增標的只花運算而不是好幾個月的人工；以及一場對外的設計競賽，得獎作品被真的做進專案裡。",
+   "chips": [
+    "9 students",
+    "2 PIs + 1 postdoc + 1 PhD student",
+    "No attributions page"
+   ],
+   "chips_zh": [
+    "9 名學生",
+    "2 位 PI + 1 位博士後 + 1 位博士生",
+    "沒有 attributions 頁"
+   ]
+  },
+  {
+   "kicker": "Smallest decorated teams",
+   "kicker_zh": "得獎隊伍中最小的幾支",
+   "title": "Six students is enough for a nomination",
+   "title_zh": "六個學生就足以拿到入圍",
+   "body": "CHINAGuangdongShimen fielded 6 students against 3 named staff and was nominated for Best Measurement (High School); its instructors are a South China University of Technology professor and an SCUT PhD candidate. PSI Korea fielded 6 students with 6 named staff and picked up three nominations. At undergraduate level XJTLU-Software reached a Best Software and AI nomination with 4 students, 2 instructors and 2 advisors, and CalPolySLO won Best Measurement with 5 students and a single PI.",
+   "body_zh": "CHINAGuangdongShimen 以 6 位學生對 3 位具名人員，入圍高中組 Best Measurement；其 instructor 分別是華南理工大學的教授與該校的博士候選人。PSI Korea 以 6 位學生搭配 6 位具名人員，拿下三項入圍。在大學部，XJTLU-Software 以 4 位學生、2 位 instructor 與 2 位 advisor 入圍 Best Software and AI；CalPolySLO 則以 5 位學生與單獨一位 PI 贏得 Best Measurement。",
+   "chips": [
+    "6, 6, 4, 5 students",
+    "All four won or were nominated",
+    "Narrow scope, named staff"
+   ],
+   "chips_zh": [
+    "6、6、4、5 名學生",
+    "四支全都得獎或入圍",
+    "範圍收窄、人員具名"
+   ]
+  },
+  {
+   "kicker": "More staff than students",
+   "kicker_zh": "指導人力多於學生",
+   "title": "WageningenUR: 11 students, 13 supervisors",
+   "title_zh": "WageningenUR：11 位學生，13 位指導者",
+   "body": "The Overgraduate Grand Prize 1st runner-up lists 11 students in its attributions form against 3 primary PIs and 10 instructors, most of them PhD candidates and postdocs across three Wageningen groups. Its own team page lists only 8 students; the attributions form lists 11. Marburg shows the same shape at 16 students to 17 instructors and advisors, and UCL at 6 to 8. On this evidence the scarce resource at university level is not students.",
+   "body_zh": "研究生組總冠軍第一亞軍在 attributions 表格中列出 11 位學生，對應 3 位 primary PI 與 10 位 instructor，後者多數是 Wageningen 三個研究群裡的博士候選人與博士後。該隊自己的團隊頁只列 8 位學生，attributions 表格卻列 11 位。Marburg 呈現同樣的形狀：16 位學生對 17 位 instructor 與 advisor；UCL 則是 6 對 8。就這些證據看，大學層級稀缺的資源並不是學生。",
+   "chips": [
+    "11 students / 13 staff",
+    "Team page said 8, the form said 11",
+    "Marburg 16 / 17; UCL 6 / 8"
+   ],
+   "chips_zh": [
+    "11 名學生 / 13 名指導",
+    "團隊頁寫 8，表單寫 11",
+    "Marburg 16 / 17；UCL 6 / 8"
+   ]
+  },
+  {
+   "kicker": "The only published ledger",
+   "kicker_zh": "唯一公開的帳本",
+   "title": "BGCFullerton writes the numbers down",
+   "title_zh": "BGCFullerton 把數字寫出來",
+   "body": "A high-school team run out of a Boys and Girls Club, not a school, and the only team in 106 that itemises money. Its external-contributions table records IFC Advisors providing “$15,000 in proof-of-concept research support”, a “$10,000 grant” from the Beckman Foundation, a “$5,000” individual donation, and Opentrons equipment “with an approximate in-kind value of $28,000”. It also records three separate universities — Chapman, UC Irvine and Cal State Fullerton — providing laboratory access.",
+   "body_zh": "這是一支由 Boys and Girls Club 而非學校主辦的高中隊伍，也是 106 支之中唯一逐項列出金額的一支。它的外部貢獻表記下 IFC Advisors 提供「$15,000 in proof-of-concept research support」、Beckman Foundation 的「$10,000 grant」、一筆「$5,000」的個人捐款，以及 Opentrons「with an approximate in-kind value of $28,000」的設備。同一張表也記下三所大學——Chapman、UC Irvine 與 Cal State Fullerton——分別提供實驗室使用權。",
+   "chips": [
+    "$15,000 + $10,000 + $5,000",
+    "$28,000 in-kind equipment",
+    "3 universities gave lab access"
+   ],
+   "chips_zh": [
+    "$15,000 + $10,000 + $5,000",
+    "$28,000 實物設備",
+    "三所大學提供實驗室"
+   ]
+  },
+  {
+   "kicker": "The whole field",
+   "kicker_zh": "整個賽場",
+   "title": "A third of the high-school section is run by a commercial organiser",
+   "title_zh": "高中組有三分之一是由營利機構帶隊",
+   "body": "Of the **147 accepted high-school teams** of 2026, iGEM's own registry records **53 under a commercial organiser**, 91 under a secondary school and 3 under a community lab. The undergraduate section has none. Among decorated teams the split is 14 commercial of 40 — and that is simply the base rate: **14 of 53 commercial high-school teams were decorated (26%), against 26 of 94 others (28%).** Being run as a programme rather than by a school confers nothing and costs nothing. GEMS-Taiwan is registered as commercial, so this is a description of what GEMS already is, not a verdict on it.",
+   "body_zh": "2026 年**正式參賽的 147 支高中隊伍**中，iGEM 官方名冊記錄**有 53 支由營利機構帶隊**、91 支由中學帶隊、3 支由社群實驗室帶隊。大學組一支也沒有。在得獎隊伍裡，40 支高中隊伍中有 14 支屬於營利機構——而這就只是基礎比率而已：**53 支營利機構高中隊伍中有 14 支得獎（26%），其餘 94 支中有 26 支得獎（28%）。** 以計畫形式運作、而不是由一所學校運作，既沒有加分也沒有減分。GEMS-Taiwan 登記的身分就是營利機構，所以這一段描述的是 GEMS 本來的樣子，不是對它的評價。",
+   "chips": [
+    "53 of 147 high-school teams",
+    "26% vs 28% decorated",
+    "undergraduate section: none"
+   ],
+   "chips_zh": [
+    "147 支高中隊伍中 53 支",
+    "得獎率 26% 對 28%",
+    "大學組：0 支"
+   ]
+  }
+ ],
+ "table": {
+  "head": [
+   "Team",
+   "Section",
+   "Students",
+   "Named PIs / instructors / advisors",
+   "Institution as registered",
+   "Result"
+  ],
+  "head_zh": [
+   "團隊",
+   "組別",
+   "學生人數",
+   "具名 PI／instructor／advisor",
+   "註冊機構",
+   "成績"
+  ],
+  "rows": [
+   [
+    "XJTLU-Software",
+    "Undergrad",
+    "4",
+    "4 (2 instructors, 2 advisors)",
+    "Xi'an Jiaotong-Liverpool University",
+    "Best Software & AI nominee"
+   ],
+   [
+    "CalPolySLO",
+    "Undergrad",
+    "5",
+    "1 (PI)",
+    "California Polytechnic State University",
+    "Best Measurement winner (Undergrad)"
+   ],
+   [
+    "CHINAGuangdongShimen",
+    "High School",
+    "6",
+    "3 (incl. an SCUT professor and an SCUT PhD candidate)",
+    "Shimen High School",
+    "Best Measurement nominee (High School)"
+   ],
+   [
+    "PSI Korea",
+    "High School",
+    "6",
+    "6 (2 PIs, 3 instructors, 1 advisor)",
+    "PSI Academy (commercial)",
+    "Three nominations"
+   ],
+   [
+    "Princeton",
+    "Undergrad",
+    "9",
+    "4 (2 PIs, 1 postdoc, 1 PhD student)",
+    "Princeton University",
+    "Top 10; 2nd runner-up Grand Prize"
+   ],
+   [
+    "UCNZ",
+    "Undergrad",
+    "10",
+    "4 (2 PIs, 2 instructors)",
+    "University of Canterbury",
+    "Undergrad Top 10"
+   ],
+   [
+    "WageningenUR",
+    "Overgrad",
+    "11",
+    "13 (3 PIs, 10 instructors)",
+    "Wageningen UR",
+    "Top 10; 1st runner-up Grand Prize"
+   ],
+   [
+    "HangzhouFourteenAP",
+    "High School",
+    "11",
+    "5 (mentors and instructors, one a PhD and postdoc)",
+    "Hangzhou No.14 High School, AP Center",
+    "High School Top 10; Best Village Project winner"
+   ]
+  ],
+  "rows_zh": [
+   [
+    "XJTLU-Software",
+    "大學部",
+    "4",
+    "4（2 位 instructor、2 位 advisor）",
+    "Xi'an Jiaotong-Liverpool University",
+    "Best Software & AI 入圍"
+   ],
+   [
+    "CalPolySLO",
+    "大學部",
+    "5",
+    "1（PI）",
+    "California Polytechnic State University",
+    "大學部 Best Measurement 首獎"
+   ],
+   [
+    "CHINAGuangdongShimen",
+    "高中組",
+    "6",
+    "3（含一位華南理工大學教授與一位該校博士候選人）",
+    "Shimen High School",
+    "高中組 Best Measurement 入圍"
+   ],
+   [
+    "PSI Korea",
+    "高中組",
+    "6",
+    "6（2 位 PI、3 位 instructor、1 位 advisor）",
+    "PSI Academy（商業機構）",
+    "三項入圍"
+   ],
+   [
+    "Princeton",
+    "大學部",
+    "9",
+    "4（2 位 PI、1 位博士後、1 位博士生）",
+    "Princeton University",
+    "Top 10；總冠軍第二亞軍"
+   ],
+   [
+    "UCNZ",
+    "大學部",
+    "10",
+    "4（2 位 PI、2 位 instructor）",
+    "University of Canterbury",
+    "大學部 Top 10"
+   ],
+   [
+    "WageningenUR",
+    "研究生組",
+    "11",
+    "13（3 位 PI、10 位 instructor）",
+    "Wageningen UR",
+    "Top 10；總冠軍第一亞軍"
+   ],
+   [
+    "HangzhouFourteenAP",
+    "高中組",
+    "11",
+    "5（mentor 與 instructor，其中一位具博士與博士後資歷）",
+    "Hangzhou No.14 High School, AP Center",
+    "高中組 Top 10；Best Village Project 首獎"
+   ]
+  ]
+ },
+ "checklist": [
+  "Field 12 to 16 students in 2027, not 35. The smallest high-school team in a Top 10 had 11, the smallest Top 10 team of any kind had 9, and two six-student teams took special-prize nominations. Thirty-five is twice the high-school median and buys nothing this sample can detect.",
+  "Spend the headcount you save on named scientists instead. Every small team that placed had a short, specific staff list: Princeton nine students to four scientists, CHINAGuangdongShimen six to three. One postdoc or PhD-level instructor who is actually present is worth more than ten extra students.",
+  "Do one chassis and several applications, not several projects. Princeton reached a Grand Prize podium with nine people because its three applications shared a single M13 build. Scope, not staffing, is what a small team controls.",
+  "Build the software that replaces hands. Princeton's de novo binder pipeline made a new target cost compute instead of months of bench work; that is the specific trade a small team can make and a large one usually does not.",
+  "Turn one outreach activity into contributed engineering. PITCCH gave the public a real unsolved sub-problem with real constraints, scored entries on one metric, and built the winner in. It costs almost no labour and it counts as engineering.",
+  "Publish a real attributions page and a funding line. Twenty-two of 106 decorated teams publish no countable roster and only 7 state any funding figure; a team that writes down who did what and what it cost stands out, and GEMS should make that one of its signatures.",
+  "If GEMS ever works in a university lab, say so on the page and say exactly who did what. Five high-school teams declared university lab access this year and none of them was penalised for it; what judges and readers cannot forgive is a page that is silent about it."
+ ],
+ "checklist_zh": [
+  "2027 年投入 12 到 16 位學生，而不是 35 位。高中組 Top 10 中人數最少的一隊是 11 人，所有 Top 10 中最少的一隊是 9 人，而兩支六人隊伍都拿到了特別獎入圍。35 人是高中組中位數的兩倍，而本樣本偵測不到它換來任何東西。",
+  "把省下來的人頭，換成具名的科學家。每一支以小規模取得名次的隊伍，人員名單都很短而且很具體：Princeton 是九位學生對四位科學家，CHINAGuangdongShimen 是六對三。一位真的在場的博士後或博士級 instructor，價值勝過多出來的十位學生。",
+  "做一個底盤搭配多個應用，而不是做好幾個專案。Princeton 能以九個人站上總冠軍頒獎台，是因為三個應用共用同一套 M13 建構。小隊伍能控制的是範圍，不是人力。",
+  "去寫那種可以取代人手的軟體。Princeton 的 de novo 結合蛋白設計流程，讓新增一個標的只需要運算資源，而不是好幾個月的實驗操作；這正是小隊伍做得到、大隊伍通常不做的取捨。",
+  "把其中一項科普活動變成實際的工程貢獻。PITCCH 把一個帶著真實限制、尚未解決的子問題交給大眾，以單一指標評分，再把優勝設計做進專案。它幾乎不耗人力，而且算得上是工程工作。",
+  "確實做一頁 attributions，並寫出一行經費。106 支得獎隊伍中有 22 支沒有可清點的成員名冊，只有 7 支寫出任何經費數字；一支把誰做了什麼、花了多少都寫下來的隊伍會很顯眼，而 GEMS 應該把這一點變成自己的招牌。",
+  "萬一 GEMS 哪天在大學實驗室裡工作，就在頁面上講明，而且精確寫出誰做了什麼。今年有五支高中隊伍聲明自己有大學實驗室使用權，沒有任何一支因此被扣分；評審與讀者無法原諒的，是對此保持沉默的頁面。"
+ ],
+ "method": "Sample: the 106 decorated 2026 teams in this report's evidence base — every Top 10 team, every special-prize winner and every nominee. Institution type comes from the iGEM registry API record for each team id and is complete for all 106: 66 higher-education, 25 secondary-education, 14 commercial and 1 community lab, with all 14 commercial and the single community lab in the High School section. Student counts were read off each team's own Team, Members or Attributions page — from the served HTML where the wiki is static, from the page's rendered text where it is a client-rendered app — and were obtained for 84 of 106 teams: 38 of 40 High School, 30 of 42 Undergraduate, 16 of 22 Overgraduate; two teams carry no section label and neither was countable. Where a page mixes students with advisors, alumni or PIs, only people the page itself labels as students, members, leaders or by class year were counted, and anyone labelled PI, instructor, advisor, mentor, teacher or alumnus was moved to the staff column; where a team published both a members page and an attributions form and the two disagreed, the attributions form was used, which is why WageningenUR is recorded as 11 students and not the 8 its team page shows. Where a roster is a game or a scroller, the count printed by the page itself was used (Marburg \"36 members\", SMS-Shenzhen \"18 CAPSULES\", GreatBay-SCIE \"0/29\", Eton-College-UK \"MET 0/16\", Yucai-SZ \"0 / 22\", HKSSC \"1 of 19\"). Twenty-two teams could not be counted and are excluded from every statistic rather than imputed; three of them are Top 10 teams (Cornell, NUS-Singapore, KAUST-KSA), so the Top 10 figures rest on 27 of 30. Tests: Spearman rank correlation of size against number of awards across all 84, and Mann-Whitney U comparing Top 10 against other decorated teams within each section. What this counting cannot see: whether a listed student actually worked, whether an instructor labelled 'supervision' in fact performed experiments, how many unnamed lab staff supported a team, and anything at all about teams that entered and did not place. Lab access and graduate-student involvement were found by full-text search of every page and script bundle fetched from each wiki, so a statement buried in a page that failed to download would be missed; the five university-lab high-school teams are therefore a floor, not a ceiling. Funding figures are only those a team states about its own money — business-plan and techno-economic numbers (McGill, UAlberta, UOttawa, Madrid-UCM) are excluded. GEMS-Taiwan is the report author's own team and has been counted and named on exactly the same terms as the rest. Organiser type, and the commercial-organiser base rate in the card above, were taken from iGEM's own registry (`api.igem.org/v1/teams/<id>` and the full 2026 competition roster) rather than from wikis, so those two figures — unlike everything else here — describe all 423 accepted teams and not only the decorated 106. Every one of the 106 was matched to the roster by name.",
+ "method_zh": "樣本：本報告證據庫中的 106 支 2026 年得獎隊伍——涵蓋所有 Top 10 隊伍、所有特別獎首獎隊伍與所有入圍隊伍。機構類型取自每個 team id 在 iGEM 註冊 API 上的紀錄，106 支全部齊備：66 支 higher-education、25 支 secondary-education、14 支 commercial、1 支 community lab；其中 14 支商業機構與唯一一支社群實驗室全部落在高中組。學生人數是從各隊自己的 Team、Members 或 Attributions 頁面讀出來的——靜態網站讀伺服器送出的 HTML，前端渲染的網站則讀頁面實際呈現的文字——106 支中取得 84 支：高中組 40 支取得 38 支、大學部 42 支取得 30 支、研究生組 22 支取得 16 支；另有兩支沒有組別標記，且兩支都數不出來。當頁面把學生與顧問、校友或 PI 混在一起時，只計入頁面本身標示為學生、成員、組長或註明年級的人；凡標示為 PI、instructor、advisor、mentor、教師或校友者，一律移到人員欄。若一隊同時有成員頁與 attributions 表格而兩者不一致，則以 attributions 表格為準，這也是 WageningenUR 在此記為 11 位學生、而非其團隊頁顯示的 8 位的原因。若成員名冊做成遊戲或捲動互動，則採用頁面自己印出的數字（Marburg 的「36 members」、SMS-Shenzhen 的「18 CAPSULES」、GreatBay-SCIE 的「0/29」、Eton-College-UK 的「MET 0/16」、Yucai-SZ 的「0 / 22」、HKSSC 的「1 of 19」）。有 22 支數不出來，一律排除於所有統計之外，不做任何補值；其中三支是 Top 10 隊伍（Cornell、NUS-Singapore、KAUST-KSA），因此 Top 10 的數字是建立在 30 支中的 27 支之上。檢定：在全部 84 支上以 Spearman 等級相關檢視人數與獎項數的關係，並在各組別內以 Mann-Whitney U 比較 Top 10 與其他得獎隊伍。這套清點看不到的事：名單上的學生是否真的投入、被標為「督導」的 instructor 是否其實動手做了實驗、有多少未具名的實驗室人員在支援一隊，以及關於報名卻未獲名次的隊伍的任何事。實驗室使用權與研究生參與，是對每個網站抓取到的所有頁面與程式包做全文檢索而得，因此若某段敘述藏在下載失敗的頁面裡就會漏掉；五支使用大學實驗室的高中隊伍因而是下限，不是上限。經費數字只收各隊談論自身經費的部分——商業計畫與技術經濟分析的數字（McGill、UAlberta、UOttawa、Madrid-UCM）一律排除。GEMS-Taiwan 是本報告作者自己的隊伍，清點方式與具名方式與其他隊伍完全相同。上面那張卡片裡的帶隊單位類型與營利機構得獎基礎比率，取自 iGEM 官方名冊（`api.igem.org/v1/teams/<id>` 與 2026 年完整參賽名單），而不是取自 wiki，因此這兩組數字——和本節其他所有數字不同——描述的是全部 423 支正式參賽隊伍，而不只是 106 支得獎隊伍。106 支全部都以隊名對上了名冊。"
+}

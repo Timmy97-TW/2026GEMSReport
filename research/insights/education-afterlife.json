@@ -1,0 +1,819 @@
+{
+ "id": "education-afterlife",
+ "tab": "good",
+ "order": 42,
+ "kicker": "Original analysis",
+ "kicker_zh": "原創分析",
+ "title": "Could a teacher in Taiwan use this next week?",
+ "title_zh": "台灣的老師下週就能拿去上課嗎？",
+ "lede": "The suspicion was wrong. Of 285 education files linked from the wikis of 31 decorated iGEM 2026 teams, 284 download today and one returns 403 — not a single 404. Education survives the Jamboree far better than software (8 of 21 still running) or hardware (6 of 20 rebuildable), because a PDF needs no server. What stops a teacher in Taiwan is something else: 9 of 64 named artefacts were never turned into a file at all, only 1 of 136 PDFs says anyone may reuse it, and exactly 2 exist in Traditional Chinese, both from Taiwanese teams.",
+ "lede_zh": "原本的懷疑錯了。31 支 2026 年得獎隊伍的 wiki 上，共有 285 個教育檔案連結，今天 284 個下載得到，一個回傳 403——一個 404 都沒有。教育成果撐過 Jamboree 的能力，遠勝軟體（21 個中 8 個還在線上）和硬體（20 件中 6 件可重建），因為一份 PDF 不需要伺服器。擋住台灣老師的是別的東西：64 件具名成果中有 9 件根本沒有被做成檔案，136 份 PDF 裡只有 1 份寫明別人可以重製使用，而正體中文版本剛好只有 2 件，兩件都出自台灣隊伍。",
+ "body": "**Two hundred and eighty-four of two hundred and eighty-five.** Every education file linked from the wikis in this sample was fetched and its HTTP status recorded, and the dead-link count is one: ZQT-Nanjing's card-design sheet for the *Synthetic Biology Lab* game returns `403 AccessDenied` from the S3 bucket, while the English rulebook beside it downloads fine. A team printed a rulebook and could not print the cards. That is the entire link-rot finding for the year. The sister studies of software and hardware both turned on a hosting decision — 8 of 21 tools were still running because someone kept paying, 6 of 20 instruments were rebuildable because someone pressed Export. Education has no such cliff. `static.igem.wiki` serves the file, the wiki freeze makes it permanent, and nobody has to maintain anything. **On pure survival, education wins the trilogy outright.**\n\nSo the honest question is not whether the artefact exists but whether a stranger can do anything with it, and there the picture darkens in three specific ways. First, 9 of the 64 named artefacts were never made into a file. The clearest case is the Best Education winner itself. **XJTLU-China's education page counts \"18 educational toolkits\" and says the aim is to \"enable other educators to adopt and adapt our materials\" — and the page links not one downloadable file.** The distribution channel it points to, a hub on XJTLU's Learning Mall Premium platform, is genuinely live and needs no login; it is also a showcase, not a library. Opened signed-out it offers one video episode, one podcast episode, a page about the *Touch Life* tactile exhibition and a page about the *Game of Seagull* board game. There is no print sheet, no rulebook, no lesson plan, no file of any kind. Muenster-University does the same thing more briefly: *Design Your Crop*, a 3–6 player card game, is described and endorsed by a named playtester, and there is nothing to print. Cornell's *Plasmid Pals* appears in four separate event write-ups and has no file. IIT Bombay, a Best Education nominee, serves a 638-byte shell at `/education`. The pattern is exactly the one the hardware census found in CAD: the thing is rendered, photographed and described, and never exported.\n\nSecond, almost nothing carries a licence. Of 136 education PDFs with an extractable text layer, **one** says anything about reuse on its own content: Cornell's *Pass the Torch* guide, which opens with \"FREE TO COPY, ADAPT & PASS ON\" and closes with a CC BY 4.0 notice. Two more — HKSSC's CUHK collaboration comics — cite CC BY for borrowed Wikimedia figures, which is good practice but is attribution, not permission. Every 2026 wiki page carries iGEM's CC BY 4.0 footer, so the files are arguably covered while they sit on the wiki. The moment a teacher downloads one, mails it to a colleague and the colleague asks whether the school may reprint it, the file itself answers nothing. CalPolySLO is the counter-example worth copying: it states the licence on the page (\"Open-license (CC BY 4.0) lab manuals\"), publishes an instructor packet with prep lists, reagent costs, timings and common failure points, and its Google Sheet and Drive files all open signed-out — checked, because an education link that needs a Google account is the same failure the hardware study found in Toronto's empty CAD folder.\n\nThird, and this is the part that matters most to a Taiwanese team: **of 31 decorated teams, three published education material in Traditional Chinese, and all three already read it.** NCKU-Tainan's 28-page 《與偏鄉共學》 handbook and GEMS-Taiwan's lesson plans and card games are Taiwanese; HKSSC's workshop materials are from Hong Kong. Every other Chinese-language education file in the census is Simplified — all 13 of BNDS-China's activity write-ups, all 13 of HFI's teaching plans and cards, all 7 of SJTU-BioX-Shanghai's. The translation effort this year was real and it was large: HFI issued its microbiology comic as text in twelve languages precisely so local educators could generate their own audio in languages the team does not speak, and Lambert-GA translated *The Mite-ty Adventure of Bentley the Bee* into thirteen. **Lambert's thirteen include Simplified Chinese and not Traditional.** Twenty-eight of the 64 artefacts exist in at least one language other than English. None of that reaches a Taiwanese classroom without someone retyping it.\n\nThe habit that separates a usable artefact from an admirable one is not hosting, as it was for software, nor export, as it was for hardware. **It is writing an instruction layer for a second adult.** Thirty-three of the 64 artefacts ship one — a teacher's guide, a facilitator pack, a rulebook, or a lesson plan with timings and materials. GU Frankfurt's organ-donation workshop ships an 18-page teachers' guide in German and English, the Myth-or-Fact card sheets and the slides, both languages, plus the ethics-committee documentation. Eton-College-UK ships a 58-page Activities Handbook with answer keys, and *Bio-Detectives* as a facilitator pack and a student pack separately, so the same workshop can be rerun by someone who was not there. Marburg went further and published a SciComm and Evaluation Guide aimed at future iGEM teams, having found that existing iGEM documentation records how outreach was organised and almost never how to evaluate it. ASIJ-Tokyo's seven lesson plans include a feedback page, added specifically because the team admits it did not systematically record feedback this year. The other 31 artefacts are the thing alone: a beautiful comic, a game board, a set of cards, and no note telling a stranger how long it takes or what to buy.\n\nOne format quietly outperformed everything else and deserves copying. Four teams published browser games served **from the frozen wiki itself**: LYON's *BL21* (a 7.3 MB script behind a wiki-hosted page, English and French, about fifteen minutes, nothing to install), GU Frankfurt's *START*, HongKong-JSS's *Small Signal*, and GEMS-Taiwan's two plant-stress games. None of them can go dark the way Vilnius-Lithuania's Ladder Detector did, because there is no service to suspend. The one artefact in the census hosted on a third-party platform, ASIJ-Tokyo's Unity game *Village 茶(Sa)kura* on itch.io, is live today and is the only one whose continued existence depends on someone else's business. And outside use — the column that was almost empty for hardware, where exactly one device in twenty had ever been used by an outsider — is where education is genuinely different. **Sixteen of the 64 artefacts carry at least one piece of evidence of use beyond the team's own events.** HKSSC's comic *The Tragedy of Margaret in Food Waste* was translated into Japanese by ASIJ-Tokyo and issued in Swahili. LYON and ASIJ-Tokyo both placed games in iGEM Patras's downloadable game library. Marburg tested the CLiPPR Toolbox with seven teachers at three schools and distributed *Plasmid Panic* through schools in German and English. BOKU-Vienna donated 《Welche Sprache spricht das Leben?》 to the lending collection of Vienna's Pappenheimgasse public library. Lambert-GA's bee book sits in the Atlanta Botanical Garden's library. Stanford's SynBase reports 750+ registered learners. NIS Almaty-Medeu names a teacher, Daniyar at Al-Farabi School No. 31, who ran his own session from their materials, and reports teachers in nine partner schools delivering activities without them. **That is sixteen, against one in twenty for hardware. Paper travels.**",
+ "body_zh": "**285 個裡有 284 個。**這份樣本中，每一個從 wiki 連出去的教育檔案都被實際抓取並記錄 HTTP 狀態，而死連結只有一個：ZQT-Nanjing 的《Synthetic Biology Lab》卡牌圖檔在 S3 上回傳 `403 AccessDenied`，旁邊那份英文規則書卻下載得好好的。一支隊伍印得出規則書，卻印不出卡片。這就是今年連結腐朽的全部。軟體與硬體那兩篇姊妹分析，關鍵都落在一個決定上——21 個工具中有 8 個還活著，是因為有人持續付代管費；20 件儀器中有 6 件可以重建，是因為有人按下了匯出。教育沒有這道懸崖。`static.igem.wiki` 負責供檔，wiki 凍結讓它永久存在，沒有人需要維護任何東西。**單就存活率而言，教育在這個三部曲裡毫無懸念地勝出。**\n\n所以真正該問的不是東西還在不在，而是陌生人能不能拿它做事；在這一點上，畫面從三個具體的方向暗下來。第一，64 件具名成果中有 9 件根本沒有被做成檔案。最清楚的例子就是最佳教育的得主本身。**XJTLU-China 的教育頁面數出「18 個教育工具包」，並寫明目的是要「enable other educators to adopt and adapt our materials」——而整個頁面沒有連出任何一個可下載的檔案。**它指向的發布管道，是西浦 Learning Mall Premium 上的一個專頁，那個專頁確實還活著、也不需要登入；但它是一個展示櫥窗，不是一座資料庫。以未登入狀態打開，裡面有一集影片、一集 podcast、一頁介紹《Touch Life》觸覺展覽、一頁介紹《Game of Seagull》桌遊。沒有列印稿、沒有規則書、沒有教案，沒有任何形式的檔案。Muenster-University 的情況更簡短：3 至 6 人的卡牌遊戲《Design Your Crop》有詳細描述，還附上一位具名試玩者的好評，但沒有任何東西可以印。Cornell 的《Plasmid Pals》出現在四篇不同的活動紀錄裡，同樣沒有檔案。IIT Bombay 身為最佳教育入圍者，`/education` 回傳的是一個 638 位元組的空殼。這個模式，正是硬體普查在 CAD 上看到的那一個：東西被算圖、被拍照、被描述，然後從來沒有被匯出。\n\n第二，幾乎沒有東西附帶授權。136 份可以抽出文字層的教育 PDF 中，只有**一份**對自己的內容說明了重製條件：Cornell 的《Pass the Torch》指南，開頭寫著「FREE TO COPY, ADAPT & PASS ON」，結尾附上 CC BY 4.0 聲明。另外兩份——HKSSC 與中大合作的漫畫——引用 CC BY，但那是為了標註借用的維基共享資源圖片；那是出處標示，不是授權。每一個 2026 年的 wiki 頁面都帶著 iGEM 的 CC BY 4.0 頁尾，所以檔案只要還掛在 wiki 上，勉強算是被涵蓋。但老師一旦把檔案下載下來、寄給同事，同事問學校能不能再印一批時，檔案本身答不出任何話。CalPolySLO 是值得照抄的反例：它在頁面上寫明授權（「Open-license (CC BY 4.0) lab manuals」），公開一份含備料清單、試劑成本、時程與常見失敗點的授課包，而它的 Google 試算表與雲端硬碟檔案在未登入狀態下全部打得開——這是實際驗證過的，因為一個需要 Google 帳號才能看的教育連結，和硬體那篇在 Toronto 空資料夾上看到的失敗是同一種。\n\n第三，而這是對台灣隊伍最關鍵的一點：**31 支得獎隊伍中，有三支公開了正體中文的教育材料，而這三支本來就看得懂正體中文。**NCKU-Tainan 那本 28 頁的《與偏鄉共學》手冊和 GEMS-Taiwan 的教案與卡牌遊戲來自台灣，HKSSC 的工作坊材料來自香港。這份普查裡其他所有中文教育檔案都是簡體——BNDS-China 的 13 份活動紀錄、HFI 的 13 份教案與互動卡、SJTU-BioX-Shanghai 的 7 份檔案，全部都是。今年的翻譯投入是真的，而且規模很大：HFI 把自己的微生物漫畫以文字形式釋出十二種語言，正是為了讓各地教育工作者能用團隊不會說的語言自行生成語音；Lambert-GA 把《The Mite-ty Adventure of Bentley the Bee》翻成十三種語言。**Lambert 那十三種包含簡體中文，不包含正體中文。**64 件成果中有 28 件存在至少一種英文以外的版本。這些全部都無法在沒有人重打一次的情況下進到台灣的教室。\n\n把「能用」和「令人佩服」分開的那個習慣，不是軟體那篇的代管，也不是硬體那篇的匯出。**是替第二個大人寫一層操作說明。**64 件成果中有 33 件附上了這一層——教師手冊、帶領者包、規則書，或是標明時間與教具的教案。GU Frankfurt 的器官捐贈工作坊附上 18 頁的教師指南（德文與英文各一份）、Myth-or-Fact 卡牌印刷稿、兩種語言的投影片，外加倫理審查文件。Eton-College-UK 附上 58 頁、含解答的活動手冊，並把《Bio-Detectives》拆成帶領者包和學生包兩份，讓當天不在場的人也能重跑同一場工作坊。Marburg 更進一步，寫了一份給未來 iGEM 隊伍看的科學傳播與評估指南，因為他們發現既有的 iGEM 文件記錄了外展活動怎麼辦，卻幾乎從不記錄要怎麼評估。ASIJ-Tokyo 的七份教案裡放了一頁回饋表，而且說明這是因為團隊今年沒有系統性地收集回饋才補上的。其餘 31 件就只是成果本身：一本漂亮的漫畫、一張遊戲板、一疊卡片，沒有任何一行字告訴陌生人這要花多久、要買什麼。\n\n有一種形式悄悄勝過其他所有形式，值得照抄。四支隊伍把瀏覽器遊戲**直接架在凍結後的 wiki 上**：LYON 的《BL21》（一個 7.3 MB 的腳本，掛在 wiki 自己的頁面後面，英文與法文，約十五分鐘，什麼都不用安裝）、GU Frankfurt 的《START》、HongKong-JSS 的《Small Signal》，以及 GEMS-Taiwan 的兩款植物逆境遊戲。它們都不可能像 Vilnius-Lithuania 的 Ladder Detector 那樣熄燈，因為根本沒有服務可以被停用。這份普查裡唯一架在第三方平台上的成果，是 ASIJ-Tokyo 放在 itch.io 的 Unity 遊戲《Village 茶(Sa)kura》；它今天還在線上，也是唯一一件存續與否取決於別人生意好壞的。而「外部使用」——硬體那篇幾乎全空的那一欄，二十件儀器中只有一件曾被團隊以外的人用過——正是教育真正不一樣的地方。**64 件成果中有 16 件留下了至少一項在團隊自辦活動之外被使用的證據。**HKSSC 的漫畫《The Tragedy of Margaret in Food Waste》被 ASIJ-Tokyo 翻成日文，並出了斯瓦希里文版。LYON 和 ASIJ-Tokyo 都把遊戲放進 iGEM Patras 的可下載遊戲庫。Marburg 把 CLiPPR 工具箱拿給三所學校的七位老師實測，並以德文與英文透過學校發行《Plasmid Panic》。BOKU-Vienna 把《Welche Sprache spricht das Leben?》捐給維也納 Pappenheimgasse 公共圖書館的外借館藏。Lambert-GA 的蜜蜂繪本進了 Atlanta Botanical Garden 的圖書室。Stanford 的 SynBase 顯示 750 位以上的註冊學習者。NIS Almaty-Medeu 具名寫出 Al-Farabi School No. 31 的老師 Daniyar 用他們的材料自行開了一場活動，並回報九所夥伴學校的老師已經在沒有他們的情況下帶活動。**是十六件，對上硬體的二十分之一。紙本走得遠。**",
+ "cards": [
+  {
+   "kicker": "The hypothesis failed",
+   "kicker_zh": "假設失敗",
+   "title": "284 of 285 education files download today",
+   "title_zh": "285 個教育檔案，今天有 284 個下載得到",
+   "body": "Every education-artefact URL linked from the 31 teams' wikis was fetched and its status recorded. The result is 284 responses of HTTP 200 and one 403 — ZQT-Nanjing's card-design sheet — and no 404 anywhere. The expected finding, that award-winning outreach exists only as photographs of children holding things, is not what the counting shows for files. iGEM's static asset host plus the wiki freeze has made education publishing effectively permanent at no cost to the team. The failures this analysis found are upstream of the link, not in it.",
+   "body_zh": "31 支隊伍 wiki 上連出去的每一個教育成果網址都被實際抓取並記錄狀態。結果是 284 個 HTTP 200、一個 403——ZQT-Nanjing 的卡牌圖檔——而且任何地方都沒有 404。原先預期的發現，也就是得獎的外展成果只剩下孩子拿著東西的照片，在檔案這一層並不成立。iGEM 的靜態資源主機加上 wiki 凍結，已經讓教育成果的發布在團隊零成本的情況下幾乎永久存在。這份分析找到的失敗，都發生在連結之前，而不在連結本身。",
+   "chips": [
+    "285 files tested",
+    "284 × HTTP 200",
+    "1 × 403",
+    "0 × 404"
+   ],
+   "chips_zh": [
+    "測試 285 個檔案",
+    "284 個回 HTTP 200",
+    "1 個回 403",
+    "0 個 404"
+   ]
+  },
+  {
+   "kicker": "Rendered, never exported",
+   "kicker_zh": "只算圖，沒匯出",
+   "title": "The Best Education winner publishes no downloadable file",
+   "title_zh": "最佳教育得主沒有公開任何可下載檔案",
+   "body": "XJTLU-China's education page counts 21 activities, 2,000+ people reached and \"18 educational toolkits\", and states the aim of enabling other educators to adopt and adapt the materials. Every link on that page is an .avif photograph, a citation or the Learning Mall hub. The hub itself loads for anyone with no login — and contains one video, one podcast episode and showcase pages for the Touch Life exhibition and the Game of Seagull board game. No rulebook, no print sheet, no lesson plan. The work may be excellent; a second educator cannot obtain it.",
+   "body_zh": "XJTLU-China 的教育頁面數出 21 場活動、觸及 2,000 人以上、以及「18 個教育工具包」，並寫明目標是讓其他教育工作者能採用並改編這些材料。那個頁面上的每一個連結，不是 .avif 照片、就是引用文獻、或是 Learning Mall 專頁。那個專頁本身任何人不用登入都打得開——裡面有一支影片、一集 podcast，以及《Touch Life》展覽和《Game of Seagull》桌遊的介紹頁。沒有規則書、沒有列印稿、沒有教案。成果可能真的很好；但第二位教育工作者拿不到它。",
+   "chips": [
+    "XJTLU-China",
+    "Best Education winner",
+    "18 toolkits claimed",
+    "0 files"
+   ],
+   "chips_zh": [
+    "XJTLU-China",
+    "最佳教育得主",
+    "宣稱 18 套教材",
+    "0 個檔案"
+   ]
+  },
+  {
+   "kicker": "Best in class",
+   "kicker_zh": "同類最佳",
+   "title": "HFI shipped 38 files and every lesson plan twice",
+   "title_zh": "HFI 交出 38 個檔案，每份教案都有兩個語言版本",
+   "body": "The High School Best Education winner publishes its whole teaching package as PDFs: slides, teaching plans and interactive cards, each in an English version and a Chinese version, alongside its microbiology comic. The comic's audiobook was recorded in three languages and then issued as plain text in twelve more — explicitly so that local educators can generate their own text-to-speech in languages the team does not speak. That is the most transferable design decision in the census. The Chinese is Simplified throughout, which is correct for Guangzhou and is not usable in a Taiwanese classroom without conversion.",
+   "body_zh": "高中組最佳教育得主把整套教學包以 PDF 形式公開：投影片、教案與互動卡，每一份都有英文版和中文版，另外還有那本微生物漫畫。漫畫的有聲書錄了三種語言，接著又以純文字形式釋出另外十二種——而且明確說明這是為了讓各地教育工作者能用團隊不會說的語言自行生成語音。這是整份普查中最容易被別人接手的一個設計決定。中文全部是簡體，這對廣州來說完全正確，但不經轉換就無法在台灣的教室使用。",
+   "chips": [
+    "HFI",
+    "38 PDFs",
+    "EN + ZH on every plan",
+    "12-language text",
+    "Simplified"
+   ],
+   "chips_zh": [
+    "HFI",
+    "38 份 PDF",
+    "每份教案都有中英兩版",
+    "12 種語言的文本",
+    "簡體"
+   ]
+  },
+  {
+   "kicker": "Nobody said you may use it",
+   "kicker_zh": "沒有人說你可以用",
+   "title": "One licence statement in 136 PDFs",
+   "title_zh": "136 份 PDF 裡只有一份授權聲明",
+   "body": "Cornell's Pass the Torch education guide opens with \"FREE TO COPY, ADAPT & PASS ON\" and ends with a CC BY 4.0 notice. It is the only education PDF in the census that grants permission on its own content. Two HKSSC comics cite CC BY, but for borrowed Wikimedia figures — attribution, not a licence. The wiki footer covers the files while they sit on the wiki, and says nothing once a file is downloaded and forwarded. A line of text costs nothing and is the difference between a teacher reprinting a workbook for a class and a teacher deciding not to risk it.",
+   "body_zh": "Cornell 的《Pass the Torch》教育指南開頭寫著「FREE TO COPY, ADAPT & PASS ON」，結尾附上 CC BY 4.0 聲明。它是整份普查中唯一一份對自身內容給出使用許可的教育 PDF。HKSSC 有兩本漫畫引用 CC BY，但那是為了借用的維基共享資源圖片——是出處標示，不是授權。wiki 頁尾在檔案還掛在 wiki 上時涵蓋了它們，一旦檔案被下載、被轉寄，頁尾就什麼也說不了。一行字不花任何成本，卻決定了一位老師會替全班重印一本作業本，還是決定不要冒這個險。",
+   "chips": [
+    "1 of 136",
+    "Cornell",
+    "CC BY 4.0",
+    "wiki footer only"
+   ],
+   "chips_zh": [
+    "136 份 PDF 中只有 1 份",
+    "Cornell",
+    "CC BY 4.0",
+    "只寫在 wiki 頁尾"
+   ]
+  },
+  {
+   "kicker": "The language gap",
+   "kicker_zh": "語言的斷層",
+   "title": "Two Traditional Chinese artefacts, both from Taiwan",
+   "title_zh": "兩件正體中文成果，兩件都來自台灣",
+   "body": "Across 31 decorated teams, education material in Traditional Chinese comes from three sources and all three already read it: NCKU-Tainan's 28-page handbook, GEMS-Taiwan's lesson plans and card games, and HKSSC's Hong Kong workshop sheets. Every other Chinese file checked — BNDS-China's 13 activity write-ups, HFI's 13 teaching documents, SJTU-BioX-Shanghai's 7 — is Simplified. Lambert-GA translated its children's book into thirteen languages and the Chinese edition is Simplified. Twenty-eight of 64 artefacts have some non-English version; the one script a Taiwanese classroom needs is the one almost nobody produced.",
+   "body_zh": "在 31 支得獎隊伍中，正體中文的教育材料來自三個來源，而這三個本來就看得懂正體中文：NCKU-Tainan 那本 28 頁的手冊、GEMS-Taiwan 的教案與卡牌遊戲，以及 HKSSC 的香港工作坊講義。其他每一份檢查過的中文檔案——BNDS-China 的 13 份活動紀錄、HFI 的 13 份教學文件、SJTU-BioX-Shanghai 的 7 份——都是簡體。Lambert-GA 把繪本翻成十三種語言，中文版是簡體。64 件成果中有 28 件存在英文以外的版本；而台灣教室需要的那一種字體，幾乎沒有人做。",
+   "chips": [
+    "3 of 31 teams",
+    "NCKU-Tainan",
+    "GEMS-Taiwan",
+    "HKSSC",
+    "rest Simplified"
+   ],
+   "chips_zh": [
+    "31 支隊伍中有 3 支",
+    "NCKU-Tainan",
+    "GEMS-Taiwan",
+    "HKSSC",
+    "其餘都是簡體"
+   ]
+  },
+  {
+   "kicker": "Copy this format",
+   "kicker_zh": "照抄這個形式",
+   "title": "Four browser games that cannot go dark",
+   "title_zh": "四款不會熄燈的瀏覽器遊戲",
+   "body": "LYON's BL21 is a wiki-hosted page loading a 7.3 MB script from static.igem.wiki: English and French, about fifteen minutes, keyboard only, nothing to install, and a second language switched with one key. GU Frankfurt's START, HongKong-JSS's Small Signal and GEMS-Taiwan's two plant-stress games work the same way. Because there is no service behind them, none can be suspended the way Vilnius-Lithuania's Ladder Detector was four weeks after the Jamboree. A game served from a frozen wiki is the most durable interactive artefact iGEM currently allows, and it costs nothing to keep.",
+   "body_zh": "LYON 的《BL21》是一個架在 wiki 上的頁面，從 static.igem.wiki 載入一支 7.3 MB 的腳本：英文與法文、約十五分鐘、只用鍵盤、什麼都不用安裝，按一個鍵就能切換語言。GU Frankfurt 的《START》、HongKong-JSS 的《Small Signal》，以及 GEMS-Taiwan 的兩款植物逆境遊戲，運作方式完全一樣。因為背後沒有服務，它們都不可能像 Vilnius-Lithuania 的 Ladder Detector 那樣，在 Jamboree 結束四週後被停用。架在凍結 wiki 上的遊戲，是 iGEM 目前允許的最耐久互動成果，而且維持它不花任何錢。",
+   "chips": [
+    "LYON BL21",
+    "GU Frankfurt START",
+    "HongKong-JSS",
+    "GEMS-Taiwan",
+    "no server to suspend"
+   ],
+   "chips_zh": [
+    "LYON BL21",
+    "GU Frankfurt START",
+    "HongKong-JSS",
+    "GEMS-Taiwan",
+    "沒有伺服器可以關掉"
+   ]
+  }
+ ],
+ "table": {
+  "head": [
+   "Team",
+   "Flagship education artefact",
+   "File you can get today",
+   "Licence in the file",
+   "Languages",
+   "Instructions for a second adult",
+   "Outside use"
+  ],
+  "head_zh": [
+   "隊伍",
+   "代表性教育成果",
+   "今天拿得到的檔案",
+   "檔案內附授權",
+   "語言",
+   "給第二個大人的操作說明",
+   "外部使用"
+  ],
+  "rows": [
+   [
+    "XJTLU-China",
+    "18 education toolkits, Game of Seagull",
+    "none — Learning Mall hub is a showcase",
+    "no",
+    "English / Chinese page",
+    "no",
+    "none found"
+   ],
+   [
+    "GU Frankfurt",
+    "Organs & Informed Decisions teacher pack",
+    "guide, slides, Myth-or-Fact cards",
+    "no",
+    "German + English",
+    "yes",
+    "hr3 radio, BIOspektrum, iGEM Lund podcast"
+   ],
+   [
+    "HFI",
+    "Teaching package + microbiology comic",
+    "38 PDFs",
+    "no",
+    "English + Simplified Chinese; comic text × 12",
+    "yes",
+    "none recorded"
+   ],
+   [
+    "CalPolySLO",
+    "CHEM 471 synthetic-cell course",
+    "10 lab manuals, instructor packet, workbook",
+    "stated CC BY 4.0 on page",
+    "English",
+    "yes",
+    "taught once; no second school yet"
+   ],
+   [
+    "Cornell",
+    "Pass the Torch education guide",
+    "21-page PDF",
+    "yes — CC BY 4.0",
+    "English",
+    "yes",
+    "book swap + translations with NUGEM"
+   ],
+   [
+    "Cornell",
+    "Plasmid Pals game",
+    "none",
+    "no",
+    "English",
+    "no",
+    "playtested only with its own guests"
+   ],
+   [
+    "IIT Bombay",
+    "education programme",
+    "none — 638-byte page shell",
+    "no",
+    "—",
+    "no",
+    "none found"
+   ],
+   [
+    "LYON",
+    "3 printable board games + facilitator guides",
+    "cards, boards, rules",
+    "no",
+    "French + English",
+    "yes",
+    "iGEM Patras game library"
+   ],
+   [
+    "LYON",
+    "BL21 browser game",
+    "wiki-hosted, 7.3 MB",
+    "no",
+    "French + English",
+    "yes (in-game)",
+    "also on itch.io"
+   ],
+   [
+    "Athens",
+    "Bee Wanderer game + bilingual comic",
+    "comic PDFs; game on GitHub Pages",
+    "no",
+    "English + Greek",
+    "partly",
+    "EU-CONEXUS Hackathon"
+   ],
+   [
+    "BOKU-Vienna",
+    "Welche Sprache spricht das Leben? book",
+    "4.0 MB PDF",
+    "no",
+    "German",
+    "no",
+    "donated to a public library's lending collection"
+   ],
+   [
+    "BOKU-Vienna",
+    "Open Educational Resources pack",
+    "22-page PDF",
+    "no",
+    "German",
+    "yes",
+    "eduvidual.at, Austrian ministry platform"
+   ],
+   [
+    "Marburg",
+    "CLiPPR Teaching Toolbox",
+    "PDF, both languages",
+    "no",
+    "German + English",
+    "yes",
+    "tested with 7 teachers at 3 schools"
+   ],
+   [
+    "Marburg",
+    "Plasmid Panic escape game",
+    "PDF, both languages",
+    "no",
+    "German + English",
+    "yes",
+    "schools + iGEM Patras"
+   ],
+   [
+    "UOregon",
+    "Three-workshop curriculum",
+    "3 slide decks + 2 workbooks",
+    "no",
+    "English",
+    "yes",
+    "3 host organisations"
+   ],
+   [
+    "ASIJ-Tokyo",
+    "Seven tested lesson plans",
+    "workbook PDF",
+    "no",
+    "English",
+    "yes",
+    "feedback page for adopters"
+   ],
+   [
+    "ASIJ-Tokyo",
+    "Village 茶(Sa)kura Unity game",
+    "itch.io + manual PDF",
+    "no",
+    "English",
+    "yes",
+    "iGEM Patras game gallery"
+   ],
+   [
+    "BNDS-China",
+    "Bilingual comic + REACH activity set",
+    "21 PDFs",
+    "no",
+    "Simplified Chinese + English",
+    "partly",
+    "school newspaper BNDS Review"
+   ],
+   [
+    "Eton-College-UK",
+    "58-page Activities Handbook",
+    "7.8 MB PDF",
+    "no",
+    "English",
+    "yes",
+    "350+ printed copies of the comic"
+   ],
+   [
+    "Eton-College-UK",
+    "Bio-Detectives workshop",
+    "facilitator + student packs",
+    "no",
+    "English",
+    "yes",
+    "rerunnable by non-authors"
+   ],
+   [
+    "HKSSC",
+    "The Tragedy of Margaret comic",
+    "PDF, several editions",
+    "no",
+    "English + Swahili + Japanese (by ASIJ)",
+    "partly",
+    "translated by 2 other teams"
+   ],
+   [
+    "UPF-Barcelona",
+    "Ten WONDER session kits",
+    "10 PDFs + Operation Priorat cards",
+    "no",
+    "English + Catalan",
+    "yes",
+    "published so others can run them"
+   ],
+   [
+    "Lambert-GA",
+    "Bentley the Bee children's book",
+    "PDF × 13 languages",
+    "no",
+    "13, Chinese is Simplified",
+    "no",
+    "Atlanta Botanical Garden library"
+   ],
+   [
+    "Muenster-University",
+    "Design Your Crop card game",
+    "none",
+    "no",
+    "German",
+    "no",
+    "named playtester only"
+   ],
+   [
+    "GEMS-Taiwan",
+    "Lesson plans, slides, 2 card games",
+    "8 PDFs + 2 browser games",
+    "no",
+    "Traditional Chinese",
+    "yes",
+    "5 schools, 140 students"
+   ],
+   [
+    "NCKU-Tainan",
+    "與偏鄉共學 education handbook",
+    "28-page PDF, EN + ZH-Hant",
+    "no",
+    "Traditional Chinese + English",
+    "yes",
+    "8 Tainan primary schools"
+   ],
+   [
+    "Stanford University",
+    "SynBase self-paced curriculum",
+    "live web app",
+    "no",
+    "English",
+    "yes",
+    "750+ registered learners"
+   ],
+   [
+    "HongKong-JSS",
+    "Small Signal browser game",
+    "wiki-hosted HTML",
+    "no",
+    "English",
+    "yes",
+    "30 teachers trained + equipment loan"
+   ],
+   [
+    "KAUST-KSA",
+    "Space Microbe activity cards",
+    "PDF, both languages",
+    "no",
+    "English + Arabic",
+    "yes",
+    "Tawasol MENA network"
+   ],
+   [
+    "UAlberta",
+    "Inclusivity in Research Course",
+    "slides as PDF; course needs a Google account",
+    "no",
+    "English",
+    "yes",
+    "9 kits shipped to rural teachers"
+   ],
+   [
+    "ZQT-Nanjing",
+    "Synthetic Biology Lab card game",
+    "rulebook yes; card sheet 403",
+    "no",
+    "English",
+    "yes",
+    "none found"
+   ],
+   [
+    "SJTU-BioX-Shanghai",
+    "145-page Education Handbook",
+    "9.9 MB PDF",
+    "no",
+    "English (other files Simplified)",
+    "yes",
+    "none recorded"
+   ],
+   [
+    "NIS Almaty-Medeu",
+    "Keleshek school materials",
+    "Drive folder, opens signed-out",
+    "no",
+    "English + Kazakh",
+    "yes",
+    "9 schools now deliver without them"
+   ],
+   [
+    "IISER-Kolkata",
+    "41 free teaching files, 3 languages",
+    "page did not render in testing",
+    "no",
+    "English, Hindi, Bengali",
+    "unknown",
+    "Ek Pehal partnership"
+   ]
+  ],
+  "rows_zh": [
+   [
+    "XJTLU-China",
+    "18 個教育工具包、Game of Seagull",
+    "無——Learning Mall 專頁只是展示",
+    "無",
+    "英文／中文頁面",
+    "無",
+    "查無"
+   ],
+   [
+    "GU Frankfurt",
+    "器官與知情決定教師包",
+    "指南、投影片、Myth-or-Fact 卡牌",
+    "無",
+    "德文＋英文",
+    "有",
+    "hr3 廣播、BIOspektrum、iGEM Lund podcast"
+   ],
+   [
+    "HFI",
+    "教學包＋微生物漫畫",
+    "38 份 PDF",
+    "無",
+    "英文＋簡體中文；漫畫文字 12 語",
+    "有",
+    "未記錄"
+   ],
+   [
+    "CalPolySLO",
+    "CHEM 471 合成細胞課程",
+    "10 份實驗手冊、授課包、工作表",
+    "頁面載明 CC BY 4.0",
+    "英文",
+    "有",
+    "已開課一次；尚無第二所學校"
+   ],
+   [
+    "Cornell",
+    "Pass the Torch 教育指南",
+    "21 頁 PDF",
+    "有——CC BY 4.0",
+    "英文",
+    "有",
+    "與 NUGEM 互換繪本並互譯"
+   ],
+   [
+    "Cornell",
+    "Plasmid Pals 遊戲",
+    "無",
+    "無",
+    "英文",
+    "無",
+    "僅與自家受邀對象試玩"
+   ],
+   [
+    "IIT Bombay",
+    "教育計畫",
+    "無——638 位元組的空殼頁面",
+    "無",
+    "——",
+    "無",
+    "查無"
+   ],
+   [
+    "LYON",
+    "三款可列印桌遊＋帶領者指南",
+    "卡片、遊戲板、規則",
+    "無",
+    "法文＋英文",
+    "有",
+    "iGEM Patras 遊戲庫"
+   ],
+   [
+    "LYON",
+    "BL21 瀏覽器遊戲",
+    "架在 wiki 上，7.3 MB",
+    "無",
+    "法文＋英文",
+    "有（遊戲內）",
+    "itch.io 亦有"
+   ],
+   [
+    "Athens",
+    "Bee Wanderer 遊戲＋雙語漫畫",
+    "漫畫 PDF；遊戲在 GitHub Pages",
+    "無",
+    "英文＋希臘文",
+    "部分",
+    "EU-CONEXUS Hackathon"
+   ],
+   [
+    "BOKU-Vienna",
+    "Welche Sprache spricht das Leben? 繪本",
+    "4.0 MB PDF",
+    "無",
+    "德文",
+    "無",
+    "捐入公共圖書館外借館藏"
+   ],
+   [
+    "BOKU-Vienna",
+    "開放教育資源包",
+    "22 頁 PDF",
+    "無",
+    "德文",
+    "有",
+    "eduvidual.at，奧地利教育部平台"
+   ],
+   [
+    "Marburg",
+    "CLiPPR 教學工具箱",
+    "PDF，兩種語言",
+    "無",
+    "德文＋英文",
+    "有",
+    "三所學校七位老師實測"
+   ],
+   [
+    "Marburg",
+    "Plasmid Panic 密室遊戲",
+    "PDF，兩種語言",
+    "無",
+    "德文＋英文",
+    "有",
+    "學校＋iGEM Patras"
+   ],
+   [
+    "UOregon",
+    "三場工作坊課程",
+    "3 份投影片＋2 份作業本",
+    "無",
+    "英文",
+    "有",
+    "三個合辦單位"
+   ],
+   [
+    "ASIJ-Tokyo",
+    "七份實測教案",
+    "作業本 PDF",
+    "無",
+    "英文",
+    "有",
+    "附給採用者的回饋頁"
+   ],
+   [
+    "ASIJ-Tokyo",
+    "Village 茶(Sa)kura Unity 遊戲",
+    "itch.io＋說明書 PDF",
+    "無",
+    "英文",
+    "有",
+    "iGEM Patras 遊戲展示區"
+   ],
+   [
+    "BNDS-China",
+    "雙語漫畫＋REACH 活動集",
+    "21 份 PDF",
+    "無",
+    "簡體中文＋英文",
+    "部分",
+    "校刊 BNDS Review"
+   ],
+   [
+    "Eton-College-UK",
+    "58 頁活動手冊",
+    "7.8 MB PDF",
+    "無",
+    "英文",
+    "有",
+    "漫畫印行 350 份以上"
+   ],
+   [
+    "Eton-College-UK",
+    "Bio-Detectives 工作坊",
+    "帶領者包＋學生包",
+    "無",
+    "英文",
+    "有",
+    "非原作者也能重跑"
+   ],
+   [
+    "HKSSC",
+    "The Tragedy of Margaret 漫畫",
+    "PDF，多種版本",
+    "無",
+    "英文＋斯瓦希里文＋日文（ASIJ 譯）",
+    "部分",
+    "另外兩支隊伍翻譯"
+   ],
+   [
+    "UPF-Barcelona",
+    "十份 WONDER 活動包",
+    "10 份 PDF＋Operation Priorat 卡牌",
+    "無",
+    "英文＋加泰隆尼亞文",
+    "有",
+    "公開讓別人照著辦"
+   ],
+   [
+    "Lambert-GA",
+    "Bentley the Bee 繪本",
+    "PDF，13 種語言",
+    "無",
+    "13 種，中文為簡體",
+    "無",
+    "Atlanta Botanical Garden 圖書室"
+   ],
+   [
+    "Muenster-University",
+    "Design Your Crop 卡牌遊戲",
+    "無",
+    "無",
+    "德文",
+    "無",
+    "僅具名試玩者"
+   ],
+   [
+    "GEMS-Taiwan",
+    "教案、投影片、兩款卡牌遊戲",
+    "8 份 PDF＋2 款瀏覽器遊戲",
+    "無",
+    "正體中文",
+    "有",
+    "5 所學校、140 位學生"
+   ],
+   [
+    "NCKU-Tainan",
+    "《與偏鄉共學》教育手冊",
+    "28 頁 PDF，英文與正體中文",
+    "無",
+    "正體中文＋英文",
+    "有",
+    "台南 8 所國小"
+   ],
+   [
+    "Stanford University",
+    "SynBase 自學課程",
+    "線上網頁應用",
+    "無",
+    "英文",
+    "有",
+    "750 位以上註冊學習者"
+   ],
+   [
+    "HongKong-JSS",
+    "Small Signal 瀏覽器遊戲",
+    "架在 wiki 上的 HTML",
+    "無",
+    "英文",
+    "有",
+    "培訓 30 位教師＋器材借用"
+   ],
+   [
+    "KAUST-KSA",
+    "太空微生物活動卡",
+    "PDF，兩種語言",
+    "無",
+    "英文＋阿拉伯文",
+    "有",
+    "Tawasol 中東北非網絡"
+   ],
+   [
+    "UAlberta",
+    "Inclusivity in Research 課程",
+    "投影片 PDF；課程需 Google 帳號",
+    "無",
+    "英文",
+    "有",
+    "寄出 9 套教具給偏遠地區教師"
+   ],
+   [
+    "ZQT-Nanjing",
+    "Synthetic Biology Lab 卡牌遊戲",
+    "規則書可下載；卡牌圖檔 403",
+    "無",
+    "英文",
+    "有",
+    "查無"
+   ],
+   [
+    "SJTU-BioX-Shanghai",
+    "145 頁教育手冊",
+    "9.9 MB PDF",
+    "無",
+    "英文（其餘檔案為簡體）",
+    "有",
+    "未記錄"
+   ],
+   [
+    "NIS Almaty-Medeu",
+    "Keleshek 校園材料",
+    "雲端硬碟資料夾，未登入可開",
+    "無",
+    "英文＋哈薩克文",
+    "有",
+    "9 所學校已能自行帶活動"
+   ],
+   [
+    "IISER-Kolkata",
+    "41 份免費教學檔案，三種語言",
+    "測試時頁面無法算繪",
+    "無",
+    "英文、印地文、孟加拉文",
+    "不明",
+    "與 Ek Pehal 的長期合作"
+   ]
+  ]
+ },
+ "checklist": [
+  "Put a licence line inside every education file, not only in the wiki footer. One PDF in 136 does this. Add \"Free to copy, adapt and reuse — CC BY 4.0\" to the cover of each ReLEAF lesson plan and card game, so the file still says it after a teacher forwards it.",
+  "Publish a Traditional Chinese and an English version of every artefact, and say which is which in the filename. Three teams in thirty-one published Traditional Chinese at all, and GEMS was one of them — that is a position to build on, not a box already ticked.",
+  "Offer Traditional Chinese translation to other teams as a formal collaboration, the way ASIJ-Tokyo translated HKSSC's comic into Japanese. Lambert-GA's children's book reached thirteen languages without reaching Taiwan; a team willing to supply the thirteenth-and-a-half script will be taken up.",
+  "Write the facilitator layer as a separate document from the student layer, as Eton-College-UK did for Bio-Detectives. Thirty-three of the sixty-four artefacts ship one; it is the single thing that decides whether a stranger can run the session.",
+  "Ship card games as print-ready sheets, with bleed, card size, paper weight and a page count, and then download them yourself from a signed-out browser. ZQT-Nanjing published the rulebook and the card artwork returns 403.",
+  "Host every interactive piece on the wiki itself, not on a platform. LYON's BL21, GU Frankfurt's START and HongKong-JSS's Small Signal are a single HTML page plus a script on static.igem.wiki and cannot be switched off.",
+  "Never put a teaching file behind Google Drive, Google Classroom or a university SharePoint without opening it in a private window first. Cornell's Drive folder sends a signed-out visitor to a Google login page.",
+  "Record the running cost and the running time on the first page of each lesson plan — what to buy, how long it takes, class size, what goes wrong — the way CalPolySLO's instructor packet lists prep, reagent costs, timings and common failure points.",
+  "Give one artefact to one school that GEMS has never visited, and publish what they did with it. Sixteen of sixty-four artefacts have outside-use evidence; it is the one column where education beats hardware's one-in-twenty, and it only exists because someone asked.",
+  "Re-fetch every education link a month after the Jamboree and publish the date you checked. The counting here found exactly one dead file in 285, which is a result worth defending rather than assuming."
+ ],
+ "checklist_zh": [
+  "在每一個教育檔案裡面放上一行授權，而不是只靠 wiki 頁尾。136 份 PDF 裡只有一份做到。在每一份 ReLEAF 教案和卡牌遊戲的封面加上「可自由重製、改作與再利用——CC BY 4.0」，讓老師轉寄之後，檔案本身還說得出話。",
+  "每一件成果都同時出正體中文版和英文版，並在檔名上標明是哪一個。三十一支隊伍中只有三支公開過正體中文，GEMS 是其中之一——這是可以往上疊的位置，不是已經打勾的項目。",
+  "把正體中文翻譯當成一項正式的合作提供給其他隊伍，就像 ASIJ-Tokyo 把 HKSSC 的漫畫翻成日文那樣。Lambert-GA 的繪本翻了十三種語言卻沒有到台灣；願意補上第十三點五種字體的隊伍，一定會有人接。",
+  "把帶領者那一層寫成與學生那一層分開的文件，就像 Eton-College-UK 的 Bio-Detectives。六十四件成果中有三十三件附上這一層；它是決定陌生人能不能把這堂課跑起來的唯一關鍵。",
+  "卡牌遊戲要以可直接付印的版型釋出，附出血、卡片尺寸、紙磅與頁數，然後自己用未登入的瀏覽器下載一次。ZQT-Nanjing 公開了規則書，卡牌圖檔卻回傳 403。",
+  "每一件互動成果都架在 wiki 本身，不要架在平台上。LYON 的 BL21、GU Frankfurt 的 START 和 HongKong-JSS 的 Small Signal，都只是一頁 HTML 加上一支放在 static.igem.wiki 的腳本，沒有人關得掉。",
+  "絕不要把教學檔案放在 Google 雲端硬碟、Google Classroom 或大學的 SharePoint 後面，除非先用無痕視窗打開確認過。Cornell 的雲端硬碟資料夾會把未登入的訪客導去 Google 登入頁。",
+  "在每份教案第一頁寫明花費與時間——要買什麼、要花多久、班級人數多少、哪裡容易出錯——就像 CalPolySLO 的授課包列出備料、試劑成本、時程與常見失敗點那樣。",
+  "挑一件成果，交給一所 GEMS 從來沒去過的學校，並把他們怎麼用它寫出來。六十四件成果中有十六件留下外部使用的證據；這是教育唯一勝過硬體二十分之一的那一欄，而它之所以存在，只因為有人開口問了。",
+  "Jamboree 結束一個月後，把每一個教育連結重抓一次，並寫上檢查日期。這次的清點在 285 個檔案中只找到一個失效，這是一個值得守住的成績，而不是可以理所當然的事。"
+ ],
+ "method": "The sample is 31 decorated teams and 64 named education artefacts. It is built from two lists. First, every 2026 Best Education winner and nominee as recorded in results2026.json — XJTLU-China, GU Frankfurt and HFI as winners, plus CalPolySLO, Cornell, IIT Bombay, LYON, Athens, BOKU-Vienna, Marburg, UOregon, ASIJ-Tokyo, BNDS-China, Eton-College-UK and HKSSC as nominees across the three sections; fifteen teams. Second, sixteen further decorated teams whose team file names a specific, titled education artefact: UPF-Barcelona, Lambert-GA, Muenster-University, GEMS-Taiwan, Stanford University, HongKong-JSS, UCAS-China, UAlberta, KAUST-KSA, NIS Almaty-Medeu, HongKong-HS, NCKU-Tainan, ZQT-Nanjing, Oxford, SJTU-BioX-Shanghai and IISER-Kolkata. An artefact was counted once no matter how many language editions it has, so HFI's twelve-language comic text and Lambert-GA's thirteen translations are one artefact each. Server-rendered wikis were read with curl; client-rendered React and Vue wikis were read either from their JavaScript bundles or in a browser, and the browser mattered — XJTLU-China's Learning Mall hub renders entirely inside a blob-URL iframe that curl cannot see, and its contents had to be read from inside that frame before the showcase-not-library finding could be made. Every education file URL found this way was then fetched with an HTTP HEAD request and its status code and content length recorded: 285 files, 284 responses of 200, one 403, no 404s. Google Drive, Google Docs, Google Classroom and SharePoint links were opened signed-out in a browser to see what an outsider actually gets; Cornell's Drive folder redirects to a Google login page, while CalPolySLO's Drive files, instructor-packet spreadsheet and SharePoint deck all open. 136 PDFs were downloaded and their text layers searched for licence and reuse statements, and the Chinese-language files were classified as Traditional or Simplified by counting script-specific characters. What the counting cannot see. A link that works today says nothing about next year; the hardware study found a repository that was named on a wiki and had already 404ed, and nothing here guarantees these 284 files will still be served in 2028. A file downloading is not a file being good: this analysis did not read most of these PDFs for pedagogical quality, and several of the artefacts it marks as unobtainable may be the best teaching work in the competition — XJTLU-China won Best Education on the strength of a framework and twenty-one activities that were genuinely evaluated, and the criticism here is about distribution, not about the teaching. Comics published as image-only PDFs, including BNDS-China's, have no text layer, so their Chinese script could not be classified and their language is reported as the team describes it. IISER-Kolkata's wiki returned an empty document body in the browser pane on three attempts across three routes with its own bundle loading at 200, so its 41 teaching files could not be reached; that may be a failure specific to this browser rather than the site. eduvidual.at, where BOKU-Vienna deposited its Open Educational Resources, resolved but did not respond from this network on two attempts, and the wiki links only the platform homepage rather than the course page — so the deposit is reported as existing and the route to it as unverified. Finally, absence of outside-use evidence is not evidence of absence: sixteen artefacts have a recorded second user, and the other forty-eight may well have quiet ones. The table lists 34 of the 64 artefacts across 28 of the 31 teams, chosen because each one settles a question; UCAS-China, HongKong-HS and Oxford are counted in the totals and left out of the table for space. The sample is decorated teams only. Nothing here describes iGEM 2026 at large.",
+ "method_zh": "樣本為 31 支得獎隊伍、64 件具名教育成果，由兩份名單組成。第一份是 results2026.json 記載的 2026 年最佳教育得主與入圍者——得主為 XJTLU-China、GU Frankfurt 與 HFI，入圍者包括三個組別的 CalPolySLO、Cornell、IIT Bombay、LYON、Athens、BOKU-Vienna、Marburg、UOregon、ASIJ-Tokyo、BNDS-China、Eton-College-UK 與 HKSSC，共十五支。第二份是另外十六支得獎隊伍，其隊伍檔案中寫出了具體且有名稱的教育成果：UPF-Barcelona、Lambert-GA、Muenster-University、GEMS-Taiwan、Stanford University、HongKong-JSS、UCAS-China、UAlberta、KAUST-KSA、NIS Almaty-Medeu、HongKong-HS、NCKU-Tainan、ZQT-Nanjing、Oxford、SJTU-BioX-Shanghai 與 IISER-Kolkata。一件成果不論有幾種語言版本都只計一次，所以 HFI 十二種語言的漫畫文字與 Lambert-GA 的十三種翻譯，各算一件。伺服器端渲染的 wiki 以 curl 讀取；客戶端渲染的 React 與 Vue wiki 則從 JavaScript 套件檔或直接在瀏覽器中讀取，而瀏覽器確實關鍵——XJTLU-China 的 Learning Mall 專頁整個算繪在一個 blob 網址的內嵌框架裡，curl 看不到，必須從那個框架內部讀取內容，才能做出「是展示櫥窗不是資料庫」這個判斷。接著，以此找出的每一個教育檔案網址都用 HTTP HEAD 請求抓取，並記錄狀態碼與內容長度：285 個檔案、284 個回傳 200、一個 403、沒有 404。Google 雲端硬碟、Google 文件、Google Classroom 與 SharePoint 的連結，都以未登入狀態在瀏覽器中開啟，確認外人實際看到什麼；Cornell 的雲端硬碟資料夾會導向 Google 登入頁，而 CalPolySLO 的雲端硬碟檔案、授課包試算表與 SharePoint 投影片則全部打得開。另下載 136 份 PDF，在文字層中搜尋授權與重製使用的敘述，並以字體特有字元的出現次數，將中文檔案分類為正體或簡體。這次清點看不到的事。今天通得過的連結，說明不了明年的狀況；硬體那篇就找到一個 wiki 上寫明、卻早已 404 的儲存庫，這裡也沒有任何東西保證這 284 個檔案到 2028 年還供得出來。檔案下載得到，不代表檔案做得好：本分析並未逐一閱讀這些 PDF 評估教學品質，而被標為拿不到的那幾件，很可能正是整場競賽裡最好的教學成果——XJTLU-China 拿下最佳教育，靠的是一套架構和二十一場確實做過評估的活動，這裡批評的是發布方式，不是教學本身。以純影像 PDF 形式發布的漫畫（包括 BNDS-China 的）沒有文字層，無法判定其中文字體，語言欄位依隊伍自述記錄。IISER-Kolkata 的 wiki 在瀏覽器面板中，跨三條路徑、三次嘗試都回傳空白的文件主體，而它自己的套件檔是 200，因此其 41 份教學檔案無法取得；這有可能是這個瀏覽器特有的失敗，而不是網站本身的問題。BOKU-Vienna 存放開放教育資源的 eduvidual.at，網域解析得出但從本網路兩次嘗試都沒有回應，而 wiki 只連到平台首頁、沒有連到課程頁——因此該存放紀錄記為存在，但抵達它的路徑記為未經驗證。最後，沒有外部使用的證據，不等於沒有外部使用：十六件成果有明確的第二位使用者，其餘四十八件也可能有默默在用的人。表格列出 64 件成果中的 34 件、涵蓋 31 支隊伍中的 28 支，收錄標準是每一列都能回答一個問題；UCAS-China、HongKong-HS 與 Oxford 計入總數，但因版面關係未列入表格。樣本僅限得獎隊伍。本文任何內容都不描述 2026 年 iGEM 的整體情況。",
+ "baseRate": {
+  "teams": 31,
+  "artefacts": 64,
+  "obtainable": 55,
+  "noFileAtAll": 9,
+  "filesTested": 285,
+  "http200": 284,
+  "http403": 1,
+  "http404": 0,
+  "pdfsWithLicence": 1,
+  "pdfsInspected": 136,
+  "withNonEnglishVersion": 28,
+  "withTraditionalChinese": 3,
+  "withFacilitatorInstructions": 33,
+  "withOutsideUseEvidence": 16
+ }
+}
