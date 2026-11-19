@@ -1,0 +1,61 @@
+{
+  "team": "SUIS-SFLS",
+  "id": "6199",
+  "section": "High School",
+  "country": "China",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/suis-sfls/",
+  "projectTitle": "TyroFix",
+  "tagline": "Recyclable magnetic-bead tyrosinase that cheaply DOPA-modifies recombinant mussel adhesive protein, sold as a B2B raw material",
+  "summary": "SUIS-SFLS expressed three microbial tyrosinases, immobilised them on magnetic beads so the enzyme can be magnetically recovered and reused, and used the recycled catalyst to hydroxylate Mfp3-linker-Mfp6 fusion mussel foot proteins into DOPA-bearing wet adhesives for skin and wound repair. The commercial thesis is unusually self-aware: after expert interviews they abandoned the idea of selling a finished dressing and repositioned as an upstream B2B raw-material supplier, splitting the same protein stock into TyroFix Mini (cosmetic grade) and TyroFix ProMax (Class II medical grade) and running both regulatory tracks in parallel from day one so that test data never has to be repeated. They are the only high-school team here with a genuine financial model, including capex, cost per litre, pricing, gross margin and breakeven year for each line, published as downloadable PDFs. They were nominated for Best Entrepreneurship in the High School section.",
+  "awards": ["Best Entrepreneurship nominee, High School"],
+  "dry": {
+    "frameworks": "Golden-circle style Why/How/What mission, PESTLE run separately for each product line, SWOT per line, 4P marketing model, Business Model Canvas, a stakeholder power-interest map, TAM-SAM-SOM per line with stated assumptions, a five-phase 36-month milestone plan, and a two-line financial model with breakeven analysis.",
+    "dataviz": "Thirteen entrepreneurship figures including two separate PESTLE diagrams, competitive positioning, purity and performance indicator panels, a technology roadmap, a business model canvas, a milestone chart and two financial-planning charts. Two downloadable PDFs (financial-planning-mini.pdf, financial-planning-promax.pdf) carry the underlying budgets. Survey results are reported with response percentages and mean Likert scores.",
+    "datascience": "A 290-response consumer survey quantified to a usable level: over 90 percent reporting skin issues, acne and marks at 62.76 percent, dryness at 48.62 percent, sensitivity at 45.17 percent, satisfaction with existing repair products at 3.34 out of 5, weak efficacy as the main complaint at 72.61 percent, safety at 82.07 percent and repair efficacy at 75.86 percent as the top purchase factors, willingness to try at 3.57 out of 5, and over 60 percent accepting CNY 100-150 with CNY 110-120 as the sweet spot. Cost modelling is benchmarked against recombinant human insulin industrial fermentation.",
+    "software": "",
+    "stack": ["magnetic-bead immobilised tyrosinase", "E. coli expression", "Mfp3-linker-Mfp6 fusion constructs", "chromatography and TFF ultrafiltration", "HPLC purity assay", "NIH/3T3 cytotoxicity assay"],
+    "techniques": ["enzyme immobilisation and magnetic recovery", "controlled DOPA hydroxylation", "three DBTL cycles on fermentation and purification", "wet adhesion measurement in kPa", "endotoxin quantification", "lyophilisation and reconstitution feasibility"]
+  },
+  "good": {
+    "publicEngagement": "A 290-response online questionnaire that went beyond sentiment into purchase behaviour, capturing preferred formats, trusted information sources (dermatologists, real user reviews, official brand channels), trial triggers (free samples at 30.69 percent, professional recommendation at 30 percent) and an explicit price band. They also read the result honestly, noting that trust comes from experimental and clinical data (76.21 percent) and transparent mechanism (63.79 percent), and then used those channels to plan promotion rather than inventing a campaign.",
+    "ihp": "Five named expert interviews, each with the background stated, the question asked, the feedback, the team's reflection and the concrete project adjustment. Dr. Dongfeng Wang (Deputy Chief Physician, Wuhan Petrochemical Hospital) converted vague 'good adhesion' into care-process requirements and gave quantitative design targets: film formation in about 5 seconds, breathability with water resistance, partial degradation in 3-5 days, and validation moving from superficial to deeper wounds. Mr. Yanxuan Song (medical device engineer and founder of a Guangzhou tech-beauty chain) widened their notion of cost to include purification, storage, transport and handling losses, and suggested lyophilised powder with a reconstitution solution to cut cold-chain burden. Mr. Jiujiang Zhang of CIRS Group, a Class II and III device regulatory specialist, established the rule that shared raw-material origin does not permit shared submission pathways. Mr. Xiaofei Ji, an ISO 13485 internal auditor and NPDP holder who has taken more than ten Class III products to approval, delivered the decisive advice: a student team should start at raw-material supply, treat reproducibility and batch records as early concerns, and settle IP before approaching any manufacturer. That advice visibly rewrote the deliverable, from a finished dressing to a characterised protein plus quality documentation.",
+    "realWorld": "The most financially literate high-school entrepreneurship case in this set, and the honesty is what makes it credible. Each line has a built-up cost model rather than a percentage: Mini needs about CNY 6.8 million of equipment (seed shakers, a 200 L fermenter, high-pressure homogeniser, chromatography system, industrial centrifuge, TFF ultrafiltration) depreciated straight-line over six years, about CNY 2.3 million of R&D, and about CNY 71 per litre to produce against a $12-18 per litre price, giving roughly 34 percent gross margin and cumulative profitability in year 3 to 4. ProMax adds an aseptic filling line, sterile filtration and a lyophiliser for about CNY 11.65 million, carries about CNY 8.15 million of R&D split CNY 5.1 million expensed and CNY 3.05 million capitalised, costs about CNY 163.5 per litre against a $22-32 price, and yields only about 15.9 percent gross margin with breakeven in year 5 to 6. Volume ramps are stated (Mini 1,000 then 5,000 then 15,000 then 30,000 litres; ProMax 200 then 1,000 then 3,000 then 8,000), and the whole budget is downloadable as two PDFs. The regulatory path is the most detailed of any team in this group and is clearly researched rather than guessed: ordinary non-special-use cosmetic filing with NMPA plus a CMA-certified safety assessment for a new cosmetic ingredient and a three-year post-market monitoring period, versus provincial Class II contact-wound-dressing registration requiring ISO 13485, 100,000-class cleanrooms, GB/T 16886 biocompatibility and a clinical evaluation route, with the deliberate choice of the equivalent-product comparison pathway to avoid human trials. They identify the specific trap that cosmetic test reports cannot be reused for device registration and design around it by running both safety programmes in parallel, and cite Giant Biogene and Fu Erjia as real companies that use the shared-campus, separated-workshop model they intend to copy. Market sizing is more careful than usual, with Frost and Sullivan figures for both markets, stated percentage assumptions for SAM, and a SOM expressed as a penetration range tied to winning 10-15 recurring B2B accounts or 2-3 licensed device partners. Now the blunt part. There is no registered entity, no funding, no incubator place, no signed letter of intent and no patent filed, only a stated plan to file three categories of patents before any external collaboration. More seriously, the competitive-efficacy section blurs sources: head-to-head performance claims against Komfymed's recombinant collagen dressing, and a 65-patient trial where MAP hydrogel healed wounds in 5.7 days versus 7.3 for rhEGF, read as literature values for mussel adhesive protein generally rather than data the team generated, yet are written as 'our advantage'. A reader should treat those numbers as borrowed benchmarks. Their own SWOT is candid about this, listing an absent intended use, no confirmed device classification, no design controls, no risk-management file, no biocompatibility package and no clinical evidence strategy. Continuation is a licensing-and-supply intent built on a correct strategic insight (cash from the fast cosmetic line funds the slow medical line), but the entity that would execute it does not yet exist.",
+    "partners": [
+      "Dr. Dongfeng Wang, Deputy Chief Physician, Wuhan Petrochemical Hospital (clinical wound care)",
+      "Mr. Yanxuan Song, medical device engineer and founder of Guangzhou Baiyoubai Tech-Beauty Chain (clinic operations and procurement)",
+      "Dr. Shengbo Wu (synthetic biology)",
+      "Mr. Jiujiang Zhang, CIRS Group Medical Devices Division (Class II and III regulatory affairs)",
+      "Mr. Xiaofei Ji, medical device development and quality systems expert (value-chain positioning)",
+      "SnapGene and Tsingke (listed sponsors)"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6199/wiki/entrepreneurship/figure-11.avif",
+      "caption": "Financial planning for TyroFix Mini: capex, R&D spend, CNY 71 per litre production cost and the volume ramp to 30,000 litres by year five",
+      "credit": "Team SUIS-SFLS, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6199/wiki/entrepreneurship/figure-12.avif",
+      "caption": "Financial planning for TyroFix ProMax, the Class II medical line, showing the lower 15.9 percent gross margin and later breakeven",
+      "credit": "Team SUIS-SFLS, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6199/wiki/entrepreneurship/figure-9.avif",
+      "caption": "Business model canvas for the two-line B2B raw-material supply model",
+      "credit": "Team SUIS-SFLS, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6199/wiki/entrepreneurship/figure-10.avif",
+      "caption": "Thirty-six-month milestone plan across five phases, from DBTL cycles to first B2B supply agreements",
+      "credit": "Team SUIS-SFLS, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Adopt their repositioning discipline: ask industry experts where a student-scale team actually belongs in the value chain, and be willing to drop the finished product for an upstream raw material plus characterisation and quality documentation, which is a deliverable a small lab can genuinely own. Then publish the budget as a downloadable model with capex, cost per unit, price, gross margin and breakeven year, so the plan can be criticised on its arithmetic rather than its adjectives.",
+  "sources": [
+    "https://2026.igem.wiki/suis-sfls/",
+    "https://2026.igem.wiki/suis-sfls/entrepreneurship/",
+    "https://2026.igem.wiki/suis-sfls/human-practices/"
+  ]
+}

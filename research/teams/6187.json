@@ -1,0 +1,132 @@
+{
+  "team": "Toronto",
+  "id": "6187",
+  "section": "Overgrad",
+  "country": "Canada",
+  "village": "Bioremediation",
+  "wiki": "https://2026.igem.wiki/toronto/",
+  "projectTitle": "PetaBite",
+  "tagline": "Planetary-scale bioprospecting for plastic-degrading enzymes: mine 300M candidates, then match an enzyme to each real-world condition.",
+  "summary": "PetaBite attacks PET and microplastic pollution by abandoning the field's usual strategy of engineering a handful of known enzymes and instead searching the natural sequence landscape at planetary scale. The dry lab rebuilt PETadex from scratch into PETadex V2: 1.74 billion plastic-degrading enzyme homologs recovered from NCBI nr and the Logan assembly of the entire Sequence Read Archive, filtered by 53 hand-curated catalytic HMMs to 291,922,243 complete catalytic ORFs, each annotated with the pH, temperature, salinity and environment of the sample it came from. They paired this with PETai activity labels scraped from literature by an LLM pipeline and by 20+ human curators, pretrained PlasticESM (LoRA adapters on ESM-C) on the corpus, and built a hardware bioreactor array to feed condition-specific measurements back into the model. They won Best Model largely for scientific honesty: a homology-component-grouped split showed that sequence length beats their own embeddings, and they reported that rather than the inflated random-split numbers.",
+  "awards": [
+    "Overgrad Top 10",
+    "Best Model winner (Overgrad)",
+    "Best Hardware nominee",
+    "Best Wiki nominee",
+    "Best Entrepreneurship nominee",
+    "Best Bioremediation Project nominee"
+  ],
+  "dry": {
+    "frameworks": "The PETadex V2 pipeline chains DIAMOND homology search against NCBI nr (42,053,081 hits down to 7,825,107 non-redundant sequences at E < 1e-5) with 53 catalytic profile HMMs built by a jackhmmer-analogous four-iteration loop that only advanced homologs retaining every canonical catalytic residue, then searched 2,740,458 catalytic-domain centroids against the Logan assembly of the SRA (87.0 Pb of raw reads compressed to 1.8 Pb of contigs) to recover 5.57 billion hits and 291,922,243 complete catalytic ORFs. Structures came from AlphaFold DB (575,770 hits, via UniProt idmapping) plus their own ESMFold2 run: 1,793,781 sequences folded in 16.6 hours on up to 80 GPUs (851.6 GPU-hours, median pLDDT 92.3), benchmarked against 244 experimental PDB structures to choose the full model under 150 aa and ESMFold2-Fast above it at 32 diffusion steps and 3 refinement loops. On the learning side they continued masked-language-model pretraining of ESM-C 300M on PETadex using LoRA adapters on all four projections of every transformer block (240 adapter tensors, 14.7M trainable parameters, backbone frozen) to produce PlasticESM, and probed its embeddings with ridge regression under homology-component-grouped cross-validation. Supporting layers include CATH and Pfam domain assignment, SignalP 6.0 secretion prediction over all ORFs, Biopython ProtParam biochemical properties, InterProScan plus HMMER accessory-domain analysis, and a reconstruction of the TED (The Encyclopedia of Domains) novelty-discovery pipeline adapted to PETadex HMMs.",
+    "dataviz": "The wiki is the clearest dataviz work in the cohort: a 300-million-protein 'PETadex Model Landscape' rendered as three explorable layers (what we found, what we know, what we predict), a draggable component map of the 46 PETadex-PAZy families, a 3D structure viewer that highlights the catalytic triad, oxyanion hole and docked PET dimer for each of 16 CATH fold groups, and a BioSample viewer that drills from a real sample (e.g. SAMN03075713, Arctic tundra soil) down through its sequencing run to individual ORFs and their 90% identity clusters. The Sharded DIAMOND search and the per-enzyme record card both ship as live in-page demos that replay ten real searches, sped up from 45 seconds to two. There is also a 'PETadex Project Calendar' that walks week by week from March to October with an explicit 'What went wrong, and what we changed' panel per workstream, and a PETamon mini-game that teaches why no single enzyme cleans up every plastic.",
+    "datascience": "Their central data-science contribution is turning a literature corpus into training labels and then proving honestly that the labels, not the corpus, are the bottleneck. An automated LLM extraction pipeline gathered 11,000 identifiers via the PAZy API, screened them to 900 seed papers, expanded by forward and backward citation to 50,000 candidates, filtered to ~4,600, converted full texts to structured JSON with Docling, Grobid and PyMuPDF, and extracted 51,455 cleaned measurement entries across 31,441 enzymes; Claude Sonnet benchmarked best (95.0% precision, 87.1% recall) with zero hallucinated enzymes across 32 double-scraped papers. In parallel, 20+ members spent 450+ hours hand-extracting 61 papers through a standardized interactive HTML schema with autogenerated IDs and built-in error checks, giving a ground truth where 78% of independent scraper pairs agreed within 10%. The benchmark result is the headline: under random five-fold splits stock ESM-C reached rho = 0.72 on kcat and 0.74 on melting temperature, but splitting folds by connected homology component dropped the same embeddings by 0.49 to 1.01 while a single sequence-length column lost at most 0.18 — because 90-92% of labelled sequences have a homologous relative elsewhere in the set. Length itself reached rho = +0.343 on kcat and beat both embeddings on all twelve target sets, so they reported the negative result, published the model card alongside the weights so nobody reuses the adapters expecting activity prediction, and designed round 2 to be chosen by model uncertainty rather than predicted activity.",
+    "software": "Two tools released under MIT at https://gitlab.igem.org/2026/software/toronto/petabite. LOBSTER (Library Optimization for Bioprospecting Sequences Through Economical Recombination) splits PETase cores into fragment positions and designs degenerate-codon oligos that combinatorially assemble by Golden Gate to cover as many natural cores as possible — it synthesized a 1,744-sequence library at 45% of individual-synthesis cost (55% nucleotide reduction) for the IsPETase and LCC 90% identity clusters. Sharded DIAMOND Search splits the 307M-sequence corpus into 32 shards searched in parallel by serverless cloud workers, returning ranked neighbours for a pasted protein in under a minute with nothing to install, live at petadex.net. Datasets are on Zenodo (PETadex catalytic ORF corpus v1.1 + sharded search DB, 23.8 GB, doi:10.5281/zenodo.23457986) and Hugging Face (petadex/plasticesm-dualseed, petadex/catalytic-orfs-90pid, petadex/petai-activity-labels, each label source published separately); analysis notebooks live at github.com/petadex/igem-toronto and github.com/petadex/petabite. Hardware: a parallel bioreactor array, up to 96 units, at about $204 CAD per reactor, with PID temperature control holding 37 C within +/-0.3 C, dual-photodiode OD600 with three-point quadratic calibration (R^2 = 0.993 on yeast), peristaltic pumps under Arduino PWM control, 150 RPM stirring, and a single-file Python dashboard over USB serial; it grew E. coli over 4 hours in the final test.",
+    "stack": [
+      "DIAMOND",
+      "HMMER / jackhmmer-style iterative HMM building",
+      "MMseqs2 (cross-check)",
+      "USEARCH",
+      "Logan SRA assembly",
+      "NCBI nr",
+      "PAZy",
+      "PlasticDB",
+      "BacDive",
+      "NCBI BioSample",
+      "ESM-C 300M / ESMC-600M",
+      "LoRA (PlasticESM)",
+      "ESMFold2 / ESMFold2-Fast",
+      "AlphaFold DB",
+      "ColabFold v1.5.5",
+      "SignalP 6.0",
+      "InterProScan",
+      "CATH",
+      "Pfam",
+      "Foldseek",
+      "umap-learn",
+      "scikit-learn ridge regression",
+      "Biopython ProtParam",
+      "Weights & Biases",
+      "Hugging Face Datasets",
+      "Docling",
+      "Grobid",
+      "PyMuPDF",
+      "Claude Sonnet (LLM extraction)",
+      "Parquet",
+      "AWS S3 + serverless workers",
+      "Arduino Nano",
+      "Python (dashboard)"
+    ],
+    "techniques": [
+      "planetary-scale metagenomic homology mining",
+      "catalytic-residue-constrained profile HMMs",
+      "hierarchical clustering at 90/60/30% identity",
+      "homology-component-grouped cross-validation",
+      "permutation tests and fold-centred scoring",
+      "model-free controls (sequence length, amino-acid composition)",
+      "continued masked-language-model pretraining with LoRA adapters",
+      "UMAP embedding atlas with shuffled/random/fragment negative controls",
+      "silhouette scoring per CATH domain",
+      "LLM literature extraction benchmarked against double-human curation",
+      "uncertainty-driven active learning for round 2 library selection",
+      "degenerate-codon Golden Gate library design",
+      "sharded parallel sequence search",
+      "PID temperature control and dual-photodiode OD600 calibration"
+    ]
+  },
+  "good": {
+    "publicEngagement": "Toronto hosted three conferences, including a 'Rethink plastic' microplastics conference built around two questions (what happens to plastic once it enters the environment, and what can we realistically do about it), deliberately framing PetaBite as one approach among many alongside prevention, policy and community action. They mentored two high-school synthetic biology teams, ran sustained exchanges with four universities abroad, and carried out eight campus collaborations across the University of Toronto reaching over 800 students and community members. Outreach ran on humour rather than lecture: a promotion video combining live action with original animation and PETase-inspired axolotl mascots, a 'Road to Jamboree' Instagram Reels series using trends and familiar formats, and a newsletter, The Waterfront, with 300+ subscribers. Instagram content drew over 105,000 views, 250+ new followers, 2,500+ profile visits and 374 link clicks through to the project and the conference.",
+    "ihp": "Roughly 70 stakeholders across four continents, and the changes are specific. A public event where biosafety dominated the questions told them containment has to come before technical detail, so every subsequent public-facing event opened with containment. Regulatory and ethics conversations led them to prioritize enzyme candidates with close homology to naturally occurring proteins and to lead with a contained bioreactor rather than dosing enzymes into open process streams. A researcher's clarification that PETases are only a subset of plastic-degrading enzymes made them explicitly define scope throughout the documentation. Hardware feedback on optical channels led them to separate the optical-density path from the colorimetric degradation readout so dye cannot corrupt cell-density estimates, and a GFP recommendation gave them a route to reporting activity per enzyme rather than per cell; the same conversations reframed the 40 mL reactor as the directed-evolution and Michaelis-Menten instrument and split off the 1,000-to-50 intermediate screen as a separate smaller-format problem. A CGM-adjacent interviewee's distinction between sensor and adhesive reshaped MVP scope. Indigenous knowledge holders reframed plastic pollution as a matter of relationships among people, land and water rather than a technical problem, which fed country-specific regulatory profiles for Pakistan, India, Nigeria, Indonesia and Canadian Indigenous communities addressing waste colonialism and ethics dumping. All of this was codified into a reusable MERGE framework (Multidisciplinary outreach, Education, Regulatory oversight, Global database, Environmental consideration) and a Regulatory Oversight Framework covering Canada's Roadmap for Open Science, FAIR, the Nagoya Protocol, dual-use research of concern, PIPEDA, the Directive on Automated Decision-Making and the EU AI Act.",
+    "realWorld": "PetaScale is the commercialization arm, explicitly framed as taking PetaBite from 0-to-1 to 1-to-n. The beachhead is wastewater treatment plants, validated through 20 feasibility conversations with operators, engineers and managers across Ontario, Alberta and Newfoundland, with PETases immobilized in packed-bed reactors so the enzyme stays contained. Three adjacent verticals are mapped: microfibre filtration, landfill leachate and textile effluent. Their differentiation is explicit against Carbios, Samsara Eco and Protein Evolution, all of which build around one engineered enzyme and one operating window (Carbios amorphizes PET and runs near 70 C) — PetaScale instead matches the enzyme to the site's existing temperature, pH and salinity so no heating or pretreatment is needed. Regulatory mapping covers CEPA, EPA TSCA Section 5 and provincial discharge permits, with tailwinds from EU Regulation 2023/2055, Directive 2024/3019 and Canada's Federal Plastics Registry. Validation signal: their associate RNAlab screened 161 randomly selected natural enzymes and two outperformed FAST-PETase. They tested the model across five Canadian national and four global competitions plus two international conferences, placed top 3 in six, attended Y Combinator Startup School, Web Summit Vancouver, SynBioBeta Global and the Canadian Food Forward Summit, completed the Wilbe incubator sprint, opened early discussions with three Canadian VC firms, and raised support from 17 sponsors.",
+    "partners": [
+      "RNAlab (associate lab, Logan project)",
+      "Environment and Climate Change Canada",
+      "U.S. EPA",
+      "U of T Trash Team",
+      "Wastewater treatment plant operators across Ontario, Alberta and Newfoundland",
+      "Wilbe startup incubator",
+      "Y Combinator Startup School",
+      "SynBioBeta Global",
+      "Web Summit Vancouver",
+      "Indigenous knowledge holders (Canada)",
+      "Four partner universities abroad",
+      "Two mentored high-school iGEM teams"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6187/wiki/drylab-page/figures/petadex-workflow-overview.svg",
+      "caption": "Overview of the PETadex V2 discovery pipeline: curated PAZy enzymes seed catalytic HMMs, which mine NCBI nr and the Logan SRA assembly down to 291,922,243 complete catalytic ORFs.",
+      "credit": "Team Toronto, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6187/wiki/drylab-page/figures/homology-leakage.svg",
+      "caption": "The team's headline negative result: the same ridge probe scored under homology-component-grouped splits (hollow) versus random five-fold splits (filled). ESM-C embeddings gain 0.49-1.01 from the random split; a single sequence-length column gains at most 0.18.",
+      "credit": "Team Toronto, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6187/wiki/drylab-page/figures/landscape-spin-poster.avif",
+      "caption": "The interactive PETadex Model Landscape, which lets a visitor explore 300 million proteins in three layers: what was found, what is known about each sequence, and what the model predicts.",
+      "credit": "Team Toronto, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6187/wiki/hardware-notebook/overview/finalresult/1.avif",
+      "caption": "The final parallel bioreactor build: about $204 CAD per unit, with PID temperature control, dual-photodiode OD600, peristaltic pumps and stirring, driven from a single-file Python dashboard over USB serial.",
+      "credit": "Team Toronto, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Copy their evaluation discipline, not their compute budget: grouping train/test splits by homology component and forcing every model to beat zero-parameter controls (sequence length, amino-acid composition) is free, and it is what turned a plausible-looking rho = 0.72 into an honest negative result that reviewers rewarded. Pair that with their hybrid labelling pattern — an LLM extraction pipeline benchmarked against a small, double-scored, schema-driven human corpus — which is exactly the right shape for a school research centre that has many students and little GPU time.",
+  "sources": [
+    "https://2026.igem.wiki/toronto/",
+    "https://2026.igem.wiki/toronto/project/description/",
+    "https://2026.igem.wiki/toronto/dry-lab/overview/",
+    "https://2026.igem.wiki/toronto/dry-lab/model/",
+    "https://2026.igem.wiki/toronto/software/",
+    "https://2026.igem.wiki/toronto/hardware/",
+    "https://2026.igem.wiki/toronto/engineering/",
+    "https://2026.igem.wiki/toronto/human-practices/",
+    "https://2026.igem.wiki/toronto/entrepreneurship/",
+    "https://2026.igem.wiki/toronto/beyond-the-bench/outreach/",
+    "https://2026.igem.wiki/toronto/contribution/",
+    "https://2026.igem.wiki/toronto/safety-and-security/"
+  ]
+}

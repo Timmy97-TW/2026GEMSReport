@@ -21,6 +21,16 @@
       "lede_zh": "GEMS Research 正在從一支團隊成為一個機構。機構的定義，在於現在這批學生畢業之後，它還能做什麼。",
       "body": "A wet lab is bounded by its benches, its reagents budget and the hours its students are physically present. A dry lab is bounded by what its people know and what they have written down. That asymmetry is the whole argument: computational capability compounds across years in a way that pipetting skill does not, because a model, a pipeline or a calibrated measurement protocol survives the student who built it.\n\nThis is also where the field has moved. Protein design, metabolic modelling and measurement standardisation are no longer the specialist corner of a project — in 2026 they are frequently the project. The teams on the 2026 podium did not win because they ran more gels.\n\nSo the roadmap below is deliberately about capability, not about any single 2027 project idea. Pick a phase and start.",
       "body_zh": "濕實驗室受限於實驗檯、試劑預算，以及學生實際在場的時數。乾實驗室則受限於人員所知，以及他們寫下了什麼。這個不對稱就是整個論點：運算能力會跨年度累積，而移液技巧不會——因為一個模型、一條管線或一份校正過的量測流程，會比建造它的那位學生留得更久。\n\n這也是整個領域移動的方向。蛋白質設計、代謝建模與量測標準化不再是專案裡的專家角落；在 2026 年，它們經常就是專案本身。站上 2026 頒獎台的團隊，不是因為多跑了幾道膠。\n\n因此以下的路線圖刻意談能力，而不是任何單一的 2027 專案構想。挑一個階段，開始做。"
+    },
+    {
+      "tab": "roadmap",
+      "kicker": "The convergence",
+      "title": "Two independent analyses, one answer",
+      "title_zh": "兩份獨立分析，同一個答案",
+      "lede": "The academic trend review and the industry trend review were run separately, from different sources, with no knowledge of each other. They landed on the same white space.",
+      "lede_zh": "學術趨勢分析與產業趨勢分析分開進行、來源不同、彼此互不知情。它們指向了同一塊空白地帶。",
+      "body": "From the literature side: light has matured from a laboratory curiosity into a real-time actuator for closed-loop control of fermentation, with reported titre gains around 60% in a 1 L photobioreactor — and optogenetics in **Bacillus subtilis** is a twelve-paper literature in the whole of PubMed.\n\nFrom the industry side, reached by an entirely different route: optogenetics is becoming the control and cleaning layer of bioprocessing, because light lets you retrofit an existing steel fermenter instead of building a new one. That makes it the cheapest route past the capital-expenditure wall that is currently the binding constraint on biomanufacturing.\n\nGEMS Research already stands in that gap. ReLEAF was a CcaS/CcaR optogenetic circuit in *Bacillus subtilis* driving a bioreactor, and it won Best Measurement and Best Hardware at high-school level for exactly the instrumentation this line needs. The competition project is over; the research line it opened is not.\n\nThere is a second, blunter finding underneath this. Taiwan's state-backed biotechnology push is a manufacturing play — contract development and manufacturing, GMP capacity — with no visible synthetic-biology **design** layer, while Singapore and Israel are explicitly funding exactly that layer. A small institution cannot out-build a CDMO. It can occupy the design position that nobody in Taiwan currently holds.",
+      "body_zh": "從文獻端看：光已經從實驗室的新奇玩意，成熟為可即時操控發酵的閉迴路致動器，1 公升光生物反應器中回報約 60% 的效價提升——而**枯草桿菌（Bacillus subtilis）**的光遺傳學，在整個 PubMed 中只有十二篇文獻。\n\n從產業端看，循著完全不同的路徑：光正在成為生物製程的控制與清潔層，因為光讓你可以改裝既有的不鏽鋼發酵槽，而不必蓋一座新的。這使它成為繞過資本支出高牆最便宜的路徑——而資本支出正是當前生物製造的關鍵瓶頸。\n\nGEMS Research 已經站在這個缺口上。ReLEAF 本來就是在*枯草桿菌*中以 CcaS/CcaR 光遺傳電路驅動生物反應器，並且正是憑著這條路線所需要的儀器化能力，在高中組拿下最佳量測與最佳硬體。競賽專案結束了，它打開的研究路線沒有。\n\n底下還有第二個更直白的發現。台灣由國家支持的生技推動是製造導向的——委託開發製造、GMP 產能——看不到合成生物學的**設計**層；而新加坡與以色列正明確地投資的，正是這一層。一個小型機構無法在產能上贏過 CDMO，但它可以佔住台灣目前沒有人佔住的設計位置。"
     }
   ],
   "roadmap": [
@@ -35,13 +45,15 @@
         "**Put every analysis in version control.** One GEMS Research GitHub organisation, one repository per project, with the raw data, the notebook and the figure-generating script in the same place. If a figure cannot be regenerated from the repository, it does not count as a result.",
         "**Write down the measurement protocols.** Calibration standards, units, replicate counts, how uncertainty was computed. The 2026 Best Measurement teams all did this; it is the cheapest credibility a dry lab can buy.",
         "**Standardise the environment.** One `environment.yml` or `requirements.txt` per project, Python 3.12+, pinned versions. A student should be able to clone and run in under ten minutes.",
-        "**Archive the 2026 ReLEAF dry lab properly** — the OD600 signal processing, the optogenetic circuit model, the hardware firmware — as the first entry in the institutional record."
+        "**Archive the 2026 ReLEAF dry lab properly** — the OD600 signal processing, the optogenetic circuit model, the hardware firmware — as the first entry in the institutional record.",
+        "**Write the one-page biosecurity and ordering policy.** The US National Policy for Nucleic Acid Synthesis Screening (November 2026) now ties federal funding to buying synthetic DNA only from certified providers that screen orders of 50+ nucleotides. Mirror it: certified suppliers only, a documented internal review of any sequence design, an explicit scope statement excluding pathogen and toxin sequences, signed by every student before their first order. It costs an afternoon and it is the first thing a serious partner asks about."
       ],
       "items_zh": [
         "**把所有分析放進版本控制。** 一個 GEMS Research GitHub organisation，一個專案一個 repository，原始資料、notebook 與產生圖表的腳本放在同一處。若一張圖無法從 repository 重新產生，它就不算結果。",
         "**寫下量測流程。** 校正標準品、單位、重複次數、不確定度如何計算。2026 年所有最佳量測獎團隊都做到了這點；這是乾實驗室能買到最便宜的可信度。",
         "**統一環境。** 每個專案一份 `environment.yml` 或 `requirements.txt`，Python 3.12 以上，版本鎖定。學生應該能在十分鐘內 clone 下來就跑起來。",
-        "**妥善歸檔 2026 ReLEAF 的乾實驗室成果** —— OD600 訊號處理、光遺傳電路模型、硬體韌體 —— 作為機構紀錄的第一筆。"
+        "**妥善歸檔 2026 ReLEAF 的乾實驗室成果** —— OD600 訊號處理、光遺傳電路模型、硬體韌體 —— 作為機構紀錄的第一筆。",
+        "**寫下一頁的生物安全與訂購政策。** 美國《核酸合成篩查國家政策》（2026 年 11 月）已將聯邦經費與「只向通過認證、且會篩查 50 個核苷酸以上訂單的供應商購買合成 DNA」綁在一起。比照辦理：僅限認證供應商、任何序列設計都要有書面內部審查、明確排除病原與毒素序列，並由每位學生在第一次下單前簽署。這只需要一個下午，而且是認真的合作對象第一個會問的事。"
       ],
       "outcome": "A new student can reproduce any 2026 figure from the repository alone, without asking anybody.",
       "outcome_zh": "新進學生只靠 repository 就能重現 2026 年的任何一張圖，不需要問任何人。"
@@ -55,13 +67,13 @@
       "lede_zh": "兩條軌道，刻意教學，每條都有真實的產出。",
       "items": [
         "**Track A — dynamical systems.** ODE models of genetic circuits, parameter fitting to the team's own data, sensitivity analysis, identifiability. Tools: Python with SciPy and lmfit, Tellurium/COPASI for the SBML side. Deliverable: a circuit model fitted to real GEMS time-course data, with confidence intervals on every parameter.",
-        "**Track B — structural and sequence modelling.** Structure prediction and protein design with the current open stack. Deliverable: a designed or selected variant with a documented computational rationale, taken to the bench.",
+        "**Track B — structural and sequence modelling.** Structure prediction is now free infrastructure: the open models (Boltz-2, Chai-1, OpenFold3, ColabFold) match or beat the gated flagship, so folding a protein is a commodity step, not a project. Put one shared GPU box or a modest cloud budget behind an internal queue, make \"fold it, then read the confidence metrics\" compulsory in every project, and teach the hard part — knowing when pLDDT and PAE are lying to you. Deliverable: a designed or selected variant with a documented computational rationale, taken to the bench.",
         "**Teach uncertainty before teaching models.** Error propagation, replicate design, what a fit actually claims. Most student models fail here, not at the mathematics.",
         "**Run a weekly dry-lab clinic.** One hour, somebody presents a figure, everyone else attacks it. This is how modelling taste transmits between cohorts."
       ],
       "items_zh": [
         "**軌道 A —— 動力系統。** 基因電路的 ODE 模型、以自身資料擬合參數、敏感度分析、可辨識性。工具：Python 搭配 SciPy 與 lmfit，SBML 端使用 Tellurium/COPASI。產出：一個以 GEMS 真實時間序列資料擬合的電路模型，每個參數都附信賴區間。",
-        "**軌道 B —— 結構與序列建模。** 以目前的開源工具鏈進行結構預測與蛋白質設計。產出：一個經過設計或篩選的變體，附上完整的運算理由，並實際進到實驗檯。",
+        "**軌道 B —— 結構與序列建模。** 結構預測現在已是免費的基礎設施：開源模型（Boltz-2、Chai-1、OpenFold3、ColabFold）已可匹敵甚至超越封閉的旗艦模型，因此「把蛋白質折出來」是一個標準步驟，而不是一個專案。配置一台共用 GPU 主機或一筆適度的雲端預算，架一個內部排程佇列，規定每個專案都必須「先折、再讀信心指標」，並教真正困難的部分——判斷 pLDDT 與 PAE 什麼時候在騙你。產出：一個經過設計或篩選的變體，附上完整的運算理由，並實際進到實驗檯。",
         "**先教不確定度，再教模型。** 誤差傳遞、重複設計、一次擬合究竟主張了什麼。多數學生模型敗在這裡，而不是數學。",
         "**每週一次乾實驗室診療會。** 一小時，一個人報一張圖，其他人負責挑戰它。建模的品味就是這樣在屆與屆之間傳下去的。"
       ],
@@ -76,12 +88,14 @@
       "lede": "The difference between a competition team and a research centre is whether anybody outside uses what you built.",
       "lede_zh": "競賽團隊與研究中心的差別，在於外界有沒有人用你做的東西。",
       "items": [
+        "**Commit to the Bacillus optogenetics line.** Both trend reviews independently pointed here. Port and properly characterise a CcaS/CcaR or LOV-based light-inducible cassette in *B. subtilis* with full dose-response, dynamic range and growth-stage characterisation. In a twelve-paper literature that is on its own a publishable contribution, and it is the natural continuation of ReLEAF rather than a fresh start.",
         "**Pick one narrow, real problem** that GEMS has genuine data on — the strongest candidate is the optogenetic induction and OD600 measurement work from ReLEAF, where GEMS already has instrumentation, data and a Best Measurement award behind it.",
         "**Build it as a deployed web tool, not a notebook.** Documented, licensed, with example data, a DOI, and a URL anybody can open. Teams that only publish source code get used by nobody.",
         "**Design for other people's data from day one.** Input format, validation, error messages. This is the single most common failure in iGEM software.",
         "**Get three outside users and write down what broke.** Other Taiwanese schools, a university lab, a 2027 iGEM team. Their complaints are the roadmap for version two."
       ],
       "items_zh": [
+        "**確立枯草桿菌光遺傳學這條路線。** 兩份趨勢分析各自獨立地指向這裡。在 *B. subtilis* 中移植並完整表徵一組 CcaS/CcaR 或 LOV 型的光誘導卡匣，做出完整的劑量反應、動態範圍與生長期表徵。在一個只有十二篇文獻的領域裡，光是這件事本身就足以發表，而且這是 ReLEAF 的自然延伸，不是重新開始。",
         "**挑一個狹窄而真實的問題**，而且 GEMS 手上有真正的資料——最強的候選是 ReLEAF 的光遺傳誘導與 OD600 量測工作，GEMS 已經有儀器、有資料，背後還有一座最佳量測獎。",
         "**把它做成已部署的網頁工具，而不是 notebook。** 有文件、有授權、有範例資料、有 DOI，以及任何人都能打開的網址。只釋出原始碼的團隊，沒有人會用。",
         "**從第一天就為別人的資料設計。** 輸入格式、驗證、錯誤訊息。這是 iGEM 軟體最常見的單一失敗原因。",
