@@ -1,333 +1,333 @@
 {
- "id": "judging-criteria",
- "tab": "judging",
- "order": 5,
- "kicker": "The rubric",
- "kicker_zh": "評分標準",
- "title": "Special awards do not buy a podium — the finalist questions do",
- "title_zh": "特別獎買不到頒獎台，決賽那幾道問題才能",
- "lede": "iGEM's own results data records a designation most reports never mention: **Finalist**. In the 2026 High School section, 147 teams entered, 10 reached the Top 10, and **exactly 2 were named Finalists** — Lambert-GA and HongKong-JSS. GEMS-Taiwan was one of the eight that were not, despite winning three section special awards, the same number of special wins as the Grand Prize winner, while HongKong-JSS won none. The eight questions below are the ones that make that cut.",
- "lede_zh": "iGEM 官方結果資料裡記著一個幾乎沒有報告提過的身分：**Finalist（決賽入選）**。2026 年高中組有 147 支隊伍參賽、10 支進入 Top 10，而**只有 2 支被列為 Finalist**——Lambert-GA 和 HongKong-JSS。GEMS-Taiwan 是沒進去的那八支之一，儘管它拿下三個組別特別獎，特別獎得獎數與總冠軍相同，而 HongKong-JSS 一個都沒有。下面那八道問題，就是做出這道切分的問題。",
- "body": "There are three separate decisions in an iGEM season and they are easy to collapse into one. A **medal** is a checklist: you meet the deliverables and you get it, which is why 135 of the 147 High School teams have one and 63 of them are Gold. A **special award** is scored by judges who look at a single dimension and ask who did it best. The **Top 10** and the **Finalist** slate are decided by judges looking at the whole project and asking nine questions, of which eight leave a public record.\n\nThose are three different games, and GEMS played two of them extremely well. Of 147 accepted High School teams, only **17 won any section-level award at all** and GEMS holds three of them; only 47 got so much as a nomination. Any account of 2026 that treats this as a failure is not reading the field. But the third game selected two teams out of ten, and that is the one this tab is about.\n\nRead the special-wins column in the table and it plainly does not sort the field: the two teams with three special wins each finished **first and fifth**, and the team that finished second won nothing. Dimension strength and whole-project strength are measured by different people asking different questions, and a team can be near the top of one distribution and mid-table in the other.\n\nWhat the eight questions reward is narrower and harder than being strong in several places. Three of them — 1, 2 and 7 — converge on a single demand: **one legible result, finished, built on characterised biology.** Two more, 6 and 8, ask whether a stranger can verify what you claim. The cards below take each question in turn with what the 2026 High School evidence shows it rewarding; the sections after them put Lambert-GA, HongKong-JSS and GEMS-Taiwan against all eight from their own wikis and Registry pages, then read the whole Top 10 the same way.",
- "body_zh": "一個 iGEM 賽季裡其實有三個互相獨立的決定，而它們很容易被當成一件事。**獎牌**是一張檢核表：做到交付項目就拿得到，所以 147 支高中隊伍裡有 135 支有獎牌，其中 63 支是金牌。**特別獎**由只看單一面向的評審評分，問「誰在這個面向做得最好」。而 **Top 10** 與 **Finalist** 名單，是由看整個專案的評審決定的，他們問九道問題，其中八道留下了公開紀錄。\n\n這是三個不同的遊戲，而 GEMS 把其中兩個玩得非常好。147 支正式參賽的高中隊伍中，**只有 17 支拿到任何一項組別層級的獎**，GEMS 一個人就佔了三項；連入圍都算進去也只有 47 支。任何把 2026 年說成「失敗」的說法，都沒有在讀這個賽場。但第三個遊戲是從十支裡選兩支，而這個頁面談的就是那一個。\n\n把表格裡「特別獎得獎」那一欄讀下來，它顯然不決定排序：各有三個特別獎的兩支隊伍，一支**第一名、一支第五名**，而第二名那一支什麼特別獎都沒拿。面向上的強度和整體專案的強度，是由不同的人問不同的問題量出來的；一支隊伍完全可以在其中一個分布的頂端，在另一個分布裡位居中段。\n\n那八道問題獎勵的東西，比「在好幾個地方都很強」更窄、也更難。其中三道——第 1、2、7 題——指向同一個要求：**一個清楚可讀、已經做完、建立在已表徵生物學之上的成果。** 另外兩道，第 6 和第 8 題，問的是陌生人能不能驗證你所聲稱的東西。下面的卡片逐題說明，以及 2026 年高中組的證據顯示它們各自在獎勵什麼；再往後的幾節，則用 Lambert-GA、HongKong-JSS 和 GEMS-Taiwan 自己的 wiki 與 Registry 頁面對照全部八題，然後用同一把尺讀完整個 Top 10。",
- "cards": [
-  {
-   "kicker": "Question 1",
-   "kicker_zh": "第 1 題",
-   "title": "How impressive is this project?",
-   "title_zh": "這個專案有多令人印象深刻？",
-   "body": "Impressive is not the same as large. It rewards one result a judge can repeat back in a single sentence without looking at notes. Lambert-GA had one: the first reported minibinder confirmed to bind Deformed Wing Virus VP3. HongKong-JSS had one: a mercury limit of detection in water. A project with four strong components and no headline sentence reads as four projects.",
-   "body_zh": "「令人印象深刻」不等於「規模大」。它獎勵的是一個評審不用翻筆記、用一句話就能複述出來的成果。Lambert-GA 有這樣一句：首次有報告確認的 minibinder 能結合 Deformed Wing Virus 的 VP3。HongKong-JSS 也有：水中汞的偵測極限。一個有四個強組件、卻沒有一句標題句的專案，讀起來就像四個專案。",
-   "chips": [
-    "one sentence, no notes"
-   ],
-   "chips_zh": [
-    "一句話，不用翻筆記"
-   ]
-  },
-  {
-   "kicker": "Question 2",
-   "kicker_zh": "第 2 題",
-   "title": "Did the project work, or is it likely to work?",
-   "title_zh": "專案真的做出來了嗎，或看起來會成功嗎？",
-   "body": "This is where long chains die. A judge asks which links were shown **with data**, which were shown **in principle**, and which were only **designed**. A five-link chain with four demonstrated links scores as a chain that does not work yet, not as 80% of a working chain. Shortening the claim is usually worth more than lengthening the system.",
-   "body_zh": "這是長鏈條死掉的地方。評審會問：哪些環節是**有資料**證明的、哪些是**原理上**說得通的、哪些**只是設計**。一條五環的鏈條做出四環，評分上是「這條鏈還不會動」，而不是「一條會動的鏈的 80%」。把主張縮小，通常比把系統拉長更值錢。",
-   "chips": [
-    "with data / in principle / designed"
-   ],
-   "chips_zh": [
-    "有資料 / 原理上 / 只是設計"
-   ]
-  },
-  {
-   "kicker": "Question 3",
-   "kicker_zh": "第 3 題",
-   "title": "Is the project likely to have an impact?",
-   "title_zh": "這個專案可能產生影響嗎？",
-   "body": "Impact is judged on whether a named person outside the team would use the thing, not on the size of the problem. Every project addresses a large problem; that is table stakes. The separating evidence is a specific user, a specific site, and a number they care about.",
-   "body_zh": "影響力的評分依據是「團隊之外某個具名的人會不會真的用這個東西」，不是問題有多大。每個專案針對的問題都很大，那只是入場券。真正拉開差距的證據是：一個具體的使用者、一個具體的場地，以及一個他們在意的數字。",
-   "chips": [
-    "a named user, not a big problem"
-   ],
-   "chips_zh": [
-    "具名的使用者，不是大問題"
-   ]
-  },
-  {
-   "kicker": "Question 4",
-   "kicker_zh": "第 4 題",
-   "title": "How well were engineering principles used?",
-   "title_zh": "工程原則運用得好不好？",
-   "body": "Design-build-test, standards, modularity. The cheapest evidence in the whole rubric and the most often missing: **one documented failure and what you changed because of it.** A page of successful iterations reads as a report. A page with a failed iteration reads as engineering.",
-   "body_zh": "設計—build—測試、標準、模組化。這是整張評分表裡最便宜的證據，卻也最常缺席：**一個被記錄下來的失敗，以及你因為它改了什麼。** 一頁都是成功迭代，讀起來像報告；一頁裡有一次失敗的迭代，讀起來才像工程。",
-   "chips": [
-    "one documented failure"
-   ],
-   "chips_zh": [
-    "一個被記錄的失敗"
-   ]
-  },
-  {
-   "kicker": "Question 5",
-   "kicker_zh": "第 5 題",
-   "title": "How thoughtful and thorough was the human practices work?",
-   "title_zh": "團隊對人類實踐的思考有多周全深入？",
-   "body": "This report's own IHP analysis found that of 106 decorated teams, 71 can point at a stakeholder who visibly changed the design — and nine or ten of those stakeholders were not credentialled experts. The question is not how many meetings happened. It is which design decision is different because of one.",
-   "body_zh": "本報告自己的整合式人類實踐分析發現：106 支得獎隊伍中，有 71 支能指出一位明顯改變了設計的利害關係人——而其中只有九或十位不是有專業背景的專家。問題不是辦了幾場會議，而是有哪一個設計決定，因為某一場會議而不一樣了。",
-   "chips": [
-    "which decision changed"
-   ],
-   "chips_zh": [
-    "哪一個決定被改了"
-   ]
-  },
-  {
-   "kicker": "Question 6",
-   "kicker_zh": "第 6 題",
-   "title": "How much of the work did the team do themselves?",
-   "title_zh": "多少工作是團隊自己做的？",
-   "body": "A judge forms a view from the attributions page in about ninety seconds. The risk is asymmetric: a team that lists every collaborator in detail looks honest, and a team whose page is thin next to an ambitious result looks like it is hiding the answer. Under-disclosing is the more expensive mistake.",
-   "body_zh": "評審大約九十秒就會從 attributions 頁形成判斷。風險是不對稱的：把每一位合作者都詳細列出來的隊伍看起來誠實；而頁面單薄、成果卻很有野心的隊伍，看起來像在藏答案。少揭露是比較貴的那個錯。",
-   "chips": [
-    "ninety seconds on /attributions"
-   ],
-   "chips_zh": [
-    "九十秒的 /attributions"
-   ]
-  },
-  {
-   "kicker": "Question 7",
-   "kicker_zh": "第 7 題",
-   "title": "Is the project built on synthetic biology and standard components?",
-   "title_zh": "專案是否建立在合成生物學與標準元件之上？",
-   "body": "Explicitly BioBricks, software, standards. A project whose strongest parts are an instrument and a model has to show a characterised genetic core as well, or this question and the next one both answer themselves badly. Three of the ten High School Top 10 teams won a parts award in 2026.",
-   "body_zh": "這一題明確點名 BioBricks、軟體、標準。一個最強的部分是儀器和模型的專案，必須同時展示一個已表徵的基因核心，否則這一題和下一題都會自己給出難看的答案。2026 年高中組 Top 10 的十支隊伍中，有三支贏得了元件獎。",
-   "chips": [
-    "3 of 10 won a parts award"
-   ],
-   "chips_zh": [
-    "10 支中 3 支贏得元件獎"
-   ]
-  },
-  {
-   "kicker": "Question 8",
-   "kicker_zh": "第 8 題",
-   "title": "Are the components well documented on the Wiki and in the Registry?",
-   "title_zh": "各個組件在 Wiki 與 Registry 上的文件是否完整？",
-   "body": "The Registry half is the one teams forget. This report's parts census found 2026 parts-award winners carrying **10,388 to 83,030 characters** of registry documentation against nominees' **440 to 2,500**. Documentation length is not quality, but a part with 600 characters cannot be assessed by anyone who was not in the room.",
-   "body_zh": "Registry 那一半是隊伍最常忘記的。本報告的元件普查發現，2026 年元件獎得主的 registry 文件長度是 **10,388 到 83,030 字元**，入圍者是 **440 到 2,500 字元**。文件長度不等於品質，但一個只有 600 字元的元件，沒有在場的人根本無法評估它。",
-   "chips": [
-    "10,388–83,030 vs 440–2,500"
-   ],
-   "chips_zh": [
-    "10,388–83,030 對 440–2,500"
-   ]
-  }
- ],
- "table": {
-  "head": [
-   "Team",
-   "Placing",
-   "Finalist",
-   "Special wins",
-   "Nominations",
-   "Parts award",
-   "Best Wiki"
+  "id": "judging-criteria",
+  "tab": "judging",
+  "order": 5,
+  "kicker": "The rubric",
+  "kicker_zh": "評分標準",
+  "title": "Special awards do not buy a podium — the finalist questions do",
+  "title_zh": "特別獎買不到頒獎台，決賽那幾道問題才能",
+  "lede": "iGEM's own results data records a designation most reports never mention: **Finalist**. In the 2026 High School section, 147 teams entered, 10 reached the Top 10, and **exactly 2 were named Finalists** — Lambert-GA and HongKong-JSS. GEMS-Taiwan was one of the eight that were not, despite winning three section special awards, the same number of special wins as the Grand Prize winner, while HongKong-JSS won none. The eight questions below are the ones that make that cut. One qualification, because it changes what the word means: in all three seasons on record — 2024, 2025 and 2026 — the Finalist set and the podium are **identical**, seven teams a year, the Grand Prize winners and the runners-up. The designation names the podium, not a wider round in front of it.",
+  "lede_zh": "iGEM 官方結果資料裡記著一個幾乎沒有報告提過的身分：**Finalist（決賽入選）**。2026 年高中組有 147 支隊伍參賽、10 支進入 Top 10，而**只有 2 支被列為 Finalist**——Lambert-GA 和 HongKong-JSS。GEMS-Taiwan 是沒進去的那八支之一，儘管它拿下三個組別特別獎，特別獎得獎數與總冠軍相同，而 HongKong-JSS 一個都沒有。下面那八道問題，就是做出這道切分的問題。有一點必須先說清楚，因為它會改變這個詞的意思：在有紀錄的三個賽季——2024、2025、2026——Finalist 集合與頒獎臺**完全相同**，每年七支，就是總冠軍與各名次的亞、季軍。這個身分命名的是頒獎臺，而不是它前面更大的一輪名單。",
+  "body": "There are three separate decisions in an iGEM season and they are easy to collapse into one. A **medal** is a checklist: you meet the deliverables and you get it, which is why 135 of the 147 High School teams have one and 63 of them are Gold. A **special award** is scored by judges who look at a single dimension and ask who did it best. The **Top 10** and the **Finalist** slate are decided by judges looking at the whole project and asking nine questions, of which eight leave a public record. One thing that sentence should not be allowed to imply: the Finalist designation is **not** a wider round that the podium was then chosen from. In 2024, 2025 and 2026 alike it lands on exactly the seven podium teams, so reaching it and reaching the podium are the same event. That makes the gap this tab examines a podium gap, described in iGEM's own vocabulary.\n\nThose are three different games, and GEMS played two of them extremely well. Of 147 accepted High School teams, only **17 won any section-level award at all** and GEMS holds three of them; only 47 got so much as a nomination. Any account of 2026 that treats this as a failure is not reading the field. But the third game selected two teams out of ten, and that is the one this tab is about.\n\nRead the special-wins column in the table and it plainly does not sort the field: the two teams with three special wins each finished **first and fifth**, and the team that finished second won nothing. Dimension strength and whole-project strength are measured by different people asking different questions, and a team can be near the top of one distribution and mid-table in the other.\n\nWhat the eight questions reward is narrower and harder than being strong in several places. Three of them — 1, 2 and 7 — converge on a single demand: **one legible result, finished, built on characterised biology.** Two more, 6 and 8, ask whether a stranger can verify what you claim. The cards below take each question in turn with what the 2026 High School evidence shows it rewarding; the sections after them put Lambert-GA, HongKong-JSS and GEMS-Taiwan against all eight from their own wikis and Registry pages, then read the whole Top 10 the same way.",
+  "body_zh": "一個 iGEM 賽季裡其實有三個互相獨立的決定，而它們很容易被當成一件事。**獎牌**是一張檢核表：做到交付項目就拿得到，所以 147 支高中隊伍裡有 135 支有獎牌，其中 63 支是金牌。**特別獎**由只看單一面向的評審評分，問「誰在這個面向做得最好」。而 **Top 10** 與 **Finalist** 名單，是由看整個專案的評審決定的，他們問九道問題，其中八道留下了公開紀錄。有一件事不能讓那句話被誤讀：Finalist 並**不是**一輪比頒獎臺更大、再從中選出名次的名單。2024、2025、2026 三年都一樣，它剛好落在頒獎臺上那七支隊伍，所以「進入 Finalist」與「站上頒獎臺」是同一件事。因此本頁檢視的那道落差，就是頒獎臺落差，只是用 iGEM 自己的詞彙來說。\n\n這是三個不同的遊戲，而 GEMS 把其中兩個玩得非常好。147 支正式參賽的高中隊伍中，**只有 17 支拿到任何一項組別層級的獎**，GEMS 一個人就佔了三項；連入圍都算進去也只有 47 支。任何把 2026 年說成「失敗」的說法，都沒有在讀這個賽場。但第三個遊戲是從十支裡選兩支，而這個頁面談的就是那一個。\n\n把表格裡「特別獎得獎」那一欄讀下來，它顯然不決定排序：各有三個特別獎的兩支隊伍，一支**第一名、一支第五名**，而第二名那一支什麼特別獎都沒拿。面向上的強度和整體專案的強度，是由不同的人問不同的問題量出來的；一支隊伍完全可以在其中一個分布的頂端，在另一個分布裡位居中段。\n\n那八道問題獎勵的東西，比「在好幾個地方都很強」更窄、也更難。其中三道——第 1、2、7 題——指向同一個要求：**一個清楚可讀、已經做完、建立在已表徵生物學之上的成果。** 另外兩道，第 6 和第 8 題，問的是陌生人能不能驗證你所聲稱的東西。下面的卡片逐題說明，以及 2026 年高中組的證據顯示它們各自在獎勵什麼；再往後的幾節，則用 Lambert-GA、HongKong-JSS 和 GEMS-Taiwan 自己的 wiki 與 Registry 頁面對照全部八題，然後用同一把尺讀完整個 Top 10。",
+  "cards": [
+    {
+      "kicker": "Question 1",
+      "kicker_zh": "第 1 題",
+      "title": "How impressive is this project?",
+      "title_zh": "這個專案有多令人印象深刻？",
+      "body": "Impressive is not the same as large. It rewards one result a judge can repeat back in a single sentence without looking at notes. Lambert-GA had one: the first reported minibinder confirmed to bind Deformed Wing Virus VP3. HongKong-JSS had one: a mercury limit of detection in water. A project with four strong components and no headline sentence reads as four projects.",
+      "body_zh": "「令人印象深刻」不等於「規模大」。它獎勵的是一個評審不用翻筆記、用一句話就能複述出來的成果。Lambert-GA 有這樣一句：首次有報告確認的 minibinder 能結合 Deformed Wing Virus 的 VP3。HongKong-JSS 也有：水中汞的偵測極限。一個有四個強組件、卻沒有一句標題句的專案，讀起來就像四個專案。",
+      "chips": [
+        "one sentence, no notes"
+      ],
+      "chips_zh": [
+        "一句話，不用翻筆記"
+      ]
+    },
+    {
+      "kicker": "Question 2",
+      "kicker_zh": "第 2 題",
+      "title": "Did the project work, or is it likely to work?",
+      "title_zh": "專案真的做出來了嗎，或看起來會成功嗎？",
+      "body": "This is where long chains die. A judge asks which links were shown **with data**, which were shown **in principle**, and which were only **designed**. A five-link chain with four demonstrated links scores as a chain that does not work yet, not as 80% of a working chain. Shortening the claim is usually worth more than lengthening the system.",
+      "body_zh": "這是長鏈條死掉的地方。評審會問：哪些環節是**有資料**證明的、哪些是**原理上**說得通的、哪些**只是設計**。一條五環的鏈條做出四環，評分上是「這條鏈還不會動」，而不是「一條會動的鏈的 80%」。把主張縮小，通常比把系統拉長更值錢。",
+      "chips": [
+        "with data / in principle / designed"
+      ],
+      "chips_zh": [
+        "有資料 / 原理上 / 只是設計"
+      ]
+    },
+    {
+      "kicker": "Question 3",
+      "kicker_zh": "第 3 題",
+      "title": "Is the project likely to have an impact?",
+      "title_zh": "這個專案可能產生影響嗎？",
+      "body": "Impact is judged on whether a named person outside the team would use the thing, not on the size of the problem. Every project addresses a large problem; that is table stakes. The separating evidence is a specific user, a specific site, and a number they care about.",
+      "body_zh": "影響力的評分依據是「團隊之外某個具名的人會不會真的用這個東西」，不是問題有多大。每個專案針對的問題都很大，那只是入場券。真正拉開差距的證據是：一個具體的使用者、一個具體的場地，以及一個他們在意的數字。",
+      "chips": [
+        "a named user, not a big problem"
+      ],
+      "chips_zh": [
+        "具名的使用者，不是大問題"
+      ]
+    },
+    {
+      "kicker": "Question 4",
+      "kicker_zh": "第 4 題",
+      "title": "How well were engineering principles used?",
+      "title_zh": "工程原則運用得好不好？",
+      "body": "Design-build-test, standards, modularity. The cheapest evidence in the whole rubric and the most often missing: **one documented failure and what you changed because of it.** A page of successful iterations reads as a report. A page with a failed iteration reads as engineering.",
+      "body_zh": "設計—build—測試、標準、模組化。這是整張評分表裡最便宜的證據，卻也最常缺席：**一個被記錄下來的失敗，以及你因為它改了什麼。** 一頁都是成功迭代，讀起來像報告；一頁裡有一次失敗的迭代，讀起來才像工程。",
+      "chips": [
+        "one documented failure"
+      ],
+      "chips_zh": [
+        "一個被記錄的失敗"
+      ]
+    },
+    {
+      "kicker": "Question 5",
+      "kicker_zh": "第 5 題",
+      "title": "How thoughtful and thorough was the human practices work?",
+      "title_zh": "團隊對人類實踐的思考有多周全深入？",
+      "body": "This report's own IHP analysis found that of 106 decorated teams, 71 can point at a stakeholder who visibly changed the design — and nine or ten of those stakeholders were not credentialled experts. The question is not how many meetings happened. It is which design decision is different because of one.",
+      "body_zh": "本報告自己的整合式人類實踐分析發現：106 支得獎隊伍中，有 71 支能指出一位明顯改變了設計的利害關係人——而其中只有九或十位不是有專業背景的專家。問題不是辦了幾場會議，而是有哪一個設計決定，因為某一場會議而不一樣了。",
+      "chips": [
+        "which decision changed"
+      ],
+      "chips_zh": [
+        "哪一個決定被改了"
+      ]
+    },
+    {
+      "kicker": "Question 6",
+      "kicker_zh": "第 6 題",
+      "title": "How much of the work did the team do themselves?",
+      "title_zh": "多少工作是團隊自己做的？",
+      "body": "A judge forms a view from the attributions page in about ninety seconds. The risk is asymmetric: a team that lists every collaborator in detail looks honest, and a team whose page is thin next to an ambitious result looks like it is hiding the answer. Under-disclosing is the more expensive mistake.",
+      "body_zh": "評審大約九十秒就會從 attributions 頁形成判斷。風險是不對稱的：把每一位合作者都詳細列出來的隊伍看起來誠實；而頁面單薄、成果卻很有野心的隊伍，看起來像在藏答案。少揭露是比較貴的那個錯。",
+      "chips": [
+        "ninety seconds on /attributions"
+      ],
+      "chips_zh": [
+        "九十秒的 /attributions"
+      ]
+    },
+    {
+      "kicker": "Question 7",
+      "kicker_zh": "第 7 題",
+      "title": "Is the project built on synthetic biology and standard components?",
+      "title_zh": "專案是否建立在合成生物學與標準元件之上？",
+      "body": "Explicitly BioBricks, software, standards. A project whose strongest parts are an instrument and a model has to show a characterised genetic core as well, or this question and the next one both answer themselves badly. Three of the ten High School Top 10 teams won a parts award in 2026.",
+      "body_zh": "這一題明確點名 BioBricks、軟體、標準。一個最強的部分是儀器和模型的專案，必須同時展示一個已表徵的基因核心，否則這一題和下一題都會自己給出難看的答案。2026 年高中組 Top 10 的十支隊伍中，有三支贏得了元件獎。",
+      "chips": [
+        "3 of 10 won a parts award"
+      ],
+      "chips_zh": [
+        "10 支中 3 支贏得元件獎"
+      ]
+    },
+    {
+      "kicker": "Question 8",
+      "kicker_zh": "第 8 題",
+      "title": "Are the components well documented on the Wiki and in the Registry?",
+      "title_zh": "各個組件在 Wiki 與 Registry 上的文件是否完整？",
+      "body": "The Registry half is the one teams forget. This report's parts census found 2026 parts-award winners carrying **10,388 to 83,030 characters** of registry documentation against nominees' **440 to 2,500**. Documentation length is not quality, but a part with 600 characters cannot be assessed by anyone who was not in the room.",
+      "body_zh": "Registry 那一半是隊伍最常忘記的。本報告的元件普查發現，2026 年元件獎得主的 registry 文件長度是 **10,388 到 83,030 字元**，入圍者是 **440 到 2,500 字元**。文件長度不等於品質，但一個只有 600 字元的元件，沒有在場的人根本無法評估它。",
+      "chips": [
+        "10,388–83,030 vs 440–2,500"
+      ],
+      "chips_zh": [
+        "10,388–83,030 對 440–2,500"
+      ]
+    }
   ],
-  "head_zh": [
-   "隊伍",
-   "名次",
-   "Finalist",
-   "特別獎得獎",
-   "入圍",
-   "元件獎",
-   "最佳 Wiki"
-  ],
-  "rows": [
-   [
-    "Lambert-GA",
-    "Grand Prize winner",
-    "Yes",
-    "3",
-    "1",
-    "No",
-    "Winner"
-   ],
-   [
-    "HongKong-JSS",
-    "1st Runner-up",
-    "Yes",
-    "0",
-    "4",
-    "Nominee (Composite)",
-    "—"
-   ],
-   [
-    "GEMS-Taiwan",
-    "Top 10",
-    "No",
-    "3",
-    "3",
-    "No",
-    "Nominee"
-   ],
-   [
-    "GHCIS",
-    "Top 10",
-    "No",
-    "2",
-    "2",
-    "Winner (Collection)",
-    "Nominee"
-   ],
-   [
-    "HFI",
-    "Top 10",
-    "No",
-    "1",
-    "3",
-    "Nominee (Collection)",
-    "Nominee"
-   ],
-   [
-    "GCGS",
-    "Top 10",
-    "No",
-    "1",
-    "3",
-    "Winner (Improved)",
-    "Nominee"
-   ],
-   [
-    "HKSSC",
-    "Top 10",
-    "No",
-    "1",
-    "2",
-    "Winner (Basic)",
-    "—"
-   ],
-   [
-    "HangzhouFourteenAP",
-    "Top 10",
-    "No",
-    "0",
-    "4",
-    "No",
-    "Nominee"
-   ],
-   [
-    "Eton-College-UK",
-    "Top 10",
-    "No",
-    "0",
-    "3",
-    "No",
-    "—"
-   ],
-   [
-    "HongKong-HS",
-    "Top 10",
-    "No",
-    "0",
-    "2",
-    "No",
-    "Nominee"
-   ]
-  ],
-  "rows_zh": [
-   [
-    "Lambert-GA",
-    "總冠軍",
-    "是",
-    "3",
-    "1",
-    "否",
-    "得獎"
-   ],
-   [
-    "HongKong-JSS",
-    "亞軍",
-    "是",
-    "0",
-    "4",
-    "入圍（Composite）",
-    "—"
-   ],
-   [
-    "GEMS-Taiwan",
-    "Top 10",
-    "否",
-    "3",
-    "3",
-    "否",
-    "入圍"
-   ],
-   [
-    "GHCIS",
-    "Top 10",
-    "否",
-    "2",
-    "2",
-    "得獎（Collection）",
-    "入圍"
-   ],
-   [
-    "HFI",
-    "Top 10",
-    "否",
-    "1",
-    "3",
-    "入圍（Collection）",
-    "入圍"
-   ],
-   [
-    "GCGS",
-    "Top 10",
-    "否",
-    "1",
-    "3",
-    "得獎（Improved）",
-    "入圍"
-   ],
-   [
-    "HKSSC",
-    "Top 10",
-    "否",
-    "1",
-    "2",
-    "得獎（Basic）",
-    "—"
-   ],
-   [
-    "HangzhouFourteenAP",
-    "Top 10",
-    "否",
-    "0",
-    "4",
-    "否",
-    "入圍"
-   ],
-   [
-    "Eton-College-UK",
-    "Top 10",
-    "否",
-    "0",
-    "3",
-    "否",
-    "—"
-   ],
-   [
-    "HongKong-HS",
-    "Top 10",
-    "否",
-    "0",
-    "2",
-    "否",
-    "入圍"
-   ]
-  ]
- },
- "method": "Placings and awards are from the official 2026 results at competition.igem.org (research/results2026.json), cross-checked against iGEM's own API at api.igem.org/v1, which is open and unauthenticated and which is also where the Finalist designation and the medal distribution come from: of 147 accepted High School teams, 135 have a recorded medal (63 Gold, 68 Silver, 4 Bronze), 17 won at least one section-level or village award and 47 received at least one nomination. Two High School teams were named Finalists; the Undergraduate section had three and the Overgraduate section two. The special-wins column counts section-level special awards only, excluding the Top 10 placing, the Grand Prize placings and Best Village Project, which is a village award and is shown separately. The nine finalist questions are iGEM's published criteria, supplied by the report's own team. Question 9, on how competently a team answered judges' questions live, is excluded from this entire tab because it leaves no public record and nothing in a wiki can evidence it. That omission is material: the live session may be exactly where part of the gap described here was created, and no public analysis can see it. Everything on this tab is therefore an account of what a judge could learn from the published record, which is a real but incomplete share of what judges actually saw.",
- "method_zh": "名次與獎項來自 competition.igem.org 的 2026 年官方結果（research/results2026.json），並與 iGEM 自己在 api.igem.org/v1 的 API 交叉核對；該 API 公開且不需驗證，Finalist 身分與獎牌分布也來自那裡：147 支正式參賽的高中隊伍中，135 支有獎牌紀錄（63 金、68 銀、4 銅），17 支至少拿下一項組別或 village 層級的獎，47 支至少獲得一次入圍。高中組有 2 支隊伍被列為 Finalist，大學組 3 支，研究生組 2 支。「特別獎得獎」一欄只計組別層級的特別獎，不含 Top 10 名次、不含總冠軍名次，也不含 Best Village Project（那是 village 層級的獎，另行標示）。那九道決賽問題是 iGEM 公布的標準，由本報告自己的團隊提供。第 9 題關於團隊現場回答評審問題的能力，在整個頁面中都被排除，因為它沒有留下任何公開紀錄，wiki 裡也沒有任何東西能證明它。這個排除很重要：這裡描述的落差，很可能有一部分正是在現場問答中產生的，而任何公開分析都看不到那一段。因此本頁所有內容，都只是「一位評審能從公開紀錄中讀到什麼」的說明；那是真實的一部分，但不是評審實際看到的全部。"
+  "table": {
+    "head": [
+      "Team",
+      "Placing",
+      "Finalist",
+      "Special wins",
+      "Nominations",
+      "Parts award",
+      "Best Wiki"
+    ],
+    "head_zh": [
+      "隊伍",
+      "名次",
+      "Finalist",
+      "特別獎得獎",
+      "入圍",
+      "元件獎",
+      "最佳 Wiki"
+    ],
+    "rows": [
+      [
+        "Lambert-GA",
+        "Grand Prize winner",
+        "Yes",
+        "3",
+        "1",
+        "No",
+        "Winner"
+      ],
+      [
+        "HongKong-JSS",
+        "1st Runner-up",
+        "Yes",
+        "0",
+        "4",
+        "Nominee (Composite)",
+        "—"
+      ],
+      [
+        "GEMS-Taiwan",
+        "Top 10",
+        "No",
+        "3",
+        "3",
+        "No",
+        "Nominee"
+      ],
+      [
+        "GHCIS",
+        "Top 10",
+        "No",
+        "2",
+        "2",
+        "Winner (Collection)",
+        "Nominee"
+      ],
+      [
+        "HFI",
+        "Top 10",
+        "No",
+        "1",
+        "3",
+        "Nominee (Collection)",
+        "Nominee"
+      ],
+      [
+        "GCGS",
+        "Top 10",
+        "No",
+        "1",
+        "3",
+        "Winner (Improved)",
+        "Nominee"
+      ],
+      [
+        "HKSSC",
+        "Top 10",
+        "No",
+        "1",
+        "2",
+        "Winner (Basic)",
+        "—"
+      ],
+      [
+        "HangzhouFourteenAP",
+        "Top 10",
+        "No",
+        "0",
+        "4",
+        "No",
+        "Nominee"
+      ],
+      [
+        "Eton-College-UK",
+        "Top 10",
+        "No",
+        "0",
+        "3",
+        "No",
+        "—"
+      ],
+      [
+        "HongKong-HS",
+        "Top 10",
+        "No",
+        "0",
+        "2",
+        "No",
+        "Nominee"
+      ]
+    ],
+    "rows_zh": [
+      [
+        "Lambert-GA",
+        "總冠軍",
+        "是",
+        "3",
+        "1",
+        "否",
+        "得獎"
+      ],
+      [
+        "HongKong-JSS",
+        "亞軍",
+        "是",
+        "0",
+        "4",
+        "入圍（Composite）",
+        "—"
+      ],
+      [
+        "GEMS-Taiwan",
+        "Top 10",
+        "否",
+        "3",
+        "3",
+        "否",
+        "入圍"
+      ],
+      [
+        "GHCIS",
+        "Top 10",
+        "否",
+        "2",
+        "2",
+        "得獎（Collection）",
+        "入圍"
+      ],
+      [
+        "HFI",
+        "Top 10",
+        "否",
+        "1",
+        "3",
+        "入圍（Collection）",
+        "入圍"
+      ],
+      [
+        "GCGS",
+        "Top 10",
+        "否",
+        "1",
+        "3",
+        "得獎（Improved）",
+        "入圍"
+      ],
+      [
+        "HKSSC",
+        "Top 10",
+        "否",
+        "1",
+        "2",
+        "得獎（Basic）",
+        "—"
+      ],
+      [
+        "HangzhouFourteenAP",
+        "Top 10",
+        "否",
+        "0",
+        "4",
+        "否",
+        "入圍"
+      ],
+      [
+        "Eton-College-UK",
+        "Top 10",
+        "否",
+        "0",
+        "3",
+        "否",
+        "—"
+      ],
+      [
+        "HongKong-HS",
+        "Top 10",
+        "否",
+        "0",
+        "2",
+        "否",
+        "入圍"
+      ]
+    ]
+  },
+  "method": "Placings and awards are from the official 2026 results at competition.igem.org (research/results2026.json), cross-checked against iGEM's own API at api.igem.org/v1, which is open and unauthenticated and which is also where the Finalist designation and the medal distribution come from: of 147 accepted High School teams, 135 have a recorded medal (63 Gold, 68 Silver, 4 Bronze), 17 won at least one section-level or village award and 47 received at least one nomination. Two High School teams were named Finalists; the Undergraduate section had three and the Overgraduate section two. The special-wins column counts section-level special awards only, excluding the Top 10 placing, the Grand Prize placings and Best Village Project, which is a village award and is shown separately. The nine finalist questions are iGEM's published criteria, supplied by the report's own team. Question 9, on how competently a team answered judges' questions live, is excluded from this entire tab because it leaves no public record and nothing in a wiki can evidence it. That omission is material: the live session may be exactly where part of the gap described here was created, and no public analysis can see it. Everything on this tab is therefore an account of what a judge could learn from the published record, which is a real but incomplete share of what judges actually saw. The Finalist designation was checked against the 2024 and 2025 seasons as well: in all three, the finalist set and the podium set are identical — seven teams each year — so the designation names the podium rather than a wider round, and no intermediate slate is visible in the public record.",
+  "method_zh": "名次與獎項來自 competition.igem.org 的 2026 年官方結果（research/results2026.json），並與 iGEM 自己在 api.igem.org/v1 的 API 交叉核對；該 API 公開且不需驗證，Finalist 身分與獎牌分布也來自那裡：147 支正式參賽的高中隊伍中，135 支有獎牌紀錄（63 金、68 銀、4 銅），17 支至少拿下一項組別或 village 層級的獎，47 支至少獲得一次入圍。高中組有 2 支隊伍被列為 Finalist，大學組 3 支，研究生組 2 支。「特別獎得獎」一欄只計組別層級的特別獎，不含 Top 10 名次、不含總冠軍名次，也不含 Best Village Project（那是 village 層級的獎，另行標示）。那九道決賽問題是 iGEM 公布的標準，由本報告自己的團隊提供。第 9 題關於團隊現場回答評審問題的能力，在整個頁面中都被排除，因為它沒有留下任何公開紀錄，wiki 裡也沒有任何東西能證明它。這個排除很重要：這裡描述的落差，很可能有一部分正是在現場問答中產生的，而任何公開分析都看不到那一段。因此本頁所有內容，都只是「一位評審能從公開紀錄中讀到什麼」的說明；那是真實的一部分，但不是評審實際看到的全部。Finalist 身分也與 2024、2025 兩個賽季核對過：三年都一樣，Finalist 集合與頒獎臺集合完全相同——每年七支——所以這個身分指的就是頒獎臺，而不是更大的一輪名單；公開紀錄裡也看不到任何中間名單。"
 }
