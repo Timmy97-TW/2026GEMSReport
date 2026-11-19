@@ -43,6 +43,51 @@ Thirteen competing teams returned six award wins — more than any East Asian te
 
 _Method and limits. Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see._
 
+## GEMS measured against its own report
+
+_Every finding in this report, turned back on the team that commissioned it. Some of it is flattering and some of it is not, and the roadmap only means anything if both are said plainly._
+
+**Start with what already meets the standard, because it is more than expected.**
+
+The report's central result is that teams which close the model–data loop reach a Top 10 at 71% against 40%. GEMS-Taiwan closes it, and in one respect goes beyond anything else in the 2026 field: the crop-stress index was *fitted* to Taiwan's own harvest record — 25 years of county rice yields against ERA5 reanalysis, all 32,767 combinations of fifteen candidate terms scored on held-out years — and then tested **prospectively**, frozen on 26 September before any county published. County error came in at 365 kg/ha against 419 for a plain trend line. Separately, a growth rate of 0.2986 h⁻¹ with a 90% interval was registered in writing on 1 October, before a single bioreactor run; run 6 landed inside it at 0.286 ± 0.010.
+
+No other team in this report pre-registered a quantitative prediction and scored it afterwards. It is the single highest-credibility item on the wiki and it cost nothing but committing in writing before the data arrived.
+
+The provenance discipline is likewise at the top of the field, alongside TU Delft's. The honesty is real too: run 7 was excluded from scoring with the reason given, the curve-shape endpoint was recorded as not scored, and a 68-year payback was published against a partner's 4.9-year figure with the disagreement named rather than resolved. The human-practices loop closes properly — Prof. Chen Wen-Liang said in April that the organism could not be contained and that biological temperature sensing was not precise enough, and both the hollow-fibre perfusion reactor and the entire electronic sensing layer came out of that one conversation. Education was measured with pre- and post-surveys and the failures published, including the 30% who got DNA base pairing wrong.
+
+**Now the gaps, each tied to a finding in this report.**
+
+*The software has no front door.* The report found that 8 of 21 award-winning tools survive, and that the one habit separating them is a hosting decision made months early — every live tool was up on wiki-freeze day, every source-only tool lists localhost. The digital twin is MIT-licensed on GitLab and genuinely substantial, but it is a reactor controller: there is nothing a stranger can open. A simulator mode running on recorded data, at a URL, would move it from the source-only column to the live one. Two **high-school** teams managed exactly this in 2026.
+
+*The structure-prediction stack is a generation behind.* The census found AlphaFold still dominates iGEM at roughly a third of teams while the research literature has moved to open models. GEMS used AlphaFold with a pre-set confidence gate, which is better practice than most — but Boltz-2, Chai-1 and the MPNN family are where Lambert-GA, Heidelberg and Princeton were working. This is the cheapest capability gap to close on the list.
+
+*No parts contribution.* Taiwan took zero nominations in any of the four parts awards across both tiers in 2026, and GEMS is part of that zero. The report found that teams with no venture at all — HBUT-China, WHU-China, Squirrel-Beijing, BASIS-China — still contributed infrastructure other teams can reuse, and that this has a longer half-life than a business plan. A characterised, documented *B. subtilis* optogenetic part is the obvious candidate, and it is the same work as the Phase 3 research line.
+
+*The model is not yet fitted at the scale it is used.* The CcaSR Hill transfer function is assumed to hold at 20 L when every induction run was at a single light intensity. By the report's own loop-closure test, that step is modelled rather than measured — and the wiki's amber rail says so, which is to its credit, but saying so is not the same as fixing it.
+
+*The integration gaps are stated and still open.* Green-light induction tested but not wired in; dissolved-oxygen calibration did not hold; the protectant amount cannot be measured. These are the honest limits of a nine-month competition, and they are exactly the work an institution — rather than a team — exists to finish.
+
+*No collaboration page.* GEMS appears on no other Taiwanese team's collaboration page and has none of its own, while NYCU-Taiwan's July meet-up drew 53 people from five teams. Being findable is a precondition for everything in Phase 4.
+
+**The summary, stated plainly.** GEMS-Taiwan's weakness is not rigour — on provenance, pre-registration and honest reporting it is at or near the top of the entire 2026 field, high school and collegiate alike. The weakness is **reach**: a tool nobody outside can open, a part nobody else can order, a page nobody can find. That is a different problem from the one most teams have, and it needs a different year.
+
+### The only pre-registered prediction in the report
+A growth rate of 0.2986 h⁻¹ with a 90% interval, registered in writing on 1 October before any bioreactor run; run 6 landed inside it at 0.286 ± 0.010. The crop-stress index was frozen on 26 September and tested against county yields nobody had published yet. No other team in this report did either. Keep doing it, and make it a house rule rather than one person's idea.
+
+### The digital twin has no front door
+MIT-licensed on GitLab and genuinely substantial — live OD600, pH, four pressure channels, an autoencoder alarm, a Kalman forecast, a hydraulic fouling model and the BLASTAM infection rule. But it is a reactor controller: there is nothing a stranger can open. A simulator mode running on recorded data, at a URL, moves it from source-only to live. Two high-school teams managed that in 2026.
+
+### Zero parts nominations, and Taiwan's zero is shared
+Taiwan took no nomination in any of the four parts awards across both tiers in 2026. Teams with no venture at all still contributed parts other teams can reuse, and that outlives a business plan. A characterised, documented *B. subtilis* optogenetic part is the obvious candidate — and it is the same work as the Phase 3 research line, not extra work.
+
+### The Hill curve is assumed at 20 L, not measured there
+Every induction ran at a single light intensity, so the CcaSR transfer function is modelled rather than measured at the scale it is used. The wiki's amber rail says so, which is to its credit — but saying so is not fixing it. A dose–response series across intensities at working volume is a term's work and would close the loop at the step that currently carries the most weight.
+
+### The weakness is reach, not rigour
+On provenance, pre-registration and honest reporting, GEMS-Taiwan sits at or near the top of the entire 2026 field, high school and collegiate alike. What it lacks is a tool anybody outside can open, a part anybody else can order, and a page anybody can find. That is a different problem from the one most teams have, and it needs a different kind of year.
+
+_Method and limits. Compares the GEMS-Taiwan team file in this report against the findings of the other nine analyses. The file was researched from the team's own 2026 wiki on the same terms as every other team, and much of the critical material here is the team's own stated limits rather than our discovery — the wiki is unusually candid, which is what makes this comparison possible at all. Where we say a gap exists, it is a gap relative to practice elsewhere in the 2026 field, not a judgement that the work is poor._
+
 ## Who actually let the outside world change the science
 
 _Across 93 teams, closing the loop has stopped being the distinction and become the norm — and almost every loop that closed was closed by a credentialled expert rather than by anybody the criterion is rhetorically about._

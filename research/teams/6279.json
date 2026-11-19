@@ -43,7 +43,11 @@
       "Gain set from low upward to avoid saturation",
       "Validation against a flask control in triplicate across three experiments",
       "Hydraulic resistance modelling checked against flow simulation"
-    ]
+    ],
+    "frameworks_zh": "量測頁面是按照工作必須進行的順序寫的：建立基線、確定可用範圍、量測反應，接著是對照與校正，然後是放大規模，最後以限制一節收尾。人類實踐只有在「少了它專案就會不一樣」的地方才算整合，因此每場對話都配上它改變了什麼。生物反應器的每一次迭代都用同一組固定問題評估，涵蓋易用性、與桌上型標準設備的可比性、模組化與監測能力，結果則記成哪些可行、哪些不可行。",
+    "dataviz_zh": "生物感測器菌株與野生型 EPI300 對照的生長曲線，同時記錄 OD600 與螢光；劑量反應圖以同一塊盤上未處理對照的倍數變化表示；全文庫散佈圖中，200 多個啟動子構築體大多聚集在生長比與誘導比均接近 1 的位置，真正的命中則以約 3 倍到 12 倍的離群點出現；LTSpice 模擬的節點表比較兩種電源軌配置下的預期電壓與模擬電壓；光密度感測器在固定照明下的讀值對時間軌跡；每一代晶片設計的 CAD 模型都以 .glb 檔公開，並附工程圖。",
+    "datascience_zh": "基線工作正是多數團隊會跳過的部分。在量測任何反應之前，團隊先在無抗生素的條件下，為 CpxP 與 RecA 兩個生物感測器菌株以及野生型 EPI300 做生長曲線，每個時間點都記錄 OD600 與 485/510 nm 的螢光，並發現兩件會改變後續所有數字讀法的事：生物感測器菌株的最大菌體密度比野生型低約 35%，顯示報導質體造成代謝負擔，也意味著不先以菌體密度標準化，螢光就不能跨菌株比較；以及 CpxP 菌株在 37 C 培養 25 小時後，基礎 sfGFP 表現比野生型或 RecA 高約 18 至 20 倍，而這個現象在 22 C 下消失。他們直接把後果寫出來：任何在不知情的情況下採用 CpxP 的團隊，都會把基線誤當成訊號。OD600 校正曲線就由這些實驗產生，使螢光可以經標準化後再報告，而不是直接報原始值。第一次劑量反應嘗試用 13 個二倍序列濃度、每 10 分鐘取樣一次、共 40 至 60 分鐘，結果完全看不到劑量依賴性；團隊把這讀成量測時間窗的失敗，而不是生物感測器的失敗，並把它公開出來，因為看到一小時平坦曲線的團隊，不該就此斷定自己的報導系統沒用。要修正它必須先知道菌株能活在哪個範圍，於是他們以文獻值作為起始範圍，對 gentamicin、tobramycin 與 amoxicillin 做 MIC 滴定，得到 4 至 8 ug/mL 的暫定 MIC 區間，界定出次抑制濃度窗，後續每一次量測都落在這個窗內。重做的八小時劑量反應顯示 CpxP 在第四到第八小時之間達到高峰，在 8 ug/mL amoxicillin 下第四小時達 2 倍、第八小時達 3 倍；而 RecA 對 amoxicillin 有反應，對兩種胺基醣苷類都沒有——這個陰性結果被團隊明確報出，以免他人把 SOS 反應再拿去當胺基醣苷類的讀值。對照是定錨而非假設出來的：以野生型 EPI300 作為底盤陰性對照，以同一塊盤上未處理的菌液作為所有倍數變化的分母，並從所有螢光值中扣掉只有培養基的空白孔。質體保留分析本身就是對量測條件的一道對照，之所以要做，是因為 chloramphenicol 會干擾他們所量測的壓力反應；結果顯示沒有選擇壓力時質體在一小時內就流失，因此選擇壓力被保留下來，而這個干擾因素被記錄下來，而不是默默接受。放大到 200 多個啟動子-GFP 構築體時，他們使用 UBC 的 Biofactorial 自動化設施：表觀 MIC 與 EUCAST 交叉核對，次抑制濃度設為表觀 MIC 的約 0.25 至 0.5 倍，用 30 塊 384 孔盤、每 30 分鐘取樣一次 OD600 與 GFP、共八小時，另加一塊無抗生素對照盤與只有培養基的空白；每個啟動子的反應都先以 OD600 標準化 GFP，再對自己的對照標準化，使生長特性不同的構築體仍可相互比較。偵測器自帶校正流程：以 LED 開的讀值減去 LED 關的讀值取得基線；訊號與參考電壓在收集過程中一起讀取並相減，使電源軌漂移被扣除，而不是被記成訊號；增益則由低往上調，直到預期最亮的樣本落在 0.883 V 可用範圍的上緣附近。解析度是推導出來並公開的，好讓他人能依自己的配置重算一遍：Arduino 的 1.1 V 內部參考電壓對應每個計數 1.074 mV 的 ADC 階距，而在 10 MOhm 跨阻電阻、增益 101 的條件下，最小可偵測電流約為 1 pA。限制就以限制的方式寫出來：MIC 數值只是暫定值，因為它們來自二倍序列稀釋的終點 OD600，而不是對參考菌株進行標準化的肉湯微量稀釋法，因此它們只是定出一個可操作範圍，並未建立臨床判定閾值。",
+    "software_zh": "PRISM（Promoter Response Index and Selection Map）是一個以 SQLite 建的關聯式證據資料庫，整合 RNA-seq 差異表現結果、調控交互作用、啟動子與轉錄單元註解以及序列資訊，為篩選排序出對抗生素有反應的啟動子；已發布在 GitLab，並另有一個放圖的儲存庫。團隊明確表示他們的貢獻在於整合、解讀與審查的工作流程，而不是表現模型或原始量測；PRISM 的作用是讓這些關聯可供檢視，並產出可重現的篩選提案。識別碼對應會保留來源資料列、參考版本與對應依據，因此一個符號對應到多個基因座的情況會被呈現出來，而不是無聲地被合併掉。輔助性的建模包括一個降解模型、啟動子文庫分析，以及病人樣本的實驗設計。一套實驗流程資料庫涵蓋 LB 培養基製備、生長曲線、質體保留分析、MIC 滴定、生物感測器劑量反應分析、選殖、抗生素降解分析、PDMS 灌模、生物反應器培養與組裝、流動測試，以及 SEN0169 pH 探針與 TSL2591 光密度感測器的校正 SOP；每一份都寫成讓當時不在現場的人也能照著做。"
   },
   "good": {
     "publicEngagement": "A wet-lab training video series of one to five minute clips covering pipetting, heat-shock transformation, LB media and plates, colony picking, autoclaving and waste disposal, and aseptic technique, made so a multidisciplinary team could learn asynchronously and review later. Beyond the team, the Human Practices group designed synthetic biology resources and workshops for primary and secondary students, for marginalised adults, and ran the Youreka Vancouver Symposium pairing high school students with research, plus a Geering Up microfluidics activity rebuilt after its first version leaked.",
@@ -56,28 +60,35 @@
       "Dr Celestine Hong (UBC Chemical and Biological Engineering)",
       "Geering Up",
       "Youreka Vancouver"
-    ]
+    ],
+    "publicEngagement_zh": "一套濕實驗訓練影片系列，每段 1 至 5 分鐘，涵蓋移液、熱休克轉形、LB 培養基與平板、挑菌落、高壓滅菌與廢棄物處理，以及無菌操作技術，目的是讓一支跨領域團隊能非同步學習、事後也能複習。團隊之外，人類實踐小組為中小學生以及處於邊緣處境的成人設計合成生物學教材與工作坊，並舉辦 Youreka Vancouver Symposium，把高中生與研究配對；另有一項 Geering Up 的微流體活動，在第一版漏液之後重做。",
+    "ihp_zh": "九位臨床醫師、研究者與病人夥伴的選擇，依據的是文獻說不出、但他們說得出的內容：研究者談一項檢測必須偵測到什麼；感染科醫師與一位臨床護理師談一旦查出抗藥性，病人會經歷什麼；病人夥伴談帶著抗藥性感染生活是什麼樣子；病人參與專家則談一支沒有倫理審查許可的學生團隊，究竟還能如何讓病人參與。硬體方面，Amin Abdolkhani 勸退了團隊「放棄 PLA 模具改用樹脂列印」的想法——那會更貴、更浪費，而且得依賴別人實驗室的印表機——他建議按修訂後的需求再試一次；結果成功了。D-Wave 的 PCB 設計師 Bram Banik 說明改用已發表的電路是業界標準做法，不必從第一原理推導，接著帶了一場 KiCad 教學。Dr Celestine Hong 帶他們參觀工業用生物反應器，說明無菌是如何靠螺栓與 O 形環、內部正壓、無菌過濾以及夾管加針筒取樣來維持；她建議加入回饋控制迴圈，也建議在現有預算下簡化為一顆微控制器、一個感測器與單一控制元件，並警告常見的光密度換算細胞數在 OD 低於 1 時證據薄弱，建議改用乾菌重校正曲線。",
+    "realWorld_zh": "需求有算出成本：傳統感受性試驗需要微生物實驗室，而且要等好幾天；適合這種輸出的螢光判讀儀從約 630 美元到超過 42,000 美元，而且沒有一台商用判讀儀接受自訂晶片格式——因此一項仍需要盤式判讀儀與中央實驗室的快速檢測，並不是定點照護檢測。團隊設定硬體範圍時，是以移除這些依賴為目標，而不是以做出效能最強的儀器為目標。市場分析以 TAM-PAM-SAM-SOM 框架把 FAST 放在全球臨床診斷產業中估算規模，並列出競爭者與將規範此產品的法規，另有需求探索、商業開發、策略規劃與長期成長等頁面。重現所需的材料齊備：每個裝置頁面都附上標有現價的物料清單；晶片頁面提供每一代的 CAD 模型（.glb 檔），以及最終直線型、梯度生成型與蛇形設計的工程圖；偵測器頁面則提供兩份 PCB 設計、一個 3D 模型與一份使用手冊。"
   },
   "images": [
     {
       "url": "https://static.igem.wiki/teams/6279/wiki/assets/87edc504fab45511ac34a0233e32a223.avif",
       "caption": "The overall setup of the fluorescence detection system. Aligning a 488 nm LED, the sample, a 500 nm long-pass filter and a photodiode on a single vertical axis removed one of the two optical filters conventional detectors need, cutting optical material cost by at least half.",
-      "credit": "Team UBC-Vancouver, iGEM 2026 wiki"
+      "credit": "Team UBC-Vancouver, iGEM 2026 wiki",
+      "caption_zh": "螢光偵測系統的整體配置。把 488 nm LED、樣本、500 nm 長波通濾光片與光二極體排在同一條垂直軸上，省掉了傳統偵測器所需兩片光學濾光片中的一片，使光學材料成本至少減半。"
     },
     {
       "url": "https://static.igem.wiki/teams/6279/wiki/assets/1049987edaae516c9d470c1dcf17c072.avif",
       "caption": "The 30 mm by 90 mm main detection PCB, with the LED, the microfluidic chip well and the photodiode vertically aligned along the board. The complete device costs $204.48 to build.",
-      "credit": "Team UBC-Vancouver, iGEM 2026 wiki"
+      "credit": "Team UBC-Vancouver, iGEM 2026 wiki",
+      "caption_zh": "30 mm x 90 mm 的主偵測 PCB，LED、微流體晶片孔位與光二極體沿板面垂直對齊。整台裝置的製作成本為 204.48 美元。"
     },
     {
       "url": "https://static.igem.wiki/teams/6279/wiki/assets/797aed1798be54a683e510a5b995770a.avif",
       "caption": "The physical PDMS microfluidic chip beside its SolidWorks model. Cast from FDM-printed PLA molds over seven design cycles, it costs roughly one to five dollars per chip and needs neither a cleanroom nor a resin printer.",
-      "credit": "Team UBC-Vancouver, iGEM 2026 wiki"
+      "credit": "Team UBC-Vancouver, iGEM 2026 wiki",
+      "caption_zh": "PDMS 微流體晶片實體與其 SolidWorks 模型並列。它以 FDM 列印的 PLA 模具灌模而成，歷經七輪設計，每片成本約 1 至 5 美元，既不需要無塵室也不需要樹脂印表機。"
     },
     {
       "url": "https://static.igem.wiki/teams/6279/wiki/assets/cb607262e5ed54178078cdf0291acf72.avif",
       "caption": "TSL2591 light sensor readings against time under constant illumination, part of the bioreactor's optical density calibration. The bioreactor costs $106.68, monitors temperature, pH and optical density, and was validated against flask culture in triplicate across three experiments.",
-      "credit": "Team UBC-Vancouver, iGEM 2026 wiki"
+      "credit": "Team UBC-Vancouver, iGEM 2026 wiki",
+      "caption_zh": "TSL2591 光感測器在固定照明下的讀值對時間，屬於生物反應器光密度校正的一部分。這座生物反應器成本 106.68 美元，可監測溫度、pH 與光密度，並在三次實驗中各以三重複對照搖瓶培養完成驗證。"
     }
   ],
   "gemsTakeaway": "Characterise the uninduced baseline before you measure any response: discovering that one reporter strain carries 18 to 20-fold higher basal expression and 35% lower maximum density than wild type is the difference between a calibrated signal and mistaking a constitutive background for a result, and it is cheap to find and free to publish.",
@@ -91,5 +102,9 @@
     "https://2026.igem.wiki/ubc-vancouver/project/human-practices",
     "https://2026.igem.wiki/ubc-vancouver/administration/market-research-",
     "https://2026.igem.wiki/ubc-vancouver/human-practices/education"
-  ]
+  ],
+  "projectTitle_zh": "FAST：一套定點照護的抗生素感受性試驗",
+  "tagline_zh": "三件自製裝置、一次 200 個啟動子的篩選，以及一個開頭就承認讀值本身就是整個診斷的量測頁面。",
+  "summary_zh": "UBC-Vancouver 做出 FAST，一套定點照護的抗生素感受性試驗：病人樣本與候選抗生素在微流體晶片上混合，凡是在這一步仍存活的抗生素會流到下游、遇上具壓力反應的 E. coli 生物感測器——若樣本為感受性菌，抗生素仍具活性，壓力啟動子啟動並表現 sfGFP；若樣本具抗藥性，抗生素被分解，訊號就停在接近基線的位置。由於螢光就是診斷本身，而不是輔助觀察，團隊把量測當成整個專案的基礎：建立基線、找出可用的濃度區間、量測反應，並把一切錨定在對照組上。三件裝置移除了定點照護檢測不能假設存在的基礎設施：一枚成本 1 至 5 美元的 PDMS 微流體晶片、一台 204.48 美元的螢光偵測器，以及一座 106.68 美元、用來生產生物感測器菌液的生物反應器。",
+  "gemsTakeaway_zh": "量測任何反應之前，先把未誘導的基線做特性分析：發現某個報導菌株的基礎表現量比野生型高 18 至 20 倍、最大菌體密度低 35%，這就是「校正過的訊號」與「把組成型背景誤認為結果」之間的差別——而且查出來便宜，公開出來更是免費。"
 }
