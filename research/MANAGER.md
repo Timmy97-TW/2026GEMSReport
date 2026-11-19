@@ -1027,3 +1027,49 @@ This correction was sent to the base-rates analyst mid-run rather than discovere
 (13.9%) · 393 hold a medal (92.9%) · 249 hold a medal and no award · **29 have neither** · exactly 1 is
 decorated without a medal · 104 Gold medals won no award · **7 Finalists across all sections, 2 of them
 high-school** · high-school medals Gold 63, Silver 68, Bronze 4 (135 of 147).
+
+### Correction 3, found and fixed in session 5: "Finalist" is the podium, not a round before it
+
+The tab opened on the Finalist designation as though it were a distinct stage — "a designation most reports
+never mention" — which lets a reader believe there was a wider slate GEMS nearly reached. Checked against
+the cached 2024, 2025 and 2026 award results: in **all three seasons the finalist set and the podium set are
+identical**, seven teams a year, and the seven are exactly the Grand Prize winners and the runners-up
+(2026: 3 winners + 3 first runners-up + 1 second runner-up). Across all sections, `type == "finalist"` and
+`type == "grand-prize"` minus Top 10 return the same seven names every year, with an empty symmetric
+difference.
+
+So the designation names the podium. The substance of the tab is untouched — 2 of the 10 High School Top 10
+reached it, GEMS did not — but the framing now says so in the lede, the first body paragraph and the method
+note of `judging-criteria`, in both languages. Nothing in the analysis depended on a wider round existing.
+
+### Second independent verification of the three load-bearing GEMS claims
+
+These are the most consequential criticisms in the report because they are aimed at the report author's own
+team, so they were re-measured from scratch in session 5 against the live wiki rather than trusted from the
+session-4 notes. All three hold.
+
+**One trap worth recording, because it nearly produced a false retraction.** A first pass extracting text
+from `/results` reported **zero** p-values and six hits for "t test", which would have reversed the
+published claim. Both were artefacts:
+- The page writes `p &lt; 0.0001` in HTML, so a regex for `p < 0` finds nothing until the entities are
+  unescaped. **Always `html.unescape` before pattern-matching a fetched wiki.**
+- Every "t test" hit was the ordinary word *test* inside prose — "Endpoint **Tested on**", "we first
+  **tested** whether", "We have not **tested** either explanation directly", "gradient **testing**",
+  "a simple containment **test**". Searching for a bare `t test` across prose is useless; the earlier
+  session's claim was right and my first check was wrong.
+
+Re-measured correctly, from `https://2026.igem.wiki/gems-taiwan/results` (HTTP 200, 160 KB, static HTML,
+plain curl with a browser User-Agent):
+- **Exactly 5 p-values**: `p <0.0001`, `p < 0.01`, `p < 0.0001`, `p <0.001`, `p < 0.0001`.
+- **Zero named statistical tests.** No t-test, ANOVA, Tukey, Dunnett, Welch, Mann-Whitney, Wilcoxon or
+  Kruskal anywhere on the page. The four "paired" hits are *540 paired readings* and *45 paired* standards —
+  measurement pairing, not a paired test.
+- `n=1` and `n=3` are the only replicate counts stated on the page.
+- The ELISA claim is verbatim and is **stronger than what was published**: *"The ELISA showed no change over
+  time. ACCD was already present at the baseline (about 3.0 µg/mL before illumination) and measured 2.6 to
+  3.2 µg/mL at every time point under both colors, well above the plasmid-free control (about 1.3 µg/mL)"*.
+  The team states the null itself.
+
+From `https://2026.igem.wiki/gems-taiwan/model` (HTTP 200, 129 KB), both quotes verbatim:
+- *"The reactor therefore cannot be scheduled from the forecast."*
+- *"Payback 68 years on our loss figure; Geospatial Analysis says 4.9"*
