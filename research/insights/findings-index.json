@@ -356,15 +356,32 @@
       "kicker_zh": "評審",
       "title": "GEMS has already won this, in 2024 — so the question is what changed",
       "title_zh": "GEMS 已經贏過一次，就在 2024 年——所以問題是什麽改變了",
-      "body": "**GEMS-Taiwan won the 2024 High School Grand Prize** and was a Finalist that year. It placed Top 10 in 2024, 2025 and 2026, and it and Lambert-GA are the **only two High School teams to do that** — each winning exactly one Grand Prize in the span, GEMS in 2024 and Lambert in 2026. So the finalist analysis is not about a bar this team has never reached. Note the shape of the three records: 2024's wins were **Best Wiki**, Best New Basic Part and the promotion video; 2025 brought five nominations and **no win at all**; 2026's wins were Measurement, Hardware and Integrated Human Practices, with Best Wiki and Best Presentation only nominated. The categories that co-occur most with a Top 10 across three seasons are Best Wiki at **60%** and Best Presentation at **53%**; Measurement and Hardware sit at 22% and 21%.",
-      "body_zh": "**GEMS-Taiwan 贏過 2024 年高中組總冠軍**，那一年它也是 Finalist。它在 2024、2025、2026 三季都進了 Top 10，而全高中組**只有它和 Lambert-GA 做到**——這段期間兩支各贏一次總冠軍，GEMS 在 2024 年，Lambert 在 2026 年。所以整份決賽分析談的並不是一道這支隊伍從未跨過的門檻。請留意三年紀錄的形狀：2024 年的得獎是**Best Wiki**、Best New Basic Part 與宣傀影片；2025 年有五項入圍、**一項都沒贏**；2026 年的得獎是量測、硬體與整合式人類實踐，而 Best Wiki 與 Best Presentation 只是入圍。三季下來，與 Top 10 最常同時發生的類別是 Best Wiki（**60%**）與 Best Presentation（**53%**）；量測與硬體則是 22% 與 21%。",
+      "body": "**GEMS-Taiwan won the 2024 High School Grand Prize** and was a Finalist that year. It placed Top 10 in 2024, 2025 and 2026, and it and Lambert-GA are the **only two High School teams to do that** — each winning exactly one Grand Prize in the span, GEMS in 2024 and Lambert in 2026. So the finalist analysis is not about a bar this team has never reached. Note the shape of the three records: 2024's wins were **Best Wiki**, Best New Basic Part and the promotion video; 2025 brought five nominations and **no win at all**; 2026's wins were Measurement, Hardware and Integrated Human Practices, with Best Wiki and Best Presentation only nominated. The obvious reading is that the whole-project communication layer slipped — 2024's Best Wiki win against 2026's mere nomination, and Best Wiki nominees take a Top 10 60% of the time against 22% for Measurement. **It was tested against all three wikis and it broke.** The 2024 Best Wiki winner is a 577-byte script shell with no results page at all and one p-value on the whole site. What separated 2024 is that both central claims were measured on the real target animal and the rival explanation was experimentally excluded.",
+      "body_zh": "**GEMS-Taiwan 贏過 2024 年高中組總冠軍**，那一年它也是 Finalist。它在 2024、2025、2026 三季都進了 Top 10，而全高中組**只有它和 Lambert-GA 做到**——這段期間兩支各贏一次總冠軍，GEMS 在 2024 年，Lambert 在 2026 年。所以整份決賽分析談的並不是一道這支隊伍從未跨過的門檻。請留意三年紀錄的形狀：2024 年的得獎是**Best Wiki**、Best New Basic Part 與宣傳影片；2025 年有五項入圍、**一項都沒贏**；2026 年的得獎是量測、硬體與整合式人類實踐，而 Best Wiki 與 Best Presentation 只是入圍。最直覺的讀法是整體專案的「傳達層」退步了——2024 年贏下 Best Wiki，2026 年只入圍，而 Best Wiki 入圍者有 60% 同時進 Top 10，量測只有 22%。**這個說法拿三年的 wiki 實際比對過，然後破了。**2024 年那個 Best Wiki 得主是一個 577 位元組的腳本外殼，整站連結果頁都沒有，全站只有一個 p 值。真正把 2024 年分出來的，是兩個核心主張都在真正的標的生物上量過，而且對手解釋被實驗排除掉了。",
       "chips": [
         "2024 Grand Prize winner",
-        "Top 10 three seasons running"
+        "the communication story broke"
       ],
       "chips_zh": [
         "2024 年總冠軍",
-        "三季連續進 Top 10"
+        "「傳達層」的說法破了"
+      ],
+      "link": "judging"
+    },
+    {
+      "kicker": "Judging",
+      "kicker_zh": "評審",
+      "title": "The podium years are the years the claim was measured on the real thing",
+      "title_zh": "站上頒獎臺的那幾年，正是核心主張在真實標的上被量過的那幾年",
+      "body": "This is the one line that now holds from two independent directions. **Across** the 2026 High School Top 10, seven of seven non-podium teams stop at a surrogate and exactly one team in ten ran its assay on a real sample — HongKong-JSS on a soil extract — and that team took 1st Runner-up. **Within** GEMS's own three seasons, the Grand Prize year is the real-target year: 2024 fed three toxins to live *Aedes albopictus* larvae, reported LC50 for all three, examined 98 dead larvae under the microscope, and ran a qPCR immune-gene panel against an empty-vector arm explicitly \"to rule out the effect of *E. coli* in the death of mosquito larvae\". In 2026 the plant rescue is strong at p < 0.0001 with 40 seedlings a condition, but **the preparation sprayed on the plants was never assayed** and the light-gated device never showed light dependence. Statistics went the other way entirely — p-values 1, then 0, then 5, and **no named statistical test in any of the three seasons.**",
+      "body_zh": "這是目前唯一從兩個獨立方向都站得住的一條線。**橫向看**2026 年高中組 Top 10：七支非頒獎臺隊伍全部停在替代物上，十支裡剛好只有一支把檢測跑在真實樣本上——HongKong-JSS 的土壤萃取液——而那一支拿下亞軍。**縱向看** GEMS 自己的三季：拿總冠軍的那一年，就是打在真實標的上的那一年。2024 年把三種毒蛋白餵給活的 *Aedes albopictus* 幼蟲，三種都報告了 LC50，以顯微鏡檢視 98 隻死亡幼蟲，還跑了一組 qPCR 免疫基因試驗對照空載體組，目的明寫是「排除 *E. coli* 在蚊蟲幼蟲死亡中的作用」。2026 年的植物救援很強，每組 40 棵苗、p < 0.0001，但**噴到植物上的那份製備從未被檢測活性**，而光控裝置也從未顯示出光依賴性。統計的方向則完全相反——p 值是 1 個、0 個、5 個，而且**三季之中沒有任何一季寫出檢定名稱**。",
+      "chips": [
+        "1 of 10 tested a real sample",
+        "p-values 1, 0, 5 — tests named: none"
+      ],
+      "chips_zh": [
+        "十支裡一支測過真實樣本",
+        "p 值 1、0、5；檢定名稱：零"
       ],
       "link": "judging"
     },

@@ -1,0 +1,257 @@
+{
+ "id": "gems-three-seasons",
+ "tab": "judging",
+ "order": 7,
+ "kicker": "Three seasons, one team",
+ "kicker_zh": "三個賽季，同一支隊伍",
+ "title": "GEMS won the 2024 Grand Prize, and the 2024 wiki is the weakest of the three",
+ "title_zh": "GEMS 拿下 2024 年總冠軍，而 2024 年的 wiki 是三年之中最弱的一個",
+ "lede": "The judging analysis on this tab treats a Finalist slate as a bar GEMS-Taiwan has yet to clear. **It cleared it in 2024**, as Grand Prize winner and Finalist, with Best Wiki among three wins. The tempting story is that the whole-project communication layer slipped between then and now. Read against the three wikis themselves, **that story breaks.** The 2024 site is a 577-byte JavaScript shell with **no results page at all**, one p-value on the entire site and no named statistical test; the 2026 results page is server-rendered, carries five p-values and 67 uniquely numbered figures, and a separate page scores all five project stages against criteria written down before the runs. What separates them is narrower and harder: in 2024 both central claims were measured on the real target animal with the competing explanation excluded, and every claim on the summary list was hedged to the evidence behind it. In 2026 the claim that makes ReLEAF an optogenetics project is stated on the landing page and contradicted on its own results page.",
+ "lede_zh": "本頁的評審分析，把決賽席位當成 GEMS-Taiwan 還沒跨過的一道門檻。**它在 2024 年就跨過了**——總冠軍、決賽隊伍，三個獎項之中還包含 Best Wiki。誘人的說法是：從那時到現在，整體專案的溝通層退步了。但把三份 wiki 放在一起讀，**這個說法就破了。** 2024 年的網站是一個 577 位元組的 JavaScript 外殼，**完全沒有結果頁**，整站只有一個 p 值，也沒有寫出任何統計檢定名稱；2026 年的結果頁是伺服器端渲染，有五個 p 值、67 張編號不重複的圖，還有另外一頁把專案的五個階段逐一對照「實驗開跑前就寫下的成功標準」來評分。真正把兩者分開的東西更窄、也更難面對：2024 年的兩項核心主張都是在真實的標的生物上量到的，而且排除了競爭解釋，摘要清單上的每一條都緊貼著它背後的證據。2026 年那個讓 ReLEAF 成為光遺傳學專案的主張，寫在首頁上，卻被它自己的結果頁推翻。",
+ "body": "Three seasons were measured on the same six questions. The 2024 wiki is a single-page application: `https://2024.igem.wiki/gems-taiwan/` returns 200 and 577 bytes, `/results` is a 404, and the whole site lives in one 1.69 MB JavaScript bundle, so **nothing on it is readable before scripts run.** The 2025 and 2026 pages are server-rendered and fetch as text. On the criterion that the Best Wiki winners studied elsewhere in this report satisfy — text first, scripts later — the Best Wiki winner of 2024 is the only one of the three that fails it.\n\n**The one-headline-versus-inventory distinction does not separate these three seasons at all.** 2024's summary is a nine-item numbered list on its description page, introduced \"Hence, our team worked across Wetlab, Drylab, Human Practice, and Software, and together, we achieved the following:\". 2025 publishes thirteen bullets under four module headings. 2026 publishes five one-line key results. The Grand Prize year has the longest inventory of the three. Whatever the two 2026 finalists were rewarded for, GEMS did not have it in 2024 either.\n\nStatistical reporting moved the same way, upward. p-values across the pages read: **2024 one, 2025 none, 2026 five.** Named statistical tests: **zero in all three seasons** — no t-test, ANOVA, Tukey, Dunnett, Welch, Mann-Whitney, Wilcoxon or Kruskal anywhere, in any year. The single 2024 p-value is \"the p-value equal to 0.0003\" on the oviposition assay. Dispersion runs from one `± SE` column in 2024, through 23 mentions of standard error in 2025, to SEM plus R² of 0.992 to 0.9995 and a pre-registered 90% interval in 2026. **Neither statistics nor structure is what changed.**\n\nWhat changed is what the central claim was made about. In 2024 the toxins were fed to live *Aedes albopictus* larvae — the actual vector species, not a surrogate — ten larvae per cup in triplicate, LC50 reported for all three toxins, 98 dead larvae mounted and examined, and a qPCR immune-gene panel against a BL21(DE3) empty-vector control run specifically \"to rule out the effect of *E. coli* in the death of mosquito larvae\". The attractant was tested on live gravid females, and when the team spotted a position bias it removed the centre cup, then suspected the beetroot colour and covered every cup with black paper before repeating. In 2026 the green-light device was never demonstrated: \"The ELISA showed no change over time\", ACCD at 2.6 to 3.2 µg/mL at every time point under both colours, AmilCP's \"medium remained colorless\", and every biological result came from a constitutively expressing bypass module. The 2024 chain was never joined end to end either — and the page says so in the same breath, \"Integration of our sticky ovitrap and recombinant biolarvicidal proteins **will be** a powerful vector control tool\", \"**partially** proved the chromosome-free system\". **That hedging is the difference the wikis actually show.** 2026's home page states \"Green light switches production on\" as a feature of the machine, and the refutation sits three pages deeper.",
+ "body_zh": "三個賽季用同樣六個問題量過。2024 年的 wiki 是一個單頁式應用程式：`https://2024.igem.wiki/gems-taiwan/` 回傳 200、只有 577 位元組，`/results` 是 404，整個網站裝在一個 1.69 MB 的 JavaScript 套件裡，因此**在腳本跑起來之前，它上面沒有任何東西讀得到。** 2025 與 2026 的頁面是伺服器端渲染，直接當文字抓得下來。本報告別處研究過的 Best Wiki 得主都滿足一個條件——文字先到、腳本後到——而三者之中唯一不滿足它的，正是 2024 年的 Best Wiki 得主。\n\n**「單一招牌結果」對「模組清單」的區分，在這三個賽季之間完全分不開任何東西。** 2024 年的摘要是 description 頁上一份九條的編號清單，開頭寫著「因此，我們的團隊橫跨 Wetlab、Drylab、Human Practice 與 Software 工作，共同達成了以下成果：」。2025 年在四個模組標題底下列出十三條。2026 年列出五條一行的 Key results。清單最長的那一年，正是總冠軍那一年。2026 年那兩支決賽隊伍是因為什麼被獎勵的，GEMS 在 2024 年也同樣沒有。\n\n統計報告的方向也是往上。各頁的 p 值依序是：**2024 年一個、2025 年零個、2026 年五個。** 寫出名稱的統計檢定：**三個賽季都是零**——任何一年、任何地方都沒有 t-test、ANOVA、Tukey、Dunnett、Welch、Mann-Whitney、Wilcoxon 或 Kruskal。2024 年那唯一的 p 值，在產卵偏好試驗上寫的是「這個實驗得到的結果高度顯著，p 值等於 0.0003」。離散度的呈現，從 2024 年一欄 `± SE`，到 2025 年二十三次提到標準誤，再到 2026 年的 SEM 加上 0.992 至 0.9995 的 R²，以及一個事先登記的 90% 區間。**改變的既不是統計，也不是結構。**\n\n改變的是「核心主張是在講什麼東西」。2024 年，毒蛋白被餵給活的 *Aedes albopictus* 幼蟲——真正的病媒物種，不是替代物——每杯十隻、三重複，三種毒蛋白都報告了 LC50，98 隻死亡幼蟲被封片檢視，還有一組 qPCR 免疫基因試驗對照 BL21(DE3) 空載體，做的目的明寫是「排除 *E. coli* 在蚊子幼蟲死亡中的作用」。引誘劑是在活的受孕雌蚊身上測的；團隊發現位置偏誤之後拿掉了中央那一杯，接著懷疑甜菜根的顏色，就用黑紙把每一杯都蓋起來再重做一次。2026 年，綠光裝置從未被證明：「ELISA 顯示隨時間沒有變化」，ACCD 在兩種光色、每一個時間點都是 2.6 至 3.2 µg/mL，AmilCP 的「培養液始終無色」，而所有生物學成果都來自一個組成型表現的旁路模組。2024 年的鏈條同樣從未端到端接起來——而那一頁在同一句話裡就說了：「把我們的黏性產卵器與重組殺幼蟲毒蛋白整合起來，**將會**是一個強大的病媒防治工具」、「**部分**證明了 chromosome-free system」。**這種緊貼證據的保留，才是三份 wiki 真正顯示出來的差別。** 2026 年的首頁把「綠光開啟生產」當成機器的一項功能寫出來，而推翻它的證據，要再往裡走三頁才看到。",
+ "cards": [
+  {
+   "kicker": "Hypothesis broken",
+   "kicker_zh": "假設被推翻",
+   "title": "The Best Wiki winner is the only one of the three whose text needs JavaScript to appear",
+   "title_zh": "三者之中唯一必須靠 JavaScript 才顯示得出文字的，正是 Best Wiki 得主",
+   "body": "`https://2024.igem.wiki/gems-taiwan/` returns 200 and **577 bytes**: a `<div id=\"root\">`, a `<noscript>` reading \"You need to enable JavaScript to run this app\", and one script tag. The whole site — every page of prose, every figure caption, the route table — is inside `main.8a37e754.js`, **1,690,501 bytes**, with no code splitting and no data fetched at runtime. `/results` on that host is a 404; the 2024 wiki has no results page, and its route list runs `/description`, `/engineering`, `/experiment`, `/proofofconcept`, `/parts`, `/awards` and sixteen more.\n\nThe 2025 and 2026 results pages fetch as server-rendered text, 108 KB and 160 KB. The 2026 home page is fully readable with scripts off, farmer quote and all, and even writes out the content of each map as text. **The team's wiki got strictly more robust across the three seasons, and the robust years are the years it did not win the category.** Whatever Best Wiki rewarded in 2024, this was not it.",
+   "body_zh": "`https://2024.igem.wiki/gems-taiwan/` 回傳 200 與 **577 位元組**：一個 `<div id=\"root\">`、一段寫著「You need to enable JavaScript to run this app」的 `<noscript>`，以及一個 script 標籤。整個網站——每一頁文字、每一個圖說、路由表——都裝在 `main.8a37e754.js` 裡，**1,690,501 位元組**，沒有程式碼分割，執行期間也不抓取任何資料。那台主機上的 `/results` 是 404；2024 年的 wiki 沒有結果頁，它的路由清單是 `/description`、`/engineering`、`/experiment`、`/proofofconcept`、`/parts`、`/awards`，再加十六個。\n\n2025 與 2026 的結果頁都是伺服器端渲染的文字，108 KB 與 160 KB。2026 年的首頁在關掉腳本的情況下完全讀得到，連農民的引語都在，甚至把每一張地圖的內容也寫成文字。**這支隊伍的 wiki 在三個賽季裡嚴格地越來越穩固，而穩固的那兩年，正是它沒有拿下這個類別的年份。** 2024 年的 Best Wiki 獎勵的是別的東西，不是這個。",
+   "chips": [
+    "2024: 577-byte shell",
+    "no results page in 2024",
+    "2025 and 2026: server-rendered"
+   ],
+   "chips_zh": [
+    "2024：577 位元組外殼",
+    "2024 沒有結果頁",
+    "2025 與 2026：伺服器端渲染"
+   ]
+  },
+  {
+   "kicker": "Inventory, all three",
+   "kicker_zh": "三年都是清單",
+   "title": "The Grand Prize year has the longest module inventory of the three",
+   "title_zh": "總冠軍那一年，模組清單是三年中最長的",
+   "body": "The finding this section was built to test is that both 2026 finalists nominate one result while the eight non-finalists publish inventories. Against GEMS's own three seasons it does not sort anything. **2024 publishes nine numbered achievements**, introduced \"Hence, our team worked across Wetlab, Drylab, Human Practice, and Software, and together, we achieved the following:\" — twelve recombinant proteins, the potency of three toxins, a cloned chromosome-free system, the attractant, the trap, the egg counter, an epidemiological model, homology models, education tools. **2025 publishes thirteen bullets** under \"Key Findings:\" across four module headings. **2026 publishes five**, as \"Key results\": protectant secretion, light control, the photometer, plant rescue, containment and release.\n\nNine, thirteen, five — and the podium year is the nine. The distinction that separates the 2026 finalists from the 2026 field does not separate this team's Grand Prize from its Top 10s, which is a reason to hold it loosely as a rule about placings in general.",
+   "body_zh": "本節要檢驗的那個發現是：2026 年兩支決賽隊伍各自指定一個結果，而八支非決賽隊伍發表的是清單。拿到 GEMS 自己的三個賽季上，它分不開任何東西。**2024 年發表九條編號成果**，開頭是「因此，我們的團隊橫跨 Wetlab、Drylab、Human Practice 與 Software 工作，共同達成了以下成果：」——十二個重組蛋白、三種毒蛋白的效力、一個選殖出來的 chromosome-free system、引誘劑、捕蚊器、蟲卵計數器、一個流行病學模型、同源模型、教育工具。**2025 年在「Key Findings」底下、四個模組標題之中發表十三條。2026 年發表五條**，標題是「Key results」：保護蛋白分泌、光控制、光度計、植物救援、圍阻與釋出。\n\n九條、十三條、五條——而上頒獎台的那一年是九條。把 2026 年兩支決賽隊伍與全場分開的那個區分，並沒有把這支隊伍的總冠軍與它的 Top 10 分開；這是一個理由，讓我們不要把它當成關於名次的一般性規則來緊握。",
+   "chips": [
+    "2024: nine items",
+    "2025: thirteen",
+    "2026: five"
+   ],
+   "chips_zh": [
+    "2024：九條",
+    "2025：十三條",
+    "2026：五條"
+   ]
+  },
+  {
+   "kicker": "Statistics",
+   "kicker_zh": "統計",
+   "title": "p-values went one, none, five — and no season ever names a statistical test",
+   "title_zh": "p 值依序是一個、零個、五個——而三個賽季都沒有寫出任何檢定名稱",
+   "body": "Counted the same way each year, after unescaping the HTML and matching on real test names with word boundaries: **2024 has exactly one p-value on its entire site**, \"The results obtained from this experiment were highly significant, with the p-value equal to 0.0003\", on the oviposition assay. **2025's results page has none.** **2026's has five**, all on the plant work, reported as asterisks (`**p < 0.01`, `***p<0.001`, `****p < 0.0001`) with \"ns, not significant\" marked where it applies.\n\n**Named tests: zero, zero, zero.** No t-test, ANOVA, Tukey, Dunnett, Welch, Mann-Whitney, Wilcoxon or Kruskal appears in any season, so every \"significant\" and \"highly significant\" in 2024 and 2025 is unattributed. Dispersion improves monotonically too: one `Mortality ± SE (%)` column in 2024; standard error named 23 times in 2025; SEM throughout 2026 plus R² of 0.992, 0.9949, 0.9995 and a growth rate registered on 1 October as \"0.2986 h−1, 90% interval 0.2705 to 0.3300\" and later observed at 0.286 ± 0.010. Replicate disclosure is the one line that got worse: triplicates stated throughout 2024, against `n=1` and `n=3` in 2026.",
+   "body_zh": "每一年都用同樣方式計數，先把 HTML 的轉義還原，再以完整字詞比對真正的檢定名稱：**2024 年整站恰好只有一個 p 值**——產卵偏好試驗上寫著「這個實驗得到的結果高度顯著，p 值等於 0.0003」。**2025 年的結果頁一個也沒有。2026 年有五個**，全在植物工作上，以星號呈現（`**p < 0.01`、`***p<0.001`、`****p < 0.0001`），並在適用處標出「ns，不顯著」。\n\n**寫出名稱的檢定：零、零、零。** 任何賽季都沒有出現 t-test、ANOVA、Tukey、Dunnett、Welch、Mann-Whitney、Wilcoxon 或 Kruskal，因此 2024 與 2025 年每一個「顯著」與「高度顯著」都沒有依據可追。離散度的呈現也是單向改善：2024 年一欄 `Mortality ± SE (%)`；2025 年二十三次寫出標準誤；2026 年全頁使用 SEM，再加上 0.992、0.9949、0.9995 的 R²，以及 10 月 1 日事先登記的生長速率 0.2986 h⁻¹、90% 區間 0.2705 至 0.3300，其後實測 0.286 ± 0.010。唯一變差的一條是重複數的揭露：2024 年全程寫明三重複，2026 年則是 `n=1` 與 `n=3`。",
+   "chips": [
+    "1 / 0 / 5 p-values",
+    "0 named tests, all three years",
+    "triplicates to n=1"
+   ],
+   "chips_zh": [
+    "p 值 1 / 0 / 5",
+    "三年都是 0 個檢定名稱",
+    "從三重複到 n=1"
+   ]
+  },
+  {
+   "kicker": "The real difference",
+   "kicker_zh": "真正的差別",
+   "title": "In 2024 the claim was measured on the real animal, and the rival explanation was shut out",
+   "title_zh": "2024 年的主張是在真實的動物身上量到的，而且把對手解釋關在門外",
+   "body": "The 2024 toxins were assayed on live *Aedes albopictus* larvae — the vector itself, no surrogate — \"by exposing 10 stage 2 larvae in each cup to different concentrations of toxins. All assays were conducted in triplicates\", with LC50 reported for all three: Cyt2Ba 5.29 × 10⁶ CFU/mL, Xpp81Aa1 1.98 × 10⁷, BmK IT1 179 mg/mL. 98 dead larvae were mounted and examined. Then the obvious rival explanation was tested directly: a qPCR panel of *Gambicin*, *Rel1*, *Rel2* and *defensin* against a BL21(DE3) empty-vector arm, run because \"We want to rule out the effect of *E. coli* in the death of mosquito larvae\".\n\nThe attractant work is the same discipline. Gravid females, three replicates, cups rotated by position; a position bias was spotted and the centre cup removed; then the beetroot colour was suspected and every cup covered with black paper, \"so that the selection of oviposition sites is based on odorant factors only\", after which the preference held at p = 0.0003. **Two confounds found and eliminated by the team itself, on its own target species.** That is the depth route the 1st Runner-up took in 2026, and GEMS had already walked it in 2024.",
+   "body_zh": "2024 年的毒蛋白是在活的 *Aedes albopictus* 幼蟲上試驗的——病媒本身，沒有替代物——方法寫明是「每一杯放入 10 隻第二齡幼蟲，暴露於不同濃度的毒蛋白。所有試驗都以三重複進行」，三種都報告了 LC50：Cyt2Ba 5.29 × 10⁶ CFU/mL、Xpp81Aa1 1.98 × 10⁷、BmK IT1 179 mg/mL。98 隻死亡幼蟲被封片檢視。接著，最明顯的對手解釋被直接檢驗：一組 *Gambicin*、*Rel1*、*Rel2* 與 *defensin* 的 qPCR 試驗，對照 BL21(DE3) 空載體組，做的理由是「我們想排除 *E. coli* 在蚊子幼蟲死亡中的作用」。\n\n引誘劑那部分是同一套紀律。受孕雌蚊、三重複、各杯依位置輪換；發現位置偏誤後拿掉中央那一杯；接著懷疑甜菜根的顏色，於是把每一杯都用黑紙蓋住，「讓產卵位置的選擇只取決於氣味因素」，之後偏好仍然成立，p = 0.0003。**兩個混淆因子都由團隊自己找出來並排除，而且是在自己的標的物種上。** 那正是 2026 年亞軍走的深度路線，而 GEMS 在 2024 年就已經走過一次。",
+   "chips": [
+    "LC50 on the vector itself",
+    "empty-vector qPCR control",
+    "two confounds eliminated"
+   ],
+   "chips_zh": [
+    "在病媒本身上測得 LC50",
+    "空載體 qPCR 對照",
+    "排除兩個混淆因子"
+   ]
+  },
+  {
+   "kicker": "The headline gap",
+   "kicker_zh": "標題與內文的落差",
+   "title": "2026's landing page states the one thing its own results page withdraws",
+   "title_zh": "2026 年的首頁寫下了它自己的結果頁收回的那一件事",
+   "body": "The 2026 home page lists \"On-demand — Green light switches production on when the environmental sensors and forecasts decide to\" among five features of the machine, and the results page's second key result reads \"Light control — Green light switches ACCD on, and activity leads the protein by hours\". Three screens into the same page: **\"The ELISA showed no change over time.** ACCD was already present at the baseline (about 3.0 µg/mL before illumination) and measured 2.6 to 3.2 µg/mL at every time point under both colors ... indicating that the cultures produced ACCD but the amount did not rise with light\". The DNPH activity difference it falls back on has \"error bars overlapped at 3 h and 8 h\", and the explanation offered ends \"We have not tested this directly\". The reporter meant to make secretion visible failed outright: \"Despite repeated experiments, the medium remained colorless\".\n\n**The 2024 summary never does this.** Its nine items are hedged to their evidence in the sentence that makes them — \"**partially** proved the chromosome-free system\", and for the component that was never joined to the rest, \"Integration of our sticky ovitrap and recombinant biolarvicidal proteins **will be** a powerful vector control tool\". Both seasons left the chain unjoined. Only one of them put the unjoined link on the front page as a finished feature.",
+   "body_zh": "2026 年的首頁在機器的五項功能中列出「On-demand——當環境感測器與預測做出判斷時，綠光開啟生產」，而結果頁的第二條 Key results 寫的是「Light control——綠光開啟 ACCD，而活性比蛋白量早幾個小時出現」。往同一頁再走三個畫面：**「ELISA 顯示隨時間沒有變化。** ACCD 在基線就已經存在（照光前約 3.0 µg/mL），在兩種光色下的每一個時間點都量到 2.6 至 3.2 µg/mL……這表示菌液確實產生了 ACCD，但量並沒有隨光上升」。它退守的那個 DNPH 活性差異，「在 3 小時與 8 小時，誤差棒互相重疊」，而所提出的解釋結尾是「我們沒有直接檢驗過這一點」。原本要讓分泌看得見的報告子徹底失敗：「儘管反覆實驗，培養液始終無色」。\n\n**2024 年的摘要從來不這樣做。** 它那九條，在寫下它們的同一句話裡就緊貼著證據保留了空間——「**部分**證明了 chromosome-free system」；而對於從未與其他部分接起來的那個元件，寫的是「把我們的黏性產卵器與重組殺幼蟲毒蛋白整合起來，**將會**是一個強大的病媒防治工具」。兩個賽季都讓鏈條沒有接起來。但只有其中一個，把沒接起來的那一環當成完成的功能放上首頁。",
+   "chips": [
+    "front page: \"switches production on\"",
+    "results page: \"no change over time\""
+   ],
+   "chips_zh": [
+    "首頁：「綠光開啟生產」",
+    "結果頁：「隨時間沒有變化」"
+   ]
+  },
+  {
+   "kicker": "Where it does hold",
+   "kicker_zh": "它成立的地方",
+   "title": "2025 is the season the communication hypothesis actually fits, and it is the season with zero wins",
+   "title_zh": "溝通層假設真正吻合的是 2025 年，而那正是零獲獎的那一年",
+   "body": "2025 took a Top 10 place and a Gold medal, five nominations including Best Wiki, and **won nothing.** It is also the only season whose wiki still carries the iGEM template's own words. The home page headline reads \"Your iGEM Journey Begins Here! We wish you a successful and rewarding season!\", and the results page opens, above the team's own contents list, with \"Present the results of your project, along with a detailed analysis and discussion of their significance. Also outline future plans and reflections on the impact of your project.\" The home page's one big number renders as **\"The world generates 0 tons of textile waste every year\"** until a counter animation runs.\n\nThe results page carries 64 images but **restarts figure numbering in each of its six sections**, so \"Figure 3\" names four different figures on one page — \"Figure 3. Residual activity of (A) Variant 1\", \"Figure 3. The surface graph of the second high-throughput screening\", \"Figure 3. Comparison of enzymatic degradation of pure PET textiles\", \"Figure 3. Enzymatic degradation of PET from cotton-polyester blended fabrics\". And the awards page is gratitude prose with no number in it, as 2024's also is. **The presentation hypothesis survives for the trough, not for 2026.**",
+   "body_zh": "2025 年拿到 Top 10 名次與金牌、五項入圍（其中包含 Best Wiki），而**什麼都沒有拿到。** 它也是唯一一個 wiki 上還留著 iGEM 範本自己文字的賽季。首頁的標題寫著「你的 iGEM 旅程從這裡開始！祝你有一個成功而充實的賽季！」；而結果頁在團隊自己的目錄之上，開頭是「呈現你的專案結果，並附上對其意義的詳細分析與討論。也請列出未來計畫，以及對專案影響的反思。」首頁那個大數字，在計數動畫跑起來之前顯示為**「全世界每年產生 0 公噸紡織廢棄物」**。\n\n結果頁有 64 張圖，卻**在它的六個段落裡各自從 1 重新編號**，因此同一頁上「Figure 3」指的是四張不同的圖——一張是 Variant 1 的殘餘活性，一張是第二次高通量篩選的曲面圖，一張是純 PET 布料酵素降解的比較，還有一張是棉／聚酯混紡布料的 PET 酵素降解。而 awards 頁是一篇沒有任何數字的感謝文，2024 年那一頁也是。**呈現方式的假設在谷底那一年撐得住，在 2026 年撐不住。**",
+   "chips": [
+    "template text still on two pages",
+    "\"Figure 3\" names four figures",
+    "0 wins"
+   ],
+   "chips_zh": [
+    "兩頁還留著範本文字",
+    "「Figure 3」指四張圖",
+    "0 個獲獎"
+   ]
+  },
+  {
+   "kicker": "Real sample",
+   "kicker_zh": "真實樣本",
+   "title": "2024 ran a randomised household field trial, and published that the users disliked the trap",
+   "title_zh": "2024 年做了一次隨機分組的家戶實地試驗，並且公開使用者不喜歡那個捕蚊器",
+   "body": "Of 342 general-survey respondents, 84 volunteered, 58 were contactable, and 10 Taipei households were scheduled across two months from 3 August to 28 September, one week each, \"randomized into two different groups: those using only water and those that needed to add beetroot peel powder\". Returned sticky papers were sorted by species. The reporting is unflattering by choice: in one trial the paper \"caught 33 mosquitoes, but most of them were\" the wrong genus, \"only trial 12 caught 5\" *Aedes*, and on usefulness **\"only 6.7% of the users rated 5 out of 5\"** for effective and convenient. The team also states the limit plainly: \"There was no synthetic biology component involved throughout our field trial (we did not have them test our biolarvacides)\".\n\n2025's ladder is the same instinct in the lab, running from the model substrate pNPB up to commercial 35:65, 55:45 and 65:35 cotton-PET blended textiles, and reporting the reversal it found: \"the prior removal of cotton inhibited the most active enzymes\". **2026 reached real plants but not the reactor's own output** — the preparation sprayed was never assayed. Across the three seasons the thing that got further from the real target is the engineered component, not the wiki.",
+   "body_zh": "一般問卷 342 份回覆中，84 人願意參與，58 人聯絡得上，最後排定台北 10 個家戶，從 8 月 3 日到 9 月 28 日橫跨兩個月、每戶一週，「隨機分成兩組：一組只用水，另一組要加入甜菜根皮粉」。收回的黏紙按物種分類。這份報告是刻意不好看的：某一次試驗的黏紙「抓到 33 隻蚊子，但大多數是」錯的屬，「只有第 12 次試驗抓到 5 隻」*Aedes*；而在好用程度上，**「只有 6.7% 的使用者給了 5 分滿分」**，認為它有效又方便。團隊也明白寫出限制：「我們的實地試驗全程沒有涉及任何合成生物學成分（我們沒有讓他們測試殺幼蟲劑）」。\n\n2025 年那道階梯是同一種本能，只是在實驗室裡：從模型底物 pNPB 一路爬到市售 35:65、55:45 與 65:35 的棉／PET 混紡布料，並且報告了它找到的反轉：「先移除棉反而抑制了活性最強的那些酵素」。**2026 年碰到了真實植物，卻沒有碰到反應器自己的產物**——噴上去的那份製備從未被檢測活性。三個賽季下來，離真實標的越來越遠的是那個被工程化的元件，不是 wiki。",
+   "chips": [
+    "10 households, 2 months",
+    "randomised into two arms",
+    "6.7% rated it 5 of 5"
+   ],
+   "chips_zh": [
+    "10 個家戶、2 個月",
+    "隨機分成兩組",
+    "6.7% 給 5 分滿分"
+   ]
+  },
+  {
+   "kicker": "Executive layer",
+   "kicker_zh": "總覽層",
+   "title": "No season answers the award criteria one by one — and 2026 comes closest by a distance",
+   "title_zh": "沒有一個賽季逐條回答獎項標準——而 2026 年遠遠最接近",
+   "body": "The Best Wiki winners studied elsewhere in this report answer each medal and award criterion in a few sentences and deep-link the evidence. **None of the three GEMS seasons does that.** 2024's `/awards` and 2025's `/awards` are both gratitude prose and nothing else; 2026 has no awards page at all, with `/awards`, `/judging` and `/medals` all returning 404.\n\nBut 2026 publishes the nearest thing any of the three has: a `/development` page that names five stages, states the functional requirement and the evidence needed for each, and then grades them — \"Detect, Forecast & Activate — Detection and forecast met; activation waits on green light\", \"Produce — Five of six rows met\", \"Contain — All four met\", \"Protect — Three of four met\". Its results page opens with an abstract and five key results and then runs `Endpoint / Tested on / Result / State` tables marked \"Measured\" or \"Partial\". **If the executive layer is what judges reward, 2026 should have scored higher than 2024, and it did not.** Deep linking is the one gap left: the 2026 results page carries only three links to other pages in 14,762 words.",
+   "body_zh": "本報告別處研究過的 Best Wiki 得主，會用幾句話逐條回答每一項獎牌與獎項標準，並把證據以深層連結指過去。**GEMS 三個賽季都沒有這樣做。** 2024 年的 `/awards` 與 2025 年的 `/awards` 都只是感謝文，別無其他；2026 年完全沒有 awards 頁，`/awards`、`/judging` 與 `/medals` 全部回傳 404。\n\n但 2026 年發表了三者之中最接近的東西：一個 `/development` 頁，列出五個階段，逐一寫出功能要求與所需證據，然後為它們評分——偵測與預測達標、啟動仍等著綠光；生產六項達成五項；圍阻四項全數達成；保護四項達成三項。它的結果頁以摘要與五條 Key results 開場，接著是一連串 `Endpoint / Tested on / Result / State` 表格，標記為「Measured」或「Partial」。**如果評審獎勵的是總覽層，2026 年本該比 2024 年得分更高，而它沒有。** 深層連結是唯一還留著的缺口：2026 年的結果頁在 14,762 字之中，只有三個連到其他頁面的連結。",
+   "chips": [
+    "no criterion page in any season",
+    "2026: /development grades five stages",
+    "3 outbound links in 14,762 words"
+   ],
+   "chips_zh": [
+    "三年都沒有標準對照頁",
+    "2026：/development 為五階段評分",
+    "14,762 字中 3 個外連"
+   ]
+  }
+ ],
+ "table": {
+  "head": [
+   "Season",
+   "Placing and awards",
+   "Headline shape",
+   "p-values / named tests",
+   "Dispersion and replicates",
+   "Central mechanism evidenced?",
+   "Readable without scripts"
+  ],
+  "head_zh": [
+   "賽季",
+   "名次與獎項",
+   "招牌形式",
+   "p 值／檢定名稱",
+   "離散度與重複數",
+   "核心機制有證據嗎？",
+   "無腳本可讀"
+  ],
+  "rows": [
+   [
+    "**2024**",
+    "**Grand Prize**, Finalist, Top 10, Gold; 3 wins (Wiki, New Basic Part, Promotion Video), 3 nominations",
+    "**Nine** numbered achievements on /description; **no results page exists**",
+    "**1** p-value (0.0003) / **none**",
+    "`Mortality ± SE (%)`; triplicates throughout, 10 larvae per cup, 98 larvae examined",
+    "**Yes** — LC50 for three toxins on live *Aedes albopictus* larvae, with an empty-vector qPCR arm run to exclude *E. coli*",
+    "**No** — 577-byte shell, whole site in one 1.69 MB bundle"
+   ],
+   [
+    "**2025**",
+    "Top 10, Gold; **0 wins**, 5 nominations (Measurement, Model, Education, Wiki, Village)",
+    "**Thirteen** bullets under four module headings; iGEM template text still above them",
+    "**0** / **none**",
+    "Standard error named 23 times; triplicate, five replicates per RSM condition",
+    "Partly — activity shown on pNPB, then on real PET film, pure PET textile and commercial cotton-PET blends; the cotton-removal step reversed",
+    "Yes"
+   ],
+   [
+    "**2026**",
+    "Top 10, Gold, **not a Finalist**; 3 wins (Measurement, Hardware, Integrated Human Practices), 3 nominations",
+    "**Five** key results plus an abstract; /development grades five stages against pre-stated criteria",
+    "**5** / **none**",
+    "SEM; R² 0.992-0.9995; a 90% interval registered 13 days ahead; `n=1` and `n=3`",
+    "**No** — ELISA flat at 2.6-3.2 µg/mL under both colours, AmilCP medium stayed colourless, all biology from the constitutive bypass",
+    "Yes"
+   ]
+  ],
+  "rows_zh": [
+   [
+    "**2024**",
+    "**總冠軍**、決賽隊伍、Top 10、金牌；3 個獲獎（Wiki、New Basic Part、Promotion Video）、3 項入圍",
+    "/description 上**九條**編號成果；**不存在結果頁**",
+    "**1** 個 p 值（0.0003）／**無**",
+    "`Mortality ± SE (%)`；全程三重複、每杯 10 隻幼蟲、檢視 98 隻",
+    "**有**——三種毒蛋白在活的 *Aedes albopictus* 幼蟲上測得 LC50，並以空載體 qPCR 組排除 *E. coli*",
+    "**否**——577 位元組外殼，整站裝在一個 1.69 MB 套件裡"
+   ],
+   [
+    "**2025**",
+    "Top 10、金牌；**0 個獲獎**、5 項入圍（Measurement、Model、Education、Wiki、Village）",
+    "四個模組標題底下**十三條**；上方還留著 iGEM 範本文字",
+    "**0** ／**無**",
+    "二十三次寫出標準誤；三重複，RSM 每個條件五個重複",
+    "部分——先在 pNPB 上證明活性，再到真實 PET 薄膜、純 PET 布料與市售棉／PET 混紡；移除棉之後出現反轉",
+    "是"
+   ],
+   [
+    "**2026**",
+    "Top 10、金牌、**非決賽隊伍**；3 個獲獎（Measurement、Hardware、Integrated Human Practices）、3 項入圍",
+    "**五條** key results 加一段摘要；/development 以事先寫下的標準為五個階段評分",
+    "**5** ／**無**",
+    "SEM；R² 0.992-0.9995；一個提早 13 天登記的 90% 區間；`n=1` 與 `n=3`",
+    "**沒有**——ELISA 在兩種光色下都平在 2.6-3.2 µg/mL，AmilCP 的培養液始終無色，所有生物學成果來自組成型旁路",
+    "是"
+   ]
+  ]
+ },
+ "checklist": [
+  "Stop treating a Finalist slate as unprecedented for this team. GEMS won the 2024 Grand Prize, and the honest question for 2027 is what the 2024 project had, not whether the bar is reachable.",
+  "Do not spend 2027 rebuilding the wiki. By every measure taken here the 2026 site already beats the Best Wiki winner of 2024: server-rendered, five times the p-values, uniquely numbered figures, and a page that grades its own stages.",
+  "Name the target organism or material in week one and plan every central assay on it. 2024 measured LC50 on live Aedes albopictus larvae; 2026 measured the sprayed preparation on plants but never assayed the preparation.",
+  "Write the rival explanation down and run the experiment that kills it. 2024 ran an empty-vector qPCR arm specifically to rule out E. coli; nothing in 2026 plays that role for the light-gated device.",
+  "Hunt your own confounds and publish the hunt. Position bias, then colour bias, eliminated one after the other is why the 2024 attractant claim survives at p = 0.0003.",
+  "Name a statistical test. Zero named tests in three seasons means every 'significant' the team has ever written is unattributed, and this is the cheapest fix on the list.",
+  "Hold the front page to the results page. Before anything ships, check that every claim on the home page and in the key-results block is one the body of the wiki still supports three screens later.",
+  "Delete every line of iGEM template text before August. In the zero-win season it was still sitting on both the home page and the top of the results page."
+ ],
+ "checklist_zh": [
+  "不要再把決賽席位當成這支隊伍前所未有的事。GEMS 拿過 2024 年總冠軍，2027 年真正該問的是 2024 年那個專案擁有什麼，而不是這道門檻能不能跨過。",
+  "不要把 2027 年花在重做 wiki 上。依本頁採用的每一項量測，2026 年的網站已經勝過 2024 年的 Best Wiki 得主：伺服器端渲染、p 值多五倍、圖號不重複，還有一頁為自己的階段評分。",
+  "第一週就把標的生物或標的材料定下來，並且讓每一項核心試驗都做在它身上。2024 年在活的 Aedes albopictus 幼蟲上量到 LC50；2026 年把噴劑用在植物上，卻從未檢測那份噴劑。",
+  "把對手解釋寫下來，然後做掉它的那個實驗。2024 年刻意做了一組空載體 qPCR 來排除 E. coli；2026 年沒有任何東西為光控裝置扮演這個角色。",
+  "獵捕自己的混淆因子，並且把這場獵捕公開。先排除位置偏誤、再排除顏色偏誤，正是 2024 年引誘劑的主張能以 p = 0.0003 撐住的原因。",
+  "寫出統計檢定的名稱。三個賽季零個檢定名稱，意思是這支隊伍寫過的每一個「significant」都沒有依據可追，而這是清單上最便宜的一項修正。",
+  "讓首頁對結果頁負責。任何東西上線之前，確認首頁與 Key results 區塊上的每一個主張，在往下三個畫面之後，wiki 的內文仍然支持它。",
+  "八月之前把 iGEM 範本文字一行不留地刪掉。在零獲獎的那個賽季，它還同時留在首頁與結果頁的最上方。"
+ ],
+ "method": "Fetched with curl and a browser User-Agent on 20 November 2026. 2025 and 2026 are server-rendered and were read directly: https://2025.igem.wiki/gems-taiwan/ and /results, /awards, /description, /experiments, /measurement; https://2026.igem.wiki/gems-taiwan/ and /results, /development, /description, /experiments, /measurement, plus static/assets/data/site-nav.js for the page list. 2026/awards, 2026/judging and 2026/medals all return 404. The 2024 wiki is a single-page application: https://2024.igem.wiki/gems-taiwan/ returns 577 bytes and /results is a 404, so the route table and all page text were extracted from the bundle at /gems-taiwan/static/js/main.8a37e754.js (1,690,501 bytes), which has no code splitting and fetches no data at runtime, meaning the bundle contains the whole site; the browser pane was not needed. All text was html.unescape-ed before matching, because pages write p &lt; 0.0001. Named tests were matched on t-test, ANOVA, Tukey, Dunnett, Welch, Mann-Whitney, Wilcoxon and Kruskal with word boundaries, never on a bare \"t test\", since every such hit in 2026 was the ordinary word tested. Counts are floors, not totals: a test named only inside a figure image, a PDF or a collapsed panel is invisible to this method, and the 2024 figures live in 488 images on static.igem.wiki that were not read. The scopes are not identical and cannot be: 2024 has no results page, so its counts are for the whole site, which makes them a generous bound, while 2025 and 2026 are counted on /results. This is one team with one data point per season. The cohort, the judges and the project change completely every year, a Best Wiki nomination rather than a win may only mean a stronger field, and nothing here supports a causal claim about what any award was given or withheld for. Question 9, the live judging session, leaves no public record and is excluded, as it is everywhere on this tab. GEMS-Taiwan is the report author's own team and the same six questions were put to it as to the other nine teams in the cohort section.",
+ "method_zh": "2026 年 11 月 20 日以 curl 搭配瀏覽器 User-Agent 取得。2025 與 2026 年是伺服器端渲染，直接讀取：https://2025.igem.wiki/gems-taiwan/ 以及 /results、/awards、/description、/experiments、/measurement；https://2026.igem.wiki/gems-taiwan/ 以及 /results、/development、/description、/experiments、/measurement，另外取 static/assets/data/site-nav.js 來得到頁面清單。2026/awards、2026/judging 與 2026/medals 全部回傳 404。2024 年的 wiki 是一個單頁式應用程式：https://2024.igem.wiki/gems-taiwan/ 回傳 577 位元組，/results 是 404，因此路由表與所有頁面文字都是從 /gems-taiwan/static/js/main.8a37e754.js（1,690,501 位元組）這個套件中抽出來的；該套件沒有程式碼分割，執行期間也不抓取資料，意即整個網站都在套件裡，因此不需要使用瀏覽器面板。所有文字在比對前都先做過 html.unescape，因為頁面會把小於號寫成轉義字元。檢定名稱是以 t-test、ANOVA、Tukey、Dunnett、Welch、Mann-Whitney、Wilcoxon 與 Kruskal 搭配完整字詞界線來比對，絕不以單純的「t test」比對，因為 2026 年所有這類命中都是普通字 tested。這些計數是下界，不是總數：若某個檢定名稱只出現在圖片、PDF 或折疊面板裡，這個方法就看不到它；而 2024 年的圖存放在 static.igem.wiki 上的 488 個影像檔中，並未讀取。各年的範圍並不一致，而且不可能一致：2024 年沒有結果頁，因此它的計數涵蓋整站，這對它是寬鬆的上限；2025 與 2026 年則只計 /results。這是一支隊伍、每個賽季一個資料點。群體、評審與專案每一年都完全改變，Best Wiki 是入圍而非獲獎，也可能只代表當年對手更強；本頁沒有任何內容足以支撐關於「某個獎為什麼頒出或為什麼沒頒」的因果主張。第 9 題現場問答沒有留下公開紀錄，在此排除，與本分頁其他各處一致。GEMS-Taiwan 是本報告作者自己的團隊，與群體那一節的其他九支隊伍一樣，被問了同樣六個問題。"
+}
