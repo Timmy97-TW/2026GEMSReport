@@ -6,24 +6,48 @@
   "village": "",
   "wiki": "https://2026.igem.wiki/nflshs-china/",
   "projectTitle": "CroTeen",
+  "projectTitle_zh": "CroTeen",
   "tagline": "Microbial crocetin: a controllable cell-factory supplement to saffron farming, taken all the way to B2B ingredient specs",
+  "tagline_zh": "微生物產番紅花酸：一座可控的細胞工廠，作為番紅花農業的補充，而且一路做到 B2B 原料規格",
   "summary": "NFLSHS-China built a fully heterologous crocetin pathway in E. coli (idi, CrtE, CrtB, CrtI, CrtY, CrtZ upstream to zeaxanthin; CsCCD2 plus Neurospora crassa NcALD downstream to free crocetin), then re-engineered it after wet-lab failure from a two-plasmid system into a single-plasmid, two-T7-cassette construct (pET-Ds-Cro) for strain stability under scale-up. They used AlphaFold3, PrankWeb and CB-Dock2 to guide semi-rational mutagenesis of the rate-limiting CsCCD2 enzyme, with the N366G mutant giving a 1.13-fold yield increase confirmed by HPLC. The commercial side is unusually disciplined for a high-school team: a named B2B beachhead, a filed and accepted patent application on the CsCCD2 mutant, two physical MVPs with full formula tables, and an explicit separation of what is designed from what is still unvalidated. They won Best Entrepreneurship and Best Presentation in the High School section.",
+  "summary_zh": "NFLSHS-China 在 E. coli 中建出一條完全異源的番紅花酸（crocetin）途徑（上游 idi、CrtE、CrtB、CrtI、CrtY、CrtZ 做到玉米黃素；下游 CsCCD2 加上 Neurospora crassa 的 NcALD 做到游離番紅花酸），在濕實驗失敗後又把它從雙質體系統重新設計成單一質體、兩個 T7 卡匣的構築體（pET-Ds-Cro），以確保放大時的菌株穩定性。他們用 AlphaFold3、PrankWeb 與 CB-Dock2 指導限速酵素 CsCCD2 的半理性突變，其中 N366G 突變體使產量提升 1.13 倍，並經 HPLC 確認。商業那一側對高中團隊來說紀律罕見：一個具名的 B2B 灘頭堡市場、一件已提出並受理的 CsCCD2 突變體專利申請、兩個實體 MVP 與完整的配方表，以及明確區分「已設計完成」與「仍未驗證」。他們拿下高中組的 Best Entrepreneurship 與 Best Presentation。",
   "awards": [
     "Best Entrepreneurship, High School (winner)",
     "Best Presentation, High School (winner)"
   ],
   "dry": {
     "frameworks": "Lean Canvas (problem, solution, UVP, key metrics, customer segments, channels, unfair advantage, cost structure, revenue streams), TAM-SAM-SOM with an explicit refusal to take a percentage of the macro market, SWOT, a risk-assessment matrix, a stage-gated Gantt chart from 2026 to 2032, three named exit options, and Techno-Economic Analysis plus Life Cycle Assessment named as future obligations.",
+    "frameworks_zh": "精實畫布（問題、解方、UVP、關鍵指標、客群、通路、不公平優勢、成本結構、營收來源）、TAM-SAM-SOM（並明確拒絕直接從宏觀市場取一個百分比）、SWOT、一張風險評估矩陣、一張從 2026 到 2032 年的階段關卡式甘特圖、三個具名的退場選項，以及把技術經濟分析（TEA）與生命週期評估（LCA）列為未來的義務。",
     "dataviz": "Nineteen numbered entrepreneurship figures: pathway maps for the two-plasmid and single-plasmid constructs, the biomanufacturing-to-application three-stage chain, a capability-gap table, a partnership-network map with a disclaimer about which relationships are confirmed, a risk matrix, a SWOT quadrant and an SDG panel. HPLC chromatograms carry the quantitative claims.",
+    "dataviz_zh": "19 張編號的創業圖表：雙質體與單一質體構築體的途徑圖、從生物製造到應用的三段鏈、一張能力缺口表、一張附有「哪些關係已確認」聲明的合作網路圖、一張風險矩陣、一個 SWOT 四象限，以及一張 SDG 面板。量化主張則由 HPLC 層析圖承載。",
     "datascience": "HPLC quantification of crocetin as the core analytical readout; mutant screening comparing predicted variants against measured titre (N366G at 1.13x). No fermentation kinetics model or cost model with numbers.",
+    "datascience_zh": "核心的分析讀值是以 HPLC 定量番紅花酸；突變體篩選則把預測出的變異體與實測產量相比（N366G 為 1.13 倍）。沒有發酵動力學模型，也沒有帶數字的成本模型。",
     "software": "",
-    "stack": ["AlphaFold3", "PrankWeb", "CB-Dock2", "HPLC", "pET-Duet-1 backbone", "E. coli BL21(DE3)", "E. coli DH5-alpha"],
-    "techniques": ["heterologous carotenoid pathway assembly", "single-plasmid multi-cassette expression with RBS re-tuning", "semi-rational enzyme engineering from binding-pocket prediction", "site-directed mutagenesis", "vacuum freeze-drying and bead-beating extraction", "soft-capsule and essence-oil formulation"]
+    "stack": [
+      "AlphaFold3",
+      "PrankWeb",
+      "CB-Dock2",
+      "HPLC",
+      "pET-Duet-1 backbone",
+      "E. coli BL21(DE3)",
+      "E. coli DH5-alpha"
+    ],
+    "techniques": [
+      "heterologous carotenoid pathway assembly",
+      "single-plasmid multi-cassette expression with RBS re-tuning",
+      "semi-rational enzyme engineering from binding-pocket prediction",
+      "site-directed mutagenesis",
+      "vacuum freeze-drying and bead-beating extraction",
+      "soft-capsule and essence-oil formulation"
+    ]
   },
   "good": {
     "publicEngagement": "An online survey plus street interviews run 12-17 March 2026 across mixed demographics found over 60 percent of respondents had never heard of crocetin and routinely confused it with crocin, and that over 40 percent would pay only 5-10 RMB per day for a mood-soothing product. That cognitive gap triggered a dedicated education page and a Xiaohongshu (Rednote) account translating biosynthesis into public infographics. They also presented at the 10th iSCRM and the 1st Grand APiC conference, and built peer resources after hearing that team members elsewhere felt unsure their assigned role mattered.",
+    "publicEngagement_zh": "2026 年 3 月 12 至 17 日進行的線上問卷加街訪，涵蓋不同人口背景，發現超過 60% 的受訪者從沒聽過番紅花酸，而且常把它和番紅花苷（crocin）搞混；另有超過 40% 表示，一款舒緩情緒的產品他們每天只願意付 5-10 RMB。這個認知落差促成了一個專門的教育頁面，以及一個把生合成轉譯成公眾資訊圖表的小紅書（Rednote）帳號。他們也在第 10 屆 iSCRM 與第 1 屆 Grand APiC 會議上發表，並在聽說其他團隊的成員覺得自己被分配到的角色不重要之後，做了給同儕的資源。",
     "ihp": "Five explicitly staged iHP phases, each written as motivation, action and integration, with dates and named interlocutors. Phase I traced the supply chain to source: an online interview with Iranian saffron grower Ali Norouzi (17 March) produced concrete constraints (15-20 day harvest window, 1-2 g dried saffron per person per day, water shortage, currency volatility), and visits to Daofengtang Rende TCM Clinic and chain pharmacies produced a real price point of 60-90 RMB per gram and the observation that pharmacies barely stock it. Phase II is the strongest: after near-zero crocetin yield on 12 May, Dr Huang Danqiong diagnosed metabolic burden and plasmid instability and told them to collapse to a single plasmid, which they did; Prof Huang Guanqin then reviewed the single-plasmid circuit against scale-up cost on 20 June; Fapon's technical director on 22 July pushed them off blind screening onto AI-guided rational design. Phase III used Associate Professor Li Chenyang twice to kill an unstable aqueous formulation on physicochemical grounds and pick the oil and capsule routes, and a perfumer, Ms Weng, taught the actual blending process. Phase IV took the business plan to Attorney Zhang on 17 September for NMPA/FDA classification, licensing and labelling risk, which changed their claims language across the wiki and social media. This is iHP that visibly rewrote both the construct and the marketing copy.",
+    "ihp_zh": "五個明確分期的 iHP 階段，每一期都寫成動機、行動與整合三段，並附日期與具名對談者。第一期把供應鏈追到源頭：與伊朗番紅花種植者 Ali Norouzi 的線上訪談（3 月 17 日）帶回具體限制（15-20 天的採收時間窗、每人每天 1-2 g 乾番紅花、缺水、幣值波動），而走訪 Daofengtang Rende TCM Clinic 與連鎖藥局則得到每克 60-90 RMB 的真實價格點，以及一個觀察：藥局幾乎不備貨。第二期最強：在 5 月 12 日番紅花酸產量幾近於零之後，Dr Huang Danqiong 診斷出代謝負擔與質體不穩定，並要他們收斂成單一質體，他們照做；接著 Prof Huang Guanqin 在 6 月 20 日針對放大成本審視了單一質體迴路；而 Fapon 的技術總監在 7 月 22 日把他們從盲篩推向 AI 指導的理性設計。第三期兩度請教 Li Chenyang 副教授，依物理化學理由否決了一個不穩定的水性配方，並選定油劑與膠囊兩條路線；另有一位調香師 Weng 女士親自教了實際的調配流程。第四期在 9 月 17 日把營運計畫帶去找 Zhang 律師，處理 NMPA/FDA 分類、許可與標示風險，而這改變了他們在整個 wiki 與社群媒體上的訴求用語。這是一份看得見地同時改寫了構築體與行銷文案的 iHP。",
     "realWorld": "This is a real venture attempt, not a canvas exercise. The business model is specifically B2B-first: the beachhead is small-to-medium functional skincare brands and boutique cosmetic R&D labs, chosen because they have shorter decision cycles than multinationals, and the first deliverable is explicitly not a consumer product but standardised samples plus HPLC chromatograms to support a customer's own formulation prototyping. Market evidence is real but qualitative: interviews across the full chain (Iranian grower, TCM clinic and pharmacies, boutique formulators, Fapon, an iGEM-mentor founder, a lawyer), a public survey with reported percentages and a willingness-to-pay band, and a visit to Shenzhen University's fermentation facility. They refuse to multiply the roughly USD 2.0 billion TAM by a made-up share and instead say SOM must be computed from reachable R&D nodes times sample volume per test, which is the correct instinct even though they then do not finish the arithmetic. Hard assets exist: a patent application, Carotenoid Cleavage Dioxygenase 2 Mutant, Preparation Method and Application, filed and accepted, and two physical MVPs with published formula tables down to percentages (essence oil at 0.03 percent crocetin, 0.5 percent vitamin E in cold-pressed olive oil; capsule at 70 percent crocetin-olive oil, 15 percent L-theanine, 13 percent soy lecithin, 2 percent vitamin E). The regulatory path is credible and specific, naming NMPA and FDA classification, production and distribution licensing, and the prohibition on medical claims, with a consequence they actually implemented, standardising functional claims site-wide. The continuation plan is a stage-gated Gantt from 2026 lab validation through 2027 customer testing, 2028 CDMO pilot and 2029 B2B commercialisation to 2030-2032 international registration, where each gate has named prerequisite resources and a numeric-in-principle pass condition, plus three exit routes (trade sale to BASF, Givaudan or DSM-Firmenich; technology licensing with royalties; VC/PE buyout). What is genuinely missing is the money: there are no unit economics, no cost of goods, no price per gram, no funding raised, no registered entity and no incubator place, and the partnership map carries its own honest disclaimer that everything except university support and paid service relationships is a prospective contact rather than a formal agreement. They also list, in their own words, the data still absent before industrialisation, including yield, purity, recovery, batch consistency and pilot-scale mutant validation. Even the downside is faced squarely, including the possibility that fermentation's carbon footprint exceeds agriculture's and that cheap biomanufacturing could destroy saffron growers' livelihoods, for which they propose market segmentation that leaves the high-end plant premium alone.",
+    "realWorld_zh": "這是一次真正的創業嘗試，不是畫布作業。商業模式明確以 B2B 為先：灘頭堡是中小型功能性保養品牌與精品化妝品研發實驗室，選它們的理由是決策週期比跨國企業短；而第一項交付成果明確不是消費品，而是標準化樣品加上 HPLC 層析圖，用來支持客戶自己做配方原型。市場證據是真實但偏質性的：橫跨整條鏈的訪談（伊朗種植者、中醫診所與藥局、精品配方商、Fapon、一位擔任 iGEM 導師的創辦人、一位律師）、一份有回報百分比與願付價格區間的公眾問卷，以及一次深圳大學發酵設施的參訪。他們拒絕把約 20 億美元的 TAM 乘上一個憑空想像的佔比，而是說 SOM 必須由「可觸及的研發節點數」乘上「每次測試的樣品量」算出來——這個直覺是對的，儘管他們後來並沒有把算式做完。硬資產確實存在：一件已提出並受理的專利申請「類胡蘿蔔素裂解雙加氧酶 2 突變體、製備方法與應用」，以及兩個實體 MVP，配方表公開到百分比（精華油為 0.03% 番紅花酸、0.5% 維生素 E，基底為冷壓橄欖油；膠囊為 70% 番紅花酸橄欖油、15% L-茶胺酸、13% 大豆卵磷脂、2% 維生素 E）。法規路徑可信且具體，點名 NMPA 與 FDA 的分類、生產與配銷許可，以及禁止醫療宣稱，而且他們真的落實了一項後果：把全站的功能性訴求用語統一標準化。後續計畫是一張階段關卡式甘特圖，從 2026 年的實驗驗證，經 2027 年的客戶測試、2028 年的 CDMO 試量產、2029 年的 B2B 商業化，到 2030-2032 年的國際註冊，每一道關卡都有具名的前置資源與原則上可量化的通過條件，另有三條退場路線（出售給 BASF、Givaudan 或 DSM-Firmenich；技術授權收權利金；VC/PE 買下）。真正缺的是錢：沒有單位經濟、沒有銷貨成本、沒有每克售價、沒有募到資金、沒有登記的法人實體、也沒有進駐育成中心；而合作關係地圖自己也誠實聲明，除了大學的支持與付費的服務關係之外，其餘都只是潛在接觸，而非正式協議。他們也用自己的話列出工業化之前仍缺的資料，包括產量、純度、回收率、批次一致性，以及試量產規模的突變體驗證。連不利的一面也正面處理，包括發酵的碳足跡可能超過農業的可能性，以及便宜的生物製造可能摧毀番紅花種植者的生計——對此他們提出市場分區，把高端的植物來源溢價市場留著不動。",
     "partners": [
       "Fapon (biotech company; technical director and business development; AI platform exposure and commercialisation advice)",
       "Shenzhen University (Prof. Wang Chaogang, Prof. Huang Guanqin, Prof. Chen Weizhao; fermentation facility access)",
@@ -40,25 +64,30 @@
     {
       "url": "https://static.igem.wiki/teams/6439/wiki/entrepreneurship8.avif",
       "caption": "Patent application for the CsCCD2 mutant, filed and accepted, shown on the entrepreneurship page as the project's first hard IP asset",
+      "caption_zh": "CsCCD2 突變體的專利申請，已提出並受理，放在創業頁上作為這個專案第一項實質的智財資產",
       "credit": "Team NFLSHS-CHINA, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6439/wiki/entrepreneurship10.avif",
       "caption": "Stage-gated development plan from 2026 laboratory validation through 2029 B2B commercialisation to 2030-2032 international expansion",
+      "caption_zh": "階段關卡式開發計畫，從 2026 年實驗室驗證，經 2029 年 B2B 商業化，到 2030-2032 年的國際擴張",
       "credit": "Team NFLSHS-CHINA, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6439/wiki/entrepreneurship9.avif",
       "caption": "Business exit strategy: trade sale to an ingredient major, technology licensing with royalties, or VC/PE buyout",
+      "caption_zh": "商業退場策略：出售給大型原料公司、技術授權收權利金，或由 VC/PE 買下",
       "credit": "Team NFLSHS-CHINA, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6439/wiki/entrepreneurship17v2.avif",
       "caption": "SWOT analysis supporting the B2B-first ingredient strategy",
+      "caption_zh": "支持 B2B 優先原料策略的 SWOT 分析",
       "credit": "Team NFLSHS-CHINA, iGEM 2026 wiki"
     }
   ],
   "gemsTakeaway": "Copy their honesty architecture: a 'Current Validation Status' block that splits completed designs from data still required, and a partnership map annotated to say which relationships are confirmed and which are merely prospective contacts. Pair it with their stage-gate habit, where each phase of the roadmap names its prerequisite resources and the single pass condition that unlocks the next phase, so a project cannot drift forward on enthusiasm.",
+  "gemsTakeaway_zh": "照抄他們的誠實架構：一個「目前驗證狀態」區塊，把已完成的設計與仍需補的資料分開；以及一張合作關係地圖，標註哪些關係已確認、哪些只是潛在接觸。再搭配他們的階段關卡習慣——路線圖的每個階段都寫明所需的前置資源，以及解鎖下一階段的那一個通過條件——這樣專案就無法僅憑熱情往前漂。",
   "sources": [
     "https://2026.igem.wiki/nflshs-china/",
     "https://2026.igem.wiki/nflshs-china/entrepreneurship/",

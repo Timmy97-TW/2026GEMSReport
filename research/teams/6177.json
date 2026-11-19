@@ -6,16 +6,23 @@
   "village": "Therapeutics / health (inferred from project scope; no village stated on the wiki)",
   "wiki": "https://2026.igem.wiki/sehs/",
   "projectTitle": "FusionDrive - an anti-TIGIT-IL-2v fusion protein for gastric cancer immunotherapy",
+  "projectTitle_zh": "FusionDrive：用於胃癌免疫治療的 anti-TIGIT-IL-2v 融合蛋白",
   "tagline": "Release the immune brake and bias the accelerator, in one molecule",
+  "tagline_zh": "以單一分子鬆開免疫煞車，並把油門偏向正確的細胞族群",
   "summary": "Starting from the high gastric-cancer burden in their home province of Shandong, SEHS designed FusionDrive, a fusion protein joining an anti-TIGIT antibody to an engineered IL-2 variant through a G4S linker. The antibody Fab blocks CD155-TIGIT inhibitory signalling to reverse T-cell exhaustion, while the Fc-fused IL-2v carries a low-alpha/high-beta modification that reduces CD25 binding and so biases stimulation away from regulatory T cells. Across five DBTL cycles the team built the antibody, the wild-type IL-2 fusion and the variant fusion in CHO cells and compared them by SDS-PAGE, TIGIT-binding ELISA (EC50 0.6317 nM for the antibody, 1.335 nM after IL-2 fusion) and flow cytometry for CD25 and pSTAT5. Because the iGEM high-school White List left Jurkat as the only available T-cell line, they used PHA induction to create CD25-high and CD25-low populations as a stand-in for the Treg receptor phenotype.",
+  "summary_zh": "從家鄉山東省沉重的胃癌負擔出發，SEHS 設計了 FusionDrive，一種以 G4S 連接子把 anti-TIGIT 抗體接上經改造 IL-2 變體的融合蛋白。抗體的 Fab 段阻斷 CD155-TIGIT 抑制訊號以逆轉 T 細胞耗竭；與 Fc 融合的 IL-2v 則帶有 low-alpha/high-beta 改造，降低對 CD25 的結合，從而讓刺激偏離調節型 T 細胞。在五個 DBTL 循環中，團隊於 CHO 細胞內製作了抗體、野生型 IL-2 融合蛋白與變體融合蛋白，並以 SDS-PAGE、TIGIT 結合 ELISA（抗體 EC50 為 0.6317 nM，融合 IL-2 後為 1.335 nM）以及針對 CD25 與 pSTAT5 的流式細胞術加以比較。由於 iGEM 高中組的 White List 只留下 Jurkat 這一株可用的 T 細胞株，他們改以 PHA 誘導製造 CD25 高表現與低表現族群，作為 Treg 受體表現型的替代。",
   "awards": [
     "Best Alternative Platform nominee (High School)"
   ],
   "dry": {
     "frameworks": "No computational model of any kind: there is no Model or Software page on the site, and no docking, structure prediction or kinetic simulation anywhere in the project. The design reasoning is literature-driven (lowalpha/highbeta IL-2 variants, G4S linker flexibility) rather than simulated. The hardware page does include a comparative literature review of three published protein-detection instruments used to specify a device.",
+    "frameworks_zh": "完全沒有任何形式的計算模型：網站上沒有 Model 或 Software 頁面，整個專案也找不到分子嵌合、結構預測或動力學模擬。設計論證是文獻驅動（low-alpha/high-beta IL-2 變體、G4S 連接子的柔性）而非模擬驅動。硬體頁面倒是收錄了三款已發表蛋白質檢測儀器的比較性文獻回顧，用來訂出裝置規格。",
     "dataviz": "Clean, interpretable assay figures: concentration-response ELISA binding curves for all three molecular formats with fitted EC50 values, flow-cytometry panels reporting both positive-cell percentage and mean fluorescence intensity, PHA induction screening results, and pSTAT5 response split across CD25-defined subpopulations. Figure captions state what is being compared.",
+    "dataviz_zh": "檢測圖表乾淨且可解讀：三種分子形式的 ELISA 濃度反應結合曲線並附擬合出的 EC50 值、同時報告陽性細胞百分比與平均螢光強度的流式細胞術圖組、PHA 誘導篩選結果，以及依 CD25 定義的次族群分別呈現的 pSTAT5 反應。圖說明確寫出所比較的對象。",
     "datascience": "Dose-response curve fitting to extract EC50 is the real quantitative work, and it is done properly - including diagnosing why the first ELISA saturated (the TIGIT-Fc coating antigen was being detected by the anti-human IgG1-HRP secondary) and re-running with His-tagged TIGIT. Flow-cytometry gating is used to separate populations and compare signalling within each, with both %positive and MFI reported rather than one summary number. No inferential statistics (no ANOVA, no stated replicate counts or error bars in the text), so the analysis is descriptive rather than statistical.",
+    "datascience_zh": "以劑量反應曲線擬合取得 EC50 是真正的定量工作，而且做得正確，包括診斷出第一次 ELISA 為何飽和（作為塗覆抗原的 TIGIT-Fc 被 anti-human IgG1-HRP 二級抗體偵測到），並改用帶 His 標籤的 TIGIT 重跑。流式細胞術的 gating 用來分離族群並比較各族群內的訊號傳遞，且同時報告陽性百分比與 MFI，而不是只給一個摘要數字。沒有推論統計（沒有 ANOVA，文中也沒有說明重複次數或誤差線），因此分析屬描述性而非統計性。",
     "software": "None.",
+    "software_zh": "無。",
     "stack": [
       "TIGIT-binding ELISA with EC50 curve fitting",
       "flow cytometry (CD25, pSTAT5; %positive and MFI)",
@@ -34,8 +41,11 @@
   },
   "good": {
     "publicEngagement": "Modest and mostly instrumental to the Human Practices work rather than a programme in its own right. There is an online questionnaire with 131 respondents (concerns clustered on efficacy, long-term side effects and cost, plus a stated appetite for disease knowledge), school outreach including a session with 15 final-year high-school students with a post-activity feedback survey, and a dual-use forum organised with two Shandong University academics after the iGEM Safety and Security Committee raised dual-use analysis. The Education page exists but is empty.",
+    "publicEngagement_zh": "規模不大，而且多半是為整合式人類實踐工作服務，而非獨立成章的計畫。內容包括一份 131 人回覆的線上問卷（疑慮集中在療效、長期副作用與費用，並表達想了解疾病知識的意願）、一場與 15 位高三學生進行並附活動後回饋調查的校園推廣，以及在 iGEM Safety and Security Committee 提出兩用性分析要求後，與兩位山東大學學者合辦的兩用性論壇。Education 頁面存在，但是空的。",
     "ihp": "Genuinely project-shaping, organised around four questions and a stakeholder table that pairs each input with the team's response and its outcome status. The pivot is documented honestly: the team began assuming alcohol consumption meant liver cancer, and oncologist Dr Meng Min redirected them to gastric cancer, pointing out that because gastric cancer is predominantly East Asian it receives less targeted-drug investment than globally prevalent cancers. Professor Yang Zhe's warning about excessive immune activation reframed the bifunctional design and set 'advanced gastric cancer, combination therapy' as the research context. Antibody engineer Professor Liu Zhifang's point that binding must be re-measured after adding modules is directly why TIGIT binding was tested separately for all three formats. A WuXi AppTec expert (anonymised as Dr Z) pushed them to distinguish a change in response bias from a change in overall activity, and reviewed their questionnaire wording. A patient's family member (Ms Wang) shifted the evaluation goal toward completing treatment rather than efficacy alone. The Safety and Security Committee exchange is what selected CHO cells as the chassis.",
+    "ihp_zh": "確實形塑了專案，圍繞四個問題與一張利害關係人表格展開，表中把每一項輸入與團隊的回應及其結果狀態配對。轉向的過程被誠實記錄：團隊起初假設飲酒意味著肝癌，腫瘤科醫師 Dr Meng Min 把他們導向胃癌，並指出胃癌以東亞為主，因此相較於全球普遍的癌症，得到的標靶藥物投資較少。Professor Yang Zhe 關於免疫過度活化的警告重新框定了雙功能設計，並把「晚期胃癌、合併療法」設為研究情境。抗體工程專家 Professor Liu Zhifang 指出加上模組後必須重新量測結合力，這正是三種形式都分別測試 TIGIT 結合的直接原因。一位 WuXi AppTec 的專家（匿名為 Dr Z）促使他們區分反應偏向的改變與整體活性的改變，並審閱了他們的問卷用語。一位病患家屬（Ms Wang）把評估目標從單看療效轉向能否完成治療。與 Safety and Security Committee 的往來，則是選定 CHO 細胞作為宿主細胞的原因。",
     "realWorld": "The Alternative Platform page is the real deliverable and the most transferable thing here: a documented mammalian expression and functional-evaluation workflow built entirely inside the 2025-onward iGEM high-school White List, which bans Check-in and Animal Use forms. CHO cells produce the molecules, Jurkat cells measure the response, and the team shows how to translate a tumour-immunology question into something testable with only a whitelisted cell line - including the PHA/CD25 trick that substitutes a receptor phenotype for an unavailable cell type. Contribution also covers the fusion-protein workflow, the modular architecture, documented assay interference, and a compact organoid-chip detection device prototype (sample chamber, constant-temperature heating, illumination, image acquisition, control system) specified as a low-cost alternative to a microplate reader. The business plan covers staged financing and technology licensing.",
+    "realWorld_zh": "Alternative Platform 頁面才是真正的交付成果，也是這裡最可移轉的東西：一套完全建立在 2025 年起生效的 iGEM 高中組 White List 之內的哺乳動物細胞表現與功能評估流程，而該清單禁止 Check-in 與 Animal Use 表單。CHO 細胞負責生產分子，Jurkat 細胞負責量測反應，團隊並示範了如何只用清單允許的細胞株，把一個腫瘤免疫學問題轉譯成可檢驗的實驗，包括用 PHA/CD25 的手法以受體表現型替代一株取用不到的細胞類型。貢獻還涵蓋融合蛋白流程、模組化架構、記錄下來的檢測干擾，以及一台精簡的類器官晶片檢測裝置原型（樣品室、恆溫加熱、照明、影像擷取、控制系統），其規格定位為微量盤判讀儀的低成本替代方案。商業計畫涵蓋分階段募資與技術授權。",
     "partners": [
       "Dr Meng Min, oncologist",
       "Professor Yang Zhe (tumour immunology)",
@@ -51,25 +61,30 @@
     {
       "url": "https://static.igem.wiki/teams/6177/wiki/description/fig-03.avif",
       "caption": "From design to initial validation: the five engineering cycles taking FusionDrive from anti-TIGIT antibody to wild-type IL-2 fusion to the low-alpha/high-beta IL-2 variant fusion.",
+      "caption_zh": "從設計到初步驗證：五個工程循環把 FusionDrive 從 anti-TIGIT 抗體推進到野生型 IL-2 融合蛋白，再到 low-alpha/high-beta IL-2 變體融合蛋白。",
       "credit": "Team SEHS, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6177/wiki/alternative-platform/fig-04.avif",
       "caption": "TIGIT-binding ELISA concentration-response curves for the three molecular formats, the dataset from which the team fitted EC50 values of 0.6317 nM (antibody) and 1.335 nM (IL-2 fusion).",
+      "caption_zh": "三種分子形式的 TIGIT 結合 ELISA 濃度反應曲線，團隊即由這組資料擬合出 0.6317 nM（抗體）與 1.335 nM（IL-2 融合蛋白）的 EC50 值。",
       "credit": "Team SEHS, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6177/wiki/alternative-platform/fig-08.avif",
       "caption": "pSTAT5 responses across CD25-defined Jurkat populations, the readout built to test the low-alpha design using only a whitelisted cell line.",
+      "caption_zh": "依 CD25 定義的 Jurkat 族群中的 pSTAT5 反應，這是為了只用清單允許的細胞株來檢驗 low-alpha 設計而建立的讀值。",
       "credit": "Team SEHS, iGEM 2026 wiki"
     },
     {
       "url": "https://static.igem.wiki/teams/6177/wiki/alternative-platform/fig-01.avif",
       "caption": "Overview of the FusionDrive mammalian cell expression and functional evaluation platform, built entirely within the iGEM high-school White List.",
+      "caption_zh": "FusionDrive 哺乳動物細胞表現與功能評估平台總覽，完全建立在 iGEM 高中組 White List 之內。",
       "credit": "Team SEHS, iGEM 2026 wiki"
     }
   ],
   "gemsTakeaway": "SEHS is a wet-lab-first project whose dry lab is thin but not decorative: EC50 curve fitting and subpopulation-resolved flow-cytometry analysis are real quantitative work and well within high-school reach, yet an antibody-cytokine fusion project with no structure prediction, no linker modelling and no docking is leaving free analysis on the table. The limiting factor is clearly mentorship rather than tooling or compute - the team had access to CHO culture and a flow cytometer, which is far rarer than a free AlphaFold or HDOCK run, so someone simply never pointed them at the computational side.",
+  "gemsTakeaway_zh": "SEHS 是一個以濕實驗為主的專案，乾實驗雖然薄弱卻不是裝飾：EC50 曲線擬合與分族群解析的流式細胞術分析都是扎實的定量工作，也完全在高中生的能力範圍內；然而一個抗體與細胞激素融合的專案若完全沒有結構預測、沒有連接子建模、也沒有分子嵌合，等於把現成可做的分析留在桌上沒撿。限制因素顯然是指導而非工具或算力：團隊能用到 CHO 細胞培養與流式細胞儀，這比免費跑一次 AlphaFold 或 HDOCK 稀有得多，只是從來沒有人把他們指向計算這一側。",
   "sources": [
     "https://2026.igem.wiki/sehs/",
     "https://2026.igem.wiki/sehs/description",

@@ -44,6 +44,7 @@
       "items": [
         "**Put every analysis in version control.** One GEMS Research GitHub organisation, one repository per project, with the raw data, the notebook and the figure-generating script in the same place. If a figure cannot be regenerated from the repository, it does not count as a result.",
         "**Write down the measurement protocols.** Calibration standards, units, replicate counts, how uncertainty was computed. The 2026 Best Measurement teams all did this; it is the cheapest credibility a dry lab can buy.",
+        "**Tag the provenance of every number.** The most copyable device in the whole 2026 field: TU Delft labels every cell of its decision matrix Factual, Inferred, Estimated or Speculative, with a legend saying the tag records the evidence and not the judgement; GEMS-Taiwan's own dose ledger runs a rail that turns from green to amber exactly where measurement stops and modelling begins. Make it the house format for every table and figure. It costs a column and it is the fastest way to be believed.",
         "**Standardise the environment.** One `environment.yml` or `requirements.txt` per project, Python 3.12+, pinned versions. A student should be able to clone and run in under ten minutes.",
         "**Archive the 2026 ReLEAF dry lab properly** — the OD600 signal processing, the optogenetic circuit model, the hardware firmware — as the first entry in the institutional record.",
         "**Write the one-page biosecurity and ordering policy.** The US National Policy for Nucleic Acid Synthesis Screening (November 2026) now ties federal funding to buying synthetic DNA only from certified providers that screen orders of 50+ nucleotides. Mirror it: certified suppliers only, a documented internal review of any sequence design, an explicit scope statement excluding pathogen and toxin sequences, signed by every student before their first order. It costs an afternoon and it is the first thing a serious partner asks about."
@@ -51,6 +52,7 @@
       "items_zh": [
         "**把所有分析放進版本控制。** 一個 GEMS Research GitHub organisation，一個專案一個 repository，原始資料、notebook 與產生圖表的腳本放在同一處。若一張圖無法從 repository 重新產生，它就不算結果。",
         "**寫下量測流程。** 校正標準品、單位、重複次數、不確定度如何計算。2026 年所有最佳量測獎團隊都做到了這點；這是乾實驗室能買到最便宜的可信度。",
+        "**為每一個數字標註來源。** 這是整個 2026 年最值得照抄的裝置：TU Delft 在決策矩陣的每一格標上 Factual、Inferred、Estimated 或 Speculative，並附圖例說明「標籤記錄的是證據，不是判斷」；GEMS-Taiwan 自己的劑量帳本則有一條軌道，正好在量測結束、模擬開始之處由綠轉琥珀。把它訂為所有表格與圖的統一格式。它只花一個欄位，卻是最快讓人相信你的方法。",
         "**統一環境。** 每個專案一份 `environment.yml` 或 `requirements.txt`，Python 3.12 以上，版本鎖定。學生應該能在十分鐘內 clone 下來就跑起來。",
         "**妥善歸檔 2026 ReLEAF 的乾實驗室成果** —— OD600 訊號處理、光遺傳電路模型、硬體韌體 —— 作為機構紀錄的第一筆。",
         "**寫下一頁的生物安全與訂購政策。** 美國《核酸合成篩查國家政策》（2026 年 11 月）已將聯邦經費與「只向通過認證、且會篩查 50 個核苷酸以上訂單的供應商購買合成 DNA」綁在一起。比照辦理：僅限認證供應商、任何序列設計都要有書面內部審查、明確排除病原與毒素序列，並由每位學生在第一次下單前簽署。這只需要一個下午，而且是認真的合作對象第一個會問的事。"
@@ -68,17 +70,19 @@
       "items": [
         "**Track A — dynamical systems.** ODE models of genetic circuits, parameter fitting to the team's own data, sensitivity analysis, identifiability. Tools: Python with SciPy and lmfit, Tellurium/COPASI for the SBML side. Deliverable: a circuit model fitted to real GEMS time-course data, with confidence intervals on every parameter.",
         "**Track B — structural and sequence modelling.** Structure prediction is now free infrastructure: the open models (Boltz-2, Chai-1, OpenFold3, ColabFold) match or beat the gated flagship, so folding a protein is a commodity step, not a project. Put one shared GPU box or a modest cloud budget behind an internal queue, make \"fold it, then read the confidence metrics\" compulsory in every project, and teach the hard part — knowing when pLDDT and PAE are lying to you. Deliverable: a designed or selected variant with a documented computational rationale, taken to the bench.",
+        "**Teach the four controls, and make them compulsory.** This is where the 71%-against-40% finding becomes a syllabus. Split calibration from validation before fitting anything. Cluster near-duplicate sequences and split whole clusters across folds, so a model cannot memorise a near-copy. Run a label-shuffle control that must collapse to chance. Run an ablation that strips the information you claim to be using. Eton-College-UK did all four at high-school level with logistic regression and a scoring matrix; the controls, not the model, are what made it credible.",
         "**Teach uncertainty before teaching models.** Error propagation, replicate design, what a fit actually claims. Most student models fail here, not at the mathematics.",
         "**Run a weekly dry-lab clinic.** One hour, somebody presents a figure, everyone else attacks it. This is how modelling taste transmits between cohorts."
       ],
       "items_zh": [
         "**軌道 A —— 動力系統。** 基因電路的 ODE 模型、以自身資料擬合參數、敏感度分析、可辨識性。工具：Python 搭配 SciPy 與 lmfit，SBML 端使用 Tellurium/COPASI。產出：一個以 GEMS 真實時間序列資料擬合的電路模型，每個參數都附信賴區間。",
         "**軌道 B —— 結構與序列建模。** 結構預測現在已是免費的基礎設施：開源模型（Boltz-2、Chai-1、OpenFold3、ColabFold）已可匹敵甚至超越封閉的旗艦模型，因此「把蛋白質折出來」是一個標準步驟，而不是一個專案。配置一台共用 GPU 主機或一筆適度的雲端預算，架一個內部排程佇列，規定每個專案都必須「先折、再讀信心指標」，並教真正困難的部分——判斷 pLDDT 與 PAE 什麼時候在騙你。產出：一個經過設計或篩選的變體，附上完整的運算理由，並實際進到實驗檯。",
+        "**教那四項對照，並列為必做。** 這就是「71% 對 40%」這個發現落地成課綱的地方。在擬合任何東西之前先把校正組與驗證組分開。把近似重複的序列分群，並讓整群落在同一個 fold，使模型無法記住近似副本。跑標籤洗牌對照，其表現必須塌回隨機水準。跑一個消融測試，剝除你宣稱正在使用的那項資訊。Eton-College-UK 在高中階段用 logistic regression 與計分矩陣就做完了這四項；讓結果可信的是那些對照，不是模型。",
         "**先教不確定度，再教模型。** 誤差傳遞、重複設計、一次擬合究竟主張了什麼。多數學生模型敗在這裡，而不是數學。",
         "**每週一次乾實驗室診療會。** 一小時，一個人報一張圖，其他人負責挑戰它。建模的品味就是這樣在屆與屆之間傳下去的。"
       ],
-      "outcome": "Two or three students who can independently build, fit and defend a model — and who can teach the next two or three.",
-      "outcome_zh": "有兩三位學生能獨立建立、擬合並為自己的模型辯護——並且能教會下兩三位。"
+      "outcome": "Two or three students who can independently build, fit and defend a model with its controls — and who can teach the next two or three.",
+      "outcome_zh": "有兩三位學生能獨立建立、擬合模型並連同對照一起為它辯護——而且能教會下兩三位。"
     },
     {
       "title": "Phase 3 · Ship one tool the outside world uses",
@@ -117,12 +121,16 @@
       "lede_zh": "機構地位來自於：對那些不欠你任何東西的人仍然有用。",
       "items": [
         "**Run a dry-lab school for Taiwanese iGEM and high-school teams.** Modelling, measurement, reproducibility. Teaching forces the material to become transmissible, and it builds the network that later supplies collaborators.",
+        "**Approach the three Taiwanese teams the analysis identified by name.** NTHU Taiwan (team 6416, Hsinchu) is a separate NTHU entry running engineered *Bacillus subtilis* in a moving-bed reactor — the closest technical match to GEMS on the island, and the natural partner for a joint *B. subtilis* measurement standard. CCU-Taiwan (6408, Chiayi) worked on rice, the same crop as ReLEAF, so a shared Taiwan rice-stress dataset with a published benchmark is a one-season project. Labi-Taiwan (6511) won the peer-voted iGEMers Prize and is the obvious co-teacher for a Taiwan high-school dry-lab school.",
+        "**Start a collaboration page, because GEMS does not have one.** The Taiwan analysis found GEMS-Taiwan appears on no other Taiwanese team's collaboration page and has none of its own, while NYCU-Taiwan's meet-up on 27 July drew 53 people from five teams. Being findable is a prerequisite for everything else in this phase.",
         "**Publish.** A methods paper, a preprint, or a well-documented dataset. One citable artefact per year changes how every later conversation starts.",
         "**Keep a standing partnership with a university lab and a non-academic stakeholder** — a farm, a clinic, a municipal body. The stakeholder relationship is what makes human practices real rather than performed, and it is the thing competition teams cannot build in nine months.",
         "**Maintain the trend watch.** This report should be regenerated at least twice a year; the academic and industry tabs are built to be re-run."
       ],
       "items_zh": [
         "**為台灣的 iGEM 與高中團隊辦一所乾實驗室學校。** 建模、量測、可重現性。教學會逼迫內容變得可傳遞，也建立起日後提供合作者的人脈網絡。",
+        "**直接聯繫分析點名的三支台灣團隊。** NTHU Taiwan（隊伍 6416，新竹）是清大另一支獨立隊伍，在移動床反應器中培養工程化的*枯草桿菌*——全島與 GEMS 技術上最接近的一支，也是共同建立 *B. subtilis* 量測標準的天然夥伴。CCU-Taiwan（6408，嘉義）做的是水稻，與 ReLEAF 同一作物，因此「共享台灣稻作逆境資料集並公開基準」是一季之內可完成的專案。Labi-Taiwan（6511）拿下同儕票選的 iGEMers Prize，是共同開辦台灣高中乾實驗室學校最明顯的人選。",
+        "**開一個 collaboration 頁面，因為 GEMS 根本沒有。** 台灣分析發現 GEMS-Taiwan 沒有出現在任何其他台灣團隊的合作頁面上，自己也沒有一個；而 NYCU-Taiwan 在 7 月 27 日的聚會吸引了來自五支隊伍的 53 人。能被找到，是這個階段其他每一件事的前提。",
         "**發表。** 一篇方法論文、一份預印本，或一套文件完整的資料集。每年一個可被引用的產物，會改變此後每一次對話的起點。",
         "**與一間大學實驗室和一個非學術利害關係人維持長期夥伴關係** —— 一座農場、一間診所、一個地方機關。利害關係人關係是讓人類實踐成為真實而非表演的關鍵，也是競賽團隊在九個月內建立不起來的東西。",
         "**持續追蹤趨勢。** 這份報告每年至少重新生成兩次；學術與產業頁就是為了可重跑而設計的。"
