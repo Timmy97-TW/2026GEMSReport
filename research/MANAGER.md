@@ -211,3 +211,19 @@ Two consequences, both now handled:
 
 Two agents caught their own errors and said so unprompted — one removed a Cyrillic fragment it had typed
 into a Chinese field, one re-added the keys it lost. That is the behaviour to keep asking for.
+
+### Character checks: two false positives, already investigated
+A naive scan for Simplified characters and non-Latin scripts flags two things across the repo. Both are fine,
+so do not "fix" them:
+- **算法** — all 19 occurrences sit inside **演算法**, which is correct Taiwan usage. The substring match is
+  the bug, not the text.
+- **β** — one occurrence, in scientific notation (beta-2 microglobulin). Greek letters belong in this text.
+
+The checks worth keeping are the Cyrillic/Greek-run scan (which caught a genuine Cyrillic fragment a
+translator had typed into a Chinese field) and the latin-inside-CJK scan (which caught an English word that
+slipped into a Chinese roadmap item). Both of those now come back clean.
+
+### Translation state at the end of this stretch
+106 team files, 98 fully translated, 0 partial, 8 outstanding and all assigned to running agents
+(6345 6422 6426 6450 6463 6475 6479 6511). All 11 analyses and both trend files are fully translated,
+tables and all. `python3 build.py` prints the live count and names anything incomplete.
