@@ -973,3 +973,57 @@ and therefore close to circular, with GCGS and HongKong-HS having no model page 
 non-podium teams publish nothing usable on attributions** (HangzhouFourteenAP's is the unedited template;
 GCGS, GHCIS and HongKong-HS have none; HKSSC's points off-wiki; HFI's is an empty iframe) while both
 finalists disclosed heavily and neither was punished.
+
+## Session 5 (from 05:47, 20 Nov 2026) — picking up the two stopped analyses
+
+Opened on a clean tree: 28 insight blocks, all bilingual, both audits silent, everything through
+`262ff52` pushed. The scratchpad survived, so both stopped analysts' cached API data was still on disk.
+
+### Step 3 of the handover: the `others7` reconciliation was already done
+
+`others7.json` (132 KB, keys `teams` / `pattern` / `_method_note`) is present and was already reconciled at
+the end of session 4 — see "The cross-check corrected the published answer twice" above. Both corrections
+(the Registry `description`-versus-documentation mix-up, and the collapse of the "one legible claim" thesis)
+are live on the tab. Nothing further to reconcile; no third disagreement was found.
+
+### A structural discovery that changes how village choice should be analysed
+
+Looking for GEMS's own village (it is **Biomanufacturing**, not Agriculture — 49 teams, 23 of them
+high-school, the most crowded high-school field of any village) turned up something the earlier scripts had
+stepped around rather than noticed:
+
+**In the high-school section, village awards are not given per village.** The thirteen villages collapse into
+**four award groups**, and iGEM's API records them as **four separate award objects that all carry the title
+"Best Village Project"**, with `type: "special"` — *not* `type: "village"`. The thirteen `type == "village"`
+objects contain **zero** high-school teams; they are undergrad and overgrad only. Each of the four groups
+gives exactly 5 citations (1 winner + 4 nominees), so there are 20 high-school village citations in total.
+
+Two traps in that one sentence, both now recorded:
+- Four distinct award objects share the exact string "Best Village Project". A `title ==` dict lookup
+  silently collapses them to one. Iterate; do not key.
+- `a6.py`/`a8.py` excluded "Best Village Project" from the special-award set, which is right for those
+  analyses but meant the high-school village economics had never been measured at all.
+
+The four groups, high-school entrants verified to partition the 147 exactly:
+
+| Group | HS entrants | Citations | Odds | Winner |
+|---|---|---|---|---|
+| Climate Crisis / Conservation / Bioremediation | 28 (0 + 7 + 21) | 5 | 1 in 5.6 | Lambert-GA |
+| Agriculture / Food & Nutrition / Fashion & Cosmetics / Art & Design | **48** (17 + 17 + 14 + 0) | 5 | **1 in 9.6** | HongKong-JSS |
+| Infectious Diseases / Therapeutics / Diagnostics / Oncology | 40 (1 + 20 + 13 + 6) | 5 | 1 in 8.0 | HFI |
+| Space / Foundational Advance / Software & AI / Biomanufacturing | 31 (4 + 2 + 2 + 23) | 5 | 1 in 6.2 | HangzhouFourteenAP (GEMS-Taiwan nominated) |
+
+So a high-school team picking a village is really picking one of four groups, and **a village's apparent
+thinness can be irrelevant once it is pooled**: Software & AI has 2 high-school entrants but sits inside a
+31-team group. GEMS's group was the second most generous of the four and GEMS was a nominee in it. Climate
+Crisis and Art & Design had **no accepted high-school teams at all**, so a per-village rate for those two is
+undefined rather than zero.
+
+This correction was sent to the base-rates analyst mid-run rather than discovered after publishing.
+
+### Verified section-level figures, for reuse without refetching
+
+423 accepted (147 high-school, 201 undergrad, 75 overgrad) · 145 decorated (34.3%) · 59 outright winners
+(13.9%) · 393 hold a medal (92.9%) · 249 hold a medal and no award · **29 have neither** · exactly 1 is
+decorated without a medal · 104 Gold medals won no award · **7 Finalists across all sections, 2 of them
+high-school** · high-school medals Gold 63, Silver 68, Bronze 4 (135 of 147).
