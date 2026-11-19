@@ -1,0 +1,113 @@
+{
+  "team": "UZurich",
+  "id": "6269",
+  "section": "Overgrad",
+  "country": "Switzerland",
+  "village": "Conservation",
+  "wiki": "https://2026.igem.wiki/uzurich/",
+  "projectTitle": "SeisMIC",
+  "tagline": "Stabilising Alpine slopes from within: engineered bacteria precipitate calcite between soil grains, with four linked models deciding where it is worth doing.",
+  "summary": "SeisMIC adapts microbially induced calcite precipitation (MICP) to Alpine slope stabilisation, where heavy rainfall is now 26% more frequent and 12% more intense and concrete anchoring is often out of proportion to the risk. Sporosarcina pasteurii hydrolyses urea so calcium carbonate crystallises around soil particles, filling pores and binding loose grains, and the team worked on the four limits that stop MICP transferring to the Alps: uneven cementation, scaling across large slopes, cold sensitivity and ammonium production. The distinctive contribution is the dry lab, which is a geospatial and economic decision system rather than a protein pipeline: an infinite-slope Factor of Safety model run across all of Switzerland on daily historical rainfall, a PHREEQC reactive transport model of calcite formation down a soil column, a QGIS MICP feasibility map, and an economic model using Flow-Py runout simulation to put a Swiss franc figure on damage avoided. The models are linked to each other and were reshaped by named expert feedback, which is what earned the Best Model nomination.",
+  "awards": [
+    "Overgrad Top 10",
+    "Best Model nominee",
+    "Best Presentation nominee",
+    "Best Wiki nominee",
+    "Best Conservation Project nominee"
+  ],
+  "dry": {
+    "frameworks": "Four models, explicitly chained so each one's output is the next one's input. (1) Slope Stability: an infinite-slope model computing the Factor of Safety from effective cohesion, effective friction angle, slope angle, soil unit weight and the pore-pressure ratio, split into a temporal model that drives soil saturation and pore-water pressure from daily historical rainfall through a bucket hydrology scheme and is validated against recorded landslide events, and a spatial model that runs the same calculation Switzerland-wide to find unstable pixels and, crucially, to output the additional effective cohesion MICP would have to supply - a direct, quantitative target the wet lab can be measured against. Root cohesion is modelled as a parallel natural source, with scenarios for bare soil, roots, MICP and roots plus MICP; the modelled unstable share falls from 82.8% to 28.9% under combined roots and MICP, stabilising 65.04% of initially unstable pixels. (2) Reactive Transport: an adaptation of the Razbani et al. model in PHREEQC, simulating a 52 cm sand column as ten stacked cells with bacteria pre-attached to grains and a urea/CaCl2 cementation solution pumped from below over ~52 hours, using Michaelis-Menten ureolysis kinetics (Rmax, Km, initial reactive surface area, biomass decay time td) and calcite precipitation rate constants k1 = 1.55e-6 and k2 = 0.501 mol m-2 s-1, reproducing both continuous-flow and stop-flow experiments; run with the wet lab's own recipe (1.015 M urea, 2 M CaCl2) it showed more than 2 M CaCl2 brings no benefit, and it predicts 77-79% of lab calcite still forms at 4 C, identifying acidic pH rather than temperature as the bigger obstacle. (3) MICP Feasibility: a binary suitability classification in QGIS combining public Swiss soil and terrain layers on stone content, water storage capacity, permeability and slope, giving 67.06% of Switzerland as technically feasible, then overlaid on landslide hazard and on the stability output to produce a MICP Injection Map - 67.32% of modelled unstable pixels fall inside feasible areas. (4) Economic: unstable cells (FoS <= 1) become release areas fed into the open-source Flow-Py gravitational mass-flow model, producing a runout envelope of 425.2 km2 from 568,627 release cells in the mpp = 1.0 scenario (62.0% of canton Glarus, 348.7-425.2 km2 across tested hydrological conditions); historical landslide frequencies and damage costs then give expected annual damage per asset class (roads, buildings, railways, forests, agricultural land), and tracing the highest-damage locations back to their contributing release areas says where treatment would pay. Combined roots and MICP lower estimated annual damage from CHF 583,000 to CHF 351,000, a 39.8% reduction. A directed evolution strand runs alongside, aimed at a non-GMO second strain.",
+    "dataviz": "The modelling work is presented as a prototype decision tool, not a figure dump. An Integrated Dashboard connects slope stability, MICP feasibility, rainfall and potential damage into a single interactive surface for deployment planning, and the team is unusually honest about its state: it currently covers slope stability and selected treatment scenarios and does not yet integrate all four models, so it is labelled a prototype of the intended end-user tool. The model landing page leads with four headline numbers (-53.9% unstable area, 67.06% of Switzerland feasible, 67.32% overlap, -39.8% annual damage, 77-79% calcite at 4 C) each linked to the model that produced it, with arrow navigation between models. Supporting visuals are decision-oriented rather than decorative: unstable share and p95 pore-pressure by canton (which ties instability to the cantonal offices that actually do prevention planning), seasonal cohesion requirements, a required-cohesion histogram, sensitivity analysis, an agreement map against the SilvaProtect reference dataset, and per-asset risk maps for roads, railways, buildings, forest and agricultural land. Derivations are offered as downloadable PDFs (infinite-slope FoS, critical saturation, bucket model) so the maths can be checked independently. An Awards page states plainly which awards the team is claiming and summarises the evidence for each.",
+    "datascience": "Their strongest data-science moment is a debugging story they chose to publish. The adapted PHREEQC model initially would not run at all, failing with 'Model failed to converge for initial solution 0'; raising iteration counts, changing tolerances and step size and improving initial guesses did nothing, and removing the calcite-equilibrium constraint made it converge to a physically absurd pH of 1.5. They computed the charge balance at fixed pH from 1 to 12, found it never reached zero, inspected the species and discovered ammonium was almost entirely in its neutral form (5.67e-2 M Amm against 8e-11 M AmmH+) because the reaction AmmH+ = Amm + H+ in the phreeqc.dat database carried no equilibrium constant, so PHREEQC set it to 0 instead of about -9.25; they fixed it with the parameters of the database's own NH4+ = NH3 + H+ reaction. The stated lesson - always check the values a model produces, not just the absence of errors - is the reusable part. The rest of the pipeline is integration work: joining national rainfall records, landslide inventories, digital elevation models, land cover and soil property rasters into one framework, validating predicted instability against recorded events and against SilvaProtect, running sensitivity analyses, and carrying each model's limitations on its own page.",
+    "software": "Code is published: the rainfall-triggered slope instability and MICP modelling at https://github.com/Alizzie/RainfallTriggeredSlopeInstabilityMICP, with the team repository at https://gitlab.igem.org/2026/uzurich. They did not build a standalone released application; the deliverables are the four validated models, the nationwide MICP Feasibility Map and MICP Injection Map (which they note did not previously exist for Switzerland in any public form), and the Integrated Dashboard prototype on the wiki. They also published a measurement framework for MICP experiments - biological screening, calcium measurement, powder recovery and soil analysis as several independent readouts rather than one, with assay limitations and validation checks documented so future teams can interpret MICP experiments more reliably.",
+    "stack": [
+      "PHREEQC (+ patched phreeqc.dat)",
+      "QGIS",
+      "Flow-Py",
+      "Python",
+      "R",
+      "Swiss digital elevation and soil/terrain rasters",
+      "MeteoSwiss rainfall records and climate scenarios",
+      "Swiss landslide inventories",
+      "SilvaProtect (validation reference)",
+      "GitHub / iGEM GitLab",
+      "interactive web dashboard"
+    ],
+    "techniques": [
+      "infinite-slope Mohr-Coulomb Factor of Safety",
+      "bucket hydrology model for antecedent soil moisture",
+      "pore-pressure ratio scenario sweeps",
+      "back-solving for required additional cohesion as a wet-lab target",
+      "root cohesion versus engineered cohesion scenario comparison",
+      "Michaelis-Menten ureolysis kinetics in a 1D reactive transport column",
+      "charge-balance diagnosis of a thermodynamic database error",
+      "sensitivity analysis to identify controlling parameters",
+      "binary multi-criteria raster suitability classification",
+      "map overlay to find instability-feasibility intersections",
+      "gravitational mass-flow runout simulation",
+      "expected annual damage (EAD) estimation per asset class",
+      "tracing damage back to contributing release areas",
+      "validation against an independent national hazard dataset"
+    ]
+  },
+  "good": {
+    "publicEngagement": "Education was run as a two-way exchange explicitly tied to the values the team set in its Human Practices work - transparency, honesty, communication and collaboration - and they state that those became practical criteria for how they communicated rather than abstract principles. Social media carried three recurring formats: 'What even is...?' deep dives into a single concept, 'Word of the Week' introducing one piece of terminology at a time without burying readers in project detail, and 'Myth vs. Fact' separating common assumptions about bacteria, biotechnology and climate change from what the evidence supports. In-person work included an Activity Fair stand and workshops, plus ZurichLernt, and across every activity they tried to distinguish three things for their audience: what is already known, what their own project demonstrated, and what they could not investigate within the time and resources available. They brought in a strategic communication professional to test their assumptions about how to build a campaign, since nobody on the team had communications training.",
+    "ihp": "The interview process itself is the method: prepare (write down why this person, what you hope to learn, which assumptions you want tested, and how their input could change SeisMIC), interview with enough flexibility to follow unexpected leads, then reflect back in an interview log on what actually changed, what challenged an assumption, what new concern it raised and who to speak to next. Stakeholders were mapped on a power-interest matrix used to decide how to approach each one rather than to rank importance, and ELSI was treated as a connected framework rather than three boxes. Concrete changes: a researcher told them to start from the environment rather than the organism rather than defaulting to E. coli because it is well characterised. A pore-scale fluid dynamics researcher listed the parameters no MICP model should omit (temperature, pH, oxygen, ion and calcite concentrations, urea hydrolysis, water saturation) and recommended sensitivity analysis to find which dominate - so they dropped a machine learning idea rather than spending the summer discovering it could not be trained, moved the reactive transport work onto established software instead of a custom implementation, and added the sensitivity analysis. Dr. Joaquin Jimenez-Martinez's feedback changed how they treat temperature, bacterial survival and pH. Stakeholders and their PIs repeatedly asking how much vegetation already contributes is why root cohesion was added to the stability model. A microbiologist corrected their premise directly - ammonia release makes soil more basic, not acidic - sending them back to locate the real problem, and suggested reading pH change around colonies with plate indicators; another suggested nitrification inhibitors to stop nitrate forming. An expert pointed out that innovative biological methods usually fail on political opposition rather than feasibility, technology or financing, and suggested they also consider protected natural areas. They dropped CLIMADA after Prof. David Bresch's guidance and reframed the economic benefit as fewer slope failures. Residents below the slopes said what they value most is the surrounding nature, which made the ecological cost of the treatment something to investigate rather than assume; their hesitation about engineered bacteria eased once biomineralisation was explained as a natural process, which told the team their job is explaining the mechanism rather than defending the idea.",
+    "realWorld": "The business case is built on a gap they verified rather than assumed: many at-risk Swiss slopes get no protection because concrete and anchors are disproportionate to the risk, and two cantons, Lucerne and Glarus, independently described exactly such slopes. Interviews with Marco Peyer (Risktec) and Prof. David Bresch (ETH Zurich) moved them off insurers and onto the real decision chain - the canton decides and pays, an engineering office proposes the method, the federal government co-finances - so the customer is cantonal natural-hazard offices and their consulting engineers. The offer is deliberately a bundle: a site-specific treatment delivered together with the modelling that shows how much damage it avoids, because as Ulrich Kaiser pointed out, prevention has a visibility problem - a stabilised slope produces no event, no headline and no credit, while the cost is immediate and concrete, so proving avoided damage has to be part of the product. Interest is reported honestly as interest, not sales: one canton offered to connect them with a suitable slope and another asked to follow the damage model, with the team stating plainly that neither is a customer yet. The roadmap is about five to eight years from lab to a first slope, with Swiss approval staged as lab, then field trial, then market. Risks are named with mitigations: urea run-off requires rinsing (one company converts the run-off to fertiliser) and they are investigating a lower-urea route while stating nothing is settled at field scale; containment is handled by a kill switch plus a second strain adapted by directed evolution without genetic engineering.",
+    "partners": [
+      "Prof. David Bresch, ETH Zurich (climate risk / economic framing)",
+      "Dr. Joaquin Jimenez-Martinez (pore-scale fluid dynamics in MICP)",
+      "Marco Peyer, Risktec (natural hazard consulting)",
+      "Ulrich Kaiser (economics of prevention)",
+      "Canton of Lucerne (natural hazard office)",
+      "Canton of Glarus (natural hazard office)",
+      "University of Zurich (UZH MNF, ULF, Science Alumni)",
+      "Galbiati Stiftung",
+      "Alpine residents and farming communities below at-risk slopes"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6269/wiki/stability-model/pipeline-overview.avif",
+      "caption": "The slope stability modelling pipeline, which joins rainfall records, landslide inventories, terrain and soil data into an infinite-slope Factor of Safety calculation and outputs the extra cohesion MICP would need to supply.",
+      "credit": "Team UZurich, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6269/wiki/stability-model/stability-interactive.avif",
+      "caption": "The interactive slope stability view behind the Integrated Dashboard prototype, which the team presents as a planning tool for deciding where MICP treatment is worth investigating rather than as a finished product.",
+      "credit": "Team UZurich, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6269/wiki/economic-model/risk-map-rounded.avif",
+      "caption": "Economic risk map for canton Glarus: Flow-Py runout from unstable release cells combined with historical landslide frequency and damage costs to give expected annual damage by location.",
+      "credit": "Team UZurich, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6269/wiki/human-practices/education/activity-fair/af1.avif",
+      "caption": "The team at their Activity Fair stand, part of an education programme run as two-way exchange and explicitly tied to the transparency and honesty values set in their Human Practices work.",
+      "credit": "Team UZurich, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Steal their interview discipline, which needs no equipment: before every expert conversation write down why this person, what you hope to learn, which assumption you want tested and how their answer could change the project, then log afterwards what actually changed and who to talk to next - that single loop is what let them kill an untrainable machine learning idea in one conversation instead of losing a summer to it. Their published PHREEQC debugging story is the second lesson worth printing on the wall: a model that runs without errors can still be wrong, so check the values, not just the exit code.",
+  "sources": [
+    "https://2026.igem.wiki/uzurich/",
+    "https://2026.igem.wiki/uzurich/description/",
+    "https://2026.igem.wiki/uzurich/model/",
+    "https://2026.igem.wiki/uzurich/stability-model/",
+    "https://2026.igem.wiki/uzurich/reactive-transport-model/",
+    "https://2026.igem.wiki/uzurich/injection-model/",
+    "https://2026.igem.wiki/uzurich/economic-model/",
+    "https://2026.igem.wiki/uzurich/methods/",
+    "https://2026.igem.wiki/uzurich/directed-evolution/",
+    "https://2026.igem.wiki/uzurich/measurement/",
+    "https://2026.igem.wiki/uzurich/engineering/",
+    "https://2026.igem.wiki/uzurich/results/",
+    "https://2026.igem.wiki/uzurich/human-practices/",
+    "https://2026.igem.wiki/uzurich/human-practices-overview/",
+    "https://2026.igem.wiki/uzurich/education/",
+    "https://2026.igem.wiki/uzurich/entrepreneurship/",
+    "https://2026.igem.wiki/uzurich/sustainability/",
+    "https://2026.igem.wiki/uzurich/contribution/",
+    "https://2026.igem.wiki/uzurich/awards/"
+  ]
+}

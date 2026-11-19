@@ -1,0 +1,89 @@
+{
+  "team": "SDU-Denmark",
+  "id": "6294",
+  "section": "Overgrad",
+  "country": "Denmark",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/sdu-denmark/",
+  "projectTitle": "Shewanode",
+  "tagline": "A microbial fuel cell built from scratch, and a measurement workflow for the outer membrane vesicles that carry its electrons.",
+  "summary": "SDU-Denmark engineered Shewanella oneidensis MR-1 to improve extracellular electron transfer and built the hardware to measure it: first a two-chamber microbial fuel cell as proof of concept, then a single-chamber design with an air-breathing cathode and carbon felt electrode that became the team's primary electrochemical measurement system. The measurement work centres on the outer membrane vesicles that carry the MtrCAB cytochrome complex, asking how to isolate them reproducibly and how to quantify their size, morphology, charge and concentration. Each question is answered with complementary methods, each with stated calibration, controls, replicates and limitations. Along the way the team documented a working anolyte recipe, which the literature generally leaves as 'Shewanella basal medium', and released it for other teams.",
+  "awards": [
+    "Best Measurement nominee (Overgraduate)",
+    "Best Alternative Platform nominee (Overgraduate)"
+  ],
+  "dry": {
+    "frameworks": "The measurement page is structured by goal rather than by technique: each goal states the question, the method, the calibration, the controls and replicates, the results, a discussion and an explicit limitations section. Complementary quantitative and qualitative methods are paired deliberately (preparative size exclusion chromatography with quantitative BCA; qualitative helium ion and scanning electron microscopy with quantitative DLS and zeta potential), and the team states where a method cannot support a claim.",
+    "dataviz": "BCA calibration curve of blank-corrected absorbance against BSA concentration; per-fraction protein concentration plots with lysed and unlysed series and a zoomed inset; DLS size-distribution-by-intensity panels with correlation functions for each biological replicate; full Zetasizer statistics tables reporting mean, standard deviation, relative standard deviation, minimum and maximum, and including the instrument's own intercept and fit error; current-versus-time traces from the single-chamber MFC and the H-cell; heme concentration bar plots showing both means and individual replicate points.",
+    "datascience": "Vesicle isolation is verified rather than assumed. A BCA assay against a BSA dilution series at 562 nm gives the standard curve, and each size-exclusion fraction is then measured twice, once untreated and once lysed with Triton X-100 for 10 minutes on ice, with an isolation-buffer-plus-Triton control confirming the detergent itself does not shift absorbance. The lysed fractions read 100 to 200 ug/mL against lower unlysed values, which is the argument that intact vesicles are present and only open on lysis; fractions above 2 mg/mL are explicitly flagged as exceeding the assay's upper linear range and excluded from interpretation. Morphology is imaged by helium ion microscopy and SEM and quantified in Fiji (wildtype n = 29 particles, mean Feret diameter 288.3 +/- 97.9 nm, circularity 0.837; mutant n = 18, 300.6 +/- 69.6 nm, circularity 0.767), and the team then states that without a buffer-only blank slide taken through the same fixation and drying the structures cannot be definitively identified as vesicles, and that some sharp-edged objects may be crystallised solvent. Size, concentration and charge come from a Malvern Zetasizer Advance Ultra Red Label with every instrument setting published (material refractive index 1.45, absorption 0.001, 25 C, dispersant RI 1.33, viscosity 0.887, dielectric constant 78.5), three biological replicates from different colonies, and technical replicates where the instrument allowed. Main-peak diameters cluster at 130 to 171 nm with z-averages of 87 to 147 nm, polydispersity indices up to 0.39 are read as genuine heterogeneity, and the team reasons through the candidate causes (subpopulations, artefacts, residual protein) using the BCA separation as evidence against one of them. Zeta potential is reported as wildtype -5.532 +/- 0.5955 mV versus MtrCAB-overexpressing mutant -4.671 +/- 0.3632 mV, the direction predicted by the hypothesis but a smaller change than expected, which the team attributes to PBS ions partially neutralising surface charge and proposes repeating in lower-ionic-strength solvents. The reported limitations are unusually candid: BSA is acknowledged as an imperfect standard for a mixed vesicle proteome; DLS is noted as sensitive to dust and aggregates, blind to morphology, and dependent on analysis models the team could not inspect because only data reports were produced; and technical replicates missing from some samples are identified as a possible artificial source of the observed subpopulations. Electrochemistry is logged as a voltage drop across a 100 ohm resistor on a PicoLog 1216, with the first current rise after about two days reported as indicative only because the experiment ran without biological replicates. The heme assay uses a standard curve to convert absorbance to micromolar concentration, with two biological replicates whose individual points are plotted alongside the means and the explicit statement that no standardised protocol exists for this application so the method would need further validation.",
+    "software": "An Arduino-based voltage logger was built for the two-chamber MFC as a low-cost alternative to dedicated logging equipment; the single-chamber system was logged on a PicoLog 1216. A hardware parts list is published for download, together with the anolyte recipe and standard operating procedures for each measurement method.",
+    "stack": [
+      "Malvern Zetasizer Advance Ultra Red Label (DLS and zeta potential)",
+      "Helium ion microscopy",
+      "Scanning electron microscopy",
+      "Fiji / ImageJ particle analysis",
+      "Pierce-style BCA assay",
+      "IZON qEVoriginal 35 nm size exclusion columns",
+      "PicoLog 1216 data logger",
+      "Arduino voltage logger",
+      "Carbon felt / carbon weave electrodes",
+      "BioRender"
+    ],
+    "techniques": [
+      "BSA standard curve with blank correction",
+      "Lysed versus unlysed paired fraction measurement",
+      "Detergent-only control",
+      "Explicit upper-linear-range exclusion",
+      "Three biological replicates from independent colonies",
+      "Published instrument settings for reproducibility",
+      "Polydispersity index as a heterogeneity readout",
+      "Zeta potential with conductivity reported alongside",
+      "Feret diameter and circularity from image analysis",
+      "Per-goal limitations sections",
+      "Voltage across a known resistor for current measurement"
+    ]
+  },
+  "good": {
+    "publicEngagement": "",
+    "ihp": "Human Practices is the largest single page on the wiki and is credited with changing the project's direction. Stakeholder discussion moved the target away from large-scale energy production toward reliability of low-power generation, which reframed the application space around environmental monitoring sensors, decentralised low-power supply, wastewater treatment with simultaneous energy recovery, and biosensor-style monitoring of marine, agricultural and remote infrastructure.",
+    "realWorld": "The application page sets out five pathways with explicit preconditions rather than claims: low-power generation for sensors triggered by a pollutant; decentralised continuous supply, conditional on storage; a battery alternative justified by the environmental cost of lithium, cobalt and nickel extraction; wastewater treatment, which would require redesigning the cell so water can flow through; and monitoring circuits where an interruption produces a signal. The team states that stability, output and maintenance all need assessment before any of these is feasible, and that the right application depends on matching the cell's capability to a specific device's energy requirement.",
+    "partners": [
+      "IZON Science (qEV columns)",
+      "University of Southern Denmark microscopy facilities",
+      "Novo Nordisk Fonden",
+      "BioRender",
+      "MathWorks"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6294/wiki/wetlab/calibration-curve-bca.avif",
+      "caption": "Calibration curve for the bicinchoninic acid assay: blank-corrected absorbance at 562 nm against a dilution series of bovine serum albumin, used to convert fraction absorbances into protein concentration.",
+      "credit": "Team SDU-Denmark, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6294/wiki/subpages/hardware/tc-mfc-prototype.avif",
+      "caption": "The two-chamber microbial fuel cell prototype assembled in the laboratory from two 50 mL falcon tubes, an inverted U-tube salt bridge and a hand-matted carbon weave electrode. It served as proof of concept before the team moved to a single-chamber air-breathing design.",
+      "credit": "Team SDU-Denmark, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6294/wiki/wetlab/him.avif",
+      "caption": "Helium ion microscopy of isolated vesicles from Shewanella oneidensis MR-1 wildtype and the MtrCAB-overexpressing mutant. Fiji analysis gave mean Feret diameters of 288 and 301 nm; the team notes that without a buffer-only blank slide taken through the same drying procedure these structures cannot be definitively called vesicles.",
+      "credit": "Team SDU-Denmark, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6294/wiki/wetlab/wetlab-results-figure7-current-scmfc.svg",
+      "caption": "Current from the single-chamber microbial fuel cell, recorded as the voltage drop across a 100 ohm resistor on a PicoLog 1216. The team reports the two-day rise as indicative only, because the experiment ran without biological replicates.",
+      "credit": "Team SDU-Denmark, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Publish the instrument settings, not just the result: the refractive index, absorption, viscosity and dielectric constant used for a DLS run, the resistor value behind a current measurement, and the statistics the instrument reports about its own fit quality. A number without its acquisition settings cannot be reproduced or contested.",
+  "sources": [
+    "https://2026.igem.wiki/sdu-denmark/measurement",
+    "https://2026.igem.wiki/sdu-denmark/hardware",
+    "https://2026.igem.wiki/sdu-denmark/results",
+    "https://2026.igem.wiki/sdu-denmark/description",
+    "https://2026.igem.wiki/sdu-denmark/application",
+    "https://2026.igem.wiki/sdu-denmark/alternative-platform"
+  ]
+}

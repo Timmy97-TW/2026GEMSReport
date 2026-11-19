@@ -1,0 +1,119 @@
+{
+  "team": "TU Delft",
+  "id": "6110",
+  "section": "Overgrad",
+  "country": "Netherlands",
+  "village": "Biomanufacturing",
+  "wiki": "https://2026.igem.wiki/tu-delft/",
+  "projectTitle": "MOSAIC",
+  "tagline": "A modular elastin-like polypeptide coating platform that lets one implant surface be tuned to the tissue, and the patient, it sits in.",
+  "summary": "MOSAIC is a modular implant coating built from elastin-like polypeptides (ELPs) that can be swapped part by part so a single platform serves many implants and tissues. The team's insight is that an implant coating has to match the stiffness and biochemistry of its target tissue: tissue stiffness spans 0.1 kPa in brain to over 1 MPa in bone, while titanium is around 100 GPa, so a one-size coating gives cells the wrong signal. They built five linked models to steer design before the lab work - an XGBoost predictor of ELP transition temperature, coarse-grained molecular dynamics of the surface-tethered hydrogel, an omics pipeline turning transcriptomic and proteomic atlases into tissue-specific coating recipes, a SuperPro Designer scale-up of ELP manufacturing, and a life-cycle assessment of that process - and they ran Value Sensitive Design across 13 interviews so stakeholders shaped the construct while it could still change. It took the Overgrad Grand Prize along with Best Wiki, Best Integrated Human Practices and Best Biomanufacturing Project.",
+  "awards": [
+    "GRAND PRIZE WINNER (Overgrad)",
+    "Overgrad Top 10",
+    "Best Wiki winner (Overgrad)",
+    "Best Integrated Human Practices winner (Overgrad)",
+    "Best Biomanufacturing Project winner",
+    "Best Model nominee",
+    "Best Presentation nominee",
+    "Best Entrepreneurship nominee"
+  ],
+  "dry": {
+    "frameworks": "Five models, each tied to a design question. (1) LCST prediction: an XGBoost regressor trained on 230 literature-curated entries predicting ELP transition temperature from sequence composition, length, charge, hydrophobicity and solution conditions, with monotonic constraints forcing predicted LCST to fall as NaCl, ELP concentration or hydrophobicity rise, 216-combination exhaustive grid search over six hyperparameters under composition-grouped 5-fold CV, and a held-out set of 43 entries covering only 10 unique sequences; MAE 3.17 C, beating a linear fit of the Meyer-Chilkoti empirical relation, a 5-nearest-neighbour model and a mean baseline. (2) Molecular dynamics: coarse-grained CALVADOS 0.8.0 with CALVADOS 2 residue parameters in OpenMM 8.2 (one bead per residue, implicit solvent, Debye-Huckel screening, 293.15 K, 10 fs timestep, Langevin thermostat) simulating 16-chain surface-tethered ELP brushes on DelftBlue, the TU Delft supercomputer - chosen explicitly because ELPs are intrinsically disordered and AlphaFold is of limited use. Three MD modules resolve hydrogel stiffness (inter-chain lysine contacts as a proxy), crosslink placement (bridges versus wasted intra-chain loops) and RGD motif solvent accessibility, analysed by response surface modelling and per-lysine regression. (3) Omics-guided motif selection: an enhancement-based test across Human Protein Atlas bulk RNA-seq, the Proteome Atlas DIA-MS intensities, Tabula Sapiens single-cell via CZ CELLxGENE, and GEO datasets (GSE104782, GSE169396, GSE147287, GSE114007), annotated by matrisome, integrin and protease category, with per-dataset thresholds (HPA: >4x the mean of other tissues above 1 nTPM, plus stricter floors of 10 nTPM for ECM ligands and 3 nTPM for integrins) producing an ECM adhesion domain, an integrin target and a targetable protease per implant tissue. (4) Large-scale production: a pilot bioprocess in SuperPro Designer with three consecutive reactors reaching 5.11 g/L ELP, sized to coat 117 million and 22 million continuous glucose monitors, with full catabolic, anabolic and glycerol metabolic balances, downstream ITC/salting-out, homogenisation, flocculation, ion exchange and lyophilisation. (5) Environmental impact: an ISO 14040-style LCA of that flowsheet expressed in eco-costs across 14 categories (acidification, water stress, biodiversity and land-use change, carbon footprint, freshwater ecotoxicity, eutrophication, human toxicity cancer and non-cancer, landfill, metals scarcity, particulate matter, photochemical ozone, plastic soup, resource use), framed against the ESPR and the fact that wearables emit 1.1-6.1 kg CO2e per device.",
+    "dataviz": "Best Wiki winner, and the mechanics are worth copying: the wiki is authored in Markdown with structured components (Image with named figure references, FigNum auto-numbering, Collapsable deep-dive blocks, Reference by DOI) and it publishes a machine-readable mirror - every page is served as plain .md at /tu-delft/<page>.md with an llms.txt index, so the whole wiki is readable without JavaScript. The MOSAIC Designer ships as a live four-step in-browser app (annotate, codon-shuffle, swap, assemble-and-export). The clearest single visual argument is a pair of dot plots of the same six-VPGVG protein: one codon per amino acid leaves 190 repeated 8 nt stretches as diagonal stripes, the scrambled spelling leaves 3. The scale-up model is presented as an interactive flowsheet where clicking any equipment unit opens its specifications and stream details, and the entrepreneurship page carries a BOM Sankey, a company-analysis matrix and a CGM signal/lag model.",
+    "datascience": "Their data engineering is as careful as the modelling. For LCST they searched 86 candidate sources (71 papers or reviews, 15 patents) and hand-extracted sequence, transition temperature, ELP-to-buffer concentration, buffer type, pH and added NaCl; where values existed only as published figures they built their own browser-based LCST Extractor that calibrates axes against tick marks, lets the user trace points along a curve, smooths with LOESS and takes the transition temperature from the steepest change in absorbance - a reproducible digitisation step instead of visual estimation. They treat two rows as the same ELP when amino acid composition matches and keep all rows of one ELP in the same fold, which is an explicit leakage guard, and they document the limitation that composition-only features cannot distinguish block from alternating arrangements of the same residues. The omics pipeline is the other half: it converts public transcriptomic and proteomic atlases into concrete, orderable sequence recipes per tissue, with documented fallback motifs when no tissue signature resolves.",
+    "software": "Four tools on iGEM GitLab. MOSAIC ELP Designer (https://gitlab.igem.org/2026/software/tu-delft/mosaic-elp-designer) solves the problem that repetitive ELP genes are near-impossible to synthesise: it annotates a pasted protein into parts and linkers, codon-scrambles the parts using a De Bruijn-window repeat check (default k = 3 codons, repeats counted from 6 to 18 nt, homopolymer rule on, BsaI/NdeI/BseRI/BamHI/XbaI excluded on both strands), designs compatible Golden Gate cut sites in the locked linkers so every new part combination assembles with the same overhangs, checks synthesisability, and exports order-ready library sequences; it runs as a web app at https://2026.igem.wiki/tu-delft/designer. LCST Prediction (https://gitlab.igem.org/2026/software/tu-delft/lcst-prediction) is a Python pipeline with clean_data.ipynb, features.py, train_model.py, test_model.py, run_pipeline.py and predict.py, and bundles the LCST Extractor digitiser under tools/curve_extract. Molecular Dynamics Simulator (https://gitlab.igem.org/2026/software/tu-delft/molecular-dynamics-simulator) wraps the CALVADOS/OpenMM brush setup and per-module analysis. Tissue-Specific ELP Design (https://gitlab.igem.org/2026/software/tu-delft/tissue-specific-elp-design) is the omics pipeline. Data deposited at doi:10.5281/zenodo.23532676.",
+    "stack": [
+      "XGBoost",
+      "scikit-learn",
+      "Python / Jupyter",
+      "CALVADOS 0.8.0 (CALVADOS 2 parameters)",
+      "OpenMM 8.2",
+      "DelftBlue HPC",
+      "SuperPro Designer",
+      "Idemat / eco-costs LCA",
+      "Human Protein Atlas",
+      "Proteome Atlas (DIA-MS)",
+      "Tabula Sapiens via CZ CELLxGENE Census",
+      "NCBI GEO",
+      "De Bruijn-graph codon scrambling",
+      "Golden Gate / MoClo assembly design",
+      "LOESS smoothing",
+      "Markdown + component-based wiki with llms.txt",
+      "QCM-D (MVP validation)",
+      "iGEM GitLab",
+      "Zenodo"
+    ],
+    "techniques": [
+      "monotonic feature constraints encoding known physics into a tree model",
+      "composition-grouped cross-validation as a leakage guard",
+      "exhaustive grid search with 5-fold CV on the training split only",
+      "benchmarking against a published empirical equation, kNN and a mean baseline",
+      "coarse-grained MD of intrinsically disordered proteins",
+      "response surface modelling and per-lysine regression on MD trajectories",
+      "bridge-versus-loop crosslink partition analysis",
+      "solvent-accessible-surface-area motif accessibility",
+      "enhancement-based tissue-specificity testing across four omics resolutions",
+      "techno-economic process simulation with full metabolic balances",
+      "ISO 14040 life-cycle assessment in single-indicator eco-costs",
+      "figure digitisation with axis calibration and LOESS",
+      "repeat-aware codon optimisation for synthesisable repetitive genes"
+    ]
+  },
+  "good": {
+    "publicEngagement": "Outreach was built as two-way exchange rather than broadcast, and the recurring artefact is the DNA bracelet: visitors translate a DNA sequence to RNA to protein, each protein becoming a differently coloured bead, so they leave with both the concept and the object. They ran it at the Weekend of Science on the TU Delft campus in The Hague (part of a national programme of 2,000 activities in one weekend), at Neighbours' Day in the district where team members live using beads donated by a local artist, and alongside a codon wheel and a 'building blocks' horse-race game. They put a pond scoop next to a microscope and taught children to focus it, letting curiosity do the teaching for the younger visitors who found the implant problem itself uninteresting. Delft Dialogue brought the Human Practices co-lead, team lead and outreach manager on to discuss the technology's implications for medicine. They also hosted a PhD student from the Daan Brinks Lab for a cloning knowledge exchange and met other iGEM teams, noting specifically what they learned from Brussels' bees and Wageningen's PFAS project.",
+    "ihp": "Best IHP winner, and the structure is the reason. They used Value Sensitive Design in three explicit passes - conceptual (who MOSAIC affects), empirical (13 semi-structured interviews plus literature) and technical (values translated into design requirements) - adapted the Rathenau Institute's iGEM Guide to the Future into five actor groups (directly affected, those who govern access, industry, those who inform, nature), placed every actor on a power-interest grid using two questions (can this actor formally block market access, and does it have a direct stake), borrowed a 1-3 MCDA scoring scale to extend GRADE, and got formal TU Delft Human Research Ethics Committee approval before any interviews. Requirements they could not meet this year became explicitly labelled Future Perspectives rather than quiet omissions. The concrete changes: a philosopher of technology pointed out that modularity is simultaneously the strength and the regulatory risk, which pushed them to involve patients, clinicians and regulators while the construct was still open and to be wary of words like 'biomimicry' that make people assume safety. Antibiotic-resistance concerns made them drop antibiotics from the antimicrobial module entirely and search the literature for alternatives, landing on antimicrobial peptides. Kirby Lattwein (Erasmus MC, cardiovascular device infections) said their assays would not predict real-world performance, so they switched to clinically relevant strains and media and ran the AMP work in her lab on three clinical isolates from LVAD driveline infections plus two reference strains, and added LVAD drivelines as a use case. Surgeon Robin Atallah told them every minute in the operating room costs 50-70 euros and that surgeons resist deviating from routine, which pushed them toward a manufacturer-pre-coated implant rather than an in-theatre paste. Ambiguity about protein coatings in permanent blood contact made them set blood-contacting implants aside and focus on tissue-embedded and skin-crossing implants. Amir Zadpoor's point that loosening is a major failure mode drove the omics-guided motif model. A CGM industry interviewee's distinction between sensor and adhesive focused the MVP on the inserted sensor and his warning that manufacturers have little incentive to reduce sensor replacement sales sent the entrepreneurship team back to the business model.",
+    "realWorld": "The MVP is deliberately the hardest possible test rather than the best-performing coating: a single construct, (VPGIG)23-VPGKG-LDASTVYAVTGRGDSPASSAASA-(VPGIG)24, with one lysine placed directly beside the RGD domain mid-chain, bonded through that lysine to a polydopamine-primed CGM polyurethane membrane, validated by QCM-D for attachment and a cell-adhesion assay against scrambled-RDG and lysine-free controls on the same purified batch. Commercially they chose continuous glucose monitors after a regulatory-driven application screen: they studied EU MDR and FDA pathways in detail (notified body versus 510(k)/PMA, Rule 14 class III escalation when a coating carries an active substance, Annex IX 4.10 review for changes to an approved device) and let that analysis eliminate candidates. The business model is ELP supply paid as a royalty per coated sensor, set as a share of the partner's net price per sensor, which they justify as how medical-technology licences are normally priced, with contracts structured to limit risk. They ran TAM/SAM/SOM, Porter's Five Forces, SWOT with explicit strategies, CGM market consolidation and GLP-1 agonist trend analysis, and three competitor case studies (LipoCoat, Surmodics, Bactiguard). Scale-up is costed for 117 million and 22 million CGMs per year with full technical and financial KPIs, backed by the LCA. IP is mapped as US and European ELP patent landscapes against TU Delft's ownership policy, with an explicit discussion of IP versus open-source science. A 3D-printed-organ bioink route is flagged as future work, since ELPs phase-transition reversibly above a set temperature.",
+    "partners": [
+      "Kirby Lattwein, Erasmus Medical Center (cardiovascular device infections; hosted the AMP assays)",
+      "Dr. Robin Atallah (bone-anchored prostheses surgeon)",
+      "Prof. Amir Zadpoor, TU Delft (implant loosening)",
+      "Prof. Gijsje Koenderink, TU Delft",
+      "Dirk Eijkel",
+      "Luca Hodes (ELP functionalisation / bioink idea)",
+      "Nikolas Gaio and Tim Bruines (industry interviews)",
+      "Daan Brinks Lab, TU Delft",
+      "TU Delft Human Research Ethics Committee",
+      "Rathenau Institute (iGEM Guide to the Future framework)",
+      "DHPC DelftBlue supercomputer"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6110/wiki/software/workflow.avif",
+      "caption": "What the MOSAIC Designer takes over: from a researcher's amino acid sequence through part identification, codon scrambling, Golden Gate cut-site design and synthesis feasibility checks to order-ready library sequences.",
+      "credit": "Team TU Delft, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6110/wiki/software/annotate.avif",
+      "caption": "The MOSAIC Designer annotation step in the browser: a pasted sequence split into parts and linkers, each listed with its range, length and sequence, auto-filled from the detected repeat motif.",
+      "credit": "Team TU Delft, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6110/wiki/model/bioinformatics-pipeline-blockscheme.avif",
+      "caption": "The omics-guided motif selection pipeline: public transcriptomic and proteomic data filtered to implant-relevant tissues, annotated by matrisome, integrin and protease category, and reduced by an enhancement test to a per-tissue coating recipe.",
+      "credit": "Team TU Delft, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6110/wiki/outreach/bracelets/workshop-preview.avif",
+      "caption": "The DNA bracelet workshop, run at the Weekend of Science and Neighbours' Day: visitors translate DNA to RNA to protein, with each protein becoming a coloured bead they take home.",
+      "credit": "Team TU Delft, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Adopt their two cheap, high-leverage habits. First, build known physics into a small model instead of hoping it learns it: monotonic constraints on NaCl, concentration and hydrophobicity let 230 hand-curated data points beat a published empirical equation, which is exactly the regime a school lab works in. Second, make the wiki machine-readable - authoring pages as Markdown and publishing them at <page>.md with an llms.txt index cost them almost nothing and made the Best Wiki winner fully legible to any reader or tool, including judges skimming on a bad connection.",
+  "sources": [
+    "https://2026.igem.wiki/tu-delft/",
+    "https://2026.igem.wiki/tu-delft/llms.txt",
+    "https://2026.igem.wiki/tu-delft/description.md",
+    "https://2026.igem.wiki/tu-delft/model.md",
+    "https://2026.igem.wiki/tu-delft/software.md",
+    "https://2026.igem.wiki/tu-delft/results.md",
+    "https://2026.igem.wiki/tu-delft/engineering.md",
+    "https://2026.igem.wiki/tu-delft/human-practices.md",
+    "https://2026.igem.wiki/tu-delft/entrepreneurship.md",
+    "https://2026.igem.wiki/tu-delft/outreach.md",
+    "https://2026.igem.wiki/tu-delft/contribution.md",
+    "https://2026.igem.wiki/tu-delft/parts.md",
+    "https://2026.igem.wiki/tu-delft/experiments.md"
+  ]
+}

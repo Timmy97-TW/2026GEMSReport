@@ -1,0 +1,121 @@
+{
+  "team": "WageningenUR",
+  "id": "6222",
+  "section": "Overgrad",
+  "country": "Netherlands",
+  "village": "Bioremediation",
+  "wiki": "https://2026.igem.wiki/wageningenur/",
+  "projectTitle": "Triton",
+  "tagline": "Capture, degrade and sense trifluoroacetate: a three-module biological system for the smallest forever chemical, aimed at reverse-osmosis concentrate.",
+  "summary": "Triton targets trifluoroacetate (TFA), the ultra-short-chain PFAS that makes up more than 98% of all PFAS measured in EU river and groundwater and was found in the blood of all 110 Europeans tested in a 2026 study. Rather than one trick, they built three modules shaped entirely by stakeholder input: a de novo protein binder on bacterial cellulose beads to concentrate TFA out of reverse-osmosis concentrate, a growth-coupled directed hyper-evolution platform to push fluoroacetate dehalogenases from monofluoroacetate toward difluoroacetate and then TFA, and a riboswitch biosensor for continuous on-site monitoring. The dry lab contributed two reusable tools - PIGEON, an active-learning in silico evolution loop that lifted a Boltz-2 binding probability by over 33%, and DISARM, which retargets existing aptamers to new small-molecule ligands without SELEX. They took 1st Runner-up Grand Prize plus Best Measurement, Best Presentation and Best Bioremediation Project.",
+  "awards": [
+    "1st Runner-up Grand Prize (Overgrad)",
+    "Overgrad Top 10",
+    "Best Measurement winner (Overgrad)",
+    "Best Presentation winner (Overgrad)",
+    "Best Bioremediation Project winner (Overgrad)",
+    "Best Wiki nominee",
+    "Best Integrated Human Practices nominee",
+    "Best Entrepreneurship nominee"
+  ],
+  "dry": {
+    "frameworks": "The capture module is a full generative-plus-evaluative protein design stack. They first searched the literature and the PDB for anything reported to bind TFA and found no strong binder, then generated de novo candidates with Proteina-Complexa and BoltzGen (both denoising generative models, seeded with the TFA conformation taken from PDB 4FVX), reasoning that evolution never had selective pressure to bind a molecule that did not exist before 1922. Every candidate was scored with Boltz-2 rather than docking, with the choice justified explicitly: AutoDock Vina treats the protein as rigid and correlated poorly with experiment (R^2 = 0.604 on a 2016 benchmark), while Boltz-2 is trained on millions of experimental binding measurements and approaches free-energy-perturbation accuracy over 1000x faster. No natural or de novo scaffold passed 0.540, held by the L-2-haloacid dehalogenase RSc1362 (PDB 3UMB). Rational pocket design came next: they mined the literature for residues that prefer the CF3 group over CH3 (arginine, methionine, glycine, histidine, glutamine, phenylalanine) with their distance preferences, used PLIP to find TFA-contacting residues, and applied a three-criterion automated mutation script - 12 of 14 mutable scaffolds improved, with a caltractin A4H substitution jumping 0.118 to 0.518, and RSc1362_v2 reaching 0.566. Then PIGEON (Protein In silico Guided Evolution and Optimization Network) closed the loop: ESM3 embeddings of the RSc1362 family paired with Boltz-2 scores train a ridge regression under repeated leave-one-out CV; ESM3 guided decoding then proposes mutations against a custom objective that rewards binding gains while preserving pTM and charges binding losses tenfold (so a 0.01 binding loss would need +0.67 pTM to break even); binding-pocket residues are protected, four designs per parent across ten parents per round, best-per-parent carried forward, newly folded scores appended to the training set. Over 50 rounds RSc1362_v3 reached 0.723, a 33% gain over wild type, with the regression's Spearman rho rising from 0.65 to 0.92 and mean pTM flat - evidence the gain was learned, not lucky. Degradation design was grounded in published QM/MM work mapping the full FAcD catalytic cycle (Asp-His-Asp triad, fluoride-binding pocket His150/Trp151/Tyr213) onto MFA, DFA and TFA, which showed the rate-determining step shifts from nucleophilic attack to C-F activation after the first fluorine and that the barrier rises ~11.8 kcal/mol from MFA to DFA but only ~1.8 from DFA to TFA; that single insight set their whole strategy of evolving for DFA first.",
+    "dataviz": "The wiki is a scroll-driven explainer that teaches the problem before the solution: TFA's ECHA Repr. 1B classification, the 110-of-110 blood result, the >98%-of-all-PFAS share and the 34-of-36 tap water samples each land as their own beat, with a stacked TFA-versus-all-other-PFAS bar and a four-property card (accumulating, unregulated, unbreakable, tiny) before the three-step Capture/Degrade/Sense walkthrough. Stakeholder quotes are first-class design elements, each with a named face, rather than buried on a human practices page - Peter Fischer's 'it's not a question of if TFA will be added to the Drinking Water Directive, it's a question of when' and Bert van der Wal's 'a TFA binder would be fantastic, then you have gold in your hands' carry the narrative. The measurement page is built as a decision aid rather than a result log: a comparison scorecard across five media lets another team pick conditions for their own question. The front page also includes a scoring widget that opens the visitor's own mail client to send feedback to the team.",
+    "datascience": "The Best Measurement work is the data-science highlight because they treated an assay as a product. Starting from the Belcher alizarin-lanthanum fluoride chemistry as used qualitatively by Bygd et al., they rebuilt it as a quantitative method: a ratiometric readout found by searching for the isosbestic point and selecting the optimal numerator wavelength in each medium, with stated acceptance thresholds (R^2 >= 0.95, >= 40 nm separation, >= 20% signal change, positive slope) and selection by lowest LOD, then LOD = 3.3 sigma/b and LOQ = 10 sigma/b with an explicit rule for which sigma to use. Fixed conditions are all stated (100 uM 1:1 alizarin:lanthanum, 84 mM acetate buffer pH 5.2, 25 v/v% acetone added after a 1-hour dark incubation, per-well volumes in 96-well format) and the data analysis is written as a procedure rather than a result, so another team reproduces the method even if their numbers differ. They characterised it as a tool across four fluorochemicals (MFA, DFA, TFA, PFOA), two hosts (E. coli MG1655, P. putida KT2440) and five media (demi water, M9, HEPES-buffered M9, 20 mM HEPES, tap water), and documented the limits as carefully as the working range: phosphate interferes, response saturates above 40 uM, 5 mM fluorochemicals suppress signal up to 60%. Controls are enumerated by class - measurement (10 blank wells for sigma, 40 uM spike, literature condition reproduced before any change), matrix (M9 as a phosphate-interference control, 93-hour incubated supernatant, fluorochemical spikes) and biological (wild-type and empty-vector negatives, MFA as a should-work substrate, PFOA as a should-not).",
+    "software": "PIGEON and DISARM, both with code on the iGEM GitLab at https://gitlab.igem.org/2026/wageningenur. PIGEON is the generalisable one: an active-learning loop over ESM3 embeddings, ridge regression and ESM3 guided decoding against a user-defined objective, which the team explicitly documents as retargetable to solubility, thermostability or ipTM rather than only Boltz-2 binding probability, and which they distinguish from a conventional ML model because it proposes mutations rather than only scoring given inputs. DISARM (Detecting Interaction Sites for Aptamer Retargeting by Mutation) recommends mutations that retarget an existing aptamer or riboswitch to a new ligand of similar size: it identifies favourable nucleotide positions around the ligand, compares them with the existing aptamer's nucleotide positions and backbone connection points, and returns 50 candidates while preserving secondary structure - positioned as a partial replacement for SELEX, or at least a rational starting library. They validated 10 DISARM riboswitches in the wet lab (4 PFOA, 4 TFA, 2 scrambled controls) and reported honestly that one PFOA riboswitch met the success criterion and no TFA riboswitch did. The contribution page also packages a reusable defluorination framework - the fluoride assay with calibration procedure, controls, sample prep and analysis workflow plus a step-by-step experimental video - and a hypermutation platform and expression architecture described as adaptable to any enzyme.",
+    "stack": [
+      "Boltz-2",
+      "BoltzGen",
+      "Proteina-Complexa",
+      "ESM3 (embeddings + guided decoding)",
+      "Ridge regression (scikit-learn)",
+      "PLIP (Protein-Ligand Interaction Profiler)",
+      "AutoDock Vina (benchmarked against, not used)",
+      "AMBER / molecular dynamics",
+      "Protein Data Bank",
+      "AlphaFold (model AF-P00506-F1)",
+      "Python",
+      "iGEM GitLab",
+      "96-well plate UV-Vis absorbance (400-700 nm)",
+      "BLASTp / BLASTn against patent sequence databases"
+    ],
+    "techniques": [
+      "de novo binder generation by denoising generative models",
+      "learned affinity prediction in place of rigid-body docking",
+      "literature-derived CF3 residue-preference rules applied as automated pocket mutations",
+      "active-learning in silico directed evolution with a custom multi-objective reward",
+      "asymmetric penalty weighting to prevent objective gaming (10x on binding loss)",
+      "binding-pocket residue protection during mutagenesis",
+      "repeated leave-one-out cross-validation on small design sets",
+      "tracking surrogate-model Spearman rho across rounds as evidence of learning",
+      "ratiometric absorbance assay with isosbestic-point calibration",
+      "LOD/LOQ determination from blank replicates",
+      "per-medium recalibration as a documented local step",
+      "growth-coupled directed hyper-evolution",
+      "in silico aptamer retargeting as a SELEX alternative"
+    ]
+  },
+  "good": {
+    "publicEngagement": "Triton has no separate education or outreach page; its public-facing work is the wiki itself, built as a scroll-driven public explainer that teaches why TFA matters before it mentions synthetic biology - the ECHA reproductive-toxicity classification, the 110-of-110 blood study, the >98% PFAS share, the 34-of-36 tap water result - with named stakeholder quotes and faces carrying the argument, a front-page feedback widget that opens the visitor's own mail client, and a step-by-step experimental video for the fluoride assay published for other labs to follow. Their documented engagement effort went into the professional and policy community rather than schools: over 30 stakeholders through interviews, company visits and events, with every stakeholder given an explanation of why the team reached out, what was learned and what was or was not incorporated, plus a published analysis of future regulatory and industrial developments offered as a starting point for anyone working on TFA contamination.",
+    "ihp": "The most traceable chain of design changes in the cohort, and the shifts are structural rather than cosmetic. They started intending only to degrade TFA; stakeholders told them they were missing an essential step. Peter Fischer (Aqualab Zuid, one of six companies legally tasked with assessing Dutch drinking water quality) showed that TFA can only be measured by LC-MS on samples shipped to a central lab, so it is expensive, discontinuous and ex situ - which meant the bioreactor could not be operated at all, and directly created the biosensor module. Frank Schoonenberg (process engineer, Vitens) explained that reverse osmosis filters TFA but does not destroy it, that the resulting concentrate is currently discharged, and that discharging it will be prohibited - so they designed Triton to treat RO concentrate rather than drinking water, filling a need nobody currently serves. Bert van der Waal and Peyman Salehian then showed that even 5-10x RO concentration leaves TFA far too dilute (an ideal 10x on the Dutch 2.2 ug/L indicative value reaches only 22 ug/L against a milligram-per-litre target), which created the capture module. Amanda Larasati ruled out ion exchange resins because resin leaching bars them from Dutch water infrastructure. Tue Kjaergaard Nielsen warned that measuring TFA reduction produces false positives because TFA adsorbs to surfaces rather than being degraded, pushing them to measure released fluoride instead. Clemens Mayer (molecular evolution, Groningen) led them to directed evolution for an enzyme that does not yet exist. Amin Espah Borujeni helped redesign the riboswitch proof-of-concept experiments after the published plasmid failed to reproduce. Regulatory interviews established that a product containing no viable GMOs faces a considerably simpler approval path, which they explored alongside deliberate release and which shaped biosafety from an early stage. They also document conflicting stakeholder views and explain why some were not implemented.",
+    "realWorld": "Implementation is specified as a real retrofit rather than a concept: Triton sits downstream of existing split-stream reverse osmosis at a drinking water plant, with the capture module as a granular filter of bacterial cellulose beads carrying TFA-binding proteins attached through a cellulose-binding domain, eluted with a wash buffer so beads are reused, feeding a three-day bioreactor where evolved dehalogenase turns TFA into oxalate and fluoride while the riboswitch biosensor monitors continuously. Biosafety is specified per module: the beads contain no living cells and need no extra measures, the biosensor's small water stream is collected and autoclaved, and the bioreactor effluent gets UV sterilisation before discharge. Timeline is roughly 10 years to drinking-water implementation, with permitting, certification and grid congestion named as the bottlenecks rather than construction, and the biosensor identified as the faster path. The market analysis is sharply scoped - not water treatment, not PFAS at large, but the destruction of PFAS that filtration cannot retain, noting destruction was 24.9% of the PFAS treatment market in 2025 and is the fastest-growing segment at a projected 10.1% CAGR against 7.1% overall. The business plan runs a six-phase TRL 3 to 9 roadmap with a gate per phase, a cost analysis across physical and human capital, 2.6M euro to raise and break-even in 2033, six commercial and adoption risks each with a mitigation, five technical failure modes each with a fallback, an operational plan with a Dreyfus-model skill gap analysis resolved build/borrow/outsource, and a SWOT identifying a co-development partner as the predominant stakeholder. IP is worked out concretely: the software is not patentable because its source is deposited on the iGEM GitLab (but is copyright-protected), while BLASTp against the patented protein database returned only 43.30% maximum identity for DAR3835 and H1_ML against claims requiring 95%, so the evolved enzymes remain patentable.",
+    "partners": [
+      "Vitens (Frank Schoonenberg, process engineer)",
+      "Aqualab Zuid (Peter Fischer, scientific advisor)",
+      "Prof. Bert van der Waal, Wageningen University (environmental sciences)",
+      "Peyman Salehian (enzyme development)",
+      "Clemens Mayer, University of Groningen (molecular evolution)",
+      "Amin Espah Borujeni (riboswitch design)",
+      "Tue Kjaergaard Nielsen",
+      "Amanda Larasati",
+      "WaterIQ (Freddy Dekkers)",
+      "Harrie Timmer",
+      "RIVM",
+      "Arcadis",
+      "Witteveen+Bos",
+      "Nijhuis Saur",
+      "Bas Eickhout (policy)",
+      "Christos Batianis and Enrique Asin-Garcia, Wageningen University"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6222/wiki/text-images/general/triton-wholesystem-v5.avif",
+      "caption": "The full Triton system: reverse-osmosis concentrate passes a bacterial-cellulose capture filter to concentrate TFA, then a bioreactor where evolved dehalogenase cleaves the C-F bond while a riboswitch biosensor monitors concentration continuously.",
+      "credit": "Team WageningenUR, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6222/wiki/text-images/dry-lab/capturing-drylab/kevin-engineering-figure-7b.webp",
+      "caption": "Fifty rounds of PIGEON in silico evolution across five runs, lifting RSc1362's Boltz-2 binding probability from 0.540 to 0.723 while the surrogate model's Spearman rho rises from 0.65 to 0.92 and mean pTM stays flat.",
+      "credit": "Team WageningenUR, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6222/wiki/text-images/measurement/triton-measurement-scorecard.avif",
+      "caption": "The medium comparison scorecard from the Best Measurement work, which lets another team choose assay conditions for their own research question rather than copying a single validated setup.",
+      "credit": "Team WageningenUR, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6222/wiki/text-images/measurement/triton-measurement-cuvettes.webp",
+      "caption": "The alizarin-lanthanum fluoride assay in practice: the spectral shift on fluoride release is visible to the naked eye above roughly 20 uM, so no fluoride electrode, ion chromatography or 19F-NMR is needed.",
+      "credit": "Team WageningenUR, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Build the measurement first and publish it as a product, not a result: their fluoride assay won Best Measurement because the protocol, the LOD/LOQ derivation, the acceptance thresholds, the comparison across five media and the documented failure modes (phosphate interference, saturation above 40 uM) all let another lab decide in advance whether it fits - and it needs only a 96-well plate reader and two cheap reagents, which is squarely within a high-school research centre's reach. The companion habit worth copying is PIGEON's reward design: charging a loss in the primary objective tenfold against the secondary one stops a model from quietly trading away the thing you actually care about.",
+  "sources": [
+    "https://2026.igem.wiki/wageningenur/",
+    "https://2026.igem.wiki/wageningenur/description/",
+    "https://2026.igem.wiki/wageningenur/design/",
+    "https://2026.igem.wiki/wageningenur/dry-lab-overview/",
+    "https://2026.igem.wiki/wageningenur/capturing/",
+    "https://2026.igem.wiki/wageningenur/capturing-dry-lab/",
+    "https://2026.igem.wiki/wageningenur/degradation/",
+    "https://2026.igem.wiki/wageningenur/sensing/",
+    "https://2026.igem.wiki/wageningenur/riboswitch/",
+    "https://2026.igem.wiki/wageningenur/measurement/",
+    "https://2026.igem.wiki/wageningenur/engineering/",
+    "https://2026.igem.wiki/wageningenur/human-practices/",
+    "https://2026.igem.wiki/wageningenur/entrepreneurship/",
+    "https://2026.igem.wiki/wageningenur/implementation/",
+    "https://2026.igem.wiki/wageningenur/contribution/"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "team": "ZJU-China",
+  "id": "6102",
+  "section": "Undergrad",
+  "country": "China",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/zju-china/",
+  "projectTitle": "NEST",
+  "tagline": "A sequence-defined SELP hydrogel with a SnoopTag2 plug socket, so one cartilage scaffold can be reconfigured by swapping functional peptides",
+  "summary": "ZJU-China built NEST, a silk-elastin-like protein (SELP) hydrogel carrying SnoopTag2 as a standardised ligation interface, so that repair peptides (Link-N, a chondroitin-sulfate-retaining CPC module, a magnetically responsive anisotropy module, a mitochondrial delivery module) can be attached without redesigning the material. They engineered a SnoopLigase2-ZJU variant for the ligation chemistry, purified SELP by inverse transition cycling optimised to 65 degrees C in PBS with 2 M NaCl, and validated GAG binding by AviTag-BirA site-specific biotinylation onto streptavidin beads with DMMB quantification. The commercial case is a full process-economics build rather than a canvas, with equipment, land, working capital, medium, IPTG, kanamycin, labour by shift and waste volumes all costed, plus a 2026-2042 stage-gated roadmap and a ten-year discounted cash-flow model. They were nominated for Best Entrepreneurship (Undergrad) and Best Biomanufacturing.",
+  "awards": ["Best Entrepreneurship nominee, Undergrad", "Best Biomanufacturing nominee"],
+  "dry": {
+    "frameworks": "TAM-SAM-SOM with a documented estimation basis and a stated conversion coefficient from osteoarthritis prevalence to the cartilage-repair addressable population, three-tier competitor analysis, NREL-style techno-economic cost structure (fixed capital investment, land, working capital, variable and fixed operating costs, annual capex), a ten-year cash-flow and NPV model, a Sustainable Business Model Canvas, a tiered critical/high risk register tied to stage-gate decisions, a staged financing plan from angel through Series B, a skill-gap analysis across eight capability areas, and a TCFD-shaped ESG framework (governance, strategy, risk and opportunity, metrics and targets).",
+    "dataviz": "Nine entrepreneurship figures: SAM and SOM projections, a three-panel budget classification and estimation-basis summary, the 2026-2042 roadmap across R&D, manufacturing, regulatory, fundraising and commercialisation lanes, a ten-year cash-flow chart distinguishing inflows, outflows, net and discounted cash flows, the business model canvas, a skills radar, and three competition-award photographs. A downloadable NEST cost sheet PDF carries the underlying calculations, and five per-module notebook PDFs back the wet-lab work.",
+    "datascience": "The costing is done from first principles rather than from benchmarks. Required SELP output for the initial market is derived first, then equipment is sized against it, giving major equipment of CNY 7.45 million (about USD 1.11 million) estimated with input from Beijing Weixinkang Medical. Consumables are itemised: roughly CNY 290,700 per year for the three main LB components, 7.47 kg of IPTG and 1.57 kg of kanamycin annually, plus PBS and sodium chloride for purification, and about 31,360 L of spent culture medium as annual waste. Labour is modelled as a sum over operations of fully loaded hourly cost, with day and night shifts priced separately against actual Zhejiang biomanufacturing job adverts (CNY 6,000-8,000 per month, conservatively the low end) and Hangzhou cleaner salaries, totalling about CNY 2.6603 million per year. The cash-flow model uses a 10 percent real cost of capital, a 13.27 percent revenue CAGR from a cartilage-repair market report and 2 percent annual cost inflation at a fixed USD 1 = CNY 6.72.",
+    "software": "",
+    "stack": ["E. coli BL21(DE3)", "SELP (silk-elastin-like protein) inverse transition cycling", "SnoopTag2 / SnoopLigase2-ZJU", "AviTag-BirA biotinylation", "streptavidin magnetic beads", "DMMB GAG assay", "Fe3O4 magnetic nanoparticles with DogTag-TVN", "DOPE/DOTAP/DSPE-PEG-Mal liposomes", "confocal microscopy and TEM"],
+    "techniques": ["modular peptide-peptide ligation as a product interface", "temperature and salt-optimised ITC purification (65 C, 2 M NaCl)", "site-specific biotinylation for immobilised binding assays", "TEV and ULP1 protease processing", "liposome-mitochondria complex assembly and uptake", "lyophilisation and hydrogel re-formation"]
+  },
+  "good": {
+    "publicEngagement": "A committed rather than rhetorical plan: during R&D they intend to spend at least CNY 50,000 annually on patient education, public lectures and open science materials, support SynEduGlobal for synthetic-biology education, establish a charitable fund for rural medical outreach and cartilage-health awareness, and continue working with Non-place Studio to use art to build understanding of synthetic biology and empathy for people with cartilage injuries. They also name limited public understanding of hydrogel therapy as a genuine commercial risk to patient confidence and access, not just a communications gap.",
+    "ihp": "Their iHP is organised as design-build-test-learn cycles, with an Implementation stage split into hardware, industrial production and entrepreneurship cycles. The entrepreneurship cycle consulted stakeholders across manufacturing, sales, government regulation, finance and entrepreneurship support, and the documented consequence is specific: they gave cost greater weight in the material design, built the detailed business model, went looking for a CDMO partner, and secured a first expression of investment interest. Clinicians fed back that the material's complexity could complicate market approval, which pushed attention toward regulatory simplicity. Professor Erik Forsberg guided the cash-flow and NPV analysis, and Beijing Weixinkang Medical supplied the equipment cost estimates, so industry input is embedded in the numbers rather than quoted alongside them.",
+    "realWorld": "A genuinely serious venture attempt with one glaring soft spot. The strong parts first. The business model is a phased B2B: research partnerships and technology-development licensing early to build relationships and validate demand, then supply of implant material and delivery solutions to clinical institutions, with orthopaedic companies and hospitals as customers and patients explicitly identified as beneficiaries rather than initial sales targets. Research grants and equity are accounted separately from operating income, which is a distinction most teams blur. The MVP is honestly narrow, the SELP-SnoopTag2 hydrogel alone, with production and storage stability already demonstrated in the lab and the remaining path stated plainly: classification confirmation, product testing, animal studies, clinical trials, NMPA registration, and a medical-device manufacturing licence for the manufacturer, expected to take ten years. The first indication is focal knee-cartilage defects in China, chosen for surgical volume and clinical-evidence base. The cost model is the standout: equipment, land, working capital, itemised media and reagents, shift-differentiated labour, and waste volumes, published as a downloadable cost sheet. Financing is staged and concrete, with real named programmes and amounts: Hangzhou's 5050 Plan (CNY 1 million start-up, up to CNY 10 million in R&D grants), up to CNY 6 million for a first Class III registration manufactured in Hangzhou via Hangzhou Medical Port, up to USD 500,000 from the GenScript Life Science Research Fund, and crucially a named investor, Ms. Zhang Jie of Huadan Angel, who in a stakeholder interview expressed willingness to discuss roughly CNY 1.5 million after first-round samples meet expectations. Industrial relationships are specific and functional rather than decorative: Weixinkang and Lanyiwei on Class III manufacturing and market access, Yuanyi Bio on fermentation and purification, Yiru Bio on scale-up, Shanghai Lingjiu Medical as a possible CDMO, WuXi AppTec's device-testing centre for registration testing, and Evonik, Arthrex and Smith+Nephew as international targets. They won Gold at Zhejiang University's Dandelion Student Innovation Competition (with prize money) and two Golds at SynBio Challenges 2026, in both the main and the industry track, the latter for the SnoopLigase2-ZJU enzyme system, which is independent validation outside iGEM. IP is planned with real specificity: a Chinese invention patent to be filed in November 2026 covering the SELP-SnoopTag2 structure, manufacturing and purification methods, hydrogel formulation, crosslinking system and peptide attachment, with a prior-art search on SnoopTag2, SELP and Ru/SPS crosslinking before any public data release, and the correct observation that treatment methods are not patentable in China so claims must sit on products and manufacturing. The roadmap is stage-gated across 2026-2042 with a criterion and a required-resources list for each window, and they say outright that they will not assign a break-even year or market-share forecast without a defensible financial model. Now the blunt part. That restraint is contradicted by the headline number: a ten-year NPV of about USD 427 million on an initial investment of about USD 8.69 million, produced by assuming NEST captures 10, 25, 50, 75 and then 100 percent of its SOM in years one to five and holds 100 percent of SOM for years six to ten. Capturing the entire serviceable obtainable market and keeping it, for a Class III implant that by their own roadmap will not be registered until roughly 2037, is not a scenario; it is an upper bound, and they label it only as 'favorable assumptions'. There is also no incorporated entity (the name NexCode Biotechnologies appears but no registration is claimed), no filed patent yet, no signed investment, and no animal data at all, which they state clearly as a limitation on any safety or efficacy claim. The honest reading is that the cost side of this model is excellent and the revenue side is aspirational.",
+    "partners": [
+      "Beijing Weixinkang Medical Co., Ltd. (Class III manufacturing, sales qualification, market access; equipment cost estimates)",
+      "Lanyiwei (Class III medical-device manufacturing and market access)",
+      "Yuanyi Bio (synthetic-biology production, fermentation, purification)",
+      "Yiru Bio (entrepreneurship and scale-up experience)",
+      "Shanghai Lingjiu Medical Technology (biomedical materials, prospective CDMO)",
+      "Huadan Angel (Ms. Zhang Jie; expressed willingness to discuss ~CNY 1.5 million early investment)",
+      "Professor Erik Forsberg (cash-flow and NPV methodology)",
+      "WuXi AppTec medical-device testing centre (prospective registration testing)",
+      "Zhejiang University School of Innovation and Entrepreneurship (Dandelion competition)",
+      "Non-place Studio (art and public understanding), SynEduGlobal (education)"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6102/wiki/images/hp/entrepreneurship/003.avif",
+      "caption": "NEST development roadmap and milestones for R&D, manufacturing, regulatory affairs, fundraising and commercialisation, 2026-2042",
+      "credit": "Team ZJU-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6102/wiki/images/hp/entrepreneurship/004.avif",
+      "caption": "Ten-year cash-flow analysis separating inflows, outflows, net and discounted cash flows at a 10 percent real cost of capital",
+      "credit": "Team ZJU-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6102/wiki/images/hp/entrepreneurship/005.avif",
+      "caption": "NEST sustainable business model canvas for the phased B2B licensing-then-supply model",
+      "credit": "Team ZJU-China, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6102/wiki/images/hp/entrepreneurship/009.avif",
+      "caption": "Gold Award for the SnoopLigase2-ZJU enzyme system in the industry track of SynBio Challenges 2026",
+      "credit": "Team ZJU-China, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Copy their bottom-up cost sheet: size the required output first, then let equipment, media, IPTG and antibiotic quantities, shift-differentiated labour rates taken from real local job adverts, and annual waste volumes fall out of it, and publish the whole thing as a downloadable file. Then apply the discipline they stated but did not follow on their own revenue line: never model capturing 100 percent of a serviceable obtainable market, and label any such figure as an upper bound rather than a forecast.",
+  "sources": [
+    "https://2026.igem.wiki/zju-china/",
+    "https://2026.igem.wiki/zju-china/entrepreneurship",
+    "https://2026.igem.wiki/zju-china/human-practices",
+    "https://2026.igem.wiki/zju-china/assets/wiki-Bwf3O9W2.js",
+    "https://static.igem.wiki/teams/6102/wiki/hp-file/nest-cost-sheet.pdf"
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "team": "McMaster-Canada",
+  "id": "6297",
+  "section": "Undergrad",
+  "country": "Canada",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/mcmaster-canada/",
+  "projectTitle": "Chariot: A Platform Technology for OMV-based Therapeutics",
+  "tagline": "Inducible loading of bacterial outer membrane vesicles, plus the standardised generation, isolation and characterisation protocols the field does not have.",
+  "summary": "McMaster built Chariot, a platform that loads cargo into bacterial outer membrane vesicles (OMVs) using the VNp tagging system, so that accumulation of a VNp-fused protein forces membrane curvature and vesiculation under an inducible promoter. Having identified that OMV work is held back less by biology than by the absence of standard methods, the team made measurement the project: they characterised VNp-driven OMV generation, benchmarked four isolation methods against a shared filtrate reference, and wrote everything into an openly published Protocol Handbook. Alongside this sits Apollo and Artemis, an in-silico platform combining GFlowNet-based active learning for peptide design with molecular dynamics for VNp-cargo compatibility. The project was shaped by 40 stakeholder interviews run through a purpose-built OMVS framework.",
+  "awards": [
+    "Best Measurement nominee (Undergraduate)"
+  ],
+  "dry": {
+    "frameworks": "A declared 'dual measurement' policy: every conclusion must be supported by at least two independent measurement techniques, and every comparison must run against a control. Integrated Human Practices uses a bespoke OMVS framework (Observe, Modify, Vision, Synthesis) built on the UKRI AREA principles, with each letter mapped to a specific iGEM Human Practices judging question. Machine learning is framed as an explicit design-test-learn loop in which measurements become training data.",
+    "dataviz": "Interactive wiki charts with toggles for 'individual measurements', 'mean +/- SD', 'logarithmic scale' and 'show data', so a reader can switch between the summary and the underlying points; an interactive stakeholder network of 40 stakeholders across 37 nodes, colour-coded by category, where clicking a node jumps to its position on an engagement timeline; a conceptual platform-workflow animation for the Apollo/Artemis pipeline.",
+    "datascience": "The measurement work is built around the idea that a single endpoint cannot be trusted. OMV preparations are characterised by dynamic light scattering (Z-average diameter and polydispersity index on a Zetasizer Nano ZS) and by nanoparticle tracking analysis (particle concentration), with the team noting explicitly that DLS readings and NTA runs are independent and not paired by row, and flagging a date discrepancy between the workbook label and the raw file timestamps rather than quietly fixing it. Total protein is quantified with a Pierce BCA assay against a BSA standard curve (R2 = 0.97), with blank-subtracted technical triplicates and the individual absorbance readings published; the resulting 709.2 ug/mL is reported alongside the caveat that BCA measures total protein and cannot distinguish lumenal cargo from membrane-associated or co-isolated protein. Comparisons between isolation methods are tested statistically rather than by eye: one-way ANOVA on log10-transformed values with Tukey post-hoc at alpha 0.05 for size and polydispersity across ultracentrifugation, centrifugal concentration, the Norgen kit, a novel 'Push-Pull' adaptation and 0.22 um filtration, all referenced to a single shared 0.45 um PES filtrate so no method gets a head start; lysis conditions are tested by one-way ANOVA with Dunnett's test against untreated OMVs; and the 4-hour versus 18-hour vesiculation comparison uses Welch's t-test on log10 values (p = 0.0005). SDS-PAGE is quantified by ImageJ densitometry, giving 41% recovery of total extracellular mNeonGreen through OMV isolation. Crucially the team kept and measured every fraction each method produced, including supernatants, flow-throughs and intermediate washes they were meant to discard, so losses can be attributed to a step. Limitations are stated as findings: the proteinase K protection assay that would distinguish genuine vesicle lysis from detergent micelle formation was not completed, so DLS size shifts remain the only lysis evidence; the 0.45 um filtrate was never run on NTA; and BCA reports preparation-level protein, not cargo. On the modelling side, Apollo is a generative flow network trained with trajectory balance and coupled to Bayesian optimisation: an ensemble of five independently initialised MLP regressors on padded one-hot peptide sequences acts as a proxy for a fixed D2-AlBERT oracle, with a UCB acquisition score converted into the GFN reward, and the released CLAMP/DBAASP dataset deduplicated and split by target identifier. The team is careful about what this does not establish, writing that negative labels do not represent experimentally demonstrated inactivity, that grouping by target does not separate closely related sequences, and that a falling training loss does not verify exact reward-proportional sampling.",
+    "software": "Apollo (GFlowNet + Bayesian optimisation peptide design, built on the published GFlowNet biological-sequence-design framework and the CLAMP/DBAASP dataset) and Artemis (molecular dynamics comparison of VNp-cargo pairings). A Protocol Handbook covering molecular cloning through OMV generation, isolation, lysis and analysis is published for reuse. Wiki source at gitlab.igem.org/2026/mcmaster-canada; site content licensed CC BY 4.0.",
+    "stack": [
+      "Malvern Zetasizer Nano ZS (DLS, zeta)",
+      "Nanoparticle tracking analysis (NTA)",
+      "Pierce BCA protein assay",
+      "SDS-PAGE with ImageJ densitometry",
+      "Norgen Bacterial EV Isolation Kit",
+      "Ultracentrifugation",
+      "50 kDa centrifugal concentrators",
+      "GFlowNets (trajectory balance)",
+      "Bayesian optimisation / GP-UCB",
+      "MLP ensembles",
+      "Molecular dynamics"
+    ],
+    "techniques": [
+      "Dual orthogonal measurement per conclusion",
+      "Shared reference control across methods",
+      "One-way ANOVA on log10 values with Tukey post-hoc",
+      "Dunnett's test against untreated control",
+      "Welch's t-test on log10 values",
+      "BSA standard curve with R2",
+      "Technical triplicates with blank subtraction",
+      "Measuring discarded fractions to locate losses",
+      "Explicit statement of unmeasured confounds",
+      "Active learning / design-test-learn loop"
+    ]
+  },
+  "good": {
+    "publicEngagement": "Education outputs include a SynBio Handbook and a zine series, classroom and community sessions with named educators, and outreach materials documented on the education page.",
+    "ihp": "Forty stakeholders were consulted across five groups (patients, healthcare providers, regulatory experts, industry experts and biosafety experts), with sub-expertise in clinical infection, biofilms and pathogen biology, OMV and EV engineering, and drug delivery and nanomedicine. Each conversation is written up through the OMVS framework and tied to a project change; the stakeholder map records three kinds of link (referrals, sequences where a question raised in one meeting was answered in a later one, and convergences where two stakeholders who had never met reached the same conclusion), so a reader can trace a design decision back to the conversation that caused it. The first major pivot came from Dr Coombes, who raised uncontrolled inflammation and septic-like responses as unavoidable risks of systemic bacterial-derived therapeutics and cautioned that peanut-allergy mechanisms are not well enough understood for rational design; the team dropped its oncology and allergy concepts and moved to localised gut-associated systems, judging every subsequent concept on biological feasibility and patient safety before therapeutic potential.",
+    "realWorld": "The entrepreneurship case positions Chariot as a modular OMV loading platform for biotechnology and pharmaceutical partners developing protein-based therapeutics, with antimicrobial resistance as the first application because OMVs fuse with bacterial and mammalian membranes and can deliver non-membrane-disrupting antimicrobial peptides past the permeability barrier. The stated value proposition is improved cargo loading plus more consistent and scalable production. The team also frames its protocol standardisation as the deliverable most likely to outlive the competition, benchmarking itself against earlier OMV teams (Freiburg 2024, NYU Abu Dhabi 2025).",
+    "partners": [
+      "Farncombe Family Digestive Health Research Institute",
+      "Didar Lab, McMaster University",
+      "Dr Brian Coombes (McMaster)",
+      "Dr Michael Surette (McMaster)",
+      "Dr Elena Verdu (Farncombe Institute)",
+      "Dr Robert Hancock",
+      "Dr Greg Hussack",
+      "iGEM Freiburg 2024",
+      "iGEM NYU Abu Dhabi 2025"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6297/wiki/measurement/measure-sds-page.avif",
+      "caption": "12% SDS-PAGE of E. coli BL21(DE3) pET26b(+) 6xHis-mNeonGreen-VNp6 induction and OMV isolation products. ImageJ densitometry on this gel gave 41% recovery of total extracellular mNeonGreen through the isolation.",
+      "credit": "Team McMaster-Canada, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6297/wiki/measurement/omv-filtrate-plate.avif",
+      "caption": "The 0.45 um PES-filtered vesicle preparation plated on LB agar. No growth confirms the absence of whole-cell contamination in the shared filtrate that every isolation method was benchmarked against.",
+      "credit": "Team McMaster-Canada, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6297/wiki/measurement/fluorescence-post-isolation.avif",
+      "caption": "mNeonGreen-VNp OMVs after Norgen kit isolation on a bench-safe blue light box: a 4-hour vesiculation period on the left, 18 hours on the right. The visible difference was then quantified by NTA, where the 18-hour preparation yielded significantly more vesicles (Welch's t-test on log10 values, p = 0.0005).",
+      "credit": "Team McMaster-Canada, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Keep and measure the fractions you were told to throw away. Benchmarking every isolation or purification method against one shared starting material, then analysing the supernatants, flow-throughs and washes as well as the eluates, turns a yield number into a map of where material is lost and at which step.",
+  "sources": [
+    "https://2026.igem.wiki/mcmaster-canada/measurement",
+    "https://2026.igem.wiki/mcmaster-canada/model",
+    "https://2026.igem.wiki/mcmaster-canada/description",
+    "https://2026.igem.wiki/mcmaster-canada/human-practices",
+    "https://2026.igem.wiki/mcmaster-canada/entrepreneurship",
+    "https://2026.igem.wiki/mcmaster-canada/hardware"
+  ]
+}

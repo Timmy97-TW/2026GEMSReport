@@ -1,0 +1,98 @@
+{
+  "team": "CalPolySLO",
+  "id": "6405",
+  "section": "Undergrad",
+  "country": "United States",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/calpolyslo/",
+  "projectTitle": "Accessible Science: Expanding the Synthetic Cell Toolkit for All",
+  "tagline": "A cheap polyphosphate-powered energy module, a reproducible synthetic-cell fabrication device, and the calibrated ATP assay that makes both measurable.",
+  "summary": "Cal Poly SLO built a cell-free and synthetic-cell platform aimed at putting synthetic cells into undergraduate hands. The science problem is that PURE-type cell-free reactions run out of energy and that commercial creatine-phosphate regeneration is one of the most expensive parts of the kit, so the team screened a library of polyphosphate kinase 2 (PPK2) enzymes, filtered from roughly 18,000 sequences down to 16 phylogenetically diverse candidates, that regenerate ATP from cheap inorganic polyphosphate. To compare those enzymes they had to build the measurement first: a scalable, interference-corrected luciferase ATP assay with matched standard curves, published protocols, OpenTrons scripts and Excel templates. They also designed a 3D-printed emulsification 'washboard' and a tip-wipe recovery step to make hand-made vesicles reproducible, and wrote the whole thing into CHEM 471, a new undergraduate synthetic-cell lab course.",
+  "awards": [
+    "Best Measurement winner (Undergraduate)",
+    "Best Alternative Platform nominee",
+    "Best Education nominee",
+    "Best Foundational Advance nominee"
+  ],
+  "dry": {
+    "frameworks": "Design-Build-Test-Learn applied separately to the assay, to the 3D-printed emulsification device (v0 to v8) and to the course materials; an explicit 'problem -> approach -> solution -> outcome' framing on every major page; measurement treated as a prerequisite for enzyme screening rather than a reporting step; Human Practices feedback logged as 'feedback -> action' pairs that changed protocols.",
+    "dataviz": "Interactive charts embedded in the wiki (per-condition time courses, Michaelis-Menten fits, reproducibility datasets) with selectable conditions; side-by-side uncorrected vs corrected Michaelis-Menten fits; log-scaled ATP standard curves; per-cell log10 GFP scatter plots across 24 timepoints with per-timepoint median lines and a dashed per-plate subpopulation threshold; a two-clock explainer diagram teaching readers how to read the quench-validation figures; SolidWorks drawings of every finalized 3D-printed part.",
+    "datascience": "The core contribution is an ATP assay that was validated before it was trusted. Three quench methods were compared head to head (cold dilution, 95 C heat stop, EDTA chelation) by sampling a DrPPK2 reaction at fixed reaction times and then varying the hold time before adding CellTiter-Glo; a flat line means the reaction stopped, a rising line means it did not. EDTA was chosen because it scales to 16 enzymes in pre-poured plates, and the concentration was then tuned from 10 mM to 5 mM when enzyme load dropped from 50 to 7.5 ng/uL. The team then defined the assay's reliable ATP range by testing whether they could extend Promega's 10 nM to 1 uM window in either direction, found they could not (0.061 nM ATP still read above 10,000 RLU; the 100 uM standard deviated from linearity), and committed to reading only inside that range and never extrapolating, discarding data that fell outside. Because EDTA, AMP and ADP all suppress luciferase, every sample is compared against ATP standards prepared at the same pre-reagent EDTA concentration and the same substrate concentration, and the ratio of slopes gives per-condition correction factors (tabulated for all eight AMP and ADP levels at both 1:25 and 1:50 dilutions, e.g. AMP CF 0.0822 at 2 mM and 0.6113 at 0.0156 mM) that are hard-coded into the published Excel templates. Correcting recovers the kinetic trend that inhibition had destroyed: the same DrPPK2 AMP dataset moves from Km 0.020 mM / Vmax 5.66 uM/min uncorrected to Km 0.139 mM / Vmax 23.2 uM/min corrected, and the 2 mM AMP point is openly excluded from the fit because the correction does not fully recover it. Benchmark kinetics are reported with R2 (DrPPK2 ADP Km 0.985 mM, Vmax 11.7 uM/min, R2 0.9894; ManPPK2 ADP Km 2.67 mM, Vmax 42.6 uM/min, R2 0.9993; FtPPK2 ADP Km 3.16 mM, Vmax 80.05 uM/min, R2 0.9963). Reproducibility was tested as an experiment in its own right: three team members ran the same full-range assay on the same enzyme aliquot on the same day, giving Km 0.0775 +/- 0.0145 mM and Vmax 8.62 +/- 1.39 uM/min, and the team states plainly that these do not match the earlier full-range values and lists the candidate causes (different purification batch, new polyP lot, new AMP lot) as unresolved. Microscopy is handled by a named pipeline, CellScope, which runs Cellpose segmentation at 1.332 um/pixel after 4x downsampling, exports one row per object per timepoint to parquet (over a million objects on one plate), applies a QC gate on diameter 5 to 60 um, circularity 0.80 to 1.25 and no saturated pixels, reports each well as fold over its own background, and runs a two-mode (delta-BIC) test for subpopulations; a dedicated figure documents a case where the segmentation silently failed on a visibly good well, which the team published rather than hid. Every bulk plate carries a 0.125 uM fluorescein well as a dye reference, and the wiki maintains an explicit glossary distinguishing RFU (plate reader) from AU (microscope) as non-comparable units.",
+    "software": "OpenTrons OT-2 Python protocols for dilution-plate creation and dilution execution (full-range and confirmatory, four enzymes), published as .py downloads; Excel analysis templates for the full-range AMP, full-range ADP and confirmatory assays with correction factors built in; a master-mix calculator, titration design workbooks, plate-map template and osmolarity worksheet; the CellScope image-analysis pipeline (Cellpose segmentation, OzaLabCP/Imageanalysis) with a published vesicle_pipeline.txt; STL files for the washboard insert and rubber-band sled; raw time-course data and raw image data/masks released. All downloads are collected on https://2026.igem.wiki/calpolyslo/downloads and the lab manuals are released under CC BY 4.0.",
+    "stack": [
+      "Promega CellTiter-Glo 2.0 luciferase ATP assay",
+      "Promega GloMax luminometer",
+      "BioTek Cytation5 plate reader",
+      "Cephla Squid automated fluorescence microscope",
+      "OpenTrons OT-2 liquid handler",
+      "Cellpose / CellScope segmentation pipeline",
+      "Python",
+      "Parquet",
+      "Excel analysis templates",
+      "SolidWorks",
+      "FDM 3D printing"
+    ],
+    "techniques": [
+      "Matched-condition standard curves",
+      "Interference correction factors",
+      "Quench-method validation",
+      "Defined linear measurement range (no extrapolation)",
+      "Michaelis-Menten fitting with R2",
+      "Inter-operator reproducibility testing",
+      "Fluorescein dye reference wells",
+      "Image segmentation with explicit QC gates",
+      "Bimodality testing (delta BIC)",
+      "Osmolarity control",
+      "DBTL hardware iteration"
+    ]
+  },
+  "good": {
+    "publicEngagement": "The team designed CHEM 471: Engineering Synthetic Cells, described as the first known undergraduate synthetic-cell course in the US, wrote and tested ten open-licence (CC BY 4.0) lab manuals plus an instructor packet with prep lists, reagent costs, timing and common failure points, taught it to ten students in spring 2026, and surveyed them before and after. Confidence rose in 9 of 12 skills; the three that did not became design inputs. Students rated fluorescence microscopy lower at the end than at the start, so the microscope protocols were rewritten and re-tested by the team's least experienced members; manual cytosol-recipe maths was replaced by auto-scaling Excel calculators; NanoOrange/A280 protein quantification was replaced with a Bradford assay plus BSA standard curve; and the Promega AMP/ADP protocol was replaced with the team's own real-time assay. A student's suggestion became the tip-wipe oil-removal method that was then tested against the standard method.",
+    "ihp": "Consultations with ethicists, legal and biosecurity scholars and industry scientists were run as feedback-to-action pairs. Dr Hank Greely advised publishing safety and containment thinking before starting work, so the team published aims, protocols, lab manuals and safety forms. Dr Ryan Jenkins recommended survivability testing as risk-assessment evidence, so the team tested whether synthetic cells survive outside the tube across pH, salinity and real environmental water samples (Los Osos Creek wetland, Avila Beach ocean water, campus pond, tap and deionised water) and found the cells lyse outside pH 7 +/- 1, at seawater salinity and in every environmental sample; he also prompted a lab-notebook safety checklist. Dr Keith Robison raised dual-use scenarios, which produced a benefits-vs-misuse framework. Dr Tae Seok Moon raised public perception, which produced IRB-approved surveys (Cal Poly IRB #2026-194 and #2026-195) of 10 CSHL Summer Synthetic Biology participants and 30 Cal Poly FSURP students on comfort, trust and regulation. Dr Zachary Sun's view that education may be the realistic near-term application reshaped the project's scope toward enzyme characterisation and teaching.",
+    "realWorld": "The framing throughout is cost of access rather than novelty: PPK2 plus polyphosphate is pursued because it lowers the price floor of cell-free protein synthesis, and the 3D-printed washboard replaces a hand-raking step that varies between operators. The course is explicitly packaged as a template other undergraduate institutions can adopt, with reagent costs and set-up in an instructor packet, and the full protocol set released so other programmes can either reproduce the six enzyme-characterisation experiments or swap in their own enzymes. Six characterised PPK2 enzymes and sixteen candidate-panel enzymes are deposited as registry parts with their datasets linked.",
+    "partners": [
+      "Cold Spring Harbor Laboratory Summer Synthetic Biology Program",
+      "Cal Poly Frost Summer Undergraduate Research Program (FSURP)",
+      "b.next (Nucleus cytosol kit)",
+      "Promega",
+      "Dr Hank Greely (Stanford)",
+      "Dr Ryan Jenkins",
+      "Dr Keith Robison",
+      "Dr Tae Seok Moon",
+      "Dr Zachary Sun"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6405/wiki/measurement/meas-opentrons-deck.avif",
+      "caption": "The Opentrons OT-2 deck loaded with tip racks and plates; the robot was revived after five years to prepare the EDTA stop plates and the fixed 1:25 and 1:50 dilution plates for the ATP assay.",
+      "credit": "Team CalPolySLO, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6405/wiki/measurement/meas-glomax-reader.avif",
+      "caption": "The Promega GloMax plate reader used to convert quenched, diluted PPK2 reactions into luminescence, which is then converted to ATP concentration against EDTA- and substrate-matched standard curves.",
+      "credit": "Team CalPolySLO, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6405/wiki/measurement/meas-celltiter-glo.avif",
+      "caption": "CellTiter-Glo 2.0, the luciferase chemistry the assay is built on. Because the reagent carries an undisclosed amount of magnesium, the safe upper EDTA limit could not be calculated and had to be measured.",
+      "credit": "Team CalPolySLO, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6405/wiki/emulsion-device/emu-final.avif",
+      "caption": "The finalized 3D-printed emulsification device: a semicircle chassis with a ridged washboard insert and a 30-degree rubber-band sled, which shears cytosol into lipid-in-oil for four tubes at once in place of hand-raking a single tube along an empty rack.",
+      "credit": "Team CalPolySLO, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Before comparing anything, prove the measurement: validate the quench, establish the instrument's honest linear range and refuse to extrapolate outside it, then build a separate standard curve for every interfering condition and hard-code the resulting correction factors into the analysis template you ship. Then test reproducibility by handing the written protocol to people who have never run it, and publish the disagreement when their numbers differ from yours.",
+  "sources": [
+    "https://2026.igem.wiki/calpolyslo/",
+    "https://2026.igem.wiki/calpolyslo/measurement",
+    "https://2026.igem.wiki/calpolyslo/description",
+    "https://2026.igem.wiki/calpolyslo/alternative-platform",
+    "https://2026.igem.wiki/calpolyslo/emulsion-device",
+    "https://2026.igem.wiki/calpolyslo/education",
+    "https://2026.igem.wiki/calpolyslo/human-practices",
+    "https://2026.igem.wiki/calpolyslo/downloads"
+  ]
+}

@@ -38,12 +38,19 @@ Agents are `general-purpose` and write files directly; they must NOT paste JSON 
 context). The brief that worked:
 
 1. Give the team list as `name → iGEM team id`.
-2. Tell them 2026 wikis are at `https://2026.igem.wiki/<slug>/`, are **server-rendered**, and that plain `curl`
-   works. Slug = lowercase team name, hyphenated. Fall back to WebSearch when a slug 404s.
+2. Tell them 2026 wikis are at `https://2026.igem.wiki/<slug>/`. Slug = lowercase team name, hyphenated.
+   **CORRECTION, learned the hard way:** most 2026 wikis are client-rendered Vite/React SPAs, so plain `curl`
+   returns an empty shell. Only a minority (ETH-Zurich, GEMS-Taiwan) are server-rendered. The reliable recipe is:
+   try `curl` first, and **the moment the extracted text is short or empty, switch to the browser pane**
+   (`mcp__Claude_Browser__navigate` then `get_page_text`, with a 2-3 s wait for lazy route chunks).
+   Route lists can be pulled by grepping `path:"..."` out of the JS bundle. Image URLs must then be collected
+   from the live DOM, because most are not string literals in the bundle.
    (`teams.igem.org/<id>` is JS-only and useless to a fetcher.)
 3. Give them the text-extraction one-liner:
    `curl -sL --max-time 40 "<url>" | python3 -I -c "import sys,re,html; t=sys.stdin.read(); t=re.sub(r'(?is)<(script|style|nav|footer)[^>]*>.*?</\1>',' ',t); t=re.sub(r'(?s)<[^>]+>',' ',t); print(html.unescape(re.sub(r'[ \t]*\n\s*','\n',re.sub(r'[ \t]+',' ',t)))[:20000])"`
 4. Images: `curl -sL "<url>" | grep -oiE 'https://static\.igem\.wiki/teams/<ID>/[^"'"'"' )]+\.(jpg|jpeg|png|webp|svg|avif)' | sort -u`
+   — works only on the server-rendered minority. For SPA wikis, read image URLs out of the rendered DOM instead.
+   Watch file size: one team shipped a 10 MB animated MD-simulation webp; prefer a lighter figure.
    then verify with `curl -sIL -o /dev/null -w "%{http_code} %{content_type} %{size_download}\n"`. 2–4 per team,
    content only (figures, hardware, activities) — never logos. **Note: most 2026 wikis serve `.avif`.**
 5. Name the exact output path `research/teams/<id>.json` and the exact schema.

@@ -1,0 +1,91 @@
+{
+  "team": "William-and-Mary",
+  "id": "6243",
+  "section": "Undergrad",
+  "country": "United States",
+  "village": "",
+  "wiki": "https://2026.igem.wiki/william-and-mary/",
+  "projectTitle": "BROKEN: Building Resilient Optimized Engineered Networks",
+  "tagline": "Bringing failure analysis from mature engineering disciplines into synthetic biology: detect, mitigate and predict how genetic circuits break.",
+  "summary": "William & Mary argued that synthetic biology measures whether a circuit works and almost never measures how long it keeps working. BROKEN therefore ran longitudinal experiments on four previously engineered circuits in laboratory cultures and in seawater microcosms, following them through serial passaging to deterioration rather than stopping at initial success. The team paired functional readouts (OD600, beta-carotene production, GFP, biofilm morphology, starch hydrolysis, colony-forming units) with molecular verification (PCR, restriction digests, gels, NanoDrop) and with multi-omics (RNA-seq, genomic DNA sequencing, long-read plasmid sequencing), then built mechanistic ODE models and machine-learning approaches to predict time to failure. The reliability framing came directly from Integrated Human Practices and turned safety into the project's central motivation, which is reflected in its Safety and Security Award.",
+  "awards": [
+    "Safety and Security Award winner (Undergraduate)",
+    "Best Measurement nominee (Undergraduate)",
+    "Best Presentation nominee"
+  ],
+  "dry": {
+    "frameworks": "A stated measurement philosophy of multitiered (population, circuit output, viability, DNA integrity, transcription), multimodal (optical, biochemical, microbiological, sequencing) and redundant measurement, with the explicit rationale that a falling fluorescence signal could equally mean circuit dysfunction, reduced growth, altered reporter maturation or changed physiology. An extension of the standard Design-Build-Test-Learn cycle so that engineering does not end at a functioning construct but continues through systematic longevity and failure testing in both laboratory and realistic environmental conditions, with results feeding back into design.",
+    "dataviz": "Longitudinal fluorescence and beta-carotene time-course figures, kill-switch and thymineless-death assay panels, DNA mutation tables for the corrosion-prevention construct, leakiness panels and circuit-expression comparisons across experiments, all numbered as a continuous figure series across the results and measurement pages.",
+    "datascience": "The headline measurement contribution is absolute-style fluorescence calibration: the team prepared concentration series of fluorescein and sulforhodamine 101 in PBS, measured four replicates at each concentration with PBS blanks to assess solvent background, fitted linear regressions of fluorophore concentration against RFU with reported R2 greater than 0.99, and then used published extinction coefficients and quantum yields to estimate conversion factors between the calibration dyes and S65T GFP, mKate2, mCherry and cpGFP, so that plate-reader readings could enter the mathematical models as concentration-like variables instead of instrument-dependent arbitrary units. They state the limitation plainly, that because dye and protein optical properties differ these conversions are estimates contingent on the correction factors. Normalisation is handled explicitly: beta-carotene is reported as A454/OD600 so that per-cell production is separated from cell number, uncontaminated LB is measured as a blank, and OD600 is used both to standardise serial transfers and to interpret every fluorescence comparison. Where optical turbidity cannot answer the biological question, the technique changes: CFU counts are used for kill-switch viability and for thymineless death and rescue, on the advice of Dr Andrei Kuzminov, with plating on thymidine-supplemented medium so that the assay does not itself impose further starvation. Reporter maturation delay was built into measurement timing after Dr Sean Sleight pointed out that a delay in fluorescence is not a delay in transcription. The RNA-seq pipeline is specified end to end: fastp for adapter trimming and quality filtering, SortMeRNA for residual rRNA removal, HISAT2 alignment against combined host-plus-plasmid references built as merged FASTA and GFF files, featureCounts for gene-level assignment and DESeq2 for differential expression; genome assemblies from Plasmidsaurus were annotated with Bakta in Geneious Prime and variant tables exported. Modelling carries uncertainty properly: SciPy least-squares fits of the lambda-repressor model give R2 = 0.82 and chi2/dof = 0.88 at 30 C, and the team reports that the 42 C prediction degrades to R2 = 0.55 with chi2/dof = 7.57, six to eight times worse than the in-sample value and therefore larger than measurement noise explains, rather than presenting the prediction as validated. A light-responsive fit is reported as poor at the assumed error (chi2/dof = 4.7, p = 0.0009) with the specific failure described (the dark curve fits, the light curve is flat then bursts). Because the labelled dataset is tiny (N = 16), model selection uses leave-one-out and leave-one-series-out rather than a train/test split, with benchmarking across OLS, Ridge, Lasso, Elastic Net, random forest and Gaussian process; Ridge on circuit fraction plus stress genes gives leave-one-out R2 = 0.61, and a classifier reaches AUC 0.880 and accuracy 0.830, both reported with the caveat that 16 samples cannot establish a general predictor.",
+    "software": "All modelling and analysis code is published with documentation on the team's iGEM GitLab, with instructions for both terminal use and a web interface. A Guidebook for Circuit Failure Measurement is released as a PDF, offering a tiered approach scaled to a laboratory's budget, from accessible functional assays through molecular diagnostics to sequencing and multi-omics. Longitudinal RNA-seq and DNA-seq datasets are released for the community, paired with functional, growth and viability measurements so that molecular change can be linked to observed performance. The hardware, software, alternative-platform and entrepreneurship wiki pages remain unfilled iGEM templates.",
+    "stack": [
+      "fastp",
+      "SortMeRNA",
+      "HISAT2",
+      "featureCounts",
+      "DESeq2",
+      "Bakta",
+      "Geneious Prime",
+      "Plasmidsaurus (Oxford Nanopore long-read)",
+      "SciPy (least_squares)",
+      "scikit-learn-style regression benchmarking",
+      "Plate reader fluorescence and OD600",
+      "Flow-cytometry-free CFU viability"
+    ],
+    "techniques": [
+      "Fluorescein and sulforhodamine 101 calibration curves (R2 > 0.99)",
+      "Dye-to-protein conversion factors via extinction coefficient and quantum yield",
+      "OD600 normalisation and blank subtraction",
+      "A454/OD600 product normalisation",
+      "CFU viability in place of turbidity",
+      "Reporter maturation-aware timing",
+      "Longitudinal serial passaging to a failure endpoint",
+      "Seawater microcosm environmental testing",
+      "chi2/dof goodness of fit",
+      "Leave-one-out and leave-one-series-out validation",
+      "Model benchmarking on a fixed small dataset"
+    ]
+  },
+  "good": {
+    "publicEngagement": "",
+    "ihp": "Integrated Human Practices reframed the project three times over. Contributors from aerospace, civil and electrical engineering backgrounds pushed the team to adopt not only the methods of failure engineering but its mindset, that failure should be anticipated and designed for rather than observed after the fact. The most consequential shift was the recognition that circuit failure is a biosafety problem, not a performance problem, which moved safety from a secondary consideration to the central motivation and underpins the team's Safety and Security Award. Technical guidance entered the DBTL cycle directly: Dr Alex Porter pressed the team on the gap between laboratory performance and behaviour under realistic environmental conditions, which produced the seawater microcosm experiments; Dr Sean Sleight raised fluorescent-protein maturation, which changed measurement timing; and Dr Andrei Kuzminov argued that OD600 and fluorescence could not measure survival during thymineless death, which replaced the planned readout with CFU-based viability.",
+    "realWorld": "The project's deliverables are aimed at the field rather than at a product: an open-source set of standard operating protocols written so that someone who was not present can follow them, a tiered Guidebook for Circuit Failure Measurement scaled to different budgets, publicly released longitudinal multi-omics datasets for comparative failure analysis and model validation, and a proposed extension of DBTL that adds systematic longevity and failure testing. The team also models building on previously published circuits rather than treating initial characterisation as an endpoint, and frames kill switches and other safety-critical circuits as the components that most need the failure analysis mature engineering disciplines already apply.",
+    "partners": [
+      "Dr Alex J. Porter",
+      "Dr Sean Sleight",
+      "Dr Andrei Kuzminov",
+      "Plasmidsaurus"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6243/wiki/figures/figure1-betacarotene-assay.avif",
+      "caption": "Beta-carotene assay following circuit output over serial passaging. Absorbance at 454 nm is normalised to OD600 so that a fall in total pigment can be separated from a fall in cell number.",
+      "credit": "Team William-and-Mary, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6243/wiki/figures/figure3-killswitch-assay.avif",
+      "caption": "Kill-switch assay. Colony-forming unit counts before and after induction are used instead of OD600 or fluorescence, because the intended output of a kill switch is loss of viability rather than loss of reporter signal.",
+      "credit": "Team William-and-Mary, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6243/wiki/figures/figure10-thymineless-rescue.avif",
+      "caption": "Thymineless rescue measured by CFU on thymidine-supplemented medium, an assay design adopted after Dr Andrei Kuzminov advised that optical density and fluorescence would not measure survival directly.",
+      "credit": "Team William-and-Mary, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6243/wiki/figures/fig11-hd260828-gfp-fluorescence-timecourse.avif",
+      "caption": "GFP fluorescence time course for an engineered construct. Raw plate-reader RFU values are converted toward concentration-like units using fluorescein and sulforhodamine 101 calibration curves (R2 > 0.99) before entering the mathematical models.",
+      "credit": "Team William-and-Mary, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Calibrate fluorescence against a dye concentration series before any number leaves the plate reader, and report model fits with chi2/dof against the measurement error rather than R2 alone, so that an out-of-sample prediction that is six times worse than the in-sample fit is visible as a failure instead of being dressed up as a moderate correlation.",
+  "sources": [
+    "https://2026.igem.wiki/william-and-mary/measurement",
+    "https://2026.igem.wiki/william-and-mary/model",
+    "https://2026.igem.wiki/william-and-mary/description",
+    "https://2026.igem.wiki/william-and-mary/results",
+    "https://2026.igem.wiki/william-and-mary/human-practices",
+    "https://2026.igem.wiki/william-and-mary/engineering"
+  ]
+}

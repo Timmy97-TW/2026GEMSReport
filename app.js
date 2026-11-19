@@ -175,6 +175,34 @@
             return "<tr>" + r.map(function (c, i) { return "<td>" + (i === 0 ? "<b>" + rich(c) + "</b>" : rich(c)) + "</td>"; }).join("") + "</tr>";
           }).join("") + "</tbody></table></div>";
       }
+      if (b.checklist && b.checklist.length) {
+        h += '<h3 class="sub">' + esc(L("Checklist", "檢查清單")) + "</h3>" +
+          '<div class="grid g2">' + (LANG === "zh" && b.checklist_zh ? b.checklist_zh : b.checklist).map(function (c, i) {
+            return '<div class="card" style="display:flex;gap:13px;align-items:flex-start">' +
+              '<span style="flex:none;width:25px;height:25px;border-radius:8px;background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center">' +
+              (i + 1) + '</span><p style="margin:2px 0 0">' + rich(c) + "</p></div>";
+          }).join("") + "</div>";
+      }
+      if (b.antipatterns && b.antipatterns.length) {
+        h += '<h3 class="sub">' + esc(L("Effort that did not pay off", "投入了卻沒有回報的事")) + "</h3>" +
+          '<div class="grid g2">' + (LANG === "zh" && b.antipatterns_zh ? b.antipatterns_zh : b.antipatterns).map(function (c) {
+            return '<div class="card" style="display:flex;gap:12px;align-items:flex-start;box-shadow:inset 0 0 0 1px rgba(229,72,77,.18)">' +
+              '<span style="flex:none;color:var(--rose);font-weight:700;font-size:15px;line-height:1.5">×</span>' +
+              '<p style="margin:0">' + rich(c) + "</p></div>";
+          }).join("") + "</div>";
+      }
+      if (b.partners && b.partners.length) {
+        h += '<h3 class="sub">' + esc(L("Collaboration proposals", "合作提案")) + "</h3>" +
+          '<div class="grid g2">' + b.partners.map(function (p) {
+            return '<div class="card lift"><h4>' + esc(T(p, "name")) + "</h4><p>" + rich(T(p, "why")) + "</p>" +
+              (p.firstProject ? '<div class="take" style="margin-top:10px"><div class="k">' +
+                esc(L("First project", "第一個合作專案")) + "</div><p>" + rich(T(p, "firstProject")) + "</p></div>" : "") + "</div>";
+          }).join("") + "</div>";
+      }
+      if (b.method) {
+        h += '<p style="margin-top:22px;font-size:13px;color:var(--ink3);max-width:60em"><b style="color:var(--ink2)">' +
+          esc(L("Method and limits.", "方法與限制。")) + "</b> " + rich(T(b, "method")) + "</p>";
+      }
       return h + "</div></section>";
     }).join("");
   }

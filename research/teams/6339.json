@@ -1,0 +1,112 @@
+{
+  "team": "Muenster-University",
+  "id": "6339",
+  "section": "Overgrad",
+  "country": "Germany",
+  "village": "Agriculture",
+  "wiki": "https://2026.igem.wiki/muenster-university/",
+  "projectTitle": "P.A.C. Immunity",
+  "tagline": "A modular platform that retrofits native plant immune sensors so a crop detects a pathogen's own protease directly and triggers an instant immune response.",
+  "summary": "P.A.C. Immunity rewires plant immunity instead of breeding for it. A plant NLR immune receptor is held inactive by a synthetic blocker peptide containing a protease cleavage site; when a pathogen secretes its effector protease into the host cell - a step many viruses, bacteria, fungi and nematodes cannot skip - the protease cleaves the blocker, the NLR fires, and the plant mounts a hypersensitive response. Because only the cleavage site changes between pathogens, swapping one short sequence retargets the whole system, which is the modularity argument: classical resistance breeding takes years and pathogens overcome new resistances quickly. The bottleneck they hit is that almost no pathogen protease has a known cleavage motif, so the dry lab built ProTEUS (Protease Target Elucidation Using Structural Modeling), a de-novo-binder-style pipeline chaining AlphaFold3, RFdiffusion3 and LigandMPNN with a mechanistically grounded geometric scoring function to generate candidate cleavage peptides for proteases with no characterised substrates at all.",
+  "awards": [
+    "Overgrad Top 10",
+    "Best New Composite Part winner (Overgrad)",
+    "Best Presentation nominee",
+    "Best Wiki nominee",
+    "Best Agriculture Project nominee"
+  ],
+  "dry": {
+    "frameworks": "ProTEUS repurposes the de novo mini-binder design stack for an unsolved problem - predicting cleavage sites for proteases whose substrates are unknown - which existing tools (PROSPER, PROSPERous, Procleave, iProt-Sub) cannot do, since they only predict where a given substrate is cut by a protease with 30 or more already-described sites. The pipeline, named as machines on the wiki: AlphaFold3 predicts the target protease structure (AF3 machine I), since no crystal structure existed for any of RipT, RipE1, RipBN or HopN1; the structure is inspected in ChimeraX and aligned by Matchmaker against papain (PDB 9PAP) and other characterised proteases to derive catalytic triads and specificity residues, whose solvent-exposed atoms become hotspot constraints (scanner); RFdiffusion3 generates 5,000 binder backbones per target (1,000 batches of 5) with atom-level rather than residue-level hotspot conditioning and 'is_non_loopy' set to false so no helical bias blocks accessible peptides, with gamma_0 raised from 0.2 to 0.6 to reduce duplicate sequences (RFD3 machine); a Python filter rejects backbones closer than 1.7 A to the protease or farther than 8.0 A from the catalytic centre, with target-specific pass rates of 94.2% for HopN1, 51.1% for RipE1, 48.1% for RipT and 12.3% for RipBN, which they attribute to differences in pocket depth and hotspot geometry (cannon I); LigandMPNN (checkpoint ligandmpnn_v_32_010_25, seed 111, sampling temperature raised to 0.3 from 0.1 for short-sequence diversity) designs 6-10 sequences per backbone with sidechain conformations (MPNN machine); AlphaFold3 re-folds each unique designed sequence in complex with the target protease (AF3 machine II); and a Python scoring script extracts binding geometry and ranks with selected weights (cannon 2), handing the top 100 per protease to wet-lab screening (portal). Everything ran on the PALMA II HPC cluster at Munster - RFdiffusion3 on an RTX 4090 (24 GB) node at about 14 h per protease, LigandMPNN on 8 CPU cores at about 10 h, AlphaFold3 on an A100 (40 GB). Confidence handling is deliberate: they analysed pLDDT and minimum binder-target PAE rather than pTM/ipTM, which have been reported as weaker predictors for protein-peptide interactions, found mean binder pLDDT of 39.73-49.00 across the four targets, and chose explicitly not to filter hard on confidence (a pLDDT > 80 cut would keep only a handful; a pLDDT > 50 intermediate filter changed nothing in the final 100 after structural assessment), reasoning that badly predicted designs would fail the geometric assessment anyway.",
+    "dataviz": "The wiki is a single-page React application built as an explorable argument rather than a document. It opens with Gary, a farmer whose story carries the problem (30% of global yield losses to plant pathogens, pesticide treadmill, resistances overcome quickly) before any molecular biology appears, and that narrative thread was a direct result of human practices advice. The dry lab page presents the ProTEUS pipeline as a machine metaphor - scanner, RFD3 machine, cannon, MPNN machine, portal - with an animated workflow, and each of the four candidate proteases gets a card showing its AlphaFold3 prediction with per-residue pLDDT for each catalytic triad member and for the whole and core enzyme, plus the hotspot atoms chosen for diffusion. Quantitative figures include a pLDDT-versus-PAE hexbin density plot with the official AlphaFold confidence bands marked, before-and-after pLDDT bars showing what trimming disordered N-terminal secretion signals does to each protease's confidence (raising RipBN above 70), and side-by-side renders of a rejected design versus a kept one. An interactive 3Dmol viewer serves structures (including an AlphaFold3 resistosome model), Rive animations drive the cloning and engineering-cycle explanations, and inline tooltips expand every acronym. Education results are themselves visualised as radial comparison charts of pre- versus post-event survey answers.",
+    "datascience": "Their most transferable piece of work is converting enzymology into a scorable geometry, because no training data existed. Since their four targets have no known cleavage motifs, they could not fit a model; instead they derived scoring parameters from the catalytic mechanism of protein-nucleophile proteases - the nucleophile sulfur or oxygen within attack distance of the base nitrogen, the nucleophile-to-carbonyl-carbon distance, the hydrogen-bond distance from the oxyanion hole amide NH to the scissile carbonyl oxygen, the nucleophile's reactive rotamer (gauche- versus trans, which determines whether the oxyanion hole is formed by the nucleophilic residue's own amide NH or the one C-terminal to it), the near-universal angle between the nucleophile atoms and the base, and the nucleophilic attack angle, with the explicit correction that cysteine proteases take a different ideal attack angle than serine proteases because sulfur hybridises more weakly than oxygen. These were combined into a weighted score over AlphaFold3 complex geometry. They also engineered the cost down: profiling showed the jackhmmer MSA search accounted for over 86% of AlphaFold3 runtime, and because every binder in an iteration is co-folded with the same protease they cached the protease MSA and skipped MSA generation for the artificial peptides entirely (homologs of a designed peptide being meaningless), cutting time per prediction from about 13 minutes to 30 seconds and making a 5,000-30,000 prediction campaign feasible where the naive estimate was 45 to 270 days. Validation was retrospective: run on NIa-Pro, a protease with a known motif, the pipeline recovered the correct residues (E/P6, V/P4, Q/P1) among its top 100 candidates, and for the four uncharacterised proteases it pinpointed potentially important residues, with preliminary wet-lab signal for HopN1, RipBN and RipT that the team states needs a refined screening assay to confirm.",
+    "software": "ProTEUS is the team's software contribution, documented step by step on the model page with every tool version, checkpoint, seed, non-default parameter and HPC node specification stated - enough for another group to rebuild it - but no public repository link is given on the wiki. Their released artefact is instead the part collection on the iGEM Registry, which is where the Best New Composite Part came from: a modular toolkit for plant-immunity engineering comprising pathogen effector protease expression constructs (NIa-Pro from Potato Potyvirus Y with an N-terminal myc tag, plus AvrPphB, HopN1, RipT, RipE1 and RipBN from Pseudomonas syringae and Ralstonia with C-terminal myc tags), a blocker peptide that prevents NLR activity when fused to the N-terminus (experimentally demonstrated on autoactive AtNRG1.1 [D485V], BBa_26V5N8GY), graded series of protease cleavage sites for NIa-Pro, AvrRpt2 and AvrPphB with short, medium and asymmetric GS-linkers plus non-cleavable mutant negative controls, a FRET pair (mTurquoise / cpVenus173) for Nicotiana benthamiana, and synthetic BsaI, BsaI-with-internal-NdeI and PaqCI dropout segments designed so an insert can be swapped into a composite part by Golden Gate assembly - built specifically for pooled library cloning, which is what makes the collection modular 'for anyone to advance with standard cloning practices'.",
+    "stack": [
+      "AlphaFold3",
+      "RFdiffusion3",
+      "LigandMPNN / ProteinMPNN",
+      "ChimeraX (Matchmaker)",
+      "Python (filtering + geometric scoring)",
+      "jackhmmer (MSA, cached)",
+      "PALMA II HPC (NVIDIA RTX 4090, A100)",
+      "3Dmol.js",
+      "React + Vite (wiki)",
+      "Rive (animations)",
+      "iGEM Registry",
+      "Golden Gate / MoClo",
+      "Gibson assembly",
+      "Western blot and GFP degradation-tag reporter screening",
+      "Nicotiana benthamiana transient expression"
+    ],
+    "techniques": [
+      "de novo binder design repurposed for protease substrate discovery",
+      "atom-level hotspot conditioning in structure diffusion",
+      "structural alignment to characterised homologs to locate catalytic triads without crystal structures",
+      "steric and distance filtering of backbone-only diffusion output",
+      "mechanism-derived geometric scoring in place of a trained model",
+      "reactive rotamer analysis to identify the active oxyanion hole",
+      "pLDDT and minimum binder-target PAE instead of pTM/ipTM for peptide complexes",
+      "disordered-terminus trimming before confidence assessment",
+      "MSA caching and MSA-free folding of synthetic peptides for throughput",
+      "retrospective validation on a protease with a known motif",
+      "screen-many-good-predictions rather than pick-the-best",
+      "GFP-cleavage-site-degradation-tag high-throughput plate screening",
+      "FRET-based cleavage readout in planta",
+      "Design-Build-Test-Learn cycles documented per module"
+    ]
+  },
+  "good": {
+    "publicEngagement": "The broadest and most systematically evaluated education programme of the five teams, and almost every activity was measured with pre- and post-activity questionnaires decided on in advance. Formats: a stand on the MS Wissenschaft science exhibition ship (a German federal research ministry project visiting 33 cities across Germany, Poland and Austria) during its Munster stop, drawing on roughly 5,000 weekend visitors, where people isolated DNA from bananas with household chemicals, built DNA double strands from 60+ gummy-bear model kits (deoxyribose, phosphate and four coloured bases) and translated their own codon to an amino acid on a take-home worksheet with a QR code back to the project; a workshop series at the LWL Museum of Natural History over the summer holidays bridging microscopic to macroscopic DNA, with agar-plate cultures cleared in writing with museum management and lab management, ending with participants designing their own Petri dishes, and follow-up feedback collected from parents rather than only participants; a protease workshop series for 8th and 9th grade school classes using digestive enzymes - ginger-juice proteases curdling milk at different temperatures, fruit juices degrading gelatine - iterated after anonymous participant feedback that the first round's instructions were 'a little hard to understand'; a bio pub quiz with the question rounds embedded in a narrative frame; 'Design Your Crop', a 3-6 player card game in which players become plant breeders guarding a hidden genome, built as a scalable substitute for events that only reach as many people as the team's time allows; a children's book featuring a farmer and a planned primary-school reading-plus-worksheet collaboration; a bioethics lecture analysing P.A.C. Immunity as a case study under the new EU NGT Directive; 'A Mosaic of Opinions', a dialogue event designed against the finding that consumer fear of gene editing in the food chain comes from campaigns plus shallow understanding; and a Fishbowl discussion in Nottuln co-organised with the Westphalia-Lippe Agricultural Association (WLV), with roughly two rounds pairing critical and supportive voices - fruit grower and pomology expert Hans-Joachim Bannier and Bioland farmers against Prof. Jochen Schmid (IMMB Munster) and the team - attended by regional farmers, Bioland farmers, association representatives, science students and the general public. They also hosted their own three-day conference, Junior Jam Munster, at the Munster castle, with expert talks, interactive workshops, poster sessions, a panel discussion and a session on iGEM judging criteria, and reported the meta-lesson from participant feedback that interactive workshops retain more than frontal ones and that Zoom talks land far weaker than in-person. The most durable piece is curricular: they developed a lesson concept on proteases for 8th and 9th grade biology, refined with teachers at a partner school and compliant with North Rhine-Westphalia's rules on genetic engineering experiments in schools; recognising that thermocyclers, electrophoresis chambers and photometers are not available in every school, they designed a lending experiment-kit concept, and they are working to shape teacher training through a university module in which master's students build and trial a lesson plan with invited school classes - aimed partly at the fifth Abitur examination subject with experimental assessment arriving in 2027-28.",
+    "ihp": "They state their principle as treating criticism as an ally and letting unanswered questions dictate which experts to approach next, and the chain is traceable. Prof. Dr. Dirk Prufer (Institute of Plant Biology and Biotechnology, Munster) validated the concept but said a project is only as strong as its ability to be explained, which is why the work up to that point - almost entirely experimental - was rebuilt around a narrative thread, and why they distilled their science communication learning into a reusable form. Public-trust interviews produced the framing that their biggest challenge is outside the lab, since without public trust there is no foundation for engineered crops in Europe. The bottleneck conversation is the most consequential: with no reliable way to identify protease cleavage motifs, they interviewed Prof. Dr. Kummel's working group and Lasse Middendorf, Michel Westermann and Michel Stevens, who told them that AlphaFold predicting a peptide in a pocket is not evidence it will be cleaved, advised a screen-many-good-predictions approach over seeking a single best prediction, recommended validating the pipeline on a protease with a known motif, and warned that AlphaFold would struggle with short peptides - all four of which became design decisions in ProTEUS, including the separate geometric scoring layer and the NIa-Pro retrospective validation. They advised against an alternative N-terminal-binding-domain NLR engineering route on feasibility grounds, which the team dropped. Verification strategy changed too: they settled on Western blotting with the cleavage site placed between two differently sized tagged proteins, and on co-infiltrating the NLR construct with the protease construct to guarantee both are expressed, judging the live-pathogen route better suited to stably transformed plants later. Industry contacts advised focusing on crops with higher production margins and identifying which chemical pesticides are likely to be restricted so the technology can be positioned as a replacement. An early farmer-focused interview changed the education strategy outright: they contacted the WLV agricultural association to reach farmers directly, and used the resulting discussion to extract farmers' specific requirements for genetic engineering, quoting farmers' own statements back as design references.",
+    "realWorld": "There is no entrepreneurship page; the real-world case is made through regulation, agronomic positioning and safety. The project is timed against the EU's new genomic techniques regulation: they tracked the European Parliament debate through the season, committed in advance to analysing the outcome's effect on their project, and published a bioethics case study assessing P.A.C. Immunity under the new NGT Directive alongside a risk analysis, noting that it remains to be seen how the rules play out in practice. Their market framing is agronomic rather than financial - pathogens cause roughly 30% of global yield losses, pesticide dependence carries economic and ecological costs, classical resistance breeding is slow and resistances are overcome quickly, so the selling point is a platform that updates by swapping one short cleavage sequence - and industry advice pushed them toward higher-margin crops and toward positioning against pesticides facing restriction. Safety is addressed as a staged transition: current work is under laboratory containment, and they state explicitly that moving toward pathogen-resistant crops in the field introduces a fundamentally different risk picture. The honest limitation is published as its own section: not all crop pathogens secrete proteases into host cells, so the platform is not universal, and ProTEUS is positioned as what would let P.A.C. Immunity expand from a few pathogens toward broad-spectrum use. The modular part collection on the Registry, plus the documented ProTEUS methodology, are the handover to whoever continues it.",
+    "partners": [
+      "Prof. Dr. Dirk Prufer, Institute of Plant Biology and Biotechnology, University of Munster",
+      "Prof. Dr. Kummel and working group, University of Munster (structural modelling)",
+      "Lasse Middendorf, Michel Westermann and Michel Stevens (modelling advisors)",
+      "Prof. Dr.-Ing. Jochen Schmid, Institute for Molecular Microbiology and Biotechnology (IMMB), University of Munster",
+      "Westphalia-Lippe Agricultural Association (WLV) - Stefan Wolfert, Michael Uckelmann, Tim Richter",
+      "Hans-Joachim Bannier (pomology expert, critical perspective)",
+      "Jorg Schulze Buschhoff (farmer)",
+      "Dr. Holger Ophoff (official oversight perspective)",
+      "LWL Museum of Natural History, Munster",
+      "MS Wissenschaft / German Federal Ministry of Research, Technology and Space",
+      "PALMA II HPC, University of Munster",
+      "Partner school and Biology Education Department, University of Munster",
+      "Junior Jam Munster participant teams; iGEM Dusseldorf Meetup; BFH"
+    ]
+  },
+  "images": [
+    {
+      "url": "https://static.igem.wiki/teams/6339/wiki/dry-lab/figures/fig3.avif",
+      "caption": "AlphaFold3 confidence for the four candidate effector proteases before and after excluding disordered N-terminal regions, averaged over 10 samples, with the share of each protein trimmed shown above each bar.",
+      "credit": "Team Muenster-University, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6339/wiki/dry-lab/figures/fig4.avif",
+      "caption": "The HopN1 protease with the hotspot atoms used to steer RFdiffusion3, shown as ribbon and surface, next to a rejected design filtered out by the Python geometry check and one kept for sequence design.",
+      "credit": "Team Muenster-University, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6339/wiki/education/cardgame/dsc9496-gro.avif",
+      "caption": "'Design Your Crop', the 3-6 player card game in which players become plant breeders guarding a hidden genome, built so the team's engagement could scale past events limited by their own time.",
+      "credit": "Team Muenster-University, iGEM 2026 wiki"
+    },
+    {
+      "url": "https://static.igem.wiki/teams/6339/wiki/education/fish-bowl-discussion/dsc05178.avif",
+      "caption": "The Fishbowl discussion in Nottuln, co-organised with the Westphalia-Lippe Agricultural Association, bringing regional farmers, Bioland farmers, association representatives and researchers into the same conversation about green genetic engineering.",
+      "credit": "Team Muenster-University, iGEM 2026 wiki"
+    }
+  ],
+  "gemsTakeaway": "Two things are directly portable. First, when no training data exists, derive a scoring function from the mechanism instead of waiting for a dataset: Munster turned textbook protease enzymology - nucleophile-to-base distance, oxyanion hole hydrogen bonds, reactive rotamer, nucleophilic attack angle, with the serine-versus-cysteine correction - into a weighted score over predicted structures, and validated it by recovering a known motif. Second, copy their education evaluation habit: decide before each event how you will check whether the learning objective was met, run a short pre- and post-questionnaire, and publish the result including what failed - and copy the curricular endgame, where a workshop becomes a lesson plan for local schools plus a lending kit for schools without thermocyclers, which is how one season's outreach keeps running after the team disbands.",
+  "sources": [
+    "https://2026.igem.wiki/muenster-university/",
+    "https://2026.igem.wiki/muenster-university/description/",
+    "https://2026.igem.wiki/muenster-university/model/",
+    "https://2026.igem.wiki/muenster-university/results/",
+    "https://2026.igem.wiki/muenster-university/engineering/",
+    "https://2026.igem.wiki/muenster-university/experiments/",
+    "https://2026.igem.wiki/muenster-university/human-practices/",
+    "https://2026.igem.wiki/muenster-university/education/",
+    "https://2026.igem.wiki/muenster-university/contribution/",
+    "https://2026.igem.wiki/muenster-university/safety-and-security/"
+  ]
+}

@@ -185,6 +185,21 @@ def main():
     }
     report = load(os.path.join(RES, "report.json"), {}) or {}
 
+    # research/insights/*.json are standalone analysis blocks; they append to the
+    # report's sections and render with the same machinery.
+    idir = os.path.join(RES, "insights")
+    insights = []
+    for fn in sorted(os.listdir(idir)) if os.path.isdir(idir) else []:
+        if not fn.endswith(".json"):
+            continue
+        blk = load(os.path.join(idir, fn))
+        if not blk or not blk.get("title"):
+            print("  ! skipping insights/%s" % fn, file=sys.stderr)
+            continue
+        blk.setdefault("tab", "overview")
+        insights.append(blk)
+    report["sections"] = (report.get("sections") or []) + insights
+
     print("building:")
     write_js("results.js", "RESULTS", results)
     write_js("teams.js", "TEAMS", teams)
@@ -192,9 +207,9 @@ def main():
     write_js("report.js", "REPORT", report)
 
     zh = sum(1 for t in teams if t.get("summary_zh"))
-    print("\n%d team files · %d translated to Chinese · %d academic trends · %d industry trends"
+    print("\n%d team files · %d translated to Chinese · %d academic trends · %d industry trends · %d insight blocks"
           % (len(teams), zh, len(trends["academic"].get("trends", [])),
-             len(trends["industry"].get("trends", []))))
+             len(trends["industry"].get("trends", [])), len(insights)))
     missing = coverage(teams, results)
     if missing:
         print("\nstill missing a file (Top 10 or special-prize winner):")
