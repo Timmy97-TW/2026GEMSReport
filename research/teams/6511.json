@@ -41,7 +41,11 @@
       "Orthogonal protein-level validation of a fluorescence readout",
       "Quality-control chain with a higher-resolution arbiter",
       "Machine-learning pre-screening with declared domain limits"
-    ]
+    ],
+    "frameworks_zh": "一套逐步量測框架，跟著感測器從標的辨識一路走到電化學讀值，並公開一張表列出每個方法的目的與可重複使用的產出。每一項量測都依它能回答什麼問題來分類：結構驗證、在相同條件下的相對比較，或絕對定量。三套模組化的量測工作流程與專案分開發布，讓別的團隊可以只採用其中一套，而不必連 BlueCatcher 一起採用。軟體則遵循 Design-Predict-Test 迴圈，預測結果回送到濕實驗，再以實驗結果判斷模型在哪些地方表現良好。",
+    "dataviz_zh": "一張熱圖呈現全部 25 種三向接合探針組合扣除背景後的螢光反應，每 5 分鐘量測一次、共 30 分鐘；FRET 時間曲線附平均值 +/- 標準差（n = 3）；劑量反應與專一性柱狀圖疊上個別數據點並標註顯著性；報導子濃度序列的基線校正後 SWV 伏安圖疊合呈現，並以內嵌小圖放對數線性校正曲線；批次間 SWV 柱狀圖並顯示個別量測值；還有一張互動式實驗設計流程圖，把每一項分析對應到它所驗證的感測器階段。",
+    "datascience_zh": "校正哲學被明確寫出來，也是這裡最值得搬走的東西：不同量測依其用途，校正到不同的程度。FRET 量測只用於相同條件下的比較，因此以扣除背景後的反應呈現（delta F 等於有標的時的螢光減去無標的時的螢光），並明確聲明其單位為任意單位，僅供同一實驗內比較，不適用於跨儀器的絕對定量。toehold switch 的螢光則在三路對照框架下解讀——只有感測器、只有觸發股、感測器加觸發股——倍數變化以（感測器+觸發股 減 只有觸發股）除以（只有感測器 減 只有觸發股）計算，藉此把背景與 OFF 狀態的滲漏和真正的活化分開；正是這個算法顯示 BL21(DE3) 的反應為 43.4 倍、pLysS 僅 3.6 倍，從而為菌株選擇提供依據。Native PAGE 只當作定性的結構驗證使用，團隊並聲明有標的與無標的這組配對膠道是兩種不同的實驗條件，不是獨立重複；定量的再現性則交由有重複的 FRET 量測來承擔。只有最後的電化學步驟被發展成絕對定量的終點：在功能化 Au@SPCE 上，對 0 至 500 nM 的亞甲藍報導子做 SWV，全程反應並非線性，但對濃度取對數後近似線性，Ip = 2.313 log10(C) - 2.028，R2 = 0.9457；偵測極限則以正確的方式從空白推出——I_LOD = I_blank + 3 sigma_blank，再經校正曲線反推得到 7.53 nM；而 0 nM 條件同時擔任門檻值所用的空白與陰性對照。再現性是在真正會變動的層級量測的，也就是電極：三批獨立製作的 Au@SPCE 對同一個 200 nM 報導子量測，彼此沒有統計上的顯著差異，合併變異係數為 10.66%。上游的品質管制明確而且不是二分的：UV 吸光值（A230、A260、A280）被當作檢核點而不是通過／不通過的關卡，比值的完整表格也公開，其中包含一個被標記為異常的樣本（A230 為 1.097、260/230 為 0.048）；樣本接著送 Sanger 定序作為更高解析度的判準，整條鏈明示為質體萃取、純度檢查、限制酶切、序列確認，然後才是功能量測。電極製作本身也以循環伏安法、計時電流法與電化學阻抗頻譜逐步做特性分析，涵蓋裸 SPCE、Au@SPCE、探針修飾、MCH 封閉與報導子雜交等狀態；EIS 在此是用來做界面特性分析，而不是作為定量讀值。統計方法有具名：無細胞篩選採二因子變異數分析搭配 Tukey 多重比較，顯著水準與 n = 3 及個別數據點一併呈現。團隊也寫出還沒做到的部分：從 toehold switch 接到 AciI 的構築體尚未建成，因此系統並未整合；在那之前，他們拒絕宣稱 BlueCatcher 比 qRT-PCR 更快、更靈敏或更容易取得，並在比較表中每一個推估時間旁都加上星號。",
+    "software_zh": "BlueCatcher Software Suite 含兩個獨立的設計模組：三向接合探針（以隨機森林訓練）與 toehold switch（以 XGBoost 訓練），可透過瀏覽器介面使用，也可在本機安裝。使用者輸入一段標的或觸發序列，工具組會產生候選設計，利用 NUPACK 與自撰程式計算序列、結構、熱力學與交互作用特徵，套用訓練好的模型，最後回傳排序後的候選、預測信心度，以及訂購與測試所需的完整序列組件，並可匯出為 CSV。適用範圍也有文件化公開：TWJ 模組適用 18 至 25 個核苷酸的標的，toehold 模組最多 30 個核苷酸的觸發序列，並說明這些是訓練資料所涵蓋的序列空間，而不是生物學上的極限；另附資料集涵蓋度的討論、預測信心度應如何解讀，以及限制散布方式的 NUPACK 依賴問題。輔助材料包括以 PDF 形式提供的完整 Sanger 定序資料，以及三份可獨立使用的操作流程文件（核酸特性分析、toehold switch 的選殖與表現、電化學訊號產生）。"
   },
   "good": {
     "publicEngagement": "Education began with research rather than assumption. An anonymous online survey, preceded by an informed-consent statement and screened for careless or too-fast responses (12 excluded, 432 retained), used translated versions of three validated instruments: the six-item Depression Literacy and eight-item Misconceptions subscales of the DepSter scale and the nine-item perceived-stigma subscale of the Depression Stigma Scale, with internal consistency reported for this sample (alpha 0.66, 0.84 and 0.72). Literacy was high (mean 25.1 of 30) and misconceptions were broadly rejected (15.7 of 40), while perceived public stigma sat in the moderate-to-high range (29.3 of 45), with the highest-scoring items describing expected social exclusion. The team's conclusion, that the gap in Taiwan is stigma rather than knowledge, redirected the education programme; a saturated path model was estimated to test how education and personal contact relate to literacy, misconceptions and the perceived limits of counselling-only assessment. The programme that followed used different approaches for different audiences: a flipped classroom, a summer laboratory camp whose toehold-switch protocol is published as a reusable four-day workflow, family information sessions, a podcast, TGEM community-building among Taiwanese teams, and social media.",
@@ -50,28 +54,35 @@
     "partners": [
       "TGEM (Taiwanese iGEM community)",
       "Previous Taipei-KCISLK teams (V1 2023, V2 2024, V3 2025)"
-    ]
+    ],
+    "publicEngagement_zh": "教育工作是從研究開始，而不是從假設開始。一份匿名線上問卷，事前附知情同意聲明，並剔除作答草率或過快的回覆（排除 12 份、保留 432 份），採用三個已驗證量表的中譯版本：DepSter 量表中六題的憂鬱症識能分量表與八題的迷思分量表，以及 Depression Stigma Scale 中九題的知覺汙名分量表；並報告此樣本的內部一致性（alpha 分別為 0.66、0.84 與 0.72）。識能偏高（平均 25.1 分，滿分 30），迷思大致被否定（15.7 分，滿分 40），而知覺到的公眾汙名則落在中高區間（29.3 分，滿分 45），其中分數最高的題目都在描述預期會遭到的社會排斥。團隊的結論是台灣的缺口在汙名而不在知識，這也讓整個教育計畫轉向；他們並估計了一個飽和路徑模型，檢驗教育程度與個人接觸經驗如何與識能、迷思，以及對僅憑諮商評估之局限的知覺相關聯。後續的計畫對不同受眾採取不同做法：翻轉教室、一場暑期實驗營（其 toehold switch 操作流程以可重複使用的四天工作流程公開）、家長說明會、一檔播客、在台灣各隊之間推動 TGEM 社群，以及社群媒體。",
+    "ihp_zh": "利害關係人工作橫跨醫療專業人員、研究者、法規專家、潛在使用者與投資專業人士，並餵進一份涵蓋法規規劃與市場分析的創業路線圖。專案的定位——BlueCatcher 是補充而非取代臨床評估——即出自這些互動，而「這台裝置偵測訊號、不做診斷」這句明確聲明也是。",
+    "realWorld_zh": "臨床缺口寫得很具體：重度憂鬱症的評估依賴會談、症狀自述與專業判斷；而病人則面臨因汙名或就醫可及性而不規則的回診、沒有量化方式評估康復或復發，以及用試誤方式選擇治療。長期目標是做成可攜形式，在沒有集中式實驗室基礎設施的場域更靠近照護現場運作，並避開 qRT-PCR 所需的反轉錄與 PCR 增幅。硬體連判讀器內部都有規格：一個可插入的電子判讀模組，上面載有電極墊與纖維素溢流墊；一顆電池；一片聚醯亞胺軟性加熱片；一支以機械方式壓破雙腔微量管內分隔膜、以釋出第二種試劑的撥桿；以及一顆 ESP32 模組負責處理訊號，並以 WiFi 與藍牙把結果傳到配套應用程式——該程式回報的是低、中、高三級的生物標記變異程度，並附帶時間戳記的後設資料，而不是二分的診斷結果。"
   },
   "images": [
     {
       "url": "https://static.igem.wiki/teams/6511/wiki/wet-lab/measurement/v2/figure-23.avif",
       "caption": "Square-wave voltammetry quantification of the methylene-blue reporter on functionalised Au@SPCEs across 0 to 500 nM. The inset shows the approximately linear relationship between peak current and log concentration (R2 = 0.9457), from which a blank-derived limit of detection of 7.53 nM is calculated.",
-      "credit": "Team Labi-Taiwan, iGEM 2026 wiki"
+      "credit": "Team Labi-Taiwan, iGEM 2026 wiki",
+      "caption_zh": "在功能化 Au@SPCE 上以方波伏安法對 0 至 500 nM 亞甲藍報導子進行定量。內嵌小圖顯示峰電流與濃度對數之間的近似線性關係（R2 = 0.9457），並據此算出由空白推得的偵測極限 7.53 nM。"
     },
     {
       "url": "https://static.igem.wiki/teams/6511/wiki/wet-lab/measurement/v2/figure-24.avif",
       "caption": "Batch-to-batch reproducibility of the SWV readout: three independently fabricated batches of functionalised Au@SPCE measured against the same 200 nM reporter, showing no significant difference and an overall coefficient of variation of 10.66%.",
-      "credit": "Team Labi-Taiwan, iGEM 2026 wiki"
+      "credit": "Team Labi-Taiwan, iGEM 2026 wiki",
+      "caption_zh": "SWV 讀值的批次間再現性：三批獨立製作的功能化 Au@SPCE 對同一個 200 nM 報導子量測，彼此無顯著差異，整體變異係數為 10.66%。"
     },
     {
       "url": "https://static.igem.wiki/teams/6511/wiki/measurement/flow/full.avif",
       "caption": "The experimental design of the project, mapping every assay onto the stage of the sensing pathway it validates, from three-way-junction target recognition through toehold-switch signal generation to electrode fabrication and the electrochemical readout.",
-      "credit": "Team Labi-Taiwan, iGEM 2026 wiki"
+      "credit": "Team Labi-Taiwan, iGEM 2026 wiki",
+      "caption_zh": "專案的實驗設計，把每一項分析對應到它所驗證的感測路徑階段，從三向接合的標的辨識、toehold switch 的訊號產生，到電極製作與電化學讀值。"
     },
     {
       "url": "https://static.igem.wiki/teams/6511/wiki/dry-lab/hardware/figure-3.avif",
       "caption": "Exploded view of the portable electrochemical reader's internal components: the insertable electron reader module with the electrode pad and cellulose overflow pad, a battery, a polyimide flexible heater, a lever that breaks the microtube's separation membrane, and an ESP32-WROOM-32 module on the main PCB.",
-      "credit": "Team Labi-Taiwan, iGEM 2026 wiki"
+      "credit": "Team Labi-Taiwan, iGEM 2026 wiki",
+      "caption_zh": "可攜式電化學判讀器內部元件的爆炸圖：可插入的電子判讀模組（含電極墊與纖維素溢流墊）、電池、聚醯亞胺軟性加熱片、壓破微量管分隔膜的撥桿，以及主 PCB 上的 ESP32-WROOM-32 模組。"
     }
   ],
   "gemsTakeaway": "Match the amount of calibration to the job each measurement does: screening comparisons can stay in background-subtracted arbitrary units if you say so, but the one measurement you report as a concentration needs a real calibration curve, a blank-derived limit of detection, standardised baseline correction and a between-batch coefficient of variation. Treating every signal as equally quantitative is where overclaiming starts.",
@@ -81,5 +92,9 @@
     "https://2026.igem.wiki/labi-taiwan/hardware",
     "https://2026.igem.wiki/labi-taiwan/description",
     "https://2026.igem.wiki/labi-taiwan/education"
-  ]
+  ],
+  "projectTitle_zh": "BlueCatcher：針對重度憂鬱症相關循環 microRNA 的無細胞電化學生物感測器",
+  "tagline_zh": "一個多步驟的生物感測器，逐站驗證：從三向接合的標的辨識，一路到經過校正的方波伏安讀值。",
+  "summary_zh": "Labi-Taiwan 做出 BlueCatcher，一台可攜式、無細胞的電化學生物感測器，用於偵測與重度憂鬱症相關的循環 microRNA；其定位是在臨床評估之外提供客觀的生物證據，而不是作為診斷。訊號鏈刻意拉得很長：三向接合辨識標的 miRNA 並釋出觸發股，觸發股啟動一個 toehold switch 表現核酸酶，核酸酶切開標記亞甲藍的 DNA 報導子，釋出的報導子再被捕捉到鍍金網印碳電極上，以方波伏安法定量。由於單看最終訊號無法證明每一個步驟都如預期運作，團隊建立了一套逐步量測框架，讓每一站在整合之前都先獨立驗證，而校正的深度也刻意對應每一項量測各自的角色。專案另有一套機器學習設計工具組，以及一個以自家 432 份有效問卷為基礎的紮實教育計畫；他們獲得高中組的 iGEMers Prize。",
+  "gemsTakeaway_zh": "讓校正的程度對應每一項量測所承擔的工作：用於篩選比較的數據可以停留在扣除背景後的任意單位——只要你說清楚；但唯一要以濃度形式報告的那項量測，就需要真正的校正曲線、由空白推得的偵測極限、標準化的基線校正，以及批次間變異係數。把每個訊號都當成同等定量，正是過度宣稱的起點。"
 }

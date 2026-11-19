@@ -334,7 +334,7 @@ def write_text_mirror(results, teams, trends, report):
             "本報告檢視 iGEM 2026 三個組別的 Top 10 團隊、所有特別獎得主與入圍隊伍，以及其背後的學術與產業趨勢。"
             "網站：https://timmy97-tw.github.io/2026GEMSReport/"))
 
-        out.append("\n## " + H("Results", "成績"))
+        out.append("\n\n# " + H("Results", "成績"))
         for sec, g in (results.get("grandPrize") or {}).items():
             ru = "; ".join("%s %s" % (r["rank"], r["team"]) for r in g.get("runnersUp", []))
             out.append("- **%s** — %s (%s, %s)%s" % (sec, g["winner"], g["village"], g["country"],
@@ -342,7 +342,24 @@ def write_text_mirror(results, teams, trends, report):
         for sec, names in (results.get("top10") or {}).items():
             out.append("- **Top 10 %s** — %s" % (sec, ", ".join(names)))
 
-        for b in report.get("sections") or []:
+        # The site groups sections under tabs; a linear read should too, rather
+        # than interleaving tabs because they happen to share an `order`.
+        TABS = [("overview", H("Overview", "總覽")), ("drylab", H("Dry lab", "乾實驗室")),
+                ("good", H("Science for good", "科學向善")), ("teams", H("Team analysis", "團隊分析")),
+                ("roadmap", H("Roadmap", "路線圖"))]
+        ordered = []
+        for tab, _ in TABS:
+            ordered += [b for b in (report.get("sections") or []) if b.get("tab") == tab]
+        ordered += [b for b in (report.get("sections") or [])
+                    if b.get("tab") not in dict(TABS)]
+
+        seen_tab = None
+        for b in ordered:
+            if b.get("tab") != seen_tab:
+                seen_tab = b.get("tab")
+                label = dict(TABS).get(seen_tab)
+                if label:
+                    out.append("\n\n# " + label)
             out.append("\n## " + md_escape(lang(b, "title", l)))
             if b.get("lede"):
                 out.append("\n_" + md_escape(lang(b, "lede", l)) + "_")
@@ -366,7 +383,7 @@ def write_text_mirror(results, teams, trends, report):
             tl = (trends.get(key) or {}).get("trends") or []
             if not tl:
                 continue
-            out.append("\n## " + head)
+            out.append("\n\n# " + head)
             for t in tl:
                 out.append("\n### " + md_escape(lang(t, "title", l)))
                 out.append(md_escape(lang(t, "oneLine", l)))
@@ -375,7 +392,7 @@ def write_text_mirror(results, teams, trends, report):
                     out.append("\n**%s** %s" % (H("GEMS action.", "GEMS 行動。"),
                                                 md_escape(lang(t, "gemsAction", l))))
 
-        out.append("\n## " + H("Roadmap", "路線圖"))
+        out.append("\n\n# " + H("The four phases", "四個階段"))
         for i, p in enumerate(report.get("roadmap") or [], 1):
             out.append("\n### %d. %s (%s)" % (i, md_escape(lang(p, "title", l)), lang(p, "when", l)))
             if p.get("lede"):
@@ -385,7 +402,7 @@ def write_text_mirror(results, teams, trends, report):
             if p.get("outcome"):
                 out.append("\n_%s %s_" % (H("Done looks like:", "完成的樣子："), md_escape(lang(p, "outcome", l))))
 
-        out.append("\n## " + H("Team files", "團隊檔案"))
+        out.append("\n\n# " + H("Team files", "團隊檔案"))
         for t in sorted(teams, key=lambda x: (-(x.get("rank") or 0), x["team"])):
             out.append("\n### %s — %s" % (t["team"], md_escape(lang(t, "projectTitle", l))))
             out.append("%s · %s · %s" % (t.get("section", ""), t.get("country", ""), t.get("wiki", "")))
