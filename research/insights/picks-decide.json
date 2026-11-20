@@ -4,12 +4,12 @@
   "order": 40,
   "kicker": "The instrument",
   "kicker_zh": "決策工具",
-  "title": "Nine questions to run a candidate topic through, and what a bad answer looks like",
-  "title_zh": "把候選題目跑過的九個問題，以及壞答案長什麼樣子",
-  "lede": "Each question exists because something in this report measured it. Run every candidate through all nine in one sitting and write the answers down; the point is not a score but a shape — a topic that cannot answer the first two is not a candidate, however interesting it is.",
-  "lede_zh": "每一個問題都存在，是因為本報告量過它。把每個候選題目一次跑完這九題，並把答案寫下來；重點不是分數，而是形狀——一個答不出前兩題的題目，不管多有趣，都不算候選。",
-  "body": "**Questions one and two are gates, not scores.** They are the only ones with a measured, two-direction basis, so a candidate that fails them is capped before the season starts no matter what it scores on the other seven. Everything from question four down is either a floor GEMS already clears or a reach question — valuable, but not the thing that decides a placing.\n\n**Write the answers in the partner's words and in their units wherever a person is involved.** The governance note for the Science for Good pipeline makes this a rule for a reason: of 106 decorated teams, 71 closed a stakeholder-to-design loop but only nine or ten of those closed one with somebody who was not a credentialled technical expert. A topic whose only outside voice is a professor is the normal case, and it is also the case that produced no non-expert evidence anywhere in the field.\n\n**Question nine is the one GEMS got wrong in 2026**, and it is the cheapest to fix. Write the sentence you want a judge to repeat, then open your own results page and try to break it. If the results page contradicts it, you have found the problem while you can still fix it rather than after the freeze.",
-  "body_zh": "**第一題和第二題是關卡，不是分數。**它們是唯一具備量測基礎、而且從兩個方向都成立的問題，所以一個過不了這兩題的候選，不管在其他七題拿幾分，賽季開始前就已經被設了上限。第四題以下的一切，要麼是 GEMS 早就跨過的門檻，要麼是觸及範圍的問題——有價值，但不是決定名次的那件事。\n\n**只要涉及人，就用對方的話和對方的單位把答案寫下來。**科學向善清單的治理章節把這件事訂成規則是有原因的：106 支得獎隊伍中，有 71 支閉合了利害關係人到設計的迴路，但其中只有九到十支是和沒有專業資格的人閉合的。一個題目如果唯一的外部聲音是教授，那是常態——而那也正是整個領域都沒能產出任何非專業者證據的那個常態。\n\n**第九題是 GEMS 2026 年做錯的那一題**，而它也是最便宜修的。先寫下你希望評審重複的那句話，然後打開自己的結果頁，試著把它推翻。如果結果頁反駁了它，你是在還能修的時候發現問題，而不是在凍結之後。",
+  "title": "Ten questions to run a candidate topic through, and what a bad answer looks like",
+  "title_zh": "把候選題目跑過的十個問題，以及壞答案長什麼樣子",
+  "lede": "Each question exists because something in this report measured it. Run every candidate through all ten in one sitting and write the answers down; the point is not a score but a shape — a topic that cannot answer the first two is not a candidate, however interesting it is.",
+  "lede_zh": "每一個問題都存在，是因為本報告量過它。把每個候選題目一次跑完這十題，並把答案寫下來；重點不是分數，而是形狀——一個答不出前兩題的題目，不管多有趣，都不算候選。",
+  "body": "**Questions one and two are gates, not scores.** They are the only ones with a measured, two-direction basis, so a candidate that fails them is capped before the season starts no matter what it scores on the other seven. Everything from question four down is either a floor GEMS already clears or a reach question — valuable, but not the thing that decides a placing.\n\n**Write the answers in the partner's words and in their units wherever a person is involved.** The governance note for the Science for Good pipeline makes this a rule for a reason: of 106 decorated teams, 71 closed a stakeholder-to-design loop but only nine or ten of those closed one with somebody who was not a credentialled technical expert. A topic whose only outside voice is a professor is the normal case, and it is also the case that produced no non-expert evidence anywhere in the field.\n\n**Question ten was added by the PI, and it changes what counts as a good answer to all the others** — a candidate that scores well on the first nine but has no path to a citable result is a season that ends at the Jamboree. **Question nine is the one GEMS got wrong in 2026**, and it is the cheapest to fix. Write the sentence you want a judge to repeat, then open your own results page and try to break it. If the results page contradicts it, you have found the problem while you can still fix it rather than after the freeze.",
+  "body_zh": "**第一題和第二題是關卡，不是分數。**它們是唯一具備量測基礎、而且從兩個方向都成立的問題，所以一個過不了這兩題的候選，不管在其他七題拿幾分，賽季開始前就已經被設了上限。第四題以下的一切，要麼是 GEMS 早就跨過的門檻，要麼是觸及範圍的問題——有價值，但不是決定名次的那件事。\n\n**只要涉及人，就用對方的話和對方的單位把答案寫下來。**科學向善清單的治理章節把這件事訂成規則是有原因的：106 支得獎隊伍中，有 71 支閉合了利害關係人到設計的迴路，但其中只有九到十支是和沒有專業資格的人閉合的。一個題目如果唯一的外部聲音是教授，那是常態——而那也正是整個領域都沒能產出任何非專業者證據的那個常態。\n\n**第十題是 PI 加進來的，而它改變了前面每一題的好答案長什麼樣子**——一個前九題都答得好、卻沒有路徑通往可被引用成果的候選，就是一個在 Jamboree 結束的賽季。**第九題是 GEMS 2026 年做錯的那一題**，而它也是最便宜修的。先寫下你希望評審重複的那句話，然後打開自己的結果頁，試著把它推翻。如果結果頁反駁了它，你是在還能修的時候發現問題，而不是在凍結之後。",
   "cards": [
     {
       "kicker": "Gate 1",
@@ -172,6 +172,24 @@
         "GEMS 以 3 分並列最差",
         "買到可信度，不是名次"
       ]
+    },
+    {
+      "kicker": "Novelty and the paper",
+      "kicker_zh": "新穎度與論文",
+      "title": "What would the paper be, and who has already written it?",
+      "title_zh": "這篇論文會是什麼，而誰已經寫過了？",
+      "body": "A good answer names the claim a referee would have to accept, the journal that publishes that kind of claim, and the closest existing paper **by title**. A bad answer is \"nobody in iGEM has done this\" — **iGEM is not the literature.** This report is built on 106 decorated teams, which is the most decorated tenth of one competition and not a sample of the field; a project can be unique across all 106 and entirely ordinary in PubMed. Check the literature before claiming the gap, and write down the closest thing you find even when it is uncomfortably close.\n\nThree distinctions decide whether a gap supports a paper. *Nobody has published this* is rare and valuable. *Nobody has published this in this application* is common and still publishable, usually as a shorter paper. *Nobody has published this at this scale or with this rigour* is the one a school team can most realistically reach, and it is how Lambert-GA won Best Model in 2026 — not with a new method, but by benchmarking the confidence metrics of existing ones against 5,721 labelled designs and publishing that its own eventual hit did not carry the best score.\n\nThe roadmap already asks for this and says why: one citable artefact a year changes how every later conversation starts. It is also the only deliverable that survives the wiki freeze unconditionally — 284 of 285 education files still download, 8 of 21 software tools still run, and a paper needs no server at all. Of 106 decorated teams only 3 credit their own predecessor with anything, and a paper is the cheapest way to stop being the fourth.",
+      "body_zh": "好答案會指名一位審稿人必須接受的那個主張、會刊登這類主張的期刊，以及最接近的既有論文**篇名**。壞答案是「iGEM 裡沒有人做過這個」——**iGEM 不是文獻。**這份報告建立在 106 支得獎隊伍之上，那是一場競賽中得獎最多的十分之一，不是這個領域的樣本；一個專案可以在 106 支之中獨一無二，而在 PubMed 裡平凡無奇。在宣稱那個空缺之前先查文獻，而且就算查到的東西近得讓人不舒服，也要把它寫下來。\n\n有三種區別決定一個空缺撐不撐得起一篇論文。*沒有人發表過這件事*，罕見而且珍貴。*沒有人在這個應用上發表過這件事*，常見，但仍然可以發表，通常是一篇較短的論文。*沒有人以這個規模或這個嚴謹度發表過這件事*，是學校隊伍最實際能做到的那一種——而 Lambert-GA 2026 年就是這樣拿下 Best Model 的：不是靠新方法，而是拿 5,721 筆有標籤的設計去檢驗既有方法的信賴度指標，並且公開說自己最後真正結合的那一個分數並不是最高的。\n\n路線圖本來就要求這件事，而且說明了理由：一年一件可被引用的產出，會改變之後每一次對話的起點。它也是唯一一種無條件撐過 wiki 凍結的交付成果——285 份教育檔案中有 284 份仍可下載、21 個軟體工具中只有 8 個還跑得動，而一篇論文根本不需要伺服器。106 支得獎隊伍中只有 3 支對自己的前一屆表示過任何感謝，而一篇論文是不成為第四支的最便宜方法。",
+      "chips": [
+        "name the closest paper by title",
+        "iGEM is not the literature",
+        "scale and rigour is the reachable gap"
+      ],
+      "chips_zh": [
+        "指名最接近那篇論文的篇名",
+        "iGEM 不是文獻",
+        "規模與嚴謹度才是搆得到的空缺"
+      ]
     }
   ],
   "table": {
@@ -241,6 +259,12 @@
         "What is the one sentence we want a judge to repeat?",
         "**The 2026 mistake, and a reversal.** 21 of 29 Top 10 teams over-claim and the podium's gap is wider, so this buys credibility rather than placing — but GEMS is joint-worst at 3",
         "A sentence written before the results exist — or one the results page does not support."
+      ],
+      [
+        "10",
+        "What would the paper be, and who has already written it?",
+        "**Novelty.** Added as a criterion by the PI. A citable artefact is the only deliverable that survives the freeze unconditionally, and only 3 of 106 teams credit a predecessor",
+        "\"Nobody in iGEM has done this.\" iGEM is 106 decorated teams, not the literature. Also: no named journal, and no closest paper identified"
       ]
     ],
     "rows_zh": [
@@ -297,6 +321,12 @@
         "我們希望評審重複的那一句話是什麼？",
         "**2026 年的錯誤，而且是一個反轉。**29 支 Top 10 隊伍中 21 支誇大，而頒獎臺的落差更大，所以這買到的是可信度而不是名次——但 GEMS 以 3 分並列最差",
         "在結果還不存在時就寫好的句子——或結果頁撐不住的句子。"
+      ],
+      [
+        "10",
+        "這篇論文會是什麼，而誰已經寫過了？",
+        "**新穎度。**由 PI 加入的判準。可被引用的產出是唯一無條件撐過凍結的交付成果，而 106 支隊伍中只有 3 支感謝過前一屆",
+        "「iGEM 裡沒有人做過這個。」iGEM 是 106 支得獎隊伍，不是文獻。另一種：沒有指名期刊，也沒有找出最接近的那篇論文"
       ]
     ]
   },
@@ -308,6 +338,7 @@
     "For question five, record the outside person's words verbatim and in their own units, and date it. A professor's technical blessing is not an answer to this question.",
     "Prefer the candidate that puts you in a room with people who repeat the lesson professionally — teachers, extension officers, technicians, inspectors — over the one with the bigger headcount.",
     "Answer question eight by choosing the artefact, not by hoping: paper if you want it to survive, a bought domain and hosting before freeze day if it is software, a geometry file if it is hardware.",
+    "Check the literature before claiming a gap, and write down the closest paper you find by title. Being unique across 106 decorated iGEM teams is not the same as being unique in PubMed.",
     "Write question nine last, from the results page, and have someone who did not write the wiki check the headline against the model page.",
     "Keep the filled-in sheet for every candidate you reject, with the question that killed it. Only 3 of 106 decorated teams credit their own predecessor with anything, and a rejected-topic file is the cheapest way not to be the fourth."
   ],
@@ -319,6 +350,7 @@
     "第五題要把外部人士的話逐字記下、用他自己的單位，並標上日期。教授在技術上的肯定不是這一題的答案。",
     "寧可選那個讓你進到「會把這堂課專業地重複下去的人」房間裡的候選——老師、推廣人員、技術員、稽查員——而不是人數比較多的那個。",
     "第八題要靠選擇產出形式來回答，而不是靠期待：想要它活下來就用紙本；是軟體就在凍結日前買好網域並上線；是硬體就輸出幾何檔案。",
+    "在宣稱一個空缺之前先查文獻，並把查到最接近的那篇論文連篇名一起寫下來。在 106 支得獎 iGEM 隊伍裡獨一無二，和在 PubMed 裡獨一無二，是兩回事。",
     "第九題最後才寫，而且從結果頁往回寫，再請一個沒寫過 wiki 的人拿標題去對模型頁。",
     "把每一個被你否決的候選題目的答案表留下來，並寫上是哪一題殺掉它的。106 支得獎隊伍裡只有 3 支對自己的前一屆表示過任何感謝，而一份「否決題目檔」是最便宜的方法，讓你們不要成為第四支。"
   ],
