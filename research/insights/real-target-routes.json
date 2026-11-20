@@ -1,0 +1,621 @@
+{
+  "id": "real-target-routes",
+  "tab": "good",
+  "order": 35,
+  "kicker": "Original analysis",
+  "kicker_zh": "原創分析",
+  "title": "Nobody signed anything: real material moved on an informal yes, and only eight of 106 teams got any",
+  "title_zh": "沒有人簽過任何文件：真實材料全靠一句口頭答應，而一百零六支隊伍裡只有八支拿到",
+  "lede": "Across the 106 decorated teams, 41 reached an outside holder's premises or material at all, but only **eight obtained physical material from whoever owns the real thing** — and three of those eight are high-school teams, so the school division is not the weak side of this. What no team has is paperwork. Not one material transfer agreement, confidentiality clause or ethics approval for material appears anywhere in the corpus; every transfer ran on an informal yes. The wall is not permission to receive. It is the rule that engineered material may not leave the lab, which is why the route that works is to bring the real thing in rather than take the organism out.",
+  "lede_zh": "一百零六支獲獎隊伍中，有四十一支真的踏進了外部單位的場地、或拿到了它的材料，但只有**八支從真正的持有者手上取得實體材料**——而這八支裡有三支是高中隊伍，所以高中組並不是這件事上的弱勢方。真正沒有的是文件。整個語料庫裡找不到任何一份材料移轉協議、保密條款，或針對材料的倫理審查核可；每一次交付都只靠一句口頭答應。真正的牆不是「能不能拿到」。是「改造後的材料不得離開實驗室」這條規則——這也正是為什麼可行的路線是把真東西帶進來，而不是把菌帶出去。",
+  "body": "The report has said for some time that podium teams test on the real thing. It has never said how a team gets the real thing. Reading all 106 team files against the access question, and then the safety and human-practices pages of the cases that look like genuine access, produces a smaller and stranger picture than the podium finding suggests.\n\n**Material access is rare in every division, and the high-school share is not the worst.** Forty-one of the 106 teams reached an outside holder physically at all — 20 of 40 High School, 13 of 42 Undergrad, 7 of 22 Overgrad. Narrow it to physical material from an outside holder and the figure falls to twelve. Narrow it again to material from whoever actually owns the real thing, rather than from a university shelf, and it falls to eight: three High School, four Undergrad, one Overgrad. The division gap the report found on the podium does not reappear here. What reappears is that almost nobody does this at all.\n\n**There is no paperwork anywhere.** The expected artefacts of material access — a transfer agreement, a confidentiality clause, an ethics or regulatory approval naming the material — appear in none of the 106 files and in none of the safety pages read. The written approvals that do exist are all for something else: human-subjects ethics approvals for interviews and surveys, which several teams obtained properly, and the competition's own responsibility office, which **BASIS-China** and **RDFZ-China** both approached in writing before collecting anything. Those two are the only high-school teams in the corpus holding a written approval of any kind for touching real material or a real site. Everything else moved because someone said yes.\n\n**The real constraint is directional.** Four separate teams hit the same rule from different sides. **HongKong-JSS** brought its device to two working sites and had to run the demonstrations without engineered material, because it could not legally leave the lab. **RDFZ-China** placed only non-engineered commercial material on the ice and removed every piece before leaving. **ABOA** states plainly that nothing goes outside containment until a national gene-technology board grants permission. **HKSSC** designs for a public facility it is legally barred from inoculating. The lesson is not that sites are closed. Sites are surprisingly open. What is closed is the direction of travel, so a 2027 plan should be built on carrying the holder's material into the lab, and on going to the holder's own bench when carrying is hard — which is exactly what the Overgrad Grand Prize winner did, running its key comparison inside a hospital researcher's laboratory and transferring nothing.\n\n**One case is pure privilege and should be named as such.** **BGI-College** works with material from its own parent research institute, on that institute's campus, isolated and sequenced by the institute's own staff. That is not a route; it is an address. A Taiwanese school team cannot reproduce it and should not try. But it is one case out of eight, and the other seven are routes: a sector association that opened a plant door, private individuals who owned the real thing, a company that wanted a product tested, a grower who offered his own land, an industrial customer-in-waiting, a brewing firm, a hospital bench lent for an afternoon.\n\n**The calendar cannot be answered from this corpus, and that is a finding too.** Almost no team dates its access. The exceptions are thin: one farm visit on 16 June 2026, two company visits on the same day in September, two supervisor meetings a week apart, a first industrial contact in March 2025 whose material was used in the 2026 season — roughly a year, with a stand-in recipe built from the holder's own numbers to work with in the meantime. Any planning figure beyond *start the year before you need it* would be invented.",
+  "body_zh": "這份報告一直在說：站上頒獎臺的隊伍，是在真實對象上做測試的那些。它從來沒說過，一支隊伍要怎麼拿到那個真實對象。把一百零六份隊伍檔案全部對著「取得管道」這個問題讀過一遍，再去讀那些看起來真的取得過管道的隊伍的安全頁與人文實務頁，得到的圖像比頒獎臺那個發現更小、也更奇怪。\n\n**材料取得在每一組都很罕見，而高中組的比例並不是最差的。**一百零六支隊伍裡，有四十一支真的在實體上接觸到外部持有者——高中組四十支裡有二十支，大學組四十二支裡有十三支，研究生組二十二支裡有七支。若收緊到「從外部持有者取得實體材料」，數字掉到十二支。再收緊到「材料來自真正擁有那個真東西的人，而不是來自某間大學的架子上」，數字掉到八支：高中三支、大學四支、研究生一支。報告在頒獎臺上看到的組別落差，在這裡並沒有重現。重現的是：幾乎沒有人在做這件事。\n\n**到處都找不到文件。**材料取得理應留下的那些憑證——移轉協議、保密條款、載明材料的倫理或法規核可——在一百零六份檔案裡一份都沒有，在讀過的安全頁裡也一份都沒有。真正存在的書面核可全是別的事：訪談與問卷的人體研究倫理核可，有幾支隊伍做得相當規矩；以及競賽本身的責任辦公室——**BASIS-China** 與 **RDFZ-China** 都在採集任何東西之前先以書面向它請示。這兩支是整個語料庫裡唯一持有任何書面核可、用來碰真實材料或真實場地的高中隊伍。其餘一切之所以成立，都只因為有人點了頭。\n\n**真正的限制是方向性的。**四支不同的隊伍，從不同側面撞上同一條規則。**HongKong-JSS** 把裝置帶到兩個實際場地，卻必須在沒有改造材料的情況下做示範，因為那些材料依法不能離開實驗室。**RDFZ-China** 只把未經改造的商用材料放上冰面，離開前每一片都收回。**ABOA** 直接寫明：在國家基因技術主管機關核准之前，任何東西都不出圍堵環境。**HKSSC** 為一座公共設施做設計，而它依法不得在那座設施裡投放。這裡的教訓不是場地很封閉。場地出乎意料地開放。封閉的是移動的方向——所以 2027 年的計畫應該建立在「把持有者的材料搬進實驗室」，以及「搬不動時就到持有者自己的實驗桌前做」這兩件事上——而這正是研究生組大獎得主做的事：把關鍵比較放在一位醫院研究者的實驗室裡跑完，什麼都沒有移轉。\n\n**有一個案例純粹是特權，就該這樣說出來。****BGI-College** 使用的材料來自它自己的母研究機構，在那個機構的園區裡，由該機構的人員完成分離與定序。那不是一條路線，那是一個地址。台灣的高中隊伍複製不了，也不該去試。但那只是八支裡的一支，另外七支都是路線：一個替他們推開工廠大門的產業公會、幾位本來就擁有那個真東西的個人、一家想讓產品被測試的公司、一位願意出借自家土地的業主、一個等著成為客戶的工廠、一家釀造公司，還有一張被借用了一個下午的醫院實驗桌。\n\n**時程問題無法從這個語料庫得到答案，而這本身也是一個發現。**幾乎沒有隊伍替自己的取得過程標上日期。例外少得可憐：一次 2026 年 6 月 16 日的農場參訪、九月同一天的兩次企業參訪、相隔一週的兩次指導教授會談、一次 2025 年 3 月的初次工業接觸而其材料用在 2026 年的季節上——大約一年，期間先用持有者自己給的數字做出一份替代配方頂著。除了「比你需要的時間早一年開始」之外，任何規劃數字都是編出來的。",
+  "cards": [
+    {
+      "kicker": "Route 1 — privilege",
+      "kicker_zh": "路線一——特權",
+      "title": "The host institution's own shelf",
+      "title_zh": "東家自己的架子",
+      "body": "BGI-College's material came from its own parent research institute, on that institute's campus, prepared and characterised by the institute's own staff. The permission level is internal sign-off and nothing is published, because nothing had to be. This is the clearest case in the corpus of access a school team cannot reproduce, and the report says so rather than dressing it as a method.",
+      "body_zh": "BGI-College 的材料來自它自己的母研究機構，就在那個機構的園區裡，由該機構的人員完成製備與鑑定。許可層級就是內部簽核，而且什麼都沒有公開，因為本來就不必公開。這是整個語料庫裡最清楚的一個案例：一支學校隊伍無法複製的取得方式；報告就這樣說，不把它包裝成一種方法。",
+      "chips": [
+        "internal sign-off only",
+        "no document published",
+        "not reproducible"
+      ],
+      "chips_zh": [
+        "只有內部簽核",
+        "沒有任何文件公開",
+        "無法複製"
+      ]
+    },
+    {
+      "kicker": "Route 2 — the association first",
+      "kicker_zh": "路線二——先找公會",
+      "title": "Write to the sector body before the firm",
+      "title_zh": "先寫給產業公會，再寫給廠商",
+      "body": "Hongwen School reached a brewing industry association before approaching any single plant, took macro figures from the association, and only then went to a member plant — which donated the byproduct the project runs on. The visit itself carried a real condition: the team completed the site's own safety training before entering production areas. The order of the two letters is the method.",
+      "body_zh": "Hongwen School 先接觸釀酒產業公會，之後才去找單一廠商；先從公會取得產業層級的數字，然後才走進一家會員廠——那家廠把專題所需的副產物送給了他們。參訪本身帶著一個真實條件：隊伍在進入生產區之前，先完成了該場地自己的安全訓練。那兩封信的先後順序，就是方法本身。",
+      "chips": [
+        "association opens the door",
+        "site safety training first",
+        "byproduct donated"
+      ],
+      "chips_zh": [
+        "公會替你開門",
+        "先上場地安全訓練",
+        "副產物獲贈"
+      ]
+    },
+    {
+      "kicker": "Route 3 — the most copyable",
+      "kicker_zh": "路線三——最可複製的一條",
+      "title": "Private individuals already own the real thing",
+      "title_zh": "真東西本來就在個人手上",
+      "body": "BASIS-China got its real material from private individuals, reached through a volunteer rescue group, and did the one thing no other high-school team did: it wrote to the competition's own responsibility office before collecting anything and obtained written approval, then published that correspondence. No institution, no fee, no committee. This is the cheapest genuine access route in the corpus and the one a Taiwanese school team can start on a Monday.",
+      "body_zh": "BASIS-China 的真實材料來自個人，透過一個志工救援團體接觸到；而他們做了一件其他高中隊伍都沒做的事：在採集任何東西之前先寫信給競賽自己的責任辦公室，取得書面核可，再把那些往來公開。不需要機構、不必付費、不用委員會。這是語料庫裡成本最低的真實取得路線，也是台灣的學校隊伍星期一就能開始走的一條。",
+      "chips": [
+        "no institution needed",
+        "written approval obtained first",
+        "correspondence published"
+      ],
+      "chips_zh": [
+        "不需要機構",
+        "先取得書面核可",
+        "往來紀錄公開"
+      ]
+    },
+    {
+      "kicker": "Route 4 — go to the bench",
+      "kicker_zh": "路線四——去對方的實驗桌",
+      "title": "Move the team, not the material",
+      "title_zh": "移動的是人，不是材料",
+      "body": "TU Delft's reviewer told the team its assays would not predict real performance and then offered her own laboratory. The work ran there, on material that never left the hospital, so no transfer agreement was ever needed. BASIS-China used the same trick with a certified third-party facility, and NFLSHS-CHINA with a university fermentation facility. When transfer looks hard, this converts a paperwork problem into a travel problem.",
+      "body_zh": "TU Delft 的評論者先告訴他們，他們的分析方式不會預測真實表現，接著把自己的實驗室借了出來。工作就在那裡進行，材料從未離開醫院，因此從頭到尾不需要任何移轉協議。BASIS-China 以同一招借用了一間具認證的第三方場地，NFLSHS-CHINA 則借用了一所大學的發酵設施。當移轉看起來很難，這一招把文件問題換成交通問題。",
+      "chips": [
+        "nothing transferred",
+        "no agreement needed",
+        "travel cost instead"
+      ],
+      "chips_zh": [
+        "什麼都沒移轉",
+        "不需要協議",
+        "換成交通成本"
+      ]
+    },
+    {
+      "kicker": "Route 5 — mutual gain",
+      "kicker_zh": "路線五——互有所得",
+      "title": "The commercial partner that wants your result",
+      "title_zh": "想要你結果的商業夥伴",
+      "body": "PSI Korea holds the only named supply agreement in the corpus: a cosmetics company supplied real products so the team could test handling, packaging curvature and readout, and the team states it will judge the collaboration by whether provision and adoption actually happen. Madrid-UCM, UCNZ and McGill reached the same place through letters of support from firms positioned as first customers. A holder with something to gain does not need persuading twice.",
+      "body_zh": "PSI Korea 擁有整個語料庫裡唯一一份有名字的供應協議：一家化妝品公司提供真實產品，讓隊伍測試取放、包材曲度與讀數，而隊伍自己寫明，將以「是否真的交付、是否真的被採用」來評判這段合作。Madrid-UCM、UCNZ 與 McGill 則透過被定位為首位客戶的廠商所出具的支持信，走到了同一個位置。一個有所得的持有者，不需要被說服兩次。",
+      "chips": [
+        "product supply agreement",
+        "letters of support",
+        "offer a measurement back"
+      ],
+      "chips_zh": [
+        "產品供應協議",
+        "支持信",
+        "回報一份量測"
+      ]
+    },
+    {
+      "kicker": "Route 6 — small holders",
+      "kicker_zh": "路線六——小持有者",
+      "title": "Small farms and single operators say yes fastest",
+      "title_zh": "小農場與單一業主答應得最快",
+      "body": "HongKong-JSS visited four small certified farms and a family fish farm, found them through a public certification scheme, and ran on-site demonstrations on an informal yes. Al-Nahrain-IRAQ was given access to a company director's own farmland. QingdaoAcademy reached two processors through a team member's own contact. None of these needed a committee; all of them needed somebody to ask.",
+      "body_zh": "HongKong-JSS 參訪了四座小型認證農場與一家家族魚場，是透過一個公開的認證名單找到的，並憑一句口頭答應在現場做了示範。Al-Nahrain-IRAQ 則獲准進入一位公司負責人自己的農地。QingdaoAcademy 透過一位隊員自己的人脈接上兩家加工企業。這些都不需要任何委員會；需要的只是有人去問。",
+      "chips": [
+        "certification lists are public",
+        "a team member's own contact",
+        "informal yes"
+      ],
+      "chips_zh": [
+        "認證名單是公開的",
+        "隊員自己的人脈",
+        "口頭答應"
+      ]
+    },
+    {
+      "kicker": "Route 7 — answers, not samples",
+      "kicker_zh": "路線七——給答案，不給樣品",
+      "title": "Public bodies open the door and keep the material",
+      "title_zh": "公部門開門，但不給材料",
+      "body": "Agency and utility contacts are the easiest to obtain and the least productive for material. HongKong-JSS emailed two government departments and got monitoring practice and a redirected sample type. ABOA, UOregon, LYON and HKSSC each got a plant's operating envelope, and ABOA records the ceiling plainly: nothing leaves containment until a national gene-technology board approves. Budget these contacts for design constraints, never for material.",
+      "body_zh": "主管機關與公用事業的聯繫最容易取得，對材料卻最無用。HongKong-JSS 寄信給兩個政府部門，換回監測實務與一個被改掉的樣品類型。ABOA、UOregon、LYON 與 HKSSC 各自取得了一座廠的運轉條件範圍，而 ABOA 把上限寫得很白：在國家基因技術主管機關核准之前，任何東西都不出圍堵環境。把這類聯繫算在設計限制上，絕不要算在材料上。",
+      "chips": [
+        "cold email works",
+        "information and site context",
+        "no material, ever"
+      ],
+      "chips_zh": [
+        "冷信有用",
+        "資訊與場地脈絡",
+        "永遠拿不到材料"
+      ]
+    },
+    {
+      "kicker": "Route 8 — no permission at all",
+      "kicker_zh": "路線八——完全不需要許可",
+      "title": "The site a student can simply walk to",
+      "title_zh": "學生自己走得到的場地",
+      "body": "RDFZ-China walked onto a glacier. The only approval it obtained was from the competition's own responsibility office, after submitting an environmental risk assessment, and it placed only non-engineered commercial material on the ice and removed every piece. QingdaoAcademy worked a fishing harbour; HUST-China read four museum collections as a public visitor. On this route permission is free and the only real cost is travel — which for a glacier is the whole cost.",
+      "body_zh": "RDFZ-China 直接走上了一條冰川。他們取得的唯一核可來自競賽自己的責任辦公室，是在提交環境風險評估之後取得的；而他們只把未經改造的商用材料放上冰面，離開前每一片都收回。QingdaoAcademy 在一座漁港工作；HUST-China 以一般參觀者身分讀了四座博物館的館藏。在這條路線上，許可是免費的，唯一的真實成本是交通——而對一條冰川來說，那就是全部的成本。",
+      "chips": [
+        "public site, free entry",
+        "risk assessment filed anyway",
+        "travel is the whole cost"
+      ],
+      "chips_zh": [
+        "公共場地，免費進入",
+        "仍然提交風險評估",
+        "交通就是全部成本"
+      ]
+    }
+  ],
+  "table": {
+    "head": [
+      "Team",
+      "Holder of the key",
+      "How the relationship started",
+      "Permission level on record",
+      "Weeks on record",
+      "Open to a Taiwanese school team?"
+    ],
+    "head_zh": [
+      "隊伍",
+      "鑰匙在誰手上",
+      "關係怎麼開始的",
+      "紀錄中的許可層級",
+      "紀錄中的時程",
+      "台灣高中隊伍走得通嗎"
+    ],
+    "rows": [
+      [
+        "BGI-College (HS, China)",
+        "The school's own parent research institute",
+        "Already there: the school sits on the institute's campus",
+        "Internal sign-off; no document published",
+        "not recorded",
+        "No — this is the privilege route"
+      ],
+      [
+        "Hongwen School (HS, China)",
+        "A brewing plant, reached through its sector association",
+        "Cold approach to the industry association first, then a member plant",
+        "Informal yes; the site's own safety training completed before entering production areas",
+        "not recorded",
+        "Yes"
+      ],
+      [
+        "BASIS-China (HS, China)",
+        "Private individuals who own the real material",
+        "Through a volunteer rescue group the team already knew",
+        "Written approval from the competition's responsibility office, obtained before any collection",
+        "not recorded",
+        "Yes — the most copyable case in the corpus"
+      ],
+      [
+        "BASIS-China (HS, China)",
+        "A certified third-party laboratory facility",
+        "Arrangement with a science-innovation centre",
+        "Facility safety training and supervised access",
+        "not recorded",
+        "Yes, at a price"
+      ],
+      [
+        "PSI Korea (HS, South Korea)",
+        "A cosmetics company",
+        "Industry expo and a brand contact",
+        "A named product supply agreement — the only one in the corpus",
+        "not recorded",
+        "Yes, where the firm gains something"
+      ],
+      [
+        "HongKong-JSS (HS, Hong Kong)",
+        "Four small certified farms and a family fish farm",
+        "Approached directly; the farms are listed publicly through a certification scheme",
+        "Informal yes for visits and on-site demonstrations; engineered material legally barred from leaving the lab",
+        "not recorded",
+        "Yes"
+      ],
+      [
+        "HongKong-JSS (HS, Hong Kong)",
+        "Two government departments",
+        "Cold email",
+        "Answers only; no material and no on-site work",
+        "not recorded",
+        "Yes for information, no for material"
+      ],
+      [
+        "RDFZ-China (HS, China)",
+        "A public glacier, plus university and academy field stations",
+        "Team-organised expedition; stations approached directly",
+        "Competition responsibility office approved an environmental risk assessment; only non-engineered commercial material placed on site, all removed",
+        "not recorded",
+        "Yes on permission, no on cost"
+      ],
+      [
+        "NFLSHS-CHINA (HS, China)",
+        "A university fermentation facility",
+        "Supervising professors at that university",
+        "Informal yes, host supervision",
+        "not recorded",
+        "Yes, with an introduction"
+      ],
+      [
+        "ASIJ-Tokyo (HS, Japan)",
+        "A family tea farm, and a university instrument",
+        "Direct approach to the farm; a professor for the instrument",
+        "Informal yes",
+        "one visit, dated 16 June 2026",
+        "Yes"
+      ],
+      [
+        "QingdaoAcademy (HS, China)",
+        "Two processing companies and a working fishing harbour",
+        "Through a team member's own contact",
+        "Informal yes; photographs published with the photographer's permission",
+        "not recorded",
+        "Yes"
+      ],
+      [
+        "GEMS-Taiwan (HS, Taiwan)",
+        "A university department",
+        "Supervisor meetings arranged directly",
+        "Informal yes — working material handed over with cultivation advice",
+        "two meetings, 28 July and 6 August",
+        "Already used"
+      ],
+      [
+        "GEMS-Taiwan (HS, Taiwan)",
+        "A hydroponic farm and an agricultural-input company",
+        "Introductions through a farming cooperative and trade events",
+        "Informal yes for visits; no material from the target site",
+        "not recorded",
+        "Already used"
+      ],
+      [
+        "Baltimore (HS, United States)",
+        "A community laboratory and its board",
+        "Membership of the community lab",
+        "The board acted as the review board for the team's surveys",
+        "not recorded",
+        "No Taiwanese equivalent found"
+      ],
+      [
+        "NIS Almaty-Medeu (HS, Kazakhstan)",
+        "Hospitals and care organisations",
+        "Pre-coordinated by correspondence, calls and preliminary visits",
+        "The clearest written practice at school level: organisational agreement, guardians' permission, separate photography consent",
+        "not recorded",
+        "Partly — the practice copies, the access does not"
+      ],
+      [
+        "HKSSC (HS, Hong Kong)",
+        "A public organic-waste recovery centre",
+        "Direct approach to the operator",
+        "Information and a facility visit; no material, and inoculation legally barred",
+        "not recorded",
+        "Yes for information"
+      ],
+      [
+        "Bist-China (HS, China)",
+        "A community health service centre",
+        "Direct approach",
+        "Visit and interviews; no material",
+        "not recorded",
+        "Yes for information"
+      ],
+      [
+        "TU Delft (OG, Netherlands)",
+        "A university hospital department",
+        "A researcher the team interviewed offered her own laboratory",
+        "None needed for material: the work ran inside her lab, so nothing was transferred",
+        "not recorded",
+        "The mechanism copies; the hospital does not"
+      ],
+      [
+        "McGill (UG, Canada)",
+        "A national research council and an industrial operator",
+        "Advisory board and an industry summit",
+        "Letters of support; samples described as secured, no agreement published",
+        "not recorded",
+        "No"
+      ],
+      [
+        "Madrid-UCM (UG, Spain)",
+        "An industrial plant",
+        "First industrial contact 20 March 2025; material used in the 2026 season",
+        "Informal yes; a stand-in recipe built from the holder's own numbers while waiting",
+        "about a year from first contact to real material",
+        "No"
+      ],
+      [
+        "UCNZ (UG, New Zealand)",
+        "A brewing company",
+        "Local industry relationship",
+        "Two letters of support",
+        "not recorded",
+        "No"
+      ],
+      [
+        "Al-Nahrain-IRAQ (UG, Iraq)",
+        "A company director's own farmland",
+        "Asked the director directly",
+        "Informal yes; land access granted",
+        "not recorded",
+        "Yes in form"
+      ],
+      [
+        "ABOA (OG, Finland)",
+        "A municipal treatment plant",
+        "Cold contact to the plant",
+        "Information and a staged plan only; outside-lab work requires a national gene-technology permit",
+        "not recorded",
+        "No for material"
+      ],
+      [
+        "LYON (UG, France)",
+        "A municipal treatment plant",
+        "A nature protection association arranged the visit",
+        "Visit only",
+        "not recorded",
+        "Yes for a visit"
+      ],
+      [
+        "Muenster-University (OG, Germany)",
+        "A regional agricultural association and a working farm",
+        "The university institute's existing ties",
+        "Visit and field access; a separate museum activity cleared in writing with museum and lab management",
+        "not recorded",
+        "Partly"
+      ],
+      [
+        "UOregon (OG, United States)",
+        "A regional wastewater treatment facility",
+        "Field trip arranged with the operator",
+        "Visit and operator interviews; no material",
+        "not recorded",
+        "Yes for a visit"
+      ]
+    ],
+    "rows_zh": [
+      [
+        "BGI-College（高中，中國）",
+        "學校自己的母研究機構",
+        "本來就在那裡：學校坐落於該機構園區內",
+        "內部簽核；沒有文件公開",
+        "未記錄",
+        "不行——這是特權路線"
+      ],
+      [
+        "Hongwen School（高中，中國）",
+        "一家釀造廠，透過其產業公會接上",
+        "先冷接觸產業公會，再接會員廠",
+        "口頭答應；進入生產區前先完成該場地自己的安全訓練",
+        "未記錄",
+        "可行"
+      ],
+      [
+        "BASIS-China（高中，中國）",
+        "擁有真實材料的個人",
+        "透過隊伍原本就認識的志工救援團體",
+        "競賽責任辦公室的書面核可，在任何採集之前取得",
+        "未記錄",
+        "可行——語料庫裡最可複製的一例"
+      ],
+      [
+        "BASIS-China（高中，中國）",
+        "一間具認證的第三方實驗場地",
+        "與一家科創中心安排",
+        "場地安全訓練與受監督的使用權",
+        "未記錄",
+        "可行，但要花錢"
+      ],
+      [
+        "PSI Korea（高中，南韓）",
+        "一家化妝品公司",
+        "產業展會與品牌端聯繫",
+        "一份具名的產品供應協議——語料庫裡唯一一份",
+        "未記錄",
+        "可行，前提是對方有所得"
+      ],
+      [
+        "HongKong-JSS（高中，香港）",
+        "四座小型認證農場與一家家族魚場",
+        "直接接觸；這些農場在認證制度中公開列名",
+        "參訪與現場示範皆為口頭答應；改造材料依法不得離開實驗室",
+        "未記錄",
+        "可行"
+      ],
+      [
+        "HongKong-JSS（高中，香港）",
+        "兩個政府部門",
+        "冷信",
+        "只有答案；沒有材料，也沒有現場作業",
+        "未記錄",
+        "問資訊可行，要材料不行"
+      ],
+      [
+        "RDFZ-China（高中，中國）",
+        "一條公共冰川，外加大學與研究院的野外站",
+        "隊伍自辦的考察；野外站直接接觸",
+        "競賽責任辦公室核可其環境風險評估；現場只放未經改造的商用材料，全部收回",
+        "未記錄",
+        "許可上可行，成本上不可行"
+      ],
+      [
+        "NFLSHS-CHINA（高中，中國）",
+        "一所大學的發酵設施",
+        "該校的指導教授",
+        "口頭答應，由東家監督",
+        "未記錄",
+        "有人介紹就可行"
+      ],
+      [
+        "ASIJ-Tokyo（高中，日本）",
+        "一座家族茶園，以及一所大學的儀器",
+        "直接接觸茶園；儀器透過一位教授",
+        "口頭答應",
+        "一次參訪，日期為 2026 年 6 月 16 日",
+        "可行"
+      ],
+      [
+        "QingdaoAcademy（高中，中國）",
+        "兩家加工企業與一座運作中的漁港",
+        "透過一位隊員自己的人脈",
+        "口頭答應；照片經攝影者許可後公開",
+        "未記錄",
+        "可行"
+      ],
+      [
+        "GEMS-Taiwan（高中，台灣）",
+        "一個大學系所",
+        "直接約定的指導教授會談",
+        "口頭答應——連同培養建議一起交付工作用材料",
+        "兩次會談，7 月 28 日與 8 月 6 日",
+        "已經用過"
+      ],
+      [
+        "GEMS-Taiwan（高中，台灣）",
+        "一座水耕農場與一家農用產品公司",
+        "透過農業合作社與產業活動介紹",
+        "參訪為口頭答應；沒有拿到目標場地的材料",
+        "未記錄",
+        "已經用過"
+      ],
+      [
+        "Baltimore（高中，美國）",
+        "一間社區實驗室及其董事會",
+        "社區實驗室的會員身分",
+        "董事會擔任該隊問卷的審查機構",
+        "未記錄",
+        "在台灣找不到對應者"
+      ],
+      [
+        "NIS Almaty-Medeu（高中，哈薩克）",
+        "醫院與照護機構",
+        "以書信、電話與先期參訪事前協調",
+        "學校層級最清楚的書面實務：機構同意、監護人許可、拍攝另行徵得同意",
+        "未記錄",
+        "部分可行——實務可複製，門路不可"
+      ],
+      [
+        "HKSSC（高中，香港）",
+        "一座公共有機資源回收中心",
+        "直接接觸營運方",
+        "資訊與一次設施參訪；沒有材料，投放亦依法禁止",
+        "未記錄",
+        "問資訊可行"
+      ],
+      [
+        "Bist-China（高中，中國）",
+        "一家社區衛生服務中心",
+        "直接接觸",
+        "參訪與訪談；沒有材料",
+        "未記錄",
+        "問資訊可行"
+      ],
+      [
+        "TU Delft（研究生，荷蘭）",
+        "一所大學醫院的科部",
+        "受訪的研究者主動借出自己的實驗室",
+        "材料端不需任何許可：工作在她的實驗室內進行，因此什麼都沒移轉",
+        "未記錄",
+        "機制可複製；醫院不可"
+      ],
+      [
+        "McGill（大學，加拿大）",
+        "一個國家研究機構與一家工業營運商",
+        "顧問團與一場產業高峰會",
+        "支持信；樣品被寫為「已取得」，但沒有協議公開",
+        "未記錄",
+        "不行"
+      ],
+      [
+        "Madrid-UCM（大學，西班牙）",
+        "一座工業廠",
+        "初次工業接觸為 2025 年 3 月 20 日；材料用於 2026 年的季節",
+        "口頭答應；等待期間以持有者自己的數字做出一份替代配方頂著",
+        "初次接觸到真實材料約一年",
+        "不行"
+      ],
+      [
+        "UCNZ（大學，紐西蘭）",
+        "一家釀造公司",
+        "本地產業關係",
+        "兩封支持信",
+        "未記錄",
+        "不行"
+      ],
+      [
+        "Al-Nahrain-IRAQ（大學，伊拉克）",
+        "一位公司負責人自己的農地",
+        "直接向該負責人提出",
+        "口頭答應；獲准進入土地",
+        "未記錄",
+        "形式上可行"
+      ],
+      [
+        "ABOA（研究生，芬蘭）",
+        "一座市政處理廠",
+        "冷接觸該廠",
+        "只有資訊與分期計畫；實驗室外作業需國家基因技術許可",
+        "未記錄",
+        "材料端不行"
+      ],
+      [
+        "LYON（大學，法國）",
+        "一座市政處理廠",
+        "由一個自然保護協會安排參訪",
+        "僅限參訪",
+        "未記錄",
+        "參訪可行"
+      ],
+      [
+        "Muenster-University（研究生，德國）",
+        "一個區域農業協會與一座運作中的農場",
+        "大學研究所既有的關係",
+        "參訪與田間進入；另一項博物館活動與館方及實驗室管理層以書面確認",
+        "未記錄",
+        "部分可行"
+      ],
+      [
+        "UOregon（研究生，美國）",
+        "一座區域污水處理設施",
+        "與營運方安排的實地參訪",
+        "參訪與營運人員訪談；沒有材料",
+        "未記錄",
+        "參訪可行"
+      ]
+    ]
+  },
+  "checklist": [
+    "Ask the holder of the real thing, not a laboratory: all three high-school teams that obtained real material went to a plant, to private individuals and to a company.",
+    "Plan to bring the real material in, never to take engineered material out — four separate teams in this corpus ran into that rule, and the two that reached a working site had to demonstrate without it.",
+    "Write to the sector body before the firm, in that order, because that is the order that produced the one donated feedstock at high-school level.",
+    "Offer the holder something it wants back — a measurement it does not have, a certificate, a dataset — since the only named supply agreement in the corpus sits with a company that gained a product test.",
+    "Put the competition's own responsibility office in the loop in writing and early: it is the only approval any high-school team here actually obtained, and both teams that asked got it before collecting anything.",
+    "Ask to work inside the holder's building whenever transfer looks hard, which turns a paperwork problem into a bus fare.",
+    "Treat agencies and utilities as a source of design constraints, not samples: every public-body contact in this corpus produced information and not one produced material.",
+    "Record the dates — first contact, yes, material in hand — because almost nobody here did, and a 2027 team cannot build a calendar from a literature that has none.",
+    "Build the stand-in anyway from the holder's own numbers, the way the team that waited roughly a year did, so the season is not spent waiting."
+  ],
+  "checklist_zh": [
+    "去問真東西的持有者，不要去問實驗室：三支取得真實材料的高中隊伍，分別去找了一家工廠、幾位個人，和一家公司。",
+    "計畫要寫成「把真實材料帶進來」，絕不要寫成「把改造材料帶出去」——這個語料庫裡有四支隊伍各自撞上那條規則，其中真的走到實際場地的兩支，只能在沒有它的情況下做示範。",
+    "先寫給產業公會，再寫給廠商，就是這個順序，因為高中層級唯一一筆獲贈原料就是這個順序換來的。",
+    "回報持有者一樣它想要的東西——一份它手上沒有的量測、一張證明、一組資料——因為語料庫裡唯一一份具名供應協議，就落在一家因此得到產品測試的公司身上。",
+    "及早以書面把競賽自己的責任辦公室拉進來：那是這裡任何高中隊伍真正取得過的唯一核可，而兩支去問的隊伍都在採集任何東西之前就拿到了。",
+    "只要移轉看起來很難，就要求到持有者的建築物裡做，這會把文件問題換成一趟車錢。",
+    "把主管機關與公用事業當成設計限制的來源，不要當成樣品的來源：這個語料庫裡每一筆公部門聯繫都產出了資訊，沒有一筆產出材料。",
+    "把日期記下來——初次接觸、對方答應、材料到手——因為這裡幾乎沒有人記，而 2027 年的隊伍無法從一份沒有日期的文獻裡排出時程。",
+    "仍然要用持有者自己給的數字做出替代物，就像那支等了大約一年的隊伍那樣，這樣一整季才不會都花在等待上。"
+  ],
+  "method": "**Corpus.** All 106 team files in this report's research set, which cover decorated teams across the 2026 High School, Undergrad and Overgrad sections. For each team I read the partner list, the integrated human-practices summary, the real-world summary, the project summary and the public-engagement summary, looking only for the access arrangement: who holds the material or the site, how the team reached them, what permission is recorded, and when.\n\n**Wiki reading.** For the teams that looked like genuine access I then read the safety page and the human-practices page of the wiki itself. Pages were fetched with curl and a browser User-Agent and HTML-unescaped before any pattern matching; every candidate pattern was printed in full before any absence was concluded. Several wikis serve a client-rendered shell, and for those I pulled the JavaScript bundles and extracted the string and template literals that carry the page prose. One team's pages were read through its Markdown mirrors. Requests were paced.\n\n**Coding.** Two tiers, counted separately. *Material* means physical material obtained from an outside holder and used in the team's own work; twelve teams qualify. *Site* means physical entry to an outside holder's own premises or land where that entry fed the project, as distinct from a video call, an email exchange or a survey; 38 teams qualify, and 41 qualify on either tier — 20 of 40 High School, 13 of 42 Undergrad, 7 of 22 Overgrad, 1 of the 2 files with no section listed. The headline figure of eight is a third, stricter tier: material from whoever actually owns the real thing the project is about. Four of the twelve fall out of it — two because the material came from a university shelf or the team's own host institution rather than from the holder of the real thing, and two because the file says material was offered rather than confirmed delivered, or may simply have been an ordinary purchase. Of the remaining eight, three are High School, four Undergrad and one Overgrad.\n\n**Disclosures.** Counting from team files and wikis makes any arrangement a team had but did not write up invisible, and the silence on paperwork should be read that way too: the absence of a transfer agreement in the corpus is the absence of a published transfer agreement, not proof that none existed. The sample is decorated teams only, so no figure here describes iGEM 2026 at large, and the base rates are not competition base rates. The boundary between a site visit and site access is a judgement call, and a different reader would move several rows. The calendar column is mostly empty because the pages are mostly undated, and I have reported that rather than estimating. Nothing here describes what was done with any material after it arrived.",
+  "method_zh": "**語料庫。**本報告研究集中的全部一百零六份隊伍檔案，涵蓋 2026 年高中組、大學組與研究生組的獲獎隊伍。每一支隊伍我都讀了合作夥伴名單、整合人文實務摘要、真實世界摘要、專題摘要與公眾參與摘要，而且只找一件事：取得安排——材料或場地在誰手上、隊伍怎麼接上他們、紀錄中是什麼層級的許可、以及什麼時候。\n\n**網站閱讀。**對於看起來真的取得過管道的隊伍，我接著讀了其 wiki 本身的安全頁與人文實務頁。頁面以 curl 搭配瀏覽器 User-Agent 抓取，並在任何樣式比對之前先還原 HTML 實體字元；在判定某項不存在之前，每一個候選樣式都先完整印出。有幾個 wiki 送出的是前端渲染的外殼，我拉下它們的 JavaScript 套件，抽出承載頁面文字的字串與樣板字面值。其中一隊的頁面是透過它的 Markdown 鏡像閱讀的。請求之間都有節流。\n\n**編碼。**兩個層級，分開計算。*材料*指從外部持有者取得、並用於隊伍自身工作的實體材料；符合者十二支。*場地*指實際進入外部持有者自己的場所或土地，且該次進入確實餵養了專題，與視訊、電子郵件往來或問卷不同；符合者三十八支，兩個層級任一符合者四十一支——高中組四十支中二十支、大學組四十二支中十三支、研究生組二十二支中七支，以及兩份未列組別的檔案中的一支。標題上的八支是第三個、更嚴格的層級：材料來自真正擁有該專題所針對之真實對象的人。十二支中有四支被排除在外——兩支是因為材料來自大學架上或隊伍自家東家，而非來自真實對象的持有者；另兩支是因為檔案寫的是材料「被提供」而非確認「已交付」，或可能只是一般採購。剩下的八支中，三支為高中組、四支為大學組、一支為研究生組。\n\n**揭露。**從隊伍檔案與 wiki 來計數，會讓一支隊伍實際有過卻沒有寫出來的安排完全隱形；而關於文件的那片沉默也應該這樣讀：語料庫裡沒有移轉協議，意思是沒有公開的移轉協議，不是證明它不存在。樣本只有獲獎隊伍，因此這裡的任何數字都不足以描述整個 iGEM 2026，這些基礎比率也不是競賽的基礎比率。「參訪」與「進入場地」之間的界線是判斷，換一位讀者會挪動好幾列。時程那一欄大半是空的，因為那些頁面大半沒有日期；我選擇照實回報，而不是去估。這裡沒有任何內容描述材料到手之後被拿去做了什麼。"
+}

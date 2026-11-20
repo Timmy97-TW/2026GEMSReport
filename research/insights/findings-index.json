@@ -143,6 +143,25 @@
       "link": "good"
     },
     {
+      "kicker": "Access",
+      "kicker_zh": "取得管道",
+      "title": "Nobody signed anything, and the wall is directional: carry their material in, or go to their bench",
+      "title_zh": "沒有人簽過任何文件，而且那道牆是有方向的：把對方的材料帶進來，或是去對方的實驗檯",
+      "body": "The report said the podium goes to the team that measured on the real thing, but never how a team reaches one. Across 106 decorated teams, **41 reached an outside holder's premises or material at all, and only 8 obtained physical material from whoever owns the real thing** — 3 of those 8 are high-school teams, so **the division gap that shows on the podium does not reappear here**. What no team has is paperwork: not one material transfer agreement, confidentiality clause or ethics approval naming material appears anywhere in the corpus, and every transfer ran on an informal yes. The only written approvals held by any high-school team came from iGEM's own responsibility office. The cross-cutting rule is directional — **carry the holder's material into your lab, or go and work at the holder's bench; never take the organism out.** Even the one High School team that ran trials at two working sites did so without engineered material, because it legally could not leave the lab.",
+      "body_zh": "報告說頒獎臺屬於把核心主張打在真實標的上的隊伍，卻從來沒說一支隊伍要怎麼拿到真實標的。在 106 支得獎隊伍中，**有 41 支真的接觸到外部持有者的場域或材料，而只有 8 支從「真正擁有那個東西的人」手上拿到實體材料**——這 8 支裡有 3 支是高中隊伍，所以**在頒獎臺上出現的組別落差，在這裡並沒有重現**。沒有任何一支隊伍擁有的，是書面文件：整個語料庫裡找不到任何一份材料轉移協議、保密條款，或指名材料的倫理核准，每一次轉移都靠一句口頭答應。高中隊伍手上唯一的書面核准，來自 iGEM 自己的責任辦公室。而貫穿全局的規則是有方向性的——**把持有者的材料帶進你的實驗室，或是去持有者的實驗檯工作；絕對不要把生物帶出去。**就連那支在兩個實際場域做過試驗的高中隊伍，也是在不帶工程化材料的情況下做的，因為它在法規上無法離開實驗室。",
+      "chips": [
+        "41 of 106 reached, 8 got material",
+        "3 of the 8 are high-school teams",
+        "zero agreements in the whole corpus"
+      ],
+      "chips_zh": [
+        "106 支中 41 支接觸、8 支拿到材料",
+        "8 支裡有 3 支是高中隊伍",
+        "整個語料庫零份協議"
+      ],
+      "link": "good"
+    },
+    {
       "kicker": "Governance",
       "kicker_zh": "治理",
       "title": "The exit rule is the one a club never writes, and it is the one that decides whether the programme lives",

@@ -84,6 +84,16 @@ one it cleared in 2024 and has not cleared since. The short version of everythin
   ones it dropped. The programme has an entry bar, five named exits of which only one is success, a cap of
   five live slots that binds entry to exit, a six-line handover, and a fourteen-question listening-visit
   instrument that opens on "walk me through yesterday" rather than on the word problem.
+- **Nobody signed anything, and the wall is directional.** The report's strongest finding is that the podium
+  goes to the team that measured on the real thing; this is how a team reaches one. Of 106 decorated teams, 41
+  reached an outside holder's premises or material at all and only 8 obtained physical material from whoever
+  owns the real thing — 3 of those 8 are high-school teams, so the division gap visible on the podium does not
+  reappear in access. Not one material transfer agreement, confidentiality clause or ethics approval naming
+  material exists anywhere in the corpus; every transfer ran on an informal yes, and the only written approvals
+  any high-school team holds came from iGEM's own responsibility office. The rule that generalises is
+  directional: carry the holder's material into your lab, or go and work at the holder's bench, but never take
+  the organism out. Even the High School team that ran trials at two working sites did so without engineered
+  material, because it legally could not leave the lab.
 - **The loops that closed were closed by experts.** Of all 106 decorated teams, 71 can point at a stakeholder
   who visibly changed the design — but almost every one of those stakeholders was a credentialled technical
   expert, with nine or ten of the 71 closing on somebody who was not. The split is not medical against
