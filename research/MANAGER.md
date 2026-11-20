@@ -1297,3 +1297,92 @@ rule wraps the result — so a triple run is not by itself a fault, which is why
 renderer rather than pattern-matching asterisk runs.
 
 Three audits now run on every build: parallel-array, character, and markdown. All three are silent.
+
+## Session 6 (from 10:38, 20 Nov 2026) — three new directions
+
+Build on entry: 31 blocks, 31 translated, all three audits silent, 106 team files complete.
+
+### The audits are genuine, not merely quiet
+
+A silent audit and a broken audit look identical, so all three were tested against a
+planted fault file rather than trusted. Each one fired: parallel_audit caught a chips_zh
+of length 2 against chips of length 3; char_audit caught the Simplified 这 and 制造 and
+条目; md_audit caught `**5 strains of *E. coli* here**` surviving as a raw asterisk pair.
+SIMPLIFIED now holds 146 entries. The silence on the real corpus is real.
+
+### Correction 4 — the continuity denominator was 78, not 81
+
+findings-index card 18 and the README both said that of the 81 decorated teams that had
+entered iGEM before, 5 carried a project line forward. multiyear-continuity.json, which
+is the measurement, is narrower and says so plainly: 81 returned, 78 had a readable
+previous project, and 5 of those 78 continued. Three could not be classified at all --
+Stockholm's 2025 wiki is the unedited iGEM template, ASIJ-Tokyo has no 2025 wiki, and
+Madrid-UCM's 2024 wiki is an empty shell. The chips on that same card already carried
+"5 of 78", so the card disagreed with itself. Both languages and the README are fixed.
+
+A cross-check was then run over all 27 overview cards and all 11 README figures: every
+"N of M" claim was matched against the source blocks and report.json. The 78/81 slip was
+the only one. That check is worth re-running whenever the overview tab is edited, because
+the overview restates 30 other blocks and is the natural place for drift.
+
+### Negative result — do NOT build a Taiwan terminology audit
+
+Tested the idea that the character audit should be joined by a terminology audit for
+mainland-versus-Taiwan word choices. Scanned the whole corpus (insights, trends, report,
+all 106 team files) against 39 candidate pairs. Roughly 95% of the hits were false
+positives, and the failure modes are instructive:
+
+- Substring collisions. 算法 matched 23 times, every one of them inside 演算法, which is
+  correct. 靶標 matched once, inside 脫靶標籤. 標準差 was a no-op pair.
+- Correct Taiwan usage that merely looks mainland. 水平轉移 is the standard term for
+  horizontal gene transfer. 質量 in 質量標準化指標 and 等質量下 is physical mass. 正規表達式
+  is the Taiwan term for a regular expression. 文件 (217 hits) means document. 項目 means
+  item. 設置 means to install. 網絡 is right for an abstract or social network, while
+  網路 is the internet. 默認作答傾向 is acquiescence bias.
+- Proper nouns. 微信視頻號 is WeChat Channels. 新基因組技術 is the EU's New Genomic
+  Techniques regulation. 給付代碼 is a reimbursement code.
+
+The only pair with any substance was 基因組 against 基因體, where Taiwan's standard term
+is 基因體 and the corpus runs 69 to 12 the other way -- but 25 of the 69 are 基因組尺度
+for genome-scale models, where both forms are current in Taiwanese writing. This is a soft
+preference, not an error, so nothing was renamed. Mass-renaming 69 strings across 23 files
+for a soft preference is churn that risks real damage for no reader benefit.
+
+The standing lesson from 后 and 并 holds and now has a second case: false positives make an
+audit get ignored, which is worse than having no audit. Script-level checks catch script
+errors. Word choice needs a reader.
+
+### Wave 8 — three agents, all on ground the report has never covered
+
+Checked first that none of the 31 existing blocks already does this work. real-world.json
+is about commercial honesty, measurement-discipline.json about calibration habits, and
+protocol-reproducibility.json about whether a stranger could repeat the method. None of
+them touches the three questions below.
+
+1. falsification-controls.json (drylab, order 46). The report's two-direction finding has
+   two halves -- measured on the real target, AND the rival explanation experimentally
+   excluded -- and only the first half has ever been measured across the field. Cohort: the
+   30 teams of the 2026 Top 10 across all three sections, read from their own wikis,
+   because a control is exactly what a summary omits. Type specimen is GEMS 2024's qPCR
+   immune-gene panel against a BL21(DE3) empty-vector arm, whose written rationale is "We
+   want to rule out the effect of E. coli in the death of mosquito larvae". Agent is told a
+   null is a valuable result here, because it would narrow the two-direction finding to the
+   real-target half alone.
+2. real-target-routes.json (good, order 35). The report says the podium goes to the team
+   that measured on the real thing. It has never said how a team gets to one. An atlas of
+   access routes: the sample, who held the key, what permit or biosafety level applied,
+   whether a high-school team could reproduce it, and where the chain breaks for teams that
+   did part of it on a surrogate. Also gives the field-wide base rate instead of the
+   High-School-Top-10-only figure.
+3. good-governance.json (good, order 22). The entry and exit rules for the Science for Good
+   pipeline, plus the listening-visit instrument for the farm visit that good-pipeline.json
+   records as the next action. Argued from three verified figures: 71 of 106 closed a
+   stakeholder loop but nearly all those stakeholders were credentialled experts; 5 of 78
+   carried a problem across years; 3 of 106 credit their predecessor. The exit rule is the
+   point -- a programme with no way to end a problem does not carry problems across years,
+   it accumulates them until a cohort graduates and the list is silently dropped.
+
+All three agents were sent the method reminders: curl before the browser pane, html.unescape
+before pattern-matching, never a bare "t test", print all regex matches, literal Chinese
+characters in a UTF-8 heredoc rather than hand-written escapes, and the markdown rule that
+bold content may not contain an asterisk.
