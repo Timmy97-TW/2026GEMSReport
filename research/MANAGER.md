@@ -1453,3 +1453,23 @@ here by hand. The brief is recorded above under Wave 8 and the question remains 
 says the podium goes to the claim measured on the real target but has never said how a team reaches one.
 A future attempt should probably narrow the brief to access routes, permissions and partner types, and avoid
 framing that reads as toxin or pathogen methodology.
+
+### Live verification at build 202611201053, and a third false-positive lesson
+
+All eight tabs swept in the live browser in both languages: 0 surviving markdown asterisks, 0 chip overflow,
+0 horizontal document overflow everywhere. Section counts: overview 3, judging 6, drylab 12, good 13,
+teams 7, academic 1, industry 1, roadmap 4. The good tab now carries the governance block as its third
+section in both languages, with its 5-column exits table rendering inside the page width.
+
+The Simplified sweep in the browser first reported 248 hits on the good tab, which would have contradicted
+the build's own character audit. It was my character class that was wrong, twice over. The first pass
+included 那, 制, 后 and 并, all valid Traditional and already deliberately excluded from build.py's map. The
+second pass narrowed to supposedly unambiguous forms and still reported 准 sixteen times across five tabs --
+but every one of those is 核准, 批准 or 獲准, meaning to approve, which is correct Traditional. The
+Simplified/Traditional split there is 准 against 準 for standard or accurate, as in 標準 and 水準, and the
+corpus uses both correctly. Genuine Simplified count across all eight tabs in both languages: zero.
+
+That is now the third time a hand-written character or term check has produced false positives on this
+project -- 后 and 并 in the map, the 39 terminology pairs, and now 准. The pattern is consistent enough to
+state as a rule: never add a character or term to a check without first grepping the corpus for it and
+reading the hits. build.py's map is trustworthy precisely because everything in it survived that test.
