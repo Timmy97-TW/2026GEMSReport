@@ -1,0 +1,219 @@
+{
+  "id": "proposals-novelty",
+  "tab": "proposals",
+  "order": 8,
+  "kicker": "The novelty screen",
+  "kicker_zh": "新穎性篩查",
+  "title": "Three concepts went into the literature and one did not come back",
+  "title_zh": "三個構想送進文獻，有一個沒有回來",
+  "lede": "The tenth selection question asks what the paper would be and who has already written it. Running it properly against three candidate concepts on Taiwan's AI-hardware supply chain killed one outright, took the headline off a second, and narrowed the third to a gap too small to reach in one season. This is the screen working, and it is cheaper to read it now than to discover it in August.",
+  "lede_zh": "第十個選題問題問的是：這篇論文會是什麼，而誰已經寫過了。把它認真套用在三個以台灣 AI 硬體供應鏈為主題的候選構想上，結果是一個直接被終結、第二個主打被拿走、第三個被壓縮到一季之內搆不到的窄縫。這就是篩查在運作——而現在讀到它，比八月才發現便宜得多。",
+  "body": "**All three concepts took damage, which is what a novelty screen is for.** The integrated-toxicity panel is already done, including in the exact host proposed, so it is withdrawn. The light-gated metal concept keeps one genuinely empty intersection but cannot reach it in a high-school season, and both of its fallback framings are published. The wafer-substrate concept had its central question answered this year in the journal it would have targeted.\n\n**One correction applies no matter what is chosen, and it is mechanistic rather than editorial.** CcaSR is a transcriptional switch: light sets how much binder is made, not the affinity of a binder already folded on the surface. A proposal claiming light-controlled release of a bound metal through CcaSR is not over-claiming, it is misreading the team's own tool, and that is the kind of error a judge spots in one sentence.\n\n**What the screen leaves standing is consistent across all three, and it is not the biology.** Each concept contains a measurement contribution more publishable than its headline — isotherms and selectivity and a validated colorimetric method in one case, reference data and reproducibility limits in another, variance components and a documented low-cost coupon in the third. That matches what this report already measured about the team: Best Measurement and Best Hardware, and a weakness that is reach rather than rigour. **Lead with the measurement and let the biology be the vehicle.**\n\n**A separate caution about the framing rather than the science.** The industrial narrative around Taiwan's supply chain carries a set of figures that circulate widely and do not survive sourcing, and there are two genuine data gaps where it is tempting to assume a number exists. Those are listed on this page so they are not repeated.",
+  "body_zh": "**三個構想全部受損，而那正是新穎性篩查的用途。**整合毒性反應組已經被做過，連提議的宿主都一樣，因此撤回。光控金屬那個構想保有一個真正空著的交集，但在高中一季之內搆不到，而它的兩條退路框架也都已經被發表。晶圓基質那個構想的核心問題，今年剛在它原本要投的那本期刊上被回答。\n\n**有一項更正不管選哪個都適用，而且是機制層面而不是文字層面。**CcaSR 是轉錄層級的開關：光決定的是製造多少結合蛋白，不是已經摺疊在表面上的結合蛋白的親和力。一份宣稱「透過 CcaSR 光控釋放已結合金屬」的提案不是誇大，而是誤讀了團隊自己的工具，而那是評審一句話就看得出來的錯誤。\n\n**篩查之後還站著的東西，三個構想之間完全一致，而且不是生物學。**每個構想裡都藏著一個比它主打更可發表的量測貢獻——一個是等溫線、選擇性與經驗證的顯色定量方法，一個是參考資料與再現性極限，第三個是變異成分與有據可查的低成本試片。這和本報告早就量到的這支隊伍的樣貌吻合：Best Measurement 與 Best Hardware，而弱點在觸及範圍、不在嚴謹度。**以量測為主打，讓生物學當載具。**\n\n**另外一項提醒，關於敘事框架而不是科學。**圍繞台灣供應鏈的產業敘事裡，有一批流傳很廣、卻查不到出處的數字，還有兩個「很容易假設數字存在、實際上不存在」的真實資料缺口。它們都列在本頁上，以免被重複引用。",
+  "cards": [
+    {
+      "kicker": "Killed",
+      "kicker_zh": "已被終結",
+      "title": "The toxicity-panel idea is twenty-six years old, and the Bacillus version was published in 2021",
+      "title_zh": "毒性反應組那個構想已經二十六歲了，而 Bacillus 版本在 2021 年就發表了",
+      "body": "The idea was a panel of stress-responsive promoter–reporter fusions in *B. subtilis* reading the integrated biological toxicity of a real waste stream, as against chemical-by-chemical analysis. According to PubMed, **Kessenikh et al. 2021** built exactly that: lux biosensors in *B. subtilis* on the SOS promoter `PdinC`, the methylation-response promoter `PalkA` and the oxidative-stress promoter `PmrgA`, compared directly against the *E. coli* equivalents, applied to toxicants introduced into soil, and written up with the stated purpose of studying how toxicity mechanisms differ between Gram-positive and Gram-negative bacteria. [DOI](https://doi.org/10.3390/ijms22179571)\n\nThe panel design itself is older still — Van Dyk et al. 2000 published a six-member *E. coli* stress-promoter panel producing what they called characteristic stress fingerprints. Applying a panel to a real uncharacterised stream with chemical cross-validation was done by Hug et al. 2015 at ninety genes, and decomposing mixture effects per component and per pathway was done by Guan et al. 2022, which is more sophisticated than what was proposed here.\n\n**The only unoccupied sliver is the application**: nobody has pointed such a panel at semiconductor-fab wastewater specifically. That is the weakest kind of novelty claim — the method is twenty-six years old, the host-specific version is five, and a referee would ask what the new matrix teaches that soil did not.",
+      "body_zh": "這個構想是在 *B. subtilis* 裡建一組逆境響應啟動子與報告基因的融合，用來讀出真實廢水流的整合生物毒性，對照傳統的逐一化學分析。根據 PubMed，**Kessenikh 等人 2021 年**做的正好就是這件事：在 *B. subtilis* 裡建構 lux 生物感測器，分別接上 SOS 啟動子 `PdinC`、甲基化響應啟動子 `PalkA` 與氧化逆境啟動子 `PmrgA`，直接與 *E. coli* 的對應版本比較，應用在投入土壤的毒物上，而且論文明寫目的是研究毒性機制在革蘭氏陽性與陰性菌之間的差異。[DOI](https://doi.org/10.3390/ijms22179571)\n\n這個「反應組」的設計本身更老——Van Dyk 等人 2000 年就發表過六成員的 *E. coli* 逆境啟動子組，產生他們稱為「特徵性逆境指紋」的東西。把反應組用在真實且未經表徵的水流上並做化學交叉驗證，Hug 等人 2015 年以九十個基因做過；而把混合毒性逐成分、逐路徑拆解，Guan 等人 2022 年做過，比這裡提議的還更精細。\n\n**唯一還空著的只有應用場域**：沒有人把這種反應組專門指向半導體廠廢水。那是最弱的一種新穎性主張——方法二十六歲、宿主特定版本五歲，而審稿人會問：這個新基質教了我們什麼土壤沒教的？",
+      "chips": [
+        "Kessenikh 2021, B. subtilis panel",
+        "Van Dyk 2000, the panel design",
+        "only the matrix is unclaimed"
+      ],
+      "chips_zh": [
+        "Kessenikh 2021，B. subtilis 反應組",
+        "Van Dyk 2000，反應組設計",
+        "只有基質還沒人佔"
+      ]
+    },
+    {
+      "kicker": "Correct this regardless",
+      "kicker_zh": "不管選哪個都要改正",
+      "title": "CcaSR cannot release a bound metal, and saying it can would read as not understanding your own tool",
+      "title_zh": "CcaSR 沒辦法把已結合的金屬放掉，而說它可以，會被讀成不懂自己的工具",
+      "body": "This is the most important line on the page and it applies whatever gets chosen. **CcaSR is a transcriptional switch.** Green light changes how much binder the cell makes; it does not change the affinity of a binder that is already folded and displayed on the surface. So a sentence like \"we will use our CcaSR system to control binding and release of the metal\" is not an over-claim, it is a mechanistic error, and any judge who works with optogenetics will see it immediately.\n\nWhat CcaSR can honestly do is set **how many binders are on the cell**, as a graded function of light dose. That is a real and measurable control variable, and it opens a question nobody has tabulated: how adsorption capacity scales with binder surface density when density is set optically rather than by promoter swapping. That is narrow, honest, achievable and uses the team's own tool for what it actually does.\n\nMaking affinity itself light-dependent would need a photoswitchable protein domain rather than a transcriptional switch — a protein-engineering project, not a one-season high-school project.",
+      "body_zh": "這是整頁最重要的一行，而且不管最後選哪一個都適用。**CcaSR 是一個轉錄層級的開關。**綠光改變的是細胞製造多少結合蛋白；它不會改變一個已經摺疊好、已經展示在表面上的結合蛋白的親和力。所以「我們會用自己的 CcaSR 系統來控制金屬的結合與釋放」這種句子不是誇大，而是機制上的錯誤，任何做過光遺傳學的評審會立刻看出來。\n\nCcaSR 誠實做得到的，是決定**細胞表面上有多少個結合蛋白**，而且是隨光劑量連續變化的。那是一個真實且可量測的控制變數，而且它打開一個沒有人列過表的問題：當結合蛋白的表面密度是用光來設定、而不是用換啟動子來設定時，吸附容量如何隨密度變化。那個問題窄、誠實、做得到，而且是用團隊自己的工具去做它真正會做的事。\n\n要讓親和力本身隨光改變，需要的是可光切換的蛋白質結構域，而不是轉錄開關——那是蛋白質工程專案，不是一季的高中專案。",
+      "chips": [
+        "transcriptional, not allosteric",
+        "light sets binder density",
+        "capacity versus density is unclaimed"
+      ],
+      "chips_zh": [
+        "是轉錄層級，不是異位調控",
+        "光決定結合蛋白密度",
+        "容量對密度的關係沒人做過"
+      ]
+    },
+    {
+      "kicker": "The fallback is closed too",
+      "kicker_zh": "退路也被堵住了",
+      "title": "Light-regulated cell recovery was published in 2016, using the same system GEMS already runs",
+      "title_zh": "光調控細胞回收在 2016 年就發表了，用的還是 GEMS 現在在跑的同一套系統",
+      "body": "If the light-gated release idea fails, the obvious retreat is McGill's framing from 2026 — use light to harvest the loaded cells instead. That retreat is not available either. **Nakajima, Abe, Ferri and Sode published \"Development of a light-regulated cell-recovery system for non-photosynthetic bacteria\"** in *Microbial Cell Factories* in **February 2016**, driving self-aggregation from a green-light sensor so cells can be recovered by settling. [DOI](https://doi.org/10.1186/s12934-016-0426-6)\n\nTwo things follow. First, light-controlled harvesting is a decade old, so a 2027 project cannot lead with it. Second — and this is worth saying because it is easy to be intimidated by a Grand-Prize-adjacent team — it means McGill's own light-flocculation novelty is thinner than its wiki reads. The lesson generalises: **check the literature before being impressed by a competitor, as well as before claiming a gap yourself.**\n\nThe headline framing is closed at the other end as well. Replacing chemical elution with light in affinity purification was published in *Nature Communications* in December 2024 as a genetically encoded azobenzene side chain. [DOI](https://doi.org/10.1038/s41467-024-55212-y)",
+      "body_zh": "如果「光控釋放」行不通，最明顯的退路是 McGill 2026 年的做法——改用光來收集載滿金屬的細胞。這條退路也不在了。**Nakajima、Abe、Ferri 與 Sode 發表了〈Development of a light-regulated cell-recovery system for non-photosynthetic bacteria〉**，刊於 *Microbial Cell Factories*，**2016 年 2 月**，用綠光感測器驅動自聚集，讓細胞可以靠沉降回收。[DOI](https://doi.org/10.1186/s12934-016-0426-6)\n\n有兩件事跟著成立。第一，光控收集已經有十年歷史，所以 2027 年的專案不能拿它當主打。第二——這點值得講，因為人很容易被一支接近總冠軍的隊伍嚇到——這表示 McGill 自己那個光控絮凝的新穎性，比它 wiki 讀起來要薄。這個教訓可以推廣：**在被競爭對手震懾之前先查文獻，就跟在自己宣稱空缺之前先查文獻一樣重要。**\n\n主打框架在另一端也被堵住了。在親和層析中用光取代化學沖提，2024 年 12 月已經以「基因編碼的偶氮苯側鏈」形式發表在 *Nature Communications*。[DOI](https://doi.org/10.1038/s41467-024-55212-y)",
+      "chips": [
+        "Nakajima 2016, ten years earlier",
+        "same CcaSR system",
+        "McGill's novelty is thinner than it reads"
+      ],
+      "chips_zh": [
+        "Nakajima 2016，早了十年",
+        "同一套 CcaSR 系統",
+        "McGill 的新穎性比讀起來薄"
+      ]
+    },
+    {
+      "kicker": "Answered this year",
+      "kicker_zh": "今年才剛被回答",
+      "title": "The wafer idea's central question was answered in 2026, in its own target journal",
+      "title_zh": "晶圓那個構想的核心問題，2026 年已經在它自己的目標期刊上被回答了",
+      "body": "The concept was to use reclaimed silicon wafers as a flat, chemically defined reference surface and ask how much of the between-laboratory variance in biofilm assays is actually surface variance. **Vohra et al. 2026 benchmarked biofilm assays across six surface types and found surface type dominated at 42.6% of variance against 17.8% for strain** — the central question, answered this year, in the *Journal of Microbiological Methods*. Silicon wafers as a controlled-hydrophobicity substrate for bacterial adhesion go back further still, to Mazumder et al. 2010, who also found that biofilm growth *alters* substratum hydrophobicity, which undercuts the premise that a wafer stays a fixed reference.\n\n**A note-sized contribution does remain**, and it is a supply-chain one rather than a scientific one: nobody has documented reclaimed or test-grade wafers as a low-cost distributable coupon with a real supply route and per-coupon cost. Which brings the premise correction — reclaimed wafers are **not** near-free in Taiwan. Taiwan is genuinely the world centre of wafer reclaim, but the business is contract-only business-to-business with no retail channel, and a search across five marketplaces found exactly one domestic consumer listing. The realistic route is importing virgin test wafers at roughly five to forty US dollars each.",
+      "body_zh": "這個構想是把再生矽晶圓當成平整、化學定義明確的參考表面，然後問：生物膜試驗的實驗室間變異裡，有多少其實是表面造成的變異。**Vohra 等人 2026 年在六種表面類型上做了生物膜試驗的基準比較，發現表面類型以 42.6% 的變異佔比居首，而菌株只有 17.8%**——核心問題，今年剛被回答，而且就發表在它自己的目標期刊《Journal of Microbiological Methods》上。用矽晶圓當作疏水性可控的細菌附著基質，時間更早，可追到 Mazumder 等人 2010 年；而他們同時發現生物膜生長本身會**改變**基材的疏水性，這等於動搖了「晶圓會保持為固定參考」這個前提。\n\n**還是剩下一個筆記等級的貢獻**，而且它屬於供應鏈而不是科學：沒有人把再生或測試級晶圓記錄成一種附有真實取得途徑與單片成本的低成本可分發試片。這也帶出一個前提更正——再生晶圓在台灣**並不是**接近免費的。台灣確實是全球晶圓再生的中心，但那是只做企業對企業合約的生意，沒有零售通路；跨五個交易平台搜尋，只找到一筆國內消費端的刊登。現實的途徑是進口全新的測試晶圓，單片大約五到四十美元。",
+      "chips": [
+        "surface 42.6% of variance",
+        "Mazumder 2010 used wafers already",
+        "wafers are not near-free in Taiwan"
+      ],
+      "chips_zh": [
+        "表面佔 42.6% 變異",
+        "Mazumder 2010 早就用過晶圓",
+        "晶圓在台灣並非接近免費"
+      ]
+    },
+    {
+      "kicker": "What survives",
+      "kicker_zh": "還活著的是什麼",
+      "title": "Lead with the measurement and let the biology be the vehicle",
+      "title_zh": "以量測為主打，讓生物學當載具",
+      "body": "The strategic read falls out of the screen rather than being imposed on it. Best Measurement plus Best Hardware says this team's demonstrated edge is **quantification and instrument-building, not novel molecular mechanism** — and every one of the three concepts has a measurement-shaped contribution inside it that is more publishable than its headline biology.\n\nFor the metal concept, the surviving paper is complete isotherms, kinetics and aluminium-and-iron selectivity for a gallium binder across the concentration range a fab stream actually occupies, plus a validated low-cost colorimetric method for gallium. That is publishable on its own, which means **the paper survives the light-gating failing** — and it is precisely the work teams skip: this report's own note on SMS-Shenzhen, a high-school team that did metal biosorption in 2026, is that the conspicuous hole was the absence of any isotherm or kinetics fitting their own data would have supported.\n\nFor the toxicity concept, the only defensible sentence left is about reference data and inter-day reproducibility limits for a defined reporter set under a stated protocol — not about the panel. For the wafer concept, it is variance components plus an open-source coupon holder, and the single move that would raise its ceiling from single-lab repeatability to a genuine interlaboratory claim is recruiting two or three other teams into a shared-protocol ring trial. Which is the thing **no team in 106 did**.",
+      "body_zh": "這個策略判斷是從篩查結果裡掉出來的，不是外加上去的。Best Measurement 加上 Best Hardware 說明這支隊伍已經證明的優勢是**量化與儀器建造，不是新穎的分子機制**——而三個構想每一個裡面，都藏著一個比它主打的生物學更可發表的、量測形狀的貢獻。\n\n金屬那個構想，活下來的論文是：完整的等溫線、動力學，以及鎵結合蛋白對鋁與鐵的選擇性，涵蓋廠務水流真正落在的濃度範圍，再加上一套經過驗證的低成本鎵顯色定量方法。那本身就可以發表，也就是說**即使光控那部分失敗，論文仍然活著**——而且那正好是各隊伍會跳過的工作：本報告對 SMS-Shenzhen（2026 年做金屬生物吸附的高中隊伍）的評註，正是說那個顯眼的洞就是沒有做等溫線與動力學擬合，而他們自己的資料本來就撐得起。\n\n毒性那個構想，剩下唯一站得住的句子是關於「在明定流程下，某一組報告菌株的參考資料與日間再現性極限」——而不是關於那個反應組。晶圓那個構想，剩下的是變異成分分析加上一個開源試片夾具；而唯一能把它的天花板從「單一實驗室可重複」抬到「真正的實驗室間主張」的動作，是找兩三支其他隊伍進來做共用流程的環狀試驗。而那正是**106 支隊伍裡沒有任何一支做過**的事。",
+      "chips": [
+        "the edge is quantification",
+        "the paper survives the headline failing",
+        "isotherms are what teams skip"
+      ],
+      "chips_zh": [
+        "優勢在量化",
+        "主打失敗論文仍活著",
+        "等溫線正是大家跳過的"
+      ]
+    },
+    {
+      "kicker": "Do not state these",
+      "kicker_zh": "這些不要寫",
+      "title": "Industrial numbers that circulate widely and could not be sourced",
+      "title_zh": "流傳很廣、但查不到出處的產業數字",
+      "body": "A separate verification pass on the industrial framing found a set of figures that circulate freely and do not survive checking. **Do not publish any of these as sourced**: that Taiwan's 2021 drought was the worst in 56 years — no official Taiwanese source carries it, and the Water Resources Agency's defensible version is that it was the first year since 1964 with no typhoon; that one firm holds about 90% of leading-edge capacity; that Taiwan held 69% of sub-10nm in 2022, which is not in the 2024 industry report it is usually attributed to; that semiconductors take 10% of Taiwan's water, which collides with the official split in which 10% is all industry; and a widely quoted figure for China's share of germanium, which does not come from the source it is credited to.\n\nTwo genuine evidence gaps matter more than the bad numbers. **There is no published germanium concentration in fab effluent at all, so do not claim germanium appears there.** And chemical-mechanical planarisation is the wrong place to look for gallium or indium — it is a copper and tungsten stream.\n\nOne time-critical item, because it moves: the suspension of China's gallium and germanium export restrictions toward the United States **expires on 27 November 2026**, a week after this was checked. Anything written about that market needs re-checking on the day it is published rather than quoted from here.",
+      "body_zh": "針對產業背景做的另一輪查證，找出一批流傳很廣、但查不下去的數字。**以下這些都不要當成有出處的事實寫出去**：台灣 2021 年乾旱是「56 年來最嚴重」——沒有任何台灣官方來源這樣寫，水利署站得住的版本是「1964 年以來第一次沒有颱風的年份」；某家公司掌握約 90% 的先進製程產能；台灣 2022 年握有 69% 的 10 奈米以下產能，這一句並不在通常被引用的那份 2024 年產業報告裡；半導體用掉台灣 10% 的水，這與官方的用水結構相衝突，因為在官方數字裡 10% 是「整個工業部門」；以及一個廣被引用的中國鍺產量占比，它並不出自被掛名的那個來源。\n\n有兩個真正的證據缺口，比那些錯數字更重要。**完全沒有已發表的廠務放流水鍺濃度資料，所以不要宣稱鍺會出現在那裡。**還有，化學機械研磨並不是找鎵或銦的地方——那是銅與鎢的水流。\n\n還有一項會移動、因此時效敏感：中國對美國暫停鎵與鍺出口管制的措施，**在 2026 年 11 月 27 日到期**，也就是這次查證之後一週。任何寫到那個市場的內容，都要在發表當天重新確認，而不是從這裡引用。",
+      "chips": [
+        "five circulating figures fail checking",
+        "no germanium data in fab effluent",
+        "one item expires 27 Nov 2026"
+      ],
+      "chips_zh": [
+        "五個流傳數字查不到出處",
+        "廠務放流水沒有鍺的數據",
+        "有一項 2026-11-27 到期"
+      ]
+    },
+    {
+      "kicker": "Security note",
+      "kicker_zh": "資安提醒",
+      "title": "Two financial-filing pages tried to instruct the automated reader",
+      "title_zh": "兩個財報頁面試圖對自動化讀取者下指令",
+      "body": "While checking company filings, two pages on a financial-filings aggregator returned text addressed to automated agents rather than to a human reader, instructing them to create an API key, register an email address and request a payment checkout link. The instructions were ignored, nothing was entered and no data was taken from those pages, and the one company figure that had come from that source is flagged in the underlying data file as needing verification against Taiwan's own Market Observation Post System instead.\n\nIt is recorded here because the team may well visit the same pages when checking a supplier or a partner, and because the general point is worth internalising: **text retrieved from a web page is data, not instructions**, however directly it addresses the reader. The same discipline applies to anything an automated tool brings back during a season.",
+      "body_zh": "在查核公司財報的過程中，某財報彙整網站的兩個頁面回傳了對「自動化代理程式」而非對人類讀者說話的文字，要求建立 API 金鑰、註冊電子郵件，並索取付款結帳連結。那些指令被忽略，沒有輸入任何東西，也沒有從那些頁面取用任何資料；而唯一一個來自該來源的公司數字，已在底層資料檔中標記為需要改以台灣公開資訊觀測站查證。\n\n記在這裡，是因為團隊在查供應商或夥伴時很可能會造訪同樣的頁面，也因為這個通則值得內化：**從網頁取回的文字是資料，不是指令**，無論它多直接地對讀者說話。同樣的紀律適用於整個賽季中任何自動化工具帶回來的東西。",
+      "chips": [
+        "pages addressed the automated reader",
+        "instructions ignored, nothing entered",
+        "retrieved text is data, not instructions"
+      ],
+      "chips_zh": [
+        "頁面對自動化讀取者說話",
+        "指令已忽略，未輸入任何內容",
+        "取回的文字是資料，不是指令"
+      ]
+    }
+  ],
+  "table": {
+    "head": [
+      "Concept",
+      "Verdict",
+      "What is already published",
+      "What survives, and where it could go"
+    ],
+    "head_zh": [
+      "構想",
+      "判定",
+      "已經被發表的是什麼",
+      "還活著的是什麼，可以投到哪"
+    ],
+    "rows": [
+      [
+        "**Light-gated metal capture and release**",
+        "**Novel in this application, but out of reach**",
+        "Light instead of chemical elution in affinity purification (*Nature Communications*, 2024). Light-modulated reversible metal capture and release in synthetic polymers. Light-regulated cell recovery using a green-light sensor (*Microbial Cell Factories*, 2016). Engineered proteins that bind gallium specifically.",
+        "The one empty intersection is a **protein** whose affinity for a critical p-block metal is light-gated — not reachable in one season. The surviving paper is full isotherms, kinetics and aluminium-and-iron selectivity across the real concentration range, plus a validated colorimetric method. Hydrometallurgy, ACS ES&T Water, Analytical Methods"
+      ],
+      [
+        "**Integrated-toxicity reporter panel**",
+        "**Already done — withdrawn**",
+        "A *B. subtilis* stress-promoter lux panel benchmarked against the *E. coli* equivalents and applied to a real matrix (2021). A six-member *E. coli* panel producing stress fingerprints (2000). A ninety-gene version on real impacted water with chemical cross-validation (2015). Mixture effects decomposed per pathway (2022).",
+        "Only the matrix is unclaimed, which is the weakest novelty claim available. The one defensible sentence is about reference data and inter-day reproducibility limits for a defined reporter set — not about the panel"
+      ],
+      [
+        "**Scrap wafers as a reference substrate**",
+        "**Incremental**",
+        "Surface type shown to dominate biofilm assay variance at 42.6% against 17.8% for strain, in 2026, in the target journal. Silicon wafers as a controlled-hydrophobicity adhesion substrate since 2010 — which also found biofilm growth alters substratum hydrophobicity",
+        "A note-sized supply-chain contribution: wafers as a documented low-cost distributable coupon, with variance components and an open-source holder. Its ceiling rises only if two or three other teams join a shared-protocol ring trial — which 0 of 106 teams have ever run"
+      ]
+    ],
+    "rows_zh": [
+      [
+        "**光控金屬捕捉與釋放**",
+        "**在這個應用上新穎，但搆不到**",
+        "在親和純化中以光取代化學沖提（《Nature Communications》2024）。合成高分子中光調控的可逆金屬捕捉與釋放。以綠光感測器驅動的光調控細胞回收（《Microbial Cell Factories》2016）。能特異結合鎵的工程化蛋白質。",
+        "唯一空著的交集是「一個**蛋白質**對關鍵 p 區金屬的親和力受光調控」——一季之內搆不到。活下來的論文是完整等溫線、動力學、對鋁與鐵的選擇性，涵蓋真實濃度範圍，外加一套經驗證的顯色定量方法。可投 Hydrometallurgy、ACS ES&T Water、Analytical Methods"
+      ],
+      [
+        "**整合毒性報告反應組**",
+        "**已經被做過——撤回**",
+        "一組 *B. subtilis* 逆境啟動子 lux 反應組，與 *E. coli* 對應版本對照並應用於真實基質（2021）。六成員 *E. coli* 反應組產生逆境指紋（2000）。九十個基因版本用於真實受影響水體並做化學交叉驗證（2015）。混合效應逐路徑拆解（2022）。",
+        "只剩基質還沒人佔，而那是能拿到的最弱的新穎性主張。唯一站得住的句子是關於某一組報告菌株的參考資料與日間再現性極限——而不是關於那個反應組"
+      ],
+      [
+        "**廢晶圓作為參考基質**",
+        "**漸進式**",
+        "2026 年已證明表面類型主導生物膜試驗變異，佔 42.6%，而菌株佔 17.8%，而且就發表在目標期刊上。矽晶圓作為疏水性可控的附著基質自 2010 年就有——而那篇同時發現生物膜生長會改變基材疏水性",
+        "剩下一個筆記等級的供應鏈貢獻：把晶圓做成有據可查的低成本可分發試片，附變異成分分析與開源夾具。它的天花板只有在兩三支其他隊伍加入共用流程的環狀試驗時才會抬高——而那件事 106 支隊伍裡 0 支做過"
+      ]
+    ]
+  },
+  "checklist": [
+    "Do not build a season on the integrated-toxicity panel. The Bacillus host version was published in 2021 with a direct Escherichia coli benchmark, and the panel design itself is from 2000.",
+    "Strike any sentence saying CcaSR controls binding and release. It is a transcriptional switch and sets binder density, not affinity, and the error is visible to any judge who works with optogenetics.",
+    "If the metal line is chosen, write the isotherms, the kinetics and the aluminium-and-iron selectivity into the plan from week one, because that is the part that stays publishable when the light-gating fails.",
+    "Do not lead with light-controlled harvesting. It was published in 2016 using the same green-light system this team already runs.",
+    "Check the literature before being impressed by a competitor as well as before claiming a gap. The closest 2026 team's light-flocculation novelty is thinner than its wiki reads.",
+    "Secure a route to accurate metal quantification before committing to the metal line. A single university collaboration for ICP-OES runs would materially raise what the project can claim.",
+    "Do not repeat the circulating industrial figures listed on this page, and do not claim germanium appears in fab effluent, because no published concentration exists.",
+    "Re-check anything about the gallium and germanium export market on the day it is published. The relevant suspension expires on 27 November 2026.",
+    "If the wafer line is chosen, recruit two or three other teams into a shared-protocol ring trial before starting, because that is the only move that lifts it above single-lab repeatability."
+  ],
+  "checklist_zh": [
+    "不要把一整季押在整合毒性反應組上。Bacillus 宿主版本 2021 年就發表了，而且附有直接對照 Escherichia coli 的基準，反應組設計本身更是 2000 年的東西。",
+    "刪掉任何說「CcaSR 控制結合與釋放」的句子。它是轉錄層級的開關，決定的是結合蛋白密度而不是親和力，而這個錯誤任何做過光遺傳學的評審都看得出來。",
+    "如果選金屬這條線，從第一週就把等溫線、動力學與對鋁和鐵的選擇性寫進計畫，因為那是光控失敗時仍然可發表的部分。",
+    "不要拿光控收集當主打。那在 2016 年就用這支隊伍現在在跑的同一套綠光系統發表過了。",
+    "在被競爭對手震懾之前先查文獻，就跟在自己宣稱空缺之前先查一樣。最接近的那支 2026 年隊伍，光控絮凝的新穎性比它 wiki 讀起來要薄。",
+    "在投入金屬這條線之前，先把準確金屬定量的途徑談定。只要和一間大學合作跑 ICP-OES，就能實質抬高這個專案撐得起的主張。",
+    "不要重複本頁列出的那些流傳數字，也不要宣稱鍺會出現在廠務放流水裡，因為沒有任何已發表的濃度資料。",
+    "任何關於鎵與鍺出口市場的內容，都要在發表當天重新確認。相關的暫停措施在 2026 年 11 月 27 日到期。",
+    "如果選晶圓這條線，開始之前先找兩三支其他隊伍加入共用流程的環狀試驗，因為那是唯一能讓它超越「單一實驗室可重複」的動作。"
+  ],
+  "method": "A literature and prior-art screen run against three candidate concepts, using PubMed, Consensus, bioRxiv and open web search, with the resulting data kept in research/novelty-check.json. Three of the load-bearing citations were then verified independently of the screen before publication: the Bacillus stress-panel paper was confirmed through PubMed, and the light-regulated cell-recovery and light-driven protein-purification papers were confirmed through Crossref, each by DOI. One further citation offered by the screen, a 2026 hazardous-materials paper on a lanthanide-binding display, did not resolve by DOI and is therefore not cited here. The screen also covered the 2026 iGEM cohort itself, because novelty against the literature and novelty against the competition are different questions: no team among the 106 decorated teams touched semiconductors at all, and mixture-toxicity and wafer-substrate work are both unclaimed within the cohort, which is why these concepts looked open until the literature was checked. Verdicts are the screen's judgement, not a measurement, and a different reader could weigh the same prior art differently -- the citations are named so that can be checked. The industrial figures flagged here were verified separately; where a widely circulated number could not be traced to the source it is attributed to, it is listed as unsourced rather than restated.",
+  "method_zh": "這是針對三個候選構想執行的文獻與前人工作篩查，使用 PubMed、Consensus、bioRxiv 與公開網路搜尋，產出的資料保存在 research/novelty-check.json。其中三項承重引用在發表前另外獨立查證過：Bacillus 逆境反應組那篇以 PubMed 確認，光調控細胞回收與光驅動蛋白質純化那兩篇以 Crossref 依 DOI 確認。篩查提供的另一項引用——2026 年一篇關於鑭系結合展示的危害性物質期刊論文——其 DOI 無法解析，因此本頁不引用它。篩查同時涵蓋 2026 年 iGEM 全體，因為「對文獻而言的新穎」與「對這場競賽而言的新穎」是兩個不同的問題：106 支得獎隊伍中沒有任何一支碰過半導體，而混合毒性與晶圓基質在這個群體裡也都沒人做過——這正是為什麼這些構想在查文獻之前看起來是空的。各項判定是篩查的判斷而非量測，不同的讀者可能對同一批前人工作給出不同權重；引用都已具名，以便查核。本頁標示的產業數字另外做過查證；凡是無法追溯到被掛名來源的流傳數字，一律列為查無出處，而不是照樣複述。"
+}

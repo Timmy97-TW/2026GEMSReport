@@ -1,0 +1,1086 @@
+{
+  "meta": {
+    "purpose": "Honest literature and prior-art assessment of three candidate 2027 project concepts for GEMS-Taiwan (high school, iGEM), against both the peer-reviewed literature and the iGEM 2026 cohort. Written so the public report does not claim novelty it has not checked.",
+    "assessmentDate": "2026-11-20",
+    "assessedBy": "literature and prior-art pass; PubMed, Consensus, web search, plus the 106 team files in research/teams/",
+    "teamConstraints": [
+      "Risk Group 1 organisms only: E. coli, B. subtilis, S. cerevisiae, Komagataella pastoris",
+      "No human samples of any kind",
+      "No isolating or sequencing from environmental samples",
+      "Nothing engineered leaves the lab",
+      "Existing capability: CcaSR green-light two-component system in B. subtilis WB800; self-built light-plate hardware",
+      "Track record: Best Measurement and Best Hardware, 2026 High School section"
+    ],
+    "howToReadVerdicts": {
+      "genuinely novel": "No published work does this thing at all, in any application.",
+      "novel in this application": "The method or mechanism is published elsewhere; applying it to this target or matrix is not. Supports a paper only if the application itself is the contribution and is done rigorously.",
+      "incremental": "Both method and application are published; the contribution would be added rigour, scale, or standardisation. Can support a methods or measurement note, rarely a full paper.",
+      "already done": "The closest prior work does substantially the thing proposed. Does not support a novelty claim."
+    },
+    "threeKindsOfNoveltyClaim": {
+      "note": "The brief asked these be kept distinct, because only some support a paper.",
+      "nobodyHasPublishedThis": "Strongest. Supports a full paper. Of the three concepts, only one narrow mechanistic slice of Concept A qualifies.",
+      "nobodyHasPublishedThisInThisApplication": "Medium. Supports a paper only when the application is itself hard or consequential, and the measurement is rigorous. Concept B's semiconductor-effluent target and part of Concept A sit here.",
+      "nobodyHasPublishedThisAtThisScaleOrRigour": "Weakest. Supports a methods note, measurement note, or registered part descriptor. Concept C sits here, and so does the realistically achievable version of Concept A."
+    },
+    "igemCohortCheck": {
+      "method": "Grepped all 106 files in research/teams/ for optogenetics, metals, semiconductor, wafer, biofilm, stress-reporter and toxicity-panel terms, then read the relevant team files.",
+      "teamsMentioningOptogeneticsOrLight": ["6040", "6060", "6072", "6220", "6292", "6350", "6450"],
+      "teamsMentioningCriticalMetalsOrBiosorption": ["6040", "6165"],
+      "teamsMentioningSemiconductorOrWaferOrPFAS": ["6041", "6110", "6196", "6222", "6280", "6295"],
+      "findings": [
+        "Concept A is directly contested inside the 2026 cohort: McGill (6040) and SMS-Shenzhen (6165). See concepts.A.priorArt.",
+        "Concept B: no 2026 team runs a multi-promoter stress-reporter panel for mixture or integrated toxicity. The nearest is HongKong-JSS (6158), MerMAID, a single MerR-based mercury assay, high school, which shows the division does single-analyte metal biosensing but not panels. Concept B is uncontested within the cohort; it is the literature that kills it.",
+        "Concept C: no 2026 team uses silicon wafers, or any defined reference surface, as an assay substrate. UOregon (6041) mentions silicon only as a wastewater contaminant alongside PFAS and nitrate. Concept C is uncontested within the cohort.",
+        "Note for the team's own records: GEMS-Taiwan is 6072 in this dataset, project ReLEAF."
+      ]
+    },
+    "securityNote": "During the industrial-facts verification, two pages on financialfilings.com (the Kinik and Scientech filing pages) returned text addressed to automated agents, instructing the reader to create an API key, register an email and request a payment checkout link. That is injected content in a third-party page, not an instruction from anyone. It was ignored and no data was taken from those pages. Flagged because the team may hit the same pages when checking Taiwanese company filings themselves."
+  },
+
+  "concepts": {
+    "A": {
+      "title": "Light-gated metal capture and release",
+      "asProposed": "Use an optogenetic switch (CcaSR or similar) to control binding and release of gallium, indium or germanium by an engineered microbial surface-display or secreted binding protein, so a recovery column is regenerated with light instead of acid elution.",
+
+      "priorArt": [
+        {
+          "axis": "light-controlled affinity capture and release (protein target, not metal)",
+          "citation": "Mayrhofer P, Anneser MR, Schira K, Sommer CA, Theobald I, Schlapschy M, Achatz S, Skerra A (2024). Protein purification with light via a genetically encoded azobenzene side chain. Nature Communications 15:10693.",
+          "source": "https://doi.org/10.1038/s41467-024-55212-y",
+          "whatItDid": "The Azo-tag: a short peptide containing the unnatural amino acid p-(phenylazo)-L-phenylalanine. trans-Pap binds an alpha-cyclodextrin column; 355 nm light switches it to cis, and the protein elutes under plain physiological buffer with no competing agent and no harsh buffer. Named Excitography.",
+          "whyItMatters": "This is the single most important paper for Concept A. The exact headline claim 'light replaces chemical elution in affinity chromatography' is already published, in Nature Communications, for protein targets. Concept A cannot claim that framing as new. It can only claim the metal-ion version."
+        },
+        {
+          "axis": "light-controlled affinity capture and release (protein target)",
+          "citation": "Prodromou R, et al. (2023). Molecular Engineering of Cyclic Azobenzene-Peptide Hybrid Ligands for the Purification of Human Blood Factor VIII via Photo-Affinity Chromatography. Advanced Functional Materials.",
+          "source": "https://consensus.app/papers/details/w:934a10f9-0f7f-44a4-a053-1f02a0812797/",
+          "whatItDid": "Cyclic azobenzene-peptide ligands on translucent chromatographic beads; >6 mg Factor VIII per mL resin, photo-isomerisation in under 30 s at 420-450 nm, >90% yield and >95% purity using a single mobile phase.",
+          "whyItMatters": "Second independent demonstration that photo-affinity chromatography works as a real separation process. 'Regenerate a column with light' is an established idea, not a new one.",
+          "unverified": "DOI not captured; volume and page numbers not confirmed. Verify before citing."
+        },
+        {
+          "axis": "light-triggered release from a column",
+          "citation": "Agrawal K, et al. (2026). Light-Activated Molecular Purification (LAMP): A Photo-Responsive Affinity-Chromatography Protocol for Recombinant Protein Purification. Current Protocols.",
+          "source": "https://consensus.app/papers/details/w:f4c4973a-9f04-46dd-b289-1dd84c9edc30/",
+          "whatItDid": "6xHis-PhoCl1-POI fusion on Ni-NTA; light cleaves PhoCl1, the His-tagged barrel stays on the resin and the protein of interest is released. >90% purity.",
+          "whyItMatters": "A third, mechanistically different route to light-triggered elution, published as a standard protocol. Reinforces that the concept's framing is mature.",
+          "unverified": "DOI not captured."
+        },
+        {
+          "axis": "LIGHT-GATED BINDING AND RELEASE OF A METAL ION - closest hit on the decisive axis",
+          "citation": "Mutluturk E, et al. (2025). Spiropyran-Functionalized Polydimethylsiloxane Sponges for Reversible Adsorption of Metal Ions. ACS Applied Polymer Materials.",
+          "source": "https://consensus.app/papers/details/w:964270f0-f118-4544-a030-e18d999d12d6/",
+          "whatItDid": "Spiropyran photoswitch (0.23% loading) in a PDMS sponge. Spiropyran isomerises reversibly to merocyanine; merocyanine complexes Al3+, Zn2+, Fe3+, Co2+, Sn2+, Hg2+, Ca2+, Mg2+. Fe3+ capacity 2.60 +/- 0.15 mg/g. Ions are retrieved by rinsing under visible light; 5 cycles without fatigue.",
+          "whyItMatters": "THIS IS THE PAPER THAT CONSTRAINS CONCEPT A MOST TIGHTLY. Light-modulated reversible metal-ion capture and light-assisted release is already published. The remaining gap is narrower than it looks: it is specifically the PROTEIN or WHOLE-CELL version, and specifically Ga/In/Ge. Concept A must not claim 'light-gated metal capture and release' as new in general terms. The capacity is also instructive: 2.60 mg/g is low, which is what photoswitch-based capture tends to give because the switch occupies most of the material.",
+          "unverified": "DOI not captured."
+        },
+        {
+          "axis": "light-gated metal ion binding and release (small molecule)",
+          "citation": "Reversible ON/OFF and OFF/ON, light-stimulated binding, or release processes of metal cations from isatin diarylhydrazone complexes in solution. Journal of Photochemistry and Photobiology A (2022).",
+          "source": "https://www.sciencedirect.com/science/article/abs/pii/S1010603022000582",
+          "whatItDid": "Photochemical isomerisation of isatin diarylhydrazone ligands switches metal-cation binding on and off in solution, in both directions.",
+          "whyItMatters": "Independent confirmation that light-switchable metal coordination is established coordination chemistry. Only the biological implementation is open."
+        },
+        {
+          "axis": "light-gated selective ion extraction",
+          "citation": "Ghosh A, et al. (2026). Light-Controlled Functions with Metal-Organic Capsules: From Guest Release to Catalysis, Separation, and Molecular Transport. Accounts of Chemical Research.",
+          "source": "https://consensus.app/papers/details/w:c83b11e0-07b2-4e44-980d-2bd65d8f94a9/",
+          "whatItDid": "Account of azobenzene-based photoswitchable metal-organic capsules, including selective lithium-ion extraction using a photoswitchable sandwich architecture, and light-gated selective molecular separations.",
+          "whyItMatters": "Selective, light-driven extraction of a technologically critical metal (Li) is published. Concept A cannot claim 'light-driven selective recovery of a critical metal' as a category."
+        },
+        {
+          "axis": "light-controlled CELL HARVESTING with the team's own CcaSR system - and the precedent McGill did not have",
+          "citation": "Nakajima M, Abe K, Ferri S, Sode K (2016). Development of a light-regulated cell-recovery system for non-photosynthetic bacteria. Microbial Cell Factories 15:31.",
+          "source": "https://doi.org/10.1186/s12934-016-0426-6",
+          "whatItDid": "CcaS/CcaR green-light two-component system from Synechocystis sp. PCC6803, with the chromophore cassette co-expressed, driving Antigen 43 from PcpcG2 in E. coli. Green light causes self-aggregation and precipitation; approximately 80% of the culture recovered by simple decantation.",
+          "whyItMatters": "Two consequences. First, light-controlled harvesting of engineered cells by induced aggregation was published in 2016, ten years before McGill's 2026 project, and with THE SAME CcaSR system GEMS-Taiwan already runs. Second, it means Concept A absolutely cannot fall back on 'light-controlled harvesting' as its novelty: that route is occupied twice over, once in the literature and once in this competition."
+        },
+        {
+          "axis": "iGEM 2026 - optogenetics + surface display + critical-metal recovery",
+          "citation": "McGill, iGEM 2026 team 6040, project LanTurn (Undergrad, Canada). Nominated Best Entrepreneurship and Best Biomanufacturing.",
+          "source": "https://2026.igem.wiki/mcgill/",
+          "whatItDid": "S. cerevisiae EBY100 displaying lanmodulin variants via Aga1-Aga2 for selective rare-earth binding, PLUS a blue-light VP16-EL222 / C120 circuit driving truncated FLO1 so REE-loaded cells flocculate on command and settle by gravity instead of centrifugation. Light-induced flocculation 66-75% vs 24-25% dark controls; display confirmed by flow cytometry and confocal microscopy. Full techno-economic analysis, 11.83-20.58 USD/kg REO, Ashram tailings NPV case, seven sensitivity analyses.",
+          "whyItMatters": "The COMBINATION of optogenetics, microbial surface display and critical-metal recovery is already occupied in this competition, by a team that did it well and got nominated for it. Judges who followed 2026 will know this project. Concept A must cite McGill explicitly and state its distinction precisely, or it will read as a high-school restatement of LanTurn.",
+          "theDistinctionThatRemains": "McGill used light to control HARVESTING OF THE CELLS. Concept A proposes light to control BINDING AND RELEASE OF THE METAL ION ITSELF. That is a real mechanistic difference. It is also the whole of the difference."
+        },
+        {
+          "axis": "iGEM 2026 - high school, selective biosorption of critical metals from real industrial wastewater",
+          "citation": "SMS-Shenzhen, iGEM 2026 team 6165, project kisMET (High School, China). Nominated Best New Composite Part.",
+          "source": "https://2026.igem.wiki/sms-shenzhen/",
+          "whatItDid": "Komagataeibacter rhaeticus decorating its own bacterial cellulose with a secreted fusion of signal peptide + carbohydrate-binding module + HiBiT tag + swappable ion-binding peptide, Golden Gate on pSEVA331 under a rhamnose-inducible promoter. Four SP/CBM scaffolds, eight-member ion-binding-peptide panel so specificity is swappable. Targets Li, Co, Ni, Mn in battery-recycling tail wastewater. Honest about what is design objective vs result.",
+          "whyItMatters": "Two lessons. First, a high-school team can do credible metal-binding work, so the division precedent exists and the bar is set. Second, and more useful: this report's own note on kisMET records that the conspicuous hole was the TOTAL ABSENCE of isotherm or kinetics fitting - no Langmuir, no Freundlich, no adsorption kinetics, no structural modelling - which their own single-metal data would have supported. That is the gap a rigorous team exploits, and it is the strongest argument for Concept A's realistic publication route."
+        },
+        {
+          "axis": "gallium-binding peptides and real industrial wastewater - the metal side of Concept A",
+          "citation": "Schonberger N, Taylor C, Schrader M, Drobot B, Matys S, Lederer FL, Pollmann K (2021). Gallium-binding peptides as a tool for the sustainable treatment of industrial waste streams. Journal of Hazardous Materials 414:125366.",
+          "source": "https://doi.org/10.1016/j.jhazmat.2021.125366",
+          "whatItDid": "Five Ga-binding peptides (TMHHAAIAHPPH, NYLPHQSSSPSR, SQALSTSRQDLR, HTQHIQSDDHLA, NDLQRHRLTAGP) characterised by isothermal titration microcalorimetry and computational modelling, then immobilised on polystyrene beads as a robust biosorbent. Validated with a REAL industrial wastewater sample. NYLPHQSSSPSR had the highest Ga affinity. Ga/As discrimination addressed explicitly.",
+          "whyItMatters": "The peptide sequences Concept A would need already exist, are published, and are already validated on real industrial wastewater on a solid support. Concept A inherits this rather than discovering it - which is good for feasibility and bad for novelty. Note also the paper's stated reason for leaving phage behind: phage particles lack the stability for industrial processes. That argues for display on a robust host or for secreted peptide on a support, not phage."
+        },
+        {
+          "axis": "gallium-binding peptide discovery and engineering",
+          "citation": "Schonberger N, Zeitler C, Braun R, Lederer FL, Matys S, Pollmann K (2019). Directed Evolution and Engineering of Gallium-Binding Phage Clones - A Preliminary Study. Biomimetics 4(2):35.",
+          "source": "https://doi.org/10.3390/biomimetics4020035",
+          "whatItDid": "Phage surface display selection of Ga-binding peptides; systematic cysteine scanning showed that constraining peptide flexibility with a disulfide bridge shifts selectivity strongly, either towards Ga over As or the reverse, depending on cysteine position.",
+          "whyItMatters": "Establishes that Ga-binding peptide selectivity is tunable by conformational constraint. Mechanistically suggestive for a photoswitch approach - a photoswitch is also a conformational constraint - but nobody has made that connection experimentally, which is part of why the gap is real."
+        },
+        {
+          "axis": "engineered PROTEIN binders for gallium and indium specifically",
+          "citation": "Ghosh P, et al. (2024). Engineered Nanobodies Bind Bismuth, Indium and Gallium for Applications in Theranostics. Angewandte Chemie International Edition.",
+          "source": "https://consensus.app/papers/details/w:e5be8a84-701c-4a7f-bc0f-8c05b44ae915/",
+          "whatItDid": "Single-residue mutagenesis creates a triple-cysteine motif binding Bi; two mutations create a quadruple-cysteine mutant specific for Ga and In. Labelling quantitative in minutes; stable for weeks; resists competition from glutathione.",
+          "whyItMatters": "Engineered protein binders for Ga and In already exist and are selective and robust. So 'an engineered protein that binds gallium or indium' is NOT new. Only the light-gating of such a protein is.",
+          "unverified": "DOI not captured."
+        },
+        {
+          "axis": "whole-cell display + metal binding + isotherms + regeneration, done properly",
+          "citation": "Li Q, Wang Y, Zeng C, Wu Z, Chen W, Wang D (2026). Integrated detection and recovery of light/medium rare earth elements using Hans-LanM-based fluorescent probe and whole-cell adsorbent. Journal of Hazardous Materials 515:143117.",
+          "source": "https://doi.org/10.1016/j.jhazmat.2026.143117",
+          "whatItDid": "Hans-LanM inserted into sfGFP gives a probe with picomolar affinity and 2 nM Sm3+ detection limit; the fusion displayed on E. coli gives a whole-cell adsorbent. 81.5% Nd3+ and 72.6% Sm3+ vs 32% Y3+ at 500 uM; equilibrium capacity 150 mg/g Sm3+; equilibrium in 30 min; selective (55-70%) in real soil leachate against a 10^6-fold excess of competing ions; >85% desorption at pH 2.3; >60% retained after 5 cycles; quasi-second-order kinetics; fluorescence linear with adsorbed amount for real-time monitoring.",
+          "whyItMatters": "This is the standard Concept A would be measured against, and it is high. It also shows the quality bar for the rigour route: isotherms, kinetics, cycling, selectivity in a real matrix, and a built-in optical readout. Note the elution is pH 2.3 acid - which is exactly the step Concept A proposes to replace with light. So the problem Concept A attacks is real and current."
+        },
+        {
+          "axis": "de novo photoswitch-protein binder pairs - the method that would actually be needed",
+          "citation": "Miyazaki T, et al. (2026). De novo chemo-optogenetics through the rational design of photoresponsive molecules and selection of their artificial protein binding pairs. Nature Chemistry.",
+          "source": "https://consensus.app/papers/details/w:d6d623c7-5570-4a05-9768-eb862e2d99cc/",
+          "whatItDid": "Designs a synthetic photoswitch with defined properties first, then uses mRNA display to select artificial protein binders recognising a specific photoisomer-dependent conformation. Yields programmable photoswitch-protein binder pairs with sustained, reversible or repeatable regulatory modes.",
+          "whyItMatters": "This is the state of the art in making a protein's binding light-dependent on purpose. It needs mRNA display and synthetic chemistry. It is a direct measure of how far outside a high-school season the genuinely novel version of Concept A sits.",
+          "unverified": "DOI not captured."
+        },
+        {
+          "axis": "light-switchable protein binders (the LOV route)",
+          "citation": "Opto-nanobodies (OptoNBs): Optogenetic control of protein binding using light-switchable nanobodies (2020), Nature Communications; preprint bioRxiv 739201.",
+          "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7426870/",
+          "whatItDid": "LOV-domain insertion into nanobodies makes binding to untagged protein targets reversibly light-dependent.",
+          "whyItMatters": "Proves the design logic (photoswitch domain fused into a binder changes affinity with light) works for protein targets. Nobody has transferred it to a metal-binding protein. That transfer is the novel claim available to Concept A.",
+          "unverified": "Exact author list, year and DOI not confirmed; verify before citing."
+        },
+        {
+          "axis": "microbial recovery of Ga and In - the well-trodden baseline",
+          "citations": [
+            {
+              "citation": "Saikia S, Costa RB, Sinharoy A, Cunha MP, Zaiat M, Lens PNL (2022). Selective removal and recovery of gallium and germanium from synthetic zinc refinery residues using biosorption and bioprecipitation. Journal of Environmental Management 317:115396.",
+              "source": "https://doi.org/10.1016/j.jenvman.2022.115396",
+              "note": "Biosorption of Ga onto biogenic elemental Te gave 69 +/- 0.4% removal, 74 mg Ga/g. Notably NO method recovered germanium - relevant to the choice of target metal."
+            },
+            {
+              "citation": "Pourhossein F, Mousavi SM (2018). Enhancement of copper, nickel, and gallium recovery from LED waste by adaptation of Acidithiobacillus ferrooxidans. Waste Management 79:98-108.",
+              "source": "https://doi.org/10.1016/j.wasman.2018.07.010",
+              "note": "60% Ga bioleaching from LED powder. Bioleaching, not binding - and Acidithiobacillus is outside the team's RG1 organism list."
+            },
+            {
+              "citation": "Constantin A, Pourhossein F, Ray D, Farnaud S (2024). Investigating the acidophilic microbial community's adaptation for enhancement indium bioleaching from high pulp density shredded discarded LCD panels. Journal of Environmental Management 365:121521.",
+              "source": "https://doi.org/10.1016/j.jenvman.2024.121521",
+              "note": "Up to 100% indium bioleaching from powdered LCD panels."
+            },
+            {
+              "citation": "Pennesi C, Amato A, Occhialini S, Critchley AT, Totti C, Giorgini E, Conti C, Beolchini F (2019). Adsorption of indium by waste biomass of brown alga Ascophyllum nodosum. Scientific Reports 9:16763.",
+              "source": "https://doi.org/10.1038/s41598-019-53172-8",
+              "note": "48-63 mg/g indium, optimum pH 3, with explicit Fe/In competition analysis. A good model for how an isotherm-and-competition paper is structured."
+            },
+            {
+              "citation": "Zheng KC, et al. (2023). Recovery technologies for indium, gallium, and germanium from end-of-life products (electronic waste) - A review. Journal of Environmental Management.",
+              "source": "https://consensus.app/papers/details/w:134fde18-6ceb-45f6-86fd-b5971a4ece66/",
+              "note": "Review; 142 citations. Establishes that indirect bioleaching reaches ~70% Ga extraction yield and that hydrometallurgy dominates. Cite this to show the team knows the baseline."
+            },
+            {
+              "citation": "Son S, et al. (2025). Solar-assisted Bioelectrochemical Removal and Solid-phase Capture of Critical Group-13 Metals: Indium and Gallium. Journal of Electrochemical Science and Technology.",
+              "source": "https://consensus.app/papers/details/w:8168fa39-39ed-4cde-9155-5ae14a8eb7db/",
+              "note": "Uses a REAL Ga-bearing semiconductor effluent (1016 +/- 4 mg/L) with a PV-biased bioanode reactor; 88% Ga removal at ~1.25 V. Light is used as an ENERGY source here, not as a control signal - a distinction Concept A should draw explicitly, because a reviewer will otherwise conflate them."
+            }
+          ]
+        }
+      ],
+
+      "whatIsNew": {
+        "theOneGenuineGap": "No published work makes a PROTEIN's affinity for a technologically critical metal ion (Ga, In, Ge) switchable by light, so that the metal itself is captured and released on an optical signal. Four independent searches across PubMed, Consensus and the open web failed to find it. Photoswitchable metal binding exists in synthetic materials (spiropyran sponges, azobenzene cages, isatin hydrazones); light-switchable protein binding exists for PROTEIN targets (Azo-tag, OptoNBs, de novo chemo-optogenetics); engineered protein binders for Ga and In exist but are not light-gated. The intersection is empty.",
+        "scopeOfTheClaim": "This is a 'nobody has published this' claim, but about a narrow intersection, not a field. Phrase it as the intersection, never as 'light-controlled metal recovery', which is published.",
+        "secondaryGap": "No whole-cell Ga biosorbent has been characterised with full isotherm, kinetic, selectivity-against-Al-and-Fe and multi-cycle regeneration data at semiconductor-effluent-relevant concentrations (1-35 mg/L). The Schonberger work is peptide-on-beads; the Li 2026 work is whole-cell but for rare earths. This is a 'nobody has published this at this rigour' claim, and it is the one the team can actually deliver."
+      },
+
+      "whatIsNotNew": [
+        "Light instead of chemical elution in affinity chromatography - published three separate ways (Mayrhofer 2024 Nat Commun; Prodromou 2023 Adv Funct Mater; Agrawal 2026 Curr Protoc). Do not claim this framing.",
+        "Light-modulated reversible capture and release of metal ions - published in synthetic materials (Mutluturk 2025 spiropyran-PDMS; Ghosh 2026 metal-organic capsules including photoswitchable Li extraction).",
+        "Optogenetic control of a microbial metal-recovery process - published (McGill iGEM 2026) and the light-harvesting mechanism itself is published from 2016 with the team's own CcaSR system (Nakajima 2016).",
+        "Microbial surface display for selective metal binding - thoroughly established; McGill 2026, Li 2026, and a large biosorption literature.",
+        "Gallium-binding peptides, including validation on real industrial wastewater - published (Schonberger 2019, 2021).",
+        "Engineered protein binders selective for Ga and In - published (Ghosh 2024 Angew Chem).",
+        "Biosorption and bioleaching of Ga and In from wastes - very thoroughly done; a review with 142 citations already exists (Zheng 2023).",
+        "Using light as an energy input to a metal-recovery reactor - published (Son 2025, PV-biased bioelectrochemical system on real semiconductor effluent)."
+      ],
+
+      "criticalFeasibilityWarning": {
+        "theCategoryError": "CcaSR is a TRANSCRIPTIONAL switch. It controls gene expression, not protein conformation. It cannot gate the binding affinity of an already-folded, already-displayed protein. Using CcaSR, light can only change how much binder is MADE - it cannot release metal already bound. A report that says 'we will use our CcaSR system to control binding and release' will be read by any reviewer or judge as a misunderstanding of the team's own tool. This must be fixed in the write-up regardless of which concept is chosen.",
+        "whatWouldActuallyBeRequired": "A genuine light-gated metal binder needs either (a) unnatural amino acid incorporation of a photoswitchable side chain, as in the Azo-tag - amber suppression plus Pap synthesis, not realistic for a high-school season; or (b) inserting a LOV or other photoswitch domain into a metal-binding protein and screening variants for a light-dependent affinity shift, as OptoNBs did for protein targets - conceptually accessible, but needs many rounds of screening and a quantitative binding assay to detect what will probably be a small affinity change; or (c) de novo photoswitch-binder selection by mRNA display (Miyazaki 2026) - far out of scope.",
+        "honestAssessment": "Route (b) is the only one a well-supported high-school team could attempt, and one season is realistically enough to build the constructs and get a preliminary, probably negative or ambiguous, result. The team should plan for the fallback being the publishable output, not the stretch goal."
+      },
+
+      "feasibility": {
+        "verdict": "The genuinely novel part is NOT feasible in one high-school season. The rigour fallback IS feasible and is publishable.",
+        "achievableInOneSeason": [
+          "Express and display or secrete a published Ga-binding peptide (NYLPHQSSSPSR is the best-characterised) in E. coli or B. subtilis WB800. WB800 is extracellular-protease-deficient, which is a genuine advantage for a secreted binder and a point the team can make.",
+          "Full equilibrium isotherms (Langmuir and Freundlich) and kinetics (pseudo-first and pseudo-second order) for Ga3+ at 1-35 mg/L, the documented fab-effluent range.",
+          "Selectivity against Al3+ and Fe3+ - the metals that actually compete with Ga and the ones that defeat most Ga-selective reagents. This is the measurement that would most distinguish the work.",
+          "Multi-cycle regeneration with acid elution, as the honest baseline against which any light effect would later be compared.",
+          "A CcaSR-controlled expression circuit for the binder, correctly described as light-controlled PRODUCTION, not light-controlled release. This is still a real and interesting dose-control result, and it plays to the team's Best Measurement strength.",
+          "Build the LOV-insertion library and report it as preliminary, with honest negative results if that is what comes out."
+        ],
+        "notAchievable": [
+          "A working light-gated metal-binding protein with demonstrated release. Treat as a multi-year goal.",
+          "Real semiconductor process effluent in a school lab. The team should use a synthetic matrix that mimics the published composition (Ga3+ in acidic sulfate or chloride with Al and Fe competitors) and say so plainly. This also respects the no-environmental-samples constraint."
+        ],
+        "constraintCompliance": "Fully compliant. E. coli and B. subtilis WB800 are RG1; no human samples; no environmental isolation needed because the peptide sequences are published; nothing leaves the lab."
+      },
+
+      "instrumentNeeded": {
+        "goldStandard": "ICP-MS or ICP-OES for Ga quantification. This is what every paper cited here uses, and a reviewer will expect it for any capacity number that carries a decimal point. A single university collaboration for ICP-OES runs would materially raise the ceiling of this project.",
+        "colorimetricAndFluorimetricAlternatives": {
+          "verdict": "A validated low-instrument route EXISTS and is adequate for the 1-35 mg/L fab-effluent range, but selectivity is the catch.",
+          "options": [
+            {
+              "method": "Lumogallion fluorescence",
+              "reportedPerformance": "A fibre-optic time-resolved fluorescence sensor using 30 uM lumogallion at pH 5 reported a Ga detection limit of 2e-5 M, which is approximately 1.4 mg/L.",
+              "assessment": "Sensitivity is adequate for 1-35 mg/L but only just. The serious problem is that lumogallion binds Al3+ strongly - it is in fact a standard aluminium reagent - so in any matrix containing Al it is not Ga-selective. Masking or separation would be required.",
+              "unverified": "No dedicated analytical validation study for a lumogallion Ga method was found. Detection limits in the sources use different definitions and matrices and are not directly comparable."
+            },
+            {
+              "method": "Gold-nanoparticle colorimetric (p-aminohippuric-acid-functionalised citrate-capped AuNPs)",
+              "reportedPerformance": "LOD 7.6 ug/L, LOQ 25 ug/L, linear range 34.9-418.3 ug/L.",
+              "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8326479/",
+              "assessment": "Far more sensitive than needed, so samples would be diluted into range - which is good, because dilution also reduces matrix interference. The most promising low-cost option. Needs its own selectivity validation against Al and Fe in the team's matrix."
+            },
+            {
+              "method": "Spectrofluorimetric with OVAC chelator",
+              "reportedPerformance": "3-sigma detection limit 7.17 nM (0.50 ug/L), from 11 replicates at 20 ug/L, in synthetic U-Ga and Ga-As solutions.",
+              "source": "https://www.sciencedirect.com/science/article/abs/pii/S1386142509005526",
+              "assessment": "Validated in synthetic solutions including Ga-As, which is the relevant interferent pair for GaAs fab waste. Worth reading closely."
+            }
+          ],
+          "theRealOpportunity": "Validating a colorimetric or fluorimetric Ga method against ICP for a defined synthetic fab-effluent matrix, with a documented Al and Fe interference profile, is itself a publishable measurement contribution - and it is squarely in the team's Best Measurement wheelhouse. It may be a better primary objective than the biology.",
+          "optionToConsider": "Li 2026 built the readout into the binder by inserting the metal-binding domain into sfGFP, giving fluorescence linear with adsorbed metal. A Ga-binding-peptide-in-fluorescent-protein sensor is a legitimate, achievable and somewhat novel design that would give the team a self-reporting adsorbent and a measurement story at once."
+        }
+      },
+
+      "publicationVenues": [
+        {
+          "venue": "Journal of Hazardous Materials",
+          "realistic": "Only with ICP-grade quantification and a complete isotherm, kinetics, selectivity and cycling dataset. This is where Schonberger 2021 and Li 2026 both published, so it is the right target for the rigour route - but it is a high bar for a high-school team working alone.",
+          "format": "full paper"
+        },
+        {
+          "venue": "ACS ES&T Water, or Hydrometallurgy",
+          "realistic": "More accessible than J Hazard Mater for a careful, well-controlled, modest-scope biosorption study. Hydrometallurgy in particular values complete isotherm and selectivity data over novelty.",
+          "format": "full paper"
+        },
+        {
+          "venue": "Analytical Methods (RSC), or Talanta",
+          "realistic": "Good fit for the colorimetric-Ga-method validation, which may be the team's strongest single deliverable. Measurement rigour is the currency here, and the team has already been recognised for exactly that.",
+          "format": "methods or measurement paper"
+        },
+        {
+          "venue": "ACS Synthetic Biology, or Journal of Biological Engineering",
+          "realistic": "For the CcaSR-controlled binder-expression circuit, honestly framed as dose control rather than release control. Modest but real.",
+          "format": "full paper or brief communication"
+        },
+        {
+          "venue": "iGEM Registry part descriptor",
+          "realistic": "Certain, and should be done regardless. A well-characterised B. subtilis WB800 secreted Ga-binding-peptide part with real binding data would be genuinely useful to other teams and is the lowest-risk publication-shaped output.",
+          "format": "registered part descriptor"
+        },
+        {
+          "venue": "bioRxiv or ChemRxiv preprint",
+          "realistic": "The right home for the LOV-insertion attempt if it gives preliminary or negative results. A clean negative result on light-gating a metal binder is genuinely useful to the field and costs nothing to post.",
+          "format": "preprint only"
+        }
+      ],
+
+      "strongestNoveltyClaim": {
+        "claim": "Light-switchable protein-ligand pairs have been demonstrated for protein targets, and photoswitchable metal-ion capture for synthetic polymers and coordination cages, but no engineered protein has been reported whose affinity for a technologically critical p-block metal ion is gated by light; we report the first attempt to transfer the photoswitch-insertion strategy from protein binders to a gallium-binding peptide, together with a complete equilibrium, kinetic and Al/Fe-selectivity characterisation of the unswitched binder at semiconductor-effluent-relevant concentrations.",
+        "whyThisSurvivesPeerReview": "It concedes everything that is published, in the same sentence. It makes the novelty claim about a specific intersection rather than a field. And it does not depend on the light-gating succeeding - the characterisation stands on its own, so the paper is publishable either way.",
+        "whatNotToClaim": [
+          "Do NOT write 'the first light-controlled metal capture and release'. Mutluturk 2025 and Ghosh 2026 refute it.",
+          "Do NOT write 'regenerating a recovery column with light instead of acid elution, for the first time'. Mayrhofer 2024 refutes it.",
+          "Do NOT write 'the first optogenetic control of microbial metal recovery'. McGill iGEM 2026 refutes it, and Nakajima 2016 refutes the mechanism.",
+          "Do NOT write 'the first engineered protein binder for gallium'. Ghosh 2024 and Schonberger 2019 refute it."
+        ]
+      },
+
+      "verdict": "novel in this application",
+      "verdictReasoning": "The light-gated-metal-binding-protein intersection is genuinely unoccupied and that is a real finding. But the concept as a whole is surrounded on every side: the light-elution framing, the photoswitchable metal capture, the optogenetic metal-recovery project, the Ga-binding peptides and the Ga/In protein binders are all published. The remaining gap is exactly what the coordinator suspected: light controls release of the metal rather than harvesting of the cells. That gap is narrow, real, and not reachable in one season. Describe it as narrow, not as open ground.",
+
+      "unverified": [
+        "DOIs not captured for: Prodromou 2023 Adv Funct Mater; Agrawal 2026 Curr Protoc; Mutluturk 2025 ACS Appl Polym Mater; Ghosh 2026 Acc Chem Res; Ghosh 2024 Angew Chem; Miyazaki 2026 Nat Chem; Son 2025 J Electrochem Sci Technol. All were found via Consensus records with full titles and abstracts, so the works are real, but page numbers and DOIs must be filled in before publication.",
+          "Exact citation for the OptoNB paper (authors, year, DOI) not confirmed.",
+        "Whether the Helmholtz Freiberg group has since moved from peptide-on-beads to bacterial surface display of Ga-binding peptides. Searches found only phage display and bead immobilisation. If they have, it would narrow Concept A's fallback significantly, so check Franziska Lederer's publication list directly before committing.",
+        "Whether any patent (as opposed to paper) claims light-gated metal binding by a protein. Patent databases were not systematically searched. This matters for any entrepreneurship framing.",
+        "Whether a lumogallion Ga assay can be made Al-selective by masking in a realistic fab-effluent matrix. No validation study found; this needs bench work or a dedicated literature search.",
+        "No bioRxiv or ChemRxiv systematic sweep was done for 2026 preprints on photoswitchable metal-binding proteins. The negative finding rests on PubMed, Consensus and web search. Given how fast chemo-optogenetics is moving, re-check before publication."
+      ]
+    },
+
+    "B": {
+      "title": "Integrated-toxicity reporter panel in B. subtilis",
+      "asProposed": "A set of stress-responsive promoter-reporter fusions in B. subtilis (oxidative stress, DNA damage, membrane stress, protein misfolding, metal stress) to measure the integrated biological toxicity of a real semiconductor-industry waste stream, as opposed to chemical-by-chemical analysis which misses mixture effects. Human-health framing: occupational and environmental exposure.",
+
+      "priorArt": [
+        {
+          "axis": "THE ORIGINATING WORK - a stress-promoter reporter panel producing toxicity fingerprints",
+          "citation": "Van Dyk TK, et al. (2000). A Panel of Bioluminescent Biosensors for Characterization of Chemically-Induced Bacterial Stress Responses. ACS Symposium Series.",
+          "source": "https://consensus.app/papers/details/w:e1816e8a-a6ed-42a6-b512-0370e7e743cd/",
+          "whatItDid": "A panel of SIX whole-cell biosensors with stress-responsive E. coli promoters fused to luxCDABE: recA-lux (SOS), grpE-lux (heat shock / protein misfolding), katG-lux (OxyR / oxidative), inaA-lux (acidification, Sox and Mar), yciG-lux (sigma-S), o513-lux (stationary phase). Built in tolC+ and tolC- backgrounds to probe efflux. Validated against five chemicals of known mode of action, then used to produce 'characteristic stress fingerprints' for feed contaminants including cadmium chloride and aluminium chloride.",
+          "whyItMatters": "THIS IS CONCEPT B, PUBLISHED IN 2000. The regulon set is nearly identical to the one proposed - oxidative, DNA damage, protein misfolding, membrane/envelope, metal. The phrase 'stress fingerprint' is theirs. Concept B is a 26-year-old idea.",
+          "unverified": "DOI not captured; ACS Symposium Series volume and page numbers not confirmed."
+        },
+        {
+          "axis": "the same approach scaled to 90 genes and applied to real environmental water",
+          "citation": "Hug C, et al. (2015). Microbial reporter gene assay as a diagnostic and early warning tool for the detection and characterization of toxic pollution in surface waters. Environmental Toxicology and Chemistry.",
+          "source": "https://consensus.app/papers/details/w:44266370-8f65-4426-95b7-32cabeb975d2/",
+          "whatItDid": "A 90-stress-gene E. coli live-cell array applied to extracts of surface waters receiving WWTP effluent - i.e. real, complex, uncharacterised mixtures. Identified oxidative stress, DNA damage and drug resistance as the dominant affected pathways, then CORRELATED the transcriptional data with independent chemical screening data and with the percentage of wastewater in each sample.",
+          "whyItMatters": "The 'integrated biological toxicity of a real waste stream, as opposed to chemical-by-chemical analysis' argument is exactly this paper's argument, executed at 90 genes with chemical cross-validation, on real samples. Concept B's central justification is already demonstrated.",
+          "unverified": "DOI not captured."
+        },
+        {
+          "axis": "mixture effects specifically - the part Concept B treats as its contribution",
+          "citation": "Guan M, et al. (2022). Integration of leave-one-out method and real-time live cell reporter array system to assess the toxicity of mixtures. Environmental Research.",
+          "source": "https://consensus.app/papers/details/w:0529fbc4-f1b7-4d9b-99de-ea26511f1ab7/",
+          "whatItDid": "Four pollutants with different modes of action (cadmium chloride, nitrofurazone, triclosan, TCEP) in a quaternary mixture plus four leave-one-out ternary mixtures, read with a 90-gene E. coli GFP reporter array. Resolved antagonism vs additivity, ranked each component's contribution to total mixture toxicity, used clustering on time-series expression and a transcriptional effect level index, and attributed per-pathway contributions - Cd dominating redox stress, triclosan contributing least to DNA stress.",
+          "whyItMatters": "This is more sophisticated than Concept B proposes. It does not just detect mixture effects; it DECOMPOSES them per component and per pathway. Concept B's 'mixture effects are missed by chemical-by-chemical analysis' framing is not a gap - it is a solved problem with a published analytical method.",
+          "unverified": "DOI not captured."
+        },
+        {
+          "axis": "B. SUBTILIS stress-promoter lux panels specifically - the host-specific claim",
+          "citation": "Kessenikh AG, Novoyatlova US, Bazhenov SV, Stepanova EA, Khrulnova SA, Gnuchikh EY, Kotova VY, Kudryavtseva AA, Bermeshev MV, Manukhov IV (2021). Constructing of Bacillus subtilis-Based Lux-Biosensors with the Use of Stress-Inducible Promoters. International Journal of Molecular Sciences 22(17):9571.",
+          "source": "https://doi.org/10.3390/ijms22179571",
+          "whatItDid": "B. subtilis lux-biosensors from stress-inducible promoters: PdinC (SOS / DNA damage), PalkA (methylation-specific response), PmrgA (oxidative stress). Responded specifically to mitomycin C, methyl methanesulfonate and H2O2. DIRECTLY COMPARED against the equivalent E. coli lux-biosensors, finding PdinC gave a higher response amplitude while PalkA gave both lower amplitude and a narrower detectable concentration range. Applied to toxicants introduced into soil. Authors state the explicit purpose: studying differences in toxicity mechanisms between Gram-positive and Gram-negative bacteria.",
+          "whyItMatters": "THIS IS THE PAPER THAT KILLS CONCEPT B'S HOST-SPECIFIC NOVELTY. 'A B. subtilis stress-responsive promoter-reporter panel, benchmarked against E. coli, applied to a real matrix' is published. Even the rationale - that a Gram-positive host reports differently - is published, with data."
+        },
+        {
+          "axis": "B. subtilis membrane-stress reporters - the membrane arm of the proposed panel",
+          "citation": "Plyuta VA, Gnuchikh EY, Gorbunova AA, Udovichenko VD, Sinyakova KA, Sidorova DE, Koksharova OA, Bazhenov SV, Melkina OE (2025). Bacterial lux-Biosensors for Detecting Specific Cell Responses to Membrane Damage. Biosensors 15(12):780.",
+          "source": "https://doi.org/10.3390/bios15120780",
+          "whatItDid": "pspA promoter from both E. coli and B. subtilis fused to Photorhabdus lux, in both hosts. Responded to ethanol, Triton X-100, polymyxin B, DMSO and melittin. Found genuinely host-specific behaviour: ethanol and polymyxin B induced pspA in both but with higher amplitude in one; Triton X-100 and melittin induced it exclusively in one host and DMSO only in the other.",
+          "whyItMatters": "The membrane-stress arm of Concept B's proposed panel is published in B. subtilis, as of November 2025, by a group that is systematically completing the panel. Published one year ago."
+        },
+        {
+          "axis": "a larger B. subtilis stress biosensor panel",
+          "citation": "Comprehensive and Comparative Transcriptional Profiling of the Cell Wall Stress Response in Bacillus subtilis. Molecular Microbiology (2025); preprint bioRxiv 2023.02.03.526509.",
+          "source": "https://doi.org/10.1111/mmi.70069",
+          "whatItDid": "Constructed a panel of ELEVEN bioluminescence-based B. subtilis biosensors by fusing signature-gene promoters to luxABCDEF, with comprehensive comparative transcriptional profiling behind the promoter choices.",
+          "whyItMatters": "An eleven-member B. subtilis stress biosensor panel exists, with transcriptomics justifying every promoter. Concept B's five-member panel would be a strict subset of published work, selected with less evidence.",
+          "unverified": "Author list not captured. Whether it includes liaI or ykzA not confirmed from the snippets available."
+        },
+        {
+          "axis": "B. subtilis bioreporter panel for mode-of-action discrimination",
+          "citation": "Urban A, et al. (2007). Novel Whole-Cell Antibiotic Biosensors for Compound Discovery. Applied and Environmental Microbiology.",
+          "source": "https://www.researchgate.net/publication/6119172_Novel_Whole-Cell_Antibiotic_Biosensors_for_Compound_Discovery",
+          "whatItDid": "A B. subtilis promoter-reporter panel (yheI, yorB, yvgS, ypuA, fabHB) used to classify compounds by mode of action, including cell-envelope stress biomarkers ypuA and liaI.",
+          "whyItMatters": "Establishes that B. subtilis reporter panels have been used for mechanistic classification of unknown samples since 2007.",
+          "unverified": "Exact year, volume, pages and DOI not confirmed."
+        },
+        {
+          "axis": "toxicity testing of real Taiwanese industrial effluent",
+          "citation": "Liu MC, Chen CM, Cheng HY, Chen HY, Su YC, Hung TY (2002). Toxicity of different industrial effluents in Taiwan: a comparison of the sensitivity of Daphnia similis and Microtox. Environmental Toxicology 17(2):93-97.",
+          "source": "https://doi.org/10.1002/tox.10036",
+          "whatItDid": "Compared the Daphnia similis acute test and the Microtox (Vibrio fischeri) assay across Taiwanese industrial effluents. Electroplating effluent most toxic (EC50 2.9% and 3.9% of whole effluent); acrylonitrile, pulp/paper and tannery followed. The other effluents were NOT acutely toxic to either organism. Concludes aquatic toxicity tests should be incorporated into Taiwan's wastewater management scheme, which still relies on chemical and physical characteristics.",
+          "whyItMatters": "Two things, both awkward for Concept B. First, whole-effluent biological toxicity testing of Taiwanese industrial discharges is established and the regulatory argument for it was made in 2002. Second and more serious: most industrial effluents tested were NOT acutely toxic. A treated fab effluent meeting Taiwan's 15 mg/L fluoride standard and the other table limits may well give a flat, negative result across the whole panel - which is a real scientific risk, not a hypothetical one."
+        },
+        {
+          "axis": "toxicity of Taiwanese electronics-sector effluent",
+          "citation": "Acute toxicity assessment of TFT-LCD wastewater using Daphnia similis and Cyprinus carpio. Journal of the Taiwan Institute of Chemical Engineers (2016).",
+          "source": "https://www.sciencedirect.com/science/article/abs/pii/S0957582016000537",
+          "whatItDid": "Acute toxicity of TFT-LCD wastewater effluents from southern Taiwan factories. Found nitrate-N, sulfate, chloride and heavy metals were NOT the major acute-toxicity concerns, and recommended two species because toxic-unit values differed between them.",
+          "whyItMatters": "The nearest published equivalent of Concept B's actual target, in Taiwan, in the display rather than logic sector. Its headline finding - that the obvious chemical suspects were not what drove toxicity - is the finding Concept B would hope to make, already made."
+        },
+        {
+          "axis": "iGEM 2026 cohort",
+          "citation": "HongKong-JSS, iGEM 2026 team 6158, project MerMAID - MerR-based Mercury Assay for In-field Detection (High School).",
+          "source": "research/teams/6158.json",
+          "whatItDid": "A single MerR-based mercury biosensor for field detection.",
+          "whyItMatters": "No 2026 team ran a multi-promoter integrated-toxicity panel, so Concept B is uncontested within the cohort. That is not a reason to pursue it - the literature, not the competition, is the problem here."
+        }
+      ],
+
+      "whatIsNew": {
+        "assessment": "Essentially nothing of substance.",
+        "theOnlyUnoccupiedSliver": "No published study applies a multi-promoter bacterial stress-reporter panel specifically to semiconductor-fab wastewater. That is a 'nobody has published this in this application' claim of the weakest kind: the method is 26 years old, the host-specific version is 5 years old, the mixture-decomposition analysis is 4 years old, the membrane arm is 1 year old, and the nearest Taiwanese electronics-sector equivalent has been done with standard whole-organism assays. Swapping the sample is not a contribution.",
+        "beBluntAboutThis": "If the team wants a paper, this is not the concept. Reporting that is the most valuable thing in this assessment, because it saves a season."
+      },
+
+      "whatIsNotNew": [
+        "Stress-responsive promoter-reporter panels for toxicity fingerprinting - Van Dyk 2000, with almost exactly the proposed regulon set.",
+        "Applying such a panel to a real, complex, uncharacterised waste stream - Hug 2015, at 90 genes, with chemical cross-validation.",
+        "Resolving and decomposing mixture effects with a reporter panel - Guan 2022, including per-component and per-pathway attribution.",
+        "A B. subtilis stress-promoter lux panel benchmarked against E. coli and applied to a real matrix - Kessenikh 2021.",
+        "The membrane-stress arm in B. subtilis - Plyuta 2025.",
+        "An eleven-member B. subtilis stress biosensor panel with transcriptomic justification - Mol Microbiol 2025.",
+        "B. subtilis reporter panels for mode-of-action classification - Urban 2007.",
+        "Biological toxicity testing of Taiwanese industrial and electronics-sector effluent, and the regulatory argument for it - Liu 2002, TFT-LCD 2016."
+      ],
+
+      "feasibility": {
+        "technicalFeasibility": "High. This is the most technically achievable of the three concepts. Promoter-reporter fusions in B. subtilis are routine, the promoters are published, and a plate reader suffices. The team's light-plate hardware experience transfers directly to building a plate-reading rig.",
+        "butTheApplicationIsBlocked": [
+          "Obtaining real semiconductor-industry waste stream. A school cannot straightforwardly receive, store and handle industrial waste - it is a permitting, insurance and safety problem before it is a science problem. Fab effluent is also commercially sensitive; a fab giving samples to a school is giving away process information.",
+          "Treated effluent may simply not be toxic. Liu 2002 found most Taiwanese industrial effluents were not acutely toxic, and the TFT-LCD study found the obvious chemicals were not the drivers. A flat panel across all five reporters is a likely outcome and is not publishable as a positive result.",
+          "The human-health framing cannot be delivered. 'Occupational and environmental exposure' is a claim about humans, and the team cannot use human samples. A bacterial reporter panel is at best a hazard-screening proxy, and a reviewer will say so. Making the human-health claim on bacterial data would be the single most criticisable thing in the report."
+        ],
+        "constraintCompliance": "The biology is compliant - B. subtilis is RG1. The SAMPLE is the problem: handling real industrial waste is not covered by the team's stated constraints and sits uneasily with 'no environmental samples'."
+      },
+
+      "instrumentNeeded": "A plate reader with fluorescence (for GFP fusions) or luminescence (for lux fusions). Luminescence is more sensitive and has better dynamic range but needs a luminometer; fluorescence is cheaper and the team likely already has it. Chemical cross-validation - the step that made Hug 2015 convincing - would need ICP-MS for metals and LC-MS or IC for anions, which a school does not have. Without that cross-validation the panel produces an uninterpretable fingerprint, which is the core methodological weakness.",
+
+      "publicationVenues": [
+        {
+          "venue": "None realistically, for the concept as proposed.",
+          "reasoning": "A five-promoter B. subtilis panel applied to one waste stream, without chemical cross-validation, would be rejected on novelty at any journal that publishes this literature - Environmental Toxicology and Chemistry, Environmental Research, Biosensors, Journal of Hazardous Materials. The reviewers would be the authors of Kessenikh 2021 or the Belkin-lineage groups."
+        },
+        {
+          "venue": "iGEM Registry part descriptors",
+          "realistic": "Achievable and worth doing. Well-characterised B. subtilis WB800 stress-reporter parts with dose-response curves would be a real contribution to the Registry even though they are not a paper.",
+          "format": "registered part descriptors"
+        },
+        {
+          "venue": "Biosensors (MDPI), or Journal of Microbiological Methods",
+          "realistic": "ONLY if the project is reconceived around a measurement-rigour contribution instead - for instance, a quantitative inter-day and inter-operator reproducibility characterisation of B. subtilis stress-reporter dose-response, with a standardised induction protocol and a published reference dataset. That has not been done systematically and is a genuine gap, but it is a different project from the one proposed.",
+          "format": "methods or measurement note"
+        }
+      ],
+
+      "strongestNoveltyClaim": {
+        "claim": "The most defensible sentence available is narrow and does not concern the panel at all: 'We report standardised dose-response reference data and inter-day reproducibility limits for a five-member B. subtilis WB800 stress-reporter set under a defined induction and plate-reading protocol, establishing the minimum detectable fold-change for each reporter.'",
+        "whyThisSurvivesPeerReview": "Because it claims only rigour and standardisation, which is the one thing the existing literature genuinely has not supplied, and it plays to the team's Best Measurement strength.",
+        "whatNotToClaim": [
+          "Do NOT claim a B. subtilis stress-reporter panel is new. Kessenikh 2021, Urban 2007 and the Mol Microbiol 2025 eleven-member panel all refute it.",
+          "Do NOT claim that measuring integrated biological toxicity of a real waste stream, rather than chemical-by-chemical, is a new approach. Van Dyk 2000 and Hug 2015 refute it.",
+          "Do NOT claim novelty in detecting mixture effects. Guan 2022 refutes it, and does more.",
+          "Do NOT make occupational or human-health claims from bacterial reporter data."
+        ]
+      },
+
+      "verdict": "already done",
+      "verdictReasoning": "The concept as proposed has been published repeatedly over 26 years, including the host-specific B. subtilis version (Kissenikh 2021), the real-waste-stream application (Hug 2015), the mixture decomposition (Guan 2022), the membrane arm in B. subtilis (Plyuta 2025), and the Taiwanese-industrial-effluent toxicity-testing argument (Liu 2002). The only unclaimed element is the specific sample type, which the team probably cannot obtain, which may well prove non-toxic, and which would not by itself constitute a contribution. Saying this plainly is the most valuable finding in this assessment.",
+
+      "unverified": [
+        "DOIs not captured for: Van Dyk 2000 ACS Symp Ser; Hug 2015 Environ Toxicol Chem; Guan 2022 Environ Res; Urban 2007 Appl Environ Microbiol. All four were located with full titles and abstracts, so the works are real.",
+        "Author list for the Molecular Microbiology 2025 eleven-member B. subtilis panel, and whether its promoter set overlaps the five arms Concept B proposes.",
+        "Whether ANY published study has applied a bacterial reporter panel to semiconductor-fab wastewater specifically. Searches found none, but PubMed returned zero results for the combined query and the negative rests on web search. The gap is probably real but is worth one more targeted check.",
+        "Whether Taiwanese fab effluent, post-treatment, shows measurable biological toxicity at all. No dataset found. This is a project-killing unknown and should be resolved before committing - possibly by asking an academic contact rather than by literature search.",
+        "Whether a Taiwanese fab or science-park sewer operator would in practice release effluent samples to a high school. Not investigated. The industrial-facts pass found no documented case of a Taiwanese school obtaining fab materials or access through any formal programme."
+      ]
+    },
+
+    "C": {
+      "title": "Scrap semiconductor wafers as a standardised assay substrate",
+      "asProposed": "Use reclaimed or test-grade silicon wafers - described as abundant and near-free in Taiwan - as an atomically flat, chemically defined reference surface for biological assays such as biofilm formation or protein immobilisation, and ask how much of the between-laboratory variance in such assays is actually surface variance.",
+
+      "priorArt": [
+        {
+          "axis": "THE HEADLINE QUESTION, ANSWERED IN 2026",
+          "citation": "Vohra M, et al. (2026). Benchmarking biofilm assays, surface models, and detachment methods in Pseudomonas aeruginosa for reproducible downstream molecular analysis. Journal of Microbiological Methods.",
+          "source": "https://consensus.app/papers/details/w:e64a8e9d-e35b-40d7-bfce-d03ed1a1d0e4/",
+          "whatItDid": "84 clinical isolates plus PAO1, three phenotypic biofilm assays, four biofilm-related genes assessed across SIX SURFACE TYPES, and four detachment methods. The key result, quantified: SURFACE TYPE WAS THE DOMINANT FACTOR influencing gene expression, accounting for 42.6% OF VARIANCE, followed by strain type at 17.8% and gene identity at 4.0%. Latex and PVC induced the highest expression (algR up to 3.33-fold, lecA up to 4.21-fold in strain PS120). Explicitly framed as addressing the fact that biofilm studies remain difficult to compare because test surfaces vary across laboratories.",
+          "whyItMatters": "THIS IS THE PAPER THAT TAKES CONCEPT C'S HEADLINE. 'How much of the variance in biofilm assays is surface variance' now has a published number - 42.6%, surface dominating strain by more than two to one. Concept C cannot pose this as an open question. It was answered this year, in the journal Concept C would target."
+        },
+        {
+          "axis": "surface chemistry and variance partitioning in biofilm assay reproducibility",
+          "citation": "Karim ME, et al. (2026). Reproducibility assessment of the crystal violet biofilm assay in Clostridioides difficile. Anaerobe.",
+          "source": "https://consensus.app/papers/details/w:4225552d-f52d-488c-8fa5-8c31205127fe/",
+          "whatItDid": "Systematically assessed the impact of MICROPLATE SURFACE CHEMISTRY, plate format and isolate-level heterogeneity on crystal violet assay reproducibility. Tissue-culture-treated plates consistently reduced variability vs untreated; 24-well plates gave the lowest CV% and 96-well the highest. Linear mixed-effects MIXED-EFFECTS VARIANCE PARTITIONING across fifteen isolates showed biological heterogeneity accounted for about 20% of total within-plate CV% variance, with experiment-level variance negligible.",
+          "whyItMatters": "Second 2026 paper doing variance partitioning with surface chemistry as an explicit factor, using exactly the statistical approach Concept C would need. The methodology is established and recent."
+        },
+        {
+          "axis": "the interlaboratory reproducibility baseline",
+          "citation": "Allkja J, van Charante F, Aizawa J, Reigada I, Guarch-Perez C, Vazquez-Rodriguez JA, Cos P, Coenye T, Fallarero A, Zaat SAJ, Felici A, Ferrari L, Azevedo NF, Parker AE, Goeres DM (2021). Interlaboratory study for the evaluation of three microtiter plate-based biofilm quantification methods. Scientific Reports 11:13779.",
+          "source": "https://doi.org/10.1038/s41598-021-93115-w",
+          "whatItDid": "FIVE-LABORATORY ring trial of crystal violet, resazurin and plate counts for S. aureus biofilm in 96-well plates, with a developed inter-lab protocol. Reproducibility SD on the log scale: 0.44 crystal violet, 0.53 resazurin, 0.92 plate counts. Plate counts best for responsiveness (Slope/S = 1.02). Concluded the microtiter plate shows good repeatability and reproducibility PROVIDED a suitable experimental design and statistical analysis are applied.",
+          "whyItMatters": "The interlaboratory variance Concept C proposes to explain has already been measured by a five-lab consortium, and their conclusion was that the problem is design and statistics, not the surface. That is a direct counter-argument Concept C must answer."
+        },
+        {
+          "axis": "the guideline that identifies the surface gap - Concept C's best hook",
+          "citation": "Allkja J, Bjarnsholt T, Coenye T, Cos P, Fallarero A, Harrison JJ, Lopes SP, Oliver A, Pereira MO, Ramage G, Shirtliff ME, Stoodley P, Webb JS, Zaat SAJ, Goeres DM, Azevedo NF (2020). Minimum information guideline for spectrophotometric and fluorometric methods to assess biofilm formation in microplates. Biofilm 2:100010.",
+          "source": "https://doi.org/10.1016/j.bioflm.2019.100010",
+          "whatItDid": "A sixteen-author international consensus minimum-information guideline, in five sections, explicitly aimed at interlaboratory reproducibility in biofilm microplate assays. Notes that microplates made from the same base polymer can have different surface properties depending on the production process, giving differences in cell adhesion, and suggests roughness might in future be used as a reported parameter.",
+          "whyItMatters": "THIS IS THE SINGLE BEST CITATION FOR CONCEPT C, because the field's own consensus guideline names the surface as an uncontrolled variable and flags surface roughness as a parameter that SHOULD be reported but is not yet. Concept C would be answering a gap the community has stated in writing. That is a far stronger position than asserting a gap oneself."
+        },
+        {
+          "axis": "silicon wafers ALREADY used as biofilm substrates",
+          "citation": "Mazumder S, Falkinham JO, Dietrich AM, Puri IK (2010). Role of hydrophobicity in bacterial adherence to carbon nanostructures and biofilm formation. Biofouling 26(3):333-339.",
+          "source": "https://doi.org/10.1080/08927010903531491",
+          "whatItDid": "Carbon nanostructures deposited on stainless steel and ON SILICON WAFERS WITH DIFFERENT INITIAL SURFACE HYDROPHOBICITIES; surface hydrophobicity measured by water contact angle; adherence of isogenic hydrophobic and hydrophilic Mycobacterium smegmatis strains measured over time. Biofilm formation itself altered substratum hydrophobicity.",
+          "whyItMatters": "Silicon wafers have been used as controlled-hydrophobicity substrates for bacterial adhesion and biofilm work for at least sixteen years. 'Use silicon wafers as a defined biological assay surface' is not new. Note also the sting in the tail: biofilm growth CHANGED the surface properties, which undermines the premise that a wafer stays a fixed reference during an assay."
+        },
+        {
+          "axis": "silicon and SiO2 as THE standard surface for protein immobilisation - thoroughly routine",
+          "citations": [
+            {
+              "citation": "Wasilewska M, et al. (2026). Protein Adsorption Kinetics on Silica: Theoretical Modeling and Experiments. Langmuir.",
+              "source": "https://consensus.app/papers/details/w:a89310c7-70f3-4ceb-b7a2-1064398edd37/",
+              "note": "Myoglobin, albumins and fibrinogen on a silica sensor under well-defined physicochemical conditions, by QCM, calibrated against AFM and cross-validated reflectometrically. Silica is treated as the reference surface, not as a novelty."
+            },
+            {
+              "citation": "Antoniou M, et al. (2020). Functionalization of silicon dioxide and silicon nitride surfaces with aminosilanes for optical biosensing applications. Medical Devices & Sensors.",
+              "source": "https://consensus.app/papers/details/w:0771eec8-ccbb-4cab-b5bc-09aabebd0265/",
+              "note": "APTES protocols on SiO2 and Si3N4 optimised for stable, repeatable and homogeneous biomolecule binding; 5% APTES in ethanol plus glutaraldehyde gave 30% higher signal AND the lowest chip-to-chip signal variation. Note that last point: chip-to-chip variability on silicon has already been optimised."
+            },
+            {
+              "citation": "Gajos K, et al. (2023). Covalent and Non-covalent In-Flow Biofunctionalization for Capture Assays on Silicon Chips. Langmuir.",
+              "source": "https://consensus.app/papers/details/w:71f562e7-7f58-47c1-819b-5e7262b376bb/",
+              "note": "Protein immobilisation on aminosilanised silicon chips characterised to the level of binding stoichiometry and antibody orientation, by white-light reflectance spectroscopy plus TOF-SIMS with PCA."
+            }
+          ],
+          "whyItMatters": "The entire optical-biosensor field uses silicon and silicon dioxide as its defined, flat, chemically characterised protein-immobilisation surface, with established silanisation chemistry and published chip-to-chip variability. Concept C's protein-immobilisation arm is not merely unoriginal; it is the field's default, and the team would be competing against work using TOF-SIMS and reflectometry."
+        },
+        {
+          "axis": "standardisation done properly, for reference",
+          "citation": "Goeres DM, et al. (2019). Development, standardization, and validation of a biofilm efficacy test: The single tube method. Journal of Microbiological Methods.",
+          "source": "https://consensus.app/papers/details/w:ddbe0e40-20ec-41ef-be0f-df393c456318/",
+          "whatItDid": "ASTM E2871: six-laboratory reproducibility study, reproducibility SDs 0.89-1.67, plus ruggedness testing on sonication duration and power, leading to revised ASTM E2871-19 and the first US regulatory method (ATMP-MB-20) for 'kills biofilm' claims.",
+          "whyItMatters": "Shows what it actually takes to standardise a biofilm method: six laboratories, ruggedness testing, and a standards body. Useful as a realistic yardstick for what a one-season high-school project can and cannot claim about standardisation."
+        },
+        {
+          "axis": "high-throughput surface-topography biofilm screening, with a warning",
+          "citation": "High-Throughput Biofilm Assay to Investigate Bacterial Interactions with Surface Topographies. ACS Applied Bio Materials (2022).",
+          "source": "https://pubs.acs.org/doi/10.1021/acsabm.2c00367",
+          "whatItDid": "Held Ra constant across different patterns to separate roughness from pattern effects.",
+          "whyItMatters": "Its conclusion is a direct warning to Concept C: the results caution against assumptions that are too broad based solely on a quantitative measurement such as surface area or roughness. A wafer's atomic flatness does not by itself make it a controlled biological surface - surface energy, native oxide thickness, and adsorbed organics all vary and all matter."
+        }
+      ],
+
+      "premiseCorrection": {
+        "theProblem": "The economic premise - that reclaimed or test-grade wafers are abundant and near-free in Taiwan - is partly wishful as stated, and the report should not assert it.",
+        "whatIsTrue": "Taiwan genuinely is a world centre of wafer reclaim. Phoenix Silicon International (TPE:8028) had reclaimed wafers at 80-85% of revenue in H1 2024 and was reported as having overtaken Japan's RS Technologies to become world number one by October 2025; Kinik (TWSE:1560) has reclaim and test wafers as its largest segment at 46% of 2025 sales; Scientech (TPEx:3583) has about 210,000 wafers/month reclaim capacity. A wafer can typically be reclaimed six to twenty times.",
+        "whatIsNotTrue": "Taiwanese reclaim is a B2B contract business selling to foundries and memory makers, with NO retail or small-order channel. Per-wafer contract pricing is genuinely opaque - not a search failure, but how the industry works. Searches of Shopee, Ruten, Taobao, Alibaba, FindPrice and Made-in-China in both Chinese and English found exactly ONE Taiwan-domestic consumer listing, an aggregator entry for a 10-pack of 12-inch reclaimed polished dummy wafers at NT$3,360 (about NT$336, roughly US$10.70, per 300mm wafer), with thickness, resistivity, polish and doping all unknown.",
+        "theRealisticRoute": "Import virgin test or dummy wafers from a US or EU research retailer: MicroChemicals lists 100mm test at EUR 12.60/wafer (lots of 25 minimum) and UniversityWafer quotes 100mm test or dummy at US$4.90-11.90 with no minimum order quantity and single-wafer shipping on request, against about US$315 for 100mm prime. So roughly US$5-40 per small wafer, imported. Shipping rates to Taiwan are published by no vendor and are a genuine gap - the industrial-facts pass recommends emailing all three vendors, a twenty-minute task producing better numbers than anything public.",
+        "note": "Also worth stating honestly: there is NO documented case of an iGEM team or Taiwanese science-fair project obtaining silicon wafers or fab access through a formal programme. That is a verified null result, not a search failure. The TSRI/TSMC high-school semiconductor camp (first session 24 July 2025, lottery entry, 4,800 students targeted over three years) is a real and actionable contact point, but nothing found suggests students take wafers away, and TSRI's fabrication services are university-level in every programme document found.",
+        "source": "Verified in the industrial-facts pass; see industrialFacts.reclaimedWafers."
+      },
+
+      "whatIsNew": {
+        "assessment": "A small, real, achievable sliver - but not the part the concept leads with.",
+        "whatIsGenuinelyUnclaimed": "No published work (a) uses reclaimed or test-grade silicon wafers specifically as a LOW-COST, DISTRIBUTABLE reference coupon for routine microbiology laboratories, (b) documents a supply route and per-coupon cost making that practical for ordinary labs, or (c) quantifies how much of BETWEEN-LABORATORY variance - as opposed to between-surface variance within one lab - is removed by substituting a defined wafer coupon for whatever polystyrene the lab happens to own. Vohra 2026 partitioned variance ACROSS surfaces in ONE study; the interlaboratory question with a controlled reference surface is still open.",
+        "scopeOfTheClaim": "This is a 'nobody has published this at this scale or rigour' claim, plus a small accessibility contribution. It supports a measurement or methods note. It does not support a full paper.",
+        "honestNote": "Claim (c) requires multiple laboratories. One team in one lab cannot measure between-laboratory variance. Allkja used five labs and Goeres used six. Without partner labs, this reduces to a single-lab repeatability study, which is a thinner claim again."
+      },
+
+      "whatIsNotNew": [
+        "Silicon wafers as a defined, controlled-hydrophobicity substrate for bacterial adhesion and biofilm - Mazumder 2010, sixteen years ago.",
+        "Silicon and SiO2 as the standard surface for protein immobilisation, with established silanisation chemistry and characterised chip-to-chip variability - Antoniou 2020, Gajos 2023, Wasilewska 2026, and the whole optical-biosensor field.",
+        "Asking how much of biofilm assay variance is surface variance - Vohra 2026 answered it at 42.6%, published this year.",
+        "Variance partitioning of biofilm assay reproducibility with surface chemistry as a factor - Karim 2026 and Vohra 2026.",
+        "Interlaboratory reproducibility quantification for biofilm assays - Allkja 2021 (five labs), Goeres 2019 (six labs, ASTM E2871).",
+        "Identifying uncontrolled surface properties as a reproducibility problem - the field's own consensus guideline, Allkja 2020, says it explicitly.",
+        "Separating roughness from other surface effects in biofilm assays - ACS Appl Bio Mater 2022."
+      ],
+
+      "feasibility": {
+        "verdict": "The most feasible of the three concepts, and the best match to the team's demonstrated strengths - but with the lowest novelty ceiling.",
+        "achievableInOneSeason": [
+          "Obtain 25-50 test or dummy wafers by import, and document the real cost and lead time to Taiwan. That documentation is itself a small contribution, because no vendor publishes Taiwan shipping.",
+          "Characterise the coupons: water contact angle, and roughness if an AFM can be borrowed. Contact angle alone is cheap and is what Mazumder 2010 used.",
+          "Run a biofilm or protein-adsorption assay on wafer coupons vs standard polystyrene plates, with enough replication to estimate within-plate, between-day and between-operator variance components by mixed-effects variance partitioning, following Karim 2026's approach.",
+          "Build a coupon holder that fits a standard plate format - this is exactly the team's Best Hardware strength and would make the coupons usable by other labs. A documented, open-source holder is possibly the single most transferable output of the whole project.",
+          "Recruit two or three other iGEM teams or local university labs to run the identical protocol on identical coupons. This converts a single-lab repeatability study into a genuine small ring trial and is the one move that materially raises the publication ceiling. It is also realistic: iGEM's collaboration culture makes it easier for this team than for an academic group."
+        ],
+        "notAchievable": [
+          "A standards-body-grade standardisation claim. ASTM E2871 took six labs plus ruggedness testing.",
+          "A claim that wafers are cheap and abundant in Taiwan. See premiseCorrection."
+        ],
+        "constraintCompliance": "Fully compliant and the cleanest of the three. B. subtilis or E. coli biofilms are RG1; no human samples; no environmental isolation; nothing leaves the lab. Wafers are inert. No industrial waste handling. This concept has essentially zero regulatory or safety friction, which for a high-school team is worth a great deal."
+      },
+
+      "instrumentNeeded": {
+        "minimum": "Plate reader (crystal violet absorbance or resazurin fluorescence) plus a contact-angle measurement, which can be done with a phone camera and ImageJ to adequate precision for ranking surfaces. Genuinely low-instrument.",
+        "desirable": "AFM for roughness, to substantiate the atomic-flatness claim rather than asserting it from the wafer's grade. Likely borrowable from a Taiwanese university; this is a far easier ask than ICP-MS.",
+        "note": "Crystal violet has the best reproducibility SD of the three methods Allkja 2021 compared (0.44 on the log scale) and is the cheapest. Use it as the primary readout, and cite Allkja 2021 for why.",
+        "advantage": "This is the only one of the three concepts whose central measurement needs no instrument the team does not already have or cannot easily borrow. That is a strong argument for it."
+      },
+
+      "publicationVenues": [
+        {
+          "venue": "Biofilm (Elsevier, open access)",
+          "realistic": "The best target. It published the Allkja 2020 minimum-information guideline, so it is explicitly receptive to reproducibility and standardisation work, and a short, careful contribution answering a gap its own guideline named would be in scope. Realistically a note rather than a full paper.",
+          "format": "methods or measurement note"
+        },
+        {
+          "venue": "Journal of Microbiological Methods",
+          "realistic": "Appropriate and achievable, especially with a multi-lab element. Note that it published both Goeres 2019 and Vohra 2026, so reviewers will know the prior art exactly and the framing must concede Vohra up front.",
+          "format": "methods paper"
+        },
+        {
+          "venue": "ACS Omega, or Scientific Reports",
+          "realistic": "Will take a solid, well-controlled, modest-novelty measurement study. A reasonable fallback.",
+          "format": "full paper"
+        },
+        {
+          "venue": "Protocol repository (protocols.io) plus an open hardware release for the coupon holder",
+          "realistic": "Certain, immediate, and genuinely useful. A citable DOI, and the thing most likely to actually be used by other people.",
+          "format": "protocol with DOI, plus open hardware"
+        },
+        {
+          "venue": "bioRxiv preprint",
+          "realistic": "Appropriate interim step. Low cost, establishes priority on the reference-coupon framing.",
+          "format": "preprint"
+        }
+      ],
+
+      "strongestNoveltyClaim": {
+        "claim": "Surface type has recently been shown to dominate variance in biofilm gene-expression assays, and the field's own minimum-information guideline identifies substratum properties as an uncontrolled and unreported variable; we show that reclaimed and test-grade silicon wafers - a by-product available at single-digit US dollars per coupon - can serve as a chemically defined, contact-angle-characterised reference substratum, and we quantify the between-operator and between-laboratory variance components of a crystal violet biofilm assay performed on this reference surface against standard polystyrene microplates.",
+        "whyThisSurvivesPeerReview": "It cites Vohra 2026 and Allkja 2020 as its own motivation rather than pretending the question is open, claims only variance quantification and accessibility, and names the specific assay and the specific variance components. Nothing in it is refutable by a reviewer holding the prior art.",
+        "whatNotToClaim": [
+          "Do NOT claim silicon wafers are a new substrate for biological assays. Mazumder 2010 and the entire biosensor literature refute it.",
+          "Do NOT pose 'how much of biofilm assay variance is surface variance' as an open question. Vohra 2026 answered it at 42.6%.",
+          "Do NOT claim atomic flatness makes a surface biologically controlled. The ACS Appl Bio Mater 2022 topography work and Mazumder's finding that biofilm growth itself alters substratum hydrophobicity both cut against it.",
+          "Do NOT claim wafers are near-free and abundant in Taiwan. See premiseCorrection; the realistic route is importing at roughly US$5-40 per wafer.",
+          "Do NOT claim to have standardised anything without a multi-laboratory ring trial."
+        ]
+      },
+
+      "verdict": "incremental",
+      "verdictReasoning": "Both the method and the application are published. Silicon as a defined biological surface is routine; the surface-variance question was answered in 2026 by Vohra; the interlaboratory reproducibility baseline was set by Allkja 2021 and Goeres 2019. The remaining contribution is accessibility plus variance quantification with a controlled reference coupon across laboratories - small, real, and achievable. It is the best fit to the team's Best Measurement and Best Hardware strengths, needs no instrument they lack, has essentially no safety or permitting friction, and has a clear and honest route to a methods note. Its ceiling is a note, not a paper.",
+
+      "unverified": [
+        "DOIs not captured for: Vohra 2026 J Microbiol Methods; Karim 2026 Anaerobe; Wasilewska 2026 Langmuir; Antoniou 2020 Med Devices Sens; Gajos 2023 Langmuir; Goeres 2019 J Microbiol Methods; the ACS Appl Bio Mater 2022 topography paper. All located with full titles and abstracts.",
+        "Whether Vohra 2026's six surface types include silicon or any atomically flat reference. If one of them is silicon, Concept C's remaining gap narrows substantially. THIS IS THE SINGLE MOST IMPORTANT THING TO CHECK before committing to Concept C - read the paper, do not rely on this summary.",
+        "Whether any ISO or ASTM standard already specifies a reference substratum for biofilm or cell-adhesion assays. ASTM E2871 was found but its coupon material was not established. If a standard reference coupon already exists, Concept C loses most of its remaining ground.",
+        "Actual shipping cost and customs treatment for silicon wafers into Taiwan from MicroChemicals, UniversityWafer or MSE Supplies. No vendor publishes Taiwan rates. Resolve by emailing all three.",
+        "Whether the single Taiwan-domestic reclaimed-wafer listing found (iOPEN Mall via FindPrice, 10 x 300mm for NT$3,360) is genuine, and what the wafers' specifications are. An aggregator entry only; verify by clicking through.",
+        "Whether reclaimed wafers are in fact chemically comparable batch to batch. Reclaim involves repeated stripping and polishing and a wafer survives six to twenty cycles, so surface chemistry and oxide thickness may vary MORE than virgin test wafers, not less. If so, the concept's core premise inverts and virgin test or dummy wafers are the right choice. No data found either way. This is a genuine technical unknown at the heart of the concept and should be settled first - possibly by contacting Phoenix Silicon International or Kinik directly.",
+        "Whether other iGEM teams or local university labs would commit to a shared-protocol ring trial. Not investigated, but decisive for the publication ceiling."
+      ]
+    }
+  },
+
+  "ranking": [
+    {
+      "rank": 1,
+      "concept": "A",
+      "title": "Light-gated metal capture and release",
+      "honestPaperPotential": "Highest ceiling, highest risk.",
+      "reasoning": "It is the only concept with a genuinely unoccupied intersection - no engineered protein's affinity for a critical p-block metal has been light-gated - and the Ga rigour fallback (full isotherms, kinetics and Al/Fe selectivity at 1-35 mg/L, plus a validated colorimetric Ga method) is publishable on its own in Hydrometallurgy, ACS ES&T Water or Analytical Methods, which SMS-Shenzhen's missing isotherms show is precisely the work teams skip.",
+      "butSayPlainly": "The gap really is only that light controls release of the metal rather than harvesting of the cells, and McGill 2026 plus Nakajima 2016 own the harvesting route. The novel part is not achievable in one season and the CcaSR mechanism as described cannot deliver it. Rank it first for its ceiling and for the quality of the fallback, not because the headline claim is reachable."
+    },
+    {
+      "rank": 2,
+      "concept": "C",
+      "title": "Scrap wafers as a standardised assay substrate",
+      "honestPaperPotential": "Lower ceiling, much higher probability of actually landing.",
+      "reasoning": "A small but real accessibility-plus-variance contribution answering a gap the field's own minimum-information guideline named in print, needing no instrument the team lacks, with no safety or permitting friction, and matching their Best Measurement and Best Hardware strengths exactly - but Vohra 2026 already answered the headline surface-variance question at 42.6%, the economic premise needs correcting, and the realistic output is a methods note rather than a paper."
+    },
+    {
+      "rank": 3,
+      "concept": "B",
+      "title": "Integrated-toxicity reporter panel",
+      "honestPaperPotential": "None, as proposed.",
+      "reasoning": "Published repeatedly across 26 years including the B. subtilis host version (Kessenikh 2021), the real-waste-stream application (Hug 2015), the mixture decomposition (Guan 2022) and the membrane arm in B. subtilis (Plyuta 2025); the only unclaimed element is a sample type the team probably cannot obtain, that may well prove non-toxic, and whose human-health framing cannot be supported without human data they are not permitted to use."
+    }
+  ],
+
+  "crossCuttingFindings": {
+    "thingsFoundAlreadyPublishedThatKillOrWeakenAConcept": [
+      {
+        "concept": "B",
+        "severity": "kills",
+        "finding": "Kessenikh et al. 2021, Int J Mol Sci 22:9571 - a B. subtilis stress-promoter lux panel (PdinC, PalkA, PmrgA), benchmarked directly against the E. coli equivalents, applied to a real matrix (soil), with the explicit stated rationale of comparing Gram-positive and Gram-negative toxicity responses.",
+        "source": "https://doi.org/10.3390/ijms22179571"
+      },
+      {
+        "concept": "B",
+        "severity": "kills",
+        "finding": "Van Dyk et al. 2000 - a six-member E. coli stress-promoter-lux panel covering oxidative, DNA damage, protein misfolding and metal stress, producing 'characteristic stress fingerprints'. Concept B's panel design, 26 years old.",
+        "source": "https://consensus.app/papers/details/w:e1816e8a-a6ed-42a6-b512-0370e7e743cd/"
+      },
+      {
+        "concept": "B",
+        "severity": "kills",
+        "finding": "Guan et al. 2022, Environ Res - mixture toxicity decomposed per component AND per pathway using a 90-gene reporter array and a leave-one-out design. Concept B's mixture-effects justification, already solved and more sophisticated.",
+        "source": "https://consensus.app/papers/details/w:0529fbc4-f1b7-4d9b-99de-ea26511f1ab7/"
+      },
+      {
+        "concept": "C",
+        "severity": "takes the headline",
+        "finding": "Vohra et al. 2026, J Microbiol Methods - surface type was the DOMINANT factor in biofilm gene expression at 42.6% of variance, vs strain at 17.8%, across six surface types. Concept C's central question, answered this year in Concept C's target journal.",
+        "source": "https://consensus.app/papers/details/w:e64a8e9d-e35b-40d7-bfce-d03ed1a1d0e4/"
+      },
+      {
+        "concept": "C",
+        "severity": "weakens",
+        "finding": "Mazumder et al. 2010, Biofouling 26:333-339 - silicon wafers already used as controlled-hydrophobicity substrates for bacterial adhesion and biofilm, sixteen years ago; and the finding that biofilm growth itself alters substratum hydrophobicity, which undercuts the fixed-reference-surface premise.",
+        "source": "https://doi.org/10.1080/08927010903531491"
+      },
+      {
+        "concept": "A",
+        "severity": "weakens, and reframes the claim",
+        "finding": "Mayrhofer et al. 2024, Nat Commun 15:10693 - the Azo-tag and Excitography: light-controlled affinity chromatography replacing chemical elution entirely, via a genetically encoded azobenzene side chain. Concept A's headline framing, published in Nature Communications two years ago, for protein targets.",
+        "source": "https://doi.org/10.1038/s41467-024-55212-y"
+      },
+      {
+        "concept": "A",
+        "severity": "weakens, and narrows the claim most",
+        "finding": "Mutluturk et al. 2025, ACS Appl Polym Mater - spiropyran-PDMS sponges giving light-modulated REVERSIBLE METAL-ION capture and light-assisted release over five cycles for eight metals. Light-gated metal bind-and-release is published; only the protein or whole-cell version remains open.",
+        "source": "https://consensus.app/papers/details/w:964270f0-f118-4544-a030-e18d999d12d6/"
+      },
+      {
+        "concept": "A",
+        "severity": "weakens, and closes the obvious fallback",
+        "finding": "Nakajima et al. 2016, Microb Cell Fact 15:31 - CcaS/CcaR green light driving Antigen 43 self-aggregation in E. coli, recovering about 80% of the culture by simple decantation. Light-controlled harvesting of engineered cells, published ten years before McGill 2026, using the SAME CcaSR system GEMS-Taiwan already runs. Concept A cannot retreat to the harvesting framing.",
+        "source": "https://doi.org/10.1186/s12934-016-0426-6"
+      },
+      {
+        "concept": "A",
+        "severity": "sets a high bar",
+        "finding": "Li et al. 2026, J Hazard Mater 515:143117 - lanmodulin-sfGFP displayed on E. coli: 150 mg/g capacity, 30 min equilibrium, selectivity retained in real soil leachate against 10^6-fold competing ions, >85% desorption at pH 2.3, five cycles, quasi-second-order kinetics, and fluorescence linear with adsorbed metal. The standard any whole-cell metal-binding paper is now measured against.",
+        "source": "https://doi.org/10.1016/j.jhazmat.2026.143117"
+      },
+      {
+        "concept": "A",
+        "severity": "removes a claim",
+        "finding": "Ghosh et al. 2024, Angew Chem Int Ed - engineered nanobodies with a quadruple-cysteine motif binding gallium and indium specifically, quantitatively, in minutes, stable for weeks. 'An engineered protein that binds gallium' is not new.",
+        "source": "https://consensus.app/papers/details/w:e5be8a84-701c-4a7f-bc0f-8c05b44ae915/"
+      },
+      {
+        "concept": "A and B",
+        "severity": "project risk, not novelty",
+        "finding": "Liu et al. 2002, Environ Toxicol 17:93-97 - across Taiwanese industrial effluents, only electroplating and acrylonitrile were acutely toxic; the others were not toxic to either test organism. And the 2016 TFT-LCD study found nitrate, sulfate, chloride and heavy metals were NOT the major acute-toxicity drivers. A treated Taiwanese fab effluent may give a flat negative across any biological panel.",
+        "source": "https://doi.org/10.1002/tox.10036"
+      }
+    ],
+    "oneMechanisticErrorToFixRegardlessOfConceptChosen": "CcaSR is a transcriptional two-component system. It controls how much protein is made; it cannot change the binding affinity of an already-folded, already-displayed protein, and therefore cannot release bound metal. Any sentence of the form 'we will use our CcaSR system to control binding and release' will be read as a misunderstanding of the team's own platform. Say 'light-controlled expression' where that is what is meant, and reserve 'light-gated binding' for a photoswitch inserted into the binder itself.",
+    "whatTheTeamsOwnTrackRecordArguesFor": "Best Measurement and Best Hardware in 2026 says the team's comparative advantage is rigorous quantification and instrument-building, not novel molecular mechanism. Every one of the three concepts has a measurement-shaped contribution hiding inside it that is more publishable than its headline biology: for A, a validated colorimetric Ga method plus complete isotherms and Al/Fe selectivity; for B, standardised dose-response reference data and reproducibility limits for B. subtilis stress reporters; for C, variance components for a defined reference coupon plus an open-source coupon holder. The honest advice is to lead with the measurement and treat the biology as the vehicle."
+  },
+
+  "industrialFacts": {
+    "verificationNote": "Verified 20 November 2026 in a dedicated pass. Primary sources (USGS PDFs, Taiwan's Executive Yuan gazette, TSMC filings, SIA/BCG PDFs, KEMI documents) were downloaded and text-extracted rather than read from search snippets, except where flagged.",
+
+    "chineseExportControls": {
+      "july2023": {
+        "claim": "On 3 July 2023 China's Ministry of Commerce (MOFCOM) and the General Administration of Customs jointly issued Announcement No. 23 of 2023, effective 1 August 2023, covering 8 gallium-related and 6 germanium-related items including gallium nitride, gallium oxide and zone-refined germanium ingots.",
+        "importantPrecision": "This was a LICENCE REQUIREMENT, not a ban. Exporters apply through provincial commerce authorities to MOFCOM for a dual-use export licence. State it that way. USGS: China 'implemented gallium export controls, requiring licensing procedures to be carried out by China's gallium exporters,' and exports 'recovered in 2024 as export licenses have been granted'.",
+        "sources": ["https://www.iea.org/policies/17893-announcement-on-the-implementation-of-export-control-of-items-related-to-gallium-and-germanium", "https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-gallium.pdf"],
+        "sourceConflictWorthAFootnote": "Chinese-language reporting described the measure as a prohibition-without-approval; law-firm summaries describe a licensing regime. Both describe the same instrument."
+      },
+      "december2024": {
+        "claim": "On 3 December 2024 MOFCOM issued Announcement No. 46 of 2024, banning exports of gallium, germanium, antimony and superhard materials to the United States, effective immediately, and tightening review of dual-use graphite. It came one day after new US restrictions on China's semiconductor sector, and covers re-export to the US via third countries. USGS states flatly for both metals: 'In December 2024, China banned all exports of gallium to the United States.'",
+        "sources": ["https://www.thomsonreuters.com/en-us/help/onesource-global-trade/regulatory-insights/2024/december-16th/china-export-ban-of-critical-minerals-to-the-us.html", "https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-germanium.pdf"]
+      },
+      "2025EscalationThenSuspension": {
+        "claim": "Announcement No. 10 of 2025 added controls on tungsten, tellurium, bismuth, molybdenum and indium-related items. On 9 October 2025 MOFCOM/GAC issued Announcements Nos. 55-58, 61 and 62, extending control to foreign-made products containing Chinese-origin rare earth material or technology; those six were suspended on 7 November 2025 until 10 November 2026. On 9 November 2025, Article 2 of Announcement No. 46 (the gallium/germanium/antimony ban on the US) was suspended from 9 November 2025 until 27 November 2026. Article 1 - the prohibition on exporting dual-use items to US military users or for US military end uses - REMAINS IN FORCE. USGS MCS 2026: 'In November 2025, China lifted its ban on gallium exports to the United States for 1 year.'",
+        "sources": ["https://www.iea.org/policies/25644-announcement-no-10-of-2025-of-the-ministry-of-commerce", "https://pillsburylaw.com/en/news-and-insights/china-suspends-export-controls-certain-critical-minerals-related-items.html", "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-gallium.pdf"],
+        "TIME_CRITICAL": "The suspension of the gallium/germanium ban EXPIRES 27 NOVEMBER 2026, one week after this verification date. Whatever the report says must be explicitly dated or re-checked against MOFCOM immediately before publication. No source was found on whether it has been extended. This is the single most perishable fact in the report."
+      },
+      "productionShares": {
+        "gallium": {
+          "claim": "China accounted for 99% of worldwide primary low-purity gallium production - verbatim in USGS MCS 2025 p.75 and MCS 2026. World primary production 848,000 kg (2024) rising to an estimated 900,000 kg (2025), of which China 839,000 kg (2024) to an estimated 900,000 kg (2025). The only other producers are Japan (about 3,000 kg) and Russia (about 6,000 kg).",
+          "priceEvidenceTheControlsBit": "Low-purity gallium in China: $240/kg (June 2023), $325 (Jan 2024), $380 (June 2024), $420 (Oct 2024), which USGS attributes to 'global concern about reduced gallium availability following China's implementation of gallium export controls.'",
+          "source": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-gallium.pdf"
+        },
+        "germanium": {
+          "WARNING": "USGS does NOT publish a China percentage for germanium. Do not invent one. Both editions say only that China 'continued to be the leading global producer and exporter of germanium metal' and that 'global production data were limited' and 'available estimates were difficult to verify.' The widely-circulated 59.2%-of-refined-germanium figure comes from secondary commodity-press reporting, NOT USGS. If used, attribute it to that source.",
+          "useThisInstead": "China's germanium metal exports, Jan-Sep: 36,656 kg (2023), 18,787 kg (2024), 7,520 kg (2025) - about an 80% fall in two years. US imports of germanium metal fell 67% in 2025 to about 7,000 kg, which USGS attributes directly to the Chinese ban. European germanium metal price: $1,550/kg (Jan 2024), $2,950 (Sep 2024), $3,150 (Jan 2025), $5,380 (Oct 2025); annual average $1,392/kg (2023), $1,991 (2024), $4,100 (2025) - roughly a 3x rise in two years. This is stronger evidence than a share figure.",
+          "source": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-germanium.pdf"
+        },
+        "indium": {
+          "claim": "China = 70% of world indium production, 760 t of a 1,080 t world total (2024). USGS explicitly links indium demand to AI: 'Artificial intelligence was expected to increase demand for specialized chip materials, including those made of InP.'",
+          "source": "https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-indium.pdf"
+        }
+      },
+      "whyItMattersConcretely": {
+        "claim": "GaAs and GaN go into compound-semiconductor wafers for integrated circuits and optoelectronics (laser diodes, LEDs, photodetectors, solar cells). In the US, ICs took 73% of gallium consumption and optoelectronics 26% (2025); about 83% of US gallium consumption is as GaAs/GaN/GaP wafers (2024). IC end uses named by USGS: defence applications, high-performance computers, telecommunications equipment. Germanium US end uses in descending order: fibre optics (GeO2/GeCl4 in fibre-optic glass for data networking and telecoms), infrared optics, semiconductor applications and solar cells (Ge wafers as substrates for multijunction space solar cells; germane gas), radiation detectors. USGS also notes GaAs 'is being replaced in some applications by silicon-germanium' in heterojunction bipolar transistors, so SiGe and GaAs are partial substitutes - germane (GeH4) is the gas-phase route into SiGe.",
+        "theNoSubstituteArgument": "USGS states: 'In many defense-related applications, GaAs- and GaN-based ICs are used because of their unique properties, and no effective substitutes exist for GaAs and GaN in these applications.' This is the citable form of the no-substitute claim.",
+        "source": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-gallium.pdf"
+      }
+    },
+
+    "metalsInWasteStreams": {
+      "summary": "Yes for gallium and indium, with peer-reviewed support including Taiwan-specific data. Weaker for germanium. Weakest of all for the CMP-slurry framing.",
+      "gallium": {
+        "headlineFigure": "GaAs semiconductor manufacturing wastewater contains gallium at 1-35 mg/L.",
+        "citation": "Kozerke et al. (2026). Techno-economic feasibility of gallium recovery from semiconductor wastewater. Systems and Control Transactions. 'GaAs semiconductor manufacturing generates wastewater that can contain gallium concentrations ranging from 1-35 mg/L, representing an underutilized secondary resource.'",
+        "source": "https://consensus.app/papers/details/w:637306a6-bbec-4b9d-86ca-a1572a560ff4/",
+        "economics": "Same paper, using a real industrial wastewater composition at 10-100 m3/day: ion exchange recovers 80.40% vs single-stage solvent extraction 62.54%; levelized cost falls to EUR 144/kg (IX) and EUR 161/kg (SX) at scale, against a gallium price of roughly $420-580/kg. So recovery is plausibly economic - a defensible claim.",
+        "chemicalForm": {
+          "claim": "Ga3+ in acidic aqueous fab effluent is documented in REAL process water, not just simulated.",
+          "citation": "Jain et al. (2019). Recovery of gallium from wafer fabrication industry wastewaters by Desferrioxamine B and E using reversed-phase chromatography. Water Research. 100% Ga complexation in two different process waters from the wafer fabrication industry; >90% decomplexation with EDTA at pH 3.5; >95% complex recovery at 69.8% and 92.9% purity.",
+          "source": "https://consensus.app/papers/details/w:f8f385f2-fd32-4fd3-ad9d-2433e8c703c5/"
+        },
+        "otherForms": [
+          "Simulated GaAs etching waste: extraction with 0.5 M Cyanex 272 in kerosene at pH 2, separating Ga from As (Sustainability 12(5):1765, 2020).",
+          "GaAs scrap leaching/ion-exchange: eluted with 0.1 M H2SO4 to 4.5 g/L Ga at 99.3% purity - note g/L, i.e. concentrated scrap liquor, not effluent.",
+          "Gallate at high pH is the Bayer-liquor route (alumina refining), NOT a fab stream.",
+          "Selectivity precedent in acid: catechol-modified polymeric resins 10-4,800x more selective for Ga than Zn, Al, Cd, Sb, Fe, As, Mn - directly relevant to Concept A's selectivity problem. https://pure.psu.edu/en/publications/chemically-modified-polymeric-resins-with-catechol-derivatives-fo/",
+          "A 2026 review's key judgement, worth quoting: the challenge 'is usually not dissolution itself; it is the selective separation of gallium from aluminum, iron, zinc, vanadium,' and the strongest opportunities are in concentrated semiconductor and process wastes, while mixed e-waste is limited by dilution and heterogeneity. https://consensus.app/papers/details/w:660bd416-14e0-43b4-a429-2dbd7a7b8bdc/",
+          "A US DOE white paper independently puts Ga in semiconductor wastewater effluent 'as high as 35 mg/L', consistent with the peer-reviewed range but a government report rather than peer-reviewed. https://ewr.openei.org/files/41/EWR_Whitepaper_41_Semiconductor%20Industry%20Waste%20Valorization%20for%20Recovery%20of%20Gallium.pdf"
+        ]
+      },
+      "indium": {
+        "taiwanIsDocumented": "Yes - but in THESES, not journal articles, so grade accordingly.",
+        "evidence": [
+          "National Cheng Kung University thesis: indium in ITO etching wastewater is 'ppm grade', with an explicitly Taiwanese rationale - worth recovering because the domestic photoelectric factory produces a large number of ITO etching wastewater every year. Recovery via ANION exchange resin, which implies the anionic indium-chloro complex rather than free In3+; equilibrium at about 10 h. https://katalog.lib.cas.cz/KNAV/EdsRecord/edsndl,edsndl.TW.097NCKU5397006",
+          "National Chiao Tung University thesis: from spent ITO pickling solution, indium recovered by magnesium displacement at 17.69 g/L, 3N purity - a concentrated spent bath, not dilute effluent. https://ir.lib.nycu.edu.tw/bitstream/11536/38774/1/855901.pdf",
+          "National Taiwan University thesis: waste-LCD microwave pyrolysis then extraction, 228.23 ppm indium, 86.17% purity, 81.7 wt% recovery - leached panel material, not effluent. https://tdr.lib.ntu.edu.tw/handle/123456789/59252",
+          "Spent ITO sputtering targets (In2O3:SnO2 about 9:1 by mass) are the main secondary indium resource; ammonium bisulfate leaching gives 14.31 g/L In and 0.05 g/L Sn.",
+          "Form and separation chemistry: ITO dissolves in 1 M H2SO4 or HCl in about 6 h; D2EHPA extracts both In and Sn from sulfate, with In selectively stripped into 1.5 M HCl to give 12.2 g/L In (Hydrometallurgy 2011, 281 citations)."
+        ],
+        "honestFraming": "In3+ in acidic sulfate/chloride is well documented in spent ITO baths and target scrap at g/L. In DILUTE ITO etching wastewater the Taiwanese evidence says only 'ppm grade' without a numeric range - the exact mg/L is a real gap."
+      },
+      "threeCorrectionsToThePremise": [
+        {
+          "issue": "CMP slurry is the WRONG place to look for Ga/In/Ge.",
+          "detail": "CMP waste is dominated by the abrasive and the metal being polished - copper and tungsten, not gallium or indium. Dissolved copper in CMP wastewater is about 1-100 mg/L, held in solution by chelators such as citric acid or ammonia. Two documented practical obstacles: suspended slurry particles make electrowon copper impure, and rinse water dilutes the stream by 30x to 100x the spent-slurry volume. One source states plainly that recycling of spent CMP slurry is not commonly practised in the semiconductor industry.",
+          "recommendation": "Either drop CMP from the Ga/In/Ge argument, or reframe it as a separate copper/tungsten stream.",
+          "sourceQuality": "US patents rather than peer-reviewed work; no Taiwan-specific CMP recovery study found. A genuine gap."
+        },
+        {
+          "issue": "Germanium in fab effluent is essentially UNDOCUMENTED.",
+          "detail": "USGS confirms germanium IS recycled from certain wastes generated during the manufacture of optical fibers, and from IR-optics machining swarf and spent solar substrates - but these are SOLID new scrap in optics and fibre plants, not aqueous fab effluent. No concentration data for Ge in semiconductor wastewater was found. Reinforced independently by Saikia 2022, in which no tested biosorption or bioprecipitation method recovered Ge at all.",
+          "recommendation": "Do NOT claim germanium appears in fab wastewater, and do not choose germanium as Concept A's target metal."
+        },
+        {
+          "issue": "'Advanced-packaging waste' as a Ga/In/Ge source is NOT verified.",
+          "detail": "Indium-based solder alloys are used in data-centre electrical components (USGS, indium), so indium is present in packaging materials - but no waste-stream characterisation for advanced packaging was found.",
+          "recommendation": "Treat as a hypothesis, label it as one."
+        }
+      ]
+    },
+
+    "waterAndThe2021Drought": {
+      "tsmcFigures": {
+        "claim": "Total water usage across TSMC's Taiwan fabs and subsidiaries (city water plus reclaimed) was 129 million m3 in 2024, up from 114 million m3 in 2023. That is roughly 350,000 m3/day, but TSMC publishes the ANNUAL figure, so quote it annually and show the arithmetic if a daily number is wanted.",
+        "reclaimed": "Tainan fabs: 17% replacement rate, cutting city-water use 31%; cumulative reclaimed use 19.65 million m3 by end-2024; reclaimed supply over 67,000 m3/day. The 2025 Climate and Nature Report raises the Taiwan-fab substitution rate to 18%.",
+        "theHonestFigureIsTheInterestingOne": "Unit water consumption went the WRONG way: +14.3% against the 2010 base year in 2024, versus a target of -2.7%, which TSMC attributes to unstable capacity utilisation in H1 2024. Its 2030 goal (-30% vs 2010) is marked UNACHIEVED. A secondary summary claiming 2024 measures CUT unit water use by 2.7% contradicts TSMC's own annual report and looks like the target being misread as the result. Use the annual report's +14.3%.",
+        "source": "https://investor.tsmc.com/static/annualReports/2024/english/ebook/files/basic-html/page159.html"
+      },
+      "recyclingRate": {
+        "figures": "TSMC water REUSE rate: 85.7% (2022), 90.3% (2023), 88.1% (2024). TSMC Arizona reports a 65% campus recycling rate, with a new plant targeting 85% at startup and 90%+ thereafter.",
+        "CAVEAT": "These three numbers are attributed to TSMC's sustainability report but were reported via a Korean outlet, NOT read first-hand. esg.tsmc.com is behind Cloudflare and returned HTTP 403 to every attempt (direct curl with browser headers, the .com.tw host, and WebFetch), so they could not be verified against the report itself and no 2025 figure was obtainable. The metric is labelled 'reuse', not 'process water recycling rate' - different definitions, do not blend them.",
+        "recommendation": "Have a human open the 2025 Sustainability Report PDF in a normal browser and read the water chapter.",
+        "source": "https://view.asiae.co.kr/en/article/2026071011262388296"
+      },
+      "nationalWaterBudget": {
+        "claim": "Taiwan's annual water consumption is about 17 billion tonnes, split agriculture 70% / domestic and commercial 20% / industrial 10%, attributed to the Water Resources Agency. Taiwan's three major science parks use about 1.31 million tonnes/day for semiconductor manufacturing.",
+        "WARNING": "The 'semiconductors take X% of Taiwan's industrial water' claim is NOT cleanly sourceable, and one popular version is wrong. A Fortune article citing an academic source says Taiwan's semiconductor industry consumes 10% of the island's water - but that COLLIDES with the WRA split, in which 10% is ALL industry. Deriving a share from the two figures above gives roughly 29%, but units and definitions do not reliably match, so that is arithmetic, not a sourced figure.",
+        "recommendation": "State the absolute figures (129 million m3/yr for TSMC; about 1.31 million t/day across the science parks) and the national 70/20/10 split. Do not assert a semiconductor percentage. A per-fab benchmark of about 20,000 t/day per average fab (China Water Risk, via Fortune) is available if a comparison is wanted.",
+        "sources": ["https://www.taiwannews.com.tw/news/6351588", "https://fortune.com/2021/06/12/chip-shortage-taiwan-drought-tsmc-water-usage/"]
+      },
+      "drought2021": {
+        "rootCause": "No typhoon made landfall in 2020 - the officially sourced root cause. WRA Deputy Director-General Wang Yi-feng: 2020 was 'the first year since 1964 that Taiwan was not hit by a typhoon,' leading to very low precipitation. https://www.taipeitimes.com/News/biz/archives/2021/01/04/2003749890",
+        "reservoirs": "Second Baoshan Reservoir (serving Hsinchu) at 14.62% storage in February 2021; several central and southern reservoirs below 20%; by May, levels below 20% generally with some below 10%. A BBC-sourced later snapshot put Baoshan No. 2 at about 7%, its lowest ever. Rainfall in the seven months to February 2021 was less than half the historic average; Taipei's Q1 2021 precipitation days were 35% below the 2010-2020 Q1 average. https://www.theregister.com/2021/02/24/tsmc_drought/",
+        "rationing": "Taiwan's first red alert on water supply in six years; supply cut two days a week in Taichung, Miaoli and northern Changhua; restrictions reached two major science parks, with Hsinchu curbs stepped up in May. https://www.cnbc.com/2021/05/19/taiwan-steps-up-curbs-on-water-use-by-chip-hub-hsinchu-during-drought.html",
+        "waterTrucks": "TSMC and UMC bought water by the truckload; TSMC ordered about 100 water trucks, called it a 'pressure test' and said there was no impact on production; UMC and VIS also contracted trucks with no production impact. Equity angle worth including: thousands of trucks carried water to the semiconductor industry, angering farmers because much of it had been earmarked for agriculture. https://www.tomshardware.com/news/tsmc-umc-hit-by-drought-trucking-in-water and https://www.aljazeera.com/news/2021/8/20/taiwan-water-woes",
+        "WARNING_on_56_years": "The 'worst drought in 56 years' claim is widely repeated in secondary sources (Earth.org, Watchers News, Asia Pacific Foundation) but NO official Taiwanese government or Central Weather Bureau statement using that number could be found. Other outlets say 'worst in more than 50 years', 'worst in decades', or - in the central bank's wording - 'worst in 100 years'. The officially attributable fact is 'first year since 1964 without a typhoon' (WRA), and 2021 minus 1964 = 57, which is probably where 56 came from by informal arithmetic.",
+        "recommendation": "Write 'the worst drought in more than half a century' and cite the WRA's since-1964 typhoon statement as the hard fact."
+      }
+    },
+
+    "pfasAndFluoride": {
+      "summary": "Both are genuinely significant, and the Taiwanese regulatory angle is far richer than usually reported.",
+      "pfasUsesInFabs": {
+        "authoritativeSource": "The Semiconductor PFAS Consortium's ten technical white papers, indexed at https://www.semiconductors.org/pfas/",
+        "sevenApplicationAreas": "photolithography; wet chemical processing; plasma-enabled etch and deposition; heat transfer fluids; lubricants; assembly/test/packaging; and articles. https://www.semiconductors.org/wp-content/uploads/2023/05/FINAL-PFAS-Consortium-Background-Paper.pdf",
+        "photolithographyVerifiedInDetail": "Photoacid generators are components of chemically amplified resists, chemically amplified polybenzoxazoles/polyimides and bottom anti-reflective coatings. The predominant PAGs are sulfonium or iodonium salts paired with PFAS super-acid anions, and the paper states 'all successfully demonstrated PAGs for high performance resists are fluorinated.' Both TARCs and BARCs are fluorinated for low refractive index and low surface energy. PFAS surfactants appear in BARCs, TARCs, colour-filter resists and rinses, including first-generation EUV rinses. THE RELEASE PATHWAY IS EXPLICIT: aqueous developer and rinse streams 'typically drain to wastewater' while solvent developer is collected separately - that is the mechanistic link from lithography to the fab drain. https://www.semiconductors.org/wp-content/uploads/2023/09/PFAS-Release-Mapping-from-Semiconductor-Photolithography-Processes-Rev.0.pdf",
+        "wetEtchantsPrecision": "Buffered HF used in buffered oxide etch 'is supplied both with and without a surfactant because not all applications using BHF require it': PFAS surfactant may be unnecessary at a 2:1 aspect ratio but essential at 10:1 (50 nm wide by 500 nm deep). So PFAS in BOE is application-specific, not universal. https://www.semiconductors.org/wp-content/uploads/2023/08/FINAL-PFAS-Containing-Wet-Chemistries-Used-in-Semiconductor-Manufacturing.pdf",
+        "plasmaEtchCVD": "HFCs (CHF3, CH2F2) and PFCs (CF4, C4F8, c-C4F8) fall inside the Consortium's PFAS definition.",
+        "peerReviewedCounterweight": "Ober, Kafer & Deng (2022). Review of essential use of fluorochemicals in lithographic patterning and semiconductor processing. J. Micro/Nanopattern. Mater. Metrol. 21(1):010901. https://doi.org/10.1117/1.JMM.21.1.010901",
+        "WARNING_thousandsOfApplications": "'Thousands of applications' is an industry characterisation with NO published basis - do not use it as a figure. SIA's press release says PFAS are used in 'thousands of essential applications' but gives no count, methodology or breakdown. The only defensible count is the Consortium's own survey: of 28 distinct wet chemical formulations surveyed, 16 (57%) contained no PFAS and 9 (32%) are produced both with and without a PFAS component - and the paper itself warns responses were limited to participating members."
+      },
+      "pfasConsortium": {
+        "claim": "Hosted by the Semiconductor Industry Association - stated verbatim in the Background Paper: 'organized under the auspices of the Semiconductor Industry Association (SIA).' It explicitly disclaims advocacy: it 'DOES NOT lobby government officials or undertake policymaking'; SIA, ESIA and SEMI advocate using its outputs. Membership: 38 named members on the July 2024 list - AND TSMC IS ONE, which is directly relevant to a Taiwanese team. Others include Applied Materials, ASML, BASF, Chemours, DuPont, Entegris, GlobalFoundries, IBM, Intel, JSR, Lam Research, Micron, NXP, Bosch, Samsung Austin, ST, TI, Tokyo Electron, TOK, ZEISS.",
+        "caveats": "Formation date 'January 2022' is secondary only (SEMI presentation decks; semi.org returned 403). SIA's own documents give no formation date; the Aug 2023 release says Phase 1 took 18 months, which back-calculates consistently - write 'formed in early 2022'. Member counts disagree across SIA's own documents: 38 (May 2023), 42 (Aug 2023 release), 38 (July 2024). Cite the July 2024 list as current.",
+        "mostReportRelevantPublication": "'2023 Survey Results - PFAS in Semiconductor Fabrication Facility Wastewater': 26 facilities, 7 member companies, across the US, Europe and Asia; targeted PFAS discharges 0.002-13 g/day per facility, averaging about 4 g/day (about 3.2 lb/yr). TWO CAVEATS MUST TRAVEL WITH THAT NUMBER: these are MASS LOADS, not concentrations, so they cannot be compared against any ng/L standard; and SIA itself states current target analytical methods cannot characterise some PFAS species present, making it a LOWER BOUND. https://www.semiconductors.org/consortium-publishes-survey-results-of-pfas-discharges-to-wastewater/"
+      },
+      "fluorideConcentrations": {
+        "recommendedPrimaryFigure": "Semiconductors and displays, 300-1,200 mg/L. Sinharoy & Chung (2024). Fluoride removal from wastewater and potential for resource recovery. Environmental Engineering Research 29(6):240179, open access. Also gives electrical/electronics 300-4,500 mg/L and steelmaking 6,500-130,000 mg/L for contrast, and notes many regulators cap discharge at under 15 mg/L - which matches Taiwan exactly. https://www.eeer.org/journal/view.php?number=1574",
+        "measuredSinglePlantFigure": "A semiconductor wastewater treated by electrocoagulation-flotation went from 806 mg/L down to 5-6 mg/L. The same review reports that 'almost 30% of waste produced in the semiconductor industry is of fluorine origin.' Materials 15(10):3461 (2022). https://pmc.ncbi.nlm.nih.gov/articles/PMC9147173/",
+        "WARNING_dropThisFigure": "Drop the commonly-repeated '1,000-3,500 mg/L'. It traces to Huang & Liu, Water Research 33(16):3403-3412 (1999), where it is itself a citation to Chou et al. 1994 describing 'typical wastewater of local semiconductor industry' - i.e. Taiwan in the early 1990s. Chou et al. 1994 could not be retrieved at all; the 1999 full text is paywalled; and another paper citing the same source gives the range as 500-2,000 mg/L, which is inconsistent. Use 300-1,200 mg/L and the measured 806 mg/L instead, noting that segregated high-concentration HF streams run higher than combined effluent.",
+        "noBOESpecificFigure": "No HF- or BOE-specific mg/L figure exists in the peer-reviewed literature that could be found - only aggregated 'fluoride wastewater'. Taiwanese thesis literature describes stream segregation into high-concentration (several thousand mg/L, pH 2-5) and low-concentration (mostly under 500 mg/L) fluoride streams, which is fine as supporting colour but not as a headline. The report should not assert a BOE-specific number.",
+        "treatmentAndRecovery": "Conventional route is calcium precipitation to CaF2 (lime or CaCl2), usually needing excess calcium, with sludge normally landfilled; fine CaF2 settles poorly, hence coagulants or flotation. Only fluidized-bed crystallization yields a fluoride-rich recoverable product among the technologies compared. A two-stage FBR achieved about 94% fluoride removal, crystallization efficiency over 95% sustained 41 days (peak 98.6%), recovered CaF2 at 91.1% purity, crystals growing 402.7 um to 1,003 um, meeting a 15 mg/L standard (Int. J. Mol. Sci. 25(9):4646, 2024) - but simulated wastewater, lab scale, Korean authors, no Taiwan content, and two unreconciled influent values (300 vs 460 mg/L). The claim of 'three full-scale FBC plants in Hsinchu Science Park' rests on a roughly 23-year-old ResearchGate snippet and is UNVERIFIED - do not use."
+      },
+      "caf2SludgeRecoveryInTaiwan": {
+        "claim": "Taiwan dries and granulates CaF2 sludge into artificial fluorite for steelmaking flux. Processor LiYing Environmental Technology, founded 2013, more than 50% of Taiwan's four artificial-fluorite producers, 2024 revenue over NT$200m, processes about 1,500 t/month of CaF2 sludge, about 40% of it from TSMC, yielding about 750 t/month of artificial fluorite at up to 80% purity, at about one-third the cost of natural fluorite (which Taiwan imports almost entirely from China). It operates inside TSMC's Taichung zero-waste centre (commercial operation Nov 2024) and UMC's Nanke circular-economy centre (about 5,000 t/yr). Buyers: China Steel, Formosa Plastics' Vietnam mill, Yieh United Steel.",
+        "caveat": "Single business-press source - specific and internally consistent, but secondary.",
+        "source": "https://esg.businesstoday.com.tw/article/category/180696/post/202502170024",
+        "whyThisMattersToTheTeam": "This is a strong, concrete, Taiwanese circular-economy precedent: a semiconductor waste stream already being valorised at industrial scale, inside TSMC's own facility. It is useful framing for any recovery-themed project and shows the industry is receptive to the idea."
+      },
+      "taiwaneseRegulation": {
+        "a_fluorideEffluentStandard": {
+          "claim": "Fluoride effluent standard = 15 mg/L, with NO stricter sector-specific limit. Governing regulation: Effluent Standards, last amended 18 December 2024. Verified verbatim from the Executive Yuan Gazette tables (vol. 031 no. 237): fluoride = 15 in Table 1 (wafer and semiconductor manufacturing), Table 2 (optoelectronic materials and devices), Table 9 (science-park dedicated sewer systems), and every other table. So the sector-specific tables EXIST - semiconductors got their own in 2011 precisely because of fluorine-bearing wastewater - but they do not tighten the fluoride number relative to general industry. Other semiconductor-table values: pH 6.0-9.0, nitrate-N 50 mg/L, temperature 38 C or below May-Sep and 35 C or below Oct-Apr. For contrast, Taiwan's DRINKING-WATER fluoride standard is 0.8 mg/L.",
+          "sources": ["https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=O0040004", "https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg030237/ch07/type1/gov60/num22/images/Eg01.pdf"]
+        },
+        "b_pfasDrinkingWater": {
+          "claim": "Binding. Drinking Water Quality Standards Art. 3-1, promulgated 25 November 2024: PFOA + PFOS combined 50 ng/L; PFOS + PFHxS combined 70 ng/L; effective 1 July 2027, with interim testing from 1 Jan 2025 and 7-day exceedance notification. A non-binding guideline of 100 ng/L for the sum of 20 PFAS also exists.",
+          "source": "https://oaout.moenv.gov.tw/law//EngLawContent.aspx?id=338"
+        },
+        "c_pfasSurfaceWater": {
+          "claim": "Binding, and new. Surface Water Body Classification and Water Quality Standards amended 25 March 2026, adding a combined PFOA + PFOS criterion of 50 ng/L or below for Class A and Class B water bodies.",
+          "source": "https://enews.moenv.gov.tw/moenv-news/zh-tw/News/1842"
+        },
+        "d_pfasWastewaterMonitoring_THE_BEST_FACT": {
+          "claim": "Taiwan DOES mandate PFAS wastewater monitoring for fabs, via a different regulation, and this is badly under-reported. The Regulations Governing Water Pollution Control Measures and Testing and Reporting Management, amended 20 January 2025, added Art. 84-3 and Table 6, 'emerging concern items'. Values apply to BOTH raw wastewater and effluent, tested once per year, effective 1 January 2027: PFOS 120 ng/L; PFOA 1,700 ng/L; PFHxS 2,100 ng/L. Covered entities include science-park and industrial-park dedicated sewer systems and - strikingly specific - wafer/semiconductor manufacturing and optoelectronic materials and devices manufacturing that discharge to surface water AND USE PHOTORESIST IN THE PROCESS. Enforcement: two consecutive exceedances trigger a mandatory self-reduction management plan within three months, maximum two years; three consecutive non-exceedances earn a testing exemption.",
+          "IMPORTANT_PRECISION": "These are MONITORING VALUES triggering a reduction-plan duty, NOT effluent limits carrying a fine. Do not call them 'effluent standards'. PFAS is in fact NOT in the effluent standards: environmental groups asked for PFAS and total organic fluorine limits in the 2024 amendment and MOENV declined, saying PFAS is not yet regulated in effluent standards internationally. The 2024 amendment instead tightened ammonia-N, phosphorus, residual chlorine and copper, affecting over 3,700 businesses, mainly semiconductors, optoelectronics and science parks.",
+          "sources": ["https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg031013/ch07/type1/gov60/num23/Eg.pdf", "https://www.rootlaw.com.tw/LawContent.aspx?LawID=A040300050004200-1140120", "https://news.ltn.com.tw/news/life/breakingnews/4852079"]
+        },
+        "e_monitoringProgramme": {
+          "claim": "MOENV Chemicals Administration, page dated 8 Jan 2026: 4,714 environmental samples analysed in 2024 for background PFAS (river sediments and fish, groundwater, seawater, effluent, drinking water, soil, textiles); 269 PFAS pre-announced as 'chemicals of concern' on 5 August 2025; drinking-water monitoring covering 130 large plants (about 91% of national supply), all compliant; 13 PFAS banned in cosmetics from 1 Jan 2025.",
+          "source": "https://www.cha.gov.tw/cp-193-6996-8e186-2.html"
+        }
+      },
+      "taiwaneseFluorideIncident": {
+        "verified": "Executive Yuan appeal decision 院臺訴字第1090171516號, 30 April 2020: fluoride measured at 18.2 mg/L against the 15 mg/L limit, sampled 17 May 2019 by the EPA's Northern Regional Environmental Inspection Brigade during a public-complaint investigation. Penalty NT$390,000 plus 2 hours mandatory environmental education; appeal dismissed. Legally significant: fluoride is designated a substance hazardous to health by EPA announcement of 25 December 2018, which adds 3 penalty points.",
+        "IMPORTANT_CAVEAT": "The violator is the Guanyin Industrial Zone Service Centre in Taoyuan - an industrial-zone SEWER OPERATOR, not a fab. A real, fully documented Taiwanese fluoride-exceedance enforcement case against a facility receiving industrial wastewater, but NOT a semiconductor plant. Say so.",
+        "source": "https://appeal.ey.gov.tw/File/Download/028ec912-f89c-4c2d-93c2-3db31b3ad307",
+        "noFabCase": "No fluoride-exceedance penalty against a named Taiwanese semiconductor or optoelectronics plant could be found, despite targeted Chinese-language searches of news, EPB penalty announcements and the Thaubing database.",
+        "CONFLATION_TO_AVOID": "The famous ASE Kaohsiung / Houjin River case of October 2013 was an ACIDITY (pH 3.02) and HEAVY-METALS violation, NOT fluoride. (Supreme Administrative Court 106年判字第289號, 8 June 2017.) Separately, Taiwan Semiconductor's Yilan plant was penalised for suspended solids (NT$1.428m, 2021) and for permit/recordkeeping irregularities concerning its fluorine-based wastewater route - a paperwork violation, not a concentration exceedance."
+      },
+      "fabLinkedContaminationCase_USE_THIS_INSTEAD": {
+        "claim": "For a fab-linked contamination case, the peer-reviewed PFAS river evidence is squarely about Taiwanese semiconductors. Lin, Panchangam & Lo (2009). The impact of semiconductor, electronics and optoelectronic industries on downstream perfluorinated chemical contamination in Taiwanese rivers. Environmental Pollution 157(4):1365-1372: ten PFCs measured in plant wastewater and in the Keya, Touchien and Xiaoli rivers - the HSINCHU SCIENCE PARK CATCHMENT - with PFOS up to 5.4 ug/L (5,400 ng/L) in river water and up to 0.13 mg/L in semiconductor wastewater; the upstream plants identified as the primary cause.",
+        "companionPaper": "Lin, Panchangam & Ciou (2010), Chemosphere 80(10):1167-1174 - photolithographic wastewater contained 12.5 mg/L PFOS; PFC levels about 10,000 ng/L in industrial WWTP effluent and receiving rivers; Nanmen Creek sediment PFOS up to about 90,000 ng/kg; PFOS risk quotient 1.21. This is the number that links lithography chemistry directly to the drain. https://pubmed.ncbi.nlm.nih.gov/20643472/",
+        "MUST_FLAG": "Both papers are 2009/2010, BEFORE the PFOS phase-out progressed. The report must NOT present these as current concentrations - flag the vintage explicitly.",
+        "source": "https://www.osti.gov/etdeweb/biblio/21188869"
+      },
+      "euAndUsRestrictions": {
+        "echaUniversalPfasRestriction": "Five submitters: Germany, Netherlands, Denmark, Sweden, Norway; REACH Annex XV report submitted January 2023; updated Background Document incorporates over 5,600 consultation responses. Semiconductors: Annex 2 entry '5.w - Semiconductor manufacturing' (renumbered 5.ee), status 'Potential derogation confirmed', duration 13.5 years after entry into force, covering photolithography, etching, deposition, engineered fluids, equipment and advanced packaging. Sector assessment: restriction option 2 cuts emissions 79%, substitution potential Low, verdict 'Likely proportionate'. Reconciling 12 vs 13.5 years: the 2023 report proposed 12 years; the 2025 document restates it as 13.5 years after entry into force - the same thing inclusive of the 18-month transition. RAC adopted its final opinion 2 March 2026; SEAC agreed its draft 10 March 2026; the 60-day consultation closed 25 May 2026 with 3,511 comments from over 3,200 organisations, and ELECTRONICS AND SEMICONDUCTORS DREW THE LARGEST SECTOR SHARE AT 12.7%.",
+        "echaAccessCaveat": "echa.europa.eu returned HTTP 403 on every path, so no ECHA page is first-hand verified. The substance above is verified from a primary document by one of the five dossier submitters, the Swedish Chemicals Agency (KEMI), updated 23 October 2025. https://www.kemi.se/download/18.43415f2e19a0f60356220f8/1761224887540/What%20you%20need%20to%20know%20about%20the%20updated%20PFAS%20restriction%20dossier-Updated-2025-10-23-2.pdf",
+        "TIME_CRITICAL": "SEAC adopted its FINAL opinion on 19 NOVEMBER 2026 - the day before this verification. It rejected a blanket ban and backed a phased approach: ban in principle 18 months after adoption for consumer uses and sectors with alternatives, plus temporary exemptions of 5 to 12 years for critical industries with no viable alternative, SEMICONDUCTORS EXPLICITLY NAMED. SINGLE SOURCE, ONE DAY OLD, and it reframes the duration as '5 to 12 years' versus KEMI's '6.5 or 13.5 years after entry into force'. Verify on ECHA's own site before publication. Both opinions now go to the Commission; no adoption date is set. https://agenceurope.eu/en/bulletin/article/13985/5/echa-endorses-final-opinion-favouring-targeted-pfas-restrictions",
+        "usEpaMcls": "Fully verified from EPA. 2024 final rule (announced 10 April 2024; Federal Register 26 April 2024): PFOA 4.0 ppt, PFOS 4.0 ppt (MCLG zero for both); PFHxS, PFNA, HFPO-DA (GenX) 10 ppt each; Hazard Index = 1 for the four-way mixture. Monitoring and public reporting by 2027; solutions by 2029. On 14 May 2025 EPA announced it would RETAIN the 4 ppt PFOA/PFOS MCLs. On 18 May 2026 two PROPOSED rules: a compliance extension moving the PFOA/PFOS deadline from 26 April 2029 to 26 April 2031, and a RESCISSION of the PFHxS, PFNA, HFPO-DA and Hazard Index regulations. NEITHER IS FINALISED and litigation over the 2024 rule is active in the D.C. Circuit. State the 4 ppt PFOA/PFOS MCLs as current law and everything else as proposed. https://www.epa.gov/sdwa/and-polyfluoroalkyl-substances-pfas",
+        "tscaReporting": "TSCA section 8(a)(7), 40 CFR Part 705, finalised 11 October 2023 - the rule that actually reaches fabs and their suppliers. Retroactive to 1 January 2011, requiring anyone who manufactured or IMPORTED PFAS or PFAS-containing ARTICLES since then to report chemical identity, uses, volumes, byproducts, health/environmental data, worker exposure and disposal. No de minimis and no small-business exemption in the original rule. THE OPERATIVE DEADLINE IS GENUINELY UNCLEAR after a chain of extensions (Nov 2024, then July 2025, then 13 Oct 2026 for most manufacturers / 13 April 2027 for small businesses reporting only on imported articles, then an April 2026 rule adding 60 days after a forthcoming revision takes effect). Verify before publishing a date. A November 2025 proposal would EXEMPT imported articles - directly relevant to fluoropolymer tubing, valves, gaskets and FOUPs; still a proposal. https://www.govinfo.gov/content/pkg/FR-2023-10-11/pdf/2023-22094.pdf"
+      }
+    },
+
+    "taiwanPositionInAiHardware": {
+      "theClaimStatedAsItCanHonestlyBeMade": "Taiwan sits at the single narrowest point in the AI hardware supply chain: TSMC alone took 72.5% of global foundry revenue in Q2 2026, Taiwan and South Korea between them hold ALL of the world's sub-10nm logic capacity, and Taiwanese firms assemble roughly 90% of the world's AI servers - so an AI accelerator is, at several separate stages, almost certain to pass through Taiwan.",
+      "foundryRevenueShare": {
+        "claim": "Q2 2026: global top-10 foundry revenue US$53.49bn (+11.5% QoQ, a record); TSMC about US$40.2bn, +12.1% QoQ, 72.5% share. Samsung 5.9% (US$3.26bn), SMIC 5.4%, UMC 3.9%, GlobalFoundries 3.2%. Trend line: 70.2% (Q2 2025, then a record), about 71% (Q3 2025), 72% (Q1 2026), 72.5% (Q2 2026). TrendForce projected 2026 global foundry revenue at about US$218.8bn, +24.8% YoY, with TSMC growing fastest at about 32%.",
+        "caveat": "TrendForce's own arithmetic does not quite close - $40.2bn divided by $53.49bn is about 75%, not 72.5% - so the shares likely use a different denominator than the top-10 total. Quote the share as published and do not recompute it.",
+        "source": "https://www.trendforce.com/presscenter/news/20260909-13225.html"
+      },
+      "leadingEdgeCapacity": {
+        "WARNING": "The commonly-repeated 'TSMC has about 90% of leading-edge (5nm/3nm) capacity' DOES NOT CHECK OUT. It does not appear in TrendForce's or Counterpoint's published figures. Drop it.",
+        "whatIsVerifiable": [
+          "100% of the world's sub-10nm capacity was in Taiwan (92%) and South Korea (8%) - SIA/BCG, verified verbatim from the primary PDF. BUT this is the 2021 report using about 2019 data - SEVEN YEARS OLD. Date it explicitly. https://www.semiconductors.org/wp-content/uploads/2021/03/SIA-BCG_Global-Value-Chain_2-pager.pdf",
+          "The 2024 SIA/BCG report does NOT restate a Taiwan sub-10nm percentage (full PDF extracted and searched; no '69%' and no '92%' appear). It says only that South Korea- and Taiwan-headquartered companies lead the world in advanced node fabrication, and projects the US reaching 28% of sub-10nm capacity by 2032 from 0% in 2022. So the widely-cited 'Taiwan 69% of sub-10nm in 2022' is NOT in the 2024 report and could not be sourced - treat as unsourceable.",
+          "TSMC's own revenue mix is the cleanest leading-edge evidence: 7nm and below = 74% of wafer revenue in Q4 2025, with 3nm at 24% and 5nm at 36%; for full-year 2025, 3nm rose from 18% (2024) to 24%, 5nm steady at 36%.",
+          "Counterpoint: TSMC likely to hold 87% of smartphone SoC shipments at 5nm and below in 2025 - note this is a SHIPMENT share in ONE application, not a capacity share.",
+          "Taiwan's share of ALL foundry capacity about 44% (2024), and of advanced (16/14nm and below) capacity 68% (2023), 66% (2024), 60% forecast by 2027, per TrendForce."
+        ],
+        "recommendation": "Build the leading-edge claim on TSMC's 7nm-and-below = 74% of wafer revenue plus the SIA/BCG 92%-of-sub-10nm figure with its 2021 date shown - and drop any 'TSMC has 90% of leading-edge capacity' line."
+      },
+      "advancedPackaging": {
+        "bestSingleFigure": "Taiwan's share of global data-centre AI chip packaging, 77% in 2024, projected to decline moderately to 70% by 2030 (DIGITIMES, sample report dated November 2025). https://www.digitimes.com/reports/ai/2025_ai_chip_packaging/assets/Global%20Data%20Center%20AI%20Chip%20Packaging%20Market%20Forecast%202024-2030(sample).pdf",
+        "cowos": "TSMC CoWoS monthly capacity about 70,000 wafers (2025) rising to 130,000-140,000 by end-2026 (TrendForce). NVIDIA has reportedly reserved about 800,000-850,000 wafers of TSMC's 2026 CoWoS capacity, over 50% of the total. TrendForce estimates the CoWoS supply-demand gap will stay at about 20% in 2026. FORECASTS DIVERGE WIDELY: DIGITIMES projects only 88,000 wafers/month by end-2026 (+26% YoY) against TrendForce's 130,000-140,000. Cite a range and name the house.",
+        "osat": "ASE is the world's largest OSAT, over 30% global share, about US$20.78bn 2025 revenue; TrendForce put the top-10 OSATs at US$41.56bn in 2024 with ASE at US$18.54bn (about 45% of the top 10). Taiwan holds 'nearly half' of the global OSAT market. Those three denominators differ - total OSAT market, top-10 revenue, and capacity - so do not blend them.",
+        "gap": "No SEMI figure for Taiwan's share of global advanced packaging CAPACITY in 2025 could be found. Use the DIGITIMES 77% AI-packaging figure and label its scope precisely."
+      },
+      "aiServers": {
+        "claim": "Taiwan assembles more than 90% of global AI servers - the original attribution is Taiwan's Ministry of Economic Affairs, reported by DIGITIMES in March 2024, and restated for 2025 in a June 2026 report. Taiwan also makes about 80-83% of ALL servers (not just AI servers), MOEA-sourced - keep the two distinct. Foxconn alone holds about 40% of the global AI server market (TVBS, April and June 2026). Taiwan's Market Intelligence Centre expects AI server shipments of 4.6 million units in 2026, with Taiwan remaining the main production base; the 90% share is expected to decline as manufacturers expand overseas.",
+        "caveat": "No source gives individual AI-server shares for Quanta, Wistron or Inventec, so the four-firm total is UNVERIFIED. State the Taiwan-level 90% and Foxconn's about 40%, and do not sum the four. Wistron overtaking Quanta as Taiwan's second-largest ODM by revenue (2025 revenue over NT$2.19 trillion) is a REVENUE ranking, not a server-share figure, and the source is weak (a LinkedIn post).",
+        "sources": ["https://www.digitimes.com/news/a20240327PD203.html", "https://news.tvbs.com.tw/english/3177408"]
+      },
+      "abfSubstrate": {
+        "assessment": "Weakest item in this section.",
+        "whatCanBeSaid": "Taiwan ranks No. 1 worldwide in ABF substrate market share - but only the headline was retrievable, not the underlying numbers. Unimicron, Ibiden and Shinko together are about three-quarters of the substrate market 'by most estimates' - a three-company figure spanning Taiwan and Japan, not a Taiwan total. DIGITIMES confirms Taiwan's three ABF leaders - Unimicron, Kinsus, Nan Ya PCB - grew at double-digit annual rates in 2025, but gives no shares.",
+        "doNotUse": "Unimicron at 22% appears in a market FAQ with no clear date or methodology - unverified, do not use.",
+        "recommendation": "Either omit a numeric ABF claim or state only 'Taiwan ranks first in ABF substrate share' with the headline citation and an explicit note that the figure is paywalled (TrendForce/Yole)."
+      }
+    },
+
+    "reclaimedWafers": {
+      "verdict": "Partly realistic, but NOT in the way the premise assumes. Taiwan genuinely is a world centre of wafer reclaim - that part is solid and well documented. But Taiwanese reclaim is a B2B contract business selling to TSMC, Micron and similar, with NO retail channel, and published per-wafer prices essentially do not exist in Taiwan. The cheap, buyable-in-ones-and-twos wafers the premise imagines are a US/EU retail phenomenon, and they are VIRGIN test/dummy wafers, not industrially reclaimed ones. A school can realistically get wafers - most likely by importing from a US/EU research retailer at roughly US$5-40 per small wafer, or by borrowing from a university contact.",
+      "taiwaneseReclaimIndustry": [
+        {
+          "company": "Phoenix Silicon International / 昇陽半導體 (TPE: 8028)",
+          "detail": "Founded 1997, Hsinchu Science Park, second plant at Taichung Port. Reclaimed wafers were 80-85% of revenue in H1 2024 (wafer thinning the remaining 15-20%); 2024 revenue NT$3.55bn; capacity target 800,000 12-inch wafers/yr by end-2025, from 630,000 in 2024; 70-75% of its reclaimed wafers go to advanced nodes. Described as world No. 2 in Jan 2025 and as having overtaken Japan's RS Technologies to become world No. 1 by Oct 2025. 2025 shipments about 9.486m 12-inch-equivalent wafers, +38.1% on 2024.",
+          "sources": ["https://www.psi.com.tw/en/", "https://taipeitimes.com/News/biz/archives/2025/01/23/2003830664", "https://www.taipeitimes.com/News/biz/archives/2025/10/09/2003845142"]
+        },
+        {
+          "company": "Kinik / 中砂 (TWSE: 1560)",
+          "detail": "Yingge, New Taipei, established 1953. Reclaim and test silicon wafers are now its largest segment at 46% of 2025 sales (CMP diamond disks 31%, grinding wheels 23%), FY2025 revenue NT$8,149m. 12-inch reclaim capacity about 400,000 wafers/month.",
+          "caveat": "The segment breakdown is second-hand from a filings aggregator whose page COULD NOT BE READ - this is one of the two injected pages flagged in meta.securityNote. Verify against Taiwan's Market Observation Post System. A press breakdown gives reclaimed wafers 50% / diamond disks 30% / grinding wheels 20%.",
+          "sources": ["https://www.moneyweekly.com.tw/_Article?AID=249328", "https://udn.com/news/story/7252/9421298"]
+        },
+        {
+          "company": "Scientech / 辛耘企業 (TPEx: 3583)",
+          "detail": "Equipment house and reclaimer; entered reclaim in 2006. SEMI profile confirms wet process equipment, wafer reclaim services and distribution products, plus 300mm reclaim. Reclaim capacity about 210,000 wafers/month mid-2026; FY2025 revenue NT$11.371bn. TSMC reported as its largest customer.",
+          "source": "https://www.semi.org/en/resources/member-directory/scientech-corp"
+        },
+        {
+          "company": "Smaller players",
+          "detail": "Hua Hsu Silicon Materials / 華旭硅材 (TPEx: 6682), Hsinchu, Gigastorage subsidiary, developed a recycled-wafer business. Applied Materials (not Taiwanese) operates a 300mm reclaim centre in Southern Taiwan Science Park."
+        }
+      ],
+      "doNotIncludeTheseAsReclaimers": "GlobalWafers / 環球晶圓 and Sino-American Silicon / 中美矽晶 are PRIME and EPITAXIAL wafer makers, not reclaimers (confirmed via SEMI and company pages). Wafer Works / 合晶科技 is prime/epi; one weak secondary source claims reclaim operations and its own site returned HTTP 500 - treat as prime/epi unless verified with the company. Topco Scientific / 崇越 is a materials distributor, not a reclaimer. Hiwin / 上銀 has no wafer connection at all. 'Chyuan Jiuh', 'Eversol' and 'Advanced Wafer Technology' returned zero results tying them to Taiwanese wafer reclaim in English or Chinese - drop unless the team has a primary source.",
+      "usefulFramingDatapoints": "A chipmaker uses roughly 2.7 reclaimed wafers of test/equipment-check material per one 2nm production wafer (https://www.taiwannews.com.tw/en/news/6404223), and a wafer can typically be reclaimed about 6 to 20 times before becoming too thin (https://www.bnext.com.tw/article/78026/semi-psi).",
+      "prices": {
+        "a_virginTestDummyRetailEuUs": {
+          "microChemicalsGermany": "Prices seen 20 Nov 2026, EUR, excl. VAT and shipping. 100mm (4 inch) test: EUR 12.60/wafer (49 pieces or fewer), falling to EUR 9.20 (2000+); lowest quantity selector is 25 wafers, NOT 1. 150mm (6 inch) dummy: EUR 8.00/wafer (24 or fewer), falling to EUR 6.50 (500+); listed 'no longer available', and the EUR 8.50 tier for 25-49 is higher than the tiers either side, probably a page error. Its own definition of dummy grade: 'wider specified, rather cheap wafers' for resist-coating tests and start-up experiments.",
+          "universityWaferUs": "Publishes example figures rather than a dated list: 100mm test/dummy US$4.90-11.90; 150mm test about US$39.00. The key comparison: 100mm prime about US$315 vs 100mm test about US$19.90, with the site stating prime 'can cost more than ten times as much as test grade'. CAVEAT: these are described on the pages as example data points; the main price page carries NO figures, and the reclaimed-wafer page carries no prices and no MOQ - quote only. https://universitywafer.com/prime-vs-test-grade-silicon-wafers.html",
+          "mseSuppliesUs": "Live cart: 300mm test grade US$227.95; for comparison 100mm prime US$57.95, 150mm prime US$72.95, 200mm prime US$109.95, cassette of 25 x 100mm prime US$547.95. CAVEAT: rate-limited, these are search-snippet figures, and MSE renders prices without decimal points in HTML so decimal placement is inferred. Verify.",
+          "noPublicPricing": "Wafer World, SVM and Ted Pella publish no prices - flag as 'no public pricing' rather than guessing."
+        },
+        "b_reclaimedSmallLotInTaiwan": {
+          "theOnlyListingFound": "A 10-piece pack of 12-inch 再生矽晶圓 polished dummy wafers at NT$3,360 (about NT$336, roughly US$10.70, per 300mm wafer), seller iOPEN Mall, seen on the FindPrice aggregator 20 Nov 2026. https://www.findprice.com.tw/g/wafer",
+          "caveat": "HEAVILY CAVEATED: an aggregator entry, not the seller's own page; thickness, resistivity, polish, doping and availability all unknown. It is the ONLY Taiwan-domestic retail wafer listing found in the entire search. Verify by clicking through before citing - but if genuine it is the most useful number here for the team's purposes.",
+          "comparison": "A Shanghai supplier lists reclaimed dummy/test wafers in 150/200/300mm at US$10-100/piece with a 25-piece MOQ (the supplier profile says 50 - inconsistent)."
+        },
+        "c_industrialContractPricing": {
+          "verdict": "OPAQUE. State this plainly. Not a single per-wafer contract price from any Taiwanese reclaimer could be found, in English or Chinese, in filings, investor presentations, trade press or market research. This is NOT a search failure; it is how the industry works - contracts are negotiated per customer on quarterly to annual terms.",
+          "onlyQuantitativeSignal": "Rate of change, not level: in H2 2022 Taiwan's three reclaimers (Kinik, Scientech, Phoenix Silicon) raised quotes by an average 5-10%, with Kinik's increases averaging about 10% and reaching 20% for some customers. https://technews.tw/2022/08/18/reclaim-wafer-price-increase/",
+          "doNotCite": "SEMI's reclaim market-size figures are dated (US$510m in 2017, US$603m in 2018, 22 suppliers tracked) and third-party 2025 forecasts disagree by an ORDER OF MAGNITUDE (US$0.61bn vs US$5.94bn) - do not cite the third-party numbers; the scope definitions clearly differ."
+        }
+      },
+      "smallQuantityAccess": {
+        "verdict": "Yes for a school, but by IMPORTING.",
+        "detail": [
+          "UniversityWafer states no minimum order quantity, sells single wafers, and ships a single wafer coin container on request for orders under 3 wafers. Its reclaimed range covers 2-inch to 300mm, SSP or DSP, quote-based. https://universitywafer.com/about.html",
+          "MSE Supplies sells individual wafers and 25-wafer cassettes through an online cart. Free shipping over US$500 is US-domestic only.",
+          "MicroChemicals is small-LOT, not single-wafer: lowest webshop quantity 25, packaging in units of 25 or 40.",
+          "Sigma-Aldrich Taiwan lists 2-inch and 3-inch SSP undoped N-type wafers - a genuine Taiwan-domestic ordering channel, though no price was visible. https://wwwqws.sigmaaldrich.com/TW/zh/substance/silicon28097440213",
+          "Is small-quantity retail a US/EU phenomenon? Essentially yes. Shopee, Ruten, Taobao, Alibaba, FindPrice and Made-in-China were all searched in Chinese and English; the iOPEN Mall 10-pack is the only Taiwan-domestic consumer listing found. One Chinese-language source says single-piece or small-lot retail is 並不常見 (not common)."
+        ],
+        "GENUINE_GAP": "Shipping to Taiwan - no published Taiwan rates for ANY vendor. MSE's free shipping is US-only; MicroChemicals quotes ex-shipping; UniversityWafer asks buyers to email for estimates. RECOMMENDATION: email all three with '1-25 wafers, 100mm or 150mm test/dummy, ship to Taiwan' and put the real quotes in the report. That is a 20-minute task producing better numbers than anything public. Customs treatment of semiconductor materials into Taiwan was not researched."
+      },
+      "educationalAccess": {
+        "documentedTaiwaneseHighSchoolRoute": "TSRI x TSMC high-school semiconductor camp (高中生半導體科普營). Fully funded by TSMC, organised by TSRI (國研院台灣半導體研究中心), open registration with selection BY LOTTERY; first session 24 July 2025. First phase runs three consecutive years targeting 4,800 high-school students. Two modules (IC design; chip manufacturing), held at TSRI's Hsinchu and Tainan bases, with students physically entering the chip-manufacturing floor. CAVEAT: that page returned 403; details are from search results. VERIFY DIRECTLY WITH TSRI and check the current registration window - this is the single most actionable item in this section. Nothing found suggests students take wafers away. https://wantrich.chinatimes.com/news/20250724900548-420501",
+        "tsriFabricationServices": "University-level only - be honest about this. TSRI provides chip implementation on TSMC 7nm, 16nm FinFET and 28nm HPC+ with regular shuttle runs, but eligibility in EVERY programme document found is 國內各公私立大學院校教授研究群 - professor-led research groups at domestic universities. Pricing is tiered academic vs industry (e.g. e-beam direct-write at NT$250/minute academic vs NT$40,000/hour industry). No document addresses high-school eligibility; TSRI's own site returned empty content. State it as 'university-level in every document found; high-school eligibility not addressed - ask TSRI directly.' NDL was merged into TSRI under NARLabs, so TSRI is the successor.",
+        "otherOutreach": "All curriculum/camp rather than materials access: TSMC x NYCU x high schools 大哥哥大姐姐講AIoT半導體, a 6-hour micro-curriculum running since 2022, reaching about 10 high schools by end-2023 including Jianguo, Zhongshan Girls, Taichung Girls and Kaohsiung Senior High; TSMC Education and Culture Foundation 台積電女科學家之旅; TSMC x NYCU 台灣半導體IC營 (760 summer places).",
+        "universityCleanrooms": "Will process a wafer you bring. NTU NEMS Center publishes a training fee schedule with academic vs commercial rates (https://nems.ntu.edu.tw/en/cp_n_175743.html); NYCU Nano Facility Center uses per-job commissioned-work quotation forms, and its oxidation/diffusion form states substrates are currently limited to Si wafers. CAVEAT: no NTHU fee schedule found, no university cleanroom policy addressing high-school users, and no per-wafer purchase price from any Taiwanese university facility.",
+        "VERIFIED_NULL_RESULT": "No documented case of an iGEM team or Taiwanese science-fair project obtaining silicon wafers or fab access through a formal programme. This is a GENUINE NULL RESULT, not a search failure - the report should not imply precedent exists."
+      }
+    },
+
+    "industrialFactsCouldNotVerify": {
+      "figuresToDropOrNotPublishAsSourced": [
+        "'Worst drought in 56 years' (2021) - widely repeated, no official Taiwanese source. Use 'worst in more than half a century' plus the WRA's officially sourced 'first year since 1964 without a typhoon'.",
+        "'TSMC has about 90% of leading-edge capacity' - not in TrendForce's or Counterpoint's published figures. Use TSMC's 7nm-and-below = 74% of wafer revenue instead.",
+        "'Taiwan 69% of sub-10nm capacity (2022)' - not in the 2024 SIA/BCG report (full PDF extracted and searched). Use the 2021 report's 92%, dated.",
+        "Fluoride '1,000-3,500 mg/L' in fab wastewater - traces to a 1994 Taiwanese source that could not be obtained, cited second-hand in a paywalled 1999 paper, and contradicted by another citation of the same source (500-2,000 mg/L). Use 300-1,200 mg/L and the measured 806 mg/L.",
+        "'Semiconductors take 10% of Taiwan's water' - collides with the WRA split in which 10% is ALL industry. Use absolute volumes instead.",
+        "PFAS 'thousands of applications' - an SIA characterisation with no published basis. The only defensible count is the 28-formulation wet-chemistry survey.",
+        "China's germanium production share (e.g. '59.2%') - USGS does NOT publish one and says global data are unverifiable. Use the export-volume collapse and 3x price rise instead.",
+        "Unimicron '22%' ABF share; third-party reclaim market-size forecasts; 'three full-scale FBC plants in Hsinchu Science Park'; 'Chyuan Jiuh' / 'Eversol' / 'Advanced Wafer Technology' / Hiwin as Taiwanese reclaimers - all unverified or wrong."
+      ],
+      "genuineEvidenceGaps": [
+        "Indium mg/L range in dilute ITO ETCHING wastewater (Taiwanese theses say only 'ppm grade').",
+        "Any germanium concentration in semiconductor fab effluent.",
+        "Any Ga/In/Ge characterisation of advanced-packaging waste.",
+        "Any Taiwan-specific CMP recovery study.",
+        "Any HF- or BOE-specific fluoride mg/L figure in the peer-reviewed literature.",
+        "A fluoride-exceedance penalty against a NAMED Taiwanese fab (the verified 18.2 mg/L case is an industrial-zone sewer operator; the ASE Houjin River case is acidity/heavy metals, not fluoride - a conflation to avoid).",
+        "SEMI's figure for Taiwan's share of global advanced packaging capacity in 2025.",
+        "Individual AI-server shares for Quanta, Wistron, Inventec (so the four-firm total cannot be summed).",
+        "An authoritative ABF substrate share table (paywalled: TrendForce/Yole).",
+        "Per-wafer industrial contract reclaim pricing in Taiwan, and published shipping rates to Taiwan from any wafer retailer.",
+        "Whether treated Taiwanese fab effluent shows measurable biological toxicity at all - relevant to Concept B and not found anywhere."
+      ],
+      "blockedByAccessControls": [
+        "esg.tsmc.com - HTTP 403 on every attempt (Cloudflare), so TSMC's water reuse rates (85.7% / 90.3% / 88.1%) are second-hand via a Korean outlet and no 2025 figure was obtainable. TSMC's 129 million m3 total and the Tainan reclaimed-water figures ARE primary, via investor.tsmc.com.",
+        "echa.europa.eu - HTTP 403 on every path. The semiconductor derogation is nonetheless solidly verified from the Swedish Chemicals Agency's own document.",
+        "Two SIA papers most likely to hold hard PFAS counts are behind registration forms; Statista's TSMC process-water series is paywalled; PMID 41260055 (a recent Taiwanese wastewater PFAS study) was blocked by a cookie wall and is worth retrieving.",
+        "financialfilings.com (Kinik and Scientech filing pages) - returned prompt-injection content addressed to automated agents; ignored, no data taken. See meta.securityNote."
+      ],
+      "timeCriticalItems": [
+        "China's suspension of the gallium/germanium export ban to the US EXPIRES 27 NOVEMBER 2026 - one week from the verification date. Status must be re-checked against MOFCOM immediately before publication.",
+        "ECHA's SEAC adopted its FINAL PFAS opinion on 19 November 2026, one day before verification, from a single news source, and its '5 to 12 years' framing differs from KEMI's '6.5 or 13.5 years after entry into force'. Verify on ECHA's own site."
+      ]
+    }
+  }
+}

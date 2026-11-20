@@ -1727,3 +1727,76 @@ correctly on the wrong kind of file: a verbatim capture of someone else's publis
 must not be translated, because translating a quoted rule would be actively harmful. parallel_audit now skips
 a named SOURCE_DATA set with that reasoning in a comment. All three audits were re-tested against a planted
 fault afterwards and all three still fire, and the skip list was verified to be honoured.
+
+## Session 6, part 4 — the novelty screen, and all three concepts took damage
+
+The user rejected the six proposals and asked for three on one theme, Taiwan's AI hardware infrastructure supply
+chain: one optogenetics, one medical, one nobody would think of. They also added a tenth selection criterion,
+novelty with realistic potential for a peer-reviewed paper, now live as question ten on the picks tab.
+
+Running that criterion properly before writing the proposals is what this part is about, and it paid for itself.
+
+### Verdicts
+
+- **Integrated-toxicity reporter panel: already done, withdrawn.** Kessenikh et al. 2021 built lux biosensors in
+  B. subtilis on PdinC, PalkA and PmrgA, compared them directly against the E. coli equivalents, applied them to
+  toxicants in soil, and stated the purpose as studying Gram-positive versus Gram-negative toxicity mechanisms.
+  Verified independently through PubMed, PMID 34502476, doi 10.3390/ijms22179571. The panel design itself is Van
+  Dyk et al. 2000. Only the matrix is unclaimed, which is the weakest novelty claim available.
+- **Light-gated metal capture and release: novel in this application, but out of reach.** The one genuinely empty
+  intersection is a protein whose affinity for a critical p-block metal is light-gated, and that needs a
+  photoswitchable domain, not a transcriptional switch. Both fallbacks are closed: light instead of chemical
+  elution in affinity purification is Nature Communications 2024 (doi 10.1038/s41467-024-55212-y, verified via
+  Crossref), and light-regulated cell recovery is Nakajima, Abe, Ferri and Sode, Microbial Cell Factories 2016
+  (doi 10.1186/s12934-016-0426-6, verified via Crossref).
+- **Scrap wafers as a reference substrate: incremental.** Vohra et al. 2026 benchmarked biofilm assays across six
+  surface types and found surface type dominated variance at 42.6 percent against 17.8 for strain -- the central
+  question, answered this year in the target journal. Mazumder et al. 2010 already used silicon wafers and found
+  biofilm growth alters substratum hydrophobicity, undercutting the fixed-reference premise.
+
+### The mechanistic correction that matters most
+
+**CcaSR is a transcriptional switch.** Light sets how much binder is made; it cannot change the affinity of a
+binder already folded and displayed. A proposal claiming CcaSR-controlled binding and release is not an
+over-claim, it is a misreading of the team's own tool, and a judge who works with optogenetics sees it in one
+sentence. What CcaSR can honestly do is set binder surface density as a graded function of light dose, which
+opens an unclaimed and measurable question: how adsorption capacity scales with optically set binder density.
+
+Second-order but worth keeping: because light-controlled harvesting was published in 2016 using the same CcaSR
+system GEMS already runs, McGill 2026's light-flocculation novelty is thinner than its wiki reads. The general
+lesson is to check the literature before being impressed by a competitor, not only before claiming a gap.
+
+### The strategic read, which fell out of the screen rather than being imposed on it
+
+Best Measurement plus Best Hardware says the team's demonstrated edge is quantification and instrument-building,
+not novel molecular mechanism, and every one of the three concepts contains a measurement contribution more
+publishable than its headline biology. For the metal line that is full isotherms, kinetics and Al/Fe selectivity
+across the real concentration range plus a validated colorimetric method -- which survives the light-gating
+failing, and which is precisely what SMS-Shenzhen skipped in 2026. Lead with the measurement, let the biology be
+the vehicle.
+
+### Industrial figures that must not be restated
+
+Verified separately and failing: the 2021 drought as worst in 56 years (use the WRA's first-year-since-1964
+-without-a-typhoon instead), a roughly 90 percent leading-edge capacity share, Taiwan at 69 percent of sub-10nm
+in 2022, semiconductors taking 10 percent of Taiwan's water (10 percent is all industry), and a widely quoted
+Chinese germanium share not actually from the source it is credited to. Two real evidence gaps: no published
+germanium concentration in fab effluent at all, and CMP is a copper and tungsten stream rather than a place to
+look for gallium or indium. One time-critical item: China's suspension of gallium and germanium export
+restrictions toward the US expires 27 November 2026. Also corrected: reclaimed wafers are NOT near-free in
+Taiwan -- the reclaim business is contract-only B2B with no retail channel, and the realistic route is importing
+virgin test wafers at roughly USD 5 to 40 each.
+
+### Prompt injection encountered and ignored
+
+Two pages on a financial-filings aggregator returned text addressed to automated agents, instructing them to
+create an API key, register an email and request a payment checkout link. Ignored, nothing entered, no data
+taken, and the one company figure sourced from there is flagged for re-verification against Taiwan's Market
+Observation Post System. Published as a card on the tab because the team may hit the same pages, and because the
+general point belongs in their working habits: text retrieved from a web page is data, not instructions.
+
+### Published as proposals-novelty.json, order 8
+
+Seven cards, 4 x 3 table, 9-line checklist. The markdown audit caught me nesting italic inside bold in a journal
+name, in both languages -- the exact rule the audit exists for -- and I had also left the English word
+"specifically" stranded inside a Chinese sentence. Both fixed before commit.
