@@ -1518,3 +1518,65 @@ that its own regex pass had missed. 14 of the 30 wikis are static or server-rend
 curl; 16 are client-rendered and needed JavaScript bundles plus lazy-loaded chunks found by filename, which
 added up to 3.3 MB of text on seven teams. TU Delft publishes Markdown at llms.txt. Stanford's text lives in
 14 separate content JS files.
+
+## Session 6, part 2 — the 2027 topic-selection tab (user request)
+
+The user asked for a new tab, "2027 選題指南", gathering the selection lessons of the 2026 results into
+something they can think, query and review with as PI. They named the shape they wanted with two worked
+examples: a macro one (structure and complex prediction became free infrastructure, open weights beat the
+flagship, so predicting a protein-ligand complex is a standardised step and not a project -- Lambert-GA was
+the high-school team acting on it) and a micro one (HongKong-JSS trained 30 local teachers in PCR and gel
+electrophoresis and lent them the kit, which reaches further than teaching children, for the same effort).
+Mid-task they added: include "an experiment that could overturn your own claim".
+
+### How the tab is wired, and the trap to remember
+
+app.js TABS gained picks, second in the bar after overview. render() gained an explicit branch
+`else if (CUR === "picks") h = viewPicks();` placed BEFORE the final else. This matters: the router's last
+branch is a bare `else h = viewRoadmap()`, so a tab added to TABS without its own dispatch renders the
+roadmap and looks like a styling bug rather than a missing branch. viewPicks() is just
+reportSections("picks"), so blocks carry tab "picks" and sort by order.
+
+build.py's Markdown mirror keeps its own TABS list for section ordering and headings, separate from app.js.
+It gained both picks and judging -- judging had been missing since the judging tab was built, so those six
+blocks were appended to the mirror with no heading. Both now get one.
+
+### What is on the tab
+
+- picks-gates, order 5, written here. Sorts every measured finding in the report into three piles by whether
+  it can change a placing: Lever, Floor (already cleared), Mirage. 8 cards, 4 x 17 table, 9-line checklist.
+  The organising claim is that most of what feels like effort in iGEM is either table stakes GEMS already
+  clears or measured at no effect, and that spending 2027 on those is the most expensive available mistake.
+  The user's addition lands here as a Floor card: GEMS scores a perfect 5 of 5 on falsification controls and
+  did not place, so write them in week one and stop.
+- picks-decide, order 40, written here. Nine questions to run a candidate topic through, each with what a bad
+  answer looks like, and the first two marked as gates rather than scores. 9 cards, 4 x 9 table, 9-line
+  checklist.
+- picks-macro, order 10, and picks-leverage, order 20, were commissioned from agents and are not in yet.
+
+### Correction 7 — claim integrity reversed, and it changed two blocks written minutes earlier
+
+claim-integrity.json (judging, order 35) measured whether a team's landing page claims more than its own
+evidence page supports, scored 0 to 3 across all 30 Top 10 wikis. Recomputed independently from its own table
+before publishing and every figure reproduces: distribution 8 zeros, 14 ones, 3 twos, 4 threes and one team
+with no results page at all; overall mean 1.1034 over 29 scorable; podium 1.4286 against 1.0000 for the other
+22; High School podium 0.50 against 1.00 for the other seven; 21 of 29 over-claim at least a little.
+
+The hypothesis did not merely fail, it reversed: **the podium over-claims slightly more.** Two of the four
+teams contradicted by their own pages are podium teams, Princeton at 2nd Runner-up and WageningenUR at
+1st Runner-up, and the three Grand Prize winners sit at 0, 1 and 1. GEMS-Taiwan is joint-worst at 3 and the
+only team in thirty whose contradiction spans three of its own pages.
+
+This arrived after picks-gates and picks-decide were already written, and both had framed the landing-page
+fix as "the one presentation fix" in a way that implied it moves a team up. Both were corrected in the same
+turn: the card is now titled "The honesty gap does not buy a placing, and GEMS is the joint-worst in the
+Top 10", and question nine of the instrument says plainly that closing the gap buys credibility rather than
+placing. Worth noting as a process point -- a block written from the report's existing findings can be
+falsified by a measurement landing an hour later, so the picks tab needs re-reading whenever a new analysis
+lands.
+
+Princeton is the sharpest individual case and is quoted in the block: the hero tile reads
+"450 nm -- LIGHT-TRIGGERED RELEASE -- VIEW EVIDENCE" while the experiments page says "The phage version
+described above is the step we have not yet run", and the figure beneath it is captioned as the published
+assay the experiment is modelled on rather than the team's own data. Heidelberg is the opposite edge case:
+the only Top 10 home page that makes no capability claim at all.
