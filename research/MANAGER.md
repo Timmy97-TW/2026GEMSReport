@@ -1386,3 +1386,70 @@ All three agents were sent the method reminders: curl before the browser pane, h
 before pattern-matching, never a bare "t test", print all regex matches, literal Chinese
 characters in a UTF-8 heredoc rather than hand-written escapes, and the markdown rule that
 bold content may not contain an asterisk.
+
+### Correction 5 — the platform-versus-applied figure was misread, and an agent caught it
+
+findings-index card 10 and the README both said that across the platform villages "2 of 26 decorated teams
+closed a design loop at all, against 14 of 45 in the applied villages". That misreads the source. The
+authoritative numbers are in ihp-by-village.json, whose own table is explicit: Platform villages combined,
+40 teams, 26 of 40 closed a loop, 2 of 26 with a non-expert. All villages, 106 teams, 71 of 106 closed a
+loop, 16 of 71 with a non-expert. So 26 is not the number of platform teams, which is 40, and 2 is not the
+count of teams that closed a loop, which is 26. The correct sentence is the one that block's body already
+used: the five platform villages closed 26 loops between them and 2 involved a non-expert, against 14 of 45
+across the applied villages. The arithmetic is self-checking and now holds: 26 + 45 = 71 closed loops, and
+2 + 14 = 16 non-expert, which the source narrows to nine or ten when only physical design changes count,
+the other twelve having changed claims, language, education material or framing only.
+
+The README also said "nine or ten exceptions in 106", which attaches the figure to the wrong denominator;
+it is nine or ten of the 71 that closed a loop. Fixed in both languages and in the README.
+
+How it was found: the good-governance agent was handed the wrong version in its brief, went to the source
+block rather than trusting the brief, and wrote the correct reading. Worth remembering as an argument for
+telling an agent which block is authoritative instead of only quoting figures at it.
+
+### Correction 6, retracted — the 2024 E. coli exclusion quote is real after all
+
+Checked the verbatim anchors for the GEMS 2024 claims against the cached literal dump and reported to two
+running agents that "We want to rule out the effect of E. coli in the death of mosquito larvae" could not be
+found, and that the four gene names were unverifiable. Both of those were wrong, and the retraction went out
+within the same window. The cached dump 2024-lits.txt simply does not cover the proof-of-concept page;
+2024pages/proofofconcept.txt does, and the sentence is there verbatim, with the species name on its own line
+because the page italicises it. The panel is named in full on that page: Gambicin, Rel1, Rel2 and defensin,
+each explained -- Gambicin and defensin as antimicrobial peptides, Rel1 and Rel2 as Relish-1 and Relish-2,
+the downstream transcription activators of the Toll and IMD pathways. The exclusion also reaches a stated
+conclusion: "This data indicated that the mortality observed in the larvicidal assay was not due to the
+introduction of BL21(DE3)."
+
+This is the same trap as the p-value false alarm last session, one level up: a string absent from one
+extraction is not a string absent from the wiki. Check every cached artefact for a page before doubting a
+sourced quote, and prefer the per-page dumps in 2024pages/ over the whole-bundle literal dump.
+
+What genuinely was new, and is now published in gems-three-seasons card 3: the exclusion is finished for the
+37 C induction and the team declared it unfinished for the 20 C arm -- "We acknowledge the limitation of this
+particular study because we did not compare it to BL21(DE3) ... Our team had a shortage of mosquito larvae to
+conduct additional groups during this period of time" -- and the panel was largely null for the 37 C arm,
+"the majority of the transcripts of immune genes were not regulated". That is the same disclosure habit as
+the LC50 series, whose own incomplete arm is disclosed on the same page, so the card now says the exclusion
+is finished for one condition and declared unfinished for the other, and its third chip reads "incomplete arm
+disclosed" instead of "two confounds eliminated".
+
+### Wave 8 result 1 of 3 — good-governance.json, published
+
+Validated independently rather than on the agent's self-report: 9 cards, 5 x 5 table, 9-line checklist, every
+_zh array matching, build silent on all three audits, Chinese reading as primary text rather than translation.
+Entry bar, five named exits with only one of them success, two reviews a year on dates fixed a year ahead and
+never within eight weeks of an iGEM deadline, a monthly roll-call where silence is an exit rather than a
+continuation, a cap of five live slots with at most two report-origin, a six-line handover, and a
+fourteen-question listening-visit instrument. It declares its own blanks -- the two review dates, who holds
+the convener role, where the files live, how many members can sign as owners, and who contacts Chen Hui-wen --
+rather than inventing them, and it states that nothing in it has been tested because the programme has not yet
+run a full cycle. Overview card added as findings-index card 5.
+
+### Wave 8 result 2 of 3 — real-target-routes.json was NOT written
+
+The agent was terminated by model safeguards, which flagged its task as biology-risk. Nothing was written and
+nothing is salvageable from it. The safeguards cover this session too, so this analysis was not attempted
+here by hand. The brief is recorded above under Wave 8 and the question remains open and valuable: the report
+says the podium goes to the claim measured on the real target but has never said how a team reaches one.
+A future attempt should probably narrow the brief to access routes, permissions and partner types, and avoid
+framing that reads as toxin or pathogen methodology.

@@ -86,6 +86,25 @@
       "link": "good"
     },
     {
+      "kicker": "Governance",
+      "kicker_zh": "治理",
+      "title": "The exit rule is the one a club never writes, and it is the one that decides whether the programme lives",
+      "title_zh": "退場規則是社團從來不會寫的那一條，而它決定了這個計畫活不活",
+      "body": "Entry rules are easy and everybody writes them. This report already measured what happens without an exit rule: of 78 readable returning teams, **5 carried a problem forward**, none of the six returning Grand Prize teams did, and only **3 of 106** credit their predecessor. A programme cannot learn whether carrying a problem works until it records the ones it dropped — and nobody in the field records those. So the Science for Good pipeline now has an entry bar (a named person outside GEMS who described the problem in their own words before anyone offered them anything, one number that would move, a named operator, and the cost of the tenth deployment against the first), **five named exits of which only one is success**, a cap of five live slots that binds entry to exit, a six-line handover, and a listening-visit instrument of fourteen questions that opens on \"walk me through yesterday\" rather than on the word problem.",
+      "body_zh": "入列規則很容易，每個社團都會寫。沒有退場規則會發生什麼事，這份報告已經量過了：78 支前一年專案查得到的回鍋隊伍裡，**只有 5 支把題目帶了下去**，六支回鍋的總冠軍級隊伍一支也沒有，而 106 支之中只有 **3 支**對自己的前一屆表示過感謝。一個計畫要學會「把題目帶下去到底有沒有用」，前提是它記錄了那些被放掉的題目——而這個領域裡沒有人在記錄。所以科學向善的清單現在有了入列門檻（一位 GEMS 以外的具名人士，在任何人向他提出任何東西之前用自己的話描述過這個問題；一個會動的數字；一位具名的操作者；以及第十次佈署相對第一次的成本），**五條具名的出路，其中只有一條叫成功**，五個名額的上限把入列綁在退場上，六行交接，以及一套十四題的傾聽訪談工具——它的第一題是「帶我走過昨天」，而不是「你有什麼問題」。",
+      "chips": [
+        "5 exits, 1 is success",
+        "5 live slots",
+        "14 questions"
+      ],
+      "chips_zh": [
+        "五條出路，一條叫成功",
+        "五個名額",
+        "十四個問題"
+      ],
+      "link": "good"
+    },
+    {
       "kicker": "Human practices",
       "kicker_zh": "人類實踐",
       "title": "The loops that closed were closed by experts, not by publics",
@@ -171,13 +190,13 @@
       "kicker_zh": "人文實踐",
       "title": "The divide is not medical versus agricultural — it is platform versus applied",
       "title_zh": "分界不在醫療與農業之間，而在平台與應用之間",
-      "body": "Therapeutics teams close loops with non-experts about as often as bioremediation teams do. What actually separates the field is whether anyone outside a lab ever operates the thing: across the platform villages — Foundational Advance, Space, Software & AI, Biomanufacturing — **2 of 26** decorated teams closed a design loop at all, against **14 of 45** in the applied villages.",
-      "body_zh": "治療類團隊與生物復育類團隊，和非專業人士閉合迴路的頻率其實差不多。真正分開這個領域的，是有沒有實驗室以外的人實際操作這個東西：在平台類賽道——Foundational Advance、Space、Software & AI、Biomanufacturing——**26 支得獎隊伍中只有 2 支**曾閉合設計迴路，應用類賽道則是 **45 支中有 14 支**。",
+      "body": "Therapeutics teams close loops with non-experts about as often as bioremediation teams do. What actually separates the field is whether anyone outside a lab ever operates the thing: the five platform villages — Foundational Advance, Space, Software & AI, Biomanufacturing, Fashion & Cosmetics — closed **26 loops between them and only 2 involved a non-expert**, against **14 of 45** across the applied villages.",
+      "body_zh": "治療類團隊與生物復育類團隊，和非專業人士閉合迴路的頻率其實差不多。真正分開這個領域的，是有沒有實驗室以外的人實際操作這個東西：五個平台類賽道——Foundational Advance、Space、Software & AI、Biomanufacturing、Fashion & Cosmetics——合計閉合了 **26 條迴路，其中只有 2 條牽涉非專業者**，應用類賽道則是 **45 條之中有 14 條**。",
       "chips": [
-        "2 of 26 vs 14 of 45"
+        "2 of 26 loops vs 14 of 45"
       ],
       "chips_zh": [
-        "2/26 對 14/45"
+        "迴路 2/26 對 14/45"
       ],
       "link": "good"
     },

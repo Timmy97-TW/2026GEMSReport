@@ -71,11 +71,17 @@ one it cleared in 2024 and has not cleared since. The short version of everythin
 - **8 of 21 award-winning software tools are still usable.** Every live one was hosted on wiki-freeze day;
   every source-only tool's wiki lists localhost as its only address. Stars and forks across every repository
   checked: zero.
+- **The Science for Good pipeline now has an exit rule, which is the half nobody writes.** Of 78 readable
+  returning teams 5 carried a problem forward, none of the six returning Grand Prize teams did, and 3 of 106
+  credit their predecessor — a programme cannot learn whether carrying a problem works until it records the
+  ones it dropped. The programme has an entry bar, five named exits of which only one is success, a cap of
+  five live slots that binds entry to exit, a six-line handover, and a fourteen-question listening-visit
+  instrument that opens on "walk me through yesterday" rather than on the word problem.
 - **The loops that closed were closed by experts.** Of all 106 decorated teams, 71 can point at a stakeholder
   who visibly changed the design — but almost every one of those stakeholders was a credentialled technical
-  expert, with nine or ten exceptions in 106. The split is not medical against agricultural: it is platform
-  against applied. Across Foundational Advance, Space, Software & AI and Biomanufacturing, 2 of 26 teams
-  closed a design loop at all, against 14 of 45 in the applied villages.
+  expert, with nine or ten of the 71 closing on somebody who was not. The split is not medical against
+  agricultural: it is platform against applied. The five platform villages closed 26 of those loops between
+  them and only 2 involved a non-expert, against 14 of 45 across the applied villages.
 - **The credible commercial sections published a model showing their own product losing** —
   Worldshaper-Shanghai's negative NPV, DTU-Denmark's LCA, Stockholm dismantling its venture when the safety
   board killed open-water release.

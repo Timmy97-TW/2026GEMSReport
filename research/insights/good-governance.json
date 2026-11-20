@@ -1,0 +1,291 @@
+{
+  "id": "good-governance",
+  "tab": "good",
+  "order": 22,
+  "kicker": "The constitution",
+  "kicker_zh": "計畫章程",
+  "title": "How a problem enters the pipeline, and how it leaves",
+  "title_zh": "一個題目怎麼進清單，又怎麼離開",
+  "lede": "Entry rules are the easy half and every club writes them. The half that decides whether the programme survives is the exit rule, because this report already measured what happens without one: of 78 readable returning teams, 5 carried a problem forward.",
+  "lede_zh": "入列規則是容易的那一半，每個社團都寫得出來。真正決定這個計畫活不活下去的是退場規則，因為本報告已經量過沒有退場規則的後果：78 支可查的回鍋隊伍裡，只有 5 支把題目帶到下一年。",
+  "body": "The pipeline page says what is in the pipeline. It does not say how anything got there, and it says nothing at all about how anything gets out. **A problem that cannot be ended is never ended.** It stays on the list, unvisited and undiscussed, until the cohort that cared about it graduates and the whole list is quietly dropped. That is not a hypothetical failure mode; it is the one this report measured across an entire competition field.\n\n**The case for writing the exit rule first.** Of the 106 decorated 2026 teams, 81 had entered iGEM before and 78 of those had a previous project anyone could read. **5 of those 78 carried a project line forward.** None of the six returning Grand Prize teams did, and only **3 of 106** credit their own predecessor with anything at all. The institution comes back every year; the problem almost never does. And the analysis that produced those numbers refused to say whether carrying a problem across years is worth it, because five cases cannot be compared with anything and all five of them are survivors. That refusal is the argument. **A programme cannot learn whether carrying a problem works until it records the ones it drops**, and nobody in the field records those. GEMS can, at the price of one page per ending.\n\n**The entry bar comes from a different pair of numbers.** Of the 106 decorated teams, 71 closed a stakeholder-to-design loop, and nine or ten of those 71 closed one with somebody who was not a credentialled technical expert. The loops that closed were closed by experts, not by the people the projects were for. Where that gap is widest is not medicine against agriculture: across Foundational Advance, Space, Software & AI and Biomanufacturing, **2 of 26** closed loops involved a non-expert, against **14 of 45** in the applied villages. The separating condition was not the subject but whether a specific person physically operates the thing being changed. So the entry rule below asks for that person by name. Not a user group, not a sector, not a beneficiary: a name, and what they said before anyone offered them anything.\n\n**And the pipeline today fails its own entry rule three times out of five.** Three of the five entries came from this report rather than from a person. That is the honest figure and the rule does not forbid it; it gives that kind of entry a shorter tether. A report-origin entry holds a slot on probation, labelled as such, for two reviews. In that time its owner has to find one person outside GEMS who will say they want it, recorded in that person's own words. If nobody does, it leaves by one of the five named exits, and leaving is not a disgrace — it is the only way the sixth problem ever gets a slot, because **no new entry is admitted until one has left**.\n\n**The listening visit.** The pipeline's recorded next action is to go back to Chen Hui-wen's farm with no method in hand, and that has to mean more than arriving without a plan. The instrument is a notebook and two students. One asks and one writes, and the writer does not talk. Nothing is proposed, nothing is pitched, and synthetic biology is not mentioned; if asked what GEMS does, the answer is that we are learning. Quote verbatim wherever you can. Copy every number in the unit the person uses rather than the unit you would prefer, and write down any word you had to ask the meaning of, because that word is the best lead in the notebook. Ask to watch the thing done once instead of only being told about it. Leave at ninety minutes, before the welcome runs out.\n\n**The questions, in order.** They start from last week rather than from the word problem, because a person asked what their problems are will name the ones they think a visitor wants to hear. (1) Walk me through yesterday, or the last normal working day — what did you do first, and what last? (2) What took longer than it should have? (3) What did you do more than three times? (4) Show me the thing you use most — may I watch you use it once? (5) What work this year had to be done over again because something went wrong? (6) When something goes wrong here, how do you find out, and how long after it happened? (7) Who else is involved in this that we have not met? (8) What have you already tried for that, and what happened? (9) If you had one extra pair of hands for a day a week, what would you put them on? (10) What do people from outside usually get wrong about this place? (11) What would you rather we did not do? (12) Of everything we talked about, which one thing would you most want to be different a year from now? (13) May we write this down, and show it back to you before anyone else reads it? (14) Can we come back, and when is a bad time?\n\nQuestions 8 and 10 are there to break the visitor's expectations rather than confirm them: 8 stops the programme re-proposing something that already failed here, and 10 invites the person to correct the visitor, which is the only question in the set they are the sole authority on. Question 11 is a consent question and a design constraint at the same time.\n\n**The observations, written without asking.** What is already measured here, and with what — a gauge, a scale, a label, a logbook, a wall calendar, a note on a phone; copy one entry out exactly. What is written down, and where, or that nothing is. What is improvised: the thing held together with tape, the tool used for a job it was not made for. Improvisation marks a need the person stopped mentioning years ago. Who physically touches the thing — count the people and name their roles, and if nobody but a trained person touches it, write that down, because it predicts an expert-closed loop. What one go costs in money, minutes and trips, in the person's own unit. What gets thrown away, and what disposal costs.\n\n**The sentence, written the same evening.** The visit produces one filled-in sentence, so that the four admission criteria can be checked against it afterwards instead of argued about: `[named person]` at `[site]` loses or spends `[quantity, in their unit]` per `[week, season, batch]` because `[cause, in their words]`; they would know it was better if `[number]` changed; the person who would operate any fix is `[name and role]`; the tenth one costs `[more, the same, less]` than the first. Line one is criterion one, the operator is criterion two, the number is criterion three, the tenth is criterion four. **Any blank you cannot fill from quoted words is the agenda for the second visit, not a guess.** Then show the sentence to the person and write down what they corrected. Their correction is the evidence. That is how a non-expert's account becomes admissible in a process that otherwise only recognises credentials — verbatim words, a number in their unit, a named operator, and a correction on the record.\n\n**What is blank.** GEMS has not named a convener, has not fixed the two review dates, has not said where the dated files and exit notes will live, and has not counted how many members have a year left and will sign as owners. Those are the club's to fill in, and the rules below are written with the blanks visible rather than guessed at.",
+  "body_zh": "題目清單那一頁說了清單上有什麼。它沒有說任何一個題目是怎麼進來的，也完全沒有說任何一個題目要怎麼出去。**一個無法結束的題目，就永遠不會結束。** 它會一直留在清單上，沒有人去、也沒有人談，直到在意它的那一屆畢業，然後整份清單被安靜地整批丟掉。這不是假想的失效方式，這正是本報告在整個賽場上量到的那一種。\n\n**為什麼要先寫退場規則。** 106 支 2026 年得獎隊伍裡，有 81 支先前就參賽過，其中 78 支的前一個專案是任何人都查得到的。**那 78 支裡，只有 5 支把一條題目線帶到今年。** 六支回鍋的總冠軍級隊伍一支也沒有，而 106 支裡只有 **3 支**對自己的前一屆表示過任何感謝。機構每年都回來，題目幾乎從不回來。而且，產出這些數字的那份分析，拒絕回答「把題目跨年帶下去到底值不值得」，因為五個案例沒有東西可以拿來比較，而且這五個全都是倖存者。那個拒絕本身就是論證。**一個計畫要能學到「把題目帶下去有沒有用」，前提是它記錄了那些被放掉的題目**，而這個領域裡沒有人在記錄這些。GEMS 可以記，代價是每一次結束寫一頁。\n\n**入列的門檻來自另外兩個數字。** 106 支得獎隊伍裡，有 71 支閉合了「利害關係人到設計」的迴路，而這 71 支之中，只有九到十支是和沒有專業資格的人閉合的。真正閉合的迴路，是專家閉合的，不是專案所要服務的那些人閉合的。而這個落差最大的地方，不是醫療對農業：在 Foundational Advance、Space、Software & AI 與 Biomanufacturing 這幾個 village，閉合的迴路有 26 個，其中只有 **2 個**涉及非專業者；而在應用型的 village，45 個之中有 **14 個**。關鍵的分界不是題材，而是「有沒有一個具體的人，用自己的手去操作那個被改動的東西」。所以下面的入列規則要求把那個人具名寫出來。不是使用族群，不是產業，不是受益者：是一個名字，以及在任何人向他們提出任何東西之前，他們說過的話。\n\n**而今天的清單，五個條目裡有三個沒有通過自己的入列規則。** 五個條目裡有三個來自本報告，不是來自某一個人。這是誠實的數字，而規則並不禁止這種條目；規則只是給它一條比較短的繩子。來自報告的條目可以占一個名額，但要標示清楚，而且只能占兩次檢視的時間。在這段時間裡，負責人必須找到 GEMS 以外的一個人說出「我要這個」，並且用那個人自己的話記錄下來。如果沒有人說，它就從五條具名的出路之一離開——而離開不是丟臉，那是第六個題目唯一能拿到名額的方式，因為**在有人退場之前，不會有新的題目進來**。\n\n**去聽的那一次拜訪。** 清單上記錄的下一步，是回到陳惠雯老師的農場，手上不帶方法；而「不帶方法」必須比「不帶計畫」更有內容。這個工具就是一本筆記本和兩名學生。一個人問，一個人寫，寫的人不說話。不提出任何東西，不推銷任何東西，也不提合成生物學；如果被問到 GEMS 在做什麼，答案是我們是來學的。能逐字抄就逐字抄。每一個數字都用對方自己的單位抄下來，不要換成你習慣的單位；還要把你必須回頭問意思的每一個詞寫下來，因為那個詞是筆記本裡最好的線索。要求親眼看一次那件事怎麼做，而不是只聽人家講。九十分鐘就走，在對方的好意用完之前走。\n\n**問題，照這個順序問。** 它們從上個禮拜問起，而不是從「問題」這個字問起，因為一個被問「你有什麼問題」的人，講出來的會是他認為訪客想聽的那些。（1）帶我走一遍昨天，或者最近一個正常的工作日——你最先做什麼，最後做什麼？（2）有哪一件事花的時間比它該花的久？（3）有哪一件事你做了三次以上？（4）給我看你最常用的那個東西——我可以看你用一次嗎？（5）今年有哪些工作因為出了錯，必須整個重做？（6）這裡出狀況的時候，你是怎麼發現的？事情發生之後多久才發現？（7）這件事還牽涉到誰，是我們還沒見過的？（8）為了這件事你已經試過什麼？結果怎麼樣？（9）如果每個禮拜多一雙手、整天都歸你用，你會把它放在哪一件事上？（10）外面來的人，通常把這裡的什麼事情搞錯？（11）有什麼是你寧願我們不要做的？（12）我們今天談到的這些，你最希望一年之後哪一件變得不一樣？（13）我們可以把這些寫下來，並且在給任何其他人看之前，先拿回來給你看嗎？（14）我們可以再來嗎？什麼時候不方便？\n\n第 8 題和第 10 題的用處是打破訪客原本的預期，而不是確認它：第 8 題能阻止這個計畫重新提出一個在這裡已經失敗過的東西；第 10 題則邀請對方糾正訪客，而那是整組問題裡唯一一題，對方是唯一的權威。第 11 題同時是一個徵得同意的問題，和一條設計上的限制。\n\n**要觀察、但不用問的事。** 這裡已經在量什麼、用什麼量——一支量表、一台磅秤、一張標籤、一本紀錄簿、牆上的月曆、手機裡的備忘；照抄其中一筆。什麼被寫下來、寫在哪裡，或者根本沒有寫。什麼是臨時湊出來的：用膠帶纏著的那個東西，被拿去做它本來不是為了做的事的工具。臨時湊出來的東西，標示的是一個對方好幾年前就不再提起的需求。誰的手真的會碰到那個東西——數人數，記下角色；如果除了受過訓練的人沒有別人會碰它，把這件事寫下來，因為它預示一個由專家閉合的迴路。做一次要花多少錢、多少分鐘、跑幾趟，而且用對方自己的單位記。什麼被丟掉，以及丟掉要花多少。\n\n**當天晚上就要寫出來的那句話。** 一次拜訪的產出是一句填好空格的話，這樣四個入列條件事後可以拿來核對，而不是拿來爭論：`[具名的人]`在`[場域]`，因為`[原因，用他們自己的話]`，每`[一週、一季、一批]`損失或花掉`[數量，用他們的單位]`；他們會知道情況變好了，是因為`[哪一個數字]`改變了；真正會操作任何解方的人是`[姓名與角色]`；第十個的成本比第一個`[更高、一樣、更低]`。第一段對應條件一，操作者對應條件二，數字對應條件三，第十個對應條件四。**任何一個你無法用引述的話填滿的空格，都是第二次拜訪的題目，不是用猜的。**然後把這句話拿回去給對方看，並且寫下他們改了什麼。他們的更正就是證據。在一個原本只認得出資歷的流程裡，非專業者的說法就是這樣取得資格的——逐字的話、用他們的單位寫的數字、一位具名的操作者，以及一筆留在紀錄上的更正。\n\n**哪些地方是空白的。** GEMS 還沒有指定召集人，還沒有定下兩次檢視的日期，還沒有說有日期的檔案和退場紀錄要放在哪裡，也還沒有數過有多少成員還剩一年以上、並且願意簽名當負責人。那些是社團自己要填的，而下面的規則是把空白留著讓人看見，而不是用猜的補上。",
+  "cards": [
+    {
+      "kicker": "Rule 1 · Entry",
+      "kicker_zh": "規則一 · 入列",
+      "title": "A person, a number, an owner, and an empty slot",
+      "title_zh": "一個人、一個數字、一位負責人，和一個空出來的名額",
+      "body": "A problem is admissible when four things sit on one dated page: a named person outside GEMS who described it in their own words before anyone offered them anything; one number that would move, with the method for measuring it; a named site and a named operator, a person rather than a role; and one sentence on what the tenth deployment costs against the first. Anyone may propose, including the partner. Nothing enters without a member who signs as owner.",
+      "body_zh": "一個題目可以入列，條件是四件事寫在同一張標了日期的紙上：一位 GEMS 以外的具名人士，在任何人向他們提出任何東西之前，用自己的話描述了它；一個會改變的數字，以及測量它的方法；一個具名的場域和一位具名的操作者——是一個人，不是一個職稱；還有一句話說明第十次佈署相對第一次的成本。任何人都可以提案，夥伴本人也可以。沒有成員簽名當負責人，就沒有東西進得來。",
+      "chips": [
+        "four criteria, one page",
+        "anyone may propose",
+        "no owner, no entry"
+      ],
+      "chips_zh": [
+        "四個條件，一張紙",
+        "任何人都能提案",
+        "沒有負責人就不入列"
+      ]
+    },
+    {
+      "kicker": "Rule 2 · Entry",
+      "kicker_zh": "規則二 · 入列",
+      "title": "An entry GEMS thought of holds its slot on probation",
+      "title_zh": "GEMS 自己想到的題目，名額是試用的",
+      "body": "Three of the five entries in the pipeline today came from this report rather than from a person. Three-fifths is the honest figure and it is allowed, with a label and a tether: such an entry holds its slot for two reviews, and in that time its owner must find one person outside GEMS who will say they want it, recorded in that person's words. The label does not come off because the argument got better. It comes off when the person exists.",
+      "body_zh": "今天清單上的五個條目，有三個來自本報告而不是來自某一個人。五分之三是誠實的數字，而且這是允許的，只是要加上標籤和一條繩子：這樣的條目可以占住名額兩次檢視，在這段時間裡，負責人必須找到 GEMS 以外的一個人說出他要這個，並且用那個人的話記下來。標籤不會因為論證寫得更好而撕掉，只有在那個人真的出現時才撕掉。",
+      "chips": [
+        "3 of 5 today",
+        "two reviews",
+        "labelled until someone asks"
+      ],
+      "chips_zh": [
+        "今天是 3/5",
+        "兩次檢視",
+        "沒人開口就一直標著"
+      ]
+    },
+    {
+      "kicker": "Rule 3 · Exit",
+      "kicker_zh": "規則三 · 退場",
+      "title": "Five ways out, and only one of them is success",
+      "title_zh": "五條出路，只有一條是成功",
+      "body": "Handed on, solved and closed, merged, parked with a date, dropped. The table gives each one its trigger, its signatures and its record. Two of them are deliberately cheap: parking needs one signature and a real revisit date, dropping needs a criterion named and the evidence that failed it. Making the unglamorous exits cheap is the whole design, because an exit that costs face is never taken and the list grows instead.",
+      "body_zh": "交出去、做完結案、併入、暫停待議、放掉。表格給每一條出路寫明觸發條件、需要誰簽名、以及要留下什麼紀錄。其中兩條是刻意弄便宜的：暫停只需要一個簽名和一個真的日期，放掉只需要指出哪一個條件沒過、以及是什麼證據讓它沒過。把不光彩的那幾條出路弄便宜，就是整個設計的重點——一條要付出面子代價的出路沒有人會走，結果就是清單愈來愈長。",
+      "chips": [
+        "5 routes",
+        "1 is success",
+        "cheap to end"
+      ],
+      "chips_zh": [
+        "五條出路",
+        "只有一條是成功",
+        "結束要很便宜"
+      ]
+    },
+    {
+      "kicker": "Rule 4 · Exit",
+      "kicker_zh": "規則四 · 退場",
+      "title": "Silence is an exit, not a continuation",
+      "title_zh": "沉默是一種退場，不是延續",
+      "body": "At the first club meeting of each month every owner says one sentence about their entry, and it is written in the file with the date. Two silent roll-calls in a row put the entry on the next review's agenda for parking, and an entry with no dated activity for 180 days is parked at that review whether anyone argues for it or not. This is the rule that stops a list turning into a monument.",
+      "body_zh": "每個月社團的第一次聚會，每位負責人都要用一句話講自己的條目，並且連同日期寫進檔案。連續兩次點名都沉默，這個條目就會被排進下一次檢視的暫停議程；而任何一個 180 天內沒有任何標了日期的進展的條目，到那次檢視就暫停，不管有沒有人替它說話。這條規則是用來阻止一份清單變成一座紀念碑。",
+      "chips": [
+        "one sentence a month",
+        "two silences, then parked",
+        "180 days"
+      ],
+      "chips_zh": [
+        "每月一句話",
+        "兩次沉默就暫停",
+        "180 天"
+      ]
+    },
+    {
+      "kicker": "Rule 5 · Cadence",
+      "kicker_zh": "規則五 · 節奏",
+      "title": "Two reviews a year, on dates iGEM does not choose",
+      "title_zh": "一年兩次檢視，日期不由 iGEM 決定",
+      "body": "The programme has no competition deadline, so its calendar must not borrow one. Two reviews at least four months apart, neither falling in the eight weeks before an iGEM deadline, both fixed in writing a year ahead. Before each one every owner writes three lines: what changed, what the number did, what they want decided. The two dates are a blank the club fills in and then does not move.",
+      "body_zh": "這個計畫沒有比賽截止日，所以它的行事曆也不該去借一個。一年兩次檢視，相隔至少四個月，兩次都不能落在任何 iGEM 截止日前八週之內，而且都要提前一年以書面定下來。每次檢視之前，每位負責人寫三行：什麼變了、那個數字怎麼動、他們希望決定什麼。那兩個日期是社團要填的空白，填完以後就不要再動。",
+      "chips": [
+        "2 a year",
+        "4 months apart",
+        "dates are a blank"
+      ],
+      "chips_zh": [
+        "一年兩次",
+        "相隔四個月",
+        "日期是空白"
+      ]
+    },
+    {
+      "kicker": "Rule 6 · Limit",
+      "kicker_zh": "規則六 · 上限",
+      "title": "Five slots, and no new entry without an exit",
+      "title_zh": "五個名額，沒有人退場就沒有人進來",
+      "body": "Five is argued, not chosen. Each live entry needs an owner who will still be at GEMS next year, and a school club has few of those; each needs at least two contacts a year to stay alive, which is ten visits or calls across five entries, already a term's real work. And the field's failure is not a shortage of problems: 5 of 78 readable returning teams carried one forward, with nothing stopping the rest from listing more. So the cap binds entry to exit.",
+      "body_zh": "五這個數字是論證出來的，不是挑出來的。每一個進行中的條目都需要一位明年還在 GEMS 的負責人，而一個學校社團這樣的人不多；每一個條目一年至少要有兩次接觸才活得下去，五個條目就是十次拜訪或通話，這已經是一個學期實際的工作量。而這個領域的失敗不是題目不夠：78 支可查的回鍋隊伍裡只有 5 支把題目帶下去，而且沒有任何東西阻止其餘的人把清單列得更長。所以上限把入列綁在退場上。",
+      "chips": [
+        "5 live slots",
+        "at most 2 from this report",
+        "entry gated on exit"
+      ],
+      "chips_zh": [
+        "五個進行中名額",
+        "最多兩個來自本報告",
+        "先退場才能入列"
+      ]
+    },
+    {
+      "kicker": "Rule 7 · Handover",
+      "kicker_zh": "規則七 · 交接",
+      "title": "Six lines, because a long form does not get written",
+      "title_zh": "六行，因為太長的表格沒有人會寫",
+      "body": "Only 3 of 106 decorated teams credit their own predecessor with anything, so the fix cannot be a report. Before a student leaves they write six lines: the problem in the partner's own sentence; the person, how to reach them, what they last said and when, and what we promised; the number and its value today; one thing that was tried and did not work; what physically exists and where, with the year it came from; and what they would do next and what they would not do again.",
+      "body_zh": "106 支得獎隊伍裡只有 3 支對自己的前一屆表示過任何感謝，所以解法不可能是一份報告。學生離開之前寫六行：用夥伴自己的那句話寫下題目；那個人是誰、怎麼聯絡、最後一次說了什麼和什麼時候說的、我們答應了他們什麼；那個數字和它今天的值；一件試過而且沒有成功的事；有哪些實體的東西、放在哪裡、是哪一年留下來的；以及他們接下來會做什麼、以及不會再做什麼。",
+      "chips": [
+        "6 lines",
+        "3 of 106 credited anyone",
+        "next owner signs and dates"
+      ],
+      "chips_zh": [
+        "六行",
+        "106 支裡只有 3 支致謝",
+        "下一位負責人簽名加日期"
+      ]
+    },
+    {
+      "kicker": "Rule 8 · The instrument",
+      "kicker_zh": "規則八 · 工具",
+      "title": "Two students, one notebook, ninety minutes, no method",
+      "title_zh": "兩名學生、一本筆記、九十分鐘、不帶方法",
+      "body": "One asks, one writes, and the writer does not talk. Nothing is proposed, nothing is pitched, and synthetic biology is not mentioned; asked what GEMS does, the answer is that we are learning. Quote verbatim, copy numbers in the person's own unit, and write down any word you had to ask the meaning of, because that word is the best lead in the notebook. Ask to watch the thing done once rather than only be told about it.",
+      "body_zh": "一個人問，一個人寫，寫的人不說話。不提出任何東西，不推銷任何東西，也不提合成生物學；被問到 GEMS 在做什麼，答案是我們是來學的。逐字抄，數字用對方自己的單位抄，還要把你必須回頭問意思的每一個詞寫下來，因為那個詞是筆記本裡最好的線索。要求親眼看一次那件事怎麼做，不要只聽人家講。",
+      "chips": [
+        "one asks, one writes",
+        "nothing proposed",
+        "90 minutes"
+      ],
+      "chips_zh": [
+        "一個問，一個寫",
+        "不提出任何方案",
+        "九十分鐘"
+      ]
+    },
+    {
+      "kicker": "Rule 9 · The instrument",
+      "kicker_zh": "規則九 · 工具",
+      "title": "Write the sentence the same evening, then show it back",
+      "title_zh": "當天晚上就寫出那句話，然後拿回去給對方看",
+      "body": "The visit produces one filled-in sentence, so the four criteria can be checked against it afterwards instead of argued about. Any blank you cannot fill from quoted words is the agenda for the second visit, not a guess. Then show the sentence to the person and write down what they corrected. The correction is the evidence, and it is what makes a non-expert's account admissible in a process that otherwise only recognises credentials.",
+      "body_zh": "一次拜訪的產出是一句填好空格的話，這樣四個條件事後可以拿來核對，而不是拿來爭論。任何一個你無法用引述的話填滿的空格，都是第二次拜訪的題目，不是用猜的。然後把那句話拿回去給對方看，並且寫下他們改了什麼。那筆更正就是證據，也正是它讓非專業者的說法，在一個原本只認得出資歷的流程裡取得資格。",
+      "chips": [
+        "one sentence",
+        "blanks, not guesses",
+        "the correction is the evidence"
+      ],
+      "chips_zh": [
+        "一句話",
+        "留空白，不要猜",
+        "更正就是證據"
+      ]
+    }
+  ],
+  "table": {
+    "head": [
+      "Exit",
+      "What evidence triggers it",
+      "Who decides",
+      "What gets written down",
+      "Can it come back?"
+    ],
+    "head_zh": [
+      "出路",
+      "什麼證據觸發它",
+      "誰決定",
+      "要寫下什麼",
+      "可以回來嗎"
+    ],
+    "rows": [
+      [
+        "Handed on",
+        "Someone outside GEMS agrees in writing to keep it and already has what they need to run it",
+        "Owner proposes; convener plus one member who never worked on it agree; the receiving party confirms in writing",
+        "Exit note: who took it, what went with them, what GEMS still owes them, and a date one year out to ask how it went",
+        "Only as a fresh entry, if they come back and ask"
+      ],
+      [
+        "Solved and closed",
+        "The named number was measured before and after and moved, and the partner says it is finished",
+        "Owner proposes with both measurements attached; the partner's own words are quoted in the note",
+        "Exit note plus the before and after figures, the method, the cost, and what would be done differently",
+        "No, but the method joins the programme's reusable list"
+      ],
+      [
+        "Merged",
+        "Two entries share a site, a partner or a number, and one owner can carry both",
+        "The two owners agree; the convener records which file survives",
+        "Both files linked, the merge date named, and the surviving file inherits the handover of the one that closed",
+        "Yes, split again at a review if the surviving owner asks"
+      ],
+      [
+        "Parked",
+        "No dated activity for 180 days, or the owner cannot continue, or an outside condition blocks it for now",
+        "Owner or convener alone, no second signature needed",
+        "Exit note with the reason in one sentence and a revisit date that is an actual date, not a season",
+        "Yes, it returns to the agenda automatically on that date"
+      ],
+      [
+        "Dropped",
+        "A criterion failed on evidence: nobody outside wants it, there is no operator, the number cannot be measured, or the tenth costs what the first did",
+        "Convener plus two members, one of them the owner",
+        "Exit note naming which criterion failed and the evidence that failed it, kept permanently and read aloud before any new entry is admitted",
+        "Only with new evidence from a named person, as a fresh entry"
+      ]
+    ],
+    "rows_zh": [
+      [
+        "交出去",
+        "GEMS 以外的人以書面同意接手，而且手上已經有運作它所需要的東西",
+        "負責人提出；召集人加上一位從未參與這個條目的成員同意；接手方以書面確認",
+        "退場紀錄：誰接走的、什麼一起交出去、GEMS 還欠他們什麼，以及一年後要去問進展的日期",
+        "只能以新條目回來，而且要由對方開口"
+      ],
+      [
+        "做完結案",
+        "指定的那個數字前後都量過，而且真的動了，夥伴也說這件事做完了",
+        "負責人提出，並附上前後兩次量測；紀錄中引用夥伴自己的話",
+        "退場紀錄，加上前後數字、方法、成本，以及如果重做會怎麼做",
+        "不會回來，但方法進入計畫可重複使用的清單"
+      ],
+      [
+        "併入",
+        "兩個條目共用同一個場域、同一位夥伴或同一個數字，而且一位負責人扛得起兩個",
+        "兩位負責人同意；召集人記下保留哪一份檔案",
+        "兩份檔案互相連結、寫明併入日期，保留下來的那份檔案承接被結掉那份的交接紀錄",
+        "可以，保留下來的負責人在檢視時提出就能拆開"
+      ],
+      [
+        "暫停待議",
+        "180 天內沒有任何標了日期的進展，或負責人無法繼續，或有外部條件暫時擋住它",
+        "負責人或召集人單獨決定，不需要第二個簽名",
+        "退場紀錄，用一句話寫下理由，加上一個真的日期而不是一個季節的重啟日",
+        "可以，到那個日期自動回到議程上"
+      ],
+      [
+        "放掉",
+        "有證據顯示某個條件沒過：外面沒有人要、沒有操作者、數字量不出來，或第十個的成本和第一個一樣",
+        "召集人加上兩位成員，其中一位是負責人",
+        "退場紀錄寫明哪一個條件沒過、是什麼證據讓它沒過，永久保存，並在接受任何新條目之前當場讀過",
+        "只有在拿到一位具名人士提供的新證據時，才能以新條目回來"
+      ]
+    ]
+  },
+  "checklist": [
+    "Admit a problem only when a named person outside GEMS has described it in their own words on a dated page, and one member has signed as its owner.",
+    "Hold five live slots and no more, at most two of them entries GEMS thought of, and admit nothing new until something has left by a named exit.",
+    "Give every report-origin entry two reviews to find one person outside GEMS who will say they want it, then exit it.",
+    "Fix the two review dates a year ahead, keep both out of the eight weeks before any iGEM deadline, and have every owner write three lines before each one.",
+    "Park any entry whose owner has nothing dated to show after 180 days, or who is silent at two monthly roll-calls in a row.",
+    "End every entry through one of the five named exits, with the reason, the date, the signatures and whether it can come back; keep the dropped ones forever and read them before admitting anything new.",
+    "Make the first visit to any partner a listening visit: two students, one notebook, ninety minutes, no method proposed and synthetic biology not mentioned.",
+    "Write the candidate problem statement the same evening in the partner's words and their units, show it back to them, and record what they corrected.",
+    "Have every departing owner leave the six-line handover, and have the next owner sign and date that they accepted it."
+  ],
+  "checklist_zh": [
+    "只有在一位 GEMS 以外的具名人士用自己的話、在一張標了日期的紙上描述過它，而且有一位成員簽名當負責人時，才接受一個題目入列。",
+    "維持五個進行中名額、不多不少，其中最多兩個是 GEMS 自己想到的；在有東西從具名的出路離開之前，不接受任何新題目。",
+    "給每一個來自報告的條目兩次檢視的時間，去找到 GEMS 以外的一個人說出他要這個；找不到就讓它退場。",
+    "兩次檢視的日期提前一年定好，兩次都避開任何 iGEM 截止日前八週，而且每位負責人在每次檢視前寫三行。",
+    "任何負責人在 180 天後拿不出標了日期的進展、或連續兩次月點名沉默的條目，一律暫停。",
+    "每一個條目都要從五條具名出路之一結束，寫下理由、日期、簽名，以及能不能回來；被放掉的那些永久保存，並在接受任何新題目之前先讀過。",
+    "任何夥伴的第一次拜訪都是去聽的：兩名學生、一本筆記、九十分鐘，不提出方法，也不提合成生物學。",
+    "當天晚上就用夥伴的話和他們的單位寫出候選題目敘述，拿回去給他們看，並記下他們改了什麼。",
+    "每一位要離開的負責人都留下六行交接，並由下一位負責人簽名加日期表示已經接下。"
+  ],
+  "method": "This section is a governance proposal, not a measurement. Nothing in it has been tested, because the programme it governs has not yet run a full cycle. It argues from three figures measured elsewhere in this report, each of which states its own limits where it is reported. First, 71 of the 106 decorated 2026 teams closed a stakeholder-to-design loop, and nine or ten of those closed one with somebody who was not a credentialled technical expert. Second, 81 of the 106 had entered iGEM before, 78 of those had a previous project that could be read, and 5 of those 78 carried a project line forward; none of the six returning Grand Prize teams did, and only 3 of 106 credit their own predecessor with anything. Three returning teams could not be classified at all, which is why the denominator is 78 rather than 81. Third, across the platform villages 2 of 26 closed loops involved a non-expert, against 14 of 45 in the applied villages. The source analysis of the second figure declines to say whether carrying a problem across years pays, because five cases are too few and all five are survivors; this note treats that refusal as its own argument for an exit rule rather than as support for the programme. Deliberately left blank for the club: the two review dates; who holds the convener role, which GEMS has not named; where the dated files and exit notes live; how many members have at least a year left and will sign as owners; how many visits a year the club can actually make; and who contacts Chen Hui-wen, and when. The five slots, the 180-day limit, the ninety-minute visit and the six handover lines are proposals with reasons attached, not measurements, and the club should change the numbers if it has better ones. Nothing here describes any difficulty of Chen Hui-wen's farm, because none has been recorded yet.",
+  "method_zh": "這一節是一份治理提案，不是一項量測。裡面沒有任何一條被驗證過，因為它所治理的計畫還沒有跑完一個完整的週期。它論證所依據的三個數字都量測於本報告其他處，各自在該處載明了自己的限制。第一，106 支 2026 年得獎隊伍中有 71 支閉合了「利害關係人到設計」的迴路，其中只有九到十支是和沒有專業資格的人閉合的。第二，106 支中有 81 支先前參賽過，其中 78 支的前一個專案是可以讀到的，而那 78 支裡有 5 支把一條題目線帶到今年；六支回鍋的總冠軍級隊伍一支也沒有，而 106 支中只有 3 支對自己的前一屆表示過任何感謝。有三支回鍋隊伍完全無法分類，這就是分母是 78 而不是 81 的原因。第三，在平台型的 village，26 個閉合的迴路中只有 2 個涉及非專業者，而應用型的 village 是 45 個中有 14 個。第二個數字的來源分析拒絕回答「把題目跨年帶下去划不划算」，因為五個案例太少，而且五個全都是倖存者；本節把那個拒絕當成「需要退場規則」的論證本身，而不是當成支持這個計畫的證據。刻意留給社團填的空白：兩次檢視的日期；召集人這個角色由誰擔任，GEMS 還沒有指定；有日期的檔案和退場紀錄放在哪裡；有多少成員還剩至少一年、並且願意簽名當負責人；社團一年實際上跑得了幾次拜訪；以及由誰、在什麼時候聯絡陳惠雯老師。五個名額、180 天的上限、九十分鐘的拜訪和六行交接，都是附了理由的提案，不是量測結果；如果社團有更好的數字，就該改掉。此處沒有描述陳惠雯老師農場的任何具體困難，因為還沒有人記錄過。"
+}
