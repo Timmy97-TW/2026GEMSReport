@@ -1,0 +1,265 @@
+{
+  "id": "proposals-six",
+  "tab": "proposals",
+  "order": 10,
+  "kicker": "The six",
+  "kicker_zh": "六個提案",
+  "title": "Six candidate projects, each answered against all nine questions",
+  "title_zh": "六個候選專案，每一個都把九個問題答完",
+  "lede": "Two built on the optogenetics line GEMS already owns, two medical in motivation but designed so that no human sample is ever touched, and two on ground nobody in the 2026 field claimed. Five of the six are built to attack Best Model, which is the one category that maps onto the High School finalist slate.",
+  "lede_zh": "兩個建立在 GEMS 已經握有的光遺傳學路線上，兩個動機是醫療、但設計成全程不碰任何人體檢體，還有兩個落在 2026 年全體都沒人認領的地上。六個裡有五個是為了攻 Best Model 而設計的，那是唯一一個疊合高中組決賽名單的類別。",
+  "body": "**The optogenetics pair is a sequence, not a choice.** The first characterises the switch and the second uses it on a real field sample; running the second without the first repeats 2026's mistake of stacking an application on a device that was never shown to work. If only one season is available, the first is the stronger candidate, because it passes both gates on day one and because closing a gap in a twelve-paper literature is publishable on its own.\n\n**The medical pair is designed around a rule, not around a disease.** The fastest way to kill a high-school medical project is to touch patients, clinical samples or human tissue. Both candidates here keep the medical motivation and move the sample: one targets a DNA sequence in environmental water, the other a live culture of the causative organism obtained from a collection. Neither requires a single human participant. The eligibility verdicts for both are in the register on this page and should be settled before the biology is designed.\n\n**The new pair claims ground the 2026 field left empty.** Nobody among 106 decorated teams ran an inter-lab measurement ring, and GEMS holds the Best Measurement credential that makes the invitation credible. And no team put a synthetic-biology design-layer artefact against Taiwan's own signature industry, which the industry review identified as the island's structural gap.\n\n**One candidate is marked down and it is marked down honestly.** The resistance-gene proposal needs a nucleic-acid readout the team does not yet own. That is amber rather than red — colorimetric methods are school-feasible — but by the rules of this instrument it must be answered before the topic is chosen rather than in month four.",
+  "body_zh": "**光遺傳學這一對是一個順序，不是一個二選一。**第一個把開關特性描述清楚，第二個把它用在真實田間樣本上；沒做第一個就做第二個，等於重演 2026 年那個錯誤——在一個從未被證明有效的裝置上疊應用。如果只有一季可用，第一個是較強的候選，因為它第一天就通過兩道關卡，而且在一個十二篇論文的領域裡補上缺口，本身就可以發表。\n\n**醫療這一對是圍繞規則設計的，不是圍繞疾病設計的。**終結一個高中醫療題目最快的方式，就是碰到病人、臨床檢體或人體組織。這裡兩個候選都保留醫療動機，把樣本移開：一個以環境水體中的 DNA 序列為標的，另一個以來自菌種保存中心的致病菌活體培養為標的。兩者都不需要任何一位人類受試者。兩者的資格判定都在本頁的檢查表裡，而且應該在設計生物學之前就先定案。\n\n**新題目這一對，佔的是 2026 年全體留空的地。**106 支得獎隊伍裡沒有任何一支跑過實驗室間量測環，而 GEMS 握有讓這份邀請具可信度的 Best Measurement 資格。也沒有任何一支隊伍，把一個合成生物學的設計層產出放到台灣自己的招牌產業旁邊——而產業回顧正是把那一點指認為這座島的結構性缺口。\n\n**有一個候選被扣分，而且是誠實地扣。**抗藥性基因那個提案需要一種團隊目前還沒有的核酸讀值能力。那是黃燈不是紅燈——顯色法學校做得來——但依這套工具的規則，它必須在選題之前就回答，而不是等到第四個月。",
+  "cards": [
+    {
+      "kicker": "Optogenetics 1 · the strongest candidate",
+      "kicker_zh": "光遺傳學 1 · 最強候選",
+      "title": "Characterise the green-light switch itself, in absolute units, and publish the OFF state",
+      "title_zh": "把綠光開關本身特性描述清楚，用絕對單位，並且發表它的關閉態",
+      "body": "**The claim.** Green light switches ACC deaminase production on and off in *B. subtilis* WB800, and here is the dose-response, the OFF state, and how much it varies between plates.\n\n**Why this one.** The entire ReLEAF line rests on a switch the team's own 2026 pages do not evidence: the ELISA showed no change over time, the AmilCP reporter never coloured, and every biological result came from a constitutive bypass rather than the light-gated device. The team named two candidate explanations — well-to-well crosstalk in the light plate apparatus, and red LEDs near 640 nm when CcaSR needs about 672 nm to switch off — and tested neither. In a literature of twelve papers in all of PubMed, closing that gap is a publishable contribution on its own.\n\n**Gate 1, real target by week six:** the switch, in the team's own cells, on day one. **Gate 2, readout on an instrument already owned:** OD600, the reporter, ELISA for ACC deaminase, and the light plate apparatus GEMS built. Both gates pass more cleanly than any other candidate here.\n\n**The model, and this is the Best Model play.** In 2026 the control architecture rested on a published Hill transfer function assumed valid at 20 L, while every induction ran at a single light intensity — modelled rather than measured, by the report's own loop-closure test. Fit the Hill curve to your own dose-response across intensities and wavelengths, and hold back whole intensity levels, not scattered points, so the validation is honest.\n\n**The arm that could break it.** An apparent light response that is really temperature, growth phase or crosstalk. Run dark controls on the same plate at the same time, log temperature per well, map crosstalk by measuring each well with neighbours on and off, and run 672 nm against 640 nm as a named comparison.\n\n**Reach and durability.** Prof. Huang Chieh-Chen at National Chung Hsing University supplied WB800 and is already named; NTHU Taiwan runs engineered *B. subtilis* on the same island. Deposit a characterised part, publish the measurement protocol in absolute units, and publish the light plate geometry file — 9 of 20 award-winning 2026 instruments published none.",
+      "body_zh": "**主張。**綠光能讓 *B. subtilis* WB800 開啟與關閉 ACC deaminase 的生產，而這是它的劑量反應、關閉態，以及盤與盤之間的變異量。\n\n**為什麼是它。**整條 ReLEAF 路線建立在一個「團隊自己 2026 年頁面並未證實」的開關上：ELISA 顯示隨時間沒有變化、AmilCP 報告基因從未顯色，而每一個生物學結果都來自組成型旁路，不是光控裝置。團隊點出兩個可能解釋——光照盤裝置的孔間串擾，以及紅光 LED 約 640 nm 而 CcaSR 需要約 672 nm 才會關閉——兩個都沒測。在一個整個 PubMed 只有十二篇論文的領域裡，補上這個缺口本身就是可發表的貢獻。\n\n**關卡一，第六週前拿到真實標的：**開關本身，在團隊自己的細胞裡，第一天就有。**關卡二，讀值做在已有的儀器上：**OD600、報告基因、ACC deaminase 的 ELISA，以及 GEMS 自己做的光照盤裝置。兩道關卡都比這裡任何其他候選過得更乾淨。\n\n**模型，而這就是 Best Model 的著力點。**2026 年整套控制架構建立在一條「假設在 20 L 仍成立」的已發表 Hill 轉移函數上，而每一次誘導都只在單一光強度下進行——依本報告自己的迴路閉合檢驗，那是被建模而不是被量測。把 Hill 曲線擬合到你們自己跨強度、跨波長的劑量反應上，而且要整個強度層級地留存，不是零散地留幾個點，這樣驗證才誠實。\n\n**那個可能推翻它的實驗組。**一個看起來像光反應、實際上是溫度、生長期或串擾造成的結果。在同一塊盤、同一時間跑暗對照；逐孔記錄溫度；把鄰孔開與關分別量一次來畫出串擾圖；並把 672 nm 對 640 nm 當成具名的比較組來跑。\n\n**觸及範圍與耐久度。**中興大學黃介辰教授提供了 WB800，而且已經具名；清華大學的 NTHU Taiwan 隊在同一座島上就養著工程化的 *B. subtilis*。存進一個特性描述完整的元件、以絕對單位發表量測流程，並且發表光照盤的幾何檔案——2026 年 20 件得獎儀器裡有 9 件完全沒有發表幾何檔案。",
+      "chips": [
+        "both gates pass cleanly",
+        "the Best Model play",
+        "12-paper literature"
+      ],
+      "chips_zh": [
+        "兩道關卡都乾淨通過",
+        "Best Model 的著力點",
+        "只有十二篇論文的領域"
+      ]
+    },
+    {
+      "kicker": "Optogenetics 2 · closes the 2026 gap",
+      "kicker_zh": "光遺傳學 2 · 補上 2026 的缺口",
+      "title": "Assay the preparation that actually reaches the plant, on plants in real field soil",
+      "title_zh": "檢測真正噴到植物上的那份製備，而且用真實田土裡的植物",
+      "body": "**The claim.** A measured dose of ACC deaminase rescues stressed rice in soil from a named field, and here is the dose that was actually delivered.\n\n**Why this one.** 2026's strongest result — a plant rescue at p < 0.0001 with 40 seedlings a condition — sits on a preparation that was never assayed. That is precisely the gate-one failure this report found separating the podium from the rest: seven of seven non-podium High School teams stopped at a surrogate. The fix is not a new project; it is finishing this one.\n\n**Gate 1:** the real target is the spray preparation itself plus stressed plants in soil from the cooperative's field, and the relationship already exists — the team interviewed Mr. Chen Ke-Wei of the Lanyang River Friendly Farming Production Cooperative in 2026. **Gate 2:** ACC deaminase activity assay, ELISA and plant phenotype, all on instruments already owned.\n\n**The model.** Fit plant rescue against *measured* enzyme activity rather than nominal dose — that single change converts an assumed delivery into a measured one. Hold back a whole stress level or a whole field block.\n\n**The arm that could break it.** The rescue comes from something else in the preparation. Run a spent-medium-only arm, a heat-inactivated-enzyme arm and a buffer-only arm. Athens wrote the type specimen for naming this honestly: \"Separating the two requires that buffer-only arm, and until it is run we describe the effect as attributable to the preparation.\"\n\n**The constraint the team already found, and must keep saying.** A farmer at a 2026 forum asked whether the system breaks organic certification; the team researched the regulations and concluded **it cannot be used on organic farms**, then interviewed the cooperative to work out what that means commercially. That is an honest market cap and it belongs on the landing page, not in a footnote.\n\n**Reach.** The multiplier is agricultural extension: the district agricultural research and extension stations employ people whose job is to repeat advice to growers for years. Train the extension officers, not the growers.",
+      "body_zh": "**主張。**一個**被量到的** ACC deaminase 劑量，能讓長在具名田區土壤裡的逆境水稻恢復，而這就是真正送達的那個劑量。\n\n**為什麼是它。**2026 年最強的結果——每組 40 棵苗、p < 0.0001 的植物救援——建立在一份從未被檢測活性的製備上。那正是本報告找到的、把頒獎臺和其他人分開的那個關卡一失誤：七支沒上頒獎臺的高中隊伍，七支全部停在替代物上。解法不是一個新專案，而是把這一個做完。\n\n**關卡一：**真實標的就是噴劑製備本身，加上長在合作社田區土壤裡的逆境植物，而且關係已經存在——團隊在 2026 年訪談過蘭陽溪友善耕作生產合作社的陳科緯先生。**關卡二：**ACC deaminase 活性測定、ELISA 與植物表型，全部做在已經有的儀器上。\n\n**模型。**把植物救援對**實測的**酵素活性作擬合，而不是對名目劑量——光是這一個改變，就把「假設的送達」變成「量到的送達」。整個逆境層級或整個田區區塊地留存起來不用。\n\n**那個可能推翻它的實驗組。**救援其實來自製備裡的別的東西。跑一組只有用過培養基的、一組熱去活化酵素的、一組只有緩衝液的。Athens 寫出了誠實指名這件事的範本：「要把這兩者分開需要那一組只有緩衝液的對照，在它被做出來之前，我們把這個效應描述為可歸因於該製備。」\n\n**團隊已經找到、而且必須繼續講的那個限制。**2026 年一場論壇上，一位農民問這套系統會不會破壞有機認證；團隊去查了法規，結論是**它不能用在有機農場**，接著訪談合作社釐清這在商業上代表什麼。那是一個誠實的市場上限，它該出現在首頁，不是藏在註腳裡。\n\n**觸及範圍。**放大器是農業推廣：各區農業改良場僱用的人，工作就是年復一年把建議重複給農民聽。訓練推廣人員，不是訓練農民。",
+      "chips": [
+        "fixes the 2026 gate-1 failure",
+        "Mr. Chen Ke-Wei already interviewed",
+        "cannot be used on organic farms"
+      ],
+      "chips_zh": [
+        "補上 2026 年關卡一的失誤",
+        "已訪談過陳科緯先生",
+        "不能用在有機農場"
+      ]
+    },
+    {
+      "kicker": "Medical 1 · medical relevance, environmental sample",
+      "kicker_zh": "醫療 1 · 醫療意義，環境樣本",
+      "title": "Antimicrobial-resistance genes in the water a named farm actually uses",
+      "title_zh": "一座具名農場真正在用的水裡，有哪些抗藥性基因",
+      "body": "**The claim.** These resistance genes are present at these concentrations in water from this named site, measured with a stated limit of detection in the real matrix.\n\n**Why this shape.** Antimicrobial resistance is a health problem of the first order, but the moment a project touches patients, clinical samples or human tissue it collides with the rules that most often kill a high-school medical idea. This design keeps the medical relevance and moves the sample out of the clinic: **the target is a DNA sequence in environmental water, not a live human pathogen and not a patient.** That single choice is what makes it buildable by this team in this division.\n\n**Gate 1:** real water from the cooperative's irrigation channel or the Lanyang river, obtainable in week one through a relationship that already exists. **Gate 2 — and this is the one candidate marked down.** GEMS owns OD600, ELISA and plate readers, but a nucleic-acid readout is a capability the team does not yet have. Colorimetric LAMP is cheap and school-feasible, so this is amber rather than red, but it must be answered before the topic is chosen, not in month four.\n\n**The model.** A calibration curve per matrix, inverse calibration to estimate unknowns, a limit of detection computed rather than asserted, and estimates outside the calibrated range flagged instead of reported silently. HongKong-JSS's calibration discipline is the template, including keeping failed predictions inside the error metric.\n\n**The arm that could break it.** The signal is free extracellular DNA, or the water matrix is inhibiting the reaction. Run spiked-matrix recovery, no-template controls on every plate, and a matrix-only arm.\n\n**Reach.** Water-quality inspectors and extension officers are professional repeaters. **Eligibility note:** the claim must stay environmental surveillance — no clinical diagnosis, no patient advice, no human sampling.",
+      "body_zh": "**主張。**這些抗藥性基因，在這個具名場址的水裡，以這些濃度存在，並以一個在真實基質中確立的偵測極限量得。\n\n**為什麼是這個形狀。**抗藥性是第一等的健康問題，但一個專案只要碰到病人、臨床檢體或人體組織，就會撞上那些最常終結高中醫療題目的規則。這個設計保留醫療意義，把樣本移出診間：**標的是環境水體中的一段 DNA 序列，不是活的人類病原，也不是病人。**就是這一個選擇，讓它在這個組別、由這支隊伍做得出來。\n\n**關卡一：**合作社灌溉渠或蘭陽溪的真實水樣，透過已經存在的關係，第一週就拿得到。**關卡二——而這是唯一一個被扣分的候選。**GEMS 有 OD600、ELISA 與盤式讀取儀，但核酸讀值是團隊目前還沒有的能力。顯色型 LAMP 便宜、學校做得來，所以這是黃燈不是紅燈，但它必須在選題之前就回答，不是拖到第四個月。\n\n**模型。**每一種基質各建一條檢量線、以反向校正推估未知濃度、偵測極限用算的而不是用宣稱的，並把超出校正範圍的估計值標示出來，而不是默默報告。HongKong-JSS 的校正紀律就是範本，包括把失敗的預測留在誤差指標裡面。\n\n**那個可能推翻它的實驗組。**訊號其實來自游離的胞外 DNA，或者水樣基質正在抑制反應。跑加標回收、每一盤都放無模板對照，以及一組只有基質的對照。\n\n**觸及範圍。**水質稽查人員與農業推廣人員都是會重複的職業角色。**資格註記：**主張必須停在環境監測——不做臨床診斷、不給病人建議、不採集人體檢體。",
+      "chips": [
+        "medical relevance, no clinic",
+        "amber on gate 2",
+        "target is a sequence, not a pathogen"
+      ],
+      "chips_zh": [
+        "有醫療意義，不進診間",
+        "關卡二是黃燈",
+        "標的是序列，不是病原"
+      ]
+    },
+    {
+      "kicker": "Medical 2 · the 2024 shape, applied to health",
+      "kicker_zh": "醫療 2 · 2024 年的形狀，用在健康上",
+      "title": "A live oral-pathogen biofilm as the real target, with no human sample anywhere",
+      "title_zh": "以活的口腔致病菌生物膜為真實標的，全程不碰任何人體檢體",
+      "body": "**The claim.** A peptide expressed from a whitelist chassis reduces biofilm formation by the actual caries organism in vitro, at this dose, with this effect size.\n\n**Why this shape.** This is the 2024 Grand Prize structure transplanted onto a health problem. In 2024 the real target was live *Aedes albopictus* larvae — the vector itself, not a surrogate — with LC50 reported for all three toxins and 98 dead larvae examined microscopically. Here the real target is a live biofilm of the organism that actually causes the disease, grown in the lab. **No patients, no saliva, no plaque, no human tissue, no clinical claim.** Childhood caries is a genuine and well-documented problem in Taiwan, so the medical motivation is real without the project ever entering a clinic.\n\n**Gate 1:** a live biofilm of the target organism, obtained from a culture collection rather than from a person — so the gate depends on a strain source and an eligibility verdict, not on recruiting anybody. **Gate 2:** biofilm quantification and growth curves on plate readers GEMS already owns.\n\n**The model.** Dose-response of biofilm inhibition with held-back concentrations, and an effect size with an interval rather than a bare p-value.\n\n**The arm that could break it.** The inhibition comes from the chassis or the medium rather than the peptide. Run an empty-vector arm, a heat-inactivated-peptide arm and a spent-medium arm — GEMS already scores a perfect five of five on exactly this habit, so it is cheap here.\n\n**Reach.** School nurses and dental hygienists repeat the lesson professionally, which is the HongKong-JSS shape. **The eligibility question is the whole risk**, and it is answered in the register below rather than assumed here: the strain's risk group, whether it sits on the White List, whether this division may culture it, and whether a check-in is required and by when.",
+      "body_zh": "**主張。**一個由白名單底盤表現出來的胜肽，在體外能降低真正造成齲齒的那種菌所形成的生物膜，在這個劑量下、有這麼大的效應量。\n\n**為什麼是這個形狀。**這是把 2024 年總冠軍的結構，移植到一個健康問題上。2024 年的真實標的是活的 *Aedes albopictus* 幼蟲——病媒本身，不是替代物——三種毒蛋白都報告了 LC50，並以顯微鏡檢視 98 隻死亡幼蟲。這裡的真實標的，是真正造成該疾病的那種菌在實驗室裡長出來的活生物膜。**不碰病人、不採唾液、不取牙菌斑、不碰人體組織、不做臨床主張。**兒童齲齒在台灣是真實且有完整記載的問題，所以醫療動機是真的，而專案全程不必踏進診間。\n\n**關卡一：**標的菌的活生物膜，來源是菌種保存中心而不是人——所以關卡取決於菌株來源與資格判定，而不是取決於招募任何人。**關卡二：**生物膜定量與生長曲線，做在 GEMS 已經有的盤式讀取儀上。\n\n**模型。**生物膜抑制的劑量反應，並留存部分濃度不用；效應量要附區間，而不是只給一個裸的 p 值。\n\n**那個可能推翻它的實驗組。**抑制其實來自底盤或培養基，而不是胜肽。跑空載體組、熱去活化胜肽組與用過培養基組——GEMS 在這個習慣上已經是滿分五類全有，所以在這裡很便宜。\n\n**觸及範圍。**學校護理師與牙科衛生師會以職業身分重複這堂課，這正是 HongKong-JSS 的形狀。**資格問題就是全部的風險**，而它在下面的檢查表裡被回答，不在這裡被假設：菌株的風險群、它在不在白名單上、這個組別可不可以培養它，以及需不需要 check-in、期限是什麼時候。",
+      "chips": [
+        "the 2024 real-target shape",
+        "no human sample at any point",
+        "eligibility is the whole risk"
+      ],
+      "chips_zh": [
+        "2024 年的真實標的形狀",
+        "全程不碰人體檢體",
+        "資格就是全部的風險"
+      ]
+    },
+    {
+      "kicker": "New 1 · genuinely unclaimed ground",
+      "kicker_zh": "新題目 1 · 真正沒人佔的地",
+      "title": "The inter-lab measurement ring nobody in 106 teams ran",
+      "title_zh": "106 支隊伍裡沒有任何一支跑過的實驗室間量測環",
+      "body": "**The claim.** The same light-inducible part, measured in N labs to one protocol in absolute units, varies by this much — and here is how much of that is the lab, the plate and the instrument.\n\n**Why this one.** Across all 106 decorated teams of 2026 there was not one inter-lab measurement ring. The whole category of collaboration that produces a reusable result went unclaimed, in a competition about measurement, while the single team that publicly offered real shared work got zero replies. GEMS holds the 2026 High School Best Measurement award, which is the credential that makes an invitation credible.\n\n**Gate 1:** the real target is the between-lab variance itself, which exists as soon as two labs run the protocol — but it has to be set up in week one, because the gate here is partner commitment rather than sample access. **Gate 2:** OD600 and a reporter, with a shared calibrant, on instruments GEMS already owns and has already won an award for.\n\n**The model, and this is why it is a Best Model candidate.** The model *is* the result: a variance-components fit separating between-lab, between-plate and within-plate contributions, with one whole lab held out to test whether the model predicts a site it never saw. That is the loop-closure habit measured at 53% against 23%, in its purest form.\n\n**The arm that could break it.** The apparent between-lab differences are really instrument differences. Ship a shared calibrant, fix the protocol, collect instrument metadata, and report the null honestly if the labs agree — a ring that finds no difference is still the first ring.\n\n**Reach and risk.** Every participating team is a multiplier and the protocol outlives all of them. The risk is coordination: the result depends on other teams delivering on time, so recruit more labs than you need and publish who did not return data, the way DTU named the turbine makers who never replied.",
+      "body_zh": "**主張。**同一個光誘導元件，在 N 個實驗室依同一套流程、以絕對單位量測，變異有這麼大——而其中有多少來自實驗室、多少來自盤、多少來自儀器，在這裡。\n\n**為什麼是它。**2026 年全部 106 支得獎隊伍裡，沒有任何一支跑過實驗室間量測環。在一個以量測為名的競賽裡，整個「能產出可重複使用結果」的合作類別無人認領；而唯一公開提出真正共享工作的隊伍，收到零個回覆。GEMS 握有 2026 年高中組 Best Measurement，那正是讓一份邀請具有可信度的資格。\n\n**關卡一：**真實標的就是實驗室間變異本身，只要有兩個實驗室跑這套流程它就存在——但必須在第一週就架好，因為這裡的關卡是夥伴的承諾，不是樣本取得。**關卡二：**OD600 與報告基因，搭配共用校正品，做在 GEMS 已經有、而且已經靠它拿過獎的儀器上。\n\n**模型，而這正是它成為 Best Model 候選的原因。**模型**就是**結果：一個變異成分模型，把實驗室間、盤間與盤內的貢獻拆開，並留出整整一個實驗室，用來檢驗模型能不能預測一個它從沒見過的場址。那就是被量到 53% 對 23% 的迴路閉合習慣，而且是最純粹的形式。\n\n**那個可能推翻它的實驗組。**看起來的實驗室間差異，其實是儀器差異。寄出共用校正品、固定流程、收集儀器中繼資料，而且如果各實驗室其實一致，就誠實報告這個虛無結果——一個發現沒有差異的環，仍然是第一個環。\n\n**觸及範圍與風險。**每一個參與的隊伍都是放大器，而流程比它們全部都活得久。風險在協調：結果取決於別的隊伍準時交件，所以招募的實驗室要多於你需要的數量，並且公開誰沒有回傳資料——就像 DTU 把從未回覆的渦輪機製造商一一點名那樣。",
+      "chips": [
+        "0 of 106 ran one",
+        "the model is the result",
+        "risk is coordination, not samples"
+      ],
+      "chips_zh": [
+        "106 支中 0 支跑過",
+        "模型就是結果",
+        "風險在協調，不在樣本"
+      ]
+    },
+    {
+      "kicker": "New 2 · Taiwan's signature industry",
+      "kicker_zh": "新題目 2 · 台灣的招牌產業",
+      "title": "A biosensor for one defined contaminant in Hsinchu process water, with real samples",
+      "title_zh": "針對新竹製程水中一種特定污染物的生物感測器，而且用真實水樣",
+      "body": "**The claim.** This sensor reports this contaminant at these concentrations in water from a real industrial process stream, with a limit of detection measured in that matrix rather than in buffer.\n\n**Why this one.** The industry review found that China holds about 70% of world fermentation capacity while Taiwan's state-backed biomanufacturing push is a contract-development play **with no visible synthetic-biology design layer** — Singapore and Israel are funding exactly that layer. A school team cannot out-build a contract manufacturer and gains nothing by miniaturising one. What it can do is put a design-layer artefact against the island's actual industry: a characterised sensing part, calibrated in absolute units, for a contaminant that a Hsinchu process stream really contains.\n\n**Gate 1 — and this is the honest risk.** Industrial sample access is harder than a farm. A water-treatment operator can hand over a sample in an afternoon, but only if the relationship exists; a company may also not want its effluent characterised by a school team. Name the route and the person before choosing this topic, and have a fallback stream. **Gate 2:** a colorimetric or fluorescent readout on plate readers already owned.\n\n**The model.** Calibration in the real matrix, inverse calibration, a computed limit of detection, and whole batches held back. The 2026 field gives a direct template: one team built a calibration curve per medium in micromolar fluoride and re-zeroed on that plate's own negative control.\n\n**The arm that could break it.** Matrix effects — the process water suppresses or mimics the signal. Spiked recovery in the real matrix, a matrix-only arm, and a buffer comparison published side by side.\n\n**Reach.** Water-treatment operators and environmental inspectors are professional repeaters, and Hsinchu is close enough for repeat visits. **Say what it is not:** a sensor is detection, not remediation, and the landing page must not promise cleanup the results page does not show.",
+      "body_zh": "**主張。**這個感測器在真實工業製程水流中，以這些濃度回報這種污染物，而偵測極限是在那個基質裡量出來的，不是在緩衝液裡。\n\n**為什麼是它。**產業回顧發現：中國掌握全球約 70% 的發酵量能，而台灣由國家主導的生物製造布局是一場代工開發的局，**看不到合成生物學的設計層**——新加坡與以色列補助的正好就是那一層。學校隊伍蓋不過代工廠，把它縮小一號也得不到任何東西。它能做的，是把一個設計層的產出放到這座島真實的產業旁邊：一個特性描述完整、以絕對單位校正過的感測元件，針對新竹某個製程水流裡真的含有的污染物。\n\n**關卡一——而這就是誠實的風險所在。**工業樣本的取得比農場難。一位水處理操作員一個下午就能給你一份樣本，但前提是關係已經存在；而且公司也可能不希望自己的放流水被一支學校隊伍做特性分析。在選這個題目之前先把路徑和人指名出來，並準備一個備援水流。**關卡二：**顯色或螢光讀值，做在已經有的盤式讀取儀上。\n\n**模型。**在真實基質中做校正、反向校正、算出偵測極限，並整批整批地留存。2026 年的全體資料給了一個直接的範本：有一支隊伍為每一種培養基各建一條以微莫耳濃度氟離子為單位的檢量線，並以該盤自己的陰性對照重新歸零。\n\n**那個可能推翻它的實驗組。**基質效應——製程水抑制或模擬了訊號。在真實基質中做加標回收、跑一組只有基質的對照，並把緩衝液的比較並排公開。\n\n**觸及範圍。**水處理操作員與環境稽查人員都是會重複的職業角色，而新竹近到可以重複拜訪。**也要講清楚它不是什麼：**感測器是偵測，不是整治；首頁不可以承諾結果頁沒有呈現的清除效果。",
+      "chips": [
+        "design layer against real industry",
+        "gate 1 is the risk: access",
+        "detection, not remediation"
+      ],
+      "chips_zh": [
+        "把設計層放到真實產業旁",
+        "關卡一是風險：取得管道",
+        "是偵測，不是整治"
+      ]
+    }
+  ],
+  "table": {
+    "head": [
+      "Proposal",
+      "Real target, in hand by week 6?",
+      "The model, and what is held back",
+      "Multiplying audience",
+      "Special prizes to enter",
+      "Verdict"
+    ],
+    "head_zh": [
+      "提案",
+      "真實標的，第六週前在手上嗎？",
+      "模型，以及留存什麼",
+      "會放大的對象",
+      "該投的特別獎",
+      "判斷"
+    ],
+    "rows": [
+      [
+        "**O1 · Characterise the green-light switch**",
+        "**Yes, day one.** The switch in the team's own cells",
+        "Hill transfer function fitted to own dose-response across intensities and wavelengths; hold back whole intensity levels",
+        "Other iGEM teams via a shippable part and protocol; in-service biology teachers",
+        "**Best Model**, Best Measurement, Best New Basic Part, Best Part Collection",
+        "**Strongest.** Both gates pass on day one, it closes the gap the whole line rests on, and the literature is twelve papers deep"
+      ],
+      [
+        "**O2 · Assay what actually reaches the plant**",
+        "**Yes.** Spray preparation plus field soil; Mr. Chen Ke-Wei already interviewed",
+        "Rescue fitted against measured enzyme activity, not nominal dose; hold back a stress level or a field block",
+        "Agricultural extension officers at the district stations",
+        "**Best Model**, Best Measurement, Best IHP, Best Sustainable Development Impact, Best Education",
+        "**Strong, but run it after O1.** Fixes the exact gate-1 failure of 2026. Must keep stating the organic-certification cap"
+      ],
+      [
+        "**M1 · Resistance genes in farm water**",
+        "Yes for the water; **amber on the readout**",
+        "Calibration per matrix, inverse calibration, computed limit of detection; hold back batches",
+        "Water-quality inspectors and extension officers",
+        "Best Measurement, Best Part Collection, Best Software, Diagnostics village",
+        "**Marked down on gate 2.** Needs a nucleic-acid readout the team does not own. Answer that before choosing, not in month four"
+      ],
+      [
+        "**M2 · Live oral-pathogen biofilm**",
+        "Depends on a strain source and an **eligibility verdict**, not on recruiting anyone",
+        "Dose-response of biofilm inhibition with held-back concentrations; effect size with an interval",
+        "School nurses and dental hygienists",
+        "**Best Model**, Best New Basic Part, Best Education, Therapeutics or Diagnostics village",
+        "**Promising, eligibility-gated.** The 2024 real-target shape applied to health, with no human sample at any point"
+      ],
+      [
+        "**N1 · The inter-lab measurement ring**",
+        "**Yes, if set up in week one.** The gate is partner commitment, not sample access",
+        "Variance components separating lab, plate and instrument; hold out a whole lab",
+        "Every participating team, and the protocol outlives them all",
+        "**Best Model**, Best Measurement, Best Part Collection, Best Software, Best Education",
+        "**Highest novelty.** 0 of 106 teams ran one. The model is the result. Risk is coordination, so over-recruit labs"
+      ],
+      [
+        "**N2 · Hsinchu process-water biosensor**",
+        "**The honest risk.** Industrial access is harder than a farm; name the operator first",
+        "Calibration in the real matrix, inverse calibration, computed limit of detection; hold back batches",
+        "Water-treatment operators and environmental inspectors",
+        "Best Measurement, Best Part Collection, Best Sustainable Development Impact, Bioremediation village",
+        "**High upside, access-gated.** Puts a design-layer artefact against Taiwan's signature industry. Secure the sample route before committing"
+      ]
+    ],
+    "rows_zh": [
+      [
+        "**O1 · 把綠光開關特性描述清楚**",
+        "**是，第一天。**開關就在團隊自己的細胞裡",
+        "把 Hill 轉移函數擬合到自己跨強度、跨波長的劑量反應；整個強度層級地留存",
+        "透過可寄送的元件與流程觸及其他 iGEM 隊伍；以及在職生物教師",
+        "**Best Model**、Best Measurement、Best New Basic Part、Best Part Collection",
+        "**最強。**兩道關卡第一天就過，它補上整條路線所依賴的那個缺口，而且這個領域的文獻只有十二篇"
+      ],
+      [
+        "**O2 · 檢測真正送到植物上的東西**",
+        "**是。**噴劑製備加田間土壤；已訪談過陳科緯先生",
+        "把救援效果對實測酵素活性擬合，而不是對名目劑量；整個逆境層級或整個田區區塊地留存",
+        "各區農業改良場的推廣人員",
+        "**Best Model**、Best Measurement、Best IHP、Best Sustainable Development Impact、Best Education",
+        "**強，但排在 O1 之後。**它補上 2026 年那個關卡一失誤。必須持續講明有機認證的上限"
+      ],
+      [
+        "**M1 · 農場水中的抗藥性基因**",
+        "水樣沒問題；**讀值是黃燈**",
+        "每種基質各建檢量線、反向校正、算出偵測極限；整批留存",
+        "水質稽查人員與農業推廣人員",
+        "Best Measurement、Best Part Collection、Best Software、Diagnostics village",
+        "**在關卡二被扣分。**需要團隊沒有的核酸讀值能力。在選題之前先回答，不要拖到第四個月"
+      ],
+      [
+        "**M2 · 活的口腔致病菌生物膜**",
+        "取決於菌株來源與**資格判定**，不取決於招募任何人",
+        "生物膜抑制的劑量反應並留存部分濃度；效應量附區間",
+        "學校護理師與牙科衛生師",
+        "**Best Model**、Best New Basic Part、Best Education、Therapeutics 或 Diagnostics village",
+        "**有潛力，但卡在資格。**把 2024 年的真實標的形狀用在健康上，全程不碰人體檢體"
+      ],
+      [
+        "**N1 · 實驗室間量測環**",
+        "**是，前提是第一週就架好。**關卡是夥伴承諾，不是樣本取得",
+        "變異成分模型拆開實驗室、盤與儀器；留出整整一個實驗室",
+        "每一支參與的隊伍，而流程比它們都活得久",
+        "**Best Model**、Best Measurement、Best Part Collection、Best Software、Best Education",
+        "**新穎度最高。**106 支裡 0 支跑過。模型就是結果。風險在協調，所以要超額招募實驗室"
+      ],
+      [
+        "**N2 · 新竹製程水生物感測器**",
+        "**誠實的風險。**工業取得比農場難；先把操作員指名出來",
+        "在真實基質中校正、反向校正、算出偵測極限；整批留存",
+        "水處理操作員與環境稽查人員",
+        "Best Measurement、Best Part Collection、Best Sustainable Development Impact、Bioremediation village",
+        "**上檔大，但卡在取得管道。**把設計層產出放到台灣招牌產業旁邊。承諾之前先確保樣本路徑"
+      ]
+    ]
+  },
+  "checklist": [
+    "If only one season is available, run O1. It passes both gates on day one, it closes the gap the entire ReLEAF line rests on, and the literature it contributes to is twelve papers deep.",
+    "Do not run O2 before O1. Using the switch on a real field sample before showing the switch works repeats the 2026 mistake exactly.",
+    "Settle both medical eligibility verdicts before designing any biology. A rule discovered in June costs a season; the same rule discovered in November costs an afternoon.",
+    "Answer M1's readout question before choosing it. A nucleic-acid readout is a new capability for this team, and by this instrument's own rules that is a gate, not a detail.",
+    "For N1, recruit more labs than you need and publish who did not return data. The result survives a partner dropping out; it does not survive pretending they did not.",
+    "For N2, name the water-treatment operator and the fallback stream before committing. Industrial sample access is the one gate a relationship cannot be improvised into.",
+    "Whichever wins, decide in week one what model will be fitted and which rows are held back, because that is the Best Model play and Best Model is the category that maps onto the finalist slate.",
+    "Whichever wins, deposit a characterised part and publish one Traditional Chinese artefact with an explicit reuse licence. GEMS won a parts award in 2024 and entered none in 2026.",
+    "Write the landing-page sentence last, from the results page. GEMS is joint-worst in the 2026 Top 10 on the gap between what a home page claims and what its own evidence shows."
+  ],
+  "checklist_zh": [
+    "如果只有一季可用，就做 O1。它第一天就通過兩道關卡，它補上整條 ReLEAF 路線所依賴的那個缺口，而它要貢獻的那個領域只有十二篇文獻。",
+    "不要在 O1 之前做 O2。在證明開關有效之前就把它用在真實田間樣本上，等於原封不動重演 2026 年的錯誤。",
+    "在設計任何生物學之前，先把兩個醫療提案的資格判定定案。六月才發現的規則要付一整季；十一月發現同一條規則，只要一個下午。",
+    "選 M1 之前先把讀值那一題回答掉。核酸讀值對這支隊伍是一項新能力，而依這套工具自己的規則，那是關卡，不是細節。",
+    "做 N1 要超額招募實驗室，並且公開誰沒有回傳資料。結果撐得住一個夥伴退出；撐不住假裝他沒退出。",
+    "做 N2 之前，先把水處理操作員和備援水流指名出來。工業樣本取得，是唯一一道沒辦法臨時用關係補上的關卡。",
+    "不管哪一個雀屏中選，都要在第一週就決定要擬合什麼模型、哪些資料列留存不用，因為那就是 Best Model 的著力點，而 Best Model 是那個疊合決賽名單的類別。",
+    "不管哪一個雀屏中選，都要存進一個特性描述完整的元件，並發表一份附明確可重用授權的繁體中文產出。GEMS 在 2024 年拿過元件獎，2026 年一個都沒投。",
+    "不管哪一個雀屏中選，首頁那句話都要最後才寫，而且從結果頁往回寫。在 2026 年 Top 10 裡，GEMS 在「首頁主張與自身證據的落差」這一項是並列最差。"
+  ],
+  "method": "These six are proposals, not measurements. What is measured is the reasoning behind each criterion, and every figure cited is measured elsewhere in this report with its own limits stated where it is reported: the real-target finding and the seven-of-seven surrogate count from judging-top10.json; the GEMS three-season record, the 640-against-672 nm wavelength question and the constitutive-bypass finding from gems-three-seasons.json, judging-three-teams.json and report.json; the 53-against-23 model-loop figure from the dry-lab analyses; the falsification-control counts from falsification-controls.json; the inter-lab-ring and escape-rate gaps from collaboration-network.json and safety-practice.json; the multiplier counts from picks-leverage.json; the special-prize co-occurrence from award-economics.json; and Taiwan's position in the design layer from trends/industry.json. GEMS's own assets -- CcaSR in Bacillus subtilis WB800 supplied by Prof. Huang Chieh-Chen, the light plate apparatus, the hollow-fibre perfusion bioreactor, the ELISA and OD600 capability, the 2026 awards, the interview with Mr. Chen Ke-Wei of the Lanyang River Friendly Farming Production Cooperative, and the organic-certification conclusion -- are all read from research/teams/6072.json. The eligibility verdicts are NOT settled here: they are in the register block on this page, and anything it marks unverified should be treated as unverified rather than as permission.",
+  "method_zh": "這六個是提案，不是量測。被量測的是每一條判準背後的推理，而所引用的每一個數字都量測於本報告其他處，並在該處載明自己的限制：真實標的發現與「七支全停在替代物」的計數來自 judging-top10.json；GEMS 三季紀錄、640 對 672 nm 的波長問題與組成型旁路的發現，來自 gems-three-seasons.json、judging-three-teams.json 與 report.json；53 對 23 的模型迴路數字來自乾實驗室相關分析；否證對照的計數來自 falsification-controls.json；實驗室間量測環與逃逸率的空白來自 collaboration-network.json 與 safety-practice.json；放大器的計數來自 picks-leverage.json；特別獎的同時發生率來自 award-economics.json；台灣在設計層的位置來自 trends/industry.json。GEMS 自己的資產——由黃介辰教授提供的 Bacillus subtilis WB800 中的 CcaSR、光照盤裝置、中空纖維灌流反應器、ELISA 與 OD600 能力、2026 年的獎項、與蘭陽溪友善耕作生產合作社陳科緯先生的訪談，以及有機認證的結論——全部讀自 research/teams/6072.json。資格判定在此**並未**定案：它們在本頁的檢查表區塊裡，而任何被標示為未經查核的項目，都應該當成未經查核，而不是當成許可。"
+}

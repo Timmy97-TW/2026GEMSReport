@@ -1,0 +1,307 @@
+{
+  "id": "proposals-how",
+  "tab": "proposals",
+  "order": 5,
+  "kicker": "Read this first",
+  "kicker_zh": "先讀這一段",
+  "title": "Six candidates, scored against the same instrument — and the prize to chase is Best Model",
+  "title_zh": "六個候選題目，用同一套工具評分——而該追的獎是 Best Model",
+  "lede": "Each proposal is run through the nine questions on the 2027 selection guide, with the same two gates: a real target in hand by week six, and a readout on an instrument GEMS already owns. None of them guarantees a Finalist slot, because nothing in this report predicts one. What they do is put the team on the right side of the one line the podium actually sat on.",
+  "lede_zh": "每一個提案都跑過 2027 選題指南上的九個問題，關卡也一樣兩道：第六週之前真實標的要在手上，而讀值要用 GEMS 已經有的儀器做得出來。沒有任何一個提案能保證決賽席位，因為這份報告裡沒有任何東西預測得了那個。它們能做的，是讓團隊站到頒獎臺真正落在的那條線的正確一側。",
+  "body": "**What \"Finalist\" actually means, so the target is the right size.** Across 2024, 2025 and 2026 alike the Finalist set and the podium are identical: seven teams a year, the Grand Prize winner and the runners-up. In the 2026 High School section, 147 teams entered, 10 reached the Top 10 and 2 were named Finalists. So this is not a wider round in front of the podium — it is the podium. GEMS has stood on it once, in 2024.\n\n**The prize to chase is Best Model, and the reason is specific.** Pooled over three seasons, the share of a category's nominees who also took a Top 10 runs from Best Wiki at 60% and Best Presentation at 53% down to 0% for Safety, Alternative Platform and New Improved Part. Best Model sits at 50% — but in the High School section it does something sharper than that: **it maps onto the finalist slate exactly.** Lambert-GA won it, HongKong-JSS was nominated, and no other High School Top 10 team appears in the category at all. GEMS was nominated for Best Model in 2024 and again in 2025, and has never won it. That is the single most addressable gap in the team's record, and five of the six proposals below are built to attack it.\n\n**Read the percentages as a map, not a prediction.** The figure is near-circular and this report says so: Wiki and Presentation are judged on how the whole project is communicated, which is the same material a Top 10 judgement works on. Chasing Best Wiki to win a Top 10 is chasing the thermometer. The reason Best Model is different is that it rewards a thing you can decide to do in week one — fit a model to your own measured data and validate it against data you held back — and that habit is independently measured at 53% reaching a Top 10 against 23%.\n\n**One regression worth naming.** GEMS won Best New Basic Part in 2024 and had **zero parts nominations in 2026**. Taiwan's zero across all thirteen competing teams is shared. Every proposal below therefore states what it would deposit in the Registry, because that is a prize category the team has already proved it can win and then stopped entering.",
+  "body_zh": "**先把「決賽隊伍」的意思講準，才知道目標有多大。**2024、2025、2026 三季都一樣：決賽隊伍集合與頒獎臺完全相同，一年七支，總冠軍加上亞軍季軍。2026 年高中組有 147 支隊伍參賽，10 支進 Top 10，2 支被列為決賽隊伍。所以這不是頒獎臺前面的一個較寬的回合——它就是頒獎臺。GEMS 站上去過一次，在 2024 年。\n\n**該追的獎是 Best Model，理由很具體。**三季合計，各類別入圍者同時拿下 Top 10 的比例，從 Best Wiki 的 60%、Best Presentation 的 53%，一路到 Safety、Alternative Platform 與 New Improved Part 的 0%。Best Model 是 50%——但在高中組，它做到一件更尖銳的事：**它正好疊合在決賽名單上。**Lambert-GA 得獎、HongKong-JSS 入圍，其餘高中組 Top 10 隊伍沒有任何一支出現在這個類別裡。GEMS 在 2024 年與 2025 年都入圍過 Best Model，從來沒有得過。那是這支隊伍紀錄裡最可著手的一個缺口，而下面六個提案有五個就是為了攻它而設計的。\n\n**那些百分比要當地圖讀，不要當預測讀。**這個數字接近循環論證，本報告自己也說了：Wiki 與 Presentation 評的是整個專案怎麼被傳達出來，而那正是 Top 10 評審所依據的同一批材料。為了拿 Top 10 去追 Best Wiki，是去追溫度計。Best Model 之所以不同，是因為它獎勵的是一件你在第一週就能決定要做的事——把模型擬合到自己量到的資料，再用事先留存的資料驗證它——而這個習慣另外被獨立量到：進 Top 10 的比例是 53% 對 23%。\n\n**有一項退步值得點名。**GEMS 在 2024 年拿下 Best New Basic Part，而 2026 年**零個元件類入圍**。台灣十三支參賽隊伍的零也是共享的。所以下面每一個提案都寫明它會往 Registry 存進什麼，因為那是一個這支隊伍已經證明自己拿得到、然後就不再投的獎項。",
+  "cards": [
+    {
+      "kicker": "The target",
+      "kicker_zh": "目標",
+      "title": "Finalist is the podium: seven teams a year, and GEMS has been one",
+      "title_zh": "決賽就是頒獎臺：一年七支，而 GEMS 當過其中一支",
+      "body": "In all three seasons on record the Finalist designation and the podium are the same seven teams, so it names the Grand Prize winner and the runners-up rather than a wider round. In the 2026 High School section that was 2 teams out of 147 entered and 10 in the Top 10. **GEMS won the 2024 High School Grand Prize**, and it and Lambert-GA are the only two High School teams in the Top 10 in all three seasons. So the honest framing for 2027 is not \"reach a bar we have never reached\" but \"clear one we cleared in 2024 and have not cleared since\".",
+      "body_zh": "有紀錄的三個賽季裡，決賽隊伍的認定與頒獎臺是同一批七支隊伍，所以它指的是總冠軍與亞軍季軍，而不是前面一個比較寬的回合。在 2026 年高中組，那是 147 支參賽、10 支進 Top 10 之中的 2 支。**GEMS 拿過 2024 年高中組總冠軍**，而且它和 Lambert-GA 是三個賽季都進高中組 Top 10 的僅有兩支隊伍。所以 2027 年誠實的說法不是「去跨一道我們從沒跨過的門檻」，而是「把 2024 年跨過、之後就沒再跨過的那一道再跨一次」。",
+      "chips": [
+        "2 Finalists of 147 entered",
+        "Finalist equals podium",
+        "GEMS won it in 2024"
+      ],
+      "chips_zh": [
+        "147 支參賽中 2 支決賽",
+        "決賽即頒獎臺",
+        "GEMS 2024 年拿過"
+      ]
+    },
+    {
+      "kicker": "The prize to chase",
+      "kicker_zh": "該追的獎",
+      "title": "Best Model maps onto the High School finalist slate exactly, and GEMS has never won it",
+      "title_zh": "Best Model 正好疊合高中組決賽名單，而 GEMS 從沒得過",
+      "body": "Across the 2026 High School Top 10, Best Model recognition lands on the two finalists and nobody else: Lambert-GA won it, HongKong-JSS was nominated, and not one of the other eight Top 10 teams appears in the category. Pooled over three seasons its nominees take a Top 10 **50%** of the time. GEMS was nominated in 2024 and 2025 and has not won. The route is not a bigger model — Lambert won by **benchmarking its own confidence metrics** against 5,721 labelled designs, finding a 38-metric ensemble at ROC-AUC 0.541, and publishing that its own eventual hit did not carry the best score.",
+      "body_zh": "在 2026 年高中組 Top 10 裡，Best Model 的得獎與入圍落在兩支決賽隊伍身上，沒有別人：Lambert-GA 得獎、HongKong-JSS 入圍，另外八支 Top 10 隊伍沒有一支出現在這個類別。三季合計，這個類別的入圍者有 **50%** 同時拿下 Top 10。GEMS 在 2024 與 2025 年入圍，沒有得過。路徑不是做一個更大的模型——Lambert 之所以得獎，是因為**拿 5,721 筆有標籤的設計去檢驗自己的信賴度指標**，發現一個 38 指標的集成模型 ROC-AUC 只有 0.541，而且公開說自己最後真正結合的那一個分數並不是最高的。",
+      "chips": [
+        "50% of nominees take a Top 10",
+        "maps onto both HS finalists",
+        "GEMS nominated 2024 and 2025"
+      ],
+      "chips_zh": [
+        "入圍者 50% 進 Top 10",
+        "疊合兩支高中決賽隊伍",
+        "GEMS 2024、2025 入圍"
+      ]
+    },
+    {
+      "kicker": "The regression",
+      "kicker_zh": "退步之處",
+      "title": "A parts award GEMS has already won, and then stopped entering",
+      "title_zh": "一個 GEMS 已經拿過、然後就不再投的元件獎",
+      "body": "GEMS won **Best New Basic Part** in the 2024 Grand Prize year. In 2026 it had zero nominations in any parts category, and so did all thirteen competing Taiwanese teams. The co-occurrence with a Top 10 is low — Best New Basic Part sits at 9% and Best Part Collection at 35% — so this is not a placing lever. It is a credibility gap and a continuity gap: a characterised, documented part is the one deliverable that outlives the season, needs no server, and can be used by somebody else. Every proposal below names what it would deposit.",
+      "body_zh": "GEMS 在 2024 年那個總冠軍賽季拿下 **Best New Basic Part**。2026 年它在任何元件類別都是零入圍，而台灣十三支參賽隊伍全部也都是零。這類獎與 Top 10 的同時發生率很低——Best New Basic Part 是 9%，Best Part Collection 是 35%——所以它不是名次槓桿。它是可信度的缺口，也是延續性的缺口：一個特性描述完整、文件齊全的元件，是唯一一種能活過這個賽季、不需要伺服器、而且別人真的用得到的交付成果。下面每一個提案都寫明它會存進什麼。",
+      "chips": [
+        "2024 win, 2026 zero",
+        "Taiwan's zero is shared",
+        "9% and 35% co-occurrence"
+      ],
+      "chips_zh": [
+        "2024 得獎，2026 掛零",
+        "台灣的零是共享的",
+        "同時發生率 9% 與 35%"
+      ]
+    },
+    {
+      "kicker": "The circularity",
+      "kicker_zh": "循環論證",
+      "title": "Do not chase Best Wiki to win a Top 10 — that is chasing the thermometer",
+      "title_zh": "不要為了拿 Top 10 去追 Best Wiki——那是去追溫度計",
+      "body": "Best Wiki nominees take a Top 10 60% of the time and Best Presentation 53%, which looks like the strongest signal on the board. It is not a lever, because both categories are judged on **how the whole project is communicated**, which is the same material a Top 10 judgement works on. The report's own three-season test makes the point harder: the 2024 GEMS site that won Best Wiki in the Grand Prize year is the weakest presented of its three seasons — a 577-byte script shell, no results page at all, one p-value. Defend the wiki because the work deserves to be readable, and pick the project on the science.",
+      "body_zh": "Best Wiki 的入圍者有 60% 同時拿下 Top 10，Best Presentation 是 53%，看起來是整張表上最強的訊號。它不是槓桿，因為這兩個類別評的都是**整個專案怎麼被傳達出來**，而那正是 Top 10 評審所依據的同一批材料。本報告自己的三季檢驗把這一點說得更硬：2024 年那個在總冠軍賽季拿下 Best Wiki 的 GEMS 網站，是三個賽季裡呈現最差的一個——577 位元組的腳本外殼、根本沒有結果頁、全站一個 p 值。把 wiki 顧好，是因為這些工作值得被讀懂；而選題要靠科學來選。",
+      "chips": [
+        "60% and 53%",
+        "judged on the same material",
+        "2024's Best Wiki was the weakest site"
+      ],
+      "chips_zh": [
+        "60% 與 53%",
+        "評的是同一批材料",
+        "2024 的 Best Wiki 是最差的網站"
+      ]
+    },
+    {
+      "kicker": "How each one is scored",
+      "kicker_zh": "每個提案怎麼評分",
+      "title": "The same nine questions, and the first two are gates",
+      "title_zh": "同樣的九個問題，而前兩題是關卡",
+      "body": "Every proposal is answered against the selection guide's instrument, in order: the real target and whether it is in hand by week six; the readout and the instrument that already exists; the model and the rows held back; the rival explanation and the arm that kills it; the named outside person; the multiplying audience; the cost of the tenth against the first; the artefact that still works a year after the freeze; and the one sentence a judge should repeat. **Questions one and two are gates rather than scores** — a proposal that fails either is not a candidate however interesting the biology is, and one of the six below is marked down on exactly that basis.",
+      "body_zh": "每一個提案都依選題指南的工具逐題作答，順序一致：真實標的是什麼、第六週前在不在手上；讀值與已經存在的儀器；模型與留存的資料列；對手解釋與殺掉它的那一組實驗；具名的外部人士；會放大的對象；第十次相對第一次的成本；凍結一年後還能用的產出；以及希望評審重複的那一句話。**第一題和第二題是關卡而不是分數**——過不了任何一題的提案就不算候選，不管生物學多有趣；下面六個之中，就有一個正是因為這一點被扣分。",
+      "chips": [
+        "nine questions, in order",
+        "two gates",
+        "one candidate is marked down"
+      ],
+      "chips_zh": [
+        "九個問題，依序",
+        "兩道關卡",
+        "有一個候選被扣分"
+      ]
+    },
+    {
+      "kicker": "What this page cannot do",
+      "kicker_zh": "這一頁做不到的事",
+      "title": "Nothing here predicts a placing, and the report is explicit about why",
+      "title_zh": "這裡沒有任何東西能預測名次，而報告很明確地說明了原因",
+      "body": "The comparisons behind these recommendations rest on 30 Top 10 teams and seven podium places, which cannot carry a causal claim, and on a sample made entirely of decorated teams, so no figure here describes the competition at large. Three of the report's recent analyses returned nulls or reversals: choosing a village is not a lever, falsification controls are a floor GEMS already clears at full marks, and over-claiming on the landing page is the Top 10 norm with the podium slightly worse. **Treat these six as structured bets with their reasoning exposed**, not as a ranking — and the eligibility register on this page matters more than the ranking does, because a rule, not a judge, is what usually ends a project.",
+      "body_zh": "支撐這些建議的比較，建立在 30 支 Top 10 隊伍與七個頒獎臺名額上，撐不起因果主張；而樣本全部由得獎隊伍構成，所以這裡沒有任何數字在描述整個賽事。本報告最近有三項分析得到虛無或反轉的結果：選村落不是槓桿；否證對照是 GEMS 早就以滿分跨過的門檻；而首頁誇大是 Top 10 的常態，頒獎臺還稍差一些。**請把這六個當成把推理攤開來的結構化下注**，而不是一張名次表——而且這一頁上的資格檢查比排名更重要，因為終結一個專案的通常是規則，不是評審。",
+      "chips": [
+        "n = 30, 7 podium places",
+        "decorated teams only",
+        "rules end projects, not judges"
+      ],
+      "chips_zh": [
+        "n = 30，七個頒獎臺名額",
+        "僅限得獎隊伍",
+        "終結專案的是規則，不是評審"
+      ]
+    }
+  ],
+  "table": {
+    "head": [
+      "Special prize",
+      "Nominees also Top 10",
+      "GEMS record 2024-26",
+      "Chase it in 2027?"
+    ],
+    "head_zh": [
+      "特別獎",
+      "入圍者同時進 Top 10",
+      "GEMS 2024-26 紀錄",
+      "2027 要追嗎？"
+    ],
+    "rows": [
+      [
+        "**Best Model**",
+        "**50% (20/40)**",
+        "2024 nominee · 2025 nominee · never won",
+        "**Yes — the primary target.** In the High School section it maps onto the finalist slate exactly. It rewards a decision made in week one, not a bigger model."
+      ],
+      [
+        "Best Wiki",
+        "**60% (49/81)**",
+        "**2024 win** · 2025 nom · 2026 nom",
+        "Defend, do not chase. Near-circular: judged on the same material as a Top 10, and GEMS's own Best Wiki year is its weakest-presented site."
+      ],
+      [
+        "Best Presentation",
+        "53% (42/79)",
+        "2024 nom · 2026 nom",
+        "Defend. Same circularity as Best Wiki."
+      ],
+      [
+        "Best Integrated Human Practices",
+        "45% (17/38)",
+        "**2026 win**",
+        "Defend. Already won; the proposals keep the named-stakeholder habit rather than rebuilding it."
+      ],
+      [
+        "Best Part Collection",
+        "35% (11/31)",
+        "never cited",
+        "**Yes, secondary.** GEMS has never been cited in any parts category since 2024, and Taiwan's zero is shared."
+      ],
+      [
+        "Best Education",
+        "33% (12/36)",
+        "2024 nom · 2025 nom",
+        "Yes, if the proposal carries a Traditional Chinese artefact with a reuse licence — 3 of 31 teams and 1 of 136 PDFs respectively."
+      ],
+      [
+        "Best Measurement",
+        "22% (7/32)",
+        "2025 nom · **2026 win**",
+        "Defend, and it is cheap to defend here: four of the six proposals are measurement-led."
+      ],
+      [
+        "Best Hardware",
+        "21% (6/29)",
+        "**2026 win**",
+        "Defend only. Low co-occurrence, and GEMS already owns the instruments these proposals need."
+      ],
+      [
+        "Best New Basic Part",
+        "9% (3/35)",
+        "**2024 win**",
+        "Yes, as credibility rather than placing. It is the one deliverable that outlives the season and needs no server."
+      ],
+      [
+        "Safety and Security Award",
+        "**0% (0/9)**",
+        "never cited",
+        "Only if the project genuinely earns it. Zero of nine nominees took a Top 10, so enter it for the work, not the odds."
+      ],
+      [
+        "Best Sustainable Development Impact",
+        "10% (3/30)",
+        "never cited",
+        "Incidental. Claim it if the project fits; do not design for it."
+      ],
+      [
+        "Best Software",
+        "24% (4/17)",
+        "never cited",
+        "Only if a tool is a real output. Of 21 award-winning 2026 tools, 8 still run — and every live one was hosted before freeze day."
+      ]
+    ],
+    "rows_zh": [
+      [
+        "**Best Model**",
+        "**50%（40 取 20）**",
+        "2024 入圍 · 2025 入圍 · 從未得獎",
+        "**要——首要目標。**在高中組它正好疊合決賽名單。它獎勵的是第一週就能做的決定，不是更大的模型。"
+      ],
+      [
+        "Best Wiki",
+        "**60%（81 取 49）**",
+        "**2024 得獎** · 2025 入圍 · 2026 入圍",
+        "守成，不要追。接近循環：評的材料和 Top 10 一樣，而 GEMS 自己拿 Best Wiki 那年的網站，是三季裡呈現最差的。"
+      ],
+      [
+        "Best Presentation",
+        "53%（79 取 42）",
+        "2024 入圍 · 2026 入圍",
+        "守成。與 Best Wiki 同樣的循環問題。"
+      ],
+      [
+        "Best Integrated Human Practices",
+        "45%（38 取 17）",
+        "**2026 得獎**",
+        "守成。已經拿過；這些提案延續具名利害關係人的習慣，而不是重做一次。"
+      ],
+      [
+        "Best Part Collection",
+        "35%（31 取 11）",
+        "從未被提及",
+        "**要，次要目標。**GEMS 自 2024 年後在任何元件類別都沒被提及過，而台灣的零是共享的。"
+      ],
+      [
+        "Best Education",
+        "33%（36 取 12）",
+        "2024 入圍 · 2025 入圍",
+        "要——條件是提案帶一份附可重用授權的繁體中文產出；這兩件事分別只有 31 支中的 3 支、136 份中的 1 份做到。"
+      ],
+      [
+        "Best Measurement",
+        "22%（32 取 7）",
+        "2025 入圍 · **2026 得獎**",
+        "守成，而且在這裡守成很便宜：六個提案裡有四個是以量測為主軸的。"
+      ],
+      [
+        "Best Hardware",
+        "21%（29 取 6）",
+        "**2026 得獎**",
+        "只守成。同時發生率低，而且這些提案需要的儀器 GEMS 都已經有了。"
+      ],
+      [
+        "Best New Basic Part",
+        "9%（35 取 3）",
+        "**2024 得獎**",
+        "要，但目的是可信度而不是名次。它是唯一能活過賽季、又不需要伺服器的交付成果。"
+      ],
+      [
+        "Safety and Security Award",
+        "**0%（9 取 0）**",
+        "從未被提及",
+        "只有在專案真的配得上時才投。九位入圍者沒有一位進 Top 10，所以為了工作本身去投，不是為了機率。"
+      ],
+      [
+        "Best Sustainable Development Impact",
+        "10%（30 取 3）",
+        "從未被提及",
+        "順帶拿。如果專案本來就符合就投，不要為它設計。"
+      ],
+      [
+        "Best Software",
+        "24%（17 取 4）",
+        "從未被提及",
+        "只有在工具是真正的產出時才投。2026 年 21 個得獎工具中有 8 個還跑得動，而每一個還活著的都在凍結日之前就上線代管了。"
+      ]
+    ]
+  },
+  "checklist": [
+    "Make Best Model the primary prize target and decide in week one what model will be fitted and which rows are held back. It is the one category that maps onto the High School finalist slate.",
+    "Do not design the season around Best Wiki or Best Presentation. Both are judged on the same material as a Top 10, so they report the result rather than cause it.",
+    "Deposit a characterised part in every candidate. GEMS won Best New Basic Part in 2024 and had zero parts nominations in 2026, and all thirteen Taiwanese teams shared that zero.",
+    "Answer questions one and two before anything else. A proposal with no real target in hand by week six, or no readout on an instrument already owned, is not a candidate.",
+    "Check eligibility before the biology. The register on this page is the part that ends projects; a rule is cheaper to discover in November than in June.",
+    "Carry one Traditional Chinese artefact with an explicit reuse licence in whichever proposal wins. Only 3 of 31 decorated teams published anything in Traditional Chinese, and 1 of 136 education PDFs carried a licence.",
+    "Keep the named-stakeholder habit that won Best Integrated Human Practices in 2026 rather than rebuilding it from scratch.",
+    "Write down which proposals you rejected and which question killed each one. Only 3 of 106 decorated teams credit their own predecessor with anything."
+  ],
+  "checklist_zh": [
+    "把 Best Model 當成首要獎項目標，並在第一週就決定要擬合什麼模型、以及哪些資料列要留存不用。它是唯一一個疊合高中組決賽名單的類別。",
+    "不要圍繞 Best Wiki 或 Best Presentation 來設計整個賽季。兩者評的材料與 Top 10 相同，所以它們是在回報結果，不是造成結果。",
+    "每一個候選題目都要存進一個特性描述完整的元件。GEMS 在 2024 年拿過 Best New Basic Part，2026 年元件類零入圍，而台灣十三支隊伍共享這個零。",
+    "在做別的事之前，先回答第一題和第二題。第六週之前沒有真實標的在手、或讀值做不在已有的儀器上，就不算候選。",
+    "先查資格，再談生物學。這一頁上的檢查表才是終結專案的那一部分；一條規則在十一月發現，比在六月發現便宜得多。",
+    "不管最後選上哪一個提案，都要帶一份附明確可重用授權的繁體中文產出。31 支得獎隊伍中只有 3 支發表過繁體中文內容，136 份教育 PDF 中只有 1 份附了授權。",
+    "延續 2026 年拿下 Best Integrated Human Practices 的具名利害關係人習慣，而不是從零重做一次。",
+    "把你否決掉的提案、以及是哪一題殺掉它的，都寫下來。106 支得獎隊伍裡只有 3 支對自己的前一屆表示過任何感謝。"
+  ],
+  "method": "The special-prize percentages come from award-economics.json, which pooled the 2024, 2025 and 2026 award records from iGEM's public API across all divisions, and that block states its own limits: the figure is near-circular for Wiki and Presentation, Best Village Project is excluded because it is awarded inside villages rather than across the field, and the High-School-only rates are not tabulated because their denominators fall to 1 or 2. The Best Model mapping onto the High School finalist slate is from judging-top10.json and covers the ten 2026 High School Top 10 teams only. The 53-against-23 model-loop figure, the Finalist-equals-podium result, the three-season GEMS record and the parts-nomination gap come from the dry-lab analyses, judging-criteria.json, gems-three-seasons.json and gems-gap.json respectively. Everything on this page is a recommendation built on those measurements, not a new measurement, and none of it predicts a placing: the underlying comparisons rest on 30 Top 10 teams and seven podium places and on a sample of decorated teams only.",
+  "method_zh": "特別獎的百分比來自 award-economics.json，該區塊彙整了 iGEM 公開 API 上 2024、2025 與 2026 三季、跨全部組別的獎項紀錄，並在該處載明自己的限制：對 Wiki 與 Presentation 而言這個數字接近循環論證；Best Village Project 被排除，因為它是在各 village 內部頒發而不是跨全體頒發；而只算高中組的比率不列表，因為分母會掉到 1 或 2。Best Model 疊合高中組決賽名單的結果來自 judging-top10.json，涵蓋範圍僅限 2026 年高中組 Top 10 那十支隊伍。53 對 23 的模型迴路數字、決賽即頒獎臺的結果、GEMS 三季紀錄，以及元件類入圍的缺口，分別來自乾實驗室相關分析、judging-criteria.json、gems-three-seasons.json 與 gems-gap.json。本頁所有內容都是建立在那些量測之上的建議，不是新的量測，而且沒有任何一項能預測名次：底層的比較建立在 30 支 Top 10 隊伍與七個頒獎臺名額上，樣本也僅限得獎隊伍。"
+}

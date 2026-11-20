@@ -364,6 +364,158 @@ Write the sentence, then open your own results page and try to break it. GEMS 20
 _Method and limits. This is an instrument rather than a measurement. The nine questions are this report's construction; what is measured is the reason each one is on the list, and every figure cited is measured elsewhere in this report with its own limits stated where it is reported. Sources: judging-top10 and gems-three-seasons for the real-target gate and the 2026 landing-page contradiction; the dry-lab analyses for the model-loop figure; falsification-controls for the five control types and the disclosure flag; good-governance and ihp-depth for the outside-person criterion and the expert-closed-loop figures; picks-leverage for the multiplying-audience question; education-afterlife, software-afterlife and hardware-afterlife for the durability figures; good-definition for the cost-of-the-tenth criterion. Two limits apply throughout. The sample is decorated teams only, so no figure here describes the competition at large unless it is drawn from iGEM's full accepted roster. And the Top 10 comparisons rest on 30 teams and seven podium places, which cannot support a causal claim -- the questions are a way of thinking, not a predictive model, and a candidate that answers all nine well can still lose._
 
 
+# 2027 project proposals
+
+## Six candidates, scored against the same instrument — and the prize to chase is Best Model
+
+_Each proposal is run through the nine questions on the 2027 selection guide, with the same two gates: a real target in hand by week six, and a readout on an instrument GEMS already owns. None of them guarantees a Finalist slot, because nothing in this report predicts one. What they do is put the team on the right side of the one line the podium actually sat on._
+
+**What "Finalist" actually means, so the target is the right size.** Across 2024, 2025 and 2026 alike the Finalist set and the podium are identical: seven teams a year, the Grand Prize winner and the runners-up. In the 2026 High School section, 147 teams entered, 10 reached the Top 10 and 2 were named Finalists. So this is not a wider round in front of the podium — it is the podium. GEMS has stood on it once, in 2024.
+
+**The prize to chase is Best Model, and the reason is specific.** Pooled over three seasons, the share of a category's nominees who also took a Top 10 runs from Best Wiki at 60% and Best Presentation at 53% down to 0% for Safety, Alternative Platform and New Improved Part. Best Model sits at 50% — but in the High School section it does something sharper than that: **it maps onto the finalist slate exactly.** Lambert-GA won it, HongKong-JSS was nominated, and no other High School Top 10 team appears in the category at all. GEMS was nominated for Best Model in 2024 and again in 2025, and has never won it. That is the single most addressable gap in the team's record, and five of the six proposals below are built to attack it.
+
+**Read the percentages as a map, not a prediction.** The figure is near-circular and this report says so: Wiki and Presentation are judged on how the whole project is communicated, which is the same material a Top 10 judgement works on. Chasing Best Wiki to win a Top 10 is chasing the thermometer. The reason Best Model is different is that it rewards a thing you can decide to do in week one — fit a model to your own measured data and validate it against data you held back — and that habit is independently measured at 53% reaching a Top 10 against 23%.
+
+**One regression worth naming.** GEMS won Best New Basic Part in 2024 and had **zero parts nominations in 2026**. Taiwan's zero across all thirteen competing teams is shared. Every proposal below therefore states what it would deposit in the Registry, because that is a prize category the team has already proved it can win and then stopped entering.
+
+### Finalist is the podium: seven teams a year, and GEMS has been one
+In all three seasons on record the Finalist designation and the podium are the same seven teams, so it names the Grand Prize winner and the runners-up rather than a wider round. In the 2026 High School section that was 2 teams out of 147 entered and 10 in the Top 10. **GEMS won the 2024 High School Grand Prize**, and it and Lambert-GA are the only two High School teams in the Top 10 in all three seasons. So the honest framing for 2027 is not "reach a bar we have never reached" but "clear one we cleared in 2024 and have not cleared since".
+
+### Best Model maps onto the High School finalist slate exactly, and GEMS has never won it
+Across the 2026 High School Top 10, Best Model recognition lands on the two finalists and nobody else: Lambert-GA won it, HongKong-JSS was nominated, and not one of the other eight Top 10 teams appears in the category. Pooled over three seasons its nominees take a Top 10 **50%** of the time. GEMS was nominated in 2024 and 2025 and has not won. The route is not a bigger model — Lambert won by **benchmarking its own confidence metrics** against 5,721 labelled designs, finding a 38-metric ensemble at ROC-AUC 0.541, and publishing that its own eventual hit did not carry the best score.
+
+### A parts award GEMS has already won, and then stopped entering
+GEMS won **Best New Basic Part** in the 2024 Grand Prize year. In 2026 it had zero nominations in any parts category, and so did all thirteen competing Taiwanese teams. The co-occurrence with a Top 10 is low — Best New Basic Part sits at 9% and Best Part Collection at 35% — so this is not a placing lever. It is a credibility gap and a continuity gap: a characterised, documented part is the one deliverable that outlives the season, needs no server, and can be used by somebody else. Every proposal below names what it would deposit.
+
+### Do not chase Best Wiki to win a Top 10 — that is chasing the thermometer
+Best Wiki nominees take a Top 10 60% of the time and Best Presentation 53%, which looks like the strongest signal on the board. It is not a lever, because both categories are judged on **how the whole project is communicated**, which is the same material a Top 10 judgement works on. The report's own three-season test makes the point harder: the 2024 GEMS site that won Best Wiki in the Grand Prize year is the weakest presented of its three seasons — a 577-byte script shell, no results page at all, one p-value. Defend the wiki because the work deserves to be readable, and pick the project on the science.
+
+### The same nine questions, and the first two are gates
+Every proposal is answered against the selection guide's instrument, in order: the real target and whether it is in hand by week six; the readout and the instrument that already exists; the model and the rows held back; the rival explanation and the arm that kills it; the named outside person; the multiplying audience; the cost of the tenth against the first; the artefact that still works a year after the freeze; and the one sentence a judge should repeat. **Questions one and two are gates rather than scores** — a proposal that fails either is not a candidate however interesting the biology is, and one of the six below is marked down on exactly that basis.
+
+### Nothing here predicts a placing, and the report is explicit about why
+The comparisons behind these recommendations rest on 30 Top 10 teams and seven podium places, which cannot carry a causal claim, and on a sample made entirely of decorated teams, so no figure here describes the competition at large. Three of the report's recent analyses returned nulls or reversals: choosing a village is not a lever, falsification controls are a floor GEMS already clears at full marks, and over-claiming on the landing page is the Top 10 norm with the podium slightly worse. **Treat these six as structured bets with their reasoning exposed**, not as a ranking — and the eligibility register on this page matters more than the ranking does, because a rule, not a judge, is what usually ends a project.
+
+**Checklist**
+
+- Make Best Model the primary prize target and decide in week one what model will be fitted and which rows are held back. It is the one category that maps onto the High School finalist slate.
+- Do not design the season around Best Wiki or Best Presentation. Both are judged on the same material as a Top 10, so they report the result rather than cause it.
+- Deposit a characterised part in every candidate. GEMS won Best New Basic Part in 2024 and had zero parts nominations in 2026, and all thirteen Taiwanese teams shared that zero.
+- Answer questions one and two before anything else. A proposal with no real target in hand by week six, or no readout on an instrument already owned, is not a candidate.
+- Check eligibility before the biology. The register on this page is the part that ends projects; a rule is cheaper to discover in November than in June.
+- Carry one Traditional Chinese artefact with an explicit reuse licence in whichever proposal wins. Only 3 of 31 decorated teams published anything in Traditional Chinese, and 1 of 136 education PDFs carried a licence.
+- Keep the named-stakeholder habit that won Best Integrated Human Practices in 2026 rather than rebuilding it from scratch.
+- Write down which proposals you rejected and which question killed each one. Only 3 of 106 decorated teams credit their own predecessor with anything.
+
+_Method and limits. The special-prize percentages come from award-economics.json, which pooled the 2024, 2025 and 2026 award records from iGEM's public API across all divisions, and that block states its own limits: the figure is near-circular for Wiki and Presentation, Best Village Project is excluded because it is awarded inside villages rather than across the field, and the High-School-only rates are not tabulated because their denominators fall to 1 or 2. The Best Model mapping onto the High School finalist slate is from judging-top10.json and covers the ten 2026 High School Top 10 teams only. The 53-against-23 model-loop figure, the Finalist-equals-podium result, the three-season GEMS record and the parts-nomination gap come from the dry-lab analyses, judging-criteria.json, gems-three-seasons.json and gems-gap.json respectively. Everything on this page is a recommendation built on those measurements, not a new measurement, and none of it predicts a placing: the underlying comparisons rest on 30 Top 10 teams and seven podium places and on a sample of decorated teams only._
+
+## Six candidate projects, each answered against all nine questions
+
+_Two built on the optogenetics line GEMS already owns, two medical in motivation but designed so that no human sample is ever touched, and two on ground nobody in the 2026 field claimed. Five of the six are built to attack Best Model, which is the one category that maps onto the High School finalist slate._
+
+**The optogenetics pair is a sequence, not a choice.** The first characterises the switch and the second uses it on a real field sample; running the second without the first repeats 2026's mistake of stacking an application on a device that was never shown to work. If only one season is available, the first is the stronger candidate, because it passes both gates on day one and because closing a gap in a twelve-paper literature is publishable on its own.
+
+**The medical pair is designed around a rule, not around a disease.** The fastest way to kill a high-school medical project is to touch patients, clinical samples or human tissue. Both candidates here keep the medical motivation and move the sample: one targets a DNA sequence in environmental water, the other a live culture of the causative organism obtained from a collection. Neither requires a single human participant. The eligibility verdicts for both are in the register on this page and should be settled before the biology is designed.
+
+**The new pair claims ground the 2026 field left empty.** Nobody among 106 decorated teams ran an inter-lab measurement ring, and GEMS holds the Best Measurement credential that makes the invitation credible. And no team put a synthetic-biology design-layer artefact against Taiwan's own signature industry, which the industry review identified as the island's structural gap.
+
+**One candidate is marked down and it is marked down honestly.** The resistance-gene proposal needs a nucleic-acid readout the team does not yet own. That is amber rather than red — colorimetric methods are school-feasible — but by the rules of this instrument it must be answered before the topic is chosen rather than in month four.
+
+### Characterise the green-light switch itself, in absolute units, and publish the OFF state
+**The claim.** Green light switches ACC deaminase production on and off in *B. subtilis* WB800, and here is the dose-response, the OFF state, and how much it varies between plates.
+
+**Why this one.** The entire ReLEAF line rests on a switch the team's own 2026 pages do not evidence: the ELISA showed no change over time, the AmilCP reporter never coloured, and every biological result came from a constitutive bypass rather than the light-gated device. The team named two candidate explanations — well-to-well crosstalk in the light plate apparatus, and red LEDs near 640 nm when CcaSR needs about 672 nm to switch off — and tested neither. In a literature of twelve papers in all of PubMed, closing that gap is a publishable contribution on its own.
+
+**Gate 1, real target by week six:** the switch, in the team's own cells, on day one. **Gate 2, readout on an instrument already owned:** OD600, the reporter, ELISA for ACC deaminase, and the light plate apparatus GEMS built. Both gates pass more cleanly than any other candidate here.
+
+**The model, and this is the Best Model play.** In 2026 the control architecture rested on a published Hill transfer function assumed valid at 20 L, while every induction ran at a single light intensity — modelled rather than measured, by the report's own loop-closure test. Fit the Hill curve to your own dose-response across intensities and wavelengths, and hold back whole intensity levels, not scattered points, so the validation is honest.
+
+**The arm that could break it.** An apparent light response that is really temperature, growth phase or crosstalk. Run dark controls on the same plate at the same time, log temperature per well, map crosstalk by measuring each well with neighbours on and off, and run 672 nm against 640 nm as a named comparison.
+
+**Reach and durability.** Prof. Huang Chieh-Chen at National Chung Hsing University supplied WB800 and is already named; NTHU Taiwan runs engineered *B. subtilis* on the same island. Deposit a characterised part, publish the measurement protocol in absolute units, and publish the light plate geometry file — 9 of 20 award-winning 2026 instruments published none.
+
+### Assay the preparation that actually reaches the plant, on plants in real field soil
+**The claim.** A measured dose of ACC deaminase rescues stressed rice in soil from a named field, and here is the dose that was actually delivered.
+
+**Why this one.** 2026's strongest result — a plant rescue at p < 0.0001 with 40 seedlings a condition — sits on a preparation that was never assayed. That is precisely the gate-one failure this report found separating the podium from the rest: seven of seven non-podium High School teams stopped at a surrogate. The fix is not a new project; it is finishing this one.
+
+**Gate 1:** the real target is the spray preparation itself plus stressed plants in soil from the cooperative's field, and the relationship already exists — the team interviewed Mr. Chen Ke-Wei of the Lanyang River Friendly Farming Production Cooperative in 2026. **Gate 2:** ACC deaminase activity assay, ELISA and plant phenotype, all on instruments already owned.
+
+**The model.** Fit plant rescue against *measured* enzyme activity rather than nominal dose — that single change converts an assumed delivery into a measured one. Hold back a whole stress level or a whole field block.
+
+**The arm that could break it.** The rescue comes from something else in the preparation. Run a spent-medium-only arm, a heat-inactivated-enzyme arm and a buffer-only arm. Athens wrote the type specimen for naming this honestly: "Separating the two requires that buffer-only arm, and until it is run we describe the effect as attributable to the preparation."
+
+**The constraint the team already found, and must keep saying.** A farmer at a 2026 forum asked whether the system breaks organic certification; the team researched the regulations and concluded **it cannot be used on organic farms**, then interviewed the cooperative to work out what that means commercially. That is an honest market cap and it belongs on the landing page, not in a footnote.
+
+**Reach.** The multiplier is agricultural extension: the district agricultural research and extension stations employ people whose job is to repeat advice to growers for years. Train the extension officers, not the growers.
+
+### Antimicrobial-resistance genes in the water a named farm actually uses
+**The claim.** These resistance genes are present at these concentrations in water from this named site, measured with a stated limit of detection in the real matrix.
+
+**Why this shape.** Antimicrobial resistance is a health problem of the first order, but the moment a project touches patients, clinical samples or human tissue it collides with the rules that most often kill a high-school medical idea. This design keeps the medical relevance and moves the sample out of the clinic: **the target is a DNA sequence in environmental water, not a live human pathogen and not a patient.** That single choice is what makes it buildable by this team in this division.
+
+**Gate 1:** real water from the cooperative's irrigation channel or the Lanyang river, obtainable in week one through a relationship that already exists. **Gate 2 — and this is the one candidate marked down.** GEMS owns OD600, ELISA and plate readers, but a nucleic-acid readout is a capability the team does not yet have. Colorimetric LAMP is cheap and school-feasible, so this is amber rather than red, but it must be answered before the topic is chosen, not in month four.
+
+**The model.** A calibration curve per matrix, inverse calibration to estimate unknowns, a limit of detection computed rather than asserted, and estimates outside the calibrated range flagged instead of reported silently. HongKong-JSS's calibration discipline is the template, including keeping failed predictions inside the error metric.
+
+**The arm that could break it.** The signal is free extracellular DNA, or the water matrix is inhibiting the reaction. Run spiked-matrix recovery, no-template controls on every plate, and a matrix-only arm.
+
+**Reach.** Water-quality inspectors and extension officers are professional repeaters. **Eligibility note:** the claim must stay environmental surveillance — no clinical diagnosis, no patient advice, no human sampling.
+
+### A live oral-pathogen biofilm as the real target, with no human sample anywhere
+**The claim.** A peptide expressed from a whitelist chassis reduces biofilm formation by the actual caries organism in vitro, at this dose, with this effect size.
+
+**Why this shape.** This is the 2024 Grand Prize structure transplanted onto a health problem. In 2024 the real target was live *Aedes albopictus* larvae — the vector itself, not a surrogate — with LC50 reported for all three toxins and 98 dead larvae examined microscopically. Here the real target is a live biofilm of the organism that actually causes the disease, grown in the lab. **No patients, no saliva, no plaque, no human tissue, no clinical claim.** Childhood caries is a genuine and well-documented problem in Taiwan, so the medical motivation is real without the project ever entering a clinic.
+
+**Gate 1:** a live biofilm of the target organism, obtained from a culture collection rather than from a person — so the gate depends on a strain source and an eligibility verdict, not on recruiting anybody. **Gate 2:** biofilm quantification and growth curves on plate readers GEMS already owns.
+
+**The model.** Dose-response of biofilm inhibition with held-back concentrations, and an effect size with an interval rather than a bare p-value.
+
+**The arm that could break it.** The inhibition comes from the chassis or the medium rather than the peptide. Run an empty-vector arm, a heat-inactivated-peptide arm and a spent-medium arm — GEMS already scores a perfect five of five on exactly this habit, so it is cheap here.
+
+**Reach.** School nurses and dental hygienists repeat the lesson professionally, which is the HongKong-JSS shape. **The eligibility question is the whole risk**, and it is answered in the register below rather than assumed here: the strain's risk group, whether it sits on the White List, whether this division may culture it, and whether a check-in is required and by when.
+
+### The inter-lab measurement ring nobody in 106 teams ran
+**The claim.** The same light-inducible part, measured in N labs to one protocol in absolute units, varies by this much — and here is how much of that is the lab, the plate and the instrument.
+
+**Why this one.** Across all 106 decorated teams of 2026 there was not one inter-lab measurement ring. The whole category of collaboration that produces a reusable result went unclaimed, in a competition about measurement, while the single team that publicly offered real shared work got zero replies. GEMS holds the 2026 High School Best Measurement award, which is the credential that makes an invitation credible.
+
+**Gate 1:** the real target is the between-lab variance itself, which exists as soon as two labs run the protocol — but it has to be set up in week one, because the gate here is partner commitment rather than sample access. **Gate 2:** OD600 and a reporter, with a shared calibrant, on instruments GEMS already owns and has already won an award for.
+
+**The model, and this is why it is a Best Model candidate.** The model *is* the result: a variance-components fit separating between-lab, between-plate and within-plate contributions, with one whole lab held out to test whether the model predicts a site it never saw. That is the loop-closure habit measured at 53% against 23%, in its purest form.
+
+**The arm that could break it.** The apparent between-lab differences are really instrument differences. Ship a shared calibrant, fix the protocol, collect instrument metadata, and report the null honestly if the labs agree — a ring that finds no difference is still the first ring.
+
+**Reach and risk.** Every participating team is a multiplier and the protocol outlives all of them. The risk is coordination: the result depends on other teams delivering on time, so recruit more labs than you need and publish who did not return data, the way DTU named the turbine makers who never replied.
+
+### A biosensor for one defined contaminant in Hsinchu process water, with real samples
+**The claim.** This sensor reports this contaminant at these concentrations in water from a real industrial process stream, with a limit of detection measured in that matrix rather than in buffer.
+
+**Why this one.** The industry review found that China holds about 70% of world fermentation capacity while Taiwan's state-backed biomanufacturing push is a contract-development play **with no visible synthetic-biology design layer** — Singapore and Israel are funding exactly that layer. A school team cannot out-build a contract manufacturer and gains nothing by miniaturising one. What it can do is put a design-layer artefact against the island's actual industry: a characterised sensing part, calibrated in absolute units, for a contaminant that a Hsinchu process stream really contains.
+
+**Gate 1 — and this is the honest risk.** Industrial sample access is harder than a farm. A water-treatment operator can hand over a sample in an afternoon, but only if the relationship exists; a company may also not want its effluent characterised by a school team. Name the route and the person before choosing this topic, and have a fallback stream. **Gate 2:** a colorimetric or fluorescent readout on plate readers already owned.
+
+**The model.** Calibration in the real matrix, inverse calibration, a computed limit of detection, and whole batches held back. The 2026 field gives a direct template: one team built a calibration curve per medium in micromolar fluoride and re-zeroed on that plate's own negative control.
+
+**The arm that could break it.** Matrix effects — the process water suppresses or mimics the signal. Spiked recovery in the real matrix, a matrix-only arm, and a buffer comparison published side by side.
+
+**Reach.** Water-treatment operators and environmental inspectors are professional repeaters, and Hsinchu is close enough for repeat visits. **Say what it is not:** a sensor is detection, not remediation, and the landing page must not promise cleanup the results page does not show.
+
+**Checklist**
+
+- If only one season is available, run O1. It passes both gates on day one, it closes the gap the entire ReLEAF line rests on, and the literature it contributes to is twelve papers deep.
+- Do not run O2 before O1. Using the switch on a real field sample before showing the switch works repeats the 2026 mistake exactly.
+- Settle both medical eligibility verdicts before designing any biology. A rule discovered in June costs a season; the same rule discovered in November costs an afternoon.
+- Answer M1's readout question before choosing it. A nucleic-acid readout is a new capability for this team, and by this instrument's own rules that is a gate, not a detail.
+- For N1, recruit more labs than you need and publish who did not return data. The result survives a partner dropping out; it does not survive pretending they did not.
+- For N2, name the water-treatment operator and the fallback stream before committing. Industrial sample access is the one gate a relationship cannot be improvised into.
+- Whichever wins, decide in week one what model will be fitted and which rows are held back, because that is the Best Model play and Best Model is the category that maps onto the finalist slate.
+- Whichever wins, deposit a characterised part and publish one Traditional Chinese artefact with an explicit reuse licence. GEMS won a parts award in 2024 and entered none in 2026.
+- Write the landing-page sentence last, from the results page. GEMS is joint-worst in the 2026 Top 10 on the gap between what a home page claims and what its own evidence shows.
+
+_Method and limits. These six are proposals, not measurements. What is measured is the reasoning behind each criterion, and every figure cited is measured elsewhere in this report with its own limits stated where it is reported: the real-target finding and the seven-of-seven surrogate count from judging-top10.json; the GEMS three-season record, the 640-against-672 nm wavelength question and the constitutive-bypass finding from gems-three-seasons.json, judging-three-teams.json and report.json; the 53-against-23 model-loop figure from the dry-lab analyses; the falsification-control counts from falsification-controls.json; the inter-lab-ring and escape-rate gaps from collaboration-network.json and safety-practice.json; the multiplier counts from picks-leverage.json; the special-prize co-occurrence from award-economics.json; and Taiwan's position in the design layer from trends/industry.json. GEMS's own assets -- CcaSR in Bacillus subtilis WB800 supplied by Prof. Huang Chieh-Chen, the light plate apparatus, the hollow-fibre perfusion bioreactor, the ELISA and OD600 capability, the 2026 awards, the interview with Mr. Chen Ke-Wei of the Lanyang River Friendly Farming Production Cooperative, and the organic-certification conclusion -- are all read from research/teams/6072.json. The eligibility verdicts are NOT settled here: they are in the register block on this page, and anything it marks unverified should be treated as unverified rather than as permission._
+
+
 # Judging
 
 ## Special awards do not buy a podium — the finalist questions do

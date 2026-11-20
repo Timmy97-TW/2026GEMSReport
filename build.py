@@ -534,6 +534,7 @@ def write_text_mirror(results, teams, trends, report):
         # The site groups sections under tabs; a linear read should too, rather
         # than interleaving tabs because they happen to share an `order`.
         TABS = [("overview", H("Overview", "總覽")), ("picks", H("2027 topic selection", "2027 選題指南")),
+                ("proposals", H("2027 project proposals", "2027 新題目建議")),
                 ("judging", H("Judging", "評審標準")), ("drylab", H("Dry lab", "乾實驗室")),
                 ("good", H("Science for good", "科學向善")), ("teams", H("Team analysis", "團隊分析")),
                 ("roadmap", H("Roadmap", "路線圖"))]

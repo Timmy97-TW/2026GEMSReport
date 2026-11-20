@@ -47,6 +47,7 @@
   var TABS = [
     { id: "overview", en: "Overview", zh: "總覽", icon: "M3 12h4l3 8 4-16 3 8h4" },
     { id: "picks", en: "2027 Picks", zh: "2027 選題指南", icon: "M12 2v4m0 12v4M2 12h4m12 0h4M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8" },
+    { id: "proposals", en: "2027 Proposals", zh: "2027 新題目建議", icon: "M9 11l3 3 8-8M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9" },
     { id: "judging", en: "Judging", zh: "評審標準", icon: "M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2M9 14l2 2 4-4" },
     { id: "drylab", en: "Dry Lab", zh: "乾實驗室", icon: "M9 3v6l-5 9a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-9V3M8 3h8" },
     { id: "good", en: "Science for Good", zh: "科學向善", icon: "M20 9c0 6-8 11-8 11S4 15 4 9a8 8 0 0 1 16 0z" },
@@ -512,6 +513,13 @@ function isWin(a) { return /winner|grand prize|top 10/i.test(a); }
     return reportSections("picks");
   }
 
+  /* Six candidate 2027 projects, each scored against the picks tab's own
+     instrument. Same dispatch caveat as viewPicks: without an explicit
+     branch in render() this tab would silently fall through to the roadmap. */
+  function viewProposals() {
+    return reportSections("proposals");
+  }
+
   function viewRoadmap() {
     var h = reportSections("roadmap");
     var ph = REPORT.roadmap || [];
@@ -585,6 +593,7 @@ function isWin(a) { return /winner|grand prize|top 10/i.test(a); }
     else if (CUR === "teams") h = viewTeams();
     else if (CUR === "judging") h = viewJudging();
     else if (CUR === "picks") h = viewPicks();
+    else if (CUR === "proposals") h = viewProposals();
     else if (CUR === "academic") h = viewTrends("academic");
     else if (CUR === "industry") h = viewTrends("industry");
     else h = viewRoadmap();
