@@ -2148,3 +2148,82 @@ in writing first and keep the answer. Do not design around the optimistic readin
 The Science for Good listening visit. good-governance.json already specifies the fourteen-question
 instrument and declares its blanks; what it needs is real entries from a farm visit, not more
 analysis. Nothing in the repo can substitute for that.
+
+## Session 7, part 4 -- the Taiwan open data is not a model target, and the reason is measurable
+
+HEAD ca51253, pushed. 46 insight blocks, all 46 translated, all three build audits silent. New block
+taiwan-open-data.json on the proposals tab at order 17, immediately after the three topics it
+constrains and before the old six.
+
+The user has NOT yet answered which of the three topics to develop. This part deliberately took the
+one open item that does not depend on their answer, rather than starting a season plan.
+
+### What was done
+
+Both Taiwanese public series were fetched once on 2026-11-20 and read as data only, each into its
+own empty directory with the profiling scripts kept elsewhere and paths passed as arguments. Byte
+counts 4,179,149 (TWC) and 19,073 (SIPA) match the earlier agent report, which independently
+confirms both links are live and unchanged.
+
+### The verdict: no, and here is the number
+
+- Variance decomposition, per-plant means against pooled within-plant variance, plants with at least
+  12 observations: total hardness 95.5% between-plant, TDS 94.6%, alkalinity 94.9%, chloride 96.6%,
+  sulfate 93.6%, pH 88.7%. Only turbidity falls to 67.6%, and its total sd is 0.106 NTU, which is at
+  the reporting resolution, so its apparent within-plant signal is rounding.
+- Month-of-year effect is negligible: hardness swings 1.88 mg/L across the calendar year against a
+  total sd of 66.5 mg/L. TDS 3.69 against 94.6. Chloride 0.28 against 20.3.
+- So there is no seasonality to fit and the predictor is plant identity, which is geology and
+  static. A regression here reports a respectable R2 that comes from a plant dummy. That is exactly
+  the non-load-bearing model bestmodel-anatomy.json spent three seasons documenting.
+- Microbiology settles topic 2 separately: 9,553 of 12,896 total bacterial counts read "<1" (74.1%),
+  the numeric remainder is 1 to 17 CFU/mL with median 1, and coliform group has ONE distinct value
+  in the whole file. Ammonia 84.9% ND, nitrite 90.5%, cadmium 91.8%, eight of thirteen pesticides
+  99%+ ND. Copper is 55.3% numeric with median 1.16 ppb, about a thousandfold below the
+  drinking-water limit.
+
+### The one result that survives, and it is better than the model would have been
+
+OCP cold-plate coolant spec limits total hardness to under 30 mg/L as CaCO3. In this dataset
+12,316 of 12,896 rows exceed it, 95.5%. County means run from about 110 mg/L (Taichung) and 120
+(Hsinchu) to 186 (Changhua) and 200 (Kaohsiung), max 300. So municipal makeup water in Taiwan is
+four to ten times outside cold-plate specification, and Hsinchu, where the fabs are, is not one of
+the softer counties. Measured from an official dataset, reproducible in one line, and it explains
+why the inhibitor and biocide packages in topics 1 and 2 exist at all.
+
+### Three previously recorded details about these files are wrong
+
+1. The TWC file is UTF-8 with a BOM, NOT Big5 as the agent report said. A team following that note
+   would corrupt every Chinese plant name.
+2. The header carries no units for any of the 49 analytes, so "read them from the file header" does
+   not work. Units must come from the national drinking-water standard and the version used must be
+   written down.
+3. SIPA labels conductivity "mho/cm" while values run 0.2 to 4.5, median 1.86. Taken literally that
+   is 1.86 million uS/cm against seawater at roughly fifty thousand, so it is physically impossible.
+   Read as mS/cm it is 1,860 uS/cm, ordinary park effluent, and close to the OCP cold-plate ceiling
+   of 2,000. The published unit is out by 10^3. Also in that file the column labelled 名稱 holds one
+   single value across all 280 rows while 項目 holds the five park names, so the two are swapped
+   against their labels, and SS is populated in only 172 of 280 rows.
+
+### Consistency fix
+
+proposals-taiwan-ai.json had a checklist item telling the team to download these two series and look
+at them because nobody in iGEM had used them. That would now send them hunting for a signal that is
+not there, so it was replaced positionally with the profiled result and a pointer to the new block.
+The report no longer contradicts itself. findings-index.json is now 35 cards.
+
+### Structural panel facts worth keeping
+
+TWC: 12,896 rows by 52 columns, 49 analytes, 84 consecutive months ROC 10801 to 11412 (2019-01 to
+2025-12), 195 distinct plant strings, 153 to 154 rows per month. As a panel it is almost perfectly
+balanced, which is the one genuinely excellent thing about it. The 淨水場 column packs name, address,
+two numeric codes and county into one string; key plants on the Chinese name before the first
+bracket and counties on the tag inside the angle brackets. 195 plant strings were NOT reconciled to
+physical plants, so a renamed plant counts twice.
+
+SIPA: 280 rows, 8 columns, 年度 111 to 115 (2022 to 2026), five parks (新竹, 竹南, 龍潭, 銅鑼, 宜蘭).
+
+### Still open, unchanged
+
+The user's answer on which topic to develop. And the Science for Good listening visit, which needs
+a farm visit rather than analysis.
