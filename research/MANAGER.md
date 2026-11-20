@@ -2033,3 +2033,118 @@ SMS-Shenzhen left open in this exact division -- but the industrial target quant
 from a metrology agent, which is running with three children of its own. Writing the proposals
 before it lands would mean guessing at analytes, and several industrial figures have already failed
 sourcing in this project.
+
+## Session 7, part 3 -- the three Taiwan AI-hardware proposals landed
+
+Both metrology agents came back and the three topics are written, wired, built, audited, committed
+and pushed. HEAD f485bc4. 45 insight blocks, all 45 translated, all three build audits silent.
+New file research/insights/proposals-taiwan-ai.json on the proposals tab at order 15, which puts it
+after proposals-rules (12) and before proposals-six (20), so a reader meets the live three before
+the six the PI rejected. Nine cards, 9 body paragraphs, a 13-row by 4-column quantity register, a
+13-item checklist, and a method note that names what was paywalled and unread.
+
+### The organising finding is a rules consequence, not a preference
+
+The White List activities axis requires a Check-In for "Making a hazardous biological agent more
+hazardous... Creating a novel hazardous biological agent, such as by rendering a non-pathogen
+virulent, or conferring the ability to damage or degrade important materials (such as electronics,
+plastics, etc.)". High School has no Check-In route. The azoles in a cooling loop are there to stop
+copper corroding, so a strain engineered to degrade them is a strain conferring the ability to
+damage electronics. Every remediation design in this theme dies on that clause and only measurement
+topics survive. That is unusual for iGEM, where remediation is the default, and it is the most
+useful thing the rules did to this theme. It is now also a README bullet.
+
+### The three topics
+
+1. Optogenetics. Azole residual (tolyltriazole / benzotriazole) in cooling towers and AI-server
+   cold-plate coolant. EL222 used as a clock rather than an actuator: blue light opens a production
+   window of known length, so the readout is a rate over a defined interval instead of an amount
+   over an unknown history. Model: an accumulation fit that emits the light window and earliest
+   read time (the wet lab then runs at those), then a four-parameter Hill fit globally over a 2D
+   azole by window matrix giving EC50 and the rate-to-mg/L calibration. Overturn test: the
+   incumbent's own interference list -- chlorine above 20 mg/L, hardness above 500 mg/L, oxidants
+   "Interfere at all levels".
+2. Medical. The colony count AI cold plates are specified on. Engineered element is an isogenic
+   two-colour live/dead reference pair whose live fraction is set rather than estimated. Model: a
+   Poisson or negative-binomial count fit that emits the filtration volume and replicate count
+   needed to resolve 1 CFU/mL, then the CFU-to-cells conversion fitted against inhibitor dose.
+   Endpoint is Legionnaires' disease in evaporative cooling; Legionella itself is RG2 and the wiki
+   must say so in one sentence.
+3. Nobody would think of it. Discriminating bubbles from particles, which IRDS 2024 YE 4.2.7 states
+   in print "is currently not possible". A hydrophobin-reporter fusion marks the gas-liquid
+   interface, a silica-binding peptide or silaffin R5 fusion marks the solid surface, two colours.
+   Model: two Langmuir isotherms on measured surface areas that emit the working concentration,
+   plus a competitive-adsorption fit. Overturn test in week 3 on degassed and sparged extremes.
+   Named risk is technical not legal: hydrophobins are hard to secrete, peptide fallback day one.
+
+Recommendation if only one season: Topic 1. Topic 3 has the best paper and the highest chance of
+nothing. Topic 2 has the strongest safety story and the weakest wet-lab novelty.
+
+### The second sweep corrected three figures before publication
+
+A second independent metrology agent (fab and data-centre cooling) landed while the file was being
+written and changed numbers I was about to publish:
+
+- Cold-plate colony spec is under 1 CFU/mL AT FILL and under 100 CFU/mL IN SERVICE, not a flat
+  under 1. Also added the tower levels the first sweep said it could not verify: CTI WTB-148 (July
+  2008), planktonic under 10,000 CFU/mL, sessile under 100,000 CFU/cm2, hyperhalogenation above
+  100,000 CFU/mL. One chain, one method, four orders of magnitude between its ends.
+- The culturable-to-total bias is far worse than the 10-to-100 factor from DAPI counts: McElhinney
+  et al., Scientific Reports 10:13299 (2020), district cooling plants, site CFU/mL is "only
+  0.01-0.06% of the corresponding ICCs" by flow cytometry. Peer-reviewed, industrial, so lead with
+  it.
+- A fast proxy for cooling-tower bacterial load is ALREADY PUBLISHED: Toman et al., Sensors
+  20:6398 (2020), respiration proxy, 30 min against 48 h, LOD 1.16e4 CFU/mL, R2 = 0.9648. And
+  SLMB 333.1 (Dec 2012) gives flow-cytometry total cell count with inter-lab reproducibility of
+  4.6-8.0% RSD across 11 operators and 4 instrument models, which exists for no other rapid method
+  in this field. So speed is NOT Topic 2's contribution. Narrowed it to the conversion, which is
+  not 1:1 and has never been published for cooling water.
+- Azole figures are richer: more than 100 ppm in service for cold-plate coolant (OCP Guidelines
+  2022) and 100 ppm residual quarterly (Lenovo Press LP2018, 2024-09-13), against a Hach 8079
+  working range of 1-20 mg/L, so the cold-plate target sits 5x above full scale and needs dilution.
+  OCP v1.3 requires an inhibitor and sets NO number; ASHRAE's table says only "Required". A
+  specified requirement with no specified number is itself a measurement gap. And RSD is 13% for
+  UV-photolysis against 0.2% for a fluorescence route already linear down to 5 ppb -- so sensitivity
+  is settled and a sensitivity claim would be wrong.
+
+The two sweeps agreed on the azole residual and disagreed only about silica, which the second
+ranked first overall. Both readings are in the register. The second sweep also contributed the
+principle that decides the whole set and is now a checklist item: a cheap new sensor can fix a
+sampling problem and cannot fix an inference problem. Approach temperature and fouling resistance
+fail for the second reason -- AHRI 550/590 titles its own section a method for SIMULATING fouling
+factor allowance, and a 2025 review says the inferred resistance can come out negative in the
+presence of foulant. All three topics are sampling problems.
+
+Two more rows earned their place in the register without becoming topics. Glycol fraction in
+direct-to-chip coolant: a dated field case has it falling 24.5% to 22% over two months while pH and
+conductivity both stayed within normal ranges, and 32% of more than 3,000 samples were out of spec.
+That is the cleanest proof in the whole project that the two cheapest online parameters can miss
+the failure -- but the quantity is refractive index, with no biology in it. Biofilm areal density:
+reported in at least four mutually non-convertible units (log CFU/cm2, percent coverage, millivolts,
+a dimensionless proprietary index) with no SI-traceable reference method and no published
+inter-instrument comparability.
+
+### Method lesson, fourth and fifth instances
+
+Three cohort searches were substring false positives before they were answers: copA inside COPASI,
+CueR inside rescuer, CcaS inside laccase. Printing every match caught all three. The real result is
+better than the apparent one: CcaS/CcaR is used by GEMS 6072 ALONE across all 106 decorated teams,
+CueR and copA by nobody, and EL222 by exactly two Undergraduate teams (McGill 6040, WHU-China 6220)
+neither of which uses light as a measurement clock. Hydrophobin, HFBI, silaffin, silica-binding,
+air-water interface, azole, benzotriazole, tolyltriazole, cooling tower, cold plate, R2A and
+Petrifilm are all zero.
+
+### One rule ambiguity the PI must resolve in writing before designing a medical season
+
+The White List lists "Human and primate cell lines that have been tested and certified free of
+known pathogens (such as MCF-7; consult your vendor about certification!)" while the same site's
+risk-group table puts "Most human and mammal cell lines" in Risk Group 2, which the White List
+routes to Check-In. That is an unresolved contradiction, not a settled permission. Topic 2 is
+designed not to need cell culture at all. If any future medical topic does, put it to iGEM safety
+in writing first and keep the answer. Do not design around the optimistic reading.
+
+### Still open
+
+The Science for Good listening visit. good-governance.json already specifies the fourteen-question
+instrument and declares its blanks; what it needs is real entries from a farm visit, not more
+analysis. Nothing in the repo can substitute for that.
