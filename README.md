@@ -94,6 +94,7 @@ one it cleared in 2024 and has not cleared since. The short version of everythin
   directional: carry the holder's material into your lab, or go and work at the holder's bench, but never take
   the organism out. Even the High School team that ran trials at two working sites did so without engineered
   material, because it legally could not leave the lab.
+- **In Taiwan's AI hardware chain the rules forbid cleaning, so every surviving topic is a measurement.** Conferring the ability to damage or degrade important materials needs a Check-In no High School team can file, and the azoles in a cooling loop are there to stop copper corroding.
 - **Best Model does not reward rigour, it rewards a load-bearing model.** All 49 recipients of 2024-26 were read
   on twelve fields, the 15 High School ones in full. In each of the three seasons the winner was not the
   best-validated team on its slate, and twice had the thinnest statistics: the 2024 winner published no equation,

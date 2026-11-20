@@ -1,0 +1,419 @@
+{
+  "id": "proposals-taiwan-ai",
+  "tab": "proposals",
+  "order": 15,
+  "kicker": "2027 · one theme",
+  "kicker_zh": "2027 · 一個主題",
+  "title": "Three topics on Taiwan's AI hardware chain, and in all three the model has to carry the project",
+  "title_zh": "台灣 AI 硬體那條鏈上的三個題目，而三個題目的模型都必須撐住整個專案",
+  "lede": "The theme is the one supply chain Taiwan is not replaceable in, and the register of what that chain cannot measure today was built from the IRDS roadmaps and the Open Compute Project cold-plate coolant specification rather than from news coverage. Three topics come out of it: one optogenetic, one with a human-disease endpoint, one aimed at a measurement a roadmap states in print is currently not possible. None of the three is a remediation project, and that is a consequence of the rules rather than a preference.",
+  "lede_zh": "主題選的是台灣在全世界無可取代的那條供應鏈，而「這條鏈今天量不出什麼」這份清冊，是從 IRDS 技術藍圖與 Open Compute Project 的冷板冷卻液規格裡挖出來的，不是從新聞報導。從清冊裡長出三個題目：一個光遺傳學、一個有人類疾病終點、一個直接打一份技術藍圖白紙黑字寫著「目前做不到」的量測。三個都不是污染處理題，而這是規則造成的結果，不是偏好。",
+  "body": "**All three measure, and none of them cleans, because the rules close that door.** The activities axis of the White List requires a Check-In for \"Creating a novel hazardous biological agent, such as by rendering a non-pathogen virulent, or conferring the ability to damage or degrade important materials (such as electronics, plastics, etc.)\" — and a High School team has no Check-In route at all. In this theme the ordinary iGEM reflex, engineer an organism to degrade the contaminant, walks straight into that clause. The azoles in a cooling loop are there to stop copper corroding, so a strain that degrades them is a strain that confers the ability to damage electronics. Every topic that survives the rules is therefore a measurement. That is unusual for iGEM, where remediation is the default, and it is the most useful thing the rules did to this theme.\n\n**The gap was located in the roadmap's own words, not inferred from them.** IRDS 2025 ESH&S, section 8.1.8 on online wastewater metrology, says that \"many parameters, including certain metals and organics, still rely on grab samples due to the limited availability of robust online tools\" and that \"Ideal systems must be robust enough to measure key parameters, such as heavy metals, hardness, and azoles, without frequent maintenance\". Section 8.1.10 goes further and asks for a curve: azoles, hydrogen peroxide and heavy metals \"disrupt biological treatment by impairing bacterial function or requiring long acclimation times. This highlights the need for comprehensive chemical characterization to understand biological impacts.\" A fitted inhibition curve against azole concentration is something the roadmap has asked for in print. Very few iGEM topics can say that about themselves.\n\n**The three sensing elements are clean across the cohort, and three of our own searches were false positives before they were answers.** Across the 106 decorated 2026 teams: benzotriazole 0, tolyltriazole 0, azole 0, cooling tower 0, cold plate 0, R2A 0, Petrifilm 0, hydrophobin 0, HFBI 0, silaffin 0, silica-binding 0, air-water interface 0. CueR and copA looked like two hits and both were substrings — copA inside COPASI, CueR inside rescuer. CcaS looked like four and three of them were laccase. EL222 is real in exactly two teams, McGill 6040 and WHU-China 6220, both Undergraduate, and neither uses light as a measurement clock. Counting matches is how you get this wrong; printing them is how you do not.\n\n**The model spec has the same shape in all three, because that is what Best Model actually rewards.** Three seasons of the award say the winner is the team whose model produced what the wet lab then built, not the team with the best statistics. So each topic below names a quantity the model emits and a protocol parameter the wet lab sets from it: a light window, a filtration volume, a working concentration. And each one is an isotherm or a kinetics fit on the team's own measurements, which is also the exact gap SMS-Shenzhen 6165 left open in writing in this same division — a High School Best New Composite Part nominee whose own report says it has \"no Langmuir or Freundlich isotherm fitting, no adsorption kinetics, no structural modelling\".\n\n**Topic 1 uses light as a clock rather than an actuator, and the claim is narrow on purpose.** Every whole-cell inhibition assay drifts, because the answer depends on the inoculum's age and history. That is the documented weakness of the one bioassay this industry already uses: the assimilable-organic-carbon method's inoculum \"must be replaced at least monthly, which makes standardisation difficult\". A light-gated promoter removes the history. Blue light opens a production window of known length, the reporter accumulates only inside it, and the readout becomes a rate over a defined interval instead of an amount over an unknown one. EL222 is the right switch because its dark reversion takes seconds, so the window closes sharply. CcaS and CcaR, which GEMS already has in hand and which no other team in the cohort uses, reverse too slowly to define a short window and are the fallback only if EL222 will not express.\n\n**Topic 2 has a real medical endpoint and a line it has to name out loud.** Evaporative cooling towers are the classic reservoir for Legionnaires' disease, and fabs and the new AI data centres run them at scale. But Legionella is Risk Group 2, and the White List routes \"All organisms that require enhanced containment (e.g. BSL2), such as those from Risk Group 2\" to a Check-In that this division cannot file. So the project is metrology with a medical endpoint, built on a defined White List inoculum in synthetic coolant, and the wiki should say that in one sentence rather than imply a clinical claim. The same restraint is what the Safety and Security Award rewards: Stockholm 6292 won it in Overgraduate for a redesign that is visible on the page.\n\n**Topic 3 attacks a sentence rather than an analyte.** IRDS 2024 Yield Enhancement, section 4.2.7, verbatim: \"Another measurement challenge for several chemicals is the differentiation between particles and bubbles, which is currently not possible.\" The same chapter says liquid-chemical particle counters reach only 40 nm, and section 4.2.1 says of 10 nm shedding from polymer components that \"Metrology for such analysis does not currently exist\". A false particle count is a wafer-scrap decision made on a bad number. The proposal is to label the two things the counter confuses with two different colours, which is high variance and the best paper of the three if it lands.\n\n**Two independent sweeps agreed on one thing and disagreed about first place, which is itself worth knowing.** Both put the azole residual in their top two. Both reached the microbial count and both named the same weakness in it. They disagreed about silica: the second sweep ranked it first, because a published numeric limit, a published control equation, a documented absence from routine monitoring and a documented instrument-range failure all coincide there, and the online instrument tops out thirty to four hundred times below what a cooling tower actually runs. It is ruled out here only because it has no biology in it, and that is a judgement about iGEM rather than about metrology. The second sweep also contributed the principle that decides the whole set: a cheap new sensor can fix a sampling problem, and it cannot fix an inference problem. Approach temperature and fouling resistance are what operators actually want, and they fail for the second reason, with AHRI 550/590 titling its own section a method for simulating fouling-factor allowance and a 2025 review stating that the inferred resistance can come out negative in the presence of foulant. All three topics below are sampling problems.\n\n**What is not sourced stays out, and what is sourced is better than expected.** The industrial figures that failed verification are still out: the 2021 drought's rank among dry years, any leading-edge capacity share, any share of Taiwan's water used by semiconductors, and any germanium concentration in fab effluent, for which there is no published figure anywhere. What is sourced and usable: CMP waste is predominantly a copper and tungsten stream; virgin test wafers import at roughly 5 to 40 US dollars each while reclaimed wafers are contract-only business to business in Taiwan; and the public data layer is real. Taiwan Water Corporation publishes monthly plant-level water chemistry, 12,896 rows from January 2019 to December 2025 across about fifty analytes including total bacterial count, as a 4.2 MB CSV. The Hsinchu Science Park Administration publishes monthly park-effluent quality, 280 rows across five parks from 2022 to 2026, with pH, suspended solids, COD and conductivity. Both are Open Government Data Licence, both download in one request, and no iGEM team has used either.",
+  "body_zh": "**三個題目都是量測，沒有一個是處理污染，因為規則把那條路關了。**白名單的「活動」軸要求以下行為必須先送 Check-In：「創造新的危害性生物因子，例如使非病原體具備毒性，或賦予其損害或降解重要材料（例如電子元件、塑膠等）的能力」——而高中組根本沒有 Check-In 這條路。在這個主題上，iGEM 最自然的反射動作「改造一株菌去分解污染物」會正面撞上這一條。冷卻迴路裡的唑類就是為了讓銅不要腐蝕才加進去的，所以一株會分解唑類的菌，就是一株被賦予了損害電子元件能力的菌。因此在規則下活得下來的題目全部都是量測題。這在 iGEM 裡很不尋常，因為那裡的預設值是處理污染；而這也是規則對這個主題做的最有用的一件事。\n\n**這個缺口是在技術藍圖自己的字句裡找到的，不是從它推論出來的。**IRDS 2025 ESH&S 第 8.1.8 節談線上廢水計量，寫的是「許多參數，包括某些金屬與有機物，仍然依賴人工取樣，因為穩健的線上工具有限」，以及「理想的系統必須穩健到足以量測關鍵參數，例如重金屬、硬度與唑類，而且不需頻繁維護」。第 8.1.10 節更進一步，直接開口要一條曲線：唑類、過氧化氫與重金屬「會干擾生物處理，損害細菌功能或需要很長的適應期。這凸顯了全面化學特性描述的必要性，以理解其生物影響。」把抑制曲線對唑類濃度擬出來，是這份技術藍圖白紙黑字要求過的東西。很少有 iGEM 題目能這樣說自己。\n\n**三個感測元件在整個群體裡都是乾淨的，而我們自己有三次搜尋在變成答案之前先是假陽性。**在 106 支獲獎的 2026 隊伍裡：benzotriazole 0、tolyltriazole 0、azole 0、cooling tower 0、cold plate 0、R2A 0、Petrifilm 0、hydrophobin 0、HFBI 0、silaffin 0、silica-binding 0、air-water interface 0。CueR 與 copA 看起來各命中兩隊，兩個都是子字串——copA 藏在 COPASI 裡，CueR 藏在 rescuer 裡。CcaS 看起來命中四隊，其中三個是 laccase。EL222 是真的，但只有兩隊：McGill 6040 與 WHU-China 6220，都是大學組，而且沒有一隊把光當成量測的時鐘。數命中次數是搞錯的方法；把命中的句子印出來讀，才是不搞錯的方法。\n\n**三個題目的模型規格形狀一樣，因為那才是最佳模型獎真正在獎勵的事。**三季的獎項紀錄說，贏的是那支「模型產出了濕實驗室接著真的去做的東西」的隊伍，不是統計做得最漂亮的那一支。所以下面每一個題目都指名兩件事：模型要吐出哪一個量，以及濕實驗室要從那個量去設定哪一個實驗參數——一段光照視窗、一個過濾體積、一個工作濃度。而每一個都是對自己量測做的等溫線或動力學擬合，那同時也是 SMS-Shenzhen 6165 在同一個組別裡、用自己的文字留下的那個缺口：一支獲最佳新複合元件提名的高中隊伍，報告自己寫著「沒有 Langmuir 或 Freundlich 等溫線擬合、沒有吸附動力學、沒有結構建模」。\n\n**題目一把光當時鐘而不是當致動器，而它的主張刻意很窄。**所有全細胞抑制分析都會漂移，因為答案取決於菌種接種物的年齡與來歷。那正是這個產業現在就在用的那一個生物分析的已知弱點：可同化有機碳法的接種物「至少必須每月更換一次，這使標準化變得困難」。一個光控啟動子把「來歷」這件事移除掉。藍光打開一段已知長度的生產視窗，報告蛋白只在視窗內累積，於是讀出的是一段明確區間上的速率，而不是一段不明歷史上的累積量。EL222 是對的開關，因為它在暗中回復只要幾秒，視窗因此關得很乾淨。CcaS 與 CcaR 是 GEMS 已經握在手上、而整個群體裡沒有別隊在用的那一對，但它們回復太慢、沒辦法定義一段短視窗，只有在 EL222 表達不出來時才當備案。\n\n**題目二有一個真正的醫療終點，也有一條它必須自己講出來的界線。**蒸發式冷卻水塔是退伍軍人症的經典病原庫，而晶圓廠和新建的 AI 資料中心都在大規模地用。但 Legionella 屬於第二風險群，白名單把「所有需要強化圍堵（例如 BSL2）的生物，例如來自第二風險群者」送進 Check-In，而這個組別交不出那張表。所以這個專案是「有醫療終點的計量學專案」，建在合成冷卻液裡一份明確定義的白名單接種物之上，而 wiki 應該用一句話把這件事說清楚，而不是暗示一個臨床主張。同樣的節制正是安全與保安獎在獎勵的：Stockholm 6292 在研究生組拿下它，靠的就是頁面上看得見的那次重新設計。\n\n**題目三打的是一句話，不是一個分析物。**IRDS 2024 良率提升章第 4.2.7 節，原文：「對好幾種化學品而言，另一個量測挑戰是區分顆粒與氣泡，而這目前做不到。」同一章說液態化學品的顆粒計數器只到 40 奈米，而第 4.2.1 節談到高分子元件在 10 奈米尺度的脫落時寫道「用於這類分析的計量方法目前並不存在」。一個錯的顆粒計數，就是一個拿壞數字做出來的晶圓報廢決定。這個提案要做的是把計數器搞混的那兩種東西用兩種顏色分別標記起來——變異大，但如果成了，三個題目裡最好的論文在這裡。\n\n**兩次互相獨立的清查在一件事上一致、在第一名上不一致，而這件事本身就值得知道。**兩次都把唑類殘留放進前兩名。兩次都走到微生物計數，而且都點出它同一個弱點。它們在二氧化矽上不一致：第二次清查把它排第一，因為在那裡「已發表的數值上限、已發表的控制方程式、在例行監測中有紀錄的缺席、以及有紀錄的儀器量程失效」四件事同時成立，而線上儀器的滿量程比冷卻水塔實際運轉值低三十到四百倍。這裡把它排除，只因為它裡面沒有生物學，而那是一個關於 iGEM 的判斷，不是關於計量學的判斷。第二次清查還貢獻了決定整組題目的那條原則：一個便宜的新感測器可以解決取樣問題，但解決不了推論問題。趨近溫度與結垢熱阻才是操作人員真正想要的量，而它們敗在第二個理由上——AHRI 550/590 自己那一節的標題就是「模擬結垢因子裕度的方法」，而 2025 年的一篇回顧指出，在有垢的情況下推論出來的熱阻甚至可能是負的。下面三個題目全部都是取樣問題。\n\n**查不到來源的就不寫，而查得到的比預期的好。**那些驗證失敗的工業數字仍然留在外面：2021 年乾旱在歷年旱象中的排名、任何先進製程產能占比、半導體用掉台灣多少比例的水，以及晶圓廠廢水中的任何鍺濃度——最後這一項全世界沒有任何已發表的數字。查得到而且用得上的是：CMP 廢液主要是銅與鎢的流；原生測試晶圓可以用每片約 5 到 40 美元進口，而再生晶圓在台灣是 B2B 合約制；還有，公開資料層是真的存在。台灣自來水公司公布逐月、逐淨水場的水質，2019 年 1 月到 2025 年 12 月共 12,896 列，約五十個分析項目，其中包含總菌落數，是一個 4.2 MB 的 CSV。新竹科學園區管理局公布逐月的園區放流水水質，2022 到 2026 年、五個園區共 280 列，有 pH、懸浮固體、COD 與導電度。兩者都是政府資料開放授權，都一次請求就下載得到，而且沒有任何 iGEM 隊伍用過其中任何一個。",
+  "cards": [
+    {
+      "kicker": "Topic 1 · optogenetics",
+      "kicker_zh": "題目一 · 光遺傳學",
+      "title": "Light as the clock: a timed-window inhibition assay for the corrosion inhibitor inside AI-server coolant",
+      "title_zh": "光當時鐘：對 AI 伺服器冷卻液裡那個腐蝕抑制劑做的定時視窗抑制分析",
+      "body": "**The claim.** Reporter output per unit of light-on time falls with azole concentration, and here is the four-parameter curve, its EC50, and what the curve does when an oxidant is present.\n\n**Why this analyte.** Two independent sweeps of this supply chain put it in their top two, and the industry has converged on a number from several directions. At least 1 mg/L free azole in open cooling towers and 5 to 10 mg/L in closed loops, per UNLV 2016; at least 10 ppm tolyltriazole wherever copper is present, in UFC 3-240-13FN of 2005 and carried verbatim into UFM 3-230-13 dated 2026-02-05; more than 100 ppm in service for cold-plate coolant in the OCP Guidelines of 2022, and 100 ppm residual checked quarterly in Lenovo Press LP2018 of 13 September 2024. The OCP Base Specification v1.3, effective 2026-08-06, requires a copper corrosion inhibitor but sets no number for it, and ASHRAE's facility-water table says only \"Required\". A specified requirement with no specified number is itself a measurement gap.\n\n**What it replaces, and what it does not.** The incumbent is Hach method 8079, a bench UV-photolysis colorimetric assay with a 1 to 20 mg/L working range, which means the cold-plate target of about 100 ppm sits five times above full scale and has to be reached by dilution. Its own patent literature puts numbers on the failure modes: relative standard deviation 13 percent against 0.2 percent for a fluorescence route, detection limit around 250 ppb, \"strongly dependent upon the operator's laboratory technique\", \"non-linear with respect to aromatic azole dosage\", \"not well suited for continuous monitoring\", and a UV photolysis step whose duration must be exactly five minutes or the result is low. It is run monthly or quarterly, and the reagent cost per test is published at 0.94 US dollars.\n\n**So state plainly what the project is not competing on.** A published fluorescence working curve is already linear down to 5 ppb. Sensitivity is settled and a sensitivity claim would be wrong. This competes on continuity, on linearity across a band that spans the Hach range and the cold-plate target, and on not depending on an operator holding a lamp for exactly five minutes.",
+      "body_zh": "**主張。**每單位光照時間的報告蛋白產出，隨唑類濃度下降；這裡是那條四參數曲線、它的 EC50，以及當水裡有氧化劑時這條曲線會怎麼變。\n\n**為什麼選這個分析物。**兩次互相獨立的清查都把它放進前兩名，而產業也從好幾個方向收斂到一個數字上。開放式冷卻水塔至少 1 mg/L 游離唑類、密閉迴路 5 到 10 mg/L，見 UNLV 2016；只要有銅存在就至少 10 ppm 甲基苯并三唑，寫在 2005 年的 UFC 3-240-13FN，並原文沿用到 2026 年 2 月 5 日的 UFM 3-230-13；冷板冷卻液在役濃度超過 100 ppm，見 2022 年的 OCP Guidelines，以及 2024 年 9 月 13 日 Lenovo Press LP2018 所載的「殘留 100 ppm、每季檢查」。而 2026 年 8 月 6 日生效的 OCP 基礎規格 v1.3 要求必須有銅腐蝕抑制劑、卻沒有給數字，ASHRAE 的廠務用水表上也只寫「必需」。一個被明訂為必需、卻沒有被明訂數值的要求，本身就是一個量測缺口。\n\n**它取代什麼，又取代不了什麼。**現行方法是 Hach 8079，一個檯面上的紫外光解比色分析，工作範圍 1 到 20 mg/L——這代表冷板那個約 100 ppm 的目標值高出滿量程五倍，只能靠稀釋才量得到。它自己的專利文獻把失效模式都標上了數字：相對標準差 13%，而螢光路線是 0.2%；偵測極限約 250 ppb；「強烈取決於操作者的實驗技術」；「對芳香族唑類劑量呈非線性」；「不適合連續監測」；還有一個紫外光解步驟，時間必須剛好五分鐘，否則結果偏低。它每月或每季做一次，每測的試劑成本公開標價 0.94 美元。\n\n**所以要把「這個專案不是在比什麼」直接講清楚。**已發表的螢光工作曲線早就線性到 5 ppb。靈敏度已經解決了，提靈敏度的主張會是錯的。這個題目比的是連續性、是在「橫跨 Hach 量程與冷板目標值」那一段區間上的線性，以及不必依賴一個人把燈剛好舉五分鐘。",
+      "chips": [
+        "Analyte: tolyltriazole and benzotriazole",
+        "Hach range 1 to 20 mg/L against a cold-plate target near 100 ppm",
+        "Switch: EL222, dark reversion in seconds",
+        "Incumbent RSD 13 percent, fluorescence already 0.2 percent",
+        "OCP v1.3 requires an inhibitor and sets no number"
+      ],
+      "chips_zh": [
+        "分析物：甲基苯并三唑與苯并三唑",
+        "Hach 量程 1 至 20 mg/L，對上冷板約 100 ppm 的目標",
+        "開關：EL222，暗回復數秒",
+        "現行方法 RSD 13%，螢光路線已達 0.2%",
+        "OCP v1.3 要求要有抑制劑，卻沒給數字"
+      ]
+    },
+    {
+      "kicker": "Topic 1 · the model spec",
+      "kicker_zh": "題目一 · 模型規格",
+      "title": "Two fits in order, and the first one chooses the light window the wet lab then uses",
+      "title_zh": "兩個依序的擬合，而第一個擬合決定濕實驗室之後要用的光照視窗",
+      "body": "**Fit 1, the accumulation model.** Production during the window, maturation delay, dilution by growth and photobleaching, fitted to a light-window sweep on the team's own plate reader. What it emits: the window length at which the signal-to-noise of the rate estimate is highest, and the earliest read time at which that rate is identifiable at all. Every later experiment runs at that window and that read time. If the model does not change the protocol it is not load-bearing, and the project has the same problem 2026 had.\n\n**Fit 2, the inhibition surface.** A four-parameter Hill model fitted globally across a two-dimensional azole by light-window matrix, giving EC50 with an interval that comes from the fit and not only from replicate spread, plus the calibration function that turns a rate into mg/L. Global non-linear fitting over a two-dimensional matrix is exactly how Mingdao 6105 got its Ki of 121 mM, and Mingdao is the local benchmark that took a High School Best Model slot on Python, Excel and a household glucose meter.\n\n**The experiment that could overturn it.** The incumbent method's own interference list is specific: chlorine above 20 mg/L, phosphonates above 100 mg/L, hardness above 500 mg/L, and strong oxidising or reducing agents that \"Interfere at all levels\". A real chlorinated loop carries residual oxidant continuously. So dose the assay with hypochlorite across and beyond 20 mg/L, and with hardness to 500 mg/L, and refit. If EC50 moves by more than the azole band the team claims to resolve, the assay does not work in a real loop, and that is the result to publish. Toronto won 2026 Overgraduate Best Model on a model that did not work, with the leakage quantified and the dumb baselines reported as winning; publishing the null is the entry fee now, not a risk.",
+      "body_zh": "**擬合一：累積模型。**視窗內的生產、成熟延遲、生長造成的稀釋與光漂白，對自己盤讀儀上做的一組光照視窗掃描做擬合。它吐出的是：速率估計的訊噪比最高的那一個視窗長度，以及那個速率最早在什麼時間點就可被辨識。之後每一個實驗都用那個視窗、那個讀取時間。如果這個模型沒有改變實驗流程，它就不是承重的，那這個專案就跟 2026 年犯的是同一個毛病。\n\n**擬合二：抑制曲面。**一個四參數 Hill 模型，在「唑類濃度 × 光照視窗」這個二維矩陣上做全域擬合，得到的 EC50 區間來自擬合本身、而不只是來自重複樣本的分散，另外還有把速率換算成 mg/L 的那條校正函數。在二維矩陣上做全域非線性擬合，正是明道 6105 得到 Ki = 121 mM 的方法，而明道就是那個在地標竿：用 Python、Excel 和一台家用血糖機，拿下高中組最佳模型的一席。\n\n**那個可能推翻自己主張的實驗。**現行方法自己的干擾清單很具體：氯高於 20 mg/L、膦酸鹽高於 100 mg/L、硬度高於 500 mg/L，以及強氧化劑或還原劑「在所有濃度下都會干擾」。而真實的加氯迴路裡持續都有殘餘氧化劑。所以把次氯酸鈉加到 20 mg/L 以上、硬度加到 500 mg/L，再重新擬合。如果 EC50 移動的幅度超過這支隊伍聲稱能分辨的唑類區間，那這個分析在真實迴路裡就是行不通，而那就是該發表的結果。Toronto 在 2026 研究生組靠一個「行不通的模型」拿下最佳模型獎，把資料洩漏量化、並把笨基準線贏過自己模型這件事寫出來；發表空結果現在是入場費，不是風險。",
+      "chips": [
+        "Emits: light window length and earliest read time",
+        "Emits: EC50 with a fit-based interval",
+        "Emits: rate to mg/L calibration function",
+        "Global 2D fit, the Mingdao 6105 method",
+        "Overturn test: chlorine past 20 mg/L, week 4"
+      ],
+      "chips_zh": [
+        "吐出：光照視窗長度與最早讀取時間",
+        "吐出：帶擬合區間的 EC50",
+        "吐出：速率換算 mg/L 的校正函數",
+        "二維全域擬合，明道 6105 的方法",
+        "推翻測試：氯超過 20 mg/L，第 4 週"
+      ]
+    },
+    {
+      "kicker": "Topic 1 · verdicts",
+      "kicker_zh": "題目一 · 判定",
+      "title": "White List clean, novelty intact, and the paper is one figure plus one null",
+      "title_zh": "白名單乾淨、新穎性站得住，而論文是一張圖加一個空結果",
+      "body": "**White List: clean.** Chassis is covered by \"Risk Group 1 microorganisms (For example: E. coli, B. subtilis spp.)\". EL222 is a protein-coding gene from Erythrobacter litoralis, a Risk Group 1 organism, and the parts axis white-lists \"Proteins or protein-coding genes from animals, plants, or Risk Group 1 / Risk Group 2 microorganisms, EXCEPT those in the list of dangerous categories\", none of which covers a light-responsive transcription factor. The promoter, RBS, terminator and binding site are all white-listed non-protein-coding categories. The activity is measurement, which matters because degrading the azole would engage the clause on \"conferring the ability to damage or degrade important materials\". Test fluid is synthetic coolant made to the OCP v1.3 recipe, not fab fluid, and nothing engineered leaves the lab, because \"Bringing a product of a genetically modified organism outside the lab\" requires a Check-In.\n\n**Novelty: intact, stated narrowly.** Light-gated expression for timed induction is standard in the literature and EL222's fast dark reversion is characterised, so neither is the contribution. What is not published is an inhibition assay built on that gate with the window chosen by a fitted accumulation model, for an analyte a roadmap has asked for the dose-response of. In the cohort, EL222 appears in two Undergraduate teams for other purposes and azoles appear nowhere.\n\n**Prizes to enter.** Best Model and Best Measurement from General Bio Engineering, Best New Composite Part for the light-gated cassette if it is characterised in absolute units, and Best Hardware if the light plate is rebuilt and documented, which 2026 showed this team can do. Gold needs three of choice with at least one from General Bio Engineering and one from Specializations, so pair Best Model with Best Hardware or with Safety and Security.",
+      "body_zh": "**白名單：乾淨。**宿主由「第一風險群微生物（例如：E. coli、B. subtilis spp.）」涵蓋。EL222 是來自 Erythrobacter litoralis 的蛋白質編碼基因，那是第一風險群生物，而元件軸把「來自動物、植物，或第一／第二風險群微生物的蛋白質或蛋白質編碼基因，除危險類別清單所列者外」列為白名單，而那些危險類別沒有一項涵蓋一個光反應轉錄因子。啟動子、RBS、終止子與結合位全部落在白名單的非編碼類別裡。這個活動是量測，而這件事很重要，因為去分解那個唑類會觸動「賦予其損害或降解重要材料的能力」那一條。測試流體是照 OCP v1.3 配方配出來的合成冷卻液，不是晶圓廠的液體；而任何改造過的東西都不出實驗室，因為「把基因改造生物的產物帶出實驗室」需要 Check-In。\n\n**新穎性：站得住，而且說得很窄。**用光控表達做定時誘導在文獻裡是標準做法，EL222 的快速暗回復也已經被特性描述過，所以這兩件都不是貢獻。沒有被發表過的是：建在那個閘門之上的抑制分析，而且視窗長度是由一個擬合出來的累積模型決定的，針對的又是一個技術藍圖公開要求過劑量反應曲線的分析物。在整個群體裡，EL222 只出現在兩支大學組隊伍、而且用途不同，唑類則一次都沒出現。\n\n**要報的獎。**一般生物工程類的最佳模型與最佳量測；若光控卡匣以絕對單位做了特性描述，加報最佳新複合元件；若把光照盤重做並寫清楚文件，加報最佳硬體——2026 年已經證明這支隊伍做得到。金牌需要自選三個獎，其中至少一個來自一般生物工程、至少一個來自專項，所以把最佳模型配上最佳硬體或安全與保安。",
+      "chips": [
+        "Rule quoted: RG1 organisms, protein-coding genes from RG1",
+        "Rule quoted: products of a GMO may not leave the lab",
+        "Cohort: EL222 in 2 of 106, both Undergrad, other uses",
+        "Paper: EC50 plus the oxidant-interference result either way",
+        "Prizes: Best Model, Best Measurement, Best New Composite Part"
+      ],
+      "chips_zh": [
+        "引用規則：第一風險群生物、來自 RG1 的蛋白質編碼基因",
+        "引用規則：基改生物的產物不得出實驗室",
+        "群體：EL222 在 106 隊中 2 隊，皆大學組、用途不同",
+        "論文：EC50，加上氧化劑干擾結果（不論正負）",
+        "獎項：最佳模型、最佳量測、最佳新複合元件"
+      ]
+    },
+    {
+      "kicker": "Topic 2 · medical",
+      "kicker_zh": "題目二 · 醫療",
+      "title": "Under one colony per millilitre: the number AI cold plates are specified on, and the four weeks it takes to get it",
+      "title_zh": "每毫升不到一個菌落：AI 冷板被規定的那個數字，以及取得它要花的四週",
+      "body": "**The claim.** The culturable count under-reads the live population by a factor that is itself a function of the biocide and inhibitor dose, and here is that factor measured against a reference material whose live fraction was set on purpose.\n\n**The specification, across four orders of magnitude of the same chain.** Cooling towers: planktonic count under 10,000 CFU/mL, sessile under 100,000 CFU per square centimetre, with hyperhalogenation indicated when counts regularly exceed 100,000 CFU/mL, in CTI Guidelines WTB-148 of July 2008. ASHRAE thermally conditioned systems: under 100 CFU/mL. AI-server cold plates: under 1 CFU/mL at fill and under 100 CFU/mL in service, in the OCP cold-plate coolant specification v1.3 effective 2026-08-06, with the method named inside the spec itself as \"Petri dish with R2A agar or Petrifilm\". One supply chain, one method, four orders of magnitude between its ends.\n\n**The lag is written into the methods, not into practice.** Standard Methods 9215 B is 48 hours at 35 degrees. ISO 6222 of 1999 is 44 hours at 36 degrees and 68 hours at 22 degrees, two separate plate sets. Dip slides are 24 to 48 hours and the catalogue itself calls the result \"semi quantitative\". The ultrapure-water literature reaches four weeks on R2A at 25 degrees. In a peer-reviewed study of district cooling plants, the site own CFU monitoring ran once per four weeks.\n\n**And the bias is far worse than a factor of a hundred.** McElhinney and colleagues, in Scientific Reports in 2020, measured site CFU/mL in district cooling plants at \"only 0.01 to 0.06 percent of the corresponding intact cell counts\" by flow cytometry. That is a factor of roughly two thousand to ten thousand, peer-reviewed, in industrial cooling. The fast substitute in current use is ATP, of which the UK guidance says results \"are expressed in relative light units and provide a broad indication of microbial growth only\", and four bioluminometers run against quantitated standards showed a standard deviation up to 50 percent of the mean.\n\n**The medical endpoint, and the line.** Evaporative cooling towers are the classic Legionnaires' disease reservoir, and the regulated instrument is a culture count sampled at intervals \"not exceeding 30 days\". Legionella is Risk Group 2 and unavailable to this division, so the endpoint is the motivation and a defined White List inoculum in synthetic coolant is the experiment. Say so on the wiki in one sentence.",
+      "body_zh": "**主張。**可培養菌落數低估了活菌族群，而低估的倍率本身是殺生劑與抑制劑劑量的函數；這裡是那個倍率，對著一個「活菌比例由我們刻意設定」的參考物質量出來的。\n\n**規格，橫跨同一條鏈上的四個數量級。**冷卻水塔：浮游菌數低於 10,000 CFU/mL、附著菌數低於每平方公分 100,000 CFU，而當菌數經常超過 100,000 CFU/mL 時即指示要做超量加氯，見 2008 年 7 月的 CTI Guidelines WTB-148。ASHRAE 的熱調節系統：低於 100 CFU/mL。AI 伺服器冷板：充填時低於 1 CFU/mL、在役時低於 100 CFU/mL，寫在 2026 年 8 月 6 日生效的 OCP 冷板冷卻液規格 v1.3 裡，而方法就寫在規格自己裡面：「以培養皿配 R2A 培養基或 Petrifilm」。同一條供應鏈、同一個方法，而兩端之間差了四個數量級。\n\n**那個延遲是寫在方法裡的，不是寫在習慣裡。**Standard Methods 9215 B 是 35 度 48 小時。1999 年的 ISO 6222 是 36 度 44 小時「加上」22 度 68 小時，兩套分開的平盤。浸片是 24 到 48 小時，而產品目錄自己把結果稱為「半定量」。超純水文獻裡則到 25 度 R2A 四週。在一篇關於區域供冷廠的同儕審查研究裡，場內自己的 CFU 監測是每四週一次。\n\n**而那個偏差比百倍差得多。**McElhinney 等人 2020 年發表在 Scientific Reports 的研究，量到區域供冷廠場內的 CFU/mL「只有流式細胞術所測完整細胞數的 0.01 到 0.06%」。那是大約兩千到一萬倍，同儕審查過，而且就在工業冷卻的場景裡。目前在用的快速替代品是 ATP，而英國的指引說它的結果「以相對光單位表示，只提供微生物生長的粗略指示」；另有四台生物發光儀對定量標準品測試，標準差高達平均值的 50%。\n\n**醫療終點，以及那條界線。**蒸發式冷卻水塔是退伍軍人症的經典病原庫，而受規範的量測工具就是一個培養計數，取樣間隔「不超過 30 天」。Legionella 屬第二風險群，這個組別拿不到，所以那個終點是動機，而實驗是合成冷卻液裡一份明確定義的白名單接種物。這一句就寫在 wiki 上。",
+      "chips": [
+        "Towers under 10,000 CFU/mL, cold plates under 1 at fill",
+        "Lag written into the methods: 44 hours to 4 weeks",
+        "Peer-reviewed bias: CFU is 0.01 to 0.06 percent of intact cells",
+        "Endpoint: Legionnaires disease risk in evaporative cooling",
+        "Legionella itself is RG2 and out of reach"
+      ],
+      "chips_zh": [
+        "水塔低於 10,000 CFU/mL，冷板充填時低於 1",
+        "延遲寫在方法裡：44 小時到 4 週",
+        "同儕審查偏差：CFU 只有完整細胞數的 0.01 至 0.06%",
+        "終點：蒸發式冷卻的退伍軍人症風險",
+        "Legionella 本身屬第二風險群，拿不到"
+      ]
+    },
+    {
+      "kicker": "Topic 2 · the model spec",
+      "kicker_zh": "題目二 · 模型規格",
+      "title": "A count model that chooses the filtration volume, and a bias surface nobody has published",
+      "title_zh": "一個決定過濾體積的計數模型，以及一個沒人發表過的偏差曲面",
+      "body": "**The engineered thing.** An isogenic reference pair in E. coli: one strain in two constitutive colours, one aliquot grown and one heat-killed, mixed to a live fraction the team sets. That is what makes the bias measurable at all, because the true live-to-total ratio is set rather than estimated. Two basic parts and one composite, each characterised.\n\n**Fit 1, the count model.** Poisson for plate counts, negative binomial if overdispersion is detected, and detection tested for rather than assumed, fitted to a dilution series of the reference pair. What it emits: the sample volume that must be filtered and the number of replicate plates needed to resolve 1 CFU/mL at a stated confidence. The wet lab then filters that volume. At the specified limit a count is Poisson-noisy, so without this fit the project cannot honestly claim to measure the spec at all; with it, the protocol is derived instead of guessed.\n\n**Fit 2, the conversion nobody has published.** Every action level in this chain is written in CFU/mL. The one rapid method with validated metrology does not report CFU/mL: Swiss SLMB method 333.1 of December 2012 gives total cell count by flow cytometry with a limit of detection of 100 cells/mL, a limit of quantitation of 1,000, and inter-laboratory reproducibility of 4.6 to 8.0 percent relative standard deviation across 11 operators and 4 instrument models. Those reproducibility figures exist for no other rapid method in this field. But cells/mL and CFU/mL are different measurands, the conversion is not one to one, and for cooling water it has never been published. So fit it: the culturable fraction as a function of azole and hypochlorite dose over a two-dimensional matrix, one conditional parameter per inhibitor, global non-linear fit. That function is what would let a twenty-minute readout be reported in the units the contract is written in.\n\n**The experiment that could overturn it.** Run the whole matrix with the live fraction set to 1.0 and no inhibitor. If the fitted bias factor contains 1 inside its confidence interval, the premise is wrong for this organism and this medium, and the honest paper is the one that says so with the interval. Pre-register the interval width that would count as a refutation, before the first plate.",
+      "body_zh": "**被工程化的東西。**一對 E. coli 同源參考菌：同一株、兩種組成型顏色，一份養活、一份熱殺，再混成一個由我們設定的活菌比例。這才是讓偏差變成可量測的關鍵，因為真正的活菌比總菌比例是被設定的、不是被估計的。兩個基本元件加一個複合元件，各自做特性描述。\n\n**擬合一：計數模型。**平盤計數用 Poisson，若檢出過度分散則改負二項，而過度分散是要去檢定、不是假設的；擬合對象是參考菌對的一組稀釋序列。它吐出的是：要在指定信心水準下分辨 1 CFU/mL，必須過濾多少樣本體積、要做幾個重複平盤。濕實驗室接著就過濾那個體積。在那個規格值附近，計數本身帶有 Poisson 雜訊，所以沒有這個擬合，這個專案根本沒辦法誠實宣稱自己量到了那個規格；有了它，流程是推導出來的，不是猜的。\n\n**擬合二：那條沒有人發表過的換算。**這條鏈上每一個行動值都是用 CFU/mL 寫的。而唯一一個有經過驗證計量學的快速方法並不報 CFU/mL：2012 年 12 月的瑞士 SLMB 方法 333.1 以流式細胞術給出總細胞數，偵測極限 100 cells/mL、定量極限 1,000，而且在 11 位操作者、4 種機型之間的實驗室間再現性是 4.6% 到 8.0% 的相對標準差。這個領域裡沒有任何其他快速方法有這組數字。但 cells/mL 與 CFU/mL 是不同的被量測量，換算不是一比一，而對冷卻水而言，那條換算從來沒有被發表過。所以就把它擬出來：可培養比例作為唑類與次氯酸鈉劑量的函數，在一個二維矩陣上做全域非線性擬合，每個抑制劑一個條件參數。那條函數，就是能讓一個二十分鐘的讀值用合約原本的單位報出來的東西。\n\n**那個可能推翻自己主張的實驗。**把活菌比例設成 1.0、不加任何抑制劑，把整個矩陣跑一次。如果擬合出來的偏差倍率的信賴區間包含 1，那對這個菌、這個介質而言前提就是錯的，而誠實的論文就是帶著那個區間把這件事說出來。在第一個平盤之前，就先把「區間寬到什麼程度算被推翻」預先寫下來。",
+      "chips": [
+        "Emits: filtration volume and replicate count",
+        "Emits: the CFU to cells conversion, fitted against inhibitor dose",
+        "Reference material with a set live fraction",
+        "Overdispersion tested, not assumed",
+        "Pre-registered refutation interval"
+      ],
+      "chips_zh": [
+        "吐出：過濾體積與重複數",
+        "吐出：CFU 對 cells 的換算，對抑制劑劑量擬合",
+        "活菌比例可設定的參考物質",
+        "過度分散要檢定，不是假設",
+        "預先登記的推翻區間"
+      ]
+    },
+    {
+      "kicker": "Topic 2 · verdicts",
+      "kicker_zh": "題目二 · 判定",
+      "title": "Clean, but one White List contradiction has to be put to iGEM in writing before the season is designed",
+      "title_zh": "乾淨，但有一個白名單矛盾必須在球季設計之前以書面問清 iGEM",
+      "body": "**White List: clean as specified.** E. coli is named. The organisms axis sends \"All organisms that require enhanced containment (e.g. BSL2), such as those from Risk Group 2\" and \"All organisms isolated from an environmental sample\" to a Check-In, so no tower water may be cultured and no environmental isolate may be used: synthetic coolant to the OCP recipe, defined inoculum. The activities axis is explicit and it includes the team itself: \"Conducting laboratory experiments using human samples, such as blood, DNA, other bodily specimens, and health or psychological outcomes, including from members of the team\" requires a Check-In. This topic needs none of that.\n\n**The contradiction worth naming rather than taking.** The White List does list \"Human and primate cell lines that have been tested and certified free of known pathogens (such as MCF-7; consult your vendor about certification!)\", while the same site's risk-group table puts \"Most human and mammal cell lines\" in Risk Group 2, which the White List routes to Check-In. That is an unresolved contradiction, not a settled permission. If any version of a medical topic depends on human cell culture, put it to iGEM safety in writing before the season is designed, and keep the answer. Do not design around the optimistic reading.\n\n**Novelty, narrowed by what the second sweep found.** Zero of the 106 decorated 2026 teams mention R2A, Petrifilm, cooling towers or cold plates. But a fast proxy for cooling-tower bacterial load is already published and must be cited rather than rediscovered: Toman and colleagues, in Sensors in 2020, used bacterial respiration as the proxy, reporting 30 minutes against the 48 hours cultivation needs, a limit of detection of 1.16 times ten to the fourth CFU/mL, and a correlation to plate count of R squared 0.9648. Live-dead discrimination is likewise old and commercial, in propidium iodide staining, ATP and flow cytometry. So speed is not the contribution and the proposal must not claim it. What is unpublished is the conversion itself, fitted against the specific inhibitor package a cold-plate coolant is required to contain, and measured against a reference material whose live fraction was set rather than estimated.\n\n**Prizes.** Best Measurement and Best Model; the Safety and Security Award, for which the honest statement of what the rules forbade is itself the evidence; Best New Basic Part for the two reference colours; Best Integrated Human Practices if a Taiwanese facilities engineer or a hospital infection-control team actually changes the design.",
+      "body_zh": "**白名單：照這樣設計是乾淨的。**E. coli 有被列名。生物軸把「所有需要強化圍堵（例如 BSL2）的生物，例如來自第二風險群者」與「所有從環境樣本分離出來的生物」送進 Check-In，所以不可以培養冷卻水塔的水、也不可以用環境分離株：照 OCP 配方的合成冷卻液，加明確定義的接種物。活動軸寫得很明白，而且包含隊員本人：「使用人體樣本進行實驗室實驗，例如血液、DNA、其他體液檢體，以及健康或心理結果，包括來自隊員本人的」需要 Check-In。這個題目完全不需要碰到這些。\n\n**那個該點名、而不是該踩進去的矛盾。**白名單確實列了「經檢測並認證不含已知病原的人類與靈長類細胞株（例如 MCF-7；請向供應商確認認證！）」，但同一個網站的風險群表把「大多數人類與哺乳類細胞株」列為第二風險群，而白名單把第二風險群導向 Check-In。這是一個未解決的矛盾，不是一個已經談定的許可。如果任何一版醫療題目要靠人類細胞培養，就在球季設計之前以書面問 iGEM 安全窗口，並把回覆留著。不要照樂觀的那個解讀去設計。\n\n**新穎性，被第二次清查縮小了。**106 支 2026 獲獎隊伍裡，提到 R2A、Petrifilm、冷卻水塔或冷板的是零隊。但冷卻水塔菌量的快速替代量測早就發表過了，必須引用、不能重新發明一次：Toman 等人 2020 年發表在 Sensors，用細菌呼吸作用當替代指標，報出 30 分鐘對培養法的 48 小時、偵測極限 1.16 乘以 10 的 4 次方 CFU/mL，以及與平盤計數的相關性 R 平方 0.9648。死活菌判別同樣很老、也早就商業化了，有碘化丙啶染色、ATP、流式細胞術。所以「快」不是貢獻，提案也不該這樣主張。沒有被發表過的是那條換算本身：對著「冷板冷卻液被規定必須含有的那套特定抑制劑配方」擬合出來，並且是對著一個活菌比例為設定值、而非估計值的參考物質量出來的。\n\n**獎項。**最佳量測與最佳模型；安全與保安獎，而那個獎的證據就是誠實寫出規則禁止了什麼；兩種參考顏色去報最佳新基本元件；若有台灣的廠務工程師或醫院感染管制團隊真的改變了設計，就報最佳整合人文實踐。",
+      "chips": [
+        "Rule quoted: RG2 and environmental isolates need a Check-In",
+        "Rule quoted: human samples, including the team's own",
+        "Prior art to cite: Toman 2020, respiration proxy, 30 minutes, R squared 0.96",
+        "Action: ask iGEM safety in writing, keep the answer",
+        "Prizes: Best Measurement, Best Model, Safety and Security"
+      ],
+      "chips_zh": [
+        "引用規則：第二風險群與環境分離株需 Check-In",
+        "引用規則：人體樣本，包括隊員自己的",
+        "必須引用的前人：Toman 2020，呼吸作用替代指標，30 分鐘，R 平方 0.96",
+        "行動：以書面問 iGEM 安全窗口，並留存回覆",
+        "獎項：最佳量測、最佳模型、安全與保安"
+      ]
+    },
+    {
+      "kicker": "Topic 3 · nobody would think of it",
+      "kicker_zh": "題目三 · 沒有人會想到",
+      "title": "Tell a bubble from a particle, which the roadmap says in print is currently not possible",
+      "title_zh": "把氣泡和顆粒分開，而技術藍圖白紙黑字說這目前做不到",
+      "body": "**The sentence this attacks.** IRDS 2024 Yield Enhancement, section 4.2.7, verbatim: \"Another measurement challenge for several chemicals is the differentiation between particles and bubbles, which is currently not possible.\" The same chapter says particle counters reach only 40 nm in liquid chemicals, and section 4.2.1 says of 10 nm shedding from polymer components that \"Metrology for such analysis does not currently exist\" and that applying the power law from 100 nm downward \"has not been demonstrated and hence cannot be assumed to hold true\". Alongside that, CMP slurry's large-particle count has no published numeric threshold at all, and the patent literature says existing sensors \"require (a) substantial dilution of the optically dense CMP slurries, or (b) discontinuous batch sampling\", and that dilution \"generates waste slurry that cannot be reused\".\n\n**The claim.** Two secreted binders label the two things a counter confuses. One goes to the gas-liquid interface, one to the solid surface, so a two-colour count separates bubbles from particles, and here are the adsorption isotherms that set the working concentration.\n\n**The biology, and what is borrowed.** Hydrophobins are the most surface-active proteins known and self-assemble at gas-liquid interfaces; fused to a fluorescent protein they mark a bubble. A silica-binding peptide, or a silaffin R5 peptide from the diatom Cylindrotheca fusiformis, fused to a second colour marks a solid surface. Secreted from E. coli, or from S. cerevisiae, which the White List added on 15 April 2025. The architecture is borrowed and the proposal should say so: signal peptide, binding module, tag, swappable recognition peptide is precisely what SMS-Shenzhen 6165 built and had nominated for Best New Composite Part in this division. What is new is the target.",
+      "body_zh": "**它打的那句話。**IRDS 2024 良率提升章第 4.2.7 節，原文：「對好幾種化學品而言，另一個量測挑戰是區分顆粒與氣泡，而這目前做不到。」同一章說液態化學品的顆粒計數器只到 40 奈米，第 4.2.1 節談高分子元件在 10 奈米的脫落時則寫道「用於這類分析的計量方法目前並不存在」，而把冪次律從 100 奈米往下外推「未經證實，因此不能假設成立」。此外，CMP 研磨液的大顆粒數根本沒有任何已發表的數值門檻，而專利文獻寫著現有感測器「需要（a）把光學上高度不透明的 CMP 研磨液大量稀釋，或（b）不連續的批次取樣」，而稀釋「會產生無法再利用的廢研磨液」。\n\n**主張。**兩個分泌型結合蛋白，分別標記計數器搞混的那兩種東西。一個去氣液界面，一個去固體表面，於是一次雙色計數就能把氣泡和顆粒分開；而這裡是決定工作濃度的那兩條吸附等溫線。\n\n**生物學，以及借來的部分。**疏水蛋白是已知表面活性最強的蛋白質，會在氣液界面自組裝；接上螢光蛋白，它就標出一個氣泡。二氧化矽結合肽，或來自矽藻 Cylindrotheca fusiformis 的 silaffin R5 肽，接上第二種顏色，就標出固體表面。從 E. coli 分泌，或從白名單在 2025 年 4 月 15 日新增的 S. cerevisiae 分泌。這個架構是借來的，提案就該這樣寫：訊號肽、結合模組、標籤、可替換的辨識肽，正是 SMS-Shenzhen 6165 做出來、並在這個組別獲最佳新複合元件提名的東西。新的是標的。",
+      "chips": [
+        "Target: the discrimination, not an analyte",
+        "IRDS 2024 YE 4.2.7: currently not possible",
+        "Binders: hydrophobin against silica-binding peptide",
+        "Chassis: E. coli or S. cerevisiae, added 2025-04-15",
+        "Architecture borrowed from SMS-Shenzhen 6165"
+      ],
+      "chips_zh": [
+        "標的：那個判別本身，不是某個分析物",
+        "IRDS 2024 良率提升 4.2.7：目前做不到",
+        "結合蛋白：疏水蛋白 對 二氧化矽結合肽",
+        "宿主：E. coli 或 S. cerevisiae，2025-04-15 新增",
+        "架構借自 SMS-Shenzhen 6165"
+      ]
+    },
+    {
+      "kicker": "Topic 3 · the model spec",
+      "kicker_zh": "題目三 · 模型規格",
+      "title": "The isotherm is the project, and it picks the working concentration before anything is built on top",
+      "title_zh": "等溫線就是這個專案本身，而它在任何東西疊上去之前先選好工作濃度",
+      "body": "**Fit 1, two Langmuir isotherms.** Each binder against its own target, from the team's own titrations: the hydrophobin against a measured gas-liquid interfacial area, the silica binder against a measured surface area of colloidal silica. Measured, not taken from a supplier sheet, because borrowing that number is the failure Mingdao 6105 avoided by measuring every parameter it used. What it emits: the working concentration at which the ratio of on-target to off-target labelling is highest. The wet lab labels at that concentration, so the model has chosen the protocol.\n\n**Fit 2, competitive adsorption.** A global fit over a two-dimensional matrix of the two binders, because the failure mode is cross-binding and the only honest way to state the result is as a contrast ratio with the competition term fitted rather than assumed away.\n\n**The experiment that could overturn it, and it runs in week three.** Two extreme samples: degassed water with silica added, and sparged particle-free water. If the contrast ratio does not separate those two with the intervals the model produced, the method does not discriminate, and the project publishes that it does not. Run this before anything is built on top of it, not after.\n\n**The honest risk is technical, not legal.** Hydrophobins are notoriously hard to express and secrete. The fallback, a shorter amphipathic surface-active peptide, belongs in the plan on day one rather than being discovered in October. Yeast also needs a spore-formation mitigation plan, which the White List states in the same entry that adds it.",
+      "body_zh": "**擬合一：兩條 Langmuir 等溫線。**每一個結合蛋白各自對它的標的，資料來自自己做的滴定：疏水蛋白對一個量出來的氣液界面面積，二氧化矽結合蛋白對一個量出來的膠體二氧化矽表面積。是量出來的，不是從供應商規格表抄的，因為抄那個數字正是明道 6105 避開的失敗——它用到的每一個參數都自己量。它吐出的是：標在標的上與標錯地方的比例最高的那一個工作濃度。濕實驗室就在那個濃度標記，所以是模型選了流程。\n\n**擬合二：競爭吸附。**在兩個結合蛋白構成的二維矩陣上做全域擬合，因為失效模式就是交叉結合，而唯一誠實的陳述方式是給出一個對比比值，並把競爭項擬合出來、而不是假設它不存在。\n\n**那個可能推翻自己主張的實驗，而且它第三週就跑。**兩個極端樣本：脫氣水加二氧化矽，以及曝氣後無顆粒的水。如果對比比值沒有在模型給出的區間下把這兩者分開，那這個方法就不能判別，而專案就把「它不能」發表出來。這件事要在任何東西疊上去之前跑，不是之後。\n\n**誠實的風險是技術性的，不是法規性的。**疏水蛋白出了名難表達、難分泌。備案是一段較短的兩親性表面活性肽，它應該第一天就寫在計畫裡，而不是十月才被發現需要。用酵母的話還需要一份孢子形成的風險緩解計畫，白名單在新增它的那同一條目裡就寫了。",
+      "chips": [
+        "Emits: working concentration from an on-target to off-target ratio",
+        "Both surface areas measured, not borrowed",
+        "Competition term fitted, not assumed away",
+        "Overturn test in week 3, before anything is stacked on it",
+        "Named risk: hydrophobin expression, with a peptide fallback"
+      ],
+      "chips_zh": [
+        "吐出：由標中對標錯比例決定的工作濃度",
+        "兩個表面積都自己量，不是借的",
+        "競爭項要擬合，不是假設它不存在",
+        "推翻測試在第 3 週，在任何東西疊上去之前",
+        "點名的風險：疏水蛋白表達，備案是短肽"
+      ]
+    },
+    {
+      "kicker": "If there is only one season",
+      "kicker_zh": "如果只有一個球季",
+      "title": "Take Topic 1, and decide in week one rather than in June",
+      "title_zh": "選題目一，而且在第一週就決定，不要拖到六月",
+      "body": "**Topic 1 is the recommendation.** It has a specified number, a quantified failure in the incumbent method, a switch the team partly has in hand, and the smallest number of things that must work before the first real result arrives. Its worst case is still a fitted dose-response curve that a published roadmap asked for.\n\n**Topic 3 has the best paper and the highest chance of nothing.** It attacks a measurement a roadmap calls impossible, which is the strongest motivation in the register, but it depends on expressing a protein family known to be difficult, and its overturn test in week three can end it. Take it only with the peptide fallback written into the plan and a second topic running beside it.\n\n**Topic 2 is the strongest safety and human-practices story and the weakest wet-lab novelty.** Live-dead discrimination is commercial. The contribution is the bias surface and the derived protocol, which are real but less visible to a judge in a poster session than a working light-gated assay.\n\n**What all three refuse to do.** None of them puts a model on the wiki that nothing downstream uses. That was the 2026 pattern across five recognised High School teams, and it is the thing this report keeps finding: the statistics improved every year while the model stopped carrying weight.",
+      "body_zh": "**建議選題目一。**它有一個被明訂的數字、一個把失效模式量化過的現行方法、一個隊伍已經部分握在手上的開關，以及「在第一個真結果出現之前必須成功的事情數量」最少。它最壞的情況，仍然是一條已發表技術藍圖要求過的、擬合出來的劑量反應曲線。\n\n**題目三有最好的論文，也有最高的機率什麼都沒有。**它打的是一個技術藍圖說做不到的量測，那是整份清冊裡最強的動機；但它靠的是表達一個出名難搞的蛋白家族，而第三週那個推翻測試就可能直接結束它。要接它，就把短肽備案寫進計畫，並讓另一個題目同時在跑。\n\n**題目二有最強的安全與人文實踐故事，也有最弱的濕實驗室新穎性。**死活菌判別已經商業化了。貢獻在那個偏差曲面與推導出來的流程，那是真的，但在海報會場上，它對評審的可見度低於一個真的會動的光控分析。\n\n**三個都拒絕做的一件事。**沒有一個會在 wiki 上放一個下游什麼都沒用到的模型。那正是 2026 年五支獲獎高中隊伍共同的樣態，也是這份報告一直在找到的那件事：統計每年都在進步，而模型卻不再承重。",
+      "chips": [
+        "Recommendation: Topic 1",
+        "Topic 3: best paper, highest chance of nothing",
+        "Topic 2: best safety story, weakest wet-lab novelty",
+        "Decide in week one",
+        "No model on the wiki that nothing downstream uses"
+      ],
+      "chips_zh": [
+        "建議：題目一",
+        "題目三：最好的論文，最高的機率什麼都沒有",
+        "題目二：最強的安全故事，最弱的濕實驗室新穎性",
+        "第一週就決定",
+        "不放下游什麼都沒用到的模型"
+      ]
+    }
+  ],
+  "table": {
+    "head": [
+      "Quantity",
+      "Specified limit, and who specifies it",
+      "Current method, and how long it takes",
+      "In or out, and why"
+    ],
+    "head_zh": [
+      "量",
+      "明訂值，以及由誰明訂",
+      "現行方法，以及要多久",
+      "採用或排除，以及原因"
+    ],
+    "rows": [
+      [
+        "Azole residual: tolyltriazole and benzotriazole, mg/L",
+        "At least 1 mg/L free azole in open towers and 5 to 10 mg/L in closed loops, UNLV 2016; at least 10 ppm tolyltriazole where copper is present, UFC 3-240-13FN 2005 carried into UFM 3-230-13 dated 2026-02-05; more than 100 ppm in service for cold-plate coolant, OCP Guidelines 2022; 100 ppm residual quarterly, Lenovo Press LP2018 dated 2024-09-13. OCP v1.3 requires an inhibitor and sets no number, and the ASHRAE facility-water table says only Required",
+        "Hach 8079, bench UV-photolysis colorimetry, 1 to 20 mg/L working range, so the cold-plate target of about 100 ppm needs dilution. RSD 13 percent against 0.2 percent for a fluorescence route, detection limit about 250 ppb, operator dependent, non-linear, a UV step that must be exactly 5 minutes, and continuous analysis against 10 minutes per grab sample, per US 5,278,074. Monthly or quarterly, 0.94 US dollars of reagent per test. The one online route, Metrohm 2060 IC with UV at 214 nm, publishes no detection limit, range, cycle time or price",
+        "In, as Topic 1. The only quantity where a primary source puts numbers on both the precision penalty and the latency penalty of the incumbent, and IRDS 2025 section 8.1.10 asks for the dose-response in print"
+      ],
+      [
+        "Total viable aerobic count, CFU/mL",
+        "Towers: planktonic under 10,000 CFU/mL, sessile under 100,000 CFU per square centimetre, hyperhalogenation above 100,000 CFU/mL, CTI WTB-148 July 2008. ASHRAE thermally conditioned systems under 100 CFU/mL. Cold plates under 1 CFU/mL at fill and under 100 in service, OCP v1.3 effective 2026-08-06, method named in the spec as R2A agar or Petrifilm",
+        "Standard Methods 9215 B is 48 hours at 35 degrees; ISO 6222 of 1999 is 44 hours at 36 degrees and 68 hours at 22 degrees; dip slides 24 to 48 hours and semi quantitative by their own catalogue; four weeks on R2A at 25 degrees in the ultrapure-water literature; once per four weeks in practice at a district cooling plant. Peer-reviewed bias: site CFU/mL is 0.01 to 0.06 percent of intact cell counts, McElhinney 2020",
+        "In, as Topic 2. Specified at both ends of one chain four orders of magnitude apart, with a peer-reviewed bias and an acknowledged non-quantitative substitute in ATP, whose four instruments against quantitated standards ran to 50 percent of the mean"
+      ],
+      [
+        "Particles against bubbles in liquid chemicals",
+        "No limit exists, because the discrimination does not",
+        "IRDS 2024 Yield Enhancement 4.2.7: differentiation is currently not possible. Counters reach only 40 nm in liquid chemicals",
+        "In, as Topic 3. Highest variance, best paper, and the strongest motivating sentence available"
+      ],
+      [
+        "Copper, iron and aluminium in cold-plate coolant, ppm",
+        "Copper under 0.2, iron under 0.1, aluminium under 0.1, OCP v1.3, baseline by ICP",
+        "ICP laboratory test for soluble ions",
+        "Held in reserve as Topic 2's fallback analyte. CueR and copA are uncontested across all 106 teams, and total copper is what gets measured while azoles are what mask it"
+      ],
+      [
+        "Urea in ultrapure water, micrograms per litre",
+        "No published numeric specification; controlled indirectly under the sub-1 ppb critical-organics limit. Mechanism documented: each urea molecule can yield two ammonia, causing T-topping and CD shifts",
+        "IC-MS or LC-OCD-OND at low ppb in a central laboratory. The one dedicated instrument has a 1.5 ppb limit of detection and is sold for boiler feedwater",
+        "Out for 2027. Urease is the most tractable assay in biology, but the threshold must be argued rather than cited, reaching single-digit micrograms per litre needs real preconcentration, and genuine fab ultrapure water is contract only"
+      ],
+      [
+        "Assimilable organic carbon, micrograms of acetate carbon per litre",
+        "Biostability cited at 10 to 100 micrograms per litre; no semiconductor-specific specification exists",
+        "14 days total: 7 to 9 days incubation at 15 degrees then 3 to 5 days plating. The authors' own enhanced method reaches 8 days, an ATP variant 2 to 4 days",
+        "Out. Here the bioassay already is the state of the art, so a faster growth assay is an incremental improvement rather than a new measurement"
+      ],
+      [
+        "Hydrogen peroxide in ultrapure water, micrograms per litre",
+        "Under 3 ppb at point of delivery, tightening to under 1 ppb from 2025, IRDS Table YE-3 note 42. The 185 nm TOC reactors generate up to 30 ppb",
+        "Gasometric palladium-resin delta dissolved oxygen: detection limit 0.27 ppb, minimum 20 minutes per analysis, and sensitivity collapses unless dissolved oxygen is at or under 1.5 ppb",
+        "Out. Already online and already meeting spec with tenfold margin, and the same oxygen interference would hit any oxygen-coupled biological readout just as hard"
+      ],
+      [
+        "Reactive silica in cooling water, mg/L",
+        "150 ppm as silica, about 250 ppm at pH 9, UFC 3-240-13FN 4-3.2.5 carried into UFM 3-230-13. Makeup above 30 ppm usually becomes the parameter controlling cycles of concentration",
+        "The online instrument physically cannot reach it. Hach 5500 sc and ASTM D7126 both top out at 5 mg/L, thirty to four hundred times below what a tower actually runs",
+        "Out as a topic, in as a part, and the one call the two sweeps disagree on: the second ranked it first overall. Absent from the DoD routine test table, absent from all three published commercial price books, and the limit itself is soft, called very conservative and possibly raised by new polymer technology. It has no biology in it unless the recognition element is a silaffin or a silica-binding peptide, which is where it feeds Topic 3"
+      ],
+      [
+        "Glycol or inhibitor fraction in direct-to-chip coolant, percent by volume",
+        "No glycol limit at all in OCP cold-plate base specification v1.3. Inhibitor side has numbers: more than 100 ppm azoles, OCP 2022, and 100 ppm, Lenovo 2024. 25 percent by volume propylene glycol is cited as the biostatic threshold in a 2021 paper",
+        "Laboratory panels at 40 to 45 US dollars per sample with about two-day turnaround. A dated field case has glycol falling from 24.5 to 22 percent over two months, a change that can easily fall between quarterly samples, and 32 percent of more than 3,000 samples out of specification",
+        "Out. Decisive as evidence, useless as a topic: the quantity is refractive index or density, with no biology anywhere in it. But keep the finding, because pH and conductivity both stayed within normal ranges while the glycol declined, which is the cleanest proof in the register that the two cheapest online parameters can miss the failure"
+      ],
+      [
+        "Biofilm areal density or thickness on an in-service surface",
+        "No standard specifies it. The only published numeric areal level anywhere is the CTI sessile count under 100,000 CFU per square centimetre of July 2008, which is still culture with the same 24 to 48 hour delay",
+        "Reported in at least four mutually non-convertible units: log colony forming units per square centimetre or per coupon, percent surface coverage, millivolts, and a dimensionless proprietary index. No SI-traceable reference method and no published inter-instrument comparability. Every ASTM method found is a laboratory reactor method for disinfectant-efficacy testing, not a field measurement",
+        "Out as a topic, kept as the sharpest example in the report of a quantity that cannot be compared between two instruments because nobody agreed what it is"
+      ],
+      [
+        "Image-sensor critical metals",
+        "0.05 parts per trillion",
+        "Three to five orders of magnitude below any method other than ICP-MS, and the roadmap itself says a sensor does not exist",
+        "Out. Not reachable by any route available to a school team"
+      ],
+      [
+        "PFAS in fab effluent",
+        "Named as a metrology gap in IRDS 2025 section 8.1",
+        "Laboratory chromatography",
+        "Out. The materials and handling are unsuitable for a high school team, whatever the scientific interest"
+      ],
+      [
+        "10 nm particle shedding from polymer components",
+        "No limit; SEMI F057 methods measure 100 nm and above",
+        "IRDS 2024 Yield Enhancement 4.2.1: metrology for such analysis does not currently exist, and applying the power law from 100 nm downward has not been demonstrated and cannot be assumed to hold",
+        "Out as a measurement, kept as the strongest sentence to quote in Topic 3's motivation"
+      ]
+    ],
+    "rows_zh": [
+      [
+        "唑類殘留：甲基苯并三唑與苯并三唑，mg/L",
+        "開放式冷卻水塔至少 1 mg/L 游離唑類、密閉迴路 5 至 10 mg/L，UNLV 2016；有銅存在處至少 10 ppm 甲基苯并三唑，2005 年 UFC 3-240-13FN 並沿用至 2026-02-05 的 UFM 3-230-13；冷板冷卻液在役超過 100 ppm，OCP Guidelines 2022；殘留 100 ppm 每季檢查，2024-09-13 的 Lenovo Press LP2018。OCP v1.3 要求要有抑制劑卻沒給數字，而 ASHRAE 的廠務用水表上只寫「必需」",
+        "Hach 8079，檯面紫外光解比色，工作範圍 1 至 20 mg/L，所以冷板約 100 ppm 的目標必須稀釋才量得到。相對標準差 13%，而螢光路線是 0.2%；偵測極限約 250 ppb；依賴操作者；非線性；紫外步驟必須剛好 5 分鐘；以及「連續分析對上人工取樣每件 10 分鐘」，見 US 5,278,074。每月或每季一次，每測試劑 0.94 美元。唯一的線上路徑 Metrohm 2060 IC 配 214 奈米紫外偵測，沒有公布偵測極限、量程、周期時間或價格",
+        "採用，為題目一。這是唯一一個由一手文獻同時把現行方法的「精度代價」與「延遲代價」都標上數字的量，而 IRDS 2025 第 8.1.10 節白紙黑字要求那條劑量反應曲線"
+      ],
+      [
+        "總好氧活菌數，CFU/mL",
+        "水塔：浮游菌低於 10,000 CFU/mL、附著菌低於每平方公分 100,000 CFU、超過 100,000 CFU/mL 時指示超量加氯，CTI WTB-148，2008 年 7 月。ASHRAE 熱調節系統低於 100 CFU/mL。冷板充填時低於 1 CFU/mL、在役時低於 100，OCP v1.3，2026-08-06 生效，方法在規格裡指名為 R2A 培養基或 Petrifilm",
+        "Standard Methods 9215 B 是 35 度 48 小時；1999 年 ISO 6222 是 36 度 44 小時加 22 度 68 小時；浸片 24 到 48 小時，而且依其產品目錄自稱「半定量」；超純水文獻裡 25 度 R2A 四週；某區域供冷廠實務上每四週一次。同儕審查的偏差：場內 CFU/mL 只有完整細胞數的 0.01 至 0.06%，McElhinney 2020",
+        "採用，為題目二。在同一條鏈的兩端都被明訂，而兩端相差四個數量級；帶一個同儕審查過的偏差，以及一個被承認為非定量的替代品 ATP——四台儀器對定量標準品測試，誤差達平均值的 50%"
+      ],
+      [
+        "液態化學品中顆粒與氣泡的區分",
+        "不存在門檻值，因為那個判別本身不存在",
+        "IRDS 2024 良率提升 4.2.7：這個區分目前做不到。液態化學品的計數器只到 40 奈米",
+        "採用，為題目三。變異最大、論文最好，而且是能拿到的最強動機句"
+      ],
+      [
+        "冷板冷卻液中的銅、鐵、鋁，ppm",
+        "銅低於 0.2、鐵低於 0.1、鋁低於 0.1，OCP v1.3，基線以 ICP 建立",
+        "可溶離子的 ICP 實驗室檢測",
+        "保留，作為題目二的備用分析物。CueR 與 copA 在全部 106 隊裡都無人碰，而被量的是總銅、遮蔽它的是唑類"
+      ],
+      [
+        "超純水中的尿素，微克每公升",
+        "沒有已發表的數值規格；是透過低於 1 ppb 的關鍵有機物上限間接管制。機制有記錄：每一個尿素分子可產生兩個氨，造成光阻 T 頂與線寬偏移",
+        "在中央實驗室以 IC-MS 或 LC-OCD-OND 做到低 ppb。唯一的專用儀器偵測極限 1.5 ppb，而且是賣給鍋爐給水市場的",
+        "2027 不採用。尿素酶是生物學裡最好做的分析，但門檻要自己論證、不能引用；要做到個位數微克每公升需要真正的預濃縮；而真正的晶圓廠超純水是合約制才拿得到"
+      ],
+      [
+        "可同化有機碳，微克乙酸碳每公升",
+        "生物穩定性門檻引用在 10 至 100 微克每公升；不存在半導體專屬規格",
+        "總共 14 天：15 度培養 7 至 9 天，再平盤 3 至 5 天。原作者自己的改良法到 8 天，ATP 變體 2 至 4 天",
+        "不採用。在這一項上，生物分析本身就已經是現行最佳技術，所以更快的生長分析是漸進改良，不是一個新的量測"
+      ],
+      [
+        "超純水中的過氧化氫，微克每公升",
+        "交付點低於 3 ppb，並自 2025 年起收緊到低於 1 ppb，IRDS 表 YE-3 註 42。185 奈米的 TOC 反應器本身會產生最多 30 ppb",
+        "氣體計量法，鈀樹脂配溶氧差：偵測極限 0.27 ppb，每次分析至少 20 分鐘，而且除非溶氧在 1.5 ppb 以下，靈敏度會崩掉",
+        "不採用。現行方法已經是線上的、而且以十倍餘裕達標；而同一個溶氧干擾，對任何耦合氧氣的生物讀出會打得一樣重"
+      ],
+      [
+        "冷卻水中的活性二氧化矽，mg/L",
+        "以二氧化矽計 150 ppm，pH 9 時約 250 ppm，UFC 3-240-13FN 第 4-3.2.5 節並沿用至 UFM 3-230-13。補充水高於 30 ppm 時，通常就變成決定濃縮倍數的那個參數",
+        "線上儀器在物理上到不了。Hach 5500 sc 與 ASTM D7126 的上限都是 5 mg/L，比冷卻水塔實際運轉值低三十到四百倍",
+        "不當題目、當元件，而這也是兩次清查唯一判斷不同的一項：第二次把它排在整體第一。它在美國國防部的例行檢測表上缺席，在找到的三份商業實驗室價目表上也都缺席，而那個上限本身是軟的——文件自己稱它「非常保守」，並說新的高分子技術可能把它往上推。它裡面沒有生物學，除非辨識元件是 silaffin 或二氧化矽結合肽，而那正是它餵進題目三的地方"
+      ],
+      [
+        "直接到晶片冷卻液中的乙二醇或抑制劑比例，體積百分比",
+        "OCP 冷板基礎規格 v1.3 裡完全沒有乙二醇上限。抑制劑那一側有數字：唑類超過 100 ppm，OCP 2022；100 ppm，Lenovo 2024。一篇 2021 年的論文引用 25 體積百分比的丙二醇為抑菌門檻",
+        "實驗室套組每件樣本 40 到 45 美元，周轉約兩天。一個有日期的現場案例顯示乙二醇在兩個月內從 24.5% 掉到 22%，而這個變化很容易落在每季取樣之間；另有超過 3,000 件樣本中 32% 至少一項不符規格",
+        "不採用。當證據是決定性的，當題目沒有用：那個量是折射率或密度，裡面哪裡都沒有生物學。但把這個發現留下來，因為乙二醇在下降的同時，pH 與導電度都還留在正常範圍內——這是整份清冊裡最乾淨的一個證明：兩個最便宜的線上參數可以完全漏掉那個失效"
+      ],
+      [
+        "在役表面上的生物膜面密度或厚度",
+        "沒有任何標準明訂它。全世界唯一一個已發表的面密度數值，是 2008 年 7 月 CTI 的附著菌數低於每平方公分 100,000 CFU，而那仍然是培養法、延遲一樣是 24 到 48 小時",
+        "至少用四種互不可換算的單位在報：每平方公分或每試片的對數菌落形成單位、表面覆蓋百分比、毫伏，以及一個無因次的專有指數。沒有可溯源至 SI 的參考方法，也沒有已發表的儀器間可比性。找到的每一個 ASTM 方法都是實驗室反應器法、用於消毒效能測試，不是現場量測",
+        "不當題目，但留下來——它是整份報告裡最尖銳的例子：一個量無法在兩台儀器之間比較，因為沒有人先談定它到底是什麼"
+      ],
+      [
+        "影像感測器關鍵金屬",
+        "0.05 兆分之一",
+        "比任何非 ICP-MS 方法低三到五個數量級，而技術藍圖自己就說感測器不存在",
+        "不採用。學校隊伍能走的任何路徑都到不了"
+      ],
+      [
+        "晶圓廠廢水中的 PFAS",
+        "在 IRDS 2025 第 8.1 節被點名為計量缺口",
+        "實驗室層析",
+        "不採用。不論科學上多有趣，所涉材料與操作都不適合高中隊伍"
+      ],
+      [
+        "高分子元件在 10 奈米尺度的顆粒脫落",
+        "無門檻值；SEMI F057 方法量的是 100 奈米以上",
+        "IRDS 2024 良率提升 4.2.1：用於這類分析的計量方法目前並不存在，而把冪次律從 100 奈米往下外推未經證實、不能假設成立",
+        "不當量測，但留下來，作為題目三動機裡最強的那句引文"
+      ]
+    ]
+  },
+  "checklist": [
+    "Write the model's output as a protocol parameter before any wet work: a light window, a filtration volume, a working concentration. If you cannot name the parameter the model sets, the model is decoration.",
+    "Check that the quantity is a sampling problem and not an inference problem. A cheap new sensor can fix how often you measure something; it cannot fix a quantity that is inferred from other measurements and comes out negative when the physics is unfavourable. Approach temperature and fouling resistance fail this test, and all three topics here pass it.",
+    "Measure every parameter the model uses. A borrowed Langmuir constant or a supplier's surface area is the failure Mingdao 6105 avoided by measuring all of its own.",
+    "Fit globally over a two-dimensional matrix, not curve by curve, and report the interval from the fit rather than from replicate spread alone.",
+    "Schedule the experiment that could overturn the claim inside the first four weeks, and write down beforehand what result would count as a refutation.",
+    "Quote the White List rule you are relying on, by its own words, on the safety page. Teams that paraphrase it get asked about it.",
+    "Never propose degrading anything in this theme. Conferring the ability to damage or degrade important materials requires a Check-In that High School cannot file.",
+    "Use synthetic fluid made to the published recipe, not fab fluid, and never culture an environmental sample.",
+    "If any version of the topic needs human cell culture, put the certified-cell-line contradiction to iGEM safety in writing before designing the season, and keep the reply.",
+    "Name the prior art you are standing on, by team number and by paper. For these three that is McGill 6040 and WHU-China 6220 on EL222, SMS-Shenzhen 6165 on the secreted fusion architecture, and the hydrophobin and carbohydrate-binding-module fusion literature.",
+    "Say what you are not competing on. For the azole assay that is sensitivity; for the viable count that is live-dead discrimination itself.",
+    "Pick the special prizes in week one, not in September, and make sure at least one is from General Bio Engineering and one from Specializations so Gold is reachable.",
+    "Download the two Taiwanese public series early and look at them. Taiwan Water Corporation's 12,896 monthly plant rows and the Hsinchu park-effluent 280 rows are free, and nobody in iGEM has used either."
+  ],
+  "checklist_zh": [
+    "在任何濕實驗之前，先把模型的輸出寫成一個實驗參數：一段光照視窗、一個過濾體積、一個工作濃度。如果你說不出模型決定了哪一個參數，那個模型就是裝飾。",
+    "確認那個量是取樣問題，不是推論問題。一個便宜的新感測器能解決「你多久量一次」，但解決不了一個「由其他量推論出來、而且在物理條件不利時會算出負值」的量。趨近溫度與結垢熱阻過不了這個檢查，而這裡三個題目都過得了。",
+    "模型用到的每一個參數都自己量。借來的 Langmuir 常數或供應商給的表面積，正是明道 6105 靠「全部自己量」避開的失敗。",
+    "在二維矩陣上做全域擬合，不要一條一條曲線分開擬；而且要報擬合本身給出的區間，不要只報重複樣本的分散。",
+    "把那個可能推翻自己主張的實驗排在前四週，並事先寫下什麼結果算是被推翻。",
+    "在安全頁面上，用白名單自己的原文引用你所依賴的那一條。改寫過的隊伍會被追問。",
+    "在這個主題上，永遠不要提「去分解什麼」。賦予損害或降解重要材料的能力需要 Check-In，而高中組交不出那張表。",
+    "用照公開配方配出來的合成流體，不要用晶圓廠的液體；也絕對不要培養環境樣本。",
+    "如果任何一版題目需要人類細胞培養，就在設計球季之前，把認證細胞株那個矛盾以書面問 iGEM 安全窗口，並把回覆留著。",
+    "把你站在上面的前人工作點名出來，寫隊號、寫論文。這三個題目的前人是：EL222 上的 McGill 6040 與 WHU-China 6220、分泌型融合架構上的 SMS-Shenzhen 6165，以及疏水蛋白與碳水化合物結合模組融合的文獻。",
+    "把「你不是在比什麼」講出來。唑類分析不是在比靈敏度；活菌計數不是在比死活菌判別本身。",
+    "第一週就選好特別獎，不要拖到九月；而且確認至少一個來自一般生物工程、一個來自專項，金牌才拿得到。",
+    "早一點把那兩份台灣公開資料下載下來看。台水的 12,896 列逐月淨水場資料與新竹園區放流水的 280 列都是免費的，而 iGEM 裡沒有人用過其中任何一份。"
+  ],
+  "method": "These are proposals, not measurements. The industrial register behind them was built from primary documents downloaded and read directly: the IRDS 2024 Yield Enhancement chapter with its table workbook, the IRDS 2025 ESH and S chapter, the Balazs Ultrapure Water Monitoring Guidelines Rev 2.0, the OCP Base Specification for Single Phase Water-Based Cold Plate Coolants v1.3 effective 2026-08-06, UFC 3-240-13FN of 2005 and UFM 3-230-13 of 2026-02-05, HSE HSG 274 Part 1, Hach method documents, US patent 5,278,074, and peer-reviewed metrology papers. Every figure quoted here carries its date and its source in the text. A second, independent sweep of the same chain was run and is folded in. It added CTI Guidelines WTB-148 of July 2008 for the cooling-tower colony-count levels the first sweep could not verify, Swiss SLMB method 333.1 of December 2012 for the only rapid count method with published inter-laboratory reproducibility, Toman and colleagues in Sensors 20:6398 of 2020 and McElhinney and colleagues in Scientific Reports 10:13299 of 2020 for the peer-reviewed cooling-tower turnaround and bias figures, AHRI 550/590-2023 and CTI ATC-105 for the thermal counter-example, the ISO and IEC 30134 series, ASHRAE Standard 30-2019 and Guideline 184, and the ASTM biofilm reactor methods E2196, E2562, E2871 and E3161. Where the two sweeps disagree, which is only on silica, both readings are reported.\n\nLimits worth stating. The SEMI standards named in the IRDS footnotes, F21, F61, F63, F75, F98, F104, F116, F121, C79, C93 and C33, were never read: semi.org refuses automated fetches, so their titles and roles are taken from the footnotes that cite them. ASTM D5127, ASHRAE Guideline 12-2023, CTI GDL-159, Standard Methods 9215 B, ISO 6222, ISO 14644-8, ISO 8192 and 9509, SEMI S23, ASME PTC 23 and the TEMA tables are all paywalled and unread, so their numbers here come from free government reposts or from the free catalogue and scope pages that cite them. The 2025 Water Circularity white paper, which the IRDS chapter says categorises parameters as feasible, conditionally measurable or not practically measurable, could not be located at any public URL and is the single document that would most improve this analysis. The cohort novelty figures are term counts across the 106 decorated 2026 teams in this repository, with every match read rather than counted: three apparent hits were substrings and are excluded. The White List readings are quotations from the captured rules file, and the one contradiction between the cell-line entry and the risk-group table is reported as unresolved rather than decided. Taiwan dataset sizes and coverage were verified by HTTP request on 20 November 2026. Figures that failed sourcing are named in the body and are not used anywhere in this report.",
+  "method_zh": "這些是提案，不是量測。背後那份工業清冊是從一手文件直接下載並讀過來的：IRDS 2024 良率提升章與它的表格工作簿、IRDS 2025 ESH and S 章、Balazs 超純水監測指引 Rev 2.0、2026-08-06 生效的 OCP 單相水基冷板冷卻液基礎規格 v1.3、2005 年 UFC 3-240-13FN 與 2026-02-05 的 UFM 3-230-13、HSE HSG 274 第一部、Hach 的方法文件、美國專利 5,278,074，以及同儕審查的計量學論文。這裡引用的每一個數字，在正文中都帶著它的日期與來源。同一條鏈還做了第二次互相獨立的清查，其結果已併入。它補上了：2008 年 7 月的 CTI Guidelines WTB-148，提供第一次清查查不到的冷卻水塔菌落數行動值；2012 年 12 月的瑞士 SLMB 方法 333.1，是唯一一個有公布實驗室間再現性的快速計數方法；2020 年 Sensors 20:6398 的 Toman 等人與 2020 年 Scientific Reports 10:13299 的 McElhinney 等人，提供同儕審查過的冷卻水塔周轉時間與偏差數字；AHRI 550/590-2023 與 CTI ATC-105，作為熱性能的反例；ISO 與 IEC 30134 系列、ASHRAE Standard 30-2019 與 Guideline 184；以及 ASTM 的生物膜反應器方法 E2196、E2562、E2871 與 E3161。兩次清查判斷不同的地方只有二氧化矽一項，而兩種讀法都如實寫出。\n\n該講的限制。IRDS 註腳裡點名的那些 SEMI 標準——F21、F61、F63、F75、F98、F104、F116、F121、C79、C93 與 C33——一份都沒讀到：semi.org 拒絕自動化抓取，所以它們的標題與角色是取自引用它們的那些註腳。ASTM D5127、ASHRAE Guideline 12-2023、CTI GDL-159、Standard Methods 9215 B、ISO 6222、ISO 14644-8、ISO 8192 與 9509、SEMI S23、ASME PTC 23 以及 TEMA 的表格，全部在付費牆後、未讀，所以這裡引到的數字都來自免費的政府轉載，或來自引用它們的免費目錄與範圍頁。IRDS 該章說有一份 2025 年水循環白皮書把參數分成「可行、有條件可量測、實務上不可量測」三類，但在任何公開網址都找不到那份文件，而它是最能改善這份分析的那一份。群體新穎性的數字，是在本資料庫中 106 支 2026 獲獎隊伍上做的詞頻計數，而且每一個命中都是讀過的、不是數出來的：有三個看似命中其實是子字串，已排除。白名單的解讀是從已擷取的規則檔逐字引用；而細胞株那一條與風險群表之間的那個矛盾，這裡報為未解決，而不是替它做決定。台灣資料集的大小與涵蓋範圍，是在 2026 年 11 月 20 日以 HTTP 請求驗證的。查證失敗的數字在正文中被點名，並且在整份報告的任何地方都沒有被使用。"
+}
