@@ -93,8 +93,9 @@ one it cleared in 2024 and has not cleared since. The short version of everythin
   competition: 5 of 106 decorated teams used light as a control input in any organism, 5 worked with
   *B. subtilis*, and the two sets intersect in one team. Excluding GEMS, the intersection is 0 of 105.
 - **The institution comes back every year; the problem almost never does.** Of the 81 decorated teams that
-  had entered iGEM before, 5 carried a project line forward, and none of the six returning Grand Prize
-  teams did. Only 3 of 106 credit their own predecessor with anything.
+  had entered iGEM before, 78 had a readable previous project and 5 of those 78 carried a project line
+  forward; none of the six returning Grand Prize teams did. Only 3 of 106 credit their own predecessor with
+  anything.
 - **Education artefacts outlive software and hardware by a wide margin** — 284 of 285 education files still
   download, against 8 of 21 software tools still running and 6 of 20 devices rebuildable. A PDF needs no
   server. The failure is licensing: 1 licence statement in 136 PDFs.
