@@ -488,6 +488,8 @@ _Two built on the optogenetics line GEMS already owns, two medical in motivation
 
 **Reach and risk.** Every participating team is a multiplier and the protocol outlives all of them. The risk is coordination: the result depends on other teams delivering on time, so recruit more labs than you need and publish who did not return data, the way DTU named the turbine makers who never replied.
 
+**Where this one came from, and the rule it has to clear.** This is not a new idea on this page: it is already an entry in the Science for Good pipeline, listed there as "the shared measurement standard nobody built" and marked as passing all four admission criteria on paper but **untested against a real person**. By the pipeline's own governance rule, an entry that comes from this report rather than from a person holds its slot on probation and must find somebody outside GEMS who will say they want it, in their own words, or it exits. That rule applies here too — and the coordination risk makes it sharper, because GEMS currently has no collaboration page and appears on no other team's.
+
 ### A biosensor for one defined contaminant in Hsinchu process water, with real samples
 **The claim.** This sensor reports this contaminant at these concentrations in water from a real industrial process stream, with a limit of detection measured in that matrix rather than in buffer.
 

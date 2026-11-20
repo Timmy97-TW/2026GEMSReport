@@ -88,17 +88,17 @@
       "kicker_zh": "新題目 1 · 真正沒人佔的地",
       "title": "The inter-lab measurement ring nobody in 106 teams ran",
       "title_zh": "106 支隊伍裡沒有任何一支跑過的實驗室間量測環",
-      "body": "**The claim.** The same light-inducible part, measured in N labs to one protocol in absolute units, varies by this much — and here is how much of that is the lab, the plate and the instrument.\n\n**Why this one.** Across all 106 decorated teams of 2026 there was not one inter-lab measurement ring. The whole category of collaboration that produces a reusable result went unclaimed, in a competition about measurement, while the single team that publicly offered real shared work got zero replies. GEMS holds the 2026 High School Best Measurement award, which is the credential that makes an invitation credible.\n\n**Gate 1:** the real target is the between-lab variance itself, which exists as soon as two labs run the protocol — but it has to be set up in week one, because the gate here is partner commitment rather than sample access. **Gate 2:** OD600 and a reporter, with a shared calibrant, on instruments GEMS already owns and has already won an award for.\n\n**The model, and this is why it is a Best Model candidate.** The model *is* the result: a variance-components fit separating between-lab, between-plate and within-plate contributions, with one whole lab held out to test whether the model predicts a site it never saw. That is the loop-closure habit measured at 53% against 23%, in its purest form.\n\n**The arm that could break it.** The apparent between-lab differences are really instrument differences. Ship a shared calibrant, fix the protocol, collect instrument metadata, and report the null honestly if the labs agree — a ring that finds no difference is still the first ring.\n\n**Reach and risk.** Every participating team is a multiplier and the protocol outlives all of them. The risk is coordination: the result depends on other teams delivering on time, so recruit more labs than you need and publish who did not return data, the way DTU named the turbine makers who never replied.",
-      "body_zh": "**主張。**同一個光誘導元件，在 N 個實驗室依同一套流程、以絕對單位量測，變異有這麼大——而其中有多少來自實驗室、多少來自盤、多少來自儀器，在這裡。\n\n**為什麼是它。**2026 年全部 106 支得獎隊伍裡，沒有任何一支跑過實驗室間量測環。在一個以量測為名的競賽裡，整個「能產出可重複使用結果」的合作類別無人認領；而唯一公開提出真正共享工作的隊伍，收到零個回覆。GEMS 握有 2026 年高中組 Best Measurement，那正是讓一份邀請具有可信度的資格。\n\n**關卡一：**真實標的就是實驗室間變異本身，只要有兩個實驗室跑這套流程它就存在——但必須在第一週就架好，因為這裡的關卡是夥伴的承諾，不是樣本取得。**關卡二：**OD600 與報告基因，搭配共用校正品，做在 GEMS 已經有、而且已經靠它拿過獎的儀器上。\n\n**模型，而這正是它成為 Best Model 候選的原因。**模型**就是**結果：一個變異成分模型，把實驗室間、盤間與盤內的貢獻拆開，並留出整整一個實驗室，用來檢驗模型能不能預測一個它從沒見過的場址。那就是被量到 53% 對 23% 的迴路閉合習慣，而且是最純粹的形式。\n\n**那個可能推翻它的實驗組。**看起來的實驗室間差異，其實是儀器差異。寄出共用校正品、固定流程、收集儀器中繼資料，而且如果各實驗室其實一致，就誠實報告這個虛無結果——一個發現沒有差異的環，仍然是第一個環。\n\n**觸及範圍與風險。**每一個參與的隊伍都是放大器，而流程比它們全部都活得久。風險在協調：結果取決於別的隊伍準時交件，所以招募的實驗室要多於你需要的數量，並且公開誰沒有回傳資料——就像 DTU 把從未回覆的渦輪機製造商一一點名那樣。",
+      "body": "**The claim.** The same light-inducible part, measured in N labs to one protocol in absolute units, varies by this much — and here is how much of that is the lab, the plate and the instrument.\n\n**Why this one.** Across all 106 decorated teams of 2026 there was not one inter-lab measurement ring. The whole category of collaboration that produces a reusable result went unclaimed, in a competition about measurement, while the single team that publicly offered real shared work got zero replies. GEMS holds the 2026 High School Best Measurement award, which is the credential that makes an invitation credible.\n\n**Gate 1:** the real target is the between-lab variance itself, which exists as soon as two labs run the protocol — but it has to be set up in week one, because the gate here is partner commitment rather than sample access. **Gate 2:** OD600 and a reporter, with a shared calibrant, on instruments GEMS already owns and has already won an award for.\n\n**The model, and this is why it is a Best Model candidate.** The model *is* the result: a variance-components fit separating between-lab, between-plate and within-plate contributions, with one whole lab held out to test whether the model predicts a site it never saw. That is the loop-closure habit measured at 53% against 23%, in its purest form.\n\n**The arm that could break it.** The apparent between-lab differences are really instrument differences. Ship a shared calibrant, fix the protocol, collect instrument metadata, and report the null honestly if the labs agree — a ring that finds no difference is still the first ring.\n\n**Reach and risk.** Every participating team is a multiplier and the protocol outlives all of them. The risk is coordination: the result depends on other teams delivering on time, so recruit more labs than you need and publish who did not return data, the way DTU named the turbine makers who never replied.\n\n**Where this one came from, and the rule it has to clear.** This is not a new idea on this page: it is already an entry in the Science for Good pipeline, listed there as \"the shared measurement standard nobody built\" and marked as passing all four admission criteria on paper but **untested against a real person**. By the pipeline's own governance rule, an entry that comes from this report rather than from a person holds its slot on probation and must find somebody outside GEMS who will say they want it, in their own words, or it exits. That rule applies here too — and the coordination risk makes it sharper, because GEMS currently has no collaboration page and appears on no other team's.",
+      "body_zh": "**主張。**同一個光誘導元件，在 N 個實驗室依同一套流程、以絕對單位量測，變異有這麼大——而其中有多少來自實驗室、多少來自盤、多少來自儀器，在這裡。\n\n**為什麼是它。**2026 年全部 106 支得獎隊伍裡，沒有任何一支跑過實驗室間量測環。在一個以量測為名的競賽裡，整個「能產出可重複使用結果」的合作類別無人認領；而唯一公開提出真正共享工作的隊伍，收到零個回覆。GEMS 握有 2026 年高中組 Best Measurement，那正是讓一份邀請具有可信度的資格。\n\n**關卡一：**真實標的就是實驗室間變異本身，只要有兩個實驗室跑這套流程它就存在——但必須在第一週就架好，因為這裡的關卡是夥伴的承諾，不是樣本取得。**關卡二：**OD600 與報告基因，搭配共用校正品，做在 GEMS 已經有、而且已經靠它拿過獎的儀器上。\n\n**模型，而這正是它成為 Best Model 候選的原因。**模型**就是**結果：一個變異成分模型，把實驗室間、盤間與盤內的貢獻拆開，並留出整整一個實驗室，用來檢驗模型能不能預測一個它從沒見過的場址。那就是被量到 53% 對 23% 的迴路閉合習慣，而且是最純粹的形式。\n\n**那個可能推翻它的實驗組。**看起來的實驗室間差異，其實是儀器差異。寄出共用校正品、固定流程、收集儀器中繼資料，而且如果各實驗室其實一致，就誠實報告這個虛無結果——一個發現沒有差異的環，仍然是第一個環。\n\n**觸及範圍與風險。**每一個參與的隊伍都是放大器，而流程比它們全部都活得久。風險在協調：結果取決於別的隊伍準時交件，所以招募的實驗室要多於你需要的數量，並且公開誰沒有回傳資料——就像 DTU 把從未回覆的渦輪機製造商一一點名那樣。\n\n**這一個是從哪裡來的，以及它必須過的那條規則。**這不是本頁才出現的新想法：它已經是科學向善清單上的一個條目，在那裡被列為「沒有人建立的共用量測標準」，並註明四項入列條件在紙面上全部通過，但**從未對著一個真實的人檢驗過**。依該清單自己的治理規則，一個來自本報告而不是來自某個人的條目，只能以觀察期的身分佔住名額，而且必須找到一位 GEMS 以外的人，用他自己的話說他要這個，否則就退場。這條規則在這裡同樣適用——而協調風險讓它更尖銳，因為 GEMS 目前沒有合作頁面，也沒有出現在任何其他隊伍的頁面上。",
       "chips": [
         "0 of 106 ran one",
-        "the model is the result",
-        "risk is coordination, not samples"
+        "already a pipeline entry, on probation",
+        "GEMS has no collaboration page"
       ],
       "chips_zh": [
         "106 支中 0 支跑過",
-        "模型就是結果",
-        "風險在協調，不在樣本"
+        "已在清單上，觀察期中",
+        "GEMS 沒有合作頁面"
       ]
     },
     {
@@ -176,7 +176,7 @@
         "Variance components separating lab, plate and instrument; hold out a whole lab",
         "Every participating team, and the protocol outlives them all",
         "**Best Model**, Best Measurement, Best Part Collection, Best Software, Best Education",
-        "**Highest novelty.** 0 of 106 teams ran one. The model is the result. Risk is coordination, so over-recruit labs"
+        "**Highest novelty, but already on probation.** 0 of 106 ran one and the model is the result — yet it is a pipeline entry with no outside person asking for it, and GEMS has no collaboration page"
       ],
       [
         "**N2 · Hsinchu process-water biosensor**",
@@ -226,7 +226,7 @@
         "變異成分模型拆開實驗室、盤與儀器；留出整整一個實驗室",
         "每一支參與的隊伍，而流程比它們都活得久",
         "**Best Model**、Best Measurement、Best Part Collection、Best Software、Best Education",
-        "**新穎度最高。**106 支裡 0 支跑過。模型就是結果。風險在協調，所以要超額招募實驗室"
+        "**新穎度最高，但已在觀察期。**106 支中 0 支跑過，而且模型就是結果——但它是一個沒有外部人士開口要的清單條目，而 GEMS 也還沒有合作頁面"
       ],
       [
         "**N2 · 新竹製程水生物感測器**",
