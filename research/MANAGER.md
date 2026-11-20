@@ -1852,3 +1852,63 @@ public body releasing material to any team.
 
 This also closes the open item recorded earlier about whether the report should state a field-wide base rate
 rather than the High-School-Top-10-only figure. It now states both.
+
+---
+
+## Session 7, part 1 -- the PI picks Best Model, and the published claim about it was wrong
+
+The PI answered the open question with "discuss direction first, I'm more interested in the model", and then
+settled it: Best Model is tentatively one of the prizes GEMS will enter in 2027. The order of work is now the
+analysis first, then the three Taiwan AI-hardware topics.
+
+**The category roster, recomputed from the three award captures** in scratchpad/awards/aw2024.json,
+aw2025.json and aw2026.json rather than from the published block. Best Model had 15 recipients in 2024, 16 in
+2025 and 18 in 2026 -- 49 in all, 9 outright winners and 40 nominees. The High School roster is fixed at five
+slots a season, one winner and four nominees, giving 15 High School recipients and 12 distinct teams. The
+published "20 of 40 (50%)" is confirmed as the nominees-only figure. New figures: all 49 recipients took a
+Top 10 27 times (55%), outright winners 7 of 9 (78%, the misses being 2024 High School IEA and 2026
+Undergraduate XJTLU-China), and High School recipients alone 8 of 15 (53%).
+
+**A published claim had to be corrected.** proposals-how.json said Best Model "maps onto the finalist slate
+exactly" in the High School section. That is a 2026-only coincidence. Per section-season the finalists who held
+Best Model run 1/2, 1/3, 0/2 in 2024; 1/2, 1/3, 1/2 in 2025; 2/2, 1/3, 1/2 in 2026. Pooled, **9 of 21
+finalists held it (43%), and the 2024 Overgraduate section had none.** The per-season High School conversion is
+also far noisier than one figure suggests: 1 of 5 in 2024, 5 of 5 in 2025, 2 of 5 in 2026.
+
+**The replacement finding is tighter and survives a control.** The High School grand-prize ladder is GEMS-Taiwan
+then GreatBay-SCIE (2024), GreatBay-SCIE then Uprize-I (2025), Lambert-GA then HongKong-JSS (2026). **All three
+High School Grand Prize winners held Best Model recognition** -- GEMS as a 2024 nominee, GreatBay-SCIE as the
+2025 winner, Lambert-GA as the 2026 winner. Running all twenty special-category titles that appear across the
+three seasons against those same three teams, **only Best Wiki also reaches three of three.** Best Village
+Project, Best Presentation and Best Education reach two; everything else reaches one or none. Best Education has
+the identical five-slot High School roster and still reaches only two, so slot size is not the explanation.
+First runners-up hold Best Model one time in three, which is why this is stated as a co-occurrence at the top of
+the section and not as a finalist rule.
+
+**The control that matters most to this PI.** Across three seasons and three sections there are nine Grand Prize
+winners. **None has ever held Best Measurement -- 0 of 9.** Best Hardware has been held by 1 of 9. Both give the
+High School section four to six slots a season, no fewer than Best Model's five. GEMS's own portfolio moved: in
+2024 it held Best Wiki (win), Best New Basic Part (win), Best Project Promotion Video (win) and Best Model,
+Education and Presentation as nominations, and won the Grand Prize; in 2025 Best Model, Measurement, Education,
+Wiki and Village Project as nominations, Top 10; in 2026 Measurement, Hardware and Integrated Human Practices as
+wins, Presentation, Wiki and Village Project as nominations, Top 10, and **no Best Model citation for the first
+time in three seasons.** So the 2026 portfolio sits in the half of the table that does not co-occur with a
+podium, and the category GEMS vacated is in the half that does.
+
+Chance baselines for the record, over High School slot sizes against 128, 143 and 147 accepted teams: all three
+grand prize winners holding Best Wiki by chance is 1 in 2,691; holding Best Model is 1 in 21,526. Those are
+illustrative only -- awards are not independent of project quality, so none of this is causal, and the block
+says so in its own text.
+
+Working file: scratchpad/bestmodel_economics.md carries every figure with its derivation.
+
+Five agents launched in parallel on the anatomy the economics cannot give: what the recognised models were
+actually about. Four on the recipients -- 2024 High School five, 2025 High School five, the six non-High-School
+winners across all three seasons, and the 2026 High School five read from the existing corpus with GEMS and
+GCGS as unrecognised controls -- each answering the same twelve fields, including parameter provenance,
+goodness-of-fit statistics actually reported, what was held back from fitting, and whether a stated prediction
+could have failed. The hypothesis under test, that the 2026 GEMS modelling was good but was not about the
+project's central claim, was deliberately kept out of every brief: the agents were asked for the headline claim
+and the model's subject as two separate observations, and the classification is mine to make afterwards. The
+fifth agent is on the metrology substrate the three topics will need -- which quantities in the Taiwan
+AI-hardware chain are expensive or slow to measure today.
