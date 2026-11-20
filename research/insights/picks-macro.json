@@ -1,0 +1,497 @@
+{
+  "id": "picks-macro",
+  "tab": "picks",
+  "order": 10,
+  "kicker": "2027 selection · macro",
+  "kicker_zh": "2027 選題 · 大勢",
+  "title": "What the 2026 shifts do to what is worth attempting",
+  "title_zh": "2026 年的轉變，如何改變「什麼值得做」",
+  "lede": "Twenty-four shifts from this report's own two trend reviews, read for one thing only: does each make a kind of project newly worth doing, newly pointless, or newly cheap for a team with one season, a school lab and no budget.",
+  "lede_zh": "本報告自己的兩份趨勢回顧共二十四項轉變，這裡只為一件事而讀：對一支只有一季、一間學校實驗室、沒有預算的隊伍來說，每一項轉變讓哪一類專案變得剛好值得做、剛好變得沒意義，或剛好變便宜了。",
+  "body": "The two trend tabs say what moved. This block asks one question of each movement and nothing else: does it make a kind of project newly worth attempting, newly pointless, or newly cheap for a team with one season, a school lab and no budget? A shift with no answer to that question is not an opportunity, and it appears below only as a table row saying why it can be ignored.\n\n**The split that matters is commoditised against still hard.** What went free in 2026 is almost entirely prediction and design. A protein-ligand complex now folds on open weights in minutes. Thirty-five binder designs cost a few hundred dollars of compute. A flux-balance model of *B. subtilis* comes out of a published genome-scale model and COBRApy for nothing. A literature-to-hypothesis pass runs on an open agent stack. A genome language model will write you a promoter. None of that can be the project any more, because the marginal cost of the step is an afternoon and a GPU, and a judge comparing two teams cannot separate them on it. What stayed hard is everything that touches a physical sample: a quantitative binding measurement, an off-state for a light-inducible promoter, a titre anyone can defend, a real sample rather than a surrogate, a cost model, a containment argument, a lead time you can plan a season around. Choose the 2027 project so that the hard half is the contribution and the free half is a line in the methods.\n\n**The worked example, checked.** The team file for Lambert-GA supports a sharper claim than the one we were handed, and a narrower one. Lambert did not win Best Model only: it took the High School Grand Prize plus Best Model, Best Wiki, Best Sustainable Development Impact and Best Village Project, and a Best Hardware nomination. Its stack is exactly the commoditised frontier — BindCraft, Boltz-2, Protenix, Mosaic — with the biolayer interferometry bought in from a commercial provider. On *the only high-school team at that frontier*, the evidence supports it for the tier that was actually read: across the ten High School Top 10 dry labs, this report's own ceiling analysis finds only Lambert-GA working at the frontier of the toolchain, while the rest reached the same tier on logistic regression, NetLogo, NUPACK, PyMOL, FoldX and one tool reused outright from a 2024 team. HKSSC used AlphaFold, so structure prediction itself was not unique — the 2026 co-folding and binder-design stack was. It does not support a claim about high-school teams in general, because only decorated teams were read.\n\nAnd the part worth copying is not the stack. Lambert benchmarked the confidence metrics against 5,721 labelled designs, found a 38-metric ensemble at ROC-AUC 0.541, barely above chance, noticed that its own eventual hit did not carry the best score, showed across 1,307 prior designs that choosing the epitope roughly doubles the hit rate, and published all thirty-five designs with the failures left in. One of thirty-five bound, at KD 603.6 nM, on under USD 400 of compute. That is the shape of a 2027 project: the free tool runs, and the contribution is the honest evaluation of what it produced.\n\n**The existing bet, re-tested.** The roadmap already points at optogenetic control in *B. subtilis*, and the 2026 evidence pulls in two directions at once — it strengthens the strategic half and weakens the readiness half. Strategically it strengthens: both trend reviews, run separately from different sources with no knowledge of each other, landed on the same gap, and the competition test is harder than the literature count. Of the 106 decorated teams of 2026, 5 used light as a control input in any organism, 5 worked with *B. subtilis*, and the two sets intersect in exactly one team, which is GEMS; excluding GEMS the intersection is 0 of 105. Four of the five light teams work in organisms where optogenetics is already routine, and four of the five *B. subtilis* teams induce with something other than light. Nobody in that cohort is competing for the line.\n\nOn readiness it weakens. The same report records that ReLEAF's own 2026 pages do not yet evidence light-dependence: the ELISA showed no change over time, the AmilCP reporter never coloured, and every biological result in the project came from a constitutive bypass. Two candidate explanations are named — well-to-well light crosstalk in the plate apparatus, and red LEDs emitting near 640 nm when CcaSR needs about 672 nm to switch off — and neither has been tested. So the honest verdict is that 2026 strengthens the bet as a direction and weakens it as a starting position. The 2027 pick should be the experiment that closes that gap, not a new application stacked on top of it. The chassis census adds the discipline: among decorated teams a non-model chassis neither helped nor hurt a Top 10 place, 9 of 27 against 21 of 79, Fisher exact p = 0.62. Hold this line because the field is empty and the capability compounds, not because it wins.\n\n**Two shifts that are specifically Taiwanese.** The first is positional. China holds roughly 70 percent of world fermentation capacity, and Taiwan's state-backed push is a contract-manufacturing play with no visible synthetic-biology design layer, while Singapore and Israel are funding exactly that layer. A school team cannot out-build a CDMO and gains nothing by miniaturising one. It can choose a project whose surviving output sits in the design layer — a characterised part set, a measurement protocol calibrated to absolute units, a small local dataset with a benchmark task attached, a tool with a URL and a licence — and name a Taiwanese end user before starting.\n\nThe second is procedural and has a date. The November 2026 National Policy for Nucleic Acid Synthesis Screening ties US federal funding to buying synthetic DNA only from certified providers that screen orders of 50 or more nucleotides with verified tools and keep records for eight years. A Taiwanese team ordering into that perimeter, collaborating with US-funded partners or sending students to US labs is inside it whether or not it has noticed. The selection consequence is that proximity to a pathogen or toxin list is now a real cost in days: it buys a review step, a supplier conversation and a delay a one-season team cannot absorb. Pick a target no screening desk has to think about, and write the one-page ordering policy before the first order rather than after the first question.\n\n**What to ignore, and why.** Autonomous cloud labs and the Genesis Mission's 97-robot facility are allocated by proposal to funded institutions, run on proprietary stacks, and carry a documented per-device integration tax; a school team gets one transferable habit from them, which is writing protocols in a machine-readable form. Genome-scale generative design needs synthesis budget at kilobase-to-genome scale and carries the sharpest dual-use profile in the field — read it, critique it, do not build it. Therapeutics needs BSL-2 or above, patients and a regulator. The cost-of-goods wall is capital engineering with government money behind it. The post-platform correction and the funding concentration are a reading skill and a careers signal, not project ideas. Six of the nineteen rows below should change nothing at all about what GEMS picks, and saying so is half the work of selection.",
+  "body_zh": "兩個趨勢頁已經說了什麼在動。這個區塊對每一項變動只問一個問題，別的都不問：對一支只有一季、一間學校實驗室、沒有預算的隊伍來說，它讓哪一類專案變得剛好值得嘗試、剛好變得沒意義，或剛好變便宜了？一項轉變若回答不了這個問題，它就不是機會；它在下面只會是表格裡的一列，說明為什麼可以不理它。\n\n**真正該分清的是「已成為廉價商品」與「仍然困難」。** 2026 年變成免費的，幾乎全都是預測與設計。蛋白質與配體的複合物現在用開放權重幾分鐘就摺好。三十五個結合蛋白設計只要幾百美元的運算費。用 COBRApy 加一個已發表的基因組尺度模型，*B. subtilis* 的通量平衡模型一毛錢都不用。文獻到假說的那一輪可以跑在開放的代理堆疊上。基因組語言模型會幫你寫啟動子。這些都不能再當成專案本身，因為這個步驟的邊際成本就是一個下午加一張 GPU，評審拿兩支隊伍來比，在這件事上分不出高下。仍然困難的，是所有會碰到實體樣本的東西：一個定量的結合量測、一個光誘導啟動子的關閉態、一個站得住腳的產量數字、一個真實樣本而不是替代品、一份成本模型、一套圍堵論述、一個能用來排整季進度的交期。2027 年的選題應該這樣挑：困難的那一半是貢獻，免費的那一半只是方法章節裡的一行字。\n\n**那個示範推理，查過了。** Lambert-GA 的團隊檔案支持的，是一個比我們拿到的版本更銳利、同時範圍更窄的說法。Lambert 不是只拿最佳建模：它拿下高中組總冠軍，外加最佳建模、最佳 Wiki、最佳永續發展影響與最佳 Village 專案，還入圍最佳硬體。它的工具組正是那個已成廉價商品的前沿——BindCraft、Boltz-2、Protenix、Mosaic——而生物層干涉量測是向商業服務商外購的。關於「唯一站在那個前沿的高中隊伍」，證據在真正被讀過的那一層成立：在十支高中組 Top 10 的乾實驗室之中，本報告自己的高中天花板分析發現只有 Lambert-GA 站在工具鏈的前沿，其餘幾支靠的是邏輯斯迴歸、NetLogo、NUPACK、PyMOL、FoldX，以及一個直接沿用 2024 年某隊的工具。HKSSC 用了 AlphaFold，所以結構預測本身並不獨特——獨特的是 2026 年的共摺疊與結合蛋白設計工具組。它不足以支持一個關於所有高中隊伍的說法，因為被讀過的只有得獎隊伍。\n\n而真正值得抄的不是那套工具。Lambert 拿 5,721 個有標註的設計去評測那些信賴度指標，發現一個 38 項指標的集成模型 ROC-AUC 只有 0.541，幾乎只比亂猜好一點，注意到自己最終成功的那個設計並不是分數最高的，又用 1,307 個先前的設計證明選對抗原決定位大約讓命中率翻倍，然後把全部三十五個設計連失敗一起公開。三十五個裡有一個結合，KD 為 603.6 nM，運算費用不到 400 美元。這就是 2027 年專案該有的形狀：免費的工具照跑，貢獻在於誠實評估它產出了什麼。\n\n**既有的那個賭注，重新檢驗。** 路線圖已經指向 *B. subtilis* 的光遺傳學控制，而 2026 年的證據同時往兩個方向拉——它加強了策略那一半，削弱了準備度那一半。策略上是加強的：兩份趨勢回顧分別從不同來源、互不知情地進行，卻落在同一個空白上，而競賽層面的檢驗比文獻數量更嚴格。2026 年 106 支得獎隊伍中，有 5 支在任何生物裡把光當成控制輸入，有 5 支用 *B. subtilis*，兩個集合的交集恰好只有一支隊伍，就是 GEMS；把 GEMS 排除，交集是 105 支中的 0 支。五支用光的隊伍中有四支工作的生物本來就把光遺傳學當成例行工具，五支用 *B. subtilis* 的隊伍中有四支是用光以外的方式誘導。這一批隊伍裡沒有人在跟你搶這塊地。\n\n準備度上則是削弱的。同一份報告記下：ReLEAF 自己 2026 年的頁面還無法證明光依賴性——ELISA 顯示隨時間沒有變化，AmilCP 報告基因從未顯色，而專案裡每一個生物學結果都來自組成型的旁路。團隊點出兩個可能解釋——培養板裝置內孔與孔之間的光串擾，以及紅光 LED 發光波長約 640 nm，而 CcaSR 需要約 672 nm 才會關閉——兩個都還沒被直接測試。所以誠實的判斷是：2026 年讓這個賭注作為「方向」更站得住，作為「起跑位置」更站不住。2027 年的選題應該就是補上那個缺口的實驗，而不是在它上面再疊一個新應用。底盤普查還補上一道紀律：在得獎隊伍之中，用非模式底盤對進 Top 10 既沒幫助也沒妨礙，27 支中 9 支對 79 支中 21 支，Fisher 精確檢定 p = 0.62。守住這條線，是因為這塊地還空著、而且能力會累積，不是因為它會贏。\n\n**兩項專屬於台灣的轉變。** 第一項是位置問題。中國掌握全球約 70% 的發酵量能，而台灣由國家主導的布局是一場代工製造的局，看不到合成生物學的設計層，新加坡與以色列卻正好在補助那一層。學校隊伍蓋不過 CDMO，把它縮小一號來做也得不到任何東西。但它可以挑一個「留下來的產出落在設計層」的專案——一組特性已完整描述的元件、一份校準到絕對單位的量測流程、一個附帶基準任務的小型本地資料集、一個有網址與授權的工具——並且在開始之前就先指名一個台灣的終端使用者。\n\n第二項是程序問題，而且有日期。2026 年 11 月的國家核酸合成篩查政策，把美國聯邦經費與「只能向認證供應商採購合成 DNA」綁在一起，這些供應商必須以驗證過的工具篩查 50 個核苷酸以上的訂單，並保留紀錄八年。一支台灣隊伍只要訂單進到那個範圍、與受美國經費支持的夥伴合作，或送學生去美國實驗室，就已經在裡面了，不管它有沒有注意到。對選題的後果是：靠近病原或毒素清單現在要用天數來計價——它會換來一道審查、一輪跟供應商的往返，以及一段只有一季的隊伍吸收不了的延誤。挑一個篩查窗口完全不需要多想的標的，並在第一筆訂單之前就把那一頁訂購政策寫好，而不是等第一個問題來了才寫。\n\n**該忽略什麼，以及為什麼。** 自主雲端實驗室與 Genesis Mission 那座 97 台機器人的設施，是以計畫申請的方式配給有經費的機構，跑在專有的技術堆疊上，而且有被記錄下來的「每台裝置都要手寫轉接程式」的整合成本；學校隊伍從它們身上只能帶走一個可移植的習慣，就是把實驗流程寫成機器可讀的格式。基因組尺度的生成式設計需要千鹼基到整個基因組級別的合成預算，而且帶著這個領域裡最尖銳的雙重用途風險——讀它、批判它，不要去做它。治療用途需要 BSL-2 以上、病人與主管機關。產品成本那道牆是有政府資金在後面推的資本工程。後平台時代的修正與資金集中，是一項閱讀能力與一個職涯訊號，不是專案題目。下面十九列裡有六列，對 GEMS 要選什麼完全不該有任何影響，而把這件事講明白，就是選題工作的一半。",
+  "cards": [
+    {
+      "kicker": "Co-folding",
+      "kicker_zh": "共摺疊",
+      "title": "Predicting a complex is a step in your methods, not your project",
+      "title_zh": "預測複合物是方法裡的一個步驟，不是你的專案",
+      "body": "AlphaFold3's architecture was reproduced and out-opened by Boltz-1 and Boltz-2, Chai-1, Protenix and OpenFold3, so the entire structural layer of a project now runs on one GPU in seconds to minutes. The consequence for selection is blunt: no 2027 project can rest on having produced a structure or a docked complex, because every other team can produce one too. What stayed scarce is judgement — knowing when pLDDT, PAE and ipTM are lying, and ranking affinity within a congeneric series, which these models do badly because they interpolate the PDB rather than learn physics. Make the confidence audit the deliverable, the way Lambert-GA did.",
+      "body_zh": "AlphaFold3 的架構已被 Boltz-1 與 Boltz-2、Chai-1、Protenix 與 OpenFold3 複現，並在開放程度上超越，於是一個專案的整個結構層現在只要一張 GPU、數秒到數分鐘就跑完。對選題的後果很直白：2027 年沒有任何專案能靠「做出了一個結構或一個對接複合物」站住，因為別的隊伍也做得出來。仍然稀缺的是判斷力——知道 pLDDT、PAE 與 ipTM 什麼時候在騙你，以及在同系列化合物之間排序親和力，而後者這些模型做得很差，因為它們是在 PDB 之間內插，不是學會物理。像 Lambert-GA 那樣，把信賴度的查核本身當成交付成果。",
+      "chips": [
+        "Free: a complex in minutes",
+        "Hard: knowing when it is wrong",
+        "Avoid: prediction as a result",
+        "Reachable: yes"
+      ],
+      "chips_zh": [
+        "免費：幾分鐘一個複合物",
+        "困難：知道它何時錯了",
+        "避開：把預測當成果",
+        "做得到：可以"
+      ]
+    },
+    {
+      "kicker": "Generative design",
+      "kicker_zh": "生成式設計",
+      "title": "A de novo binder is affordable; the binding assay is what you must secure first",
+      "title_zh": "從頭設計結合蛋白負擔得起，要先談定的是結合檢測",
+      "body": "BindCraft, LigandMPNN and RFdiffusion2 made de novo binders routine enough to benchmark honestly, and the honest number is a cross-target success rate nearer 25 percent than the 46.3 percent mean, with the hardest published single-target set under 10 percent. Lambert-GA's own campaign landed 1 confirmed binder out of 35 designs, at KD 603.6 nM, for under USD 400 of compute — and bought the biolayer interferometry in. So the design half is cheap and the measurement half carries the whole project risk. Do not open a design campaign in 2027 without a named, costed route to a quantitative binding number: a partner lab, a commercial run, or an assay GEMS already owns.",
+      "body_zh": "BindCraft、LigandMPNN 與 RFdiffusion2 讓從頭設計的結合蛋白普及到足以誠實做基準評測，而誠實的數字是：跨標的成功率更接近 25%，而不是 46.3% 的平均值，已發表中最困難的單一標的資料集甚至低於 10%。Lambert-GA 自己那一輪，三十五個設計中確認有一個結合，KD 為 603.6 nM，運算費用不到 400 美元——而生物層干涉量測是外購的。所以設計那一半很便宜，量測那一半承擔了整個專案的風險。2027 年要開設計戰役，必須先有一條指名、已估價的路徑可以拿到定量的結合數字：一間合作實驗室、一次商業委測，或 GEMS 本來就有的檢測。",
+      "chips": [
+        "Free: 20 to 35 designs",
+        "Hard: a defensible KD",
+        "Lambert: 1 of 35 bound",
+        "Secure the assay first"
+      ],
+      "chips_zh": [
+        "免費：20 到 35 個設計",
+        "困難：站得住的 KD",
+        "Lambert：35 個中 1 個結合",
+        "先談定檢測"
+      ]
+    },
+    {
+      "kicker": "Light as control",
+      "kicker_zh": "以光作為控制",
+      "title": "The light gap is real and uncontested, but GEMS has not yet shown its own switch works",
+      "title_zh": "光的空白是真的、也沒人搶，但 GEMS 還沒證明自己的開關能用",
+      "body": "Two independent reviews converged: light has become a real-time actuator for closed-loop fermentation control, with reported titre gains near 60 percent in a 1 L photobioreactor, and the cheapest retrofit past the capital wall — while optogenetics in *B. subtilis* is twelve papers in all of PubMed. The competition test is sharper than the literature: 5 of 106 decorated teams used light as a control input, 5 worked in *B. subtilis*, the intersection is one team, and it is GEMS; 0 of 105 without it. Against that, ReLEAF's own 2026 pages report no ELISA change over time, a reporter that never coloured, and every biological result from a constitutive bypass. So the pick is specific: spend 2027 on dose-response and the off-state, testing the suspected 640-against-672 nm mismatch and the plate crosstalk directly. In a twelve-paper field that is on its own a publishable contribution. A new application on an unevidenced switch is not.",
+      "body_zh": "兩份互不相關的回顧收斂到同一處：光已成為閉環發酵控制的即時致動器，1 L 光生物反應器中回報的產量提升接近 60%，也是繞過資本門檻最便宜的改裝途徑——而 *B. subtilis* 的光遺傳學在整個 PubMed 裡只有十二篇論文。競賽層面的檢驗比文獻更嚴格：106 支得獎隊伍中有 5 支把光當成控制輸入，有 5 支做 *B. subtilis*，交集只有一支，就是 GEMS；把它排除就是 105 支中的 0 支。但另一邊，ReLEAF 自己 2026 年的頁面記載 ELISA 隨時間沒有變化、報告基因從未顯色，而每一個生物學結果都來自組成型旁路。所以選題很具體：2027 年投入在劑量反應與關閉態，直接測試那個疑似 640 對 672 nm 的波長錯配，以及培養板的光串擾。在一個只有十二篇論文的領域裡，這件事本身就是可發表的貢獻。在一個還沒被證明的開關上疊新應用，則不是。",
+      "chips": [
+        "Free: LEDs and a plate reader",
+        "Hard: an off-state",
+        "0 of 105 compete for it",
+        "Pick: dose-response first"
+      ],
+      "chips_zh": [
+        "免費：LED 與讀盤機",
+        "困難：關閉態",
+        "105 支中 0 支在搶",
+        "選題：先做劑量反應"
+      ]
+    },
+    {
+      "kicker": "ML-guided DBTL",
+      "kicker_zh": "機器學習導引的 DBTL",
+      "title": "Two design cycles on a small library is a season; six cycles with robots is not",
+      "title_zh": "小型函式庫跑兩個設計循環是一季的事；靠機器人跑六個循環不是",
+      "body": "COBRApy, flux balance analysis and a published *B. subtilis* genome-scale model cost nothing, and the benchmarks are reproducible, so the dry half of ML-guided strain design is free. The results are real: a five-fold titre gain over six cycles in *P. putida*, and 2.37-fold over two cycles on p-coumaric acid in yeast against a design space of roughly 170 million. But the published gains ride on lab automation and high-throughput proteomics that a school lab does not have. For one season the honest scope is to reproduce the exploration-against-exploitation comparison in silico, then run one real cycle on a library small enough to assay by hand. Avoid putting a titre figure in the abstract before the assay exists.",
+      "body_zh": "COBRApy、通量平衡分析，加一個已發表的 *B. subtilis* 基因組尺度模型都不要錢，而那些基準測試可以重現，所以機器學習導引菌株設計的乾實驗那一半是免費的。成果也是真的：*P. putida* 在六個循環中產量提升五倍，酵母菌生產 p-coumaric acid 在兩個循環中提升 2.37 倍，而設計空間約有 1.7 億種。但那些已發表的提升，靠的是學校實驗室沒有的實驗室自動化與高通量蛋白質體學。一季的誠實範圍是：先在電腦上重現探索對利用的比較，再在一個小到可以手工檢測的函式庫上跑一個真實循環。在檢測方法還不存在之前，不要把產量數字寫進摘要。",
+      "chips": [
+        "Free: COBRApy and a published GEM",
+        "Hard: library build and titre assay",
+        "Scope: one real cycle"
+      ],
+      "chips_zh": [
+        "免費：COBRApy 與已發表的 GEM",
+        "困難：建函式庫與產量檢測",
+        "範圍：一個真實循環"
+      ]
+    },
+    {
+      "kicker": "Build and supply",
+      "kicker_zh": "建構與供應",
+      "title": "Prototype cell-free, order fragments, and plan the season around a quoted lead time",
+      "title_zh": "用無細胞做原型、訂片段，並依實際報價的交期排整季",
+      "body": "Cell-free TXTL is the one wet step that got genuinely cheaper for a school lab: it removes transformation, growth and most of the biosafety friction, and it is the right first test of any new circuit. The rest of the build industrialisation — one-pot hybridisation synthesis of a thousand fragments, droplet pooled assembly, long-read design-space mapping — needs equipment a school does not have and should not chase. On supply, the 2026 shift is not price: Ansa sells 50 kb clonal constructs from USD 0.13 per base pair and Twist fragments from USD 0.07, so the differentiator is length, turnaround and customs. A 2027 plan that assumes a 10 kb construct arrives in two weeks will fail in Taiwan. Design for synthesis, order fragments you can assemble locally, and build the calendar backwards from a real quote.",
+      "body_zh": "無細胞的 TXTL 是學校實驗室真正變便宜的那一個濕實驗步驟：它省去轉形、培養與大部分生物安全上的摩擦，而且是任何新電路最合適的第一輪測試。建構工業化的其餘部分——一鍋式雜交合成一千個片段、液滴混池組裝、長讀長設計空間繪製——需要學校沒有的設備，也不該去追。在供應端，2026 年的轉變不在價格：Ansa 的 50 kb 單株構築體每鹼基對 0.13 美元起，Twist 的片段每鹼基對 0.07 美元起，所以差異化在長度、交期與海關。一個假設 10 kb 構築體兩週就到貨的 2027 年計畫，在台灣一定會失敗。為合成而設計，訂可以自己在本地組裝的片段，並依實際報價往回推整季行程。",
+      "chips": [
+        "Free: TXTL prototyping",
+        "Hard: lead time and customs",
+        "Order fragments, not one long construct"
+      ],
+      "chips_zh": [
+        "免費：TXTL 原型製作",
+        "困難：交期與海關",
+        "訂片段，不要訂一條長構築體"
+      ]
+    },
+    {
+      "kicker": "Biosecurity",
+      "kicker_zh": "生物安全",
+      "title": "Screening policy now prices your choice of target",
+      "title_zh": "篩查政策現在替你的標的選擇標上價格",
+      "body": "The November 2026 National Policy for Nucleic Acid Synthesis Screening ties US federal funding to certified providers, a 50-nucleotide screening threshold, identity verification and eight-year record retention, and the defensive literature is now publishing algorithms against order-splitting evasion. None of this is technically hard; it is paperwork with a deadline, and it reaches any team that orders synthetic DNA, collaborates with US-funded partners or sends students to US labs. The selection consequence is that proximity to a pathogen or toxin list is now a cost measured in days: a review step, a supplier conversation, a delay a one-season team cannot absorb. Pick a target no screening desk has to think about. Then write the one-page ordering policy before the first order, and teach screening itself — sequence similarity and adversarial order splitting is a genuinely good dry-lab exercise.",
+      "body_zh": "2026 年 11 月的國家核酸合成篩查政策，把美國聯邦經費綁上認證供應商、50 個核苷酸的篩查門檻、身分查核與八年紀錄保存，而防禦端的文獻現在也在發表對付拆單規避的演算法。這些在技術上都不難；它是有期限的文書工作，而且管到任何會訂購合成 DNA、與受美國經費支持的夥伴合作，或送學生去美國實驗室的隊伍。對選題的後果是：靠近病原或毒素清單現在是一筆以天數計算的成本——一道審查、一輪跟供應商的往返，一段只有一季的隊伍吸收不了的延誤。挑一個篩查窗口完全不必多想的標的。然後在第一筆訂單之前把那一頁訂購政策寫好，並且把篩查本身當課程教——序列相似度與對抗式拆單是一個真正好的乾實驗練習。",
+      "chips": [
+        "Hard: nothing technical",
+        "Cost: days of delay",
+        "Pick far from any list",
+        "Cheapest credibility here"
+      ],
+      "chips_zh": [
+        "困難：技術上沒有",
+        "代價：以天計的延誤",
+        "挑離清單遠的標的",
+        "這裡最便宜的信譽"
+      ]
+    },
+    {
+      "kicker": "Taiwan",
+      "kicker_zh": "台灣",
+      "title": "Taiwan is building tanks and no design layer, so leave a design-layer artefact behind",
+      "title_zh": "台灣在蓋發酵槽、沒有設計層，所以要留下設計層的產出",
+      "body": "China holds about 70 percent of world fermentation capacity, and Taiwan's state-backed biomanufacturing push is a contract-development play with no visible synthetic-biology design layer, while Singapore's biological data centre and Israel's biological-AI infrastructure fund exactly that layer. A school team cannot out-build a CDMO and gains nothing by miniaturising one. The 2027 consequence is to choose a project whose surviving output sits in the design layer — a characterised part set, a measurement protocol calibrated to absolute units, a small local dataset with a benchmark task, a tool with a URL and a licence — and to name a Taiwanese end user before starting rather than after. TBMC in Hsinchu is physically close and ramping, and this report's roadmap already names three Taiwanese teams worth writing to.",
+      "body_zh": "中國掌握全球約 70% 的發酵量能，而台灣由國家主導的生物製造布局是一場代工開發的局，看不到合成生物學的設計層；新加坡的生物資料中心與以色列的生物 AI 基礎設施，補助的正好就是那一層。學校隊伍蓋不過 CDMO，把它縮小一號也得不到任何東西。2027 年的後果是：挑一個「留下來的產出落在設計層」的專案——一組特性已完整描述的元件、一份校準到絕對單位的量測流程、一個附帶基準任務的小型本地資料集、一個有網址與授權的工具——並且在開始之前、而不是結束之後，就先指名一個台灣的終端使用者。新竹的 TBMC 距離近、正在擴產，而本報告的路線圖已經指名三支值得寫信去聯絡的台灣隊伍。",
+      "chips": [
+        "Free: proximity and open doors",
+        "Hard: no local pipeline to join",
+        "Pick a design-layer deliverable"
+      ],
+      "chips_zh": [
+        "免費：地理鄰近與已開的門",
+        "困難：沒有本地管道可加入",
+        "選設計層的交付物"
+      ]
+    },
+    {
+      "kicker": "Agriculture",
+      "kicker_zh": "農業",
+      "title": "In an agricultural pick, the containment story is part of the science",
+      "title_zh": "農業題目裡，圍堵論述就是科學的一部分",
+      "body": "A Nature Biotechnology assessment of 77 agricultural biotechnologies found market viability and social acceptance, not technological readiness, to be the binding constraints, and USDA conditionally licensed an engineered gut microbe now in 35 million broilers on a feed-conversion argument rather than a welfare one. For a school team that is good news, because the missing deliverables are cheap: a readiness score across the published dimensions, a regulatory-pathway memo naming the responsible Taiwanese agency, and a cost per hectare or per bird. Light-dependence is itself a containment mechanism — no light, no function — which is a genuinely novel argument and free to make. The expensive half is the other one: this report's reading of the High School Top 10 found exactly one team in ten assayed a real sample, and that team took 1st Runner-up. Pick an agricultural target where a real sample is actually reachable inside one season.",
+      "body_zh": "Nature Biotechnology 對 77 項農業生技的評估發現，真正的限制是市場可行性與社會接受度，不是技術成熟度；而美國農業部有條件核准了一株工程化的腸道微生物，目前已用在 3,500 萬隻肉雞上，賣點是飼料轉換率，不是動物福利。對學校隊伍來說這是好消息，因為缺的交付物都很便宜：依已發表的面向打一份成熟度評分、一份指名台灣主責機關的法規路徑備忘錄，以及每公頃或每隻雞的成本。光依賴性本身就是一種圍堵機制——沒有光就沒有功能——這是一個真正新穎、而且免費就能提出的論點。貴的是另外那一半：本報告讀過高中組 Top 10 後發現，十支中恰好只有一支把檢測做在真實樣本上，而那一支拿下亞軍。挑一個在一季之內真的拿得到真實樣本的農業標的。",
+      "chips": [
+        "Free: readiness score and a regulator memo",
+        "Hard: a real sample",
+        "1 of 10 ran one",
+        "Containment as an argument"
+      ],
+      "chips_zh": [
+        "免費：成熟度評分與法規備忘錄",
+        "困難：真實樣本",
+        "十支中只有一支做了",
+        "把圍堵當成論點"
+      ]
+    },
+    {
+      "kicker": "Data and standards",
+      "kicker_zh": "資料與標準",
+      "title": "You cannot own a model, but a small Taiwanese dataset with a benchmark is yours for good",
+      "title_zh": "模型你擁有不了，但一個附帶基準的小型台灣資料集會一直是你的",
+      "body": "Evo 2 is free and in Nature while Basecamp raised USD 140M on the claim that its biodiversity data is what public databases cannot give you, which locates the value precisely. No school team will out-train Arc, and none needs to. A narrow, locally collected, well-labelled dataset with a public benchmark task attached is a durable asset that compounds across cohorts, and it is one of very few things a single season can actually finish: subtropical soil or coastal microbiomes, a local crop pathogen, a Taiwan rice-stress series, or the light dose-response series this line needs anyway. Adopt SBOL3 and calibrate fluorescence to absolute units from the start, because the field's self-identified weak link is that its data are not machine-readable enough to train the models it now depends on — and a new programme has nothing to retrofit.",
+      "body_zh": "Evo 2 免費而且登上 Nature，而 Basecamp 以「它的生物多樣性資料是公開資料庫給不了的」為說法募到 1.4 億美元，這就精準指出價值在哪。沒有學校隊伍會在訓練上贏過 Arc，也沒有誰需要。一個範圍窄、在本地採集、標註良好，並附上公開基準任務的資料集，是一項會跨屆累積的長期資產，而且是極少數一季真的做得完的東西：亞熱帶土壤或沿海微生物體、一種本地作物病原、一套台灣稻作逆境序列，或者這條主線本來就需要的光劑量反應序列。從一開始就採用 SBOL3，並把螢光校準到絕對單位，因為這個領域自己點出的弱點就是：它的資料機器可讀程度不足，餵不動它現在賴以為生的那些模型——而一個新的計畫沒有任何舊資料要回頭遷移。",
+      "chips": [
+        "Free: SBOL3, calibration, a repo",
+        "Hard: data nobody else has",
+        "The benchmark is the output"
+      ],
+      "chips_zh": [
+        "免費：SBOL3、校準、一個程式庫",
+        "困難：別人沒有的資料",
+        "交付的是基準，不是模型"
+      ]
+    }
+  ],
+  "table": {
+    "head": [
+      "Shift",
+      "What it makes cheap or free",
+      "What is still hard",
+      "What GEMS should pick or avoid",
+      "Reachable by a high-school team?"
+    ],
+    "head_zh": [
+      "轉變",
+      "它讓什麼變便宜或免費",
+      "什麼仍然困難",
+      "GEMS 該選或該避開什麼",
+      "高中隊伍做得到嗎？"
+    ],
+    "rows": [
+      [
+        "Co-folding became free infrastructure",
+        "A protein-ligand complex on open weights, minutes on one GPU",
+        "Judging when pLDDT, PAE and ipTM are wrong; affinity ranking within a series",
+        "Pick: fold as a methods step and make the confidence audit the contribution. Avoid: a predicted structure as a result",
+        "Yes — Colab or one shared GPU"
+      ],
+      [
+        "Generative binder and enzyme design crossed into function",
+        "20 to 35 designs for a few hundred dollars of compute; BindCraft and LigandMPNN are open",
+        "A quantitative binding number; cross-target hit rates near 25 percent, and 1 of 35 for Lambert-GA",
+        "Pick: a design campaign only with a named, costed assay. Avoid: natural-language design as a production tool",
+        "Yes, if the assay is outsourced or a partner lab is secured"
+      ],
+      [
+        "Light became the control and cleaning layer of bioprocessing",
+        "LED hardware, a plate reader, published CcaSR, EL222 and LOV parts, and an empty field (12 papers, 0 of 105 teams)",
+        "An off-state, full dose-response at the right wavelength, and a closed loop rather than on-off induction",
+        "Pick: dose-response and the 640-against-672 nm off-state. Avoid: a new application on an unevidenced switch",
+        "Yes — the one frontier a school lab can hold"
+      ],
+      [
+        "ML-guided DBTL beats intuition on real titres",
+        "COBRApy, flux balance analysis, a published B. subtilis model, scikit-learn, reproducible benchmarks",
+        "Library construction and a defensible titre assay; published gains need automation and six cycles",
+        "Pick: in-silico reproduction, then one real cycle on a hand-assayable library. Avoid: a titre promise in the abstract",
+        "Dry half yes; wet half one cycle at most"
+      ],
+      [
+        "The Build step is being industrialised",
+        "Cell-free TXTL prototyping, with no transformation, growth or biosafety step",
+        "One-pot thousand-fragment synthesis, droplet pooled assembly, long-read design-space mapping",
+        "Pick: cell-free as the default first test of any circuit. Avoid: a build-throughput project",
+        "TXTL yes; pooled synthesis no"
+      ],
+      [
+        "DNA synthesis competes on length and turnaround, not price",
+        "Nothing new — 0.07 to 0.13 USD per base pair is already the floor",
+        "Lead time, customs and tariff exposure; assembling long constructs locally",
+        "Pick: design for synthesis and order assemblable fragments. Avoid: a plan needing 10 kb in two weeks",
+        "Yes, as planning discipline"
+      ],
+      [
+        "Nucleic-acid synthesis screening became binding policy",
+        "Nothing — this is a cost, not a saving",
+        "Nothing technical; it is paperwork with a deadline and a named contact",
+        "Pick: a target no screening desk has to think about. Avoid: anything near a pathogen or toxin list",
+        "Yes, and it is the cheapest credibility on this list"
+      ],
+      [
+        "The centre of gravity moved to Asia; Taiwan sits on the manufacturing side",
+        "Proximity to fermentation capacity, TBMC in Hsinchu, three named Taiwanese teams",
+        "There is no Taiwanese design-layer pipeline to join, so GEMS has to be it",
+        "Pick: a design-layer deliverable with a named Taiwanese end user. Avoid: a scale-up demonstration",
+        "Yes"
+      ],
+      [
+        "Agricultural synbio hit a market and acceptance wall, and got its regulatory unlock",
+        "Readiness scoring, a regulatory-pathway memo and a cost-per-hectare model — all afternoon work",
+        "A contained greenhouse trial, and a real sample rather than a surrogate",
+        "Pick: an agricultural target with a reachable real sample, using light-dependence as containment. Avoid: a surrogate-only readout",
+        "Yes, with a Taiwanese agricultural partner"
+      ],
+      [
+        "The moat moved to proprietary data, and standards are the field's weak link",
+        "SBOL3, fluorescence calibrated to absolute units, a versioned repo, a public benchmark task",
+        "Collecting a dataset nobody else has, inside one season",
+        "Pick: one narrow Taiwanese dataset with a benchmark attached. Avoid: training a model from scratch",
+        "Yes — the cheapest durable asset here"
+      ],
+      [
+        "Agentic AI became an experiment designer",
+        "A documented literature-to-hypothesis pass; Biomni is open source",
+        "Knowing when an agent is confidently wrong; only 4 of 106 teams stated what AI did not do",
+        "Pick: run the pass, then audit it and publish what it got wrong. Avoid: an AI assistant as the project",
+        "Yes"
+      ],
+      [
+        "Biosensors are machine-designed, including the receptor",
+        "The design step, and published minimal binding domains to start from",
+        "Redesigning specificity and proving it; a lyophilised, field-ready cell-free format",
+        "Pick: port and properly characterise a sensor with a colorimetric or electrochemical readout. Avoid: promising a redesigned receptor",
+        "Partly — porting yes, receptor redesign no"
+      ],
+      [
+        "Virtual cells and biological foundation models",
+        "The Virtual Cell Challenge is free and externally scored; Evo 2 weights are open",
+        "Generalisation to unseen contexts is unsolved; nothing predicts an engineered phenotype",
+        "Pick: enter as a separate dry-lab track. Avoid: making it the season's project — it has no wet-lab counterpart",
+        "Partly — as a side track only"
+      ],
+      [
+        "Genome-scale generative design writes genomes that boot",
+        "Generating and critiquing sequences costs nothing; building them does not",
+        "Synthesis budget at kilobase-to-genome scale, and the sharpest dual-use profile in the field",
+        "Ignore as a build. Keep it as a reading-and-critique teaching unit with nothing synthesised",
+        "No — budget and dual-use both rule it out"
+      ],
+      [
+        "Autonomous cloud labs and the Genesis Mission",
+        "Nothing — access is allocated by proposal to funded institutions",
+        "A 97-robot facility, proprietary closed stacks, and a per-device integration tax",
+        "Ignore, except for one habit worth keeping: write protocols in a machine-readable form",
+        "No — not available to a school team"
+      ],
+      [
+        "The post-platform correction, Ginkgo against Twist",
+        "Nothing — filings are free to read, and that is the whole value here",
+        "Nothing; it is not a technical trend",
+        "Ignore as a topic. Keep the lesson: pitch one capability, never a platform",
+        "Not a project — a reading skill"
+      ],
+      [
+        "The cost-of-goods wall",
+        "A one-page techno-economic model is free to write",
+        "Redesigning a fermentation tank is capital engineering with government money behind it",
+        "Ignore as a topic. Attach a one-page cost model to whatever is picked",
+        "No — the trend is for funded companies"
+      ],
+      [
+        "Therapeutics is where the capital and the credibility gap both sit",
+        "Nothing — comparing a press release against a trial registry is a free exercise",
+        "BSL-2 or above, patients, a regulator and a clinical trial",
+        "Avoid any therapeutic framing for 2027, however small the model system",
+        "No — the facility requirement alone rules it out"
+      ],
+      [
+        "Funding is up in dollars and down in companies",
+        "Nothing — it is a labour-market signal, not a capability",
+        "Nothing; it is not a technical trend",
+        "Ignore when choosing the topic. Use it when choosing what to teach",
+        "Not a project — a careers signal"
+      ]
+    ],
+    "rows_zh": [
+      [
+        "共摺疊成為免費的基礎設施",
+        "用開放權重算出蛋白質與配體的複合物，一張 GPU、幾分鐘",
+        "判斷 pLDDT、PAE 與 ipTM 何時出錯；同系列化合物之間的親和力排序",
+        "選：把摺疊當方法步驟，把信賴度查核當貢獻。避開：把預測出的結構當成果",
+        "可以——Colab 或一台共用 GPU"
+      ],
+      [
+        "生成式結合蛋白與酵素設計跨進了功能層面",
+        "幾百美元運算費就能做 20 到 35 個設計；BindCraft 與 LigandMPNN 是開放的",
+        "一個定量的結合數字；跨標的命中率約 25%，Lambert-GA 是 35 個中 1 個",
+        "選：只在已指名、已估價的檢測到手時才開設計戰役。避開：把自然語言設計當生產工具",
+        "可以，前提是檢測外購或已談定合作實驗室"
+      ],
+      [
+        "光成為生物製程的控制與清潔層",
+        "LED 硬體、讀盤機、已發表的 CcaSR、EL222 與 LOV 元件，加上一塊空地（12 篇論文、105 支中 0 支）",
+        "關閉態、在正確波長下的完整劑量反應，以及閉合迴路而非單純開關誘導",
+        "選：劑量反應與 640 對 672 nm 的關閉態。避開：在未被證明的開關上做新應用",
+        "可以——學校實驗室唯一守得住的前沿"
+      ],
+      [
+        "機器學習導引的 DBTL 在真實產量上勝過直覺",
+        "COBRApy、通量平衡分析、一個已發表的 B. subtilis 模型、scikit-learn，以及可重現的基準",
+        "建函式庫與站得住的產量檢測；已發表的提升需要自動化與六個循環",
+        "選：先在電腦上重現，再在可手工檢測的函式庫上跑一個真實循環。避開：在摘要裡先承諾產量數字",
+        "乾實驗那一半可以；濕實驗最多一個循環"
+      ],
+      [
+        "Build 環節正在工業化",
+        "無細胞 TXTL 原型製作，不需轉形、培養或生物安全步驟",
+        "一鍋式千片段合成、液滴混池組裝、長讀長設計空間繪製",
+        "選：把無細胞當成任何電路的預設第一輪測試。避開：以建構通量為題的專案",
+        "TXTL 可以；混池合成不行"
+      ],
+      [
+        "DNA 合成的競爭在長度與交期，不在價格",
+        "沒有新的便宜——每鹼基對 0.07 到 0.13 美元已經是地板",
+        "交期、海關與關稅暴露；在本地把長構築體組起來",
+        "選：為合成而設計，訂可自行組裝的片段。避開：需要兩週拿到 10 kb 的計畫",
+        "可以，當成排程紀律"
+      ],
+      [
+        "核酸合成篩查成為具約束力的政策",
+        "沒有——這是成本，不是省下來的錢",
+        "技術上沒有難處；它是有期限、要指名聯絡人的文書工作",
+        "選：一個篩查窗口完全不必多想的標的。避開：任何靠近病原或毒素清單的東西",
+        "可以，而且是這張清單上最便宜的信譽"
+      ],
+      [
+        "重心移向亞洲，台灣站在製造這一邊",
+        "鄰近發酵量能、新竹的 TBMC、三支已指名的台灣隊伍",
+        "台灣沒有設計層的人才管道可加入，所以 GEMS 得自己當那個管道",
+        "選：一個有指名台灣終端使用者的設計層交付物。避開：放大量產的示範",
+        "可以"
+      ],
+      [
+        "農業合成生物學撞上市場與接受度的牆，同時拿到法規解鎖",
+        "成熟度評分、法規路徑備忘錄與每公頃成本模型——都只是一個下午的事",
+        "一次有圍堵條件的溫室試驗，以及真實樣本而非替代品",
+        "選：真實樣本拿得到的農業標的，並以光依賴性作為圍堵論述。避開：只有替代品的讀出",
+        "可以，前提是有台灣的農業合作夥伴"
+      ],
+      [
+        "護城河移到專有資料，而標準是這個領域的弱點",
+        "SBOL3、校準到絕對單位的螢光、版本控管的程式庫、一個公開基準任務",
+        "在一季之內收集到別人沒有的資料集",
+        "選：一個範圍窄、附帶基準的台灣資料集。避開：從頭訓練一個模型",
+        "可以——這裡最便宜的長期資產"
+      ],
+      [
+        "代理式 AI 成為實驗設計者",
+        "一輪有記錄的文獻到假說流程；Biomni 是開放原始碼",
+        "知道代理什麼時候在自信地犯錯；106 支隊伍中只有 4 支寫出 AI 沒做什麼",
+        "選：跑那一輪，然後查核它，並公開它錯在哪裡。避開：把 AI 助手當成專案本身",
+        "可以"
+      ],
+      [
+        "生物感測器改為機器設計，連受體本身也是",
+        "設計那一步，以及可當起點的已發表最小結合域",
+        "重新設計專一性並加以證明；做出凍乾、可下田的無細胞格式",
+        "選：移植並完整描述一個有比色或電化學讀出的感測器。避開：承諾重新設計受體",
+        "部分可以——移植可以，重新設計受體不行"
+      ],
+      [
+        "虛擬細胞與生物基礎模型",
+        "Virtual Cell Challenge 免費而且由外部評分；Evo 2 的權重是開放的",
+        "推廣到未見過的情境尚未解決；沒有模型能預測新設計出的表現型",
+        "選：當成另一條獨立的乾實驗路線參加。避開：把它當成本季的專案——它沒有對應的濕實驗",
+        "部分可以——只能當副線"
+      ],
+      [
+        "基因組尺度的生成式設計寫出能啟動的基因組",
+        "生成與批判序列不花錢；真的去做就花錢了",
+        "千鹼基到整個基因組級別的合成預算，以及這個領域最尖銳的雙重用途風險",
+        "當成建構專案就忽略它。保留成閱讀與批判的教學單元，完全不做合成",
+        "不行——預算與雙重用途各自都足以排除"
+      ],
+      [
+        "自主雲端實驗室與 Genesis Mission",
+        "沒有——使用權是以計畫申請配給有經費的機構",
+        "一座 97 台機器人的設施、專有封閉的技術堆疊，以及每台裝置的整合成本",
+        "忽略，只留一個值得保留的習慣：把實驗流程寫成機器可讀的格式",
+        "不行——學校隊伍拿不到"
+      ],
+      [
+        "後平台時代的修正：Ginkgo 對 Twist",
+        "沒有——財報免費可讀，而這裡的價值就只有這個",
+        "沒有；它不是一項技術趨勢",
+        "當題目就忽略它。保留那個教訓：推銷一項能力，絕不要推銷一個平台",
+        "不是專案——是一項閱讀能力"
+      ],
+      [
+        "產品成本那道牆",
+        "寫一頁技術經濟分析是免費的",
+        "重新設計發酵槽是有政府資金在後面推的資本工程",
+        "當題目就忽略它。把一頁成本模型附在最後選定的任何題目上",
+        "不行——這項趨勢是給有經費的公司的"
+      ],
+      [
+        "治療領域同時是資金所在與可信度落差所在",
+        "沒有——把新聞稿對照臨床試驗登錄比對，是免費的練習",
+        "BSL-2 以上、病人、主管機關與一場臨床試驗",
+        "2027 年避開任何治療用途的框架，不管模式系統多小",
+        "不行——光是設施要求就足以排除"
+      ],
+      [
+        "資金總額上升、公司數量下降",
+        "沒有——它是勞動市場訊號，不是一項能力",
+        "沒有；它不是一項技術趨勢",
+        "選題時忽略它。決定教什麼的時候才用它",
+        "不是專案——是一個職涯訊號"
+      ]
+    ]
+  },
+  "checklist": [
+    "Write each candidate as a consequence, not a theme. Name the 2026 shift, then the one sentence saying what it makes newly worth attempting. If that sentence will not write, the idea is not a project yet.",
+    "Check that the hard half is the contribution. List every step that is now free — folding, binder design, flux balance, a literature pass — and confirm that none of them is what the project is being judged on.",
+    "Secure the measurement before the design. Name the assay, its cost, its provider and its lead time on the day the topic is chosen, not in month four.",
+    "Close the light-dependence gap before extending the line. Dose-response, an off-state at the right wavelength, and the plate-crosstalk test come before any new application built on the switch.",
+    "Pick a target no screening desk has to think about, and publish the one-page ordering and screening policy before the first order rather than after the first question.",
+    "Make a real sample a gate, not an extra. If the season can only reach a surrogate, change the target — exactly one team in ten in the High School Top 10 assayed a real sample, and that team took 1st Runner-up.",
+    "Choose a deliverable that sits in the design layer and name its Taiwanese end user: a characterised part set, a calibrated protocol, a benchmarked dataset, or a tool with a URL and a licence.",
+    "Refuse the four that are not available — an autonomous cloud lab, a genome-scale build, a therapeutic, and a scale-up economics demonstration — and write the refusal down so the discussion does not reopen in month three.",
+    "Do not justify the pick as a way to win. Chassis choice did not predict a Top 10 place among decorated teams (9 of 27 against 21 of 79, p = 0.62) and GEMS already holds a perfect controls score. Pick for the capability that survives the cohort."
+  ],
+  "checklist_zh": [
+    "把每個候選題目寫成一個後果，而不是一個主題。先指名 2026 年的那項轉變，再寫出那一句話：它讓什麼變得剛好值得嘗試。如果那句話寫不出來，這個想法還不是一個專案。",
+    "確認困難的那一半才是貢獻。把現在已經免費的每個步驟列出來——摺疊、結合蛋白設計、通量平衡、文獻回合——然後確認專案被評審的點不是其中任何一個。",
+    "在設計之前先把量測談定。選定題目的那一天，就要指名檢測方法、它的費用、它的服務商與它的交期，而不是拖到第四個月。",
+    "在延伸這條主線之前先補上光依賴性的缺口。劑量反應、在正確波長下的關閉態，以及培養板光串擾的測試，都要排在任何建立在這個開關之上的新應用之前。",
+    "挑一個篩查窗口完全不必多想的標的，並在第一筆訂單之前、而不是第一個問題之後，就把那一頁訂購與篩查政策公開。",
+    "把真實樣本當成關卡，不是加分項。如果這一季只能做到替代品，就換標的——高中組 Top 10 裡恰好只有十分之一支隊伍把檢測做在真實樣本上，而那一支拿下亞軍。",
+    "選一個落在設計層的交付物，並指名它的台灣終端使用者：一組特性已完整描述的元件、一份校準過的流程、一個已附基準的資料集，或一個有網址與授權的工具。",
+    "拒絕那四個拿不到的東西——自主雲端實驗室、基因組尺度的建構、治療用途，以及放大量產的經濟性示範——並且把這個拒絕寫下來，讓討論不會在第三個月又被翻出來。",
+    "不要用「這樣比較會贏」來替選題找理由。在得獎隊伍之中，底盤選擇無法預測是否進 Top 10（27 支中 9 支對 79 支中 21 支，p = 0.62），而 GEMS 的對照組分數本來就已滿分。為那個能撐過這一屆學生的能力而選。"
+  ],
+  "method": "The trend material in this block is not original. It comes from this report's own two trend reviews: the academic review, built from the Nature, Nature Biotechnology, Nature Methods and Nature Reviews Bioengineering subject listings, a bioRxiv synthetic-biology sweep from June to November 2026, PubMed, Consensus and targeted web searches across 25 recorded sources; and the industry review, built from 18 recorded sources covering company filings, funding announcements, policy documents and trade press. Both are published as their own tabs and every trend claim above can be traced there. What is original here is only the second step — the consequence. Those are judgements about what a one-season, school-lab, no-budget team should attempt, not measurements, and a reader is entitled to accept a trend and reject the inference drawn from it. Four things were verified against the report's own files rather than taken on trust. **Lambert-GA** was read from its team file, which records the High School Grand Prize plus Best Model, Best Wiki, Best Sustainable Development Impact and Best Village Project and a Best Hardware nomination, a BindCraft, Boltz-2, Protenix and Mosaic stack, biolayer interferometry bought in from Adaptyv Bio, the ROC-AUC 0.541 ensemble benchmark against 5,721 labelled designs, and 1 confirmed binder of 35 designs at KD 603.6 nM on under USD 400 of compute. The claim that it was *the only high-school team at that frontier* was narrowed using the high-school ceiling analysis, which reads the ten High School Top 10 dry labs and finds only Lambert-GA at the frontier of the toolchain; HKSSC used AlphaFold, so structure prediction was not unique, and nothing here extends to undecorated high-school teams. The light-and-*Bacillus* counts — 5 of 106, 5 of 106, intersecting in 1, and 0 of 105 excluding GEMS — and the Fisher exact null on non-model chassis (9 of 27 against 21 of 79, p = 0.62) come from the chassis census. ReLEAF's unevidenced light-dependence, the one-in-ten real-sample finding across the High School Top 10, and the 4-of-106 AI-disclosure figure come from the report's own roadmap and the blocks it cites. Nothing in this block was checked against a team's live wiki, and no new literature was read for it.",
+  "method_zh": "這個區塊的趨勢素材不是原創的。它來自本報告自己的兩份趨勢回顧：學術回顧建立在 Nature、Nature Biotechnology、Nature Methods 與 Nature Reviews Bioengineering 的主題清單、2026 年 6 月至 11 月的 bioRxiv 合成生物學掃讀、PubMed、Consensus，以及針對性的網路搜尋，共 25 筆記錄來源；產業回顧建立在 18 筆記錄來源，涵蓋公司財報、募資公告、政策文件與產業媒體。兩者都各自成頁發表，上面每一項趨勢主張都可以回溯到那裡。這裡原創的只有第二步——後果。那些是對「一支只有一季、一間學校實驗室、沒有預算的隊伍該嘗試什麼」所做的判斷，不是量測；讀者完全可以接受某項趨勢，同時否定由它推出的推論。有四件事是對照報告自己的檔案查核過的，不是信了就用。**Lambert-GA** 讀自它的團隊檔案，其中記載高中組總冠軍，外加最佳建模、最佳 Wiki、最佳永續發展影響與最佳 Village 專案，以及最佳硬體入圍；工具組為 BindCraft、Boltz-2、Protenix 與 Mosaic；生物層干涉量測向 Adaptyv Bio 外購；以 5,721 個有標註的設計所做的集成模型基準測試 ROC-AUC 為 0.541；三十五個設計中確認一個結合，KD 為 603.6 nM，運算費用不到 400 美元。至於「唯一站在那個前沿的高中隊伍」這個說法，是用高中天花板分析收窄過的：該分析讀了十支高中組 Top 10 的乾實驗室，發現只有 Lambert-GA 站在工具鏈前沿；HKSSC 用了 AlphaFold，所以結構預測本身並不獨特，而這裡的任何說法都不延伸到未得獎的高中隊伍。光與 *Bacillus* 的計數——106 支中 5 支、106 支中 5 支、交集 1 支、排除 GEMS 後 105 支中 0 支——以及非模式底盤的 Fisher 精確檢定虛無結果（27 支中 9 支對 79 支中 21 支，p = 0.62），來自底盤普查。ReLEAF 尚未被證明的光依賴性、高中組 Top 10 中「十支只有一支用真實樣本」的發現，以及 106 支中 4 支的 AI 揭露數字，來自報告自己的路線圖與它引用的區塊。這個區塊沒有任何內容是對照隊伍的現行 Wiki 查核的，也沒有為它額外讀任何新文獻。"
+}

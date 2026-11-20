@@ -101,6 +101,16 @@ one it cleared in 2024 and has not cleared since. The short version of everythin
 - **Taiwan won six awards across thirteen competing teams**, more than any East Asian territory except China —
   but every technical award came from the high-school tier, with zero nominations in any parts award and zero
   in Best Software.
+- **The 2026 shifts moved almost everything cheap into prediction, and left everything physical hard.** What
+  went free this year is a protein-ligand complex on open weights in minutes, 20-35 de novo binder designs for
+  a few hundred dollars of compute, and a flux-balance model from COBRApy and a published GEM — none of which
+  can be the project, because the step costs an afternoon and a judge cannot separate two teams on it. What
+  stayed hard is everything touching a physical sample: a quantitative binding number, an off-state for a
+  light-inducible promoter, a defensible titre, a real sample rather than a surrogate, a containment argument
+  and a lead time you can plan a season around. Lambert-GA won the High School Grand Prize on exactly that
+  split — not for using BindCraft, Boltz-2 and Protenix, but for benchmarking the confidence metrics against
+  5,721 labelled designs, finding a 38-metric ensemble at ROC-AUC 0.541, publishing that its own eventual hit
+  did not carry the best score, and buying in the binding assay from Adaptyv Bio.
 - **One team in 106 shone light on *B. subtilis*, and it is GEMS.** Both trend reviews independently named
   optogenetic control in *B. subtilis* as the white space this report's roadmap aims at. Tested against the
   competition: 5 of 106 decorated teams used light as a control input in any organism, 5 worked with

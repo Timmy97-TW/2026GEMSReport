@@ -1580,3 +1580,34 @@ Princeton is the sharpest individual case and is quoted in the block: the hero t
 described above is the step we have not yet run", and the figure beneath it is captioned as the published
 assay the experiment is modelled on rather than the team's own data. Heidelberg is the opposite edge case:
 the only Top 10 home page that makes no capability claim at all.
+
+### picks-macro.json published, and it corrected the brief it was given
+
+Validated independently rather than on the agent's self-report: 9 cards, 5 x 19 table, 9-line checklist, key
+order exact, every _zh array matching, build silent on all three audits. 13 shifts judged to carry a real
+consequence and 6 tail rows for the ones discarded as out of reach, each with its reason, because knowing
+what to ignore is half of selection. Every load-bearing figure was traced to its source: 5,721 labelled
+designs, ROC-AUC 0.541, 1,307 prior designs, KD 603.6 nM and the Adaptyv Bio buy-in are all in
+research/teams/6185.json; the 60 percent titre gain in a 1 L photobioreactor and the twelve-paper PubMed
+count are in trends/academic.json; China's roughly 70 percent of world fermentation capacity and TBMC's
+Hsinchu ramp from Q2 2026 are in trends/industry.json; the 640-against-672 nm wavelength mismatch is in
+report.json and judging-three-teams.json, both attributing it to GEMS's own named explanations.
+
+**The brief was wrong and the agent fixed it.** I told it Lambert-GA won Best Model. Lambert-GA won the High
+School Grand Prize plus Best Model, Best Wiki, Best Sustainable Development Impact and Best Village Project
+(Climate Crisis / Conservation / Bioremediation), with a Best Hardware nomination. It also narrowed the
+"only high-school team at that frontier" claim properly: highschool-ceiling.json supports it only for the ten
+High School Top 10 dry labs actually read, and HKSSC used AlphaFold, so structure prediction was not unique --
+the 2026 co-folding and binder-design stack was. That narrowing is in the block's method note. Second time
+this session an agent has corrected a figure I handed it by going to the source; the lesson from Correction 5
+holds.
+
+**The Bacillus optogenetics verdict is split, and the block says so.** Strategically 2026 strengthens the
+bet: the two trend reviews converged independently, and the competition test is harder than the PubMed count
+-- 5 of 106 decorated teams used light as a control input, 5 worked with B. subtilis, the intersection is
+exactly GEMS, and excluding GEMS it is 0 of 105, with four of the five light teams working where optogenetics
+is already routine. On readiness it weakens: ReLEAF's own 2026 pages show no light dependence, and neither
+named explanation has been tested. So the 2027 pick should be the experiment that closes that gap rather than
+a new application stacked on an unproven switch. The block also carries the chassis census's Fisher exact
+null (9 of 27 against 21 of 79, p = 0.62) as discipline: hold the line because the field is empty and the
+capability compounds, not because it wins.
