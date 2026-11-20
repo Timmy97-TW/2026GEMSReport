@@ -39,6 +39,25 @@
       "link": "drylab"
     },
     {
+      "kicker": "Falsification",
+      "kicker_zh": "否證",
+      "title": "Running the experiment that could break your own claim is a floor, not a ranking — and GEMS already clears it",
+      "title_zh": "做一個可能推翻自己主張的實驗，是一道門檻，不是一張名次表——而 GEMS 早就跨過了",
+      "body": "The real-target finding has a second half — the rival explanation experimentally excluded — and measuring it across all 30 Top 10 wikis broke it. **26 of 30** ran an experiment designed expressly to kill a rival explanation, and **30 of 30** published a result unfavourable to their own headline, so the practice cannot separate a podium from a Top 10. Podium teams average 4.29 of the five control types against 3.61 (gap 0.68, permutation p = 0.079 — not a result). What survives is a floor: no podium team scored below 4, while 10 of 23 others did. **And the counting is not the mechanism — of the seven teams with all five types, five missed the podium, GEMS-Taiwan among them with a perfect score.** The scarce habits are the harder two: 17 of 30 removed a confound by design and re-tested, 12 of 30 validated against held-back data.",
+      "body_zh": "「打在真實標的上」這項發現還有另一半——對手解釋有沒有被實驗排除掉——而把 30 支 Top 10 隊伍的 wiki 全部讀完之後，這一半不成立。**30 支中有 26 支**做過刻意設計來殺掉自家結果另一種解釋的實驗，**30 支全部**公開過一項對自己主張不利的結果，所以這個習慣分不出頒獎臺和前十。頒獎臺隊伍平均擁有五類對照中的 4.29 類，其餘是 3.61 類（差距 0.68，置換檢定 p = 0.079——不構成結果）。留下來的是一道門檻：沒有任何頒獎臺隊伍低於 4 類，而其餘 23 支中有 10 支低於 4 類。**而這個計數並不是機制——五類全有的七支隊伍裡，有五支沒上頒獎臺，GEMS-Taiwan 就是其中一支，而且是滿分。**真正稀少的是較難的兩類：30 支中只有 17 支以設計移除混淆因子後重測，只有 12 支拿留存資料做驗證。",
+      "chips": [
+        "26 of 30",
+        "30 of 30 unfavourable",
+        "GEMS scores 5 of 5"
+      ],
+      "chips_zh": [
+        "30 支中 26 支",
+        "30 支全部登出不利結果",
+        "GEMS 五類全有"
+      ],
+      "link": "drylab"
+    },
+    {
       "kicker": "Software",
       "kicker_zh": "軟體",
       "title": "8 of 21 award-winning tools are still usable, and the reason is hosting",

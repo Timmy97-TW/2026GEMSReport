@@ -1,0 +1,625 @@
+{
+  "id": "falsification-controls",
+  "tab": "drylab",
+  "order": 46,
+  "kicker": "Original analysis",
+  "kicker_zh": "原創分析",
+  "title": "A floor, not a ranking",
+  "title_zh": "一道門檻，而不是一張名次表",
+  "lede": "The half of this report's strongest finding that had never been measured does not hold. Reading all 30 Top 10 wikis of 2026, 26 teams ran an experiment designed expressly to kill a rival explanation for their own result, and all 30 published a result unfavourable to their own claim — so the practice cannot tell a podium from a Top 10. It sets a floor instead: no podium team had fewer than four of the five control types, and five of the seven teams that had all five missed the podium.",
+  "lede_zh": "本報告最強的那項發現，其中一半從來沒有人量過；量過之後，這一半並不成立。我們讀完 2026 年三個組別全部 30 支 Top 10 團隊的 wiki：有 26 支做過一個刻意設計來殺掉自家結果另一種解釋的實驗，而 30 支全部都公開了一項對自己主張不利的結果——所以這個習慣分不出獎台與前十。它劃出的是一道門檻：沒有任何一支獎台隊伍的五類對照少於四類；而五類全有的七支隊伍裡，有五支沒上獎台。",
+  "body": "We asked one question of all 30 Top 10 wikis: **how many decorated 2026 teams ran an experiment whose result could have broken their own headline claim, and does doing so track the podium?** The first half has an answer. The second half breaks.\n\n**The type specimen is GEMS-Taiwan's 2024 Grand Prize, and it is not an extra assay.** Having killed mosquito larvae with three toxins, the team wrote on the page what it was worried about: \"We want to rule out the effect of E. coli in the death of mosquito larvae.\" The arm it built was a BL21(DE3) empty-vector group read out by a Gambicin, Rel1, Rel2 and defensin qPCR immune-gene panel, with the reason stated plainly: \"The reason why we use BL21(DE3)-empty vector is to investigate whether the mortality observed was due to the cytotoxicity effect or bacterial infection of the E. coli or solely due to the potency of the biolarvicides.\" It reached a conclusion — \"This data indicated that the mortality observed in the larvicidal assay was not due to the introduction of BL21(DE3).\" — and the panel itself came back largely null, which the team also said: \"the majority of the transcripts of immune genes were not regulated after the larvae exposure to the toxins.\" In the oviposition-attractant assay the same habit appears as a confound removed by design, with the purpose given as ruling out the coloration factor: \"we covered each solution with black paper … so that the selection of oviposition sites is based on odorant factors only\", and the preference still held at p = 0.0003.\n\n**The exclusion and the disclosure of its gap are scored apart, because the same page does both.** That 2024 panel is complete for one induction condition and the team says which one it could not cover and why: \"We acknowledge the limitation of this particular study because we did not compare it to BL21(DE3) for biolarvicidal toxin produced at 20 degrees C overnight. Our team had a shortage of mosquito larvae to conduct additional groups during this period of time, and hence, we were not able to compare the cytotoxicity effect of BL21(DE3).\" A rubric that credits only completed exclusions would rank that page below a team that never noticed the confound at all, which is plainly the wrong answer. So the five scored types below are the controls that were run, and a sixth flag records naming an arm you could not run.\n\n**Five types, scored only on a sentence we can quote.** `A` a chassis-only, empty-vector, untransformed or heat-killed arm on the headline assay, not on a cloning gel: **28 of 30**. `R` an experiment run expressly to exclude a named rival cause: **26 of 30**. `D` a confound removed by design and the effect then re-tested: **17 of 30**. `H` validation against data held back from fitting: **12 of 30**. `U` a result unfavourable to the team's own headline, published: **30 of 30**.\n\n**Three of the five are saturated, and that is the finding.** At this level of the field a no-activity arm, a rival-mechanism exclusion and a published unfavourable result are table stakes, not distinctions. Thirty of thirty published something that cut against them. Twenty-six of thirty built an arm against a named alternative cause. Whatever separates a Grand Prize from a Top 10 in 2026, it is not whether the team thought of the control.\n\n**The podium comparison, with its n.** Podium teams (7) average **4.29 of 5** control types; the other 23 average **3.61**. The gap is 0.68 of one category, and a permutation test over the 30 scores puts it at **p = 0.079** one-sided — not a result. Within the High School section alone it is 4.00 against 3.50, on two teams against eight, which is not a comparison at all. The three Grand Prize winners score 4, 4 and 5. **n = 30 cannot support a strong inference**, and we are not drawing one.\n\n**What survives is a floor and an absence of ranking.** No podium team scored below 4, while **10 of the 23 non-podium teams did**. But four-of-five did not get you there either: of the seven teams with all five types, only UCAS-China and TU Delft are on a podium. **Eton-College-UK, GEMS-Taiwan, Heidelberg, NUS-Singapore and UOttawa** all scored a full five and finished outside the top three of their section. If the count were the mechanism, those five would be the podium.\n\n**Where the field does split is `D` and `H`.** Removing a confound by design and then re-testing is 5 of 7 on the podium against 12 of 23 off it; holding data back from fitting is 4 of 7 against 8 of 23. Held-back validation is also the one habit that is evenly thin across all three sections — exactly 4 of 10 teams in High School, Undergrad and Overgrad alike.\n\n**The sixth flag is the cleanest signal in the whole analysis, and it is about writing, not pipetting.** Twenty-three of 30 teams name a specific arm, replicate or comparison they did not run and state what cannot be concluded without it — and that is **7 of 7 on the podium against 16 of 23 off it**. Athens has the single best instance in the cohort, a control it has not run, named as the thing that would settle its own effect: \"Separating the two requires that buffer-only arm, and until it is run we describe the effect as attributable to the preparation.\" HongKong-JSS, the High School 1st Runner-up, writes the admission that most teams would delete: \"we forgot to include matching 0 µM samples, an empty-vector control and an untransformed E. coli control in these early experiments. This was an experimental-design mistake.\" It then added them, and its own sensors came out weaker and less consistent than the uncontrolled screen had suggested. Cornell puts it in parentheses mid-protocol: \"(regrettably, pre-induction or t~0 aliquots were not collected as negative controls for this experiment)\".\n\n**Four controls in this cohort actually broke something, which is the point of running them.** Muenster-University's no-protease arm cleaved anyway, so the screen could not be trusted: \"The presence of the cleavage product in samples without pACYC_Myc_NIaPro implies that construct, leading to false-positive results … This means even if we had cleavage by NIa-Pro, the negative controls would show false results.\" GEMS-Taiwan's untransformed host read the same as its constructs, and the team published the table anyway: \"A negative control returning a signal comparable to the samples means the assay is reading something other than recombinant protein in these preparations, so no difference here can be attributed to expression.\" Marburg's no-RBS background control turned a happy result into an artefact — the team had briefly believed its hairpins were silencing expression, then found \"an unintended additional ATG located one base upstream of and out of frame with the NanoLuc start codon\". Toronto audited its own benchmark and declared it circular: \"The HMMs were themselves built from the NR search, so testing them on NR mostly measured how well they recall their own training data,\" then moved validation to a held-out set, concluding that \"A benchmark has to be independent of what the model was built from.\"\n\n**The floor of the cohort is real too.** UCNZ, HongKong-HS and GHCIS score 2, with a reagent blank and a published failure but no experiment aimed at an alternative cause; on UCNZ's wiki the phrase \"negative control\" does not appear anywhere we could read, across 1.3 MB of recovered text. Cornell scores 2 from the other direction: it reasons carefully about alternative causes and says out loud which arms it skipped.\n\n**So the two-direction finding narrows to one direction.** Measuring the central claim on the real target still separates the podium. Experimentally excluding the rival explanation does not — not because it is rare, but because among decorated teams it is close to universal. What is still scarce, and what leans podium-ward on numbers too small to trust, is the harder pair: redesigning the experiment so a confound cannot enter, and keeping data back from your own fitting.",
+  "body_zh": "我們對 30 支 Top 10 團隊的 wiki 只問一個問題：**2026 年有多少支獲獎團隊，做過一個結果有可能推翻自家主要主張的實驗；而這件事是否和獎台相關？** 前半有答案，後半破了。\n\n**模式標本是 GEMS-Taiwan 2024 年的總冠軍，而它不是多做一個 assay。** 在用三種毒素殺死蚊子幼蟲之後，這支隊伍把自己擔心的事寫在頁面上：「We want to rule out the effect of E. coli in the death of mosquito larvae.」他們設計的那一組是 BL21(DE3) 空載體組，讀出的是 Gambicin、Rel1、Rel2 與 defensin 的 qPCR 免疫基因盤，理由也寫得很白：「The reason why we use BL21(DE3)-empty vector is to investigate whether the mortality observed was due to the cytotoxicity effect or bacterial infection of the E. coli or solely due to the potency of the biolarvicides.」這一組得到了結論——「This data indicated that the mortality observed in the larvicidal assay was not due to the introduction of BL21(DE3).」——而基因盤本身大致是空的，隊伍也照樣寫了出來：「the majority of the transcripts of immune genes were not regulated after the larvae exposure to the toxins.」在產卵誘引試驗裡，同一種習慣換成了用設計排除混淆因子，目的直接寫明是要排除顏色這個因素：「we covered each solution with black paper … so that the selection of oviposition sites is based on odorant factors only」，而偏好依然在 p = 0.0003 的水準上成立。\n\n**我們把「排除」和「承認排除有缺口」分開計分，因為同一個頁面兩件事都做了。** 2024 年那組基因盤只在一種誘導條件下完成，隊伍寫出了自己沒能涵蓋哪一種、以及為什麼：「We acknowledge the limitation of this particular study because we did not compare it to BL21(DE3) for biolarvicidal toxin produced at 20 degrees C overnight. Our team had a shortage of mosquito larvae to conduct additional groups during this period of time, and hence, we were not able to compare the cytotoxicity effect of BL21(DE3).」一套只認完整排除的評分標準，會把這一頁排在一支從頭到尾沒想到這個混淆因子的隊伍後面，那顯然是錯的答案。所以底下五個計分類別都是真的做了的對照，第六個旗標則記錄「指名了自己沒能做的那一組」。\n\n**五個類別，而且只憑一句可以逐字引用的話給分。** `A` 主要 assay 上的宿主單獨組、空載體組、未轉形組或熱殺死組，不算選殖用的膠片：**30 支中的 28 支**。`R` 專門為排除某個指名的競爭解釋而做的實驗：**30 支中的 26 支**。`D` 用設計移除混淆因子，然後把效應重測一次：**30 支中的 17 支**。`H` 用從擬合中保留下來的資料做驗證：**30 支中的 12 支**。`U` 公開一項對自家主張不利的結果：**30 支中的 30 支**。\n\n**五類裡有三類已經飽和，而這本身就是發現。** 在這個層級的場域裡，一組無活性對照、一次競爭機制排除、一項公開的不利結果，都是入場費，不是區別。三十支裡有三十支公開了對自己不利的東西。三十支裡有二十六支針對某個指名的替代原因做了一組實驗。2026 年把總冠軍和 Top 10 分開的東西，不是「隊伍有沒有想到那組對照」。\n\n**獎台比較，連同它的 n。** 七支獎台隊伍平均擁有 **五類中的 4.29 類**，其餘 23 支平均 **3.61 類**。差距是 0.68 個類別；對 30 筆分數做置換檢定，單尾 **p = 0.079**——這不是一個結果。單看高中組是 4.00 對 3.50，兩支對八支，那根本不能算比較。三支總冠軍的分數是 4、4、5。**n = 30 撐不起任何強推論**，我們也不打算做。\n\n**留下來的是一道門檻，以及名次的缺席。** 沒有任何獎台隊伍低於 4 分，而 **23 支非獎台隊伍中有 10 支低於 4 分**。但四類也不保證上得去：五類全有的七支隊伍裡，只有 UCAS-China 與 TU Delft 在獎台上。**Eton-College-UK、GEMS-Taiwan、Heidelberg、NUS-Singapore 與 UOttawa** 五支全拿滿五類，卻都停在自己組別的前三之外。如果這個計數就是機制，那獎台應該是這五支。\n\n**真正分得開的是 `D` 和 `H`。** 用設計移除混淆因子再重測，獎台是七支中的五支，台下是 23 支中的 12 支；把資料從擬合中保留下來，獎台是七支中的四支，台下是 23 支中的八支。保留資料驗證也是唯一一項在三個組別都同樣稀薄的習慣——高中組、大學組、研究生組都剛好是十支中的四支。\n\n**第六個旗標是整份分析裡最乾淨的訊號，而它關乎寫作，不關乎操作。** 30 支裡有 23 支指名了某一組自己沒做的對照、重複或比較，並說明少了它就不能下什麼結論——而這是 **獎台七支中的七支，對台下 23 支中的 16 支**。Athens 有全 cohort 最好的一例：一組還沒做的對照，被指名為唯一能定案自家效應的東西——「Separating the two requires that buffer-only arm, and until it is run we describe the effect as attributable to the preparation.」高中組第一亞軍 HongKong-JSS 寫下了多數隊伍會刪掉的那句自白：「we forgot to include matching 0 µM samples, an empty-vector control and an untransformed E. coli control in these early experiments. This was an experimental-design mistake.」接著他們把那些對照補上去，自家感測器的表現就比沒有對照的初篩所顯示的更弱、更不一致。Cornell 把它放在 protocol 中間的括號裡：「(regrettably, pre-induction or t~0 aliquots were not collected as negative controls for this experiment)」。\n\n**這個 cohort 裡有四組對照真的弄壞了什麼，而那正是做對照的意義。** Muenster-University 沒有加蛋白酶的那一組照樣被切開了，於是整套篩選不能相信：「The presence of the cleavage product in samples without pACYC_Myc_NIaPro implies that construct, leading to false-positive results … This means even if we had cleavage by NIa-Pro, the negative controls would show false results.」GEMS-Taiwan 的未轉形宿主讀到和自家構築體同一個範圍，隊伍照樣把那張表登了出來：「A negative control returning a signal comparable to the samples means the assay is reading something other than recombinant protein in these preparations, so no difference here can be attributed to expression.」Marburg 的 no-RBS 背景對照把一個令人開心的結果變成了假象——他們一度以為自家的髮夾結構成功抑制了表現，後來才發現「an unintended additional ATG located one base upstream of and out of frame with the NanoLuc start codon」。Toronto 稽核了自己的基準測試並宣告它是循環的：「The HMMs were themselves built from the NR search, so testing them on NR mostly measured how well they recall their own training data.」接著把驗證搬到一組保留資料上，並得出結論：「A benchmark has to be independent of what the model was built from.」\n\n**這個 cohort 的地板也是真的。** UCNZ、HongKong-HS 與 GHCIS 都是 2 分：有試劑空白、有公開的失敗，但沒有任何針對替代原因的實驗；在我們能讀到的範圍內，UCNZ 的 wiki 整整 1.3 MB 還原文字裡，完全沒出現「negative control」這個詞。Cornell 的 2 分來自另一個方向：它對替代原因推理得很仔細，並且明說自己跳過了哪幾組。\n\n**於是那項雙向發現收斂成單向。** 把中心主張量在真正的標的上，仍然分得開獎台。用實驗排除競爭解釋則分不開——不是因為它罕見，而是因為在獲獎團隊之間它幾乎普及。真正還稀少、而且在小到不可信的樣本上偏向獎台的，是更難的那一對：把實驗重新設計到混淆因子進不來，以及把資料從自己的擬合裡留下來。",
+  "cards": [
+    {
+      "kicker": "The headline number",
+      "kicker_zh": "最關鍵的數字",
+      "title": "26 of 30 killed a rival explanation",
+      "title_zh": "30 支裡有 26 支殺掉了競爭解釋",
+      "body": "Twenty-six of the 30 Top 10 teams of 2026 ran at least one experiment whose stated purpose was to exclude a named alternative cause of their own result. Four did not: GHCIS, HKSSC, HongKong-HS and UCNZ. The practice is not rare at this level of the field, which is why it cannot pick the winner.",
+      "body_zh": "2026 年 30 支 Top 10 團隊中，有 26 支至少做過一個實驗，其寫明的目的就是排除自家結果的某個指名替代原因。沒有的四支是 GHCIS、HKSSC、HongKong-HS 與 UCNZ。在這個層級的場域裡，這個習慣並不罕見，這也正是它挑不出贏家的原因。",
+      "chips": [
+        "26/30 exclusions",
+        "4 teams with none",
+        "Not a discriminator"
+      ],
+      "chips_zh": [
+        "26/30 有排除實驗",
+        "4 支完全沒有",
+        "分不出勝負"
+      ]
+    },
+    {
+      "kicker": "The type specimen",
+      "kicker_zh": "模式標本",
+      "title": "An empty vector and a sheet of black paper",
+      "title_zh": "一個空載體和一張黑紙",
+      "body": "GEMS-Taiwan's 2024 Grand Prize turned on two controls, not on an extra assay. The first names the rival cause out loud: \"We want to rule out the effect of E. coli in the death of mosquito larvae.\" The arm was a BL21(DE3) empty-vector group read by a Gambicin, Rel1, Rel2 and defensin qPCR panel. The second removes a confound by design: \"we covered each solution with black paper … so that the selection of oviposition sites is based on odorant factors only\" — and the preference survived at p = 0.0003.",
+      "body_zh": "GEMS-Taiwan 2024 年的總冠軍，關鍵在兩組對照，而不在多做一個 assay。第一組把競爭原因直接說出口：「We want to rule out the effect of E. coli in the death of mosquito larvae.」那一組是 BL21(DE3) 空載體組，以 Gambicin、Rel1、Rel2 與 defensin 的 qPCR 盤讀出。第二組用設計移除混淆因子：「we covered each solution with black paper … so that the selection of oviposition sites is based on odorant factors only」——而偏好在 p = 0.0003 下依然成立。",
+      "chips": [
+        "Empty-vector arm",
+        "Confound by design",
+        "p = 0.0003"
+      ],
+      "chips_zh": [
+        "空載體對照組",
+        "用設計排除混淆",
+        "p = 0.0003"
+      ]
+    },
+    {
+      "kicker": "Why two scores, not one",
+      "kicker_zh": "為什麼是兩個分數，不是一個",
+      "title": "The exclusion and its gap are scored apart",
+      "title_zh": "排除與它的缺口分開計分",
+      "body": "The 2024 panel is complete for one induction condition and the team says which one it could not cover: \"We acknowledge the limitation of this particular study because we did not compare it to BL21(DE3) for biolarvicidal toxin produced at 20 degrees C overnight.\" A rubric crediting only completed exclusions would rank that page below a team that never noticed the confound. So five types count the controls run, and a sixth flag counts naming the arm you could not run.",
+      "body_zh": "2024 年那組基因盤只在一種誘導條件下完成，隊伍也寫出自己沒能涵蓋哪一種：「We acknowledge the limitation of this particular study because we did not compare it to BL21(DE3) for biolarvicidal toxin produced at 20 degrees C overnight.」一套只認完整排除的標準，會把這一頁排在從沒想到這個混淆因子的隊伍後面。所以五個類別數的是做了的對照，第六個旗標數的是「指名了自己沒做的那一組」。",
+      "chips": [
+        "Run vs disclosed",
+        "Incomplete arm named",
+        "Both are discipline"
+      ],
+      "chips_zh": [
+        "做了的對照／承認的缺口",
+        "指名未完成的那一組",
+        "兩者都是紀律"
+      ]
+    },
+    {
+      "kicker": "The podium test",
+      "kicker_zh": "獎台檢定",
+      "title": "4.29 against 3.61, p = 0.079",
+      "title_zh": "4.29 對 3.61，p = 0.079",
+      "body": "The seven podium teams average 4.29 of the five control types; the other 23 average 3.61. A permutation test over the 30 scores puts the one-sided p at 0.079. The three Grand Prize winners score 4, 4 and 5. Within High School alone it is 4.00 against 3.50 on two teams against eight. None of this is strong enough to infer from, and we do not.",
+      "body_zh": "七支獎台隊伍平均擁有五類對照中的 4.29 類，其餘 23 支平均 3.61 類。對 30 筆分數做置換檢定，單尾 p 為 0.079。三支總冠軍的分數是 4、4、5。單看高中組是 4.00 對 3.50，兩支對八支。這些都不足以支撐推論，我們也沒有做推論。",
+      "chips": [
+        "7 vs 23 teams",
+        "p = 0.079, one-sided",
+        "n = 30"
+      ],
+      "chips_zh": [
+        "7 支對 23 支",
+        "p = 0.079，單尾",
+        "n = 30"
+      ]
+    },
+    {
+      "kicker": "The result that breaks it",
+      "kicker_zh": "推翻假設的那個結果",
+      "title": "Five perfect scorers missed the podium",
+      "title_zh": "五支滿分隊伍沒上獎台",
+      "body": "Seven teams hold all five control types. Only UCAS-China and TU Delft are on a podium. Eton-College-UK, GEMS-Taiwan, Heidelberg, NUS-Singapore and UOttawa each scored a full five and finished outside their section's top three. If the count were the mechanism, those five would be the podium. What survives is a floor: no podium team scored below 4, while 10 of the 23 non-podium teams did.",
+      "body_zh": "有七支隊伍五類對照全有，其中只有 UCAS-China 與 TU Delft 在獎台上。Eton-College-UK、GEMS-Taiwan、Heidelberg、NUS-Singapore 與 UOttawa 五支全拿滿分，卻都停在自己組別前三之外。如果這個計數就是機制，獎台應該是這五支。留下來的只是一道門檻：沒有獎台隊伍低於 4 分，而 23 支非獎台隊伍中有 10 支低於 4 分。",
+      "chips": [
+        "5 of 7 off the podium",
+        "Podium minimum 4/5",
+        "10 of 23 below 4"
+      ],
+      "chips_zh": [
+        "七支滿分有五支沒上台",
+        "獎台最低 4/5",
+        "23 支中 10 支低於 4"
+      ]
+    },
+    {
+      "kicker": "Where the field actually splits",
+      "kicker_zh": "場域真正的分水嶺",
+      "title": "17 redesign; 12 hold data back",
+      "title_zh": "17 支重新設計，12 支保留資料",
+      "body": "Three of the five types are saturated: a no-activity arm appears on 28 of 30 wikis, a rival-mechanism exclusion on 26, and every single one of the 30 published something unfavourable to its own claim. The scarce pair is harder. Removing a confound by design and re-testing: 17 of 30. Validating against data held back from fitting: 12 of 30, and exactly 4 of 10 in each of the three sections.",
+      "body_zh": "五類中有三類已經飽和：無活性對照出現在 30 份 wiki 中的 28 份，競爭機制排除出現在 26 份，而 30 支全部都公開了對自家主張不利的東西。稀少的那一對比較難。用設計移除混淆因子再重測：30 支中的 17 支。用保留下來的資料驗證：30 支中的 12 支，而且三個組別都剛好是十支中的四支。",
+      "chips": [
+        "A 28/30",
+        "R 26/30",
+        "D 17/30",
+        "H 12/30"
+      ],
+      "chips_zh": [
+        "A 28/30",
+        "R 26/30",
+        "D 17/30",
+        "H 12/30"
+      ]
+    },
+    {
+      "kicker": "The control that worked",
+      "kicker_zh": "真的起作用的那組對照",
+      "title": "Four teams had something broken for them",
+      "title_zh": "四支隊伍被自己的對照弄壞了東西",
+      "body": "Muenster-University's no-protease arm cleaved anyway: \"even if we had cleavage by NIa-Pro, the negative controls would show false results.\" GEMS-Taiwan's untransformed host read the same as its constructs, and the table went up anyway: \"no difference here can be attributed to expression.\" Marburg's no-RBS background exposed an unintended upstream ATG behind a result it had briefly celebrated. Toronto declared its own benchmark circular and moved it to a held-out set.",
+      "body_zh": "Muenster-University 沒加蛋白酶的那一組照樣被切開：「even if we had cleavage by NIa-Pro, the negative controls would show false results.」GEMS-Taiwan 的未轉形宿主讀到和自家構築體同一範圍，那張表照樣登出來：「no difference here can be attributed to expression.」Marburg 的 no-RBS 背景對照，揭穿了一個它一度慶祝過的結果背後那個非預期的上游 ATG。Toronto 宣告自己的基準測試是循環的，並把它搬到保留資料上。",
+      "chips": [
+        "4 broken claims",
+        "Published anyway",
+        "That is the point"
+      ],
+      "chips_zh": [
+        "4 項被推翻的主張",
+        "照樣公開",
+        "這才是重點"
+      ]
+    },
+    {
+      "kicker": "The sixth flag",
+      "kicker_zh": "第六個旗標",
+      "title": "23 of 30 named the arm they could not run",
+      "title_zh": "30 支裡有 23 支指名了自己做不到的那一組",
+      "body": "This is the cleanest signal here, and it is writing rather than pipetting: 7 of 7 podium teams against 16 of 23 off the podium. Athens names a control it has not run as the only thing that would settle its own effect: \"Separating the two requires that buffer-only arm, and until it is run we describe the effect as attributable to the preparation.\" Wageningen, HongKong-JSS and Cornell each print the missing arm on the page rather than quietly leaving it out.",
+      "body_zh": "這是這裡最乾淨的訊號，而且關乎寫作、不關乎操作：獎台七支中的七支，對台下 23 支中的 16 支。Athens 把一組還沒做的對照，指名為唯一能定案自家效應的東西：「Separating the two requires that buffer-only arm, and until it is run we describe the effect as attributable to the preparation.」Wageningen、HongKong-JSS 與 Cornell 都把缺少的那一組寫在頁面上，而不是悄悄省略。",
+      "chips": [
+        "7/7 on the podium",
+        "16/23 off it",
+        "Athens names it best"
+      ],
+      "chips_zh": [
+        "獎台 7/7",
+        "台下 16/23",
+        "Athens 寫得最好"
+      ]
+    }
+  ],
+  "table": {
+    "head": [
+      "Team",
+      "Section",
+      "Placing",
+      "Control types",
+      "The arm that could have broken the claim"
+    ],
+    "head_zh": [
+      "團隊",
+      "組別",
+      "名次",
+      "對照類型（A R D H U）",
+      "可能推翻自家主張的那一組對照"
+    ],
+    "rows": [
+      [
+        "Lambert-GA",
+        "High School",
+        "Grand Prize",
+        "A R H U — 4",
+        "GFP-only and nanobody-only arms on the pull-down, a test set split by antigen cluster with homology checked, and 34 of 35 designs published one per row as negative binding calls"
+      ],
+      [
+        "HongKong-JSS",
+        "High School",
+        "1st Runner-up",
+        "A R H U — 4",
+        "The empty-vector and untransformed arms it admits forgetting: \"we forgot to include matching 0 µM samples, an empty-vector control and an untransformed E. coli control\" — added later, and the sensors got weaker"
+      ],
+      [
+        "Eton-College-UK",
+        "High School",
+        "Top 10",
+        "A R D H U — 5",
+        "\"Heated and unheated samples were also included to control for potential effects of sample preparation\", plus out-of-fold scoring of held-out positives against competitor proteases"
+      ],
+      [
+        "GCGS",
+        "High School",
+        "Top 10",
+        "A R U — 3",
+        "A growth curve run so the reporter signal could have been blamed on cell density: \"fluorescence differences reflected genuine promoter activity instead of cell density artifacts\""
+      ],
+      [
+        "GEMS-Taiwan",
+        "High School",
+        "Top 10",
+        "A R D H U — 5",
+        "A seven-group control table captioned by what each group rules out, an apo-receptor simulation, and an untransformed-host ELISA arm that killed the team's own expression ranking"
+      ],
+      [
+        "GHCIS",
+        "High School",
+        "Top 10",
+        "A U — 2",
+        "A 0 µM negative control on the paper assay whose own colour became the finding: \"color formation alone was insufficient for a reliable positive call\""
+      ],
+      [
+        "HFI",
+        "High School",
+        "Top 10",
+        "A R D U — 4",
+        "A blank arm \"ruling out the interference of lysine's own non-biological degradation\", plus a ldcC knockout chassis built to remove the host's own lysine consumption, then re-tested"
+      ],
+      [
+        "HKSSC",
+        "High School",
+        "Top 10",
+        "A D U — 3",
+        "\"To rule out the stress caused by pelB, we removed the pelB sequence in cycle 3 as well\", and an uninduced arm at every paraben dose"
+      ],
+      [
+        "HangzhouFourteenAP",
+        "High School",
+        "Top 10",
+        "A R D U — 4",
+        "Heat-inactivated enzyme subtracted well by well, plus leave-one-enzyme-out omission groups; the gravimetric readout then returned no significant difference and said so"
+      ],
+      [
+        "HongKong-HS",
+        "High School",
+        "Top 10",
+        "A U — 2",
+        "\"negative controls containing no plasmids\" on the cell-free run, and a published null: no significant difference with or without target for the miR-21 candidates"
+      ],
+      [
+        "Stanford University",
+        "Undergrad",
+        "Grand Prize",
+        "A R D U — 4",
+        "A non-targeting guide RNA, mismatched trigger arms, and a design giving every condition ADAR1 \"so that results were not confounded by lack of endogenous ADAR1 availability\""
+      ],
+      [
+        "UCAS-China",
+        "Undergrad",
+        "1st Runner-up",
+        "A R D H U — 5",
+        "Cell counts run against its own fluorescence claim, \"ruling out interference from differences in cell number\", plus leave-one-donor-out prediction rotated across three donors"
+      ],
+      [
+        "Princeton",
+        "Undergrad",
+        "2nd Runner-up",
+        "A R D U — 4",
+        "\"Each grid carries a phage-only row with no bacteria added … it rules out carryover growth, spontaneous resistance and contamination\", plus allocation, experimental, measurement and analysis blinding"
+      ],
+      [
+        "Cornell",
+        "Undergrad",
+        "Top 10",
+        "R U — 2",
+        "A lysate-and-pellet split run \"to rule out the possibility that the protein aggregated and precipitated\", with the missing t~0 negative controls admitted in parentheses on the page"
+      ],
+      [
+        "Heidelberg",
+        "Undergrad",
+        "Top 10",
+        "A R D H U — 5",
+        "\"Collapse the gas vesicles with pressure in the same field: same cells, no vesicles … This one control rules out density and slide differences at once\", plus nine scrambled design negatives"
+      ],
+      [
+        "LYON",
+        "Undergrad",
+        "Top 10",
+        "A R D U — 4",
+        "An inactive protein of the same size replacing a boiled-enzyme control whose aggregate \"played to much on the absorbance of theses wells\" — the control was swapped, then the assay re-run"
+      ],
+      [
+        "NUS-Singapore",
+        "Undergrad",
+        "Top 10",
+        "A R D H U — 5",
+        "Cross-activation tests that found its own sensor leaking, plus the harder of two validation designs: \"an independent plate at a temperature held out of training entirely\""
+      ],
+      [
+        "UAlberta",
+        "Undergrad",
+        "Top 10",
+        "A R U — 3",
+        "An off-target glycan and a negative-control glycan chosen in advance \"to ensure Galectin-3 doesn't bind indiscriminately\", with no-template controls on every assembly gel"
+      ],
+      [
+        "UCNZ",
+        "Undergrad",
+        "Top 10",
+        "A U — 2",
+        "A substrate-only reference on the sugar-release assay and several published failures; no exclusion experiment, and no instance of the phrase \"negative control\" anywhere we could read"
+      ],
+      [
+        "UOttawa",
+        "Undergrad",
+        "Top 10",
+        "A R D H U — 5",
+        "A lock that \"tests the branch that was chosen against data withheld until the choice was made\", and a retrieval audit that \"cannot rule out knowledge already encoded in the model's weights\""
+      ],
+      [
+        "TU Delft",
+        "Overgrad",
+        "Grand Prize",
+        "A R D H U — 5",
+        "A scrambled-motif twin, RDG(-)-ELP, \"leaving the motif sequence as the main difference between them\", with every data row of one ELP kept on one side of the held-out split"
+      ],
+      [
+        "WageningenUR",
+        "Overgrad",
+        "1st Runner-up",
+        "A R D U — 4",
+        "A no-enzyme control promoted to a reporting rule: \"Bars marked with an asterisk did not exceed the no-enzyme control and are shown uncorrected\", plus solvent-matched autofluorescence negatives"
+      ],
+      [
+        "Athens",
+        "Overgrad",
+        "Top 10",
+        "R D U — 3",
+        "Every enzyme built twice, fused and bare, so \"any difference in activity is attributable to the peptide\"; the buffer-only arm is named on the page and not yet run"
+      ],
+      [
+        "ETH-Zurich",
+        "Overgrad",
+        "Top 10",
+        "A R H U — 4",
+        "\"the absence of a difference between empty and Cre-loaded cages showed that free Cre does not generate false-positive reporter switching\", plus reporter-less control cells at every dose"
+      ],
+      [
+        "GU Frankfurt",
+        "Overgrad",
+        "Top 10",
+        "A R D U — 4",
+        "A scrambled shRNA set as the 1.0 line on every knockdown figure, with two off-target alleles — one structurally similar, one distant — carried through protein and mRNA readouts"
+      ],
+      [
+        "KAUST-KSA",
+        "Overgrad",
+        "Top 10",
+        "A R U — 3",
+        "Wild-type cells as the negative control under every UV dose, plus a one-at-a-time supplementation test that separated two simultaneous model bottlenecks; \"Knockouts do nothing\" published as a result"
+      ],
+      [
+        "Marburg",
+        "Overgrad",
+        "Top 10",
+        "A R D U — 4",
+        "A no-RBS construct that \"defines the translation-independent background\" and a non-matching PPR on the same target; the control then exposed an unintended upstream ATG behind a happy result"
+      ],
+      [
+        "Muenster-University",
+        "Overgrad",
+        "Top 10",
+        "A R U — 3",
+        "A protease-inhibitor arm that excluded environmental proteases, and a no-protease arm that cleaved anyway, so \"the screening method cannot work in procaryotic cells\""
+      ],
+      [
+        "Toronto",
+        "Overgrad",
+        "Top 10",
+        "A R H U — 4",
+        "A biosensor-only arm run to see \"if any cells would fluoresce without PETase activity\", plus a benchmark the team declared circular and moved to a held-out set"
+      ],
+      [
+        "UZurich",
+        "Overgrad",
+        "Top 10",
+        "A R H U — 4",
+        "Uninoculated medium and a wild-type comparison built to \"distinguish the effects of our modifications from its existing activity\", plus held-out landslide events with matched control dates"
+      ]
+    ],
+    "rows_zh": [
+      [
+        "Lambert-GA",
+        "高中組",
+        "總冠軍",
+        "A R H U — 4",
+        "下拉實驗設有只放 GFP 與只放奈米抗體的對照組，測試集依抗原群聚切分並檢查序列同源性，35 個設計中有 34 個以逐列方式公開為陰性結合判定"
+      ],
+      [
+        "HongKong-JSS",
+        "高中組",
+        "第一亞軍",
+        "A R H U — 4",
+        "那組它承認忘記做的空載體與未轉形對照：「we forgot to include matching 0 µM samples, an empty-vector control and an untransformed E. coli control」——後來補上了，感測器也變弱了"
+      ],
+      [
+        "Eton-College-UK",
+        "高中組",
+        "前十",
+        "A R D H U — 5",
+        "「Heated and unheated samples were also included to control for potential effects of sample preparation」，再加上以 out-of-fold 評分把保留的陽性樣本對上競爭蛋白酶"
+      ],
+      [
+        "GCGS",
+        "高中組",
+        "前十",
+        "A R U — 3",
+        "做了一條生長曲線，讓報導基因訊號有可能被歸因於細胞密度：「fluorescence differences reflected genuine promoter activity instead of cell density artifacts」"
+      ],
+      [
+        "GEMS-Taiwan",
+        "高中組",
+        "前十",
+        "A R D H U — 5",
+        "一張七組對照表，逐列寫明每一組排除了什麼；一組無配體受體模擬；以及一組未轉形宿主的 ELISA 對照，直接推翻了隊伍自己的表現量排序"
+      ],
+      [
+        "GHCIS",
+        "高中組",
+        "前十",
+        "A U — 2",
+        "紙片試驗上的 0 µM 陰性對照，而它自己的顯色就成了結論：「color formation alone was insufficient for a reliable positive call」"
+      ],
+      [
+        "HFI",
+        "高中組",
+        "前十",
+        "A R D U — 4",
+        "一組空白對照「ruling out the interference of lysine's own non-biological degradation」，再加上為了移除宿主自身離胺酸消耗而建的 ldcC 剔除底盤，並重新測試"
+      ],
+      [
+        "HKSSC",
+        "高中組",
+        "前十",
+        "A D U — 3",
+        "「To rule out the stress caused by pelB, we removed the pelB sequence in cycle 3 as well」，以及每個對羥基苯甲酸酯劑量都設未誘導對照組"
+      ],
+      [
+        "HangzhouFourteenAP",
+        "高中組",
+        "前十",
+        "A R D U — 4",
+        "逐孔扣掉熱去活酵素的讀值，再加上逐一抽掉單一酵素的缺項組；接著重量法讀值顯示沒有顯著差異，而他們照實寫了出來"
+      ],
+      [
+        "HongKong-HS",
+        "高中組",
+        "前十",
+        "A U — 2",
+        "無細胞反應中設有「negative controls containing no plasmids」，以及一項公開的虛無結果：miR-21 候選在有無標的下沒有顯著差異"
+      ],
+      [
+        "Stanford University",
+        "大學組",
+        "總冠軍",
+        "A R D U — 4",
+        "一條不針對任何標的的嚮導 RNA、錯配觸發對照組，以及讓每個條件都有 ADAR1 的設計「so that results were not confounded by lack of endogenous ADAR1 availability」"
+      ],
+      [
+        "UCAS-China",
+        "大學組",
+        "第一亞軍",
+        "A R D H U — 5",
+        "用細胞計數反過來檢驗自家的螢光主張，「ruling out interference from differences in cell number」，再加上在三位捐贈者間輪替的留一捐贈者預測"
+      ],
+      [
+        "Princeton",
+        "大學組",
+        "第二亞軍",
+        "A R D U — 4",
+        "「Each grid carries a phage-only row with no bacteria added … it rules out carryover growth, spontaneous resistance and contamination」，再加上分配、實驗、量測與分析四段盲法"
+      ],
+      [
+        "Cornell",
+        "大學組",
+        "前十",
+        "R U — 2",
+        "把裂解液與沉澱分開跑，「to rule out the possibility that the protein aggregated and precipitated」；而缺少的 t~0 陰性對照就用括號寫在頁面上承認"
+      ],
+      [
+        "Heidelberg",
+        "大學組",
+        "前十",
+        "A R D H U — 5",
+        "「Collapse the gas vesicles with pressure in the same field: same cells, no vesicles … This one control rules out density and slide differences at once」，再加上九個打亂序列的設計陰性對照"
+      ],
+      [
+        "LYON",
+        "大學組",
+        "前十",
+        "A R D U — 4",
+        "用一個同樣大小的無活性蛋白取代煮沸酵素對照，因為後者形成的聚集物「played to much on the absorbance of theses wells」——換掉對照，再重跑 assay"
+      ],
+      [
+        "NUS-Singapore",
+        "大學組",
+        "前十",
+        "A R D H U — 5",
+        "交叉活化測試抓到自家感測器在漏，再加上兩種驗證設計中較難的那一種：「an independent plate at a temperature held out of training entirely」"
+      ],
+      [
+        "UAlberta",
+        "大學組",
+        "前十",
+        "A R U — 3",
+        "事先選定一個脫靶醣分子與一個陰性對照醣分子「to ensure Galectin-3 doesn't bind indiscriminately」，每張組裝膠片都附無模板對照"
+      ],
+      [
+        "UCNZ",
+        "大學組",
+        "前十",
+        "A U — 2",
+        "糖釋放 assay 上有一組只放基質的參考組，也公開了幾項失敗；但沒有任何排除實驗，而我們讀得到的範圍內完全沒有「negative control」這個詞"
+      ],
+      [
+        "UOttawa",
+        "大學組",
+        "前十",
+        "A R D H U — 5",
+        "一道鎖，「tests the branch that was chosen against data withheld until the choice was made」；以及一次檢索稽核，並承認「cannot rule out knowledge already encoded in the model's weights」"
+      ],
+      [
+        "TU Delft",
+        "研究生組",
+        "總冠軍",
+        "A R D H U — 5",
+        "一個打亂 motif 的孿生構築體 RDG(-)-ELP，「leaving the motif sequence as the main difference between them」；而同一個 ELP 的所有資料列都被留在保留切分的同一側"
+      ],
+      [
+        "WageningenUR",
+        "研究生組",
+        "第一亞軍",
+        "A R D U — 4",
+        "把無酵素對照升級成報告規則：「Bars marked with an asterisk did not exceed the no-enzyme control and are shown uncorrected」，再加上溶劑配對的自體螢光陰性對照"
+      ],
+      [
+        "Athens",
+        "研究生組",
+        "前十",
+        "R D U — 3",
+        "每個酵素都做兩版，融合與裸酵素，於是「any difference in activity is attributable to the peptide」；而只放緩衝液的那一組被寫在頁面上，還沒做"
+      ],
+      [
+        "ETH-Zurich",
+        "研究生組",
+        "前十",
+        "A R H U — 4",
+        "「the absence of a difference between empty and Cre-loaded cages showed that free Cre does not generate false-positive reporter switching」，再加上每個劑量都設沒有報導基因的對照細胞"
+      ],
+      [
+        "GU Frankfurt",
+        "研究生組",
+        "前十",
+        "A R D U — 4",
+        "每張剔減圖都以打亂序列的 shRNA 作為 1.0 基準線，並帶著兩個脫靶對偶基因——一個結構相近、一個相遠——一路做到蛋白與 mRNA 讀值"
+      ],
+      [
+        "KAUST-KSA",
+        "研究生組",
+        "前十",
+        "A R U — 3",
+        "每個 UV 劑量都以野生型細胞作為陰性對照，再加上逐一補充營養的測試，分離出兩個同時存在的模型瓶頸；並把「Knockouts do nothing」當成結果公開"
+      ],
+      [
+        "Marburg",
+        "研究生組",
+        "前十",
+        "A R D U — 4",
+        "一個無 RBS 構築體「defines the translation-independent background」，以及一個不匹配的 PPR 打在同一個標的上；接著這組對照揭穿了一個令人開心的結果背後非預期的上游 ATG"
+      ],
+      [
+        "Muenster-University",
+        "研究生組",
+        "前十",
+        "A R U — 3",
+        "一組加蛋白酶抑制劑的對照排除了環境蛋白酶，而沒加蛋白酶的那一組照樣被切開，於是「the screening method cannot work in procaryotic cells」"
+      ],
+      [
+        "Toronto",
+        "研究生組",
+        "前十",
+        "A R H U — 4",
+        "一組只放生物感測器的對照，用來看「if any cells would fluoresce without PETase activity」；再加上一個被隊伍自己宣告為循環、並改用保留資料重做的基準測試"
+      ],
+      [
+        "UZurich",
+        "研究生組",
+        "前十",
+        "A R H U — 4",
+        "未接菌的培養基，加上一組野生型比較，用來「distinguish the effects of our modifications from its existing activity」；再加上保留的山崩事件與配對的對照日期"
+      ]
+    ]
+  },
+  "checklist": [
+    "Write the rival explanation down before you run the assay. One sentence, in the protocol: if this result is real, what else could have produced it? GEMS-Taiwan 2024 wrote \"We want to rule out the effect of E. coli in the death of mosquito larvae\" and the whole control followed from it.",
+    "Put a no-activity arm on the headline assay itself, not only on a cloning gel. Empty vector, untransformed host, heat-killed enzyme, substrate alone — whichever makes your own number impossible. Twenty-eight of 30 Top 10 teams did this, so a wiki without it stands out.",
+    "Build the rival-exclusion arm into the same plate, same day, same operator. Heidelberg collapses its vesicles in the same field with the same cells, which is why one control rules out density and slide differences at once.",
+    "Remove one confound by design and then re-test the effect. Cover the wells with black paper, scramble the motif instead of deleting it, swap in an inactive protein of the same size. Only 17 of 30 did this, and it is where the podium teams pull ahead.",
+    "Hold data back from your own fitting before you look at it, and say which rows you held. Twelve of 30 did; name the split rule, as TU Delft does by keeping every row of one ELP on one side of it.",
+    "Check your benchmark is not built from the thing it is testing. Toronto found its own HMMs were validated on the search that produced them and moved the test to a held-out set: a benchmark has to be independent of what the model was built from.",
+    "When a control defeats your measurement, publish the table and say what can no longer be concluded. GEMS-Taiwan 2026 printed an ELISA whose untransformed host read the same as its constructs, and wrote that no difference there can be attributed to expression.",
+    "Name the arm you could not run, and what it would have settled. Every podium team does this; Athens does it best. \"Until it is run we describe the effect as attributable to the preparation\" costs you nothing and is the clearest evidence a judge has that you know what your data does not show.",
+    "Never conclude a string is absent from a wiki because your extraction did not find it. Italicised species names and gene symbols drop out of client-rendered bundles, so check the rendered page before you retract a finding."
+  ],
+  "checklist_zh": [
+    "在做 assay 之前，先把競爭解釋寫下來。在 protocol 裡寫一句話：如果這個結果是真的，還有什麼別的東西能產生它？GEMS-Taiwan 2024 寫下「We want to rule out the effect of E. coli in the death of mosquito larvae」，整組對照就是從這句話長出來的。",
+    "把無活性對照放在主要 assay 本身，而不是只放在選殖用的膠片上。空載體、未轉形宿主、熱殺死的酵素、只放基質——哪一種能讓你自己的數字變成不可能，就用哪一種。30 支 Top 10 團隊裡有 28 支做了，所以沒做的 wiki 會很顯眼。",
+    "把排除競爭解釋的那一組，排進同一塊盤、同一天、同一位操作者。Heidelberg 就是在同一個視野、用同一批細胞把氣囊壓破，所以那一組對照能同時排除密度與玻片差異。",
+    "用設計移除一個混淆因子，然後把效應重測一次。用黑紙蓋住孔洞、把 motif 打亂而不是刪掉、換成同樣大小的無活性蛋白。30 支裡只有 17 支做了，而這正是獎台隊伍拉開距離的地方。",
+    "在看資料之前，先把一部分從自己的擬合裡留下來，並寫明你留了哪些列。30 支裡有 12 支做了；請指明切分規則，像 TU Delft 那樣把同一個 ELP 的所有資料列都留在同一側。",
+    "檢查你的基準測試，不是用它要測的東西做出來的。Toronto 發現自家的 HMM 是拿產生它們的那次搜尋來驗證，於是把測試改到保留資料上：基準測試必須獨立於模型建構時所用的東西。",
+    "當一組對照擊敗了你的量測，就把那張表登出來，並寫明哪些結論不能再下。GEMS-Taiwan 2026 把一張 ELISA 登了出來，其中未轉形宿主讀到和自家構築體同一範圍，並寫明那裡的差異不能歸因於表現量。",
+    "指名你沒能做的那一組，以及它本來能定案什麼。每一支獎台隊伍都做了這件事，Athens 做得最好。「Until it is run we describe the effect as attributable to the preparation」這句話對你毫無成本，卻是評審能看到的最清楚證據，證明你知道自己的資料沒有顯示什麼。",
+    "絕對不要因為自己的擷取程式沒找到某個字串，就斷定那個字串不在 wiki 上。斜體的物種名與基因符號會從前端渲染的打包檔裡掉出來，所以在撤回一項發現之前，先去看渲染後的頁面。"
+  ],
+  "method": "Cohort: the 30 teams in the 2026 Top 10 across all three sections — High School, Undergrad and Overgrad — identified from research/results2026.json, with the seven podium places (three Grand Prizes, three 1st Runners-up, one 2nd Runner-up; the High School and Overgrad sections named no 2nd Runner-up) treated as one group against the remaining 23. The team JSON files in research/teams/ were used only for the wiki slug and the award list. They are not a valid source for this question: a falsification control is exactly the kind of thing a project summary omits, so every score comes from the wiki itself. How the wikis were read: curl with a browser User-Agent first, every time. Fourteen of the 30 are static or server-rendered and were crawled page by page over results, engineering, experiments, notebook, model, description, measurement, parts and contribution, resolving relative links against each page. Sixteen are client-rendered; for those we pulled the JavaScript bundles and extracted string literals, following lazy-loaded chunks by filename, which added between 0.9 and 3.3 MB of recovered text on seven teams and changed one team's score. TU Delft publishes Markdown versions of every page at llms.txt and those were read directly. Stanford University is a client-templated page whose text lives in fourteen separate content JavaScript files, fetched individually. All fetched HTML was HTML-unescaped before any pattern matching, because the less-than sign is written as an entity and a regex for a p-value finds nothing without it. Every match of every pattern was printed and read before any absence was recorded, and bare-word searches were not used: 'tested' is not a t-test. Scoring: five types, each credited only on a sentence we can quote from the team's own page. A, a chassis-only, empty-vector, untransformed, uninduced, heat-killed or no-enzyme arm on the headline assay rather than on a transformation plate or cloning gel. R, an experiment whose stated purpose was to exclude a named alternative cause of the team's own result. D, a confound removed by design — scrambled rather than deleted motifs, matched solvents, blinding, randomisation, an inactive protein of matched size — with the effect then re-tested. H, validation against data held back from fitting, with the split rule stated. U, a result unfavourable to the team's own headline claim, published. A sixth flag, not part of the five, records a team naming a specific arm, replicate or comparison it did not run together with what cannot be concluded without it. Judgement enters at the boundary of A and D, and at whether an arm sits on the headline assay or on a cloning step; a different scorer would move one or two teams by one category. The counts are A 28/30, R 26/30, D 17/30, H 12/30, U 30/30, sixth flag 23/30. What we could not see: figures and gel images (every score rests on text), work done and not written up, pages behind a login or published after the freeze, and anything in a PDF we did not open. One failure mode is worth recording because it nearly produced a false retraction in this analysis: italicised species names and gene symbols are dropped by bundle string extraction, so a sentence can appear truncated in the recovered text and complete on the rendered page. A string absent from an extraction is not a string absent from the wiki. Limits of n: 30 teams, 7 of them on a podium. The podium-versus-rest difference of 0.68 of one category has a one-sided permutation p of 0.079 over 200,000 shuffles, the High School comparison is two teams against eight, and three of the five scored types are saturated at 26/30 or above, which leaves the five-point scale almost no room to rank anybody. n = 30 cannot support a strong inference, and nothing here should be read as one. The honest reading is that the practice is a floor among decorated teams and not a ranking, and that the report's two-direction finding narrows to the real-target half.",
+  "method_zh": "Cohort：2026 年三個組別——高中組、大學組、研究生組——全部 30 支 Top 10 團隊，名單取自 research/results2026.json；七個獎台席次（三個總冠軍、三個第一亞軍、一個第二亞軍；高中組與研究生組沒有頒出第二亞軍）視為一組，與其餘 23 支對照。research/teams/ 裡的團隊 JSON 檔只用來取 wiki 網址與獎項清單。對這個問題，它們不是有效的資料來源：可否證性對照正是專案摘要最會省略的東西，所以每一個分數都來自 wiki 本身。怎麼讀這些 wiki：每一次都先用帶瀏覽器 User-Agent 的 curl。30 支中有 14 支是靜態或伺服器端渲染，逐頁爬過 results、engineering、experiments、notebook、model、description、measurement、parts 與 contribution，並把相對連結逐頁解析。另外 16 支是前端渲染；對這些我們抓下 JavaScript 打包檔並擷取字串常量，再依檔名追查延遲載入的分塊檔——這一步在七支隊伍上多還原了 0.9 MB 到 3.3 MB 的文字，並改變了其中一支的分數。TU Delft 在 llms.txt 公布每一頁的 Markdown 版本，我們直接讀那些。Stanford University 是前端套版頁面，文字分散在十四個 content JavaScript 檔裡，逐一抓取。所有抓下來的 HTML 都先做 HTML 反轉義再比對樣式，因為小於符號是以實體寫成，少了這一步，搜尋 p 值的正規表達式什麼都找不到。在記下任何「不存在」之前，每一條樣式的每一個命中都被印出來讀過；也不使用裸字搜尋：tested 不是 t 檢定。計分：五個類別，每一類都只憑一句能從團隊自家頁面逐字引用的話給分。A，主要 assay 上的宿主單獨組、空載體組、未轉形組、未誘導組、熱殺死組或無酵素組，而不是轉形平盤或選殖膠片上的對照。R，一個寫明目的就是要排除自家結果某個指名替代原因的實驗。D，用設計移除混淆因子——把 motif 打亂而非刪除、配對溶劑、盲法、隨機分配、同樣大小的無活性蛋白——並把效應重測一次。H，用從擬合中保留下來的資料驗證，並寫明切分規則。U，公開一項對自家主要主張不利的結果。第六個旗標不計入這五類，記錄的是團隊指名了某一組自己沒做的對照、重複或比較，並說明少了它就不能下什麼結論。判斷會進入兩個地方：A 與 D 的邊界，以及某一組對照究竟落在主要 assay 還是選殖步驟上；換一位評分者，大概會有一兩支隊伍上下移動一個類別。各類計數為 A 28/30、R 26/30、D 17/30、H 12/30、U 30/30，第六旗標 23/30。我們看不到的東西：圖與膠片影像（每一個分數都只建立在文字上）、做了但沒寫出來的工作、需要登入或在凍結後才發布的頁面，以及我們沒打開的 PDF 內容。有一種失誤值得記下來，因為它在這次分析中差點造成一次錯誤的撤回：斜體的物種名與基因符號會被打包檔字串擷取丟掉，所以一句話在還原文字裡看起來被截斷，在渲染後的頁面上卻是完整的。擷取結果裡沒有的字串，不等於 wiki 上沒有。n 的限制：30 支隊伍，其中 7 支在獎台上。獎台與其餘隊伍相差 0.68 個類別，在 200,000 次置換中單尾 p 為 0.079；高中組的比較是兩支對八支；而五個計分類別中有三個已飽和在 26/30 以上，使得這個五分制幾乎沒有空間排出任何名次。n = 30 撐不起強推論，這裡的任何一句話都不該被當成強推論讀。誠實的讀法是：在獲獎團隊之間，這個習慣是一道門檻而不是一張名次表；而本報告那項雙向發現，收斂到「量在真正的標的上」這一半。"
+}

@@ -60,6 +60,13 @@ one it cleared in 2024 and has not cleared since. The short version of everythin
   wins sit at 45%, 22% and 21%. The figure is near-circular and the analysis says so — Wiki and Presentation
   are judged on how the whole project is communicated, which is the material a Top 10 judgement works on — so
   it maps the categories rather than predicting anything.
+- **The other half of that finding is a floor, not a ranking — and GEMS already clears it.** Reading all 30
+  Top 10 wikis, 26 of 30 ran an experiment designed expressly to kill a rival explanation for their own
+  result and 30 of 30 published a result unfavourable to their own headline, so the habit cannot separate a
+  podium from a Top 10 (podium 4.29 of five control types against 3.61, permutation p = 0.079). No podium
+  team scored below 4 while 10 of 23 others did — but of the seven teams holding all five types, five missed
+  the podium, GEMS-Taiwan among them with a perfect score. The scarce habits are the harder two: 17 of 30
+  removed a confound by design and re-tested, 12 of 30 validated against data held back from fitting.
 - **Closing the model–data loop is the single best predictor of a Top 10.** Teams that both fit a model to
   their own measured data *and* validate it against something held back reached a Top 10 at 53%, against 23%
   for those that did not. All nine who closed the loop without a Top 10 won or were nominated for a major special prize anyway.

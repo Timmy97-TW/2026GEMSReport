@@ -14,7 +14,7 @@
 
 # 總覽
 
-## 28 個發現，以及各自該讀哪一頁
+## 29 個發現，以及各自該讀哪一頁
 
 _2026 年所有最佳 Wiki 得主都建了一層像這樣的東西——每個主張兩句話，附上直達證據的連結。它有效，所以這份報告也這麼做。_
 
@@ -23,6 +23,9 @@ _2026 年所有最佳 Wiki 得主都建了一層像這樣的東西——每個�
 
 ### 在高中層級，差距在評估紀律，不在工具
 Eton-College-UK 用的是 logistic regression 與 PSSM，但做了分群感知的交叉驗證、標籤洗牌對照與消融測試。Lambert-GA 拿下最佳模型，是因為他們對信心指標本身做了基準測試，並公開自己成功的設計其實分數不是最高的。GCGS 則在完全沒有 model 頁的情況下進入 Top 10。
+
+### 做一個可能推翻自己主張的實驗，是一道門檻，不是一張名次表——而 GEMS 早就跨過了
+「打在真實標的上」這項發現還有另一半——對手解釋有沒有被實驗排除掉——而把 30 支 Top 10 隊伍的 wiki 全部讀完之後，這一半不成立。**30 支中有 26 支**做過刻意設計來殺掉自家結果另一種解釋的實驗，**30 支全部**公開過一項對自己主張不利的結果，所以這個習慣分不出頒獎臺和前十。頒獎臺隊伍平均擁有五類對照中的 4.29 類，其餘是 3.61 類（差距 0.68，置換檢定 p = 0.079——不構成結果）。留下來的是一道門檻：沒有任何頒獎臺隊伍低於 4 類，而其餘 23 支中有 10 支低於 4 類。**而這個計數並不是機制——五類全有的七支隊伍裡，有五支沒上頒獎臺，GEMS-Taiwan 就是其中一支，而且是滿分。**真正稀少的是較難的兩類：30 支中只有 17 支以設計移除混淆因子後重測，只有 12 支拿留存資料做驗證。
 
 ### 21 個得獎工具中有 8 個仍可使用，原因是「有沒有架站」
 每一個仍在線的工具，在 wiki 凍結當日就已經上線；每一個只有原始碼的工具，wiki 上唯一的位址都是 localhost。這不是寫程式或預算的決定，而是提前好幾個月做的架站決定。兩支高中隊伍交付得比多數大學還好。所有檢查過的 repository，star 與 fork 都是零。
@@ -465,6 +468,72 @@ GEMS-Taiwan 在實驗流程（25 份條目中 24 份可下載 PDF，菌落 PCR �
 - 凍結一個月後，把所有外部連結重新點一次。Toronto 自家資料集的 DOI 已經失效，實驗日誌還要 Google 登入；GEMS 的資料連結指向 GitLab，這個選擇是對的，但出發去 Jamboree 之前仍應以未登入的狀態實際抓一次。
 
 _方法與限制。 取樣：2026 年 Top 10 名單上的全部 30 支隊伍——大學部十支、研究生組十支、高中組十支。選這個集合，是因為它是事先就定義好的完整名單，不需要去判斷哪些獎項算濕實驗；也因為 GEMS-Taiwan 本來就在裡面，而不是另外補進來的。表格順序為大學部、研究生組、高中組。每支隊伍以六項檢核計分，每項一分：（1）完整實驗流程，指步驟層級、寫明體積、溫度、時間，並至少具名一個套組或供應商，形式可以是 wiki 內文、摺疊面板或可下載 PDF——只有敘述性摘要不算；（2）菌株寫到品系層級，例如 BL21(DE3)、DH5-alpha、Nissle 1917、WB800、BY4741，而不是只寫 E. coli；（3）質體圖譜或完整序列，且需涵蓋實際做出來的構築，形式可以是圖譜、直接印出的序列、序列檔或公開的序列平台連結——只給 Registry 連結不算；35 個零件只有一張圖譜，判定為未通過；（4）零件已附序列存入 Registry，做法是以瀏覽器 User-Agent、每次間隔 1.4 秒查詢 api.registry.igem.org/v1/parts/slugs/，每隊抽查最多八個 2026 年編號，合計 210 個；（5）原始數據，指至少一張已發表實驗圖背後的數字可下載或被印出來——只有統計表、未裁切的墨點影像或圖表本身都算未通過；經濟模型、分子對接、文獻整理或科普活動的 CSV 不列為實驗數據；（6）附日曆日期的實驗記錄，可以在 wiki 上或 PDF 裡——只寫「Day 1⋯Day 20」算未通過。GEMS-Taiwan 在數據這一項判定為通過，依據是其數位孿生倉庫裡光度計與生物反應器的 CSV 連續量測；表格中該格標為「部分」，因為沒有任何一項實驗台上的分析——ELISA、DNPH、西方墨點、植株生長——有公開數字。閱讀方式是抓取各站頁面與 JavaScript bundle，再輔以瀏覽器實際開啟；這批 wiki 約有三分之一是前端渲染，其中數支（NUS-Singapore、Muenster-University、Eton-College-UK、GU Frankfurt、KAUST-KSA）把流程或零件收在直接抓取看不到的面板裡，因此凡是數值偏低的項目，都先在瀏覽器裡重新確認過才記錄。共下載 110 份以上的 PDF 並抽取文字，所以流程與記錄 PDF 是被讀過內容，而不是只被數過份數。凡是被寫成失效的資料、序列或倉庫連結，都在未登入狀態下實際抓取並記下 HTTP 狀態碼。看不到的部分：wiki 上沒有流程，並不等於這支隊伍沒有流程——這份研究讀的是 wiki，不是實驗記錄本；隊伍手上可能有完整紀錄、原始試算表與註解過的圖譜，只是從未上傳。它同樣無法判斷已公開的流程是否真的做得出來、某個數字對不對，或某則記錄是否真的寫於它所標示的那一天。掃描或純影像的 PDF 抽不出文字，因此只以照片形式存在的流程可能被低估。Registry 每隊最多抽查八個零件，不是全部，且該 API 會限流，少數編號是重試後才讀到。樣本僅限得獎隊伍——評審排名最高的 30 個專案——此處沒有任何一句話在描述整個 iGEM 2026。_
+
+## 一道門檻，而不是一張名次表
+
+_本報告最強的那項發現，其中一半從來沒有人量過；量過之後，這一半並不成立。我們讀完 2026 年三個組別全部 30 支 Top 10 團隊的 wiki：有 26 支做過一個刻意設計來殺掉自家結果另一種解釋的實驗，而 30 支全部都公開了一項對自己主張不利的結果——所以這個習慣分不出獎台與前十。它劃出的是一道門檻：沒有任何一支獎台隊伍的五類對照少於四類；而五類全有的七支隊伍裡，有五支沒上獎台。_
+
+我們對 30 支 Top 10 團隊的 wiki 只問一個問題：**2026 年有多少支獲獎團隊，做過一個結果有可能推翻自家主要主張的實驗；而這件事是否和獎台相關？** 前半有答案，後半破了。
+
+**模式標本是 GEMS-Taiwan 2024 年的總冠軍，而它不是多做一個 assay。** 在用三種毒素殺死蚊子幼蟲之後，這支隊伍把自己擔心的事寫在頁面上：「We want to rule out the effect of E. coli in the death of mosquito larvae.」他們設計的那一組是 BL21(DE3) 空載體組，讀出的是 Gambicin、Rel1、Rel2 與 defensin 的 qPCR 免疫基因盤，理由也寫得很白：「The reason why we use BL21(DE3)-empty vector is to investigate whether the mortality observed was due to the cytotoxicity effect or bacterial infection of the E. coli or solely due to the potency of the biolarvicides.」這一組得到了結論——「This data indicated that the mortality observed in the larvicidal assay was not due to the introduction of BL21(DE3).」——而基因盤本身大致是空的，隊伍也照樣寫了出來：「the majority of the transcripts of immune genes were not regulated after the larvae exposure to the toxins.」在產卵誘引試驗裡，同一種習慣換成了用設計排除混淆因子，目的直接寫明是要排除顏色這個因素：「we covered each solution with black paper … so that the selection of oviposition sites is based on odorant factors only」，而偏好依然在 p = 0.0003 的水準上成立。
+
+**我們把「排除」和「承認排除有缺口」分開計分，因為同一個頁面兩件事都做了。** 2024 年那組基因盤只在一種誘導條件下完成，隊伍寫出了自己沒能涵蓋哪一種、以及為什麼：「We acknowledge the limitation of this particular study because we did not compare it to BL21(DE3) for biolarvicidal toxin produced at 20 degrees C overnight. Our team had a shortage of mosquito larvae to conduct additional groups during this period of time, and hence, we were not able to compare the cytotoxicity effect of BL21(DE3).」一套只認完整排除的評分標準，會把這一頁排在一支從頭到尾沒想到這個混淆因子的隊伍後面，那顯然是錯的答案。所以底下五個計分類別都是真的做了的對照，第六個旗標則記錄「指名了自己沒能做的那一組」。
+
+**五個類別，而且只憑一句可以逐字引用的話給分。** `A` 主要 assay 上的宿主單獨組、空載體組、未轉形組或熱殺死組，不算選殖用的膠片：**30 支中的 28 支**。`R` 專門為排除某個指名的競爭解釋而做的實驗：**30 支中的 26 支**。`D` 用設計移除混淆因子，然後把效應重測一次：**30 支中的 17 支**。`H` 用從擬合中保留下來的資料做驗證：**30 支中的 12 支**。`U` 公開一項對自家主張不利的結果：**30 支中的 30 支**。
+
+**五類裡有三類已經飽和，而這本身就是發現。** 在這個層級的場域裡，一組無活性對照、一次競爭機制排除、一項公開的不利結果，都是入場費，不是區別。三十支裡有三十支公開了對自己不利的東西。三十支裡有二十六支針對某個指名的替代原因做了一組實驗。2026 年把總冠軍和 Top 10 分開的東西，不是「隊伍有沒有想到那組對照」。
+
+**獎台比較，連同它的 n。** 七支獎台隊伍平均擁有 **五類中的 4.29 類**，其餘 23 支平均 **3.61 類**。差距是 0.68 個類別；對 30 筆分數做置換檢定，單尾 **p = 0.079**——這不是一個結果。單看高中組是 4.00 對 3.50，兩支對八支，那根本不能算比較。三支總冠軍的分數是 4、4、5。**n = 30 撐不起任何強推論**，我們也不打算做。
+
+**留下來的是一道門檻，以及名次的缺席。** 沒有任何獎台隊伍低於 4 分，而 **23 支非獎台隊伍中有 10 支低於 4 分**。但四類也不保證上得去：五類全有的七支隊伍裡，只有 UCAS-China 與 TU Delft 在獎台上。**Eton-College-UK、GEMS-Taiwan、Heidelberg、NUS-Singapore 與 UOttawa** 五支全拿滿五類，卻都停在自己組別的前三之外。如果這個計數就是機制，那獎台應該是這五支。
+
+**真正分得開的是 `D` 和 `H`。** 用設計移除混淆因子再重測，獎台是七支中的五支，台下是 23 支中的 12 支；把資料從擬合中保留下來，獎台是七支中的四支，台下是 23 支中的八支。保留資料驗證也是唯一一項在三個組別都同樣稀薄的習慣——高中組、大學組、研究生組都剛好是十支中的四支。
+
+**第六個旗標是整份分析裡最乾淨的訊號，而它關乎寫作，不關乎操作。** 30 支裡有 23 支指名了某一組自己沒做的對照、重複或比較，並說明少了它就不能下什麼結論——而這是 **獎台七支中的七支，對台下 23 支中的 16 支**。Athens 有全 cohort 最好的一例：一組還沒做的對照，被指名為唯一能定案自家效應的東西——「Separating the two requires that buffer-only arm, and until it is run we describe the effect as attributable to the preparation.」高中組第一亞軍 HongKong-JSS 寫下了多數隊伍會刪掉的那句自白：「we forgot to include matching 0 µM samples, an empty-vector control and an untransformed E. coli control in these early experiments. This was an experimental-design mistake.」接著他們把那些對照補上去，自家感測器的表現就比沒有對照的初篩所顯示的更弱、更不一致。Cornell 把它放在 protocol 中間的括號裡：「(regrettably, pre-induction or t~0 aliquots were not collected as negative controls for this experiment)」。
+
+**這個 cohort 裡有四組對照真的弄壞了什麼，而那正是做對照的意義。** Muenster-University 沒有加蛋白酶的那一組照樣被切開了，於是整套篩選不能相信：「The presence of the cleavage product in samples without pACYC_Myc_NIaPro implies that construct, leading to false-positive results … This means even if we had cleavage by NIa-Pro, the negative controls would show false results.」GEMS-Taiwan 的未轉形宿主讀到和自家構築體同一個範圍，隊伍照樣把那張表登了出來：「A negative control returning a signal comparable to the samples means the assay is reading something other than recombinant protein in these preparations, so no difference here can be attributed to expression.」Marburg 的 no-RBS 背景對照把一個令人開心的結果變成了假象——他們一度以為自家的髮夾結構成功抑制了表現，後來才發現「an unintended additional ATG located one base upstream of and out of frame with the NanoLuc start codon」。Toronto 稽核了自己的基準測試並宣告它是循環的：「The HMMs were themselves built from the NR search, so testing them on NR mostly measured how well they recall their own training data.」接著把驗證搬到一組保留資料上，並得出結論：「A benchmark has to be independent of what the model was built from.」
+
+**這個 cohort 的地板也是真的。** UCNZ、HongKong-HS 與 GHCIS 都是 2 分：有試劑空白、有公開的失敗，但沒有任何針對替代原因的實驗；在我們能讀到的範圍內，UCNZ 的 wiki 整整 1.3 MB 還原文字裡，完全沒出現「negative control」這個詞。Cornell 的 2 分來自另一個方向：它對替代原因推理得很仔細，並且明說自己跳過了哪幾組。
+
+**於是那項雙向發現收斂成單向。** 把中心主張量在真正的標的上，仍然分得開獎台。用實驗排除競爭解釋則分不開——不是因為它罕見，而是因為在獲獎團隊之間它幾乎普及。真正還稀少、而且在小到不可信的樣本上偏向獎台的，是更難的那一對：把實驗重新設計到混淆因子進不來，以及把資料從自己的擬合裡留下來。
+
+### 30 支裡有 26 支殺掉了競爭解釋
+2026 年 30 支 Top 10 團隊中，有 26 支至少做過一個實驗，其寫明的目的就是排除自家結果的某個指名替代原因。沒有的四支是 GHCIS、HKSSC、HongKong-HS 與 UCNZ。在這個層級的場域裡，這個習慣並不罕見，這也正是它挑不出贏家的原因。
+
+### 一個空載體和一張黑紙
+GEMS-Taiwan 2024 年的總冠軍，關鍵在兩組對照，而不在多做一個 assay。第一組把競爭原因直接說出口：「We want to rule out the effect of E. coli in the death of mosquito larvae.」那一組是 BL21(DE3) 空載體組，以 Gambicin、Rel1、Rel2 與 defensin 的 qPCR 盤讀出。第二組用設計移除混淆因子：「we covered each solution with black paper … so that the selection of oviposition sites is based on odorant factors only」——而偏好在 p = 0.0003 下依然成立。
+
+### 排除與它的缺口分開計分
+2024 年那組基因盤只在一種誘導條件下完成，隊伍也寫出自己沒能涵蓋哪一種：「We acknowledge the limitation of this particular study because we did not compare it to BL21(DE3) for biolarvicidal toxin produced at 20 degrees C overnight.」一套只認完整排除的標準，會把這一頁排在從沒想到這個混淆因子的隊伍後面。所以五個類別數的是做了的對照，第六個旗標數的是「指名了自己沒做的那一組」。
+
+### 4.29 對 3.61，p = 0.079
+七支獎台隊伍平均擁有五類對照中的 4.29 類，其餘 23 支平均 3.61 類。對 30 筆分數做置換檢定，單尾 p 為 0.079。三支總冠軍的分數是 4、4、5。單看高中組是 4.00 對 3.50，兩支對八支。這些都不足以支撐推論，我們也沒有做推論。
+
+### 五支滿分隊伍沒上獎台
+有七支隊伍五類對照全有，其中只有 UCAS-China 與 TU Delft 在獎台上。Eton-College-UK、GEMS-Taiwan、Heidelberg、NUS-Singapore 與 UOttawa 五支全拿滿分，卻都停在自己組別前三之外。如果這個計數就是機制，獎台應該是這五支。留下來的只是一道門檻：沒有獎台隊伍低於 4 分，而 23 支非獎台隊伍中有 10 支低於 4 分。
+
+### 17 支重新設計，12 支保留資料
+五類中有三類已經飽和：無活性對照出現在 30 份 wiki 中的 28 份，競爭機制排除出現在 26 份，而 30 支全部都公開了對自家主張不利的東西。稀少的那一對比較難。用設計移除混淆因子再重測：30 支中的 17 支。用保留下來的資料驗證：30 支中的 12 支，而且三個組別都剛好是十支中的四支。
+
+### 四支隊伍被自己的對照弄壞了東西
+Muenster-University 沒加蛋白酶的那一組照樣被切開：「even if we had cleavage by NIa-Pro, the negative controls would show false results.」GEMS-Taiwan 的未轉形宿主讀到和自家構築體同一範圍，那張表照樣登出來：「no difference here can be attributed to expression.」Marburg 的 no-RBS 背景對照，揭穿了一個它一度慶祝過的結果背後那個非預期的上游 ATG。Toronto 宣告自己的基準測試是循環的，並把它搬到保留資料上。
+
+### 30 支裡有 23 支指名了自己做不到的那一組
+這是這裡最乾淨的訊號，而且關乎寫作、不關乎操作：獎台七支中的七支，對台下 23 支中的 16 支。Athens 把一組還沒做的對照，指名為唯一能定案自家效應的東西：「Separating the two requires that buffer-only arm, and until it is run we describe the effect as attributable to the preparation.」Wageningen、HongKong-JSS 與 Cornell 都把缺少的那一組寫在頁面上，而不是悄悄省略。
+
+**檢查清單**
+
+- 在做 assay 之前，先把競爭解釋寫下來。在 protocol 裡寫一句話：如果這個結果是真的，還有什麼別的東西能產生它？GEMS-Taiwan 2024 寫下「We want to rule out the effect of E. coli in the death of mosquito larvae」，整組對照就是從這句話長出來的。
+- 把無活性對照放在主要 assay 本身，而不是只放在選殖用的膠片上。空載體、未轉形宿主、熱殺死的酵素、只放基質——哪一種能讓你自己的數字變成不可能，就用哪一種。30 支 Top 10 團隊裡有 28 支做了，所以沒做的 wiki 會很顯眼。
+- 把排除競爭解釋的那一組，排進同一塊盤、同一天、同一位操作者。Heidelberg 就是在同一個視野、用同一批細胞把氣囊壓破，所以那一組對照能同時排除密度與玻片差異。
+- 用設計移除一個混淆因子，然後把效應重測一次。用黑紙蓋住孔洞、把 motif 打亂而不是刪掉、換成同樣大小的無活性蛋白。30 支裡只有 17 支做了，而這正是獎台隊伍拉開距離的地方。
+- 在看資料之前，先把一部分從自己的擬合裡留下來，並寫明你留了哪些列。30 支裡有 12 支做了；請指明切分規則，像 TU Delft 那樣把同一個 ELP 的所有資料列都留在同一側。
+- 檢查你的基準測試，不是用它要測的東西做出來的。Toronto 發現自家的 HMM 是拿產生它們的那次搜尋來驗證，於是把測試改到保留資料上：基準測試必須獨立於模型建構時所用的東西。
+- 當一組對照擊敗了你的量測，就把那張表登出來，並寫明哪些結論不能再下。GEMS-Taiwan 2026 把一張 ELISA 登了出來，其中未轉形宿主讀到和自家構築體同一範圍，並寫明那裡的差異不能歸因於表現量。
+- 指名你沒能做的那一組，以及它本來能定案什麼。每一支獎台隊伍都做了這件事，Athens 做得最好。「Until it is run we describe the effect as attributable to the preparation」這句話對你毫無成本，卻是評審能看到的最清楚證據，證明你知道自己的資料沒有顯示什麼。
+- 絕對不要因為自己的擷取程式沒找到某個字串，就斷定那個字串不在 wiki 上。斜體的物種名與基因符號會從前端渲染的打包檔裡掉出來，所以在撤回一項發現之前，先去看渲染後的頁面。
+
+_方法與限制。 Cohort：2026 年三個組別——高中組、大學組、研究生組——全部 30 支 Top 10 團隊，名單取自 research/results2026.json；七個獎台席次（三個總冠軍、三個第一亞軍、一個第二亞軍；高中組與研究生組沒有頒出第二亞軍）視為一組，與其餘 23 支對照。research/teams/ 裡的團隊 JSON 檔只用來取 wiki 網址與獎項清單。對這個問題，它們不是有效的資料來源：可否證性對照正是專案摘要最會省略的東西，所以每一個分數都來自 wiki 本身。怎麼讀這些 wiki：每一次都先用帶瀏覽器 User-Agent 的 curl。30 支中有 14 支是靜態或伺服器端渲染，逐頁爬過 results、engineering、experiments、notebook、model、description、measurement、parts 與 contribution，並把相對連結逐頁解析。另外 16 支是前端渲染；對這些我們抓下 JavaScript 打包檔並擷取字串常量，再依檔名追查延遲載入的分塊檔——這一步在七支隊伍上多還原了 0.9 MB 到 3.3 MB 的文字，並改變了其中一支的分數。TU Delft 在 llms.txt 公布每一頁的 Markdown 版本，我們直接讀那些。Stanford University 是前端套版頁面，文字分散在十四個 content JavaScript 檔裡，逐一抓取。所有抓下來的 HTML 都先做 HTML 反轉義再比對樣式，因為小於符號是以實體寫成，少了這一步，搜尋 p 值的正規表達式什麼都找不到。在記下任何「不存在」之前，每一條樣式的每一個命中都被印出來讀過；也不使用裸字搜尋：tested 不是 t 檢定。計分：五個類別，每一類都只憑一句能從團隊自家頁面逐字引用的話給分。A，主要 assay 上的宿主單獨組、空載體組、未轉形組、未誘導組、熱殺死組或無酵素組，而不是轉形平盤或選殖膠片上的對照。R，一個寫明目的就是要排除自家結果某個指名替代原因的實驗。D，用設計移除混淆因子——把 motif 打亂而非刪除、配對溶劑、盲法、隨機分配、同樣大小的無活性蛋白——並把效應重測一次。H，用從擬合中保留下來的資料驗證，並寫明切分規則。U，公開一項對自家主要主張不利的結果。第六個旗標不計入這五類，記錄的是團隊指名了某一組自己沒做的對照、重複或比較，並說明少了它就不能下什麼結論。判斷會進入兩個地方：A 與 D 的邊界，以及某一組對照究竟落在主要 assay 還是選殖步驟上；換一位評分者，大概會有一兩支隊伍上下移動一個類別。各類計數為 A 28/30、R 26/30、D 17/30、H 12/30、U 30/30，第六旗標 23/30。我們看不到的東西：圖與膠片影像（每一個分數都只建立在文字上）、做了但沒寫出來的工作、需要登入或在凍結後才發布的頁面，以及我們沒打開的 PDF 內容。有一種失誤值得記下來，因為它在這次分析中差點造成一次錯誤的撤回：斜體的物種名與基因符號會被打包檔字串擷取丟掉，所以一句話在還原文字裡看起來被截斷，在渲染後的頁面上卻是完整的。擷取結果裡沒有的字串，不等於 wiki 上沒有。n 的限制：30 支隊伍，其中 7 支在獎台上。獎台與其餘隊伍相差 0.68 個類別，在 200,000 次置換中單尾 p 為 0.079；高中組的比較是兩支對八支；而五個計分類別中有三個已飽和在 26/30 以上，使得這個五分制幾乎沒有空間排出任何名次。n = 30 撐不起強推論，這裡的任何一句話都不該被當成強推論讀。誠實的讀法是：在獲獎團隊之間，這個習慣是一道門檻而不是一張名次表；而本報告那項雙向發現，收斂到「量在真正的標的上」這一半。_
 
 
 # 科學向善
@@ -1882,7 +1951,7 @@ _完成的樣子： 有兩三位學生能獨立建立、擬合模型並連同對
 - **不要期待有人會自己找上門。** 在檢查過的每一個 2026 得獎 repository 中，star 與 fork 都是零，而唯一能找到的外部採用數字，是 Stanford 的 SynBase 回報的 837 位學習者。Uni-Padua-IT 公開表示願意為任何團隊最佳化序列，結果沒有人回應，而他們把這件事寫在 wiki 上。釋出是必要條件而非充分條件：下面那三位外部使用者，必須一個一個親手去找。
 - **找到三位外部使用者，並記錄哪裡壞了。** 其他台灣學校、一間大學實驗室、一支 2027 iGEM 團隊。他們的抱怨就是第二版的路線圖。
 - **在這條路線上，先把光依賴性這個缺口補起來，因為整張路線圖都架在它上面。** ReLEAF 自己 2026 年的文件寫著 ELISA 隨時間沒有變化，ACCD 在兩種光色下的每一個時間點都是 2.6 到 3.2 µg/mL，而無質體對照組大約是 1.3；AmilCP 從未顯色；而專案裡每一個生物學成果，都來自組成型旁路模組，不是光控裝置本身。團隊自己點出兩個可能的解釋——LPA 中孔與孔之間的光干擾，以及紅光 LED 發在 640 nm，而 CcaSR 需要大約 672 nm 才能關閉——並且寫明兩者都沒有直接測試過。每一個大約是一週的工作量。在其中一個被解決之前，這整條路線所倚賴的光遺傳學主張，依 GEMS 自己的頁面來看都還沒有證據。
-- **把「真實樣本」設成一道門檻，而不是加分項。** 在 2026 年高中組 Top 10 裡，七支沒有站上頒獎臺的隊伍，七支全部停在替代物上——用合成的觸發 RNA 代替河水、用模型酯類、用報導基因代替療法。十支裡剛好只有一支把檢測跑在真實樣本上，也就是 HongKong-JSS 的土壤萃取液，而那支拿下亞軍。十支隊伍、兩個頒獎臺名額，撐不起因果主張，但這是頒獎臺剛好落在正確一側的唯一一條線——而且它現在從第二個獨立方向也站得住：在 GEMS 自己的三季裡，站上頒獎臺的那一年就是打在真實標的上的那一年。2024 年把三種毒蛋白餵給活的 Aedes albopictus 幼蟲，三種都報告了 LC50，以顯微鏡檢視 98 隻死亡幼蟲，還跑了一組 qPCR 免疫基因試驗對照空載體組，明確用來排除 E. coli 才是致死原因的可能。對 ReLEAF 來說，真實樣本並不遙遠：它就是真正噴到植物上的那份製備，而那份從未被檢測活性——所以每組 40 棵苗、p < 0.0001 的植物救援，也就是這個專案最強的成果，是建立在一份沒有被證明由反應器做出來的保護蛋白上。
+- **把「真實樣本」設成一道門檻，而不是加分項。** 在 2026 年高中組 Top 10 裡，七支沒有站上頒獎臺的隊伍，七支全部停在替代物上——用合成的觸發 RNA 代替河水、用模型酯類、用報導基因代替療法。十支裡剛好只有一支把檢測跑在真實樣本上，也就是 HongKong-JSS 的土壤萃取液，而那支拿下亞軍。十支隊伍、兩個頒獎臺名額，撐不起因果主張，但這是頒獎臺剛好落在正確一側的唯一一條線——而且它現在從第二個獨立方向也站得住：在 GEMS 自己的三季裡，站上頒獎臺的那一年就是打在真實標的上的那一年。2024 年把三種毒蛋白餵給活的 Aedes albopictus 幼蟲，三種都報告了 LC50，以顯微鏡檢視 98 隻死亡幼蟲，還跑了一組 qPCR 免疫基因試驗對照空載體組，明確用來排除 E. coli 才是致死原因的可能。對 ReLEAF 來說，真實樣本並不遙遠：它就是真正噴到植物上的那份製備，而那份從未被檢測活性——所以每組 40 棵苗、p < 0.0001 的植物救援，也就是這個專案最強的成果，是建立在一份沒有被證明由反應器做出來的保護蛋白上。　這項發現的另一半，現在已經在 30 支 Top 10 隊伍的 wiki 上量過了，而它排不出名次：30 支中有 26 支做過刻意殺掉對手解釋的實驗，30 支全部公開過對自己不利的結果。**GEMS-Taiwan 五類對照全有、是滿分，卻仍然停在頒獎臺之外**——另外四支滿分隊伍也一樣。所以對照是一道這支隊伍早就跨過的門檻，真正缺的是真實樣本那一半。2027 年不要把時間花在加對照上。
 
 _完成的樣子： 一個有網址、有授權、有文件，而且使用者不是 GEMS 學生的工具。_
 

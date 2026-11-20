@@ -1473,3 +1473,48 @@ That is now the third time a hand-written character or term check has produced f
 project -- 后 and 并 in the map, the 39 terminology pairs, and now 准. The pattern is consistent enough to
 state as a rule: never add a character or term to a check without first grepping the corpus for it and
 reading the hits. build.py's map is trustworthy precisely because everything in it survived that test.
+
+### Wave 8 result 3 of 3 — falsification-controls.json, published, and it narrows the headline finding
+
+The two-direction finding had two halves and only the real-target half had ever been measured. The other
+half has now been measured across all 30 Top 10 wikis of 2026, and it does not rank anyone.
+
+Every figure in the block was recomputed independently from its own published table before publication, and
+every one reproduces: control-type counts A 28, R 26, D 17, H 12, U 30 of 30; podium mean 4.2857 against
+3.6087 for the other 23; gap 0.677; permutation test on 200,000 shuffles gives one-sided p = 0.0800 against
+the agent's 0.079, which is Monte-Carlo noise on a different seed; no podium team below 4 and 10 of 23
+others below 4; seven perfect scorers of whom only UCAS-China and TU Delft reached a podium; held-back-data
+validation exactly 4 of 10 in each of the three sections. The four teams with no rival-mechanism exclusion
+are GHCIS, HKSSC, HongKong-HS and UCNZ, and the two with no chassis-only arm are Cornell and Athens. The
+letters in the table column are A chassis-only arm, R rival-mechanism exclusion, D confound removed by
+design then re-tested, H validation against held-back data, U unfavourable result published.
+
+The result that matters for 2027: **GEMS-Taiwan holds all five control types, a perfect score, and still
+placed outside the podium.** So did Eton-College-UK, Heidelberg, NUS-Singapore and UOttawa. Controls are a
+floor this team already clears, which means the real-target half is the only part of the finding that is
+actually missing for GEMS. The Phase 3 roadmap item now says this in both languages and ends with: do not
+spend 2027 adding controls. That is the second roadmap instruction of its kind, after "do not spend 2027
+rebuilding the wiki" — both are things the evidence says GEMS is already good at.
+
+Two further things from the block worth keeping. First, the cleanest signal in it is unscored and is about
+writing rather than bench work: 23 of 30 teams named an arm they could not run, and that is 7 of 7 on the
+podium against 16 of 23 off it. Athens is the type specimen, writing that "Separating the two requires that
+buffer-only arm, and until it is run we describe the effect as attributable to the preparation" -- and
+scoring only 3 of 5 while writing the best control reasoning in the cohort. Second, GEMS's own 2026 wiki
+published an ELISA in which the untransformed host read in the same range as the team's own constructs, and
+said plainly that the differences there cannot be attributed to expression level. That is the same
+disclosure habit as 2024's incomplete LC50 arm, so it is a three-season habit and not a one-off.
+
+Honourable mentions the block records: Muenster-University published a control that destroyed its own
+screening method and concluded "the screening method cannot work in procaryotic cells"; Toronto audited its
+own benchmark, found it circular because the HMMs were built from the search used to test them, and moved
+validation to a held-out set; HongKong-JSS printed "we forgot to include matching 0 uM samples, an
+empty-vector control and an untransformed E. coli control", added them, and reported that its sensors then
+looked weaker.
+
+Method note for future waves: the agent read wikis rather than pattern-matching the team files, which was
+the right call -- reading the pages rescued credits for GHCIS, KAUST-KSA, HKSSC, HongKong-HS and UZurich
+that its own regex pass had missed. 14 of the 30 wikis are static or server-rendered and crawled fine with
+curl; 16 are client-rendered and needed JavaScript bundles plus lazy-loaded chunks found by filename, which
+added up to 3.3 MB of text on seven teams. TU Delft publishes Markdown at llms.txt. Stanford's text lives in
+14 separate content JS files.
