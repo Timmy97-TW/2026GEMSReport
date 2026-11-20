@@ -1912,3 +1912,124 @@ project's central claim, was deliberately kept out of every brief: the agents we
 and the model's subject as two separate observations, and the classification is mine to make afterwards. The
 fifth agent is on the metrology substrate the three topics will need -- which quantities in the Taiwan
 AI-hardware chain are expensive or slow to measure today.
+
+---
+
+## Session 7, part 2 -- the Best Model anatomy lands, and it corrects my own reading
+
+Four agents returned on the three-season anatomy. The block is live as bestmodel-anatomy.json
+(drylab, order 31), 9 cards, a 15-row table of every High School recipient across three seasons,
+and a 12-line checklist. Full agent reports preserved at
+tool-results/toolu_01YYnWNFmqEhRdamkKrGuTuR.txt (2026 High School) and
+tool-results/toolu_01TZAVNncUZ1uMcUH1Xqt2dN.txt (the six university winners); condensed working
+notes in scratchpad/bestmodel_2025hs.md, bestmodel_2026hs.md and bestmodel_synthesis.md.
+
+**The finding.** In each of the three seasons the High School winner was NOT the best-validated
+team on its slate, and twice had the thinnest statistics. 2024's winner IEA published no equation,
+no parameter, no fitting method, no statistic, no validation and no numeric result, and left the
+iGEM boilerplate on the page. 2025's winner GreatBay-SCIE had one R-squared and no computational
+error bars, while Lambert-GA on the same slate reported a temporal hold-out, leave-one-year-out
+cross-validation, AICc selection across four structures and Tukey intervals, and was a nominee.
+2026's winner Lambert-GA reports no RMSE, R-squared or residual for any of its four models, and the
+team with the strongest validation design of the seven examined was GEMS-Taiwan, not recognised in
+the category at all.
+
+**What the three winners share: the model is load-bearing.** IEA's generative model emitted the
+enzyme sequences, so it was the deliverable. All 18 of GreatBay-SCIE's wet-lab variants exist
+because a model ranked them. Lambert's 2026 pipeline produced the 35 candidates and its own verdict
+then demoted the flagship protein component in writing. Second shared property: the computational
+work is published as something a stranger can run. Third: new effort was spent to serve the model
+(IEA built a mass-spectrometry assay over 8,000 proteins because the training data did not exist).
+Fourth: each published a null or a self-demotion.
+
+**MY EARLIER READING WAS WRONG, and in which direction.** I had told the user the 2026 GEMS models
+were good but did not point at the project's central claim. The evidence reverses that. The stress
+index IS the trigger in the headline loop and sits closer to the claim than Mingdao's or
+GreatBay-SCIE's modelled quantities, and both of those were recognised. Four of six university
+winners won on a supporting quantity; 2025 Peking ran eight models and not one addressed the
+therapeutic efficacy its headline claimed. So distance-from-claim does not separate recognised from
+unrecognised teams. On statistical and documentation practice GEMS is at or above the recognised
+five. The actual gap is REACH: no mechanistic model of its own engineered system, where all five
+recognised 2026 teams have one. GEMS's trajectory is 2024 a ten-equation SEI-SEIR system that was
+the headline claim, 2025 kinetic symbols defined but never parameterised, 2026 no mechanistic model
+of the engineered system at all. The statistics improved every year and the model stopped carrying
+weight.
+
+**The strongest single precedent for the user's own instruction.** The 2026 Overgraduate winner,
+Toronto, won Best Model on a model that did not work: it asked whether protein-language-model
+embeddings predict PET-degrading activity under an honest split, answered no, printed a correlation
+of 0.72 under a leaky split beside minus 0.025 under a grouped one, quantified the leakage avoided,
+ran sequence length and amino-acid composition as dumb baselines, reported that the baselines win,
+and states that no library has yet been chosen by the model.
+
+**Money is not the gate.** The 2026 Undergraduate winner XJTLU-China ran CPU-only and
+pip-installable, with a one-sentence compute statement. HongKong-JSS reached 1st Runner-up on a
+laptop and about USD 357 of hardware; Mingdao took a Best Model slot on Python, Excel and a
+household glucose meter; Lambert's winning season used under USD 400 of rented GPU. The six things
+money does buy are an institutional HPC allocation, A100-class cards for days, hundreds of
+GPU-hours, production all-atom MD, structure prediction in the thousands, and a wet lab able to
+produce the measurement that settles the model.
+
+**Still open as a differentiator.** Not one of the six university winners reports RMSE, none reports
+chi-squared, R-squared appears on exactly one page, and across all five recognised 2026 High School
+teams no mechanistic model carries an R-squared or RMSE against the team's own data. Held-out
+validation is arriving from the top: all four 2024-25 university winners held nothing back, both
+2026 university winners made held-out split design the centrepiece, and High School runs 0 of 5,
+1 of 5, 2 of 5. Publishing a failed prediction is now the entry fee, not the edge.
+
+### Verification of the scheduled prompt's prior-art claims, before building novelty on them
+- McGill 6040: CONFIRMED and sharper than the summary. Undergrad. S. cerevisiae EBY100 displaying
+  lanmodulin variants via Aga1-Aga2 for selective rare-earth binding, plus a blue-light
+  VP16-EL222 / C120 circuit driving a truncated 678FLO1 flocculin so loaded cells settle by gravity
+  instead of centrifugation. Light-induced flocculation 66-75% against 24-25% in dark controls.
+  Light drives HARVESTING, not metal binding or release. Awards: Best Entrepreneurship nominee and
+  Best Biomanufacturing nominee.
+- SMS-Shenzhen 6165: CONFIRMED, after a false positive of my own. A term count showed Langmuir 4,
+  Freundlich 4, isotherm 2 -- but reading the hits shows every one of them is the report's own
+  sentence saying the OPPOSITE: "There is no mechanistic or kinetic model - no Langmuir or
+  Freundlich isotherm fitting, no adsorption kinetics, no structural modelling of the ion-binding
+  peptides - which is the clearest gap in [an adsorption project]." High School, Best New Composite
+  Part nominee, selective metal biosorption from spent lithium-ion battery recycling wastewater at
+  parts-per-million. The file's own takeaway: a single afternoon with their own single-metal data
+  would have filled it, and the limiting factor is mentorship. THE ISOTHERM AND KINETICS GAP IS
+  REAL AND OPEN IN THE HIGH SCHOOL DIVISION.
+- No team in the 106 touched semiconductors: CONFIRMED. semiconductor 0 files, wafer 0, ultrapure
+  water 0, germanium 0, gallium 0, indium 0, CMP 0, TSMC 0, data centre 0. The 16 "fab" hits are
+  fabric and fabrication; the one "photoresist" hit is photoresistors, an electronic component, in
+  6263; the two "cleanroom" hits are medical-device registration (ISO 13485) and the phrase "needs
+  neither a cleanroom"; the two "rare earth" hits are McGill and SMS-Shenzhen. The novelty file's
+  six semiconductor-or-wafer-or-PFAS matches are all PFAS.
+- novelty-check.json cohort positions, re-read: Concept A is contested inside the cohort by 6040
+  and 6165. Concept B, a multi-promoter stress-reporter panel for mixture toxicity, is UNCONTESTED
+  in the cohort -- the nearest is HongKong-JSS 6158 MerMAID, a single MerR mercury assay, high
+  school -- and it is the literature that kills it. Concept C, a wafer or any defined reference
+  surface as an assay substrate, is UNCONTESTED in the cohort; UOregon 6041 mentions silicon only
+  as a wastewater contaminant.
+
+### White List, re-read for the three topics rather than trusted from the summary
+- Human and primate cell lines certified free of known pathogens ARE white-listed, MCF-7 named.
+  But the ACTIVITIES axis requires a Check In for "laboratory experiments using human samples, such
+  as blood, DNA, other bodily specimens... including from members of the team". So the line for a
+  medical topic is exact: a certified cell line needs no Check In, a human sample does, and a high
+  school team has no Check In route. This is more open than the earlier read suggested.
+- S. cerevisiae and K. pastoris were ADDED to the white list on 15 April 2025, with a required plan
+  to mitigate spore formation. So yeast surface display plus an optogenetic circuit -- McGill's
+  exact stack -- is white-list clean for a high school team.
+- Protein-coding genes from animals, plants or RG1/RG2 microorganisms are white-listed except the
+  dangerous categories, so lanmodulin and metal-binding peptides are clean.
+- "Bringing a product of a genetically modified organism outside the lab" requires a Check In,
+  which restates the directional rule from the rules side.
+
+### Housekeeping
+Eleven formal-variant city names in taiwan-cohort.json normalised to the user's preferred form, all
+of them descriptive geography rather than institution names. The place name itself needed no change:
+its only two occurrences anywhere are inside a MANAGER.md line recording the earlier audit that
+found zero. Fourth instance of the read-the-hits lesson.
+
+### Open
+The three Taiwan AI-hardware proposals are not written. The structural spine is settled -- the
+load-bearing model is an isotherm and kinetics fit on the team's own data, which is the gap
+SMS-Shenzhen left open in this exact division -- but the industrial target quantity is still coming
+from a metrology agent, which is running with three children of its own. Writing the proposals
+before it lands would mean guessing at analytes, and several industrial figures have already failed
+sourcing in this project.
