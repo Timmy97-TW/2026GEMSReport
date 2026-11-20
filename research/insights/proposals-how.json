@@ -88,17 +88,17 @@
       "kicker_zh": "每個提案怎麼評分",
       "title": "The same nine questions, and the first two are gates",
       "title_zh": "同樣的九個問題，而前兩題是關卡",
-      "body": "Every proposal is answered against the selection guide's instrument, in order: the real target and whether it is in hand by week six; the readout and the instrument that already exists; the model and the rows held back; the rival explanation and the arm that kills it; the named outside person; the multiplying audience; the cost of the tenth against the first; the artefact that still works a year after the freeze; and the one sentence a judge should repeat. **Questions one and two are gates rather than scores** — a proposal that fails either is not a candidate however interesting the biology is, and one of the six below is marked down on exactly that basis.",
-      "body_zh": "每一個提案都依選題指南的工具逐題作答，順序一致：真實標的是什麼、第六週前在不在手上；讀值與已經存在的儀器；模型與留存的資料列；對手解釋與殺掉它的那一組實驗；具名的外部人士；會放大的對象；第十次相對第一次的成本；凍結一年後還能用的產出；以及希望評審重複的那一句話。**第一題和第二題是關卡而不是分數**——過不了任何一題的提案就不算候選，不管生物學多有趣；下面六個之中，就有一個正是因為這一點被扣分。",
+      "body": "Every proposal is answered against the selection guide's instrument, in order: the real target and whether it is in hand by week six; the readout and the instrument that already exists; the model and the rows held back; the rival explanation and the arm that kills it; the named outside person; the multiplying audience; the cost of the tenth against the first; the artefact that still works a year after the freeze; and the one sentence a judge should repeat. **Questions one and two are gates rather than scores** — a proposal that fails either is not a candidate however interesting the biology is, and one of the six below is marked down on exactly that basis. **A third screen then runs behind both gates and matters more than either:** iGEM's White List, which for a high school team is a hard ceiling rather than a default, because this division has no Check-In route at all.",
+      "body_zh": "每一個提案都依選題指南的工具逐題作答，順序一致：真實標的是什麼、第六週前在不在手上；讀值與已經存在的儀器；模型與留存的資料列；對手解釋與殺掉它的那一組實驗；具名的外部人士；會放大的對象；第十次相對第一次的成本；凍結一年後還能用的產出；以及希望評審重複的那一句話。**第一題和第二題是關卡而不是分數**——過不了任何一題的提案就不算候選，不管生物學多有趣；下面六個之中，就有一個正是因為這一點被扣分。**而在兩道關卡後面還有第三道篩查，它比前兩道都更要緊：**iGEM 的白名單——對高中組隊伍而言那是一道硬天花板，不是預設值，因為這個組別根本沒有 Check-In 管道。",
       "chips": [
         "nine questions, in order",
         "two gates",
-        "one candidate is marked down"
+        "and a White List ceiling behind them"
       ],
       "chips_zh": [
         "九個問題，依序",
         "兩道關卡",
-        "有一個候選被扣分"
+        "後面還有一道白名單天花板"
       ]
     },
     {

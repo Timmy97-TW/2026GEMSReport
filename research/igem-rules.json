@@ -1,0 +1,992 @@
+{
+  "fetchedAt": "2026-11-20",
+  "purpose": "Eligibility screen for GEMS-Taiwan (HIGH SCHOOL division) 2027 candidate projects. Every fact below carries the exact URL it was read from and the season it belongs to.",
+  "caveat": "All iGEM sites (competition.igem.org, responsibility.igem.org, teams.igem.org) are client-rendered React SPAs; curl of a page URL returns only an app shell. Every quote below was extracted from the per-page JavaScript content chunks that those pages load (igem-release build 96be78f017fa2edebea59e5f1c091d7dd31f1e49, served 2026-11-20). The text is verbatim from those chunks, which is what the page renders, but line breaks and inline links were normalised. The most recent published season is 2026 (results published 2026-11-16); no 2027 rules are published yet, so a 2027 team must re-verify every item once the 2027 season opens. Nothing here is filled in from memory: where a source could not be read, the question is in openQuestions and marked unverified.",
+  "seasonPublished": "2026",
+  "divisionOfInterest": "High School",
+
+  "whiteList": {
+    "what": "A published list of the organisms, parts and activities an iGEM team may use WITHOUT asking permission. Anything not on it requires an approved Check-In Form from the Safety and Security Committee (SSC) before the work starts. For high school teams it is not a default but a hard boundary: there is no Check-In route out of it.",
+    "quote": "This page provides the details of organisms, parts, and activities teams can use in iGEM, along with those which require approval from the Safety and Security Committee before they can be used.",
+    "quoteSource": "https://responsibility.igem.org/guidance/white-list",
+    "scope": "NOT purely organism-level. The White List has three separate axes, each with its own allowed / check-in-required columns: (1) whole organisms, (2) parts (genetic sequences), (3) activities. A project can be blocked by any one of the three even if the other two are clean. 'Whole organism' is defined on the page; isolated genomes and individual nucleic acids/proteins count as parts, not organisms.",
+    "wholeOrganismDefinitionQuote": "For the purposes of this White List, a \"whole organism\" is an entire cell or multicellular organism, whether alive or dead. Intact, isolated viral genomes are also considered \"whole organism\", because many viral genomes can be pathogenic if they enter a host cell, even without the viral capsule. (Isolated non-viral genomes are considered parts. Individual nucleic acids and proteins are also parts.)",
+    "riskGroupsInvolved": {
+      "summary": "Risk Group 1 microorganisms are white-listed. Risk Group 2 is NOT white-listed (it needs a Check-In, because it needs enhanced containment). Risk Group 3 and 4 whole organisms, and parts from Risk Group 4 organisms, are banned outright for every team, Check-In or not.",
+      "rg1": "White-listed. Quote: 'Risk Group 1 microorganisms (For example: E. coli, B. subtilis spp.)'",
+      "rg2": "Check-In required. Quote: 'All organisms that require enhanced containment (e.g.BSL2), such as those from Risk Group 2 or plant pathogens, or that otherwise pose a risk should they be released'",
+      "rg3": "Banned. Quote (Risk Groups page): 'Risk Group / Safety Level 3 ... Whole organisms not permitted in iGEM.' Any PART from a Risk Group 3 organism requires a Check-In, 'regardless of its function'.",
+      "rg4": "Banned entirely. Quote (Risk Groups page): 'Risk Group / Safety Level 4 ... Neither parts nor organisms permitted in iGEM.' and 'iGEM teams are not allowed to use ANY part from a Risk Group 4 organism.'",
+      "source": "https://responsibility.igem.org/guidance/risk-groups",
+      "asOf": "2026 season (page undated; served in the 2026 build)"
+    },
+    "howToCheck": [
+      "Read the White List table itself at https://responsibility.igem.org/guidance/white-list (the list IS published as a list of categories plus named examples, not as a species-by-species registry).",
+      "Determine the Risk Group of the organism. iGEM states there is no single worldwide list and names its recommended sources: China CDC list of pathogenic microorganisms; NIH Guidelines Appendix B; ABSA Risk Group Database (https://my.absa.org/tiki-index.php?page=Riskgroups); Indian Dept of Biotechnology 2021 list; Canadian Pathogen Safety Data Sheets (PHAC); ATCC product sheets; DSMZ catalogues. Quote: 'To determine the Risk Group of an organism, we must consult reliable sources. There is no world-wide standard list of microorganisms and their Risk Groups.' (https://responsibility.igem.org/guidance/risk-groups)",
+      "For Registry parts, check whether the part carries a Safety Committee Red Flag. iGEM publishes the complete Red Flag list at https://parts.igem.org/Special:WhatLinksHere/Template:SafetyFlag . NOTE: this URL returned HTTP 405 behind a CAPTCHA to automated fetch on 2026-11-20, so the list itself is UNVERIFIED here and must be opened in a browser by a human.",
+      "If still unsure, email safety@igem.org. Quote: 'Ask us! Contact safety@igem.org. Alternatively, you could choose to send a brief Check In Form even if you are unsure.' (not available to high school teams - see highSchool section)"
+    ],
+    "stabilityWithinASeason": {
+      "quote": "As we learn more, we might add things to the White List, but we will not [remove] things from the White List until after the Jamboree each year. So, if something is on the White List now, it will stay on the White List for the whole competition season.",
+      "note": "The word 'remove' sits inside a bolded fragment in the source markup and was reconstructed from context; the rest of the sentence is verbatim.",
+      "source": "https://responsibility.igem.org/guidance/white-list"
+    },
+    "entries": {
+      "organisms": [
+        {
+          "row": "Risk Group 1 microorganisms",
+          "whiteList": "Risk Group 1 microorganisms (For example: E. coli, B. subtilis spp.)",
+          "checkInRequired": "Spore-forming fungi (including from Risk Group 1, but excluding S. cerevisiae, K. pastoris)"
+        },
+        {
+          "row": "Yeasts added 2025",
+          "whiteList": "Saccharomyces cerevisiae, and Komagataella (Pichia) pastoris. Teams must have a plan to mitigate the risks of spore formation and avoid spore-forming conditions",
+          "addedQuote": "As of April 15, 2025, two new organisms have been added to the White List: Saccharomyces cerevisiae, and Komagataella (Pichia) pastoris. These Risk Group 1 fungi are generally safe to work with and are useful expression systems for eukaryotic proteins.",
+          "condition": "Teams must be aware that these organisms have the potential to form spores under stressful conditions like nitrogen-starvation or carbon-starvation. Teams must have a plan to mitigate the risks of spore formation."
+        },
+        {
+          "row": "Higher-containment organisms",
+          "whiteList": "(none)",
+          "checkInRequired": "All organisms that require enhanced containment (e.g.BSL2), such as those from Risk Group 2 or plant pathogens, or that otherwise pose a risk should they be released. Any organisms obtained from outside the lab or from non-traditional / non-institutional suppliers"
+        },
+        {
+          "row": "Plant-transfection strains",
+          "whiteList": "Commercially available disarmed strains of plant pathogens commonly used to transfect plants (such as Agrobacterium tumefaciens)",
+          "checkInRequired": "Wildtype strains of plant pathogens commonly used to transfect plants (such as Agrobacterium tumefaciens) - Other disarmed strains of plant pathogens intended to be used to transfect plants, including those prepared by an iGEM team"
+        },
+        {
+          "row": "Phages and viruses",
+          "whiteList": "Bacteriophages T2, T4, T7, M13, P1, PhiX174 (Phi X 174), and lambda (Lambda), unless containing a virulence factor - Phagemids",
+          "checkInRequired": "Other viruses and bacteriophages, including SARS-CoV-2 virus"
+        },
+        {
+          "row": "Cell lines",
+          "whiteList": "Human and primate cell lines that have been tested and certified free of known pathogens (such as MCF-7; consult your vendor about certification!) - Cell lines from plants, fungi, or animals that are not primates (such as CHO cells or plant cells)",
+          "checkInRequired": "All primary isolated cells (that is, cells taken directly from the body of a multicellular organism) - All organisms isolated from an environmental sample",
+          "tensionFlag": "IMPORTANT AMBIGUITY for a medical project: certified-pathogen-free human/primate cell lines are listed as ON the White List, yet the Risk Groups page's own table assigns 'Most human and mammal cell lines' to Risk Group 2, and the organisms row above puts anything needing BSL2 in the Check-In column. Both statements are quoted verbatim here. A high school team that cannot file a Check-In should treat human cell lines as a question for safety@igem.org BEFORE designing around them, not as settled."
+        },
+        {
+          "row": "Multicellular model organisms",
+          "whiteList": "C. elegans (nematodes) - Physcomitrella patens, [Arabidopsis] spp., [Nicotiana] spp. - Teams are responsible for ensuring that any use of a model organism is consistent with their local, institutional and national rules and regulations",
+          "entryNote": "Two genus names in this row render as italic spans that the extractor could not recover; they are given in brackets as best-effort and should be re-read from the live page.",
+          "checkInRequired": "Other multicellular organisms (animals, plants, insects, etc.) - Fertilized chicken eggs no greater than 2/3 development stage - Additional permission is required from the Safety and Security Committee for the use of any vertebrates (e.g. rats, mice, guinea pigs, hamsters, amphibians, and fishes), or invertebrates, like social insects (e.g. bees, cockroaches), cephalopod molluscs (e.g. octopus, squid), decapod crustaceans (e.g. crabs, lobster, shrimp) and Embryos (e.g. fertilized chicken eggs) past species-specific gestational thresholds in iGEM projects"
+        },
+        {
+          "row": "Catch-all",
+          "whiteList": "(none)",
+          "checkInRequired": "Any organism not explicitly white listed"
+        }
+      ],
+      "parts": [
+        {
+          "row": "Registry parts",
+          "whiteList": "All Registry parts, except those with a Red Flag placed by the Safety Committee",
+          "checkInRequired": "Registry parts that have a Red Flag. A complete list of parts with Red Flags can be found [at https://parts.igem.org/Special:WhatLinksHere/Template:SafetyFlag]"
+        },
+        {
+          "row": "Protein-coding genes",
+          "whiteList": "Proteins or protein-coding genes from animals, plants, or Risk Group 1 / Risk Group 2 microorganisms, EXCEPT those in the list of dangerous categories",
+          "checkInRequired": "Proteins or protein-coding genes in the following dangerous categories: Virulence factors; Factors that help pathogens evade or shut down the immune system; Factors that help pathogens halt the host's DNA/RNA replication, transcription, or translation; Factors that regulate the immune system, such as cytokines and interferons; Proteins that are toxic to humans, animals, or plants; Enzymes that produce a molecule that is toxic to humans, animals, or plants; Parts likely to increase potential for horizontal gene transfer, such as transferase"
+        },
+        {
+          "row": "Non-protein-coding parts",
+          "whiteList": "Non-protein-coding parts in the following categories: Promoters, RBSes, Terminators; Binding sites for transcriptional regulators, endonucleases, and other proteins that bind to DNA; Aptamers and catalytic RNAs; CRISPR guide RNAs, microRNAs, small interfering RNAs, and short hairpin RNAs that do not target human genes",
+          "checkInRequired": "All other non-protein-coding parts or genes, including: CRISPR guide RNAs, microRNAs, small interfering RNAs, and short hairpin RNAs that target human genes; Parts that encode non-proteinaceous toxins, such as bioactive peptides, non-protein amino acids, and other non-proteinaceous components harmful to humans, animals, or plants; Parts likely to increase potential for horizontal gene transfer, such as origin-of-transfer sequences",
+          "medicalProjectFlag": "Any guide RNA / miRNA / siRNA / shRNA that TARGETS A HUMAN GENE is off the White List. For a high school team with no Check-In route, that rules out a large class of RNA-therapeutic and human-gene-knockdown project designs."
+        },
+        {
+          "row": "Prions",
+          "whiteList": "Prions from non-mammalian organisms, such as yeast",
+          "checkInRequired": "Prions from mammals, such as human PrP"
+        },
+        {
+          "row": "Risk Group 3 parts",
+          "whiteList": "(none)",
+          "checkInRequired": "Any part from a Risk Group 3 organism, regardless of its function"
+        },
+        {
+          "row": "SARS-CoV-2 parts",
+          "whiteList": "(none)",
+          "checkInRequired": "Any fragment of the SARS-CoV-2 virus"
+        },
+        {
+          "row": "Australia Group listed pathogens and toxins",
+          "whiteList": "(none)",
+          "checkInRequired": "Any part containing any gene which could endow or enhance pathogenicity, or in itself or through its transcribed or translated products, represent a significant hazard to health from a human or animal bacterial or fungal pathogen or a plant pathogen listed by the Australia Group; Any part containing any gene from a human or animal viral pathogen listed by the Australia Group; Any part containing any gene which codes for a [toxin] listed by the Australia Group",
+          "referencedLists": [
+            "https://australiagroup.net/en/human_animal_pathogens.html",
+            "https://australiagroup.net/en/plants.html"
+          ],
+          "entryNote": "The third bullet's object (rendered emphasised in the source, most likely 'toxin') could not be recovered by the extractor and is bracketed."
+        },
+        {
+          "row": "Catch-all",
+          "whiteList": "(none)",
+          "checkInRequired": "Any part not explicitly white listed"
+        }
+      ],
+      "activities": [
+        {
+          "row": "General",
+          "whiteList": "All activity, except those explicitly listed as requiring a check in"
+        },
+        {
+          "row": "Human samples",
+          "checkInRequired": "Conducting laboratory experiments using human samples, such as blood, DNA, other bodily specimens, and health or psychological outcomes, including from members of the team"
+        },
+        {
+          "row": "Animals",
+          "checkInRequired": "Working with animals or samples from animals (in iGEM, \"animals\" are vertebrates, like rats or fish, and higher-order invertebrates, like octopus and bees)"
+        },
+        {
+          "row": "Antimicrobial resistance",
+          "checkInRequired": "Experiments likely to increase the antimicrobial resistance of any human, animal, or plant pathogen. Experiments making use of antimicrobial resistance factors not in common use in the host institution. Experiments intended to confer resistance for an antimicrobial not previously conferred to that organism (e.g., conferring vancomycin resistance to a bacteria that has never been made resistant in the past)"
+        },
+        {
+          "row": "Release beyond containment",
+          "checkInRequired": "Bringing a product of a genetically modified organism outside the lab"
+        },
+        {
+          "row": "Gene drives",
+          "checkInRequired": "Experiments likely to bias the inheritance frequency of a genetic marker in an organism's progeny, such as through the creation of a [gene drive]"
+        },
+        {
+          "row": "Making agents more hazardous (dual use)",
+          "checkInRequired": "Making a hazardous biological agent more hazardous, such as enhancing the virulence or transmissibility of a human, plant, or animal pathogen, or altering its host-range. Creating a novel hazardous biological agent, such as by rendering a non-pathogen virulent, or conferring the ability to damage or degrade important materials (such as electronics, plastics, etc.). Making a biological agent or toxin more suitable for use as a weapon"
+        },
+        {
+          "row": "Immunity / vaccine / diagnostic evasion",
+          "checkInRequired": "Potentially disrupting immunity or immune function - Potentially rendering a vaccine ineffective - Potentially enabling a hazardous biological agent to evade common diagnostic or detection tools"
+        },
+        {
+          "row": "Controlled chemicals",
+          "checkInRequired": "Use of controlled chemicals, including those that are particularly hazardous, explosive or psychoactive, will need approval in advance from the Safety and Security Committee. Permission should be requested using a Check In Form",
+          "source": "https://responsibility.igem.org/guidance/working-safely"
+        }
+      ]
+    },
+    "thirdPartyCollaborators": {
+      "quote": "Collaborating with other researchers, institutions, or 3rd party vendors does not remove the requirements for teams to obtain approval for this work through a Check-In Form, and Animal Use Form (if applicable). If your team is not able to receive approval from the SSC for your proposed work, either due to insufficient information in your Check-In or Animal Use Form, the Safety and Security Committee declining to approve your Check-In or Animal Use Form, or by virtue of being a high school team (and therefore unable to seek approval via Check-In Forms), you should not engage collaborators to work beyond the White List.",
+      "whyItMatters": "This closes the single most tempting workaround for a high school team: having a friendly university lab, a vendor, or an alumni contact do the off-White-List step. It is explicitly forbidden, and high school status is named as a reason you cannot do it.",
+      "source": "https://responsibility.igem.org/guidance/white-list"
+    },
+    "source": "https://responsibility.igem.org/guidance/white-list",
+    "policyPageSource": "https://responsibility.igem.org/safety-policies/white-list",
+    "asOf": "2026 season build; list content dated 'As of April 15, 2025'"
+  },
+
+  "checkIn": {
+    "what": "The Check-In Form is the request a team files to get the Safety and Security Committee's written permission to use an organism, part or activity that is not on the White List.",
+    "quote": "A Check In is how you ask iGEM's safety experts to review your plans for acquiring, using, or working with a higher-risk organism, part, or activity, and how iGEM approves those plans or suggests changes. Send one for anything that is not on the White List.",
+    "whoApproves": "The Safety and Security Committee (SSC), reachable at safety@igem.org. Quote (Rules & Policies): 'A group of experts in biosafety, biosecurity, and risk assessment, drawn from across industry, academia, and government.' Committee members listed at https://responsibility.igem.org/about/people",
+    "whoFilesIt": "Quote: 'We encourage team members, rather than instructors or advisors, to complete them. Any team member may send a Check In Form, and your team may submit as many as you need.'",
+    "whenItMustBeFiled": "Before acquisition or use, not before the deadline. Quote: 'Submit the form [before] you acquire or work with the organism, part, or activity - not after.' and 'Once the Safety and Security Committee has approved your Check In, you may begin working with that organism, part, or activity.'",
+    "appliesEvenToPreliminaryWork": "Quote: 'The Check In requirement applies to all organisms and all parts that you will handle in the lab, even if they will not be engineered as part of your final project. Please Check In for every organism or part you want to acquire that is not on the White List.' Culturing an organism merely to extract DNA from it also requires a Check-In.",
+    "howLongItTakes": {
+      "quote": "We expect to reply to most Check Ins within a few days. If you have not heard back from us after one full week following submission, email safety@igem.org.",
+      "practicalNote": "Quote (requirements tab): 'This is the last date the form accepts submissions - it is not the date to aim for. Approval has to be in hand before you acquire the material or begin the work, and review takes a few days, so submit as soon as you know you need to.'"
+    },
+    "combiningParts": "Quote: 'If the parts all come from the same organism of origin, you may combine them on a single Check In, but make sure you give complete information about each part. If the parts come from different organisms of origin, please send separate Check Ins.'",
+    "languageAndPublicity": [
+      "Quote: 'Your iGEM Safety Forms must be submitted in English to facilitate review and record-keeping.' Supporting documents (institutional approvals, ethics letters) may be uploaded in the original language.",
+      "Quote: 'In order to reassure our community that iGEM's synthetic biology work is done in a safe and secure manner, the safety forms we use for risk assessment of team projects are openly available. Write with that in mind.'"
+    ],
+    "doesNotReplaceInstitutionalApproval": "Quote: 'The iGEM Safety Committee does not replace institutional review boards, or your local government. You are responsible for obtaining from your university or government any approvals that might be necessary.' And: 'Approval from your university, institutional review board, or national authority does not substitute for iGEM's approval - and iGEM's approval does not substitute for theirs. You need both.'",
+    "ifYouAlreadyStarted": "Quote: 'Just let us know. Email safety@igem.org to describe the situation, and send us a Check In promptly. Tell us in the \"Further Comments\" section what you have done with the organism or part already.'",
+    "neverApproved": {
+      "quote": "Some of the most dangerous organisms and parts are not allowed in iGEM, even with a Check In: Whole organisms from Risk Group 3; Whole organisms from Risk Group 4; Parts from Risk Group 4 organisms; High concentrations or large volumes of SARS-CoV-2 virus",
+      "quoteSource": "https://responsibility.igem.org/safety-policies/white-list",
+      "formLevelList": [
+        "Using organisms from Risk Group 3 or 4",
+        "Using parts from an organism in Risk Group 4",
+        "Releasing or deploying a genetically modified organism outside the lab",
+        "Testing your product on humans (including yourselves)"
+      ],
+      "formLevelListSource": "https://teams.igem.org/go/safety (Safety Forms app, 'Never permitted' list; asset assets/safetyPolicies-DSm3uuaE.js)",
+      "formLevelListQuote": "These activities are strictly prohibited at iGEM. There is no form that makes them allowable.",
+      "redesignAdvice": "Quote: 'If you find that you want to use a banned organism/part, you should redesign your project to use a safer substitute. Consult your advisor or contact us at safety@igem.org to get advice on choosing a substitute.'"
+    },
+    "specialCaseGeneDrives": {
+      "quote": "Gene drives are not allowed in iGEM projects without a special exception from the Safety Committee. The requirements go beyond simply submitting a Check In Form, though that can be the first step.",
+      "extraRequirements": "No environmental release; project must be shown safe under an adaptive risk management framework; implement safeguards per Akbari et al.; the team AND its faculty advisor must take part in 'a mandatory conference call with experts on drives and on safeguards'; all commercial genetic material orders must be screened for regulated sequences; no submitted Registry part may contain a functional gene drive ('a drive in a single part will not be accepted and this can have implications for medal criteria').",
+      "source": "https://responsibility.igem.org/safety-policies/gene-drives"
+    },
+    "deadlines2026": {
+      "checkInFormClosing": "2026-09-23 15:00 UTC",
+      "animalUseFormClosing": "2026-09-02 15:00 UTC",
+      "projectSafetyFormPreliminary": "2026-07-01 15:00 UTC",
+      "projectSafetyFormFinal": "2026-10-07 15:00 UTC",
+      "expoBoothSafetyProposal": "2026-09-16 15:00 UTC",
+      "calendarQuote": "Teams must submit Check-in Forms to request permission before working with any organism, part or activity that is not on the White List. This is the last date to submit Check-in Forms. Teams may submit Check-in Forms at any time before the deadline, but approval is required before beginning covered work.",
+      "timezoneNote": "Calendar entries are stored as ISO instants with a trailing Z (e.g. 2026-09-23T15:00:00Z) and the registration page states deadlines as '15:00 UTC', so UTC is confirmed.",
+      "source": "https://competition.igem.org/calendar",
+      "secondarySource": "https://competition.igem.org/deliverables/guides#h-safety-forms"
+    },
+    "missedFormConsequence": "Quote: 'Complying with the safety and security requirements - including providing all the information in these forms by the relevant deadlines - is a condition of competing at iGEM. Failure to do so can lead to immediate disqualification from the Competition and referral to the Responsible Conduct Committee.' Also: 'Teams that do not submit the Project Safety Form may be disqualified from the competition.'",
+    "source": "https://teams.igem.org/go/safety",
+    "secondarySource": "https://responsibility.igem.org/guidance/white-list",
+    "asOf": "2026"
+  },
+
+  "highSchool": {
+    "headline": "A high school team has NO Check-In route. Its project must be buildable entirely from the White List, or it cannot be done in iGEM at all.",
+    "theRule": {
+      "quote": "High school teams must use organisms, parts and activities from the White List in their iGEM projects.",
+      "source": "https://competition.igem.org/about/rules-and-policies",
+      "sectionAnchor": "#h-safety-rules",
+      "alternateUrlSeenInSource": "https://competition.igem.org/participation/rules-and-policies#h-safety-rules",
+      "asOf": "2026"
+    },
+    "formsDisabled": {
+      "quote": "We are a High School team. Do we file Check In and Animal Use Forms? No. High School teams are required to conduct all their work with organisms, parts, and activities from the White List, so Check In Forms and Animal Use Forms are disabled for that section - you will not see them on the Submissions tab. Your team files the Project Safety Form only. Work that would require a Check In is not permitted in the High School section, so if your project seems to need one, email safety@igem.org before you build your plans around it.",
+      "source": "https://teams.igem.org/go/safety",
+      "asOf": "2026"
+    },
+    "formsDisabledSecondQuote": {
+      "quote": "High School teams are the exception: they are required to conduct all work with organisms, parts, and activities from the White List, with no route to work outside it. Check In Forms and Animal Use Forms are disabled for those teams, so any work that would need one is not permitted in that section.",
+      "source": "https://teams.igem.org/go/safety (requirements tab)"
+    },
+    "whenThisStarted": {
+      "quote": "1. Projects should be based on White List. Starting in 2025, high school teams must ensure that their projects use only the organisms and components specified in the current iGEM White List. Additionally, all team activities must strictly align with the items included in the White List.",
+      "source": "https://competition.igem.org/high-school",
+      "asOf": "2025 (the /high-school page is still headed 'What's New for High School Competition in 2025?' and still cites the 2025 Paris Jamboree dates, so it is a stale page in the 2026 build; the 2026 rule is confirmed independently by the Rules & Policies page and the live Safety Forms app)",
+      "changeBetweenSeasons": "The White-List-only restriction for high school did NOT exist before 2025. It is in force for 2025 and 2026. A 2027 team should assume it continues but must re-verify."
+    },
+    "formsRequiredOfHighSchoolTeams": [
+      {
+        "form": "Project Safety Form",
+        "requirement": "Exactly one per team; describes the project, the lab, the risks identified and how they are managed; must be signed off by a PI. Reviewed in two passes (preliminary draft for feedback, then final version).",
+        "deadlines2026": ["Preliminary 2026-07-01 15:00 UTC", "Final 2026-10-07 15:00 UTC"]
+      },
+      {
+        "form": "Check-In Form",
+        "requirement": "DISABLED for High School teams."
+      },
+      {
+        "form": "Animal Use Form",
+        "requirement": "DISABLED for High School teams."
+      }
+    ],
+    "divisionDefinition": {
+      "quote": "High School Competition: All team members are high school students on March 31, 2026. There are no separate sections in the High School Competition. All teams (no matter the Organizer Type, or age of members) compete in the same category.",
+      "note": "Section assignment is automatic and happens after the Team Roster Freeze (2026-09-16). Collegiate split: Undergraduate = all student members 23 or younger on March 31; Overgraduate = one or more student members 24 or older.",
+      "source": "https://competition.igem.org/registration/team-roster",
+      "asOf": "2026"
+    },
+    "supervisionAndPI": {
+      "primaryPIRule": {
+        "quote": "Secondary Education Teams: The Primary PI must be a principal, teacher, or academic coach employed by the school where team members are enrolled. If students are from multiple schools the Primary PI must be a principal, teacher, or academic coach employed at of one of the schools.",
+        "source": "https://competition.igem.org/registration/overview"
+      },
+      "piSafetyResponsibility": {
+        "quote": "The PI is responsible for the safety of each participant. The PI understands that while participating in the Program, members on the official Team Roster may be exposed to biological laboratory activities or other risks. The PI understands that iGEM does not select, employ, supervise or otherwise exercise authority or control over the teachers, mentors, and other participants in iGEM projects and programs. The PI acknowledges and agrees that the PI is primarily responsible for team member safety and that the PI will monitor each participant's participation in the Program.",
+        "source": "https://competition.igem.org/registration/overview (PI Agreement)"
+      },
+      "signatureOnSafetyForms": {
+        "quote": "The team's Primary PI, Secondary PI, or Instructor must sign the Safety Form and any Animal Use Form the team submits.",
+        "source": "https://competition.igem.org/about/rules-and-policies"
+      },
+      "consentForms": {
+        "quote": "Every participant must submit an individual consent form to join the Team Roster. Participants under age 18 (on March 31, 2026) cannot sign for themselves - a parent or legal guardian must sign on their behalf.",
+        "highSchoolOnlyExtra": "For High School Competition only (except Commercial Type Teams): Principal Acknowledgment Agreements: At least one Principal Acknowledgment Agreement is required to complete registration. Additional forms [are] required for each school represented on the Team Roster.",
+        "source": "https://competition.igem.org/registration/overview"
+      },
+      "whereWorkMayBeDone": "iGEM does not publish a high-school-specific lab-location rule. The general rules apply: teams must work at the biosafety level appropriate for the project, and may not work in Safety Level 3 or 4 labs. Community Lab organizer-type teams must demonstrate access to a BSL-1 lab. No published rule was found restricting high school teams to BSL-1 by name, but the White-List-only restriction has that effect in practice, since everything requiring enhanced containment (BSL2) sits in the Check-In column. This inference is flagged in openQuestions."
+    },
+    "awardsStructureForHighSchool": {
+      "grandPrize": "Green BioBrick Trophy - 'Awarded to the best overall high school team project.' Top 2 finishers recognised: Grand Prize (BioBrick Trophy) and First Runner-Up.",
+      "villageAwards": "Quote: 'High School Village Awards are given by combined Village Groups, where each group shares a broader thematic category and contains at least 10 high school teams. The highest-scoring high school team in each group receives a Village Award.'",
+      "specialAwards": "Quote: 'high school is always evaluated separately' - High School receives its own winner for each Special Award, independent of collegiate team counts.",
+      "source": "https://competition.igem.org/judging/awards/project"
+    },
+    "source": "https://competition.igem.org/about/rules-and-policies",
+    "asOf": "2026"
+  },
+
+  "humanSubjects": {
+    "twoSeparatePolicies": "iGEM splits human-related work into two policies that are easy to confuse: the Human Experimentation Policy (lab work with human samples, and testing products on people) and the Human Subjects Research Policy (social science: surveys, interviews, focus groups, public engagement). A medical project usually touches both.",
+    "humanExperimentation": {
+      "hardProhibition": {
+        "quote": "Testing your product on humans (including yourselves) is strictly prohibited. Engineered organisms you make should never come into direct contact with humans.",
+        "source": "https://responsibility.igem.org/safety-policies/human-experimentation",
+        "alsoInNeverPermittedList": true,
+        "asOf": "2026"
+      },
+      "projectsStayExperimental": {
+        "quote": "iGEM projects are meant to remain at the experimental stage.",
+        "source": "https://responsibility.igem.org/safety-policies/human-experimentation"
+      },
+      "narrowExceptionForProducts": {
+        "quote": "You may be able to get permission to test something produced by an engineered organism, if you can demonstrate that the product has no modified organisms on or in it. Please contact safety@igem.org setting out what you would like to do, and why you believe that there will be no modified organisms present. You need permission from the Safety and Security Committee before any of your product comes into contact with any humans, including yourselves.",
+        "highSchoolImplication": "This exception runs through SSC permission (a Check-In / written approval). High school teams have no Check-In route, so this exception is effectively closed to them; email safety@igem.org before designing around it."
+      },
+      "humanSamples": {
+        "quote": "In the past, some teams have wanted to use samples from humans (swabs, feaces, blood, etc.). This is possible but, in accordance with the White List, a team needs to receive permission in advance from the Safety and Security Committee before using human samples. Permission can be requested using a Check In Form. The Safety and Security Committee is unlikely to grant permission to use samples from vulnerable populations (such as minors/children, prisoners, pregnant women, or fetuses).",
+        "institutionalEvidence": "Quote: 'Teams must comply with all institutional and national rules governing the use of human samples. The Safety and Security committee will require a team wanting to use specimens from humans to provide evidence of relevant institutional or national reviews.'",
+        "definition": "Quote: 'For the purposes of iGEM, human samples include but are not limited to the unique contributions of an individual including blood, DNA, other bodily specimens, and health or psychological outcomes.'",
+        "highSchoolImplication": "Human samples - including samples from the team's own members - require a Check-In. High school teams cannot file one. So ANY wet-lab work on patient samples, blood, saliva, swabs, stool, or human DNA is not available to a high school team. This is the single most common way a high-school diagnostic or medical project dies.",
+        "doubleBarrier": "Note the compounding problem for a high school team: its own members are mostly minors, and the SSC is 'unlikely to grant permission to use samples from vulnerable populations (such as minors/children...)' even for teams that CAN file a Check-In.",
+        "source": "https://responsibility.igem.org/safety-policies/human-experimentation"
+      },
+      "checkInTrigger": {
+        "quote": "You must submit a Check In Form BEFORE conducting laboratory experiments using human samples (including but not limited to blood, DNA, other bodily specimens, and health or psychological outcomes). This includes any testing of products of synthetic biology on humans."
+      }
+    },
+    "humanSubjectsResearch": {
+      "whatNeedsCheckIn": {
+        "quote": "You must submit a Check In Form BEFORE conducting laboratory experiments involving humans, including experiments that measure psychological outcomes. Many forms of human subjects research (e.g. surveys, interviews, public engagement) do not need to be checked in, but you must attest that all your research was done in accordance with relevant laws and regulations, as well as any institutional rules or guidance.",
+        "readingForHighSchool": "Surveys, interviews and public engagement do NOT require a Check-In, so they remain open to high school teams. Lab experiments involving humans, and anything measuring psychological outcomes, DO require a Check-In, and are therefore closed to high school teams."
+      },
+      "ethicsApprovalRule": {
+        "quote": "It is iGEM policy that all human subjects research conducted by teams must be done in accordance with relevant laws and regulations, as well as any institutional rules or guidance. Teams must demonstrate their awareness of these laws, regulations, rules and guidance, as well as their adherence to them. Teams are reminded they must attest to compliance via their safety forms.",
+        "irbWarning": "Quote: 'Many universities have an internal \"Institutional Review Board\" (IRB) or \"Research Ethics Committee\" (REC) that is responsible for approving human subjects research at that institution. Because of the time it can take to fill out forms and receive IRB/REC approval (often weeks or months), teams are strongly advised to begin the approval process as soon as possible.'",
+        "aboveAndBeyond": "Quote: 'Demonstration of adherence to institutional policies should be seen as minimum requirements, and we expect teams to go above and beyond in demonstrating their commitments to responsible and ethical conduct. For example, for teams that do not have established review committees at their institutions (e.g. some community lab teams), we expect them to consult with the international and national policies and other resources and experts linked below.'",
+        "highSchoolRelevance": "A high school rarely has an IRB. iGEM explicitly expects teams without a review committee to consult national and international policy and expert resources instead. For surveys and interviews with minors in Taiwan, the team should plan on a named external ethics route and document it, since 'we have no IRB' is not an accepted answer."
+      },
+      "faqQuote": {
+        "quote": "What about experiments with human subjects, such as surveys or software user-testing? See the Human Subjects Policy. If you conduct any experiments with human subjects, you must follow your country's laws and your university's rules. You must get approval from the appropriate authorities, even for non-invasive experiments like surveys.",
+        "source": "https://responsibility.igem.org/guidance/white-list"
+      },
+      "source": "https://responsibility.igem.org/safety-policies/human-subjects",
+      "relatedGuidance": [
+        "https://responsibility.igem.org/guidance/informed-consent",
+        "https://responsibility.igem.org/guidance/surveys-and-interviews"
+      ],
+      "asOf": "2026"
+    },
+    "clinicalClaims": {
+      "honestyRule": {
+        "quote": "Be honest and accurate: You should represent your project and results both honestly and accurately. This is especially important when describing your project's likelihood of solving real world problems. Recognize that many people are eager for hope and it can be tempting to over-promise. An iGEM team is not expected to scale their project into a regional or national solution during one season of the competition.",
+        "source": "https://competition.igem.org/about/rules-and-policies (Communication Policies)"
+      },
+      "impersonationRule": {
+        "quote": "Be yourself: No team member should pretend to have a disability, medical condition, cultural affiliation, or racial identity that they do not have in real life. This may happen with the best of intentions, but comes with a real risk of spreading stereotypes or otherwise failing to treat everyone with respect.",
+        "source": "https://competition.igem.org/about/rules-and-policies"
+      },
+      "disturbingImageryRule": {
+        "quote": "Don't include disturbing imagery: We know you may be addressing serious and upsetting issues, but we ask that you consider whether disturbing imagery is truly necessary. Videos containing scenes of violence, death, drug use, or other potentially disturbing content must have warnings added or be removed from iGEM's platforms.",
+        "source": "https://competition.igem.org/about/rules-and-policies"
+      },
+      "workedExample": {
+        "scenario": "Stereotyping and Over-Promising",
+        "quote": "A team's promotional video includes scenes where they pretend to experience a serious medical problem. A judge flags the exaggerated way the team acted out the medical problem, including a scene which shows someone falling into a coma, while a voiceover announces that this condition would not happen if they use the team's engineered microbiome solution.",
+        "outcome": "Quote: 'The RCC reaches out to make sure that the team intended for the video to be respectful, and has engaged responsibly with people who have the medical condition they are portraying during their project. As long as the discussion does not reveal other issues, the only change would be the addition of a content warning to the beginning of the video.'",
+        "source": "https://competition.igem.org/about/rules-and-policies"
+      },
+      "note": "No rule was found that forbids describing a therapeutic or diagnostic AIM. The constraints are on over-promising, on impersonation, and on actually touching people with the product. A medical-flavoured project is allowed; a medical TEST on people is not."
+    }
+  },
+
+  "prohibited": {
+    "neverPermittedAnyTeam": {
+      "list": [
+        "Using organisms from Risk Group 3 or 4",
+        "Using parts from an organism in Risk Group 4",
+        "Releasing or deploying a genetically modified organism outside the lab",
+        "Testing your product on humans (including yourselves)"
+      ],
+      "quote": "These activities are strictly prohibited at iGEM. There is no form that makes them allowable.",
+      "source": "https://teams.igem.org/go/safety",
+      "asOf": "2026"
+    },
+    "safetyRulesVerbatim": {
+      "source": "https://competition.igem.org/about/rules-and-policies#h-safety-rules",
+      "asOf": "2026",
+      "rules": [
+        "Teams must fill in the Safety Form to provide information on any risks from their project and steps taken to manage those risks.",
+        "Hazardous organisms, parts or activities: Teams must submit additional Check-In Forms and get approval by the Safety & Security Committee [before] beginning experiments for projects involving parts, organisms or activities that are not on the White List. All teams must refer to the White List Policy.",
+        "High school teams must use organisms, parts and activities from the White List in their iGEM projects.",
+        "Animal Use Forms: Teams must get permission from the Safety & Security Committee [before] beginning experiments for projects involving vertebrates and some invertebrates. This includes the use of live or dead animals, and animal samples such as organs, tissues, blood, saliva or other bodily fluids. Failure to meet this requirement has been the most common reason for disqualification of iGEM teams.",
+        "The team's Primary PI, Secondary PI, or Instructor must sign the Safety Form and any Animal Use Form the team submits.",
+        "Teams must meet all safety & security deadlines, including those given in email communications from the Safety & Security Committee.",
+        "Teams must follow all relevant international, regional, national, local or institutional laws, rules, regulations, or policies, including national or institutional biosafety and biosecurity rules applicable to each team.",
+        "For teams conducting any experiment with human subjects (including non-invasive experiments, such as surveys), teams must comply with all rules governing experiments with human subjects.",
+        "Teams must work in the biosafety level appropriate for their project. If a project involves organisms and parts that can be used safely in a BSL1 lab, the team should not work at higher containment levels. If this is not possible, an explanation must be provided in the Safety Form.",
+        "Teams cannot conduct work with Risk Group 3 or 4 organisms, parts from a Risk Group 4 organism, or work in a Safety Level 3 or 4 laboratory. This includes work with large volumes or high concentrations of SARS-CoV-2, whether isolated virus, or human, animal, or environmental samples likely to contain it.",
+        "Teams cannot release or deploy their project outside of the laboratory at any time during the Competition or at the Grand Jamboree.",
+        "Teams cannot test products of synthetic biology on or in human subjects. Testing your product on humans (including yourselves) is strictly prohibited."
+      ],
+      "note": "The word 'before' appears bolded/emphasised in two of these rules and was reconstructed in brackets; the remainder is verbatim."
+    },
+    "gainOfFunctionAndDualUse": {
+      "checkInRequiredCategories": [
+        "Making a hazardous biological agent more hazardous, such as enhancing the virulence or transmissibility of a human, plant, or animal pathogen, or altering its host-range",
+        "Creating a novel hazardous biological agent, such as by rendering a non-pathogen virulent, or conferring the ability to damage or degrade important materials (such as electronics, plastics, etc.)",
+        "Making a biological agent or toxin more suitable for use as a weapon",
+        "Potentially disrupting immunity or immune function",
+        "Potentially rendering a vaccine ineffective",
+        "Potentially enabling a hazardous biological agent to evade common diagnostic or detection tools"
+      ],
+      "status": "These are listed in the White List's 'Check In Required' column, i.e. they are not flatly banned for collegiate teams but require SSC approval. For a high school team, with no Check-In route, they are unavailable. iGEM does not publish a separate 'gain-of-function' policy page under that name.",
+      "source": "https://responsibility.igem.org/guidance/white-list",
+      "asOf": "2026"
+    },
+    "selectAgentsAndExportControl": {
+      "australiaGroup": "Parts covered by Australia Group lists of human/animal bacterial, fungal and viral pathogens, plant pathogens, and toxins require a Check-In. Lists cited: https://australiagroup.net/en/human_animal_pathogens.html and https://australiagroup.net/en/plants.html",
+      "selectAgentsMention": {
+        "quote": "There could also be security risks - many pathogens controlled because of their potential for misuse (such as those on export control lists, Select Agents in the US, or Schedule 5 agents in the UK) can also be found in nature. For example, a soil sample might include spores from Bacillus anthracis. It is possible that an environmental sample includes pathogens that would require you to take specific security precautions.",
+        "source": "https://responsibility.igem.org/safety-policies/environmental-samples"
+      },
+      "note": "iGEM does not publish its own enumerated 'select agent' list. It references the Australia Group lists (for parts) and national lists (US Select Agents, UK Schedule 5) as context for environmental sampling risk. There is no single iGEM-published agent-by-agent prohibition table beyond the Risk Group 3/4 rule and the Red Flag list in the Registry.",
+      "asOf": "2026"
+    },
+    "releaseIntoEnvironment": {
+      "rule": {
+        "quote": "iGEM teams should not release or deploy any genetically modified organisms outside the lab.",
+        "checkInTrigger": "You must submit a Check In Form BEFORE bringing any product of synthetic biology outside of the lab for any purpose, including testing, stakeholder consultations, or presenting it at the Giant Jamboree. Products of synthetic biology include, but are not limited to, biosynthetic fragrances and dyes, cell-free biosensors, and purified proteins and biomaterials."
+      },
+      "countsAsRelease": [
+        "Putting your GMOs into the natural environment (soil, lakes, oceans, forests, etc.)",
+        "Putting your GMOs onto or into a human body, including your own. Engineered organisms you make should never come into direct contact with humans.",
+        "Taking the products of your GMOs outside of the lab without advance permission from the Safety and Security Committee. \"Products\" includes any chemicals that your GMOs might synthesize, even if you purify them. This also covers bringing them to the Giant Jamboree.",
+        "Putting your GMOs (or their products) into a containing device, and then putting that containing device into the natural environment.",
+        "Eating food made using your GMOs (bread, beer, etc.)"
+      ],
+      "doesNotCountAsRelease": [
+        "Transporting cells or DNA between two labs, in proper packaging, for research or teaching purposes.",
+        "Releasing software or hardware",
+        "Testing the product of your engineered system outside of the lab with advance permission from the Safety and Security Committee",
+        "Bringing the product of your engineered system to show at the Exhibition Space at the Giant Jamboree, with advance permission from the Safety and Security Committee",
+        "Performing a field experiment using a wild-type organism",
+        "Disposing of sterilized lab waste"
+      ],
+      "containedDeviceRule": "Quote: 'If you engineer an organism in the lab, you may not deliberately release it outside the lab, even inside a \"containing\" device.'",
+      "legality": "Quote: 'In most countries, it is illegal to release GMOs or their products into the natural environment without extensive government permits and approvals. Obtaining these permits and approvals would probably take longer than the entire iGEM competition.'",
+      "highSchoolImplication": "Every 'with advance permission' escape in the 'Not Release' column runs through the SSC, i.e. through a Check-In. A high school team therefore cannot take any product of its engineered organism out of the lab - including to a demo, a stakeholder meeting, or the Jamboree Expo booth. Hardware and software are unaffected, and field work with a WILD-TYPE organism is explicitly not release (but note the Environmental Samples policy below still gates bringing such material into the lab).",
+      "source": "https://responsibility.igem.org/safety-policies/release-beyond-containment",
+      "asOf": "2026"
+    },
+    "workingOutsideALabAndFieldSampling": {
+      "environmentalSamplesPolicy": {
+        "permissive": "Quote: 'As long as parts or organisms are not isolated from them, samples from the environment, the food industry, or other non-traditional suppliers may be used in your experiments.'",
+        "checkInTrigger": "Quote: 'You must submit a Check In Form BEFORE before using any parts or organisms obtained from outside the lab or from non-traditional suppliers. Isolation and sequencing of nucleic acids from environmental samples also require the submission of a Check In Form.' (the doubled 'BEFORE before' is as published)",
+        "whyNote": "Quote: 'Unlike materials commonly available inside the laboratory (such as cell or tissue cultures, isolated biological agents, or laboratory bred animals) environmental samples have not undergone a risk assessment or been certified pathogen-free by supervisors, commercial suppliers, or institutional biosafety officers.'",
+        "assumption": "Quote: 'Samples from the environment, food industry or other non-traditional suppliers do not always require a check-in, but iGEM teams should assume these samples could include pathogens. As a result, they may not be on iGEM's White List and teams planning to use them may need to get permission from the Safety and Security Committee by submitting a Check In Form before using these samples.'",
+        "humanAndAnimalCarveouts": "Samples from people - even team members - fall under the Human Experimentation policy. Samples from vertebrates and higher invertebrates fall under the Animal Use policy.",
+        "highSchoolImplication": "Collecting a soil or water sample and USING it as a bulk sample may be White-List-clean, but ISOLATING or SEQUENCING nucleic acids from it requires a Check-In, and the White List puts 'All organisms isolated from an environmental sample' and 'Any organisms obtained from outside the lab or from non-traditional / non-institutional suppliers' in the Check-In column. A high school metagenomics or bioprospecting project is therefore very tightly constrained. This reading is an inference from two quoted sources, not a single published high-school sentence - treat as a question for safety@igem.org.",
+        "source": "https://responsibility.igem.org/safety-policies/environmental-samples",
+        "asOf": "2026"
+      },
+      "noPublishedFieldworkPolicyBeyondThis": "iGEM publishes no separate 'working outside a laboratory' policy page. The applicable rules are the Release Beyond Containment policy (nothing engineered leaves the lab), the Environmental Samples policy (nothing unvetted comes in without a Check-In), and the general requirement to follow institutional and national law. Human Practices fieldwork with people is governed by the Human Subjects Research policy. A responsibility guidance article on field evaluations exists at https://responsibility.igem.org/guidance (asset 'how-to-undertake-responsible-field-evaluations') but was not read for this file."
+    },
+    "amr": {
+      "quote": "You must submit a Check In Form before beginning experiments likely to increase the risk posed by antimicrobial resistance (e.g. by using novel resistance factors, adding known factors into new organisms, or using resistance factors not previously used in your facility).",
+      "triggers": [
+        "Increasing the antimicrobial resistance of any human, animal, or plant pathogen",
+        "Creating novel antimicrobial resistance factors",
+        "Conferring a resistance to an antimicrobial not previously conferred to that organism (e.g., conferring vancomycin resistance to a bacteria that has never been made resistant in the past)",
+        "Making use of antimicrobial resistance factors not in common use in the host institution"
+      ],
+      "registryFlagging": "Quote: 'iGEM will continue to accept AMR-related parts into the Registry, but any part containing sequences connected resistance to antimicrobials on WHO's list will be flagged.'",
+      "highSchoolImplication": "The fourth trigger is the trap: using a resistance marker 'not in common use in the host institution' requires a Check-In. A high school team whose school lab has only ever used, say, ampicillin should confirm its selection markers are already in routine use there, or it needs a Check-In it cannot file.",
+      "source": "https://responsibility.igem.org/safety-policies/antimicrobial-resistance",
+      "asOf": "2026"
+    },
+    "sarsCov2": {
+      "quote": "Any work using the live SARS-CoV-2 virus (the causative agent of COVID-19) must follow [WHO guidance] even if it is stricter than local safety rules, in addition to all local and institutional rules. Before working with SARS-CoV-2, as with any organism that requires enhanced containment, you must submit a Check In Form to get permission. Note that, under WHO guidance, work with high concentrations of live SARS-CoV-2 virus or large volumes of infectious material (including viral propagation) requires heightened control (BSL3) and therefore is prohibited within iGEM.",
+      "partsQuote": "Parts from or fragments of the SARS-CoV-2 virus are NOT covered by iGEM's White List. You will need to submit a Check In Form to get permission in advance.",
+      "highSchoolImplication": "Any SARS-CoV-2 work, including mere sequence fragments, is off the White List and therefore unavailable to a high school team.",
+      "source": "https://responsibility.igem.org/safety-policies/sars-cov-2",
+      "asOf": "2026 build; page content references WHO interim guidance of 28 January 2021 and reads as written during the pandemic"
+    },
+    "contentAndHostingRules": {
+      "countryFlags": "Quote: 'No country flags: Country flags are not allowed to be displayed in your videos or promotional materials.'",
+      "copyright": "Quote: 'Teams cannot use any copyrighted materials: Copyrighted images and other materials are not permitted on the iGEM wiki. You may use materials that are appropriately licensed for reuse, such as open-source code or Creative Commons licensed images. If you use copyrighted materials, we reserve the right to remove the content at will.'",
+      "hosting": "Quote: 'Teams must host all online content on iGEM servers: All team pages, images, documents and code must be hosted on the iGEM servers... Hosting content outside of the iGEM servers is a form of cheating and may result in no medal.'",
+      "source": "https://competition.igem.org/about/rules-and-policies",
+      "asOf": "2026"
+    },
+    "consequences": {
+      "serious": [
+        "Full disqualification: A team is disqualified from the competition. The team is unable to receive any awards or medals, and their wiki may be removed from the iGEM website.",
+        "Partial disqualification: A part of a team's project is disqualified. Judges are asked to proceed as if the team had not done that experiment or activity. The team may be asked to edit and/or remove sections of their wiki.",
+        "Ineligibility for medals: The team cannot receive medals, regardless of the score given to them by judges.",
+        "Ineligibility for special awards: The team cannot receive certain special awards, regardless of judge scores.",
+        "Ban from future participation: In the most extreme cases, individuals and/or institutions may be banned from future iGEM Competitions."
+      ],
+      "minor": [
+        "Cease and adjust",
+        "Add disclaimers or additional context",
+        "Add content warnings or revise materials"
+      ],
+      "committees": {
+        "ssc": "Safety & Security Committee - safety@igem.org - handles Safety & Security Violations, Safety Rules, Safety Policies, Safety Form Reviews, White List",
+        "rcc": "Responsible Conduct Committee - rcc@igem.org - handles Code of Conduct Violations, Scientific Integrity and Attribution, Harassment Reports and Reviews, Policy Violations",
+        "hq": "hq@igem.org"
+      },
+      "mostCommonDisqualificationCause": "Quote: 'Failure to meet this requirement has been the most common reason for disqualification of iGEM teams.' (in reference to Animal Use Form approval before beginning animal work)",
+      "source": "https://competition.igem.org/about/rules-and-policies",
+      "asOf": "2026"
+    }
+  },
+
+  "specialPrizes": {
+    "meta": {
+      "officialSectionName": "Special Awards",
+      "legacyName": "Special Prizes (the route /judging/special-prizes still resolves and is linked from the medals page)",
+      "source": "https://competition.igem.org/judging/awards/special",
+      "asOf": "2026",
+      "count": 18,
+      "divisionRule": {
+        "quote": "For each Special Award, up to three winners are recognized, one per section. Within each section, the team with the highest score on the award's ballot questions wins, provided that score meets the minimum performance standard. If multiple teams tie at the top, all tied teams receive the award.",
+        "sectionCombiningQuote": "The same section rules used for Village Awards apply: high school is always evaluated separately, and each collegiate section (undergraduate and overgraduate) receives its own award only if it has at least 10 teams. Otherwise the two collegiate sections are combined and a single award goes to the top collegiate team overall.",
+        "whatThisMeansForOdds": "High School is ALWAYS its own section for every Special Award. A high school team competes only against other high school teams for each of the 17 sectioned awards - it is never pooled with collegiate teams. The only award whose division basis is not stated is the iGEM Spirit Award."
+      },
+      "twoCategories": {
+        "allTeams": "Quote: 'All Teams - Every team automatically competes for these awards. Their scores also contribute to the Project Awards.' (Best Presentation, Best Wiki)",
+        "elective": "Quote: 'Elective. On the Judging Form, each team may elect up to three additional awards for Gold Medal consideration: at least one from each list, plus a third from either. The limit of three encourages teams to focus on quality over quantity.' (the General Bio Engineering and Specialization awards)"
+      },
+      "scoringRubric": "Quote: 'iGEM uses an academic rubric so all judges apply the same standards. For each ballot question, a judge picks a score from 1 to 6. Each question has its own specific wording for what each score means, calibrated to that question. The per-question wording is not published so that teams stay focused on answering the broader question rather than optimizing for a specific phrase.' Scale: 1 Poor work done or completely absent; 2 Less work done, multiple missing components; 3 Some work done, incomplete; 4 Good work, complete; 5 Great work, complete with some impressive components; 6 Amazing work, impressive."
+    },
+    "awards": [
+      {
+        "name": "Best Presentation",
+        "category": "All Teams",
+        "division": "Per division (one winner per section: High School / Undergraduate / Overgraduate, subject to the 10-team collegiate combining rule)",
+        "requirement": "Automatic - no self-nomination. Judges evaluate the Team Presentation Video. Standard URL: 'None. Judges will evaluate your Team Presentation Video.' Deliverable deadline: Presentation Video due 2026-10-28 15:00 UTC.",
+        "source": "https://competition.igem.org/judging/awards/special#h-best-presentation"
+      },
+      {
+        "name": "Best Wiki",
+        "category": "All Teams",
+        "division": "Per division",
+        "requirement": "Automatic - no self-nomination. Judges evaluate the entire Team Wiki. Standard URL: 'None. Judges will evaluate your entire Team Wiki.' Deliverable deadline: Wiki Freeze 2026-10-21 15:00 UTC.",
+        "source": "https://competition.igem.org/judging/awards/special#h-best-wiki"
+      },
+      {
+        "name": "Best Measurement",
+        "category": "General Bio Engineering",
+        "division": "Per division",
+        "requirement": "Elective - select on the Judging Form (freeze 2026-10-21 15:00 UTC). Deliverable: a Standard URL page at https://2026.igem.wiki/<team>/measurement",
+        "source": "https://competition.igem.org/judging/awards/special#h-best-measurement"
+      },
+      {
+        "name": "Best Model",
+        "category": "General Bio Engineering",
+        "division": "Per division",
+        "requirement": "Elective - select on the Judging Form. Standard URL: https://2026.igem.wiki/<team>/model",
+        "source": "https://competition.igem.org/judging/awards/special#h-best-model"
+      },
+      {
+        "name": "Best New Basic Part",
+        "category": "General Bio Engineering",
+        "division": "Per division",
+        "requirement": "Elective - select on the Judging Form. No wiki Standard URL: 'Judges evaluate the part's entry in the iGEM Registry.' Eligibility quote: 'To be eligible, your part must consist of a single genetic component and be well documented on the iGEM Registry.' Registry Contributions freeze 2026-10-21 15:00 UTC.",
+        "source": "https://competition.igem.org/judging/awards/special#h-best-new-basic-part"
+      },
+      {
+        "name": "Best New Composite Part",
+        "category": "General Bio Engineering",
+        "division": "Per division",
+        "requirement": "Elective. Judged from the Registry entry. Eligibility quote: 'To be eligible, your part must combine multiple genetic components and be well documented on the iGEM Registry.'",
+        "source": "https://competition.igem.org/judging/awards/special#h-best-new-composite-part"
+      },
+      {
+        "name": "Best New Improved Part",
+        "category": "General Bio Engineering",
+        "division": "Per division",
+        "requirement": "Elective. Judged from the Registry entries for BOTH parts. Eligibility quote: 'To be eligible, the new, improved part must be well documented on the iGEM Registry, and the existing and improved parts should reference each other.' Ballot requires the old part to have been used as a control.",
+        "source": "https://competition.igem.org/judging/awards/special#h-best-new-improved-part"
+      },
+      {
+        "name": "Best Part Collection",
+        "category": "General Bio Engineering",
+        "division": "Per division",
+        "requirement": "Elective. Judged from the Part Collection Documentation on the Registry. Eligibility quote: 'To be eligible, your collection must be registered in the iGEM Registry and document the ensemble as a whole.' Each part still needs its own Registry page; the collection page sits on top.",
+        "source": "https://competition.igem.org/judging/awards/special#h-best-part-collection"
+      },
+      {
+        "name": "Best Education",
+        "category": "Specialization",
+        "division": "Per division",
+        "requirement": "Elective. Standard URL: https://2026.igem.wiki/<team>/education. Quote: 'Activities do not have to relate directly to your project... The only requirement is that they promote scientific learning rather than market iGEM or synthetic biology.'",
+        "source": "https://competition.igem.org/judging/awards/special#h-best-education"
+      },
+      {
+        "name": "Best Entrepreneurship",
+        "category": "Specialization",
+        "division": "Per division",
+        "requirement": "Elective. Standard URL: https://2026.igem.wiki/<team>/entrepreneurship. Expected: a business plan grounded in customer needs and expert feasibility input, plus a minimum viable product.",
+        "source": "https://competition.igem.org/judging/awards/special#h-best-entrepreneurship"
+      },
+      {
+        "name": "Best Hardware",
+        "category": "Specialization",
+        "division": "Per division",
+        "requirement": "Elective. Standard URL: https://2026.igem.wiki/<team>/hardware. Ballot expects utility, user testing, and documentation sufficient for other teams to reproduce it.",
+        "source": "https://competition.igem.org/judging/awards/special#h-best-hardware"
+      },
+      {
+        "name": "Inclusivity Award",
+        "category": "Specialization",
+        "division": "Per division",
+        "requirement": "Elective. Standard URL: https://2026.igem.wiki/<team>/inclusivity. Quote: 'Activities do not have to relate directly to your team's project.'",
+        "source": "https://competition.igem.org/judging/awards/special#h-inclusivity-award"
+      },
+      {
+        "name": "Best Integrated Human Practices",
+        "category": "Specialization",
+        "division": "Per division",
+        "requirement": "Elective. Standard URL: https://2026.igem.wiki/<team>/human-practices (the same page as the Silver Human Practices criterion).",
+        "source": "https://competition.igem.org/judging/awards/special#h-best-integrated-human-practices"
+      },
+      {
+        "name": "Best Alternative Platform",
+        "category": "Specialization",
+        "division": "Per division",
+        "requirement": "Elective. Standard URL: https://2026.igem.wiki/<team>/alternative-platform. Scope quote: 'covers anything that is not E. coli, S. cerevisiae, and B. subtilis. This award may be given to a team working in plant biology chassis, mammalian cells, cell-free platform, or non-model organisms. Show us what you made and remember to adhere to iGEM Safety Policies and guidelines!'",
+        "highSchoolNote": "Attractive on paper but constrained in practice: most alternative chassis sit outside the White List, so a high school team's options here are roughly the white-listed non-E.coli set (K. pastoris, C. elegans, moss, Arabidopsis/Nicotiana, certified pathogen-free cell lines subject to the BSL2 ambiguity noted above) plus cell-free systems.",
+        "source": "https://competition.igem.org/judging/awards/special#h-best-alternative-platform"
+      },
+      {
+        "name": "Safety and Security Award",
+        "category": "Specialization",
+        "division": "Per division",
+        "requirement": "Elective. Standard URL: https://2026.igem.wiki/<team>/safety-and-security.",
+        "source": "https://competition.igem.org/judging/awards/special#h-safety-and-security-award"
+      },
+      {
+        "name": "Best Software",
+        "category": "Specialization",
+        "division": "Per division",
+        "requirement": "Elective. Standard URL: https://2026.igem.wiki/<team>/software. Hard eligibility quote: 'Your software must be documented and released under an OSI-approved open-source license. The source code must be hosted on the dedicated repository in iGEM's GitLab.' Plus: 'Software & AI Village teams are not eligible for this award.' Software freeze 2026-10-21 15:00 UTC.",
+        "nameDiscrepancy": "The Awards page calls it 'Best Software'; the Deliverables data for the same season calls it 'Best Software Tool' (and once 'Best Software & AI Project Nominee'). Flagged in openQuestions.",
+        "source": "https://competition.igem.org/judging/awards/special#h-best-software"
+      },
+      {
+        "name": "Best Sustainable Development Impact",
+        "category": "Specialization",
+        "division": "Per division",
+        "requirement": "Elective. Standard URL: https://2026.igem.wiki/<team>/sustainability.",
+        "source": "https://competition.igem.org/judging/awards/special#h-best-sustainable-development-impact"
+      },
+      {
+        "name": "iGEM Spirit Award",
+        "category": "(none - carries no 'All Teams' / 'General Bio Engineering' / 'Specialization' badge, no Standard URL and no published ballot questions)",
+        "division": "NOT STATED. The page says it 'recognizes the team that best embodies the values of iGEM' (singular), which reads as a single award across all divisions, but no source sentence says so. Treat as unverified; see openQuestions.",
+        "requirement": "No form, no page, no self-nomination published. Quote: 'It is open to teams of any scale or level of achievement, and honors those who give their best effort, strive to move their project forward, support others, and show a genuine commitment to doing good in the world.'",
+        "source": "https://competition.igem.org/judging/awards/special#h-igem-spirit-award"
+      }
+    ],
+    "projectAwardsForContext": {
+      "source": "https://competition.igem.org/judging/awards/project",
+      "asOf": "2026",
+      "grandPrizes": [
+        {
+          "name": "Titanium BioBrick Trophy",
+          "division": "Undergraduate",
+          "note": "Top 3 finishers: Grand Prize (BioBrick Trophy), First Runner-Up, Second Runner-Up"
+        },
+        {
+          "name": "Aluminum BioBrick Trophy",
+          "division": "Overgraduate",
+          "note": "Top 2 finishers: Grand Prize, First Runner-Up"
+        },
+        {
+          "name": "Green BioBrick Trophy",
+          "division": "High School",
+          "note": "Top 2 finishers: Grand Prize, First Runner-Up"
+        }
+      ],
+      "howRanked": "Quote: 'To compete for a Grand Prize, your team's score is ranked against every other team in your section: high school, undergraduate, or overgraduate. The top scorers from each section become finalists, present on the main stage at the Grand Jamboree, and are judged against each other in a final meeting.' Project Awards are determined by the weighted scores of the General Project, Presentation and Wiki sections of the ballot.",
+      "villageAwards": {
+        "collegiate": "Quote: 'For collegiate sections, at least 10 undergraduate teams (or 10 overgraduate teams) must compete in a Village for that section to receive its own Village Award. If a section has fewer than 10 teams, the two collegiate sections are combined and a single award goes to the highest-ranked collegiate team in the Village.'",
+        "highSchool": "Quote: 'High School Village Awards are given by combined Village Groups, where each group shares a broader thematic category and contains at least 10 high school teams. The highest-scoring high school team in each group receives a Village Award.'"
+      },
+      "villagesCount": "Quote: 'In 2026, teams choose from 15 Villages' (list not enumerated on the page text; see https://villages.igem.org)",
+      "generalProjectBallotQuestions": [
+        "How well were engineering principles used (e.g., design-build-test cycle, use of standards, modularity, etc.)?",
+        "Did the team design a project based on synthetic biology and standard components (BioBricks, software, etc.)?",
+        "Did the project work or is it likely to work?",
+        "How competent was the team, collectively, at answering judge questions?",
+        "How well did the team's data (modeled and/or experimentally measured) support their claims?",
+        "Is the project likely to have an impact?",
+        "How well did the team demonstrate that their Human Practices work influenced the design, execution, application and/or other aspects of their project?",
+        "To what extent did they convince you that their Human Practices activities helped create a project that is responsible and good for the world?",
+        "Are the project components well documented on the team's Wiki/Registry pages (parts must be documented in the Registry)?",
+        "How much of the project was initiated and led by the students?"
+      ]
+    }
+  },
+
+  "medals": {
+    "source": "https://competition.igem.org/judging/awards/medals",
+    "asOf": "2026",
+    "philosophy": {
+      "quote": "There is no limit to the number of Medals awarded each year. All teams compete only with themselves by meeting defined Medal Criteria, and all teams are eligible to earn a Medal."
+    },
+    "scoring": {
+      "quote": "Individual judges evaluate the work documented on the Standard URL on team wikis (and on the relevant Registry entries, where applicable). For each criterion, every judge records a [yes or no] for the team. The yes votes are counted, and the criterion's final result is [yes] when a majority of judges vote [yes]. Ties are ruled in favor of the team (for example, three yes votes and three no votes means the criterion is met). A team earns the highest medal for which every criterion (at that level and at all levels below it) has a final result of yes.",
+      "note": "Bolded yes/no tokens in the source are bracketed."
+    },
+    "bronze": {
+      "statement": "Awarded to teams that have participated in iGEM, presented their work, and made meaningful contributions that future teams can build on.",
+      "criteria": [
+        {
+          "n": 1,
+          "name": "Competition Deliverables",
+          "quote": "Complete the following Competition Deliverables: Safety Forms, Wiki, Judging Form, Presentation Video, and Judging Session.",
+          "standardUrl": null
+        },
+        {
+          "n": 2,
+          "name": "Project Attributions",
+          "quote": "Provide a detailed description of what your team members did and what others did for every aspect of your project, using the standardized Attributions Form.",
+          "detail": "It must be filled out completely, accurately, and honestly. We recommend starting early and updating it often.",
+          "standardUrl": null
+        },
+        {
+          "n": 3,
+          "name": "Contribution",
+          "quote": "Make a useful contribution for future iGEM teams.",
+          "standardUrl": "https://2026.igem.wiki/<team>/contribution",
+          "detail": "Teams must document their contribution and explain why it is a contribution to fellow iGEMers. There is no single definition: be creative and generous with the knowledge, data, or tools you provide. Examples given: add new substantial documentation to an existing Part on the Registry; build on existing software or hardware; document troubleshooting useful to future teams."
+        }
+      ]
+    },
+    "silver": {
+      "statement": "Awarded to teams that have addressed the key pillars of iGEM projects: Engineering Success and Human Practices. All Bronze and Silver criteria must be met.",
+      "criteria": [
+        {
+          "n": 1,
+          "name": "Engineering Success",
+          "quote": "Demonstrate engineering success in a technical aspect of your project by going through at least one iteration of the engineering design cycle.",
+          "standardUrl": "https://2026.igem.wiki/<team>/engineering",
+          "detail": "Engineering success can be achieved by documenting your effort to follow the engineering design cycle: Design -> Build -> Test -> Learn. 'For example, you can design and build a new Part, measure its performance, document whether it worked or not, and propose how the results could inform the next design or steps (documentation must be on the Registry).'"
+        },
+        {
+          "n": 2,
+          "name": "Human Practices",
+          "quote": "Explain how you have determined that your work is responsible and good for the world.",
+          "standardUrl": "https://2026.igem.wiki/<team>/human-practices"
+        }
+      ]
+    },
+    "gold": {
+      "statement": "Awarded to teams that have shown excellence, beyond what is required for Silver, across General Bio Engineering and their chosen Specializations. All Bronze, Silver and Gold criteria must be met.",
+      "criteria": [
+        {
+          "n": 1,
+          "name": "Excellence in Synthetic Biology",
+          "quote": "Demonstrate excellence in your work toward three Special Awards of your choice. At least one must come from the General Bio Engineering category and at least one from the Specializations category.",
+          "exclusion": "Software & AI Village teams cannot select Best Software Award as a Gold Medal criterion.",
+          "selectionMechanism": "Quote: 'The third selection may come from either list. Teams may select fewer than three Special Awards, but will not qualify for a Gold Medal. You select your awards on the Judging Form.'",
+          "generalBioEngineeringOptions": [
+            "Best Measurement",
+            "Best Model",
+            "Best New Basic Part",
+            "Best New Composite Part",
+            "Best New Improved Part",
+            "Best Part Collection"
+          ],
+          "specializationOptions": [
+            "Best Education",
+            "Best Entrepreneurship",
+            "Best Hardware",
+            "Inclusivity Award",
+            "Best Integrated Human Practices",
+            "Best Alternative Platform",
+            "Safety and Security Award",
+            "Best Software",
+            "Best Sustainable Development Impact"
+          ]
+        }
+      ],
+      "changedIn2026": {
+        "quote": "Gold (new in 2026): the criterion is assessed through the three Special Awards the team selected on the Judging Form. Judges do not cast a separate Gold vote. Each judge already scores those awards on their rubrics, and that judge's yes/no for an award is inferred from their score: [yes] if the score meets the performance standard, [no] otherwise. These votes are then counted in exactly the same way as above. Each of the three selected awards must reach a final result of yes for the Gold criterion to be met.",
+          "contrast": "Quote: 'Bronze and Silver: each judge records their yes/no directly for each criterion.'",
+        "significance": "This is a real change for 2027 planning: Gold now requires the three elected Special Awards each to clear the award's own performance standard on the judges' rubrics, not just a separate Gold vote. The page labels it 'new in 2026', so the 2025 mechanism differed - but the 2025 wording itself was NOT retrieved (see openQuestions)."
+      }
+    },
+    "deliverablesAndDeadlines2026": {
+      "timezone": "All times 15:00 UTC unless noted",
+      "source": "https://competition.igem.org/calendar",
+      "items": [
+        { "date": "2026-01-16", "category": "Registration", "item": "Team Registration Opens" },
+        { "date": "2026-02-12", "category": "Registration", "item": "Stage I (Registration) - Early Deadline" },
+        { "date": "2026-04-02", "category": "Registration", "item": "Stage I (Registration) - Regular Deadline" },
+        { "date": "2026-06-04", "category": "Registration", "item": "Stage I (Registration) - Late Deadline" },
+        { "date": "2026-06-04", "category": "Registration", "item": "Mentorship Program - Application Deadline" },
+        { "date": "2026-06-24", "category": "Deliverables", "item": "Village & Project Info - Submissions due" },
+        { "date": "2026-07-01", "category": "Deliverables", "item": "Project Safety Form: Preliminary Version - Deadline" },
+        { "date": "2026-07-30", "category": "Registration", "item": "Stage II (Finalization) - Deadline" },
+        { "date": "2026-08-12", "category": "Deliverables", "item": "Project Promotion Video - Submission Deadline" },
+        { "date": "2026-09-02", "category": "Deliverables", "item": "Animal Use Safety Form - Submission Deadline (disabled for High School)" },
+        { "date": "2026-09-16", "category": "Deliverables", "item": "Expo Booth: Safety Proposal - Submission Deadline" },
+        { "date": "2026-09-16", "category": "Jamboree", "item": "Live Stage Talks - Proposals Due" },
+        { "date": "2026-09-16", "category": "Registration", "item": "Team Roster Freeze (also when section assignment happens)" },
+        { "date": "2026-09-23", "category": "Deliverables", "item": "Safety Check-in Form - Submission Deadline (disabled for High School)" },
+        { "date": "2026-10-07", "category": "Deliverables", "item": "Project Safety Form: Final Version - Deadline" },
+        { "date": "2026-10-07", "category": "Jamboree", "item": "Team Logo & Photo Due" },
+        { "date": "2026-10-21", "category": "Deliverables", "item": "Wiki - Freeze" },
+        { "date": "2026-10-21", "category": "Deliverables", "item": "Attributions Form - Freeze" },
+        { "date": "2026-10-21", "category": "Deliverables", "item": "Judging Form - Freeze" },
+        { "date": "2026-10-21", "category": "Deliverables", "item": "Registry Contributions - Freeze" },
+        { "date": "2026-10-21", "category": "Deliverables", "item": "Software - Freeze" },
+        { "date": "2026-10-28", "category": "Deliverables", "item": "Presentation Video - Submission Deadline" },
+        { "date": "2026-11-16", "category": "Jamboree", "item": "Jamboree: Final Day Show & Results Publication" },
+        { "date": "2026-11-24", "category": "Judging", "item": "Judging Sessions - Recordings Available" },
+        { "date": "2026-11-25", "category": "Deliverables", "item": "Wiki - Thaw" },
+        { "date": "2026-12-09", "category": "Deliverables", "item": "Wiki - Final Archival" }
+      ],
+      "noExtensions": {
+        "quote": "Do not wait until the last minute when it comes to key judging deadlines like the Wiki Freeze, Judging Form Freeze and Registry Part Pages Freeze (if applicable). Your team should work on these items throughout the iGEM Competition and not just in the day(s) leading up to the deadline. The Freezes are very important deadlines for judging and no extensions will be granted. (No exceptions!)",
+        "source": "https://competition.igem.org/judging/tips"
+      }
+    },
+    "fullDeliverableList2026": {
+      "source": "https://competition.igem.org/deliverables/guides",
+      "items": [
+        "Village & Project Description",
+        "Safety Forms (Project Safety Form; Check-In Form and Animal Use Form where applicable - both disabled for High School)",
+        "Project Promotion Video (2-minute public-facing video)",
+        "Team Wiki",
+        "Judging Form (project title, abstract, Standard URL links for medal criteria, Special Award self-nominations)",
+        "Attributions Form",
+        "Registry Submissions / Registry Contributions",
+        "Project Software (required for Software & AI Village teams; required to compete for the software award)",
+        "Presentation Video (15-minute final presentation)",
+        "Judging Session",
+        "Live Stage Talk (in-person teams, optional, proposal required)",
+        "Expo Booth (safety proposal required for special equipment/materials)",
+        "Finalist Presentation (finalists only)"
+      ]
+    }
+  },
+
+  "keyRisksForAHighSchoolMedicalProject": [
+    {
+      "rank": 1,
+      "rule": "High school teams have no Check-In route at all; the White List is a hard ceiling.",
+      "quote": "High School teams are required to conduct all their work with organisms, parts, and activities from the White List, so Check In Forms and Animal Use Forms are disabled for that section - you will not see them on the Submissions tab. Your team files the Project Safety Form only. Work that would require a Check In is not permitted in the High School section.",
+      "source": "https://teams.igem.org/go/safety",
+      "killsWhat": "Any design whose critical step is off the White List, with no appeal, no exception process, and no collaborator workaround."
+    },
+    {
+      "rank": 2,
+      "rule": "Lab work with human samples requires a Check-In, so it is unavailable to high school teams. Testing anything on people is banned for everyone.",
+      "quote": "Conducting laboratory experiments using human samples, such as blood, DNA, other bodily specimens, and health or psychological outcomes, including from members of the team [requires a Check In].",
+      "secondQuote": "Testing your product on humans (including yourselves) is strictly prohibited. Engineered organisms you make should never come into direct contact with humans.",
+      "source": "https://responsibility.igem.org/guidance/white-list and https://responsibility.igem.org/safety-policies/human-experimentation",
+      "killsWhat": "Patient-sample diagnostics, saliva/blood/swab/stool assays, biomarker panels run on real specimens, human-DNA genotyping, any device validated on a person - including on the team's own members."
+    },
+    {
+      "rank": 3,
+      "rule": "Nothing engineered, and no product of anything engineered, may leave the lab without SSC permission - which high school teams cannot obtain.",
+      "quote": "Teams cannot release or deploy their project outside of the laboratory at any time during the Competition or at the Grand Jamboree.",
+      "secondQuote": "Taking the products of your GMOs outside of the lab without advance permission from the Safety and Security Committee. \"Products\" includes any chemicals that your GMOs might synthesize, even if you purify them. This also covers bringing them to the Giant Jamboree.",
+      "source": "https://competition.igem.org/about/rules-and-policies and https://responsibility.igem.org/safety-policies/release-beyond-containment",
+      "killsWhat": "Field deployment, point-of-care demos on real users, taking a biosensor or purified product to the Expo booth, any 'we tested it in the real world' claim involving engineered material."
+    },
+    {
+      "rank": 4,
+      "rule": "Human-gene-targeting RNA parts and immune-modulating / toxin / virulence protein parts are off the White List.",
+      "quote": "CRISPR guide RNAs, microRNAs, small interfering RNAs, and short hairpin RNAs that target human genes [require a Check In]",
+      "secondQuote": "Factors that regulate the immune system, such as cytokines and interferons [require a Check In]",
+      "source": "https://responsibility.igem.org/guidance/white-list",
+      "killsWhat": "siRNA/shRNA/gRNA therapeutics against human targets, cytokine or interferon engineering, toxin-based kill switches aimed at human cells."
+    },
+    {
+      "rank": 5,
+      "rule": "Human and primate cell lines are listed on the White List only if certified pathogen-free, while the same site classifies most human/mammalian cell lines as Risk Group 2 (which the White List puts in the Check-In column).",
+      "quote": "Human and primate cell lines that have been tested and certified free of known pathogens (such as MCF-7; consult your vendor about certification!)",
+      "conflictingQuote": "Most human and mammal cell lines | 2 [Risk Group table]",
+      "source": "https://responsibility.igem.org/guidance/white-list and https://responsibility.igem.org/guidance/risk-groups",
+      "killsWhat": "Potentially any mammalian-cell-culture project. This is an unresolved ambiguity, not a settled ban - it must be put to safety@igem.org in writing before a season is designed around cell culture."
+    }
+  ],
+
+  "openQuestions": [
+    {
+      "question": "What exactly is on the Registry Red Flag list?",
+      "status": "UNVERIFIED",
+      "whatWasTried": "Fetched https://parts.igem.org/Special:WhatLinksHere/Template:SafetyFlag with a browser User-Agent. It returned HTTP 405 behind a JavaScript CAPTCHA ('you need to verify that you're not a robot'). No attempt was made to bypass it.",
+      "whyItMatters": "The White List says all Registry parts are usable EXCEPT red-flagged ones, and red-flagged parts require a Check-In - which a high school team cannot file. So every Registry part the team plans to order has to be checked against this list by hand.",
+      "nextStep": "Open the URL in a browser and read the list; or ask safety@igem.org to confirm the flag status of the specific parts in the candidate design."
+    },
+    {
+      "question": "Is the iGEM Spirit Award given once overall, or once per division?",
+      "status": "UNVERIFIED",
+      "whatWasTried": "Read the full Special Awards page content (competition.igem.org/judging/awards/special, asset Awards-D4K45S_0.js). The Spirit Award is the only award with no category badge, no Standard URL and no ballot questions, and the page's 'up to three winners, one per section' rule is stated in the section about awards with ballot questions. The Spirit Award description says 'recognizes the team' in the singular, which suggests a single award, but no sentence states it.",
+      "whyItMatters": "If it is a single all-divisions award, a high school team is competing against 400+ teams for it; if per-division, the odds change materially.",
+      "nextStep": "Check the 2026 results pages (https://competition.igem.org/results/2026) for how many Spirit Awards were given, or ask hq@igem.org."
+    },
+    {
+      "question": "Is the software award called 'Best Software' or 'Best Software Tool' in 2026?",
+      "status": "CONFLICTING SOURCES within the same build",
+      "whatWasTried": "The Special Awards page uses 'Best Software' consistently (heading id h-best-software), and the Medals page lists 'Best Software' among the Specializations and refers to 'Best Software Award'. The Deliverables data for the same season (asset deliverablesData-D5VWT6yC.js, which drives https://competition.igem.org/deliverables/guides) uses 'Best Software Tool' four times, plus 'Best Software Tool prize', 'Best Software Tool Nominee' and once 'Best Software & AI Project Nominee'.",
+      "whyItMatters": "Only the exact official name matters if the report prints an award list. It does not change eligibility.",
+      "nextStep": "Treat the Awards page name ('Best Software') as authoritative for 2026 and confirm for 2027 when the season opens."
+    },
+    {
+      "question": "What were the 2025 Gold Medal criteria, verbatim?",
+      "status": "UNVERIFIED",
+      "whatWasTried": "The 2026 Medals page explicitly labels the current mechanism 'Gold (new in 2026)', so a change is confirmed from iGEM's own wording. The legacy routes /judging/medals, /judging/special-prizes etc. exist in the 2026 router but load the same 2026 content chunks, so no 2025 text was obtainable from the live site. No archived 2025 page was fetched.",
+      "whyItMatters": "Useful for showing the team how the bar moved, but the 2026 rule is what a 2027 plan should be built on.",
+      "nextStep": "If needed, read an archived 2025 team wiki or an Internet Archive capture of https://competition.igem.org/judging/awards/medals from mid-2025."
+    },
+    {
+      "question": "Is there a published rule restricting high school teams to BSL-1 labs by name, or rules about where high school work may be done?",
+      "status": "NOT FOUND - inference only",
+      "whatWasTried": "Read competition.igem.org/about/rules-and-policies (full Safety Rules list), competition.igem.org/registration/overview (organizer types, PI eligibility, PI Agreement), competition.igem.org/registration/team-roster, competition.igem.org/high-school, responsibility.igem.org/guidance/working-safely, responsibility.igem.org/guidance/risk-groups, and the live Safety Forms app at teams.igem.org/go/safety (instructions and requirements tabs).",
+      "whatWasFound": "No high-school-specific lab-location or BSL rule exists in any of those. The general rules say teams must work at the biosafety level appropriate to the project and may not work in Safety Level 3 or 4 labs; Community Lab organizer-type teams (any division) must demonstrate BSL-1 access. The White-List-only restriction has a BSL-1 effect in practice because everything needing enhanced containment (BSL2) sits in the Check-In column - but that is an inference, not a quoted rule.",
+      "nextStep": "If the 2027 plan depends on using a university BSL-2 facility, confirm directly with safety@igem.org before designing around it."
+    },
+    {
+      "question": "Does the White List's 'certified pathogen-free human/primate cell line' allowance actually let a High School team culture human cells, given that the Risk Groups page calls most human cell lines Risk Group 2?",
+      "status": "AMBIGUOUS in the published sources",
+      "whatWasTried": "Both statements were read in full and are quoted verbatim in this file (whiteList.entries.organisms 'Cell lines' row, and whiteList.riskGroupsInvolved). No page reconciles them.",
+      "whyItMatters": "This single ambiguity decides whether any mammalian-cell medical project is viable for the team at all.",
+      "nextStep": "Written question to safety@igem.org naming the specific cell line and vendor certification, before any project design commits to it."
+    },
+    {
+      "question": "Are there 2027-season rules yet?",
+      "status": "NO",
+      "whatWasTried": "The competition site's router and calendar contain only 2026 data (2026 results published 2026-11-16; registration for 2026 closed). There is a /about/new-in-2025 page but no new-in-2026 or new-in-2027 page in the route table.",
+      "whyItMatters": "Every verdict in this file is a 2026-season verdict used as a proxy for 2027. The White List, the special award set and the Gold mechanism have all changed at least once in the last two seasons.",
+      "nextStep": "Re-run this research once the 2027 season opens (registration historically opens mid-January; 2026 opened 2026-01-16). Priority re-checks: the White List itself, the high-school Check-In prohibition, and the special award list."
+    },
+    {
+      "question": "Which URL is canonical for the Rules & Policies page?",
+      "status": "MINOR INCONSISTENCY",
+      "whatWasTried": "The router in competition.igem.org's main bundle defines the route as about/rules-and-policies, and the page's own internal anchor links use https://competition.igem.org/about/rules-and-policies#h-our-shared-values. But the Deliverables data and the teams.igem.org Safety app both link to https://competition.igem.org/participation/rules-and-policies#h-safety-rules. A curl of /participation/rules redirected to /about/rules.",
+      "nextStep": "Use https://competition.igem.org/about/rules-and-policies; the /participation/ form appears to be a legacy alias."
+    },
+    {
+      "question": "Full enumerated list of the 15 Villages for 2026, and which Village Groups high school teams are pooled into.",
+      "status": "NOT RETRIEVED",
+      "whatWasTried": "The Project Awards page states 'In 2026, teams choose from 15 Villages' but renders the list through a component whose data was not in the chunks read. The page points to https://villages.igem.org, which was not fetched.",
+      "whyItMatters": "High School Village Awards are given per combined Village Group of at least 10 high school teams, so which group a project lands in affects the odds of a Village Award.",
+      "nextStep": "Fetch https://villages.igem.org and the 2026 team list at https://teams.igem.org to count high school teams per Village."
+    }
+  ],
+
+  "sourcesRead": [
+    "https://responsibility.igem.org/guidance/white-list",
+    "https://responsibility.igem.org/safety-policies/white-list",
+    "https://responsibility.igem.org/safety-policies (introduction)",
+    "https://responsibility.igem.org/safety-policies/human-experimentation",
+    "https://responsibility.igem.org/safety-policies/human-subjects",
+    "https://responsibility.igem.org/safety-policies/animal-use",
+    "https://responsibility.igem.org/safety-policies/release-beyond-containment",
+    "https://responsibility.igem.org/safety-policies/environmental-samples",
+    "https://responsibility.igem.org/safety-policies/gene-drives",
+    "https://responsibility.igem.org/safety-policies/antimicrobial-resistance",
+    "https://responsibility.igem.org/safety-policies/sars-cov-2",
+    "https://responsibility.igem.org/guidance/risk-groups",
+    "https://responsibility.igem.org/guidance/working-safely",
+    "https://responsibility.igem.org/human-practices/faq",
+    "https://competition.igem.org/about/rules-and-policies",
+    "https://competition.igem.org/judging/awards/medals",
+    "https://competition.igem.org/judging/awards/project",
+    "https://competition.igem.org/judging/awards/special",
+    "https://competition.igem.org/judging/tips",
+    "https://competition.igem.org/calendar",
+    "https://competition.igem.org/deliverables/guides",
+    "https://competition.igem.org/registration/overview",
+    "https://competition.igem.org/registration/team-roster",
+    "https://competition.igem.org/high-school",
+    "https://teams.igem.org/go/safety"
+  ],
+  "methodNote": "Each URL above was read by downloading the page's compiled JavaScript content chunk from the same origin (e.g. https://responsibility.igem.org/assets/white-list-cUQHJyP6.js) and extracting its string literals with HTML entities unescaped, because the HTML served at the page URL is an empty React shell. Chunk filenames are tied to igem-release 96be78f017fa2edebea59e5f1c091d7dd31f1e49 and will change on the next deploy; re-derive them from the page's index bundle rather than reusing them. Where the source emphasises a word with bold/italic markup, the extractor could not recover it and the reconstruction is marked with square brackets and a note. api.registry.igem.org was not queried at all."
+}

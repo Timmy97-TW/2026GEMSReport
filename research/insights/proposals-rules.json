@@ -1,0 +1,261 @@
+{
+  "id": "proposals-rules",
+  "tab": "proposals",
+  "order": 20,
+  "kicker": "The register",
+  "kicker_zh": "資格檢查表",
+  "title": "The White List is a ceiling, not a default — a High School team has no Check-In route at all",
+  "title_zh": "白名單是天花板，不是預設值——高中組隊伍根本沒有 Check-In 管道",
+  "lede": "Read from iGEM's own 2026 rules pages. One sentence decides more about a 2027 project than anything else on this tab: work that would need a Check-In is simply not permitted in the High School section, so anything off the White List has no appeal, no exception and no collaborator workaround.",
+  "lede_zh": "直接讀自 iGEM 自己的 2026 年規則頁。有一句話對 2027 年選題的影響，比本分頁其他任何東西都大：需要 Check-In 的工作在高中組就是不被允許，所以任何不在白名單上的東西，沒有申訴、沒有例外，也沒有找合作者代勞這條路。",
+  "body": "**The operative sentence, from iGEM's live safety forms application.** *\"We are a High School team. Do we file Check In and Animal Use Forms? No. High School teams are required to conduct all their work with organisms, parts, and activities from the White List, so Check In Forms and Animal Use Forms are disabled for that section — you will not see them on the Submissions tab. Your team files the Project Safety Form only. Work that would require a Check In is not permitted in the High School section, so if your project seems to need one, email safety@igem.org before you build your plans around it.\"* The Rules and Policies page says the same thing more briefly: *\"High school teams must use organisms, parts and activities from the White List in their iGEM projects.\"* This restriction began in 2025 and was in force for 2026.\n\n**The collaborator loophole is closed in writing.** The White List page addresses it directly: a team that cannot get approval *\"by virtue of being a high school team (and therefore unable to seek approval via Check-In Forms)… should not engage collaborators to work beyond the White List.\"* A university partner does not widen the ceiling.\n\n**The White List has three axes and any one of them can end a project.** Organisms, parts and activities each have their own allowed column and their own Check-In column, so a project can be clean on the chassis and still blocked on the activity. Risk Group 1 microorganisms are in, with *E. coli* and *B. subtilis* named. Risk Group 2 is out. Risk Group 3 and 4 whole organisms, and parts from Risk Group 4 organisms, are banned outright for every team with or without a form.\n\n**The list only grows within a season.** *\"We might add things to the White List, but we will not remove things from the White List until after the Jamboree each year.\"* So a project that is clean in January stays clean — but 2027's list is not published yet, and all three of the things that matter most here have changed in the last two seasons.",
+  "body_zh": "**那句關鍵句，出自 iGEM 線上的安全表單系統。***「我們是高中隊伍，要交 Check In 與動物使用表嗎？不用。高中隊伍必須以白名單上的生物、零件與活動進行全部工作，所以該組別的 Check In Form 與 Animal Use Form 都被停用——你在繳交頁上根本看不到它們。你的團隊只需繳交 Project Safety Form。需要 Check In 的工作在高中組不被允許，所以如果你的專案看起來需要一份，請在圍繞它擬定計畫之前，先寫信到 safety@igem.org。」*規則與政策頁把同一件事說得更短：*「高中隊伍在 iGEM 專案中必須使用白名單上的生物、零件與活動。」*這項限制自 2025 年開始，2026 年仍然有效。\n\n**「找合作者代勞」這條路被白紙黑字堵死了。**白名單頁直接處理了這一點：一支因為*「身為高中隊伍（因而無法透過 Check-In Form 申請核准）」*而拿不到核准的隊伍，*「不應該找合作者去做超出白名單的工作。」*一位大學端的夥伴並不會把天花板撐高。\n\n**白名單有三個軸，任何一個都能終結一個專案。**生物、零件、活動各自有自己的允許欄與 Check-In 欄，所以一個專案可能底盤乾淨、卻被活動擋住。風險群 1 的微生物在名單上，並具名列出 *E. coli* 與 *B. subtilis*。風險群 2 不在。風險群 3 與 4 的整體生物、以及來自風險群 4 生物的零件，對所有隊伍都是直接禁止，有沒有表格都一樣。\n\n**名單在一個賽季內只會變多。***「我們可能會往白名單裡增加項目，但在每年 Jamboree 結束之前，我們不會從白名單移除任何項目。」*所以一月乾淨的專案會一直乾淨——但 2027 年的名單還沒公布，而這裡最要緊的三件事，在過去兩個賽季都變動過。",
+  "cards": [
+    {
+      "kicker": "Rule 1 · the ceiling",
+      "kicker_zh": "規則一 · 天花板",
+      "title": "No Check-In route means no appeal, no exception, and no partner workaround",
+      "title_zh": "沒有 Check-In 管道，就沒有申訴、沒有例外，也沒有夥伴代勞",
+      "body": "For a collegiate team the White List is a default that a Check-In can widen; the Safety and Security Committee replies to most within a few days. For a High School team the forms are **disabled in the submissions interface** and the rule is stated as a prohibition rather than a hurdle. The practical consequence for 2027 planning: eligibility is not a risk to manage during the season, it is a filter to apply before choosing. Email safety@igem.org in the design phase, not in June — and note that iGEM's own guidance says to do exactly that, *\"before you build your plans around it.\"*",
+      "body_zh": "對大學組隊伍而言，白名單是一個可以用 Check-In 撐開的預設值；安全與保安委員會對多數申請在數天內回覆。對高中組隊伍而言，那些表單在繳交介面上**直接被停用**，而規則的寫法是「禁止」，不是「門檻」。對 2027 年規劃的實際後果是：資格不是賽季中要管理的風險，而是選題前要套用的篩子。在設計階段就寫信給 safety@igem.org，不要等到六月——而且 iGEM 自己的指引講的正是這件事：*「在你圍繞它擬定計畫之前。」*",
+      "chips": [
+        "forms disabled, not just unlikely",
+        "no collaborator workaround",
+        "ask in the design phase"
+      ],
+      "chips_zh": [
+        "表單被停用，不只是難通過",
+        "不能找合作者代勞",
+        "在設計階段就問"
+      ]
+    },
+    {
+      "kicker": "Rule 2 · human anything",
+      "kicker_zh": "規則二 · 任何與人有關的",
+      "title": "Human samples need a Check-In, and testing on people is banned for everyone",
+      "title_zh": "人體檢體需要 Check-In，而在人身上測試對所有隊伍都是禁止的",
+      "body": "The White List puts *\"Conducting laboratory experiments using human samples, such as blood, DNA, other bodily specimens, and health or psychological outcomes, including from members of the team\"* in the Check-In column — so for this division it is simply unavailable. Separately, and for every team: *\"Testing your product on humans (including yourselves) is strictly prohibited. Engineered organisms you make should never come into direct contact with humans.\"* There is a double bind worth seeing: even where collegiate teams can apply, the committee is *\"unlikely to grant permission to use samples from vulnerable populations (such as minors/children…)\"* — and a high school team is largely made of minors. **What survives is surveys, interviews and public engagement**, which iGEM says do not need a Check-In, though they still require compliance with local law and institutional rules.",
+      "body_zh": "白名單把*「使用人體檢體進行實驗室實驗，例如血液、DNA、其他身體檢體，以及健康或心理結果，包括來自團隊成員的」*放在 Check-In 欄裡——所以對這個組別而言，它就是不可得。另外，對每一支隊伍都適用的是：*「在人身上（包括你們自己）測試你的產品是嚴格禁止的。你們製造的工程化生物，絕不應與人體直接接觸。」*還有一個值得看見的雙重束縛：即使在大學組可以申請的地方，委員會也*「不太可能核准使用來自弱勢族群（例如未成年人／兒童……）的檢體」*——而高中隊伍本身大多由未成年人組成。**還活得下來的是問卷、訪談與公眾參與**，iGEM 明說這些不需要 Check-In，但仍須遵守當地法律與機構規定。",
+      "chips": [
+        "unavailable to this division",
+        "banned outright for everyone",
+        "surveys and interviews survive"
+      ],
+      "chips_zh": [
+        "這個組別不可得",
+        "對所有人都直接禁止",
+        "問卷與訪談還能做"
+      ]
+    },
+    {
+      "kicker": "Rule 3 · nothing leaves the lab",
+      "kicker_zh": "規則三 · 沒有東西能離開實驗室",
+      "title": "Not the organism, not its product, not inside a containing device",
+      "title_zh": "生物不行，它的產物不行，裝在「密閉」裝置裡也不行",
+      "body": "*\"Teams cannot release or deploy their project outside of the laboratory at any time during the Competition or at the Grand Jamboree.\"* And the definition is wider than it first looks: *\"Taking the products of your GMOs outside of the lab… 'Products' includes any chemicals that your GMOs might synthesize, even if you purify them.\"* Also: *\"If you engineer an organism in the lab, you may not deliberately release it outside the lab, even inside a 'containing' device.\"* Every escape hatch in the policy is conditioned on advance permission from the committee, which this division cannot obtain. **Two things are explicitly exempt and they are the ones GEMS is strongest at:** releasing software or hardware is not release, and transporting an engineered organism between two labs in proper packaging for research or teaching is not release either — which is precisely what an inter-lab measurement ring needs.",
+      "body_zh": "*「隊伍不得在競賽期間或 Grand Jamboree 上的任何時刻，將其專案釋出或佈署到實驗室之外。」*而這個定義比乍看之下更寬：*「把你們基改生物的產物帶出實驗室……『產物』包括你們的基改生物可能合成的任何化學物質，即使你們已經純化了它。」*還有：*「如果你在實驗室裡工程改造了一個生物，你就不得刻意把它釋出到實驗室外，即使裝在一個『密閉』裝置裡也不行。」*政策裡每一個逃生口，都以委員會的事前許可為條件，而這個組別拿不到。**有兩件事是明文豁免的，而它們正好是 GEMS 最強的那兩項：**釋出軟體或硬體不算釋出；為研究或教學、以適當包裝在兩個實驗室之間運送工程化生物，也不算釋出——而那正是一個實驗室間量測環所需要的。",
+      "chips": [
+        "products count, even purified",
+        "containing devices do not help",
+        "software, hardware and lab-to-lab shipping are exempt"
+      ],
+      "chips_zh": [
+        "產物也算，純化過也算",
+        "裝在密閉裝置裡也沒用",
+        "軟體、硬體與實驗室間運送豁免"
+      ]
+    },
+    {
+      "kicker": "Rule 4 · environmental samples",
+      "kicker_zh": "規則四 · 環境樣本",
+      "title": "You may use the sample; you may not isolate anything from it",
+      "title_zh": "你可以用那個樣本；你不能從裡面分離出任何東西",
+      "body": "This is the rule that reshaped two proposals on this page, and it cuts a surprisingly fine line. Permitted: *\"As long as parts or organisms are not isolated from them, samples from the environment, the food industry, or other non-traditional suppliers may be used in your experiments.\"* Not permitted without a Check-In: *\"Isolation and sequencing of nucleic acids from environmental samples also require the submission of a Check In Form.\"* The White List reinforces it from the organism side, putting *\"All organisms isolated from an environmental sample\"* and *\"Any organisms obtained from outside the lab or from non-traditional / non-institutional suppliers\"* in the Check-In column. **So bulk field soil, river water or process water can be brought in and used as-is — but a metagenomics, bioprospecting or environmental-sequencing project is closed to this division.**",
+      "body_zh": "這就是把本頁兩個提案重新塑形的那條規則，而它切出的線比想像中細。允許的是：*「只要沒有從中分離出零件或生物，來自環境、食品工業或其他非傳統供應者的樣本，都可以用在你的實驗裡。」*沒有 Check-In 就不被允許的是：*「從環境樣本中分離與定序核酸，同樣需要提交 Check In Form。」*白名單從生物那一側再加固一次，把*「所有從環境樣本中分離出來的生物」*與*「任何取自實驗室外、或取自非傳統／非機構供應者的生物」*放進 Check-In 欄。**所以團體的田土、河水或製程水可以搬進實驗室照原樣使用——但總體基因體學、生物探勘或環境定序專案，對這個組別是關閉的。**",
+      "chips": [
+        "bulk sample in, nothing isolated out",
+        "metagenomics is closed",
+        "it reshaped two proposals here"
+      ],
+      "chips_zh": [
+        "團體樣本進得來，分離不出去",
+        "總體基因體學關閉",
+        "它改寫了本頁兩個提案"
+      ]
+    },
+    {
+      "kicker": "Rule 5 · parts and activities",
+      "kicker_zh": "規則五 · 零件與活動",
+      "title": "Where medical designs usually die, and it is not the chassis",
+      "title_zh": "醫療設計通常死在哪裡，而且不是死在底盤",
+      "body": "Protein-coding genes from animals, plants and Risk Group 1 or 2 microorganisms are white-listed **except** virulence factors, factors that help pathogens evade the immune system, and *\"factors that regulate the immune system, such as cytokines and interferons.\"* On the non-coding side, guide RNAs, microRNAs, siRNAs and shRNAs are white-listed only when they **do not** target human genes. That removes most RNA-therapeutic and immunomodulation designs in one stroke. On the activities axis, antimicrobial-resistance work has its own Check-In trigger, as does use of controlled chemicals, and so does anything that could make a hazardous agent more hazardous. **The chassis is rarely the problem. The part and the activity usually are.**",
+      "body_zh": "來自動物、植物與風險群 1 或 2 微生物的蛋白質編碼基因在白名單上，**除了**毒力因子、幫助病原逃避免疫系統的因子，以及*「調節免疫系統的因子，例如細胞激素與干擾素」*。在非編碼那一側，嚮導 RNA、microRNA、siRNA 與 shRNA 只有在**不**針對人類基因時才在白名單上。這一刀就移除了大部分 RNA 療法與免疫調節的設計。在活動軸上，抗藥性相關工作有自己的 Check-In 觸發條件，受管制化學品的使用也有，而任何可能讓危險因子變得更危險的事情同樣有。**底盤很少是問題。零件和活動通常才是。**",
+      "chips": [
+        "no cytokines or interferons",
+        "no human-gene-targeting RNA",
+        "AMR has its own trigger"
+      ],
+      "chips_zh": [
+        "不能用細胞激素或干擾素",
+        "不能用針對人類基因的 RNA",
+        "抗藥性有自己的觸發條件"
+      ]
+    },
+    {
+      "kicker": "Unresolved",
+      "kicker_zh": "未解",
+      "title": "Three things this screen could not settle, and none should be read as permission",
+      "title_zh": "這次篩查沒能定案的三件事，沒有一件該被讀成許可",
+      "body": "**The Registry Red Flag list could not be read.** The page sits behind a JavaScript challenge, so every Registry part a 2027 project plans to use must be checked by hand in a browser — red-flagged parts need a Check-In this division cannot file. **Human and primate cell lines are genuinely ambiguous.** The White List allows those *\"tested and certified free of known pathogens\"*, while iGEM's own Risk Groups table assigns *\"Most human and mammal cell lines\"* to Risk Group 2, which the organisms row routes to Check-In. No published page reconciles the two, and that single ambiguity decides whether any mammalian-cell project is available at all. **And no 2027 rules exist yet.** Everything here is the 2026 season read as a proxy; registration has historically opened in mid-January. The three items to re-verify first are the White List itself, the High School Check-In prohibition and the special award list — all three changed in the last two seasons.",
+      "body_zh": "**Registry 的 Red Flag 清單讀不到。**那個頁面擋在一道 JavaScript 驗證後面，所以 2027 年專案打算使用的每一個 Registry 元件，都必須在瀏覽器裡人工逐一確認——被標紅旗的元件需要這個組別無法提交的 Check-In。**人類與靈長類細胞株確實存在矛盾。**白名單允許那些*「經檢驗並證實不帶已知病原」*的細胞株，而 iGEM 自己的風險群表格卻把*「大多數人類與哺乳類細胞株」*列為風險群 2，而生物那一列又把風險群 2 導向 Check-In。沒有任何已發布頁面調和這兩者，而光是這一個模糊地帶，就決定了任何哺乳類細胞培養專案到底可不可行。**而且 2027 年的規則還不存在。**這裡的一切都是把 2026 賽季當成代理來讀的；報名在歷年上大約於一月中旬開放。最該優先重新確認的三件事是：白名單本身、高中組的 Check-In 禁令，以及特別獎清單——這三者在過去兩個賽季都變動過。",
+      "chips": [
+        "Red Flag list unread",
+        "cell lines genuinely ambiguous",
+        "2027 rules not published"
+      ],
+      "chips_zh": [
+        "Red Flag 清單未讀到",
+        "細胞株確實模糊",
+        "2027 規則尚未公布"
+      ]
+    }
+  ],
+  "table": {
+    "head": [
+      "Proposal",
+      "White List verdict",
+      "What triggers it",
+      "What to do"
+    ],
+    "head_zh": [
+      "提案",
+      "白名單判定",
+      "觸發條件是什麼",
+      "該怎麼做"
+    ],
+    "rows": [
+      [
+        "**O1 · Characterise the switch**",
+        "**Clean**",
+        "*B. subtilis* is a named Risk Group 1 organism; Registry parts; all work in the lab; nothing leaves",
+        "Proceed. Check each Registry part against the Red Flag list by hand, since that list could not be read here"
+      ],
+      [
+        "**O2 · What reaches the plant**",
+        "**Clean if re-scoped**",
+        "Only *Physcomitrella patens*, *Arabidopsis* spp. and *Nicotiana* spp. are white-listed plants; GMO products may not leave the lab",
+        "Use a white-listed plant, not rice. Bring bulk soil in and use it as-is. Keep the model about rice and say so"
+      ],
+      [
+        "**M1 · Resistance genes in water**",
+        "**Not permitted**",
+        "Isolation and sequencing of nucleic acids from environmental samples; and antimicrobial-resistance experiments — two independent triggers",
+        "Drop the metagenomics. Sense a purchased analyte standard and a bulk matrix, and publish where the chain breaks"
+      ],
+      [
+        "**M2 · Oral-pathogen biofilm**",
+        "**Unresolved — ask in writing**",
+        "Risk Group 2 organisms need a Check-In this division cannot file; organisms from non-traditional suppliers do too",
+        "Email safety@igem.org before designing. If the answer is no, fall back to a Risk Group 1 indicator and say why"
+      ],
+      [
+        "**N1 · Inter-lab ring**",
+        "**Clean, and explicitly blessed**",
+        "Transporting an engineered organism between two labs in proper packaging for research or teaching is listed as NOT release",
+        "Proceed. Package properly and state the arrangement on the safety page"
+      ],
+      [
+        "**N2 · Process-water sensor**",
+        "**Clean if lab-only**",
+        "Bringing a product of a GMO outside the lab needs permission; controlled chemicals have their own trigger",
+        "Bring the water to the lab, not the sensor to the plant. Confirm the contaminant is not a controlled chemical"
+      ],
+      [
+        "*Any project using human samples*",
+        "**Not permitted**",
+        "Human samples, including from team members, sit in the Check-In column; testing on people is banned outright for every team",
+        "Use surveys, interviews and public engagement instead — iGEM states these need no Check-In"
+      ],
+      [
+        "*Any project using a Risk Group 2 organism*",
+        "**Not permitted**",
+        "Risk Group 2 needs enhanced containment, which routes to Check-In",
+        "There is no route. Choose a Risk Group 1 chassis and state the substitution on the wiki"
+      ]
+    ],
+    "rows_zh": [
+      [
+        "**O1 · 把開關特性描述清楚**",
+        "**乾淨**",
+        "*B. subtilis* 是具名的風險群 1 生物；使用 Registry 元件；全部工作在實驗室內；沒有東西離開",
+        "可以進行。每一個 Registry 元件要人工到瀏覽器裡對 Red Flag 清單確認，因為那份清單這次讀不到"
+      ],
+      [
+        "**O2 · 真正送到植物上的東西**",
+        "**改寫範圍後乾淨**",
+        "白名單植物只有 *Physcomitrella patens*、*Arabidopsis* spp. 與 *Nicotiana* spp.；基改產物不得離開實驗室",
+        "用白名單植物，不要用水稻。把團體田土搬進來照原樣使用。模型仍然可以是關於水稻的，而且要寫明"
+      ],
+      [
+        "**M1 · 水中的抗藥性基因**",
+        "**不被允許**",
+        "從環境樣本分離與定序核酸；以及抗藥性相關實驗——兩條互相獨立的觸發條件",
+        "拿掉總體基因體學。改成感測一個買得到的分析物標準品與一個團體基質，並公開鏈條斷在哪裡"
+      ],
+      [
+        "**M2 · 口腔致病菌生物膜**",
+        "**未解——先要到書面回覆**",
+        "風險群 2 的生物需要這個組別無法提交的 Check-In；來自非傳統供應者的生物同樣需要",
+        "設計之前先寫信給 safety@igem.org。如果答案是否定的，退回用風險群 1 的指示菌，並寫明原因"
+      ],
+      [
+        "**N1 · 實驗室間量測環**",
+        "**乾淨，而且明文背書**",
+        "為研究或教學、以適當包裝在兩個實驗室之間運送工程化生物，被明列為「不算釋出」",
+        "可以進行。包裝要確實，並在安全頁上寫明這個安排"
+      ],
+      [
+        "**N2 · 製程水感測器**",
+        "**只在實驗室內則乾淨**",
+        "把基改生物的產物帶出實驗室需要許可；受管制化學品有自己的觸發條件",
+        "把水送進實驗室，不要把感測器送到廠裡。確認該污染物不是受管制化學品"
+      ],
+      [
+        "*任何使用人體檢體的專案*",
+        "**不被允許**",
+        "人體檢體，包括來自團隊成員的，都在 Check-In 欄裡；在人身上測試對所有隊伍都直接禁止",
+        "改用問卷、訪談與公眾參與——iGEM 明說這些不需要 Check-In"
+      ],
+      [
+        "*任何使用風險群 2 生物的專案*",
+        "**不被允許**",
+        "風險群 2 需要加強圍堵，而那會導向 Check-In",
+        "沒有任何管道。改選風險群 1 的底盤，並在 wiki 上寫明這個替換"
+      ]
+    ]
+  },
+  "checklist": [
+    "Screen every candidate against all three White List axes before costing it: the organism, the part and the activity. A project can be clean on the chassis and dead on the activity.",
+    "Email safety@igem.org during the design phase, not in June. iGEM's own guidance says to ask before you build your plans around it, and the reply usually comes within days.",
+    "Ask iGEM in writing about the human and primate cell line contradiction before any mammalian-cell project is considered. The White List and the Risk Groups table disagree, and no published page reconciles them.",
+    "Check every planned Registry part against the Red Flag list by hand in a browser. That list sits behind a JavaScript challenge and could not be read here, and a red-flagged part needs a Check-In this division cannot file.",
+    "Do not plan on a university partner widening the ceiling. The White List page closes that door explicitly for high school teams.",
+    "Keep bulk environmental samples, drop anything that isolates or sequences from them. Using the sample is permitted; isolating from it is not.",
+    "Design the demonstration around software and hardware, which are exempt from the release rules, rather than around taking an engineered product anywhere.",
+    "Re-verify the White List, the High School Check-In prohibition and the special award list when the 2027 rules publish, historically mid-January. All three changed in the last two seasons.",
+    "File the Project Safety Form on time. It is the only safety form this division files, and missing a required form is grounds for disqualification rather than a lost point."
+  ],
+  "checklist_zh": [
+    "在估算成本之前，先把每個候選題目對照白名單三個軸篩一遍：生物、零件、活動。一個專案可能底盤乾淨、卻死在活動上。",
+    "在設計階段就寫信到 safety@igem.org，不要等到六月。iGEM 自己的指引就說要在圍繞它擬定計畫之前先問，而回覆通常數天內就到。",
+    "在考慮任何哺乳類細胞專案之前，先就人類與靈長類細胞株的矛盾向 iGEM 取得書面答覆。白名單與風險群表格互相牴觸，而且沒有任何已發布頁面調和它們。",
+    "每一個預定使用的 Registry 元件，都要人工在瀏覽器裡對 Red Flag 清單確認。那份清單擋在 JavaScript 驗證後面，這次讀不到，而被標紅旗的元件需要這個組別無法提交的 Check-In。",
+    "不要指望大學端的夥伴能把天花板撐高。白名單頁針對高中隊伍明文堵死了這條路。",
+    "保留團體環境樣本，拿掉任何從中分離或定序的步驟。使用樣本是允許的；從中分離則不允許。",
+    "把成果展示設計在軟體與硬體上——它們豁免於釋出規則——而不是設計成把一個工程化產物帶到任何地方。",
+    "等 2027 年規則公布（歷年約在一月中旬）時，重新確認白名單、高中組 Check-In 禁令，以及特別獎清單。這三者在過去兩個賽季都變動過。",
+    "準時繳交 Project Safety Form。那是這個組別唯一要交的安全表單，而漏繳必繳表單的後果是取消資格，不是扣分。"
+  ],
+  "method": "Read from iGEM's own published pages for the 2026 season, which is the most recent season published; no 2027 rules exist yet, so everything here is a 2026 proxy and is labelled as such. Primary sources: the White List guidance and policy pages and the Risk Groups, Human Experimentation, Release Beyond Containment and Environmental Samples policies on responsibility.igem.org; the Rules and Policies, Awards, Medals and Registration pages on competition.igem.org; and the live safety forms application at teams.igem.org, which turned out to state the high-school rule most explicitly. Every iGEM site is a client-rendered application that returns an empty shell to a plain fetch, so each page was read by downloading its compiled JavaScript content chunk from the same origin and extracting string literals with entities unescaped; those chunk hashes are tied to one release and will change on the next deploy. Operative sentences are quoted verbatim so a reader can check them. This is an eligibility screen and not legal or institutional advice: iGEM states plainly that its approval does not replace institutional or national approval, and that a team needs both. Three items could not be settled and are named on this page rather than guessed -- the Registry Red Flag list, the human and primate cell line contradiction, and whether any high-school-specific containment-level rule exists beyond what the White List implies. Anything marked unresolved here should be treated as unresolved rather than as permission.",
+  "method_zh": "直接讀自 iGEM 自己 2026 賽季的已發布頁面，那是目前最新已發布的賽季；2027 年規則尚不存在，所以本頁一切都是以 2026 年作為代理，並已如此標註。主要來源：responsibility.igem.org 上的白名單指引頁與政策頁，以及風險群、人體實驗、超出圍堵之釋出、環境樣本等政策；competition.igem.org 上的規則與政策、獎項、獎牌與報名頁；以及 teams.igem.org 上線上的安全表單系統——結果那裡才是把高中組規則講得最明確的地方。iGEM 所有網站都是用戶端渲染的應用程式，對一般抓取只會回傳空殼，所以每個頁面都是從同一來源下載其編譯後的 JavaScript 內容區塊、並將實體字元還原後擷取字串常數來閱讀的；那些區塊雜湊綁定於某一次發布，下次部署就會改變。關鍵句一律逐字引用，讓讀者可以自行查核。這是一份資格篩查，不是法律或機構層面的建議：iGEM 明白表示，它的核准不能取代機構或國家層級的核准，兩者都需要。有三件事無法定案，已在本頁具名列出而不是用猜的——Registry 的 Red Flag 清單、人類與靈長類細胞株的矛盾，以及除了白名單隱含之外、是否存在任何高中組專屬的圍堵等級規定。本頁任何標示為未解的事項，都應該當成未解，而不是當成許可。"
+}

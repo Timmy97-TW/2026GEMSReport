@@ -383,7 +383,15 @@ def parallel_audit(root="research"):
                 return n[k][:40]
         return ""
 
+    # Reference data captured from an outside source is not rendered and is not
+    # translated on purpose -- igem-rules.json is a verbatim record of iGEM's own
+    # published rules, where translating a quoted rule would be actively harmful.
+    # Only files whose strings reach a reader belong in this audit.
+    SOURCE_DATA = {"igem-rules.json"}
+
     for path in sorted(glob.glob(os.path.join(root, "**", "*.json"), recursive=True)):
+        if os.path.basename(path) in SOURCE_DATA:
+            continue
         try:
             doc = json.load(io.open(path, encoding="utf-8"))
         except (ValueError, OSError) as e:

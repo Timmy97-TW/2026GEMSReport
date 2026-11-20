@@ -1660,3 +1660,70 @@ consistency fix and not a correctness one, and it was done mechanically with a J
 written. Final counts: 台灣 190 and 臺灣 0; 頒獎臺 95 and 頒獎台 0. 平台 was already consistent at 44 with no
 平臺. No character audit could have caught either, because nothing here was ever wrong -- it was only
 inconsistent, which is the class of problem a reader notices and a script does not.
+
+## Session 6, part 3 — the 2027 proposals tab, and the rule that reshaped it
+
+The user asked for a second new tab, "2027 新題目建議": five new topics analysed in full, two optogenetics, two
+medical with an explicit instruction to watch the iGEM White List, and two new -- which is 2+2+2 and therefore
+six, not five. Delivered six and said so in one line, on the reasoning that every category named was explicit
+while the single digit contradicted the enumeration, and a superset costs the user nothing.
+
+### The special-prize answer is Best Model
+
+From award-economics.json pooled over three seasons: Best Wiki nominees take a Top 10 60% of the time, Best
+Presentation 53%, Best Model 50%, down to 0% for Safety, Alternative Platform and New Improved Part. But in
+the High School section Best Model does something sharper, from judging-top10.json: it maps onto the finalist
+slate exactly -- Lambert-GA won it, HongKong-JSS was nominated, no other Top 10 team appears in the category.
+GEMS was nominated in 2024 and 2025 and has never won it. Wiki and Presentation are explicitly NOT
+recommended as targets despite higher co-occurrence, because both are judged on the same material as a Top 10,
+so chasing them is chasing the thermometer -- and GEMS's own 2024 Best Wiki year is its weakest-presented
+site. Also recorded: GEMS won Best New Basic Part in 2024 and had zero parts nominations in 2026, a zero all
+thirteen Taiwanese teams shared.
+
+### The White List screen changed four of the six proposals
+
+This is the important part of the session. research/igem-rules.json is a new verbatim capture of iGEM's 2026
+rules, 100 KB, every fact carrying its source URL and season, with nine open questions recorded rather than
+guessed. The load-bearing finding, quoted from the live safety forms app at teams.igem.org:
+
+**"Work that would require a Check In is not permitted in the High School section."** Check-In and Animal Use
+forms are disabled in the submissions interface for this division. So the White List is a hard ceiling, not a
+default a form can widen, and the White List page closes the collaborator loophole in writing too -- a high
+school team "should not engage collaborators to work beyond the White List". The restriction began in 2025.
+
+What that did to the six:
+- O1 (characterise the CcaSR switch): clean. B. subtilis is a named Risk Group 1 organism, Registry parts,
+  nothing leaves the lab. Now unambiguously the strongest candidate.
+- O2 (assay what reaches the plant): re-scoped. The only white-listed multicellular plants are Physcomitrella
+  patens, Arabidopsis spp. and Nicotiana spp. GEMS's 2026 stress index was fitted to Taiwanese county RICE
+  yields, so a rice assay plant is Check-In work this division cannot file. Also, GMO products may not leave
+  the lab, so the spray work happens indoors on bulk soil brought in.
+- M1 (resistance genes in farm water): NOT PERMITTED, blocked twice independently -- "Isolation and sequencing
+  of nucleic acids from environmental samples also require the submission of a Check In Form", and the
+  activities column lists antimicrobial-resistance experiments separately. Re-scoped in place to sensing a
+  purchased analyte standard plus a bulk matrix used as-is, with the chain break published.
+- M2 (oral-pathogen biofilm): gated on a written answer. Risk Group 2 routes to Check-In, and so does any
+  organism from a non-traditional supplier. If the organism is RG2 the project does not exist for GEMS.
+- N1 (inter-lab ring): clean, and the rules explicitly bless the mechanism -- transporting an engineered
+  organism between two labs in proper packaging for research or teaching is listed as NOT release.
+- N2 (process-water sensor): clean only if lab-only. The water comes to the lab, not the sensor to the plant.
+
+Two of six came through untouched and both are white-listed-chassis measurement work. That is what the rules
+leave open to this division, and the proposals block now says so in its lede and body.
+
+### Three things the screen could not settle, recorded as unresolved
+
+The Registry Red Flag list sits behind a JavaScript challenge and was not read, so every planned Registry part
+must be checked by hand. The White List allows certified-pathogen-free human and primate cell lines while
+iGEM's own Risk Groups table calls most human and mammal cell lines Risk Group 2, and no published page
+reconciles them -- that single ambiguity decides whether any mammalian-cell project is available. And no 2027
+rules exist yet; everything is a 2026 proxy, with the White List, the high-school prohibition and the special
+award list named as the three things to re-verify first, since all three changed in the last two seasons.
+
+### parallel_audit now skips source data
+
+igem-rules.json tripped the parallel-array audit on its openQuestions list. That was the audit working
+correctly on the wrong kind of file: a verbatim capture of someone else's published rules is not rendered and
+must not be translated, because translating a quoted rule would be actively harmful. parallel_audit now skips
+a named SOURCE_DATA set with that reasoning in a comment. All three audits were re-tested against a planted
+fault afterwards and all three still fire, and the skip list was verified to be honoured.

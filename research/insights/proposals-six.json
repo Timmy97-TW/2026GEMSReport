@@ -6,10 +6,10 @@
   "kicker_zh": "六個提案",
   "title": "Six candidate projects, each answered against all nine questions",
   "title_zh": "六個候選專案，每一個都把九個問題答完",
-  "lede": "Two built on the optogenetics line GEMS already owns, two medical in motivation but designed so that no human sample is ever touched, and two on ground nobody in the 2026 field claimed. Five of the six are built to attack Best Model, which is the one category that maps onto the High School finalist slate.",
-  "lede_zh": "兩個建立在 GEMS 已經握有的光遺傳學路線上，兩個動機是醫療、但設計成全程不碰任何人體檢體，還有兩個落在 2026 年全體都沒人認領的地上。六個裡有五個是為了攻 Best Model 而設計的，那是唯一一個疊合高中組決賽名單的類別。",
-  "body": "**The optogenetics pair is a sequence, not a choice.** The first characterises the switch and the second uses it on a real field sample; running the second without the first repeats 2026's mistake of stacking an application on a device that was never shown to work. If only one season is available, the first is the stronger candidate, because it passes both gates on day one and because closing a gap in a twelve-paper literature is publishable on its own.\n\n**The medical pair is designed around a rule, not around a disease.** The fastest way to kill a high-school medical project is to touch patients, clinical samples or human tissue. Both candidates here keep the medical motivation and move the sample: one targets a DNA sequence in environmental water, the other a live culture of the causative organism obtained from a collection. Neither requires a single human participant. The eligibility verdicts for both are in the register on this page and should be settled before the biology is designed.\n\n**The new pair claims ground the 2026 field left empty.** Nobody among 106 decorated teams ran an inter-lab measurement ring, and GEMS holds the Best Measurement credential that makes the invitation credible. And no team put a synthetic-biology design-layer artefact against Taiwan's own signature industry, which the industry review identified as the island's structural gap.\n\n**One candidate is marked down and it is marked down honestly.** The resistance-gene proposal needs a nucleic-acid readout the team does not yet own. That is amber rather than red — colorimetric methods are school-feasible — but by the rules of this instrument it must be answered before the topic is chosen rather than in month four.",
-  "body_zh": "**光遺傳學這一對是一個順序，不是一個二選一。**第一個把開關特性描述清楚，第二個把它用在真實田間樣本上；沒做第一個就做第二個，等於重演 2026 年那個錯誤——在一個從未被證明有效的裝置上疊應用。如果只有一季可用，第一個是較強的候選，因為它第一天就通過兩道關卡，而且在一個十二篇論文的領域裡補上缺口，本身就可以發表。\n\n**醫療這一對是圍繞規則設計的，不是圍繞疾病設計的。**終結一個高中醫療題目最快的方式，就是碰到病人、臨床檢體或人體組織。這裡兩個候選都保留醫療動機，把樣本移開：一個以環境水體中的 DNA 序列為標的，另一個以來自菌種保存中心的致病菌活體培養為標的。兩者都不需要任何一位人類受試者。兩者的資格判定都在本頁的檢查表裡，而且應該在設計生物學之前就先定案。\n\n**新題目這一對，佔的是 2026 年全體留空的地。**106 支得獎隊伍裡沒有任何一支跑過實驗室間量測環，而 GEMS 握有讓這份邀請具可信度的 Best Measurement 資格。也沒有任何一支隊伍，把一個合成生物學的設計層產出放到台灣自己的招牌產業旁邊——而產業回顧正是把那一點指認為這座島的結構性缺口。\n\n**有一個候選被扣分，而且是誠實地扣。**抗藥性基因那個提案需要一種團隊目前還沒有的核酸讀值能力。那是黃燈不是紅燈——顯色法學校做得來——但依這套工具的規則，它必須在選題之前就回答，而不是等到第四個月。",
+  "lede": "Two built on the optogenetics line GEMS already owns, two medical in motivation but designed so that no human sample is ever touched, and two on ground nobody in the 2026 field claimed. Five of the six are built to attack Best Model. **All six have now been screened against iGEM's White List, and the screen changed four of them** — because a high school team has no Check-In route, so the White List is a ceiling rather than a default.",
+  "lede_zh": "兩個建立在 GEMS 已經握有的光遺傳學路線上，兩個動機是醫療、但設計成全程不碰任何人體檢體，還有兩個落在 2026 年全體都沒人認領的地上。六個裡有五個是為了攻 Best Model 而設計的。**六個現在都已經對照 iGEM 白名單篩過一遍，而這次篩查改掉了其中四個**——因為高中組隊伍沒有 Check-In 管道，所以白名單是天花板，不是預設值。",
+  "body": "**The optogenetics pair is a sequence, not a choice.** The first characterises the switch and the second uses it on a real field sample; running the second without the first repeats 2026's mistake of stacking an application on a device that was never shown to work. If only one season is available, the first is the stronger candidate, because it passes both gates on day one and because closing a gap in a twelve-paper literature is publishable on its own.\n\n**The medical pair is designed around a rule, not around a disease.** The fastest way to kill a high-school medical project is to touch patients, clinical samples or human tissue. Both candidates here keep the medical motivation and move the sample: one targets a DNA sequence in environmental water, the other a live culture of the causative organism obtained from a collection. Neither requires a single human participant. The eligibility verdicts for both are in the register on this page and should be settled before the biology is designed.\n\n**The new pair claims ground the 2026 field left empty.** Nobody among 106 decorated teams ran an inter-lab measurement ring, and GEMS holds the Best Measurement credential that makes the invitation credible. And no team put a synthetic-biology design-layer artefact against Taiwan's own signature industry, which the industry review identified as the island's structural gap.\n\n**The eligibility screen mattered more than the scoring did, which is the point.** The resistance-gene proposal is not permitted in the High School section at all, blocked independently by the environmental-sample rule and by the antimicrobial-resistance rule. The oral-pathogen proposal is gated on a written answer from iGEM about one organism's risk group. The field proposal loses its field: the assay plant must be white-listed and the spray work must happen in the lab. The process-water proposal cannot put its sensor on site. **Two of the six came through untouched, and both are optogenetics or measurement work in a white-listed chassis.** That is not a coincidence — it is what the rules leave open to this division.",
+  "body_zh": "**光遺傳學這一對是一個順序，不是一個二選一。**第一個把開關特性描述清楚，第二個把它用在真實田間樣本上；沒做第一個就做第二個，等於重演 2026 年那個錯誤——在一個從未被證明有效的裝置上疊應用。如果只有一季可用，第一個是較強的候選，因為它第一天就通過兩道關卡，而且在一個十二篇論文的領域裡補上缺口，本身就可以發表。\n\n**醫療這一對是圍繞規則設計的，不是圍繞疾病設計的。**終結一個高中醫療題目最快的方式，就是碰到病人、臨床檢體或人體組織。這裡兩個候選都保留醫療動機，把樣本移開：一個以環境水體中的 DNA 序列為標的，另一個以來自菌種保存中心的致病菌活體培養為標的。兩者都不需要任何一位人類受試者。兩者的資格判定都在本頁的檢查表裡，而且應該在設計生物學之前就先定案。\n\n**新題目這一對，佔的是 2026 年全體留空的地。**106 支得獎隊伍裡沒有任何一支跑過實驗室間量測環，而 GEMS 握有讓這份邀請具可信度的 Best Measurement 資格。也沒有任何一支隊伍，把一個合成生物學的設計層產出放到台灣自己的招牌產業旁邊——而產業回顧正是把那一點指認為這座島的結構性缺口。\n\n**資格篩查比評分更要緊，而這正是重點。**抗藥性基因那個提案在高中組根本不被允許，被環境樣本規則與抗藥性規則各自獨立擋住。口腔致病菌那個提案卡在 iGEM 對某一種菌風險群的書面回覆上。田間那個提案失去了它的田：試驗植物必須在白名單上，而噴灑工作必須在實驗室裡進行。製程水那個提案的感測器不能放到現場。**六個裡只有兩個原封不動通過，而且兩個都是在白名單底盤上的光遺傳學或量測工作。**那不是巧合——那就是規則留給這個組別的空間。",
   "cards": [
     {
       "kicker": "Optogenetics 1 · the strongest candidate",
@@ -34,53 +34,53 @@
       "kicker_zh": "光遺傳學 2 · 補上 2026 的缺口",
       "title": "Assay the preparation that actually reaches the plant, on plants in real field soil",
       "title_zh": "檢測真正噴到植物上的那份製備，而且用真實田土裡的植物",
-      "body": "**The claim.** A measured dose of ACC deaminase rescues stressed rice in soil from a named field, and here is the dose that was actually delivered.\n\n**Why this one.** 2026's strongest result — a plant rescue at p < 0.0001 with 40 seedlings a condition — sits on a preparation that was never assayed. That is precisely the gate-one failure this report found separating the podium from the rest: seven of seven non-podium High School teams stopped at a surrogate. The fix is not a new project; it is finishing this one.\n\n**Gate 1:** the real target is the spray preparation itself plus stressed plants in soil from the cooperative's field, and the relationship already exists — the team interviewed Mr. Chen Ke-Wei of the Lanyang River Friendly Farming Production Cooperative in 2026. **Gate 2:** ACC deaminase activity assay, ELISA and plant phenotype, all on instruments already owned.\n\n**The model.** Fit plant rescue against *measured* enzyme activity rather than nominal dose — that single change converts an assumed delivery into a measured one. Hold back a whole stress level or a whole field block.\n\n**The arm that could break it.** The rescue comes from something else in the preparation. Run a spent-medium-only arm, a heat-inactivated-enzyme arm and a buffer-only arm. Athens wrote the type specimen for naming this honestly: \"Separating the two requires that buffer-only arm, and until it is run we describe the effect as attributable to the preparation.\"\n\n**The constraint the team already found, and must keep saying.** A farmer at a 2026 forum asked whether the system breaks organic certification; the team researched the regulations and concluded **it cannot be used on organic farms**, then interviewed the cooperative to work out what that means commercially. That is an honest market cap and it belongs on the landing page, not in a footnote.\n\n**Reach.** The multiplier is agricultural extension: the district agricultural research and extension stations employ people whose job is to repeat advice to growers for years. Train the extension officers, not the growers.",
-      "body_zh": "**主張。**一個**被量到的** ACC deaminase 劑量，能讓長在具名田區土壤裡的逆境水稻恢復，而這就是真正送達的那個劑量。\n\n**為什麼是它。**2026 年最強的結果——每組 40 棵苗、p < 0.0001 的植物救援——建立在一份從未被檢測活性的製備上。那正是本報告找到的、把頒獎臺和其他人分開的那個關卡一失誤：七支沒上頒獎臺的高中隊伍，七支全部停在替代物上。解法不是一個新專案，而是把這一個做完。\n\n**關卡一：**真實標的就是噴劑製備本身，加上長在合作社田區土壤裡的逆境植物，而且關係已經存在——團隊在 2026 年訪談過蘭陽溪友善耕作生產合作社的陳科緯先生。**關卡二：**ACC deaminase 活性測定、ELISA 與植物表型，全部做在已經有的儀器上。\n\n**模型。**把植物救援對**實測的**酵素活性作擬合，而不是對名目劑量——光是這一個改變，就把「假設的送達」變成「量到的送達」。整個逆境層級或整個田區區塊地留存起來不用。\n\n**那個可能推翻它的實驗組。**救援其實來自製備裡的別的東西。跑一組只有用過培養基的、一組熱去活化酵素的、一組只有緩衝液的。Athens 寫出了誠實指名這件事的範本：「要把這兩者分開需要那一組只有緩衝液的對照，在它被做出來之前，我們把這個效應描述為可歸因於該製備。」\n\n**團隊已經找到、而且必須繼續講的那個限制。**2026 年一場論壇上，一位農民問這套系統會不會破壞有機認證；團隊去查了法規，結論是**它不能用在有機農場**，接著訪談合作社釐清這在商業上代表什麼。那是一個誠實的市場上限，它該出現在首頁，不是藏在註腳裡。\n\n**觸及範圍。**放大器是農業推廣：各區農業改良場僱用的人，工作就是年復一年把建議重複給農民聽。訓練推廣人員，不是訓練農民。",
+      "body": "**The claim.** A measured dose of ACC deaminase rescues stressed rice in soil from a named field, and here is the dose that was actually delivered.\n\n**Why this one.** 2026's strongest result — a plant rescue at p < 0.0001 with 40 seedlings a condition — sits on a preparation that was never assayed. That is precisely the gate-one failure this report found separating the podium from the rest: seven of seven non-podium High School teams stopped at a surrogate. The fix is not a new project; it is finishing this one.\n\n**Gate 1:** the real target is the spray preparation itself plus stressed plants in soil from the cooperative's field, and the relationship already exists — the team interviewed Mr. Chen Ke-Wei of the Lanyang River Friendly Farming Production Cooperative in 2026. **Gate 2:** ACC deaminase activity assay, ELISA and plant phenotype, all on instruments already owned.\n\n**The model.** Fit plant rescue against *measured* enzyme activity rather than nominal dose — that single change converts an assumed delivery into a measured one. Hold back a whole stress level or a whole field block.\n\n**The arm that could break it.** The rescue comes from something else in the preparation. Run a spent-medium-only arm, a heat-inactivated-enzyme arm and a buffer-only arm. Athens wrote the type specimen for naming this honestly: \"Separating the two requires that buffer-only arm, and until it is run we describe the effect as attributable to the preparation.\"\n\n**The constraint the team already found, and must keep saying.** A farmer at a 2026 forum asked whether the system breaks organic certification; the team researched the regulations and concluded **it cannot be used on organic farms**, then interviewed the cooperative to work out what that means commercially. That is an honest market cap and it belongs on the landing page, not in a footnote.\n\n**Reach.** The multiplier is agricultural extension: the district agricultural research and extension stations employ people whose job is to repeat advice to growers for years. Train the extension officers, not the growers.\n\n**Two rule constraints that change how this is built.** First, the White List names only *Physcomitrella patens*, *Arabidopsis* spp. and *Nicotiana* spp. as permitted multicellular plants; everything else is \"Other multicellular organisms\", which is Check-In work a high school team cannot file. GEMS's 2026 stress index was fitted to twenty-five years of Taiwanese county **rice** yields, so if the 2027 assay plant is rice, the assay is not available in this division — the model can still be about rice while the plant on the bench is a white-listed species, and the wiki should say so. Second, nothing engineered and no product of anything engineered may leave the lab without permission GEMS cannot obtain, so the spray assay happens **in the lab on bulk field soil brought in**, not in the field. Using the soil as-is is explicitly permitted; isolating anything from it is not.",
+      "body_zh": "**主張。**一個**被量到的** ACC deaminase 劑量，能讓長在具名田區土壤裡的逆境水稻恢復，而這就是真正送達的那個劑量。\n\n**為什麼是它。**2026 年最強的結果——每組 40 棵苗、p < 0.0001 的植物救援——建立在一份從未被檢測活性的製備上。那正是本報告找到的、把頒獎臺和其他人分開的那個關卡一失誤：七支沒上頒獎臺的高中隊伍，七支全部停在替代物上。解法不是一個新專案，而是把這一個做完。\n\n**關卡一：**真實標的就是噴劑製備本身，加上長在合作社田區土壤裡的逆境植物，而且關係已經存在——團隊在 2026 年訪談過蘭陽溪友善耕作生產合作社的陳科緯先生。**關卡二：**ACC deaminase 活性測定、ELISA 與植物表型，全部做在已經有的儀器上。\n\n**模型。**把植物救援對**實測的**酵素活性作擬合，而不是對名目劑量——光是這一個改變，就把「假設的送達」變成「量到的送達」。整個逆境層級或整個田區區塊地留存起來不用。\n\n**那個可能推翻它的實驗組。**救援其實來自製備裡的別的東西。跑一組只有用過培養基的、一組熱去活化酵素的、一組只有緩衝液的。Athens 寫出了誠實指名這件事的範本：「要把這兩者分開需要那一組只有緩衝液的對照，在它被做出來之前，我們把這個效應描述為可歸因於該製備。」\n\n**團隊已經找到、而且必須繼續講的那個限制。**2026 年一場論壇上，一位農民問這套系統會不會破壞有機認證；團隊去查了法規，結論是**它不能用在有機農場**，接著訪談合作社釐清這在商業上代表什麼。那是一個誠實的市場上限，它該出現在首頁，不是藏在註腳裡。\n\n**觸及範圍。**放大器是農業推廣：各區農業改良場僱用的人，工作就是年復一年把建議重複給農民聽。訓練推廣人員，不是訓練農民。\n\n**兩條會改變做法的規則限制。**第一，白名單上允許的多細胞植物只有 *Physcomitrella patens*、*Arabidopsis* spp. 與 *Nicotiana* spp.；其餘一律屬於「其他多細胞生物」，那是高中組隊伍無法提交的 Check-In 工作。GEMS 2026 年的逆境指數，是擬合到台灣各縣市二十五年的**水稻**產量上的，所以如果 2027 年的試驗植物是水稻，這個試驗在這個組別就做不成——模型仍然可以是關於水稻的，而實驗檯上那株是白名單物種，而且 wiki 應該把這件事寫出來。第二，任何工程化生物及其產物，都不得在沒有 GEMS 拿不到的許可下離開實驗室，所以噴灑試驗要**在實驗室裡、用搬進來的團體田土**進行，不是在田裡。照原樣使用那些土是明文允許的；從中分離任何東西則不允許。",
       "chips": [
         "fixes the 2026 gate-1 failure",
-        "Mr. Chen Ke-Wei already interviewed",
-        "cannot be used on organic farms"
+        "white-listed plants only, not rice",
+        "in the lab, on soil brought in"
       ],
       "chips_zh": [
         "補上 2026 年關卡一的失誤",
-        "已訪談過陳科緯先生",
-        "不能用在有機農場"
+        "只能用白名單植物，不是水稻",
+        "在實驗室裡，用搬進來的土"
       ]
     },
     {
-      "kicker": "Medical 1 · medical relevance, environmental sample",
-      "kicker_zh": "醫療 1 · 醫療意義，環境樣本",
-      "title": "Antimicrobial-resistance genes in the water a named farm actually uses",
-      "title_zh": "一座具名農場真正在用的水裡，有哪些抗藥性基因",
-      "body": "**The claim.** These resistance genes are present at these concentrations in water from this named site, measured with a stated limit of detection in the real matrix.\n\n**Why this shape.** Antimicrobial resistance is a health problem of the first order, but the moment a project touches patients, clinical samples or human tissue it collides with the rules that most often kill a high-school medical idea. This design keeps the medical relevance and moves the sample out of the clinic: **the target is a DNA sequence in environmental water, not a live human pathogen and not a patient.** That single choice is what makes it buildable by this team in this division.\n\n**Gate 1:** real water from the cooperative's irrigation channel or the Lanyang river, obtainable in week one through a relationship that already exists. **Gate 2 — and this is the one candidate marked down.** GEMS owns OD600, ELISA and plate readers, but a nucleic-acid readout is a capability the team does not yet have. Colorimetric LAMP is cheap and school-feasible, so this is amber rather than red, but it must be answered before the topic is chosen, not in month four.\n\n**The model.** A calibration curve per matrix, inverse calibration to estimate unknowns, a limit of detection computed rather than asserted, and estimates outside the calibrated range flagged instead of reported silently. HongKong-JSS's calibration discipline is the template, including keeping failed predictions inside the error metric.\n\n**The arm that could break it.** The signal is free extracellular DNA, or the water matrix is inhibiting the reaction. Run spiked-matrix recovery, no-template controls on every plate, and a matrix-only arm.\n\n**Reach.** Water-quality inspectors and extension officers are professional repeaters. **Eligibility note:** the claim must stay environmental surveillance — no clinical diagnosis, no patient advice, no human sampling.",
-      "body_zh": "**主張。**這些抗藥性基因，在這個具名場址的水裡，以這些濃度存在，並以一個在真實基質中確立的偵測極限量得。\n\n**為什麼是這個形狀。**抗藥性是第一等的健康問題，但一個專案只要碰到病人、臨床檢體或人體組織，就會撞上那些最常終結高中醫療題目的規則。這個設計保留醫療意義，把樣本移出診間：**標的是環境水體中的一段 DNA 序列，不是活的人類病原，也不是病人。**就是這一個選擇，讓它在這個組別、由這支隊伍做得出來。\n\n**關卡一：**合作社灌溉渠或蘭陽溪的真實水樣，透過已經存在的關係，第一週就拿得到。**關卡二——而這是唯一一個被扣分的候選。**GEMS 有 OD600、ELISA 與盤式讀取儀，但核酸讀值是團隊目前還沒有的能力。顯色型 LAMP 便宜、學校做得來，所以這是黃燈不是紅燈，但它必須在選題之前就回答，不是拖到第四個月。\n\n**模型。**每一種基質各建一條檢量線、以反向校正推估未知濃度、偵測極限用算的而不是用宣稱的，並把超出校正範圍的估計值標示出來，而不是默默報告。HongKong-JSS 的校正紀律就是範本，包括把失敗的預測留在誤差指標裡面。\n\n**那個可能推翻它的實驗組。**訊號其實來自游離的胞外 DNA，或者水樣基質正在抑制反應。跑加標回收、每一盤都放無模板對照，以及一組只有基質的對照。\n\n**觸及範圍。**水質稽查人員與農業推廣人員都是會重複的職業角色。**資格註記：**主張必須停在環境監測——不做臨床診斷、不給病人建議、不採集人體檢體。",
+      "kicker": "Medical 1 · blocked as designed, re-scoped",
+      "kicker_zh": "醫療 1 · 原設計不可行，已改寫",
+      "title": "The resistance-gene idea is not permitted in the High School section, and here is what survives",
+      "title_zh": "抗藥性基因那個構想在高中組不被允許，而這是還活得下來的版本",
+      "body": "**This one was killed by the rules, not by the science, and it was killed twice.** The original design was to detect antimicrobial-resistance genes in water from the cooperative's channel. Two independent White List triggers block it, and a high school team has no Check-In route to clear either.\n\nFirst, the environmental-sample rule: *\"Isolation and sequencing of nucleic acids from environmental samples also require the submission of a Check In Form.\"* Reading resistance genes out of river water is exactly that. Second, the activities column lists *\"Experiments making use of antimicrobial resistance factors not in common use in the host institution\"* as Check-In work in its own right. Either one ends it.\n\n**What survives, and it is a real project.** Keep the medical motivation, drop the metagenomics: build the sensor for an analyte you can buy as a standard, and characterise it on that standard and on a bulk matrix used as-is without isolating anything from it — which the same policy permits: *\"As long as parts or organisms are not isolated from them, samples from the environment, the food industry, or other non-traditional suppliers may be used in your experiments.\"*\n\n**Then say exactly where the chain breaks**, which is the habit this report found separating the podium: the real molecule is reachable, the real clinical sample is not, and the rule that forbids it should be quoted on the wiki rather than left as a silence. A project that names its own ceiling reads as rigour; the same project with the ceiling unmentioned reads as an over-claim, and GEMS is already joint-worst in the Top 10 on that measure.",
+      "body_zh": "**這一個是被規則殺掉的，不是被科學殺掉的，而且被殺了兩次。**原本的設計是偵測合作社水道裡的抗藥性基因。有兩條互相獨立的白名單觸發條件擋住它，而高中組隊伍沒有任何 Check-In 管道可以過關。\n\n第一，環境樣本規則：*「從環境樣本中分離與定序核酸，同樣需要提交 Check In Form。」*從河水裡讀出抗藥性基因，正是這件事。第二，活動欄本身就把*「使用該機構並非常規使用之抗藥性因子的實驗」*列為需要 Check-In 的工作。任何一條都足以終結它。\n\n**還活得下來的版本，而且它是個真專案。**保留醫療動機，拿掉總體基因體學：把感測器做給一個你買得到標準品的分析物，並且在那個標準品、以及一個「照原樣使用、不從中分離任何東西」的團體基質上做特性描述——而同一條政策正好允許這件事：*「只要沒有從中分離出零件或生物，來自環境、食品工業或其他非傳統供應者的樣本，都可以用在你的實驗裡。」*\n\n**然後把鏈條斷在哪裡講清楚**，那正是本報告找到的、把頒獎臺分出來的那個習慣：真實的分子拿得到，真實的臨床檢體拿不到，而禁止它的那條規則應該被引在 wiki 上，而不是留成一片沉默。一個指名自己上限的專案讀起來是嚴謹；同一個專案如果不提那個上限，讀起來就是誇大——而 GEMS 在這一項已經是 Top 10 裡並列最差。",
       "chips": [
-        "medical relevance, no clinic",
-        "amber on gate 2",
-        "target is a sequence, not a pathogen"
+        "blocked twice over",
+        "no Check-In route in High School",
+        "the re-scope is still a project"
       ],
       "chips_zh": [
-        "有醫療意義，不進診間",
-        "關卡二是黃燈",
-        "標的是序列，不是病原"
+        "兩條規則各自擋住",
+        "高中組沒有 Check-In 管道",
+        "改寫後仍然是個專案"
       ]
     },
     {
-      "kicker": "Medical 2 · the 2024 shape, applied to health",
-      "kicker_zh": "醫療 2 · 2024 年的形狀，用在健康上",
+      "kicker": "Medical 2 · eligibility decides it",
+      "kicker_zh": "醫療 2 · 由資格決定",
       "title": "A live oral-pathogen biofilm as the real target, with no human sample anywhere",
       "title_zh": "以活的口腔致病菌生物膜為真實標的，全程不碰任何人體檢體",
-      "body": "**The claim.** A peptide expressed from a whitelist chassis reduces biofilm formation by the actual caries organism in vitro, at this dose, with this effect size.\n\n**Why this shape.** This is the 2024 Grand Prize structure transplanted onto a health problem. In 2024 the real target was live *Aedes albopictus* larvae — the vector itself, not a surrogate — with LC50 reported for all three toxins and 98 dead larvae examined microscopically. Here the real target is a live biofilm of the organism that actually causes the disease, grown in the lab. **No patients, no saliva, no plaque, no human tissue, no clinical claim.** Childhood caries is a genuine and well-documented problem in Taiwan, so the medical motivation is real without the project ever entering a clinic.\n\n**Gate 1:** a live biofilm of the target organism, obtained from a culture collection rather than from a person — so the gate depends on a strain source and an eligibility verdict, not on recruiting anybody. **Gate 2:** biofilm quantification and growth curves on plate readers GEMS already owns.\n\n**The model.** Dose-response of biofilm inhibition with held-back concentrations, and an effect size with an interval rather than a bare p-value.\n\n**The arm that could break it.** The inhibition comes from the chassis or the medium rather than the peptide. Run an empty-vector arm, a heat-inactivated-peptide arm and a spent-medium arm — GEMS already scores a perfect five of five on exactly this habit, so it is cheap here.\n\n**Reach.** School nurses and dental hygienists repeat the lesson professionally, which is the HongKong-JSS shape. **The eligibility question is the whole risk**, and it is answered in the register below rather than assumed here: the strain's risk group, whether it sits on the White List, whether this division may culture it, and whether a check-in is required and by when.",
-      "body_zh": "**主張。**一個由白名單底盤表現出來的胜肽，在體外能降低真正造成齲齒的那種菌所形成的生物膜，在這個劑量下、有這麼大的效應量。\n\n**為什麼是這個形狀。**這是把 2024 年總冠軍的結構，移植到一個健康問題上。2024 年的真實標的是活的 *Aedes albopictus* 幼蟲——病媒本身，不是替代物——三種毒蛋白都報告了 LC50，並以顯微鏡檢視 98 隻死亡幼蟲。這裡的真實標的，是真正造成該疾病的那種菌在實驗室裡長出來的活生物膜。**不碰病人、不採唾液、不取牙菌斑、不碰人體組織、不做臨床主張。**兒童齲齒在台灣是真實且有完整記載的問題，所以醫療動機是真的，而專案全程不必踏進診間。\n\n**關卡一：**標的菌的活生物膜，來源是菌種保存中心而不是人——所以關卡取決於菌株來源與資格判定，而不是取決於招募任何人。**關卡二：**生物膜定量與生長曲線，做在 GEMS 已經有的盤式讀取儀上。\n\n**模型。**生物膜抑制的劑量反應，並留存部分濃度不用；效應量要附區間，而不是只給一個裸的 p 值。\n\n**那個可能推翻它的實驗組。**抑制其實來自底盤或培養基，而不是胜肽。跑空載體組、熱去活化胜肽組與用過培養基組——GEMS 在這個習慣上已經是滿分五類全有，所以在這裡很便宜。\n\n**觸及範圍。**學校護理師與牙科衛生師會以職業身分重複這堂課，這正是 HongKong-JSS 的形狀。**資格問題就是全部的風險**，而它在下面的檢查表裡被回答，不在這裡被假設：菌株的風險群、它在不在白名單上、這個組別可不可以培養它，以及需不需要 check-in、期限是什麼時候。",
+      "body": "**The claim.** A peptide expressed from a whitelist chassis reduces biofilm formation by the actual caries organism in vitro, at this dose, with this effect size.\n\n**Why this shape.** This is the 2024 Grand Prize structure transplanted onto a health problem. In 2024 the real target was live *Aedes albopictus* larvae — the vector itself, not a surrogate — with LC50 reported for all three toxins and 98 dead larvae examined microscopically. Here the real target is a live biofilm of the organism that actually causes the disease, grown in the lab. **No patients, no saliva, no plaque, no human tissue, no clinical claim.** Childhood caries is a genuine and well-documented problem in Taiwan, so the medical motivation is real without the project ever entering a clinic.\n\n**Gate 1:** a live biofilm of the target organism, obtained from a culture collection rather than from a person — so the gate depends on a strain source and an eligibility verdict, not on recruiting anybody. **Gate 2:** biofilm quantification and growth curves on plate readers GEMS already owns.\n\n**The model.** Dose-response of biofilm inhibition with held-back concentrations, and an effect size with an interval rather than a bare p-value.\n\n**The arm that could break it.** The inhibition comes from the chassis or the medium rather than the peptide. Run an empty-vector arm, a heat-inactivated-peptide arm and a spent-medium arm — GEMS already scores a perfect five of five on exactly this habit, so it is cheap here.\n\n**Reach.** School nurses and dental hygienists repeat the lesson professionally, which is the HongKong-JSS shape. **The eligibility question is the whole risk, and the rules make it sharper than I first wrote it.** Only Risk Group 1 organisms are white-listed; anything needing enhanced containment is Check-In, and **a high school team has no Check-In route at all** — *\"Work that would require a Check In is not permitted in the High School section.\"* So if the target organism is Risk Group 2 under the sources iGEM names, this project does not exist for GEMS, full stop. A second gate sits behind it: *\"Any organisms obtained from outside the lab or from non-traditional / non-institutional suppliers\"* also require a Check-In, so the strain's provenance matters as much as its risk group. **Do not design a season around this until safety@igem.org has answered in writing.** The fallback, if the answer is no, is to run the same assay against a Risk Group 1 indicator organism and state plainly that the real pathogen was out of reach under the rules — which is a chain-break worth publishing, not a defeat worth hiding.",
+      "body_zh": "**主張。**一個由白名單底盤表現出來的胜肽，在體外能降低真正造成齲齒的那種菌所形成的生物膜，在這個劑量下、有這麼大的效應量。\n\n**為什麼是這個形狀。**這是把 2024 年總冠軍的結構，移植到一個健康問題上。2024 年的真實標的是活的 *Aedes albopictus* 幼蟲——病媒本身，不是替代物——三種毒蛋白都報告了 LC50，並以顯微鏡檢視 98 隻死亡幼蟲。這裡的真實標的，是真正造成該疾病的那種菌在實驗室裡長出來的活生物膜。**不碰病人、不採唾液、不取牙菌斑、不碰人體組織、不做臨床主張。**兒童齲齒在台灣是真實且有完整記載的問題，所以醫療動機是真的，而專案全程不必踏進診間。\n\n**關卡一：**標的菌的活生物膜，來源是菌種保存中心而不是人——所以關卡取決於菌株來源與資格判定，而不是取決於招募任何人。**關卡二：**生物膜定量與生長曲線，做在 GEMS 已經有的盤式讀取儀上。\n\n**模型。**生物膜抑制的劑量反應，並留存部分濃度不用；效應量要附區間，而不是只給一個裸的 p 值。\n\n**那個可能推翻它的實驗組。**抑制其實來自底盤或培養基，而不是胜肽。跑空載體組、熱去活化胜肽組與用過培養基組——GEMS 在這個習慣上已經是滿分五類全有，所以在這裡很便宜。\n\n**觸及範圍。**學校護理師與牙科衛生師會以職業身分重複這堂課，這正是 HongKong-JSS 的形狀。**資格問題就是全部的風險，而規則讓它比我原本寫的更尖銳。**白名單上只有風險群 1 的生物；任何需要加強圍堵的都要 Check-In，而**高中組隊伍根本沒有 Check-In 管道**——*「需要 Check In 的工作，在高中組不被允許。」*所以如果標的菌在 iGEM 指名的那些來源裡屬於風險群 2，這個專案對 GEMS 就不存在，沒有轉圜。它後面還有第二道關卡：*「任何取自實驗室外、或取自非傳統／非機構供應者的生物」*同樣需要 Check-In，所以菌株的來源和它的風險群一樣重要。**在 safety@igem.org 書面回覆之前，不要圍繞這個題目設計一整季。**如果答案是否定的，退路是把同一套試驗改用風險群 1 的指示菌來做，並且明白寫出真正的病原在規則下拿不到——那是一個值得發表的鏈條斷點，不是一個該藏起來的挫敗。",
       "chips": [
-        "the 2024 real-target shape",
-        "no human sample at any point",
-        "eligibility is the whole risk"
+        "RG1 only, no Check-In route",
+        "strain provenance is a second gate",
+        "get it in writing first"
       ],
       "chips_zh": [
-        "2024 年的真實標的形狀",
-        "全程不碰人體檢體",
-        "資格就是全部的風險"
+        "只能風險群 1，沒有 Check-In",
+        "菌株來源是第二道關卡",
+        "先拿到書面回覆"
       ]
     },
     {
@@ -106,17 +106,17 @@
       "kicker_zh": "新題目 2 · 台灣的招牌產業",
       "title": "A biosensor for one defined contaminant in Hsinchu process water, with real samples",
       "title_zh": "針對新竹製程水中一種特定污染物的生物感測器，而且用真實水樣",
-      "body": "**The claim.** This sensor reports this contaminant at these concentrations in water from a real industrial process stream, with a limit of detection measured in that matrix rather than in buffer.\n\n**Why this one.** The industry review found that China holds about 70% of world fermentation capacity while Taiwan's state-backed biomanufacturing push is a contract-development play **with no visible synthetic-biology design layer** — Singapore and Israel are funding exactly that layer. A school team cannot out-build a contract manufacturer and gains nothing by miniaturising one. What it can do is put a design-layer artefact against the island's actual industry: a characterised sensing part, calibrated in absolute units, for a contaminant that a Hsinchu process stream really contains.\n\n**Gate 1 — and this is the honest risk.** Industrial sample access is harder than a farm. A water-treatment operator can hand over a sample in an afternoon, but only if the relationship exists; a company may also not want its effluent characterised by a school team. Name the route and the person before choosing this topic, and have a fallback stream. **Gate 2:** a colorimetric or fluorescent readout on plate readers already owned.\n\n**The model.** Calibration in the real matrix, inverse calibration, a computed limit of detection, and whole batches held back. The 2026 field gives a direct template: one team built a calibration curve per medium in micromolar fluoride and re-zeroed on that plate's own negative control.\n\n**The arm that could break it.** Matrix effects — the process water suppresses or mimics the signal. Spiked recovery in the real matrix, a matrix-only arm, and a buffer comparison published side by side.\n\n**Reach.** Water-treatment operators and environmental inspectors are professional repeaters, and Hsinchu is close enough for repeat visits. **Say what it is not:** a sensor is detection, not remediation, and the landing page must not promise cleanup the results page does not show.",
-      "body_zh": "**主張。**這個感測器在真實工業製程水流中，以這些濃度回報這種污染物，而偵測極限是在那個基質裡量出來的，不是在緩衝液裡。\n\n**為什麼是它。**產業回顧發現：中國掌握全球約 70% 的發酵量能，而台灣由國家主導的生物製造布局是一場代工開發的局，**看不到合成生物學的設計層**——新加坡與以色列補助的正好就是那一層。學校隊伍蓋不過代工廠，把它縮小一號也得不到任何東西。它能做的，是把一個設計層的產出放到這座島真實的產業旁邊：一個特性描述完整、以絕對單位校正過的感測元件，針對新竹某個製程水流裡真的含有的污染物。\n\n**關卡一——而這就是誠實的風險所在。**工業樣本的取得比農場難。一位水處理操作員一個下午就能給你一份樣本，但前提是關係已經存在；而且公司也可能不希望自己的放流水被一支學校隊伍做特性分析。在選這個題目之前先把路徑和人指名出來，並準備一個備援水流。**關卡二：**顯色或螢光讀值，做在已經有的盤式讀取儀上。\n\n**模型。**在真實基質中做校正、反向校正、算出偵測極限，並整批整批地留存。2026 年的全體資料給了一個直接的範本：有一支隊伍為每一種培養基各建一條以微莫耳濃度氟離子為單位的檢量線，並以該盤自己的陰性對照重新歸零。\n\n**那個可能推翻它的實驗組。**基質效應——製程水抑制或模擬了訊號。在真實基質中做加標回收、跑一組只有基質的對照，並把緩衝液的比較並排公開。\n\n**觸及範圍。**水處理操作員與環境稽查人員都是會重複的職業角色，而新竹近到可以重複拜訪。**也要講清楚它不是什麼：**感測器是偵測，不是整治；首頁不可以承諾結果頁沒有呈現的清除效果。",
+      "body": "**The claim.** This sensor reports this contaminant at these concentrations in water from a real industrial process stream, with a limit of detection measured in that matrix rather than in buffer.\n\n**Why this one.** The industry review found that China holds about 70% of world fermentation capacity while Taiwan's state-backed biomanufacturing push is a contract-development play **with no visible synthetic-biology design layer** — Singapore and Israel are funding exactly that layer. A school team cannot out-build a contract manufacturer and gains nothing by miniaturising one. What it can do is put a design-layer artefact against the island's actual industry: a characterised sensing part, calibrated in absolute units, for a contaminant that a Hsinchu process stream really contains.\n\n**Gate 1 — and this is the honest risk.** Industrial sample access is harder than a farm. A water-treatment operator can hand over a sample in an afternoon, but only if the relationship exists; a company may also not want its effluent characterised by a school team. Name the route and the person before choosing this topic, and have a fallback stream. **Gate 2:** a colorimetric or fluorescent readout on plate readers already owned.\n\n**The model.** Calibration in the real matrix, inverse calibration, a computed limit of detection, and whole batches held back. The 2026 field gives a direct template: one team built a calibration curve per medium in micromolar fluoride and re-zeroed on that plate's own negative control.\n\n**The arm that could break it.** Matrix effects — the process water suppresses or mimics the signal. Spiked recovery in the real matrix, a matrix-only arm, and a buffer comparison published side by side.\n\n**Reach.** Water-treatment operators and environmental inspectors are professional repeaters, and Hsinchu is close enough for repeat visits. **Say what it is not:** a sensor is detection, not remediation, and the landing page must not promise cleanup the results page does not show.\n\n**One rule to build around.** The sensor cannot go to the plant: bringing a product of a genetically modified organism outside the lab requires permission a high school team cannot obtain. So the water comes to the lab, not the sensor to the water, and the wiki should say that plainly instead of implying an on-site device. Using the water as-is is permitted; isolating anything from it is not. Check separately that the target contaminant is not a controlled chemical, which is its own Check-In trigger.",
+      "body_zh": "**主張。**這個感測器在真實工業製程水流中，以這些濃度回報這種污染物，而偵測極限是在那個基質裡量出來的，不是在緩衝液裡。\n\n**為什麼是它。**產業回顧發現：中國掌握全球約 70% 的發酵量能，而台灣由國家主導的生物製造布局是一場代工開發的局，**看不到合成生物學的設計層**——新加坡與以色列補助的正好就是那一層。學校隊伍蓋不過代工廠，把它縮小一號也得不到任何東西。它能做的，是把一個設計層的產出放到這座島真實的產業旁邊：一個特性描述完整、以絕對單位校正過的感測元件，針對新竹某個製程水流裡真的含有的污染物。\n\n**關卡一——而這就是誠實的風險所在。**工業樣本的取得比農場難。一位水處理操作員一個下午就能給你一份樣本，但前提是關係已經存在；而且公司也可能不希望自己的放流水被一支學校隊伍做特性分析。在選這個題目之前先把路徑和人指名出來，並準備一個備援水流。**關卡二：**顯色或螢光讀值，做在已經有的盤式讀取儀上。\n\n**模型。**在真實基質中做校正、反向校正、算出偵測極限，並整批整批地留存。2026 年的全體資料給了一個直接的範本：有一支隊伍為每一種培養基各建一條以微莫耳濃度氟離子為單位的檢量線，並以該盤自己的陰性對照重新歸零。\n\n**那個可能推翻它的實驗組。**基質效應——製程水抑制或模擬了訊號。在真實基質中做加標回收、跑一組只有基質的對照，並把緩衝液的比較並排公開。\n\n**觸及範圍。**水處理操作員與環境稽查人員都是會重複的職業角色，而新竹近到可以重複拜訪。**也要講清楚它不是什麼：**感測器是偵測，不是整治；首頁不可以承諾結果頁沒有呈現的清除效果。\n\n**有一條規則要繞著它設計。**感測器不能送到廠裡：把基因改造生物的產物帶出實驗室，需要高中組隊伍拿不到的許可。所以是水送到實驗室，不是感測器送到水邊，而 wiki 應該把這點直說，而不是暗示那是一台現場裝置。照原樣使用那些水是允許的；從中分離任何東西則不允許。另外要分開確認：標的污染物不是受管制化學品，那本身是另一條 Check-In 觸發條件。",
       "chips": [
         "design layer against real industry",
-        "gate 1 is the risk: access",
-        "detection, not remediation"
+        "water comes to the lab, not the reverse",
+        "check it is not a controlled chemical"
       ],
       "chips_zh": [
         "把設計層放到真實產業旁",
-        "關卡一是風險：取得管道",
-        "是偵測，不是整治"
+        "是水送進實驗室，不是反過來",
+        "確認它不是受管制化學品"
       ]
     }
   ],
@@ -144,7 +144,7 @@
         "Hill transfer function fitted to own dose-response across intensities and wavelengths; hold back whole intensity levels",
         "Other iGEM teams via a shippable part and protocol; in-service biology teachers",
         "**Best Model**, Best Measurement, Best New Basic Part, Best Part Collection",
-        "**Strongest.** Both gates pass on day one, it closes the gap the whole line rests on, and the literature is twelve papers deep"
+        "**Strongest, and now confirmed clean.** *B. subtilis* is named on the White List, the parts are Registry parts and nothing leaves the lab. No Check-In needed anywhere"
       ],
       [
         "**O2 · Assay what actually reaches the plant**",
@@ -152,15 +152,15 @@
         "Rescue fitted against measured enzyme activity, not nominal dose; hold back a stress level or a field block",
         "Agricultural extension officers at the district stations",
         "**Best Model**, Best Measurement, Best IHP, Best Sustainable Development Impact, Best Education",
-        "**Strong, but run it after O1.** Fixes the exact gate-1 failure of 2026. Must keep stating the organic-certification cap"
+        "**Strong, but re-scoped by the rules.** The assay plant must be *Arabidopsis* or *Nicotiana*, not rice, and the spray work happens in the lab on soil brought in"
       ],
       [
-        "**M1 · Resistance genes in farm water**",
-        "Yes for the water; **amber on the readout**",
+        "**M1 · Medical sensing, metagenomics dropped**",
+        "Yes for a purchased standard and a bulk matrix; **no** for any clinical or sequenced sample",
         "Calibration per matrix, inverse calibration, computed limit of detection; hold back batches",
         "Water-quality inspectors and extension officers",
         "Best Measurement, Best Part Collection, Best Software, Diagnostics village",
-        "**Marked down on gate 2.** Needs a nucleic-acid readout the team does not own. Answer that before choosing, not in month four"
+        "**Not permitted as designed.** Blocked twice: nucleic-acid isolation from environmental samples, and antimicrobial-resistance work. The re-scoped version drops the metagenomics and states the chain break"
       ],
       [
         "**M2 · Live oral-pathogen biofilm**",
@@ -168,7 +168,7 @@
         "Dose-response of biofilm inhibition with held-back concentrations; effect size with an interval",
         "School nurses and dental hygienists",
         "**Best Model**, Best New Basic Part, Best Education, Therapeutics or Diagnostics village",
-        "**Promising, eligibility-gated.** The 2024 real-target shape applied to health, with no human sample at any point"
+        "**Gated on a written answer.** Risk Group 1 only and no Check-In route, so if the organism is RG2 the project does not exist. Strain provenance is a second gate. Ask safety@igem.org before designing"
       ],
       [
         "**N1 · The inter-lab measurement ring**",
@@ -176,7 +176,7 @@
         "Variance components separating lab, plate and instrument; hold out a whole lab",
         "Every participating team, and the protocol outlives them all",
         "**Best Model**, Best Measurement, Best Part Collection, Best Software, Best Education",
-        "**Highest novelty, but already on probation.** 0 of 106 ran one and the model is the result — yet it is a pipeline entry with no outside person asking for it, and GEMS has no collaboration page"
+        "**Highest novelty, and the rules bless the mechanism.** Shipping an engineered organism between labs for research or teaching is explicitly not release. Still a pipeline entry on probation"
       ],
       [
         "**N2 · Hsinchu process-water biosensor**",
@@ -184,7 +184,7 @@
         "Calibration in the real matrix, inverse calibration, computed limit of detection; hold back batches",
         "Water-treatment operators and environmental inspectors",
         "Best Measurement, Best Part Collection, Best Sustainable Development Impact, Bioremediation village",
-        "**High upside, access-gated.** Puts a design-layer artefact against Taiwan's signature industry. Secure the sample route before committing"
+        "**High upside, access-gated, lab-only.** The water comes to the lab, not the sensor to the water. Secure the sample route, and check the contaminant is not a controlled chemical"
       ]
     ],
     "rows_zh": [
@@ -194,7 +194,7 @@
         "把 Hill 轉移函數擬合到自己跨強度、跨波長的劑量反應；整個強度層級地留存",
         "透過可寄送的元件與流程觸及其他 iGEM 隊伍；以及在職生物教師",
         "**Best Model**、Best Measurement、Best New Basic Part、Best Part Collection",
-        "**最強。**兩道關卡第一天就過，它補上整條路線所依賴的那個缺口，而且這個領域的文獻只有十二篇"
+        "**最強，而且現在確認資格乾淨。***B. subtilis* 明列於白名單上，元件是 Registry 元件，而且沒有任何東西離開實驗室。全程不需要任何 Check-In"
       ],
       [
         "**O2 · 檢測真正送到植物上的東西**",
@@ -202,15 +202,15 @@
         "把救援效果對實測酵素活性擬合，而不是對名目劑量；整個逆境層級或整個田區區塊地留存",
         "各區農業改良場的推廣人員",
         "**Best Model**、Best Measurement、Best IHP、Best Sustainable Development Impact、Best Education",
-        "**強，但排在 O1 之後。**它補上 2026 年那個關卡一失誤。必須持續講明有機認證的上限"
+        "**強，但被規則改寫了範圍。**試驗植物必須是 *Arabidopsis* 或 *Nicotiana*，不是水稻，而噴灑工作要在實驗室裡、用搬進來的土進行"
       ],
       [
-        "**M1 · 農場水中的抗藥性基因**",
-        "水樣沒問題；**讀值是黃燈**",
+        "**M1 · 醫療感測，拿掉總體基因體學**",
+        "買得到的標準品與團體基質可以；任何臨床或需定序的樣本**不行**",
         "每種基質各建檢量線、反向校正、算出偵測極限；整批留存",
         "水質稽查人員與農業推廣人員",
         "Best Measurement、Best Part Collection、Best Software、Diagnostics village",
-        "**在關卡二被扣分。**需要團隊沒有的核酸讀值能力。在選題之前先回答，不要拖到第四個月"
+        "**原設計不被允許。**被兩條規則擋住：從環境樣本分離核酸，以及抗藥性相關工作。改寫版拿掉總體基因體學，並把鏈條斷點寫出來"
       ],
       [
         "**M2 · 活的口腔致病菌生物膜**",
@@ -218,7 +218,7 @@
         "生物膜抑制的劑量反應並留存部分濃度；效應量附區間",
         "學校護理師與牙科衛生師",
         "**Best Model**、Best New Basic Part、Best Education、Therapeutics 或 Diagnostics village",
-        "**有潛力，但卡在資格。**把 2024 年的真實標的形狀用在健康上，全程不碰人體檢體"
+        "**卡在一份書面回覆上。**只能用風險群 1 而且沒有 Check-In 管道，所以如果該菌屬於風險群 2，這個專案就不存在。菌株來源是第二道關卡。設計之前先問 safety@igem.org"
       ],
       [
         "**N1 · 實驗室間量測環**",
@@ -226,7 +226,7 @@
         "變異成分模型拆開實驗室、盤與儀器；留出整整一個實驗室",
         "每一支參與的隊伍，而流程比它們都活得久",
         "**Best Model**、Best Measurement、Best Part Collection、Best Software、Best Education",
-        "**新穎度最高，但已在觀察期。**106 支中 0 支跑過，而且模型就是結果——但它是一個沒有外部人士開口要的清單條目，而 GEMS 也還沒有合作頁面"
+        "**新穎度最高，而且規則正好為這個機制背書。**為研究或教學在實驗室之間運送工程化生物，明文不算釋出。但它仍是清單上觀察期中的條目"
       ],
       [
         "**N2 · 新竹製程水生物感測器**",
@@ -234,7 +234,7 @@
         "在真實基質中校正、反向校正、算出偵測極限；整批留存",
         "水處理操作員與環境稽查人員",
         "Best Measurement、Best Part Collection、Best Sustainable Development Impact、Bioremediation village",
-        "**上檔大，但卡在取得管道。**把設計層產出放到台灣招牌產業旁邊。承諾之前先確保樣本路徑"
+        "**上檔大，卡在取得管道，而且只能在實驗室。**是水送進實驗室，不是感測器送到水邊。先確保樣本路徑，並確認污染物不是受管制化學品"
       ]
     ]
   },
