@@ -40,7 +40,7 @@
    "title": "Labi-Taiwan — BlueCatcher",
    "title_zh": "Labi-Taiwan — BlueCatcher",
    "body": "A nucleic-acid biosensor for major depressive disorder, built by Labi Education, the programme formerly entered as Taipei-KCISLK. The dry lab is the most data-heavy of any Taiwanese high-school team: differential expression, miRNA–mRNA networks, GSEA and WGCNA narrowed 2,656 mature miRNAs to sixteen candidates and then to miR-124-3p as the first engineering target, with machine learning used to prioritise three-way-junction probes and toehold switches, and thermodynamic and kinetic modelling behind the readout. It won the iGEMers Prize, the award the other teams vote for, and was nominated for Best Measurement on a portable electrochemical reader. Like GEMS, it is a Taipei-area commercial-organiser programme and appears on no other Taiwanese team's collaboration page.",
-   "body_zh": "一個針對重度憂鬱症的核酸生物感測器，由 Labi Education 製作，這個計畫過去以 Taipei-KCISLK 的名義參賽。它的乾實驗室是台灣所有高中隊伍中資料量最大的：差異表現分析、miRNA–mRNA 網路、GSEA 和 WGCNA 把 2,656 個成熟 miRNA 收斂到十六個候選，再收斂到 miR-124-3p 作為第一個工程標的，並用機器學習排序三向接合探針與 toehold switch，讀出背後還有熱力學與動力學建模。它拿下 iGEMers Prize，也就是由其他隊伍投票選出的獎，並以一台攜帶式電化學讀取器入圍最佳量測。和 GEMS 一樣，它是臺北地區由商業機構營運的計畫，而且沒有出現在任何其他台灣隊伍的合作頁面上。",
+   "body_zh": "一個針對重度憂鬱症的核酸生物感測器，由 Labi Education 製作，這個計畫過去以 Taipei-KCISLK 的名義參賽。它的乾實驗室是台灣所有高中隊伍中資料量最大的：差異表現分析、miRNA–mRNA 網路、GSEA 和 WGCNA 把 2,656 個成熟 miRNA 收斂到十六個候選，再收斂到 miR-124-3p 作為第一個工程標的，並用機器學習排序三向接合探針與 toehold switch，讀出背後還有熱力學與動力學建模。它拿下 iGEMers Prize，也就是由其他隊伍投票選出的獎，並以一台攜帶式電化學讀取器入圍最佳量測。和 GEMS 一樣，它是台北地區由商業機構營運的計畫，而且沒有出現在任何其他台灣隊伍的合作頁面上。",
    "chips": [
     "Gold",
     "iGEMers Prize",
@@ -198,7 +198,7 @@
    "title": "WIST — ultrasound-reporting probiotic",
    "title_zh": "WIST — 以超音波回報的益生菌",
    "body": "Washington International School, Taichung: an engineered E. coli that answers two chemical clues at once, lactate and nitrate, and reports the AND condition by filling with gas vesicles and becoming visible to ultrasound, as a swallowable early screen for colorectal cancer. The acoustic-reporter approach is the same gas-vesicle technology Heidelberg built its collegiate Top 10 project on this year, which makes it an ambitious choice for a high-school team. It carries both a Model and a Software page and declares every figure on the home page a diagram of method rather than acquired data. Gold medal, no awards; it attended the NYCU Meet-Up and appears on NCKU-Tainan's collaboration list.",
-   "body_zh": "臺中的 Washington International School：一株工程化的 E. coli 同時回答兩個化學線索——乳酸和硝酸鹽——並以充滿氣囊、在超音波下變得可見的方式回報這個 AND 條件，作為可吞服的大腸癌早期篩檢。這種聲學報告子的作法，和 Heidelberg 今年拿下大專組 Top 10 的專案所用的氣囊技術相同，這讓它對一支高中隊伍來說是個野心很大的選擇。它同時有 Model 和 Software 頁面，並聲明首頁上的每一張圖都是方法示意圖，不是實際取得的資料。金牌，沒有得獎；它出席了 NYCU 的 Meet-Up，也出現在 NCKU-Tainan 的合作名單上。",
+   "body_zh": "台中的 Washington International School：一株工程化的 E. coli 同時回答兩個化學線索——乳酸和硝酸鹽——並以充滿氣囊、在超音波下變得可見的方式回報這個 AND 條件，作為可吞服的大腸癌早期篩檢。這種聲學報告子的作法，和 Heidelberg 今年拿下大專組 Top 10 的專案所用的氣囊技術相同，這讓它對一支高中隊伍來說是個野心很大的選擇。它同時有 Model 和 Software 頁面，並聲明首頁上的每一張圖都是方法示意圖，不是實際取得的資料。金牌，沒有得獎；它出席了 NYCU 的 Meet-Up，也出現在 NCKU-Tainan 的合作名單上。",
    "chips": [
     "Gold",
     "no awards",
@@ -233,7 +233,7 @@
     "沒有得獎",
     "PETase",
     "太空 village",
-    "臺北"
+    "台北"
    ],
    "kicker_zh": "高中組 · Taipei · id 6200 — 不在原清單中"
   },
@@ -242,7 +242,7 @@
    "title": "VIS — Cadture",
    "title_zh": "VIS — Cadture",
    "body": "VIS@betterworld Lab, testing whether engineered metallothioneins can capture cadmium from industrial wastewater, with a modelling page on cadmium removal. The notable feature is epistemic honesty of the kind GEMS also practises: the home page states that current work measures bacterial growth and GFP response and that direct cadmium removal remains to be tested, rather than implying a result it does not have. Silver medal, no awards or nominations. It attended the NYCU Meet-Up and is on NCKU-Tainan's collaboration list, so it is inside the island network that the Taipei commercial programmes are outside.",
-   "body_zh": "VIS@betterworld Lab 測試工程化的金屬硫蛋白能否從工業廢水中捕捉鎘，並有一個關於除鎘的建模頁面。值得注意的是它那種 GEMS 也在實踐的知識論誠實：首頁寫明目前的工作量測的是細菌生長與 GFP 反應，直接除鎘仍有待測試，而不是暗示一個它並不擁有的結果。銀牌，沒有得獎或入圍。它出席了 NYCU 的 Meet-Up，也在 NCKU-Tainan 的合作名單上，所以它在島內網絡之內，而臺北那兩個商業計畫在這個網絡之外。",
+   "body_zh": "VIS@betterworld Lab 測試工程化的金屬硫蛋白能否從工業廢水中捕捉鎘，並有一個關於除鎘的建模頁面。值得注意的是它那種 GEMS 也在實踐的知識論誠實：首頁寫明目前的工作量測的是細菌生長與 GFP 反應，直接除鎘仍有待測試，而不是暗示一個它並不擁有的結果。銀牌，沒有得獎或入圍。它出席了 NYCU 的 Meet-Up，也在 NCKU-Tainan 的合作名單上，所以它在島內網絡之內，而台北那兩個商業計畫在這個網絡之外。",
    "chips": [
     "Silver",
     "no awards",
@@ -308,7 +308,7 @@
    "title": "Taipei-TWN and Oros Biotech",
    "title_zh": "Taipei-TWN 與 Oros Biotech",
    "body": "Two Taiwanese registrations that never reached the competition floor and so are missing from every results table. Taipei-TWN (Kang Chiao International School, Linkou campus, high school, Taipei) carries the status 'not eligible' with no medal and no wiki content. Oros Biotech of Taichung entered the venture-foundry track rather than the competition, has no section, no medal and a 404 wiki — meaning Taiwan's only 2026 entry into iGEM's startup pathway left no public record. Both matter for the denominator: fifteen Taiwanese registrations, thirteen competing teams, and an entrepreneurship route the island used once and did not document.",
-   "body_zh": "兩個從未站上競賽場的台灣註冊隊伍，因此在每一份成績表上都看不到。Taipei-TWN（康橋國際學校林口校區，高中，臺北）的狀態是「不符資格」，沒有獎牌也沒有 wiki 內容。臺中的 Oros Biotech 進入的是創投育成路線而不是競賽，沒有組別、沒有獎牌，wiki 回傳 404——也就是說，台灣 2026 年唯一進入 iGEM 新創路徑的隊伍沒有留下任何公開紀錄。兩者對分母都有意義：十五個台灣註冊隊伍、十三支參賽隊伍，以及一條台灣用過一次卻沒有記錄下來的創業路線。",
+   "body_zh": "兩個從未站上競賽場的台灣註冊隊伍，因此在每一份成績表上都看不到。Taipei-TWN（康橋國際學校林口校區，高中，台北）的狀態是「不符資格」，沒有獎牌也沒有 wiki 內容。台中的 Oros Biotech 進入的是創投育成路線而不是競賽，沒有組別、沒有獎牌，wiki 回傳 404——也就是說，台灣 2026 年唯一進入 iGEM 新創路徑的隊伍沒有留下任何公開紀錄。兩者對分母都有意義：十五個台灣註冊隊伍、十三支參賽隊伍，以及一條台灣用過一次卻沒有記錄下來的創業路線。",
    "chips": [
     "Not eligible",
     "venture foundry",
@@ -320,8 +320,8 @@
     "不符資格",
     "創投育成路線",
     "沒有 wiki",
-    "臺北",
-    "臺中"
+    "台北",
+    "台中"
    ],
    "kicker_zh": "未參賽 · ids 6142, 6543 — 不在原清單中"
   },
@@ -566,7 +566,7 @@
   {
    "name": "CCU-Taiwan (National Chung Cheng University, Chiayi) — team 6408",
    "why": "Working the same crop, the same island and the same problem from the other side: rice under pest pressure rather than rice under abiotic stress. Its framing already matches GEMS's economic argument — that only about 12% of world rice crosses a border, so an Asian yield loss cannot be imported away — and it brings entomology and migration data (spring leafroller flights north from Hanoi and Nanning with Taiwan on the route) that GEMS's stress index does not contain. Gold medal, no awards, no obvious outlet for the work. Geographically it sits between Tainan and Taichung, inside the rice belt both projects target.",
-   "why_zh": "從另一側處理同一種作物、同一座島、同一個問題：稻米面對的是蟲害壓力，而不是非生物逆境。它的切入角度已經和 GEMS 的經濟論點一致——全世界只有大約 12% 的稻米跨越國界，所以亞洲的減產無法靠進口補上——而它帶來 GEMS 的逆境指數裡沒有的昆蟲學與遷移資料（春季捲葉螟從河內與南寧往北飛，台灣就在路線上）。金牌，沒有得獎，這些成果也沒有明顯的出口。地理上它位在臺南與臺中之間，就在兩個專案共同指向的稻作帶裡。",
+   "why_zh": "從另一側處理同一種作物、同一座島、同一個問題：稻米面對的是蟲害壓力，而不是非生物逆境。它的切入角度已經和 GEMS 的經濟論點一致——全世界只有大約 12% 的稻米跨越國界，所以亞洲的減產無法靠進口補上——而它帶來 GEMS 的逆境指數裡沒有的昆蟲學與遷移資料（春季捲葉螟從河內與南寧往北飛，台灣就在路線上）。金牌，沒有得獎，這些成果也沒有明顯的出口。地理上它位在台南與台中之間，就在兩個專案共同指向的稻作帶裡。",
    "firstProject": "A shared Taiwan rice-stress dataset with a published benchmark. Extend GEMS's fitted stress index — 25 years of county rice yields against ERA5 daily reanalysis, scored across 32,767 candidate term combinations — with CCU's leafroller pressure and arrival data, release it as a versioned, licensed dataset with a defined forecasting benchmark task and a public leaderboard, and have both teams state a trigger rule against it in advance. One hectare, two trigger rules, one open benchmark that other teams can beat.",
    "firstProject_zh": "一份共享的台灣稻作逆境資料集，並附上公開的基準測試。把 GEMS 配適出的逆境指數——25 年的縣級稻米產量對 ERA5 每日再分析資料，在 32,767 種候選項組合中評分——擴充進 CCU 的捲葉螟壓力與到達資料，以有版本控制、附授權的資料集釋出，定義一項預測基準任務和一個公開排行榜，並讓兩支隊伍各自事先針對它宣告一條觸發規則。一公頃、兩條觸發規則、一個其他隊伍可以來挑戰的開放基準。"
   },
@@ -580,7 +580,7 @@
   {
    "name": "Labi-Taiwan (Labi Education, Taoyuan) — team 6511",
    "why": "The only other Taiwanese high-school programme with a genuine computational stack, and GEMS's structural twin: both are Taipei-area programmes run by commercial organisers, both are absent from NYCU's and NCKU's collaboration lists, and between them they hold four of Taiwan's six 2026 wins. Their skills barely overlap — Labi runs sequencing-to-target evidence integration (2,656 miRNAs narrowed to miR-124-3p through differential expression, miRNA-mRNA networks, GSEA and WGCNA), ML-prioritised nucleic-acid probe design and electrochemical readout, where GEMS runs sensor metrology, reactor control and provenance auditing. Labi's iGEMers Prize also proves it can carry a room, which is the reputational asset a teaching programme needs.",
-   "why_zh": "唯一另一個擁有真正計算堆疊的台灣高中計畫，也是 GEMS 結構上的孿生：兩者都是臺北地區由商業機構營運的計畫，都不在 NYCU 和 NCKU 的合作名單上，而台灣 2026 年六項得獎中有四項由它們兩家拿下。他們的技能幾乎不重疊——Labi 做的是從定序到標的的證據整合（2,656 個 miRNA 透過差異表現、miRNA-mRNA 網路、GSEA 和 WGCNA 收斂到 miR-124-3p）、以機器學習排序的核酸探針設計和電化學讀出，而 GEMS 做的是感測器計量、反應器控制和來源稽核。Labi 的 iGEMers Prize 也證明它撐得住一個場子，而那正是一個教學計畫需要的聲譽資產。",
+   "why_zh": "唯一另一個擁有真正計算堆疊的台灣高中計畫，也是 GEMS 結構上的孿生：兩者都是台北地區由商業機構營運的計畫，都不在 NYCU 和 NCKU 的合作名單上，而台灣 2026 年六項得獎中有四項由它們兩家拿下。他們的技能幾乎不重疊——Labi 做的是從定序到標的的證據整合（2,656 個 miRNA 透過差異表現、miRNA-mRNA 網路、GSEA 和 WGCNA 收斂到 miR-124-3p）、以機器學習排序的核酸探針設計和電化學讀出，而 GEMS 做的是感測器計量、反應器控制和來源稽核。Labi 的 iGEMers Prize 也證明它撐得住一個場子，而那正是一個教學計畫需要的聲譽資產。",
    "firstProject": "A two-module Taiwan high-school dry-lab school, co-taught and open to any Taiwanese team. GEMS teaches provenance ledgers, assumption registers, pre-registration with written pass criteria and instrument cross-calibration; Labi teaches target selection from public sequencing cohorts, probe design and electrochemical quantification. Every participating team leaves with one pre-registered prediction, scored publicly after their next experiment. Teaching is also how GEMS joins the island network it currently sits outside.",
    "firstProject_zh": "一所兩個模組、共同授課、對任何台灣隊伍開放的高中乾實驗室學校。GEMS 教來源帳本、假設登記表、附書面通過標準的預先登錄，以及儀器交叉校正；Labi 教如何從公開定序世代資料中選標的、探針設計和電化學定量。每一支參加的隊伍離開時都帶著一個預先登錄的預測，在他們下一次實驗之後公開評分。教學也是 GEMS 加入目前被排除在外的島內網絡的方式。"
   },
