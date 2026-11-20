@@ -2227,3 +2227,53 @@ SIPA: 280 rows, 8 columns, 年度 111 to 115 (2022 to 2026), five parks (新竹,
 
 The user's answer on which topic to develop. And the Science for Good listening visit, which needs
 a farm visit rather than analysis.
+
+## Session 7, part 5 -- the render verification gap is closed, and here is how
+
+HEAD unchanged at 92e3149 before this append; working tree was clean. The user has still not said
+which of the three topics to develop, so no season plan was started, per the standing decision not
+to begin a large workstream on an unanswered question.
+
+### The live site is serving the latest build
+
+Verified by HTTP on 2026-11-21: the live index.html carries cache stamp 202611202230, matching the
+local build exactly, and the served data/report.js is 1,749,680 bytes carrying 49 sections, with
+proposals-taiwan-ai and taiwan-open-data both present on the proposals tab in the intended order
+(proposals-how, proposals-novelty, proposals-rules, proposals-taiwan-ai, taiwan-open-data,
+proposals-six). So both recent deliverables have actually reached the public site, which had not
+been confirmed before.
+
+### How to render the site visually, which was twice reported as impossible
+
+The blocker was real but the workaround is trivial and should not be rediscovered. A local HTTP
+server from Bash is refused by the permission classifier, and opening index.html over file:// gives
+a static snapshot with no JavaScript, so the app never renders. BUT the published GitHub Pages URL
+is ordinary HTTPS and the built-in browser renders it with JavaScript normally. So:
+
+  preview_start with url https://timmy97-tw.github.io/2026GEMSReport/
+
+and drive it with find / computer / javascript_tool as usual. The only cost is that this renders
+what is PUSHED, not the working tree, so push first and then look.
+
+Two mechanical notes for next time. The page does not scroll the window object, so window.scrollTo
+and window.scrollY are useless here and scrollY stays pinned; use element.scrollIntoView instead,
+which works regardless of the scroll container. And a screenshot taken immediately after scroll_to
+can come back blank white because the scroll has not settled; add a short wait, or scroll with
+scrollIntoView inside javascript_tool and await a timeout before the shot. A blank screenshot here
+was a scroll artefact and not a rendering fault, confirmed by reading the DOM.
+
+### What the visual pass actually confirmed
+
+Both languages render correctly on the proposals tab with zero console errors. The English
+taiwan-open-data block renders with its kicker, title, lede and bold paragraph leads intact. The
+Chinese version renders all six body paragraphs with their bold leads correct and 台灣 used
+throughout. The proposals-taiwan-ai Chinese checklist renders all 13 items, and item 13 is the
+corrected one that now tells the team NOT to use the Taiwanese datasets as a modelling target, so
+the consistency fix from part 4 is live rather than merely committed. The merged method note shows
+the second-sweep sources (SLMB 333.1, Toman 2020, CTI WTB-148) on the live page.
+
+### Housekeeping
+
+Rebuilding with no content change rewrites only the cache-busting stamp: data/results.js
+window.BUILD plus five script tags in index.html, six lines in all. That churn was reverted rather
+than committed, so build-only runs do not add noise to the history.
