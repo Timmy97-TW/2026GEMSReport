@@ -94,6 +94,17 @@ one it cleared in 2024 and has not cleared since. The short version of everythin
   directional: carry the holder's material into your lab, or go and work at the holder's bench, but never take
   the organism out. Even the High School team that ran trials at two working sites did so without engineered
   material, because it legally could not leave the lab.
+- **Best Model does not reward rigour, it rewards a load-bearing model.** All 49 recipients of 2024-26 were read
+  on twelve fields, the 15 High School ones in full. In each of the three seasons the winner was not the
+  best-validated team on its slate, and twice had the thinnest statistics: the 2024 winner published no equation,
+  parameter, statistic or validation at all, and the 2026 winner reports no RMSE or R-squared for any of its four
+  models. What the three winners share is that the model produced what the wet lab built or settled whether a
+  method works. Four of six university winners won on a supporting quantity rather than the headline claim, and
+  the 2026 Overgraduate winner won on a model that did not work, printing a correlation of 0.72 under a leaky
+  split beside minus 0.025 under a grouped one. Money is not the gate: the Undergraduate winner ran CPU-only, a
+  High School first runner-up on a laptop and about US$357 of hardware. GEMS-Taiwan's own three seasons run the
+  other way, from a ten-equation mechanistic system that was the headline claim in 2024, through kinetic symbols
+  defined but never parameterised in 2025, to no mechanistic model of the engineered system at all in 2026.
 - **The loops that closed were closed by experts.** Of all 106 decorated teams, 71 can point at a stakeholder
   who visibly changed the design — but almost every one of those stakeholders was a credentialled technical
   expert, with nine or ten of the 71 closing on somebody who was not. The split is not medical against
