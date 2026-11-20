@@ -1,0 +1,367 @@
+{
+  "id": "taiwan-open-data",
+  "tab": "proposals",
+  "order": 17,
+  "kicker": "Taiwan open data",
+  "kicker_zh": "台灣公開資料",
+  "title": "Both Taiwanese datasets downloaded and profiled, and the variance in them is geology rather than a signal",
+  "title_zh": "兩份台灣公開資料都下載並剖析過了，而裡面的變異是地質，不是訊號",
+  "lede": "The open question was whether Taiwan's two relevant public series could serve as a high school team's modelling target, so that a 2027 project could stand on real Taiwanese data instead of synthetic coolant alone. Both files were downloaded and profiled directly. The answer is no, and the reason is measurable rather than impressionistic: in every well-populated analyte, 93 to 97 percent of the variance sits between treatment plants rather than within them, and the month-of-year swing is a rounding error against the spread. One genuinely useful number falls out anyway, and three published details about the files turn out to be wrong.",
+  "lede_zh": "原本懸著的問題是：台灣這兩份相關的公開序列，能不能當成一支高中隊伍的建模標的，讓 2027 年的專案可以站在真實的台灣資料上，而不是只站在合成冷卻液上。兩個檔案都已直接下載並剖析。答案是不能，而理由是量得出來的、不是印象式的：在每一個資料齊全的分析項目上，有 93% 到 97% 的變異落在不同淨水場「之間」，而不是同一場「之內」，而月份造成的擺動相對於整體離散只是個進位誤差。但仍然掉出一個真正有用的數字，另外還有三項關於這兩個檔案的已發布細節其實是錯的。",
+  "body": "**What was actually done.** Taiwan Water Corporation's plant-level water chemistry and the Hsinchu Science Park Administration's park-effluent series were fetched directly and read as data, nothing executed. The byte counts came back at 4,179,149 and 19,073, matching what the earlier sweep reported, which is an independent confirmation that both links are live and unchanged. The water series is 12,896 data rows by 52 columns, 49 of them analytes, over 84 consecutive months from ROC 10801 to 11412, that is January 2019 to December 2025, across 195 plant strings at 153 to 154 rows per month. As a panel it is almost perfectly balanced, which is rarer than it sounds and is the one thing about it that is genuinely excellent.\n\n**The microbiology in it cannot be modelled, because three quarters of it is the detection limit.** Of 12,896 total bacterial counts, 9,553 are recorded as less than 1, which is 74.1 percent. The entire numeric range of the remaining quarter is 1 to 17 CFU/mL with a median of 1. Coliform group is 100 percent censored and has exactly one distinct value in the whole file, so it carries no information at all. Of the thirteen pesticides, most are 99 to 100 percent not-detected. Anything fitted to these columns would be fitting a detection floor, not a biological quantity. That settles it for the colony-count topic: the Taiwanese drinking-water series cannot be its target, and a team that tried would spend a season rediscovering the laboratory's reporting convention.\n\n**And in the columns that are fully populated, the variance is in the wrong place.** Total hardness, total dissolved solids, total alkalinity, chloride, sulfate, pH, turbidity and free residual chlorine are all at or near 100 percent numeric. But decomposing their variance between plants against within plants gives 95.5 percent between for hardness, 94.6 for dissolved solids, 94.9 for alkalinity, 96.6 for chloride and 93.6 for sulfate. The month-of-year effect is negligible: averaged across plants, hardness swings 1.88 mg/L over the calendar year against a total standard deviation of 66.5 mg/L. There is no seasonality to fit. The predictor is which plant the sample came from, which is geology and does not change, so a model built on this would be a lookup table wearing a regression's clothes.\n\n**That is precisely the model this report has spent three seasons warning about.** The Best Model anatomy found that the award goes to the team whose model produced what the wet lab then built, and that the 2026 pattern across five recognised High School teams was a model on the wiki that nothing downstream used. A regression on this dataset would report a respectable coefficient of determination that came almost entirely from a plant identity term, and the honest conclusion would be one sentence long. Finding that out now costs an afternoon. Finding it out in October costs the season.\n\n**One number does survive, and it is worth more than the model would have been.** The OCP cold-plate coolant specification limits total hardness to under 30 mg/L as calcium carbonate, and says of it that any hardness \"will be a risk for scale particles precipitate inside the microchannel of the cold plate or within the quick disconnects\". In this dataset 12,316 of 12,896 rows, which is 95.5 percent, sit above that limit. County means run from about 110 mg/L in Taichung to about 200 mg/L in Kaohsiung, with a maximum of 300. So the municipal water an AI data centre in Taiwan would draw as makeup is four to ten times outside cold-plate specification, and the pretreatment burden is a measured fact from an official dataset rather than an assertion. That strengthens the framing of the first two topics: the inhibitor and biocide packages exist because the feedwater is nowhere near spec.\n\n**Three published details about these files are wrong, and one of them by a factor of a thousand.** The water file is UTF-8 with a byte-order mark, not Big5 as previously recorded, so a team following that note would mangle every Chinese plant name. Its header carries no units for any of the 49 analytes, so the advice to read units from the file header does not work and they have to come from the national drinking-water standard instead. And the park-effluent file labels its conductivity column mho per centimetre while the values run 0.2 to 4.5 with a median of 1.86. At mho per centimetre that median would be 1.86 million microsiemens per centimetre, which is physically impossible for water, since seawater is around fifty thousand. Read as millisiemens per centimetre it is 1,860 microsiemens per centimetre, which is ordinary fab-park effluent. The published unit is out by ten to the third. In the same file the column labelled name holds one single value for all 280 rows while the column labelled item holds the five park names, so the two are effectively swapped against their own labels, and suspended solids is populated in only 172 of the 280 rows.",
+  "body_zh": "**實際做了什麼。**台灣自來水公司的逐場水質，以及新竹科學園區管理局的園區放流水序列，都直接抓下來、當成資料讀，沒有執行任何東西。回傳的位元組數是 4,179,149 與 19,073，與先前那次清查報的一致，這同時獨立確認了兩個連結都還活著、內容也沒變。水質序列是 12,896 列資料乘以 52 個欄位，其中 49 個是分析項目，涵蓋民國 10801 到 11412 共 84 個連續月份，也就是 2019 年 1 月到 2025 年 12 月，橫跨 195 個淨水場字串，每月 153 到 154 列。作為一個追蹤資料面板，它幾乎完美平衡，這比聽起來更罕見，而且是它唯一真正優秀的地方。\n\n**裡面的微生物資料沒辦法建模，因為四分之三都是偵測極限。**12,896 筆總菌落數裡，有 9,553 筆記錄為「小於 1」，占 74.1%。剩下那四分之一的全部數值範圍是 1 到 17 CFU/mL，中位數是 1。大腸桿菌群 100% 被審查，而且整個檔案裡只有一個相異值，所以它完全不帶任何資訊。十三種農藥裡，多數有 99% 到 100% 是未檢出。對這些欄位做任何擬合，擬的都是一個偵測底線，不是一個生物量。這就把菌落數那個題目定案了：台灣的飲用水序列不能當它的標的，而硬要試的隊伍會花一整季去重新發現實驗室的報告慣例。\n\n**而在那些資料齊全的欄位裡，變異落在錯的地方。**總硬度、總溶解固體量、總鹼度、氯鹽、硫酸鹽、pH、濁度與自由有效餘氯，全部都是或接近 100% 可用數值。但把它們的變異拆成「場與場之間」對「同一場之內」，硬度是 95.5% 落在場間、總溶解固體量 94.6%、總鹼度 94.9%、氯鹽 96.6%、硫酸鹽 93.6%。月份效應則微不足道：跨場平均後，硬度在一整個年度裡擺動 1.88 mg/L，而整體標準差是 66.5 mg/L。沒有季節性可以擬合。預測因子是「樣本來自哪一個場」，那是地質，而地質不會變；所以建在這上面的模型，會是一張穿著迴歸外衣的查表。\n\n**而那正是這份報告花了三季在警告的那種模型。**最佳模型獎的解剖發現，獎會給那支「模型產出了濕實驗室接著真的去做的東西」的隊伍；而 2026 年五支獲獎高中隊伍共同的樣態，是 wiki 上放了一個下游什麼都沒用到的模型。對這份資料做迴歸，會報出一個看起來體面的決定係數，而它幾乎全部來自一個「場別」項，而誠實的結論只有一句話長。現在發現這件事，代價是一個下午。十月才發現，代價是一整季。\n\n**有一個數字活下來了，而它比那個模型本來會有的價值更高。**OCP 冷板冷卻液規格把總硬度限制在以碳酸鈣計 30 mg/L 以下，並說任何硬度「都會造成結垢顆粒在冷板微流道內或快接頭內沉積的風險」。在這份資料裡，12,896 列中有 12,316 列高於那個上限，也就是 95.5%。各縣市平均從台中約 110 mg/L 到高雄約 200 mg/L，最高值 300。所以一座台灣的 AI 資料中心會取來當補充水的自來水，比冷板規格高出四到十倍，而前處理的負擔是一個從官方資料集量出來的事實，不是一句斷言。這也強化了前兩個題目的框架：抑制劑與殺生劑配方之所以存在，就是因為進水離規格差得很遠。\n\n**關於這兩個檔案，有三項已發布的細節是錯的，其中一項錯了一千倍。**水質檔是帶位元組順序標記的 UTF-8，不是先前記錄的 Big5，所以照那條註記去做的隊伍會把每一個中文淨水場名稱弄壞。它的標頭對 49 個分析項目全都沒有附單位，所以「單位請從檔案標頭讀」這個建議行不通，單位只能改從國家飲用水水質標準來。而園區放流水那個檔，把導電度欄位標成 mho/cm，而數值範圍是 0.2 到 4.5、中位數 1.86。若真的是 mho/cm，那個中位數會是 186 萬 µS/cm，對水而言在物理上不可能，因為海水大約是五萬。讀成 mS/cm 則是 1,860 µS/cm，那是很普通的園區放流水。公布的單位差了 10 的 3 次方。同一個檔案裡，標成「名稱」的欄位在全部 280 列都只有一個值，而標成「項目」的欄位裝的是五個園區名，所以這兩欄相對於自己的標籤其實是對調的；而懸浮固體只有 280 列中的 172 列有值。",
+  "cards": [
+    {
+      "kicker": "The censoring census",
+      "kicker_zh": "審查值普查",
+      "title": "Three quarters of the bacterial counts are the words less than one",
+      "title_zh": "四分之三的菌落數就是「小於 1」這三個字",
+      "body": "**9,553 of 12,896** total bacterial counts read as less than 1. The numeric remainder spans **1 to 17 CFU/mL**, median 1. Coliform group is **100 percent censored with one distinct value** in the entire file. Ammonia is 84.9 percent not-detected, nitrite 90.5 percent, cadmium 91.8 percent, and eight of the thirteen pesticides are 99 percent or more not-detected.\n\n**Why that is fatal rather than inconvenient.** Left-censored data is workable when the censoring is a minority and the detection limit is known. Here the censoring is the majority and the limit is the mode. A team that replaces less than 1 with 1 invents a signal; one that replaces it with 0 invents a different one; one that drops those rows keeps the 26 percent of plants that happened to be dirtier, which is a selection effect, not a sample.",
+      "body_zh": "**12,896 筆總菌落數裡有 9,553 筆**寫的是「小於 1」。剩下有數值的部分範圍是 **1 到 17 CFU/mL**，中位數 1。大腸桿菌群在整個檔案裡是 **100% 被審查、只有一個相異值**。氨氮有 84.9% 未檢出、亞硝酸鹽氮 90.5%、鎘 91.8%，而十三種農藥裡有八種未檢出比例在 99% 以上。\n\n**為什麼這是致命的、而不只是不方便。**左設限資料在「設限只占少數、而偵測極限已知」時是可以處理的。這裡設限占了多數，而那個極限就是眾數。把「小於 1」換成 1 的隊伍捏造了一個訊號；換成 0 的捏造了另一個；把那些列丟掉的，留下的是剛好比較髒的那 26% 的場，那是一個選擇效應，不是一個樣本。",
+      "chips": [
+        "9,553 of 12,896 are less than 1",
+        "Numeric range 1 to 17 CFU/mL",
+        "Coliform: one distinct value in the whole file",
+        "The detection limit is the mode"
+      ],
+      "chips_zh": [
+        "12,896 筆中 9,553 筆是「小於 1」",
+        "有數值者範圍 1 至 17 CFU/mL",
+        "大腸桿菌群：整檔只有一個相異值",
+        "偵測極限就是眾數"
+      ]
+    },
+    {
+      "kicker": "Where the variance lives",
+      "kicker_zh": "變異住在哪裡",
+      "title": "95 percent between plants, 5 percent within, and no month-of-year effect worth the name",
+      "title_zh": "95% 在場與場之間、5% 在同一場之內，而月份效應根本不值一提",
+      "body": "**The decomposition.** For every analyte that is fully populated, the share of variance sitting between plants rather than within them: hardness 95.5 percent, dissolved solids 94.6, alkalinity 94.9, chloride 96.6, sulfate 93.6, pH 88.7. Only turbidity gets as low as 67.6 percent between, and its total standard deviation is 0.106 NTU, which is near the reporting resolution.\n\n**The seasonality.** Averaged across plants, hardness moves **1.88 mg/L over the whole calendar year** against a total standard deviation of **66.5 mg/L**. Dissolved solids move 3.69 against 94.6. Chloride moves 0.28 against 20.3. There is nothing seasonal to fit.\n\n**So what would a model be?** A function of plant identity. That is geology, it does not change, and recovering it is a lookup rather than a prediction. The coefficient of determination would look fine and would mean nothing.",
+      "body_zh": "**拆解結果。**對每一個資料齊全的分析項目，變異落在「場與場之間」而非「同一場之內」的比例：硬度 95.5%、總溶解固體量 94.6%、總鹼度 94.9%、氯鹽 96.6%、硫酸鹽 93.6%、pH 88.7%。只有濁度低到 67.6% 落在場間，而它的整體標準差是 0.106 NTU，已經接近報告解析度。\n\n**季節性。**跨場平均後，硬度在**整個年度裡只移動 1.88 mg/L**，而整體標準差是 **66.5 mg/L**。總溶解固體量移動 3.69，對上 94.6。氯鹽移動 0.28，對上 20.3。沒有任何季節性可以擬合。\n\n**那模型會是什麼？**一個「場別」的函數。那是地質，它不會變，而把它還原出來是查表、不是預測。決定係數會看起來很體面，而且什麼都不代表。",
+      "chips": [
+        "Hardness 95.5 percent between-plant",
+        "Hardness year swing 1.88 against sd 66.5",
+        "Chloride 96.6 percent between-plant",
+        "The predictor is geology, and geology is static"
+      ],
+      "chips_zh": [
+        "硬度 95.5% 落在場間",
+        "硬度年度擺動 1.88，對上標準差 66.5",
+        "氯鹽 96.6% 落在場間",
+        "預測因子是地質，而地質不會動"
+      ]
+    },
+    {
+      "kicker": "What survives",
+      "kicker_zh": "活下來的那個",
+      "title": "95.5 percent of Taiwanese treated-water rows are above the hardness limit an AI cold plate tolerates",
+      "title_zh": "台灣處理後自來水有 95.5% 的紀錄高於 AI 冷板能容許的硬度上限",
+      "body": "**The comparison.** The OCP cold-plate coolant specification limits total hardness to **under 30 mg/L as calcium carbonate**, because any hardness \"will be a risk for scale particles precipitate inside the microchannel of the cold plate or within the quick disconnects\". In this dataset **12,316 of 12,896 rows sit above 30**, which is 95.5 percent.\n\n**The spread.** County means run from about 110 mg/L in Taichung and 120 in Hsinchu, through 136 in Hualien and 147 in Pingtung, to 186 in Changhua and 200 in Kaohsiung. The maximum observed is 300 mg/L. So the makeup water is four to ten times outside specification depending on where the facility sits, and Hsinchu, which is where the fabs are, is not one of the softer ones.\n\n**Why this is worth more than the model would have been.** It is a measured fact from an official dataset, it is one line of arithmetic to reproduce, and it explains why the inhibitor and biocide packages in topics 1 and 2 exist at all. It is also a legitimate figure for a wiki, which a lookup-table regression would not have been.",
+      "body_zh": "**那個對照。**OCP 冷板冷卻液規格把總硬度限制在**以碳酸鈣計 30 mg/L 以下**，因為任何硬度「都會造成結垢顆粒在冷板微流道內或快接頭內沉積的風險」。在這份資料裡，**12,896 列中有 12,316 列高於 30**，也就是 95.5%。\n\n**分布。**各縣市平均從台中約 110 mg/L、新竹約 120，經花蓮 136、屏東 147，到彰化 186、高雄 200。觀察到的最高值是 300 mg/L。所以補充水依設施位置不同，比規格高出四到十倍；而晶圓廠所在的新竹，並不屬於比較軟的那一邊。\n\n**為什麼這比那個模型本來的價值更高。**它是一個從官方資料集量出來的事實，重算一次只需要一行算術，而它解釋了題目一與題目二裡那些抑制劑與殺生劑配方為什麼存在。它也是一個可以正當放上 wiki 的數字，而一個查表式的迴歸不會是。",
+      "chips": [
+        "OCP limit: under 30 mg/L as calcium carbonate",
+        "12,316 of 12,896 rows exceed it",
+        "County means 110 to 200 mg/L, max 300",
+        "Hsinchu is not one of the softer counties"
+      ],
+      "chips_zh": [
+        "OCP 上限：以碳酸鈣計 30 mg/L 以下",
+        "12,896 列中 12,316 列超過",
+        "各縣市平均 110 至 200 mg/L，最高 300",
+        "新竹不屬於比較軟的縣市"
+      ]
+    },
+    {
+      "kicker": "Three published details are wrong",
+      "kicker_zh": "三項已發布細節是錯的",
+      "title": "The encoding, the units, and a conductivity column out by a factor of a thousand",
+      "title_zh": "編碼、單位，以及一個差了一千倍的導電度欄位",
+      "body": "**Encoding.** The water file is UTF-8 with a byte-order mark, not Big5. A team following the earlier note would corrupt every Chinese plant name on read.\n\n**Units.** The header carries no unit for any of the 49 analytes. The advice to read units from the file header cannot be followed because there is nothing there to read; they have to come from the national drinking-water standard, and the team should write down which version it used.\n\n**Conductivity.** The park-effluent file labels its conductivity column mho per centimetre, and the values run 0.2 to 4.5 with a median of 1.86. Taken literally that median is 1.86 million microsiemens per centimetre, against seawater at roughly fifty thousand, so it is physically impossible. Read as millisiemens per centimetre it is 1,860 microsiemens per centimetre, which is ordinary park effluent and is close to the OCP cold-plate conductivity ceiling of 2,000. The label is out by ten to the third.\n\n**And the columns are swapped.** In that same file the column labelled name holds a single value across all 280 rows, while the column labelled item holds the five park names. Suspended solids is populated in only 172 of 280 rows.",
+      "body_zh": "**編碼。**水質檔是帶位元組順序標記的 UTF-8，不是 Big5。照先前那條註記做的隊伍，讀檔時會把每一個中文淨水場名稱弄壞。\n\n**單位。**標頭對 49 個分析項目全都沒有附單位。「單位請從檔案標頭讀」這個建議沒辦法照做，因為那裡沒有東西可讀；單位只能從國家飲用水水質標準來，而隊伍應該寫下自己用的是哪一版。\n\n**導電度。**園區放流水檔把導電度欄位標成 mho/cm，而數值是 0.2 到 4.5、中位數 1.86。照字面讀，那個中位數是 186 萬 µS/cm，而海水大約是五萬，所以物理上不可能。讀成 mS/cm 則是 1,860 µS/cm，那是很普通的園區放流水，而且接近 OCP 冷板的導電度上限 2,000。這個標籤差了 10 的 3 次方。\n\n**而那兩欄是對調的。**同一個檔案裡，標成「名稱」的欄位在全部 280 列只有一個值，而標成「項目」的欄位裝的是五個園區名。懸浮固體只有 280 列中的 172 列有值。",
+      "chips": [
+        "UTF-8 with BOM, not Big5",
+        "No units anywhere in the 52-column header",
+        "Conductivity label out by ten to the third",
+        "Name and item columns swapped against their labels"
+      ],
+      "chips_zh": [
+        "帶 BOM 的 UTF-8，不是 Big5",
+        "52 欄的標頭裡哪裡都沒有單位",
+        "導電度標籤差了 10 的 3 次方",
+        "「名稱」與「項目」兩欄相對標籤對調"
+      ]
+    },
+    {
+      "kicker": "What to do instead",
+      "kicker_zh": "那該怎麼做",
+      "title": "Use these files as context and as a sanity check, never as the thing the model predicts",
+      "title_zh": "把這兩個檔案當背景、當合理性檢查，絕對不要當成模型要預測的對象",
+      "body": "**Legitimate uses.** Establishing that the feedwater is far outside cold-plate specification, which is the hardness result above. Choosing realistic concentrations for synthetic coolant and for spike recoveries, so the bench work sits in the range Taiwan actually produces. Sanity-checking a sensor against the official value for the same month and plant. Showing an integrated human practices audience a number about their own county.\n\n**Illegitimate uses.** Any regression whose response is one of these columns. Any claim of a trend over the 84 months, because the between-plant term will dominate whatever is fitted. Any use of the bacterial count, coliform, colour, odour or the pesticide panel as a quantity at all.\n\n**The general rule this is an instance of.** Before adopting a public dataset as a modelling target, decompose its variance and check that the part you intend to predict is the part that moves. It took one afternoon here and it removed a plausible-looking plan that would have consumed a season.",
+      "body_zh": "**正當的用法。**用來確立進水遠在冷板規格之外，也就是上面那個硬度結果。用來替合成冷卻液與加標回收率挑選合理濃度，讓檯面上的實驗落在台灣真實會產出的範圍裡。用來把感測器對同一個月、同一個場的官方數值做合理性檢查。用來在整合人文實踐的場合，給聽眾一個關於他們自己縣市的數字。\n\n**不正當的用法。**任何以這些欄位作為反應變數的迴歸。任何關於那 84 個月趨勢的主張，因為不管擬什麼，場間項都會壓倒一切。以及把菌落數、大腸桿菌群、色度、臭度或那組農藥項目當成一個「量」來用——完全不行。\n\n**這件事只是某條通則的一個實例。**在把一份公開資料集當成建模標的之前，先把它的變異拆開，確認你打算預測的那一部分，就是真的在動的那一部分。這裡花了一個下午，換掉了一個看起來很合理、但會吃掉一整季的計畫。",
+      "chips": [
+        "Use for context, concentrations and sanity checks",
+        "Never as the response variable",
+        "No trend claims over the 84 months",
+        "Decompose variance before adopting any public dataset"
+      ],
+      "chips_zh": [
+        "用於背景、濃度與合理性檢查",
+        "絕不當作反應變數",
+        "不要對那 84 個月提出趨勢主張",
+        "採用任何公開資料集前先拆解變異"
+      ]
+    }
+  ],
+  "table": {
+    "head": [
+      "Analyte",
+      "Usable numeric",
+      "Total standard deviation",
+      "Variance between plants",
+      "Year swing",
+      "Verdict"
+    ],
+    "head_zh": [
+      "分析項目",
+      "可用數值比例",
+      "整體標準差",
+      "變異落在場間的比例",
+      "年度擺動",
+      "判定"
+    ],
+    "rows": [
+      [
+        "Total hardness",
+        "100.0 percent",
+        "66.5 mg/L",
+        "95.5 percent",
+        "1.88 mg/L",
+        "Context only. The one useful result is the comparison against the OCP limit of 30, which 95.5 percent of rows exceed"
+      ],
+      [
+        "Total dissolved solids",
+        "100.0 percent",
+        "94.6 mg/L",
+        "94.6 percent",
+        "3.69 mg/L",
+        "Context only. Same shape as hardness"
+      ],
+      [
+        "Total alkalinity",
+        "100.0 percent",
+        "50.7 mg/L",
+        "94.9 percent",
+        "1.50 mg/L",
+        "Context only. 970 distinct values, so resolution is fine and the problem is purely where the variance sits"
+      ],
+      [
+        "Chloride",
+        "99.9 percent",
+        "20.3 mg/L",
+        "96.6 percent",
+        "0.28 mg/L",
+        "Context only, and the most extreme case: essentially all of it is geology"
+      ],
+      [
+        "Sulfate",
+        "99.7 percent",
+        "35.3 mg/L",
+        "93.6 percent",
+        "1.29 mg/L",
+        "Context only"
+      ],
+      [
+        "pH",
+        "100.0 percent",
+        "0.392",
+        "88.7 percent",
+        "0.015",
+        "Context only, and reported to one decimal so only 21 distinct values exist across 12,896 rows"
+      ],
+      [
+        "Turbidity",
+        "100.0 percent",
+        "0.106 NTU",
+        "67.6 percent",
+        "0.005",
+        "The lowest between-plant share, but the standard deviation is at the reporting resolution, so what looks like within-plant signal is rounding"
+      ],
+      [
+        "Free residual chlorine",
+        "100.0 percent",
+        "0.109 mg/L",
+        "82.3 percent",
+        "0.003",
+        "Context only. An operational setpoint rather than a natural quantity"
+      ],
+      [
+        "Total bacterial count",
+        "25.9 percent",
+        "not computed",
+        "not computed",
+        "not computed",
+        "Unusable. 74.1 percent reads less than 1, the numeric range is 1 to 17 CFU/mL, median 1"
+      ],
+      [
+        "Coliform group",
+        "0.0 percent",
+        "none",
+        "none",
+        "none",
+        "Unusable. One distinct value in 12,896 rows, so zero information"
+      ],
+      [
+        "Copper",
+        "55.3 percent",
+        "not computed",
+        "not computed",
+        "not computed",
+        "Unusable as a response. 26.4 percent censored, 18.4 percent not-detected, median 1.16 ppb, about a thousandfold below the drinking-water limit"
+      ],
+      [
+        "Ammonia, nitrite, cadmium",
+        "15.1, 0.4, 4.9 percent",
+        "none",
+        "none",
+        "none",
+        "Unusable. 84.9, 90.5 and 91.8 percent not-detected respectively"
+      ],
+      [
+        "Pesticide panel, 13 analytes",
+        "0.0 to 5.6 percent",
+        "none",
+        "none",
+        "none",
+        "Unusable. Eight of the thirteen are 99 percent or more not-detected, two are 100 percent"
+      ]
+    ],
+    "rows_zh": [
+      [
+        "總硬度",
+        "100.0%",
+        "66.5 mg/L",
+        "95.5%",
+        "1.88 mg/L",
+        "只能當背景。唯一有用的結果是對上 OCP 上限 30 的那個比較，而 95.5% 的紀錄超過它"
+      ],
+      [
+        "總溶解固體量",
+        "100.0%",
+        "94.6 mg/L",
+        "94.6%",
+        "3.69 mg/L",
+        "只能當背景。形狀與硬度相同"
+      ],
+      [
+        "總鹼度",
+        "100.0%",
+        "50.7 mg/L",
+        "94.9%",
+        "1.50 mg/L",
+        "只能當背景。有 970 個相異值，所以解析度沒問題，問題純粹在變異住在哪裡"
+      ],
+      [
+        "氯鹽",
+        "99.9%",
+        "20.3 mg/L",
+        "96.6%",
+        "0.28 mg/L",
+        "只能當背景，而且是最極端的一例：幾乎全部都是地質"
+      ],
+      [
+        "硫酸鹽",
+        "99.7%",
+        "35.3 mg/L",
+        "93.6%",
+        "1.29 mg/L",
+        "只能當背景"
+      ],
+      [
+        "pH",
+        "100.0%",
+        "0.392",
+        "88.7%",
+        "0.015",
+        "只能當背景，而且只報到小數一位，所以 12,896 列裡只存在 21 個相異值"
+      ],
+      [
+        "濁度",
+        "100.0%",
+        "0.106 NTU",
+        "67.6%",
+        "0.005",
+        "場間比例最低的一項，但標準差已在報告解析度上，所以看起來像場內訊號的其實是進位"
+      ],
+      [
+        "自由有效餘氯",
+        "100.0%",
+        "0.109 mg/L",
+        "82.3%",
+        "0.003",
+        "只能當背景。它是一個操作設定值，不是一個自然量"
+      ],
+      [
+        "總菌落數",
+        "25.9%",
+        "未計算",
+        "未計算",
+        "未計算",
+        "不可用。74.1% 讀作「小於 1」，有數值者範圍 1 至 17 CFU/mL，中位數 1"
+      ],
+      [
+        "大腸桿菌群",
+        "0.0%",
+        "無",
+        "無",
+        "無",
+        "不可用。12,896 列裡只有一個相異值，零資訊"
+      ],
+      [
+        "銅",
+        "55.3%",
+        "未計算",
+        "未計算",
+        "未計算",
+        "不可作為反應變數。26.4% 被審查、18.4% 未檢出，中位數 1.16 ppb，約比飲用水上限低一千倍"
+      ],
+      [
+        "氨氮、亞硝酸鹽氮、鎘",
+        "15.1%、0.4%、4.9%",
+        "無",
+        "無",
+        "無",
+        "不可用。未檢出比例分別為 84.9%、90.5% 與 91.8%"
+      ],
+      [
+        "農藥項目，13 項",
+        "0.0% 至 5.6%",
+        "無",
+        "無",
+        "無",
+        "不可用。十三項中有八項未檢出達 99% 以上，兩項是 100%"
+      ]
+    ]
+  },
+  "checklist": [
+    "Decompose the variance of any public dataset between groups and within groups before adopting it as a modelling target. If the part you want to predict is not the part that moves, the model is a lookup table.",
+    "Count the censored values per column before anything else. A column whose mode is its detection limit carries no quantity, however many rows it has.",
+    "Never substitute a number for a censored value without saying what you substituted and showing the result both ways. Replacing less than 1 with 1 and with 0 give different answers, and the difference is your uncertainty.",
+    "Check the stated unit against physical plausibility. A conductivity of 1.86 mho per centimetre would be thirty-seven times seawater, which is how that label was caught.",
+    "Check the stated encoding yourself. This file is UTF-8 with a byte-order mark and was previously recorded as Big5.",
+    "If the header carries no units, find the standard that defines them and write down which version you used.",
+    "Use these two files for realistic concentrations, for sanity checks against official values, and for telling a local audience something about their own county. Not as a response variable.",
+    "Keep the comparison that did work: 12,316 of 12,896 rows exceed the OCP cold-plate hardness limit of 30 mg/L, and it reproduces in one line of arithmetic."
+  ],
+  "checklist_zh": [
+    "在把任何公開資料集當成建模標的之前，先把它的變異拆成「組間」與「組內」。如果你想預測的那一部分不是真的在動的那一部分，那個模型就是一張查表。",
+    "先數每一欄的審查值，比什麼都先做。一個眾數就是自己偵測極限的欄位，不管有幾列，都不帶任何量。",
+    "絕對不要在沒有說明替代值的情況下替換審查值，而且要把兩種做法的結果都呈現出來。把「小於 1」換成 1 和換成 0 會給出不同答案，而那個差距就是你的不確定度。",
+    "把標示的單位拿去對物理合理性檢查一遍。導電度 1.86 mho/cm 會是海水的三十七倍，那個標籤就是這樣被抓到的。",
+    "自己檢查標示的編碼。這個檔案是帶位元組順序標記的 UTF-8，而先前被記錄成 Big5。",
+    "如果標頭沒有附單位，就去找定義單位的那份標準，並寫下你用的是哪一版。",
+    "這兩個檔案拿來做合理濃度、拿來對官方數值做合理性檢查、拿來跟在地聽眾講一件關於他們自己縣市的事。不要拿來當反應變數。",
+    "把那個真的成立的比較留著：12,896 列中有 12,316 列超過 OCP 冷板硬度上限 30 mg/L，而且重算只需要一行算術。"
+  ],
+  "method": "Both files were fetched once on 20 November 2026 and read as data only, each into its own empty directory, with the profiling scripts kept elsewhere and the paths passed as arguments. Byte counts were 4,179,149 for the water series and 19,073 for the park effluent, matching the earlier sweep, which independently confirms both links. The water series is 12,896 data rows by 52 columns over 84 consecutive months, ROC 10801 to 11412, with 195 distinct plant strings and 153 to 154 rows per month. Plants were keyed on the Chinese name before the first bracket and counties on the tag inside the angle brackets, since the plant column packs name, address, two numeric codes and the county into one string. The variance split is a plain one-way decomposition: variance of the per-plant means against the mean of the within-plant variances, computed on plants with at least twelve observations, which is a descriptive split and not a fitted random-effects model. The year swing is the range across calendar months of the mean deviation from each plant's own mean. Censored and not-detected values were excluded from every numeric statistic rather than substituted, which is why the censored columns show no standard deviation. What was not done: no units were assigned to any analyte, because the header carries none and the national standard was not read in this pass; no distribution was fitted; no attempt was made to reconcile the 195 plant strings into a smaller set of physical plants, so a plant that was renamed would count twice. The hardness comparison uses the OCP cold-plate limit as the reference and assumes the water column is reported as calcium carbonate equivalent, which is the Taiwanese convention but is not stated in the file.",
+  "method_zh": "兩個檔案都在 2026 年 11 月 20 日抓取一次，而且只當資料讀，各自放進自己的空目錄，剖析腳本放在別處、路徑以參數傳入。位元組數為水質序列 4,179,149、園區放流水 19,073，與先前那次清查一致，因而獨立確認了兩個連結。水質序列是 12,896 列乘 52 欄，涵蓋民國 10801 到 11412 共 84 個連續月份，有 195 個相異淨水場字串，每月 153 到 154 列。淨水場以第一個括號前的中文名稱為鍵，縣市以角括號內的標記為鍵，因為那個欄位把名稱、地址、兩組數字代碼與縣市全部塞進同一個字串。變異拆解是單純的單因子拆解：各場平均值的變異，對上各場內變異的平均，只納入至少有十二筆觀測的場；這是一個描述性的拆分，不是一個擬合出來的隨機效果模型。年度擺動是「各月相對於該場自身平均之偏差的平均值」在十二個月之間的全距。審查值與未檢出值在所有數值統計中都被排除、而不是被替換，這也是為什麼被審查的欄位沒有標準差。沒有做的事：沒有為任何分析項目指定單位，因為標頭沒有附、而這一輪也沒有去讀國家標準；沒有擬合任何分布；也沒有嘗試把 195 個淨水場字串歸併成較少的實體場，所以一個改過名的場會被算成兩個。硬度那個比較以 OCP 冷板上限為參考，並假設水質欄位是以碳酸鈣當量報告——那是台灣的慣例，但檔案裡沒有寫。"
+}

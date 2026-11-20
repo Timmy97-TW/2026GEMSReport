@@ -587,6 +587,27 @@
         "兩次互相獨立的計量清查"
       ],
       "link": "proposals"
+    },
+    {
+      "kicker": "2027 Proposals",
+      "kicker_zh": "2027 新題目建議",
+      "title": "The Taiwanese open data was profiled, and the variance in it is geology",
+      "title_zh": "台灣公開資料剖析過了，而裡面的變異是地質",
+      "body": "Both public series were downloaded and read. In every fully populated analyte, **93 to 97 percent of the variance sits between treatment plants rather than within them**, and hardness swings 1.88 mg/L over the calendar year against a standard deviation of 66.5. There is no seasonality to fit and the predictor is which plant the sample came from, so a model here would be a lookup table. The microbiology is worse: **9,553 of 12,896 bacterial counts read less than 1**, and coliform has one distinct value in the whole file. One number survives and is worth more than the model would have been: **12,316 of 12,896 rows, 95.5 percent, exceed the OCP cold-plate hardness limit of 30 mg/L**, with county means from 110 to 200. Three published details about the files were also wrong, including a conductivity column labelled out by a factor of a thousand.",
+      "body_zh": "兩份公開序列都下載讀過了。在每一個資料齊全的分析項目上，**有 93% 到 97% 的變異落在淨水場「之間」而非「之內」**，而硬度在整個年度裡只擺動 1.88 mg/L，對上標準差 66.5。沒有季節性可以擬合，預測因子是「樣本來自哪一場」，所以在這裡建模型就是一張查表。微生物的部分更糟：**12,896 筆菌落數裡有 9,553 筆讀作「小於 1」**，而大腸桿菌群在整個檔案裡只有一個相異值。有一個數字活下來，而且比那個模型本來的價值更高：**12,896 列中有 12,316 列、也就是 95.5%，超過 OCP 冷板的硬度上限 30 mg/L**，各縣市平均從 110 到 200。另外關於這兩個檔案，有三項已發布細節是錯的，其中一個導電度欄位的單位標錯了一千倍。",
+      "chips": [
+        "95.5 percent between-plant variance",
+        "9,553 of 12,896 counts are less than 1",
+        "95.5 percent exceed the cold-plate hardness limit",
+        "Conductivity label out by ten to the third"
+      ],
+      "chips_zh": [
+        "95.5% 的變異落在場間",
+        "12,896 筆計數中 9,553 筆是「小於 1」",
+        "95.5% 超過冷板硬度上限",
+        "導電度標籤差了 10 的 3 次方"
+      ],
+      "link": "proposals"
     }
   ],
   "method": "Each card summarises an analysis published in full on the tab it links to, where the evidence, the named teams and the limits of the method are set out. Where a finding rests on a number, the analysis says how the number was computed and what it cannot see.",
