@@ -1,0 +1,621 @@
+{
+  "id": "claim-integrity",
+  "tab": "judging",
+  "order": 35,
+  "kicker": "Original analysis",
+  "kicker_zh": "原創分析",
+  "title": "Over-claiming is the Top 10 norm, and the podium does it slightly more",
+  "title_zh": "誇大宣稱是前十名的常態，而且得獎隊伍還稍微誇得更兇",
+  "lede": "Across the 2026 Top 10, 21 of the 29 teams with a results page claim more on their landing page than their own evidence supports, and the size of the gap does not track placing — the seven podium teams average 1.43 on a 0–3 scale against 1.00 for the other 22, with the undergraduate second runner-up and the overgraduate first runner-up among the four teams their own pages contradict. GEMS-Taiwan's n = 1 turns out to be a shared habit that cost nobody a prize.",
+  "lede_zh": "在 2026 年的前十名中，有結果頁的二十九支隊伍裡，二十一支的首頁宣稱超過了自家證據所能支持的程度；而落差的大小與名次無關——七支頒獎台隊伍在 0 到 3 的尺度上平均 1.43 分，其餘二十二支平均 1.00 分，大學組季軍與研究生組亞軍還名列四支被自家頁面打臉的隊伍之中。GEMS-Taiwan 那個 n = 1 的案例，結果是一個大家都有、而且沒有害任何人失去獎項的習慣。",
+  "body": "Twenty-one of the twenty-nine teams with a results page claim more on their landing page than their own evidence supports. Only eight are clean. That makes over-claiming the normal condition of a Top 10 wiki, not a disqualifying defect — and it is the first thing GEMS-Taiwan should take from this, because GEMS scores 3 and swept three high-school technical awards anyway.\n\nThe expected pattern does not appear. The seven podium teams average 1.43 on the 0–3 scale; the twenty-two other scored teams average 1.00. The podium is **worse**, not better. Two of the four teams whose front page is contradicted by their own pages are Princeton, the undergraduate second runner-up, and WageningenUR, the overgraduate first runner-up. The three Grand Prize winners land at 0, 1 and 1, which is near the cohort middle rather than above it. Inside the High School section the two podium teams do score lower than the rest, 0.5 against 1.0, but that comparison has an n of two and should not be used for anything.\n\nWhat the cohort does share is a particular shape of failure. Fourteen of the twenty-one over-claims score 1: the landing page overshoots in tense or scope, and the results page states the limit in plain words a click away. TU Delft's home page says the coating \"fights bacteria\"; its results page says the peptide was tested on its own and the tethered version is the next experiment. Marburg's home page says its PPR collection is \"controlled by inducible promoters in the nucleus\"; its results page says \"Three turns of the design cycle, two of which did not work.\" These wikis are not dishonest. They have two voices, and the louder one is on the page a judge reads first.\n\nThe four contradictions are a different thing. Princeton puts a \"VIEW EVIDENCE\" link on a 450 nm light-triggered release whose own experiments page says \"the step we have not yet run\". Wageningen says its biosensor \"monitors the TFA level, continuously and on-site\" above a sensing page that says a working TFA riboswitch still needs more work. Cornell says it \"engineered probiotic bacteria to produce and secrete the 810A peptide\" above a contribution page reporting \"no transformants\". GEMS-Taiwan says green light \"switches production on when the environmental sensors and forecasts decide to\" above a results page reading \"the amount did not rise with light\" and a model page reading \"The reactor therefore cannot be scheduled from the forecast.\"\n\nTwo teams sit outside the scale and both are instructive. Heidelberg's home page makes no capability claim at all — a canvas intro, one question, sponsors — and that is a legitimate way to score 0. Eton-College-UK reached the Top 10 with no results page; `/results` is a 404, and its landing page still says \"Then read two numbers\". Whatever else the 2026 judging rewarded, it did not require a reader to be able to check the front page.",
+  "body_zh": "有結果頁的二十九支隊伍裡，二十一支的首頁宣稱超過了自家證據所能支持的程度，只有八支是乾淨的。這表示在前十名的 wiki 裡，誇大是常態，而不是會被取消資格的瑕疵——這也是 GEMS-Taiwan 該從這份分析拿走的第一件事，因為 GEMS 得了 3 分，照樣橫掃三項高中組技術獎。\n\n預期中的模式並沒有出現。七支頒獎台隊伍在 0 到 3 的尺度上平均 1.43 分；其餘二十二支有評分的隊伍平均 1.00 分。頒獎台**更差**，不是更好。四支首頁被自家頁面打臉的隊伍中，有兩支是大學組季軍 Princeton 與研究生組亞軍 WageningenUR。三個大獎得主分別落在 0、1、1 分，接近整體中位，而不是高於它。在高中組內部，兩支頒獎台隊伍確實比其他隊低，0.5 對 1.0，但那個比較的 n 等於二，不該拿來證明任何事。\n\n這批隊伍真正共有的，是一種特定形狀的失誤。二十一項誇大中有十四項是 1 分：首頁在時態或範圍上衝過頭，而結果頁就在一次點擊之外，用白話寫明了限制。TU Delft 的首頁說塗層「對抗細菌」；它的結果頁說肽是單獨測試的，接上塗層的版本是下一個實驗。Marburg 的首頁說它的 PPR 集合「由細胞核中的誘導型啟動子控制」；它的結果頁說「設計循環走了三輪，其中兩輪沒有成功。」這些 wiki 並不不誠實。它們有兩個聲音，而比較大聲的那個，就在評審最先讀的那一頁上。\n\n四項矛盾則是另一回事。Princeton 在「450 nm 光觸發釋放」上掛了「看證據」的連結，而它自己的實驗頁說那是「我們還沒跑過的一步」。Wageningen 說它的生物感測器「連續地、就地監測 TFA 濃度」，底下的感測頁卻說可運作的 TFA 核糖開關還需要更多工作。Cornell 說它「改造了益生菌，使其生產並分泌 810A 肽」，底下的貢獻頁報告的是「沒有轉形株」。GEMS-Taiwan 說綠光「當環境感測器與預報判定該開工時就把生產打開」，底下的結果頁寫著「量並未隨光照上升」，模型頁寫著「因此這台反應器無法依預報排程。」\n\n有兩支隊伍落在尺度之外，而且都很有啟發。Heidelberg 的首頁完全沒有能力宣稱——一段畫布開場、一個問句、贊助商——那是拿到 0 分的正當方式。Eton-College-UK 則是在沒有結果頁的情況下進了前十；`/results` 是 404，而它的首頁仍然寫著「然後讀兩個數字」。不管 2026 年的評審還獎勵了什麼，它並沒有要求讀者有辦法去核對首頁。",
+  "cards": [
+    {
+      "kicker": "The scale",
+      "kicker_zh": "評分尺度",
+      "title": "Four grades, and an aim is not an over-claim",
+      "title_zh": "四個等級，而「目標」不算誇大",
+      "body": "Every team was scored 0 to 3 on one thing only: the single strongest capability sentence a reader meets first on the landing page, set against what the team's own results page says about that same claim. A tagline that names an aim — \"we aim to\", \"our goal is\", \"our project focuses on\", or a question — is not an over-claim, and neither is a how-it-works walkthrough that explains the design in the present tense. What gets scored is a demonstrated capability asserted in the present indicative. **Eight teams score 0. Fourteen score 1. Three score 2. Four score 3. One has no results page.**",
+      "body_zh": "每一隊只就一件事評 0 到 3 分：讀者在首頁最先遇到的那一句最強的能力宣稱，對照該隊自己結果頁對同一宣稱的說法。標語若明說是目標——「我們希望」「我們的目標是」「我們的專題聚焦於」，或乾脆是個問句——不算誇大；用現在式解釋設計如何運作的流程說明，也不算。真正被計分的，是以現在直述語氣斷言的、已經做到的能力。**八隊得 0 分，十四隊得 1 分，三隊得 2 分，四隊得 3 分，一隊沒有結果頁。**",
+      "chips": [
+        "0 = supported or hedged",
+        "3 = contradicted",
+        "n = 30"
+      ],
+      "chips_zh": [
+        "0 = 有證據或已留餘地",
+        "3 = 被自己打臉",
+        "n = 30"
+      ]
+    },
+    {
+      "kicker": "The reversal",
+      "kicker_zh": "反轉",
+      "title": "The podium over-claims more, not less",
+      "title_zh": "得獎隊伍誇得更多，不是更少",
+      "body": "The seven podium teams average **1.43**; the other twenty-two scored teams average **1.00**. Two of the four teams that contradict themselves are podium teams: Princeton, the undergraduate second runner-up, and WageningenUR, the overgraduate first runner-up. Inside the High School section the direction flips the expected way — Lambert-GA scores 0 and HongKong-JSS scores 1, against a mean of 1.0 for the other seven scored teams — but that comparison rests on two podium wikis. At these numbers neither direction means anything. The honest reading is that claim integrity and placing are unrelated in the 2026 Top 10.",
+      "body_zh": "七支登上頒獎台的隊伍平均 **1.43** 分；其餘二十二支有評分的隊伍平均 **1.00** 分。四支自相矛盾的隊伍中有兩支在頒獎台上：大學組季軍 Princeton，以及研究生組亞軍 WageningenUR。在高中組內部，方向倒是符合直覺——Lambert-GA 得 0 分、HongKong-JSS 得 1 分，其餘七支有評分的隊伍平均 1.0 分——但這個比較只建立在兩個得獎網站上。以這種樣本數，兩個方向都說明不了什麼。誠實的讀法是：在 2026 年的前十名裡，宣稱的誠實度和名次無關。",
+      "chips": [
+        "Podium mean 1.43 (n = 7)",
+        "Rest mean 1.00 (n = 22)",
+        "No signal"
+      ],
+      "chips_zh": [
+        "頒獎台平均 1.43（n = 7）",
+        "其餘平均 1.00（n = 22）",
+        "沒有訊號"
+      ]
+    },
+    {
+      "kicker": "The worst gap",
+      "kicker_zh": "最大的落差",
+      "title": "Princeton puts \"VIEW EVIDENCE\" on a step it never ran",
+      "title_zh": "Princeton 在一步沒跑過的實驗上掛了「看證據」",
+      "body": "Princeton's home page opens with four stat tiles, each carrying a \"VIEW EVIDENCE\" link. One reads **450 nm — LIGHT-TRIGGERED RELEASE**. Follow it and the Experiments page says: \"The phage version described above is the step we have not yet run.\" The figure directly beneath is captioned \"the published assay this experiment is modelled on, not our own data\". The landing page also states that no adsorbent combines bulk capacity, specificity and renewable release, and that \"SymPleco fills that gap\". Renewable release is the one leg of the three that was never tested.",
+      "body_zh": "Princeton 的首頁一開場就是四張數據卡，每一張都掛著「看證據」的連結。其中一張寫著 **450 nm — 光觸發釋放**。點進去，實驗頁卻說：「上文所述的噬菌體版本，是我們還沒跑過的一步。」正下方那張圖的說明是「這是本實驗所仿照的已發表分析，不是我們自己的數據」。首頁同時主張市面上沒有吸附材同時具備大容量、專一性與可再生釋放，而「SymPleco 補上了這個缺口」。三條腿裡，可再生釋放正是從未被測試的那一條。",
+      "chips": [
+        "Undergrad 2nd Runner-up",
+        "Score 3",
+        "Evidence link to a blank"
+      ],
+      "chips_zh": [
+        "大學組季軍",
+        "3 分",
+        "證據連結指向空白"
+      ]
+    },
+    {
+      "kicker": "The worst gap",
+      "kicker_zh": "最大的落差",
+      "title": "Wageningen's biosensor monitors a molecule it cannot sense yet",
+      "title_zh": "Wageningen 的生物感測器監測一個它還測不到的分子",
+      "body": "WageningenUR's landing page lays out three steps and closes with \"We make the forever chemical forever no more.\" Step 3 reads: \"Our biosensor monitors the TFA level, continuously and on-site.\" The Sensing page's own conclusion is: \"In order to create a working TFA riboswitch, more experiments and tests are needed.\" What worked was a PFOA riboswitch, a longer and easier target. The Degradation page is equally plain: \"No enzyme is known to defluorinate TFA… We did not expect TFA activity.\" The science underneath is careful; the front page is a different document.",
+      "body_zh": "WageningenUR 的首頁列出三個步驟，收尾是「我們讓永久化學物質不再永久。」第三步寫著：「我們的生物感測器連續地、就地監測 TFA 濃度。」而感測頁自己的結論是：「要做出能運作的 TFA 核糖開關，還需要更多實驗與測試。」真正成功的是 PFOA 核糖開關——一個鏈更長、也更容易的標的。降解頁同樣直白：「目前沒有已知的酵素能對 TFA 去氟……我們原本就不預期會有 TFA 活性。」底下的科學做得很謹慎；首頁則像是另一份文件。",
+      "chips": [
+        "Overgrad 1st Runner-up",
+        "Score 3",
+        "PFOA worked, TFA did not"
+      ],
+      "chips_zh": [
+        "研究生組亞軍",
+        "3 分",
+        "PFOA 成功，TFA 沒有"
+      ]
+    },
+    {
+      "kicker": "The worst gap",
+      "kicker_zh": "最大的落差",
+      "title": "Cornell engineered a bacterium it never transformed",
+      "title_zh": "Cornell 改造了一株從未轉形成功的細菌",
+      "body": "Cornell's home page says, in the past tense, \"Our team engineered probiotic bacteria to produce and secrete the 810A peptide that inhibits the functional region of connective tissue growth factor (CTGF).\" The Contribution page says: \"We tested multiple protocols using different electroporation techniques with no transformants, but we will continue to optimize this process.\" The Entrepreneurship page adds, in the present progressive, \"Where we are now. Our wet lab is confirming that the bacteria produce 810A, that 810A binds CTGF, which bacterial host performs best, and that the matrix retains the bacteria.\" Four open questions, one finished sentence on the front page.",
+      "body_zh": "Cornell 的首頁用過去式寫著：「我們的團隊改造了益生菌，使其生產並分泌 810A 肽，抑制結締組織生長因子（CTGF）的功能區域。」貢獻頁卻說：「我們以不同電穿孔技術測試了多種流程，都沒有得到轉形株，但我們會繼續最佳化這個流程。」創業頁再用現在進行式補上：「我們現在的進度：濕式實驗室正在確認細菌是否生產 810A、810A 是否結合 CTGF、哪一種宿主菌表現最好，以及基質是否留得住細菌。」四個還沒答案的問題，在首頁變成一句已完成的話。",
+      "chips": [
+        "Score 3",
+        "No transformants",
+        "Past tense on the front page"
+      ],
+      "chips_zh": [
+        "3 分",
+        "沒有轉形株",
+        "首頁用過去式"
+      ]
+    },
+    {
+      "kicker": "What a zero looks like",
+      "kicker_zh": "零分長什麼樣",
+      "title": "Athens and Lambert put the limit in the same breath",
+      "title_zh": "Athens 和 Lambert 把限制寫在同一口氣裡",
+      "body": "Athens's home page has a block headed **What we have shown**, with a tick, the number and the strain: \"~40% fall in OD600 of M. plutonius (LMG 20360) with purified EndoLys 50 µg/mL\". The third thing the wet lab set out to do is still written as a question on that same page. Lambert-GA does the same at high-school level: \"Ours bind VP3, with the aim of blocking infection in the bee's gut\", and its results page says outright that binding \"is distinguish[ed] from antiviral protection in bees, which was not established by this assay\". Neither team sells less science. They sell the same science with its conditions attached.",
+      "body_zh": "Athens 的首頁有一個區塊，標題就是 **我們已經證明的**，附上勾號、數字與菌株：「以 50 µg/mL 純化 EndoLys 處理，蜂房球菌（LMG 20360）的 OD600 下降約 40%」。濕式實驗室想做的第三件事，在同一頁上仍然寫成問句。Lambert-GA 在高中組做了同樣的事：「我們的迷你結合蛋白結合 VP3，目標是阻斷蜜蜂腸道內的感染」，而它的結果頁直說，結合「與蜜蜂體內的抗病毒保護是兩回事，後者並未由此分析建立」。兩隊都沒有少賣科學，他們賣的是同一份科學，連同條件一起。",
+      "chips": [
+        "Athens 0",
+        "Lambert-GA 0",
+        "Numbers with their conditions"
+      ],
+      "chips_zh": [
+        "Athens 0 分",
+        "Lambert-GA 0 分",
+        "數字連著條件一起給"
+      ]
+    },
+    {
+      "kicker": "Two edge cases",
+      "kicker_zh": "兩個邊界案例",
+      "title": "Heidelberg claims nothing; Eton has nowhere to check",
+      "title_zh": "Heidelberg 什麼都沒宣稱；Eton 則無處可查",
+      "body": "Heidelberg's home page is the only one in the Top 10 with no capability claim on it at all. It is a canvas intro whose single line is a question — \"What if we could hear what we have never seen?\" — followed by sponsors and a contact block. Scoring it is trivial because there is nothing to overshoot. Eton-College-UK sits at the other edge: its landing page says \"Protease activity becomes an electrical signal… Then read two numbers\", and `/results` returns \"Page not found\". The hardware page calls the cartridge \"an initial render\". A reader cannot check the front page against anything, so Eton gets its own category rather than a score.",
+      "body_zh": "Heidelberg 的首頁是前十名中唯一完全沒有任何能力宣稱的一頁。那是一段畫布動畫開場，唯一的一句話是問句——「如果我們能聽見從未見過的東西呢？」——接著就是贊助商與聯絡資訊。評分很容易，因為根本沒有東西可以超出。Eton-College-UK 在另一端：首頁寫著「蛋白酶活性變成電訊號……然後讀兩個數字」，而 `/results` 回傳「找不到頁面」。硬體頁把試劑匣稱為「初版算圖」。讀者無從拿首頁去對照任何東西，所以 Eton 另列一類，不給分數。",
+      "chips": [
+        "Heidelberg: a question, not a claim",
+        "Eton: /results is a 404",
+        "1 of 30 unscorable"
+      ],
+      "chips_zh": [
+        "Heidelberg：一個問句，不是宣稱",
+        "Eton：/results 是 404",
+        "30 隊中有 1 隊無法評分"
+      ]
+    },
+    {
+      "kicker": "What this means for GEMS",
+      "kicker_zh": "這對 GEMS 的意義",
+      "title": "GEMS is joint-worst, and that cost it nothing",
+      "title_zh": "GEMS 並列最差，而這並沒有讓它付出代價",
+      "body": "GEMS-Taiwan is one of four teams in the cohort whose landing page is contradicted by its own pages, and it is the only team whose contradiction spans three of them: the results page on the light response, the ELISA and the chromoprotein, and the model page on scheduling. It still swept three high-school technical awards. So the roadmap item that tells GEMS to close this gap should not be sold as a placing lever — nothing here says it is one. It is a credibility lever. The wiki already withdraws its own claims everywhere except the one page a judge reads first, and that inconsistency is the actual defect.",
+      "body_zh": "GEMS-Taiwan 是這批隊伍中四支首頁被自家頁面打臉的隊伍之一，而且是唯一一支矛盾橫跨三頁的：結果頁在光反應、ELISA 與顯色蛋白三處，模型頁在排程一處。它仍然橫掃了三項高中組技術獎。所以那條要 GEMS 補上這個落差的路線圖事項，不該被包裝成名次的槓桿——這份資料沒有任何地方這樣說。它是可信度的槓桿。這個 wiki 在其他地方到處都在收回自己的主張，唯獨在評審最先讀的那一頁沒有，而這個不一致本身才是真正的瑕疵。",
+      "chips": [
+        "Score 3",
+        "Joint-worst of 30",
+        "Swept three technical awards"
+      ],
+      "chips_zh": [
+        "3 分",
+        "30 隊中並列最差",
+        "橫掃三項技術獎"
+      ]
+    }
+  ],
+  "table": {
+    "head": [
+      "Team",
+      "Section and placing",
+      "Top claim on the landing page",
+      "What its own evidence page says",
+      "Gap"
+    ],
+    "head_zh": [
+      "隊伍",
+      "組別與名次",
+      "首頁最強宣稱",
+      "自家證據頁怎麼說",
+      "落差"
+    ],
+    "rows": [
+      [
+        "Lambert-GA (6185)",
+        "High School — Grand Prize",
+        "“Ours bind VP3, with the aim of blocking infection in the bee’s gut.” — and “The first-ever experimentally validated de novo minibinder for an iflavirus.”",
+        "“a combined affinity of 603.6 nM across two replicates (95% confidence interval: 497.1–733.3 nM)”, then: “The experimental validation results distinguish binding to the tested VP3 construct from antiviral protection in bees, which was not established by this assay.”",
+        "0"
+      ],
+      [
+        "HongKong-JSS (6158)",
+        "High School — 1st Runner-up",
+        "“MerMAID is a living sensor that glows red when it meets mercury, read by a portable detector, and fed by a sample-extraction platform that turns other samples into water.”",
+        "“The visual readout needs a centrifuge: colour in unspun culture is distinguishable by eye only above about 0.5 µM. Soil mercury was not measured directly, and the bead work was qualitative.”",
+        "1"
+      ],
+      [
+        "Eton-College-UK (6462)",
+        "High School",
+        "“Protease activity becomes an electrical signal. Press, dilute, insert. Then read two numbers.”",
+        "There is no results page; `/results` returns “Page not found”. The Hardware page says of the cartridge: “this is an initial render”.",
+        "no results page"
+      ],
+      [
+        "GCGS (6242)",
+        "High School",
+        "“Attack: Only upon activation, it releases Alginate Lyase to tear down the biofilm walls.”",
+        "“Due to laboratory safety constraints, we were unable to perform wet lab experiments using live pathogenic P. aeruginosa biofilm samples. Our activity evaluation was limited to purified sodium alginate substrate in cell free in vitro assay.”",
+        "1"
+      ],
+      [
+        "GEMS-Taiwan (6072)",
+        "High School",
+        "“On-demand — Green light switches production on when the environmental sensors and forecasts decide to.”",
+        "Results: “the amount did not rise with light”; “The ELISA showed no change over time”; “the medium remained colorless”. Model: “The reactor therefore cannot be scheduled from the forecast.”",
+        "3"
+      ],
+      [
+        "GHCIS (6166)",
+        "High School",
+        "“The toehold sequences were carefully selected and validated to reduce the incidence of missed detections and false positives.”",
+        "“The present results support continued development toward waterborne resistance-gene monitoring; they do not yet establish a validated detection limit or the performance of the complete DNA-to-color workflow.”",
+        "1"
+      ],
+      [
+        "HFI (6178)",
+        "High School",
+        "“Our goal: Apply synthetic biology to construct engineered probiotics encapsulated into capsules, achieving pain free treatment for patients.”",
+        "“Due to experimental time constraints, we have not completed quantitative detection…” and “Kill-switch characterization is incomplete”.",
+        "0"
+      ],
+      [
+        "HKSSC (6053)",
+        "High School",
+        "“Lab results prove our solution works, paving the way for faster food waste recycling and a greener earth.”",
+        "“due to the constraints with the limitation of sample numbers, we were unable to use more standards with a wider range and smaller increments”; the degradation read is “it can be deduced that the later peaks at 1 and 15 are the products of prbA”.",
+        "2"
+      ],
+      [
+        "HangzhouFourteenAP (6197)",
+        "High School",
+        "“An enzyme-based approach to dental calculus, designed to disrupt biofilms and protect the tooth surface.”",
+        "The landing page qualifies itself: “Our current work evaluates enzyme activity and biofilm disruption in vitro. Clinical calculus removal, long-term protection and formulation performance require further validation.”",
+        "0"
+      ],
+      [
+        "HongKong-HS (6214)",
+        "High School",
+        "“A urine-based test-kit concept for chronic kidney disease.” — “Our project explores urinary miRNAs as signals for CKD screening.”",
+        "“increasing concentrations of target miRNA did not result in a positive correlation… suggesting limited assay sensitivity or target-specific inhibition at elevated miRNA levels.”",
+        "0"
+      ],
+      [
+        "Stanford University (6278)",
+        "Undergrad — Grand Prize",
+        "“Finding the Imposter in Keloid Scars. A therapy that reads a cell before it treats it.”",
+        "“Transfecting our top-performing sensors into fibroblasts proved challenging.” and “But levels of therapeutic output are still low.”",
+        "1"
+      ],
+      [
+        "UCAS-China (6157)",
+        "Undergrad — 1st Runner-up",
+        "“A novel RNA delivery platform for asthma inhalation medication, provides a new choice.”",
+        "“no obvious dose-dependent leakage was observed” and “the fluorescence measurements did not establish a solely G_eCFP-dependent increase in ligation efficiency”.",
+        "1"
+      ],
+      [
+        "Princeton (6295)",
+        "Undergrad — 2nd Runner-up",
+        "Hero stat tile: “450 nm — LIGHT-TRIGGERED RELEASE — VIEW EVIDENCE”, over “No adsorbent on the market combines bulk capacity, molecular specificity, and controlled, renewable release. SymPleco fills that gap”.",
+        "Experiments: “The phage version described above is the step we have not yet run.” The figure under it is captioned “the published assay this experiment is modelled on, not our own data”.",
+        "3"
+      ],
+      [
+        "Cornell (6122)",
+        "Undergrad",
+        "“Our team engineered probiotic bacteria to produce and secrete the 810A peptide that inhibits the functional region of connective tissue growth factor (CTGF).”",
+        "Contribution: “We tested multiple protocols using different electroporation techniques with no transformants.” Entrepreneurship: “Where we are now. Our wet lab is confirming that the bacteria produce 810A…”",
+        "3"
+      ],
+      [
+        "Heidelberg (6249)",
+        "Undergrad",
+        "The home page carries no capability claim at all. Its only line is a question: “What if we could hear what we have never seen?”",
+        "The claim lives on the Description page instead: “VOYAGE — An acoustic platform for observation and organization of living systems.” The Results page is linked as “Where data tells the story”.",
+        "0"
+      ],
+      [
+        "LYON (6280)",
+        "Undergrad",
+        "“Our project focuses on extracting TFA from water using an engineered thermo-reversible affinity system that relies on a TFA-specific protein binder.”",
+        "“No activity above background on TFA.” and “TFA is recognised, but the signal is carried by the carboxylate and not by the fluorines”, plus “We do not claim a doubled affinity.”",
+        "1"
+      ],
+      [
+        "NUS-Singapore (6395)",
+        "Undergrad",
+        "“ORCHID’s engineered yeast strains carry genetically encoded biosensors that report the cell’s internal state directly, in real time, while the process is running.”",
+        "“ORCHID aims to read ER, oxidative and energy stress from a single yeast strain carrying several biosensors.” The data are plate-reader dose–response curves; no run inside a live fermentation is reported either way.",
+        "2"
+      ],
+      [
+        "UAlberta (6254)",
+        "Undergrad",
+        "“How our three engineered proteins work together to deliver medicine precisely where it is needed and to hold it in place”, over tiles reading “Drug Retention increased”.",
+        "“the mutant had diminished retention (0.675%) when compared to the wild type (2.889%)” in the frog eye model.",
+        "1"
+      ],
+      [
+        "UCNZ (6301)",
+        "Undergrad",
+        "“NanoBrew is developing a sustainable, enzyme orientated approach to break down brewers’ spent grain and access nanocellulose.”",
+        "Hedged on the landing page itself: “Our experimental data will be used to assess the economic and sustainable feasibility of up-scaling this process into a one-pot bioreactor.”",
+        "0"
+      ],
+      [
+        "UOttawa (6077)",
+        "Undergrad",
+        "“We have optimized this platform at the enzyme, regulatory, and cellular levels”, closing with “we show that biodesulfurization is a promising alternative for removing DBT from oil”.",
+        "“obtained preliminary evidence of 2-HBP formation from one engineered strain”.",
+        "1"
+      ],
+      [
+        "TU Delft (6110)",
+        "Overgrad — Grand Prize",
+        "“It helps your cells attach to the implant, it fights bacteria, and can deliver and release additional cargo exactly where needed.”",
+        "“As a first step, we tested the AMP SAAP-148 on its own… These results provide the baseline against which we will compare SAAP-148 once it is attached to our ELPs.” The coating itself was never tested against bacteria.",
+        "1"
+      ],
+      [
+        "WageningenUR (6222)",
+        "Overgrad — 1st Runner-up",
+        "“Step 3 Sense. Our biosensor monitors the TFA level, continuously and on-site.” — and “We make the forever chemical forever no more.”",
+        "Sensing: “In order to create a working TFA riboswitch, more experiments and tests are needed.” Degradation: “No enzyme is known to defluorinate TFA… We did not expect TFA activity”.",
+        "3"
+      ],
+      [
+        "Athens (6478)",
+        "Overgrad",
+        "“What we have shown: Lyses M. plutonius in vitro — ~40% fall in OD600 of M. plutonius (LMG 20360) with purified EndoLys 50 µg/mL”.",
+        "The results page carries the same numbers, and the one unanswered question stays a question on the landing page: “Can we make it stronger by fusing it to an antimicrobial peptide?”",
+        "0"
+      ],
+      [
+        "ETH-Zurich (6289)",
+        "Overgrad",
+        "“We targeted PVCs to CD20, a protein on the surface of certain human cells, and could prove to affect these cells specifically.”",
+        "“The de novo designed anti-CD20 binder gave 9.1%, roughly threefold over every negative control in the same plate (PBS ~2.95%, empty cage with binder ~3.2–3.8%, non-injecting Cre control ~3.0%).”",
+        "0"
+      ],
+      [
+        "GU Frankfurt (6108)",
+        "Overgrad",
+        "“By hiding the differences, we protect the organ and leave the immune system free to do the rest… In short: we HIDE the organ from the immune system.”",
+        "“With the generated binder data being preliminary, there are no definitive results to be extracted from them.” and “we were not able to verify that the siRNA was indeed in the sEVs”.",
+        "1"
+      ],
+      [
+        "KAUST-KSA (6341)",
+        "Overgrad",
+        "“We integrate engineered microorganisms, a modular bioreactor, and automated purification to produce high-value proteins when and where they are needed.”",
+        "Proof of Concept hedges to “a compact bioreactor prototype designed to regulate culture conditions”; the proteins on the Results page were purified on a bench HisTrap column, and the integrated animation is captioned “an illustration of the sequence, not measured data”.",
+        "2"
+      ],
+      [
+        "Marburg (6350)",
+        "Overgrad",
+        "“Our collection of synthetic PPRs provides sequence-specific binding to engineered chloroplast RNA, controlled by inducible promoters in the nucleus.”",
+        "“Three turns of the design cycle, two of which did not work.” “Where regulation was not observed, the explanation therefore lies downstream of binding.” The Chlamydomonas transformants are “currently under selection”.",
+        "1"
+      ],
+      [
+        "Muenster-University (6339)",
+        "Overgrad",
+        "“A modular platform technology that updates native plant immune sensors to identify pathogens directly and induce an instant and effective immune response.”",
+        "“Successful HR induction when minimal constructs were infiltrated with the corresponding pathogen protease” — but also “we could not detect any protease” in the expression host, and one of three cleavage sites failed.",
+        "1"
+      ],
+      [
+        "Toronto (6187)",
+        "Overgrad",
+        "“To fight the growing accumulation of microplastics everywhere, we’re revolutionizing the field of plastic-degrading enzymes”, over “identify, engineer, and deploy highly efficient plastic-degrading enzymes”.",
+        "The results page reports assay controls, not enzymes: “The next steps are to test whether msGFP2 can be sufficiently expressed with the copper amounts that can be realistically released from the mesh”.",
+        "1"
+      ],
+      [
+        "UZurich (6269)",
+        "Overgrad",
+        "“Our bacteria produce calcium carbonate more efficiently and uniformly, binding soil particles together for more consistent soil reinforcement.”",
+        "“the results presented here were obtained using our model organism, Escherichia coli”, and for the urease assay “no reliable conclusion can be made from this assay”.",
+        "1"
+      ]
+    ],
+    "rows_zh": [
+      [
+        "Lambert-GA (6185)",
+        "高中組 — 大獎",
+        "「我們的迷你結合蛋白結合 VP3，目標是阻斷蜜蜂腸道內的感染。」以及「史上第一個經實驗驗證、針對 iflavirus 的從頭設計迷你結合蛋白。」",
+        "「兩次重複實驗合併後的親和力為 603.6 nM（95% 信賴區間：497.1–733.3 nM）」，接著寫明：「本次實驗驗證的是與所測 VP3 構築體的結合，而非蜜蜂體內的抗病毒保護；後者並未由此分析建立。」",
+        "0"
+      ],
+      [
+        "HongKong-JSS (6158)",
+        "高中組 — 亞軍",
+        "「MerMAID 是一個活體感測器，遇到汞就發出紅色，由可攜式偵測器讀取，並由一套樣品萃取平台把其他樣品轉成水。」",
+        "「目視讀數需要離心機：未離心的菌液顏色要到約 0.5 µM 以上肉眼才分得出來。土壤汞並未直接量測，而磁珠部分只是定性。」",
+        "1"
+      ],
+      [
+        "Eton-College-UK (6462)",
+        "高中組",
+        "「蛋白酶活性變成電訊號。按壓、稀釋、插入，然後讀兩個數字。」",
+        "沒有結果頁；`/results` 回傳「找不到頁面」。硬體頁對試劑匣的說明是「這只是初版算圖」。",
+        "無結果頁"
+      ],
+      [
+        "GCGS (6242)",
+        "高中組",
+        "「攻擊：只有在被活化時，它才釋出藻酸鹽裂解酶，拆掉生物膜的牆。」",
+        "「受限於實驗室安全規範，我們無法以活的致病性綠膿桿菌生物膜樣品進行濕式實驗。我們的活性評估僅限於純化藻酸鈉受質的無細胞體外分析。」",
+        "1"
+      ],
+      [
+        "GEMS-Taiwan (6072)",
+        "高中組",
+        "「隨需生產 — 當環境感測器與預報判定該開工時，綠光就把生產打開。」",
+        "結果頁：「量並未隨光照上升」、「ELISA 顯示隨時間沒有變化」、「培養液維持無色」。模型頁：「因此這台反應器無法依預報排程。」",
+        "3"
+      ],
+      [
+        "GHCIS (6166)",
+        "高中組",
+        "「這些 toehold 序列經過仔細挑選與驗證，以降低漏檢與偽陽性的發生率。」",
+        "「目前的結果支持朝水體抗藥基因監測繼續開發；但尚未建立經驗證的偵測極限，也尚未確立完整 DNA 到顯色流程的效能。」",
+        "1"
+      ],
+      [
+        "HFI (6178)",
+        "高中組",
+        "「我們的目標：運用合成生物學建構封裝成膠囊的工程益生菌，為病人達成無痛治療。」",
+        "「受限於實驗時間，我們尚未完成定量偵測……」以及「自殺開關的特性分析並不完整」。",
+        "0"
+      ],
+      [
+        "HKSSC (6053)",
+        "高中組",
+        "「實驗結果證明我們的方案可行，為更快的廚餘回收與更綠的地球鋪路。」",
+        "「受限於樣品數量，我們無法使用範圍更廣、間距更小的標準品」；對降解的判讀則是「可以推論第 1 與第 15 個波峰是 prbA 的產物」。",
+        "2"
+      ],
+      [
+        "HangzhouFourteenAP (6197)",
+        "高中組",
+        "「一套以酵素為基礎、針對牙結石的做法，設計用來瓦解生物膜並保護牙面。」",
+        "首頁自己就加上限制：「我們目前的工作是在體外評估酵素活性與生物膜瓦解。臨床上的牙結石清除、長期保護與配方表現仍需進一步驗證。」",
+        "0"
+      ],
+      [
+        "HongKong-HS (6214)",
+        "高中組",
+        "「一個以尿液為基礎的慢性腎臟病試劑組構想。」—「我們的專題探討尿液 miRNA 作為慢性腎臟病篩檢訊號的可能。」",
+        "「提高目標 miRNA 濃度並未帶來正相關……顯示分析靈敏度有限，或在高 miRNA 濃度下有標的專一的抑制。」",
+        "0"
+      ],
+      [
+        "Stanford University (6278)",
+        "大學組 — 大獎",
+        "「在蟹足腫裡找出冒牌貨。一種先讀懂細胞、再治療細胞的療法。」",
+        "「把表現最好的感測器轉染進纖維母細胞相當困難。」以及「但治療性輸出的量仍然偏低。」",
+        "1"
+      ],
+      [
+        "UCAS-China (6157)",
+        "大學組 — 亞軍",
+        "「一個用於氣喘吸入式給藥的新型 RNA 遞送平台，提供了新的選擇。」",
+        "「並未觀察到明顯的劑量依賴性滲漏」，以及「螢光量測並未確立接合效率僅取決於 G_eCFP 的上升」。",
+        "1"
+      ],
+      [
+        "Princeton (6295)",
+        "大學組 — 季軍",
+        "首頁數據卡：「450 nm — 光觸發釋放 — 看證據」，底下寫著「市面上沒有任何吸附材同時具備大容量、分子專一性與可控、可再生的釋放。SymPleco 補上了這個缺口」。",
+        "實驗頁：「上文所述的噬菌體版本，是我們還沒跑過的一步。」底下的圖說明寫著「這是本實驗所仿照的已發表分析，不是我們自己的數據」。",
+        "3"
+      ],
+      [
+        "Cornell (6122)",
+        "大學組",
+        "「我們的團隊改造了益生菌，使其生產並分泌 810A 肽，抑制結締組織生長因子（CTGF）的功能區域。」",
+        "貢獻頁：「我們以不同電穿孔技術測試了多種流程，都沒有得到轉形株。」創業頁：「我們現在的進度：濕式實驗室正在確認細菌是否生產 810A……」",
+        "3"
+      ],
+      [
+        "Heidelberg (6249)",
+        "大學組",
+        "首頁完全沒有任何能力宣稱，唯一的一句話是個問句：「如果我們能聽見從未見過的東西呢？」",
+        "宣稱改放在專題說明頁：「VOYAGE — 一個用於觀察與組織活體系統的聲學平台。」結果頁在選單上的副標是「數據說故事的地方」。",
+        "0"
+      ],
+      [
+        "LYON (6280)",
+        "大學組",
+        "「我們的專題聚焦於以一套工程化的熱可逆親和系統，搭配對 TFA 專一的蛋白結合子，把 TFA 從水中萃取出來。」",
+        "「對 TFA 沒有高於背景值的活性。」以及「TFA 確實被辨識，但訊號來自羧酸根而不是氟原子」，並寫明「我們並不宣稱親和力加倍。」",
+        "1"
+      ],
+      [
+        "NUS-Singapore (6395)",
+        "大學組",
+        "「ORCHID 的工程酵母菌株帶有基因編碼的生物感測器，在製程運轉當下即時、直接回報細胞的內部狀態。」",
+        "「ORCHID 的目標是從單一酵母菌株上同時讀出內質網、氧化與能量逆境。」實際數據是盤讀儀的劑量反應曲線；至於在真實發酵中即時讀取，結果頁既沒有證實也沒有否認。",
+        "2"
+      ],
+      [
+        "UAlberta (6254)",
+        "大學組",
+        "「我們的三個工程蛋白如何協同運作，把藥物精準送到需要的地方並留在那裡」，下方的數據卡寫著「藥物滯留 上升」。",
+        "「在爪蟾眼睛模型中，突變體的滯留率（0.675%）低於野生型（2.889%）。」",
+        "1"
+      ],
+      [
+        "UCNZ (6301)",
+        "大學組",
+        "「NanoBrew 正在發展一套永續、以酵素為導向的方法，分解啤酒糟並取得奈米纖維素。」",
+        "首頁本身就留了餘地：「我們的實驗數據將用來評估把這個製程放大成一鍋式生物反應器在經濟與永續上的可行性。」",
+        "0"
+      ],
+      [
+        "UOttawa (6077)",
+        "大學組",
+        "「我們已在酵素、調控與細胞三個層級上最佳化這個平台」，收尾則是「我們顯示生物脫硫是移除油品中 DBT 的一個有潛力的替代方案」。",
+        "「從一株工程菌取得了 2-HBP 生成的初步證據。」",
+        "1"
+      ],
+      [
+        "TU Delft (6110)",
+        "研究生組 — 大獎",
+        "「它幫助你的細胞附著在植入物上，它對抗細菌，也能把額外的貨物精準遞送並釋放到需要的位置。」",
+        "「第一步，我們單獨測試了抗菌肽 SAAP-148……這些結果提供了基準線，供日後 SAAP-148 接上我們的 ELP 之後比較。」塗層本身從未對細菌測試過。",
+        "1"
+      ],
+      [
+        "WageningenUR (6222)",
+        "研究生組 — 亞軍",
+        "「第三步 感測。我們的生物感測器連續地、就地監測 TFA 濃度。」以及「我們讓永久化學物質不再永久。」",
+        "感測頁：「要做出能運作的 TFA 核糖開關，還需要更多實驗與測試。」降解頁：「目前沒有已知的酵素能對 TFA 去氟……我們原本就不預期會有 TFA 活性。」",
+        "3"
+      ],
+      [
+        "Athens (6478)",
+        "研究生組",
+        "「我們已經證明的：在體外裂解蜂房球菌 — 以 50 µg/mL 純化 EndoLys 處理，蜂房球菌（LMG 20360）的 OD600 下降約 40%」。",
+        "結果頁載的是同一組數字；而唯一還沒答案的問題，在首頁上仍然以問句呈現：「把它和抗菌肽融合，能不能讓它更強？」",
+        "0"
+      ],
+      [
+        "ETH-Zurich (6289)",
+        "研究生組",
+        "「我們把 PVC 導向 CD20（某些人類細胞表面的一個蛋白），並且能證明它專一地作用在這些細胞上。」",
+        "「從頭設計的抗 CD20 結合子得到 9.1%，大約是同一盤中每一個陰性對照的三倍（PBS 約 2.95%、空殼加結合子約 3.2–3.8%、不注射的 Cre 對照約 3.0%）。」",
+        "0"
+      ],
+      [
+        "GU Frankfurt (6108)",
+        "研究生組",
+        "「藉由把差異藏起來，我們保護器官，讓免疫系統去做其餘的事……簡單說：我們把器官對免疫系統藏起來。」",
+        "「由於所產生的結合子數據仍屬初步，無法從中得出確定的結論。」以及「我們無法確認 siRNA 確實在小型胞外囊泡裡面」。",
+        "1"
+      ],
+      [
+        "KAUST-KSA (6341)",
+        "研究生組",
+        "「我們整合工程微生物、模組化生物反應器與自動化純化，在需要的時間與地點生產高價值蛋白質。」",
+        "概念驗證頁的措辭退為「一台設計用來調控培養條件的小型生物反應器原型」；結果頁上的蛋白是用實驗檯上的 HisTrap 管柱純化的，而整合流程動畫的圖說是「這是流程順序的示意，不是量測數據」。",
+        "2"
+      ],
+      [
+        "Marburg (6350)",
+        "研究生組",
+        "「我們的合成 PPR 集合提供對工程化葉綠體 RNA 的序列專一結合，並由細胞核中的誘導型啟動子控制。」",
+        "「設計循環走了三輪，其中兩輪沒有成功。」「在沒有觀察到調控的地方，原因因此落在結合的下游。」萊茵衣藻的轉殖株「目前還在篩選中」。",
+        "1"
+      ],
+      [
+        "Muenster-University (6339)",
+        "研究生組",
+        "「一套模組化平台技術，把作物原生的免疫感測器升級成能直接辨識病原，並誘發即時而有效的免疫反應。」",
+        "「以對應的病原蛋白酶浸潤最小化構築體時，成功誘發過敏性反應」—但同一頁也寫著在表現宿主中「我們偵測不到任何蛋白酶」，而三個切割位中有一個失敗。",
+        "1"
+      ],
+      [
+        "Toronto (6187)",
+        "研究生組",
+        "「為了對抗到處累積的微塑膠，我們正在革新塑膠降解酵素這個領域」，上方則寫著「找出、改造並部署高效率的塑膠降解酵素」。",
+        "結果頁報告的是分析方法的對照組，而不是酵素：「接下來要測試的是，在試片實際能釋出的銅量下，msGFP2 是否能被充分表現。」",
+        "1"
+      ],
+      [
+        "UZurich (6269)",
+        "研究生組",
+        "「我們的細菌生產碳酸鈣的效率更高、分布更均勻，把土壤顆粒結合起來，達成更一致的邊坡補強。」",
+        "「此處呈現的結果是用我們的模式生物大腸桿菌取得的」，而尿素酶分析則是「無法從這個分析做出可靠的結論」。",
+        "1"
+      ]
+    ]
+  },
+  "checklist": [
+    "Write the landing page last, after the results page is frozen, and build every hero line from a sentence that already exists in Results.",
+    "Mark aims as aims on the front page: \"we set out to\", \"our goal is\", or a question, as Athens, UCNZ and HangzhouFourteenAP do.",
+    "Put the condition next to the number on the landing page, the way HongKong-JSS writes \"under assay conditions\" beside its 1 ppb.",
+    "Never label a stat tile \"evidence\" unless the linked page holds your own measurement; Princeton's 450 nm tile is the cohort's clearest failure.",
+    "Audit every present-indicative verb on the landing page and ask which figure on Results it points to; delete or re-tense the ones with no figure.",
+    "Fix the On-demand card first: the reactor's own model page says it cannot be scheduled from the forecast, so the front page must not say it is.",
+    "Keep the hedge in the same sentence, not in a footnote lower down — a reader who bounces off the hero never reaches the footnote.",
+    "Ship a results page at all, and make the headline evidence reachable in one click from the hero, since one Top 10 team had neither."
+  ],
+  "checklist_zh": [
+    "首頁最後才寫：等結果頁定稿之後，再從結果頁既有的句子裡長出每一句主視覺文案。",
+    "在首頁把目標標成目標：「我們著手要做的是」「我們的目標是」，或乾脆用問句，像 Athens、UCNZ 與 HangzhouFourteenAP 那樣。",
+    "在首頁把條件寫在數字旁邊，就像 HongKong-JSS 在 1 ppb 旁邊寫「在本分析條件下」。",
+    "除非連過去的頁面裡放著你們自己的量測，否則別把數據卡標成「證據」；Princeton 的 450 nm 卡是這批隊伍中最明顯的反例。",
+    "逐一檢查首頁上每一個現在直述語氣的動詞，問它指向結果頁的哪一張圖；指不到圖的，刪掉或改時態。",
+    "先修「隨需生產」那張卡：反應器自己的模型頁說它無法依預報排程，首頁就不該說它可以。",
+    "把保留寫在同一句裡，不要塞進下面的註腳——看完主視覺就離開的讀者，永遠讀不到註腳。",
+    "至少要有一個結果頁，而且讓頭條證據從主視覺一次點擊就到得了，因為前十名裡有一隊兩者皆無。"
+  ],
+  "method": "For each of the 30 teams in the 2026 Top 10 I read two things: the landing page as a reader meets it, and the page that carries the headline evidence (results, or where no results page exists, description, proof of concept, engineering or the equivalent wet-lab page). Static and server-rendered wikis were fetched directly with curl and a browser User-Agent, and the HTML was HTML-unescaped before any pattern matching. TU Delft was read through its Markdown mirrors at `/tu-delft/<page>.md`. For the fourteen wikis that serve a near-empty single-page-app shell, I pulled the JavaScript bundles and extracted the string literals and template literals that hold the page prose, and cross-checked every quote used here by loading the page in a browser. Heidelberg's home page renders on a canvas with no DOM text and was read from screenshots.\n\n**The scale.** 0 — the landing claim is stated at the level the results support, or is hedged, marked as an aim, or posed as a question in the same breath. 1 — the landing claim is stronger in tense or scope than the evidence, and the results page states that specific limit plainly. 2 — the landing claim asserts a demonstrated capability that the results page does not establish and does not address, and nothing on the landing page marks it as a goal. 3 — the landing claim is contradicted by the team's own results, model or contribution page. A separate category, \"no results page\", is recorded rather than guessed; Eton-College-UK is the only team in it.\n\n**The fairness rule.** A tagline is allowed to be a project's aim rather than its result. \"We aim to\", \"our goal is\", \"our project focuses on\", \"we are developing\" and an outright question are not over-claims, and a team that writes them is not penalised however far the aim outruns the data. Neither is a how-it-works walkthrough that explains the intended mechanism in the present tense; that is design exposition, and almost every wiki in the cohort has one. What is scored is a demonstrated capability asserted in the present indicative in the hero or opening summary — the single strongest capability sentence a reader meets first. Where a score is 2 or 3, both sides are quoted verbatim in the table so a reader can check the call.\n\n**Limits.** n = 30, of which 29 are scorable and 7 are podium teams. A difference between a mean of 1.43 and a mean of 1.00 on a four-point ordinal scale, with seven teams on one side, carries no statistical weight and no causal claim whatever. The High School sub-comparison rests on two podium wikis. Scoring also depends on which sentence is taken as the top claim; on a wiki with several hero lines a different reader could pick a different one and move a team by a point. The scale is ordinal, so the means are reported as a convenience, not as a measurement. What the data can support is the negative: across these 30 wikis there is no visible relationship between claim integrity and placing, and the two teams whose landing pages are most sharply contradicted by their own evidence are both runners-up.",
+  "method_zh": "2026 年前十名的 30 支隊伍，每一支我都讀兩樣東西：讀者實際看到的首頁，以及承載頭條證據的那一頁（結果頁；若無結果頁，則是專題說明、概念驗證、工程循環或對應的濕式實驗頁）。靜態與伺服器渲染的 wiki 直接以 curl 加瀏覽器 User-Agent 抓取，HTML 在做任何樣式比對之前都先還原過實體字元。TU Delft 透過它在 `/tu-delft/<page>.md` 的 Markdown 鏡像閱讀。有十四個 wiki 送出的是幾乎空白的單頁式應用外殼，我拉下它們的 JavaScript 套件，抽出承載頁面文字的字串與樣板字面值，並把本文引用的每一句話都用瀏覽器載入頁面核對過。Heidelberg 的首頁在畫布上繪製、沒有任何 DOM 文字，是從螢幕截圖讀的。\n\n**評分尺度。** 0 分——首頁宣稱的強度與結果支持的程度相當，或在同一句裡就留了餘地、標明是目標，或乾脆寫成問句。1 分——首頁宣稱在時態或範圍上強過證據，但結果頁清楚寫明了那一項的限制。2 分——首頁以已完成的語氣斷言某項能力，而結果頁既未建立也未處理這一點，且首頁沒有任何地方把它標成目標。3 分——首頁宣稱被該隊自己的結果頁、模型頁或貢獻頁否定。另設「無結果頁」一類，據實記錄而不臆測；Eton-College-UK 是唯一一隊。\n\n**公平原則。** 標語本來就可以是專題的目標而非成果。「我們希望」「我們的目標是」「我們的專題聚焦於」「我們正在發展」，以及直接的問句，都不算誇大；這樣寫的隊伍，不論目標離數據多遠都不扣分。用現在式解釋預期機制的流程說明也不算——那是設計闡述，這批 wiki 幾乎每一個都有。真正被計分的，是在主視覺或開場摘要中以現在直述語氣斷言的、已經做到的能力，也就是讀者最先遇到的那一句最強的能力宣稱。凡是評為 2 分或 3 分的，表格中都逐字引用雙方說法，讓讀者自己核對判斷。\n\n**限制。** n = 30，其中 29 支可評分，7 支在頒獎台上。在一個四點序位尺度上，1.43 與 1.00 兩個平均值的差距，而且其中一邊只有七支隊伍，不具任何統計份量，也完全不能支持因果主張。高中組的子比較只建立在兩個得獎網站上。評分也取決於把哪一句話當成最強宣稱；一個首頁若有好幾句主視覺文案，換一個讀者挑另一句，就可能讓某隊上下一分。尺度是序位的，所以平均值只是方便閱讀的摘要，不是量測值。這份資料能支持的是否定面：在這 30 個 wiki 裡，宣稱誠實度與名次之間看不到任何關係，而首頁被自家證據打臉得最厲害的兩支隊伍，都是亞軍或季軍。"
+}

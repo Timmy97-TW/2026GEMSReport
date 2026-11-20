@@ -58,6 +58,25 @@
       "link": "drylab"
     },
     {
+      "kicker": "Claim integrity",
+      "kicker_zh": "主張誠實度",
+      "title": "Over-claiming on the landing page is the Top 10 norm, and the podium does it slightly more",
+      "title_zh": "首頁誇大是 Top 10 的常態，而頒獎臺隊伍還稍微誇得更兇",
+      "body": "Every 2026 Top 10 landing page was read against the team's own evidence page and scored 0 to 3. **21 of 29 scorable teams assert more than their own results support.** The expectation was that the gap would track placing; it reversed — the podium averages **1.43** against **1.00** for everyone else, two of the four teams contradicted by their own pages are podium teams, and the three Grand Prize winners score 0, 1 and 1. Princeton's hero tile reads \"450 nm — LIGHT-TRIGGERED RELEASE\" while its experiments page says \"The phage version described above is the step we have not yet run\". **GEMS-Taiwan is joint-worst at 3** and the only team in thirty whose contradiction spans three of its own pages. So closing this buys credibility, not a placing — and one team reached the Top 10 with no results page at all.",
+      "body_zh": "2026 年每一支 Top 10 隊伍的首頁，都拿去對照該隊自己的證據頁，並以 0 到 3 評分。**29 支可評分的隊伍中有 21 支，主張超過自己結果撐得住的範圍。**原本的預期是落差會與名次相關；結果反轉了——頒獎臺平均 **1.43**，其餘隊伍 **1.00**；四支被自己頁面反駁的隊伍裡有兩支在頒獎臺上；三支總冠軍的分數是 0、1、1。Princeton 的首頁大字寫著「450 nm——光觸發釋放」，而它的實驗頁寫著「上述的噬菌體版本，是我們還沒做的那一步」。**GEMS-Taiwan 以 3 分並列最差**，而且是三十支裡唯一一支矛盾橫跨自己三個頁面的隊伍。所以補起這個落差買到的是可信度，不是名次——而且有一支隊伍根本沒有結果頁就進了 Top 10。",
+      "chips": [
+        "21 of 29 over-claim",
+        "podium 1.43 vs 1.00",
+        "GEMS joint-worst at 3"
+      ],
+      "chips_zh": [
+        "29 支中 21 支誇大",
+        "頒獎臺 1.43 對 1.00",
+        "GEMS 以 3 分並列最差"
+      ],
+      "link": "judging"
+    },
+    {
       "kicker": "Software",
       "kicker_zh": "軟體",
       "title": "8 of 21 award-winning tools are still usable, and the reason is hosting",

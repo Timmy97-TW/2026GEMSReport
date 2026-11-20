@@ -1,0 +1,405 @@
+{
+  "id": "picks-gates",
+  "tab": "picks",
+  "order": 5,
+  "kicker": "Start here",
+  "kicker_zh": "從這裡開始",
+  "title": "Three piles: what the 2026 results say is a lever, what is only a floor, and what is a mirage",
+  "title_zh": "三堆東西：2026 年的結果說哪些是槓桿、哪些只是門檻、哪些是幻覺",
+  "lede": "Every measured finding in this report, sorted by whether it can change where GEMS places. The useful part is the second and third piles: most of what feels like effort in iGEM is either table stakes GEMS already clears, or measured at no effect. Spending 2027 on those is the most expensive mistake available.",
+  "lede_zh": "本報告每一條量測過的發現，依「能不能改變 GEMS 的名次」分類。真正有用的是第二堆和第三堆：iGEM 裡大部分感覺很費力的事，要麼是 GEMS 早就跨過的基本門檻，要麼量出來根本沒有效果。把 2027 年花在那些事情上，是能犯的最貴的錯。",
+  "body": "**One lever is supported from two directions, and it is the only one.** Across the 2026 High School Top 10, seven of the seven teams that missed the podium stop at a surrogate — a synthetic trigger RNA standing in for river water, a model ester, a reporter standing in for a therapy. Exactly one team in ten ran its assay on a real sample, and that team took 1st Runner-up. Inside GEMS's own three seasons the podium year is the real-target year: 2024 fed three toxins to live *Aedes albopictus* larvae and reported LC50 for all three, while 2026's strongest result, a plant rescue at p < 0.0001 with 40 seedlings a condition, sits on a preparation that was never assayed. Cross-sectional and longitudinal agreement is rare in this report; nothing else here has it.\n\n**The second pile is the dangerous one, because it is where good teams work hard for nothing.** Falsification controls are the clearest case. Reading all 30 Top 10 wikis, 26 of 30 ran an experiment designed expressly to kill a rival explanation for their own result, and 30 of 30 published a result unfavourable to their own headline. The practice is so near-universal that it cannot separate a podium from a Top 10 — podium teams average 4.29 of five control types against 3.61, which is a permutation p of 0.079 and not a result. **GEMS-Taiwan holds all five types, a perfect score, and still placed outside the podium**, as did four other perfect scorers. So controls are a floor this team cleared years ago. Write them in week one, then stop thinking about them.\n\n**The third pile is measured at nothing, and some of it is counter-intuitive enough to be worth saying twice.** Choosing a village is not a lever. Reporting more statistics is not a lever — the Top 10 team with the most statistical apparatus won nothing, and the Grand Prize winner names no test at all. A bigger team is not a lever. Rebuilding the wiki is not a lever, and the proof is GEMS's own: the 2024 site that won Best Wiki in the Grand Prize year is the weakest presented of its three seasons.",
+  "body_zh": "**只有一條槓桿從兩個獨立方向都站得住，而且也只有這一條。**在 2026 年高中組 Top 10 裡，七支沒上頒獎臺的隊伍，七支全部停在替代物上——用合成的觸發 RNA 代替河水、用模型酯類、用報導基因代替療法。十支裡剛好只有一支把檢測跑在真實樣本上，而那一支拿下亞軍。在 GEMS 自己的三個賽季裡，上頒獎臺的那一年就是打在真實標的上的那一年：2024 年把三種毒蛋白餵給活的 *Aedes albopictus* 幼蟲、三種都報告了 LC50；而 2026 年最強的結果，每組 40 棵苗、p < 0.0001 的植物救援，卻建立在一份從未被檢測活性的製備上。橫向與縱向同時成立，在這份報告裡很罕見；除此之外沒有任何一條做到。\n\n**第二堆才是危險的那一堆，因為好隊伍會在這裡白費力氣。**否證對照是最清楚的例子。把 30 支 Top 10 隊伍的 wiki 全部讀完：30 支中有 26 支做過刻意殺掉自家結果另一種解釋的實驗，30 支全部公開過一項對自己標題主張不利的結果。這個習慣普及到分不出頒獎臺與前十——頒獎臺隊伍平均擁有五類對照中的 4.29 類，其餘是 3.61 類，置換檢定 p 為 0.079，不構成結果。**GEMS-Taiwan 五類全有、滿分，卻仍然沒上頒獎臺**，另外四支滿分隊伍也一樣。所以對照是這支隊伍好幾年前就跨過的門檻。第一週就寫好，然後不要再想它。\n\n**第三堆是量出來等於零的，其中有幾項反直覺到值得講兩次。**選村落不是槓桿。報告更多統計不是槓桿——Top 10 裡統計工具用得最多的那一支什麼獎都沒拿，而總冠軍連一個檢定名稱都沒寫。隊伍更大不是槓桿。重做 wiki 不是槓桿，而證據來自 GEMS 自己：2024 年那個在總冠軍年拿下 Best Wiki 的網站，是三個賽季裡呈現最差的一個。",
+  "cards": [
+    {
+      "kicker": "Lever",
+      "kicker_zh": "槓桿",
+      "title": "Can you get the real thing, by week six?",
+      "title_zh": "你能不能在第六週之前拿到真實的那個東西？",
+      "body": "This is the only finding in the report supported both across the 2026 field and across GEMS's own three seasons. If a candidate topic's honest answer is \"we will use a surrogate and argue it is representative\", the topic is capped before the season starts — seven of seven non-podium High School teams did exactly that. Make sample access a selection criterion, not a logistics problem to solve later. The question is not whether the science is good; it is whether the thing you claim to act on is the thing you measured.",
+      "body_zh": "這是整份報告裡唯一同時在 2026 年全體與 GEMS 自己三個賽季都站得住的發現。如果一個候選題目誠實的答案是「我們會用替代物，然後論證它具代表性」，那這個題目在賽季開始前就被設了上限——七支沒上頒獎臺的高中隊伍，七支都正是這樣做。把「樣本取得」當成選題條件，而不是之後再解決的後勤問題。問題不在科學好不好，而在你聲稱要作用的那個東西，是不是你真正量到的那個東西。",
+      "chips": [
+        "7 of 7 non-podium used a surrogate",
+        "1 of 10 used a real sample",
+        "that one took 1st Runner-up"
+      ],
+      "chips_zh": [
+        "七支非頒獎臺隊伍全用替代物",
+        "十支裡一支用真實樣本",
+        "那一支拿下亞軍"
+      ]
+    },
+    {
+      "kicker": "Lever",
+      "kicker_zh": "槓桿",
+      "title": "Close the model-data loop, and hold data back before you look at it",
+      "title_zh": "把模型與資料的迴路閉合，而且在看資料之前就先留一部分起來",
+      "body": "Teams that both fitted a model to their own measured data **and** validated it against something held back reached a Top 10 at 53%, against 23% for those that did not. All nine teams that closed the loop without a Top 10 won or were nominated for a major special prize anyway, so this is close to a floor on the downside and a lever on the upside. It is also scarce where it counts: only 12 of the 30 Top 10 teams validated against held-back data at all. Best Model recognition in the High School section maps onto the finalist slate exactly — Lambert-GA won it, HongKong-JSS was nominated, and no other Top 10 team appears in the category.",
+      "body_zh": "同時把模型擬合到自己量到的資料**並且**拿留存資料做驗證的隊伍，進 Top 10 的比例是 53%，沒做的是 23%。九支閉合了迴路但沒進 Top 10 的隊伍，全部還是拿到或入圍了某個重要特別獎，所以這件事下有保底、上有槓桿。而它在關鍵處其實很稀少：30 支 Top 10 隊伍裡，只有 12 支真的拿留存資料做過驗證。高中組的 Best Model 入圍與得獎名單，正好疊合在決賽名單上——Lambert-GA 得獎、HongKong-JSS 入圍，其餘 Top 10 隊伍沒有任何一支出現在這個類別裡。",
+      "chips": [
+        "53% against 23%",
+        "only 12 of 30 held data back",
+        "Best Model maps onto the finalists"
+      ],
+      "chips_zh": [
+        "53% 對 23%",
+        "30 支裡只有 12 支留存資料",
+        "Best Model 疊合決賽名單"
+      ]
+    },
+    {
+      "kicker": "Lever, and rare",
+      "kicker_zh": "槓桿，而且稀少",
+      "title": "Remove a confound by design, then run it again",
+      "title_zh": "用設計移除一個混淆因子，然後重跑一次",
+      "body": "Of the five falsification-control types, four are saturated across the Top 10 and one pair is scarce: only 17 of 30 removed a confound by design and re-tested, and only 12 of 30 held data back. Those two are where the podium actually leans ahead. GEMS's own 2024 attractant work is the model — a position bias was found and the centre cup removed, then the beetroot colour was suspected and every cup covered with black paper \"so that the selection of oviposition sites is based on odorant factors only\", after which the preference still held at p = 0.0003. **Two confounds found and eliminated by the team itself, on its own target species.**",
+      "body_zh": "五類否證對照裡有四類在 Top 10 之中已經飽和，只有一對很稀少：30 支中只有 17 支以設計移除混淆因子後重測，只有 12 支留存資料做驗證。頒獎臺真正拉開距離的就是這兩類。GEMS 自己 2024 年的引誘劑實驗就是範本——先發現位置偏誤，拿掉中央那一杯；接著懷疑甜菜根的顏色，就把每一杯都用黑紙蓋住，「讓產卵位置的選擇只取決於氣味因素」，之後偏好仍然成立，p = 0.0003。**兩個混淆因子都由團隊自己找出來並排除，而且是在自己的標的物種上。**",
+      "chips": [
+        "17 of 30 redesigned and re-tested",
+        "12 of 30 held data back",
+        "GEMS 2024 did both"
+      ],
+      "chips_zh": [
+        "30 支中 17 支重新設計並重測",
+        "30 支中 12 支留存資料",
+        "GEMS 2024 兩者都做到"
+      ]
+    },
+    {
+      "kicker": "Floor — already cleared",
+      "kicker_zh": "門檻——已經跨過",
+      "title": "The experiment that could have broken your own claim",
+      "title_zh": "那個可能推翻你自己主張的實驗",
+      "body": "Write it in week one and then stop thinking about it, because **GEMS already scores a perfect five of five** on this and it did not place. 26 of 30 Top 10 teams ran an exclusion of a rival explanation; 30 of 30 published a result unfavourable to their own headline. The habit is a floor, not a ranking. The cheapest part is also the most visible: 23 of 30 teams named an arm they could not run, and that is 7 of 7 on the podium against 16 of 23 off it. Athens wrote the best version — \"Separating the two requires that buffer-only arm, and until it is run we describe the effect as attributable to the preparation\" — and scored only 3 of 5 while doing so. Naming the gap costs nothing and is the clearest evidence a judge can see that you know what your data does not show.",
+      "body_zh": "第一週就寫好，然後不要再想它，因為**GEMS 這一項已經是滿分五類全有**，卻沒有名次。30 支 Top 10 隊伍中有 26 支做過排除對手解釋的實驗，30 支全部公開過對自己標題不利的結果。這個習慣是門檻，不是名次表。其中最便宜的部分也最顯眼：30 支中有 23 支指名了自己沒能做的那一組對照，而這是頒獎臺 7 比 7、臺下 23 比 16。Athens 寫出了最好的版本——「要把這兩者分開需要那一組只有緩衝液的對照，在它被做出來之前，我們把這個效應描述為可歸因於該製備」——而它這樣寫卻只拿 3 分。指名缺口完全不花錢，而且是評審能看到的最清楚證據，證明你知道自己的資料沒有顯示什麼。",
+      "chips": [
+        "26 of 30 ran an exclusion",
+        "30 of 30 published bad news",
+        "GEMS scores 5 of 5"
+      ],
+      "chips_zh": [
+        "30 支中 26 支做過排除",
+        "30 支全部登出壞消息",
+        "GEMS 五類全有"
+      ]
+    },
+    {
+      "kicker": "Floor — already cleared",
+      "kicker_zh": "門檻——已經跨過",
+      "title": "Do not rebuild the wiki, and the proof is your own 2024 site",
+      "title_zh": "不要重做 wiki，而證據是你自己 2024 年的網站",
+      "body": "The tempting story is that presentation slipped since 2024. Read against all three seasons it breaks. The 2024 site that won **both** the Grand Prize and Best Wiki is a 577-byte script shell with the whole site in one 1,690,501-byte bundle, no results page at all because `/results` returns 404, one p-value, and the longest module inventory of the three. The 2026 site beats it on every presentation measure: server-rendered, five times the p-values, 67 uniquely numbered figures, and a page that scores its own stages. Every team in the 2026 Top 10 publishes a wet-lab protocol a stranger could follow, so that is table stakes too. The one presentation thing that is still worth fixing is not design, it is honesty — see the next pile.",
+      "body_zh": "誘人的說法是：自 2024 年以來，呈現退步了。拿三個賽季一起讀，這個說法就破了。2024 年那個**同時**拿下總冠軍與 Best Wiki 的網站，是一個 577 位元組的腳本外殼，整站裝在一個 1,690,501 位元組的套件裡，根本沒有結果頁，因為 `/results` 回傳 404，全站只有一個 p 值，而且模組清單是三年裡最長的。2026 年的網站在每一項呈現指標上都勝過它：伺服器端渲染、p 值多五倍、67 張不重複編號的圖，還有一頁為自己的階段評分。2026 年 Top 10 的每一支隊伍都公開了陌生人能照著做的濕實驗流程，所以那也是基本門檻。唯一還值得修的呈現問題不是設計，而是誠實——見下一堆。",
+      "chips": [
+        "2024: 577-byte shell, no results page",
+        "2026 wins on every measure",
+        "all 30 publish followable protocols"
+      ],
+      "chips_zh": [
+        "2024：577 位元組外殼、沒有結果頁",
+        "2026 在每項指標上勝出",
+        "30 支全部公開可照做的流程"
+      ]
+    },
+    {
+      "kicker": "Not a lever either — fix it anyway",
+      "kicker_zh": "也不是槓桿——但還是要修",
+      "title": "The honesty gap does not buy a placing, and GEMS is the joint-worst in the Top 10",
+      "title_zh": "誠實落差買不到名次，而 GEMS 在 Top 10 裡並列最差",
+      "body": "This was measured across all 30 Top 10 wikis and the result reversed the expectation. **Over-claiming is the norm, and the podium does it slightly more**: 21 of 29 scorable teams assert more on the landing page than their own evidence page supports, the podium averages 1.43 on a 0-to-3 gap scale against 1.00 for everyone else, and two of the four teams whose own pages contradict them are podium teams. The three Grand Prize winners score 0, 1 and 1 — mid-cohort.\n\nSo fixing this buys credibility, not placing. Fix it anyway, because **GEMS-Taiwan is joint-worst at 3**, tied with Princeton, Cornell and WageningenUR, and it is the only team in thirty whose contradiction spans three of its own pages. The home page sells \"On-demand — Green light switches production on when the environmental sensors and forecasts decide to\". The results page says the ELISA showed no change over time, that the amount did not rise with light, and that the medium remained colorless. The model page says \"The reactor therefore cannot be scheduled from the forecast\". 2024 did not make this mistake: it hedged in the same breath, writing that the work \"partially proved the chromosome-free system\".",
+      "body_zh": "這一項在 30 支 Top 10 隊伍的 wiki 上全部量過，而結果與預期相反。**誇大宣稱是常態，而且頒獎臺隊伍還稍微誇得更兇**：29 支可評分的隊伍中有 21 支，在首頁上主張的內容超過自己證據頁撐得住的範圍；在 0 到 3 的落差尺度上，頒獎臺平均 1.43，其餘隊伍 1.00；而四支被自己頁面反駁的隊伍裡，有兩支就在頒獎臺上。三支總冠軍的分數是 0、1、1——都在中段。\n\n所以修這件事買到的是可信度，不是名次。但還是要修，因為**GEMS-Taiwan 以 3 分並列最差**，和 Princeton、Cornell 與 WageningenUR 同分，而且是三十支裡唯一一支矛盾橫跨自己三個頁面的隊伍。首頁賣的是「On-demand——綠光在環境感測器與預報做出判斷時開啟生產」。結果頁說 ELISA 隨時間沒有變化、產量並未隨光照上升、培養基始終沒有顯色。模型頁寫著「因此反應器無法由預報來排程」。2024 年沒有犯這個錯：它把保留寫在同一句話裡——「**部分**證實了無染色體系統」。",
+      "chips": [
+        "21 of 29 over-claim",
+        "podium 1.43 vs 1.00",
+        "GEMS joint-worst at 3"
+      ],
+      "chips_zh": [
+        "29 支中 21 支誇大",
+        "頒獎臺 1.43 對 1.00",
+        "GEMS 以 3 分並列最差"
+      ]
+    },
+    {
+      "kicker": "Mirage",
+      "kicker_zh": "幻覺",
+      "title": "Choosing a village is not a lever, and neither is team size",
+      "title_zh": "選村落不是槓桿，隊伍大小也不是",
+      "body": "Of 147 accepted High School teams, 47 were decorated, which is 32.0%. The per-village spread runs from 2 of 17 in Agriculture up to 12 of 23 in Biomanufacturing — and that spread is **not distinguishable** from 147 teams decorated independently at 32% (chi-square 19.64 on 12 degrees of freedom, Monte-Carlo p = 0.088). Year to year, the only thing that carries is crowding (r = +0.91); what a village pays does not (Top 10 rate r = +0.17, p = 0.58). Team size is the same story: headcount against award count across 84 decorated teams correlates at 0.06 with p = 0.61, and the smallest Top 10 team was Princeton with nine undergraduates. Pick the village the problem lives in and move on.",
+      "body_zh": "147 支獲准參賽的高中隊伍中，有 47 支得獎，也就是 32.0%。各村落的得獎率從 Agriculture 的 17 取 2，到 Biomanufacturing 的 23 取 12——而這個分布**無法與**「147 支隊伍各自獨立以 32% 機率得獎」區分開來（卡方 19.64、自由度 12、蒙地卡羅 p = 0.088）。年與年之間唯一延續的是擁擠程度（r = +0.91）；村落「給多少獎」並不延續（Top 10 率 r = +0.17、p = 0.58）。隊伍大小是同一個故事：84 支得獎隊伍的人數與獲獎數相關係數 0.06、p = 0.61，而最小的 Top 10 隊伍是 Princeton，九位大學部學生。選題目所在的那個村落，然後別再想它。",
+      "chips": [
+        "32.0% base rate",
+        "chi-square p = 0.088",
+        "team size r = 0.06"
+      ],
+      "chips_zh": [
+        "32.0% 基礎比率",
+        "卡方 p = 0.088",
+        "隊伍人數 r = 0.06"
+      ]
+    },
+    {
+      "kicker": "Mirage",
+      "kicker_zh": "幻覺",
+      "title": "More statistics, more Registry pages and more measurement discipline all buy nothing",
+      "title_zh": "更多統計、更多 Registry 文件、更嚴的量測紀律，全都買不到名次",
+      "body": "Three separate nulls point the same way. In the High School Top 10, HongKong-HS reported ANOVA, a Dunnett post-hoc, a t-test, n = 3 and standard deviations — and won nothing at all, while the Grand Prize winner names no statistical test and gives no p-value. The Grand Prize winner also has the **shortest** Registry documentation of all ten. And measurement discipline, scored on seven checkable habits across all 106 files, runs 27% against 29% — *no effect*. None of this means be sloppy; it means these are hygiene, and hygiene is not a strategy. Nobody ran an inter-lab measurement ring in 2026 and nobody measured an escape rate, so those remain genuinely unclaimed ground rather than crowded ground.",
+      "body_zh": "三個互相獨立的虛無結果指向同一個方向。在高中組 Top 10 裡，HongKong-HS 報告了 ANOVA、Dunnett 事後檢定、t 檢定、n = 3 與標準差——結果一個獎都沒拿；而總冠軍連一個統計檢定名稱都沒寫，也沒有給出任何 p 值。總冠軍的 Registry 文件也是十支裡**最短**的。而量測紀律——以七項可檢核的習慣掃過全部 106 份檔案——是 27% 對 29%，*沒有效果*。這些都不是叫你草率，而是說這些屬於衛生習慣，而衛生習慣不是策略。2026 年沒有任何隊伍辦過實驗室間的量測環，也沒有任何隊伍量過逃逸率，所以那些仍然是真正沒人佔的地，而不是擠滿人的地。",
+      "chips": [
+        "most statistics won nothing",
+        "Grand Prize has shortest Registry docs",
+        "measurement discipline 27% vs 29%"
+      ],
+      "chips_zh": [
+        "統計最多的什麼都沒拿",
+        "總冠軍 Registry 文件最短",
+        "量測紀律 27% 對 29%"
+      ]
+    }
+  ],
+  "table": {
+    "head": [
+      "Finding",
+      "Pile",
+      "The measurement",
+      "What it means for choosing 2027"
+    ],
+    "head_zh": [
+      "發現",
+      "分類",
+      "量測結果",
+      "對 2027 選題的意義"
+    ],
+    "rows": [
+      [
+        "Central claim measured on the real target",
+        "**Lever**",
+        "7 of 7 non-podium HS teams used a surrogate; 1 of 10 used a real sample and took 1st Runner-up; GEMS's podium year is its real-target year",
+        "Make sample access a selection criterion. If the honest answer is a surrogate, pick a different topic."
+      ],
+      [
+        "Model fitted to own data and validated on held-back data",
+        "**Lever**",
+        "53% reached a Top 10 against 23%; all 9 who closed it without a Top 10 still won or were nominated for a major special prize",
+        "Choose a topic where you will generate enough of your own data to fit and still hold some back."
+      ],
+      [
+        "Best Model recognition",
+        "**Lever**",
+        "In the HS section it maps onto the finalist slate exactly: Lambert-GA won, HongKong-JSS nominated, no other Top 10 team appears",
+        "Treat the modelling track as the one award-level signal that tracks the podium."
+      ],
+      [
+        "Confound removed by design, then re-tested",
+        "**Lever, and rare**",
+        "Only 17 of 30 Top 10 teams did it",
+        "Plan the redesign-and-repeat before you start, not after a reviewer asks."
+      ],
+      [
+        "Validation against held-back data",
+        "**Lever, and rare**",
+        "Only 12 of 30 Top 10 teams did it; exactly 4 of 10 in each section",
+        "Decide the split rule in week one and write down which rows you kept out."
+      ],
+      [
+        "An experiment that could break your own claim",
+        "**Floor — cleared**",
+        "26 of 30 ran one; 30 of 30 published an unfavourable result; **GEMS scores 5 of 5** and still did not place",
+        "Write it in week one, then stop. It cannot buy a placing it has already given everyone."
+      ],
+      [
+        "Naming the arm you could not run",
+        "**Floor — cheap and visible**",
+        "23 of 30 overall; 7 of 7 on the podium against 16 of 23 off it",
+        "Costs nothing. Say which condition you could not cover and what it would have settled."
+      ],
+      [
+        "A wet-lab protocol a stranger could follow",
+        "**Floor**",
+        "All 30 of the 2026 Top 10 publish one",
+        "Table stakes. Budget the time, claim no credit."
+      ],
+      [
+        "Wiki presentation quality",
+        "**Floor — cleared**",
+        "GEMS's 2024 Best Wiki winner is the weakest presented of its three seasons: 577-byte shell, no results page, 1 p-value",
+        "Do not spend 2027 rebuilding the wiki."
+      ],
+      [
+        "Landing page claims matching the results page",
+        "**Not a lever — fix for credibility**",
+        "21 of 29 Top 10 teams over-claim; podium averages 1.43 against 1.00, so the podium is slightly worse; **GEMS is joint-worst at 3** and the only team contradicted across three of its own pages",
+        "Fix it because it is about whether your claims are true, not because it will move you up."
+      ],
+      [
+        "Choosing a village",
+        "**Mirage**",
+        "Spread 2 of 17 to 12 of 23 not distinguishable from 32% independent (chi-square 19.64, 12 df, Monte-Carlo p = 0.088); year to year only crowding carries, r = +0.91",
+        "Pick the village the problem lives in. Do not optimise on it."
+      ],
+      [
+        "Team size",
+        "**Mirage**",
+        "Headcount against award count r = 0.06, p = 0.61 across 84 teams; smallest Top 10 team had nine members",
+        "Choose a topic the team you have can finish."
+      ],
+      [
+        "Volume of statistical reporting",
+        "**Mirage**",
+        "The HS Top 10 team with the most of it won nothing; the Grand Prize winner names no test and gives no p-value",
+        "Report statistics honestly, but do not mistake apparatus for evidence."
+      ],
+      [
+        "Volume of Registry documentation",
+        "**Mirage**",
+        "The Grand Prize winner has the shortest of all ten",
+        "Document parts properly, expect no placing from length."
+      ],
+      [
+        "Measurement discipline",
+        "**Mirage**",
+        "27% against 29% across all 106 files — no effect",
+        "Hygiene, not strategy."
+      ],
+      [
+        "Dark mode, alt-text sweeps, mascot systems",
+        "**Mirage**",
+        "Correlate with nothing across the Best Wiki winners",
+        "Skip them."
+      ],
+      [
+        "Inter-lab measurement ring; escape-rate measurement",
+        "**Unclaimed ground**",
+        "Nobody in 106 decorated teams did either",
+        "Genuinely open. Cheap for a team that already holds a Measurement award."
+      ]
+    ],
+    "rows_zh": [
+      [
+        "核心主張打在真實標的上",
+        "**槓桿**",
+        "七支非頒獎臺高中隊伍全用替代物；十支裡一支用真實樣本並拿下亞軍；GEMS 上頒獎臺的那年就是打在真實標的上的那年",
+        "把樣本取得當成選題條件。如果誠實的答案是替代物，就換一個題目。"
+      ],
+      [
+        "模型擬合自家資料並以留存資料驗證",
+        "**槓桿**",
+        "53% 進 Top 10，對 23%；九支閉合迴路但沒進 Top 10 的隊伍，全部仍得獎或入圍重要特別獎",
+        "選一個你們會產出足夠自家資料、既能擬合又還留得出一部分的題目。"
+      ],
+      [
+        "Best Model 的得獎與入圍",
+        "**槓桿**",
+        "在高中組，它正好疊合決賽名單：Lambert-GA 得獎、HongKong-JSS 入圍，其餘 Top 10 隊伍皆未出現",
+        "把建模這條線當成唯一一個與頒獎臺同步的獎項層級訊號。"
+      ],
+      [
+        "以設計移除混淆因子後重測",
+        "**槓桿，而且稀少**",
+        "30 支 Top 10 隊伍裡只有 17 支做了",
+        "在開始之前就把「重新設計再重跑」排進計畫，而不是等評審問起才做。"
+      ],
+      [
+        "以留存資料做驗證",
+        "**槓桿，而且稀少**",
+        "30 支 Top 10 隊伍裡只有 12 支做了；三個組別各剛好 4 支",
+        "第一週就決定切分規則，並寫下你們留了哪些資料在外面。"
+      ],
+      [
+        "一個可能推翻自己主張的實驗",
+        "**門檻——已跨過**",
+        "30 支中 26 支做過；30 支全部登出不利結果；**GEMS 五類全有滿分**，卻仍沒有名次",
+        "第一週寫好，然後停手。它買不到一個早就給了所有人的名次。"
+      ],
+      [
+        "指名自己沒能做的那一組對照",
+        "**門檻——便宜又顯眼**",
+        "整體 30 支中 23 支；頒獎臺 7 比 7，臺下 23 比 16",
+        "完全不花錢。寫明你們沒能涵蓋哪個條件，以及它本來能定案什麼。"
+      ],
+      [
+        "陌生人能照著做的濕實驗流程",
+        "**門檻**",
+        "2026 年 Top 10 全部 30 支都公開了",
+        "基本門檻。時間要排，但別指望加分。"
+      ],
+      [
+        "wiki 的呈現品質",
+        "**門檻——已跨過**",
+        "GEMS 2024 年的 Best Wiki 得主是三季裡呈現最差的：577 位元組外殼、沒有結果頁、1 個 p 值",
+        "2027 年不要花時間重做 wiki。"
+      ],
+      [
+        "首頁主張與結果頁相符",
+        "**不是槓桿——為可信度而修**",
+        "29 支 Top 10 隊伍中 21 支誇大；頒獎臺平均 1.43 對 1.00，所以頒獎臺還稍差；**GEMS 以 3 分並列最差**，而且是唯一一支被自己三個頁面反駁的隊伍",
+        "要修，是因為它關乎你的主張是不是真的，不是因為它會讓你往上移。"
+      ],
+      [
+        "選村落",
+        "**幻覺**",
+        "17 取 2 到 23 取 12 的分布，無法與「各自獨立 32%」區分（卡方 19.64、自由度 12、蒙地卡羅 p = 0.088）；年與年之間只有擁擠程度延續，r = +0.91",
+        "選題目所在的那個村落。不要為它做最佳化。"
+      ],
+      [
+        "隊伍大小",
+        "**幻覺**",
+        "84 支隊伍的人數對獲獎數 r = 0.06、p = 0.61；最小的 Top 10 隊伍九人",
+        "選一個你們現有人力做得完的題目。"
+      ],
+      [
+        "統計報告的數量",
+        "**幻覺**",
+        "高中組 Top 10 裡統計最多的那支什麼都沒拿；總冠軍不寫檢定名稱也不給 p 值",
+        "統計要誠實報告，但不要把工具當成證據。"
+      ],
+      [
+        "Registry 文件的數量",
+        "**幻覺**",
+        "總冠軍的文件是十支裡最短的",
+        "元件要好好記錄，但別期待長度換名次。"
+      ],
+      [
+        "量測紀律",
+        "**幻覺**",
+        "全部 106 份檔案中 27% 對 29%——沒有效果",
+        "衛生習慣，不是策略。"
+      ],
+      [
+        "深色模式、替代文字補掃、吉祥物系統",
+        "**幻覺**",
+        "在 Best Wiki 得主之間與任何結果都不相關",
+        "跳過。"
+      ],
+      [
+        "實驗室間量測環；逃逸率量測",
+        "**沒人佔的地**",
+        "106 支得獎隊伍裡沒有任何一支做過",
+        "真正空著。對一支已經握有 Measurement 獎的隊伍來說很便宜。"
+      ]
+    ]
+  },
+  "checklist": [
+    "Sort every 2027 idea into these three piles before arguing about which is most interesting. An idea that only scores in the floor and mirage piles is not a candidate.",
+    "Ask of each candidate: what is the real target, and can we hold it in our hands by week six? If the answer is a surrogate, the topic is capped.",
+    "Pick a topic that will generate enough of your own data to fit a model and still hold some back. Only 12 of 30 Top 10 teams managed that, so it is both a lever and scarce.",
+    "Write the rival explanation and the arm that kills it in week one, then stop thinking about controls. GEMS already scores a perfect five of five and it did not place.",
+    "Name the arm you could not run, every season. It is free, it is 7 of 7 on the podium, and GEMS has done it three years running.",
+    "Do not rebuild the wiki and do not add statistics for their own sake. Both are measured at no effect, and the wiki proof is GEMS's own 2024 site.",
+    "Write the landing-page sentence last, from the results page, and have someone check it against the model page. That is the one presentation failure of 2026.",
+    "Choose the village the problem lives in and stop optimising it. The spread between villages is not distinguishable from chance.",
+    "If two candidates tie, prefer the one that opens unclaimed ground — an inter-lab measurement ring or an escape-rate measurement, neither of which any of the 106 decorated teams of 2026 attempted."
+  ],
+  "checklist_zh": [
+    "在爭論哪個題目最有趣之前，先把 2027 年的每個想法分進這三堆。一個只在門檻堆和幻覺堆得分的想法，不算候選。",
+    "對每個候選問一句：真實標的是什麼，我們能不能在第六週之前親手拿到它？如果答案是替代物，這個題目就被設了上限。",
+    "選一個會產出足夠自家資料、既能擬合模型又還留得出一部分的題目。30 支 Top 10 隊伍裡只有 12 支做到，所以它既是槓桿又稀少。",
+    "第一週就把對手解釋、以及殺掉它的那一組實驗寫下來，然後不要再想對照。GEMS 已經是滿分五類全有，而且沒有名次。",
+    "每一季都要指名自己沒能做的那一組對照。它免費、在頒獎臺上是 7 比 7，而 GEMS 已經連續三年都做到。",
+    "不要重做 wiki，也不要為了統計而加統計。兩者都量出沒有效果，而 wiki 的證據來自 GEMS 自己 2024 年的網站。",
+    "首頁那句話最後才寫，而且從結果頁往回寫，再請人拿模型頁對一次。那是 2026 年唯一的呈現失誤。",
+    "選題目所在的那個村落，然後停止最佳化它。村落之間的差距無法與隨機區分。",
+    "如果兩個候選打平，選那個打開沒人佔的地的——實驗室間的量測環，或是逃逸率量測；2026 年 106 支得獎隊伍裡，兩者都沒有任何一支嘗試過。"
+  ],
+  "method": "This block is a synthesis rather than a new measurement: every figure in it is measured elsewhere in this report and each source block states its own limits where it is reported. The lever, floor and mirage labels are this report's judgement about what can change a placing, not iGEM's categories and not a statistical classification. Sources, in the order the table uses them: judging-top10 and gems-three-seasons for the real-target finding and the three-season GEMS record; the model-loop figure and the Best Model mapping from the dry-lab analyses and judging-top10; falsification-controls for the five control types, the 26 of 30, the 30 of 30, the 17 and 12 of 30, the 23 of 30 disclosure flag and the permutation test; village-baserates for the village null; team-resources for team size; measurement-discipline for the 27-against-29 null; protocol-reproducibility for the protocol floor; wiki-craft and gems-three-seasons for presentation. Two cautions carry over from those blocks and apply to everything here. First, the sample is decorated teams only -- every team file is a Top 10 or special-prize winner or nominee -- so no figure here describes the competition at large except where a base rate is explicitly drawn from iGEM's full accepted roster. Second, the Top 10 comparisons rest on 30 teams and seven podium places, which cannot carry a causal claim; read them as a description of which side of a line the podium happened to fall on.",
+  "method_zh": "本節是綜合整理，不是新的量測：裡面每一個數字都量測於本報告其他處，而各來源區塊都在該處載明了自己的限制。「槓桿」、「門檻」、「幻覺」這三個標籤是本報告對「什麼能改變名次」的判斷，不是 iGEM 的分類，也不是統計上的分類。來源依表格使用順序：真實標的發現與 GEMS 三季紀錄來自 judging-top10 與 gems-three-seasons；模型迴路數字與 Best Model 的疊合來自乾實驗室相關分析與 judging-top10；五類對照、30 支中 26 支、30 支全部、30 支中 17 與 12 支、23 支揭露旗標與置換檢定來自 falsification-controls；村落虛無結果來自 village-baserates；隊伍大小來自 team-resources；27 對 29 的虛無結果來自 measurement-discipline；流程門檻來自 protocol-reproducibility；呈現相關來自 wiki-craft 與 gems-three-seasons。有兩項警告從那些區塊延續下來，並適用於本節全部內容。第一，樣本僅限得獎隊伍——每一份團隊檔案都是 Top 10 或特別獎得主或入圍者——所以除了明確取自 iGEM 完整正式參賽名單的基礎比率之外，本節沒有任何數字在描述整個賽事。第二，Top 10 的各項比較建立在 30 支隊伍與七個頒獎臺名額上，撐不起因果主張；請把它們讀成「頒獎臺剛好落在某條線的哪一側」的描述。"
+}

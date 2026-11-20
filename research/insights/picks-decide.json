@@ -1,0 +1,327 @@
+{
+  "id": "picks-decide",
+  "tab": "picks",
+  "order": 40,
+  "kicker": "The instrument",
+  "kicker_zh": "決策工具",
+  "title": "Nine questions to run a candidate topic through, and what a bad answer looks like",
+  "title_zh": "把候選題目跑過的九個問題，以及壞答案長什麼樣子",
+  "lede": "Each question exists because something in this report measured it. Run every candidate through all nine in one sitting and write the answers down; the point is not a score but a shape — a topic that cannot answer the first two is not a candidate, however interesting it is.",
+  "lede_zh": "每一個問題都存在，是因為本報告量過它。把每個候選題目一次跑完這九題，並把答案寫下來；重點不是分數，而是形狀——一個答不出前兩題的題目，不管多有趣，都不算候選。",
+  "body": "**Questions one and two are gates, not scores.** They are the only ones with a measured, two-direction basis, so a candidate that fails them is capped before the season starts no matter what it scores on the other seven. Everything from question four down is either a floor GEMS already clears or a reach question — valuable, but not the thing that decides a placing.\n\n**Write the answers in the partner's words and in their units wherever a person is involved.** The governance note for the Science for Good pipeline makes this a rule for a reason: of 106 decorated teams, 71 closed a stakeholder-to-design loop but only nine or ten of those closed one with somebody who was not a credentialled technical expert. A topic whose only outside voice is a professor is the normal case, and it is also the case that produced no non-expert evidence anywhere in the field.\n\n**Question nine is the one GEMS got wrong in 2026**, and it is the cheapest to fix. Write the sentence you want a judge to repeat, then open your own results page and try to break it. If the results page contradicts it, you have found the problem while you can still fix it rather than after the freeze.",
+  "body_zh": "**第一題和第二題是關卡，不是分數。**它們是唯一具備量測基礎、而且從兩個方向都成立的問題，所以一個過不了這兩題的候選，不管在其他七題拿幾分，賽季開始前就已經被設了上限。第四題以下的一切，要麼是 GEMS 早就跨過的門檻，要麼是觸及範圍的問題——有價值，但不是決定名次的那件事。\n\n**只要涉及人，就用對方的話和對方的單位把答案寫下來。**科學向善清單的治理章節把這件事訂成規則是有原因的：106 支得獎隊伍中，有 71 支閉合了利害關係人到設計的迴路，但其中只有九到十支是和沒有專業資格的人閉合的。一個題目如果唯一的外部聲音是教授，那是常態——而那也正是整個領域都沒能產出任何非專業者證據的那個常態。\n\n**第九題是 GEMS 2026 年做錯的那一題**，而它也是最便宜修的。先寫下你希望評審重複的那句話，然後打開自己的結果頁，試著把它推翻。如果結果頁反駁了它，你是在還能修的時候發現問題，而不是在凍結之後。",
+  "cards": [
+    {
+      "kicker": "Gate 1",
+      "kicker_zh": "關卡一",
+      "title": "What is the real target, and can we hold it in our hands by week six?",
+      "title_zh": "真實標的是什麼，我們能不能在第六週之前親手拿到它？",
+      "body": "A good answer names a physical thing and a route to it: this soil from this field, this water from this plant, this larva of this species, this sample from this clinic, and the person who will hand it over. A bad answer is \"we will use a standard strain and argue it represents the field case\", or \"we will spike a buffer\". Seven of the seven High School Top 10 teams that missed the podium gave the bad answer. Week six matters because a sample you cannot obtain until week eighteen cannot carry the headline result.",
+      "body_zh": "好答案會指名一個實體的東西和一條取得的路徑：這塊田的這份土、這座廠的這份水、這個物種的這隻幼蟲、這間診所的這份樣本，以及會把它交給你的那個人。壞答案是「我們會用標準菌株，然後論證它代表現場情況」，或是「我們會在緩衝液裡加標準品」。七支沒上頒獎臺的高中組 Top 10 隊伍，七支都給了壞答案。第六週很重要，因為一份要等到第十八週才拿到的樣本，撐不起標題結果。",
+      "chips": [
+        "names a thing and a person",
+        "not a spiked buffer",
+        "week six, not week eighteen"
+      ],
+      "chips_zh": [
+        "指名一個東西和一個人",
+        "不是加標準品的緩衝液",
+        "第六週，不是第十八週"
+      ]
+    },
+    {
+      "kicker": "Gate 2",
+      "kicker_zh": "關卡二",
+      "title": "What will we measure on it, with which instrument we already own?",
+      "title_zh": "我們要在它上面量什麼，用我們已經有的哪一台儀器？",
+      "body": "A good answer names the readout, the instrument, the units and roughly how many samples a week it can process. A bad answer needs a machine the school does not have, or needs an instrument built first — because then the instrument becomes the project and the measurement slips to the end of the season. GEMS already holds a Best Measurement and a Best Hardware award, so this question is usually answerable; the failure mode is choosing a topic whose readout needs something new.",
+      "body_zh": "好答案會指名讀值、儀器、單位，以及大致一週能處理幾個樣本。壞答案需要學校沒有的機器，或需要先把儀器做出來——因為那樣儀器就會變成專案本身，而量測會被推到賽季末。GEMS 已經握有 Best Measurement 與 Best Hardware，所以這一題通常答得出來；真正的失敗模式是選了一個讀值需要全新設備的題目。",
+      "chips": [
+        "readout, instrument, units",
+        "throughput per week",
+        "no instrument-first projects"
+      ],
+      "chips_zh": [
+        "讀值、儀器、單位",
+        "每週處理量",
+        "不要以儀器為先的專案"
+      ]
+    },
+    {
+      "kicker": "Lever",
+      "kicker_zh": "槓桿",
+      "title": "What model will we fit to our own data, and which rows will we hold back?",
+      "title_zh": "我們要把什麼模型擬合到自家資料，又要留下哪些列不用？",
+      "body": "This is the 53%-against-23% question. A good answer names the model, the parameter it estimates, and the split rule decided **before** any data is seen — by batch, by run, by cluster, by antigen, by site. A bad answer is \"we will fit a curve to the data once we have it\". Only 12 of 30 Top 10 teams held anything back, so this is the scarcest lever available. TU Delft's rule is the one to copy: keep every row from the same source on the same side of the split.",
+      "body_zh": "這就是 53% 對 23% 那一題。好答案會指名模型、它要估計的參數，以及**在看到任何資料之前**就決定好的切分規則——依批次、依實驗場次、依群集、依抗原、依場址。壞答案是「等資料拿到再擬一條曲線」。30 支 Top 10 隊伍裡只有 12 支留存過任何資料，所以這是現有最稀少的槓桿。TU Delft 的規則值得照抄：同一個來源的每一列，都留在切分的同一側。",
+      "chips": [
+        "53% against 23%",
+        "split rule before data",
+        "12 of 30 managed it"
+      ],
+      "chips_zh": [
+        "53% 對 23%",
+        "先定切分規則再看資料",
+        "30 支中 12 支做到"
+      ]
+    },
+    {
+      "kicker": "Floor",
+      "kicker_zh": "門檻",
+      "title": "Which rival explanation could produce our result, and what arm kills it?",
+      "title_zh": "哪一個對手解釋也能產生我們的結果，哪一組實驗能殺掉它？",
+      "body": "Write this in week one and then stop thinking about it. **GEMS already scores a perfect five of five** on falsification controls and still placed outside the podium, so this cannot buy a placing — but it is also the cheapest possible loss if skipped, because 26 of 30 Top 10 teams did it. GEMS 2024 is the model: the empty-vector arm existed because \"We want to rule out the effect of *E. coli* in the death of mosquito larvae\". And when the arm cannot be run, say so: 23 of 30 named one they could not run, which is 7 of 7 on the podium.",
+      "body_zh": "第一週就寫好，然後不要再想它。**GEMS 的否證對照已經是滿分五類全有**，卻仍然沒上頒獎臺，所以這買不到名次——但跳過它也是最便宜的損失，因為 30 支 Top 10 隊伍中有 26 支做了。GEMS 2024 年就是範本：那一組空載體對照之所以存在，是因為「我們想排除 *E. coli* 在蚊蟲幼蟲死亡中的作用」。而當那一組做不出來，就寫出來：30 支中有 23 支指名了自己沒能做的那一組，而這在頒獎臺上是 7 比 7。",
+      "chips": [
+        "GEMS scores 5 of 5",
+        "26 of 30 did it",
+        "name the arm you cannot run"
+      ],
+      "chips_zh": [
+        "GEMS 五類全有",
+        "30 支中 26 支做了",
+        "指名你做不出來的那一組"
+      ]
+    },
+    {
+      "kicker": "Reach",
+      "kicker_zh": "觸及範圍",
+      "title": "Who outside GEMS has already said they want this, in their own words?",
+      "title_zh": "GEMS 以外，已經有誰用自己的話說過他想要這個？",
+      "body": "A good answer is a named person at a named site who described the problem **before** anyone from GEMS offered them a solution, recorded in their words and dated. A bad answer is a professor who confirmed the idea is technically sound — that is the normal case and it is also why only nine or ten of 106 decorated teams closed a design loop with a non-expert. If no such person exists yet, the topic is admissible only on probation, and finding that person is the first task rather than a later one.",
+      "body_zh": "好答案是一位在具名場域的具名人士，**在 GEMS 任何人向他提出解方之前**就描述過這個問題，而且用他自己的話記錄下來、標了日期。壞答案是一位教授確認這個想法技術上可行——那是常態，而那也正是 106 支得獎隊伍裡只有九到十支和非專業者閉合設計迴路的原因。如果這樣的人還不存在，這個題目只能以觀察期的身分入列，而找到那個人是第一件任務，不是後面的任務。",
+      "chips": [
+        "their words, dated",
+        "before you offered anything",
+        "9 or 10 of 106 managed it"
+      ],
+      "chips_zh": [
+        "他自己的話，標日期",
+        "在你提出任何東西之前",
+        "106 支中九到十支做到"
+      ]
+    },
+    {
+      "kicker": "Reach",
+      "kicker_zh": "觸及範圍",
+      "title": "Which multiplying audience does this topic give us access to?",
+      "title_zh": "這個題目讓我們接觸到哪一群會放大的人？",
+      "body": "Not how many people the topic lets us reach, but which **repeating** people. HongKong-JSS is the type specimen: four tiers of education, of which the one recorded as most durable was a two-day workshop for 30 local school teachers on PCR and agarose gel electrophoresis, plus a standing loan programme letting those teachers borrow DNA samples and equipment from the team. Thirty teachers who teach for years beats sixteen hundred children once, for the same effort. Ask of each candidate: whose professional practice could this change, and would the topic get us in the room with them?",
+      "body_zh": "不是這個題目能接觸到多少人，而是能接觸到哪一群**會重複的人**。HongKong-JSS 就是範本：四層教育推廣，其中被記錄為最耐久的那一層，是為 30 位本地學校教師辦的兩天工作坊，教 PCR 與瓊脂膠體電泳，再加上一個常設的借用方案，讓這些教師可以向團隊借 DNA 樣品與設備。三十位會教好幾年的老師，勝過一千六百個只來一次的孩子，而力氣是一樣的。對每個候選問一句：這個題目可能改變誰的專業工作方式，而它能不能讓我們進到那個房間裡？",
+      "chips": [
+        "30 teachers over 1,600 children",
+        "a standing loan programme",
+        "whose practice changes?"
+      ],
+      "chips_zh": [
+        "30 位老師勝過 1,600 個孩子",
+        "一個常設的借用方案",
+        "誰的工作方式會改變？"
+      ]
+    },
+    {
+      "kicker": "Reach",
+      "kicker_zh": "觸及範圍",
+      "title": "What does the tenth deployment cost against the first?",
+      "title_zh": "第十次佈署的成本，相對第一次是多少？",
+      "body": "This is the Science for Good admission criterion that most ideas fail. A good answer is a number and a direction: the tenth costs less because the protocol is written and the parts are in the Registry, or the tenth costs the same because every unit needs a new sensor. A bad answer treats the first deployment as the whole project. The 2026 field is blunt about this — across every award-winning repository checked, stars and forks were zero, and the only external-adoption figure found anywhere was Stanford's SynBase reporting 837 learners.",
+      "body_zh": "這是科學向善的入列條件裡，最多想法過不了的那一條。好答案是一個數字和一個方向：第十次更便宜，因為流程已經寫好、元件已經在 Registry 裡；或者第十次一樣貴，因為每一台都需要一個新的感測器。壞答案是把第一次佈署當成整個專案。2026 年的全體資料對此很直白——所有查過的得獎程式庫，star 與 fork 全部為零，而整個領域唯一找到的外部採用數字，是 Stanford 的 SynBase 報告的 837 位學習者。",
+      "chips": [
+        "a number and a direction",
+        "zero stars across every repo",
+        "837 learners was the only figure"
+      ],
+      "chips_zh": [
+        "一個數字和一個方向",
+        "所有程式庫 star 全為零",
+        "837 位學習者是唯一的數字"
+      ]
+    },
+    {
+      "kicker": "Durability",
+      "kicker_zh": "耐久度",
+      "title": "What will we publish that still works a year after the freeze?",
+      "title_zh": "我們要公開什麼，在凍結一年後還能用？",
+      "body": "The measured answer is paper. Of 285 education files linked from 31 decorated 2026 wikis, **284 still download and none 404** — against 8 of 21 award-winning software tools still running and 6 of 20 instruments rebuildable. A PDF on `static.igem.wiki` needs no server. If the topic's output is software, the single habit that separated the live tools from the dead ones is buying a domain and hosting before freeze day; if it is hardware, the habit is exporting a geometry file, which 9 of 20 award-winning instruments never did. And there is a standing opening for a Taiwanese team: of 31 teams publishing education material, only three published anything in Traditional Chinese.",
+      "body_zh": "量測出來的答案是紙本。31 個得獎 2026 wiki 所連出的 285 份教育檔案中，**284 份至今仍可下載，沒有任何一份 404**——相對之下，21 個得獎軟體工具只有 8 個還跑得動，20 件儀器只有 6 件重建得出來。放在 `static.igem.wiki` 上的 PDF 不需要伺服器。如果題目的產出是軟體，那麼區分「活的工具」與「死的工具」的唯一習慣，就是在凍結日之前買好網域並上線；如果是硬體，習慣則是輸出幾何檔案，而 20 件得獎儀器裡有 9 件從未這麼做。而且台灣隊伍有一個一直空著的缺口：31 支公開教育材料的隊伍中，只有三支發表過任何繁體中文內容。",
+      "chips": [
+        "284 of 285 files still download",
+        "8 of 21 tools still run",
+        "3 of 31 published Traditional Chinese"
+      ],
+      "chips_zh": [
+        "285 份中 284 份仍可下載",
+        "21 個工具中 8 個還能跑",
+        "31 支中 3 支發表繁體中文"
+      ]
+    },
+    {
+      "kicker": "The 2026 mistake",
+      "kicker_zh": "2026 年的錯誤",
+      "title": "What is the one sentence we want a judge to repeat — and does our own results page support it?",
+      "title_zh": "我們希望評審重複的那一句話是什麼——而我們自己的結果頁撐得住它嗎？",
+      "body": "Write the sentence, then open your own results page and try to break it. GEMS 2026 failed exactly here: the home page sold \"On-demand — Green light switches production on when the environmental sensors and forecasts decide to\", while the results page said the ELISA showed no change over time and the model page said the reactor cannot be scheduled from the forecast. Note the order this question comes in: **last**. The headline is written from the results, not the other way round. Two cautions, both measured. Nominating one claim is necessary but not sufficient — the clearest headline among the seven non-podium High School teams placed nowhere. And closing the honesty gap will not move you up: across the Top 10, 21 of 29 teams over-claim and the podium averages a **wider** gap than everyone else. Do it because the claim should be true, not because it pays. **GEMS is joint-worst in the field on this**, so it is the cheapest credibility GEMS can buy.",
+      "body_zh": "先寫下那句話，然後打開自己的結果頁，試著把它推翻。GEMS 2026 年正是在這裡失手：首頁賣的是「On-demand——綠光在環境感測器與預報做出判斷時開啟生產」，而結果頁說 ELISA 隨時間沒有變化，模型頁說反應器無法由預報來排程。注意這一題的順序：**最後**。標題是從結果往回寫的，不是反過來。有兩項提醒，都量測過。「指名一個主張」是必要但不充分——七支非頒獎臺高中隊伍之中，標題最清楚的那一支什麼名次都沒有。而把誠實落差補起來並不會讓你往上移：在 Top 10 裡，29 支中有 21 支誇大，而頒獎臺的落差平均**還更大**。做這件事，是因為主張應該是真的，不是因為它划算。**GEMS 在這一項是全體並列最差**，所以這是 GEMS 能買到的最便宜的可信度。",
+      "chips": [
+        "write it last, from the results",
+        "GEMS joint-worst at 3",
+        "buys credibility, not placing"
+      ],
+      "chips_zh": [
+        "最後才寫，而且從結果往回寫",
+        "GEMS 以 3 分並列最差",
+        "買到可信度，不是名次"
+      ]
+    }
+  ],
+  "table": {
+    "head": [
+      "#",
+      "The question",
+      "Why it is on the list",
+      "A bad answer"
+    ],
+    "head_zh": [
+      "#",
+      "問題",
+      "它為什麼在清單上",
+      "壞答案"
+    ],
+    "rows": [
+      [
+        "1",
+        "What is the real target, and can we hold it by week six?",
+        "**Gate.** The only finding supported both across the field and across GEMS's three seasons: 7 of 7 non-podium HS teams used a surrogate",
+        "\"A standard strain that represents the field case.\" Or a sample that arrives in week eighteen."
+      ],
+      [
+        "2",
+        "What will we measure on it, with which instrument we already own?",
+        "**Gate.** An instrument that must be built first becomes the project, and the measurement slips to the end",
+        "\"We will build a reader for it.\" GEMS already holds Best Measurement and Best Hardware."
+      ],
+      [
+        "3",
+        "What model will we fit, and which rows will we hold back?",
+        "**Lever.** 53% reached a Top 10 against 23%; only 12 of 30 Top 10 teams held anything back",
+        "\"We will fit a curve once we have the data.\" No split rule named in advance."
+      ],
+      [
+        "4",
+        "Which rival explanation could produce our result, and what arm kills it?",
+        "**Floor.** 26 of 30 did it; GEMS scores a perfect 5 of 5 and still did not place",
+        "No named rival explanation. Also: running the arm and not saying which condition it failed to cover."
+      ],
+      [
+        "5",
+        "Who outside GEMS has already said they want this, in their own words?",
+        "**Reach.** 71 of 106 closed a design loop, but only 9 or 10 with a non-expert",
+        "\"A professor confirmed it is technically sound.\" That is the normal case, not evidence of demand."
+      ],
+      [
+        "6",
+        "Which multiplying audience does this give us access to?",
+        "**Reach.** HongKong-JSS trained 30 teachers and lent them equipment — recorded as its most durable tier",
+        "A headcount. \"We will reach 2,000 students\" is a count, not a multiplier."
+      ],
+      [
+        "7",
+        "What does the tenth deployment cost against the first?",
+        "**Reach.** Stars and forks were zero across every award-winning repository checked",
+        "Treating the first deployment as the whole project."
+      ],
+      [
+        "8",
+        "What will we publish that still works a year after the freeze?",
+        "**Durability.** 284 of 285 education files still download; 8 of 21 software tools still run",
+        "Source code with localhost as its only address. A device with no geometry file."
+      ],
+      [
+        "9",
+        "What is the one sentence we want a judge to repeat?",
+        "**The 2026 mistake, and a reversal.** 21 of 29 Top 10 teams over-claim and the podium's gap is wider, so this buys credibility rather than placing — but GEMS is joint-worst at 3",
+        "A sentence written before the results exist — or one the results page does not support."
+      ]
+    ],
+    "rows_zh": [
+      [
+        "1",
+        "真實標的是什麼，我們能不能在第六週之前拿到它？",
+        "**關卡。**唯一同時在全體與 GEMS 三季都成立的發現：七支非頒獎臺高中隊伍全用替代物",
+        "「一株能代表現場情況的標準菌株。」或是一份第十八週才會到的樣本。"
+      ],
+      [
+        "2",
+        "我們要在它上面量什麼，用已經有的哪一台儀器？",
+        "**關卡。**必須先做出來的儀器會變成專案本身，而量測會被推到最後",
+        "「我們會做一台讀取器。」GEMS 已經握有 Best Measurement 與 Best Hardware。"
+      ],
+      [
+        "3",
+        "我們要擬合什麼模型，又要留下哪些列不用？",
+        "**槓桿。**53% 進 Top 10 對 23%；30 支 Top 10 隊伍裡只有 12 支留存過資料",
+        "「等資料拿到再擬一條曲線。」事前沒有指名切分規則。"
+      ],
+      [
+        "4",
+        "哪一個對手解釋也能產生我們的結果，哪一組實驗能殺掉它？",
+        "**門檻。**30 支中 26 支做了；GEMS 滿分五類全有，卻仍沒有名次",
+        "沒有指名對手解釋。另一種：做了那一組，卻沒說它沒能涵蓋哪個條件。"
+      ],
+      [
+        "5",
+        "GEMS 以外，已經有誰用自己的話說過他想要這個？",
+        "**觸及範圍。**106 支中 71 支閉合了設計迴路，但只有九到十支是和非專業者閉合的",
+        "「一位教授確認技術上可行。」那是常態，不是需求的證據。"
+      ],
+      [
+        "6",
+        "這個題目讓我們接觸到哪一群會放大的人？",
+        "**觸及範圍。**HongKong-JSS 訓練 30 位教師並把設備借給他們——被記錄為最耐久的那一層",
+        "一個人數。「我們會接觸 2,000 位學生」是計數，不是放大器。"
+      ],
+      [
+        "7",
+        "第十次佈署的成本，相對第一次是多少？",
+        "**觸及範圍。**所有查過的得獎程式庫，star 與 fork 全部為零",
+        "把第一次佈署當成整個專案。"
+      ],
+      [
+        "8",
+        "我們要公開什麼，在凍結一年後還能用？",
+        "**耐久度。**285 份教育檔案中 284 份仍可下載；21 個軟體工具中 8 個還跑得動",
+        "只有原始碼，而唯一的位址是 localhost。或一件沒有幾何檔案的裝置。"
+      ],
+      [
+        "9",
+        "我們希望評審重複的那一句話是什麼？",
+        "**2026 年的錯誤，而且是一個反轉。**29 支 Top 10 隊伍中 21 支誇大，而頒獎臺的落差更大，所以這買到的是可信度而不是名次——但 GEMS 以 3 分並列最差",
+        "在結果還不存在時就寫好的句子——或結果頁撐不住的句子。"
+      ]
+    ]
+  },
+  "checklist": [
+    "Run every candidate through all nine in one sitting, and write the answers down rather than discussing them. An unwritten answer is usually a missing one.",
+    "Treat questions one and two as gates. A topic that fails either is not a candidate, however interesting the biology is.",
+    "Decide the held-back data split rule in week one, before any data exists, and record which rows are out and why.",
+    "Write the rival explanation and its killing arm in week one too, then stop. Controls are a floor GEMS already clears at full marks.",
+    "For question five, record the outside person's words verbatim and in their own units, and date it. A professor's technical blessing is not an answer to this question.",
+    "Prefer the candidate that puts you in a room with people who repeat the lesson professionally — teachers, extension officers, technicians, inspectors — over the one with the bigger headcount.",
+    "Answer question eight by choosing the artefact, not by hoping: paper if you want it to survive, a bought domain and hosting before freeze day if it is software, a geometry file if it is hardware.",
+    "Write question nine last, from the results page, and have someone who did not write the wiki check the headline against the model page.",
+    "Keep the filled-in sheet for every candidate you reject, with the question that killed it. Only 3 of 106 decorated teams credit their own predecessor with anything, and a rejected-topic file is the cheapest way not to be the fourth."
+  ],
+  "checklist_zh": [
+    "把每個候選題目一次跑完這九題，而且把答案寫下來，不要只是討論。沒寫下來的答案，通常就是沒有答案。",
+    "把第一題和第二題當成關卡。過不了任何一題的題目就不算候選，不管那個生物學多有趣。",
+    "第一週就決定留存資料的切分規則，在任何資料存在之前，並記下哪些列被留在外面、為什麼。",
+    "對手解釋和殺掉它的那一組實驗也在第一週寫好，然後停手。對照是 GEMS 早就以滿分跨過的門檻。",
+    "第五題要把外部人士的話逐字記下、用他自己的單位，並標上日期。教授在技術上的肯定不是這一題的答案。",
+    "寧可選那個讓你進到「會把這堂課專業地重複下去的人」房間裡的候選——老師、推廣人員、技術員、稽查員——而不是人數比較多的那個。",
+    "第八題要靠選擇產出形式來回答，而不是靠期待：想要它活下來就用紙本；是軟體就在凍結日前買好網域並上線；是硬體就輸出幾何檔案。",
+    "第九題最後才寫，而且從結果頁往回寫，再請一個沒寫過 wiki 的人拿標題去對模型頁。",
+    "把每一個被你否決的候選題目的答案表留下來，並寫上是哪一題殺掉它的。106 支得獎隊伍裡只有 3 支對自己的前一屆表示過任何感謝，而一份「否決題目檔」是最便宜的方法，讓你們不要成為第四支。"
+  ],
+  "method": "This is an instrument rather than a measurement. The nine questions are this report's construction; what is measured is the reason each one is on the list, and every figure cited is measured elsewhere in this report with its own limits stated where it is reported. Sources: judging-top10 and gems-three-seasons for the real-target gate and the 2026 landing-page contradiction; the dry-lab analyses for the model-loop figure; falsification-controls for the five control types and the disclosure flag; good-governance and ihp-depth for the outside-person criterion and the expert-closed-loop figures; picks-leverage for the multiplying-audience question; education-afterlife, software-afterlife and hardware-afterlife for the durability figures; good-definition for the cost-of-the-tenth criterion. Two limits apply throughout. The sample is decorated teams only, so no figure here describes the competition at large unless it is drawn from iGEM's full accepted roster. And the Top 10 comparisons rest on 30 teams and seven podium places, which cannot support a causal claim -- the questions are a way of thinking, not a predictive model, and a candidate that answers all nine well can still lose.",
+  "method_zh": "這是一套工具，不是一項量測。九個問題是本報告自己的建構；被量測的是「每一題為什麼在清單上」的理由，而所引用的每一個數字都量測於本報告其他處，並在該處載明自己的限制。來源：真實標的關卡與 2026 年首頁矛盾來自 judging-top10 與 gems-three-seasons；模型迴路數字來自乾實驗室相關分析；五類對照與揭露旗標來自 falsification-controls；外部人士條件與專家閉合迴路數字來自 good-governance 與 ihp-depth；會放大的人那一題來自 picks-leverage；耐久度數字來自 education-afterlife、software-afterlife 與 hardware-afterlife；第十次成本的條件來自 good-definition。全篇適用兩項限制。樣本僅限得獎隊伍，所以除非取自 iGEM 完整正式參賽名單，本節沒有任何數字在描述整個賽事。而 Top 10 的各項比較建立在 30 支隊伍與七個頒獎臺名額上，撐不起因果主張——這九個問題是一種思考方式，不是預測模型；一個九題都答得很好的候選，仍然可能落敗。"
+}
