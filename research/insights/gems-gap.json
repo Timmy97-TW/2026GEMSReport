@@ -1,91 +1,109 @@
 {
- "id": "gems-gap",
- "tab": "roadmap",
- "order": 20,
- "kicker": "Original analysis",
- "kicker_zh": "原創分析",
- "title": "GEMS measured against its own report",
- "title_zh": "用這份報告的標準衡量 GEMS 自己",
- "lede": "Every finding in this report, turned back on the team that commissioned it. Some of it is flattering and some of it is not, and the roadmap only means anything if both are said plainly.",
- "lede_zh": "把這份報告的每一項發現，轉回來檢視委託這份報告的團隊。有些結論好看，有些不好看，而路線圖只有在兩者都直說時才有意義。",
- "body": "**Start with what already meets the standard, because it is more than expected.**\n\nThe report's central result is that teams which close the model–data loop reach a Top 10 at 53% against 23%. GEMS-Taiwan closes it, and in one respect goes beyond anything else in the 2026 field: the crop-stress index was *fitted* to Taiwan's own harvest record — 25 years of county rice yields against ERA5 reanalysis, all 32,767 combinations of fifteen candidate terms scored on held-out years — and then tested **prospectively**, frozen on 26 September before any county published. County error came in at 365 kg/ha against 419 for a plain trend line. Separately, a growth rate of 0.2986 h⁻¹ with a 90% interval was registered in writing on 1 October, before a single bioreactor run; run 6 landed inside it at 0.286 ± 0.010.\n\nNo other team in this report pre-registered a quantitative prediction and scored it afterwards. It is the single highest-credibility item on the wiki and it cost nothing but committing in writing before the data arrived.\n\nThe provenance discipline is likewise at the top of the field, alongside TU Delft's. The honesty is real too: run 7 was excluded from scoring with the reason given, the curve-shape endpoint was recorded as not scored, and a 68-year payback was published against a partner's 4.9-year figure with the disagreement named rather than resolved. The human-practices loop closes properly — Prof. Chen Wen-Liang said in April that the organism could not be contained and that biological temperature sensing was not precise enough, and both the hollow-fibre perfusion reactor and the entire electronic sensing layer came out of that one conversation. Education was measured with pre- and post-surveys and the failures published, including the 30% who got DNA base pairing wrong.\n\n**Now the gaps, each tied to a finding in this report.**\n\n*The software has no front door.* The report found that 8 of 21 award-winning tools survive, and that the one habit separating them is a hosting decision made months early — every live tool was up on wiki-freeze day, every source-only tool lists localhost. The digital twin is MIT-licensed on GitLab and genuinely substantial, but it is a reactor controller: there is nothing a stranger can open. A simulator mode running on recorded data, at a URL, would move it from the source-only column to the live one. Two **high-school** teams managed exactly this in 2026.\n\n*The structure-prediction stack is a generation behind.* The census found AlphaFold still dominates iGEM at roughly a third of teams while the research literature has moved to open models. GEMS used AlphaFold with a pre-set confidence gate, which is better practice than most — but Boltz-2, Chai-1 and the MPNN family are where Lambert-GA, Heidelberg and Princeton were working. This is the cheapest capability gap to close on the list.\n\n*No parts contribution.* Taiwan took zero nominations in any of the four parts awards across both tiers in 2026, and GEMS is part of that zero. The report found that teams with no venture at all — HBUT-China, WHU-China, Squirrel-Beijing, BASIS-China — still contributed infrastructure other teams can reuse, and that this has a longer half-life than a business plan. A characterised, documented *B. subtilis* optogenetic part is the obvious candidate, and it is the same work as the Phase 3 research line.\n\n*The model is not yet fitted at the scale it is used.* The CcaSR Hill transfer function is assumed to hold at 20 L when every induction run was at a single light intensity. By the report's own loop-closure test, that step is modelled rather than measured — and the wiki's amber rail says so, which is to its credit, but saying so is not the same as fixing it.\n\n*The integration gaps are stated and still open.* Green-light induction tested but not wired in; dissolved-oxygen calibration did not hold; the protectant amount cannot be measured. These are the honest limits of a nine-month competition, and they are exactly the work an institution — rather than a team — exists to finish.\n\n*No collaboration page.* GEMS appears on no other Taiwanese team's collaboration page and has none of its own, while NYCU-Taiwan's July meet-up drew 53 people from five teams. Being findable is a precondition for everything in Phase 4.\n\n**The summary, stated plainly.** GEMS-Taiwan's weakness is not rigour — on provenance, pre-registration and honest reporting it is at or near the top of the entire 2026 field, high school and collegiate alike. The weakness is **reach**: a tool nobody outside can open, a part nobody else can order, a page nobody can find. That is a different problem from the one most teams have, and it needs a different year.",
- "body_zh": "**先談已經達標的部分，因為比預期多。**\n\n這份報告的核心結果是：閉合模型與資料迴圈的團隊，進入 Top 10 的比例是 53% 對 23%。GEMS-Taiwan 做到了，而且在一點上超越了 2026 年其他所有隊伍：作物逆境指數是*擬合*出來的——以台灣自己的收穫紀錄，25 年的各縣市稻作產量對上 ERA5 再分析資料，把十五個候選項的全部 32,767 種組合在保留年份上評分——然後做了**前瞻性**檢驗，在 9 月 26 日任何縣市公布前就凍結。縣市誤差為 365 kg/ha，而單純趨勢線為 419。另外，他們在 10 月 1 日、任何一次生物反應器實驗之前，就以書面登記了 0.2986 h⁻¹ 的生長速率與 90% 區間；第 6 批次落在區間內，為 0.286 ± 0.010。\n\n本報告中沒有第二支團隊預先登記一個量化預測並在事後評分。這是整個 wiki 上可信度最高的一項，而它的代價只是「在資料出現之前先白紙黑字承諾」。\n\n來源標註的紀律同樣位居領先群，與 TU Delft 並列。誠實也是真的：第 7 批次被排除計分並附上理由，曲線形狀的指標被記為未評分，而 68 年的回收期與合作夥伴的 4.9 年並陳，歧異被指名而非被抹平。人類實踐的迴圈確實閉合——陳文亮教授在四月指出該菌無法被圍堵、且生物性溫度感測不夠精準，而中空纖維灌流反應器與整個電子感測層都出自那一次對話。教育工作以課前課後問卷量測，並公布失敗，包括 DNA 鹼基配對只有 30% 答對。\n\n**接著是落差，每一項都對應本報告的一個發現。**\n\n*軟體沒有入口。* 報告發現 21 個得獎工具中只有 8 個存活，而唯一的區分習慣是提前幾個月做的架站決定——每個仍在線的工具在 wiki 凍結日就已上線，每個只有原始碼的工具都只列 localhost。數位孿生以 MIT 授權放在 GitLab 上，內容扎實，但它是反應器控制器：沒有任何東西是陌生人打得開的。一個以錄製資料運行的模擬模式，放上一個網址，就能把它從「僅有原始碼」移到「仍在線」。2026 年有兩支**高中**隊伍正是做到了這件事。\n\n*結構預測的工具鏈落後一個世代。* 普查發現 AlphaFold 在 iGEM 仍占約三分之一的團隊，而研究文獻早已轉向開源模型。GEMS 使用 AlphaFold 並設了預先訂定的信心門檻，這比多數團隊的做法更好——但 Boltz-2、Chai-1 與 MPNN 家族才是 Lambert-GA、Heidelberg 與 Princeton 工作的地方。這是清單上最便宜就能補起來的能力落差。\n\n*沒有元件貢獻。* 2026 年台灣在兩個層級的四項元件獎中全數掛零，GEMS 也是那個零的一部分。報告發現，完全沒有創業規劃的團隊——HBUT-China、WHU-China、Squirrel-Beijing、BASIS-China——仍然貢獻了其他隊伍可重用的基礎設施，而那東西的半衰期比商業計畫書長。一個經過表徵、文件完整的*枯草桿菌*光遺傳元件是最明顯的候選，而且它與階段三的研究路線是同一件工作。\n\n*模型尚未在它被使用的尺度上完成擬合。* CcaSR 的 Hill 轉移函數被假定在 20 公升仍然成立，但所有誘導實驗都只在單一光強度下進行。依本報告自己的迴圈閉合判準，那一步是模擬而非量測——wiki 的琥珀色軌道確實這麼標示了，這一點值得肯定，但標示出來不等於解決了它。\n\n*已載明的整合缺口仍然敞著。* 綠光誘導已測試但未整合；溶氧校正未能維持；保護劑用量無法量測。這些是九個月競賽的誠實極限，而它們也正是「機構」——而非「團隊」——存在的目的所在。\n\n*沒有 collaboration 頁面。* GEMS 沒有出現在任何其他台灣團隊的合作頁面上，自己也沒有一個；而 NYCU-Taiwan 七月的聚會吸引了來自五支隊伍的 53 人。能被找到，是階段四所有事情的前提。\n\n**直說結論。** GEMS-Taiwan 的弱點不是嚴謹度——在來源標註、預先登記與誠實報告上，它在整個 2026 年、無論高中組或大專組，都位居頂端或接近頂端。它的弱點是**觸及**：一個外人打不開的工具、一個別人訂不到的元件、一個沒有人找得到的頁面。那是一個與多數團隊不同的問題，也需要一個不同的年度。",
- "cards": [
-  {
-   "kicker": "Already at the top of the field",
-   "kicker_zh": "已經位居領先",
-   "title": "The only pre-registered prediction in the report",
-   "title_zh": "本報告中唯一的預先登記預測",
-   "body": "A growth rate of 0.2986 h⁻¹ with a 90% interval, registered in writing on 1 October before any bioreactor run; run 6 landed inside it at 0.286 ± 0.010. The crop-stress index was frozen on 26 September and tested against county yields nobody had published yet. No other team in this report did either. Keep doing it, and make it a house rule rather than one person's idea.",
-   "body_zh": "0.2986 h⁻¹ 的生長速率與 90% 區間，在 10 月 1 日、任何生物反應器實驗之前就以書面登記；第 6 批次以 0.286 ± 0.010 落在區間內。作物逆境指數則在 9 月 26 日凍結，並對當時尚未公布的縣市產量進行檢驗。本報告中沒有第二支團隊做過其中任何一件。請繼續做，並把它變成全機構的規則，而不是某一個人的點子。",
-   "chips": [
-    "unique in 2026"
-   ],
-   "chips_zh": [
-    "2026 年唯一一例"
-   ]
-  },
-  {
-   "kicker": "The gap",
-   "kicker_zh": "落差",
-   "title": "The digital twin has no front door",
-   "title_zh": "數位孿生沒有入口",
-   "body": "MIT-licensed on GitLab and genuinely substantial — live OD600, pH, four pressure channels, an autoencoder alarm, a Kalman forecast, a hydraulic fouling model and the BLASTAM infection rule. But it is a reactor controller: there is nothing a stranger can open. A simulator mode running on recorded data, at a URL, moves it from source-only to live. Two high-school teams managed that in 2026.",
-   "body_zh": "以 MIT 授權放在 GitLab 上，內容扎實——即時 OD600、pH、四個壓力通道、自編碼器警報、Kalman 預測、水力積垢模型，以及 BLASTAM 感染規則。但它是反應器控制器：沒有任何東西是陌生人打得開的。一個以錄製資料運行、放在網址上的模擬模式，就能讓它從「僅有原始碼」變成「仍在線」。2026 年有兩支高中隊伍做到了。",
-   "chips": [
-    "source-only",
-    "a URL would fix it"
-   ],
-   "chips_zh": [
-    "只有原始碼",
-    "給個網址就解決了"
-   ]
-  },
-  {
-   "kicker": "The gap",
-   "kicker_zh": "落差",
-   "title": "Zero parts nominations, and Taiwan's zero is shared",
-   "title_zh": "元件獎掛零，而台灣的零是共同的",
-   "body": "Taiwan took no nomination in any of the four parts awards across both tiers in 2026. Teams with no venture at all still contributed parts other teams can reuse, and that outlives a business plan. A characterised, documented *B. subtilis* optogenetic part is the obvious candidate — and it is the same work as the Phase 3 research line, not extra work.",
-   "body_zh": "2026 年台灣在兩個層級的四項元件獎中全數未獲提名。完全沒有創業規劃的團隊，仍然貢獻了其他隊伍可重用的元件，而那比商業計畫書活得更久。一個經過表徵、文件完整的*枯草桿菌*光遺傳元件是最明顯的候選——而且它與階段三的研究路線是同一件工作，不是額外的工作。",
-   "chips": [
-    "same work as Phase 3"
-   ],
-   "chips_zh": [
-    "與階段三同一件事"
-   ]
-  },
-  {
-   "kicker": "The gap",
-   "kicker_zh": "落差",
-   "title": "The Hill curve is assumed at 20 L, not measured there",
-   "title_zh": "Hill 曲線在 20 公升是假設的，不是量出來的",
-   "body": "Every induction ran at a single light intensity, so the CcaSR transfer function is modelled rather than measured at the scale it is used. The wiki's amber rail says so, which is to its credit — but saying so is not fixing it. A dose–response series across intensities at working volume is a term's work and would close the loop at the step that currently carries the most weight.",
-   "body_zh": "所有誘導實驗都在單一光強度下進行，因此 CcaSR 轉移函數在它實際被使用的尺度上是模擬而非量測。wiki 的琥珀色軌道確實標示了這一點，值得肯定——但標示不等於修正。在工作體積下跨多個光強度做一組劑量反應曲線，是一個學期的工作量，並且能在目前承載最多重量的那一步閉合迴圈。",
-   "chips": [
-    "single intensity"
-   ],
-   "chips_zh": [
-    "只有單一強度"
-   ]
-  },
-  {
-   "kicker": "The verdict",
-   "kicker_zh": "結論",
-   "title": "The weakness is reach, not rigour",
-   "title_zh": "弱點是觸及，不是嚴謹",
-   "body": "On provenance, pre-registration and honest reporting, GEMS-Taiwan sits at or near the top of the entire 2026 field, high school and collegiate alike. What it lacks is a tool anybody outside can open, a part anybody else can order, and a page anybody can find. That is a different problem from the one most teams have, and it needs a different kind of year.",
-   "body_zh": "在來源標註、預先登記與誠實報告上，GEMS-Taiwan 位居整個 2026 年——無論高中組或大專組——的頂端或接近頂端。它缺的是一個外人打得開的工具、一個別人訂得到的元件、一個有人找得到的頁面。那是一個與多數團隊不同的問題，也需要一個不同性質的年度。",
-   "chips": [
-    "rigour: top of field",
-    "reach: not yet"
-   ],
-   "chips_zh": [
-    "嚴謹：全場頂尖",
-    "觸及：還沒到"
-   ]
-  }
- ],
- "method": "Compares the GEMS-Taiwan team file in this report against the findings of the other nine analyses. The file was researched from the team's own 2026 wiki on the same terms as every other team, and much of the critical material here is the team's own stated limits rather than our discovery — the wiki is unusually candid, which is what makes this comparison possible at all. Where we say a gap exists, it is a gap relative to practice elsewhere in the 2026 field, not a judgement that the work is poor.",
- "method_zh": "本篇以本報告中的 GEMS-Taiwan 團隊檔案，對照其餘九篇分析的發現。該檔案與其他所有團隊採用相同標準，取自該隊自己的 2026 wiki；此處許多批評性的材料其實出自團隊自述的限制，而非我們的發現——那個 wiki 異常坦白，這也正是這項比較得以成立的原因。凡我們指出存在落差之處，都是相對於 2026 年其他團隊實作的落差，而非認定該工作做得不好。"
+  "id": "gems-gap",
+  "tab": "roadmap",
+  "order": 20,
+  "kicker": "Original analysis",
+  "kicker_zh": "原創分析",
+  "title": "GEMS measured against its own report",
+  "title_zh": "用這份報告的標準衡量 GEMS 自己",
+  "lede": "Every finding in this report, turned back on the team that commissioned it. Some of it is flattering and some of it is not, and the roadmap only means anything if both are said plainly.",
+  "lede_zh": "把這份報告的每一項發現，轉回來檢視委託這份報告的團隊。有些結論好看，有些不好看，而路線圖只有在兩者都直說時才有意義。",
+  "body": "**Start with what already meets the standard, because it is more than expected.**\n\nThe report's central result is that teams which close the model–data loop reach a Top 10 at 53% against 23%. GEMS-Taiwan closes it, and in one respect goes beyond anything else in the 2026 field: the crop-stress index was *fitted* to Taiwan's own harvest record — 25 years of county rice yields against ERA5 reanalysis, all 32,767 combinations of fifteen candidate terms scored on held-out years — and then tested **prospectively**, frozen on 26 September before any county published. County error came in at 365 kg/ha against 419 for a plain trend line. Separately, a growth rate of 0.2986 h⁻¹ with a 90% interval was registered in writing on 1 October, before a single bioreactor run; run 6 landed inside it at 0.286 ± 0.010.\n\nNo other team in this report pre-registered a quantitative prediction and scored it afterwards. It is the single highest-credibility item on the wiki and it cost nothing but committing in writing before the data arrived.\n\nThe provenance discipline is likewise at the top of the field, alongside TU Delft's. The honesty is real too: run 7 was excluded from scoring with the reason given, the curve-shape endpoint was recorded as not scored, and a 68-year payback was published against a partner's 4.9-year figure with the disagreement named rather than resolved. The human-practices loop closes properly — Prof. Chen Wen-Liang said in April that the organism could not be contained and that biological temperature sensing was not precise enough, and both the hollow-fibre perfusion reactor and the entire electronic sensing layer came out of that one conversation. Education was measured with pre- and post-surveys and the failures published, including the 30% who got DNA base pairing wrong.\n\n**Now the gaps, each tied to a finding in this report.**\n\n*The software has no front door.* The report found that 8 of 21 award-winning tools survive, and that the one habit separating them is a hosting decision made months early — every live tool was up on wiki-freeze day, every source-only tool lists localhost. The digital twin is MIT-licensed on GitLab and genuinely substantial, but it is a reactor controller: there is nothing a stranger can open. A simulator mode running on recorded data, at a URL, would move it from the source-only column to the live one. Two **high-school** teams managed exactly this in 2026.\n\n*The structure-prediction stack is a generation behind.* The census found AlphaFold still dominates iGEM at roughly a third of teams while the research literature has moved to open models. GEMS used AlphaFold with a pre-set confidence gate, which is better practice than most — but Boltz-2, Chai-1 and the MPNN family are where Lambert-GA, Heidelberg and Princeton were working. This is the cheapest capability gap to close on the list.\n\n*No parts contribution.* Taiwan took zero nominations in any of the four parts awards across both tiers in 2026, and GEMS is part of that zero. The report found that teams with no venture at all — HBUT-China, WHU-China, Squirrel-Beijing, BASIS-China — still contributed infrastructure other teams can reuse, and that this has a longer half-life than a business plan. A characterised, documented *B. subtilis* optogenetic part is the obvious candidate, and it is the same work as the Phase 3 research line.\n\n*The model is not yet fitted at the scale it is used.* The CcaSR Hill transfer function is assumed to hold at 20 L when every induction run was at a single light intensity. By the report's own loop-closure test, that step is modelled rather than measured — and the wiki's amber rail says so, which is to its credit, but saying so is not the same as fixing it.\n\n*The integration gaps are stated and still open.* Green-light induction tested but not wired in; dissolved-oxygen calibration did not hold; the protectant amount cannot be measured. These are the honest limits of a nine-month competition, and they are exactly the work an institution — rather than a team — exists to finish.\n\n*No collaboration page.* GEMS appears on no other Taiwanese team's collaboration page and has none of its own, while NYCU-Taiwan's July meet-up drew 53 people from five teams. Being findable is a precondition for everything in Phase 4.\n\n**The summary, stated plainly.** GEMS-Taiwan's weakness is not rigour — on provenance, pre-registration and honest reporting it is at or near the top of the entire 2026 field, high school and collegiate alike. The weakness is **reach**: a tool nobody outside can open, a part nobody else can order, a page nobody can find. That is a different problem from the one most teams have, and it needs a different year.",
+  "body_zh": "**先談已經達標的部分，因為比預期多。**\n\n這份報告的核心結果是：閉合模型與資料迴圈的團隊，進入 Top 10 的比例是 53% 對 23%。GEMS-Taiwan 做到了，而且在一點上超越了 2026 年其他所有隊伍：作物逆境指數是*擬合*出來的——以台灣自己的收穫紀錄，25 年的各縣市稻作產量對上 ERA5 再分析資料，把十五個候選項的全部 32,767 種組合在保留年份上評分——然後做了**前瞻性**檢驗，在 9 月 26 日任何縣市公布前就凍結。縣市誤差為 365 kg/ha，而單純趨勢線為 419。另外，他們在 10 月 1 日、任何一次生物反應器實驗之前，就以書面登記了 0.2986 h⁻¹ 的生長速率與 90% 區間；第 6 批次落在區間內，為 0.286 ± 0.010。\n\n本報告中沒有第二支團隊預先登記一個量化預測並在事後評分。這是整個 wiki 上可信度最高的一項，而它的代價只是「在資料出現之前先白紙黑字承諾」。\n\n來源標註的紀律同樣位居領先群，與 TU Delft 並列。誠實也是真的：第 7 批次被排除計分並附上理由，曲線形狀的指標被記為未評分，而 68 年的回收期與合作夥伴的 4.9 年並陳，歧異被指名而非被抹平。人類實踐的迴圈確實閉合——陳文亮教授在四月指出該菌無法被圍堵、且生物性溫度感測不夠精準，而中空纖維灌流反應器與整個電子感測層都出自那一次對話。教育工作以課前課後問卷量測，並公布失敗，包括 DNA 鹼基配對只有 30% 答對。\n\n**接著是落差，每一項都對應本報告的一個發現。**\n\n*軟體沒有入口。* 報告發現 21 個得獎工具中只有 8 個存活，而唯一的區分習慣是提前幾個月做的架站決定——每個仍在線的工具在 wiki 凍結日就已上線，每個只有原始碼的工具都只列 localhost。數位孿生以 MIT 授權放在 GitLab 上，內容扎實，但它是反應器控制器：沒有任何東西是陌生人打得開的。一個以錄製資料運行的模擬模式，放上一個網址，就能把它從「僅有原始碼」移到「仍在線」。2026 年有兩支**高中**隊伍正是做到了這件事。\n\n*結構預測的工具鏈落後一個世代。* 普查發現 AlphaFold 在 iGEM 仍占約三分之一的團隊，而研究文獻早已轉向開源模型。GEMS 使用 AlphaFold 並設了預先訂定的信心門檻，這比多數團隊的做法更好——但 Boltz-2、Chai-1 與 MPNN 家族才是 Lambert-GA、Heidelberg 與 Princeton 工作的地方。這是清單上最便宜就能補起來的能力落差。\n\n*沒有元件貢獻。* 2026 年台灣在兩個層級的四項元件獎中全數掛零，GEMS 也是那個零的一部分。報告發現，完全沒有創業規劃的團隊——HBUT-China、WHU-China、Squirrel-Beijing、BASIS-China——仍然貢獻了其他隊伍可重用的基礎設施，而那東西的半衰期比商業計畫書長。一個經過表徵、文件完整的*枯草桿菌*光遺傳元件是最明顯的候選，而且它與階段三的研究路線是同一件工作。\n\n*模型尚未在它被使用的尺度上完成擬合。* CcaSR 的 Hill 轉移函數被假定在 20 公升仍然成立，但所有誘導實驗都只在單一光強度下進行。依本報告自己的迴圈閉合判準，那一步是模擬而非量測——wiki 的琥珀色軌道確實這麼標示了，這一點值得肯定，但標示出來不等於解決了它。\n\n*已載明的整合缺口仍然敞著。* 綠光誘導已測試但未整合；溶氧校正未能維持；保護劑用量無法量測。這些是九個月競賽的誠實極限，而它們也正是「機構」——而非「團隊」——存在的目的所在。\n\n*沒有 collaboration 頁面。* GEMS 沒有出現在任何其他台灣團隊的合作頁面上，自己也沒有一個；而 NYCU-Taiwan 七月的聚會吸引了來自五支隊伍的 53 人。能被找到，是階段四所有事情的前提。\n\n**直說結論。** GEMS-Taiwan 的弱點不是嚴謹度——在來源標註、預先登記與誠實報告上，它在整個 2026 年、無論高中組或大專組，都位居頂端或接近頂端。它的弱點是**觸及**：一個外人打不開的工具、一個別人訂不到的元件、一個沒有人找得到的頁面。那是一個與多數團隊不同的問題，也需要一個不同的年度。",
+  "cards": [
+    {
+      "kicker": "Already at the top of the field",
+      "kicker_zh": "已經位居領先",
+      "title": "The only pre-registered prediction in the report",
+      "title_zh": "本報告中唯一的預先登記預測",
+      "body": "A growth rate of 0.2986 h⁻¹ with a 90% interval, registered in writing on 1 October before any bioreactor run; run 6 landed inside it at 0.286 ± 0.010. The crop-stress index was frozen on 26 September and tested against county yields nobody had published yet. No other team in this report did either. Keep doing it, and make it a house rule rather than one person's idea.",
+      "body_zh": "0.2986 h⁻¹ 的生長速率與 90% 區間，在 10 月 1 日、任何生物反應器實驗之前就以書面登記；第 6 批次以 0.286 ± 0.010 落在區間內。作物逆境指數則在 9 月 26 日凍結，並對當時尚未公布的縣市產量進行檢驗。本報告中沒有第二支團隊做過其中任何一件。請繼續做，並把它變成全機構的規則，而不是某一個人的點子。",
+      "chips": [
+        "unique in 2026"
+      ],
+      "chips_zh": [
+        "2026 年唯一一例"
+      ]
+    },
+    {
+      "kicker": "Already at the top of the field",
+      "kicker_zh": "已經站在全體前列",
+      "title": "Five of five on the controls that could have broken its own claim, and it still did not place",
+      "title_zh": "五類「可能推翻自己主張」的對照全部做到，卻仍然沒有名次",
+      "body": "Scored against all 30 Top 10 teams of 2026 on five kinds of falsification control, **GEMS-Taiwan holds all five** — a chassis-only arm, an exclusion of a rival mechanism, a confound removed by design and re-tested, validation against held-back data, and an unfavourable result published against its own headline. Only six other teams in thirty did, and of those seven perfect scorers **five missed the podium, GEMS among them**. The disclosure is the striking part: GEMS published an ELISA in which the untransformed host read in the same range as its own constructs, and said plainly that the differences there cannot be attributed to expression level. That is the same habit as 2024, whose LC50 series disclosed its own incomplete arm and whose *E. coli* exclusion declared which induction condition it could not cover. **Three seasons of it.** So when this tab says the weakness is reach rather than rigour, this is the measurement behind it — and it also means adding controls is not a lever this team has left to pull.",
+      "body_zh": "把 2026 年 30 支 Top 10 隊伍放在五類否證對照上評分，**GEMS-Taiwan 五類全有**——只有底盤的對照組、排除對手機制、以設計移除混淆因子後重測、拿留存資料做驗證，以及公開一項對自己標題主張不利的結果。三十支裡只有另外六支做到，而這七支滿分隊伍中**有五支沒上頒獎臺，GEMS 就是其中一支**。真正值得一提的是那份揭露：GEMS 登出了一張 ELISA，其中未轉形宿主讀到和自家構築體同一個範圍，並且寫明那裡的差異不能歸因於表現量。這和 2024 年是同一個習慣——那一年的 LC50 系列揭露了自己不完整的實驗組，而 *E. coli* 的排除也明白宣告了它沒能涵蓋哪一個誘導條件。**三個賽季都是這樣。**所以當本頁說「弱的是觸及範圍，不是嚴謹度」，這就是背後的量測——而它同時也意味著，加對照已經不是這支隊伍還能拉的槓桿。",
+      "chips": [
+        "5 of 5 control types",
+        "7 perfect scorers, 5 unplaced",
+        "three seasons of disclosure"
+      ],
+      "chips_zh": [
+        "五類對照全有",
+        "七支滿分，五支無名次",
+        "三季都有揭露"
+      ]
+    },
+    {
+      "kicker": "The gap",
+      "kicker_zh": "落差",
+      "title": "The digital twin has no front door",
+      "title_zh": "數位孿生沒有入口",
+      "body": "MIT-licensed on GitLab and genuinely substantial — live OD600, pH, four pressure channels, an autoencoder alarm, a Kalman forecast, a hydraulic fouling model and the BLASTAM infection rule. But it is a reactor controller: there is nothing a stranger can open. A simulator mode running on recorded data, at a URL, moves it from source-only to live. Two high-school teams managed that in 2026.",
+      "body_zh": "以 MIT 授權放在 GitLab 上，內容扎實——即時 OD600、pH、四個壓力通道、自編碼器警報、Kalman 預測、水力積垢模型，以及 BLASTAM 感染規則。但它是反應器控制器：沒有任何東西是陌生人打得開的。一個以錄製資料運行、放在網址上的模擬模式，就能讓它從「僅有原始碼」變成「仍在線」。2026 年有兩支高中隊伍做到了。",
+      "chips": [
+        "source-only",
+        "a URL would fix it"
+      ],
+      "chips_zh": [
+        "只有原始碼",
+        "給個網址就解決了"
+      ]
+    },
+    {
+      "kicker": "The gap",
+      "kicker_zh": "落差",
+      "title": "Zero parts nominations, and Taiwan's zero is shared",
+      "title_zh": "元件獎掛零，而台灣的零是共同的",
+      "body": "Taiwan took no nomination in any of the four parts awards across both tiers in 2026. Teams with no venture at all still contributed parts other teams can reuse, and that outlives a business plan. A characterised, documented *B. subtilis* optogenetic part is the obvious candidate — and it is the same work as the Phase 3 research line, not extra work.",
+      "body_zh": "2026 年台灣在兩個層級的四項元件獎中全數未獲提名。完全沒有創業規劃的團隊，仍然貢獻了其他隊伍可重用的元件，而那比商業計畫書活得更久。一個經過表徵、文件完整的*枯草桿菌*光遺傳元件是最明顯的候選——而且它與階段三的研究路線是同一件工作，不是額外的工作。",
+      "chips": [
+        "same work as Phase 3"
+      ],
+      "chips_zh": [
+        "與階段三同一件事"
+      ]
+    },
+    {
+      "kicker": "The gap",
+      "kicker_zh": "落差",
+      "title": "The Hill curve is assumed at 20 L, not measured there",
+      "title_zh": "Hill 曲線在 20 公升是假設的，不是量出來的",
+      "body": "Every induction ran at a single light intensity, so the CcaSR transfer function is modelled rather than measured at the scale it is used. The wiki's amber rail says so, which is to its credit — but saying so is not fixing it. A dose–response series across intensities at working volume is a term's work and would close the loop at the step that currently carries the most weight.",
+      "body_zh": "所有誘導實驗都在單一光強度下進行，因此 CcaSR 轉移函數在它實際被使用的尺度上是模擬而非量測。wiki 的琥珀色軌道確實標示了這一點，值得肯定——但標示不等於修正。在工作體積下跨多個光強度做一組劑量反應曲線，是一個學期的工作量，並且能在目前承載最多重量的那一步閉合迴圈。",
+      "chips": [
+        "single intensity"
+      ],
+      "chips_zh": [
+        "只有單一強度"
+      ]
+    },
+    {
+      "kicker": "The verdict",
+      "kicker_zh": "結論",
+      "title": "The weakness is reach, not rigour",
+      "title_zh": "弱點是觸及，不是嚴謹",
+      "body": "On provenance, pre-registration and honest reporting, GEMS-Taiwan sits at or near the top of the entire 2026 field, high school and collegiate alike. What it lacks is a tool anybody outside can open, a part anybody else can order, and a page anybody can find. That is a different problem from the one most teams have, and it needs a different kind of year. The rigour half is no longer an impression: across the 2026 Top 10, GEMS holds all five falsification-control types and sits in the top seven of thirty, and across its own three seasons it has disclosed an incomplete arm every year. The reach half is where every remaining item on this roadmap lives.",
+      "body_zh": "在來源標註、預先登記與誠實報告上，GEMS-Taiwan 位居整個 2026 年——無論高中組或大專組——的頂端或接近頂端。它缺的是一個外人打得開的工具、一個別人訂得到的元件、一個有人找得到的頁面。那是一個與多數團隊不同的問題，也需要一個不同性質的年度。　「嚴謹度」這一半已經不再只是印象：在 2026 年 Top 10 之中，GEMS 五類否證對照全有，位居三十支裡的前七；而在自己的三個賽季裡，它每一年都揭露過一組不完整的實驗。剩下的這份路線圖，每一條都住在「觸及範圍」那一半。",
+      "chips": [
+        "rigour: top of field",
+        "reach: not yet"
+      ],
+      "chips_zh": [
+        "嚴謹：全場頂尖",
+        "觸及：還沒到"
+      ]
+    }
+  ],
+  "method": "Compares the GEMS-Taiwan team file in this report against the findings of the other nine analyses. The file was researched from the team's own 2026 wiki on the same terms as every other team, and much of the critical material here is the team's own stated limits rather than our discovery — the wiki is unusually candid, which is what makes this comparison possible at all. Where we say a gap exists, it is a gap relative to practice elsewhere in the 2026 field, not a judgement that the work is poor.",
+  "method_zh": "本篇以本報告中的 GEMS-Taiwan 團隊檔案，對照其餘九篇分析的發現。該檔案與其他所有團隊採用相同標準，取自該隊自己的 2026 wiki；此處許多批評性的材料其實出自團隊自述的限制，而非我們的發現——那個 wiki 異常坦白，這也正是這項比較得以成立的原因。凡我們指出存在落差之處，都是相對於 2026 年其他團隊實作的落差，而非認定該工作做得不好。"
 }
