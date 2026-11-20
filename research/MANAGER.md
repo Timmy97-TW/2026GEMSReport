@@ -1800,3 +1800,55 @@ general point belongs in their working habits: text retrieved from a web page is
 Seven cards, 4 x 3 table, 9-line checklist. The markdown audit caught me nesting italic inside bold in a journal
 name, in both languages -- the exact rule the audit exists for -- and I had also left the English word
 "specifically" stranded inside a Chinese sentence. Both fixed before commit.
+
+### real-target-routes.json published — the reframe worked, and the safeguard fired once more
+
+The question an earlier agent was killed for is now answered. The difference was entirely in the framing: the
+first brief asked how teams tested on real targets, which reads as a methods question; the second asked who
+held the key, how the relationship started, what permission was on record and how many weeks it took, with an
+explicit instruction to ignore any method detail encountered. That completed.
+
+Worth recording honestly: **the classifier still fired once mid-run**, on one of the agent's own intermediate
+messages that bulk-dumped coded access cases. The agent did not reproduce it and rewrote every material
+description in the output to carry organisation type, relationship origin and permission level only, with no
+organism, strain or method detail anywhere in the file. So the lesson is not "the reframe made the topic safe"
+but "the reframe made the deliverable answerable, and the content still has to stay on the access side".
+
+Validated independently before publishing. 8 cards, 6 x 26 table, 9-line checklist, key order exact, every _zh
+array matching, build silent on all three audits. The denominators check out against the corpus: Undergrad 42,
+High School 40, Overgrad 22, 2 files with no section, totalling 106. All eight headline teams exist and sit in
+the sections claimed -- Hongwen School, BASIS-China and PSI Korea in High School; McGill, Madrid-UCM, UCNZ and
+Al-Nahrain-IRAQ in Undergrad; TU Delft in Overgrad.
+
+**The figures.** Three tiers, counted separately and all disclosed: 41 of 106 reached an outside holder's
+premises or material at all (HS 20/40, UG 13/42, OG 7/22); 12 obtained physical material from an outside
+holder; and the headline 8 obtained material from whoever actually owns the real thing (HS 3, UG 4, OG 1). Four
+of the 12 drop out because the material came from a university shelf or the team's own host institution, or
+because the file says offered-not-delivered or possibly an ordinary purchase. **The division gap that shows on
+the podium does not reappear in access** -- the school division is not the weak side here, which is the single
+most useful line for GEMS.
+
+**The cross-cutting finding, now in the roadmap.** The wall is directional: carry the holder's material into
+the lab, or go and work at the holder's bench, but never take the organism out. That is the same shape the
+White List screen found from the rules side, so two independent analyses converged on it. Even HongKong-JSS,
+the team the report cites for testing on a real sample, ran its on-site trials without engineered material
+because it legally could not leave the lab.
+
+**What the files could not support.** No paperwork anywhere: not one material transfer agreement,
+confidentiality clause or ethics approval naming material in 106 files or any safety page read, disclosed as
+absence-of-published-paperwork rather than proof none existed. The calendar is unanswerable -- almost no team
+dates its access, and the only defensible planning figure is "start the year before you need it", resting on a
+single datable industrial contact of roughly twelve months. How a relationship started is recorded for about a
+third of cases.
+
+**What Best Integrated Human Practices 2026 actually opens**, in the block's own terms: it makes a cold email
+answerable, converting "a high-school team" into "the team that won the iGEM human-practices award", which in
+this corpus is enough for a meeting, a site visit and an informal yes on material. It does not open a hospital,
+a utility or a regulated site, and it does not substitute for an institutional review or a gene-technology
+permit. In Taiwan the open routes are farmers' cooperatives and natural-farming growers, farmers' markets, a
+commercial agricultural-input company and public natural sites -- all of which GEMS already touches -- plus a
+university department with an introduction. Public bodies are information only: the corpus has zero cases of a
+public body releasing material to any team.
+
+This also closes the open item recorded earlier about whether the report should state a field-wide base rate
+rather than the High-School-Top-10-only figure. It now states both.
