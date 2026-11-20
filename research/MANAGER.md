@@ -1611,3 +1611,52 @@ named explanation has been tested. So the 2027 pick should be the experiment tha
 a new application stacked on an unproven switch. The block also carries the chassis census's Fisher exact
 null (9 of 27 against 21 of 79, p = 0.62) as discipline: hold the line because the field is empty and the
 capability compounds, not because it wins.
+
+### picks-leverage.json published — the picks tab is now four blocks
+
+Validated independently: 9 cards, 5 x 29 table, 9-line checklist, key order exact, every _zh array matching,
+build silent on all three audits. Every figure traced to a source team file rather than taken on trust:
+Princeton's 42 submissions and 26 passing printability and the gyroid brief are in teams/6295.json;
+NIS Almaty-Medeu's 70-school network and nine self-running partner schools in 6523.json; Uni-Padua-IT's
+2.16-fold and the 52 percent to 2 percent failure drop in 6151.json; BOKU's eduvidual.at deposit in 6090.json;
+Stanford's roughly 5,000 applications for 230 places and SynBase's 750+ learners in 6278.json. The
+284-of-285, 8-of-21, 6-of-20, 3-of-31 and 1-of-136 figures are all in education-afterlife.json, and
+"thirty-three of the 64 artefacts ship" a facilitator layer is there too, written in words rather than digits.
+
+**The central number, and the agent split the framing rather than accepting the brief's.** I had suggested
+the practice was rare across the board. It is not: standing in front of a stakeholder who can veto the design
+is the house style of this decorated field, because that is what the IHP award machinery rewards. What is
+genuinely rare is durable capacity -- 7 of 106 taught an audience that teaches professionally (HongKong-JSS,
+Muenster-University, UAlberta, MIT-MAHE, NIS Almaty-Medeu, KAUST-KSA, Marburg) and 5 of 106 left equipment or
+a kit in someone else's hands (HongKong-JSS's standing loan, BAID-China's donation to a school for blind
+students, UAlberta's nine shipped kits, NIS Almaty-Medeu's twelve hospital kits, Muenster's lending kit,
+flagged as designed rather than demonstrably running). **Only HongKong-JSS did both, and only HongKong-JSS
+added the civic tier.** Both counts are declared as upper bounds on rarity in the method note, since a move
+used but not written up is invisible, and the method also records that no team in the field followed up to
+show its trained teachers teaching the next year -- 30 trained teachers is an input, not a demonstrated
+outcome.
+
+Two multiplier types were not in my brief and came out of the data: "make the students the faculty", a peer
+educator cascade that doubles as a recruitment pipeline (HongKong-HS), and "ship the course, not the cohort",
+converting a curriculum when demand exceeds mentoring hours (Stanford). The block also splits borrowing an
+institution's channel into a shelf and a megaphone, with the line that a shelf keeps paying out while a
+megaphone pays once -- which is why BOKU's deposit on the Austrian education ministry's OER platform scores
+above a trade-show stand.
+
+For Taiwan the block argues that **agricultural extension is the strongest unexploited lever**, and that the
+2026 project already brushed it: farmers' associations and the district agricultural research and extension
+stations employ people whose job is to repeat advice to growers for years, and the team already knows the
+Lanyang River Friendly Farming Production Cooperative. Train the extension officers, not the farmers. It is
+honest about what is not available -- a federal exhibition ship touring 33 cities, a national radio slot, a
+joint government media briefing -- and marks the Taiwanese equivalent of a ministry OER platform as
+unverified rather than asserting a platform it could not check.
+
+### Two Chinese word forms normalised across the whole report
+
+picks-leverage arrived using 臺灣 while the rest of the report used 台灣 179 times, so the new block was
+normalised to the majority form. Checking that also surfaced a pre-existing inconsistency: 頒獎臺 55 against
+頒獎台 40, spread across thirteen files. Both forms of each pair are valid Traditional, so this is purely a
+consistency fix and not a correctness one, and it was done mechanically with a JSON parse check on every file
+written. Final counts: 台灣 190 and 臺灣 0; 頒獎臺 95 and 頒獎台 0. 平台 was already consistent at 44 with no
+平臺. No character audit could have caught either, because nothing here was ever wrong -- it was only
+inconsistent, which is the class of problem a reader notices and a script does not.

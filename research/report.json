@@ -22,7 +22,7 @@
       "lede": "GEMS Research is becoming an institution, not a team. Institutions are defined by what they can still do after the current students graduate.",
       "lede_zh": "GEMS Research 正在從一支團隊成為一個機構。機構的定義，在於現在這批學生畢業之後，它還能做什麼。",
       "body": "A wet lab is bounded by its benches, its reagents budget and the hours its students are physically present. A dry lab is bounded by what its people know and what they have written down. That asymmetry is the whole argument: computational capability compounds across years in a way that pipetting skill does not, because a model, a pipeline or a calibrated measurement protocol survives the student who built it.\n\nThis is also where the field has moved. Protein design, metabolic modelling and measurement standardisation are no longer the specialist corner of a project — in 2026 they are frequently the project. The teams on the 2026 podium did not win because they ran more gels.\n\nSo the roadmap below is deliberately about capability, not about any single 2027 project idea. Pick a phase and start.",
-      "body_zh": "濕實驗室受限於實驗檯、試劑預算，以及學生實際在場的時數。乾實驗室則受限於人員所知，以及他們寫下了什麼。這個不對稱就是整個論點：運算能力會跨年度累積，而移液技巧不會——因為一個模型、一條管線或一份校正過的量測流程，會比建造它的那位學生留得更久。\n\n這也是整個領域移動的方向。蛋白質設計、代謝建模與量測標準化不再是專案裡的專家角落；在 2026 年，它們經常就是專案本身。站上 2026 頒獎台的團隊，不是因為多跑了幾道膠。\n\n因此以下的路線圖刻意談能力，而不是任何單一的 2027 專案構想。挑一個階段，開始做。"
+      "body_zh": "濕實驗室受限於實驗檯、試劑預算，以及學生實際在場的時數。乾實驗室則受限於人員所知，以及他們寫下了什麼。這個不對稱就是整個論點：運算能力會跨年度累積，而移液技巧不會——因為一個模型、一條管線或一份校正過的量測流程，會比建造它的那位學生留得更久。\n\n這也是整個領域移動的方向。蛋白質設計、代謝建模與量測標準化不再是專案裡的專家角落；在 2026 年，它們經常就是專案本身。站上 2026 頒獎臺的團隊，不是因為多跑了幾道膠。\n\n因此以下的路線圖刻意談能力，而不是任何單一的 2027 專案構想。挑一個階段，開始做。"
     },
     {
       "tab": "roadmap",

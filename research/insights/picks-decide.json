@@ -124,17 +124,17 @@
       "kicker_zh": "觸及範圍",
       "title": "What does the tenth deployment cost against the first?",
       "title_zh": "第十次佈署的成本，相對第一次是多少？",
-      "body": "This is the Science for Good admission criterion that most ideas fail. A good answer is a number and a direction: the tenth costs less because the protocol is written and the parts are in the Registry, or the tenth costs the same because every unit needs a new sensor. A bad answer treats the first deployment as the whole project. The 2026 field is blunt about this — across every award-winning repository checked, stars and forks were zero, and the only external-adoption figure found anywhere was Stanford's SynBase reporting 837 learners.",
-      "body_zh": "這是科學向善的入列條件裡，最多想法過不了的那一條。好答案是一個數字和一個方向：第十次更便宜，因為流程已經寫好、元件已經在 Registry 裡；或者第十次一樣貴，因為每一台都需要一個新的感測器。壞答案是把第一次佈署當成整個專案。2026 年的全體資料對此很直白——所有查過的得獎程式庫，star 與 fork 全部為零，而整個領域唯一找到的外部採用數字，是 Stanford 的 SynBase 報告的 837 位學習者。",
+      "body": "This is the Science for Good admission criterion that most ideas fail. A good answer is a number and a direction: the tenth costs less because the protocol is written and the parts are in the Registry, or the tenth costs the same because every unit needs a new sensor. A bad answer treats the first deployment as the whole project. The 2026 field is blunt about this — across every award-winning repository checked, stars and forks were zero, and the only external-adoption figure found anywhere was Stanford's SynBase — whose frozen wiki states 750+ registered learners and 650+ discussion contributions as of 17 October 2026, while the live platform's own counter later read 837. That gap is the point: it is the one artefact in the sample that kept growing after the freeze.",
+      "body_zh": "這是科學向善的入列條件裡，最多想法過不了的那一條。好答案是一個數字和一個方向：第十次更便宜，因為流程已經寫好、元件已經在 Registry 裡；或者第十次一樣貴，因為每一台都需要一個新的感測器。壞答案是把第一次佈署當成整個專案。2026 年的全體資料對此很直白——所有查過的得獎程式庫，star 與 fork 全部為零，而整個領域唯一找到的外部採用數字來自 Stanford 的 SynBase——它凍結後的 wiki 寫的是截至 2026 年 10 月 17 日有 750 位以上註冊學習者與 650 則以上討論留言，而該平台自己的計數器後來顯示 837。這個差距正是重點：它是樣本中唯一一件在凍結之後還在成長的產出。",
       "chips": [
         "a number and a direction",
         "zero stars across every repo",
-        "837 learners was the only figure"
+        "SynBase kept growing after freeze"
       ],
       "chips_zh": [
         "一個數字和一個方向",
         "所有程式庫 star 全為零",
-        "837 位學習者是唯一的數字"
+        "SynBase 凍結後仍在成長"
       ]
     },
     {
@@ -227,7 +227,7 @@
       [
         "7",
         "What does the tenth deployment cost against the first?",
-        "**Reach.** Stars and forks were zero across every award-winning repository checked",
+        "**Reach.** Stars and forks were zero across every award-winning repository checked; the one artefact that kept growing after the freeze was a teaching platform",
         "Treating the first deployment as the whole project."
       ],
       [
@@ -283,7 +283,7 @@
       [
         "7",
         "第十次佈署的成本，相對第一次是多少？",
-        "**觸及範圍。**所有查過的得獎程式庫，star 與 fork 全部為零",
+        "**觸及範圍。**所有查過的得獎程式庫，star 與 fork 全部為零；唯一在凍結後還在成長的產出，是一個教學平台",
         "把第一次佈署當成整個專案。"
       ],
       [

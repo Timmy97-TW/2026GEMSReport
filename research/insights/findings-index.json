@@ -109,6 +109,25 @@
       "link": "drylab"
     },
     {
+      "kicker": "Leverage",
+      "kicker_zh": "放大器",
+      "title": "Seven teams in 106 taught the people who teach for a living, and one team did the whole thing",
+      "title_zh": "106 支裡有 7 支把課上給以教學為業的人，而把整件事做完的只有一支",
+      "body": "The multiplier nobody used. Across 106 decorated teams, **7 taught an audience that teaches professionally** and **5 left equipment or a kit in somebody else's hands** — and **only HongKong-JSS did both**, pairing a two-day PCR and agarose-gel workshop for 30 local school teachers with a standing loan of DNA samples and lab equipment, then adding a civic tier on top. Its own wiki calls that the most durable of its four tiers, against the 1,600 pupils and 730 secondary peers it reached once. Both counts are upper bounds on rarity, since a move not written up is invisible. By contrast, standing in front of a stakeholder who can veto you is the house style of this field, not a rarity. The other transferable moves: Stanford converted a 5,000-application, 230-place mentorship into a free course; Princeton handed the public a real unsolved sub-problem and got 42 submissions of which 26 passed printability screening; NIS Almaty-Medeu trained teachers across a 70-school network until nine partner schools ran the activities themselves.",
+      "body_zh": "沒有人用的那個放大器。106 支得獎隊伍中，**有 7 支把課上給以教學為業的對象**，**有 5 支把器材或套件留在別人手上**——而**兩件都做的只有 HongKong-JSS**：為 30 位本地學校教師辦兩天 PCR 與瓊脂膠體電泳工作坊，再搭配 DNA 樣品與實驗設備的常設借用方案，然後在上面又加了一層公民參與。他們自己的 wiki 把這一層稱為四層之中最耐久的，相對於只接觸一次的 1,600 位小學生與 730 位中學同儕。這兩個數字都只是稀有度的上限，因為沒寫出來的做法就看不到。相對地，站到一位能否決你的關係人面前，是這個領域的標準做法，不是稀罕事。其他可以照搬的做法：Stanford 把 5,000 份申請、230 個名額的導師制轉成一門免費課程；Princeton 把一個真正未解的子問題交給大眾，收到 42 份投稿、其中 26 份通過可列印性篩選；NIS Almaty-Medeu 在 70 校網絡裡持續培訓教師，直到九所夥伴學校能自行開辦。",
+      "chips": [
+        "7 of 106 trained trainers",
+        "5 of 106 left equipment",
+        "only 1 did both"
+      ],
+      "chips_zh": [
+        "106 支中 7 支訓練師資",
+        "106 支中 5 支留下器材",
+        "兩件都做的只有 1 支"
+      ],
+      "link": "picks"
+    },
+    {
       "kicker": "Science for Good",
       "kicker_zh": "Science for Good",
       "title": "The deadline, not the people, is what limits Science for Good",
@@ -448,7 +467,7 @@
       "title": "Two routes to the finalist slate, and GEMS took neither",
       "title_zh": "通往決賽席位有兩條路，GEMS 兩條都沒走",
       "body": "In the 2026 High School section 147 teams entered, 10 reached the Top 10 and **2 were named Finalists**. GEMS-Taiwan was not one, while holding three of the 17 section-level awards won across the whole section. Five explanations died on the evidence: not statistics (the Grand Prize winner's results page has no p-values and no named test), not completeness, not Registry documentation (**the Grand Prize winner has the shortest of all ten**), not candour, and not even having one clear claim — the clearest headline among the non-finalists placed nowhere. The finalists arrived by different routes: **novelty**, and **depth on a real sample**. Seven of seven non-podium teams stop at a surrogate; exactly one team in ten tested a real one.",
-      "body_zh": "2026 年高中組有 147 支隊伍參賽、10 支進入 Top 10，而**只有 2 支被列為 Finalist**。GEMS-Taiwan 不在其中，但它握有整個組別總共 17 項組別層級獎項中的三項。五個解釋都死在證據上：不是統計（總冠軍的結果頁沒有 p 值、也沒有檢定名稱）、不是完成度、不是 Registry 文件（**總冠軍的文件是十支裡最短的**）、不是坦白，甚至也不是「有一個清楚的主張」——非決賽隊伍中標題最清楚的那一支，什麼名次都沒有。兩支決賽隊伍是沿著不同的路抵達的：**新穎性**，以及**在真實樣本上的深度**。七支非頒獎台隊伍全部停在替代物上；十支之中只有一支測過真實樣本。",
+      "body_zh": "2026 年高中組有 147 支隊伍參賽、10 支進入 Top 10，而**只有 2 支被列為 Finalist**。GEMS-Taiwan 不在其中，但它握有整個組別總共 17 項組別層級獎項中的三項。五個解釋都死在證據上：不是統計（總冠軍的結果頁沒有 p 值、也沒有檢定名稱）、不是完成度、不是 Registry 文件（**總冠軍的文件是十支裡最短的**）、不是坦白，甚至也不是「有一個清楚的主張」——非決賽隊伍中標題最清楚的那一支，什麼名次都沒有。兩支決賽隊伍是沿著不同的路抵達的：**新穎性**，以及**在真實樣本上的深度**。七支非頒獎臺隊伍全部停在替代物上；十支之中只有一支測過真實樣本。",
       "chips": [
         "2 finalists of 10",
         "novelty, or depth on a real sample"

@@ -1,0 +1,627 @@
+{
+  "id": "picks-leverage",
+  "tab": "picks",
+  "order": 20,
+  "kicker": "Original analysis",
+  "kicker_zh": "原創分析",
+  "title": "Find the audience that multiplies, not the one that counts",
+  "title_zh": "找會放大的對象，而不是能計數的對象",
+  "lede": "HongKong-JSS reached over 1,600 primary pupils and then spent two days teaching PCR and agarose gel electrophoresis to 30 local school teachers, and lent them the DNA samples and the equipment afterwards. Thirty teachers who each teach for years beat 1,600 children who each watch once, for the same hours. Across all 106 team files only 7 teams taught an audience that teaches professionally, and only 5 left equipment in somebody else's hands. One team did both.",
+  "lede_zh": "HongKong-JSS 的科普活動觸及超過 1,600 名小學生與家長，接著又用兩天時間，教 30 位本地學校教師做 PCR 與瓊脂膠體電泳，之後還把 DNA 樣本與實驗器材借給這些老師。同樣的工時，30 位會教好幾年的老師，勝過 1,600 個只看一次的孩子。翻遍 106 份團隊檔案，只有 7 支隊伍把課上給「以教學為業」的人，只有 5 支隊伍把器材留在別人手上。兩件都做的，只有一支。",
+  "body": "**Tier 3 is the one that matters.** HongKong-JSS, the High School 1st Runner-up, ran education in four tiers: over 1,600 primary pupils and parents with strawberry DNA extraction and live gel demonstrations, over 730 secondary peers, then a **two-day Teacher Biotech Training Workshop for 30 local school teachers covering PCR and agarose gel electrophoresis, combined with a standing loan programme letting those teachers borrow DNA samples and laboratory equipment from the team** — recorded in the team file as a deliberate attempt to leave teaching capacity behind after the competition ends. Tier 4 went into civic space: a stand at InnoEX 2026 and a joint announcement at the Drainage Services Department's annual media briefing, which put the project on an official government page and into local news.\n\nThe arithmetic is not subtle. A workshop for 30 teachers who each run a biology class for the next decade produces more teaching than a booth for 1,600 children who each see one gel, and it costs less. The same shape repeats everywhere once you look for it: the audience, the partner or the artefact that **multiplies** rather than the one that merely **counts**. It is worth saying plainly that the 1,600-pupil tier is not wasted — it is what made the teacher workshop credible and what filled it. The mistake is stopping there.\n\n**How rare is this?** Not uniformly. Standing in front of the stakeholder who can forbid your project is the house style of the decorated 2026 field, not a rarity: Oxford let four regulators overrule the beekeepers who preferred a living gut symbiont and switched to heat-inactivated dried yeast, stating the cost; HKSSC had its whole safety framing rebuilt by one professor's flat statement that engineered microbes cannot legally go into Hong Kong collection bins; Bist-China was told by a US state public-health educator that its prototype could hand a cancer-risk conclusion to an untrained user, and re-scoped it to a bench-side research instrument reporting only concentrations and quality-control status. That lever is available to anyone who asks the right person early enough.\n\nThe durable-capacity levers are the rare ones. **Of 106 teams, 7 taught people who teach for a living** — HongKong-JSS's 30 teachers, Muenster-University's grade 8 and 9 lesson concept built to North Rhine-Westphalia's school genetic-engineering rules and refined with partner-school teachers, UAlberta's Rural Teachers Synbiosium mapped to the Alberta curriculum with nine kits shipped in advance, MIT-MAHE walking teachers through every protocol step so the demonstration survives the team's departure, NIS Almaty-Medeu's teacher training across a 70-school network (nine partner schools were running the activities themselves by September), KAUST-KSA's course that trains youth volunteers who then teach rural farmers, and Marburg's curriculum-aligned toolbox tested with seven teachers at three schools. **And 5 left equipment or a kit in someone else's hands**: HongKong-JSS's standing loan, BAID-China's tactile magnetic genetic-circuit kit donated to a Beijing school for the visually impaired, UAlberta's nine shipped kits, NIS Almaty-Medeu's twelve individual hospital kits built because the volunteers and the shared LEGO had left with them, and Muenster-University's lending kit, which is designed rather than yet running. Only HongKong-JSS did both, and only HongKong-JSS added the civic tier on top.\n\n**Paper is the cheapest multiplier in the competition, and the report has already measured it.** Of 285 education files linked from the wikis of 31 decorated teams, 284 download today and one returns 403 — no dead links at all — against 8 of 21 software tools still running and 6 of 20 instruments rebuildable. Nothing has to be maintained: `static.igem.wiki` serves the file and the wiki freeze makes it permanent. Four teams took this further and served browser games from the frozen wiki itself, so even the interactive asset needs no hosting bill. But a file is not yet a capability. The census found that 33 of 64 artefacts ship an instruction layer for a second adult — a facilitator pack, a rulebook, a lesson plan with timings and materials — and the other 31 are the beautiful thing alone. Eton-College-UK ships its workshop as a facilitator pack and a student pack separately so somebody who was not there can rerun it. **That separation is the difference between an admirable artefact and a borrowable one.**\n\n**Build on what exists.** The cheapest multiplier of all is other people's finished work, and the strongest 2026 examples are explicit about it. Vilnius-Lithuania runs GelGenie's published, peer-reviewed U-Net weights for band segmentation and spends its own effort on the one step nobody had automated. Uni-Padua-IT forked and extended TISIGNER and validated the extension at the bench, with a 2.16-fold expression result and a failure rate cut from 52 percent to 2 percent. HongKong-HS built an entire high-school dry lab from NUPACK plus Wageningen iGEM 2024's miRADAR, and predicted its background-leakage failure mode before the gel showed it. Squirrel-Beijing met the Bronze contribution requirement by adding the characterisation an existing Registry part was missing rather than registering another new one. Eton-College-UK built on the open-source Biocoin wearable platform. In every case the borrowed base is named and cited, which is also what makes the team's own contribution legible.\n\n**Two more shapes worth stealing.** Princeton handed the public a genuine unsolved sub-problem from its own project — a 3D-printable gyroid biofilter, 20 mm by 25 mm, maximise contact surface area, with the team's real print parameters — ran it as a free asynchronous online competition, drew 42 submissions of which 26 passed dimensional and printability screening, ranked them computationally on total surface area, and then named the winners on the wiki and used their designs. Outreach became contributed engineering at almost no cost, and the task rewards spatial creativity rather than synthetic biology training, which is exactly why school students can win it. Stanford did the other move: its mentored bootcamp drew nearly 5,000 applications for 230 places, so instead of running it again at the same size the team converted the whole curriculum into SynBase, a free self-paced nine-module course with over 750 registered learners, and invited other teams to use it for their own onboarding. **When demand exceeds your hours, ship the course, not the cohort.**\n\n**Pool it.** HBUT-China initiated a five-school joint biosafety manual for anti-tumour synthetic biology with four other university teams, with internally unified but deliberately differentiable risk-assessment protocols, on the correct reasoning that one lab's risk-assessment competence is narrower than five labs'. HUST-China independently hosted a regional forum for 15 teams that replicated the Jamboree's own format — keynotes, a LiveStage block, judge commentary, a poster walk — and won the peer-voted iGEMers Prize. JLU-FBH coordinated a myth-busting handbook with submissions from more than 17 teams. None of these is expensive; all of them produce an artefact no single team could have afforded.\n\n**What this means for a Taiwanese high-school team.** Three multipliers are plainly available and under-used. First, teacher networks: a two-day PCR and gel workshop for in-service biology teachers is exactly the HongKong-JSS move, GEMS-Taiwan already owns instruments it built itself, and the loan shelf costs a sign-out sheet. Second, agricultural extension, which is Taiwan's strongest unexploited lever and the one the 2026 project already touched: farmers' associations and the district agricultural research and extension stations employ people whose job is to repeat advice to growers for years, and GEMS-Taiwan already knows one such body in the Lanyang River Friendly Farming Production Cooperative. Train the extension officers rather than the farmers. Third, the island's own cohort: Taiwan fielded thirteen competing teams in 2026 and Labi-Taiwan already runs TGEM, so HBUT's five-school manual and HUST's regional forum are both directly copyable. Add the free one: **3 of 31 decorated teams published any education material in Traditional Chinese, and all three already read it** — NCKU-Tainan, GEMS-Taiwan and HKSSC. Lambert-GA translated its children's book into thirteen languages including Simplified Chinese and not Traditional. A good artefact republished in Traditional Chinese with a reuse licence reaches a classroom nothing else in the 2026 census can reach, and only 1 of 136 education PDFs carried a reuse licence at all.\n\nScience museums are available but are a megaphone rather than a shelf: a weekend at a national science-education centre is attention, not capacity, unless something is left behind. Government departments are available for informational conversations, and GEMS-Taiwan has already had them, but a Taiwanese high-school team should not plan on a joint media briefing or a written regulatory determination — the one written determination that **is** free is iGEM's own, which BASIS-China obtained from the Director of Responsibility before collecting a single sample and then published. Not available: a federal science exhibition ship touring 33 cities, a national radio slot reaching a million listeners a day, and a deposit on a ministry-run open-educational-resources platform, which BOKU-Vienna could rely on in Austria and which nothing in this analysis verifies for Taiwan. Plan around what repeats, not what is photographed.",
+  "body_zh": "**真正關鍵的是第三層。** 高中組亞軍 HongKong-JSS 把科教活動分成四層：第一層用草莓 DNA 萃取與現場電泳，觸及超過 1,600 名小學生與家長；第二層觸及超過 730 名中學同儕；第三層是 **為 30 位本地學校教師辦的兩天「教師生物科技培訓工作坊」，內容涵蓋 PCR 與瓊脂膠體電泳，並搭配一個常設的借用方案，讓這些老師可以向團隊借 DNA 樣本與實驗器材** —— 團隊檔案記載，這是刻意要在競賽結束後把教學能量留下來。第四層則走進公共場域：在香港國際創科展 InnoEX 2026 設攤，並在渠務署年度記者會上共同發布，讓專案登上政府官方網頁與本地新聞。\n\n這筆算術並不精巧。為 30 位未來十年都會教生物課的老師辦一場工作坊，所產生的教學量超過讓 1,600 個孩子各看一塊膠體的攤位，而且成本更低。一旦開始找，這個形狀到處都在：挑**會放大**的對象、夥伴或產出，而不是只能**計數**的那一個。也要講清楚：1,600 人那一層並不是浪費——正是它讓教師工作坊有說服力，也是它把人招滿的。錯誤在於停在那裡。\n\n**這有多罕見？** 並不一致。站到那個有權否決你的關係人面前，是 2026 年獲獎群體的常態做法，而不是稀罕事：Oxford 讓四個主管與認證機構壓過偏好活體腸道共生菌的養蜂人，改用熱滅活乾酵母，並寫出這個選擇的代價；HKSSC 的整套安全論述，被一位教授一句「在香港，工程化微生物依法不能放進回收桶」徹底重建；Bist-China 被一位美國州衛生部門的醫檢教育者指出，原型機會把癌症風險結論直接交給未受訓練的使用者，於是重新定位為實驗桌旁的研究儀器，只回報濃度與品管狀態。只要夠早去問對的人，這個槓桿人人可用。\n\n稀有的是「留下能力」這一類槓桿。**106 支隊伍中，只有 7 支把課上給以教學為業的人**——HongKong-JSS 的 30 位老師；Muenster-University 依北萊茵-西發利亞邦校園基因工程實驗規定設計、並與夥伴學校教師共同修訂的八、九年級課程方案；UAlberta 對準亞伯達課綱、並事先寄出九份實作套件的「鄉村教師合成生物學研習」；MIT-MAHE 帶著老師把每個步驟走過一遍，讓示範在團隊離開後仍能繼續；NIS Almaty-Medeu 在 70 校網絡中同時培訓師生（到九月，已有九所夥伴學校自行開辦這些活動）；KAUST-KSA 訓練青年志工、再由志工去教偏鄉農民的課程；以及 Marburg 與三所學校七位教師一起試教的課綱對接教具箱。**另有 5 支把器材或套件留在別人手上**：HongKong-JSS 的常設借用方案；BAID-China 捐給北京一所視障學校、讓校內老師持續改用的觸覺磁性基因迴路套件；UAlberta 寄出的九份套件；NIS Almaty-Medeu 因為「志工和共用樂高都跟著離開」而做出的 12 份個人化病房套件；以及 Muenster-University 的外借套件——目前是設計完成，尚未實際運作。兩件都做的只有 HongKong-JSS，而且只有它再加上公共場域那一層。\n\n**紙本是全場最便宜的放大器，而本報告已經量過。** 31 支獲獎隊伍的 wiki 上共連出 285 份教育檔案，今天有 284 份下載得到，一份回傳 403，完全沒有死連結——相對地，21 個軟體工具只有 8 個還跑得動，20 件儀器只有 6 件重建得出來。什麼都不必維護：`static.igem.wiki` 負責供檔，wiki 凍結讓它永久存在。四支隊伍更進一步，把瀏覽器遊戲直接掛在凍結的 wiki 上，連互動產出都不需要有人付主機費。但「有檔案」還不等於「有能力」。普查發現，64 件產出中有 33 件附上給第二位大人看的操作層——帶領者手冊、遊戲規則、含時間與材料的教案——另外 31 件只有漂亮的東西本身。Eton-College-UK 把工作坊拆成帶領者包與學生包兩份，讓當天不在場的人也能重跑一次。**這個拆分，就是「令人佩服的產出」與「可被借走的產出」之間的差別。**\n\n**站在既有成果上。** 最便宜的放大器是別人已經做完的工作，而 2026 年最強的例子都把這件事說得很清楚。Vilnius-Lithuania 直接採用GelGenie 已發表、經同儕審查的 U-Net 權重做條帶切割，把自己的力氣花在唯一沒人自動化過的那一步。Uni-Padua-IT 分支並延伸了 TISIGNER，還在實驗端驗證延伸的部分：表現量提升 2.16 倍，失敗率由 52% 降到 2%。HongKong-HS 用 NUPACK 加上 Wageningen iGEM 2024 的 miRADAR，搭出一整個高中乾實驗室，並在膠體跑出來之前就先預測到背景洩漏這個失敗模式。Squirrel-Beijing 滿足銅牌貢獻要求的方式，是替一個既有 Registry 零件補上它缺少的特性數據，而不是再登錄一個新零件。Eton-College-UK 則建在開源穿戴式平台 Biocoin 之上。每一個案例都點名並引用了所借用的基礎，而這同時也讓團隊自己的貢獻看得清楚。\n\n**另外兩個值得照抄的形狀。** Princeton 把自己專案裡一個真正未解的子問題交給大眾——可 3D 列印的螺旋面生物濾材，直徑 20 公釐、高 25 公釐，目標是最大化接觸表面積，並附上團隊真正使用的列印參數——以免費、全非同步的線上競賽方式舉辦，收到 42 件投稿，其中 26 件通過尺寸與可列印性篩選，再以總表面積做電腦排序，最後在 wiki 上具名公布獲獎者並採用其設計。幾乎沒有成本，科普就變成了外部貢獻的工程；而且這個任務獎勵的是空間創造力而非合成生物學訓練，這正是中學生能夠獲勝的原因。Stanford 做的是另一手：它的導師制營隊收到近 5,000 份申請卻只有 230 個名額，於是團隊沒有照原規模再辦一次，而是把整套課程轉成 SynBase——一套免費、自主進度的九模組課程，註冊學習者超過 750 人——並邀請其他隊伍拿去訓練自己的新成員。**當需求超過你的工時，就交付課程，不要再交付一個班。**\n\n**把資源併起來。** HBUT-China 發起並主導了一份五校聯合生物安全手冊，與另外四支大學隊伍共同撰寫，內部統一卻刻意保留可區辨性的風險評估程序，理由很正確：一間實驗室的風險評估能力，比五間窄。HUST-China 自行舉辦區域論壇，接待 15 支隊伍，並刻意複製 Jamboree 本身的格式——主題演講、LiveStage 發表段、評審評論、海報走動交流——拿下同儕投票的 iGEMers Prize。JLU-FBH 統籌了一本破除迷思手冊，收錄超過 17 支隊伍的投稿。這些都不貴；而每一件都產出了單一隊伍負擔不起的成果。\n\n**這對台灣高中團隊意味著什麼。** 有三個放大器明顯可用，而且被用得太少。第一是教師網絡：為在職生物科教師辦一場兩天的 PCR 與電泳工作坊，就是 HongKong-JSS 那一手；GEMS-Taiwan 本來就擁有自己做出來的儀器，而一個借用架子只需要一張借還登記表。第二是農業推廣體系，這是台灣最被低估的槓桿，也是 2026 年專案已經碰到的一塊：農會與各區農業改良場裡，本來就有人以「年復一年把建議重複給農民」為職業，而 GEMS-Taiwan 已經認識蘭陽溪友善耕作生產合作社這樣一個組織。要訓練推廣人員，而不是只訓練農民。第三是島內自己的群體：台灣 2026 年有十三支隊伍參賽，Labi-Taiwan 已經在經營 TGEM，所以 HBUT 的五校手冊與 HUST 的區域論壇都可以直接照抄。再加上那個免費的：**31 支獲獎隊伍中，只有 3 支出版過任何繁體中文教育材料，而這三支本來就看得懂繁體**——NCKU-Tainan、GEMS-Taiwan 與 HKSSC。Lambert-GA 把童書譯成十三種語言，其中有簡體中文，沒有繁體中文。一份好的產出，用繁體中文重新出版並附上可重用授權，就能進到 2026 年普查中其他東西都到不了的教室；而 136 份教育 PDF 裡，只有 1 份真的附了可重用授權。\n\n科學博物館可用，但它是擴音器而不是架子：在國立科學教育場館待一個週末得到的是注意力，不是能力，除非有東西被留下來。政府部門可用於資訊性的對話，GEMS-Taiwan 也已經談過，但台灣高中團隊不該把計畫押在聯合記者會或書面法規認定上——唯一**真正**免費的書面認定來自 iGEM 自己：BASIS-China 在採集任何一份樣本之前，先向 iGEM 總部的 Director of Responsibility 取得書面同意，然後把那封信公開。不可得的是：巡迴 33 座城市的聯邦科學展覽船、每日百萬聽眾的全國廣播時段，以及在教育部層級的開放教育資源平台上存放材料——BOKU-Vienna 在奧地利能倚賴這一點，而本分析無法替台灣驗證同等管道。把計畫圍繞「會重複的東西」來排，而不是圍繞「會被拍照的東西」。",
+  "cards": [
+    {
+      "kicker": "Train the trainers",
+      "kicker_zh": "訓練訓練者",
+      "title": "HongKong-JSS taught 30 teachers, not 1,600 children",
+      "title_zh": "HongKong-JSS 教的是 30 位老師，不是 1,600 個孩子",
+      "body": "Two days of PCR and agarose gel electrophoresis for 30 local school teachers, recorded in the team file as a deliberate attempt to leave teaching capacity behind after the competition ends. Six other teams did something like it: Muenster-University built a lesson concept compliant with its state's school genetic-engineering rules and refined it with partner-school teachers; UAlberta mapped a half-day online event to the Alberta curriculum; MIT-MAHE walked teachers through every protocol step; NIS Almaty-Medeu trained teachers across a 70-school network until nine schools ran the activities themselves; KAUST-KSA trains youth volunteers who then teach rural farmers; Marburg tested its toolbox with seven teachers at three schools. **Seven of 106.**",
+      "body_zh": "兩天的 PCR 與瓊脂膠體電泳課程，對象是 30 位本地學校教師；團隊檔案明言，這是刻意要在競賽結束後留下教學能量。另有六支隊伍做了類似的事：Muenster-University 設計出符合所在邦校園基因工程規定的課程方案，並與夥伴學校教師共同修訂；UAlberta 把半天線上研習對準亞伯達課綱；MIT-MAHE 帶老師把每個步驟走過一遍；NIS Almaty-Medeu 在 70 校網絡裡持續培訓教師，直到九所學校能自行開辦；KAUST-KSA 訓練青年志工，再由志工去教偏鄉農民；Marburg 與三所學校的七位教師一起試教教具箱。**106 支中的 7 支。**",
+      "chips": [
+        "30 teachers, 2 days",
+        "PCR and gel electrophoresis",
+        "7 of 106 teams"
+      ],
+      "chips_zh": [
+        "30 位教師、2 天",
+        "PCR 與膠體電泳",
+        "106 支中的 7 支"
+      ]
+    },
+    {
+      "kicker": "Leave the capability behind",
+      "kicker_zh": "把能力留下來",
+      "title": "A loan shelf beats a demonstration",
+      "title_zh": "一個借用架，勝過一場示範",
+      "body": "The same team ran a standing loan programme letting the trained teachers borrow DNA samples and laboratory equipment. Four others left hardware in other hands: BAID-China donated its tactile magnetic genetic-circuit kit to a Beijing school for the visually impaired so its own teachers keep adapting it; UAlberta shipped nine hands-on kits before its teacher event; NIS Almaty-Medeu built twelve individual hospital kits after noticing that the volunteers and the shared LEGO left with them; Muenster-University designed a lending kit for schools with no thermocycler. The cheapest version is paper and needs no loan desk at all — 284 of 285 education files still download, against 8 of 21 software tools still running.",
+      "body_zh": "同一支隊伍還辦了常設借用方案，讓受訓教師可以借走 DNA 樣本與實驗器材。另有四支把硬體留在別人手上：BAID-China 把觸覺磁性基因迴路套件捐給北京一所視障學校，讓校內老師持續改用；UAlberta 在教師研習前先寄出九份實作套件；NIS Almaty-Medeu 發現「志工和共用樂高都跟著離開」後，做出 12 份個人化病房套件；Muenster-University 則為沒有 PCR 儀的學校設計了外借套件。最便宜的版本是紙本，連借還櫃台都不需要——285 份教育檔案有 284 份今天仍下載得到，而 21 個軟體工具只有 8 個還跑得動。",
+      "chips": [
+        "Standing loan of DNA and kit",
+        "5 of 106 left equipment",
+        "284 of 285 files survive"
+      ],
+      "chips_zh": [
+        "DNA 與器材常設外借",
+        "106 支中 5 支留下器材",
+        "285 份檔案中 284 份存活"
+      ]
+    },
+    {
+      "kicker": "Make the students the faculty",
+      "kicker_zh": "讓學生變師資",
+      "title": "HongKong-HS trained its own juniors to teach",
+      "title_zh": "HongKong-HS 把自己的學弟妹訓練成講師",
+      "body": "The Cascading Peer-Educator Model trained non-iGEM junior-form Science Team members as Student Facilitators in both content and facilitation skills, then had those facilitators independently run workshops for their schoolmates — and published the training guide for holding a secondary school workshop so the materials outlive the team. It multiplies in two directions at once: it buys delivery capacity the team does not have to staff, and it builds the next cohort's bench. HKSSC did the recruitment half of this with eight after-school workshops over seven months for 28 participants aged 11 to 16, described as a deliberate pipeline for future team members.",
+      "body_zh": "「階梯式同儕教育者模式」把非 iGEM 的低年級科學隊成員訓練成學生帶領者，內容與帶領技巧並重，再讓這些帶領者獨立為同校學生開辦工作坊——並公開了一份「如何辦一場中學工作坊」的培訓指引，讓材料活得比團隊更久。它同時往兩個方向放大：既買到團隊不必自己出人力的授課量，也養出下一屆的板凳深度。HKSSC 做了其中的招募那一半：七個月內八場課後工作坊，28 位 11 至 16 歲的參與者，團隊明言這是為未來成員刻意鋪的管道。",
+      "chips": [
+        "Juniors run the workshops",
+        "Training guide published",
+        "Also a recruitment pipeline"
+      ],
+      "chips_zh": [
+        "由低年級學生主持工作坊",
+        "培訓指引已公開",
+        "同時是招募管道"
+      ]
+    },
+    {
+      "kicker": "Borrow an institution's channel",
+      "kicker_zh": "借機構的通路",
+      "title": "BOKU deposited on the education ministry's platform",
+      "title_zh": "BOKU 把材料存進教育部的平台",
+      "body": "BOKU-Vienna published all its tested worksheets, workshop guides and experiment protocols as Open Educational Resources on eduvidual.at, the official learning platform of the Austrian federal education ministry, so teachers nationwide can reuse them. The same instinct, applied to attention rather than storage, produced HongKong-JSS's stand at InnoEX 2026 and its joint announcement at the Drainage Services Department's annual media briefing, which landed an official government page and local news; Muenster-University's stand on a federal research-ministry exhibition ship touring 33 cities; GU Frankfurt's slot on hr3, about a million daily listeners, and a political proposal the cross-party Bundestag group agreed to consider. **A shelf keeps paying out; a megaphone pays once.**",
+      "body_zh": "BOKU-Vienna 把所有經過試教的學習單、工作坊指引與實驗流程，全部以開放教育資源形式發布在 eduvidual.at——奧地利聯邦教育部的官方學習平台——讓全國教師都能重用。同樣的直覺若用在注意力而非儲存上，就產生了 HongKong-JSS 在 InnoEX 2026 的攤位，以及在渠務署年度記者會上的共同發布，換來政府官方網頁與本地新聞；Muenster-University 在聯邦研究部巡迴 33 座城市的科學展覽船上設攤；GU Frankfurt 上了每日約百萬聽眾的 hr3 電台，並提出一份跨黨派聯邦議院小組同意納入考慮的政策建議。**架子會持續產出，擴音器只響一次。**",
+      "chips": [
+        "Ministry platform deposit",
+        "Government media briefing",
+        "Shelf, not megaphone"
+      ],
+      "chips_zh": [
+        "存進部會平台",
+        "政府記者會發布",
+        "要架子，不要擴音器"
+      ]
+    },
+    {
+      "kicker": "Stand in front of the veto",
+      "kicker_zh": "站到否決權面前",
+      "title": "Oxford let regulators overrule its own users",
+      "title_zh": "Oxford 讓主管機關壓過自己的使用者",
+      "body": "Beekeepers preferred a persistent living engineered gut symbiont because it minimises their labour. Oxford took the question to four regulatory and certification bodies instead of simply obeying, switched the chassis to heat-inactivated dried yeast, and stated plainly what that cost: the persistence the beekeepers wanted, meaning repeat dosing and more labour. The lever is choosing the person whose objection changes the design rather than the person who compliments it. Bist-China's prototype was re-scoped to a bench-side research instrument after a state public-health educator found it could hand a cancer-risk conclusion to an untrained user. BASIS-China asked iGEM's own Director of Responsibility in writing before collecting a sample, and published the approval email.",
+      "body_zh": "養蜂人偏好一種持續存活的工程化腸道共生菌，因為那樣最省人力。Oxford 沒有照單全收，而是把問題帶去四個主管與認證機構，最後把底盤改成熱滅活乾酵母，並明白寫出代價：失去養蜂人想要的持續性，意思是必須重複投藥、更費人力。槓桿在於挑那個「反對意見會改變設計」的人，而不是那個會稱讚設計的人。Bist-China 的原型機在一位州衛生部門的醫檢教育者指出它會把癌症風險結論交給未受訓練的使用者之後，被重新定位為實驗桌旁的研究儀器。BASIS-China 則在採集任何樣本之前，先以書面向 iGEM 的 Director of Responsibility 請示，並把同意信公開。",
+      "chips": [
+        "Four regulators beat the users",
+        "Cost of the switch stated",
+        "Written determination, free"
+      ],
+      "chips_zh": [
+        "四個主管機關勝過使用者",
+        "明寫改設計的代價",
+        "書面認定，免費"
+      ]
+    },
+    {
+      "kicker": "Build on what exists",
+      "kicker_zh": "站在既有成果上",
+      "title": "Uni-Padua forked TISIGNER instead of rebuilding it",
+      "title_zh": "Uni-Padua 分支 TISIGNER，而不是重寫它",
+      "body": "ReTIsigner forks and extends a cited scientific tool and then validates the extension at the bench: a 2.16-fold wet-lab expression result and a failure rate cut from 52 percent to 2 percent. Three more examples are directly within high-school reach. Vilnius-Lithuania runs GelGenie's peer-reviewed U-Net weights for segmentation and spends its own effort on the one unautomated step. HongKong-HS built its whole dry lab from NUPACK plus Wageningen iGEM 2024's miRADAR. Squirrel-Beijing met the Bronze contribution requirement by adding the characterisation an existing Registry part was missing — a 15 to 37 degrees C gradient crossed with culture time — rather than registering another new part.",
+      "body_zh": "ReTIsigner 分支並延伸了一個有被引用的科學工具，然後在實驗端驗證延伸的部分：表現量提升 2.16 倍，失敗率由 52% 降到 2%。另有三個例子完全在高中能力範圍內。Vilnius-Lithuania 直接採用 GelGenie 經同儕審查的 U-Net 權重做切割，把力氣花在唯一沒被自動化的那一步。HongKong-HS 用 NUPACK 加上 Wageningen iGEM 2024 的 miRADAR 搭出整個乾實驗室。Squirrel-Beijing 滿足銅牌貢獻要求的方式，是替一個既有 Registry 零件補上缺少的特性數據——15 到 37 度的溫度梯度乘上培養時間——而不是再登錄一個新零件。",
+      "chips": [
+        "Fork, then validate at the bench",
+        "2.16-fold, 52% to 2%",
+        "Characterise, do not re-register"
+      ],
+      "chips_zh": [
+        "先分支，再上實驗台驗證",
+        "2.16 倍、52% 降到 2%",
+        "補特性數據，別再登新零件"
+      ]
+    },
+    {
+      "kicker": "Turn the audience into contributors",
+      "kicker_zh": "把觀眾變成貢獻者",
+      "title": "Princeton's PITCCH shipped a real unsolved part",
+      "title_zh": "Princeton 的 PITCCH 把真正未解的零件交出去",
+      "body": "Entrants were handed a genuine open engineering problem from the project — design a 3D-printable gyroid biofilter, 20 mm diameter by 25 mm height, maximising contact surface area — along with the team's actual print parameters. Free, fully asynchronous, online, with a junior division for grades 5 to 12. **42 submissions, 26 passed dimensional and printability screening, ranked computationally on total surface area, two winners named on the wiki and their designs used.** Outreach became contributed engineering at almost no cost, and because the task rewards spatial creativity rather than synthetic biology training, school students can genuinely win it.",
+      "body_zh": "參賽者拿到的是專案裡一個真正開放的工程問題——設計一個可 3D 列印的螺旋面生物濾材，直徑 20 公釐、高 25 公釐，目標是最大化接觸表面積——還附上團隊實際使用的列印參數。免費、全非同步、線上，並設有五到十二年級的少年組。**42 件投稿，26 件通過尺寸與可列印性篩選，以總表面積做電腦排序，兩位獲獎者在 wiki 上具名，其設計被採用。**幾乎零成本，科普就變成了外部貢獻的工程；而且這個任務獎勵的是空間創造力而非合成生物學訓練，中學生真的贏得到。",
+      "chips": [
+        "A real open sub-problem",
+        "42 entries, 26 screened",
+        "Winners named and used"
+      ],
+      "chips_zh": [
+        "真正開放的子問題",
+        "42 件投稿、26 件過篩",
+        "獲獎者具名且設計被採用"
+      ]
+    },
+    {
+      "kicker": "Ship the course, not the cohort",
+      "kicker_zh": "交付課程，不是交付一個班",
+      "title": "Stanford turned 5,000 applications into SynBase",
+      "title_zh": "Stanford 把 5,000 份申請變成 SynBase",
+      "body": "Stanford's free online bioengineering bootcamp drew nearly 5,000 applications from all 50 US states and over 100 countries for 230 places, two-thirds of applicants female and over 60 percent from low-income and first-generation backgrounds. Rather than run the same cohort again, the team converted the entire curriculum into SynBase: nine self-paced modules, saved progress, knowledge checks and discussion boards, no application and no deadline, free worldwide, **750 or more registered learners and 650 or more free-response contributions** — and an explicit invitation to other iGEM teams to use or adapt it for onboarding their own members. The teaching asset now outlives the cohort that could not be staffed.",
+      "body_zh": "Stanford 的免費線上生物工程密集營，收到來自全美 50 州與超過 100 個國家的近 5,000 份申請，名額只有 230 個；申請者中三分之二為女性，超過六成來自低收入或家族第一代大學生背景。團隊沒有照原規模再辦一屆，而是把整套課程轉成 SynBase：九個自主進度模組、進度保存、知識檢核與討論區，不需申請、沒有截止日、全球免費，**註冊學習者 750 人以上、開放式回應貢獻 650 則以上**——並公開邀請其他 iGEM 隊伍拿去訓練自己的新成員。那份教學資產，現在活得比那個排不出人力的班更久。",
+      "chips": [
+        "5,000 applications, 230 places",
+        "Nine self-paced modules",
+        "750+ learners, no deadline"
+      ],
+      "chips_zh": [
+        "5,000 份申請、230 個名額",
+        "九個自主進度模組",
+        "750 人以上、無截止日"
+      ]
+    },
+    {
+      "kicker": "Pool it across teams",
+      "kicker_zh": "跨隊共同承擔",
+      "title": "HBUT wrote one biosafety manual for five schools",
+      "title_zh": "HBUT 為五所學校寫了一份生物安全手冊",
+      "body": "HBUT-China initiated and led a five-school joint biosafety manual for anti-tumour synthetic biology with four other university teams, covering oncolytic-virus operating standards, GMO leakage hazards and waste disposal, published as a downloadable PDF with internally unified but deliberately differentiable risk-assessment protocols because the five teams use different carriers. The reasoning is the whole point: one lab's risk-assessment competence is narrower than five labs'. HUST-China hosted a regional forum for 15 teams replicating the Jamboree's own format and won the peer-voted iGEMers Prize; JLU-FBH coordinated a myth-busting handbook with more than 17 teams contributing.",
+      "body_zh": "HBUT-China 發起並主導一份抗腫瘤合成生物學的五校聯合生物安全手冊，與另外四支大學隊伍共同撰寫，涵蓋溶瘤病毒操作標準、基改生物洩漏風險與廢棄物處理，以可下載 PDF 發布；因為五隊使用不同載體，風險評估程序刻意做到內部統一卻可區辨。重點在那個理由：一間實驗室的風險評估能力，比五間窄。HUST-China 為 15 支隊伍舉辦區域論壇，複製 Jamboree 本身的格式，並拿下同儕投票的 iGEMers Prize；JLU-FBH 統籌一本破除迷思手冊，有超過 17 支隊伍投稿。",
+      "chips": [
+        "Five labs, one manual",
+        "Unified but differentiable",
+        "TGEM is the Taiwanese route"
+      ],
+      "chips_zh": [
+        "五間實驗室、一份手冊",
+        "統一但可區辨",
+        "台灣的管道是 TGEM"
+      ]
+    }
+  ],
+  "table": {
+    "head": [
+      "The move",
+      "Team",
+      "Multiplier type",
+      "The obvious version it beat",
+      "Open to a Taiwanese high-school team?"
+    ],
+    "head_zh": [
+      "做法",
+      "團隊",
+      "放大類型",
+      "它勝過的明顯做法",
+      "台灣高中團隊可行嗎？"
+    ],
+    "rows": [
+      [
+        "Two-day Teacher Biotech Training Workshop in PCR and agarose gel electrophoresis for 30 local school teachers",
+        "HongKong-JSS (High School)",
+        "Train the trainers",
+        "A tenth strawberry-DNA booth for primary pupils",
+        "Yes"
+      ],
+      [
+        "Standing loan programme letting those teachers borrow DNA samples and laboratory equipment from the team",
+        "HongKong-JSS (High School)",
+        "Leave the capability behind",
+        "Packing the kit away when the workshop ends",
+        "Yes, with a sign-out sheet"
+      ],
+      [
+        "Exhibitor stand at InnoEX 2026 plus a joint announcement at the Drainage Services Department annual media briefing, landing an official government page and local news",
+        "HongKong-JSS (High School)",
+        "Borrow an institution's channel",
+        "A team Instagram post and a school assembly",
+        "Partly, a city agricultural office is reachable, a joint briefing is not assured"
+      ],
+      [
+        "Drainage Services Department guidance replaced earlier chromoproteins with mRFP1e, giving a visible channel for non-specialists and a fluorescence channel for quantification",
+        "HongKong-JSS (High School)",
+        "Stand in front of the veto",
+        "Asking a professor who already liked the design",
+        "Yes"
+      ],
+      [
+        "More Happy Farm said plainly that not every farmer wants to own a device, which moved the plan from instrument sales to a certification service",
+        "HongKong-JSS (High School)",
+        "Stand in front of the veto",
+        "A willingness-to-buy survey of farmers",
+        "Yes"
+      ],
+      [
+        "Grade 8 and 9 protease lesson concept compliant with state school genetic-engineering rules, refined with partner-school teachers, plus a university module where master's students build and trial lesson plans",
+        "Muenster-University (Overgrad)",
+        "Train the trainers",
+        "One school visit with a borrowed demonstration",
+        "Partly, curriculum alignment yes, the university module needs a faculty partner"
+      ],
+      [
+        "Lending experiment-kit designed because thermocyclers, electrophoresis chambers and photometers are not in every school",
+        "Muenster-University (Overgrad)",
+        "Leave the capability behind",
+        "Running the activity only where the equipment already is",
+        "Yes"
+      ],
+      [
+        "All tested worksheets, workshop guides and experiment protocols deposited as Open Educational Resources on eduvidual.at, the Austrian federal education ministry platform",
+        "BOKU-Vienna (Overgrad)",
+        "Borrow an institution's channel",
+        "PDFs on the team wiki and nowhere else",
+        "Unverified, depends whether a Taiwanese teaching platform takes outside deposits"
+      ],
+      [
+        "Cascading Peer-Educator Model: non-iGEM junior-form Science Team members trained as Student Facilitators who then ran workshops for schoolmates independently, with the training guide published",
+        "HongKong-HS (High School)",
+        "Make the students the faculty",
+        "Team members delivering every session themselves",
+        "Yes"
+      ],
+      [
+        "Eight after-school workshops over seven months for 28 participants aged 11 to 16, described as a deliberate pipeline for future team members",
+        "HKSSC (High School)",
+        "Make the students the faculty",
+        "Recruiting next year's team from whoever volunteers",
+        "Yes"
+      ],
+      [
+        "Rural Teachers Synbiosium, a half-day online professional-development event mapped to the Alberta middle and high school curriculum, with nine free hands-on kits shipped in advance",
+        "UAlberta (Undergrad)",
+        "Train the trainers",
+        "Helping rural schools found their own competition teams",
+        "Yes"
+      ],
+      [
+        "Teachers walked through every protocol step so they could keep running the demonstration after the team left, and Vision Empower approved the tactile models for use across its associated schools",
+        "MIT-MAHE (Undergrad)",
+        "Train the trainers",
+        "Performing the demonstration for the class and leaving",
+        "Yes"
+      ],
+      [
+        "Tactile magnetic genetic-circuit kit donated to a Beijing school for the visually impaired so its own teachers keep adapting it for different ages",
+        "BAID-China (High School)",
+        "Leave the capability behind",
+        "Taking the prototype home after the workshop",
+        "Yes"
+      ],
+      [
+        "Teachers trained alongside students across a 70-school network, until by September teachers and older students at nine partner schools were delivering the activities themselves",
+        "NIS Almaty-Medeu (High School)",
+        "Train the trainers",
+        "Counting the 226 children reached in six school visits",
+        "Yes"
+      ],
+      [
+        "Twelve individual hospital kits built after a paediatric oncology visit, because the volunteers and the shared LEGO left with them",
+        "NIS Almaty-Medeu (High School)",
+        "Leave the capability behind",
+        "Booking a second visit with the same shared equipment",
+        "Yes"
+      ],
+      [
+        "A farmer-facing course that trains youth volunteers who then go and teach rural farmers",
+        "KAUST-KSA (Overgrad)",
+        "Train the trainers",
+        "Team members visiting farms themselves",
+        "Yes, through a farmers' association or extension station"
+      ],
+      [
+        "Nearly 5,000 applications for 230 mentored bootcamp places converted into SynBase, a free self-paced nine-module course with 750 or more registered learners",
+        "Stanford University (Undergrad)",
+        "Ship the course, not the cohort",
+        "Running the same bootcamp again next summer at the same size",
+        "Yes"
+      ],
+      [
+        "PITCCH handed the public a real unsolved sub-problem, a 3D-printable gyroid biofilter 20 mm by 25 mm maximising contact surface area, with the team's own print parameters; 42 submissions, 26 passed screening, two winners named and their designs used",
+        "Princeton (Undergrad)",
+        "Turn the audience into contributors",
+        "A poster session explaining the finished design",
+        "Yes"
+      ],
+      [
+        "Five-school joint biosafety manual for anti-tumour synthetic biology co-authored with four other university teams, with internally unified but deliberately differentiable risk-assessment protocols",
+        "HBUT-China (Undergrad)",
+        "Pool it across teams",
+        "Writing your own laboratory risk assessment alone",
+        "Yes, through TGEM"
+      ],
+      [
+        "First Central-China iGEM Forum, independently hosted for 15 teams and deliberately replicating the Jamboree format of keynotes, a LiveStage block, judge commentary and a poster walk",
+        "HUST-China (Undergrad)",
+        "Pool it across teams",
+        "Attending somebody else's regional meetup",
+        "Yes, through TGEM"
+      ],
+      [
+        "Ladder Detector runs GelGenie's published peer-reviewed U-Net weights for band segmentation and spends the team's own effort on the one step nobody had automated",
+        "Vilnius-Lithuania (Undergrad)",
+        "Build on what exists",
+        "Training a segmentation network on gel images you do not have",
+        "Yes"
+      ],
+      [
+        "ReTIsigner forks and extends TISIGNER, validated by a 2.16-fold wet-lab expression result and a failure rate cut from 52 percent to 2 percent",
+        "Uni-Padua-IT (Undergrad)",
+        "Build on what exists",
+        "Writing a new codon optimiser from scratch",
+        "Yes"
+      ],
+      [
+        "A whole high-school dry lab built from NUPACK plus Wageningen iGEM 2024's miRADAR, ranking 16 candidate switches on explicit thermodynamic criteria and predicting the background-leakage failure before the gel showed it",
+        "HongKong-HS (High School)",
+        "Build on what exists",
+        "A bespoke script nobody outside the team can check",
+        "Yes"
+      ],
+      [
+        "Bronze contribution met by adding the characterisation an existing Registry part was missing, a 15 to 37 degrees C gradient crossed with culture time, instead of registering another new part",
+        "Squirrel-Beijing (High School)",
+        "Build on what exists",
+        "Registering one more new and uncharacterised part",
+        "Yes"
+      ],
+      [
+        "Wearable sensing built on the open-source Biocoin platform, with the substrate predictor released as a protease-agnostic package another team retrains on a basic laptop in a few hours",
+        "Eton-College-UK (High School)",
+        "Build on what exists",
+        "Designing a new potentiostat from first principles",
+        "Yes"
+      ],
+      [
+        "Four regulatory and certification bodies overruled the beekeepers' preference for a living engineered gut symbiont; the chassis became heat-inactivated dried yeast and the cost of that switch was stated",
+        "Oxford (Undergrad)",
+        "Stand in front of the veto",
+        "Following the users who liked the original plan",
+        "Yes, a certification body is more reachable than a national regulator"
+      ],
+      [
+        "A state public-health medical laboratory educator found the prototype could hand a cancer-risk conclusion to an untrained user, so it was re-scoped to a bench-side research instrument reporting only concentrations and quality-control status",
+        "Bist-China (High School)",
+        "Stand in front of the veto",
+        "A friendly clinician calling the idea promising",
+        "Yes"
+      ],
+      [
+        "Asked iGEM's Safety and Regulatory Committee before collecting any samples, obtained written approval from the Director of Responsibility to collect shed cat hair without an Animal Use Form, and published the email",
+        "BASIS-China (High School)",
+        "Stand in front of the veto",
+        "Assuming an unavailable form means the work cannot be done",
+        "Yes, and free"
+      ],
+      [
+        "Browser games served from the frozen wiki itself, so even the interactive teaching asset needs no server anyone must keep paying for",
+        "LYON, GU Frankfurt, HongKong-JSS, GEMS-Taiwan",
+        "Leave the capability behind",
+        "A hosted web app that goes dark when the hosting bill stops",
+        "Yes, and already done once"
+      ]
+    ],
+    "rows_zh": [
+      [
+        "為 30 位本地學校教師辦的兩天教師生物科技培訓工作坊，內容涵蓋 PCR 與瓊脂膠體電泳",
+        "HongKong-JSS（高中組）",
+        "訓練訓練者",
+        "再辦第十個給小學生的草莓 DNA 攤位",
+        "可行"
+      ],
+      [
+        "常設借用方案，讓這些老師向團隊借用 DNA 樣本與實驗器材",
+        "HongKong-JSS（高中組）",
+        "把能力留下來",
+        "工作坊結束就把器材收回庫房",
+        "可行，只需一張借還登記表"
+      ],
+      [
+        "在 InnoEX 2026 設攤，並在渠務署年度記者會上共同發布，換來政府官方網頁與本地新聞報導",
+        "HongKong-JSS（高中組）",
+        "借機構的通路",
+        "團隊發一則 Instagram 貼文加一場朝會",
+        "部分可行，地方農業局談得到，但聯合記者會不保證"
+      ],
+      [
+        "渠務署的建議把先前使用的色素蛋白換成 mRFP1e，讓非專業者看得見顏色，也保留螢光通道做定量",
+        "HongKong-JSS（高中組）",
+        "站到否決權面前",
+        "去問一位本來就認同這個設計的教授",
+        "可行"
+      ],
+      [
+        "More Happy Farm 直言並非每位農民都想擁有一台儀器，使計畫從賣儀器轉為提供認證服務",
+        "HongKong-JSS（高中組）",
+        "站到否決權面前",
+        "對農民做一份購買意願調查",
+        "可行"
+      ],
+      [
+        "符合所在邦校園基因工程規定、並與夥伴學校教師共同修訂的八、九年級蛋白酶課程方案，外加一門由碩士生設計並試教課程的大學師培模組",
+        "Muenster-University（研究生組）",
+        "訓練訓練者",
+        "帶著借來的示範去學校跑一次",
+        "部分可行，課綱對接可以，大學師培模組需要大學端夥伴"
+      ],
+      [
+        "因為並非每所學校都有 PCR 儀、電泳槽與分光光度計而設計的外借實驗套件",
+        "Muenster-University（研究生組）",
+        "把能力留下來",
+        "只在本來就有器材的地方做活動",
+        "可行"
+      ],
+      [
+        "把所有經過試教的學習單、工作坊指引與實驗流程，以開放教育資源形式存入奧地利聯邦教育部的官方平台 eduvidual.at",
+        "BOKU-Vienna（研究生組）",
+        "借機構的通路",
+        "只把 PDF 放在團隊 wiki 上",
+        "尚未驗證，取決於台灣的教學平台是否接受外部投件"
+      ],
+      [
+        "階梯式同儕教育者模式：把非 iGEM 的低年級科學隊成員訓練成學生帶領者，再讓他們獨立為同校學生開辦工作坊，並公開培訓指引",
+        "HongKong-HS（高中組）",
+        "讓學生變師資",
+        "每一場都由團隊成員親自上",
+        "可行"
+      ],
+      [
+        "七個月內八場課後工作坊，28 位 11 至 16 歲參與者，團隊明言這是為未來成員刻意鋪的管道",
+        "HKSSC（高中組）",
+        "讓學生變師資",
+        "下一屆隊員等誰自己來報名就好",
+        "可行"
+      ],
+      [
+        "鄉村教師合成生物學研習：半天線上師培，對準亞伯達中學課綱，並事先寄出九份免費實作套件",
+        "UAlberta（大學組）",
+        "訓練訓練者",
+        "協助偏鄉學校自己成立參賽隊",
+        "可行"
+      ],
+      [
+        "帶著老師把每一個操作步驟走過一遍，讓示範在團隊離開後仍能繼續；Vision Empower 核可那套觸覺教具，將在其合作學校推廣使用",
+        "MIT-MAHE（大學組）",
+        "訓練訓練者",
+        "替全班做完示範然後離開",
+        "可行"
+      ],
+      [
+        "把觸覺磁性基因迴路套件捐給北京一所視障學校，讓校內老師持續針對不同年齡改用",
+        "BAID-China（高中組）",
+        "把能力留下來",
+        "工作坊結束把原型帶回家",
+        "可行"
+      ],
+      [
+        "在 70 校網絡中同時培訓教師與學生，到九月已有九所夥伴學校的教師與高年級學生自行開辦這些活動",
+        "NIS Almaty-Medeu（高中組）",
+        "訓練訓練者",
+        "統計六場校訪觸及的 226 名兒童",
+        "可行"
+      ],
+      [
+        "在一次兒童腫瘤科探訪後製作 12 份個人化病房套件，因為志工和共用樂高都跟著離開了",
+        "NIS Almaty-Medeu（高中組）",
+        "把能力留下來",
+        "再安排一次帶同一批共用器材的探訪",
+        "可行"
+      ],
+      [
+        "面向農民的課程，訓練青年志工，再由志工去教偏鄉農民",
+        "KAUST-KSA（研究生組）",
+        "訓練訓練者",
+        "團隊成員自己跑農場",
+        "可行，可透過農會或農業改良場"
+      ],
+      [
+        "近 5,000 份申請爭取 230 個導師制營隊名額，於是整套課程被轉成 SynBase：免費、自主進度的九模組課程，註冊學習者 750 人以上",
+        "Stanford University（大學組）",
+        "交付課程，不是交付一個班",
+        "明年夏天照同樣規模再辦一屆",
+        "可行"
+      ],
+      [
+        "PITCCH 把專案裡一個真正未解的子問題交給大眾：可 3D 列印、直徑 20 公釐高 25 公釐、最大化接觸表面積的螺旋面生物濾材，並附團隊實際列印參數；42 件投稿、26 件過篩，兩位獲獎者具名且設計被採用",
+        "Princeton（大學組）",
+        "把觀眾變成貢獻者",
+        "辦一場海報說明會解釋已完成的設計",
+        "可行"
+      ],
+      [
+        "與另外四支大學隊伍共同撰寫的抗腫瘤合成生物學五校聯合生物安全手冊，風險評估程序內部統一卻刻意可區辨",
+        "HBUT-China（大學組）",
+        "跨隊共同承擔",
+        "自己一間實驗室寫自己的風險評估",
+        "可行，可透過 TGEM"
+      ],
+      [
+        "自行舉辦第一屆華中 iGEM 論壇，接待 15 支隊伍，並刻意複製 Jamboree 的格式：主題演講、LiveStage 發表段、評審評論、海報走動交流",
+        "HUST-China（大學組）",
+        "跨隊共同承擔",
+        "去參加別人辦的區域聚會",
+        "可行，可透過 TGEM"
+      ],
+      [
+        "Ladder Detector 直接採用 GelGenie 已發表、經同儕審查的 U-Net 權重做條帶切割，把自己的力氣花在唯一沒人自動化過的那一步",
+        "Vilnius-Lithuania（大學組）",
+        "站在既有成果上",
+        "用自己根本沒有的膠體影像去訓練切割模型",
+        "可行"
+      ],
+      [
+        "ReTIsigner 分支並延伸 TISIGNER，並以實驗驗證：表現量提升 2.16 倍，失敗率由 52% 降到 2%",
+        "Uni-Padua-IT（大學組）",
+        "站在既有成果上",
+        "從零寫一個新的密碼子最佳化工具",
+        "可行"
+      ],
+      [
+        "用 NUPACK 加上 Wageningen iGEM 2024 的 miRADAR 搭出一整個高中乾實驗室，以明確的熱力學標準排序 16 個候選開關，並在膠體跑出來之前就先預測到背景洩漏這個失敗模式",
+        "HongKong-HS（高中組）",
+        "站在既有成果上",
+        "寫一支外人完全無法檢驗的自製腳本",
+        "可行"
+      ],
+      [
+        "以補上既有 Registry 零件缺少的特性數據來滿足銅牌貢獻要求：15 到 37 度的溫度梯度乘上培養時間，而不是再登錄一個新零件",
+        "Squirrel-Beijing（高中組）",
+        "站在既有成果上",
+        "再登錄一個新的、沒有特性數據的零件",
+        "可行"
+      ],
+      [
+        "穿戴式感測建在開源 Biocoin 平台上，並把底物預測模型釋出為不綁特定蛋白酶的套件，別隊用一般筆電幾小時就能重新訓練",
+        "Eton-College-UK（高中組）",
+        "站在既有成果上",
+        "從基本原理重新設計一台恆電位儀",
+        "可行"
+      ],
+      [
+        "四個主管與認證機構壓過養蜂人偏好的活體工程化腸道共生菌；底盤改為熱滅活乾酵母，並明寫這個改動的代價",
+        "Oxford（大學組）",
+        "站到否決權面前",
+        "聽從那些認同原方案的使用者",
+        "可行，認證機構比中央主管機關容易談到"
+      ],
+      [
+        "一位州衛生部門的醫檢教育者發現原型機會把癌症風險結論交給未受訓練的使用者，於是重新定位為實驗桌旁的研究儀器，只回報濃度與品管狀態",
+        "Bist-China（高中組）",
+        "站到否決權面前",
+        "一位友善的臨床醫師說這想法很有潛力",
+        "可行"
+      ],
+      [
+        "在採集任何樣本前先詢問 iGEM 安全與法規委員會，取得 Director of Responsibility 的書面同意，得以在無動物使用表的情況下收集自然掉落的貓毛，並公開該信件",
+        "BASIS-China（高中組）",
+        "站到否決權面前",
+        "以為表格申請不到就等於這件事不能做",
+        "可行，而且免費"
+      ],
+      [
+        "把瀏覽器遊戲直接掛在凍結的 wiki 上，連互動教材都不需要有人持續付主機費",
+        "LYON、GU Frankfurt、HongKong-JSS、GEMS-Taiwan",
+        "把能力留下來",
+        "架一個雲端網頁應用，帳單一停就黑掉",
+        "可行，而且已經做過一次"
+      ]
+    ]
+  },
+  "checklist": [
+    "Choose a 2027 topic that has a professional repeater in Taiwan behind it, a teacher, an extension officer, an inspector or a technician, and name that person before you fix the biology.",
+    "Budget one two-day training session for adults who teach or advise for a living, and treat the pupil-facing events as the thing that recruits and legitimises it rather than as the goal.",
+    "Decide now what you will lend: list the equipment and consumables a school or a farm could borrow from you in 2028, and write the loan terms into the plan.",
+    "Ship every teaching artefact as a file on the frozen wiki with a facilitator sheet naming the time, the materials and the cost, because 31 of 64 artefacts in the 2026 census were the beautiful thing alone.",
+    "Publish at least one artefact in Traditional Chinese and state on the file itself that it may be reused, since 3 of 31 decorated teams reached Traditional Chinese and 1 of 136 education PDFs carried a reuse licence.",
+    "Before any design freezes, book the stakeholder who can forbid the project, a certification body, a procurement officer or a safety committee, and write down in advance what you would change if they said no.",
+    "Search for the published model, part or instrument you can fork before you write one, and say on the wiki why you did not rebuild it.",
+    "Hand the public one genuine unsolved sub-problem with real constraints, judge it on a single measurable criterion, and name the winners inside your own design.",
+    "Take one artefact to the other Taiwanese teams through TGEM and co-author it, so what survives the season is larger than one school's work."
+  ],
+  "checklist_zh": [
+    "選一個 2027 題目，背後要有台灣的「職業重複者」：老師、農業推廣人員、稽查員或技術員；在定下生物學內容之前，先把這個人指名出來。",
+    "預算中排進一場兩天的培訓，對象是以教學或諮詢為業的大人；把面向學生的活動當成替它招人並建立正當性的手段，而不是目標本身。",
+    "現在就決定要借出什麼：列出 2028 年一所學校或一座農場可以向你借走的器材與耗材，並把借用條件寫進計畫。",
+    "每一份教材都要以檔案形式放上凍結的 wiki，並附一張帶領者說明，寫明所需時間、材料與費用；2026 年普查的 64 件產出中，有 31 件只有漂亮的東西本身。",
+    "至少出版一份繁體中文產出，並在檔案本身寫明可重用；31 支獲獎隊伍中只有 3 支觸及繁體中文，136 份教育 PDF 中只有 1 份附了可重用授權。",
+    "在任何設計定案之前，先約那個有權否決專案的關係人：認證機構、採購人員或安全委員會；並事先寫下如果對方說不，你會改什麼。",
+    "在自己動手寫之前，先去找可以分支的已發表模型、零件或儀器，並在 wiki 上寫出你為什麼沒有重做一遍。",
+    "把一個真正未解、帶有真實限制條件的子問題交給大眾，用單一可量測的標準評分，並在自己的設計中把獲獎者具名寫進去。",
+    "透過 TGEM 把一份產出帶給台灣其他隊伍共同撰寫，讓賽季結束後留下來的東西，大於一所學校自己的成果。"
+  ],
+  "method": "What was read. All 106 team files in `research/teams/`, field by field: `good.publicEngagement`, `good.ihp`, `good.realWorld`, `good.partners`, `dry.software`, `dry.stack`, `gemsTakeaway`, `summary`, `awards`, `section` and `country`. The `gemsTakeaway` field was the most productive single source because it already records what a GEMS reader should steal. Three measured figures are quoted rather than re-derived and were read from the files that established them: 284 of 285 education files still downloading, 1 of 136 PDFs carrying a reuse licence, 3 of 31 teams reaching Traditional Chinese and 33 of 64 artefacts shipping facilitator instructions, all from `education-afterlife.json`; 8 of 21 software tools still running from `software-afterlife.json`; 6 of 20 instruments rebuildable from `hardware-afterlife.json`. The Taiwan cohort figures come from `taiwan-cohort.json`.\n\nThe inclusion rule. A move counted as a multiplier only if the team file named something checkable — a number, a named partner, or a named artefact — and the move bought reach, durability or credibility that the obvious version of the same activity would not have bought. A workshop for children counted only if it trained someone who teaches again, left an object behind, or produced an artefact a stranger could run. Reach alone never counted: a headcount is the thing this block is written against. Consultations counted only where the file records a design change or a documented reason for no change, which is why stakeholder entries here are tied to a specific reversal rather than to a meeting.\n\nWhat the team files cannot see. A technique used but not written up is invisible, so every count here is a count of documented practice, not of practice. Teams that trained teachers and did not say so are missing; so is any loan, donation or institutional deposit a team thought too ordinary to record. The direction of that error is one-sided: the rarity figures are upper bounds on rarity and the real numbers can only be higher. Nor can a file establish that a multiplier worked — 30 trained teachers is an input, and no team in this field followed up to show those teachers teaching the following year. The Austrian ministry deposit and the Muenster lending kit are reported as the files describe them, one unverified from this network and one designed rather than running.\n\nThe sample is decorated teams only. These 106 files cover award winners and nominees, so nothing here is a base rate for iGEM 2026 at large. When this block says 7 of 106 teams trained teachers, it means 7 of 106 decorated teams — among the field's strongest and best-documented programmes, which makes the scarcity more striking, not less.",
+  "method_zh": "讀了什麼。`research/teams/` 裡全部 106 份團隊檔案，逐欄閱讀：`good.publicEngagement`、`good.ihp`、`good.realWorld`、`good.partners`、`dry.software`、`dry.stack`、`gemsTakeaway`、`summary`、`awards`、`section` 與 `country`。單一來源中最有產出的是 `gemsTakeaway`，因為它本來就記錄了 GEMS 讀者該偷走什麼。有三組已量測數字是引用而非重新推導，直接取自建立它們的檔案：285 份教育檔案中 284 份仍可下載、136 份 PDF 中只有 1 份附可重用授權、31 支隊伍中只有 3 支觸及繁體中文、64 件產出中 33 件附帶領者說明，均出自 `education-afterlife.json`；21 個軟體工具中 8 個仍可運作，出自 `software-afterlife.json`；20 件儀器中 6 件可重建，出自 `hardware-afterlife.json`。台灣隊伍的統計數字取自 `taiwan-cohort.json`。\n\n納入規則。一個做法要算作放大器，必須在團隊檔案裡指名出可查核的東西——一個數字、一個具名夥伴，或一件具名產出——而且該做法換到的觸及、續存或可信度，是同一活動的明顯版本換不到的。給兒童辦的工作坊只有在它訓練了會再去教別人的人、留下了實體物件，或產出了外人能照著跑的成果時才算。純粹的觸及人數一律不算：這整個段落就是寫來反對人頭數的。關係人諮詢只有在檔案記錄了設計變更、或記錄了「不改的理由」時才算，這也是為什麼這裡的關係人條目都綁在某個具體的反轉上，而不是綁在一場會議上。\n\n團隊檔案看不見什麼。用了但沒寫下來的手法是隱形的，所以這裡每一個計數都是「有記錄的做法」的計數，不是「做法」的計數。訓練了老師卻沒寫出來的隊伍不會被算到；任何被團隊認為太平常而沒記錄的外借、捐贈或機構存放也一樣。這個誤差是單向的：罕見程度的數字是罕見程度的上界，真實數字只會更高。檔案也無法證明某個放大器真的奏效——30 位受訓教師是投入，而這個場上沒有任何隊伍回頭追蹤，證明那些老師隔年真的在教。奧地利部會平台的存放與 Muenster 的外借套件，都按檔案所述呈現：前者從本次網路環境無法驗證，後者是設計完成而非已在運作。\n\n樣本只有獲獎隊伍。這 106 份檔案涵蓋的是獎項得主與入圍者，所以這裡沒有任何數字可當作 iGEM 2026 全體的基準率。當本段說「106 支隊伍中有 7 支訓練教師」，意思是 106 支獲獎隊伍中有 7 支——這些是全場最強、記錄最完整的方案，這讓那份稀少更顯眼，而不是更不顯眼。"
+}

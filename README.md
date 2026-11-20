@@ -119,6 +119,15 @@ one it cleared in 2024 and has not cleared since. The short version of everythin
   had entered iGEM before, 78 had a readable previous project and 5 of those 78 carried a project line
   forward; none of the six returning Grand Prize teams did. Only 3 of 106 credit their own predecessor with
   anything.
+- **The multiplier almost nobody used: teach the people who teach for a living.** Across 106 decorated teams,
+  7 taught an audience that teaches professionally and 5 left equipment or a kit in somebody else's hands —
+  and only HongKong-JSS did both, pairing a two-day PCR and agarose-gel workshop for 30 local school teachers
+  with a standing loan of DNA samples and lab equipment, against the 1,600 pupils and 730 secondary peers it
+  reached once. Its own wiki calls that tier the most durable. Stakeholder-veto work, by contrast, is the
+  house style of this field rather than a rarity. The other transferable moves: Stanford converted a
+  5,000-application, 230-place mentorship into a free course; Princeton handed the public a real unsolved
+  sub-problem and got 42 submissions of which 26 passed printability screening; NIS Almaty-Medeu trained
+  teachers across a 70-school network until nine partner schools ran the activities themselves.
 - **Education artefacts outlive software and hardware by a wide margin** — 284 of 285 education files still
   download, against 8 of 21 software tools still running and 6 of 20 devices rebuildable. A PDF needs no
   server. The failure is licensing: 1 licence statement in 136 PDFs.
